@@ -1,0 +1,78 @@
+/* ============================================
+   UPDATE ITEMS STYLING
+   ============================================ */
+
+.category-section {
+    margin-bottom: 30px;
+}
+
+.category-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    color: #2C3E50;
+}
+
+.updates-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.update-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #4A90E2;
+    transition: all 0.3s ease;
+}
+
+.update-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.update-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2C3E50;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.update-title:hover {
+    color: #4A90E2;
+}
+
+.update-summary {
+    font-size: 14px;
+    color: #6c757d;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.update-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.update-date, .update-source {
+    display: flex;
+    align-items: center;
+}
+
+.loading, .error, .no-updates {
+    text-align: center;
+    padding: 40px 20px;
+    color: #6c757d;
+    font-size: 16px;
+}
+
+.error {
+    color: #E74C3C;
+}

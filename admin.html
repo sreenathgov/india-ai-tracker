@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - India AI Policy Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #29353C;
+            --secondary: #44576D;
+            --tertiary: #768A96;
+            --accent: #AAC7D8;
+            --light: #DFEBF6;
+            --lightest: #E6E6E6;
+            --white: #FFFFFF;
+            --success: #27ae60;
+            --danger: #e74c3c;
+            --warning: #f39c12;
+            --rail-width: 64px;
+            --rail-expanded: 200px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--lightest);
+            color: var(--primary);
+            line-height: 1.6;
+        }
+
+        /* ==================== LEFT ACTION RAIL ==================== */
+        .action-rail {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: var(--rail-width);
+            height: 100vh;
+            background: var(--primary);
+            display: flex;
+            flex-direction: column;
+            z-index: 100;
+            transition: width 0.2s ease;
+        }
+
+        .rail-logo {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid var(--secondary);
+        }
+
+        .rail-logo span {
+            font-size: 1.5rem;
+        }
+
+        .rail-nav {
+            flex: 1;
+            padding: 1rem 0;
+        }
+
+        .rail-item {
+            display: flex;
+            align-items: center;
+            padding: 0.875rem 1rem;
+            color: var(--accent);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+        .rail-item:hover {
+            background: var(--secondary);
+            color: var(--white);
+        }
+
+        .rail-item.active {
+            background: var(--secondary);
+            color: var(--white);
+            border-left: 3px solid var(--accent);
+        }
+
+        .rail-item .icon {
+            font-size: 1.25rem;
+            min-width: 32px;
+            text-align: center;
+        }
+
+        .rail-item .label {
+            margin-left: 0.75rem;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .action-rail:hover {
+            width: var(--rail-expanded);
+        }
+
+        .action-rail:hover .rail-item .label {
+            opacity: 1;
+        }
+
+        .rail-divider {
+            height: 1px;
+            background: var(--secondary);
+            margin: 0.5rem 1rem;
+        }
+
+        .rail-footer {
+            padding: 1rem;
+            border-top: 1px solid var(--secondary);
+        }
+
+        .rail-footer .rail-item {
+            padding: 0.75rem 1rem;
+        }
+
+        /* ==================== MAIN CONTENT ==================== */
+        .main-content {
+            margin-left: var(--rail-width);
+            min-height: 100vh;
+            transition: margin-left 0.2s ease;
+        }
+
+        header {
+            background: var(--white);
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--lightest);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        header h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--tertiary);
+            font-size: 0.85rem;
+        }
+
+        .container {
+            padding: 1.5rem 2rem;
+        }
+
+        /* ==================== BUTTONS ==================== */
+        .btn {
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary { background: var(--accent); color: var(--primary); }
+        .btn-primary:hover { background: var(--light); }
+        .btn-success { background: var(--success); color: white; }
+        .btn-success:hover { opacity: 0.9; }
+        .btn-danger { background: var(--danger); color: white; }
+        .btn-danger:hover { opacity: 0.9; }
+        .btn-secondary { background: var(--secondary); color: white; }
+        .btn-secondary:hover { background: var(--tertiary); }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--light);
+            color: var(--secondary);
+        }
+        .btn-outline:hover {
+            background: var(--light);
+        }
+
+        .btn-sm {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.8rem;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* ==================== STATS BAR ==================== */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 1.25rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-left: 4px solid var(--accent);
+        }
+
+        .stat-card h3 { font-size: 1.75rem; color: var(--primary); }
+        .stat-card p { color: var(--tertiary); font-size: 0.85rem; margin-top: 0.25rem; }
+
+        /* ==================== TOOLBAR ==================== */
+        .toolbar {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 200px;
+            padding: 0.625rem 1rem;
+            border: 2px solid var(--light);
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        select {
+            padding: 0.625rem 1rem;
+            border: 2px solid var(--light);
+            border-radius: 6px;
+            background: white;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        /* ==================== BULK ACTIONS BAR ==================== */
+        .bulk-actions {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: none;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .bulk-actions.show {
+            display: flex;
+        }
+
+        .bulk-actions .selected-count {
+            font-weight: 500;
+        }
+
+        .bulk-actions .btn {
+            padding: 0.5rem 1rem;
+        }
+
+        /* ==================== UPDATES TABLE ==================== */
+        .updates-table {
+            width: 100%;
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .updates-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .updates-table th {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.875rem 1rem;
+            text-align: left;
+            font-weight: 500;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .updates-table td {
+            padding: 0.875rem 1rem;
+            border-bottom: 1px solid var(--lightest);
+            font-size: 0.875rem;
+        }
+
+        .updates-table tr:hover {
+            background: var(--light);
+        }
+
+        .updates-table tr.selected {
+            background: #e8f4fc;
+        }
+
+        .title-cell {
+            max-width: 280px;
+        }
+
+        .title-cell a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .title-cell a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        /* ==================== BADGES ==================== */
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .badge-category { background: var(--light); color: var(--primary); }
+        .badge-state { background: var(--accent); color: var(--primary); margin-right: 0.25rem; }
+        .badge-approved { background: var(--success); color: white; }
+        .badge-pending { background: var(--warning); color: white; }
+        .badge-high { background: #e74c3c; color: white; }
+        .badge-medium { background: #f39c12; color: white; }
+        .badge-low { background: #95a5a6; color: white; }
+        .badge-active { background: var(--success); color: white; }
+        .badge-paused { background: var(--tertiary); color: white; }
+
+        .actions-cell {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        /* ==================== MODAL ==================== */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active { display: flex; }
+
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 700px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            background: var(--primary);
+            color: white;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 { font-size: 1.1rem; }
+
+        .modal-body { padding: 1.5rem; }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.625rem 0.875rem;
+            border: 2px solid var(--light);
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .form-group textarea { min-height: 80px; resize: vertical; }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        /* State Tags Selector */
+        .state-selector-wrapper {
+            position: relative;
+        }
+
+        .selected-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            padding: 0.5rem;
+            min-height: 42px;
+            border: 2px solid var(--light);
+            border-radius: 6px;
+            background: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .state-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 0.3rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .state-tag .remove-tag {
+            background: none;
+            border: none;
+            color: var(--secondary);
+            cursor: pointer;
+            font-size: 1rem;
+            line-height: 1;
+            padding: 0;
+            margin-left: 0.2rem;
+        }
+
+        .state-tag .remove-tag:hover {
+            color: var(--danger);
+        }
+
+        .state-dropdown {
+            width: 100%;
+            padding: 0.625rem;
+            border: 2px solid var(--light);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            background: white;
+        }
+
+        .no-tags-placeholder {
+            color: var(--tertiary);
+            font-size: 0.85rem;
+            padding: 0.2rem;
+        }
+
+        .modal-footer {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid var(--lightest);
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.75rem;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        /* ==================== TABS ==================== */
+        .tabs {
+            display: flex;
+            gap: 0;
+            margin-bottom: 1.5rem;
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .tab {
+            padding: 0.875rem 1.5rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--tertiary);
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab:hover {
+            color: var(--primary);
+            background: var(--light);
+        }
+
+        .tab.active {
+            color: var(--primary);
+            border-bottom-color: var(--accent);
+            background: var(--light);
+        }
+
+        /* ==================== PAGE SECTIONS ==================== */
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        /* ==================== TOAST ==================== */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 2000;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .toast.success { background: var(--success); }
+        .toast.error { background: var(--danger); }
+
+        /* ==================== LOADING ==================== */
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--tertiary);
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--light);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* ==================== EMPTY STATE ==================== */
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: var(--tertiary);
+        }
+
+        .empty-state .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 768px) {
+            .action-rail {
+                width: 100%;
+                height: auto;
+                position: relative;
+                flex-direction: row;
+            }
+
+            .action-rail:hover {
+                width: 100%;
+            }
+
+            .rail-nav {
+                display: flex;
+                padding: 0;
+            }
+
+            .rail-item .label {
+                display: none;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Left Action Rail -->
+    <nav class="action-rail">
+        <div class="rail-logo">
+            <span>🇮🇳</span>
+        </div>
+        <div class="rail-nav">
+            <button class="rail-item active" onclick="showSection('dashboard')" data-section="dashboard">
+                <span class="icon">📊</span>
+                <span class="label">Dashboard</span>
+            </button>
+            <button class="rail-item" onclick="openAddModal()">
+                <span class="icon">➕</span>
+                <span class="label">Add Update</span>
+            </button>
+            <button class="rail-item" onclick="runScraper()">
+                <span class="icon">🔄</span>
+                <span class="label">Run Scraper</span>
+            </button>
+            <div class="rail-divider"></div>
+            <button class="rail-item" onclick="showSection('sources')" data-section="sources">
+                <span class="icon">🔗</span>
+                <span class="label">Sources</span>
+            </button>
+        </div>
+        <div class="rail-footer">
+            <a href="index.html" class="rail-item">
+                <span class="icon">👁️</span>
+                <span class="label">View Site</span>
+            </a>
+            <a href="/admin/logout" class="rail-item">
+                <span class="icon">🚪</span>
+                <span class="label">Logout</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h1 id="pageTitle">Dashboard</h1>
+            <div class="header-actions">
+                <div class="user-info">
+                    <span>👤</span>
+                    <span>Admin</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- ==================== DASHBOARD SECTION ==================== -->
+        <div class="page-section active" id="section-dashboard">
+            <div class="container">
+                <div class="stats-bar" id="statsBar">
+                    <div class="stat-card">
+                        <h3 id="totalCount">-</h3>
+                        <p>Total Updates</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="approvedCount">-</h3>
+                        <p>Approved</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="todayCount">-</h3>
+                        <p>Added Today</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="statesCount">-</h3>
+                        <p>States Covered</p>
+                    </div>
+                </div>
+
+                <div class="toolbar">
+                    <input type="text" class="search-box" id="searchBox" placeholder="Search by title..." onkeyup="filterUpdates()">
+                    <select id="categoryFilter" onchange="filterUpdates()">
+                        <option value="">All Categories</option>
+                        <option value="Policies and Initiatives">Policies and Initiatives</option>
+                        <option value="Events">Events</option>
+                        <option value="Major AI Developments">Major AI Developments</option>
+                        <option value="AI Start-Up News">AI Start-Up News</option>
+                    </select>
+                    <select id="stateFilter" onchange="filterUpdates()">
+                        <option value="">All States</option>
+                        <option value="IN">All India</option>
+                        <option value="TN">Tamil Nadu</option>
+                        <option value="KA">Karnataka</option>
+                        <option value="MH">Maharashtra</option>
+                        <option value="DL">Delhi</option>
+                        <option value="TG">Telangana</option>
+                        <option value="AP">Andhra Pradesh</option>
+                        <option value="WB">West Bengal</option>
+                        <option value="GJ">Gujarat</option>
+                        <option value="RJ">Rajasthan</option>
+                        <option value="UP">Uttar Pradesh</option>
+                        <option value="KL">Kerala</option>
+                        <option value="PB">Punjab</option>
+                        <option value="HR">Haryana</option>
+                        <option value="MP">Madhya Pradesh</option>
+                        <option value="GA">Goa</option>
+                    </select>
+                    <select id="approvalFilter" onchange="filterUpdates()">
+                        <option value="">All Status</option>
+                        <option value="true">Approved</option>
+                        <option value="false">Pending</option>
+                    </select>
+                </div>
+
+                <!-- Bulk Actions Bar -->
+                <div class="bulk-actions" id="bulkActions">
+                    <span class="selected-count"><span id="selectedCount">0</span> selected</span>
+                    <button class="btn btn-success btn-sm" onclick="bulkAction('approve')">✓ Approve</button>
+                    <button class="btn btn-danger btn-sm" onclick="bulkAction('delete')">🗑 Delete</button>
+                    <select id="bulkCategory" class="btn-sm" style="padding: 0.4rem;">
+                        <option value="">Move to Category...</option>
+                        <option value="Policies and Initiatives">Policies and Initiatives</option>
+                        <option value="Events">Events</option>
+                        <option value="Major AI Developments">Major AI Developments</option>
+                        <option value="AI Start-Up News">AI Start-Up News</option>
+                    </select>
+                    <button class="btn btn-outline btn-sm" onclick="applyBulkCategory()">Apply</button>
+                    <select id="bulkState" class="btn-sm" style="padding: 0.4rem;">
+                        <option value="">Reassign State...</option>
+                        <option value="IN">All India</option>
+                        <option value="TN">Tamil Nadu</option>
+                        <option value="KA">Karnataka</option>
+                        <option value="MH">Maharashtra</option>
+                        <option value="DL">Delhi</option>
+                        <option value="TG">Telangana</option>
+                    </select>
+                    <button class="btn btn-outline btn-sm" onclick="applyBulkState()">Apply</button>
+                    <button class="btn btn-secondary btn-sm" onclick="clearSelection()" style="margin-left: auto;">Clear</button>
+                </div>
+
+                <div class="updates-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 40px;"><input type="checkbox" id="selectAll" onchange="toggleSelectAll()"></th>
+                                <th>Title</th>
+                                <th>Category</th>
+                                <th>States</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="updatesBody">
+                            <tr><td colspan="7" class="loading"><span class="spinner"></span> Loading updates...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SOURCES SECTION ==================== -->
+        <div class="page-section" id="section-sources">
+            <div class="container">
+                <div class="stats-bar">
+                    <div class="stat-card">
+                        <h3 id="sourcesTotal">-</h3>
+                        <p>Total Sources</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="sourcesActive">-</h3>
+                        <p>Active</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="sourcesPaused">-</h3>
+                        <p>Paused</p>
+                    </div>
+                </div>
+
+                <div class="toolbar">
+                    <input type="text" class="search-box" id="sourceSearchBox" placeholder="Search sources..." onkeyup="filterSources()">
+                    <select id="sourceStatusFilter" onchange="filterSources()">
+                        <option value="">All Status</option>
+                        <option value="active">Active</option>
+                        <option value="paused">Paused</option>
+                    </select>
+                    <select id="sourceScopeFilter" onchange="filterSources()">
+                        <option value="">All Scopes</option>
+                        <option value="national">National</option>
+                        <option value="state">State-specific</option>
+                    </select>
+                    <button class="btn btn-primary" onclick="openSourceModal()">+ Add Source</button>
+                    <button class="btn btn-secondary" onclick="importSources()">📥 Import from JSON</button>
+                </div>
+
+                <div class="updates-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>URL</th>
+                                <th>Type</th>
+                                <th>Scope</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Last Scraped</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sourcesBody">
+                            <tr><td colspan="8" class="loading"><span class="spinner"></span> Loading sources...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Update Modal -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Edit Update</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="editId">
+                <div class="form-group">
+                    <label>Title *</label>
+                    <input type="text" id="editTitle" required>
+                </div>
+                <div class="form-group">
+                    <label>URL *</label>
+                    <input type="url" id="editUrl" required>
+                </div>
+                <div class="form-group">
+                    <label>Summary</label>
+                    <textarea id="editSummary"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Category *</label>
+                        <select id="editCategory">
+                            <option value="Policies and Initiatives">Policies and Initiatives</option>
+                            <option value="Events">Events</option>
+                            <option value="Major AI Developments">Major AI Developments</option>
+                            <option value="AI Start-Up News">AI Start-Up News</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Date Published</label>
+                        <input type="date" id="editDate">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>States</label>
+                    <div class="state-selector-wrapper">
+                        <div class="selected-tags" id="selectedStateTags">
+                            <span class="no-tags-placeholder">No states selected</span>
+                        </div>
+                        <select class="state-dropdown" id="stateDropdown" onchange="addStateTag(this.value)">
+                            <option value="">+ Add a state...</option>
+                            <option value="IN">All India (National)</option>
+                            <option value="AP">Andhra Pradesh</option>
+                            <option value="AR">Arunachal Pradesh</option>
+                            <option value="AS">Assam</option>
+                            <option value="BR">Bihar</option>
+                            <option value="CT">Chhattisgarh</option>
+                            <option value="GA">Goa</option>
+                            <option value="GJ">Gujarat</option>
+                            <option value="HR">Haryana</option>
+                            <option value="HP">Himachal Pradesh</option>
+                            <option value="JH">Jharkhand</option>
+                            <option value="KA">Karnataka</option>
+                            <option value="KL">Kerala</option>
+                            <option value="MP">Madhya Pradesh</option>
+                            <option value="MH">Maharashtra</option>
+                            <option value="MN">Manipur</option>
+                            <option value="ML">Meghalaya</option>
+                            <option value="MZ">Mizoram</option>
+                            <option value="NL">Nagaland</option>
+                            <option value="OR">Odisha</option>
+                            <option value="PB">Punjab</option>
+                            <option value="RJ">Rajasthan</option>
+                            <option value="SK">Sikkim</option>
+                            <option value="TN">Tamil Nadu</option>
+                            <option value="TG">Telangana</option>
+                            <option value="TR">Tripura</option>
+                            <option value="UP">Uttar Pradesh</option>
+                            <option value="UT">Uttarakhand</option>
+                            <option value="WB">West Bengal</option>
+                            <option value="DL">Delhi (NCT)</option>
+                            <option value="JK">Jammu & Kashmir</option>
+                            <option value="LA">Ladakh</option>
+                            <option value="PY">Puducherry</option>
+                            <option value="CH">Chandigarh</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Source Name</label>
+                    <input type="text" id="editSource">
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="editApproved"> Approved (visible on site)
+                    </label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                <button class="btn btn-success" onclick="saveUpdate()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Source Modal -->
+    <div class="modal" id="sourceModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="sourceModalTitle">Add Source</h2>
+                <button class="close-btn" onclick="closeSourceModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="sourceId">
+                <div class="form-group">
+                    <label>Source Name *</label>
+                    <input type="text" id="sourceName" required placeholder="e.g., Analytics India Magazine">
+                </div>
+                <div class="form-group">
+                    <label>URL *</label>
+                    <input type="url" id="sourceUrl" required placeholder="https://example.com/feed">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Type</label>
+                        <select id="sourceType">
+                            <option value="rss">RSS Feed</option>
+                            <option value="web">Web Scraper</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Scope</label>
+                        <select id="sourceScope" onchange="toggleSourceStates()">
+                            <option value="national">National (All India)</option>
+                            <option value="state">State-specific</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" id="sourceStatesGroup" style="display: none;">
+                    <label>States</label>
+                    <div class="state-selector-wrapper">
+                        <div class="selected-tags" id="selectedSourceStateTags">
+                            <span class="no-tags-placeholder">No states selected</span>
+                        </div>
+                        <select class="state-dropdown" id="sourceStateDropdown" onchange="addSourceStateTag(this.value)">
+                            <option value="">+ Add a state...</option>
+                            <option value="TN">Tamil Nadu</option>
+                            <option value="KA">Karnataka</option>
+                            <option value="MH">Maharashtra</option>
+                            <option value="DL">Delhi</option>
+                            <option value="TG">Telangana</option>
+                            <option value="AP">Andhra Pradesh</option>
+                            <option value="KL">Kerala</option>
+                            <option value="GJ">Gujarat</option>
+                            <option value="RJ">Rajasthan</option>
+                            <option value="UP">Uttar Pradesh</option>
+                            <option value="WB">West Bengal</option>
+                            <option value="PB">Punjab</option>
+                            <option value="HR">Haryana</option>
+                            <option value="GA">Goa</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Category Hint</label>
+                        <select id="sourceCategoryHint">
+                            <option value="">None (Auto-detect)</option>
+                            <option value="Policies and Initiatives">Policies and Initiatives</option>
+                            <option value="Events">Events</option>
+                            <option value="Major AI Developments">Major AI Developments</option>
+                            <option value="AI Start-Up News">AI Start-Up News</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Priority</label>
+                        <select id="sourcePriority">
+                            <option value="high">High</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Internal Remarks</label>
+                    <textarea id="sourceRemarks" placeholder="Notes about this source..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="sourceActive" checked> Active (include in scraper runs)
+                    </label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="testSource()" id="testSourceBtn">🧪 Test</button>
+                <button class="btn btn-secondary" onclick="closeSourceModal()">Cancel</button>
+                <button class="btn btn-success" onclick="saveSource()">Save Source</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        const API_BASE = 'http://localhost:5001/api';
+        let allUpdates = [];
+        let allSources = [];
+        let selectedStates = [];
+        let selectedSourceStates = [];
+
+        const STATE_NAMES = {
+            'IN': 'All India', 'AP': 'Andhra Pradesh', 'AR': 'Arunachal Pradesh',
+            'AS': 'Assam', 'BR': 'Bihar', 'CT': 'Chhattisgarh', 'GA': 'Goa',
+            'GJ': 'Gujarat', 'HR': 'Haryana', 'HP': 'Himachal Pradesh',
+            'JH': 'Jharkhand', 'KA': 'Karnataka', 'KL': 'Kerala', 'MP': 'Madhya Pradesh',
+            'MH': 'Maharashtra', 'MN': 'Manipur', 'ML': 'Meghalaya', 'MZ': 'Mizoram',
+            'NL': 'Nagaland', 'OR': 'Odisha', 'PB': 'Punjab', 'RJ': 'Rajasthan',
+            'SK': 'Sikkim', 'TN': 'Tamil Nadu', 'TG': 'Telangana', 'TR': 'Tripura',
+            'UP': 'Uttar Pradesh', 'UT': 'Uttarakhand', 'WB': 'West Bengal',
+            'DL': 'Delhi', 'JK': 'Jammu & Kashmir', 'LA': 'Ladakh',
+            'PY': 'Puducherry', 'CH': 'Chandigarh'
+        };
+
+        // ==================== AUTHENTICATION CHECK ====================
+        async function checkAuth() {
+            try {
+                const response = await fetch(`${API_BASE}/admin/auth/status`, { credentials: 'include' });
+                const data = await response.json();
+                if (!data.authenticated) {
+                    window.location.href = '/admin/login';
+                }
+            } catch (error) {
+                console.error('Auth check failed:', error);
+            }
+        }
+
+        // ==================== SECTION NAVIGATION ====================
+        function showSection(sectionName) {
+            // Update rail items
+            document.querySelectorAll('.rail-item[data-section]').forEach(item => {
+                item.classList.remove('active');
+                if (item.dataset.section === sectionName) {
+                    item.classList.add('active');
+                }
+            });
+
+            // Update page sections
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(`section-${sectionName}`).classList.add('active');
+
+            // Update page title
+            const titles = { dashboard: 'Dashboard', sources: 'Scraper Sources' };
+            document.getElementById('pageTitle').textContent = titles[sectionName] || 'Dashboard';
+
+            // Load data for the section
+            if (sectionName === 'sources') {
+                loadSources();
+            }
+        }
+
+        // ==================== STATE TAG MANAGEMENT ====================
+        function addStateTag(stateCode) {
+            if (!stateCode || selectedStates.includes(stateCode)) {
+                document.getElementById('stateDropdown').value = '';
+                return;
+            }
+            selectedStates.push(stateCode);
+            renderStateTags();
+            document.getElementById('stateDropdown').value = '';
+        }
+
+        function removeStateTag(stateCode) {
+            selectedStates = selectedStates.filter(s => s !== stateCode);
+            renderStateTags();
+        }
+
+        function renderStateTags() {
+            const container = document.getElementById('selectedStateTags');
+            if (selectedStates.length === 0) {
+                container.innerHTML = '<span class="no-tags-placeholder">No states selected</span>';
+                return;
+            }
+            container.innerHTML = selectedStates.map(code => `
+                <span class="state-tag">
+                    ${STATE_NAMES[code] || code}
+                    <button type="button" class="remove-tag" onclick="removeStateTag('${code}')">&times;</button>
+                </span>
+            `).join('');
+        }
+
+        function setSelectedStates(states) {
+            selectedStates = states || [];
+            renderStateTags();
+        }
+
+        // Source state tags
+        function addSourceStateTag(stateCode) {
+            if (!stateCode || selectedSourceStates.includes(stateCode)) {
+                document.getElementById('sourceStateDropdown').value = '';
+                return;
+            }
+            selectedSourceStates.push(stateCode);
+            renderSourceStateTags();
+            document.getElementById('sourceStateDropdown').value = '';
+        }
+
+        function removeSourceStateTag(stateCode) {
+            selectedSourceStates = selectedSourceStates.filter(s => s !== stateCode);
+            renderSourceStateTags();
+        }
+
+        function renderSourceStateTags() {
+            const container = document.getElementById('selectedSourceStateTags');
+            if (selectedSourceStates.length === 0) {
+                container.innerHTML = '<span class="no-tags-placeholder">No states selected</span>';
+                return;
+            }
+            container.innerHTML = selectedSourceStates.map(code => `
+                <span class="state-tag">
+                    ${STATE_NAMES[code] || code}
+                    <button type="button" class="remove-tag" onclick="removeSourceStateTag('${code}')">&times;</button>
+                </span>
+            `).join('');
+        }
+
+        function toggleSourceStates() {
+            const scope = document.getElementById('sourceScope').value;
+            document.getElementById('sourceStatesGroup').style.display = scope === 'state' ? 'block' : 'none';
+        }
+
+        // ==================== UPDATES MANAGEMENT ====================
+        async function loadUpdates() {
+            try {
+                const response = await fetch(`${API_BASE}/admin/updates`, { credentials: 'include' });
+                if (response.status === 401) {
+                    window.location.href = '/admin/login';
+                    return;
+                }
+                if (!response.ok) throw new Error('Failed to load');
+                const data = await response.json();
+                allUpdates = data.updates || [];
+                renderUpdates(allUpdates);
+                updateStats(data);
+            } catch (error) {
+                document.getElementById('updatesBody').innerHTML =
+                    '<tr><td colspan="7" class="loading">Error loading updates. Is the backend running?</td></tr>';
+            }
+        }
+
+        function renderUpdates(updates) {
+            const tbody = document.getElementById('updatesBody');
+
+            if (!updates.length) {
+                tbody.innerHTML = '<tr><td colspan="7" class="loading">No updates found</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = updates.map(u => `
+                <tr data-id="${u.id}" class="${document.querySelector(`.row-select[value="${u.id}"]`)?.checked ? 'selected' : ''}">
+                    <td><input type="checkbox" class="row-select" value="${u.id}" onchange="updateBulkUI()"></td>
+                    <td class="title-cell">
+                        <a href="${u.url}" target="_blank" title="${u.title}">${u.title}</a>
+                    </td>
+                    <td><span class="badge badge-category">${u.category || 'Uncategorized'}</span></td>
+                    <td>${(u.state_codes || []).map(s => `<span class="badge badge-state">${s}</span>`).join('')}</td>
+                    <td>${u.date_published ? new Date(u.date_published).toLocaleDateString() : '-'}</td>
+                    <td><span class="badge ${u.is_approved ? 'badge-approved' : 'badge-pending'}">${u.is_approved ? 'Approved' : 'Pending'}</span></td>
+                    <td class="actions-cell">
+                        <button class="btn btn-primary btn-sm" onclick="editUpdate(${u.id})">Edit</button>
+                        <button class="btn btn-danger btn-sm" onclick="deleteUpdate(${u.id})">Delete</button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function updateStats(data) {
+            document.getElementById('totalCount').textContent = data.total || 0;
+            document.getElementById('approvedCount').textContent = data.approved || 0;
+            document.getElementById('todayCount').textContent = data.today || 0;
+            document.getElementById('statesCount').textContent = data.states_count || 0;
+        }
+
+        function filterUpdates() {
+            const search = document.getElementById('searchBox').value.toLowerCase();
+            const category = document.getElementById('categoryFilter').value;
+            const state = document.getElementById('stateFilter').value;
+            const approval = document.getElementById('approvalFilter').value;
+
+            const filtered = allUpdates.filter(u => {
+                if (search && !u.title.toLowerCase().includes(search)) return false;
+                if (category && u.category !== category) return false;
+                if (state && !(u.state_codes || []).includes(state)) return false;
+                if (approval !== '' && String(u.is_approved) !== approval) return false;
+                return true;
+            });
+
+            renderUpdates(filtered);
+        }
+
+        // ==================== BULK ACTIONS ====================
+        function toggleSelectAll() {
+            const checked = document.getElementById('selectAll').checked;
+            document.querySelectorAll('.row-select').forEach(cb => {
+                cb.checked = checked;
+                cb.closest('tr').classList.toggle('selected', checked);
+            });
+            updateBulkUI();
+        }
+
+        function updateBulkUI() {
+            const selected = document.querySelectorAll('.row-select:checked');
+            const bulkBar = document.getElementById('bulkActions');
+            const countSpan = document.getElementById('selectedCount');
+
+            if (selected.length > 0) {
+                bulkBar.classList.add('show');
+                countSpan.textContent = selected.length;
+            } else {
+                bulkBar.classList.remove('show');
+            }
+
+            // Update row highlighting
+            document.querySelectorAll('.row-select').forEach(cb => {
+                cb.closest('tr').classList.toggle('selected', cb.checked);
+            });
+        }
+
+        function clearSelection() {
+            document.getElementById('selectAll').checked = false;
+            document.querySelectorAll('.row-select').forEach(cb => {
+                cb.checked = false;
+                cb.closest('tr').classList.remove('selected');
+            });
+            updateBulkUI();
+        }
+
+        function getSelectedIds() {
+            return Array.from(document.querySelectorAll('.row-select:checked')).map(cb => parseInt(cb.value));
+        }
+
+        async function bulkAction(action) {
+            const ids = getSelectedIds();
+            if (!ids.length) return;
+
+            const confirmMsg = action === 'delete'
+                ? `Delete ${ids.length} update(s)? This cannot be undone.`
+                : `${action.charAt(0).toUpperCase() + action.slice(1)} ${ids.length} update(s)?`;
+
+            if (!confirm(confirmMsg)) return;
+
+            try {
+                const response = await fetch(`${API_BASE}/admin/updates/bulk`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include',
+                    body: JSON.stringify({ ids, action })
+                });
+
+                if (!response.ok) throw new Error('Failed');
+                showToast(`${ids.length} update(s) ${action}d`, 'success');
+                clearSelection();
+                loadUpdates();
+            } catch (error) {
+                showToast('Error performing bulk action', 'error');
+            }
+        }
+
+        function applyBulkCategory() {
+            const category = document.getElementById('bulkCategory').value;
+            if (!category) {
+                showToast('Select a category first', 'error');
+                return;
+            }
+            const ids = getSelectedIds();
+            if (!ids.length) return;
+
+            fetch(`${API_BASE}/admin/updates/bulk`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'include',
+                body: JSON.stringify({ ids, action: 'move_category', category })
+            }).then(res => {
+                if (res.ok) {
+                    showToast(`${ids.length} update(s) moved to ${category}`, 'success');
+                    document.getElementById('bulkCategory').value = '';
+                    clearSelection();
+                    loadUpdates();
+                }
+            });
+        }
+
+        function applyBulkState() {
+            const state = document.getElementById('bulkState').value;
+            if (!state) {
+                showToast('Select a state first', 'error');
+                return;
+            }
+            const ids = getSelectedIds();
+            if (!ids.length) return;
+
+            fetch(`${API_BASE}/admin/updates/bulk`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'include',
+                body: JSON.stringify({ ids, action: 'move_state', states: [state] })
+            }).then(res => {
+                if (res.ok) {
+                    showToast(`${ids.length} update(s) reassigned to ${STATE_NAMES[state]}`, 'success');
+                    document.getElementById('bulkState').value = '';
+                    clearSelection();
+                    loadUpdates();
+                }
+            });
+        }
+
+        // ==================== MODAL FUNCTIONS ====================
+        function openAddModal() {
+            document.getElementById('modalTitle').textContent = 'Add New Update';
+            document.getElementById('editId').value = '';
+            document.getElementById('editTitle').value = '';
+            document.getElementById('editUrl').value = '';
+            document.getElementById('editSummary').value = '';
+            document.getElementById('editCategory').value = 'Policies and Initiatives';
+            document.getElementById('editSource').value = 'Manual Entry';
+            document.getElementById('editDate').value = new Date().toISOString().split('T')[0];
+            document.getElementById('editApproved').checked = true;
+            setSelectedStates(['IN']);
+            document.getElementById('editModal').classList.add('active');
+        }
+
+        function editUpdate(id) {
+            const update = allUpdates.find(u => u.id === id);
+            if (!update) return;
+
+            document.getElementById('modalTitle').textContent = 'Edit Update';
+            document.getElementById('editId').value = update.id;
+            document.getElementById('editTitle').value = update.title;
+            document.getElementById('editUrl').value = update.url;
+            document.getElementById('editSummary').value = update.summary || '';
+            document.getElementById('editCategory').value = update.category || 'Policies and Initiatives';
+            document.getElementById('editSource').value = update.source_name || '';
+            document.getElementById('editDate').value = update.date_published || '';
+            document.getElementById('editApproved').checked = update.is_approved;
+            setSelectedStates(update.state_codes || []);
+            document.getElementById('editModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('editModal').classList.remove('active');
+        }
+
+        async function saveUpdate() {
+            const id = document.getElementById('editId').value;
+
+            const data = {
+                title: document.getElementById('editTitle').value,
+                url: document.getElementById('editUrl').value,
+                summary: document.getElementById('editSummary').value,
+                category: document.getElementById('editCategory').value,
+                state_codes: selectedStates,
+                source_name: document.getElementById('editSource').value,
+                date_published: document.getElementById('editDate').value || null,
+                is_approved: document.getElementById('editApproved').checked
+            };
+
+            try {
+                const url = id ? `${API_BASE}/admin/updates/${id}` : `${API_BASE}/admin/updates`;
+                const method = id ? 'PUT' : 'POST';
+
+                const response = await fetch(url, {
+                    method,
+                    headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include',
+                    body: JSON.stringify(data)
+                });
+
+                if (!response.ok) throw new Error('Failed to save');
+
+                showToast(id ? 'Update saved!' : 'Update created!', 'success');
+                closeModal();
+                loadUpdates();
+            } catch (error) {
+                showToast('Error saving update', 'error');
+            }
+        }
+
+        async function deleteUpdate(id) {
+            if (!confirm('Are you sure you want to delete this update?')) return;
+
+            try {
+                const response = await fetch(`${API_BASE}/admin/updates/${id}`, {
+                    method: 'DELETE',
+                    credentials: 'include'
+                });
+                if (!response.ok) throw new Error('Failed to delete');
+                showToast('Update deleted', 'success');
+                loadUpdates();
+            } catch (error) {
+                showToast('Error deleting update', 'error');
+            }
+        }
+
+        async function runScraper() {
+            if (!confirm('Run the scraper now? This may take a few minutes.')) return;
+
+            showToast('Starting scraper...', '');
+
+            try {
+                const response = await fetch(`${API_BASE}/admin/scrape/run`, {
+                    method: 'POST',
+                    credentials: 'include'
+                });
+                const data = await response.json();
+                showToast(`Scraper complete! ${data.final_processed || 0} new updates.`, 'success');
+                loadUpdates();
+            } catch (error) {
+                showToast('Scraper error', 'error');
+            }
+        }
+
+        // ==================== SOURCES MANAGEMENT ====================
+        async function loadSources() {
+            try {
+                const response = await fetch(`${API_BASE}/admin/sources`, { credentials: 'include' });
+                if (response.status === 401) {
+                    window.location.href = '/admin/login';
+                    return;
+                }
+                if (!response.ok) throw new Error('Failed to load');
+                const data = await response.json();
+                allSources = data.sources || [];
+                renderSources(allSources);
+                updateSourceStats(data);
+            } catch (error) {
+                document.getElementById('sourcesBody').innerHTML =
+                    '<tr><td colspan="8" class="loading">Error loading sources.</td></tr>';
+            }
+        }
+
+        function renderSources(sources) {
+            const tbody = document.getElementById('sourcesBody');
+
+            if (!sources.length) {
+                tbody.innerHTML = `
+                    <tr><td colspan="8" class="empty-state">
+                        <div class="icon">🔗</div>
+                        <p>No sources configured yet.</p>
+                        <button class="btn btn-primary" onclick="importSources()">Import from sources.json</button>
+                    </td></tr>
+                `;
+                return;
+            }
+
+            tbody.innerHTML = sources.map(s => `
+                <tr data-id="${s.id}">
+                    <td><strong>${s.name}</strong></td>
+                    <td style="max-width: 200px; overflow: hidden; text-overflow: ellipsis;">
+                        <a href="${s.url}" target="_blank" title="${s.url}">${s.url}</a>
+                    </td>
+                    <td>${s.source_type.toUpperCase()}</td>
+                    <td>${s.scope === 'national' ? 'National' : (s.state_codes || []).join(', ')}</td>
+                    <td><span class="badge badge-${s.priority}">${s.priority}</span></td>
+                    <td><span class="badge badge-${s.status}">${s.status}</span></td>
+                    <td>${s.last_scraped ? new Date(s.last_scraped).toLocaleDateString() : 'Never'}</td>
+                    <td class="actions-cell">
+                        <button class="btn btn-outline btn-sm" onclick="toggleSource(${s.id})">${s.status === 'active' ? '⏸' : '▶'}</button>
+                        <button class="btn btn-primary btn-sm" onclick="editSource(${s.id})">Edit</button>
+                        <button class="btn btn-danger btn-sm" onclick="deleteSource(${s.id})">Delete</button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function updateSourceStats(data) {
+            document.getElementById('sourcesTotal').textContent = data.total || 0;
+            document.getElementById('sourcesActive').textContent = data.active || 0;
+            document.getElementById('sourcesPaused').textContent = data.paused || 0;
+        }
+
+        function filterSources() {
+            const search = document.getElementById('sourceSearchBox').value.toLowerCase();
+            const status = document.getElementById('sourceStatusFilter').value;
+            const scope = document.getElementById('sourceScopeFilter').value;
+
+            const filtered = allSources.filter(s => {
+                if (search && !s.name.toLowerCase().includes(search) && !s.url.toLowerCase().includes(search)) return false;
+                if (status && s.status !== status) return false;
+                if (scope && s.scope !== scope) return false;
+                return true;
+            });
+
+            renderSources(filtered);
+        }
+
+        function openSourceModal() {
+            document.getElementById('sourceModalTitle').textContent = 'Add Source';
+            document.getElementById('sourceId').value = '';
+            document.getElementById('sourceName').value = '';
+            document.getElementById('sourceUrl').value = '';
+            document.getElementById('sourceType').value = 'rss';
+            document.getElementById('sourceScope').value = 'national';
+            document.getElementById('sourceCategoryHint').value = '';
+            document.getElementById('sourcePriority').value = 'medium';
+            document.getElementById('sourceRemarks').value = '';
+            document.getElementById('sourceActive').checked = true;
+            selectedSourceStates = [];
+            renderSourceStateTags();
+            toggleSourceStates();
+            document.getElementById('sourceModal').classList.add('active');
+        }
+
+        function editSource(id) {
+            const source = allSources.find(s => s.id === id);
+            if (!source) return;
+
+            document.getElementById('sourceModalTitle').textContent = 'Edit Source';
+            document.getElementById('sourceId').value = source.id;
+            document.getElementById('sourceName').value = source.name;
+            document.getElementById('sourceUrl').value = source.url;
+            document.getElementById('sourceType').value = source.source_type;
+            document.getElementById('sourceScope').value = source.scope;
+            document.getElementById('sourceCategoryHint').value = source.category_hint || '';
+            document.getElementById('sourcePriority').value = source.priority;
+            document.getElementById('sourceRemarks').value = source.remarks || '';
+            document.getElementById('sourceActive').checked = source.status === 'active';
+            selectedSourceStates = source.state_codes || [];
+            renderSourceStateTags();
+            toggleSourceStates();
+            document.getElementById('sourceModal').classList.add('active');
+        }
+
+        function closeSourceModal() {
+            document.getElementById('sourceModal').classList.remove('active');
+        }
+
+        async function saveSource() {
+            const id = document.getElementById('sourceId').value;
+
+            const data = {
+                name: document.getElementById('sourceName').value,
+                url: document.getElementById('sourceUrl').value,
+                source_type: document.getElementById('sourceType').value,
+                scope: document.getElementById('sourceScope').value,
+                state_codes: selectedSourceStates,
+                category_hint: document.getElementById('sourceCategoryHint').value || null,
+                priority: document.getElementById('sourcePriority').value,
+                remarks: document.getElementById('sourceRemarks').value,
+                status: document.getElementById('sourceActive').checked ? 'active' : 'paused'
+            };
+
+            try {
+                const url = id ? `${API_BASE}/admin/sources/${id}` : `${API_BASE}/admin/sources`;
+                const method = id ? 'PUT' : 'POST';
+
+                const response = await fetch(url, {
+                    method,
+                    headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include',
+                    body: JSON.stringify(data)
+                });
+
+                if (!response.ok) throw new Error('Failed to save');
+
+                showToast(id ? 'Source updated!' : 'Source created!', 'success');
+                closeSourceModal();
+                loadSources();
+            } catch (error) {
+                showToast('Error saving source', 'error');
+            }
+        }
+
+        async function deleteSource(id) {
+            if (!confirm('Delete this source?')) return;
+
+            try {
+                const response = await fetch(`${API_BASE}/admin/sources/${id}`, {
+                    method: 'DELETE',
+                    credentials: 'include'
+                });
+                if (!response.ok) throw new Error('Failed');
+                showToast('Source deleted', 'success');
+                loadSources();
+            } catch (error) {
+                showToast('Error deleting source', 'error');
+            }
+        }
+
+        async function toggleSource(id) {
+            try {
+                const response = await fetch(`${API_BASE}/admin/sources/${id}/toggle`, {
+                    method: 'POST',
+                    credentials: 'include'
+                });
+                if (!response.ok) throw new Error('Failed');
+                const data = await response.json();
+                showToast(`Source ${data.status}`, 'success');
+                loadSources();
+            } catch (error) {
+                showToast('Error toggling source', 'error');
+            }
+        }
+
+        async function testSource() {
+            const id = document.getElementById('sourceId').value;
+            if (!id) {
+                showToast('Save source first before testing', 'error');
+                return;
+            }
+
+            showToast('Testing source...', '');
+
+            try {
+                const response = await fetch(`${API_BASE}/admin/sources/${id}/test`, {
+                    method: 'POST',
+                    credentials: 'include'
+                });
+                const data = await response.json();
+                if (data.success) {
+                    showToast(`Test OK: ${data.result?.items || 0} items found`, 'success');
+                } else {
+                    showToast(`Test failed: ${data.error}`, 'error');
+                }
+            } catch (error) {
+                showToast('Test failed', 'error');
+            }
+        }
+
+        async function importSources() {
+            if (!confirm('Import sources from sources.json? Existing sources with same URL will be skipped.')) return;
+
+            showToast('Importing sources...', '');
+
+            try {
+                const response = await fetch(`${API_BASE}/admin/sources/import`, {
+                    method: 'POST',
+                    credentials: 'include'
+                });
+                const data = await response.json();
+                if (data.success) {
+                    showToast(`Imported ${data.imported} sources (${data.skipped} skipped)`, 'success');
+                    loadSources();
+                } else {
+                    showToast(`Import failed: ${data.error}`, 'error');
+                }
+            } catch (error) {
+                showToast('Import failed', 'error');
+            }
+        }
+
+        // ==================== TOAST ====================
+        function showToast(message, type) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = 'toast show ' + type;
+            setTimeout(() => toast.className = 'toast', 3000);
+        }
+
+        // ==================== INITIALIZATION ====================
+        document.addEventListener('DOMContentLoaded', () => {
+            checkAuth();
+            loadUpdates();
+        });
+    </script>
+</body>
+</html>

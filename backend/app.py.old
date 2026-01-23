@@ -1,0 +1,295 @@
+"""
+India AI Policy Tracker - Backend
+Main Flask Application
+"""
+
+from flask import Flask, jsonify, request
+from flask_cors import CORS
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
+# Initialize Flask app
+app = Flask(__name__)
+CORS(app)  # Enable CORS for frontend connection
+
+# Configuration
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///tracker.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev-secret-key-change-in-production')
+
+# Initialize database
+db = SQLAlchemy(app)
+
+# Import models (we'll create these next)
+from models.update import Update
+from models.source import Source
+from models.state import State
+
+# Create database tables
+with app.app_context():
+    db.create_all()
+    print("✅ Database initialized!")
+
+# ============================================
+# PUBLIC API ENDPOINTS (for frontend)
+# ============================================
+
+@app.route('/api/states/<state_code>/updates', methods=['GET'])
+def get_state_updates(state_code):
+    """
+    Get all approved updates for a specific state
+    Frontend calls this to display updates
+    """
+    try:
+        category = request.args.get('category', None)
+        
+        # Query updates
+        query = Update.query.filter(
+            Update.state_codes.contains(state_code),
+            Update.is_approved == True
+        )
+        
+        if category:
+            query = query.filter(Update.category == category)
+        
+        updates = query.order_by(Update.date_published.desc()).limit(50).all()
+        
+        # Convert to JSON
+        result = {
+            'state': state_code,
+            'total': len(updates),
+            'updates': [update.to_dict() for update in updates]
+        }
+        
+        return jsonify(result), 200
+        
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/states/<state_code>/categories', methods=['GET'])
+def get_state_categories(state_code):
+    """
+    Get updates grouped by category for a state
+    This is what your frontend currently expects
+    """
+    try:
+        categories = {
+            'AI Policy Developments': [],
+            'Events': [],
+            'Investment Opportunities': [],
+            'AI Start-Up News': [],
+            'Relevant News/Articles': []
+        }
+        
+        updates = Update.query.filter(
+            Update.state_codes.contains(state_code),
+            Update.is_approved == True
+        ).order_by(Update.date_published.desc()).all()
+        
+        for update in updates:
+            if update.category in categories:
+                categories[update.category].append(update.to_dict())
+        
+        return jsonify({
+            'state': state_code,
+            'categories': categories
+        }), 200
+        
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/all-india/updates', methods=['GET'])
+def get_all_india_updates():
+    """
+    Get national-level updates
+    """
+    try:
+        updates = Update.query.filter(
+            Update.state_codes.contains('ALL'),
+            Update.is_approved == True
+        ).order_by(Update.date_published.desc()).limit(50).all()
+        
+        return jsonify({
+            'total': len(updates),
+            'updates': [update.to_dict() for update in updates]
+        }), 200
+        
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+# ============================================
+# ADMIN API ENDPOINTS
+# ============================================
+
+@app.route('/api/admin/updates', methods=['GET'])
+def admin_get_all_updates():
+    """
+    Get all updates (including unapproved) for admin review
+    """
+    try:
+        status = request.args.get('status', 'all')  # all, pending, approved
+        
+        query = Update.query
+        
+        if status == 'pending':
+            query = query.filter(Update.is_approved == False)
+        elif status == 'approved':
+            query = query.filter(Update.is_approved == True)
+        
+        updates = query.order_by(Update.date_scraped.desc()).limit(100).all()
+        
+        return jsonify({
+            'total': len(updates),
+            'updates': [update.to_dict() for update in updates]
+        }), 200
+        
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/admin/updates/<int:update_id>', methods=['PUT'])
+def admin_update_update(update_id):
+    """
+    Edit an update (title, summary, tags, etc.)
+    """
+    try:
+        update = Update.query.get_or_404(update_id)
+        data = request.json
+        
+        # Update fields
+        if 'title' in data:
+            update.title = data['title']
+        if 'summary' in data:
+            update.summary = data['summary']
+        if 'tags' in data:
+            update.tags = data['tags']
+        if 'category' in data:
+            update.category = data['category']
+        if 'is_approved' in data:
+            update.is_approved = data['is_approved']
+        
+        db.session.commit()
+        
+        return jsonify({
+            'message': 'Update modified successfully',
+            'update': update.to_dict()
+        }), 200
+        
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/admin/updates/<int:update_id>', methods=['DELETE'])
+def admin_delete_update(update_id):
+    """
+    Delete an update
+    """
+    try:
+        update = Update.query.get_or_404(update_id)
+        db.session.delete(update)
+        db.session.commit()
+        
+        return jsonify({'message': 'Update deleted successfully'}), 200
+        
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/admin/updates/<int:update_id>/approve', methods=['POST'])
+def admin_approve_update(update_id):
+    """
+    Approve an update
+    """
+    try:
+        update = Update.query.get_or_404(update_id)
+        update.is_approved = True
+        db.session.commit()
+        
+        return jsonify({
+            'message': 'Update approved',
+            'update': update.to_dict()
+        }), 200
+        
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'error': str(e)}), 500
+
+
+# ============================================
+# SCRAPING TRIGGER ENDPOINTS
+# ============================================
+
+@app.route('/api/admin/scrape/run', methods=['POST'])
+def run_scraper():
+    """
+    Manually trigger scraping job
+    """
+    try:
+        from scrapers.orchestrator import run_all_scrapers
+        
+        result = run_all_scrapers()
+        
+        return jsonify({
+            'message': 'Scraping completed',
+            'result': result
+        }), 200
+        
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+# ============================================
+# HEALTH CHECK
+# ============================================
+
+@app.route('/api/health', methods=['GET'])
+def health_check():
+    """
+    Check if API is running
+    """
+    return jsonify({
+        'status': 'healthy',
+        'timestamp': datetime.utcnow().isoformat(),
+        'database': 'connected' if db else 'disconnected'
+    }), 200
+
+
+@app.route('/', methods=['GET'])
+def home():
+    """
+    API documentation page
+    """
+    return jsonify({
+        'message': 'India AI Policy Tracker API',
+        'version': '1.0.0',
+        'endpoints': {
+            'public': {
+                'GET /api/states/<code>/updates': 'Get updates for a state',
+                'GET /api/states/<code>/categories': 'Get categorized updates',
+                'GET /api/all-india/updates': 'Get national updates'
+            },
+            'admin': {
+                'GET /api/admin/updates': 'Get all updates',
+                'PUT /api/admin/updates/<id>': 'Update an update',
+                'DELETE /api/admin/updates/<id>': 'Delete an update',
+                'POST /api/admin/updates/<id>/approve': 'Approve an update',
+                'POST /api/admin/scrape/run': 'Run scraper manually'
+            }
+        }
+    }), 200
+
+
+if __name__ == '__main__':
+    # Run the app
+    port = int(os.getenv('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)

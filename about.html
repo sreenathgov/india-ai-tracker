@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About & Disclosures - India AI Policy Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles-v2.css?v=13">
+    <style>
+        /* Override the overflow:hidden from main stylesheet */
+        html {
+            height: auto !important;
+            overflow: auto !important;
+        }
+
+        body.about-page {
+            height: auto !important;
+            overflow: auto !important;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .about-header {
+            background: var(--accent-primary);
+            color: var(--bg-primary);
+            padding: 1.25rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .about-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .about-header a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.8125rem;
+            transition: color 0.15s ease;
+        }
+
+        .about-header a:hover {
+            color: var(--bg-primary);
+        }
+
+        .about-content {
+            flex: 1;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .about-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .about-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .about-section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .about-section h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0.75rem;
+        }
+
+        .about-section p {
+            font-size: 0.9375rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+
+        .about-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-section a {
+            color: rgba(180, 200, 255, 0.9);
+            text-decoration: none;
+        }
+
+        .about-section a:hover {
+            color: rgba(255, 255, 255, 1);
+            text-decoration: underline;
+        }
+
+        .about-footer {
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .about-header {
+                flex-direction: column;
+                gap: 0.75rem;
+                text-align: center;
+                padding: 1rem 1.5rem;
+            }
+
+            .about-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .about-content h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="about-page">
+    <header class="about-header">
+        <h1>About & Disclosures</h1>
+        <a href="index.html">&larr; Back to Tracker</a>
+    </header>
+
+    <main class="about-content">
+        <h2>India AI Policy Tracker</h2>
+
+        <section class="about-section">
+            <h3>What this site is</h3>
+            <p>The India AI Policy Tracker is an independent platform that aggregates publicly available news, policy updates, government announcements, and industry developments related to artificial intelligence across Indian states and at the national level.</p>
+            <p>The site is intended as a research and discovery tool for policymakers, researchers, journalists, and professionals seeking to monitor AI governance and technology developments in India.</p>
+        </section>
+
+        <section class="about-section">
+            <h3>What this site is not</h3>
+            <p>This platform does not produce original reporting, analysis, or editorial content. It does not claim ownership over any third-party material, nor does it host, reproduce, or republish full articles from external sources.</p>
+            <p>The site is not affiliated with any government body, news organisation, or commercial entity. All content aggregated here remains the intellectual property of its original publishers.</p>
+        </section>
+
+        <section class="about-section">
+            <h3>Attribution & traffic intent</h3>
+            <p>Every entry on this platform links directly to the original source article or announcement. Brief summaries are provided solely to aid discovery and contextual understanding, not to substitute for or compete with original reporting.</p>
+            <p>The explicit intent of this platform is to direct readers to primary publishers and original sources. No content is paywalled, monetised, or presented in a manner intended to divert traffic from source publications.</p>
+        </section>
+
+        <section class="about-section">
+            <h3>Feedback & corrections</h3>
+            <p>Accuracy and fair representation are priorities for this project. If you are a publisher, researcher, or reader who has identified an error, wishes to request removal of a specific entry, or would like to suggest an update or missing development, please contact <a href="mailto:sreenath.govin@gmail.com">sreenath.govin@gmail.com</a>.</p>
+            <p>All reasonable requests will be reviewed and addressed promptly.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer about-footer">
+        <p class="footer-attribution">Built and maintained by Sreenath Govindarajan</p>
+        <p class="footer-links">
+            <a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="separator">·</span>
+            <a href="mailto:sreenath.govin@gmail.com">Email</a>
+            <span class="separator">·</span>
+            <a href="about.html">About this project</a>
+        </p>
+        <p class="footer-description">Developed independently by an international law researcher focused on AI governance, technology policy, and Indian regulatory developments.</p>
+    </footer>
+</body>
+</html>
