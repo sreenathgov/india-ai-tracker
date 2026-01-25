@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Test - Diagnostic</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            height: 100dvh;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            height: 100dvh;
+            overflow: hidden;
+            background: #0a2f52;
+        }
+
+        .header {
+            flex-shrink: 0;
+            height: 48px;
+            background: #0a2f52;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            padding: 0 1rem;
+            color: #F4EBD0;
+        }
+
+        .hero {
+            flex-shrink: 0;
+            padding: 0.5rem 1rem;
+            text-align: center;
+            color: #F4EBD0;
+            background: #0a2f52;
+        }
+
+        .main-container {
+            flex: 1 1 0%;
+            min-height: 0;
+            position: relative;
+            padding: 0.5rem;
+            overflow: hidden;
+        }
+
+        /* Force the viewport height on mobile via JS */
+        html, body, .page-wrapper {
+            height: calc(var(--vh, 1vh) * 100);
+        }
+
+        .panel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            max-height: 100%;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .panel-header {
+            flex-shrink: 0;
+            padding: 1rem;
+            background: #F4EBD0;
+            border-bottom: 2px solid #B45309;
+        }
+
+        .panel-content {
+            flex: 1 1 0%;
+            min-height: 0;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 1rem;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        .update-item {
+            background: white;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            border-radius: 6px;
+            border-left: 3px solid #142166;
+        }
+
+        .update-title {
+            font-weight: 600;
+            color: #142166;
+            margin-bottom: 0.25rem;
+        }
+
+        .update-summary {
+            font-size: 0.875rem;
+            color: #4A4A4C;
+            line-height: 1.5;
+        }
+
+        .footer {
+            flex-shrink: 0;
+            padding: 0.5rem;
+            text-align: center;
+            color: #F4EBD0;
+            font-size: 0.75rem;
+            opacity: 0.5;
+        }
+
+        .debug-info {
+            position: fixed;
+            bottom: 60px;
+            left: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: #0f0;
+            font-family: monospace;
+            font-size: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <span>KANAN LABS - Scroll Test</span>
+        </header>
+
+        <section class="hero">
+            <h1>Scroll Diagnostic</h1>
+        </section>
+
+        <main class="main-container">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>Test Panel - 30 Items</h2>
+                </div>
+                <div class="panel-content" id="panelContent">
+                    <!-- Items will be generated -->
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            Footer - Should always be visible
+        </footer>
+    </div>
+
+    <div class="debug-info" id="debug"></div>
+
+    <script>
+        // Generate 30 test items
+        const content = document.getElementById('panelContent');
+        let html = '';
+        for (let i = 1; i <= 30; i++) {
+            html += `
+                <div class="update-item">
+                    <div class="update-title">Update Item #${i}</div>
+                    <div class="update-summary">This is a test update item to verify scrolling behavior. It should be scrollable on all devices including mobile phones and tablets.</div>
+                </div>
+            `;
+        }
+        content.innerHTML = html;
+
+        // Set viewport height CSS variable
+        function setViewportHeight() {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        setViewportHeight();
+        window.addEventListener('resize', setViewportHeight);
+
+        // Debug info
+        function updateDebug() {
+            const debug = document.getElementById('debug');
+            const panel = document.querySelector('.panel-content');
+            const main = document.querySelector('.main-container');
+            const wrapper = document.querySelector('.page-wrapper');
+
+            debug.innerHTML = `
+                viewport: ${window.innerWidth}x${window.innerHeight}<br>
+                wrapper: ${wrapper.offsetHeight}px (computed: ${getComputedStyle(wrapper).height})<br>
+                main: ${main.offsetHeight}px (computed: ${getComputedStyle(main).height})<br>
+                panel: ${document.querySelector('.panel').offsetHeight}px<br>
+                content: ${panel.offsetHeight}px, scroll: ${panel.scrollHeight}px<br>
+                scrollTop: ${panel.scrollTop} / ${panel.scrollHeight - panel.offsetHeight}
+            `;
+        }
+
+        updateDebug();
+        window.addEventListener('resize', updateDebug);
+        document.querySelector('.panel-content').addEventListener('scroll', updateDebug);
+    </script>
+</body>
+</html>

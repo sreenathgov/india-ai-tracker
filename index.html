@@ -6,40 +6,50 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>India AI Policy Tracker</title>
+    <title>India AI Tracker | Kanan Labs</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <link rel="stylesheet" href="css/styles-v2.css?v=13">
+    <link rel="stylesheet" href="css/styles-v2.css?v=17">
 </head>
 <body>
     <div class="page-wrapper">
-        <header>
-            <div class="header-content">
-                <h1>India AI Policy Tracker</h1>
-                <p class="subtitle">Real-time AI Governance & Development Monitoring</p>
+        <!-- LAYER 1: Institutional Header (Persistent) -->
+        <header class="institutional-header">
+            <a href="index.html" aria-label="Kanan Labs Home">
+                <img src="assets/images/KANAN-LABS-WEBSITELOGO.png" alt="Kanan Labs" class="brand-logo">
+            </a>
+            <nav class="institutional-nav">
+                <a href="about.html">About</a>
+                <a href="mailto:sreenath.govin@gmail.com">Contact</a>
+            </nav>
+        </header>
+
+        <!-- LAYER 2: Product Hero (Compact) -->
+        <section class="product-hero">
+            <h1>India AI Tracker</h1>
+            <div class="product-controls">
+                <!-- View Mode Toggle -->
+                <div class="view-toggle" role="tablist">
+                    <button class="toggle-option active" onclick="setViewMode('state')" role="tab" aria-selected="true">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        State View
+                    </button>
+                    <button class="toggle-option" onclick="setViewMode('allIndia')" role="tab" aria-selected="false">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        All India
+                    </button>
+                    <div class="toggle-indicator"></div>
+                </div>
                 <p class="system-status" id="lastUpdated"></p>
             </div>
-
-            <!-- View Mode Toggle -->
-            <div class="view-toggle" role="tablist">
-                <button class="toggle-option active" onclick="setViewMode('state')" role="tab" aria-selected="true">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                        <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
-                    State View
-                </button>
-                <button class="toggle-option" onclick="setViewMode('allIndia')" role="tab" aria-selected="false">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                    </svg>
-                    All India
-                </button>
-                <div class="toggle-indicator"></div>
-            </div>
-        </header>
+        </section>
 
         <main class="main-container">
             <!-- Map Frame - contains the map with rounded corners and shadow -->
@@ -83,18 +93,17 @@
         </main>
 
         <footer class="site-footer">
-            <p class="footer-attribution">Built and maintained by Sreenath Govindarajan</p>
+            <p class="footer-byline">A public AI governance intelligence tool by Sreenath Govindarajan, Founder of Kanan Labs</p>
             <p class="footer-links">
+                <a href="about.html">About</a>
+                <span class="separator">·</span>
+                <a href="mailto:sreenath.govin@gmail.com">Contact</a>
+                <span class="separator">·</span>
                 <a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank" rel="noopener">LinkedIn</a>
-                <span class="separator">·</span>
-                <a href="mailto:sreenath.govin@gmail.com">Email</a>
-                <span class="separator">·</span>
-                <a href="about.html">About this project</a>
             </p>
-            <p class="footer-description">Developed independently by an international law researcher focused on AI governance, technology policy, and Indian regulatory developments.</p>
         </footer>
     </div>
 
-    <script src="js/app-final.js?v=13"></script>
+    <script src="js/app-final.js?v=14"></script>
 </body>
 </html>

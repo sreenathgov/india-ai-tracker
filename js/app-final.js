@@ -576,10 +576,24 @@ function initInfoTooltip() {
     });
 }
 
+// Fix mobile viewport height issues
+function setMobileViewportHeight() {
+    // Set CSS custom property for actual viewport height
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initMap();
     fetchLastUpdated();
     initInfoTooltip();
+
+    // Initialize mobile viewport fix
+    setMobileViewportHeight();
+    window.addEventListener('resize', setMobileViewportHeight);
+    window.addEventListener('orientationchange', () => {
+        setTimeout(setMobileViewportHeight, 100);
+    });
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {

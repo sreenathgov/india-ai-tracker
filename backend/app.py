@@ -6,7 +6,7 @@ from flask import Flask, jsonify, request, session, redirect, url_for, render_te
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from functools import wraps
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import os
 import json
 from dotenv import load_dotenv
@@ -298,9 +298,14 @@ def get_last_updated():
         ).order_by(Update.date_scraped.desc()).first()
 
         if latest and latest.date_scraped:
+            # Convert UTC to IST (UTC+5:30)
+            utc_time = latest.date_scraped.replace(tzinfo=timezone.utc)
+            ist_offset = timedelta(hours=5, minutes=30)
+            ist_time = utc_time + ist_offset
+
             return jsonify({
-                'last_updated': latest.date_scraped.isoformat(),
-                'formatted': latest.date_scraped.strftime('%d %b %Y, %H:%M')
+                'last_updated': ist_time.isoformat(),
+                'formatted': ist_time.strftime('%d %b %Y, %H:%M') + ' IST'
             })
         else:
             return jsonify({
