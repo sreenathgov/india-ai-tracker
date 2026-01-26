@@ -74,6 +74,8 @@ let recentUpdatesCache = {};
 let currentViewMode = 'state'; // 'state' or 'allIndia'
 let currentCategoriesData = null; // Store fetched categories for expansion
 let selectedLayer = null; // Track the currently selected GeoJSON layer for centering
+let currentPage = 1; // Pagination state for currently expanded category
+let currentExpandedCategory = null; // Track which category is currently expanded
 
 async function initMap() {
     map = L.map('map', { center: [22.5, 79], zoom: 5 });
@@ -181,6 +183,10 @@ async function openStatePanel(stateName) {
         return;
     }
 
+    // Reset pagination state when opening a new state
+    currentPage = 1;
+    currentExpandedCategory = null;
+
     showPanel(stateName, '<div class="loading">Loading...</div>');
 
     const categories = await fetchStateData(stateCode);
@@ -244,6 +250,12 @@ function expandCategory(categoryName) {
     const updates = currentCategoriesData[categoryName] || [];
     const config = CATEGORY_CONFIG[categoryName];
 
+    // Reset pagination to page 1 if switching to a different category
+    if (currentExpandedCategory !== categoryName) {
+        currentPage = 1;
+        currentExpandedCategory = categoryName;
+    }
+
     // Find the correct expanded content container based on current view mode
     let expandedContent;
     if (currentViewMode === 'allIndia') {
@@ -282,6 +294,20 @@ function expandCategory(categoryName) {
     // Sort updates by date (most recent first)
     updates.sort((a, b) => new Date(b.date_published) - new Date(a.date_published));
 
+    // Pagination constants - 6 items per page on mobile, 10 on desktop/tablet
+    const isMobile = window.innerWidth <= 768;
+    const ITEMS_PER_PAGE = isMobile ? 6 : 10;
+    const totalPages = Math.ceil(updates.length / ITEMS_PER_PAGE);
+    
+    // Ensure currentPage is within valid range
+    if (currentPage < 1) currentPage = 1;
+    if (currentPage > totalPages && totalPages > 0) currentPage = totalPages;
+
+    // Calculate slice indices for current page
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    const paginatedUpdates = updates.slice(startIndex, endIndex);
+
     let html = `
         <div class="expanded-header">
             <h3>${config.icon} ${categoryName}</h3>
@@ -294,7 +320,7 @@ function expandCategory(categoryName) {
         <div class="updates-list-expanded">
     `;
 
-    updates.forEach(update => {
+    paginatedUpdates.forEach(update => {
         const date = update.date_published
             ? new Date(update.date_published).toLocaleDateString('en-US', {
                 month: 'short',
@@ -313,8 +339,102 @@ function expandCategory(categoryName) {
     });
 
     html += '</div>';
+
+    // Add pagination controls if there are multiple pages
+    if (totalPages > 1) {
+        const isFirstPage = currentPage === 1;
+        const isLastPage = currentPage === totalPages;
+
+        html += `
+            <div class="pagination-controls">
+                <button class="pagination-btn pagination-prev" ${isFirstPage ? 'disabled' : ''} onclick="goToPreviousPage('${categoryName}')">
+                    Previous
+                </button>
+                <span class="pagination-info">Page ${currentPage} of ${totalPages}</span>
+                <button class="pagination-btn pagination-next" ${isLastPage ? 'disabled' : ''} onclick="goToNextPage('${categoryName}')">
+                    Next
+                </button>
+            </div>
+        `;
+    }
+
     expandedContent.innerHTML = html;
+    
+    // Force reflow before adding visible class to ensure proper rendering
+    expandedContent.offsetHeight;
+    
     expandedContent.classList.add('visible');
+
+    // Scroll to top of expanded content after rendering
+    // Use requestAnimationFrame to ensure DOM is updated and layout is calculated
+    requestAnimationFrame(() => {
+        scrollToTopOfExpandedContent(expandedContent);
+    });
+}
+
+// Scroll to top of expanded content
+function scrollToTopOfExpandedContent(expandedContent) {
+    if (!expandedContent) return;
+    
+    // Find the parent scrollable container
+    let scrollableContainer;
+    if (currentViewMode === 'allIndia') {
+        scrollableContainer = document.querySelector('.all-india-content');
+    } else {
+        scrollableContainer = document.querySelector('.panel-content');
+    }
+    
+    if (scrollableContainer && expandedContent) {
+        // Find the expanded header (first child) to scroll to
+        const expandedHeader = expandedContent.querySelector('.expanded-header');
+        if (expandedHeader) {
+            // Calculate position relative to scrollable container
+            const containerRect = scrollableContainer.getBoundingClientRect();
+            const headerRect = expandedHeader.getBoundingClientRect();
+            const scrollTop = scrollableContainer.scrollTop;
+            const relativeTop = headerRect.top - containerRect.top + scrollTop;
+            
+            // Scroll to the header with smooth behavior
+            scrollableContainer.scrollTo({
+                top: Math.max(0, relativeTop - 10), // Small offset for better visibility
+                behavior: 'smooth'
+            });
+        }
+    }
+}
+
+// Pagination navigation helper functions
+function goToPage(categoryName, page) {
+    if (!currentCategoriesData) return;
+    const updates = currentCategoriesData[categoryName] || [];
+    const isMobile = window.innerWidth <= 768;
+    const ITEMS_PER_PAGE = isMobile ? 6 : 10;
+    const totalPages = Math.ceil(updates.length / ITEMS_PER_PAGE);
+    
+    // Validate page number
+    if (page < 1) page = 1;
+    if (page > totalPages) page = totalPages;
+    
+    currentPage = page;
+    expandCategory(categoryName);
+}
+
+function goToPreviousPage(categoryName) {
+    if (currentPage > 1) {
+        goToPage(categoryName, currentPage - 1);
+    }
+}
+
+function goToNextPage(categoryName) {
+    if (!currentCategoriesData) return;
+    const updates = currentCategoriesData[categoryName] || [];
+    const isMobile = window.innerWidth <= 768;
+    const ITEMS_PER_PAGE = isMobile ? 6 : 10;
+    const totalPages = Math.ceil(updates.length / ITEMS_PER_PAGE);
+    
+    if (currentPage < totalPages) {
+        goToPage(categoryName, currentPage + 1);
+    }
 }
 
 // Collapse expanded category
@@ -431,6 +551,10 @@ function setViewMode(mode) {
     const allIndiaPanel = document.getElementById('allIndiaPanel');
     const viewToggle = document.querySelector('.view-toggle');
     const toggleOptions = viewToggle.querySelectorAll('.toggle-option');
+
+    // Reset pagination state when switching view modes
+    currentPage = 1;
+    currentExpandedCategory = null;
 
     // Close any open state panel first (without triggering another view change)
     if (currentPanel) {
