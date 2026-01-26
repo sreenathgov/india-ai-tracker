@@ -44,6 +44,16 @@ class Update:
             # Admin Control
             is_approved = db.Column(db.Boolean, default=False)
             admin_notes = db.Column(db.Text)
+
+            # Processing State Management (added for batch processing)
+            processing_state = db.Column(
+                db.String(20),
+                default='PROCESSED',  # Existing articles default to PROCESSED
+                index=True
+            )  # Values: SCRAPED, PROCESSING, PROCESSED, FAILED
+            processing_attempts = db.Column(db.Integer, default=0)
+            last_processing_error = db.Column(db.Text)
+            last_processing_attempt = db.Column(db.DateTime)
             
             def to_dict(self):
                 """Convert to JSON-friendly dictionary"""
@@ -60,7 +70,9 @@ class Update:
                     'tags': json.loads(self.tags) if self.tags else [],
                     'is_ai_relevant': self.is_ai_relevant,
                     'relevance_score': self.relevance_score,
-                    'is_approved': self.is_approved
+                    'is_approved': self.is_approved,
+                    'processing_state': self.processing_state,
+                    'processing_attempts': self.processing_attempts
                 }
             
             def __repr__(self):

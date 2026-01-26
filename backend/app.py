@@ -322,7 +322,8 @@ def get_state_categories(state_code):
         updates = Update.query.filter(
             Update.state_codes.contains(state_code),
             Update.is_approved == True,
-            (Update.is_deleted == False) | (Update.is_deleted == None)
+            (Update.is_deleted == False) | (Update.is_deleted == None),
+            Update.processing_state == 'PROCESSED'  # Only show fully processed articles
         ).order_by(Update.date_published.desc()).all()
 
         # New category structure
@@ -349,7 +350,8 @@ def get_all_india_categories():
         updates = Update.query.filter(
             Update.state_codes.contains('IN'),
             Update.is_approved == True,
-            (Update.is_deleted == False) | (Update.is_deleted == None)
+            (Update.is_deleted == False) | (Update.is_deleted == None),
+            Update.processing_state == 'PROCESSED'  # Only show fully processed articles
         ).order_by(Update.date_published.desc()).all()
 
         categories = {
@@ -379,7 +381,8 @@ def get_recent_update_counts():
         recent_updates = Update.query.filter(
             Update.is_approved == True,
             Update.date_published >= seven_days_ago,
-            (Update.is_deleted == False) | (Update.is_deleted == None)
+            (Update.is_deleted == False) | (Update.is_deleted == None),
+            Update.processing_state == 'PROCESSED'  # Only show fully processed articles
         ).all()
 
         # Count updates per state
