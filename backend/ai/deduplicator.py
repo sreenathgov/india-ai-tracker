@@ -40,8 +40,10 @@ class Deduplicator:
     PARTIAL_THRESHOLD = 90    # partial_ratio - when one title is subset of another
     COMBINED_THRESHOLD = 82   # weighted average of multiple algorithms
 
-    # Time window for considering articles as potentially duplicate (hours)
-    TIME_WINDOW_HOURS = 72
+    # Rolling window for duplicate detection (days)
+    # Only articles published within this window are compared for duplicates
+    # This prevents expensive full-database scans and focuses on recent news
+    DEDUP_WINDOW_DAYS = 14  # Configurable: compare against last 14 days only
 
     # Patterns to extract key entities for comparison
     AMOUNT_PATTERN = re.compile(
@@ -378,27 +380,37 @@ class Deduplicator:
 
         return distinguishing
 
-    def _load_database_titles(self, lookback_days=7):
+    def _load_database_titles(self, lookback_days=None):
         """
         Load recent titles from database for cross-cycle deduplication.
 
+        Uses a rolling window approach: only articles from the last N days are
+        compared for duplicates. This prevents expensive full-database scans
+        and focuses on recent news events.
+
         Args:
-            lookback_days: Number of days to look back for potential duplicates
+            lookback_days: Number of days to look back (defaults to DEDUP_WINDOW_DAYS)
         """
         if self._db_titles_loaded:
             return
+
+        # Use class constant if not specified
+        if lookback_days is None:
+            lookback_days = self.DEDUP_WINDOW_DAYS
 
         try:
             from app import app, db, Update
 
             with app.app_context():
+                # Calculate cutoff date for rolling window
                 cutoff_date = datetime.utcnow() - timedelta(days=lookback_days)
 
-                # Get recent non-deleted updates
+                # Query only articles within the rolling window
+                # NOTE: This query requires an index on date_scraped for performance
                 recent_updates = Update.query.filter(
                     Update.date_scraped >= cutoff_date,
                     (Update.is_deleted == False) | (Update.is_deleted == None)
-                ).all()
+                ).order_by(Update.date_scraped.desc()).all()
 
                 for update in recent_updates:
                     entities = self._extract_entities(update.title)
@@ -411,7 +423,8 @@ class Deduplicator:
                     self.seen_urls.add(update.url)
                     self.seen_normalized_urls.add(self._normalize_url(update.url))
 
-                print(f"  [DEDUP] Loaded {len(self._db_titles)} titles from database (last {lookback_days} days)")
+                print(f"  [DEDUP] Loaded {len(self._db_titles)} titles from database")
+                print(f"  [DEDUP] Rolling window: Last {lookback_days} days (from {cutoff_date.date()} onwards)")
                 self._db_titles_loaded = True
 
         except Exception as e:
