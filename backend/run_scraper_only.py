@@ -183,7 +183,6 @@ def run_scraper_only(target_states=None):
                     date_published=article.get('date_published'),
                     date_scraped=datetime.utcnow(),
                     source_name=article.get('source_name'),
-                    source_url=article.get('source_url'),
                     processing_state='SCRAPED',  # NOT processed yet
                     processing_attempts=0
                 )
