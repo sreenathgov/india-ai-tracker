@@ -227,6 +227,10 @@ class Update(db.Model):
     last_processing_error = db.Column(db.Text)
     last_processing_attempt = db.Column(db.DateTime)
 
+    # Layer 3 Premium Processing (importance scoring)
+    importance_score = db.Column(db.Float, default=0.0)  # Importance score from Layer 3
+    premium_processed = db.Column(db.Boolean, default=False)  # Whether refined by Layer 3
+
     def to_dict(self):
         return {
             'id': self.id,
@@ -240,7 +244,9 @@ class Update(db.Model):
             'is_approved': self.is_approved,
             'is_deleted': self.is_deleted,
             'processing_state': self.processing_state,
-            'processing_attempts': self.processing_attempts
+            'processing_attempts': self.processing_attempts,
+            'importance_score': self.importance_score,
+            'premium_processed': self.premium_processed
         }
 
 
