@@ -1,0 +1,127 @@
+{
+  "timestamp": "2026-01-27T23:41:06.719639",
+  "total_tested": 100,
+  "stats": {
+    "total": 100,
+    "passed": 89,
+    "rejected": 0,
+    "borderline": 11,
+    "pass_rate": 0.89,
+    "confidence_distribution": {
+      "high": 89,
+      "medium": 0,
+      "borderline": 11,
+      "low": 0
+    }
+  },
+  "passed_sample": [
+    {
+      "title": "Why Elon Musk's Grok is in trouble in India while ChatGPT and Gemini are not\u2014for now",
+      "score": 200,
+      "confidence": "high"
+    },
+    {
+      "title": "Mint Explainer | Grok AI controversy: Why Elon Musk\u2019s chatbot has alarmed India\u2019s IT ministry",
+      "score": 210,
+      "confidence": "high"
+    },
+    {
+      "title": "OpenAI\u2019s Bengaluru Workshop Helps Nonprofits Scale AI for Social Impact",
+      "score": 200,
+      "confidence": "high"
+    },
+    {
+      "title": "Rajasthan CM outlines AI roadmap for Rajasthan at Regional AI Impact Conference 2026",
+      "score": 150,
+      "confidence": "high"
+    },
+    {
+      "title": "Google launches Market Access Program to help Indian AI startups scale globally",
+      "score": 210,
+      "confidence": "high"
+    },
+    {
+      "title": "AI will power the next wave of India\u2019s tech startup evolution: National Startup Day",
+      "score": 210,
+      "confidence": "high"
+    },
+    {
+      "title": "The AI reckoning for Indian IT: Disrupt now or decline",
+      "score": 160,
+      "confidence": "high"
+    },
+    {
+      "title": "From silicon to systems: India\u2019s integrated approach to semiconductors and AI",
+      "score": 150,
+      "confidence": "high"
+    },
+    {
+      "title": "India targets large-scale skilling in AI, cybersecurity and quantum technologies by 2030",
+      "score": 160,
+      "confidence": "high"
+    },
+    {
+      "title": "AI to add $1.7 trillion to India&#039;s economy by 2035: Govt",
+      "score": 200,
+      "confidence": "high"
+    }
+  ],
+  "rejected_sample": [],
+  "borderline_all": [
+    {
+      "title": "RCB to Collaborate with Staqu for AI-Enabled Crowd Management at Chinnaswamy Stadium",
+      "score": 100,
+      "url": "https://analyticsindiamag.com/ai-news-updates/rcb-to-collaborate-with-staqu-for-ai-enabled-crowd-management-at-chinnaswamy-stadium/"
+    },
+    {
+      "title": "Nagpur airport may get AI facial recognition to identify criminals",
+      "score": 100,
+      "url": "https://timesofindia.indiatimes.com/city/nagpur/nagpur-airport-may-get-ai-facial-recognition-to-identify-criminals/articleshow/126715211.cms"
+    },
+    {
+      "title": "Tagbin\u2019s Immersive Media Platform Finds Enterprise Niche In The AI Age",
+      "score": 150,
+      "url": "https://inc42.com/startups/tagbins-immersive-media-platform-finds-enterprise-niche-in-the-ai-age/"
+    },
+    {
+      "title": "LightSpeed Photonics Bets On Optical Tech To Ease AI Data Centre Bottlenecks",
+      "score": 150,
+      "url": "https://inc42.com/startups/lightspeed-photonics-bets-on-optical-tech-to-ease-ai-data-centre-bottlenecks/"
+    },
+    {
+      "title": "How National Deep Tech Startup Policy can Help Start a New Era in Innovation",
+      "score": 100,
+      "url": "https://t-hub.co/how-national-deep-tech-startup-policy-can-help-start-a-new-era-in-innovation/"
+    },
+    {
+      "title": "Dunzo co-founder\u2019s vibe-coding startup Emergent raises $70M from Khosla Ventures, SoftBank Vision Fund 2",
+      "score": 100,
+      "url": "https://yourstory.com/2026/01/dunzo-co-founder-vibe-coding-startup-emergent-series-b-khosla-ventures-softbank-vision"
+    },
+    {
+      "title": "Digital clinic Pinky Promise raises $1 Mn led by Rebalance Angel Community",
+      "score": 100,
+      "url": "https://entrackr.com/snippets/digital-clinic-pinky-promise-raises-1-mn-led-by-rebalance-angel-community-11015492"
+    },
+    {
+      "title": "FireAI raises early-stage funding from IPV, VCats, and SucSEED Indovation",
+      "score": 100,
+      "url": "https://entrackr.com/snippets/fireai-raises-early-stage-funding-from-ipv-vcats-and-sucseed-indovation-11015328"
+    },
+    {
+      "title": "CBDT awards \u20b93000 crore contract to LTIMindtree for building AI-powered tax analytics platform",
+      "score": 100,
+      "url": "https://government.economictimes.indiatimes.com/news/technology/cbdt-awards-3000-crore-contract-to-ltimindtree-for-building-ai-powered-tax-analytics-platform/126559012"
+    },
+    {
+      "title": "AI-system to challan vehicles sans valid docus at Goa border checkposts",
+      "score": 100,
+      "url": "https://b2b.economictimes.indiatimes.com/news/goa/ai-system-to-challan-vehicles-sans-valid-docus-at-goa-border-checkposts/125869333"
+    },
+    {
+      "title": "T-Hub and Hexagon selects 12 Startups for LAB32 Cohort, Driving Innovation in AI and Digital Reality",
+      "score": 150,
+      "url": "https://t-hub.co/t-hub-and-hexagon-selects-12-startups-for-lab32-cohort-driving-innovation-in-ai-and-digital-reality/"
+    }
+  ]
+}

@@ -1,0 +1,503 @@
+# India AI Tracker - Filter Configuration
+# This file contains all keywords, weights, and scoring rules
+# You can edit this file without coding!
+
+# ============================================================
+# AI KEYWORDS
+# ============================================================
+
+ai_keywords:
+  # Strong AI signals - must appear for consideration (weight: 100)
+  strong:
+    - keyword: "(?<![a-z])\\bai\\b(?![a-z])"
+      weight: 100
+      categories: ["ai_tech"]
+      importance_boost: 0
+      description: "AI as standalone word"
+
+    - keyword: "\\bA\\.I\\.\\b"
+      weight: 100
+      categories: ["ai_tech"]
+      importance_boost: 0
+      description: "A.I. with periods"
+
+    - keyword: "\\bartificial intelligence\\b"
+      weight: 100
+      categories: ["ai_tech"]
+      importance_boost: 0
+
+    - keyword: "\\bmachine learning\\b"
+      weight: 100
+      categories: ["ai_tech", "research"]
+      importance_boost: 0
+
+    - keyword: "\\bml\\s+model"
+      weight: 100
+      categories: ["ai_tech"]
+      importance_boost: 0
+
+    - keyword: "\\bdeep learning\\b"
+      weight: 100
+      categories: ["ai_tech", "research"]
+      importance_boost: 0
+
+    - keyword: "\\bneural network"
+      weight: 100
+      categories: ["ai_tech", "research"]
+      importance_boost: 0
+
+    - keyword: "\\bllm\\b"
+      weight: 100
+      categories: ["ai_tech", "products"]
+      importance_boost: 5
+
+    - keyword: "\\bllms\\b"
+      weight: 100
+      categories: ["ai_tech", "products"]
+      importance_boost: 5
+
+    - keyword: "\\blarge language model"
+      weight: 100
+      categories: ["ai_tech", "products"]
+      importance_boost: 5
+
+    - keyword: "\\bgenerative ai\\b"
+      weight: 100
+      categories: ["ai_tech", "products"]
+      importance_boost: 5
+
+    - keyword: "\\bgen ai\\b"
+      weight: 100
+      categories: ["ai_tech", "products"]
+      importance_boost: 5
+
+    - keyword: "\\bgenai\\b"
+      weight: 100
+      categories: ["ai_tech", "products"]
+      importance_boost: 5
+
+  # AI products and services (weight: 80-100)
+  products:
+    - keyword: "\\bgpt[\\-\\s]?\\d*\\b"
+      weight: 90
+      categories: ["ai_products"]
+      importance_boost: 5
+      description: "GPT, GPT-4, GPT4"
+
+    - keyword: "\\bchatgpt\\b"
+      weight: 90
+      categories: ["ai_products"]
+      importance_boost: 5
+
+    - keyword: "\\bgemini\\b"
+      weight: 90
+      categories: ["ai_products"]
+      importance_boost: 5
+
+    - keyword: "\\bclaude\\b"
+      weight: 90
+      categories: ["ai_products"]
+      importance_boost: 5
+
+    - keyword: "\\bopenai\\b"
+      weight: 90
+      categories: ["ai_products", "companies"]
+      importance_boost: 5
+
+    - keyword: "\\banthropic\\b"
+      weight: 90
+      categories: ["ai_products", "companies"]
+      importance_boost: 5
+
+    - keyword: "\\bmistral ai\\b"
+      weight: 90
+      categories: ["ai_products", "companies"]
+      importance_boost: 5
+
+    - keyword: "\\bperplexity\\b"
+      weight: 90
+      categories: ["ai_products"]
+      importance_boost: 5
+
+    - keyword: "\\bdeepseek\\b"
+      weight: 90
+      categories: ["ai_products"]
+      importance_boost: 5
+
+    - keyword: "\\bgrok\\b"
+      weight: 90
+      categories: ["ai_products"]
+      importance_boost: 5
+
+    - keyword: "\\bsora\\b"
+      weight: 90
+      categories: ["ai_products"]
+      importance_boost: 5
+
+    - keyword: "\\bstable diffusion\\b"
+      weight: 80
+      categories: ["ai_products"]
+      importance_boost: 0
+
+    - keyword: "\\bmidjourney\\b"
+      weight: 80
+      categories: ["ai_products"]
+      importance_boost: 0
+
+    - keyword: "\\bdall-?e\\b"
+      weight: 80
+      categories: ["ai_products"]
+      importance_boost: 0
+
+  # AI infrastructure and technical (weight: 90-100)
+  infrastructure:
+    - keyword: "\\bai chip"
+      weight: 90
+      categories: ["ai_infrastructure", "hardware"]
+      importance_boost: 10
+
+    - keyword: "\\bai compute"
+      weight: 90
+      categories: ["ai_infrastructure"]
+      importance_boost: 10
+
+    - keyword: "\\bai infrastructure"
+      weight: 90
+      categories: ["ai_infrastructure"]
+      importance_boost: 10
+
+    - keyword: "\\bfoundation model"
+      weight: 90
+      categories: ["ai_tech"]
+      importance_boost: 10
+
+    - keyword: "\\bai model"
+      weight: 80
+      categories: ["ai_tech"]
+      importance_boost: 0
+
+    - keyword: "\\btransformer model"
+      weight: 90
+      categories: ["ai_tech"]
+      importance_boost: 5
+
+  # AI policy and governance (weight: 150 - HIGHEST)
+  policy:
+    - keyword: "\\bai policy"
+      weight: 150
+      categories: ["policy", "government"]
+      importance_boost: 30
+      description: "High importance for policy"
+
+    - keyword: "\\bai policies\\b"
+      weight: 150
+      categories: ["policy", "government"]
+      importance_boost: 30
+
+    - keyword: "\\bai governance"
+      weight: 150
+      categories: ["policy", "government"]
+      importance_boost: 35
+
+    - keyword: "\\bai regulation"
+      weight: 150
+      categories: ["policy", "government"]
+      importance_boost: 35
+
+    - keyword: "\\bai ethics\\b"
+      weight: 120
+      categories: ["policy", "ethics"]
+      importance_boost: 20
+
+    - keyword: "\\bai safety\\b"
+      weight: 120
+      categories: ["policy", "safety"]
+      importance_boost: 20
+
+  # AI business and ecosystem (weight: 70-80)
+  business:
+    - keyword: "\\bai startup"
+      weight: 80
+      categories: ["startups", "business"]
+      importance_boost: 5
+
+    - keyword: "\\bai startups\\b"
+      weight: 80
+      categories: ["startups", "business"]
+      importance_boost: 5
+
+    - keyword: "\\bai hub"
+      weight: 70
+      categories: ["business", "ecosystem"]
+      importance_boost: 10
+
+    - keyword: "\\bai centre\\b"
+      weight: 70
+      categories: ["business", "research"]
+      importance_boost: 10
+
+    - keyword: "\\bai center\\b"
+      weight: 70
+      categories: ["business", "research"]
+      importance_boost: 10
+
+    - keyword: "\\bai investment"
+      weight: 80
+      categories: ["business", "funding"]
+      importance_boost: 15
+
+    - keyword: "\\bai funding\\b"
+      weight: 80
+      categories: ["business", "funding"]
+      importance_boost: 15
+
+    - keyword: "\\bai adoption\\b"
+      weight: 70
+      categories: ["business"]
+      importance_boost: 5
+
+  # AI applications (weight: 60-70)
+  applications:
+    - keyword: "\\bai agent"
+      weight: 70
+      categories: ["ai_tech", "products"]
+      importance_boost: 5
+
+    - keyword: "\\bagentic\\b"
+      weight: 70
+      categories: ["ai_tech"]
+      importance_boost: 5
+
+    - keyword: "\\bconversational ai\\b"
+      weight: 70
+      categories: ["ai_products"]
+      importance_boost: 0
+
+    - keyword: "\\bchatbot\\b"
+      weight: 60
+      categories: ["ai_products"]
+      importance_boost: 0
+
+    - keyword: "\\bai assistant\\b"
+      weight: 70
+      categories: ["ai_products"]
+      importance_boost: 0
+
+    - keyword: "\\bvoice ai\\b"
+      weight: 70
+      categories: ["ai_products"]
+      importance_boost: 0
+
+    - keyword: "\\bcomputer vision\\b"
+      weight: 80
+      categories: ["ai_tech"]
+      importance_boost: 5
+
+    - keyword: "\\bnatural language processing\\b"
+      weight: 80
+      categories: ["ai_tech"]
+      importance_boost: 5
+
+    - keyword: "\\bnlp\\b"
+      weight: 70
+      categories: ["ai_tech"]
+      importance_boost: 0
+
+# ============================================================
+# INDIA RELEVANCE MARKERS
+# ============================================================
+
+india_markers:
+  # Tier 1: Strong India signals (50 points)
+  tier1_states:
+    weight: 50
+    importance_boost: 0
+    items:
+      - name: "India"
+        aliases: ["\\bindia\\b", "\\bindian\\b"]
+      - name: "Tamil Nadu"
+        aliases: ["\\btamil nadu\\b", "\\btamilnadu\\b", "\\btn\\b"]
+        code: "TN"
+      - name: "Karnataka"
+        aliases: ["\\bkarnataka\\b", "\\bbengaluru\\b", "\\bbangalore\\b"]
+        code: "KA"
+      - name: "Maharashtra"
+        aliases: ["\\bmaharashtra\\b", "\\bmumbai\\b", "\\bpune\\b"]
+        code: "MH"
+      - name: "Telangana"
+        aliases: ["\\btelangana\\b", "\\bhyderabad\\b"]
+        code: "TG"
+      - name: "Andhra Pradesh"
+        aliases: ["\\bandhra pradesh\\b", "\\bandhra\\b", "\\bvisakhapatnam\\b", "\\bvizag\\b"]
+        code: "AP"
+      - name: "Gujarat"
+        aliases: ["\\bgujarat\\b", "\\bahmedabad\\b", "\\bsurat\\b", "\\bgandhinagar\\b"]
+        code: "GJ"
+      - name: "Delhi"
+        aliases: ["\\bdelhi\\b", "\\bnew delhi\\b", "\\bncr\\b"]
+        code: "DL"
+      - name: "Uttar Pradesh"
+        aliases: ["\\buttar pradesh\\b", "\\bup\\b", "\\bnoida\\b", "\\blucknow\\b", "\\bkanpur\\b"]
+        code: "UP"
+      - name: "West Bengal"
+        aliases: ["\\bwest bengal\\b", "\\bkolkata\\b", "\\bcalcutta\\b"]
+        code: "WB"
+      - name: "Kerala"
+        aliases: ["\\bkerala\\b", "\\bkochi\\b", "\\btrivandrum\\b", "\\bthiruvananthapuram\\b"]
+        code: "KL"
+      - name: "Rajasthan"
+        aliases: ["\\brajasthan\\b", "\\bjaipur\\b", "\\budaipur\\b"]
+        code: "RJ"
+
+  # Tier 2: Indian companies (40 points)
+  tier2_companies:
+    weight: 40
+    importance_boost: 5
+    items:
+      # Major IT
+      - name: "TCS"
+        pattern: "\\btcs\\b|\\btata consultancy\\b"
+        type: "major_it"
+      - name: "Infosys"
+        pattern: "\\binfosys\\b"
+        type: "major_it"
+      - name: "Wipro"
+        pattern: "\\bwipro\\b"
+        type: "major_it"
+      - name: "HCL Tech"
+        pattern: "\\bhcl\\s*tech|\\bhcltech\\b"
+        type: "major_it"
+      - name: "Tech Mahindra"
+        pattern: "\\btech mahindra\\b"
+        type: "major_it"
+
+      # Conglomerates
+      - name: "Tata"
+        pattern: "\\btata\\b"
+        type: "conglomerate"
+      - name: "Reliance"
+        pattern: "\\breliance\\b"
+        type: "conglomerate"
+        importance_boost: 10
+      - name: "Adani"
+        pattern: "\\badani\\b"
+        type: "conglomerate"
+        importance_boost: 10
+
+      # Startups/Unicorns
+      - name: "Krutrim"
+        pattern: "\\bkrutrim\\b"
+        type: "ai_startup"
+        importance_boost: 20
+      - name: "Sarvam"
+        pattern: "\\bsarvam\\b"
+        type: "ai_startup"
+        importance_boost: 20
+      - name: "Ola"
+        pattern: "\\bola\\b|\\bola electric\\b"
+        type: "startup"
+      - name: "Flipkart"
+        pattern: "\\bflipkart\\b"
+        type: "startup"
+      - name: "Zomato"
+        pattern: "\\bzomato\\b"
+        type: "startup"
+      - name: "Paytm"
+        pattern: "\\bpaytm\\b"
+        type: "startup"
+      - name: "PhonePe"
+        pattern: "\\bphonepe\\b"
+        type: "startup"
+      - name: "Razorpay"
+        pattern: "\\brazorpay\\b"
+        type: "startup"
+      - name: "Zerodha"
+        pattern: "\\bzerodha\\b"
+        type: "startup"
+
+      # AI-specific Indian companies
+      - name: "Qure.ai"
+        pattern: "\\bqure\\.?ai\\b"
+        type: "ai_startup"
+        importance_boost: 15
+      - name: "Niramai"
+        pattern: "\\bniramai\\b"
+        type: "ai_startup"
+        importance_boost: 15
+      - name: "Wadhwani AI"
+        pattern: "\\bwadhwani\\b.*\\bai\\b"
+        type: "ai_research"
+        importance_boost: 20
+
+  # Tier 3: Government & Institutions (60 points + high importance)
+  tier3_government:
+    weight: 60
+    importance_boost: 40
+    items:
+      # Central Government
+      - name: "Ministry of Electronics"
+        pattern: "\\bmeity\\b|\\bministry of electronics"
+        importance_boost: 45
+      - name: "NITI Aayog"
+        pattern: "\\bniti aayog\\b"
+        importance_boost: 45
+      - name: "Digital India"
+        pattern: "\\bdigital india\\b"
+        importance_boost: 35
+      - name: "Startup India"
+        pattern: "\\bstartup india\\b"
+        importance_boost: 30
+      - name: "Central Government"
+        pattern: "\\bcentral government\\b|\\bunion government\\b|\\bgovernment of india\\b"
+        importance_boost: 40
+      - name: "Prime Minister"
+        pattern: "\\bprime minister\\b.*(?:modi|india)|\\bpm\\s+modi\\b"
+        importance_boost: 45
+      - name: "Parliament"
+        pattern: "\\bparliament\\b.*india|\\blok sabha\\b|\\brajya sabha\\b"
+        importance_boost: 40
+
+      # Research Institutions
+      - name: "IIT"
+        pattern: "\\biit\\b|\\biit-?[a-z]+\\b"
+        importance_boost: 15
+      - name: "IISc"
+        pattern: "\\biisc\\b"
+        importance_boost: 15
+      - name: "ISRO"
+        pattern: "\\bisro\\b"
+        importance_boost: 20
+      - name: "DRDO"
+        pattern: "\\bdrdo\\b"
+        importance_boost: 20
+      - name: "CSIR"
+        pattern: "\\bcsir\\b"
+        importance_boost: 15
+
+# ============================================================
+# SCORING THRESHOLDS
+# ============================================================
+
+thresholds:
+  # Layer 1 pass threshold
+  pass_filter: 40
+
+  # Confidence zones
+  high_confidence: 80
+  medium_confidence: 40
+  borderline_min: 30
+
+  # Layer 3 importance threshold
+  premium_importance: 70
+
+# ============================================================
+# METADATA
+# ============================================================
+
+metadata:
+  version: "1.0.0"
+  last_updated: "2026-01-27"
+  extracted_from: "ai/filter.py"
+  total_ai_keywords: 60
+  total_india_markers: 50
+  notes: "Keywords extracted from existing filter.py with original weights and patterns"
