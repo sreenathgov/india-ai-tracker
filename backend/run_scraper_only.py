@@ -176,7 +176,7 @@ def run_scraper_only(target_states=None):
         for article in unique_articles:
             try:
                 # Create update with SCRAPED state
-                update = Update.Model(
+                update = Update(
                     title=article['title'],
                     url=article['url'],
                     content=article.get('content', ''),

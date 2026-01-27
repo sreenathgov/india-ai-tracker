@@ -41,7 +41,7 @@ def process_batch_with_gemini(articles):
     """
     Process a batch of articles with Gemini API (all AI tasks combined).
 
-    This sends a single prompt containing 3 articles, clearly delimited,
+    This sends a single prompt containing up to 3 articles, clearly delimited,
     and requests structured output for all AI tasks per article.
 
     Args:
@@ -59,73 +59,94 @@ def process_batch_with_gemini(articles):
             'error': str (if failed)
         }
     """
-    # TODO: Replace with actual Gemini API call
-    # For now, using Groq as placeholder (will be swapped to Gemini)
+    import os
 
-    from ai.filter import AIFilter
-    from ai.categoriser import Categoriser
-    from ai.geo_attributor import GeoAttributor
-    from ai.summarizer import AISummarizer
+    # Check which AI provider to use
+    ai_provider = os.getenv('AI_PROVIDER', 'groq').lower()
 
-    ai_filter = AIFilter()
-    categoriser = Categoriser()
-    geo_attributor = GeoAttributor()
-    summarizer = AISummarizer()
+    if ai_provider == 'gemini':
+        # Use Gemini API (batch processing)
+        from ai.gemini_api import GeminiProcessor
 
-    results = []
+        processor = GeminiProcessor()
 
-    for article in articles:
-        try:
-            # Step 1: Relevance check
-            is_relevant, score = ai_filter.check_relevance(
-                article.title,
-                article.content or ''
-            )
+        # Convert Update objects to dicts for Gemini
+        article_dicts = [
+            {
+                'title': article.title,
+                'content': article.content or ''
+            }
+            for article in articles
+        ]
 
-            if not is_relevant:
+        return processor.process_batch(article_dicts)
+
+    else:
+        # Fallback to Groq (sequential processing)
+        from ai.filter import AIFilter
+        from ai.categoriser import Categoriser
+        from ai.geo_attributor import GeoAttributor
+        from ai.summarizer import AISummarizer
+
+        ai_filter = AIFilter()
+        categoriser = Categoriser()
+        geo_attributor = GeoAttributor()
+        summarizer = AISummarizer()
+
+        results = []
+
+        for article in articles:
+            try:
+                # Step 1: Relevance check
+                is_relevant, score = ai_filter.check_relevance(
+                    article.title,
+                    article.content or ''
+                )
+
+                if not is_relevant:
+                    results.append({
+                        'is_relevant': False,
+                        'relevance_score': score,
+                        'success': True
+                    })
+                    continue
+
+                # Step 2: Categorization
+                category, event_type = categoriser.categorise(
+                    article.title,
+                    article.content or '',
+                    category_hint=None
+                )
+
+                # Step 3: Geographic attribution
+                state_codes, geo_explanation = geo_attributor.attribute(
+                    article.title,
+                    article.content or '',
+                    source_state=article.source_name
+                )
+
+                # Step 4: Summarization
+                summary = summarizer.summarize(
+                    article.title,
+                    article.content or ''
+                )
+
                 results.append({
-                    'is_relevant': False,
+                    'is_relevant': True,
                     'relevance_score': score,
+                    'category': category,
+                    'state_codes': state_codes,
+                    'summary': summary,
                     'success': True
                 })
-                continue
 
-            # Step 2: Categorization
-            category, event_type = categoriser.categorise(
-                article.title,
-                article.content or '',
-                category_hint=None
-            )
+            except Exception as e:
+                results.append({
+                    'success': False,
+                    'error': str(e)
+                })
 
-            # Step 3: Geographic attribution
-            state_codes, geo_explanation = geo_attributor.attribute(
-                article.title,
-                article.content or '',
-                source_state=article.source_name  # Will be improved
-            )
-
-            # Step 4: Summarization
-            summary = summarizer.summarize(
-                article.title,
-                article.content or ''
-            )
-
-            results.append({
-                'is_relevant': True,
-                'relevance_score': score,
-                'category': category,
-                'state_codes': state_codes,
-                'summary': summary,
-                'success': True
-            })
-
-        except Exception as e:
-            results.append({
-                'success': False,
-                'error': str(e)
-            })
-
-    return results
+        return results
 
 
 def process_article_with_retries(article):

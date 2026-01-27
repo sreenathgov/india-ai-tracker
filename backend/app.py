@@ -221,6 +221,12 @@ class Update(db.Model):
     is_approved = db.Column(db.Boolean, default=False)
     is_deleted = db.Column(db.Boolean, default=False)  # Soft delete flag
 
+    # Processing State Management (added for batch processing)
+    processing_state = db.Column(db.String(20), default='PROCESSED', index=True)
+    processing_attempts = db.Column(db.Integer, default=0)
+    last_processing_error = db.Column(db.Text)
+    last_processing_attempt = db.Column(db.DateTime)
+
     def to_dict(self):
         return {
             'id': self.id,
@@ -232,7 +238,9 @@ class Update(db.Model):
             'category': self.category,
             'state_codes': json.loads(self.state_codes) if self.state_codes else [],
             'is_approved': self.is_approved,
-            'is_deleted': self.is_deleted
+            'is_deleted': self.is_deleted,
+            'processing_state': self.processing_state,
+            'processing_attempts': self.processing_attempts
         }
 
 

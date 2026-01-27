@@ -74,7 +74,7 @@ def test_processing_states():
 
         try:
             # Create SCRAPED article (should be hidden)
-            scraped_article = Update.Model(
+            scraped_article = Update(
                 title="Test Article SCRAPED State",
                 url="http://test.com/scraped",
                 processing_state='SCRAPED',
@@ -85,7 +85,7 @@ def test_processing_states():
             test_articles.append(scraped_article)
 
             # Create PROCESSING article (should be hidden)
-            processing_article = Update.Model(
+            processing_article = Update(
                 title="Test Article PROCESSING State",
                 url="http://test.com/processing",
                 processing_state='PROCESSING',
@@ -96,7 +96,7 @@ def test_processing_states():
             test_articles.append(processing_article)
 
             # Create FAILED article (should be hidden)
-            failed_article = Update.Model(
+            failed_article = Update(
                 title="Test Article FAILED State",
                 url="http://test.com/failed",
                 processing_state='FAILED',
@@ -108,7 +108,7 @@ def test_processing_states():
             test_articles.append(failed_article)
 
             # Create PROCESSED article (should be visible)
-            processed_article = Update.Model(
+            processed_article = Update(
                 title="Test Article PROCESSED State",
                 url="http://test.com/processed",
                 processing_state='PROCESSED',
