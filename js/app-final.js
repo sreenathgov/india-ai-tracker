@@ -73,6 +73,7 @@ let map, geojsonLayer, currentPanel = null;
 let recentUpdatesCache = {};
 let currentViewMode = 'state'; // 'state' or 'allIndia'
 let currentCategoriesData = null; // Store fetched categories for expansion
+let currentTodayUpdates = []; // Store list of categories with today's updates
 let selectedLayer = null; // Track the currently selected GeoJSON layer for centering
 let currentPage = 1; // Pagination state for currently expanded category
 let currentExpandedCategory = null; // Track which category is currently expanded
@@ -168,7 +169,10 @@ async function fetchStateData(stateCode) {
         const response = await fetch(`${API_BASE_URL}/states/${stateCode}/categories`);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const data = await response.json();
-        return data.categories;
+        return {
+            categories: data.categories,
+            todayUpdates: data.today_updates || []
+        };
     } catch (error) {
         console.error('Fetch error:', error);
         return null;
@@ -189,18 +193,21 @@ async function openStatePanel(stateName) {
 
     showPanel(stateName, '<div class="loading">Loading...</div>');
 
-    const categories = await fetchStateData(stateCode);
-    if (!categories) {
+    const data = await fetchStateData(stateCode);
+    if (!data) {
         showPanel(stateName, '<div style="text-align:center;padding:40px;color:#B45309;">Failed to load. Check if backend is running on port 5001.</div>');
         return;
     }
 
-    currentCategoriesData = categories;
-    showPanel(stateName, buildCategoryCards(categories));
+    currentCategoriesData = data.categories;
+    currentTodayUpdates = data.todayUpdates;
+    showPanel(stateName, buildCategoryCards(data.categories, data.todayUpdates));
 }
 
 // Build horizontal category cards (collapsed by default)
-function buildCategoryCards(categories) {
+function buildCategoryCards(categories, todayUpdates = []) {
+    console.log('Building category cards with todayUpdates:', todayUpdates);
+
     let totalUpdates = 0;
     CATEGORY_ORDER.forEach(cat => {
         totalUpdates += (categories[cat] || []).length;
@@ -217,13 +224,21 @@ function buildCategoryCards(categories) {
         const config = CATEGORY_CONFIG[categoryName];
         const count = updates.length;
         const hasUpdates = count > 0;
+        const hasTodayUpdates = todayUpdates.includes(categoryName);
+
+        if (hasTodayUpdates) {
+            console.log(`✓ ${categoryName} has today updates - adding indicator`);
+        }
 
         html += `
             <div class="category-card-compact ${hasUpdates ? '' : 'empty'}"
                  data-category="${categoryName}"
                  data-index="${index}"
                  onclick="expandCategory('${categoryName}')">
-                <div class="card-icon">${config.icon}</div>
+                <div class="card-icon">
+                    ${config.icon}
+                    ${hasTodayUpdates ? '<span class="new-indicator" title="New updates today"></span>' : ''}
+                </div>
                 <div class="card-info">
                     <span class="card-name">${config.shortName}</span>
                     <span class="card-count">${count} update${count !== 1 ? 's' : ''}</span>
@@ -624,7 +639,8 @@ async function loadAllIndiaContent() {
         const data = await response.json();
 
         currentCategoriesData = data.categories;
-        contentEl.innerHTML = buildCategoryCards(data.categories);
+        currentTodayUpdates = data.today_updates || [];
+        contentEl.innerHTML = buildCategoryCards(data.categories, data.today_updates || []);
     } catch (error) {
         console.error('Error fetching All India data:', error);
         contentEl.innerHTML = '<div class="no-updates">Failed to load. Check if backend is running.</div>';
