@@ -141,6 +141,10 @@ class IntegratedPipeline:
                     update.processing_state = 'PROCESSED'
                     update.last_processing_attempt = datetime.utcnow()
 
+                    # AUTO-APPROVE AI-relevant articles (like the old system)
+                    # Only AI-relevant articles appear in admin/public site
+                    update.is_approved = result.get('is_relevant', False)
+
                     db.session.commit()
                     self.stats['database']['updated'] += 1
 

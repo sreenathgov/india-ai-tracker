@@ -448,7 +448,9 @@ def admin_get_updates():
     try:
         # Exclude soft-deleted items by default
         show_deleted = request.args.get('show_deleted', 'false').lower() == 'true'
-        query = Update.query
+        # ONLY show AI-relevant articles (like the old system)
+        # Non-AI articles are automatically filtered out and don't clutter the admin
+        query = Update.query.filter(Update.is_ai_relevant == True)
         if not show_deleted:
             query = query.filter((Update.is_deleted == False) | (Update.is_deleted == None))
         updates = query.order_by(Update.date_scraped.desc()).all()
