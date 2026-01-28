@@ -7,7 +7,6 @@
     "priority": "very_high, high, medium, low - affects processing order",
     "notes": "These sources feed ALL 28 states + All India panel. Geographic attribution happens dynamically based on content."
   },
-
   "national": [
     {
       "name": "Analytics India Magazine - AI News",
@@ -83,8 +82,8 @@
       "is_state_specific": false,
       "category_hint": "Policies and Initiatives",
       "priority": "very_high",
-      "enabled": true,
-      "notes": "Primary source for government policy news"
+      "enabled": false,
+      "notes": "Primary source for government policy news - DISABLED: Feed hangs/timeout"
     },
     {
       "name": "ET CIO - AI",
@@ -412,7 +411,6 @@
       "notes": "All India conferences and events"
     }
   ],
-
   "tamil_nadu": [
     {
       "name": "ET B2B Tamil Nadu",
@@ -516,7 +514,6 @@
       "notes": "TN tech events and fests - always TN-relevant"
     }
   ],
-
   "karnataka": [
     {
       "name": "The Hindu - Bangalore",
@@ -655,7 +652,6 @@
       "notes": "IE Mangaluru city news - Karnataka coastal city"
     }
   ],
-
   "telangana": [
     {
       "name": "T-Hub News",
@@ -732,7 +728,6 @@
       "notes": "ET B2B Telangana regional feed"
     }
   ],
-
   "andhra_pradesh": [
     {
       "name": "Times of India - Andhra Pradesh",
@@ -759,7 +754,6 @@
       "notes": "The Hindu AP state news"
     }
   ],
-
   "maharashtra": [
     {
       "name": "The Hindu - Mumbai",
@@ -871,7 +865,6 @@
       "notes": "IE Navi Mumbai city news"
     }
   ],
-
   "uttar_pradesh": [
     {
       "name": "Tribune - Uttar Pradesh",
@@ -997,7 +990,6 @@
       "notes": "Official UP startup events"
     }
   ],
-
   "gujarat": [
     {
       "name": "Times of India - Ahmedabad",
@@ -1148,7 +1140,6 @@
       "notes": "Vibrant Gujarat summit events - DISABLED (403 Forbidden)"
     }
   ],
-
   "delhi": [
     {
       "name": "Times of India - Delhi",
@@ -1238,7 +1229,6 @@
       "notes": "ET CIO Delhi enterprise IT news"
     }
   ],
-
   "rajasthan": [
     {
       "name": "Times of India - Rajasthan",
@@ -1341,7 +1331,6 @@
       "notes": "Conferences and events in Jaipur"
     }
   ],
-
   "kerala": [
     {
       "name": "Times of India - Kerala",
@@ -1431,7 +1420,6 @@
       "notes": "Kerala Public Relations Dept - official govt news"
     }
   ],
-
   "madhya_pradesh": [
     {
       "name": "Tribune - Madhya Pradesh",
@@ -1508,7 +1496,6 @@
       "notes": "MP investment portal news and events"
     }
   ],
-
   "arunachal_pradesh": [
     {
       "name": "Indian Express - Arunachal Pradesh",
@@ -1562,7 +1549,6 @@
       "notes": "Official Arunachal NIC events"
     }
   ],
-
   "tripura": [
     {
       "name": "Indian Express - Tripura",
@@ -1615,7 +1601,6 @@
       "notes": "Tripura Chronicle local news"
     }
   ],
-
   "assam": [
     {
       "name": "Indian Express - Assam",
@@ -1691,7 +1676,6 @@
       "notes": "The Hindu Assam state news"
     }
   ],
-
   "manipur": [
     {
       "name": "Indian Express - Manipur",
@@ -1731,7 +1715,6 @@
       "notes": "The Hindu Manipur state news"
     }
   ],
-
   "meghalaya": [
     {
       "name": "Indian Express - Meghalaya",
@@ -1823,7 +1806,6 @@
       "notes": "The Hindu Meghalaya state news"
     }
   ],
-
   "mizoram": [
     {
       "name": "Indian Express - Mizoram",
@@ -1902,7 +1884,6 @@
       "notes": "The Hindu Mizoram state news"
     }
   ],
-
   "nagaland": [
     {
       "name": "Indian Express - Nagaland",
@@ -1968,7 +1949,6 @@
       "notes": "The Hindu Nagaland state news"
     }
   ],
-
   "ladakh": [
     {
       "name": "Ladakh Gov - News",
@@ -2022,7 +2002,6 @@
       "notes": "University of Ladakh events"
     }
   ],
-
   "jammu_kashmir": [
     {
       "name": "Tribune - J&K",
@@ -2086,7 +2065,6 @@
       "notes": "The Hindu J&K news"
     }
   ],
-
   "jharkhand": [
     {
       "name": "Times of India - Ranchi",
@@ -2177,7 +2155,6 @@
       "notes": "Tech conferences in Jharkhand"
     }
   ],
-
   "himachal_pradesh": [
     {
       "name": "Tribune - Himachal",
@@ -2216,7 +2193,6 @@
       "notes": "ET B2B Himachal Pradesh regional feed"
     }
   ],
-
   "uttarakhand": [
     {
       "name": "Tribune - Uttarakhand",
@@ -2294,7 +2270,6 @@
       "notes": "The Hindu Uttarakhand news"
     }
   ],
-
   "west_bengal": [
     {
       "name": "Times of India - Kolkata",
@@ -2397,7 +2372,6 @@
       "notes": "Bengal Chamber of Commerce events"
     }
   ],
-
   "odisha": [
     {
       "name": "Times of India - Bhubaneswar",
@@ -2487,7 +2461,6 @@
       "notes": "Odisha NIC events"
     }
   ],
-
   "bihar": [
     {
       "name": "Times of India - Patna",
@@ -2552,7 +2525,6 @@
       "notes": "Bihar Tech Association news and events"
     }
   ],
-
   "chhattisgarh": [
     {
       "name": "Tribune - Chhattisgarh",
@@ -2604,7 +2576,6 @@
       "notes": "Chhattisgarh IT agency events"
     }
   ],
-
   "punjab": [
     {
       "name": "Tribune - Punjab",
@@ -2754,7 +2725,6 @@
       "notes": "Amritsar district official announcements"
     }
   ],
-
   "goa": [
     {
       "name": "Times of India - Goa",
@@ -2831,7 +2801,6 @@
       "notes": "Goa IT department - DISABLED: site structure may be unusual, needs testing"
     }
   ],
-
   "haryana": [
     {
       "name": "Times of India - Chandigarh/Haryana",
@@ -2921,7 +2890,6 @@
       "notes": "TechCircle Haryana government news"
     }
   ],
-
   "_disabled_sources": {
     "notes": "Sources that were evaluated but not included or need special handling",
     "sources": [
