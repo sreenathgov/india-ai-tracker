@@ -94,7 +94,7 @@ async function initMap() {
 // Fetch 7-day update counts for all states
 async function fetchRecentUpdates() {
     try {
-        const response = await fetch(`${API_BASE_URL}/states/recent-counts`);
+        const response = await fetch(`${API_BASE_URL}/states/recent-counts.json`);
         if (response.ok) {
             const data = await response.json();
             recentUpdatesCache = data.counts || {};
@@ -169,7 +169,7 @@ function buildTooltipContent(stateName, recentCount) {
 
 async function fetchStateData(stateCode) {
     try {
-        const response = await fetch(`${API_BASE_URL}/states/${stateCode}/categories`);
+        const response = await fetch(`${API_BASE_URL}/states/${stateCode}/categories.json`);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const data = await response.json();
         return {
@@ -637,7 +637,7 @@ async function loadAllIndiaContent() {
     contentEl.innerHTML = '<div class="loading">Loading national updates...</div>';
 
     try {
-        const response = await fetch(`${API_BASE_URL}/all-india/categories`);
+        const response = await fetch(`${API_BASE_URL}/all-india/categories.json`);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const data = await response.json();
 
@@ -662,7 +662,7 @@ function closeModal() {
 // Fetch and display last updated timestamp
 async function fetchLastUpdated() {
     try {
-        const response = await fetch(`${API_BASE_URL}/last-updated`);
+        const response = await fetch(`${API_BASE_URL}/last-updated.json`);
         if (response.ok) {
             const data = await response.json();
             const statusEl = document.getElementById('lastUpdated');
