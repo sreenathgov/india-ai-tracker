@@ -21,24 +21,6 @@
         "premium_processed": false
       },
       {
-        "id": 119,
-        "title": "AI adoption to generate $1.7 trillion for India by 2035: KPMG report",
-        "url": "https://telanganatoday.com/ai-adoption-to-generate-1-7-trillion-for-india-by-2035-kpmg-report",
-        "summary": "India's adoption of artificial intelligence is expected to generate $1.7 trillion in economic value by 2035. This growth will be driven by investments in semiconductors, strong data governance, and rapid adoption across various sectors. A KPMG report released at the World Economic Forum in Davos forecasts this significant economic boost.",
-        "date_published": "2026-01-22",
-        "source_name": "Telangana Today - Tech",
-        "category": "Policies and Initiatives",
-        "state_codes": [
-          "TG"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false
-      },
-      {
         "id": 39,
         "title": "Telangana govt signs pact with Deakin University to establish AI CoE",
         "url": "https://b2b.economictimes.indiatimes.com/news/telangana/telangana-partners-with-deakin-university-to-launch-pioneering-ai-centre-of-excellence/125832531",
@@ -87,8 +69,7 @@
         "source_name": "Times of India - Bhopal",
         "category": "Major AI Developments",
         "state_codes": [
-          "TG",
-          "DL"
+          "TG"
         ],
         "is_approved": true,
         "is_deleted": false,

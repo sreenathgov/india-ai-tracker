@@ -134,25 +134,6 @@
     ],
     "Major AI Developments": [
       {
-        "id": 147,
-        "title": "Western Union partners HCLTech to open AI-led global capability centre in Hyderabad",
-        "url": "https://timesofindia.indiatimes.com/city/hyderabad/western-union-partners-hcltech-to-open-ai-led-global-capability-centre-in-hyderabad/articleshow/127647361.cms",
-        "summary": "Western Union has partnered with HCLTech to open an AI-led global capability centre in Hyderabad. The centre will leverage artificial intelligence to drive innovation and growth for Western Union. This collaboration aims to enhance Western Union's global operations with advanced technology and expertise.",
-        "date_published": "2026-01-28",
-        "source_name": "Times of India - Bhopal",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "TG",
-          "DL"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false
-      },
-      {
         "id": 45,
         "title": "AI and unstructured data: A roadmap for India's digital transformation with elastic CEO",
         "url": "https://cio.economictimes.indiatimes.com/tag/delhi",
@@ -191,7 +172,5 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
