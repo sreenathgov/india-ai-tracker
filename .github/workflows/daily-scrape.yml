@@ -1,0 +1,101 @@
+name: Daily AI Tracker Scrape
+
+on:
+  schedule:
+    # Run daily at 6:00 AM IST (12:30 AM UTC)
+    - cron: '30 0 * * *'
+  workflow_dispatch: # Allow manual trigger from GitHub UI
+
+jobs:
+  scrape-and-process:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          cd backend
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Download existing database (if exists)
+        run: |
+          cd backend
+          if [ -f tracker.db ]; then
+            echo "Database already exists locally"
+          else
+            echo "No existing database found - will create new one"
+          fi
+
+      - name: Run scraper and pipeline
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OLLAMA_DISABLED: "true"
+        run: |
+          cd backend
+          echo "Step 1: Running scraper..."
+          PYTHONPATH=. python3 -c "
+          from scrapers.orchestrator import run_all_scrapers
+          result = run_all_scrapers()
+          print(f'Scraped {result.get(\"final_processed\", 0)} articles')
+          "
+
+          echo "Step 2: Running 3-layer processing pipeline..."
+          PYTHONPATH=. python3 ai/integrated_pipeline.py
+
+          echo "Step 3: Generating static JSON API files..."
+          PYTHONPATH=. python3 scripts/generate_static_api.py
+
+          echo "Step 4: Complete!"
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          # Add database, reports, and API files
+          git add backend/tracker.db
+          git add backend/reports/*.json || true
+          git add api/ || true
+
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update: Daily scrape and processing - $(date +'%Y-%m-%d %H:%M IST')"
+            git push
+          fi
+
+      - name: Generate summary
+        run: |
+          cd backend
+          PYTHONPATH=. python3 -c "
+          from app import app, db, Update
+          from datetime import datetime
+
+          with app.app_context():
+              today = datetime.now().date().isoformat()
+              today_scraped = Update.query.filter(Update.date_scraped >= today).count()
+              today_ai_relevant = Update.query.filter(
+                  Update.date_scraped >= today,
+                  Update.is_ai_relevant == True
+              ).count()
+              total = Update.query.count()
+
+              print(f'📊 Daily Scrape Summary ({today}):')
+              print(f'  Articles scraped today: {today_scraped}')
+              print(f'  AI-relevant: {today_ai_relevant}')
+              print(f'  Total in database: {total}')
+          " || echo "Could not generate summary"

@@ -1,4 +1,7 @@
-const API_BASE_URL = 'http://localhost:5001/api';
+// Use production API (static JSON files) or local backend for development
+const API_BASE_URL = window.location.hostname === 'localhost'
+    ? 'http://localhost:5001/api'  // Local development
+    : '/api';  // Production (Vercel serves static JSON)
 
 // Complete mapping for all 28 states + 8 union territories
 const STATE_CODE_MAP = {

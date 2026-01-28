@@ -1,0 +1,29 @@
+{
+  "state": "KL",
+  "categories": {
+    "Policies and Initiatives": [],
+    "Events": [
+      {
+        "id": 31,
+        "title": "Regional AI Conference at Thiruvananthapuram",
+        "url": "https://www.digitalindia.gov.in/events/regional-ai-conference-at-thiruvananthapuram/",
+        "summary": "A regional AI conference is being held in Thiruvananthapuram, bringing together experts and enthusiasts to discuss artificial intelligence. The conference aims to promote knowledge sharing and collaboration in the field of AI. Details about the conference, including its schedule and speakers, are not specified.",
+        "date_published": "2026-01-20",
+        "source_name": "Digital India - Events",
+        "category": "Events",
+        "state_codes": [
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false
+      }
+    ],
+    "Major AI Developments": [],
+    "AI Start-Up News": []
+  },
+  "today_updates": []
+}
