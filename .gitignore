@@ -56,3 +56,5 @@ htmlcov/
 *.bak
 *.swp
 temp/
+backend/reports/*.json
+backend/test_*.py
