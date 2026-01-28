@@ -89,8 +89,11 @@ Please provide a REFINED analysis:
    - AI Infrastructure & Compute
 
 3. **State Attribution**: JSON array of 2-letter state codes
-   - Use ["IN"] for national/multi-state
-   - Be precise (e.g., ["KA"] for Bangalore, ["TN"] for Chennai)
+   - CRITICAL: Tag a state ONLY if article content is SUBSTANTIVELY about that state
+   - DO NOT tag based on news source domain (e.g., ignore telanganatoday.com)
+   - DO NOT tag unless state is MATERIALLY discussed in title or content
+   - Valid reasons: state govt policy, state event, company HQ doing something in that state
+   - Use ["IN"] for national/multi-state or if no specific state is central to the story
 
 4. **Summary**: Write a polished, publication-ready 2-3 sentence summary
    - Focus on key facts and impact

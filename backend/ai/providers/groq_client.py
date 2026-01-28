@@ -93,7 +93,11 @@ class GroqClient:
 3. State Attribution: JSON array of state codes (e.g., ["KA", "TN", "MH"])
    - Use standard 2-letter codes
    - ["IN"] for national/multiple states
-   - Extract from location mentions, company HQs, government bodies
+   - CRITICAL: Tag a state ONLY if the article content is SUBSTANTIVELY about that state
+   - DO NOT tag based on news source domain (ignore telanganatoday.com, hindustantimes, etc.)
+   - DO NOT tag unless the state is MATERIALLY discussed in title or content
+   - Valid reasons to tag: state government policy, state-specific event, company HQ in that state doing something there
+   - If article mentions India broadly or multiple states equally, use ["IN"]
 
 4. Summary: 2-3 sentences capturing key points
 
