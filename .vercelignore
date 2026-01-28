@@ -1,0 +1,10 @@
+# Only ignore these - everything else should be deployed
+backend/
+.git/
+.github/
+node_modules/
+venv/
+*.pyc
+__pycache__/
+.env
+.DS_Store
