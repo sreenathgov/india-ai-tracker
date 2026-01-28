@@ -11,6 +11,7 @@ import os
 import json
 from dotenv import load_dotenv
 from pathlib import Path
+import threading
 
 load_dotenv()
 
@@ -348,11 +349,23 @@ def get_state_categories(state_code):
             'AI Start-Up News': [],
         }
 
+        # Track which categories have updates from today
+        today = datetime.utcnow().date()
+        categories_with_today_updates = set()
+
         for update in updates:
             if update.category in categories:
                 categories[update.category].append(update.to_dict())
 
-        return jsonify({'state': state_code, 'categories': categories})
+                # Check if this update was scraped today
+                if update.date_scraped and update.date_scraped.date() == today:
+                    categories_with_today_updates.add(update.category)
+
+        return jsonify({
+            'state': state_code,
+            'categories': categories,
+            'today_updates': list(categories_with_today_updates)
+        })
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
@@ -375,11 +388,23 @@ def get_all_india_categories():
             'AI Start-Up News': [],
         }
 
+        # Track which categories have updates from today
+        today = datetime.utcnow().date()
+        categories_with_today_updates = set()
+
         for update in updates:
             if update.category in categories:
                 categories[update.category].append(update.to_dict())
 
-        return jsonify({'state': 'IN', 'categories': categories})
+                # Check if this update was scraped today
+                if update.date_scraped and update.date_scraped.date() == today:
+                    categories_with_today_updates.add(update.category)
+
+        return jsonify({
+            'state': 'IN',
+            'categories': categories,
+            'today_updates': list(categories_with_today_updates)
+        })
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
@@ -416,13 +441,55 @@ def get_recent_update_counts():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+def run_pipeline_background(scraped_count):
+    """Run the processing pipeline in background after scraping."""
+    if scraped_count == 0:
+        print("No new articles to process")
+        return
+
+    try:
+        print(f"Starting background pipeline for {scraped_count} articles...")
+        from ai.integrated_pipeline import IntegratedPipeline
+
+        pipeline = IntegratedPipeline(
+            layer2_provider='auto',
+            layer3_top_n=50
+        )
+
+        stats = pipeline.run(limit=None, save_report=True)
+        print(f"✅ Pipeline complete: {stats['database']['updated']} articles processed")
+    except Exception as e:
+        print(f"❌ Pipeline error: {e}")
+
+
 @app.route('/api/admin/scrape/run', methods=['POST'])
 @login_required
 def run_scraper():
     try:
         from scrapers.orchestrator import run_all_scrapers
-        result = run_all_scrapers()
-        return jsonify(result)
+
+        # Step 1: Run scraper (synchronously)
+        scrape_result = run_all_scrapers()
+        scraped_count = scrape_result.get('final_processed', 0)
+
+        # Step 2: Start pipeline in background thread
+        if scraped_count > 0:
+            pipeline_thread = threading.Thread(
+                target=run_pipeline_background,
+                args=(scraped_count,),
+                daemon=True
+            )
+            pipeline_thread.start()
+            pipeline_message = f'Pipeline started in background for {scraped_count} articles'
+        else:
+            pipeline_message = 'No new articles to process'
+
+        # Return immediately (don't wait for pipeline)
+        return jsonify({
+            'scrape': scrape_result,
+            'pipeline': {'success': True, 'message': pipeline_message},
+            'final_processed': scraped_count
+        })
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 

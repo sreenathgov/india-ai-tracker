@@ -1462,14 +1462,18 @@
         }
 
         async function runScraper() {
-            if (!confirm('Run the scraper now? This may take a few minutes.')) return;
+            if (!confirm('Run the complete pipeline (scrape + process)? This may take a few minutes.')) return;
 
             // Show persistent status
             const statusDiv = document.createElement('div');
-            statusDiv.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); z-index: 10000; min-width: 300px; text-align: center;';
+            statusDiv.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); z-index: 10000; min-width: 400px; text-align: center;';
             statusDiv.innerHTML = `
-                <h3 style="margin: 0 0 15px 0; color: var(--primary);">🔄 Scraper Running</h3>
+                <h3 style="margin: 0 0 15px 0; color: var(--primary);">🔄 Step 1/2: Scraping RSS Feeds</h3>
                 <p style="margin: 0; color: var(--secondary);">This may take a few minutes...<br>Please wait.</p>
+                <div style="margin-top: 15px; font-size: 12px; color: #999;">
+                    <div>✓ Scraping feeds...</div>
+                    <div style="opacity: 0.5;">⏳ Processing with AI pipeline...</div>
+                </div>
             `;
             document.body.appendChild(statusDiv);
 
@@ -1480,15 +1484,52 @@
                 });
                 const data = await response.json();
 
-                // Update status with results
-                statusDiv.innerHTML = `
-                    <h3 style="margin: 0 0 15px 0; color: #27ae60;">✅ Scraper Complete!</h3>
-                    <p style="margin: 0; color: var(--secondary); font-size: 18px; font-weight: 600;">${data.final_processed || 0} new articles found</p>
-                    <button onclick="this.parentElement.remove(); loadUpdates();" style="margin-top: 20px; padding: 10px 20px; background: var(--primary); color: white; border: none; border-radius: 4px; cursor: pointer;">Close & Refresh</button>
-                `;
+                // Check if there was an error
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+
+                // Show completion status
+                const scrapeCount = data.final_processed || 0;
+                const pipelineSuccess = data.pipeline?.success || false;
+                const pipelineMessage = data.pipeline?.message || 'Unknown';
+
+                let statusHTML = '';
+                if (pipelineSuccess) {
+                    statusHTML = `
+                        <h3 style="margin: 0 0 15px 0; color: #27ae60;">✅ Pipeline Complete!</h3>
+                        <div style="margin: 15px 0; padding: 15px; background: #f8f9fa; border-radius: 6px;">
+                            <div style="font-size: 18px; font-weight: 600; color: var(--primary); margin-bottom: 10px;">
+                                ${scrapeCount} articles scraped
+                            </div>
+                            <div style="font-size: 14px; color: var(--secondary);">
+                                ✓ Scraped from RSS feeds<br>
+                                ✓ Processed with 3-layer AI pipeline<br>
+                                ✓ AI-relevant articles auto-approved
+                            </div>
+                        </div>
+                        <button onclick="this.parentElement.remove(); loadUpdates();" style="margin-top: 20px; padding: 10px 20px; background: var(--primary); color: white; border: none; border-radius: 4px; cursor: pointer;">Close & Refresh</button>
+                    `;
+                } else {
+                    statusHTML = `
+                        <h3 style="margin: 0 0 15px 0; color: #f39c12;">⚠️ Partial Success</h3>
+                        <div style="margin: 15px 0; padding: 15px; background: #fff3cd; border-radius: 6px;">
+                            <div style="font-size: 16px; font-weight: 600; color: var(--primary); margin-bottom: 10px;">
+                                ${scrapeCount} articles scraped
+                            </div>
+                            <div style="font-size: 14px; color: var(--secondary);">
+                                ✓ Scraping completed<br>
+                                ⚠️ Pipeline: ${pipelineMessage}
+                            </div>
+                        </div>
+                        <button onclick="this.parentElement.remove(); loadUpdates();" style="margin-top: 20px; padding: 10px 20px; background: var(--primary); color: white; border: none; border-radius: 4px; cursor: pointer;">Close & Refresh</button>
+                    `;
+                }
+
+                statusDiv.innerHTML = statusHTML;
             } catch (error) {
                 statusDiv.innerHTML = `
-                    <h3 style="margin: 0 0 15px 0; color: #e74c3c;">❌ Scraper Error</h3>
+                    <h3 style="margin: 0 0 15px 0; color: #e74c3c;">❌ Pipeline Error</h3>
                     <p style="margin: 0; color: var(--secondary);">${error.message}</p>
                     <button onclick="this.parentElement.remove();" style="margin-top: 20px; padding: 10px 20px; background: var(--danger); color: white; border: none; border-radius: 4px; cursor: pointer;">Close</button>
                 `;
