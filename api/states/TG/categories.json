@@ -83,6 +83,25 @@
         "posted_to_x_at": null
       },
       {
+        "id": 156,
+        "title": "Google rolls out AI-powered photo editing feature in India",
+        "url": "https://telanganatoday.com/google-rolls-out-ai-powered-photo-editing-feature-in-india",
+        "summary": "Google has launched an AI-powered photo editing feature in India, allowing users to edit images in Google Photos using voice or text prompts. The feature, powered by Gemini, supports multiple Indian languages and offers conversational editing tools. It also provides personalised editing options for users.",
+        "date_published": "2026-01-28",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 103,
         "title": "Telangana Launches Aikam, Global AI Innovation Entity, at Davos",
         "url": "https://analyticsindiamag.com/ai-news-updates/telangana-launches-aikam-global-ai-innovation-entity-at-davos/",
@@ -295,5 +314,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

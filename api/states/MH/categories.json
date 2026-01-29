@@ -3,6 +3,25 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 150,
+        "title": "Before the first missiles fly: AI, cyber &amp; electronic warfare - how India is preparing for invisible battlefields",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/before-the-first-missiles-fly-ai-cyber-electronic-warfare-how-india-is-preparing-for-invisible-battlefields/127707922",
+        "summary": "India is integrating AI, cyber, and electronic warfare into its military, shifting towards a process-centric doctrine. This integration, as seen in Operation Sindoor, aims to enhance intelligence, surveillance, and reconnaissance capabilities. The goal is to achieve strategic dominance and reduce reliance on foreign technology in future conflicts.",
+        "date_published": "2026-01-28",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 126,
         "title": "Mumbai to Host World’s First AI GCC Hub as Maharashtra & Supervity AI Sign Landmark MoU at Davos",
         "url": "https://analyticsindiamag.com/ai-news-updates/mumbai-to-host-worlds-first-ai-gcc-hub-as-maharashtra-supervity-ai-sign-landmark-mou-at-davos/",
@@ -182,5 +201,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

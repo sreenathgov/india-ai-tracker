@@ -179,7 +179,29 @@
         "posted_to_x_at": null
       }
     ],
-    "AI Start-Up News": []
+    "AI Start-Up News": [
+      {
+        "id": 153,
+        "title": "1Buy.AI raises Rs 32.5 Cr in seed round led by 100Unicorns",
+        "url": "https://entrackr.com/snippets/1buyai-raises-rs-325-cr-in-seed-round-led-by-100unicorns-11039023",
+        "summary": "1Buy.AI, a procurement and cost-reduction platform, has raised Rs 32.5 crore in a seed funding round led by 100Unicorns. The funding round also saw participation from investors such as Ashish Kacholia, Gruhas, and FJ Labs. The fresh funds will be used to develop compliant SaaS platforms and expand global data pipes.",
+        "date_published": "2026-01-29",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

@@ -3,10 +3,48 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 148,
+        "title": "How AI is helping researchers revive cultural heritage; Explained",
+        "url": "https://www.etnownews.com/technology/how-ai-is-helping-researchers-revive-cultural-heritage-explained-article-153526885",
+        "summary": "AI is aiding researchers in reviving cultural heritage through digitization efforts. In India, over 10 crore pages of historical documents are now available online via the Abhilekh Patal portal, a significant milestone in heritage preservation. This digital archive is a result of the National Archives' prioritization of digitization to make cultural heritage more accessible.",
+        "date_published": "2026-01-29",
+        "source_name": "ET Now Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 143,
         "title": "60% of businesses confident in scaling AI, but gaps remain: Nasscom Report",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/60-of-indian-businesses-confident-in-scaling-responsible-ai-despite-challenges-nasscom-report/127146897",
         "summary": "Indian businesses are increasingly adopting Responsible AI, with 30% having mature practices and 45% implementing formal frameworks, marking a significant increase from 2023. Despite 60% of businesses being confident in scaling AI, challenges such as hallucinations and privacy concerns persist. Businesses with higher AI maturity are better prepared for emerging technologies, but require framework updates for advanced AI systems.",
+        "date_published": "2026-01-28",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 151,
+        "title": "Dell, NxtGen to build &#039;India’s largest AI training cluster&#039; under sovereign cloud",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/dell-and-nxtgen-collaborate-to-create-indias-largest-ai-training-cluster/127699336",
+        "summary": "Dell and NxtGen are collaborating to build India's largest AI training cluster under a sovereign cloud project. The project will utilize over 4,000 NVIDIA GPUs to enhance domestic AI computing capabilities. This initiative aims to support enterprises, startups, academia, and government entities.",
         "date_published": "2026-01-28",
         "source_name": "ET CIO - AI",
         "category": "Policies and Initiatives",
@@ -368,12 +406,50 @@
     ],
     "Major AI Developments": [
       {
+        "id": 155,
+        "title": "Indian, US researchers develop AI-based eye scan to detect diabetes",
+        "url": "https://cellit.in/indian-us-researchers-develop-ai-based-eye-scan-to-detect-diabetes/",
+        "summary": "Researchers from India and the US have collaborated to develop an AI-based eye scan that can detect diabetes. This innovative technology uses artificial intelligence to analyze eye scans and identify signs of diabetes. The breakthrough has the potential to provide a non-invasive and efficient method for diabetes detection.",
+        "date_published": "2026-01-29",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 144,
         "title": "PwC India report projects AI to unlock USD 550 billion across five sectors by 2035",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-to-drive-550-billion-growth-in-agriculture-education-energy-healthcare-and-manufacturing-by-2035-pwc-india-report/127596756",
         "summary": "PwC India's report projects AI to add $550 billion to five key sectors by 2035. The report introduces a 3A2I framework for scaling AI, focusing on access, acceptance, and assimilation, as well as implementation and institutionalization. This framework aims to unlock broader public and economic benefits from AI adoption.",
         "date_published": "2026-01-28",
         "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 149,
+        "title": "How AI-driven platforms are transforming Rs 32 lakh crore Indian retail market - What EY NASSCOM report revealed",
+        "url": "https://www.etnownews.com/technology/how-ai-driven-platforms-are-transforming-rs-32-lakh-crore-indian-retail-market-what-ey-nasscom-report-revealed-article-153521608",
+        "summary": "A report by EY India and NASSCOM reveals that AI-driven platforms are transforming the Indian retail market, valued at Rs 32 lakh crore. The report predicts that 2026 will be the year of \"Productive Retail,\" driven by AI advancements. Generative AI is expected to boost sector productivity by up to 37% by 2030.",
+        "date_published": "2026-01-28",
+        "source_name": "ET Now Technology",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -789,12 +865,50 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 152,
+        "title": "Antler is doubling its checks and speed amidst the flurry of AI companies in India",
+        "url": "https://yourstory.com/2026/01/antler-doubling-checks-speed-amidst-flurry-ai-companies-india",
+        "summary": "Antler is adjusting its strategy amidst the growing AI industry in India, focusing on quality founders and ideas by reducing cohort size. The firm plans to onboard new cohorts every quarter to keep pace with the evolving AI landscape. This shift comes after Antler announced its AI residency programme in July 2025.",
+        "date_published": "2026-01-29",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 142,
         "title": "Over 100 Indian AI startup founders moving to US for funds and talent",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/100-indian-ai-founders-relocate-to-us-for-growth-and-talent/127676735",
         "summary": "Over 100 Indian AI startup founders are relocating to the US in search of funding and talent. Several startups, including Composio and Meetstream.ai, have already made the move over the past couple of years. Others, such as Smallest.ai and Beatoven.ai, are also shifting their base to the US.",
         "date_published": "2026-01-28",
         "source_name": "ET CIO - AI",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 154,
+        "title": "AI film studio TakeTwo secures funding at Rs 100 Cr valuation in pre-seed round",
+        "url": "https://entrackr.com/snippets/ai-film-studio-taketwo-secures-funding-at-rs-100-cr-valuation-in-pre-seed-round-11037420",
+        "summary": "TakeTwo, an AI-native film studio, has secured funding at a valuation of Rs 100 crore in its pre-seed round, with participation from US-based Afore Capital and Canada's Inovia VC. The company, founded by Y Combinator's AI Startup School alumni, aims to be a key technology partner for India's film industry. The funding will be used to develop technical infrastructure and scale its team of creative technologists.",
+        "date_published": "2026-01-28",
+        "source_name": "Entrackr - AI & Startups",
         "category": "AI Start-Up News",
         "state_codes": [
           "IN"
@@ -1056,5 +1170,9 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives",
+    "AI Start-Up News",
+    "Major AI Developments"
+  ]
 }
