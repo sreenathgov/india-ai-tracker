@@ -36,9 +36,10 @@ class Deduplicator:
     """
 
     # Similarity thresholds (calibrated through testing)
-    TOKEN_SET_THRESHOLD = 88  # token_set_ratio - handles different lengths/word order
-    PARTIAL_THRESHOLD = 90    # partial_ratio - when one title is subset of another
-    COMBINED_THRESHOLD = 82   # weighted average of multiple algorithms
+    # Lowered after user feedback - news headlines vary significantly for same story
+    TOKEN_SET_THRESHOLD = 75  # token_set_ratio - handles different lengths/word order
+    PARTIAL_THRESHOLD = 85    # partial_ratio - when one title is subset of another
+    COMBINED_THRESHOLD = 70   # weighted average of multiple algorithms
 
     # Rolling window for duplicate detection (days)
     # Only articles published within this window are compared for duplicates
@@ -239,6 +240,48 @@ class Deduplicator:
         # ============================================================
         # Now check for duplicate signals
         # ============================================================
+
+        # SPECIAL CASES: Certain patterns are strong duplicate signals
+        # Check for same report/study/survey
+        report_keywords = {'nasscom', 'kpmg', 'mckinsey', 'gartner', 'idc', 'forrester', 'deloitte', 'pwc', 'ey', 'imf', 'worldbank'}
+
+        # Extract report names from both titles
+        words1 = set(t1_lower.split())
+        words2 = set(t2_lower.split())
+
+        # If both mention the same report/study organization
+        common_reports = words1 & words2 & report_keywords
+        if common_reports:
+            # Check for "report", "study", "survey", "analysis"
+            report_indicators = {'report', 'study', 'survey', 'analysis', 'findings', 'reveals'}
+            has_report_indicator1 = any(ind in t1_lower for ind in report_indicators)
+            has_report_indicator2 = any(ind in t2_lower for ind in report_indicators)
+
+            if has_report_indicator1 and has_report_indicator2:
+                # Both are about a report from the same organization
+                # Even if wording is different, likely the same report
+                # Check for overlapping key terms
+                term_overlap = len(set(entities1['key_terms']) & set(entities2['key_terms']))
+                if term_overlap >= 3 or token_set >= 55:  # Very low threshold for reports
+                    return weighted_avg, f"Same report source ({common_reports}) - likely duplicate"
+
+        # Check for same minister/official making statement at same event
+        # Look for specific minister names in lowercase
+        minister_names = {'vaishnaw', 'modi', 'sitharaman', 'goyal', 'jaishankar', 'ambedkar', 'pradhan'}
+        common_ministers = words1 & words2 & minister_names
+
+        if common_ministers and ('minister' in t1_lower or 'minister' in t2_lower):
+            # Same minister mentioned in both
+            event_keywords = {'davos', 'wef', 'parliament', 'budget', 'conference', 'summit', 'forum'}
+            common_events = words1 & words2 & event_keywords
+
+            # If same minister + same event, very likely duplicate
+            if common_events and token_set >= 60:
+                return weighted_avg, f"Same minister ({common_ministers}) at same event ({common_events}) with token_set {token_set}%"
+
+            # Even without event match, if token_set is decent and minister is same
+            if token_set >= 70:
+                return weighted_avg, f"Same minister ({common_ministers}) making statement with token_set {token_set}%"
 
         # Entity-based boost for similarity
         entity_adjustment = 0
