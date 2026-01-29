@@ -80,13 +80,10 @@ Previous Analysis (for reference):
 Please provide a REFINED analysis:
 
 1. **AI Relevance Verification**: Confirm this is truly about AI (YES/NO + confidence 0-100)
-2. **Category** (select ONE):
-   - Major AI Developments
-   - AI Policy & Regulation
-   - AI Start-Up News
-   - AI Research & Innovation
-   - AI Products & Applications
-   - AI Infrastructure & Compute
+2. **Category** (select ONE using STRICT definitions):
+   - **Policies and Initiatives**: Government ONLY (policies, laws, govt programs, minister statements, govt investments)
+   - **AI Start-Up News**: Startup must be subject/object (funding, launches, pivots, acquisitions)
+   - **Major AI Developments**: Everything else (industry reports, big tech, conferences, research, market trends)
 
 3. **State Attribution**: JSON array of 2-letter state codes
    - CRITICAL: Tag a state ONLY if article content is SUBSTANTIVELY about that state

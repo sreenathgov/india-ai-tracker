@@ -82,13 +82,32 @@ class GroqClient:
    - Must be fundamentally about AI technology, products, policy, or AI investments
    - Reject if AI mentioned only tangentially
 
-2. Category: One of these categories ONLY:
-   - Major AI Developments
-   - AI Policy & Regulation
-   - AI Start-Up News
-   - AI Research & Innovation
-   - AI Products & Applications
-   - AI Infrastructure & Compute
+2. Category: Select ONE using these STRICT definitions:
+
+   **Policies and Initiatives** (Government ONLY):
+   - Actual government policies, laws, regulations, frameworks released
+   - Government initiatives, partnerships, structured programs
+   - Government ministers/officials making statements/announcements
+   - Government budget allocations, investments, commitments
+   - Examples: "Minister announces policy", "Govt launches initiative", "₹150Bn govt investment"
+   - NOT industry reports, NOT private sector, NOT general market news
+
+   **AI Start-Up News** (Startup must be subject OR object):
+   - Funding rounds (seed, Series A/B/C, acquisitions)
+   - Startup launches, pivots, major milestones
+   - Startup product releases or customer wins
+   - Article MUST substantively involve a startup company
+   - Examples: "Startup raises $5M", "Neysa valued at $300M", "SpeakX pivots to GenAI"
+   - NOT just mentioning startups, must be ABOUT startups
+
+   **Major AI Developments** (Everything else):
+   - Industry reports, surveys, studies (Nasscom, KPMG, McKinsey, IMF)
+   - Big tech announcements (Google, Microsoft, Amazon, Meta)
+   - Conferences, events, summits (not govt-organized)
+   - Research from established institutions (not govt initiatives)
+   - Market trends, adoption stats, economic forecasts
+   - International collaborations (non-govt)
+   - DEFAULT if doesn't fit the other two categories
 
 3. State Attribution: JSON array of state codes (e.g., ["KA", "TN", "MH"])
    - Use standard 2-letter codes
