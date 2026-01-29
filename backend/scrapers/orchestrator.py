@@ -30,6 +30,27 @@ import json
 import os
 
 
+def cleanup_database_session(db):
+    """
+    Ensure database changes are persisted to disk.
+
+    Critical for Flask-SQLAlchemy 3.x with SQLite:
+    - commit() writes to WAL (Write-Ahead Log)
+    - close() closes the session
+    - dispose() ensures all connections are closed and WAL is checkpointed
+
+    Without this, changes remain in memory/WAL and aren't persisted to the .db file.
+    """
+    try:
+        db.session.commit()
+        db.session.close()
+        db.engine.dispose()
+        return True
+    except Exception as e:
+        print(f"⚠️  Database cleanup error: {e}")
+        return False
+
+
 def run_all_scrapers(target_states=None):
     """
     Main function to run all scrapers.
@@ -160,6 +181,7 @@ def run_all_scrapers(target_states=None):
 
     if not ai_relevant_articles:
         print("\nNo AI-relevant articles found. This is expected - prefer false negatives.")
+        cleanup_database_session(db)
         return stats
 
     # STEP 3: Deduplication
@@ -179,6 +201,7 @@ def run_all_scrapers(target_states=None):
 
     if not unique_articles:
         print("\nAll articles were duplicates. Exiting.")
+        cleanup_database_session(db)
         return stats
 
     # STEP 4: Categorisation
@@ -272,6 +295,10 @@ def run_all_scrapers(target_states=None):
     print(f"By Category:       {stats['by_category']}")
     print(f"By State:          {stats['by_state']}")
     print("=" * 60)
+
+    # CRITICAL: Ensure database changes are persisted to disk
+    if cleanup_database_session(db):
+        print("\n✅ Database connection closed and changes persisted")
 
     return stats
 
