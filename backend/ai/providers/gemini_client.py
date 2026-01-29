@@ -95,10 +95,20 @@ Please provide a REFINED analysis:
    - Valid reasons: state govt policy, state event, company HQ doing something in that state
    - Use ["IN"] for national/multi-state or if no specific state is central to the story
 
-4. **Summary**: Write a polished, publication-ready 2-3 sentence summary
-   - Focus on key facts and impact
-   - Professional tone
-   - Capture the "why this matters"
+4. **Summary**: Write a concise, professional summary (STRICT LIMIT: under 240 characters).
+   FORMAT RULES:
+   - Lead with the actor (company/govt/institution) and their action
+   - Name the geography (state or "India") where relevant
+   - State the purpose or impact briefly
+   - Use neutral, factual language - no hype words
+   - 1-2 short sentences maximum
+
+   GOOD EXAMPLES:
+   - "Karnataka govt unveils AI skilling scheme to train 1 lakh students in ML and data science over 3 years."
+   - "India's MeitY releases draft guidelines for AI safety testing to standardise model risk assessments."
+   - "Bengaluru startup Acme AI raises $20M Series A to expand its document processing platform."
+
+   BAD (too long/vague): "This is a really exciting development in the AI space that could potentially transform..."
 
 Respond with ONLY valid JSON:
 {{

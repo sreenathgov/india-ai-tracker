@@ -99,7 +99,21 @@ class GroqClient:
    - Valid reasons to tag: state government policy, state-specific event, company HQ in that state doing something there
    - If article mentions India broadly or multiple states equally, use ["IN"]
 
-4. Summary: 2-3 sentences capturing key points
+4. Summary: Write a concise, professional summary (STRICT LIMIT: under 240 characters).
+   FORMAT RULES:
+   - Lead with the actor (company/govt/institution) and their action
+   - Name the geography (state or "India") where relevant
+   - State the purpose or impact briefly
+   - Use neutral, factual language - no hype words
+   - 1-2 short sentences maximum
+
+   GOOD EXAMPLES:
+   - "Karnataka govt unveils AI skilling scheme to train 1 lakh students in ML and data science over 3 years."
+   - "India's MeitY releases draft guidelines for AI safety testing to standardise model risk assessments."
+   - "Bengaluru startup Acme AI raises $20M Series A to expand its document processing platform."
+   - "IIT Madras launches AI research centre focused on healthcare diagnostics in partnership with Apollo Hospitals."
+
+   BAD (too long/vague): "This is a really exciting development in the AI space that could potentially transform..."
 
 Articles to analyze:
 

@@ -232,6 +232,9 @@ class Update(db.Model):
     importance_score = db.Column(db.Float, default=0.0)  # Importance score from Layer 3
     premium_processed = db.Column(db.Boolean, default=False)  # Whether refined by Layer 3
 
+    # X (Twitter) posting tracking
+    posted_to_x_at = db.Column(db.DateTime, nullable=True)  # When posted to X, NULL if not posted
+
     def to_dict(self):
         return {
             'id': self.id,
@@ -247,7 +250,8 @@ class Update(db.Model):
             'processing_state': self.processing_state,
             'processing_attempts': self.processing_attempts,
             'importance_score': self.importance_score,
-            'premium_processed': self.premium_processed
+            'premium_processed': self.premium_processed,
+            'posted_to_x_at': self.posted_to_x_at.isoformat() if self.posted_to_x_at else None
         }
 
 
