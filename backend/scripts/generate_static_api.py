@@ -110,12 +110,23 @@ def generate_all_state_categories(api_root):
     ]
 
     for state_code in state_codes:
-        updates = Update.query.filter(
-            Update.state_codes.contains(state_code),
+        # Get all approved updates and filter in Python for exact JSON array match
+        # contains() does substring match which causes false positives
+        all_updates = Update.query.filter(
             Update.is_approved == True,
             (Update.is_deleted == False) | (Update.is_deleted == None),
             Update.processing_state == 'PROCESSED'
         ).order_by(Update.date_published.desc()).all()
+
+        # Filter for exact state code match in JSON array
+        updates = []
+        for update in all_updates:
+            try:
+                state_list = json.loads(update.state_codes) if isinstance(update.state_codes, str) else update.state_codes
+                if state_list and state_code in state_list:
+                    updates.append(update)
+            except:
+                continue
 
         categories = {
             'Policies and Initiatives': [],
@@ -155,12 +166,23 @@ def generate_all_india_categories(api_root):
     """Generate all-india/categories.json"""
     print("🇮🇳 Generating all-india/categories.json...")
 
-    updates = Update.query.filter(
-        Update.state_codes.contains('IN'),
+    # Get all approved updates and filter in Python for exact JSON array match
+    # contains() does substring match which causes false positives (TN contains IN)
+    all_updates = Update.query.filter(
         Update.is_approved == True,
         (Update.is_deleted == False) | (Update.is_deleted == None),
         Update.processing_state == 'PROCESSED'
     ).order_by(Update.date_published.desc()).all()
+
+    # Filter for exact "IN" match in state codes array
+    updates = []
+    for update in all_updates:
+        try:
+            state_list = json.loads(update.state_codes) if isinstance(update.state_codes, str) else update.state_codes
+            if state_list and 'IN' in state_list:
+                updates.append(update)
+        except:
+            continue
 
     categories = {
         'Policies and Initiatives': [],
