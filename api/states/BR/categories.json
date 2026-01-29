@@ -2,26 +2,7 @@
   "state": "BR",
   "categories": {
     "Policies and Initiatives": [],
-    "Events": [
-      {
-        "id": 137,
-        "title": "IIT-Patna event to focus on AI strategy",
-        "url": "https://timesofindia.indiatimes.com/city/patna/iit-patna-event-to-focus-on-ai-strategy/articleshow/127416398.cms",
-        "summary": "IIT-Patna is hosting a pre-event for the India AI Impact Summit 2026, focusing on innovative AI strategies. The event will highlight AI's role in addressing national issues like climate resilience and child safety, as well as promoting startup growth. It aims to showcase cutting-edge AI solutions that drive innovation and progress.",
-        "date_published": "2026-01-25",
-        "source_name": "Times of India - Patna",
-        "category": "Events",
-        "state_codes": [
-          "BR"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false
-      }
-    ],
+    "Events": [],
     "Major AI Developments": [],
     "AI Start-Up News": []
   },

@@ -1,87 +1,10 @@
 {
   "state": "GJ",
   "categories": {
-    "Policies and Initiatives": [
-      {
-        "id": 42,
-        "title": "Now, AI to identify stray cattle in Ahmedabad, track owners",
-        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/now-ai-to-identify-stray-cattle-in-ahmedabad-track-owners/articleshow/126710858.cms",
-        "summary": "The Ahmedabad city administration is utilizing AI technology to identify stray cattle and track their owners. This initiative aims to address the issue of stray cattle roaming the streets, causing accidents and other problems. The AI system will help authorities to locate and reunite the stray cattle with their owners.",
-        "date_published": "2026-01-20",
-        "source_name": "Times of India - Ahmedabad",
-        "category": "Policies and Initiatives",
-        "state_codes": [
-          "GJ"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false
-      }
-    ],
+    "Policies and Initiatives": [],
     "Events": [],
-    "Major AI Developments": [
-      {
-        "id": 139,
-        "title": "Saved by seconds: ISR working on AI-based quake early warning system for Gujarat",
-        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/saved-by-seconds-isr-working-on-ai-based-quake-early-warning-system-for-gujarat/articleshow/127495679.cms",
-        "summary": "The Indian Space Research Organisation (ISR) is developing an AI-based earthquake early warning system for Gujarat. The system aims to provide critical seconds of warning to people in the event of an earthquake, potentially saving lives. The AI technology will help detect seismic activity and alert authorities and the public quickly.",
-        "date_published": "2026-01-26",
-        "source_name": "Times of India - Ahmedabad",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "GJ"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false
-      },
-      {
-        "id": 43,
-        "title": "Tatas to make chips, laptops for Intel in Gujarat, Assam",
-        "url": "https://b2b.economictimes.indiatimes.com/news/gujarat/tatas-to-make-chips-laptops-for-intel-in-gujarat-assam/125867971",
-        "summary": "Tata Electronics will manufacture Intel's advanced AI laptop chips and employ cutting-edge packaging technologies at its new facilities in Gujarat and Assam. This collaboration aims to boost India's semiconductor ambitions and enhance cost-effectiveness for Intel. The partnership will also accelerate market entry for Intel, capitalizing on India's growing AI PC demand.",
-        "date_published": "2025-12-09",
-        "source_name": "ET B2B Gujarat",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "AS",
-          "GJ"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false
-      }
-    ],
-    "AI Start-Up News": [
-      {
-        "id": 75,
-        "title": "How this deeptech startup is driving seaweed cultivation along the western coast of India",
-        "url": "https://yourstory.com/2026/01/how-this-deeptech-startup-is-driving-seaweed-cultivation-along-the-western-coast-of-india",
-        "summary": "ClimaCrew, a Mumbai-based deeptech startup, is promoting seaweed cultivation along India's western coast by partnering with coastal communities and industries. The company uses an AI-driven platform to analyze satellite data and identify suitable locations for seaweed cultivation. This initiative aims to harness the nutritional potential of seaweed in Gujarat and Maharashtra.",
-        "date_published": "2026-01-21",
-        "source_name": "YourStory",
-        "category": "AI Start-Up News",
-        "state_codes": [
-          "GJ",
-          "MH"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false
-      }
-    ]
+    "Major AI Developments": [],
+    "AI Start-Up News": []
   },
   "today_updates": []
 }

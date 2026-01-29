@@ -2,26 +2,7 @@
   "state": "SK",
   "categories": {
     "Policies and Initiatives": [],
-    "Events": [
-      {
-        "id": 105,
-        "title": "DI Talk Show on India AI Impact Summit 2026 and Digital India Initiatives in Sikkim",
-        "url": "https://www.digitalindia.gov.in/events/di-talk-show-on-india-ai-impact-summit-2026-and-digital-india-initiatives-in-sikkim/",
-        "summary": "A DI Talk Show discussed the India AI Impact Summit 2026 and Digital India initiatives in Sikkim. The event highlighted the potential impact of AI on India's growth and development. Digital India initiatives in Sikkim were also explored, focusing on the state's digital transformation.",
-        "date_published": "2026-01-22",
-        "source_name": "Digital India - Events",
-        "category": "Events",
-        "state_codes": [
-          "SK"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false
-      }
-    ],
+    "Events": [],
     "Major AI Developments": [],
     "AI Start-Up News": []
   },

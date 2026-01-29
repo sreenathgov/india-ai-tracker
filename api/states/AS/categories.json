@@ -3,7 +3,7 @@
   "categories": {
     "Policies and Initiatives": [
       {
-        "id": 95,
+        "id": 41,
         "title": "IIT-Guwahati backing Assam&#039;s AI push by teacher training, preparing textbooks: Director",
         "url": "https://b2b.economictimes.indiatimes.com/news/assam/iit-guwahati-backing-assams-ai-push-by-teacher-training-preparing-textbooks-director/125870595",
         "summary": "IIT-Guwahati is supporting Assam's artificial intelligence initiative by providing teacher training and developing textbooks. The institute's director announced this effort as part of the state's AI push. This move aims to enhance AI education and awareness in Assam.",
@@ -18,32 +18,15 @@
         "processing_state": "PROCESSED",
         "processing_attempts": 0,
         "importance_score": 0.0,
-        "premium_processed": false
+        "premium_processed": false,
+        "posted_to_x_at": null
       }
     ],
     "Events": [],
-    "Major AI Developments": [
-      {
-        "id": 43,
-        "title": "Tatas to make chips, laptops for Intel in Gujarat, Assam",
-        "url": "https://b2b.economictimes.indiatimes.com/news/gujarat/tatas-to-make-chips-laptops-for-intel-in-gujarat-assam/125867971",
-        "summary": "Tata Electronics will manufacture Intel's advanced AI laptop chips and employ cutting-edge packaging technologies at its new facilities in Gujarat and Assam. This collaboration aims to boost India's semiconductor ambitions and enhance cost-effectiveness for Intel. The partnership will also accelerate market entry for Intel, capitalizing on India's growing AI PC demand.",
-        "date_published": "2025-12-09",
-        "source_name": "ET B2B Gujarat",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "AS",
-          "GJ"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false
-      }
-    ],
+    "Major AI Developments": [],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }
