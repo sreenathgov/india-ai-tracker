@@ -1,16 +1,34 @@
 {
   "state": "UP",
   "categories": {
-    "Policies and Initiatives": [],
-    "Events": [
+    "Policies and Initiatives": [
       {
-        "id": 28,
+        "id": 136,
+        "title": "Policy Leaders and Innovators deliberate future of Responsible Health AI as Federated Intelligence Hackathon Concludes at IIT Kanpur",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2218389",
+        "summary": "Policy leaders and innovators gathered at IIT Kanpur to discuss the future of responsible health AI. The event coincided with the conclusion of the Federated Intelligence Hackathon, which focused on health AI. The deliberations aimed to shape the development of health AI in a responsible and innovative manner.",
+        "date_published": "2026-01-25",
+        "source_name": "PIB Tamil Nadu",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 90,
         "title": "UP govt to host AI-led innovation, skills conference in Lucknow",
         "url": "https://government.economictimes.indiatimes.com/news/technology/uttar-pradesh-to-host-groundbreaking-ai-innovation-conference-in-lucknow/126751373",
-        "summary": "The Uttar Pradesh government is hosting an AI-led innovation and skills conference in Lucknow. Global tech companies such as Microsoft, Google, TCS, and Intel are set to participate in the event. The conference aims to promote innovation and skills development in the field of artificial intelligence.",
+        "summary": "The Uttar Pradesh government will host an AI-led innovation and skills conference in Lucknow, bringing together global technology majors. Companies such as Microsoft, Google, TCS, and Intel are set to participate in the event. The conference aims to promote AI-led innovation and skills development in the region.",
         "date_published": "2026-01-20",
         "source_name": "ET Government - Technology",
-        "category": "Events",
+        "category": "Policies and Initiatives",
         "state_codes": [
           "UP"
         ],
@@ -23,10 +41,9 @@
         "posted_to_x_at": null
       }
     ],
+    "Events": [],
     "Major AI Developments": [],
     "AI Start-Up News": []
   },
-  "today_updates": [
-    "Events"
-  ]
+  "today_updates": []
 }

@@ -3,7 +3,27 @@
   "categories": {
     "Policies and Initiatives": [],
     "Events": [],
-    "Major AI Developments": [],
+    "Major AI Developments": [
+      {
+        "id": 86,
+        "title": "RMZ Group to Invest $10 Billion in GCC Park, Data Centre in Andhra Pradesh",
+        "url": "https://analyticsindiamag.com/ai-news-updates/rmz-group-to-invest-10-billion-in-gcc-park-data-centre-in-andhra-pradesh/",
+        "summary": "RMZ Group is investing $10 billion in a GCC Park and data centre in Andhra Pradesh. The projects are expected to create around 100,000 jobs across various sectors, including IT services, data centres, industrial, and logistics. This significant investment aims to boost employment and economic growth in the region.",
+        "date_published": "2026-01-21",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "AI Start-Up News": []
   },
   "today_updates": []
