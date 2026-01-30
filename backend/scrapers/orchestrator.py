@@ -375,27 +375,32 @@ def save_to_database(articles):
         try:
             db.session.commit()
             print(f"\nCommitted {saved_count} articles to database")
-
-            # CRITICAL FIX: Force SQLite to flush to disk
-            # Close and reopen connection to force write
-            db.session.close()
-            db.engine.dispose()
-
-            # Verify write by reopening
-            from sqlalchemy import create_engine
-            import os
-            db_path = os.path.join(os.path.dirname(__file__), '..', 'tracker.db')
-            verify_engine = create_engine(f'sqlite:///{db_path}')
-            with verify_engine.connect() as conn:
-                result = conn.execute(db.text("SELECT COUNT(*) FROM updates"))
-                count = result.scalar()
-                print(f"✓ Database file verified: {count} total updates")
-            verify_engine.dispose()
-
         except Exception as e:
             db.session.rollback()
             print(f"\nDatabase commit error: {e}")
             return 0
+
+    # CRITICAL: Force write to disk OUTSIDE the app context
+    # Flask-SQLAlchemy's context manager cleanup can interfere with persistence
+    try:
+        import sqlite3
+        import os
+        db_path = os.path.join(os.path.dirname(__file__), '..', 'tracker.db')
+
+        # Force SQLite to checkpoint WAL and sync to disk
+        conn = sqlite3.connect(db_path)
+        conn.execute("PRAGMA wal_checkpoint(FULL)")
+        conn.execute("PRAGMA synchronous = FULL")
+        conn.commit()
+
+        # Verify count
+        cursor = conn.execute("SELECT COUNT(*) FROM updates")
+        count = cursor.fetchone()[0]
+        conn.close()
+
+        print(f"✓ Database persisted to disk: {count} total updates")
+    except Exception as e:
+        print(f"⚠️  Warning: Could not verify disk write: {e}")
 
     return saved_count
 
