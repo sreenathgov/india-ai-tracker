@@ -1,14 +1,53 @@
 {
   "state": "TG",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 141,
+        "title": "Hyderabad Police launch AI-driven system to overhaul CAR duty allocation",
+        "url": "https://www.thehindu.com/news/cities/Hyderabad/hyderabad-police-launch-ai-driven-system-to-overhaul-car-duty-allocation/article70557894.ece",
+        "summary": "Hyderabad Police have introduced an AI-driven system to revamp the allocation of CAR (Crime and Accident Reporting) duties. The new system aims to optimize duty allocation using artificial intelligence. This initiative is expected to improve the efficiency and effectiveness of police operations in the city.",
+        "date_published": "2026-01-28",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 39,
+        "title": "Telangana govt signs pact with Deakin University to establish AI CoE",
+        "url": "https://b2b.economictimes.indiatimes.com/news/telangana/telangana-partners-with-deakin-university-to-launch-pioneering-ai-centre-of-excellence/125832531",
+        "summary": "The Telangana government has signed a pact with Deakin University to establish an Artificial Intelligence Centre of Excellence (AI CoE). This partnership aims to enhance research and advanced skill development in key sectors. The new CoE is expected to contribute to Telangana's emergence as a gateway for Digital India.",
+        "date_published": "2025-12-08",
+        "source_name": "ET B2B Telangana",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [
       {
-        "id": 15,
+        "id": 29,
         "title": "Regional AI Conference at Hyderabad",
         "url": "https://www.digitalindia.gov.in/events/regional-ai-conference-at-hyderabad/",
-        "summary": "A Regional AI Conference is being held in Hyderabad, bringing together experts and enthusiasts to discuss the latest developments in artificial intelligence. The conference aims to facilitate knowledge sharing and collaboration among participants from the region. Details about the conference, including its schedule and speakers, are not specified.",
-        "date_published": "2026-01-30",
+        "summary": "A Regional AI Conference is being held in Hyderabad, bringing together experts and enthusiasts to discuss the latest developments in artificial intelligence. The conference aims to facilitate knowledge sharing, collaboration, and innovation in the field of AI. Details about the conference, including its schedule and speakers, are not specified in the given information.",
+        "date_published": "2026-01-20",
         "source_name": "Digital India - Events",
         "category": "Events",
         "state_codes": [
@@ -25,7 +64,26 @@
     ],
     "Major AI Developments": [
       {
-        "id": 22,
+        "id": 147,
+        "title": "Western Union partners HCLTech to open AI-led global capability centre in Hyderabad",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/western-union-partners-hcltech-to-open-ai-led-global-capability-centre-in-hyderabad/articleshow/127647361.cms",
+        "summary": "Western Union has partnered with HCLTech to open an AI-led global capability centre in Hyderabad. The centre will leverage artificial intelligence to drive innovation and growth for Western Union. This collaboration aims to enhance Western Union's global operations with advanced technology and expertise.",
+        "date_published": "2026-01-28",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 156,
         "title": "Google rolls out AI-powered photo editing feature in India",
         "url": "https://telanganatoday.com/google-rolls-out-ai-powered-photo-editing-feature-in-india",
         "summary": "Google has launched an AI-powered photo editing feature in India, allowing users to edit images in Google Photos using voice or text prompts. The feature, powered by Gemini, supports multiple Indian languages and offers conversational editing tools. It also provides personalised editing options for users.",
@@ -42,16 +100,206 @@
         "importance_score": 0.0,
         "premium_processed": false,
         "posted_to_x_at": null
+      },
+      {
+        "id": 103,
+        "title": "Telangana Launches Aikam, Global AI Innovation Entity, at Davos",
+        "url": "https://analyticsindiamag.com/ai-news-updates/telangana-launches-aikam-global-ai-innovation-entity-at-davos/",
+        "summary": "Telangana has launched Aikam, a global AI innovation entity, with the goal of placing the region among the top 20 global innovation hubs. Aikam aims to achieve this through AI workforce development. The launch took place at Davos, a prominent international gathering.",
+        "date_published": "2026-01-22",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 109,
+        "title": "L’Oréal to pump Rs 3,500 cr in 1st AI-driven global tech hub in Hyderabad",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/loral-to-pump-rs-3500-cr-in-1st-ai-driven-global-tech-hub-in-hyderabad/articleshow/127036033.cms",
+        "summary": "L'Oréal is investing Rs 3,500 cr in its first AI-driven global tech hub, located in Hyderabad. The hub will be the company's first of its kind, leveraging artificial intelligence to drive innovation. This significant investment underscores Hyderabad's growing importance as a technology hub.",
+        "date_published": "2026-01-22",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 120,
+        "title": "UPC Volt to set up AI ready data centre at Telangana’s Bharat Future City; ₹5,000 crore investment over 5 years estimated",
+        "url": "https://www.thehindu.com/news/national/telangana/upc-volt-to-set-up-ai-ready-data-centre-at-telanganas-bharat-future-city/article70537110.ece",
+        "summary": "UPC Volt is setting up an AI-ready data centre at Telangana's Bharat Future City with an estimated investment of ₹5,000 crore over 5 years. The facility is expected to create over 3,000 jobs during construction and more than 800 jobs during operation. The data centre will be a significant addition to the region's infrastructure, driven by AI technology.",
+        "date_published": "2026-01-22",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 87,
+        "title": "Telangana Unveils Life Sciences Policy 2026–30 at Davos, Targets $25 Bn Investments",
+        "url": "https://analyticsindiamag.com/ai-news-updates/telangana-unveils-life-sciences-policy-2026-30-at-davos-targets-25-bn-investments/",
+        "summary": "Telangana has unveiled its Life Sciences Policy 2026-30 at Davos, aiming to attract $25 billion in investments. The policy proposes the development of 10 Pharma Villages and the expansion of Genome Valley and the Medical Devices Park. This initiative is expected to boost the region's life sciences sector through strategic infrastructure development and investment.",
+        "date_published": "2026-01-21",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 89,
+        "title": "Hyderabad Emerges as Global Beauty Tech Hub with L’Oréal’s Largest GCC Investment",
+        "url": "https://analyticsindiamag.com/ai-news-updates/hyderabad-emerges-as-global-beauty-tech-hub-with-loreals-largest-gcc-investment/",
+        "summary": "Hyderabad is emerging as a global beauty tech hub with L'Oréal's largest investment in a Global Capability Centre (GCC). The new GCC represents an initial investment of ₹3,500 crore. This investment establishes Hyderabad as a key location for beauty tech innovation and development.",
+        "date_published": "2026-01-21",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 96,
+        "title": "Unilever Considers GCC in Hyderabad, Cites City’s Growing Global Appeal",
+        "url": "https://analyticsindiamag.com/ai-news-updates/unilever-considers-gcc-in-hyderabad-cites-citys-growing-global-appeal/",
+        "summary": "Unilever is considering Hyderabad as a potential location for its Global Capability Centre (GCC) operations. The company is drawn to the city's growing global appeal, indicating its increasing attractiveness as a business hub. Hyderabad's emergence as a key destination is a significant factor in Unilever's decision to evaluate the city for its GCC operations.",
+        "date_published": "2026-01-21",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 83,
+        "title": "Indian start-ups unveil breakthrough AI tools for mass health screening",
+        "url": "https://www.thehindu.com/news/national/telangana/indian-start-ups-unveil-breakthrough-ai-tools-for-mass-health-screening/article70529390.ece",
+        "summary": "Indian start-ups have developed innovative AI tools for mass health screening, marking a significant breakthrough in the field. These AI-powered tools aim to enhance the efficiency and accessibility of health screenings, potentially benefiting a large population. The introduction of these tools is expected to revolutionize the healthcare sector in India and beyond.",
+        "date_published": "2026-01-20",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 38,
+        "title": "AI hype reversal could bring back FIIs to India creating huge upside",
+        "url": "https://telanganatoday.com/ai-hype-reversal-could-bring-back-fiis-to-india-creating-huge-upside",
+        "summary": "A potential reversal of the global AI investment boom could redirect foreign capital towards India. India's limited exposure to AI infrastructure and strong macro fundamentals may offer significant upside when markets refocus on fundamentals. This shift could bring back Foreign Institutional Investors (FIIs) to India, creating a huge upside.",
+        "date_published": "2026-01-08",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 34,
+        "title": "T-Hub selects 10 startups to drive AI, semiconductor innovation in India",
+        "url": "https://t-hub.co/t-hub-selects-10-startups-to-drive-ai-semiconductor-innovation-in-india/",
+        "summary": "T-Hub has selected 10 startups in partnership with the UK Government's 'UK-India Emerging Tech Exchange Programme' to drive innovation in AI and semiconductors. The chosen startups include Alice Camera, B-Secur, and StarBuzz.AI, among others, and will leverage the capabilities of both India and the UK in these fields. The partnership aims to provide a robust platform for these startups to grow and collaborate.",
+        "date_published": "2024-04-01",
+        "source_name": "T-Hub News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
       }
     ],
     "AI Start-Up News": [
       {
-        "id": 18,
-        "title": "Sarvam AI signs MoU with TN Govt to set up  sovereign AI park with ₹10,000 cr investment",
-        "url": "https://www.techcircle.in/2026/01/13/-sarvam-ai-signs-mou-with-tn-govt-to-set-up-sovereign-ai-park-with-10-000-cr-investment",
-        "summary": "Sarvam AI has signed a Memorandum of Understanding (MoU) with the Tamil Nadu government to establish a sovereign AI park. The project is expected to attract an investment of ₹10,000 crore. The AI park aims to promote innovation and development in the field of artificial intelligence.",
-        "date_published": "2026-01-01",
-        "source_name": "TechCircle - Policy",
+        "id": 35,
+        "title": "IIIT-Hyderabad uses AI to decode the Indian thali",
+        "url": "https://telanganatoday.com/iiit-hyderabad-uses-ai-to-decode-the-indian-thali",
+        "summary": "Researchers at IIIT-Hyderabad are developing an AI-powered system to analyze the Indian thali, a meal with diverse textures and overlapping ingredients. The system aims to decode the complex composition of the thali using artificial intelligence. The research was recently presented at the 16th Indian Conference on Computer Vision, Graphics and Image Processing 2025.",
+        "date_published": "2026-01-17",
+        "source_name": "Telangana Today - Tech",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 106,
+        "title": "T-Hub and Hexagon selects 12 Startups for LAB32 Cohort, Driving Innovation in AI and Digital Reality",
+        "url": "https://t-hub.co/t-hub-and-hexagon-selects-12-startups-for-lab32-cohort-driving-innovation-in-ai-and-digital-reality/",
+        "summary": "T-Hub and Hexagon have selected 12 startups for the LAB32 cohort, a 100-day program focused on AI and digital reality innovations. The program will provide mentorship, guidance, and support in areas such as go-to-market strategies and predictive maintenance using AI models. The selected startups were chosen from over 230 applications and will have access to market opportunities, including the potential to partner with Hexagon.",
+        "date_published": "2024-04-01",
+        "source_name": "T-Hub News",
         "category": "AI Start-Up News",
         "state_codes": [
           "TG"
@@ -67,8 +315,6 @@
     ]
   },
   "today_updates": [
-    "Events",
-    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

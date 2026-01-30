@@ -1,13 +1,110 @@
 {
   "state": "KA",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 117,
+        "title": "Karnataka Cabinet approves Centre for Applied AI for Tech Solutions",
+        "url": "https://www.thehindu.com/news/cities/bangalore/karnataka-cabinet-approves-centre-for-applied-ai-for-tech-solutions/article70538568.ece",
+        "summary": "The Karnataka Cabinet has approved the establishment of a Centre for Applied AI for Tech Solutions. This move aims to leverage artificial intelligence for technological advancements and solutions. The centre is expected to drive innovation and development in the state.",
+        "date_published": "2026-01-23",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 98,
+        "title": "WEF Davos: Karnataka holds talks with Bharti, PayPal, Mistral AI on expansion",
+        "url": "https://yourstory.com/2026/01/wef-davos-karnataka-holds-talks-with-bharti-paypal-mistral-ai-on-expansion",
+        "summary": "Karnataka held talks with companies like Bharti, PayPal, and Mistral AI at WEF Davos to discuss expansion opportunities. The state pitched investment opportunities in areas such as data centres and AI hubs. Deputy CM Shivakumar promoted Bengaluru as the \"city of the future\" to attract international investment.",
+        "date_published": "2026-01-21",
+        "source_name": "YourStory",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 68,
+        "title": "Inside IAIRO, India’s ISRO for AI",
+        "url": "https://analyticsindiamag.com/ai-features/inside-iairo-indias-isro-for-ai/",
+        "summary": "IAIRO aims to create an AI ecosystem in India by establishing funded labs, providing strong mentors, and fostering a culture of building AI. The organization is often referred to as India's ISRO for AI, drawing a comparison to the country's prominent space research organization. IAIRO's goal is to support ambitious peers and promote AI development in India.",
+        "date_published": "2026-01-20",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 49,
+        "title": "Employee Union Flags Fresher Onboarding Delays at Wipro, Seeks Labour Ministry Intervention",
+        "url": "https://analyticsindiamag.com/ai-news-updates/employee-union-flags-fresher-onboarding-delays-at-wipro-seeks-labour-ministry-intervention/",
+        "summary": "Wipro's fresher employees are experiencing months of uncertainty despite receiving letters of intent and completing necessary checks. Many have been given promised joining dates, but onboarding has been delayed. The employee union is seeking intervention from the Labour Ministry to address the issue.",
+        "date_published": "2026-01-19",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [
       {
-        "id": 17,
+        "id": 32,
+        "title": "AI Impact Summit Working Group Meeting in Bengaluru",
+        "url": "https://www.digitalindia.gov.in/events/ai-impact-summit-working-group-meeting-in-bengaluru/",
+        "summary": "An AI Impact Summit Working Group meeting took place in Bengaluru, bringing together key stakeholders to discuss AI's impact. The meeting aimed to explore the potential effects of AI on various sectors and industries. Details of the discussions and outcomes from the meeting are not specified.",
+        "date_published": "2026-01-20",
+        "source_name": "Digital India - Events",
+        "category": "Events",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 33,
         "title": "Data to Decisions: Powering Bharat’s AI Revolution",
         "url": "https://cio.economictimes.indiatimes.com/powering-ai-revolution?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
-        "summary": "A new initiative called \"Data to Decisions\" is powering India's AI revolution, particularly in the region of Bharat. The initiative is based in Bangalore, a major hub for technology and innovation in India. This effort aims to drive decision-making and growth through the use of artificial intelligence and data-driven insights.",
+        "summary": "A new initiative called \"Data to Decisions\" is powering India's AI revolution, particularly in Bharat. The initiative is focused on leveraging data to drive decision-making and is based in Bangalore. This effort aims to propel India's growth in the field of artificial intelligence.",
         "date_published": "2025-12-01",
         "source_name": "CIO ET - Events",
         "category": "Events",
@@ -23,15 +120,207 @@
         "posted_to_x_at": null
       }
     ],
-    "Major AI Developments": [],
+    "Major AI Developments": [
+      {
+        "id": 123,
+        "title": "Why Mphasis CEO Believes AI Can No Longer Be ‘Lipstick’ on Legacy IT",
+        "url": "https://analyticsindiamag.com/it-services/why-mphasis-ceo-believes-ai-can-no-longer-be-lipstick-on-legacy-it/",
+        "summary": "Mphasis CEO Nitin Rakesh believes AI can no longer be used as a superficial solution, or \"lipstick,\" on legacy IT systems. Instead, he thinks enterprises must use AI to extract intelligence from their existing core systems. This approach requires a more integrated and meaningful application of AI in legacy IT.",
+        "date_published": "2026-01-23",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 102,
+        "title": "Mistral AI in Talks to Set Up Bengaluru GCC, Plans Phased Research Expansion",
+        "url": "https://analyticsindiamag.com/ai-news-updates/mistral-ai-in-talks-to-set-up-bengaluru-gcc-plans-phased-research-expansion/",
+        "summary": "Mistral AI is in talks to set up a Global Capability Centre (GCC) in Bengaluru, with plans for phased research expansion. The Bengaluru GCC is expected to start with engineering capabilities, marking the initial phase of the expansion. This move indicates Mistral AI's intention to establish a significant presence in the city.",
+        "date_published": "2026-01-22",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 112,
+        "title": "HSR Layout to Get Karnataka’s ₹20 Crore AI Centre of Excellence",
+        "url": "https://analyticsindiamag.com/ai-news-updates/hsr-layout-to-get-karnatakas-%e2%82%b920-crore-ai-centre-of-excellence/",
+        "summary": "Karnataka is establishing a ₹20 crore AI Centre of Excellence in HSR Layout, focusing on key areas such as AI, robotics, and digital transformation. The centre aims to prioritize these areas, driving innovation and growth. The investment is expected to boost the region's technological capabilities.",
+        "date_published": "2026-01-22",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 79,
+        "title": "PhonePe charts road to IPO; OpenAI’s compute-to-revenue flywheel",
+        "url": "https://yourstory.com/2026/01/phonepe-charts-road-to-ipo-openais-compute-to-revenue-flywheel",
+        "summary": "PhonePe is planning an initial public offering (IPO) where existing shareholders will sell their shares, without the company raising new capital. OpenAI is focusing on a \"compute-to-revenue flywheel\" for growth, leveraging its computational capabilities to drive revenue. Shadowfax is developing a unified app to help riders switch between delivery formats and increase their hourly earnings.",
+        "date_published": "2026-01-21",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 80,
+        "title": "Voice AI startup Ringg AI raises $5.5 Mn in Series A funding led by Arkam Ventures",
+        "url": "https://entrackr.com/snippets/voice-ai-startup-ringg-ai-raises-55-mn-in-series-a-funding-led-by-arkam-ventures-11017504",
+        "summary": "Ringg AI, a Bengaluru-based voice AI startup, has raised $5.5 million in a Series A funding round led by Arkam Ventures. The funding round also saw participation from other investors, including Groww Founder Fund and Kunal Shah. The startup plans to use the fresh capital to expand its teams, accelerate product development, and strengthen its international presence.",
+        "date_published": "2026-01-21",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 58,
+        "title": "Swiggy using genAI to streamline operations as India’s food delivery market expands",
+        "url": "https://yourstory.com/2026/01/swiggy-genai-streamline-operations-india-food-delivery-market-expands",
+        "summary": "Swiggy is utilizing genAI to streamline its operations amidst the growing Indian food delivery market. India's food delivery market remains largely untapped, with only 10-12% of the population having used such services. This presents a significant opportunity for expansion and growth in the market.",
+        "date_published": "2026-01-20",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 15,
+        "title": "Agentic AI to drive autonomous enterprise by 2026, human role to shift to orchestration: Wipro CTO",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/agentic-ai-to-drive-autonomous-enterprise-by-2026-human-role-to-shift-to-orchestration-wipro-cto/126113653",
+        "summary": "",
+        "date_published": "2025-12-22",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 8.0,
+        "premium_processed": true,
+        "posted_to_x_at": null
+      }
+    ],
     "AI Start-Up News": [
       {
-        "id": 21,
-        "title": "Bengaluru: ED alleges AI-led rigging at WinZO",
-        "url": "https://timesofindia.indiatimes.com/city/bengaluru/bengaluru-ed-alleges-ai-led-rigging-at-winzo/articleshow/127796620.cms",
-        "summary": "The Enforcement Directorate (ED) has alleged that WinZO, a gaming platform, engaged in AI-led rigging. The ED made this allegation in Bengaluru, highlighting potential unfair practices at the company. The accusation suggests that WinZO may have used artificial intelligence to manipulate game outcomes.",
-        "date_published": "2026-01-30",
-        "source_name": "Times of India - Bangalore",
+        "id": 140,
+        "title": "Swiggy lets users order through ChatGPT, Claude",
+        "url": "https://yourstory.com/2026/01/swiggy-lets-users-order-through-chatgpt-claude-gemini",
+        "summary": "Swiggy is integrating its services with AI assistants like ChatGPT, allowing users to order meals, groceries, and book tables directly through these platforms. This move expands commerce beyond traditional app interfaces, enhancing user convenience. The integration includes other AI assistants like Claude and Gemini.",
+        "date_published": "2026-01-27",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 118,
+        "title": "AI-powered assistive eyewear for the visually impaired launched in Bengaluru",
+        "url": "https://www.thehindu.com/news/cities/bangalore/ai-powered-assistive-eyewear-for-the-visually-impaired-launched-in-bengaluru/article70538345.ece",
+        "summary": "AI-powered assistive eyewear has been launched in Bengaluru to aid the visually impaired. This innovative technology is designed to provide assistance and support to individuals with visual impairments. The launch of this eyewear marks a significant development in assistive technology, aiming to improve the daily lives of the visually impaired.",
+        "date_published": "2026-01-22",
+        "source_name": "The Hindu - Bangalore",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 65,
+        "title": "Bengaluru Voice AI Startup Bolna Grabs $6.3 Mn to Enhance Vernacular Calls",
+        "url": "https://analyticsindiamag.com/ai-news-updates/bengaluru-voice-ai-startup-bolna-grabs-6-3-mn-to-enhance-vernacular-calls/",
+        "summary": "Bolna, a Bengaluru-based voice AI startup, has secured $6.3 million in funding to enhance its vernacular call capabilities. The company's platform enables businesses to run voice AI systems in multiple languages and scenarios. This investment will likely support Bolna's efforts to expand its voice AI offerings.",
+        "date_published": "2026-01-21",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 76,
+        "title": "Dunzo co-founder’s vibe-coding startup Emergent raises $70M from Khosla Ventures, SoftBank Vision Fund 2",
+        "url": "https://yourstory.com/2026/01/dunzo-co-founder-vibe-coding-startup-emergent-series-b-khosla-ventures-softbank-vision",
+        "summary": "Emergent, a startup co-founded by Dunzo co-founder Mukund Jha and his twin brother Madhav Jha, has raised $70M from investors including Khosla Ventures and SoftBank Vision Fund 2. The company offers an AI-native platform that enables users to create web and mobile applications using natural language, eliminating the need for coding. This innovative platform allows for production-ready applications to be built without requiring users to write code.",
+        "date_published": "2026-01-20",
+        "source_name": "YourStory",
         "category": "AI Start-Up News",
         "state_codes": [
           "KA"
@@ -46,8 +335,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Events",
-    "AI Start-Up News"
-  ]
+  "today_updates": []
 }
