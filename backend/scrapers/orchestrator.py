@@ -30,27 +30,6 @@ import json
 import os
 
 
-def cleanup_database_session(db):
-    """
-    Ensure database changes are persisted to disk.
-
-    Critical for Flask-SQLAlchemy 3.x with SQLite:
-    - commit() writes changes to database
-    - remove() removes the session from the registry
-
-    Note: We don't call dispose() here because in GitHub Actions workflow,
-    subsequent steps (integrated_pipeline, generate_static_api) need to
-    access the database. dispose() would close the entire connection pool.
-    """
-    try:
-        db.session.commit()
-        db.session.remove()  # Remove session from registry (thread-local cleanup)
-        return True
-    except Exception as e:
-        print(f"⚠️  Database cleanup error: {e}")
-        return False
-
-
 def run_all_scrapers(target_states=None):
     """
     Main function to run all scrapers.
@@ -181,7 +160,6 @@ def run_all_scrapers(target_states=None):
 
     if not ai_relevant_articles:
         print("\nNo AI-relevant articles found. This is expected - prefer false negatives.")
-        cleanup_database_session(db)
         return stats
 
     # STEP 3: Deduplication
@@ -201,7 +179,6 @@ def run_all_scrapers(target_states=None):
 
     if not unique_articles:
         print("\nAll articles were duplicates. Exiting.")
-        cleanup_database_session(db)
         return stats
 
     # STEP 4: Categorisation
@@ -295,10 +272,6 @@ def run_all_scrapers(target_states=None):
     print(f"By Category:       {stats['by_category']}")
     print(f"By State:          {stats['by_state']}")
     print("=" * 60)
-
-    # CRITICAL: Ensure database changes are persisted to disk
-    if cleanup_database_session(db):
-        print("\n✅ Database connection closed and changes persisted")
 
     return stats
 
@@ -402,6 +375,23 @@ def save_to_database(articles):
         try:
             db.session.commit()
             print(f"\nCommitted {saved_count} articles to database")
+
+            # CRITICAL FIX: Force SQLite to flush to disk
+            # Close and reopen connection to force write
+            db.session.close()
+            db.engine.dispose()
+
+            # Verify write by reopening
+            from sqlalchemy import create_engine
+            import os
+            db_path = os.path.join(os.path.dirname(__file__), '..', 'tracker.db')
+            verify_engine = create_engine(f'sqlite:///{db_path}')
+            with verify_engine.connect() as conn:
+                result = conn.execute(db.text("SELECT COUNT(*) FROM updates"))
+                count = result.scalar()
+                print(f"✓ Database file verified: {count} total updates")
+            verify_engine.dispose()
+
         except Exception as e:
             db.session.rollback()
             print(f"\nDatabase commit error: {e}")
