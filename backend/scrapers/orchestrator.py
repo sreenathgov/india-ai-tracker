@@ -35,16 +35,16 @@ def cleanup_database_session(db):
     Ensure database changes are persisted to disk.
 
     Critical for Flask-SQLAlchemy 3.x with SQLite:
-    - commit() writes to WAL (Write-Ahead Log)
-    - close() closes the session
-    - dispose() ensures all connections are closed and WAL is checkpointed
+    - commit() writes changes to database
+    - remove() removes the session from the registry
 
-    Without this, changes remain in memory/WAL and aren't persisted to the .db file.
+    Note: We don't call dispose() here because in GitHub Actions workflow,
+    subsequent steps (integrated_pipeline, generate_static_api) need to
+    access the database. dispose() would close the entire connection pool.
     """
     try:
         db.session.commit()
-        db.session.close()
-        db.engine.dispose()
+        db.session.remove()  # Remove session from registry (thread-local cleanup)
         return True
     except Exception as e:
         print(f"⚠️  Database cleanup error: {e}")
