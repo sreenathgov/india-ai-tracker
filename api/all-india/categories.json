@@ -406,6 +406,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 157,
+        "title": "Dell Technologies and NxtGen partner to build India’s largest AI factory",
+        "url": "https://yourstory.com/2026/01/dell-technologies-nxtgen-partner-build-indias-largest-ai-factory",
+        "summary": "Dell Technologies and NxtGen are partnering to build India's largest AI factory, utilizing Dell AI Factory with NVIDIA for scalable and secure infrastructure. This partnership aims to accelerate India's AI mission and support large-scale AI development nationwide. The collaboration will enable NxtGen to expand its AI services across the country.",
+        "date_published": "2026-01-30",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 155,
         "title": "Indian, US researchers develop AI-based eye scan to detect diabetes",
         "url": "https://cellit.in/indian-us-researchers-develop-ai-based-eye-scan-to-detect-diabetes/",
@@ -884,6 +903,25 @@
         "posted_to_x_at": null
       },
       {
+        "id": 158,
+        "title": "India has seen a 3X increase in number of GenAI startups in 2025: Economic Survey",
+        "url": "https://yourstory.com/2026/01/india-3x-increase-number-genai-startups-2025-economic-survey",
+        "summary": "India saw a threefold increase in the number of GenAI startups in 2025, according to the Economic Survey. Cumulative funding for these startups rose to $990 million in the first half of 2025, up from $758 million in the same period the previous year. This growth has made GenAI a spotlight sector in India's deeptech ecosystem.",
+        "date_published": "2026-01-29",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 142,
         "title": "Over 100 Indian AI startup founders moving to US for funds and talent",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/100-indian-ai-founders-relocate-to-us-for-growth-and-talent/127676735",
@@ -1171,7 +1209,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives",
     "AI Start-Up News",
     "Major AI Developments"
   ]

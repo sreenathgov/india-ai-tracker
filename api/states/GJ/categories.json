@@ -3,6 +3,44 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 159,
+        "title": "MoU Exchanged to Establish Krishnamurthy Tandon School of Artificial Intelligence at IIM Ahmedabad",
+        "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2220512",
+        "summary": "A Memorandum of Understanding (MoU) has been exchanged to establish the Krishnamurthy Tandon School of Artificial Intelligence at IIM Ahmedabad. This new school will focus on artificial intelligence and is named after its benefactors. The establishment aims to promote research and education in the field of AI.",
+        "date_published": "2026-01-30",
+        "source_name": "PIB Press Releases (English)",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 160,
+        "title": "1cr outlay for AI in Ahmedabad civic schools",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/1cr-outlay-for-ai-in-ahmedabad-civic-schools/articleshow/127784683.cms",
+        "summary": "The Ahmedabad civic body has allocated Rs 1 crore for the implementation of artificial intelligence in its schools. This initiative aims to enhance the education system and provide students with exposure to AI technology. The allocation is part of the civic body's efforts to modernize and improve the quality of education in its schools.",
+        "date_published": "2026-01-30",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 42,
         "title": "Now, AI to identify stray cattle in Ahmedabad, track owners",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/now-ai-to-identify-stray-cattle-in-ahmedabad-track-owners/articleshow/126710858.cms",
@@ -24,6 +62,25 @@
     ],
     "Events": [],
     "Major AI Developments": [
+      {
+        "id": 161,
+        "title": "IIM-A gets Rs 100cr endowment to establish school of AI",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/iim-a-gets-rs-100cr-endowment-to-establish-school-of-ai/articleshow/127784244.cms",
+        "summary": "The Indian Institute of Management Ahmedabad (IIM-A) has received a Rs 100cr endowment to establish a school of artificial intelligence (AI). This significant funding will enable the institute to set up a dedicated school focused on AI research and education. The endowment is expected to enhance IIM-A's capabilities in the field of AI and related technologies.",
+        "date_published": "2026-01-30",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
       {
         "id": 139,
         "title": "Saved by seconds: ISR working on AI-based quake early warning system for Gujarat",
@@ -87,5 +144,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives",
+    "Major AI Developments"
+  ]
 }
