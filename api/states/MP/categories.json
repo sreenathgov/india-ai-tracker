@@ -3,27 +3,7 @@
   "categories": {
     "Policies and Initiatives": [],
     "Events": [],
-    "Major AI Developments": [
-      {
-        "id": 146,
-        "title": "IIT Indore develops AI-driven system to improve road safety, ease traffic",
-        "url": "https://www.tribuneindia.com/news/madhya-pradesh/iit-indore-develops-ai-driven-system-to-improve-road-safety-ease-traffic",
-        "summary": "IIT Indore has developed an AI-powered C-V2X technology for smarter traffic management, utilizing 4G/5G networks to send real-time alerts to drivers. The system provides updates on road conditions, accidents, and congestion to enhance road safety. This technology aims to prevent accidents and improve traffic flow by dynamically allocating communication resources.",
-        "date_published": "2026-01-12",
-        "source_name": "Tribune - Madhya Pradesh",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "MP"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      }
-    ],
+    "Major AI Developments": [],
     "AI Start-Up News": []
   },
   "today_updates": []
