@@ -29,6 +29,33 @@ def generate_static_api():
     os.makedirs(os.path.join(api_root, 'all-india'), exist_ok=True)
 
     with app.app_context():
+        # CRITICAL SAFETY CHECK: Verify database has data before regenerating API
+        # This prevents data loss if database hasn't been written to disk properly
+        total_updates = Update.query.count()
+        print(f"\n🔍 Pre-generation safety check:")
+        print(f"   Database has {total_updates} total updates")
+
+        # Load existing API to compare counts
+        existing_count = 0
+        try:
+            existing_api_path = os.path.join(api_root, 'all-india', 'categories.json')
+            if os.path.exists(existing_api_path):
+                with open(existing_api_path, 'r') as f:
+                    existing_data = json.load(f)
+                    existing_count = sum(len(cat) for cat in existing_data.get('categories', {}).values())
+                print(f"   Existing API has {existing_count} national updates")
+        except Exception as e:
+            print(f"   Could not read existing API: {e}")
+
+        # SAFETY: If database has significantly fewer records than existing API,
+        # this likely means database wasn't persisted properly. ABORT to prevent data loss.
+        if existing_count > 0 and total_updates < existing_count * 0.8:  # 20% margin
+            print(f"\n⚠️  SAFETY ABORT: Database has {total_updates} records but existing API has {existing_count}!")
+            print(f"   This suggests database wasn't persisted properly.")
+            print(f"   REFUSING to overwrite API files to prevent data loss.")
+            print(f"   Fix the database persistence issue first, then regenerate API.")
+            return
+
         # Generate last-updated.json
         generate_last_updated(api_root)
 
