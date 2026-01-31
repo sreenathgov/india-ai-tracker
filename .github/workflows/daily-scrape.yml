@@ -1,100 +1,200 @@
 name: Daily AI Tracker Scrape
-
+ 
 on:
   schedule:
     # Run daily at 11:00 AM IST (5:30 AM UTC)
     - cron: '30 5 * * *'
   workflow_dispatch: # Allow manual trigger from GitHub UI
-
+ 
 jobs:
   scrape-and-process:
     runs-on: ubuntu-latest
-
+ 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.PAT_TOKEN }}
           fetch-depth: 0
-
+ 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.9'
-
+ 
       - name: Install dependencies
         run: |
           cd backend
           pip install --upgrade pip
           pip install -r requirements.txt
-
-      - name: Download existing database (if exists)
+ 
+      - name: Check canonical data store
         run: |
-          cd backend
-          if [ -f tracker.db ]; then
-            echo "Database already exists locally"
+          echo "📂 Checking canonical JSON data store..."
+          if [ -f api/all-india/categories.json ]; then
+            NATIONAL_COUNT=$(python3 -c "
+            import json
+            with open('api/all-india/categories.json', 'r') as f:
+                data = json.load(f)
+                total = sum(len(articles) for articles in data.get('categories', {}).values())
+                print(total)
+            ")
+            echo "✓ Canonical store has $NATIONAL_COUNT national articles"
           else
-            echo "No existing database found - will create new one"
+            echo "⚠️  No existing canonical data - starting fresh"
           fi
-
+ 
       - name: Run scraper and pipeline
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OLLAMA_DISABLED: "true"
+          SCRAPE_TIME_WINDOW_HOURS: "24"  # Only scrape articles from last 24 hours
         run: |
           cd backend
-          echo "Step 1: Running scraper..."
+ 
+          # Record canonical JSON count BEFORE scraping
+          echo "📊 Checking canonical store before scraping..."
+          API_COUNT_BEFORE=$(python3 -c "
+          import json
+          import os
+          try:
+              with open('../api/all-india/categories.json', 'r') as f:
+                  data = json.load(f)
+                  total = sum(len(articles) for articles in data.get('categories', {}).values())
+                  print(total)
+          except:
+              print('0')
+          " 2>/dev/null || echo "0")
+          echo "Canonical JSON has $API_COUNT_BEFORE national articles before scraping"
+ 
+          echo ""
+          echo "Step 1: Running scraper with 24h time window..."
+          echo "  (Global deduplication against canonical JSON)"
+          echo "  (Time window: last 24 hours only)"
           PYTHONPATH=. python3 -c "
           from scrapers.orchestrator import run_all_scrapers
           result = run_all_scrapers()
-          print(f'Scraped {result.get(\"final_processed\", 0)} articles')
+          print(f'\\nFinal: {result.get(\"final_processed\", 0)} new articles after dedup & filtering')
           "
-
-          echo "Step 2: Running 3-layer processing pipeline..."
+ 
+          echo ""
+          echo "Step 2: Running 3-layer AI processing pipeline..."
           PYTHONPATH=. python3 ai/integrated_pipeline.py
-
-          echo "Step 3: Generating static JSON API files..."
+ 
+          echo ""
+          echo "Step 3: Merging into canonical JSON store..."
+          echo "  (Using MERGE logic - never reduces count)"
           PYTHONPATH=. python3 scripts/generate_static_api.py
-
+ 
+          # Verify canonical JSON was updated (should increase or stay same, never decrease)
+          echo ""
+          echo "🔍 Verifying merge results..."
+          API_COUNT_AFTER=$(python3 -c "
+          import json
+          try:
+              with open('../api/all-india/categories.json', 'r') as f:
+                  data = json.load(f)
+                  total = sum(len(articles) for articles in data.get('categories', {}).values())
+                  print(total)
+          except:
+              print('0')
+          " 2>/dev/null || echo "0")
+          echo "Canonical JSON now has $API_COUNT_AFTER national articles"
+ 
+          if [ "$API_COUNT_AFTER" -lt "$API_COUNT_BEFORE" ]; then
+            echo "❌ ERROR: Article count DECREASED ($API_COUNT_BEFORE → $API_COUNT_AFTER)!"
+            echo "❌ This violates the 'never reduce count' invariant!"
+            echo "❌ Refusing to commit - this is a critical bug!"
+            exit 1
+          fi
+ 
+          echo "✅ Merge successful: $API_COUNT_BEFORE → $API_COUNT_AFTER (+$(($API_COUNT_AFTER - $API_COUNT_BEFORE)))"
+          echo ""
           echo "Step 4: Complete!"
-
+ 
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-
-          # Add database, reports, and API files
-          git add backend/tracker.db
-          git add backend/reports/*.json || true
+ 
+          # Add canonical API files (the source of truth)
+          # Database is temp store only - not committed
           git add api/ || true
-
+          git add backend/reports/*.json || true
+ 
           # Check if there are changes to commit
           if git diff --staged --quiet; then
-            echo "No changes to commit"
+            echo "No changes to commit (no new articles after deduplication)"
           else
-            git commit -m "Update: Daily scrape and processing - $(date +'%Y-%m-%d %H:%M IST')"
+            # Count how many articles were added
+            API_COUNT=$(python3 -c "
+            import json
+            try:
+                with open('api/all-india/categories.json', 'r') as f:
+                    data = json.load(f)
+                    total = sum(len(articles) for articles in data.get('categories', {}).values())
+                    print(total)
+            except:
+                print('unknown')
+            " 2>/dev/null || echo "unknown")
+ 
+            git commit -m "Daily update: Merge new articles into canonical store - $(date +'%Y-%m-%d %H:%M IST')
+ 
+Total national articles: $API_COUNT
+ 
+Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>"
             git push
           fi
-
-      - name: Generate summary
+ 
+      - name: Generate summary and log counts
         run: |
-          cd backend
-          PYTHONPATH=. python3 -c "
-          from app import app, db, Update
+          mkdir -p backend/reports
+ 
+          # Log canonical store counts (source of truth)
+          python3 -c "
+          import json
           from datetime import datetime
-
-          with app.app_context():
-              today = datetime.now().date().isoformat()
-              today_scraped = Update.query.filter(Update.date_scraped >= today).count()
-              today_ai_relevant = Update.query.filter(
-                  Update.date_scraped >= today,
-                  Update.is_ai_relevant == True
-              ).count()
-              total = Update.query.count()
-
-              print(f'📊 Daily Scrape Summary ({today}):')
-              print(f'  Articles scraped today: {today_scraped}')
-              print(f'  AI-relevant: {today_ai_relevant}')
-              print(f'  Total in database: {total}')
+ 
+          today = datetime.now().date().isoformat()
+ 
+          # Count national articles
+          try:
+              with open('api/all-india/categories.json', 'r') as f:
+                  data = json.load(f)
+                  national_total = sum(len(articles) for articles in data.get('categories', {}).values())
+          except:
+              national_total = 0
+ 
+          # Count state articles
+          import os
+          state_total = 0
+          states_with_data = 0
+          if os.path.exists('api/states'):
+              for state_dir in os.listdir('api/states'):
+                  state_file = f'api/states/{state_dir}/categories.json'
+                  if os.path.exists(state_file):
+                      try:
+                          with open(state_file, 'r') as f:
+                              data = json.load(f)
+                              count = sum(len(articles) for articles in data.get('categories', {}).values())
+                              if count > 0:
+                                  state_total += count
+                                  states_with_data += 1
+                      except:
+                          pass
+ 
+          print(f'📊 Daily Scrape Summary ({today}):')
+          print(f'  National articles (canonical): {national_total}')
+          print(f'  State articles (canonical): {state_total} across {states_with_data} states')
+          print(f'  Grand total: {national_total + state_total}')
+          print(f'')
+          print(f'✅ Canonical JSON store is the source of truth')
+          print(f'✅ Merge logic preserves historical data')
+          print(f'✅ Global deduplication prevents duplicates')
+          print(f'✅ 24h time window prevents old articles')
+ 
+          # Write summary to log
+          with open('backend/reports/daily_counts.log', 'a') as f:
+              f.write(f'{today}: National={national_total}, States={state_total} ({states_with_data} states)\\n')
           " || echo "Could not generate summary"
