@@ -1,10 +1,16 @@
 """
 RSS Feed Scraper
 Scrapes from RSS feeds (easiest and most reliable)
+
+TIME WINDOW ENFORCEMENT:
+- Only scrapes articles from last 24 hours (configurable via env var)
+- Prevents old articles from RSS feeds (which often contain 7-14 days of content)
+- Configurable window: SCRAPE_TIME_WINDOW_HOURS (default: 24)
 """
 
 import feedparser
 import requests
+import os
 from datetime import datetime, timedelta
 from scrapers.base_scraper import BaseScraper
 
@@ -35,8 +41,13 @@ class RSScraper(BaseScraper):
                 print(f"⚠️  Feed warning: {feed.bozo_exception}")
                 # Continue anyway - feed might still be usable
 
-            # Only scrape articles from last 3 days to avoid old content
-            cutoff_date = (datetime.now() - timedelta(days=3)).date()
+            # TIME WINDOW ENFORCEMENT: Only scrape articles from last N hours
+            # Configurable via environment variable (default: 24 hours)
+            time_window_hours = int(os.getenv('SCRAPE_TIME_WINDOW_HOURS', '24'))
+            cutoff_time = datetime.now() - timedelta(hours=time_window_hours)
+            cutoff_date = cutoff_time.date()
+
+            skipped_old = 0
 
             for entry in feed.entries[:20]:  # Limit to 20 most recent
                 article = {
@@ -47,14 +58,16 @@ class RSScraper(BaseScraper):
                     'source_url': source_url
                 }
 
-                # Skip articles older than 3 days
+                # Enforce time window: skip articles older than cutoff
                 if article['date_published'] and article['date_published'] < cutoff_date:
+                    skipped_old += 1
                     continue
 
                 if article['title'] and article['url']:
                     articles.append(article)
 
-            print(f"✅ Scraped {len(articles)} articles from RSS feed")
+            print(f"✅ Scraped {len(articles)} articles from RSS feed "
+                  f"(skipped {skipped_old} older than {time_window_hours}h)")
             return articles
 
         except requests.Timeout:

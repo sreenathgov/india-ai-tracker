@@ -25,9 +25,108 @@ from ai.geo_attributor import GeoAttributor
 from ai.summarizer import AISummarizer
 from ai.deduplicator import Deduplicator
 from ai.date_extractor import DateExtractor
-from datetime import datetime
+from utils.canonical_key import get_canonical_key
+from datetime import datetime, timedelta
 import json
 import os
+
+
+def load_canonical_urls_from_json():
+    """
+    Load all existing URLs from canonical JSON API files.
+
+    This implements global deduplication by checking against the historical
+    canonical data store (JSON files) rather than just the current database.
+
+    Returns:
+        set of canonical URLs (normalized)
+    """
+    canonical_urls = set()
+
+    # Path to API directory
+    api_root = os.path.join(os.path.dirname(__file__), '..', '..', 'api')
+
+    # Load from all-india
+    all_india_path = os.path.join(api_root, 'all-india', 'categories.json')
+    if os.path.exists(all_india_path):
+        try:
+            with open(all_india_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                for articles in data.get('categories', {}).values():
+                    for article in articles:
+                        key = get_canonical_key(article)
+                        if key:
+                            canonical_urls.add(key)
+        except Exception as e:
+            print(f"  Warning: Could not load all-india canonical data: {e}")
+
+    # Load from all states
+    state_codes = [
+        'AN', 'AP', 'AR', 'AS', 'BR', 'CH', 'CG', 'DD', 'DL', 'DN', 'GA',
+        'GJ', 'HP', 'HR', 'JH', 'JK', 'KA', 'KL', 'LA', 'LD', 'MH', 'ML',
+        'MN', 'MP', 'MZ', 'NL', 'OD', 'PB', 'PY', 'RJ', 'SK', 'TN', 'TG',
+        'TR', 'UP', 'UT', 'WB'
+    ]
+
+    for state_code in state_codes:
+        state_path = os.path.join(api_root, 'states', state_code, 'categories.json')
+        if os.path.exists(state_path):
+            try:
+                with open(state_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    for articles in data.get('categories', {}).values():
+                        for article in articles:
+                            key = get_canonical_key(article)
+                            if key:
+                                canonical_urls.add(key)
+            except Exception as e:
+                pass  # Silently skip - state might not have data
+
+    return canonical_urls
+
+
+def deduplicate_against_canonical(scraped_articles):
+    """
+    Remove articles that already exist in canonical JSON store.
+
+    This implements GLOBAL deduplication across all historical data,
+    not just within the current scrape run.
+
+    Args:
+        scraped_articles: List of article dictionaries from scrapers
+
+    Returns:
+        List of articles that don't exist in canonical store
+    """
+    print("Loading canonical URLs from JSON files...")
+    canonical_urls = load_canonical_urls_from_json()
+    print(f"  Found {len(canonical_urls)} existing articles in canonical store")
+
+    deduplicated = []
+    skipped = 0
+
+    for article in scraped_articles:
+        key = get_canonical_key(article)
+
+        if not key:
+            # No URL - can't deduplicate, include it
+            deduplicated.append(article)
+            continue
+
+        if key in canonical_urls:
+            skipped += 1
+            # Optionally log first few for debugging
+            if skipped <= 5:
+                print(f"  Skipping (exists): {article.get('title', 'Unknown')[:60]}...")
+        else:
+            deduplicated.append(article)
+
+    if skipped > 5:
+        print(f"  ... and {skipped - 5} more duplicates")
+
+    print(f"\nGlobal dedup: {skipped} duplicates removed, {len(deduplicated)} new articles")
+
+    return deduplicated
 
 
 def run_all_scrapers(target_states=None):
@@ -121,19 +220,55 @@ def run_all_scrapers(target_states=None):
     # STEP 1.5: Extract/improve dates
     print()
     print("-" * 40)
-    print("STEP 1.5: DATE EXTRACTION")
+    print("STEP 1.5: DATE EXTRACTION & TIME WINDOW FILTER")
     print("-" * 40)
 
+    # Get time window from environment (default: 24 hours)
+    time_window_hours = int(os.getenv('SCRAPE_TIME_WINDOW_HOURS', '24'))
+    cutoff_time = datetime.now() - timedelta(hours=time_window_hours)
+    cutoff_date = cutoff_time.date()
+
+    filtered_articles = []
+    skipped_old = 0
+
     for article in all_articles:
+        # Extract date if missing
         if not article.get('date_published'):
-            # Try to extract from content
             extracted_date = date_extractor.extract(
                 article.get('content', ''),
                 fallback_date=datetime.now().date()
             )
             article['date_published'] = extracted_date
 
+        # Enforce time window: only keep articles from last N hours
+        if article['date_published'] and article['date_published'] < cutoff_date:
+            skipped_old += 1
+            continue
+
+        filtered_articles.append(article)
+
+    # Replace articles list with filtered version
+    all_articles = filtered_articles
+
     print(f"Processed dates for {len(all_articles)} articles")
+    print(f"Time window filter: kept {len(all_articles)}, skipped {skipped_old} articles older than {time_window_hours}h")
+
+    if not all_articles:
+        print("\nAll articles were outside the time window. Exiting.")
+        return stats
+
+    # STEP 1.6: Global Deduplication Against Canonical Store
+    print()
+    print("-" * 40)
+    print("STEP 1.6: GLOBAL DEDUPLICATION")
+    print("-" * 40)
+
+    # Deduplicate against canonical JSON (not database)
+    all_articles = deduplicate_against_canonical(all_articles)
+
+    if not all_articles:
+        print("\nAll articles were duplicates from canonical store. Exiting.")
+        return stats
 
     # STEP 2: AI Relevance Filter (STRICT)
     print()
