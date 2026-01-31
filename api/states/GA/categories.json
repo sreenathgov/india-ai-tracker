@@ -1,7 +1,27 @@
 {
   "state": "GA",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 101,
+        "title": "AI-system to challan vehicles sans valid docus at Goa border checkposts",
+        "url": "https://b2b.economictimes.indiatimes.com/news/goa/ai-system-to-challan-vehicles-sans-valid-docus-at-goa-border-checkposts/125869333",
+        "summary": "The GoVA system uses AI-enabled cameras at Goa's border entry points to monitor vehicles. These cameras can identify vehicles without valid documents, enabling authorities to issue challans. The system aims to improve enforcement and compliance at border checkposts.",
+        "date_published": "2025-12-09",
+        "source_name": "ET B2B Goa",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [],
     "Major AI Developments": [
       {
@@ -26,7 +46,5 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
