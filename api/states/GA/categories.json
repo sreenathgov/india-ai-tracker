@@ -1,15 +1,17 @@
 {
   "state": "GA",
   "categories": {
-    "Policies and Initiatives": [
+    "Policies and Initiatives": [],
+    "Events": [],
+    "Major AI Developments": [
       {
-        "id": 101,
-        "title": "AI-system to challan vehicles sans valid docus at Goa border checkposts",
-        "url": "https://b2b.economictimes.indiatimes.com/news/goa/ai-system-to-challan-vehicles-sans-valid-docus-at-goa-border-checkposts/125869333",
-        "summary": "The GoVA system uses AI-enabled cameras at Goa's border entry points to monitor vehicles. These cameras can identify vehicles without valid documents, enabling authorities to issue challans. The system aims to improve enforcement and compliance at border checkposts.",
-        "date_published": "2025-12-09",
-        "source_name": "ET B2B Goa",
-        "category": "Policies and Initiatives",
+        "id": 20,
+        "title": "AI traffic signals with smart cameras at 92 locations in Goa",
+        "url": "https://timesofindia.indiatimes.com/city/goa/ai-traffic-signals-with-smart-cameras-at-92-locations-in-goa/articleshow/127808624.cms",
+        "summary": "Goa has implemented AI-powered traffic signals with smart cameras at 92 locations. The intelligent system aims to improve traffic management and reduce congestion. The technology is expected to enhance road safety and efficiency in the region.",
+        "date_published": "2026-01-31",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
         "state_codes": [
           "GA"
         ],
@@ -22,9 +24,9 @@
         "posted_to_x_at": null
       }
     ],
-    "Events": [],
-    "Major AI Developments": [],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
