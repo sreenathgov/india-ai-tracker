@@ -139,11 +139,9 @@ jobs:
                 print('unknown')
             " 2>/dev/null || echo "unknown")
  
-            git commit -m "Daily update: Merge new articles into canonical store - $(date +'%Y-%m-%d %H:%M IST')
- 
-Total national articles: $API_COUNT
- 
-Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>"
+                        git commit -m "Daily update: Merge new articles into canonical store - $(date +'%Y-%m-%d %H:%M IST')" \
+                       -m "Total national articles: $API_COUNT" \
+                       -m "Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>"
             git push
           fi
  
