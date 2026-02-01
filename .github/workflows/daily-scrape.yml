@@ -72,12 +72,7 @@ jobs:
           echo "Step 1: Running scraper with 24h time window..."
           echo "  (Global deduplication against canonical JSON)"
           echo "  (Time window: last 24 hours only)"
-          PYTHONPATH=. python3 -c "
-          from scrapers.orchestrator import run_all_scrapers
-          result = run_all_scrapers()
-          print(f'\\nFinal: {result.get(\"final_processed\", 0)} new articles after dedup & filtering')
-          "
- 
+                    PYTHONPATH=. python3 -c "from scrapers.orchestrator import run_all_scrapers; result = run_all_scrapers(); print(f'\\nFinal: {result.get(\"final_processed\", 0)} new articles after dedup & filtering')"
           echo ""
           echo "Step 2: Running 3-layer AI processing pipeline..."
           PYTHONPATH=. python3 ai/integrated_pipeline.py
