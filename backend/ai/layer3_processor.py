@@ -109,11 +109,15 @@ class Layer3Processor:
 
         # Step 2: Refine with premium model
         if not self.client:
-            print("❌ No premium client available")
+            print("⚠️  No premium client available - using Layer 2 scores only")
+            print(f"⚠️  Passing through {len(top_articles)} articles from Layer 2")
             return {
-                'processed': 0,
-                'results': [],
-                'stats': self.stats
+                'processed': len(top_articles),
+                'results': top_articles,  # Pass through Layer 2 results unchanged
+                'stats': {
+                    'passed_through': len(top_articles),
+                    'reason': 'no_premium_client'
+                }
             }
 
         print(f"{'='*70}")

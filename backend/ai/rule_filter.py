@@ -199,18 +199,63 @@ class RuleBasedFilter:
         has_ai_signal = ai_score >= 60  # At least one strong AI keyword
         has_india_signal = india_score >= 20  # At least some India connection
 
+        # RELAXED RULE for policy articles: Strong policy keywords can pass with lower India score
+        # This helps capture Union Budget, IndiaAI Mission, Semiconductor Mission articles
+        is_policy_article = ai_score >= 120  # Strong policy keyword match (Budget, IndiaAI Mission, Semiconductor Mission)
+        relaxed_india_gate = india_score >= 10  # Lower threshold for high-priority policy articles
+
         # Determine confidence level
         if total_score >= self.high_confidence and has_ai_signal and has_india_signal:
             confidence = 'high'
         elif total_score >= self.pass_threshold and has_ai_signal and has_india_signal:
             confidence = 'medium'
+        elif total_score >= self.pass_threshold and is_policy_article and relaxed_india_gate:
+            confidence = 'medium'  # Policy articles with relaxed gate get medium confidence
         elif total_score >= self.borderline_min and (has_ai_signal or has_india_signal):
             confidence = 'borderline'
         else:
             confidence = 'low'
 
-        # Decision: Must pass threshold AND have both AI + India signals
-        passed = total_score >= self.pass_threshold and has_ai_signal and has_india_signal
+        # Decision: Must pass threshold AND have AI signal AND (standard India signal OR policy exemption)
+        passed = total_score >= self.pass_threshold and has_ai_signal and (
+            has_india_signal or (is_policy_article and relaxed_india_gate)
+        )
+
+        # LLM FALLBACK: If article has strong AI signal but failed India gate, use Groq to verify
+        # This catches cases where regex misses implicit India relevance (e.g., government announcements)
+        llm_verified = False
+        if has_ai_signal and not passed and 30 <= total_score < self.pass_threshold + 20:
+            try:
+                import os
+                from groq import Groq
+
+                # Initialize Groq client (same as filter.py uses)
+                groq_key = os.getenv('GROQ_API_KEY')
+                if groq_key:
+                    client = Groq(api_key=groq_key)
+
+                    # Ask LLM: "Is this article relevant to India?"
+                    # Focus on title since it's most indicative
+                    prompt = f"Is this article about India, Indian companies, Indian government, or events in India? Title: '{title[:200]}'. Content preview: '{content[:300]}'. Answer only 'yes' or 'no'."
+
+                    response = client.chat.completions.create(
+                        model="llama-3.3-70b-versatile",
+                        messages=[{"role": "user", "content": prompt}],
+                        temperature=0.1,
+                        max_tokens=10
+                    )
+
+                    llm_response = response.choices[0].message.content.lower()
+                    llm_says_india = 'yes' in llm_response
+
+                    if llm_says_india:
+                        passed = True  # Override the India gate with LLM verification
+                        llm_verified = True
+                        confidence = 'medium'  # LLM-verified articles get medium confidence
+            except Exception as e:
+                # If Groq fails, keep original decision
+                # Don't print error to avoid cluttering logs
+                pass
 
         return {
             'passed': passed,
@@ -218,6 +263,7 @@ class RuleBasedFilter:
             'ai_score': ai_score,
             'india_score': india_score,
             'confidence': confidence,
+            'llm_verified': llm_verified,  # Indicates if LLM override was used
             'ai_matches': ai_matches[:5],  # Top 5 matches
             'india_matches': india_matches[:3],  # Top 3 matches
             'matched_categories': list(ai_categories),
@@ -225,7 +271,8 @@ class RuleBasedFilter:
             'breakdown': {
                 'ai_keywords_found': len(ai_matches),
                 'india_markers_found': len(india_matches),
-                'india_tiers_matched': list(india_tiers)
+                'india_tiers_matched': list(india_tiers),
+                'llm_fallback_used': llm_verified
             }
         }
 
