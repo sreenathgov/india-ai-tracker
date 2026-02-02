@@ -199,27 +199,18 @@ class RuleBasedFilter:
         has_ai_signal = ai_score >= 60  # At least one strong AI keyword
         has_india_signal = india_score >= 20  # At least some India connection
 
-        # RELAXED RULE for policy articles: Strong policy keywords can pass with lower India score
-        # This helps capture Union Budget, IndiaAI Mission, Semiconductor Mission articles
-        is_policy_article = ai_score >= 120  # Strong policy keyword match (Budget, IndiaAI Mission, Semiconductor Mission)
-        relaxed_india_gate = india_score >= 10  # Lower threshold for high-priority policy articles
-
         # Determine confidence level
         if total_score >= self.high_confidence and has_ai_signal and has_india_signal:
             confidence = 'high'
         elif total_score >= self.pass_threshold and has_ai_signal and has_india_signal:
             confidence = 'medium'
-        elif total_score >= self.pass_threshold and is_policy_article and relaxed_india_gate:
-            confidence = 'medium'  # Policy articles with relaxed gate get medium confidence
         elif total_score >= self.borderline_min and (has_ai_signal or has_india_signal):
             confidence = 'borderline'
         else:
             confidence = 'low'
 
-        # Decision: Must pass threshold AND have AI signal AND (standard India signal OR policy exemption)
-        passed = total_score >= self.pass_threshold and has_ai_signal and (
-            has_india_signal or (is_policy_article and relaxed_india_gate)
-        )
+        # Decision: Must pass threshold AND have BOTH AI signal AND India signal (no exemptions)
+        passed = total_score >= self.pass_threshold and has_ai_signal and has_india_signal
 
         # LLM FALLBACK: If article has strong AI signal but failed India gate, use Groq to verify
         # This catches cases where regex misses implicit India relevance (e.g., government announcements)

@@ -305,24 +305,6 @@ ai_keywords:
       categories: ["policy", "safety"]
       importance_boost: 20
 
-    # Budget and government allocation keywords - critical for policy news
-    - keyword: "\\bunion budget\\b"
-      weight: 150
-      categories: ["policy", "government"]
-      importance_boost: 45
-      description: "Central government budget"
-
-    - keyword: "\\bbudget 202\\d\\b"
-      weight: 150
-      categories: ["policy", "government"]
-      importance_boost: 45
-      description: "Annual budget announcements"
-
-    - keyword: "\\bbudget allocation\\b"
-      weight: 120
-      categories: ["policy", "government"]
-      importance_boost: 30
-
     - keyword: "\\bindiaai mission\\b"
       weight: 150
       categories: ["policy", "government"]
@@ -339,12 +321,6 @@ ai_keywords:
       categories: ["policy", "government"]
       importance_boost: 50
       description: "Finance minister announcements related to AI/semiconductors"
-
-    - keyword: "\\bgovernment allocat"
-      weight: 120
-      categories: ["policy", "government"]
-      importance_boost: 35
-      description: "Government allocation/funding announcements"
 
   # AI business and ecosystem (weight: 70-80)
   business:
@@ -605,6 +581,23 @@ india_markers:
       - name: "CSIR"
         pattern: "\\bcsir\\b"
         importance_boost: 15
+
+      # Budget context markers (contribute to India score, not AI score)
+      - name: "Union Budget"
+        pattern: "\\bunion budget\\b"
+        importance_boost: 50
+
+      - name: "Budget Announcement"
+        pattern: "\\bbudget 202\\d\\b"
+        importance_boost: 45
+
+      - name: "Budget Allocation"
+        pattern: "\\bbudget allocation\\b"
+        importance_boost: 40
+
+      - name: "Government Allocation"
+        pattern: "\\bgovernment allocat"
+        importance_boost: 40
 
 # ============================================================
 # SCORING THRESHOLDS
