@@ -1,7 +1,46 @@
 {
   "state": "AP",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 31,
+        "title": "Union Budget 2026: CPI protests lack of allocations to Andhra Pradesh",
+        "url": "https://www.thehindu.com/news/cities/Visakhapatnam/union-budget-2026-cpi-protests-lack-of-allocations-to-andhra-pradesh/article70579548.ece",
+        "summary": "The Communist Party of India (CPI) is protesting the lack of allocations to Andhra Pradesh in the Union Budget 2026. The CPI is criticizing the budget for not providing sufficient funds to the state, sparking outrage among its members. The protest highlights the perceived neglect of Andhra Pradesh's needs in the federal budget.",
+        "date_published": "2026-02-01",
+        "source_name": "The Hindu - Andhra Pradesh",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 32,
+        "title": "Free health tests for 72 lakh under Sanjeevani digital drive: Naidu",
+        "url": "https://www.thehindu.com/news/national/andhra-pradesh/free-health-tests-for-72-lakh-under-sanjeevani-digital-drive-naidu/article70579370.ece",
+        "summary": "Andhra Pradesh's Chief Minister Naidu has launched the Sanjeevani digital drive, offering free health tests to 72 lakh people. The initiative aims to provide technology-enabled public healthcare, utilizing AI-based advisories and specialist consultations. It targets addressing lifestyle diseases through regular screening across the state.",
+        "date_published": "2026-02-01",
+        "source_name": "The Hindu - Andhra Pradesh",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [],
     "Major AI Developments": [
       {

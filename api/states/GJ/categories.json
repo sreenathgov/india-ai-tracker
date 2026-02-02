@@ -3,6 +3,44 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 36,
+        "title": "Centre’s ISM 2.0 to turbocharge Guj’s semicon industry",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/centres-ism-2-0-to-turbocharge-gujs-semicon-industry/articleshow/127847558.cms",
+        "summary": "The Indian government's ISM 2.0 initiative is expected to boost Gujarat's semiconductor industry. The program aims to accelerate the growth of the sector in the state, although specific details are not provided. Gujarat is poised to benefit from the central government's efforts to promote the semiconductor industry through ISM 2.0.",
+        "date_published": "2026-02-02",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Union Budget 2026-27: Gujarat poised to benefit from industry, connectivity and capex push",
+        "url": "https://government.economictimes.indiatimes.com/news/policy/union-budget-2026-27-gujarat-poised-to-benefit-from-industry-connectivity-and-capex-push/127843878",
+        "summary": "Gujarat is expected to benefit from the Union Budget 2026-27 due to its focus on industry, connectivity, and capital expenditure. The budget's capex push, urban infrastructure plans, and tax reforms for GIFT City align with the state's industrial and services goals. These initiatives are likely to drive growth and development in Gujarat.",
+        "date_published": "2026-02-01",
+        "source_name": "ET Government - Policy",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 42,
         "title": "Now, AI to identify stray cattle in Ahmedabad, track owners",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/now-ai-to-identify-stray-cattle-in-ahmedabad-track-owners/articleshow/126710858.cms",
@@ -87,5 +125,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

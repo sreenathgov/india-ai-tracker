@@ -1,7 +1,108 @@
 {
   "state": "KL",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 53,
+        "title": "Union Budget 2026: Kerala finds barely a mention; leaders across spectrum, except BJP, flay neglect",
+        "url": "https://www.thehindu.com/news/national/kerala/kerala-finds-barely-a-mention-in-union-budget-leaders-across-spectrum-except-bjp-flay-neglect/article70579191.ece",
+        "summary": "Kerala received minimal mention in the Union Budget 2026, prompting criticism from state leaders across the political spectrum, except the BJP. Chief Minister Pinarayi Vijayan termed the Budget a deliberate attempt to hinder Kerala's development, while Leader of the Opposition V.D. Satheesan questioned whether Kerala is considered part of India. The neglect has sparked widespread disappointment among Kerala's leaders.",
+        "date_published": "2026-02-02",
+        "source_name": "The Hindu - Kerala",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 50,
+        "title": "Industry forums in Kerala welcome development proposals in Union Budget",
+        "url": "https://www.thehindu.com/news/national/kerala/industry-forums-welcome-development-proposals-in-union-budget/article70579519.ece",
+        "summary": "Industry forums in Kerala, including FICCI and the Indian Chamber of Commerce & Industry, Cochin, have welcomed development proposals in the Union Budget. The initiatives focus on bolstering manufacturing, with significant funding allocated to bio-pharma and electronic components. The proposals are expected to support the growth of key industries in the region.",
+        "date_published": "2026-02-01",
+        "source_name": "The Hindu - Kerala",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 51,
+        "title": "Union Budget disappointing: K.N. Balagopal",
+        "url": "https://www.thehindu.com/news/national/kerala/union-budget-disappointing-kn-balagopal/article70579482.ece",
+        "summary": "K.N. Balagopal expressed disappointment with the Union Budget. Kerala has been selected for the 'Rare Earth Corridor' scheme, which the state aims to leverage to establish related industries. The state's goal is to have these industries set up within Kerala.",
+        "date_published": "2026-02-01",
+        "source_name": "The Hindu - Kerala",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 52,
+        "title": "Left, Congress leaders slam Union Budget for ignoring Kerala",
+        "url": "https://www.thehindu.com/news/national/kerala/left-congress-leaders-slam-union-budget-for-ignoring-kerala/article70579351.ece",
+        "summary": "Left and Congress leaders have criticized the Union Budget for neglecting Kerala's interests, with M.A. Baby stating it favors big corporate houses. M.V. Govindan described the Budget as \"a declaration of war\" against Kerala, while Chennithala termed it a \"complete disappointment\". The leaders expressed strong opposition to the Budget's alleged disregard for the state's needs.",
+        "date_published": "2026-02-01",
+        "source_name": "The Hindu - Kerala",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 59,
+        "title": "Union Budget 2026: Mountain, turtle, birdwatching trails to come up in Himachal, Jammu & Kashmir, Odisha, Karnataka, Kerala, Tamil Nadu",
+        "url": "https://www.thehindu.com/business/budget/budget-2026-mountain-trails-turtle-trails-birdwatching-trails-to-come-odisha-karnataka-kerala/article70577059.ece",
+        "summary": "The Union Budget 2026 will fund the development of mountain, turtle, and birdwatching trails in several Indian states, including Himachal, Jammu & Kashmir, Odisha, Karnataka, Kerala, and Tamil Nadu. A birdwatching trail will be specifically developed along the Pulicat Lake on the Andhra Pradesh-Tamil Nadu border. These projects aim to promote eco-tourism in these regions.",
+        "date_published": "2026-02-01",
+        "source_name": "The Hindu - J&K",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA",
+          "TN",
+          "JK",
+          "HP",
+          "KL",
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [
       {
         "id": 31,
@@ -26,5 +127,7 @@
     "Major AI Developments": [],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

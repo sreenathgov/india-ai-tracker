@@ -3,6 +3,88 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 20,
+        "title": "Union Budget 2026: Seven new rail corridors announced",
+        "url": "https://www.thehindu.com/business/budget/union-budget-2026-announces-seven-high-speed-rail-corridors/article70576998.ece",
+        "summary": "The Union Budget 2026 has announced seven new rail corridors, dubbed \"growth connectors\", spanning 4,000 km. These corridors will connect major cities, including Mumbai-Pune, Pune-Hyderabad, and Delhi-Varanasi, among others. The infrastructure project is estimated to cost ₹16 lakh crore.",
+        "date_published": "2026-02-02",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA",
+          "UP",
+          "WB",
+          "TG",
+          "TN",
+          "MH",
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 54,
+        "title": "Union Budget: Hyd gets 3 high-speed rail corridors",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/union-budget-hyd-gets-3-high-speed-rail-corridors/articleshow/127846425.cms",
+        "summary": "The Union Budget has allocated three high-speed rail corridors to Hyderabad. This development is expected to enhance the city's transportation infrastructure. The specific details of the corridors, including their routes and timelines, are not specified in the initial announcement.",
+        "date_published": "2026-02-02",
+        "source_name": "Times of India - Bhopal",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 28,
+        "title": "CREDAI Hyderabad welcomes infrastructure push in Union Budget 2026-27, flags gaps in affordable housing support",
+        "url": "https://www.thehindu.com/news/cities/Hyderabad/credai-hyderabad-welcomes-infrastructure-push-in-union-budget-2026-27-flags-gaps-in-affordable-housing-support/article70578945.ece",
+        "summary": "CREDAI Hyderabad has welcomed the infrastructure push in the Union Budget 2026-27, but has also highlighted gaps in support for affordable housing. The organization acknowledges the budget's focus on infrastructure development, but expresses concern over the lack of adequate measures to address affordable housing needs. The budget's impact on the real estate sector, particularly affordable housing, is a key area of concern for CREDAI Hyderabad.",
+        "date_published": "2026-02-01",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 29,
+        "title": "Union Budget 2026-27: Telangana doctors welcome pharma push; flag neglect of prevention and affordability",
+        "url": "https://www.thehindu.com/news/national/telangana/union-budget-2026-27-telangana-doctors-welcome-pharma-push-flag-neglect-of-prevention-and-affordability/article70578249.ece",
+        "summary": "The Union Budget 2026-27 has been met with a mixed reaction from Telangana doctors, who welcome the push for the pharmaceutical sector but express concern over the neglect of prevention and affordability. Doctors in the state appreciate the potential benefits of the budget's pharma initiatives, but highlight the need for greater emphasis on preventive healthcare and making medical care more affordable. The budget's focus on pharmaceuticals is seen as a positive step, but its impact on overall healthcare accessibility remains a concern.",
+        "date_published": "2026-02-01",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 141,
         "title": "Hyderabad Police launch AI-driven system to overhaul CAR duty allocation",
         "url": "https://www.thehindu.com/news/cities/Hyderabad/hyderabad-police-launch-ai-driven-system-to-overhaul-car-duty-allocation/article70557894.ece",
@@ -63,6 +145,27 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 23,
+        "title": "Bengaluru to get high-speed rail links to Chennai, Hyderabad; max speed 350 kmph to cut travel time",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/bengaluru-to-get-high-speed-rail-links-to-chennai-hyderabad/articleshow/127846364.cms",
+        "summary": "Bengaluru will get high-speed rail links to Chennai and Hyderabad with maximum speeds of 350 kmph, reducing travel time. The new rail corridors are part of a larger effort to improve connectivity in the region. The Union Budget has also allocated ₹500 crore for the Bengaluru Suburban Rail Project to enhance local connectivity.",
+        "date_published": "2026-02-02",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "TN",
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
       {
         "id": 1,
         "title": "Hyderabad hospital launches AI-enabled clinic as experts flag rising head, neck cancer burden in India",
@@ -353,6 +456,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "Policies and Initiatives"
   ]
 }

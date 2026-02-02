@@ -3,14 +3,97 @@
   "categories": {
     "Policies and Initiatives": [
       {
-        "id": 150,
-        "title": "Before the first missiles fly: AI, cyber &amp; electronic warfare - how India is preparing for invisible battlefields",
-        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/before-the-first-missiles-fly-ai-cyber-electronic-warfare-how-india-is-preparing-for-invisible-battlefields/127707922",
-        "summary": "India is integrating AI, cyber, and electronic warfare into its military, shifting towards a process-centric doctrine. This integration, as seen in Operation Sindoor, aims to enhance intelligence, surveillance, and reconnaissance capabilities. The goal is to achieve strategic dominance and reduce reliance on foreign technology in future conflicts.",
-        "date_published": "2026-01-28",
-        "source_name": "ET CIO - AI",
+        "id": 20,
+        "title": "Union Budget 2026: Seven new rail corridors announced",
+        "url": "https://www.thehindu.com/business/budget/union-budget-2026-announces-seven-high-speed-rail-corridors/article70576998.ece",
+        "summary": "The Union Budget 2026 has announced seven new rail corridors, dubbed \"growth connectors\", spanning 4,000 km. These corridors will connect major cities, including Mumbai-Pune, Pune-Hyderabad, and Delhi-Varanasi, among others. The infrastructure project is estimated to cost ₹16 lakh crore.",
+        "date_published": "2026-02-02",
+        "source_name": "The Hindu - Bangalore",
         "category": "Policies and Initiatives",
         "state_codes": [
+          "KA",
+          "UP",
+          "WB",
+          "TG",
+          "TN",
+          "MH",
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 49,
+        "title": "Speaker Gupta thumbs up for record capex allocation",
+        "url": "https://www.tribuneindia.com/news/delhi/speaker-gupta-thumbs-up-for-record-capex-allocation",
+        "summary": "Speaker Vijender Gupta praised the 2026-27 Union Budget as visionary, citing its focus on self-reliance and inclusive growth. The budget's infrastructure investments, support for MSMEs, and initiatives for farmers, women, and urban development were particularly highlighted. These allocations reflect PM Modi's development vision, according to Gupta.",
+        "date_published": "2026-02-02",
+        "source_name": "Tribune - Delhi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 33,
+        "title": "Maharashtra to benefit from Budget 2026-27, central tax devolution component at Rs 98,306 crore: Fadnavis",
+        "url": "https://indianexpress.com/article/cities/mumbai/maharashtra-budget-2026-central-tax-devolution-component-devendra-fadnavis-10507695/",
+        "summary": "Maharashtra is expected to benefit from the Budget 2026-27, with the central tax devolution component allocated at Rs 98,306 crore. This allocation was announced by Fadnavis, indicating a significant financial boost for the state. The budget is anticipated to have a positive impact on Maharashtra's development and growth.",
+        "date_published": "2026-02-01",
+        "source_name": "Indian Express - Mumbai",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 47,
+        "title": "Nirmala chooses reforms over populism, but can she deliver",
+        "url": "https://www.tribuneindia.com/news/avgcsector/nirmala-chooses-reforms-over-populism-but-can-she-deliver",
+        "summary": "The 2026-27 Indian Union Budget prioritizes long-term reforms and self-reliance over populist measures. The budget includes initiatives to support micro-industries, high-value agriculture, and creative and care economies, aiming to boost exports and economic transformation. It was presented by Nirmala Sitharaman in the new Kartavya Bhavan.",
+        "date_published": "2026-02-01",
+        "source_name": "Tribune - Delhi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 48,
+        "title": "A people-first, future-ready Budget: Assembly Speaker",
+        "url": "https://www.tribuneindia.com/news/delhi/a-people-first-future-ready-budget-assembly-speaker",
+        "summary": "Delhi Assembly Speaker Vijender Gupta praised the Union Budget 2026-27 for its focus on self-reliance, inclusive growth, and infrastructure development. The Budget includes record capital expenditure, support for MSMEs, and initiatives for farmers, women, and social infrastructure. It reflects Prime Minister Modi's vision for a developed India by 2047.",
+        "date_published": "2026-02-01",
+        "source_name": "Tribune - Delhi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL",
           "MH"
         ],
         "is_approved": true,
@@ -60,25 +143,6 @@
         "posted_to_x_at": null
       },
       {
-        "id": 40,
-        "title": "Maharashtra poised to lead India’s public-sector AI adoption: Wadhwani AI",
-        "url": "https://government.economictimes.indiatimes.com/tag/maharashtra",
-        "summary": "Maharashtra is expected to take the lead in public-sector AI adoption in India, according to Wadhwani AI. The state's efforts to integrate AI into its public sector are anticipated to set an example for other regions. Wadhwani AI's statement highlights Maharashtra's potential to drive AI adoption in India's public sector.",
-        "date_published": "2026-01-20",
-        "source_name": "ET Government - Maharashtra",
-        "category": "Policies and Initiatives",
-        "state_codes": [
-          "MH"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
-      {
         "id": 41,
         "title": "Nagpur airport may get AI facial recognition to identify criminals",
         "url": "https://timesofindia.indiatimes.com/city/nagpur/nagpur-airport-may-get-ai-facial-recognition-to-identify-criminals/articleshow/126715211.cms",
@@ -100,6 +164,44 @@
     ],
     "Events": [
       {
+        "id": 16,
+        "title": "Transforming Customer Experiences with Agentic AI",
+        "url": "https://cio.economictimes.indiatimes.com/transforming-customer-experiences?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "Agentic AI is being utilized to transform customer experiences. The development is taking place in Mumbai, where the technology is being implemented to enhance customer interactions. This innovative approach aims to revolutionize the way companies engage with their customers through AI-driven solutions.",
+        "date_published": "2026-02-01",
+        "source_name": "CIO ET - Events",
+        "category": "Events",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 17,
+        "title": "DPDP and Enterprise AI",
+        "url": "https://cio.economictimes.indiatimes.com/dpdp-enterprise-ai?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "A recent event in Mumbai focused on the intersection of DPDP (Data Protection and Digital Privacy) and Enterprise AI. The discussion highlighted the importance of balancing data privacy with the implementation of artificial intelligence in businesses. Key stakeholders gathered to explore the challenges and opportunities of integrating AI in enterprises while ensuring compliance with DPDP regulations.",
+        "date_published": "2026-02-01",
+        "source_name": "CIO ET - Events",
+        "category": "Events",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 56,
         "title": "Jio to launch people-first Al platform - Here's what Reliance's Chairman Mukesh Ambani said",
         "url": "https://www.etnownews.com/technology/jio-to-launch-people-first-al-platform-heres-what-reliances-chairman-mukesh-ambani-said-article-153430913",
@@ -120,6 +222,25 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 5,
+        "title": "How Bharat Intelligence uses AI to solve farm labour crisis in Maharashtra’s villages",
+        "url": "https://yourstory.com/2026/01/mumbai-agritech-startup-bharat-intelligence-ai-solve-farm-labour-crisis-maharashtra-nashik-rural-areas",
+        "summary": "Bharat Intelligence, a Mumbai-based agritech startup, is using AI to address the farm labour crisis in Maharashtra's villages. The company has developed a digital model of villages across the state, which its AI engine uses to deploy labourers to farmers with accuracy. This innovative approach aims to streamline the labour allocation process and support local farmers.",
+        "date_published": "2026-02-02",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
       {
         "id": 69,
         "title": "Persistent Extends Growth Run to 23 Quarters, Profit Slips 7% QoQ",
@@ -239,5 +360,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments",
+    "Policies and Initiatives"
+  ]
 }

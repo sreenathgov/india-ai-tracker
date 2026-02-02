@@ -1,7 +1,32 @@
 {
   "state": "OD",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 59,
+        "title": "Union Budget 2026: Mountain, turtle, birdwatching trails to come up in Himachal, Jammu & Kashmir, Odisha, Karnataka, Kerala, Tamil Nadu",
+        "url": "https://www.thehindu.com/business/budget/budget-2026-mountain-trails-turtle-trails-birdwatching-trails-to-come-odisha-karnataka-kerala/article70577059.ece",
+        "summary": "The Union Budget 2026 will fund the development of mountain, turtle, and birdwatching trails in several Indian states, including Himachal, Jammu & Kashmir, Odisha, Karnataka, Kerala, and Tamil Nadu. A birdwatching trail will be specifically developed along the Pulicat Lake on the Andhra Pradesh-Tamil Nadu border. These projects aim to promote eco-tourism in these regions.",
+        "date_published": "2026-02-01",
+        "source_name": "The Hindu - J&K",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA",
+          "TN",
+          "JK",
+          "HP",
+          "KL",
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [],
     "Major AI Developments": [],
     "AI Start-Up News": []

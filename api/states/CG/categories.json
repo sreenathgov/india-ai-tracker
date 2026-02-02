@@ -2,9 +2,31 @@
   "state": "CG",
   "categories": {
     "Policies and Initiatives": [],
-    "Events": [],
+    "Events": [
+      {
+        "id": 15,
+        "title": "DI Talk Show on India AI Impact Summit 2026 and Digital India Initiatives in Chhattisgarh",
+        "url": "https://www.digitalindia.gov.in/events/di-talk-show-on-india-ai-impact-summit-2026-and-digital-india-initiatives-in-chhattisgarh/",
+        "summary": "The DI Talk Show discussed the India AI Impact Summit 2026 and its potential effects. It also explored Digital India initiatives in the state of Chhattisgarh, highlighting their significance. The summit and initiatives aim to promote AI adoption and digital transformation in India.",
+        "date_published": "2026-02-02",
+        "source_name": "Digital India - Events",
+        "category": "Events",
+        "state_codes": [
+          "CG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "Major AI Developments": [],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Events"
+  ]
 }
