@@ -83,6 +83,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "AI demand presents a golden opportunity for India to crack the $400 bn chip equipment supply chain",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/ai-demand-presents-a-golden-opportunity-for-india-to-crack-the-400-bn-chip-equipment-supply-chain/articleshow/127847444.cms",
+        "summary": "India has a chance to break into the $400 billion chip equipment supply chain due to increasing demand for AI. The growing need for AI technology presents an opportunity for India to establish itself in the global semiconductor industry. This could potentially boost India's economy and technological advancements.",
+        "date_published": "2026-02-02",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 127,
         "title": "Zoho Launches AI-native ERP Platform From Rural Tamil Nadu",
         "url": "https://analyticsindiamag.com/ai-news-updates/zoho-launches-ai-native-erp-platform-from-rural-tamil-nadu/",
@@ -123,5 +142,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

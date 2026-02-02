@@ -4,6 +4,25 @@
     "Policies and Initiatives": [],
     "Events": [
       {
+        "id": 4,
+        "title": "DI Awareness Worshop on India AI Impact Summit 2026 and Digital India Initiatives in Sikkim",
+        "url": "https://www.digitalindia.gov.in/events/di-awareness-worshop-on-india-ai-impact-summit-2026-and-digital-india-initiatives-in-sikkim/",
+        "summary": "A workshop on Digital India awareness is being held in Sikkim, focusing on the India AI Impact Summit 2026. The event aims to promote Digital India initiatives in the region. The workshop will likely discuss the impact of AI on India's digital transformation and its potential applications in Sikkim.",
+        "date_published": "2026-02-02",
+        "source_name": "Digital India - Events",
+        "category": "Events",
+        "state_codes": [
+          "SK"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 105,
         "title": "DI Talk Show on India AI Impact Summit 2026 and Digital India Initiatives in Sikkim",
         "url": "https://www.digitalindia.gov.in/events/di-talk-show-on-india-ai-impact-summit-2026-and-digital-india-initiatives-in-sikkim/",
@@ -26,5 +45,7 @@
     "Major AI Developments": [],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Events"
+  ]
 }
