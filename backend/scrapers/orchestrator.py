@@ -19,7 +19,7 @@ Design Philosophy:
 
 from scrapers.rss_scraper import RSScraper
 from scrapers.web_scraper import WebScraper
-from ai.filter import AIFilter
+from ai.rule_filter import RuleBasedFilter  # CRITICAL FIX: Use RuleBasedFilter to load filters.yaml with Budget/ISM keywords
 from ai.categoriser import Categoriser
 from ai.geo_attributor import GeoAttributor
 from ai.summarizer import AISummarizer
@@ -149,7 +149,7 @@ def run_all_scrapers(target_states=None):
     # Initialize components
     rss_scraper = RSScraper()
     web_scraper = WebScraper()
-    ai_filter = AIFilter()
+    ai_filter = RuleBasedFilter()  # CRITICAL FIX: Load filters.yaml with Budget/ISM 2.0 keywords
     categoriser = Categoriser()
     geo_attributor = GeoAttributor()
     summarizer = AISummarizer()
@@ -280,13 +280,20 @@ def run_all_scrapers(target_states=None):
 
     ai_relevant_articles = []
     for article in all_articles:
-        is_relevant, score = ai_filter.check_relevance(
+        # CRITICAL FIX: RuleBasedFilter uses calculate_score() which returns a dict
+        result = ai_filter.calculate_score(
             article['title'],
             article.get('content', '')
         )
 
+        is_relevant = result['passed']
+        score = result['total_score']
+
         if is_relevant:
             article['relevance_score'] = score
+            article['ai_score'] = result['ai_score']
+            article['india_score'] = result['india_score']
+            article['confidence'] = result['confidence']
             ai_relevant_articles.append(article)
 
     stats['ai_relevant'] = len(ai_relevant_articles)
