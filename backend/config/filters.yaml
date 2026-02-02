@@ -181,6 +181,97 @@ ai_keywords:
       categories: ["ai_tech"]
       importance_boost: 5
 
+    # Semiconductor keywords - critical for chip/hardware news
+    - keyword: "\\bsemiconductor mission\\b"
+      weight: 150
+      categories: ["policy", "ai_infrastructure"]
+      importance_boost: 40
+      description: "India Semiconductor Mission program"
+
+    - keyword: "\\bism 2\\.?0\\b"
+      weight: 150
+      categories: ["policy", "ai_infrastructure"]
+      importance_boost: 40
+      description: "ISM 2.0"
+
+    - keyword: "\\bindia semiconductor mission\\b"
+      weight: 150
+      categories: ["policy", "ai_infrastructure"]
+      importance_boost: 40
+
+    - keyword: "\\bchip manufacturing\\b"
+      weight: 100
+      categories: ["ai_infrastructure", "hardware"]
+      importance_boost: 20
+
+    - keyword: "\\bsemiconductor manufacturing\\b"
+      weight: 100
+      categories: ["ai_infrastructure", "hardware"]
+      importance_boost: 20
+
+    - keyword: "\\bfab\\b|\\bfabrication facility\\b"
+      weight: 90
+      categories: ["ai_infrastructure"]
+      importance_boost: 15
+      description: "Semiconductor fabrication"
+
+    - keyword: "\\bfoundry\\b"
+      weight: 80
+      categories: ["ai_infrastructure"]
+      importance_boost: 10
+      description: "Semiconductor foundry"
+
+    - keyword: "\\batmp\\b|\\bosat\\b"
+      weight: 90
+      categories: ["ai_infrastructure"]
+      importance_boost: 15
+      description: "Assembly, Testing, Marking, Packaging / Outsourced Semiconductor Assembly and Test"
+
+    - keyword: "\\bchip equipment\\b"
+      weight: 90
+      categories: ["ai_infrastructure", "hardware"]
+      importance_boost: 15
+
+    - keyword: "\\bsemiconductor equipment\\b"
+      weight: 90
+      categories: ["ai_infrastructure"]
+      importance_boost: 15
+
+    - keyword: "\\blithography\\b"
+      weight: 80
+      categories: ["ai_infrastructure", "hardware"]
+      importance_boost: 10
+      description: "Chip lithography technology"
+
+    - keyword: "\\bwafer\\b"
+      weight: 70
+      categories: ["ai_infrastructure"]
+      importance_boost: 5
+      description: "Silicon wafer manufacturing"
+
+    - keyword: "\\bchip design\\b"
+      weight: 90
+      categories: ["ai_infrastructure"]
+      importance_boost: 15
+
+    - keyword: "\\basic\\b"
+      weight: 80
+      categories: ["ai_infrastructure", "hardware"]
+      importance_boost: 10
+      description: "Application-Specific Integrated Circuit"
+
+    - keyword: "\\bsemiconductor\\b"
+      weight: 90
+      categories: ["ai_infrastructure"]
+      importance_boost: 10
+      description: "General semiconductor term"
+
+    - keyword: "\\bchip\\b"
+      weight: 80
+      categories: ["ai_infrastructure"]
+      importance_boost: 5
+      description: "General chip term"
+
   # AI policy and governance (weight: 150 - HIGHEST)
   policy:
     - keyword: "\\bai policy"
@@ -213,6 +304,47 @@ ai_keywords:
       weight: 120
       categories: ["policy", "safety"]
       importance_boost: 20
+
+    # Budget and government allocation keywords - critical for policy news
+    - keyword: "\\bunion budget\\b"
+      weight: 150
+      categories: ["policy", "government"]
+      importance_boost: 45
+      description: "Central government budget"
+
+    - keyword: "\\bbudget 202\\d\\b"
+      weight: 150
+      categories: ["policy", "government"]
+      importance_boost: 45
+      description: "Annual budget announcements"
+
+    - keyword: "\\bbudget allocation\\b"
+      weight: 120
+      categories: ["policy", "government"]
+      importance_boost: 30
+
+    - keyword: "\\bindiaai mission\\b"
+      weight: 150
+      categories: ["policy", "government"]
+      importance_boost: 50
+      description: "IndiaAI Mission program"
+
+    - keyword: "\\bindia ai mission\\b"
+      weight: 150
+      categories: ["policy", "government"]
+      importance_boost: 50
+
+    - keyword: "\\bfinance minister\\b.*\\b(?:ai|artificial intelligence|semiconductor)\\b"
+      weight: 150
+      categories: ["policy", "government"]
+      importance_boost: 50
+      description: "Finance minister announcements related to AI/semiconductors"
+
+    - keyword: "\\bgovernment allocat"
+      weight: 120
+      categories: ["policy", "government"]
+      importance_boost: 35
+      description: "Government allocation/funding announcements"
 
   # AI business and ecosystem (weight: 70-80)
   business:

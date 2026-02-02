@@ -125,9 +125,8 @@ class AIFilter:
     ]
 
     # Context-dependent keywords (need AI context)
+    # Note: semiconductor and chip moved to STRONG_AI_KEYWORDS in filters.yaml
     CONTEXT_DEPENDENT_KEYWORDS = [
-        r'\bsemiconductor',
-        r'\bchip\b',
         r'\bgpu\b',
         r'\bnvidia\b',
         r'\bdata center\b',
