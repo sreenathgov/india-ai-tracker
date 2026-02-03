@@ -3,6 +3,25 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 8,
+        "title": "Rare earths found in state can power India’s dreams: Singhdeo",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/rare-earths-found-in-state-can-power-indias-dreams-singhdeo/articleshow/127870316.cms",
+        "summary": "Odisha's coastal region is rich in rare earth minerals, essential for India's semiconductor industry, with deposits found to be shallow and commercially viable for extraction. Deputy Chief Minister KV Singhdeo has highlighted the area's potential, citing its importance for India's ambitions. A Singaporean firm is already involved, indicating global interest in Odisha's critical mineral resources.",
+        "date_published": "2026-02-03",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 59,
         "title": "Union Budget 2026: Mountain, turtle, birdwatching trails to come up in Himachal, Jammu & Kashmir, Odisha, Karnataka, Kerala, Tamil Nadu",
         "url": "https://www.thehindu.com/business/budget/budget-2026-mountain-trails-turtle-trails-birdwatching-trails-to-come-odisha-karnataka-kerala/article70577059.ece",
@@ -31,5 +50,7 @@
     "Major AI Developments": [],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

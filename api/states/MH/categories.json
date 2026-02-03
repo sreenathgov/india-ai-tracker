@@ -301,6 +301,44 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "Ather Energy sees 50% rise in Q3 revenue; A brandy giant betting on luxury whisky",
+        "url": "https://yourstory.com/2026/02/ather-energy-sees-50-rise-in-q3-revenue-a-brandy-giant-betting-on-luxury-whisky",
+        "summary": "Ather Energy experienced a 50% increase in Q3 revenue, but expects challenges from volatile commodity prices. Tilaknagar Industries is shifting focus to luxury whisky, while Bharat Intelligence is using AI to address farm labour issues in Maharashtra. These developments indicate diverse growth and innovation strategies in various industries.",
+        "date_published": "2026-02-03",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "63SATS Cybertech raises Rs 245 Cr to build cybersecurity for the AI era",
+        "url": "https://yourstory.com/2026/02/63sats-cybertech-raises-rs-245-cr-to-build-cybersecurity-for-the-ai-era",
+        "summary": "63SATS Cybertech, an Indian cybersecurity firm, has raised Rs 245 Cr to develop cybersecurity solutions for the AI era. The company aims to secure AI models, data pipelines, and automated decision systems, positioning itself at the intersection of AI adoption and trust. This funding will support the company's growth as a subsidiary of 63 moons technologies limited.",
+        "date_published": "2026-02-02",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 17,
         "title": "Maharashtra poised to lead India’s public-sector AI adoption: Wadhwani AI",
         "url": "https://government.economictimes.indiatimes.com/tag/maharashtra",
@@ -361,7 +399,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "Policies and Initiatives"
+    "AI Start-Up News"
   ]
 }

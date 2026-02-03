@@ -60,7 +60,27 @@
         "posted_to_x_at": null
       }
     ],
-    "Events": [],
+    "Events": [
+      {
+        "id": 5,
+        "title": "Digital India Awareness Workshop on India AI Impact Summit 2026 and Digital India Initiatives in Daman & Diu",
+        "url": "https://www.digitalindia.gov.in/events/digital-india-awareness-workshop-on-india-ai-impact-summit-2026-and-digital-india-initiatives-in-daman-diu/",
+        "summary": "A Digital India Awareness Workshop was held in Daman & Diu to promote the India AI Impact Summit 2026 and Digital India Initiatives. The workshop aimed to raise awareness about the government's digital initiatives and their impact on the region. The event focused on the India AI Impact Summit 2026, highlighting its significance in promoting artificial intelligence in India.",
+        "date_published": "2026-02-03",
+        "source_name": "Digital India - Events",
+        "category": "Events",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "Major AI Developments": [
       {
         "id": 139,
@@ -126,6 +146,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives"
+    "Events"
   ]
 }
