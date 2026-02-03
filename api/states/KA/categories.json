@@ -482,6 +482,25 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "Loop AI raises $14 M in Series A round led by Nyca Partners",
+        "url": "https://yourstory.com/2026/02/loop-ai-raises-series-a-round-led-by-nyca-partners",
+        "summary": "Loop AI has raised $14 million in a Series A funding round led by Nyca Partners. The company's AI platform is designed to support back-office operations for restaurants and retail businesses. The new funding will be used to expand product offerings and increase staff across its global offices.",
+        "date_published": "2026-02-03",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 140,
         "title": "Swiggy lets users order through ChatGPT, Claude",
         "url": "https://yourstory.com/2026/01/swiggy-lets-users-order-through-chatgpt-claude-gemini",
@@ -560,7 +579,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "Policies and Initiatives"
+    "AI Start-Up News"
   ]
 }

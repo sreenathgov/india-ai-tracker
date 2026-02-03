@@ -501,6 +501,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "AI adoption is widespread, but developer confidence is still catching up",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-adoption-surges-in-southeast-asia-and-india-but-developer-confidence-lags-behind/127876786",
+        "summary": "Developers across Southeast Asia and India are widely adopting AI, with nearly nine in ten using it weekly, and most reporting productivity gains. Despite its widespread use, many engineers remain cautious and treat AI as an accelerator rather than a substitute for human judgment. Confidence in AI's reliability has yet to fully mature, with developers still approaching it with caution.",
+        "date_published": "2026-02-03",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "AI investment in India is expected to rise 75.6% over the next 2 years",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-leads-in-ai-adoption-despite-rising-infrastructure-challenges/127842094",
@@ -1342,6 +1361,7 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives"
+    "Policies and Initiatives",
+    "Major AI Developments"
   ]
 }
