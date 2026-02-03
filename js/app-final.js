@@ -317,8 +317,22 @@ async function initMap() {
     // Use zoom level 4 on mobile for better overview, 5 on desktop
     const isMobile = window.innerWidth <= 768;
     const initialZoom = isMobile ? 4 : 5;
-    map = L.map('map', { center: [22.5, 79], zoom: initialZoom });
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(map);
+
+    // Create map with canvas renderer for smoother panning
+    // Canvas is ~10x faster than SVG for pan operations
+    map = L.map('map', {
+        center: [22.5, 79],
+        zoom: initialZoom,
+        preferCanvas: true,  // Use canvas for all vector layers
+        renderer: L.canvas({ padding: 0.5 })  // 50% buffer beyond viewport
+    });
+
+    // Add tile layer with buffer for pre-loading tiles beyond viewport
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        keepBuffer: 4,         // Pre-load 4 tile rows/columns beyond viewport
+        updateWhenIdle: false, // Update tiles during panning, not after
+        updateWhenZooming: true
+    }).addTo(map);
 
     // Pre-fetch recent updates count for all states
     await fetchRecentUpdates();
@@ -348,7 +362,11 @@ function loadGeoJSON() {
     fetch('js/india-states.geojson')
         .then(r => r.json())
         .then(data => {
+            // Use canvas renderer with padding for smoother panning
+            const canvasRenderer = L.canvas({ padding: 0.5 });
+
             geojsonLayer = L.geoJSON(data, {
+                renderer: canvasRenderer,  // Canvas is faster than SVG for panning
                 style: () => ({
                     fillColor: '#4A90E2',
                     weight: 1.5,
