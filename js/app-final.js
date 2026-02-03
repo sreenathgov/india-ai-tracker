@@ -1,7 +1,6 @@
-// Use production API (static JSON files) or local backend for development
-const API_BASE_URL = window.location.hostname === 'localhost'
-    ? 'http://localhost:5001/api'  // Local development
-    : '/api';  // Production (Vercel serves static JSON)
+// Use static JSON files - works both locally and in production
+// For local testing: run `python3 -m http.server 8000` from project root
+const API_BASE_URL = '/api';
 
 // Complete mapping for all 28 states + 8 union territories
 const STATE_CODE_MAP = {
@@ -72,6 +71,12 @@ const CATEGORY_ORDER = [
 // Animation timing constant - single source of truth
 const TRANSITION_DURATION = 450;
 
+// Auto-scroll configuration
+let autoScrollInterval = null;
+let isAutoScrollPaused = false;
+const AUTO_SCROLL_SPEED = 1; // pixels per frame
+const AUTO_SCROLL_PAUSE_DELAY = 2000; // ms before resuming after hover
+
 let map, geojsonLayer, currentPanel = null;
 let recentUpdatesCache = {};
 let currentViewMode = 'state'; // 'state' or 'allIndia'
@@ -81,12 +86,246 @@ let selectedLayer = null; // Track the currently selected GeoJSON layer for cent
 let currentPage = 1; // Pagination state for currently expanded category
 let currentExpandedCategory = null; // Track which category is currently expanded
 
+// ============================================
+// FEED PANEL FUNCTIONS
+// ============================================
+
+// Fetch recent updates for the feed panel
+async function fetchTodayFeed() {
+    try {
+        // Try to fetch all-india data which contains updates across all states
+        const response = await fetch(`${API_BASE_URL}/all-india/categories.json`);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+
+        // Flatten all updates from all categories and add state info
+        const allUpdates = [];
+        const categories = data.categories || {};
+
+        Object.keys(categories).forEach(categoryName => {
+            const updates = categories[categoryName] || [];
+            updates.forEach(update => {
+                allUpdates.push({
+                    ...update,
+                    category: CATEGORY_CONFIG[categoryName]?.shortName || categoryName,
+                    state: update.state || 'All India'
+                });
+            });
+        });
+
+        // Sort by date (most recent first)
+        allUpdates.sort((a, b) => new Date(b.date_published) - new Date(a.date_published));
+
+        // Return the most recent 15 updates for the live feed
+        return allUpdates.slice(0, 15);
+    } catch (error) {
+        console.warn('Could not fetch feed updates:', error);
+        return [];
+    }
+}
+
+// Render the feed panel with updates
+function renderFeed(updates) {
+    const feedContent = document.getElementById('feedContent');
+    if (!feedContent) return;
+
+    if (!updates || updates.length === 0) {
+        feedContent.innerHTML = `
+            <div class="feed-empty">
+                <p>No recent updates</p>
+            </div>
+        `;
+        return;
+    }
+
+    // On mobile/tablet, show only top 7 updates (no scrolling)
+    // On desktop, show all updates with auto-scroll
+    const isMobileOrTablet = window.innerWidth <= 768;
+    const displayUpdates = isMobileOrTablet ? updates.slice(0, 7) : updates;
+
+    let html = '';
+    displayUpdates.forEach(update => {
+        const stateCode = STATE_CODE_MAP[update.state] || '';
+        const relativeTime = getRelativeTime(update.date_published);
+
+        html += `
+            <a href="${update.url}" target="_blank" rel="noopener"
+               class="feed-item"
+               data-state="${stateCode}"
+               data-state-name="${update.state}">
+                <div class="feed-item-title">${update.title}</div>
+                <div class="feed-item-meta">
+                    <span class="feed-item-state">${update.state}</span>
+                    <span class="separator">·</span>
+                    <span class="feed-item-time">${relativeTime}</span>
+                    <span class="separator">·</span>
+                    <span class="feed-item-category">${update.category}</span>
+                </div>
+            </a>
+        `;
+    });
+
+    feedContent.innerHTML = html;
+
+    // Add hover listeners for map highlighting
+    initFeedHoverHighlighting();
+
+    // Initialize auto-scroll only on desktop (not mobile/tablet)
+    if (!isMobileOrTablet) {
+        initAutoScroll();
+    }
+}
+
+// Get relative time string (e.g., "2h ago", "3d ago")
+function getRelativeTime(dateString) {
+    if (!dateString) return '';
+
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffMs = now - date;
+    const diffMins = Math.floor(diffMs / 60000);
+    const diffHours = Math.floor(diffMs / 3600000);
+    const diffDays = Math.floor(diffMs / 86400000);
+
+    if (diffMins < 60) {
+        return diffMins <= 1 ? 'Just now' : `${diffMins}m ago`;
+    } else if (diffHours < 24) {
+        return `${diffHours}h ago`;
+    } else if (diffDays < 7) {
+        return `${diffDays}d ago`;
+    } else {
+        return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    }
+}
+
+// Initialize auto-scrolling for the feed
+function initAutoScroll() {
+    const feedContent = document.getElementById('feedContent');
+    if (!feedContent) return;
+
+    // Stop any existing auto-scroll
+    stopAutoScroll();
+
+    // Only auto-scroll if content overflows
+    if (feedContent.scrollHeight <= feedContent.clientHeight) return;
+
+    // Start auto-scrolling
+    autoScrollInterval = setInterval(() => {
+        if (!isAutoScrollPaused && feedContent) {
+            feedContent.scrollTop += AUTO_SCROLL_SPEED;
+
+            // Loop back to top when reaching the end
+            if (feedContent.scrollTop >= feedContent.scrollHeight - feedContent.clientHeight) {
+                feedContent.scrollTop = 0;
+            }
+        }
+    }, 30); // ~33fps
+
+    // Pause on hover
+    feedContent.addEventListener('mouseenter', pauseAutoScroll);
+    feedContent.addEventListener('mouseleave', resumeAutoScrollDelayed);
+
+    // Pause on touch
+    feedContent.addEventListener('touchstart', pauseAutoScroll, { passive: true });
+    feedContent.addEventListener('touchend', resumeAutoScrollDelayed, { passive: true });
+}
+
+function stopAutoScroll() {
+    if (autoScrollInterval) {
+        clearInterval(autoScrollInterval);
+        autoScrollInterval = null;
+    }
+}
+
+function pauseAutoScroll() {
+    isAutoScrollPaused = true;
+}
+
+function resumeAutoScrollDelayed() {
+    setTimeout(() => {
+        isAutoScrollPaused = false;
+    }, AUTO_SCROLL_PAUSE_DELAY);
+}
+
+// Initialize feed item hover highlighting on map
+function initFeedHoverHighlighting() {
+    const feedItems = document.querySelectorAll('.feed-item');
+
+    feedItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            const stateCode = item.dataset.state;
+            const stateName = item.dataset.stateName;
+            if (stateCode && stateName) {
+                highlightStateOnMap(stateName);
+            }
+        });
+
+        item.addEventListener('mouseleave', () => {
+            clearStateHighlight();
+        });
+    });
+}
+
+// Highlight a state on the map
+function highlightStateOnMap(stateName) {
+    if (!geojsonLayer) return;
+
+    geojsonLayer.eachLayer(layer => {
+        const name = layer.feature?.properties?.ST_NM ||
+                     layer.feature?.properties?.name ||
+                     layer.feature?.properties?.NAME;
+        if (name === stateName) {
+            layer.setStyle({
+                weight: 3,
+                color: '#db4a2b',
+                fillOpacity: 0.8
+            });
+            layer.bringToFront();
+        }
+    });
+}
+
+// Clear state highlight
+function clearStateHighlight() {
+    if (geojsonLayer) {
+        geojsonLayer.resetStyle();
+    }
+}
+
+// Hide feed panel (when state panel opens)
+function hideFeedPanel() {
+    const feedPanel = document.getElementById('feedPanel');
+    if (feedPanel) {
+        feedPanel.classList.add('hidden');
+        stopAutoScroll();
+    }
+}
+
+// Show feed panel (when state panel closes)
+function showFeedPanel() {
+    const feedPanel = document.getElementById('feedPanel');
+    if (feedPanel) {
+        feedPanel.classList.remove('hidden');
+        // Restart auto-scroll after a delay for the transition
+        setTimeout(() => {
+            initAutoScroll();
+        }, 400);
+    }
+}
+
 async function initMap() {
-    map = L.map('map', { center: [22.5, 79], zoom: 5 });
+    // Use zoom level 4 on mobile for better overview, 5 on desktop
+    const isMobile = window.innerWidth <= 768;
+    const initialZoom = isMobile ? 4 : 5;
+    map = L.map('map', { center: [22.5, 79], zoom: initialZoom });
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(map);
 
     // Pre-fetch recent updates count for all states
     await fetchRecentUpdates();
+
+    // Load feed panel content
+    const feedUpdates = await fetchTodayFeed();
+    renderFeed(feedUpdates);
 
     loadGeoJSON();
 }
@@ -483,10 +722,11 @@ function collapseCategory() {
 /**
  * Show the side panel and coordinate map frame resize.
  * Animation approach:
- * 1. Add classes to both map-frame and side-panel simultaneously
- * 2. CSS transitions handle the coordinated animation
- * 3. After animation completes, call map.invalidateSize() once for Leaflet reflow
- * 4. Then fit the map to the selected state's bounds for proper centering
+ * 1. Hide feed panel with premium dissolve animation
+ * 2. Add classes to both map-frame and side-panel simultaneously
+ * 3. CSS transitions handle the coordinated animation
+ * 4. After animation completes, call map.invalidateSize() once for Leaflet reflow
+ * 5. Then fit the map to the selected state's bounds for proper centering
  */
 function showPanel(stateName, content) {
     const panel = document.getElementById('sidePanel');
@@ -495,7 +735,10 @@ function showPanel(stateName, content) {
     document.getElementById('panelTitle').textContent = stateName;
     document.getElementById('panelContent').innerHTML = content;
 
-    // Trigger coordinated animation via CSS classes
+    // Step 1: Hide feed panel with premium animation
+    hideFeedPanel();
+
+    // Step 2: Trigger coordinated animation via CSS classes (slight delay for orchestration)
     requestAnimationFrame(() => {
         panel.classList.add('open');
         mapFrame.classList.add('panel-open');
@@ -526,6 +769,10 @@ function showPanel(stateName, content) {
 /**
  * Close the side panel and restore map frame to full width.
  * Same coordination pattern as showPanel().
+ * Animation orchestration:
+ * 1. Panel slides out
+ * 2. Map expands back to 65%
+ * 3. Feed panel fades back in
  */
 function closePanel() {
     const panel = document.getElementById('sidePanel');
@@ -541,6 +788,7 @@ function closePanel() {
      * After the CSS transition completes:
      * 1. Call invalidateSize() so Leaflet knows the new container dimensions
      * 2. Reset the map view to show all of India
+     * 3. Show feed panel with fade-in animation
      */
     setTimeout(() => {
         map.invalidateSize({ animate: false, pan: false });
@@ -550,6 +798,9 @@ function closePanel() {
             animate: true,
             duration: 0.3
         });
+
+        // Show feed panel after map transition
+        showFeedPanel();
     }, TRANSITION_DURATION + 50);
 
     currentPanel = null;
@@ -595,9 +846,10 @@ function setViewMode(mode) {
         toggleOptions[1].setAttribute('aria-selected', 'true');
         viewToggle.classList.add('all-india-active');
 
-        // Fade out map frame, show All India panel
+        // Fade out map frame, hide feed panel, show All India panel
         requestAnimationFrame(() => {
             mapFrame.classList.add('hidden');
+            hideFeedPanel();
             allIndiaPanel.classList.add('visible');
         });
 
@@ -615,7 +867,7 @@ function setViewMode(mode) {
         toggleOptions[1].setAttribute('aria-selected', 'false');
         viewToggle.classList.remove('all-india-active');
 
-        // Show map frame, hide All India panel
+        // Show map frame, hide All India panel, show feed panel
         requestAnimationFrame(() => {
             mapFrame.classList.remove('hidden');
             allIndiaPanel.classList.remove('visible');
@@ -628,6 +880,8 @@ function setViewMode(mode) {
                 animate: true,
                 duration: 0.3
             });
+            // Show feed panel after transition
+            showFeedPanel();
         }, TRANSITION_DURATION + 50);
     }
 }
