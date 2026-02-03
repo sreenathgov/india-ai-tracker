@@ -22,25 +22,6 @@
         "posted_to_x_at": null
       },
       {
-        "id": 7,
-        "title": "Union Budget 2026-27: BJP Leader Arun Singh Highlights Viksit Bharat Foundation, Middle Class Relief, Farmer Support",
-        "url": "https://timesofindia.indiatimes.com/city/ranchi/union-budget-2026-27-bjp-leader-arun-singh-highlights-viksit-bharat-foundation-middle-class-relief-farmer-support/articleshow/127870007.cms",
-        "summary": "BJP leader Arun Singh stated that the 2026-27 union budget aims to empower various segments of society, including youth, farmers, and the middle class. The budget is expected to provide relief to the middle class through improved healthcare and reduced import duties on medicines. It will also support MSMEs, agriculture, and fish farming through AI integration and subsidies.",
-        "date_published": "2026-02-03",
-        "source_name": "Times of India - Ranchi",
-        "category": "Policies and Initiatives",
-        "state_codes": [
-          "IN"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
-      {
         "id": 3,
         "title": "Budget 2026 signals AI-led growth, skilling push; industry calls for faster execution",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/union-budget-2026-27-a-catalyst-for-ai-driven-growth-and-employability/127842519",
@@ -438,6 +419,32 @@
         "importance_score": 0.0,
         "premium_processed": false,
         "posted_to_x_at": null
+      },
+      {
+        "url": "https://techcrunch.com/2026/02/01/india-offers-zero-taxes-through-2047-to-lure-global-ai-workloads/",
+        "title": "India Offers Zero Taxes Until 2045 to Lure Global AI Firms",
+        "summary": "As the global race to build AI infrastructure accelerates, India has offered foreign cloud providers zero taxes through 2047 on services sold outside the country if they run those workloads from Indian data centres. This is expected to accelerate India's rise in the AI space.",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "date_published": "2026-02-03",
+        "source_name": "Manual Entry - Admin Tool",
+        "is_approved": true,
+        "is_deleted": false
+      },
+      {
+        "url": "https://www.ndtv.com/india-news/union-budget-2026-live-new-panel-to-review-impact-of-ai-on-services-sector-nirmala-sitharaman-10923410",
+        "title": "New Panel To Review Impact Of AI On Services Sector: Nirmala Sitharaman",
+        "summary": "India is taking precautions to protect its rapidly expanding workforce from the ill-effects of AI's slow takeover. This new panel is a high-powered Education to Employment and Enterprises Standing Committee that will recommend measures that focus on services sector as a core driver of economic growth.",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "date_published": "2026-02-03",
+        "source_name": "Manual Entry - Admin Tool",
+        "is_approved": true,
+        "is_deleted": false
       }
     ],
     "Events": [
@@ -526,25 +533,6 @@
         "summary": "AI investment in India is expected to increase by 75.6% over the next two years, driven by the country's leading position in AI adoption. Indian companies are achieving positive results with AI, but face challenges such as complex data systems and security concerns. To overcome these hurdles, organizations are partnering with others to address talent shortages and scale their AI efforts.",
         "date_published": "2026-02-02",
         "source_name": "ET CIO - AI",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "IN"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 1,
-        "title": "OPPO Reno 15c Launched in India: Price, AI camera features, battery and more | In Pics",
-        "url": "https://www.etnownews.com/technology/oppo-reno-15c-launched-in-india-price-ai-camera-features-battery-and-more-in-pics-photo-gallery-153550125",
-        "summary": "OPPO has launched the Reno 15c in India, its most affordable Reno model, featuring an AI-powered 50 MP camera. The device also boasts an AMOLED 120 hertz display and a large 7000 mAh battery with fast charging capabilities. The Reno 15c offers a range of premium features at an affordable price point.",
-        "date_published": "2026-02-02",
-        "source_name": "ET Now Technology",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
