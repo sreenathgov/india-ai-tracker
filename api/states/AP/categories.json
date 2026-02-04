@@ -44,7 +44,29 @@
         "posted_to_x_at": null
       }
     ],
-    "AI Start-Up News": []
+    "AI Start-Up News": [
+      {
+        "id": 1,
+        "title": "Andhra Pradesh positions itself as IT and GCC hub, eyes Eastern Gateway status",
+        "url": "https://yourstory.com/2026/02/ap-targets-it-gcc-capital-status-with-visakhapatnam-as-focus",
+        "summary": "Andhra Pradesh is positioning itself as a hub for IT and Global Capability Centers (GCC), with Visakhapatnam projected to become a key cluster for IT, GCC, and AI. The state already operates six seaports and plans to have four new greenfield ports operational within two years. This development aims to establish Andhra Pradesh as the Eastern Gateway, enhancing its economic and technological presence.",
+        "date_published": "2026-02-04",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

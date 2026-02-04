@@ -1024,6 +1024,25 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "All In Capital launches Golden Ticket program for early-stage AI SaaS founders",
+        "url": "https://entrackr.com/snippets/all-in-capital-launches-golden-ticket-program-for-early-stage-ai-saas-founders-11074761",
+        "summary": "All In Capital has launched its Golden Ticket program to support early-stage Indian founders building AI-led and vertical SaaS companies. The program will select 20-30 startups for pre-seed funding of up to $300K per company, with a total capital deployment of up to $1 million. The selected startups will participate in a demo day as part of the program.",
+        "date_published": "2026-02-04",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "This new AI tool can help you book train tickets, get refunds and check details on IRCTC website and app",
         "url": "https://timesofindia.indiatimes.com/gadgets-news/this-new-ai-tool-can-help-you-book-train-tickets-get-refunds-and-check-details-on-irctc-website-and-app/articleshow/108431623.cms",
@@ -1329,5 +1348,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }
