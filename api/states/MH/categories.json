@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 6,
+        "title": "Cancer hospital likely to startnext year: Rane",
+        "url": "https://timesofindia.indiatimes.com/city/goa/cancer-hospital-likely-to-startnext-year-rane/articleshow/127893523.cms",
+        "summary": "Goa's health minister has announced plans to launch a new cancer hospital by the end of 2027, featuring Israeli equipment and collaboration with Tata Memorial Centre. The state is also implementing AI-driven lung cancer screening, which has already analyzed over 1 lakh chest X-rays. This initiative aims to speed up diagnosis and identify critical lung nodules more efficiently.",
+        "date_published": "2026-02-04",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GA",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 20,
         "title": "Union Budget 2026: Seven new rail corridors announced",
         "url": "https://www.thehindu.com/business/budget/union-budget-2026-announces-seven-high-speed-rail-corridors/article70576998.ece",
@@ -223,6 +243,63 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "How GenAI is boosting engagement, skills and collaboration across teams",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/how-genai-is-boosting-engagement-skills-and-collaboration-across-teams/127885631",
+        "summary": "Generative AI is being used by 95% of developers in Southeast Asia on a weekly basis, leading to higher engagement and productivity gains of up to 70%. This increased productivity is allowing for more time to be spent on upskilling, mentoring, and complex work. The adoption of GenAI is also improving global collaboration and helping to address talent shortages in the region.",
+        "date_published": "2026-02-04",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "From measurements to menus, AI is powering professional kitchens",
+        "url": "https://timesofindia.indiatimes.com/city/pune/from-measurements-to-menus-ai-is-powering-professional-kitchens/articleshow/127893880.cms",
+        "summary": "AI technology is being increasingly used in professional kitchens to streamline various tasks, from measurements to menu planning. This integration of AI aims to improve efficiency and productivity in the culinary industry. AI-powered tools are helping chefs and kitchen staff with tasks such as recipe optimization, inventory management, and personalized menu creation.",
+        "date_published": "2026-02-04",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "NCP uses AI-generated voice, video of Ajit Pawar to make emotional pitch in zilla parishad polls; kicks off debate",
+        "url": "https://timesofindia.indiatimes.com/city/pune/ncp-uses-ai-generated-voice-video-of-ajit-pawar-to-make-emotional-pitch-in-zilla-parishad-polls-kicks-off-debate/articleshow/127897738.cms",
+        "summary": "The Nationalist Congress Party (NCP) is using AI-generated voice and video clips of Ajit Pawar to make emotional appeals in zilla parishad polls. The clips mimic Pawar's voice and image, aiming to connect with voters by recalling his vision and endorsing trusted candidates. This tactic has sparked a debate over the ethical boundaries of using AI in political campaigning.",
+        "date_published": "2026-02-04",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "How Bharat Intelligence uses AI to solve farm labour crisis in Maharashtra’s villages",
         "url": "https://yourstory.com/2026/01/mumbai-agritech-startup-bharat-intelligence-ai-solve-farm-labour-crisis-maharashtra-nashik-rural-areas",
@@ -399,6 +476,7 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Major AI Developments",
+    "Policies and Initiatives"
   ]
 }

@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 6,
+        "title": "Cancer hospital likely to startnext year: Rane",
+        "url": "https://timesofindia.indiatimes.com/city/goa/cancer-hospital-likely-to-startnext-year-rane/articleshow/127893523.cms",
+        "summary": "Goa's health minister has announced plans to launch a new cancer hospital by the end of 2027, featuring Israeli equipment and collaboration with Tata Memorial Centre. The state is also implementing AI-driven lung cancer screening, which has already analyzed over 1 lakh chest X-rays. This initiative aims to speed up diagnosis and identify critical lung nodules more efficiently.",
+        "date_published": "2026-02-04",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GA",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 101,
         "title": "AI-system to challan vehicles sans valid docus at Goa border checkposts",
         "url": "https://b2b.economictimes.indiatimes.com/news/goa/ai-system-to-challan-vehicles-sans-valid-docus-at-goa-border-checkposts/125869333",
@@ -46,5 +66,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

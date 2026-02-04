@@ -182,11 +182,31 @@
         "posted_to_x_at": null
       }
     ],
-    "Events": [],
+    "Events": [
+      {
+        "id": 5,
+        "title": "Meet on AI",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/meet-on-ai/articleshow/127894106.cms",
+        "summary": "A meeting on Artificial Intelligence (AI) was held in Lucknow, as reported by the Times of India. The event aimed to discuss various aspects of AI, although specific details of the meeting are not provided. The meeting's agenda and outcomes are not mentioned in the available information.",
+        "date_published": "2026-02-04",
+        "source_name": "Times of India - Lucknow",
+        "category": "Events",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "Major AI Developments": [],
     "AI Start-Up News": []
   },
   "today_updates": [
-    "Policies and Initiatives"
+    "Events"
   ]
 }

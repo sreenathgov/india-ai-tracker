@@ -22,6 +22,32 @@
         "posted_to_x_at": null
       },
       {
+        "url": "https://techcrunch.com/2026/02/01/india-offers-zero-taxes-through-2047-to-lure-global-ai-workloads/",
+        "title": "India Offers Zero Taxes Until 2045 to Lure Global AI Firms",
+        "summary": "As the global race to build AI infrastructure accelerates, India has offered foreign cloud providers zero taxes through 2047 on services sold outside the country if they run those workloads from Indian data centres. This is expected to accelerate India's rise in the AI space.",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "date_published": "2026-02-03",
+        "source_name": "Manual Entry - Admin Tool",
+        "is_approved": true,
+        "is_deleted": false
+      },
+      {
+        "url": "https://www.ndtv.com/india-news/union-budget-2026-live-new-panel-to-review-impact-of-ai-on-services-sector-nirmala-sitharaman-10923410",
+        "title": "New Panel To Review Impact Of AI On Services Sector: Nirmala Sitharaman",
+        "summary": "India is taking precautions to protect its rapidly expanding workforce from the ill-effects of AI's slow takeover. This new panel is a high-powered Education to Employment and Enterprises Standing Committee that will recommend measures that focus on services sector as a core driver of economic growth.",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "date_published": "2026-02-03",
+        "source_name": "Manual Entry - Admin Tool",
+        "is_approved": true,
+        "is_deleted": false
+      },
+      {
         "id": 3,
         "title": "Budget 2026 signals AI-led growth, skilling push; industry calls for faster execution",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/union-budget-2026-27-a-catalyst-for-ai-driven-growth-and-employability/127842519",
@@ -419,32 +445,6 @@
         "importance_score": 0.0,
         "premium_processed": false,
         "posted_to_x_at": null
-      },
-      {
-        "url": "https://techcrunch.com/2026/02/01/india-offers-zero-taxes-through-2047-to-lure-global-ai-workloads/",
-        "title": "India Offers Zero Taxes Until 2045 to Lure Global AI Firms",
-        "summary": "As the global race to build AI infrastructure accelerates, India has offered foreign cloud providers zero taxes through 2047 on services sold outside the country if they run those workloads from Indian data centres. This is expected to accelerate India's rise in the AI space.",
-        "category": "Policies and Initiatives",
-        "state_codes": [
-          "IN"
-        ],
-        "date_published": "2026-02-03",
-        "source_name": "Manual Entry - Admin Tool",
-        "is_approved": true,
-        "is_deleted": false
-      },
-      {
-        "url": "https://www.ndtv.com/india-news/union-budget-2026-live-new-panel-to-review-impact-of-ai-on-services-sector-nirmala-sitharaman-10923410",
-        "title": "New Panel To Review Impact Of AI On Services Sector: Nirmala Sitharaman",
-        "summary": "India is taking precautions to protect its rapidly expanding workforce from the ill-effects of AI's slow takeover. This new panel is a high-powered Education to Employment and Enterprises Standing Committee that will recommend measures that focus on services sector as a core driver of economic growth.",
-        "category": "Policies and Initiatives",
-        "state_codes": [
-          "IN"
-        ],
-        "date_published": "2026-02-03",
-        "source_name": "Manual Entry - Admin Tool",
-        "is_approved": true,
-        "is_deleted": false
       }
     ],
     "Events": [
@@ -1348,8 +1348,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Policies and Initiatives",
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

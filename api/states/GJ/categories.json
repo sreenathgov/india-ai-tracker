@@ -83,6 +83,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "HORIBA acquires Pristine Deeptech to strengthen R&D",
+        "url": "https://entrackr.com/snippets/horiba-acquires-pristine-deeptech-to-strengthen-rd-11070827",
+        "summary": "HORIBA India has acquired a 100% stake in Pristine Deeptech, a startup focused on lab-grown diamonds for semiconductor and quantum research. The acquisition strengthens HORIBA's expertise in diamond-based technologies and supports the creation of a dedicated R&D hub in India. This move enhances the company's ability to deliver advanced analytical and measurement solutions for next-generation technologies.",
+        "date_published": "2026-02-03",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 139,
         "title": "Saved by seconds: ISR working on AI-based quake early warning system for Gujarat",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/saved-by-seconds-isr-working-on-ai-based-quake-early-warning-system-for-gujarat/articleshow/127495679.cms",
@@ -145,7 +164,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Events"
-  ]
+  "today_updates": []
 }
