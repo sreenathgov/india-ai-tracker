@@ -20,13 +20,15 @@ Design Philosophy:
 from scrapers.rss_scraper import RSScraper
 from scrapers.web_scraper import WebScraper
 from ai.ai_subject_validator import AISubjectValidator  # Phase 3: AI Subject Validator
+from ai.india_subject_validator import IndiaSubjectValidator  # Phase 4: India Subject Validator
+from ai.event_temporal_validator import EventTemporalValidator  # Phase 4: Event Temporal Filter
 from ai.categoriser import Categoriser
 from ai.geo_attributor import GeoAttributor
 from ai.summarizer import AISummarizer
 from ai.deduplicator import Deduplicator
 from ai.date_extractor import DateExtractor
 from utils.canonical_key import get_canonical_key
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 import json
 import os
 
@@ -149,7 +151,9 @@ def run_all_scrapers(target_states=None):
     # Initialize components
     rss_scraper = RSScraper()
     web_scraper = WebScraper()
-    ai_validator = AISubjectValidator()  # Phase 3: AI Subject Validator (replaces RuleBasedFilter)
+    ai_validator = AISubjectValidator()  # Phase 3: AI Subject Validator
+    india_validator = IndiaSubjectValidator()  # Phase 4: India Subject Validator
+    event_validator = EventTemporalValidator()  # Phase 4: Event Temporal Filter
     categoriser = Categoriser()
     geo_attributor = GeoAttributor()
     summarizer = AISummarizer()
@@ -270,38 +274,69 @@ def run_all_scrapers(target_states=None):
         print("\nAll articles were duplicates from canonical store. Exiting.")
         return stats
 
-    # STEP 2: AI Subject Validation (Is AI the SUBJECT, not merely mentioned?)
+    # STEP 2a: AI Subject Validation (Is AI the SUBJECT, not merely mentioned?)
     print()
     print("-" * 40)
-    print("STEP 2: AI SUBJECT VALIDATION")
+    print("STEP 2a: AI SUBJECT VALIDATION")
     print("-" * 40)
     print("Validating AI is the subject (not merely mentioned)...")
     print()
 
-    ai_relevant_articles = []
+    ai_passed_articles = []
+    ai_dropped = 0
     for article in all_articles:
         # Phase 3: AISubjectValidator validates AI is materially discussed
-        result = ai_validator.validate(
+        ai_result = ai_validator.validate(
             article['title'],
             article.get('content', '')
         )
 
-        if result.passed:
-            article['relevance_score'] = result.ai_score
-            article['ai_score'] = result.ai_score
-            article['india_score'] = 0  # Not checking India here
-            article['confidence'] = result.confidence
-            article['validation_reason'] = result.reason  # For audit trail
-            article['validation_archetype'] = result.archetype  # If matched archetype
+        if ai_result.passed:
+            article['ai_score'] = ai_result.ai_score
+            article['ai_validation_reason'] = ai_result.reason
+            article['ai_archetype'] = ai_result.archetype
+            ai_passed_articles.append(article)
+        else:
+            ai_dropped += 1
+
+    print(f"AI Validation: {len(ai_passed_articles)} passed | {ai_dropped} dropped")
+
+    if not ai_passed_articles:
+        print("\nNo AI-relevant articles found. Exiting.")
+        return stats
+
+    # STEP 2b: India Subject Validation (Is India the SUBJECT, not merely mentioned?)
+    print()
+    print("-" * 40)
+    print("STEP 2b: INDIA SUBJECT VALIDATION")
+    print("-" * 40)
+    print("Validating India is the subject (not merely mentioned)...")
+    print()
+
+    ai_relevant_articles = []
+    india_dropped = 0
+    for article in ai_passed_articles:
+        # Phase 4: IndiaSubjectValidator validates India is materially discussed
+        india_result = india_validator.validate(
+            article['title'],
+            article.get('content', '')
+        )
+
+        if india_result.passed:
+            article['india_score'] = india_result.india_score
+            article['india_validation_reason'] = india_result.reason
+            article['relevance_score'] = article['ai_score'] + india_result.india_score
+            article['confidence'] = india_result.confidence
             ai_relevant_articles.append(article)
         else:
-            # Log dropped articles for debugging
-            if result.reason not in ('NO_AI_SIGNAL', 'NON_AI_SUBJECT'):
-                print(f"  DROP: {article['title'][:50]}... ({result.reason})")
+            india_dropped += 1
+            # Log non-India articles that passed AI filter (for debugging)
+            print(f"  DROP (not India): {article['title'][:50]}... ({india_result.reason})")
 
     stats['ai_relevant'] = len(ai_relevant_articles)
     rejected = stats['total_scraped'] - stats['ai_relevant']
-    print(f"\nAI Relevant: {stats['ai_relevant']} | Rejected: {rejected}")
+    print(f"\nIndia Validation: {len(ai_relevant_articles)} passed | {india_dropped} dropped")
+    print(f"Total AI+India Relevant: {stats['ai_relevant']} | Total Rejected: {rejected}")
 
     if not ai_relevant_articles:
         print("\nNo AI-relevant articles found. This is expected - prefer false negatives.")
@@ -341,10 +376,44 @@ def run_all_scrapers(target_states=None):
         article['category'] = category
         article['event_type'] = event_type
 
-        # Track category stats
-        stats['by_category'][category] = stats['by_category'].get(category, 0) + 1
+    # STEP 4.5: Event Temporal Validation (only for Events category)
+    print()
+    print("-" * 40)
+    print("STEP 4.5: EVENT TEMPORAL VALIDATION")
+    print("-" * 40)
+    print("Validating events are in the future...")
 
-    print(f"\nCategories: {stats['by_category']}")
+    events_reclassified = 0
+    today = datetime.now().date()
+
+    for article in unique_articles:
+        if article['category'] == 'Events':
+            # Phase 4: EventTemporalValidator checks if event is in the future
+            temporal_result = event_validator.validate(
+                article['title'],
+                article.get('content', ''),
+                today
+            )
+
+            if not temporal_result.is_future:
+                # Reclassify past events to "Major AI Developments"
+                old_category = article['category']
+                article['category'] = 'Major AI Developments'
+                article['temporal_reason'] = temporal_result.reason
+                article['event_type'] = None  # Clear event type
+                events_reclassified += 1
+                print(f"  RECLASSIFY (past event): {article['title'][:50]}... ({temporal_result.reason})")
+            else:
+                article['temporal_reason'] = temporal_result.reason
+
+    if events_reclassified > 0:
+        print(f"\nReclassified {events_reclassified} past event(s) to Major AI Developments")
+
+    # Track category stats (after temporal validation)
+    for article in unique_articles:
+        stats['by_category'][article['category']] = stats['by_category'].get(article['category'], 0) + 1
+
+    print(f"\nFinal Categories: {stats['by_category']}")
 
     # STEP 5: Geographic Attribution
     print()
