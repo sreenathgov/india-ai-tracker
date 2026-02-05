@@ -64,6 +64,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 13,
+        "title": "UK firm opens its new AI-first Global Capability Centre in Hyd",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/uk-firm-opens-its-new-ai-first-global-capability-centre-in-hyd/articleshow/127917274.cms",
+        "summary": "A UK-based firm has launched its new AI-first Global Capability Centre in Hyderabad. The centre is expected to leverage artificial intelligence to drive innovation and growth. This move marks a significant expansion of the company's presence in India, focusing on AI-driven technologies.",
+        "date_published": "2026-02-05",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Hyderabad hospital launches AI-enabled clinic as experts flag rising head, neck cancer burden in India",
         "url": "https://www.thehindu.com/news/cities/Hyderabad/hyderabad-hospital-launches-ai-enabled-clinic-as-experts-flag-rising-head-neck-cancer-burden-in-india/article70574998.ece",
@@ -294,6 +313,25 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "US startup sets eyes on real-world AI applications in India",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/blaize-ai-startup-aims-to-revolutionize-indias-agriculture-and-traffic-management/127902426",
+        "summary": "A US startup is focusing on real-world AI applications in India, with a significant portion of its research and development taking place in Telangana. The company, which is listed on Nasdaq, has nearly 300 employees, with half of them based in India. The startup develops programmable AI processors and software for devices and data centres.",
+        "date_published": "2026-02-04",
+        "source_name": "ET CIO - AI",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 35,
         "title": "IIIT-Hyderabad uses AI to decode the Indian thali",
         "url": "https://telanganatoday.com/iiit-hyderabad-uses-ai-to-decode-the-indian-thali",
@@ -353,7 +391,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "Policies and Initiatives"
+    "Major AI Developments"
   ]
 }

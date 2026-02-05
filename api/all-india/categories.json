@@ -509,6 +509,101 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "AI adoption across Indian enterprises remains largely pre-scale",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-adoption-in-indian-enterprises-pre-scale-challenges-and-insights/127907433",
+        "summary": "Indian companies are eager to adopt AI but face challenges in implementation, with most remaining in the early stages of adoption. Gaps in governance and business alignment are major obstacles to progress, despite investments in AI. To succeed, companies must develop deep capabilities and evolve their learning and development strategies to enable informed decision-making.",
+        "date_published": "2026-02-05",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Union Budget 2026: Cloud &amp; AI take center stage in India’s digital strategy",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/union-budget-2026-advancements-in-cloud-and-ai-to-propel-indias-digital-future/127901011",
+        "summary": "India's Union Budget 2026 prioritizes cloud and AI adoption as key components of the country's digital strategy. The budget aims to drive growth through the integration of these technologies, with industry leaders offering their insights on the initiative. Cloud and AI are expected to play a central role in shaping India's digital future.",
+        "date_published": "2026-02-05",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Alphabet caps 2025 with revenue milestone, doubles down on AI spending",
+        "url": "https://yourstory.com/2026/02/alphabet-caps-2025-revenue-milestone-doubles-down-ai-spending",
+        "summary": "Alphabet reported $402.8 billion in revenue for the full financial year, a 15% increase from the previous year. Net profit for the year rose 32% to $132.2 billion. The company is also increasing its investment in AI, doubling down on AI spending.",
+        "date_published": "2026-02-05",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "AI is infrastructure, and India will have its own,” says NVIDIA's Jensen Huang",
+        "url": "https://yourstory.com/2026/02/ai-is-infrastructure-and-india-will-have-its-own-says-jensen-huang",
+        "summary": "NVIDIA CEO Jensen Huang stated that India will develop its own AI systems, data centers, and chips. He emphasized that artificial intelligence is as crucial to nations as electricity and the internet. Huang views AI as a fundamental infrastructure that countries like India will establish domestically.",
+        "date_published": "2026-02-04",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Golden Sparrow Ventures announces first close of $20 Mn Fund II",
+        "url": "https://entrackr.com/snippets/golden-sparrow-ventures-announces-first-close-of-20-mn-fund-ii-11077001",
+        "summary": "Golden Sparrow Ventures has announced the first close of its $20 million Fund II, with over half of the fund committed and 60% of Fund I's limited partners re-investing. The fund will target 22 pre-seed and seed stage companies with an average investment of $650,000, split evenly between deep tech and enterprise AI. About 12% of the capital is reserved for follow-on investments in successful companies.",
+        "date_published": "2026-02-04",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "AI adoption is widespread, but developer confidence is still catching up",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-adoption-surges-in-southeast-asia-and-india-but-developer-confidence-lags-behind/127876786",
         "summary": "Developers across Southeast Asia and India are widely adopting AI, with nearly nine in ten using it weekly, and most reporting productivity gains. Despite its widespread use, many engineers remain cautious and treat AI as an accelerator rather than a substitute for human judgment. Confidence in AI's reliability has yet to fully mature, with developers still approaching it with caution.",
@@ -1349,6 +1444,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }
