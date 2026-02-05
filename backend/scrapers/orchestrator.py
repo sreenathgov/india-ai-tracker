@@ -19,7 +19,7 @@ Design Philosophy:
 
 from scrapers.rss_scraper import RSScraper
 from scrapers.web_scraper import WebScraper
-from ai.rule_filter import RuleBasedFilter  # CRITICAL FIX: Use RuleBasedFilter to load filters.yaml with Budget/ISM keywords
+from ai.ai_subject_validator import AISubjectValidator  # Phase 3: AI Subject Validator
 from ai.categoriser import Categoriser
 from ai.geo_attributor import GeoAttributor
 from ai.summarizer import AISummarizer
@@ -149,7 +149,7 @@ def run_all_scrapers(target_states=None):
     # Initialize components
     rss_scraper = RSScraper()
     web_scraper = WebScraper()
-    ai_filter = RuleBasedFilter()  # CRITICAL FIX: Load filters.yaml with Budget/ISM 2.0 keywords
+    ai_validator = AISubjectValidator()  # Phase 3: AI Subject Validator (replaces RuleBasedFilter)
     categoriser = Categoriser()
     geo_attributor = GeoAttributor()
     summarizer = AISummarizer()
@@ -223,8 +223,8 @@ def run_all_scrapers(target_states=None):
     print("STEP 1.5: DATE EXTRACTION & TIME WINDOW FILTER")
     print("-" * 40)
 
-    # Get time window from environment (default: 24 hours)
-    time_window_hours = int(os.getenv('SCRAPE_TIME_WINDOW_HOURS', '24'))
+    # Get time window from environment (default: 96 hours = 4 days)
+    time_window_hours = int(os.getenv('SCRAPE_TIME_WINDOW_HOURS', '96'))
     cutoff_time = datetime.now() - timedelta(hours=time_window_hours)
     cutoff_date = cutoff_time.date()
 
@@ -270,31 +270,34 @@ def run_all_scrapers(target_states=None):
         print("\nAll articles were duplicates from canonical store. Exiting.")
         return stats
 
-    # STEP 2: AI Relevance Filter (STRICT)
+    # STEP 2: AI Subject Validation (Is AI the SUBJECT, not merely mentioned?)
     print()
     print("-" * 40)
-    print("STEP 2: AI RELEVANCE FILTER")
+    print("STEP 2: AI SUBJECT VALIDATION")
     print("-" * 40)
-    print("Applying strict AI relevance filter...")
+    print("Validating AI is the subject (not merely mentioned)...")
     print()
 
     ai_relevant_articles = []
     for article in all_articles:
-        # CRITICAL FIX: RuleBasedFilter uses calculate_score() which returns a dict
-        result = ai_filter.calculate_score(
+        # Phase 3: AISubjectValidator validates AI is materially discussed
+        result = ai_validator.validate(
             article['title'],
             article.get('content', '')
         )
 
-        is_relevant = result['passed']
-        score = result['total_score']
-
-        if is_relevant:
-            article['relevance_score'] = score
-            article['ai_score'] = result['ai_score']
-            article['india_score'] = result['india_score']
-            article['confidence'] = result['confidence']
+        if result.passed:
+            article['relevance_score'] = result.ai_score
+            article['ai_score'] = result.ai_score
+            article['india_score'] = 0  # Not checking India here
+            article['confidence'] = result.confidence
+            article['validation_reason'] = result.reason  # For audit trail
+            article['validation_archetype'] = result.archetype  # If matched archetype
             ai_relevant_articles.append(article)
+        else:
+            # Log dropped articles for debugging
+            if result.reason not in ('NO_AI_SIGNAL', 'NON_AI_SUBJECT'):
+                print(f"  DROP: {article['title'][:50]}... ({result.reason})")
 
     stats['ai_relevant'] = len(ai_relevant_articles)
     rejected = stats['total_scraped'] - stats['ai_relevant']
@@ -350,7 +353,8 @@ def run_all_scrapers(target_states=None):
     print("-" * 40)
 
     for article in unique_articles:
-        states = geo_attributor.attribute(
+        # New conservative geo_attributor returns tuple: (state_codes, attribution_reason)
+        states, attribution_reason = geo_attributor.attribute(
             article['title'],
             article.get('content', ''),
             article.get('source_state'),
@@ -358,12 +362,14 @@ def run_all_scrapers(target_states=None):
             article.get('geo_mode', 'default')
         )
         article['state_codes'] = states
+        article['geo_attribution_reason'] = attribution_reason  # For debugging/audit
 
         # Handle event location rules
         if article['category'] == 'Events' and article.get('event_type'):
             if article['event_type'] == 'online':
                 # Online events go to All India only
                 article['state_codes'] = ['IN']
+                article['geo_attribution_reason'] = 'ONLINE_EVENT_OVERRIDE'
             elif article['event_type'] == 'hybrid':
                 # Hybrid events go to both state and All India
                 if 'IN' not in article['state_codes']:
@@ -374,7 +380,7 @@ def run_all_scrapers(target_states=None):
             stats['by_state'][state] = stats['by_state'].get(state, 0) + 1
 
         state_names = [geo_attributor.get_state_name(s) for s in article['state_codes']]
-        print(f"  [{', '.join(state_names)}] {article['title'][:50]}...")
+        print(f"  [{', '.join(state_names)}] {article['title'][:50]}... ({attribution_reason})")
 
     print(f"\nStates: {stats['by_state']}")
 

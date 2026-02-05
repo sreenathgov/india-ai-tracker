@@ -110,13 +110,26 @@ class GroqClient:
    - DEFAULT if doesn't fit the other two categories
 
 3. State Attribution: JSON array of state codes (e.g., ["KA", "TN", "MH"])
-   - Use standard 2-letter codes
-   - ["IN"] for national/multiple states
-   - CRITICAL: Tag a state ONLY if the article content is SUBSTANTIVELY about that state
-   - DO NOT tag based on news source domain (ignore telanganatoday.com, hindustantimes, etc.)
-   - DO NOT tag unless the state is MATERIALLY discussed in title or content
-   - Valid reasons to tag: state government policy, state-specific event, company HQ in that state doing something there
-   - If article mentions India broadly or multiple states equally, use ["IN"]
+   - DEFAULT: ["IN"] for national/All India - THIS IS THE CORRECT DEFAULT
+   - Use standard 2-letter codes only when STATE IS THE SUBJECT of the news
+
+   STRICT RULES - State attribution requires EXPLICIT evidence:
+   ✅ ASSIGN STATE only if:
+      - State GOVERNMENT announces/implements/executes AI policy/initiative/scheme
+      - AI facility/hub/office/data centre is being OPENED/SET UP in that state
+      - AI event is PHYSICALLY taking place in that state (not online events)
+      - Explicit investment/deployment TIED to that specific state
+
+   ❌ DO NOT assign state based on:
+      - Company headquarters location (Zoho launching product ≠ Tamil Nadu)
+      - Startup's known base (Sarvam AI funding round ≠ Telangana)
+      - News source location (Telangana Today article ≠ Telangana)
+      - Datelines at start of article (Chennai: ... ≠ Tamil Nadu)
+      - Passing city mentions in quotes, examples, or background context
+      - Author or journalist location
+
+   WHEN IN DOUBT: Use ["IN"] - conservative attribution is correct.
+   Location must be the SUBJECT of the news, not an incidental attribute.
 
 4. Summary: Write a concise, professional summary (STRICT LIMIT: under 240 characters).
    FORMAT RULES:
