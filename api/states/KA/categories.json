@@ -180,6 +180,25 @@
         "posted_to_x_at": null
       },
       {
+        "id": 4,
+        "title": "AI-in-Fintech Bharat Conclave to be held in Bengaluru on Feb 6",
+        "url": "https://yourstory.com/2026/02/ai-in-fintech-bharat-conclave-in-bengaluru-on-feb-6",
+        "summary": "The AI-in-Fintech Bharat Conclave is scheduled to take place in Bengaluru on February 6. The event will gather policymakers, regulators, tech experts, and fintech founders to discuss AI's role in the fintech ecosystem. Key stakeholders will come together to explore the intersection of AI and fintech.",
+        "date_published": "2026-02-05",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 123,
         "title": "Why Mphasis CEO Believes AI Can No Longer Be ‘Lipstick’ on Legacy IT",
         "url": "https://analyticsindiamag.com/it-services/why-mphasis-ceo-believes-ai-can-no-longer-be-lipstick-on-legacy-it/",
@@ -393,7 +412,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
