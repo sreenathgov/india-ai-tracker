@@ -25,6 +25,25 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 14,
+        "title": "CM Himanta Biswa Sarma oversees rollout of AI-driven hospitals in Assam with Lord’s Mark Industries",
+        "url": "https://timesofindia.indiatimes.com/city/guwahati/cm-himanta-biswa-sarma-oversees-rollout-of-ai-driven-hospitals-in-assam-with-lords-mark-industries/articleshow/127993245.cms",
+        "summary": "CM Himanta Biswa Sarma is overseeing the rollout of AI-driven hospitals in Assam in partnership with Lord's Mark Industries. The initiative aims to bring advanced healthcare facilities to the state using artificial intelligence technology. The rollout is part of efforts to improve healthcare infrastructure in Assam.",
+        "date_published": "2026-02-07",
+        "source_name": "Times of India - Guwahati",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AS"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 43,
         "title": "Tatas to make chips, laptops for Intel in Gujarat, Assam",
         "url": "https://b2b.economictimes.indiatimes.com/news/gujarat/tatas-to-make-chips-laptops-for-intel-in-gujarat-assam/125867971",
@@ -47,5 +66,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

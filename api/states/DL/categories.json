@@ -141,6 +141,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "Futuristic makeover for Lutyens’ Delhi ahead of AI Summit 2026",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/futuristic-makeover-for-lutyens-delhi-ahead-of-ai-summit-2026/articleshow/128001730.cms",
+        "summary": "Lutyens' Delhi is set to undergo a futuristic makeover ahead of the AI Summit 2026. The makeover aims to transform the area into a modern and technologically advanced hub. The exact details of the makeover are not specified, but it is expected to be completed before the AI Summit 2026.",
+        "date_published": "2026-02-07",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Agentic AI platform Vibrium raises $1 Mn in seed round",
         "url": "https://entrackr.com/snippets/agentic-ai-platform-vibrium-raises-1-mn-in-seed-round-11075601",
@@ -239,5 +258,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

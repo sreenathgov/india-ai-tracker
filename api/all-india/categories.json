@@ -449,6 +449,25 @@
     ],
     "Events": [
       {
+        "id": 12,
+        "title": "Delhi to get major facelift as NDMC steps up preparations for upcoming India-AI Impact Summit",
+        "url": "https://indianexpress.com/article/cities/delhi/delhi-major-facelift-ndmc-steps-preparations-for-upcoming-india-ai-impact-summit-10518528/",
+        "summary": "The New Delhi Municipal Council (NDMC) is preparing for the upcoming India-AI Impact Summit by giving Delhi a major facelift. The preparations are part of the city's efforts to host the summit, which is expected to bring significant attention to the area. The facelift aims to improve the city's infrastructure and overall appearance.",
+        "date_published": "2026-02-07",
+        "source_name": "Indian Express - Delhi",
+        "category": "Events",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Capital One India: Driving innovation with a country-wide Hackathon and AI Summit",
         "url": "https://yourstory.com/2026/02/capital-one-india-driving-innovation-country-wide-hackathon-ai-summit",
@@ -507,6 +526,139 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 2,
+        "title": "Fixing India's debt collection industry; Veranda Learning Q3 profit soars 110%",
+        "url": "https://yourstory.com/2026/02/fixing-indias-debt-collection-industry-veranda-learning-q3-profit-soars-110",
+        "summary": "DPDzero is utilizing AI to improve debt collection efficiency for lenders in India. Veranda Learning has reported a significant 110% increase in Q3 profit, reaching Rs 17 crore, driven by a 52% rise in revenue. The company's financial growth is a notable development in India's education and financial sectors.",
+        "date_published": "2026-02-07",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Hyderabad Police Commissioner flags threat posed by AI agents",
+        "url": "https://cellit.in/hyderabad-police-commissioner-flags-threat-posed-by-ai-agents/",
+        "summary": "Hyderabad's Police Commissioner has highlighted the potential threat posed by AI agents. The commissioner's statement suggests that AI agents could be used for malicious purposes, posing a risk to security. The exact nature of the threat was not specified, but it indicates growing concern over AI's potential misuse.",
+        "date_published": "2026-02-07",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "India AI Impact Summit: Research symposium draws over 250 submissions",
+        "url": "https://cellit.in/india-ai-impact-summit-research-symposium-draws-over-250-submissions/",
+        "summary": "The India AI Impact Summit hosted a research symposium that received over 250 submissions. This high volume of submissions indicates significant interest in the field of artificial intelligence in India. The summit aims to showcase innovative AI research and its potential impact on various industries.",
+        "date_published": "2026-02-07",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Govt’s AI-driven tool to weed out misinformation draws BJP ‘snooping’ charge",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/govts-ai-driven-tool-to-weed-out-misinformation-draws-bjp-snooping-charge/articleshow/128001923.cms",
+        "summary": "The Indian government has developed an AI-driven tool to combat misinformation, but it has drawn criticism from the BJP, which has accused the government of \"snooping\". The tool aims to identify and counter false information, but the BJP has raised concerns about its potential impact on privacy and civil liberties. The controversy has sparked a debate about the balance between combating misinformation and protecting individual rights.",
+        "date_published": "2026-02-07",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Biometric cards and AI robots shine at Maha-Tech industrial expo",
+        "url": "https://timesofindia.indiatimes.com/city/pune/biometric-cards-and-ai-robots-shine-at-maha-tech-industrial-expo/articleshow/128006357.cms",
+        "summary": "The Maha-Tech industrial expo showcased innovative technologies, including biometric cards and AI-powered robots. These cutting-edge solutions drew significant attention at the event, highlighting their potential applications in various industries. The expo demonstrated the growing integration of AI and biometrics in modern technology.",
+        "date_published": "2026-02-07",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "CCTVs, AI to guard Lucknow-Kanpur e-way",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/cctvs-ai-to-guard-lucknow-kanpur-e-way/articleshow/128007265.cms",
+        "summary": "The Lucknow-Kanpur expressway will be equipped with CCTV cameras and AI technology to enhance security and surveillance. This integration of AI and CCTV cameras aims to improve safety on the expressway. The system will utilize AI to monitor and analyze footage from the cameras to detect and respond to potential incidents.",
+        "date_published": "2026-02-07",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "AI to detect lion activity near tracks",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ai-to-detect-lion-activity-near-tracks/articleshow/128004997.cms",
+        "summary": "Artificial intelligence is being utilized to detect lion activity near tracks, aiming to enhance safety and conservation efforts. The AI system will help monitor and track lion movements, reducing potential conflicts between lions and human activities. This innovative approach is expected to improve lion conservation and management in the region.",
+        "date_published": "2026-02-07",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
       {
         "id": 7,
         "title": "Digital India Ask Our Experts Episode 41 on “India AI Impact Summit 2026”",
@@ -609,6 +761,63 @@
         "summary": "DPDZero utilizes AI to enhance debt collection in India by automating reminders and creating personalized repayment plans for borrowers. This approach aims to replace traditional collection methods, increasing efficiency for banks and lenders. The goal is to improve the recovery of unpaid loans in the country.",
         "date_published": "2026-02-06",
         "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "AI a catalyst for financial inclusive growth: Finance Ministry official",
+        "url": "https://yourstory.com/2026/02/ai-in-fintech-bharat-conclave-financial-inclusive-growth-finance-ministry-official",
+        "summary": "A Finance Ministry official stated that AI can drive financial inclusive growth. India's digital public infrastructure, including Aadhaar, UPI, and Account Aggregator, provides a foundation for AI adoption. This infrastructure enables the responsible and scalable use of AI in the financial sector.",
+        "date_published": "2026-02-06",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Fractal raises Rs 1,248 Cr from anchor investors ahead of IPO",
+        "url": "https://entrackr.com/news/fractal-raises-rs-1248-cr-from-anchor-investors-ahead-of-ipo-11083270",
+        "summary": "Fractal Analytics has raised Rs 1,248 crore from anchor investors ahead of its initial public offering. The company allotted 1.38 crore equity shares at Rs 900 per share, the upper end of the IPO's price band, to a mix of domestic and global investors. Leading participants included SBI Small Cap Fund and the Life Insurance Corporation of India.",
+        "date_published": "2026-02-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "‘Discard slave mentality’: PM Modi links ‘swadeshi’ lifestyle and AI skills to exam success in first-ever multi-city Pariksha Pe Charcha",
+        "url": "https://indianexpress.com/article/cities/delhi/pm-modi-student-interaction-pariksha-pe-charcha-swadeshi-ai-10517025/",
+        "summary": "PM Modi emphasized the importance of adopting a \"swadeshi\" lifestyle and acquiring AI skills for exam success during the first-ever multi-city Pariksha Pe Charcha. He encouraged students to discard a \"slave mentality\" and instead focus on developing skills that will help them succeed. The event aimed to promote a holistic approach to education and exam preparation.",
+        "date_published": "2026-02-06",
+        "source_name": "Indian Express - Delhi",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -1767,6 +1976,7 @@
     ]
   },
   "today_updates": [
+    "Events",
     "Major AI Developments"
   ]
 }
