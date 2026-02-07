@@ -449,25 +449,6 @@
     ],
     "Events": [
       {
-        "id": 12,
-        "title": "Delhi to get major facelift as NDMC steps up preparations for upcoming India-AI Impact Summit",
-        "url": "https://indianexpress.com/article/cities/delhi/delhi-major-facelift-ndmc-steps-preparations-for-upcoming-india-ai-impact-summit-10518528/",
-        "summary": "The New Delhi Municipal Council (NDMC) is preparing for the upcoming India-AI Impact Summit by giving Delhi a major facelift. The preparations are part of the city's efforts to host the summit, which is expected to bring significant attention to the area. The facelift aims to improve the city's infrastructure and overall appearance.",
-        "date_published": "2026-02-07",
-        "source_name": "Indian Express - Delhi",
-        "category": "Events",
-        "state_codes": [
-          "IN"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
-      {
         "id": 6,
         "title": "Capital One India: Driving innovation with a country-wide Hackathon and AI Summit",
         "url": "https://yourstory.com/2026/02/capital-one-india-driving-innovation-country-wide-hackathon-ai-summit",
@@ -526,25 +507,6 @@
       }
     ],
     "Major AI Developments": [
-      {
-        "id": 2,
-        "title": "Fixing India's debt collection industry; Veranda Learning Q3 profit soars 110%",
-        "url": "https://yourstory.com/2026/02/fixing-indias-debt-collection-industry-veranda-learning-q3-profit-soars-110",
-        "summary": "DPDzero is utilizing AI to improve debt collection efficiency for lenders in India. Veranda Learning has reported a significant 110% increase in Q3 profit, reaching Rs 17 crore, driven by a 52% rise in revenue. The company's financial growth is a notable development in India's education and financial sectors.",
-        "date_published": "2026-02-07",
-        "source_name": "YourStory",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "IN"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
       {
         "id": 5,
         "title": "Hyderabad Police Commissioner flags threat posed by AI agents",
