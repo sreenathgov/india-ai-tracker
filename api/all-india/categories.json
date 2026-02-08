@@ -3,6 +3,25 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 1,
+        "title": "India-US interim trade deal to boost access to advanced GPUs, data centre equipment",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/india-us-interim-trade-deal-to-boost-access-to-advanced-gpus-data-centre-equipment/128063046",
+        "summary": "India and the US are finalising an interim trade framework to increase access to advanced GPUs and data centre equipment. The agreement aims to create opportunities for startups, service providers, and the AI ecosystem. This trade deal is expected to boost India's access to critical technologies, according to Union Minister Ashwini Vaishnaw.",
+        "date_published": "2026-02-08",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Agnihotri bats for drone, robotics push at tech fest",
         "url": "https://www.tribuneindia.com/news/mukesh-agnihotri/agnihotri-bats-for-drone-robotics-push-at-tech-fest",
@@ -2090,6 +2109,7 @@
     ]
   },
   "today_updates": [
+    "Policies and Initiatives",
     "Major AI Developments"
   ]
 }
