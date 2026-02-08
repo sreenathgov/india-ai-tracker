@@ -220,6 +220,38 @@ class GeoAttributor:
         'mumbai university': 'MH',
         'pune university': 'MH', 'savitribai phule': 'MH',
 
+        # State Universities (commonly in news)
+        'jntuh': 'TG', 'jntu hyderabad': 'TG', 'jawaharlal nehru technological university hyderabad': 'TG',
+        'jntuk': 'AP', 'jntu kakinada': 'AP',
+        'jntua': 'AP', 'jntu anantapur': 'AP',
+        'andhra university': 'AP',
+        'university of hyderabad': 'TG', 'uoh': 'TG',
+        'bangalore university': 'KA',
+        'mysore university': 'KA',
+        'calicut university': 'KL',
+        'kerala university': 'KL',
+        'madras university': 'TN', 'university of madras': 'TN',
+        'bharathiar university': 'TN',
+        'lucknow university': 'UP',
+        'allahabad university': 'UP',
+        'bhu': 'UP', 'banaras hindu university': 'UP',
+        'amu': 'UP', 'aligarh muslim university': 'UP',
+        'patna university': 'BR',
+        'rajasthan university': 'RJ',
+        'gujarat university': 'GJ',
+
+        # Medical/Research Institutes
+        'sgpgi': 'UP', 'sgpgims': 'UP', 'sanjay gandhi postgraduate': 'UP',
+        'pgimer': 'CH', 'pgimer chandigarh': 'CH',
+        'nimhans': 'KA', 'nimhans bangalore': 'KA',
+        'tifr': 'MH', 'tata institute of fundamental research': 'MH',
+        'ncbs': 'KA', 'national centre for biological sciences': 'KA',
+        'iari': 'DL', 'indian agricultural research institute': 'DL',
+        'cdac': 'MH', 'cdac pune': 'MH',
+        'cdac hyderabad': 'TG',
+        'cdac bangalore': 'KA',
+        'cdac chennai': 'TN', 'cdac thiruvananthapuram': 'KL',
+
         # AIIMS
         'aiims delhi': 'DL', 'aiims new delhi': 'DL',
         'aiims bhubaneswar': 'OD',

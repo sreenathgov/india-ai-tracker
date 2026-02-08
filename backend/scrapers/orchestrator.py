@@ -88,32 +88,99 @@ def load_canonical_urls_from_json():
     return canonical_urls
 
 
+def load_blacklist():
+    """
+    Load URLs that have been manually deleted and should NEVER be re-added.
+
+    Returns:
+        set of blacklisted URLs
+    """
+    blacklist_path = os.path.join(os.path.dirname(__file__), '..', '..', 'api', 'blacklist.json')
+
+    if not os.path.exists(blacklist_path):
+        return set()
+
+    try:
+        with open(blacklist_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            return set(data.get('urls', []))
+    except Exception as e:
+        print(f"  Warning: Could not load blacklist: {e}")
+        return set()
+
+
+def add_to_blacklist(url: str) -> bool:
+    """
+    Add a URL to the blacklist (for use by admin tool).
+
+    Args:
+        url: URL to blacklist
+
+    Returns:
+        True if successful
+    """
+    blacklist_path = os.path.join(os.path.dirname(__file__), '..', '..', 'api', 'blacklist.json')
+
+    try:
+        if os.path.exists(blacklist_path):
+            with open(blacklist_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+        else:
+            data = {"_description": "Articles manually deleted - do not re-add", "urls": []}
+
+        if url not in data['urls']:
+            data['urls'].append(url)
+            data['_updated'] = datetime.now().strftime('%Y-%m-%d')
+
+        with open(blacklist_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2)
+
+        return True
+    except Exception as e:
+        print(f"  Error adding to blacklist: {e}")
+        return False
+
+
 def deduplicate_against_canonical(scraped_articles):
     """
-    Remove articles that already exist in canonical JSON store.
+    Remove articles that already exist in canonical JSON store OR are blacklisted.
 
     This implements GLOBAL deduplication across all historical data,
-    not just within the current scrape run.
+    not just within the current scrape run. Also excludes manually deleted articles.
 
     Args:
         scraped_articles: List of article dictionaries from scrapers
 
     Returns:
-        List of articles that don't exist in canonical store
+        List of articles that don't exist in canonical store and aren't blacklisted
     """
     print("Loading canonical URLs from JSON files...")
     canonical_urls = load_canonical_urls_from_json()
     print(f"  Found {len(canonical_urls)} existing articles in canonical store")
 
+    # Load blacklist of manually deleted articles
+    blacklist = load_blacklist()
+    if blacklist:
+        print(f"  Found {len(blacklist)} blacklisted URLs (manually deleted)")
+
     deduplicated = []
     skipped = 0
+    blacklisted = 0
 
     for article in scraped_articles:
+        url = article.get('url', '')
         key = get_canonical_key(article)
 
         if not key:
             # No URL - can't deduplicate, include it
             deduplicated.append(article)
+            continue
+
+        # Check blacklist first (manually deleted articles)
+        if url in blacklist:
+            blacklisted += 1
+            if blacklisted <= 3:
+                print(f"  BLOCKED (blacklisted): {article.get('title', 'Unknown')[:50]}...")
             continue
 
         if key in canonical_urls:
@@ -126,8 +193,10 @@ def deduplicate_against_canonical(scraped_articles):
 
     if skipped > 5:
         print(f"  ... and {skipped - 5} more duplicates")
+    if blacklisted > 3:
+        print(f"  ... and {blacklisted - 3} more blacklisted")
 
-    print(f"\nGlobal dedup: {skipped} duplicates removed, {len(deduplicated)} new articles")
+    print(f"\nGlobal dedup: {skipped} duplicates, {blacklisted} blacklisted, {len(deduplicated)} new articles")
 
     return deduplicated
 
