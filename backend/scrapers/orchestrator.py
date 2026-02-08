@@ -22,6 +22,7 @@ from scrapers.web_scraper import WebScraper
 from ai.ai_subject_validator import AISubjectValidator  # Phase 3: AI Subject Validator
 from ai.india_subject_validator import IndiaSubjectValidator  # Phase 4: India Subject Validator
 from ai.event_temporal_validator import EventTemporalValidator  # Phase 4: Event Temporal Filter
+from ai.llm_adjudicator import LLMAdjudicator  # Final LLM quality gate
 from ai.categoriser import Categoriser
 from ai.geo_attributor import GeoAttributor
 from ai.summarizer import AISummarizer
@@ -154,6 +155,7 @@ def run_all_scrapers(target_states=None):
     ai_validator = AISubjectValidator()  # Phase 3: AI Subject Validator
     india_validator = IndiaSubjectValidator()  # Phase 4: India Subject Validator
     event_validator = EventTemporalValidator()  # Phase 4: Event Temporal Filter
+    llm_adjudicator = LLMAdjudicator()  # Final LLM quality gate
     categoriser = Categoriser()
     geo_attributor = GeoAttributor()
     summarizer = AISummarizer()
@@ -170,6 +172,8 @@ def run_all_scrapers(target_states=None):
         'total_scraped': 0,
         'ai_relevant': 0,
         'duplicates_removed': 0,
+        'adjudicator_dropped': 0,
+        'adjudicator_corrected': 0,
         'final_processed': 0,
         'by_state': {},
         'by_category': {},
@@ -298,8 +302,10 @@ def run_all_scrapers(target_states=None):
             ai_passed_articles.append(article)
         else:
             ai_dropped += 1
+            # Log non-AI articles (for debugging)
+            print(f"  DROP (not AI): {article['title'][:50]}... ({ai_result.reason})")
 
-    print(f"AI Validation: {len(ai_passed_articles)} passed | {ai_dropped} dropped")
+    print(f"\nAI Validation: {len(ai_passed_articles)} passed | {ai_dropped} dropped")
 
     if not ai_passed_articles:
         print("\nNo AI-relevant articles found. Exiting.")
@@ -377,14 +383,16 @@ def run_all_scrapers(target_states=None):
         article['event_type'] = event_type
 
     # STEP 4.5: Event Temporal Validation (only for Events category)
+    # Past events are DROPPED entirely, not reclassified
     print()
     print("-" * 40)
     print("STEP 4.5: EVENT TEMPORAL VALIDATION")
     print("-" * 40)
-    print("Validating events are in the future...")
+    print("Validating events are in the future (past events will be DROPPED)...")
 
-    events_reclassified = 0
+    events_dropped = 0
     today = datetime.now().date()
+    filtered_articles = []
 
     for article in unique_articles:
         if article['category'] == 'Events':
@@ -396,18 +404,22 @@ def run_all_scrapers(target_states=None):
             )
 
             if not temporal_result.is_future:
-                # Reclassify past events to "Major AI Developments"
-                old_category = article['category']
-                article['category'] = 'Major AI Developments'
-                article['temporal_reason'] = temporal_result.reason
-                article['event_type'] = None  # Clear event type
-                events_reclassified += 1
-                print(f"  RECLASSIFY (past event): {article['title'][:50]}... ({temporal_result.reason})")
+                # DROP past events entirely (don't include in output)
+                events_dropped += 1
+                print(f"  DROP (past event): {article['title'][:50]}... ({temporal_result.reason})")
+                continue  # Skip this article - don't add to filtered list
             else:
                 article['temporal_reason'] = temporal_result.reason
 
-    if events_reclassified > 0:
-        print(f"\nReclassified {events_reclassified} past event(s) to Major AI Developments")
+        # Add non-events and future events to filtered list
+        filtered_articles.append(article)
+
+    # Replace unique_articles with filtered list
+    unique_articles = filtered_articles
+    stats['events_dropped'] = events_dropped
+
+    if events_dropped > 0:
+        print(f"\nDropped {events_dropped} past event(s)")
 
     # Track category stats (after temporal validation)
     for article in unique_articles:
@@ -453,6 +465,67 @@ def run_all_scrapers(target_states=None):
 
     print(f"\nStates: {stats['by_state']}")
 
+    # STEP 5.5: LLM Adjudication (Final Quality Gate)
+    print()
+    print("-" * 40)
+    print("STEP 5.5: LLM ADJUDICATION (Final Quality Gate)")
+    print("-" * 40)
+
+    if llm_adjudicator.enabled:
+        print(f"Adjudicating {len(unique_articles)} articles...")
+        adjudicated_articles = []
+        adjudicator_dropped = 0
+        adjudicator_corrected = 0
+
+        for article in unique_articles:
+            # Run LLM adjudication
+            result = llm_adjudicator.adjudicate(article)
+
+            if result.should_drop:
+                # LLM recommends dropping this article
+                adjudicator_dropped += 1
+                print(f"  DROP (LLM): {article['title'][:50]}... ({result.drop_reason})")
+                continue
+
+            # Check if LLM corrected anything
+            if not result.original_preserved:
+                adjudicator_corrected += 1
+                old_cat = article['category']
+                old_states = article['state_codes']
+
+                # Apply LLM corrections
+                article['category'] = result.category
+                article['state_codes'] = result.state_codes
+                article['llm_adjudication'] = {
+                    'confidence': result.confidence,
+                    'reasoning': result.llm_reasoning,
+                    'original_category': old_cat,
+                    'original_states': old_states
+                }
+
+                print(f"  CORRECTED: {article['title'][:40]}...")
+                print(f"    Category: {old_cat} → {result.category}")
+                print(f"    States: {old_states} → {result.state_codes}")
+
+            adjudicated_articles.append(article)
+
+        # Replace with adjudicated list
+        unique_articles = adjudicated_articles
+        stats['adjudicator_dropped'] = adjudicator_dropped
+        stats['adjudicator_corrected'] = adjudicator_corrected
+
+        print(f"\nLLM Adjudication: {len(unique_articles)} kept, {adjudicator_dropped} dropped, {adjudicator_corrected} corrected")
+    else:
+        print("LLM Adjudicator is DISABLED (set LLM_ADJUDICATOR_ENABLED=true to enable)")
+
+    # Recalculate stats after adjudication
+    stats['by_category'] = {}
+    stats['by_state'] = {}
+    for article in unique_articles:
+        stats['by_category'][article['category']] = stats['by_category'].get(article['category'], 0) + 1
+        for state in article.get('state_codes', ['IN']):
+            stats['by_state'][state] = stats['by_state'].get(state, 0) + 1
+
     # STEP 6: Generate Summaries
     print()
     print("-" * 40)
@@ -485,6 +558,8 @@ def run_all_scrapers(target_states=None):
     print(f"Total Scraped:     {stats['total_scraped']}")
     print(f"AI Relevant:       {stats['ai_relevant']}")
     print(f"Duplicates:        {stats['duplicates_removed']}")
+    print(f"LLM Dropped:       {stats.get('adjudicator_dropped', 0)}")
+    print(f"LLM Corrected:     {stats.get('adjudicator_corrected', 0)}")
     print(f"Final Saved:       {stats['final_processed']}")
     print(f"By Category:       {stats['by_category']}")
     print(f"By State:          {stats['by_state']}")

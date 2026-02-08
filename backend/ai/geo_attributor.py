@@ -1,23 +1,30 @@
 """
-Geographic Attribution Module - CONSERVATIVE IMPLEMENTATION
+Geographic Attribution Module - JURISDICTION-FIRST IMPLEMENTATION
 
-Core Principle: Location must be the SUBJECT of the news, not an incidental attribute.
+Core Principle: Physical jurisdiction determines attribution.
+If a named sub-national entity appears, assign the corresponding state.
 
-ACCEPTABLE GROUNDS FOR STATE ATTRIBUTION (all require explicit evidence):
-1. STATE GOVERNMENT ACTION - State govt announces/implements AI policy/initiative
-2. PHYSICAL ACTIVITY - AI facility/hub/office being SET UP in that state
-3. LOCATION-BOUND EVENT - AI event PHYSICALLY taking place in that state
-4. EXPLICIT INVESTMENT - Capital investment explicitly tied to that state
+JURISDICTION-FIRST RULES (in priority order):
+1. CITY/DISTRICT MATCH - Any city/district name → corresponding State
+2. INSTITUTION MATCH - Any institution with known location → corresponding State
+3. STATE GOVERNMENT ACTION - State govt action → corresponding State
+4. STATE NAME MATCH - Explicit state name → corresponding State
+5. NATIONAL SCOPE - Central govt, pan-India, nationwide → 'IN'
 
-DISALLOWED SIGNALS (must NEVER independently cause state attribution):
-- Company headquarters location
-- Startup's known base
-- News source/publisher location
-- Datelines (e.g., "Chennai: ...")
-- Passing city mentions in quotes or examples
+WHAT TRIGGERS STATE ASSIGNMENT (hard signals, NOT probabilistic):
+- City names (Chennai, Lucknow, Pune, etc.)
+- District names
+- University names (IIT Madras → TN, IIT Delhi → DL)
+- Police units (Mumbai Police → MH, UP Police → UP)
+- Hospitals with location (AIIMS Delhi → DL)
+- Roads/Expressways (Mumbai-Pune Expressway → MH)
+- Any physical facility with location
 
-DEFAULT BEHAVIOR: If no explicit state signal found, return 'IN' (All India).
-Conservative attribution is a correct and expected outcome.
+WHAT DOES NOT TRIGGER STATE ASSIGNMENT:
+- Company headquarters (Infosys HQ is Bangalore but news may be global)
+- Datelines alone (e.g., "Chennai: ..." without substantive location reference)
+
+DEFAULT: Only if NO sub-national entity found → 'IN' (All India)
 """
 
 import re
@@ -146,6 +153,127 @@ class GeoAttributor:
         'agartala': 'TR', 'itanagar': 'AR', 'gangtok': 'SK',
         'shimla': 'HP', 'dharamshala': 'HP',
         'srinagar': 'JK', 'jammu': 'JK', 'leh': 'LA',
+
+        # Additional districts/areas (common in news)
+        'ernakulam': 'KL', 'thrissur': 'KL', 'malappuram': 'KL',
+        'andheri': 'MH', 'bandra': 'MH', 'powai': 'MH', 'worli': 'MH',
+        'whitefield': 'KA', 'electronic city': 'KA', 'koramangala': 'KA',
+        'tambaram': 'TN', 'adyar': 'TN', 'anna nagar': 'TN',
+    }
+
+    # ==================== INSTITUTION TO STATE MAPPING ====================
+    # Universities, IITs, IIMs, hospitals, police units, etc.
+    INSTITUTION_STATE_MAP = {
+        # IITs
+        'iit madras': 'TN', 'iit-m': 'TN', 'iitm': 'TN',
+        'iit bombay': 'MH', 'iit-b': 'MH', 'iitb': 'MH',
+        'iit delhi': 'DL', 'iit-d': 'DL', 'iitd': 'DL',
+        'iit kanpur': 'UP', 'iit-k': 'UP', 'iitk': 'UP',
+        'iit kharagpur': 'WB', 'iit-kgp': 'WB', 'iitkgp': 'WB',
+        'iit roorkee': 'UK', 'iit-r': 'UK',
+        'iit guwahati': 'AS', 'iit-g': 'AS', 'iitg': 'AS',
+        'iit hyderabad': 'TG', 'iit-h': 'TG', 'iith': 'TG',
+        'iit indore': 'MP',
+        'iit bhubaneswar': 'OD',
+        'iit gandhinagar': 'GJ',
+        'iit jodhpur': 'RJ',
+        'iit patna': 'BR',
+        'iit ropar': 'PB',
+        'iit mandi': 'HP',
+        'iit tirupati': 'AP',
+        'iit palakkad': 'KL',
+        'iit dharwad': 'KA',
+        'iit bhilai': 'CG',
+        'iit goa': 'GA',
+        'iit jammu': 'JK',
+
+        # IIITs
+        'iiit hyderabad': 'TG', 'iiit-h': 'TG', 'iiith': 'TG',
+        'iiit bangalore': 'KA', 'iiit-b': 'KA', 'iiitb': 'KA',
+        'iiit delhi': 'DL', 'iiit-d': 'DL', 'iiitd': 'DL',
+        'iiit allahabad': 'UP',
+        'iiit kancheepuram': 'TN',
+
+        # IIMs
+        'iim ahmedabad': 'GJ', 'iim-a': 'GJ', 'iima': 'GJ',
+        'iim bangalore': 'KA', 'iim-b': 'KA', 'iimb': 'KA',
+        'iim calcutta': 'WB', 'iim-c': 'WB', 'iimc': 'WB',
+        'iim lucknow': 'UP', 'iim-l': 'UP',
+        'iim kozhikode': 'KL', 'iim-k': 'KL',
+        'iim indore': 'MP',
+
+        # IISc and other premier institutes
+        'iisc': 'KA', 'iisc bangalore': 'KA', 'indian institute of science': 'KA',
+        'isro': 'KA', 'isro bangalore': 'KA',
+        'bits pilani': 'RJ',
+        'nit trichy': 'TN', 'nit tiruchirappalli': 'TN',
+        'nit warangal': 'TG',
+        'nit surathkal': 'KA',
+        'nit calicut': 'KL',
+        'nit rourkela': 'OD',
+        'anna university': 'TN',
+        'osmania university': 'TG',
+        'jadavpur university': 'WB',
+        'delhi university': 'DL', 'du': 'DL',
+        'jnu': 'DL', 'jawaharlal nehru university': 'DL',
+        'jamia millia': 'DL', 'jamia': 'DL',
+        'mumbai university': 'MH',
+        'pune university': 'MH', 'savitribai phule': 'MH',
+
+        # AIIMS
+        'aiims delhi': 'DL', 'aiims new delhi': 'DL',
+        'aiims bhubaneswar': 'OD',
+        'aiims jodhpur': 'RJ',
+        'aiims rishikesh': 'UK',
+        'aiims patna': 'BR',
+        'aiims raipur': 'CG',
+        'aiims bhopal': 'MP',
+        'aiims nagpur': 'MH',
+        'aiims mangalagiri': 'AP',
+        'aiims bibinagar': 'TG',
+
+        # Police units
+        'mumbai police': 'MH',
+        'delhi police': 'DL',
+        'chennai police': 'TN', 'tamil nadu police': 'TN', 'tn police': 'TN',
+        'bangalore police': 'KA', 'bengaluru police': 'KA', 'karnataka police': 'KA',
+        'hyderabad police': 'TG', 'telangana police': 'TG',
+        'kolkata police': 'WB', 'west bengal police': 'WB',
+        'kerala police': 'KL',
+        'up police': 'UP', 'uttar pradesh police': 'UP',
+        'punjab police': 'PB',
+        'rajasthan police': 'RJ',
+        'gujarat police': 'GJ',
+        'mp police': 'MP', 'madhya pradesh police': 'MP',
+
+        # Airports
+        'chennai airport': 'TN',
+        'mumbai airport': 'MH',
+        'delhi airport': 'DL', 'igi airport': 'DL',
+        'bangalore airport': 'KA', 'kempegowda airport': 'KA',
+        'hyderabad airport': 'TG', 'rajiv gandhi airport': 'TG',
+        'kolkata airport': 'WB',
+        'cochin airport': 'KL', 'kochi airport': 'KL',
+
+        # Metro systems
+        'chennai metro': 'TN',
+        'mumbai metro': 'MH',
+        'delhi metro': 'DL', 'dmrc': 'DL',
+        'bangalore metro': 'KA', 'namma metro': 'KA',
+        'hyderabad metro': 'TG',
+        'kolkata metro': 'WB',
+        'kochi metro': 'KL',
+        'lucknow metro': 'UP',
+        'jaipur metro': 'RJ',
+        'pune metro': 'MH',
+
+        # Expressways/Roads
+        'mumbai pune expressway': 'MH',
+        'yamuna expressway': 'UP',
+        'agra lucknow expressway': 'UP',
+        'purvanchal expressway': 'UP',
+        'dwarka expressway': 'DL',
+        'peripheral expressway': 'KA',
     }
 
     # ==================== STATE GOVERNMENT PATTERNS ====================
@@ -356,26 +484,45 @@ class GeoAttributor:
         # Compile investment patterns
         self.compiled_investment_patterns = [re.compile(p, re.IGNORECASE) for p in self.INVESTMENT_PATTERNS]
 
+        # Pre-compile city patterns (sorted by length desc to match longer names first)
+        self.compiled_city_patterns = {}
+        for city, state in sorted(self.CITY_STATE_MAP.items(), key=lambda x: -len(x[0])):
+            if len(city) >= 4:  # Skip very short names
+                self.compiled_city_patterns[city] = (re.compile(r'\b' + re.escape(city) + r'\b', re.IGNORECASE), state)
+
+        # Pre-compile institution patterns (sorted by length desc)
+        self.compiled_institution_patterns = {}
+        for inst, state in sorted(self.INSTITUTION_STATE_MAP.items(), key=lambda x: -len(x[0])):
+            self.compiled_institution_patterns[inst] = (re.compile(r'\b' + re.escape(inst) + r'\b', re.IGNORECASE), state)
+
     def attribute(self, title: str, content: str = "", source_state: str = None,
                   is_state_specific_source: bool = False, geo_mode: str = "default") -> Tuple[List[str], str]:
         """
-        Conservative geographic attribution.
+        JURISDICTION-FIRST geographic attribution.
+
+        Core Principle: If a named sub-national entity appears, assign the corresponding state.
+        This is NOT probabilistic and does NOT require an "action archetype".
+
+        Priority Order:
+        1. INSTITUTION_MATCH - IIT Madras → TN, Mumbai Police → MH
+        2. CITY_MATCH - Chennai → TN, Lucknow → UP
+        3. GOVT_ACTION - State government action patterns
+        4. STATE_MATCH - Explicit state name in text
+        5. NATIONAL_SCOPE - Central govt, pan-India → 'IN'
+        6. DEFAULT - No signal → 'IN'
 
         Args:
             title: Article headline
             content: Article content (first 2000 chars used)
             source_state: State code from source configuration
             is_state_specific_source: Whether source is state-specific
-            geo_mode: How to use source_state:
-                     - 'force': Force include this state (only for official govt sources)
-                     - 'default': Use as fallback if no other state found
-                     - 'strict': Only use if content explicitly mentions it
+            geo_mode: How to use source_state
 
         Returns:
             Tuple of (list of state codes, attribution reason string)
-            Examples: (['TN'], 'GOVT_ACTION:TN')
-                      (['IN'], 'NO_STATE_SIGNAL')
-                      (['KA', 'TN'], 'GOVT_ACTION:KA; PHYSICAL_ACTIVITY:TN')
+            Examples: (['TN'], 'INSTITUTION_MATCH:iit madras→TN')
+                      (['MH'], 'CITY_MATCH:mumbai→MH')
+                      (['IN'], 'NATIONAL_SCOPE')
         """
         title_lower = title.lower()
         content_lower = (content[:2000] if content else "").lower()
@@ -384,54 +531,102 @@ class GeoAttributor:
         found_states: Set[str] = set()
         attribution_reasons: List[str] = []
 
-        # EARLY CHECK: Is this clearly a national-level article?
-        if self._is_national_article(text):
-            # Check if there are ALSO specific state signals (multi-state project)
-            # If not, return national immediately
-            pass  # Continue to check for state-specific signals
+        # ======== JURISDICTION-FIRST CHECKS (hard signals) ========
 
-        # RULE 1: Check for State Government Action
+        # PRIORITY 1: Institution matches (IITs, AIIMS, Police, Metro, etc.)
+        inst_results = self._check_institution_match(text)
+        for state, inst_name in inst_results:
+            found_states.add(state)
+            attribution_reasons.append(f"INSTITUTION_MATCH:{inst_name}→{state}")
+
+        # PRIORITY 2: City/District matches
+        city_results = self._check_city_match(text)
+        for state, city_name in city_results:
+            if state not in found_states:  # Avoid duplicate if city already covered by institution
+                found_states.add(state)
+                attribution_reasons.append(f"CITY_MATCH:{city_name}→{state}")
+
+        # PRIORITY 3: State government action patterns
         govt_states = self._check_govt_action(text)
         for state in govt_states:
-            found_states.add(state)
-            attribution_reasons.append(f"GOVT_ACTION:{state}")
-
-        # RULE 2: Check for Physical Activity in State
-        activity_states = self._check_physical_activity(text)
-        for state in activity_states:
-            found_states.add(state)
-            attribution_reasons.append(f"PHYSICAL_ACTIVITY:{state}")
-
-        # RULE 3: Check for Location-Bound Event
-        if self._is_physical_event(text):
-            event_states = self._extract_event_locations(text)
-            for state in event_states:
+            if state not in found_states:
                 found_states.add(state)
-                attribution_reasons.append(f"EVENT_LOCATION:{state}")
+                attribution_reasons.append(f"GOVT_ACTION:{state}")
 
-        # RULE 4: Check for Explicit Investment/Deployment
-        investment_states = self._check_investment(text)
-        for state in investment_states:
-            found_states.add(state)
-            attribution_reasons.append(f"INVESTMENT:{state}")
+        # PRIORITY 4: Explicit state name mentions
+        state_results = self._check_state_name_match(text)
+        for state, state_name in state_results:
+            if state not in found_states:
+                found_states.add(state)
+                attribution_reasons.append(f"STATE_MATCH:{state_name}→{state}")
 
-        # SPECIAL: geo_mode handling (revised - very conservative)
-        if source_state and geo_mode == 'force' and is_state_specific_source:
-            # Only force-add for official government sources
-            # This should be rare - only tn.gov.in, karnataka.gov.in type sources
-            if not found_states:  # Only if no other signal found
-                found_states.add(source_state)
-                attribution_reasons.append(f"OFFICIAL_SOURCE:{source_state}")
-
+        # ======== NATIONAL SCOPE CHECK ========
         # If national indicators present AND no state-specific signals, return IN
         if self._is_national_article(text) and not found_states:
             return ['IN'], "NATIONAL_SCOPE"
+
+        # SPECIAL: geo_mode handling for official sources
+        if source_state and geo_mode == 'force' and is_state_specific_source:
+            if not found_states:
+                found_states.add(source_state)
+                attribution_reasons.append(f"OFFICIAL_SOURCE:{source_state}")
 
         # DEFAULT: If no states found, return All India
         if not found_states:
             return ['IN'], "NO_STATE_SIGNAL"
 
         return list(found_states), "; ".join(attribution_reasons)
+
+    def _check_institution_match(self, text: str) -> List[Tuple[str, str]]:
+        """
+        PRIORITY 1: Check for institution mentions.
+        Returns list of (state_code, institution_name) tuples.
+        """
+        results = []
+        matched_institutions = set()
+
+        for inst_name, (pattern, state) in self.compiled_institution_patterns.items():
+            if pattern.search(text):
+                if inst_name not in matched_institutions:
+                    results.append((state, inst_name))
+                    matched_institutions.add(inst_name)
+
+        return results
+
+    def _check_city_match(self, text: str) -> List[Tuple[str, str]]:
+        """
+        PRIORITY 2: Check for city/district mentions.
+        Returns list of (state_code, city_name) tuples.
+        """
+        results = []
+        matched_states = set()
+
+        for city_name, (pattern, state) in self.compiled_city_patterns.items():
+            if pattern.search(text):
+                # Only add if we haven't already matched this state via a city
+                if state not in matched_states:
+                    results.append((state, city_name))
+                    matched_states.add(state)
+
+        return results
+
+    def _check_state_name_match(self, text: str) -> List[Tuple[str, str]]:
+        """
+        PRIORITY 4: Check for explicit state name mentions.
+        Returns list of (state_code, state_name) tuples.
+        """
+        results = []
+        matched_states = set()
+
+        for state_name, state_code in self.STATE_NAME_MAP.items():
+            if state_code not in matched_states:
+                # Word boundary check for state names
+                pattern = r'\b' + re.escape(state_name) + r'\b'
+                if re.search(pattern, text, re.IGNORECASE):
+                    results.append((state_code, state_name))
+                    matched_states.add(state_code)
+
+        return results
 
     def _is_national_article(self, text: str) -> bool:
         """Check if article is clearly national-level."""

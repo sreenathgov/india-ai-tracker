@@ -203,6 +203,24 @@ class IndiaSubjectValidator:
     ]
 
     # =========================================================================
+    # SPECULATIVE/COMPARATIVE India mentions - NOT material involvement
+    # These should NOT count toward India relevance
+    # =========================================================================
+    INDIA_SPECULATIVE_SIGNALS = [
+        r'\blike\s+india\b',
+        r'\bsimilar\s+to\s+india\b',
+        r'\bcountries\s+(?:like|such\s+as|including)\s+[^.]*india\b',
+        r'\bindia\s+(?:and|or)\s+(?:china|brazil|other|many|several)\b',
+        r'\bcompared\s+to\s+india\b',
+        r'\bincluding\s+india\b',
+        r'\bexpanding\s+to\s+india\b',  # Future/speculative
+        r'\bplans?\s+(?:to\s+)?(?:enter|expand)\s+[^.]*india\b',  # Speculative plans
+        r'\bmarkets?\s+(?:like|such\s+as|including)\s+[^.]*india\b',
+        r'\bemerging\s+markets?\s+[^.]*india\b',  # Listed among emerging markets
+        r'\b(?:asia|apac|global)\s+[^.]*including\s+india\b',
+    ]
+
+    # =========================================================================
     # CONTENT INDIA SUBSTANCE SIGNALS
     # =========================================================================
 
@@ -232,6 +250,9 @@ class IndiaSubjectValidator:
         # Drop patterns
         self.non_india_patterns = [re.compile(p, re.I) for p in self.NON_INDIA_SIGNALS]
 
+        # Speculative patterns (new)
+        self.speculative_patterns = [re.compile(p, re.I) for p in self.INDIA_SPECULATIVE_SIGNALS]
+
         # Substance patterns
         self.substance_patterns = [re.compile(p, re.I) for p in self.INDIA_SUBSTANCE_TERMS]
 
@@ -252,34 +273,26 @@ class IndiaSubjectValidator:
         matched_patterns = []
         india_score = 0
 
+        # STEP 0: Check for speculative India mentions FIRST
+        # "Countries like India", "expanding to India" etc. should DROP
+        # even if they mention India in the title
+        speculative_match = self._get_speculative_match(title)
+        if speculative_match:
+            # Check if there's also a DIRECT signal (company, city, govt)
+            # If no direct signal, it's speculative → DROP
+            if not self._has_direct_india_signal(title):
+                return IndiaValidationResult(
+                    passed=False,
+                    reason='SPECULATIVE_INDIA_TITLE',
+                    india_score=10,
+                    matched_patterns=[f"SPECULATIVE:{speculative_match}"],
+                    confidence='high'
+                )
+
         # STEP 1: Check title for strong India signal → DEFINITE PASS
         title_lower = title.lower()
 
-        # Direct India mention in title
-        for pattern in self.india_direct_patterns:
-            if pattern.search(title):
-                matched_patterns.append(f"TITLE_INDIA:{pattern.pattern[:30]}")
-                return IndiaValidationResult(
-                    passed=True,
-                    reason='TITLE_INDIA_DIRECT',
-                    india_score=90,
-                    matched_patterns=matched_patterns,
-                    confidence='high'
-                )
-
-        # Indian state/city in title
-        for pattern in self.state_city_patterns:
-            if pattern.search(title):
-                matched_patterns.append(f"TITLE_LOCATION:{pattern.pattern[:30]}")
-                return IndiaValidationResult(
-                    passed=True,
-                    reason='TITLE_INDIA_LOCATION',
-                    india_score=85,
-                    matched_patterns=matched_patterns,
-                    confidence='high'
-                )
-
-        # Indian company in title
+        # Indian company in title (check BEFORE generic "India" word)
         for pattern in self.company_patterns:
             if pattern.search(title):
                 matched_patterns.append(f"TITLE_COMPANY:{pattern.pattern[:30]}")
@@ -291,7 +304,19 @@ class IndiaSubjectValidator:
                     confidence='high'
                 )
 
-        # Indian govt/institution in title
+        # Indian state/city in title (check BEFORE generic "India" word)
+        for pattern in self.state_city_patterns:
+            if pattern.search(title):
+                matched_patterns.append(f"TITLE_LOCATION:{pattern.pattern[:30]}")
+                return IndiaValidationResult(
+                    passed=True,
+                    reason='TITLE_INDIA_LOCATION',
+                    india_score=85,
+                    matched_patterns=matched_patterns,
+                    confidence='high'
+                )
+
+        # Indian govt/institution in title (check BEFORE generic "India" word)
         for pattern in self.govt_patterns:
             if pattern.search(title):
                 matched_patterns.append(f"TITLE_GOVT:{pattern.pattern[:30]}")
@@ -303,9 +328,22 @@ class IndiaSubjectValidator:
                     confidence='high'
                 )
 
+        # Generic "India" mention in title - only after checking for speculative
+        for pattern in self.india_direct_patterns:
+            if pattern.search(title):
+                matched_patterns.append(f"TITLE_INDIA:{pattern.pattern[:30]}")
+                return IndiaValidationResult(
+                    passed=True,
+                    reason='TITLE_INDIA_DIRECT',
+                    india_score=90,
+                    matched_patterns=matched_patterns,
+                    confidence='high'
+                )
+
         # STEP 2: Check for definite non-India subject → DEFINITE DROP
         # Only drop if no India signals at all in text
         has_any_india = self._has_any_india_signal(text)
+        has_direct_india = self._has_direct_india_signal(text)
 
         if not has_any_india:
             for pattern in self.non_india_patterns:
@@ -317,6 +355,19 @@ class IndiaSubjectValidator:
                         matched_patterns=[f"NON_INDIA:{pattern.pattern[:40]}"],
                         confidence='high'
                     )
+
+        # STEP 2b: Check for speculative India mentions → DROP if no direct signal
+        # "Countries like India", "expanding to India", etc. are NOT material involvement
+        if has_any_india and not has_direct_india:
+            speculative_match = self._get_speculative_match(text)
+            if speculative_match:
+                return IndiaValidationResult(
+                    passed=False,
+                    reason='SPECULATIVE_INDIA_MENTION',
+                    india_score=10,
+                    matched_patterns=[f"SPECULATIVE:{speculative_match}"],
+                    confidence='high'
+                )
 
         # STEP 3: Check content for India substance
         # Count India signals in content
@@ -352,12 +403,25 @@ class IndiaSubjectValidator:
                 matched_patterns.append(f"SUBSTANCE:{pattern.pattern[:30]}")
                 india_score += 20
 
-        # If strong content signals, pass
-        if india_signal_count >= 2 and india_score >= 50:
+        # If strong content signals, pass - BUT must have at least one direct signal
+        # Direct signals: Indian company, city, govt institution (not just "India" word)
+        has_direct_content_signal = self._has_direct_india_signal(content)
+
+        if india_signal_count >= 2 and india_score >= 60 and has_direct_content_signal:
             return IndiaValidationResult(
                 passed=True,
                 reason='CONTENT_INDIA_SUBSTANCE',
                 india_score=min(india_score, 85),
+                matched_patterns=matched_patterns[:5],
+                confidence='medium'
+            )
+
+        # Weaker content signals - still need direct signal
+        if india_signal_count >= 2 and india_score >= 50 and has_direct_content_signal:
+            return IndiaValidationResult(
+                passed=True,
+                reason='CONTENT_INDIA_MODERATE',
+                india_score=min(india_score, 70),
                 matched_patterns=matched_patterns[:5],
                 confidence='medium'
             )
@@ -398,6 +462,43 @@ class IndiaSubjectValidator:
             if pattern.search(text):
                 return True
         return False
+
+    def _has_direct_india_signal(self, text: str) -> bool:
+        """
+        Check if text has a DIRECT India signal (company, city, govt, institution).
+        This excludes mere mentions of "India" which could be speculative.
+        """
+        # Indian company
+        for pattern in self.company_patterns:
+            if pattern.search(text):
+                return True
+        # Indian state/city
+        for pattern in self.state_city_patterns:
+            if pattern.search(text):
+                return True
+        # Indian govt/institution
+        for pattern in self.govt_patterns:
+            if pattern.search(text):
+                return True
+        return False
+
+    def _is_speculative_mention(self, text: str) -> bool:
+        """
+        Check if India mention is speculative/comparative rather than material.
+        Returns True if the India mention is likely speculative.
+        """
+        for pattern in self.speculative_patterns:
+            if pattern.search(text):
+                return True
+        return False
+
+    def _get_speculative_match(self, text: str) -> str:
+        """Get the matched speculative pattern for logging."""
+        for pattern in self.speculative_patterns:
+            match = pattern.search(text)
+            if match:
+                return match.group(0)[:40]
+        return None
 
     def _llm_verify(self, title: str, content: str) -> Dict[str, Any]:
         """
@@ -491,7 +592,7 @@ def test_validator():
     validator = IndiaSubjectValidator()
 
     test_cases = [
-        # MUST PASS - India-relevant
+        # MUST PASS - Direct India involvement (company, city, govt, institution)
         ("TCS launches AI platform for enterprises", "", True),
         ("IIT Madras researchers develop new NLP model", "", True),
         ("Karnataka government announces AI policy", "", True),
@@ -508,6 +609,12 @@ def test_validator():
         ("US Senate debates AI regulation bill", "", False),
         ("NVIDIA earnings beat Wall Street estimates", "", False),
         ("Roblox launches AI tech for 3D models", "", False),
+
+        # MUST DROP - Speculative/comparative India mentions
+        ("OpenAI plans to expand to countries like India", "", False),
+        ("AI adoption growing in emerging markets including India", "", False),
+        ("Compared to India, China leads in AI investment", "", False),
+        ("Company expanding to India and Brazil next year", "", False),
     ]
 
     print("\n" + "=" * 70)

@@ -50,9 +50,13 @@ class AISubjectValidator:
     High recall preference - when uncertain, lean toward PASS.
     """
 
-    # DEFINITE PASS: Strong AI terms in title
-    TITLE_AI_SIGNALS = [
-        r'\b(?:artificial\s+intelligence|AI)\b',
+    # =========================================================================
+    # TITLE AI SIGNALS - Split into STRONG (auto-pass) and WEAK (need content)
+    # =========================================================================
+
+    # STRONG AI signals - auto-pass in title (definite AI discussion)
+    TITLE_AI_STRONG = [
+        r'\b(?:artificial\s+intelligence)\b',
         r'\b(?:machine\s+learning|ML)\b',
         r'\b(?:deep\s+learning|DL)\b',
         r'\b(?:gen(?:erative)?\s*AI|GenAI)\b',
@@ -60,11 +64,24 @@ class AISubjectValidator:
         r'\b(?:GPT|ChatGPT|Claude|Gemini|Llama|Mistral|Phi)\b',
         r'\b(?:neural\s+network)s?\b',
         r'\b(?:NLP|natural\s+language\s+processing)\b',
-        r'\b(?:computer\s+vision|CV)\b',
-        r'\b(?:robotics?|autonomous)\b',
-        r'\bCopilot\b',
+        r'\b(?:computer\s+vision)\b',  # Removed CV - too ambiguous
         r'\b(?:transformer|diffusion)\s+model\b',
+        # AI alone (but not AI-powered/AI-driven which are weak)
+        r'\bAI\b(?!\s*-?\s*(?:powered|driven|enabled|based))',
     ]
+
+    # WEAK AI signals - require content reinforcement (often marketing buzzwords)
+    TITLE_AI_WEAK = [
+        r'\b(?:robotics?|autonomous)\b',  # Could be simple automation
+        r'\bCopilot\b',  # Could be brand name reference
+        r'\b(?:AI|ML)\s*-?\s*(?:powered|driven|enabled|based)\b',  # Often marketing
+        r'\bsmart\s+(?:city|cities|camera|device|home|meter|grid)\b',  # Often non-AI
+        r'\bautomation\b',  # Often non-AI automation
+        r'\bintelligent\s+(?:system|solution|platform)\b',  # Vague
+    ]
+
+    # Legacy: Keep TITLE_AI_SIGNALS as union for backward compatibility
+    TITLE_AI_SIGNALS = TITLE_AI_STRONG + TITLE_AI_WEAK
 
     # ARCHETYPE PATTERNS (gold standard must-pass)
     # These patterns match the 10 archetypes that must always pass
@@ -160,6 +177,10 @@ class AISubjectValidator:
 
     def _compile_patterns(self):
         """Pre-compile all regex patterns for performance."""
+        # New tiered title patterns
+        self.title_strong_patterns = [re.compile(p, re.I) for p in self.TITLE_AI_STRONG]
+        self.title_weak_patterns = [re.compile(p, re.I) for p in self.TITLE_AI_WEAK]
+        # Legacy combined patterns (for backward compatibility)
         self.title_patterns = [re.compile(p, re.I) for p in self.TITLE_AI_SIGNALS]
         self.non_ai_patterns = [re.compile(p, re.I) for p in self.NON_AI_SIGNALS]
         self.substance_patterns = [re.compile(p, re.I) for p in self.AI_SUBSTANCE_TERMS]
@@ -185,17 +206,69 @@ class AISubjectValidator:
         text = f"{title} {content[:2000]}"
         matched_patterns = []
 
-        # STEP 1: Check title for strong AI signal → DEFINITE PASS
-        for pattern in self.title_patterns:
+        # STEP 1a: Check title for STRONG AI signal → DEFINITE PASS
+        for pattern in self.title_strong_patterns:
             if pattern.search(title):
-                matched_patterns.append(f"TITLE:{pattern.pattern[:40]}")
+                matched_patterns.append(f"TITLE_STRONG:{pattern.pattern[:40]}")
                 return ValidationResult(
                     passed=True,
-                    reason='TITLE_AI_SIGNAL',
+                    reason='TITLE_AI_STRONG',
                     ai_score=90,
                     matched_patterns=matched_patterns,
                     confidence='high'
                 )
+
+        # STEP 1b: Check title for WEAK AI signal → Requires content reinforcement
+        weak_title_match = None
+        for pattern in self.title_weak_patterns:
+            if pattern.search(title):
+                weak_title_match = pattern.pattern[:40]
+                matched_patterns.append(f"TITLE_WEAK:{weak_title_match}")
+                break
+
+        # If weak title match, check for content reinforcement before passing
+        if weak_title_match:
+            # Count content substance signals
+            content_substance = 0
+            for pattern in self.substance_patterns:
+                if pattern.search(content):
+                    content_substance += 1
+                    matched_patterns.append(f"SUBSTANCE:{pattern.pattern[:30]}")
+            for pattern in self.strong_patterns:
+                if pattern.search(content):
+                    content_substance += 1
+                    matched_patterns.append(f"STRONG:{pattern.pattern[:30]}")
+
+            # Weak title + 2+ content signals → PASS
+            if content_substance >= 2:
+                return ValidationResult(
+                    passed=True,
+                    reason='TITLE_WEAK_CONTENT_REINFORCED',
+                    ai_score=75,
+                    matched_patterns=matched_patterns,
+                    confidence='medium'
+                )
+
+            # Weak title + 1 content signal → LLM verification
+            if content_substance >= 1:
+                llm_result = self._llm_verify(title, content[:500])
+                return ValidationResult(
+                    passed=llm_result['is_subject'],
+                    reason=f"TITLE_WEAK_LLM:{llm_result['classification']}",
+                    ai_score=60 if llm_result['is_subject'] else 20,
+                    matched_patterns=matched_patterns,
+                    llm_used=True,
+                    confidence='borderline'
+                )
+
+            # Weak title + no content signals → DROP
+            return ValidationResult(
+                passed=False,
+                reason='TITLE_WEAK_NO_SUBSTANCE',
+                ai_score=15,
+                matched_patterns=matched_patterns,
+                confidence='medium'
+            )
 
         # STEP 2: Check for definite non-AI subject → DEFINITE DROP
         for pattern in self.non_ai_patterns:
@@ -368,8 +441,8 @@ def test_validator():
     validator = AISubjectValidator()
 
     test_cases = [
-        # MUST PASS - Gold Standard Archetypes
-        ("Zoho launches AI-powered analytics tool", "", True, "product_launch"),
+        # MUST PASS - Gold Standard Archetypes (with content substance)
+        ("Zoho launches analytics tool", "Uses machine learning models for prediction", True, "product_launch"),
         ("IIT Madras researchers publish NLP breakthrough", "", True, "research_paper"),
         ("Sarvam AI raises $50M Series B funding", "", True, "funding_acquisition"),
         ("Microsoft to build AI data centre in Hyderabad", "", True, "infrastructure"),
@@ -385,9 +458,19 @@ def test_validator():
         ("Mumbai weather forecast for tomorrow", "", False, None),
         ("Bollywood star launches new perfume brand", "", False, None),
 
-        # Title AI signals
+        # STRONG Title AI signals → PASS
         ("New machine learning model achieves record accuracy", "", True, None),
         ("ChatGPT users reach 200 million milestone", "", True, None),
+        ("Neural network architecture improves efficiency", "", True, None),
+
+        # WEAK Title signals without content → DROP
+        ("Robotic automation deployed in factory", "", False, None),
+        ("AI-powered marketing tool launched", "", False, None),
+        ("Smart city initiative announced", "", False, None),
+
+        # WEAK Title signals WITH content → PASS
+        ("AI-powered tool launched", "The model uses deep learning and neural networks for inference", True, None),
+        ("Robotics system unveiled", "Uses transformer models trained on large datasets with GPU acceleration", True, None),
     ]
 
     print("\n" + "=" * 70)
