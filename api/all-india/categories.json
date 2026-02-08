@@ -3,6 +3,25 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 8,
+        "title": "Agnihotri bats for drone, robotics push at tech fest",
+        "url": "https://www.tribuneindia.com/news/mukesh-agnihotri/agnihotri-bats-for-drone-robotics-push-at-tech-fest",
+        "summary": "Deputy CM Agnihotri emphasized the need for IIIT Una to focus on drone technology and robotics at a tech fest. He praised the institution's skill development courses and new MSc mathematics program, and MoUs were signed to enhance academic and research collaboration. Agnihotri also stressed the importance of technology fairs and government support for a thriving digital ecosystem.",
+        "date_published": "2026-02-07",
+        "source_name": "Tribune - Himachal",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Next-Gen chips, real-world challenges: India Semiconductor Mission 2.0",
         "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/indias-semiconductor-mission-20-navigating-challenges-and-opportunities-in-the-chip-ecosystem/127857962",
@@ -450,6 +469,25 @@
     "Events": [
       {
         "id": 6,
+        "title": "Delhi to get major facelift as NDMC steps up preparations for upcoming India-AI Impact Summit",
+        "url": "https://indianexpress.com/article/cities/delhi/delhi-major-facelift-ndmc-steps-preparations-for-upcoming-india-ai-impact-summit-10518528/",
+        "summary": "The New Delhi Municipal Council (NDMC) is preparing for the upcoming India-AI Impact Summit by giving Delhi a major facelift. The preparations are part of the city's efforts to host the summit, which is expected to bring significant attention to the city. Delhi's infrastructure and amenities will be upgraded as part of the facelift.",
+        "date_published": "2026-02-07",
+        "source_name": "Indian Express - Delhi",
+        "category": "Events",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
         "title": "Capital One India: Driving innovation with a country-wide Hackathon and AI Summit",
         "url": "https://yourstory.com/2026/02/capital-one-india-driving-innovation-country-wide-hackathon-ai-summit",
         "summary": "Capital One India is hosting a nationwide hackathon and AI summit to drive innovation and address real-world challenges. The event aims to bring together talent, technology, and purpose to build solutions. The hackathon and summit will provide a platform for participants to showcase their skills and creativity.",
@@ -507,6 +545,82 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 2,
+        "title": "Seven Chakras of the India–AI Impact Summit 2026",
+        "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2225069",
+        "summary": "The India–AI Impact Summit 2026 is an upcoming event, with details about its content and focus currently unavailable. The summit's title mentions \"Seven Chakras,\" which may imply a structured approach to discussing AI's impact. Further information about the summit's agenda, speakers, and goals has not been provided.",
+        "date_published": "2026-02-08",
+        "source_name": "PIB Press Releases (English)",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Cybersecurity breaches top risk for India Inc: FICCI-EY survey",
+        "url": "https://telanganatoday.com/cybersecurity-breaches-top-risk-for-india-inc-ficci-ey-survey",
+        "summary": "Cybersecurity breaches are the top risk to organisational performance in India, according to a FICCI-EY survey. Changing customer expectations and geopolitical events are the next biggest risks, highlighting concerns over technology and operational resilience. The survey underscores growing worries over AI governance and cybersecurity threats in India Inc.",
+        "date_published": "2026-02-08",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "SGPGI to push AI-tech for next phase of growth",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/sgpgi-to-push-ai-tech-for-next-phase-of-growth/articleshow/128045830.cms",
+        "summary": "SGPGI is set to leverage AI technology to drive its next phase of growth. The institution aims to utilize AI-tech to enhance its capabilities and services. This move is expected to mark a significant milestone in SGPGI's development and expansion.",
+        "date_published": "2026-02-08",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "JNTUH reaffirms tech,AI push at convocation",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/jntuh-reaffirms-techai-push-at-convocation/articleshow/128044746.cms",
+        "summary": "Jawaharlal Nehru Technological University Hyderabad (JNTUH) has reaffirmed its focus on technology and artificial intelligence (AI) at its convocation ceremony. The university emphasized its commitment to pushing the boundaries of tech and AI in its academic and research pursuits. JNTUH's push for tech and AI is expected to drive innovation and growth in the field.",
+        "date_published": "2026-02-08",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
       {
         "id": 5,
         "title": "Hyderabad Police Commissioner flags threat posed by AI agents",
@@ -609,6 +723,25 @@
         "summary": "Artificial intelligence is being utilized to detect lion activity near tracks, aiming to enhance safety and conservation efforts. The AI system will help monitor and track lion movements, reducing potential conflicts between lions and human activities. This innovative approach is expected to improve lion conservation and management in the region.",
         "date_published": "2026-02-07",
         "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Fixing India's debt collection industry; Veranda Learning Q3 profit soars 110%",
+        "url": "https://yourstory.com/2026/02/fixing-indias-debt-collection-industry-veranda-learning-q3-profit-soars-110",
+        "summary": "DPDzero is utilizing AI to improve debt collection efficiency for lenders in India. Veranda Learning has reported a significant increase in profit, with a 110% rise to Rs 17 crore, driven by a 52% revenue increase. This growth highlights the potential for technology-driven solutions to transform industries in India.",
+        "date_published": "2026-02-07",
+        "source_name": "YourStory",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -1594,6 +1727,25 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "Funding and acquisitions in Indian startup this week [Feb 02 - Feb 07]",
+        "url": "https://entrackr.com/report/weekly-funding-report/funding-and-acquisitions-in-indian-startup-this-week-feb-02-feb-07-11084503",
+        "summary": "26 Indian startups raised around $215 million in funding this week, with 3 growth-stage and 18 early-stage deals. Five startups kept their funding amounts undisclosed. This amount is lower than the $354 million secured by 47 startups in the previous week.",
+        "date_published": "2026-02-07",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "How Kentrix.ai Is Helping Brands Rethink GTM Strategies Using Granular Data And AI",
         "url": "https://inc42.com/startups/how-kentrix-ai-is-helping-brands-rethink-gtm-strategies-using-granular-data-and-ai/",
@@ -1938,7 +2090,6 @@
     ]
   },
   "today_updates": [
-    "Events",
     "Major AI Developments"
   ]
 }
