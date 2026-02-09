@@ -42,10 +42,30 @@
       }
     ],
     "Events": [],
-    "Major AI Developments": [],
+    "Major AI Developments": [
+      {
+        "id": 12,
+        "title": "Odisha readies for smooth conduct of HS exams",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/odisha-readies-for-smooth-conduct-of-hs-exams/articleshow/128081387.cms",
+        "summary": "Odisha's state government has finalized measures for the Annual Higher Secondary Examination, which will involve over 4 lakh students across 1,357 centers. The exams, taking place from February 18 to March 28, will feature strict protocols, including AI-enabled surveillance and a ban on electronic devices. These measures aim to ensure a transparent and malpractice-free examination period.",
+        "date_published": "2026-02-09",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "AI Start-Up News": []
   },
   "today_updates": [
-    "Policies and Initiatives"
+    "Major AI Developments"
   ]
 }

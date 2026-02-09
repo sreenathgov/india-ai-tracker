@@ -23,7 +23,27 @@
       }
     ],
     "Events": [],
-    "Major AI Developments": [],
+    "Major AI Developments": [
+      {
+        "id": 1,
+        "title": "Google Gemini launches JEE Main mock test papers: IIT Kharagpur alumnus Sundar Pichai goes nostalgic, ‘If I could…’",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/google-gemini-launches-jee-main-mock-test-papers-iit-kharagpur-alumnus-sundar-pichai-goes-nostalgic-if-i-could-11769670590061.html",
+        "summary": "Google Gemini has launched free mock JEE Main test papers that simulate real exam conditions, offering instant performance analysis and personalized study plans. The launch was celebrated by Sundar Pichai, an IIT Kharagpur alumnus, who expressed nostalgia and appreciation for the initiative. The AI platform aims to support students preparing for the JEE Main exam with its innovative features.",
+        "date_published": "2026-02-09",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "AI Start-Up News": []
   },
   "today_updates": [

@@ -3,6 +3,25 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 4,
+        "title": "India&#039;s sovereign AI model strategy delivering results",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-revolution-sarvam-ais-breakthrough-and-governments-support/128095734",
+        "summary": "India's sovereign AI model strategy is yielding positive results, according to Union Electronics and IT Minister Ashwini Vaishnaw. He praised a homegrown startup, Sarvam AI, for releasing an advanced AI model. The success of this strategy highlights the potential of India's domestic AI development efforts.",
+        "date_published": "2026-02-09",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "India-US interim trade deal to boost access to advanced GPUs, data centre equipment",
         "url": "https://government.economictimes.indiatimes.com/news/technology/india-us-interim-trade-deal-to-boost-access-to-advanced-gpus-data-centre-equipment/128063046",
@@ -566,6 +585,101 @@
     "Major AI Developments": [
       {
         "id": 2,
+        "title": "Mint Explainer: How AI is a threat to the reputation of top influencers and what can be done about it?",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/ai-generated-images-videos-deepfake-threat-india-influencers-legal-gaps-11768711241931.html",
+        "summary": "The growing creator economy in India is vulnerable to AI threats, particularly deepfakes, which can harm the reputation of top influencers. Comprehensive personality rights protections are needed to safeguard digital identities. Content labeling and watermarking, supported by PM Modi, may help mitigate the AI threat to influencers.",
+        "date_published": "2026-02-09",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "TCS gets special attention from Tata Sons chairman; What N Chandrasekaran is planning at IT giant?",
+        "url": "https://www.etnownews.com/technology/tcs-gets-special-attention-from-tata-sons-chairman-what-n-chandrasekaran-is-planning-at-it-giant-article-153583448",
+        "summary": "Tata Sons chairman N Chandrasekaran is increasing his involvement with TCS to guide the company through a critical phase. He is emphasizing the need for continuous upskilling to prepare for the impact of artificial intelligence. Chandrasekaran's focus is on TCS's AI push and navigating the company's future growth.",
+        "date_published": "2026-02-09",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Connected intelligence: India&#039;s defining advantage in the AI era",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-competitive-edge-in-the-ai-revolution-harnessing-connected-intelligence/127927108",
+        "summary": "Indian enterprises are well-positioned to lead the AI transformation by developing \"connected intelligence\" that combines human and AI efforts. The country's diverse operational complexity has inadvertently prepared it to create a robust AI architecture, unifying fragmented tools and data. This approach enables faster execution and a significant competitive advantage by prioritizing purposeful work over passive productivity.",
+        "date_published": "2026-02-09",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Velocity commits Rs 100 Cr to expand AI-led shipping platform",
+        "url": "https://yourstory.com/2026/02/velocity-commits-rs-100-cr-to-expand-ai-led-shipping-platform",
+        "summary": "Velocity Shipping will receive an investment of Rs 100 Cr to expand its AI-led shipping platform over the next two years. The funding will come from internal accruals and revenue from the company's core businesses. This investment aims to support the growth of Velocity's shipping platform.",
+        "date_published": "2026-02-09",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Can DPDzero’s AI Bet End The Fear Around Debt Recovery, Collections?",
+        "url": "https://inc42.com/startups/can-dpdzeros-ai-bet-end-the-fear-around-debt-recovery-collections/",
+        "summary": "India is experiencing a financial inclusion boom, with more households gaining access to credit. DPDzero's AI-powered debt recovery and collections platform aims to reduce the fear associated with debt recovery. The platform uses AI to streamline and personalize the debt collection process, potentially making it more efficient and less intimidating.",
+        "date_published": "2026-02-09",
+        "source_name": "Inc42 Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "Seven Chakras of the India–AI Impact Summit 2026",
         "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2225069",
         "summary": "The India–AI Impact Summit 2026 is an upcoming event, with details about its content and focus currently unavailable. The summit's title mentions \"Seven Chakras,\" which may imply a structured approach to discussing AI's impact. Further information about the summit's agenda, speakers, and goals has not been provided.",
@@ -628,6 +742,44 @@
         "summary": "Jawaharlal Nehru Technological University Hyderabad (JNTUH) has reaffirmed its focus on technology and artificial intelligence (AI) at its convocation ceremony. The university emphasized its commitment to pushing the boundaries of tech and AI in its academic and research pursuits. JNTUH's push for tech and AI is expected to drive innovation and growth in the field.",
         "date_published": "2026-02-08",
         "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "India–Malaysia deepen semiconductor partnership alongside trade, AI and digital technologies",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/india-and-malaysia-strengthen-semiconductor-ties-amid-growing-trade-and-ai-collaboration/128065290",
+        "summary": "India and Malaysia are strengthening their semiconductor partnership as part of broader efforts to enhance trade and security ties. The move comes during a visit by Indian Prime Minister Narendra Modi, aiming to boost cooperation in key areas. The partnership also encompasses collaboration in AI and digital technologies.",
+        "date_published": "2026-02-08",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "India–US trade deal seen boosting AI hardware and compute ecosystem",
+        "url": "https://telanganatoday.com/india-us-trade-deal-seen-boosting-ai-hardware-and-compute-ecosystem",
+        "summary": "The India-US trade deal is expected to lower import duties on advanced AI hardware and reduce GPU infrastructure costs. This could attract large-scale data centre investments and position India as a key global hub for AI compute services. The deal may boost India's AI hardware and compute ecosystem, making it a major player in the industry.",
+        "date_published": "2026-02-08",
+        "source_name": "Telangana Today - Tech",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -1976,7 +2128,7 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives",
-    "Major AI Developments"
+    "Major AI Developments",
+    "Policies and Initiatives"
   ]
 }

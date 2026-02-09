@@ -313,6 +313,25 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 8,
+        "title": "Global HealthX crosses $15 Mn in healthcare investments, unveils startup cohort",
+        "url": "https://entrackr.com/snippets/global-healthx-crosses-15-mn-in-healthcare-investments-unveils-startup-cohort-11089283",
+        "summary": "Global HealthX, a healthcare and life sciences innovation hub, has surpassed $15 million in investments across startups and studio-built ventures over the past two years. The platform operates at the intersection of healthcare, life sciences, and technology to address gaps in India's healthcare ecosystem. Global HealthX aims to improve access, affordability, and continuity of care through its integrated model of venture studio, strategic investments, and market-access partnerships.",
+        "date_published": "2026-02-09",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "US startup sets eyes on real-world AI applications in India",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/blaize-ai-startup-aims-to-revolutionize-indias-agriculture-and-traffic-management/127902426",
@@ -391,6 +410,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }

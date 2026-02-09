@@ -121,6 +121,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "Problem-solving ability will be the real strength of the future, says Dr. Tapan Singhel at IMDR’s 51st convocation ceremony",
+        "url": "https://timesofindia.indiatimes.com/city/pune/problem-solving-ability-will-be-the-real-strength-of-the-future-says-dr-tapan-singhel-at-imdrs-51st-convocation-ceremony/articleshow/128097736.cms",
+        "summary": "Dr. Tapan Singhel emphasized the importance of problem-solving ability as the key strength for future success, particularly for young professionals. Despite AI's impact on entry-level roles, those with strong skills and innovative thinking will still find high-paying jobs. Dr. Singhel urged graduates to develop problem-solving abilities, learn from failure, and embrace opportunities for career success.",
+        "date_published": "2026-02-09",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "How GenAI is boosting engagement, skills and collaboration across teams",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/how-genai-is-boosting-engagement-skills-and-collaboration-across-teams/127885631",
@@ -335,7 +354,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }
