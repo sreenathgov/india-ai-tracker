@@ -23,8 +23,30 @@
         "posted_to_x_at": null
       }
     ],
-    "Major AI Developments": [],
+    "Major AI Developments": [
+      {
+        "id": 12,
+        "title": "CNLU holds round table conference on AI",
+        "url": "https://timesofindia.indiatimes.com/city/patna/cnlu-holds-round-table-conference-on-ai/articleshow/128125769.cms",
+        "summary": "CNLU held a round table conference on Artificial Intelligence (AI). The event aimed to discuss various aspects of AI, although specific details of the conference are not provided. The conference was organized by Chanakya National Law University (CNLU), with the goal of exploring the implications and applications of AI.",
+        "date_published": "2026-02-10",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

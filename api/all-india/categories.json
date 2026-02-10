@@ -584,6 +584,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "AI infrastructure arms race heats up; Helping women return to public life after breast cancer",
+        "url": "https://yourstory.com/2026/02/ai-infrastructure-arms-race-heats-up-women-public-life-breast-cancer",
+        "summary": "Big Tech companies are investing billions in AI infrastructure, including data centres and custom chips. Meanwhile, organizations like Saaisha India Foundation are using innovative approaches, such as hand-knitted prostheses, to support women after breast cancer. Java Capital has launched a new fund to back seed-stage deeptech startups, further fueling the AI ecosystem.",
+        "date_published": "2026-02-10",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Mint Explainer: How AI is a threat to the reputation of top influencers and what can be done about it?",
         "url": "https://www.livemint.com/ai/artificial-intelligence/ai-generated-images-videos-deepfake-threat-india-influencers-legal-gaps-11768711241931.html",
@@ -666,6 +685,25 @@
         "summary": "India is experiencing a financial inclusion boom, with more households gaining access to credit. DPDzero's AI-powered debt recovery and collections platform aims to reduce the fear associated with debt recovery. The platform uses AI to streamline and personalize the debt collection process, potentially making it more efficient and less intimidating.",
         "date_published": "2026-02-09",
         "source_name": "Inc42 Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Who’s coming to India’s biggest AI summit? Check full list here",
+        "url": "https://www.etnownews.com/technology/whos-coming-to-indias-biggest-ai-summit-check-full-list-here-article-153587270",
+        "summary": "Prime Minister Narendra Modi is expected to inaugurate India's biggest AI summit and host a CEOs' roundtable. The event highlights the Indian government's strategic focus on AI technology. The summit is set to bring together key stakeholders, with a full list of attendees available.",
+        "date_published": "2026-02-09",
+        "source_name": "ET Now Technology",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -1765,6 +1803,63 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "AI software testing startup BotGauge AI raises $2 Mn led by Surface Ventures",
+        "url": "https://entrackr.com/snippets/ai-software-testing-startup-botgauge-ai-raises-2-mn-led-by-surface-ventures-11092144",
+        "summary": "BotGauge AI, a software testing startup, has raised $2 million in funding led by Surface Ventures, with participation from IA Seed Ventures and Saka Ventures. The fresh capital will be used to strengthen product development, expand the engineering team, and scale operations in international markets. The company, founded in 2024, builds a software testing platform that uses autonomous AI agents to automate quality assurance processes.",
+        "date_published": "2026-02-10",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Sarvam AI : Why this AI model is gaining attention? Know full story here",
+        "url": "https://www.etnownews.com/technology/sarvam-ai-why-this-ai-model-is-gaining-attention-know-full-story-here-article-153584660",
+        "summary": "Sarvam AI has emerged as a prominent player in India's AI ecosystem under the leadership of co-founder and CEO Pratyush Kumar. The company is developing foundational AI technologies that are competitive with international counterparts. Sarvam AI's innovations are gaining attention for their potential to drive growth and advancement in the field.",
+        "date_published": "2026-02-09",
+        "source_name": "ET Now Technology",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Java Capital launches Rs 400 Cr fund to back seed-stage deeptech startups",
+        "url": "https://entrackr.com/snippets/java-capital-launches-rs-400-cr-fund-to-back-seed-stage-deeptech-startups-11090523",
+        "summary": "Java Capital has launched a Rs 400 crore fund to invest in seed-stage deeptech startups, focusing on IP-led technology businesses across various sectors. The fund will target companies in areas such as semiconductors, cybersecurity, AI infrastructure, and climate tech, among others. It plans to invest in 15-20 startups over the next three to four years, with initial cheques ranging from Rs 6-8 crore.",
+        "date_published": "2026-02-09",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Funding and acquisitions in Indian startup this week [Feb 02 - Feb 07]",
         "url": "https://entrackr.com/report/weekly-funding-report/funding-and-acquisitions-in-indian-startup-this-week-feb-02-feb-07-11084503",
@@ -2128,7 +2223,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "Policies and Initiatives"
+    "AI Start-Up News",
+    "Major AI Developments"
   ]
 }
