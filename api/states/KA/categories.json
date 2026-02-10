@@ -330,6 +330,25 @@
         "importance_score": 0.0,
         "premium_processed": false,
         "posted_to_x_at": null
+      },
+      {
+        "id": 15,
+        "title": "Agentic AI to drive autonomous enterprise by 2026, human role to shift to orchestration: Wipro CTO",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/agentic-ai-to-drive-autonomous-enterprise-by-2026-human-role-to-shift-to-orchestration-wipro-cto/126113653",
+        "summary": "",
+        "date_published": "2025-12-22",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 8.0,
+        "premium_processed": true,
+        "posted_to_x_at": null
       }
     ],
     "AI Start-Up News": [
@@ -430,7 +449,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

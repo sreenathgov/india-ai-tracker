@@ -1,0 +1,72 @@
+{
+  "state": "GA",
+  "categories": {
+    "Policies and Initiatives": [
+      {
+        "id": 6,
+        "title": "Cancer hospital likely to startnext year: Rane",
+        "url": "https://timesofindia.indiatimes.com/city/goa/cancer-hospital-likely-to-startnext-year-rane/articleshow/127893523.cms",
+        "summary": "Goa's health minister has announced plans to launch a new cancer hospital by the end of 2027, featuring Israeli equipment and collaboration with Tata Memorial Centre. The state is also implementing AI-driven lung cancer screening, which has already analyzed over 1 lakh chest X-rays. This initiative aims to speed up diagnosis and identify critical lung nodules more efficiently.",
+        "date_published": "2026-02-04",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GA",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 101,
+        "title": "AI-system to challan vehicles sans valid docus at Goa border checkposts",
+        "url": "https://b2b.economictimes.indiatimes.com/news/goa/ai-system-to-challan-vehicles-sans-valid-docus-at-goa-border-checkposts/125869333",
+        "summary": "The GoVA system uses AI-enabled cameras at Goa's border entry points to monitor vehicles. These cameras can identify vehicles without valid documents, enabling authorities to issue challans. The system aims to improve enforcement and compliance at border checkposts.",
+        "date_published": "2025-12-09",
+        "source_name": "ET B2B Goa",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
+    "Events": [],
+    "Major AI Developments": [
+      {
+        "id": 20,
+        "title": "AI traffic signals with smart cameras at 92 locations in Goa",
+        "url": "https://timesofindia.indiatimes.com/city/goa/ai-traffic-signals-with-smart-cameras-at-92-locations-in-goa/articleshow/127808624.cms",
+        "summary": "Goa has implemented AI-powered traffic signals with smart cameras at 92 locations. The intelligent system aims to improve traffic management and reduce congestion. The technology is expected to enhance road safety and efficiency in the region.",
+        "date_published": "2026-01-31",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
+    "AI Start-Up News": []
+  },
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
+}

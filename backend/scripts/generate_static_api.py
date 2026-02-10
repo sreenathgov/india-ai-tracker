@@ -63,14 +63,14 @@ def generate_static_api():
         # Generate last-updated.json (metadata, not article data)
         generate_last_updated(api_root)
 
-        # Generate states/recent-counts.json (metadata, not article data)
-        generate_recent_counts(api_root)
-
         # Merge state categories for all states
         generate_all_state_categories(api_root)
 
         # Merge all-india/categories.json
         generate_all_india_categories(api_root)
+
+        # Generate recent-counts AFTER merges so newly-merged articles are included
+        generate_recent_counts(api_root)
 
     print("\n✅ Static API generation complete!")
     print(f"📁 Files saved to: {api_root}")
@@ -102,31 +102,65 @@ def generate_last_updated(api_root):
     save_json(api_root, 'last-updated.json', data)
 
 def generate_recent_counts(api_root):
-    """Generate states/recent-counts.json"""
+    """Generate states/recent-counts.json from canonical JSON files (not database).
+
+    Reads from the canonical JSON files on disk rather than the ephemeral SQLite
+    database, which may not contain historical data (e.g. in CI where the DB is
+    rebuilt each run).
+    """
     print("📊 Generating states/recent-counts.json...")
 
-    seven_days_ago = datetime.utcnow() - timedelta(days=7)
-
-    updates = Update.query.filter(
-        Update.date_scraped >= seven_days_ago,
-        Update.is_approved == True,
-        (Update.is_deleted == False) | (Update.is_deleted == None),
-        Update.processing_state == 'PROCESSED'
-    ).all()
+    seven_days_ago = (datetime.utcnow() - timedelta(days=7)).strftime('%Y-%m-%d')
 
     state_counts = {}
+    states_dir = os.path.join(api_root, 'states')
 
-    for update in updates:
+    def _count_recent_articles(categories_data):
+        """Count articles published in the last 7 days from a categories dict."""
+        count = 0
+        for category, articles in categories_data.get('categories', {}).items():
+            for article in articles:
+                date_pub = article.get('date_published', '')
+                if (date_pub >= seven_days_ago
+                        and article.get('is_approved')
+                        and not article.get('is_deleted')
+                        and article.get('processing_state') == 'PROCESSED'):
+                    count += 1
+        return count
+
+    # Count recent articles from each state's canonical JSON
+    if os.path.isdir(states_dir):
+        for entry in os.listdir(states_dir):
+            state_dir = os.path.join(states_dir, entry)
+            categories_file = os.path.join(state_dir, 'categories.json')
+
+            if not os.path.isdir(state_dir) or not os.path.exists(categories_file):
+                continue
+
+            try:
+                with open(categories_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                count = _count_recent_articles(data)
+                if count > 0:
+                    state_counts[entry] = count
+            except Exception as e:
+                print(f"  ⚠️  Could not read {categories_file}: {e}")
+
+    # Count recent national ("IN") articles from all-india canonical JSON
+    all_india_file = os.path.join(api_root, 'all-india', 'categories.json')
+    if os.path.exists(all_india_file):
         try:
-            state_codes = json.loads(update.state_codes) if isinstance(update.state_codes, str) else update.state_codes
-            if state_codes:
-                for code in state_codes:
-                    state_counts[code] = state_counts.get(code, 0) + 1
-        except:
-            continue
+            with open(all_india_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            in_count = _count_recent_articles(data)
+            if in_count > 0:
+                state_counts['IN'] = in_count
+        except Exception as e:
+            print(f"  ⚠️  Could not read {all_india_file}: {e}")
 
-    data = {'counts': state_counts, 'period_days': 7}
-    save_json(os.path.join(api_root, 'states'), 'recent-counts.json', data)
+    result = {'counts': state_counts, 'period_days': 7}
+    save_json(os.path.join(api_root, 'states'), 'recent-counts.json', result)
+    print(f"  📊 Recent counts: {len(state_counts)} regions with updates in last 7 days")
 
 def generate_all_state_categories(api_root):
     """
