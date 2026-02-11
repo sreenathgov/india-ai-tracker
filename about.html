@@ -6,6 +6,8 @@
     <title>About & Disclosures - India AI Tracker</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-v2.css?v=13">
+    <link rel="stylesheet" href="css/staggered-menu.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <style>
         /* Override the overflow:hidden from main stylesheet */
         html {
@@ -191,16 +193,19 @@
                 margin-top: 2rem;
             }
         }
+        /* Override staggered menu colors for about page */
+        .sm-toggle {
+            color: var(--brand-cream) !important;
+        }
     </style>
 </head>
 <body class="about-page">
-    <header class="about-header">
-        <h1>About & Disclosures</h1>
-        <a href="index.html">&larr; Back to Tracker</a>
-    </header>
+    <!-- Staggered menu will be injected here by staggered-menu.js -->
+
+    <div style="height: 80px;"></div> <!-- Spacer for menu -->
 
     <main class="about-content">
-        <h2>India AI Tracker</h2>
+        <h2>About & Disclosures</h2>
 
         <section class="about-section">
             <h3>What this site is</h3>
@@ -244,5 +249,6 @@
         </p>
         <p class="footer-description">Developed independently by an international law researcher focused on AI governance, technology policy, and Indian regulatory developments.</p>
     </footer>
+    <script src="js/staggered-menu.js"></script>
 </body>
 </html>

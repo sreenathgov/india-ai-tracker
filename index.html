@@ -30,19 +30,13 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <link rel="stylesheet" href="css/styles-v2.css?v=19">
+    <link rel="stylesheet" href="css/staggered-menu.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
 <body>
     <div class="page-wrapper">
         <!-- LAYER 1: Institutional Header (Persistent) -->
-        <header class="institutional-header">
-            <a href="index.html" aria-label="Kanan Labs Home">
-                <img src="assets/images/KANAN-LABS-WEBSITELOGO.png" alt="Kanan Labs" class="brand-logo">
-            </a>
-            <nav class="institutional-nav">
-                <a href="about.html">About</a>
-                <a href="mailto:sreenath.govin@gmail.com">Contact</a>
-            </nav>
-        </header>
+        <!-- Note: Staggered menu will be injected here by staggered-menu.js -->
 
         <!-- LAYER 2: Product Hero (Compact) -->
         <section class="product-hero">
@@ -134,6 +128,7 @@
         </footer>
     </div>
 
+    <script src="js/staggered-menu.js"></script>
     <script src="js/app-final.js?v=17"></script>
 </body>
 </html>

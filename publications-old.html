@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="publications-html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publication | India AI Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles-v2.css?v=17">
+    <link rel="stylesheet" href="css/publications.css?v=12">
+    <link rel="stylesheet" href="css/staggered-menu.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>
+
+<body class="publications-page">
+    <div class="page-wrapper">
+        <!-- Institutional Header -->
+        <!-- Staggered menu will be injected here by staggered-menu.js -->
+
+        <!-- Publication Hero -->
+        <section class="publication-hero">
+            <div class="publication-hero-content">
+                <h1 class="publication-title" id="publicationTitle">Loading...</h1>
+                <div class="publication-meta">
+                    <span class="publication-author" id="publicationAuthor"></span>
+                    <span class="publication-date" id="publicationDate"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Reading Container -->
+        <main class="reading-container">
+            <!-- Table of Contents Sidebar -->
+            <aside class="toc-sidebar" id="tocSidebar">
+                <section class="how-to-read">
+                    <button id="howToReadBtn" class="how-to-toggle">+ How to Read</button>
+                    <div id="howToReadContent" class="how-to-content">
+                        <!-- Content moved inside this wrapper -->
+                        <div class="how-to-body">
+                            <div class="how-to-row">
+                                <span class="how-to-dot how-to-dot-overview"></span>
+                                <div class="how-to-text">
+                                    <p class="how-to-label">Overview</p>
+                                    <p class="how-to-description">
+                                        The main narrative. Read this layer to understand the core argument and key
+                                        findings.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="how-to-row">
+                                <span class="how-to-dot how-to-dot-analysis"></span>
+                                <div class="how-to-text">
+                                    <p class="how-to-label">Analysis</p>
+                                    <p class="how-to-description">
+                                        Deeper examination of specific topics. Click chapter sections to open the
+                                        analysis panel.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="how-to-row">
+                                <span class="how-to-dot how-to-dot-indepth"></span>
+                                <div class="how-to-text">
+                                    <p class="how-to-label">In-Depth</p>
+                                    <p class="how-to-description">
+                                        Methodological notes, references, and extended context for researchers.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="how-to-navigation">
+                                <p class="how-to-nav-label">Navigation</p>
+                                <ul class="how-to-nav-list">
+                                    <li>Click any section title to dive deeper.</li>
+                                    <li>Use the close buttons or click anywhere outside a panel to return.</li>
+                                    <li>Panels slide smoothly from the right.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="toc-header">
+                    <span class="toc-label">Contents</span>
+                </div>
+                <nav class="toc-nav">
+                    <ul class="toc-list" id="tocList">
+                        <!-- Dynamically populated -->
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Central Reading Column -->
+            <article class="reading-column" id="readingColumn">
+                <div class="reading-content" id="readingContent">
+                    <!-- Overview content rendered here -->
+                    <div class="loading-state">
+                        <p>Loading publication...</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Layer Indicator -->
+            <div class="layer-indicator layer-overview" id="layerIndicator">
+                <span class="layer-label">Current Layer</span>
+                <div class="layer-indicator-right">
+                    <span class="layer-name" id="layerName">Overview</span>
+                    <div class="layer-square">
+                        <div class="layer-square-inner"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analysis Panel (Slides from Right) -->
+            <aside class="reading-panel analysis-panel" id="analysisPanel">
+                <div class="panel-header">
+                    <button class="panel-close" id="closeAnalysisBtn" aria-label="Close panel">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    <div class="panel-header-content">
+                        <span class="panel-layer-tag">Analysis</span>
+                        <h2 class="panel-title" id="analysisPanelTitle">Section Title</h2>
+                    </div>
+                </div>
+                <div class="panel-content" id="analysisPanelContent">
+                    <!-- Analysis layer content -->
+                </div>
+            </aside>
+
+            <!-- In-Depth Panel (Slides from Right, Stacks on Analysis) -->
+            <aside class="reading-panel indepth-panel" id="indepthPanel">
+                <div class="panel-header">
+                    <button class="panel-close" id="closeIndepthBtn" aria-label="Close panel">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    <div class="panel-header-content">
+                        <span class="panel-layer-tag">In Depth</span>
+                        <h2 class="panel-title" id="indepthPanelTitle">Subsection Title</h2>
+                    </div>
+                </div>
+                <div class="panel-content" id="indepthPanelContent">
+                    <!-- In-depth layer content -->
+                </div>
+            </aside>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer publications-footer">
+            <p class="footer-byline">A public AI governance intelligence tool by Sreenath Govindarajan, Founder of Kanan
+                Labs</p>
+            <p class="footer-links">
+                <a href="about.html">About</a>
+                <span class="separator">·</span>
+                <a href="mailto:sreenath.govin@gmail.com">Contact</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="js/staggered-menu.js"></script>
+    <script src="js/publications.js?v=9"></script>
+</body>
+
+</html>
