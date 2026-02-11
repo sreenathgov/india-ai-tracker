@@ -13,6 +13,8 @@ class StaggeredMenu {
       displaySocials: true,
       displayItemNumbering: true,
       logoUrl: 'assets/images/KANAN-LABS-WEBSITELOGO.png',
+      mobileLogoUrl: 'KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png',
+      mobileOpenLogoUrl: 'KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-WHITEBG.png',
       menuButtonColor: '#f4ebd0',
       openMenuButtonColor: '#fff',
       accentColor: '#db4a2b',
@@ -85,6 +87,21 @@ class StaggeredMenu {
     document.body.insertBefore(wrapper, document.body.firstChild);
 
     this.refs.wrapper = wrapper;
+
+    // Set initial logo based on screen size
+    this.setInitialLogo();
+  }
+
+  setInitialLogo() {
+    const logoImg = this.refs.wrapper.querySelector('.sm-logo-img');
+    if (!logoImg) return;
+
+    const isMobile = window.innerWidth <= 1024;
+    if (isMobile) {
+      logoImg.src = this.options.mobileLogoUrl;
+    } else {
+      logoImg.src = this.options.logoUrl;
+    }
   }
 
   createPrelayers() {
@@ -306,6 +323,17 @@ class StaggeredMenu {
     if (this.options.closeOnClickAway) {
       document.addEventListener('mousedown', (e) => this.handleClickOutside(e));
     }
+
+    // Handle window resize to update logo
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        if (!this.state.open) {
+          this.setInitialLogo();
+        }
+      }, 150);
+    });
   }
 
   handleClickOutside(event) {
@@ -609,13 +637,50 @@ class StaggeredMenu {
 
     if (target) {
       this.playOpen();
+      this.updateLogoForFullScreen(true);
     } else {
       this.playClose();
+      this.updateLogoForFullScreen(false);
     }
 
     this.animateIcon(target);
     this.animateColor(target);
     this.animateText(target);
+  }
+
+  updateLogoForFullScreen(isOpen) {
+    const logoImg = this.refs.wrapper.querySelector('.sm-logo-img');
+    if (!logoImg) return;
+
+    const isMobile = window.innerWidth <= 1024;
+
+    if (isMobile) {
+      // Mobile: Smooth transition between letter logos
+      const targetSrc = isOpen ? this.options.mobileOpenLogoUrl : this.options.mobileLogoUrl;
+
+      if (logoImg.src.includes(targetSrc)) return; // Already correct logo
+
+      // Smooth fade transition timed with panel animation
+      gsap.to(logoImg, {
+        opacity: 0,
+        duration: 0.2,
+        ease: 'power2.in',
+        onComplete: () => {
+          logoImg.src = targetSrc;
+          gsap.to(logoImg, {
+            opacity: 1,
+            duration: 0.3,
+            delay: 0.2, // Delay to sync with panel sliding in
+            ease: 'power2.out'
+          });
+        }
+      });
+    } else {
+      // Desktop: Keep full logo, no change needed
+      if (!logoImg.src.includes(this.options.logoUrl)) {
+        logoImg.src = this.options.logoUrl;
+      }
+    }
   }
 
   closeMenu() {
@@ -632,6 +697,7 @@ class StaggeredMenu {
       if (panel) panel.setAttribute('aria-hidden', 'true');
 
       this.playClose();
+      this.updateLogoForFullScreen(false);
       this.animateIcon(false);
       this.animateColor(false);
       this.animateText(false);
@@ -661,6 +727,8 @@ document.addEventListener('DOMContentLoaded', function() {
     openMenuButtonColor: '#db4a2b',
     accentColor: '#db4a2b',
     changeMenuColorOnOpen: true,
-    logoUrl: 'assets/images/KANAN-LABS-WEBSITELOGO.png'
+    logoUrl: 'assets/images/KANAN-LABS-WEBSITELOGO.png',
+    mobileLogoUrl: 'KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png',
+    mobileOpenLogoUrl: 'KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-WHITEBG.png'
   });
 });
