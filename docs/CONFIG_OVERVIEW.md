@@ -38,9 +38,9 @@ The India AI Tracker uses a **3-layer hybrid processing pipeline** to minimize c
                  ↓
 ┌─────────────────────────────────────────────────┐
 │ LAYER 3: Premium Polish                        │
-│ - Provider: Gemini 1.5 Flash (primary)         │
+│ - Provider: Groq (Llama 3.3 70B)               │
 │ - Top 30-50 important articles only            │
-│ - Cost: $0 (within free tier)                  │
+│ - Cost: $0 (Groq free tier)                    │
 └─────────────────────────────────────────────────┘
 ```
 
@@ -52,9 +52,9 @@ The India AI Tracker uses a **3-layer hybrid processing pipeline** to minimize c
 
 | Service | Purpose | Required? | Fallback |
 |---------|---------|-----------|----------|
-| **Groq API** | Layer 2 bulk processing | Yes | Ollama (local) |
-| **Gemini API** | Layer 3 premium polish | Yes | Groq |
-| **Ollama** | Layer 2 fallback (local) | Optional | None |
+| **Groq API** | Layer 2 & 3 processing | Yes | Ollama (local) |
+| **Gemini API** | ~~Layer 3 premium polish~~ Deprecated | No | — |
+| **Ollama** | Layer 2/3 fallback (local) | Optional | None |
 
 ### **Services We DON'T Use:**
 
@@ -182,23 +182,25 @@ LAYER2_PROVIDER=gemini
 
 ---
 
-### **Layer 3: Gemini ↔ Groq Switching**
+### **Layer 3: Groq (Primary)**
 
-**Manual Configuration:**
+**Configuration:**
 ```bash
 # In backend/.env file
 
-# Use Gemini (default - recommended)
-LAYER3_PROVIDER=gemini
-
-# Use Groq instead
+# Use Groq (default - recommended)
 LAYER3_PROVIDER=groq
+
+# Use Gemini as fallback (optional, but expensive)
+LAYER3_PROVIDER=gemini
 ```
 
-**Why Gemini is recommended for Layer 3:**
-- Better at nuanced summaries
-- Higher quality output
-- Still free (we use <50 calls/day)
+**Why Groq for Layer 3:**
+- Free tier (14,400 requests/day - plenty of capacity)
+- Fast processing
+- Consistent with Layer 2 (same provider)
+- No quota exhaustion issues like Gemini
+- Cost-effective as system scales
 
 ---
 
@@ -219,8 +221,8 @@ LAYER2_MODEL=llama-3.1-70b-versatile  # For Groq
 LAYER2_BATCH_SIZE=10           # Articles per batch
 
 # ==================== LAYER 3 CONFIG ====================
-LAYER3_PROVIDER=gemini         # gemini or groq
-LAYER3_MODEL=gemini-1.5-flash  # For Gemini
+LAYER3_PROVIDER=groq           # groq or gemini
+LAYER3_MODEL=llama-3.3-70b-versatile  # For Groq
 LAYER3_TOP_N=50                # Number of articles for premium processing
 
 # ==================== OLLAMA CONFIG (Optional) ====================
@@ -301,11 +303,11 @@ ollama serve
 ollama pull llama3.2:3b
 ```
 
-#### **3. "Gemini quota exceeded"**
+#### **3. "Groq quota exceeded at Layer 3"**
 ```
-✅ NORMAL: Gemini 2.5 Flash has only 20/day (we don't use it)
-✅ We use Gemini 1.5 Flash (1,500/day)
-🔧 Fix: Update .env to use gemini-1.5-flash model
+❌ RARE: Groq free tier has 14,400 requests/day
+🔧 Fix 1: Switch to Gemini for Layer 3 (LAYER3_PROVIDER=gemini)
+🔧 Fix 2: Upgrade Groq to paid tier at https://console.groq.com/
 ```
 
 #### **4. "API key invalid"**
@@ -341,8 +343,9 @@ LAYER 2: Bulk Processing
   ⚠️  Groq quota used: 1,247/14,400 (8.7%)
 
 LAYER 3: Premium Polish
-  Provider:   Gemini 1.5 Flash
-  Gemini quota used: 42/1,500 (2.8%)
+  Provider:   Groq
+  ⚠️  Groq quota used: 50/14,400 (0.3%)
+  Total Groq: 1,297/14,400 (9%)
 ```
 
 ---
@@ -366,13 +369,13 @@ LAYER 3: Premium Polish
 ## 📝 Summary
 
 **Required for Operation:**
-- ✅ Groq API key (free)
-- ✅ Gemini API key (free)
-- ⚠️  Ollama (optional but recommended)
+- ✅ Groq API key (free) - for Layers 2 & 3
+- ❌ Gemini API key (deprecated for Layer 3)
+- ⚠️  Ollama (optional but recommended as fallback)
 
 **Monthly Cost:**
-- ✅ $0 if within free tiers (normal usage)
-- ⚠️  <$1 if you exceed free tiers (unlikely)
+- ✅ $0 - Everything uses Groq free tier
+- 📊 Expected usage: ~1,300 requests/day (9% of free tier)
 
 **Next Steps:**
 - Read `docs/ARCHITECTURE.md` for system design

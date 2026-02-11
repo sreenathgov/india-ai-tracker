@@ -302,6 +302,128 @@ Ensure the JSON is valid and parseable. Include ALL articles in order.
             else:
                 raise Exception(f"Groq API error: {error_msg}")
 
+    def refine_article(self, article: Dict[str, str], layer2_results: Dict[str, str] = None) -> Dict[str, str]:
+        """
+        Refine a single high-importance article with premium processing.
+
+        Args:
+            article: Article dict with 'title', 'content'
+            layer2_results: Results from Layer 2 (for cross-checking)
+
+        Returns:
+            Refined results
+        """
+        title = article.get('title', '')
+        content = article.get('content', '')[:2000]  # First 2000 chars
+
+        # Build premium prompt
+        prompt = f"""You are analyzing a HIGH-IMPORTANCE article about AI in India.
+
+This article has been flagged as particularly significant (government policy, major funding, or national importance).
+
+Article:
+Title: {title}
+Content: {content}
+
+Previous Analysis (for reference):
+- Category: {layer2_results.get('category', 'Unknown') if layer2_results else 'Not yet analyzed'}
+- States: {layer2_results.get('state_codes', []) if layer2_results else []}
+
+Please provide a REFINED analysis:
+
+1. **AI Relevance Verification**: Confirm this is truly about AI (YES/NO + confidence 0-100)
+2. **Category** (select ONE using STRICT definitions):
+   - **Policies and Initiatives**: Government ONLY (policies, laws, govt programs, minister statements, govt investments)
+   - **AI Start-Up News**: Startup must be subject/object (funding, launches, pivots, acquisitions)
+   - **Major AI Developments**: Everything else (industry reports, big tech, conferences, research, market trends)
+
+3. **State Attribution**: JSON array of 2-letter state codes
+   - CRITICAL: Tag a state ONLY if article content is SUBSTANTIVELY about that state
+   - DO NOT tag based on news source domain (e.g., ignore telanganatoday.com)
+   - DO NOT tag unless state is MATERIALLY discussed in title or content
+   - Valid reasons: state govt policy, state event, company HQ doing something in that state
+   - Use ["IN"] for national/multi-state or if no specific state is central to the story
+
+4. **Summary**: Write a concise, professional summary (STRICT LIMIT: under 240 characters).
+   FORMAT RULES:
+   - Lead with the actor (company/govt/institution) and their action
+   - Name the geography (state or "India") where relevant
+   - State the purpose or impact briefly
+   - Use neutral, factual language - no hype words
+   - 1-2 short sentences maximum
+
+   GOOD EXAMPLES:
+   - "Karnataka govt unveils AI skilling scheme to train 1 lakh students in ML and data science over 3 years."
+   - "India's MeitY releases draft guidelines for AI safety testing to standardise model risk assessments."
+   - "Bengaluru startup Acme AI raises $20M Series A to expand its document processing platform."
+
+   BAD (too long/vague): "This is a really exciting development in the AI space that could potentially transform..."
+
+Respond with ONLY valid JSON:
+{{
+  "is_relevant": true,
+  "confidence": 98,
+  "category": "AI Policy & Regulation",
+  "state_codes": ["IN"],
+  "summary": "The Indian government has..."
+}}
+"""
+
+        try:
+            # Rate limiting
+            self._rate_limit()
+
+            # Call Groq API
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "You are an expert at analyzing AI-related news articles about India. You always respond with valid JSON."
+                    },
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ],
+                temperature=0.1,
+                max_tokens=500,
+                timeout=30.0
+            )
+
+            # Parse response
+            import json
+            response_text = response.choices[0].message.content
+
+            # Extract JSON
+            start = response_text.find('{')
+            end = response_text.rfind('}') + 1
+
+            if start == -1 or end == 0:
+                raise ValueError("No JSON found in response")
+
+            json_str = response_text[start:end]
+            result = json.loads(json_str)
+
+            return {
+                'is_relevant': result.get('is_relevant', True),
+                'confidence': float(result.get('confidence', 95)),
+                'category': result.get('category', 'Uncategorized'),
+                'state_codes': result.get('state_codes', []),
+                'summary': result.get('summary', ''),
+                'provider': 'groq',
+                'model': self.model
+            }
+
+        except Exception as e:
+            error_msg = str(e)
+            if 'rate' in error_msg.lower() or '429' in error_msg:
+                raise Exception(f"Groq rate limit exceeded: {error_msg}")
+            elif 'quota' in error_msg.lower():
+                raise Exception(f"Groq quota exceeded: {error_msg}")
+            else:
+                raise Exception(f"Groq API error: {error_msg}")
+
     def test_connection(self) -> bool:
         """
         Test if Groq API is accessible.

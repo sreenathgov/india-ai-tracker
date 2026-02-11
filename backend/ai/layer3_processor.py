@@ -1,13 +1,13 @@
 """
 Layer 3: Premium Processing
 
-Selects top 30-50 most important articles and refines them with Gemini 1.5 Flash.
+Selects top 30-50 most important articles and refines them with Groq (Llama 3.3 70B).
 
 Flow:
 1. Load articles that passed Layer 2
 2. Score importance using ImportanceScorer
 3. Select top N articles
-4. Refine with Gemini for premium quality
+4. Refine with Groq for premium quality
 5. Update database with premium results
 """
 
@@ -22,6 +22,7 @@ load_dotenv(env_path)
 
 from ai.importance_scorer import ImportanceScorer
 from ai.providers.gemini_client import GeminiClient
+from ai.providers.groq_client import GroqClient
 
 
 class Layer3Processor:
@@ -37,7 +38,7 @@ class Layer3Processor:
             provider: 'gemini' or 'groq' (defaults to env LAYER3_PROVIDER)
             top_n: Number of top articles to process (defaults to env LAYER3_TOP_N)
         """
-        self.provider_preference = provider or os.getenv('LAYER3_PROVIDER', 'gemini')
+        self.provider_preference = provider or os.getenv('LAYER3_PROVIDER', 'groq')
         self.top_n = top_n or int(os.getenv('LAYER3_TOP_N', '50'))
 
         # Initialize scorer
@@ -51,8 +52,14 @@ class Layer3Processor:
             except Exception as e:
                 print(f"⚠️  Failed to initialize Gemini: {e}")
                 self.client = None
+        elif self.provider_preference == 'groq':
+            try:
+                self.client = GroqClient()
+                print(f"✅ Groq client initialized for Layer 3")
+            except Exception as e:
+                print(f"⚠️  Failed to initialize Groq: {e}")
+                self.client = None
         else:
-            # Could add Groq fallback here
             raise ValueError(f"Provider {self.provider_preference} not supported for Layer 3")
 
         # Stats
