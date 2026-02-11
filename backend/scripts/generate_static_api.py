@@ -176,7 +176,7 @@ def generate_all_state_categories(api_root):
         'AN', 'AP', 'AR', 'AS', 'BR', 'CH', 'CG', 'DD', 'DL', 'DN', 'GA',
         'GJ', 'HP', 'HR', 'JH', 'JK', 'KA', 'KL', 'LA', 'LD', 'MH', 'ML',
         'MN', 'MP', 'MZ', 'NL', 'OD', 'PB', 'PY', 'RJ', 'SK', 'TN', 'TG',
-        'TR', 'UP', 'UT', 'WB'
+        'TR', 'UK', 'UP', 'UT', 'WB'
     ]
 
     # Track statistics across all states
@@ -202,18 +202,32 @@ def generate_all_state_categories(api_root):
             except:
                 continue
 
-        # Skip states with no data
-        if not updates:
-            continue
-
         # Convert to dictionaries for merging
         new_articles = [update.to_dict() for update in updates]
 
-        # Merge into existing JSON (canonical store)
+        # Always create state directory and file (even if empty)
+        # This ensures all states are accessible on the website
         state_dir = os.path.join(api_root, 'states', state_code)
         os.makedirs(state_dir, exist_ok=True)
         filepath = os.path.join(state_dir, 'categories.json')
 
+        # If no updates from database but no existing file, create empty structure
+        if not updates and not os.path.exists(filepath):
+            empty_data = {
+                'state': state_code,
+                'categories': {
+                    'Policies and Initiatives': [],
+                    'Events': [],
+                    'Major AI Developments': [],
+                    'AI Start-Up News': [],
+                },
+                'today_updates': []
+            }
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(empty_data, f, ensure_ascii=False, indent=2)
+            continue
+
+        # Merge database updates into existing JSON
         stats = merge_articles_into_json(filepath, new_articles, state_code)
 
         # Update the 'state' field in the merged file
