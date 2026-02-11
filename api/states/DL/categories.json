@@ -101,6 +101,25 @@
     ],
     "Events": [
       {
+        "id": 12,
+        "title": "AI Impact Summit in Delhi: What to know — dates, venue, security, traffic and global buzz",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/ai-impact-summit-in-delhi-what-to-know-dates-venue-security-traffic-and-global-buzz/articleshow/128187055.cms",
+        "summary": "New Delhi will host the AI Impact Summit 2026 from February 19-20, expecting 1.5 lakh delegates, including global leaders like French President Macron. The event will have high-security measures in place, along with traffic diversions in central Delhi from February 18-20. The summit coincides with Class XII board exams, which may be affected by the security and traffic arrangements.",
+        "date_published": "2026-02-11",
+        "source_name": "Times of India - Delhi",
+        "category": "Events",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 129,
         "title": "OpenAI CEO Sam Altman likely to visit India in Feb: ChatGPT maker expected at India AI Impact Summit 2026 - What we know so far",
         "url": "https://www.etnownews.com/technology/openai-ceo-sam-altman-likely-to-visit-india-in-feb-chatgpt-maker-expected-at-india-ai-impact-summit-2026-what-we-know-so-far-article-153497742",
@@ -140,6 +159,44 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 6,
+        "title": "Care.fi raises $8 Mn in Series A round led by July Ventures",
+        "url": "https://entrackr.com/snippets/carefi-raises-8-mn-in-series-a-round-led-by-july-ventures-11096132",
+        "summary": "Care.fi, a healthcare-focused fintech startup, has raised $8 million in a Series A funding round led by July Ventures, with $5 million in equity and $3 million in debt financing. The round also saw participation from Peak XV Partners, Accion Venture Lab, and Sadev Ventures, among others. The funds will be used to expand operations into additional Indian cities.",
+        "date_published": "2026-02-11",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "GMC school gets AI lab for 238 female students",
+        "url": "https://timesofindia.indiatimes.com/city/noida/gmc-school-gets-ai-lab-for-238-female-students/articleshow/128174215.cms",
+        "summary": "A new AI lab has been established at a GMC school, specifically catering to 238 female students. The lab aims to provide these students with hands-on experience and training in artificial intelligence. This initiative is expected to enhance their skills and knowledge in the field of AI.",
+        "date_published": "2026-02-11",
+        "source_name": "Times of India - Noida",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
       {
         "id": 8,
         "title": "The AI Security Control Plane",
@@ -296,5 +353,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments",
+    "Events"
+  ]
 }

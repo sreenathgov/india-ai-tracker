@@ -3,6 +3,25 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 1,
+        "title": "Indian govt issues new AI content rules for social media, sets 3-hour takedown window",
+        "url": "https://www.etnownews.com/technology/indian-govt-issues-new-ai-content-rules-for-social-media-sets-3-hour-takedown-window-article-153592263",
+        "summary": "The Indian government has introduced new rules for social media platforms regarding AI-generated content, requiring them to use automated tools to detect and prevent its circulation. Platforms must take down such content within a 3-hour window. The revised framework aims to regulate the spread of illegal AI-generated content on social media.",
+        "date_published": "2026-02-10",
+        "source_name": "ET Now Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "India&#039;s sovereign AI model strategy delivering results",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-revolution-sarvam-ais-breakthrough-and-governments-support/128095734",
@@ -584,12 +603,69 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "From AI for analytics to agents for action",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/from-ai-for-analytics-to-agents-for-action/128187518",
+        "summary": "Walmart Global Tech India's senior VP, Balu Chaturvedula, notes a shift from analytical AI to agentic systems that take action. These systems are transforming business models and talent strategies, with applications in product cataloging and customer service. Speed and a mindset shift are crucial for organizational change and employee adoption of these new systems.",
+        "date_published": "2026-02-11",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Freshworks posts $223 Mn Q4 CY25 revenue, achieves GAAP operating profit",
+        "url": "https://entrackr.com/fintrackr/freshworks-posts-223-mn-q4-cy25-revenue-achieves-gaap-operating-profit-11095611",
+        "summary": "Freshworks reported a 15% year-on-year increase in Q4 CY25 revenue to $223 million, with a 4% quarter-on-quarter rise from $215 million in Q3 CY25. The company achieved GAAP operating profit during the quarter, marking a significant milestone. Freshworks' revenue growth indicates a positive trend for the NASDAQ-listed SaaS company.",
+        "date_published": "2026-02-11",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "AI infrastructure arms race heats up; Helping women return to public life after breast cancer",
         "url": "https://yourstory.com/2026/02/ai-infrastructure-arms-race-heats-up-women-public-life-breast-cancer",
         "summary": "Big Tech companies are investing billions in AI infrastructure, including data centres and custom chips. Meanwhile, organizations like Saaisha India Foundation are using innovative approaches, such as hand-knitted prostheses, to support women after breast cancer. Java Capital has launched a new fund to back seed-stage deeptech startups, further fueling the AI ecosystem.",
         "date_published": "2026-02-10",
         "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "India ranks second globally in enterprise AI adoption, security challenges loom",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-emerges-as-a-global-ai-leader-amid-security-challenges-report/128153871",
+        "summary": "India ranks second globally in enterprise AI adoption, but faces significant security challenges. The growth of AI adoption has also led to increased vulnerabilities, with agentic AI being weaponized and exploits being discovered quickly. As a result, enterprises must prioritize understanding AI usage and implementing robust data protection measures.",
+        "date_published": "2026-02-10",
+        "source_name": "ET CIO - AI",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -1841,12 +1917,50 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 7,
+        "title": "ThirdAI raises $3 Mn led by Endiya Partners and Capria Ventures",
+        "url": "https://entrackr.com/snippets/thirdai-raises-3-mn-led-by-endiya-partners-and-capria-ventures-11095630",
+        "summary": "Deeptech startup ThirdAI has raised $3 million in a seed funding round co-led by Endiya Partners and Capria Ventures. The company plans to use the fresh capital to scale product development, expand its teams, and accelerate deployments with semiconductor toolmakers and fabrication facilities. ThirdAI is an India-US-based company building a causal AI-powered platform for root cause analysis and troubleshooting in semiconductor manufacturing.",
+        "date_published": "2026-02-11",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "AI software testing startup BotGauge AI raises $2 Mn led by Surface Ventures",
         "url": "https://entrackr.com/snippets/ai-software-testing-startup-botgauge-ai-raises-2-mn-led-by-surface-ventures-11092144",
         "summary": "BotGauge AI, a software testing startup, has raised $2 million in funding led by Surface Ventures, with participation from IA Seed Ventures and Saka Ventures. The fresh capital will be used to strengthen product development, expand the engineering team, and scale operations in international markets. The company, founded in 2024, builds a software testing platform that uses autonomous AI agents to automate quality assurance processes.",
         "date_published": "2026-02-10",
         "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "India&#039;s sovereign AI models outperform global giants like ChatGPT",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-breakthrough-sarvam-models-outshine-global-leaders/128148838",
+        "summary": "India's homegrown AI models are achieving global success, with government-backed startup Sarvam developing tools that outperform major international players. Sarvam's AI models are surpassing the capabilities of global giants like ChatGPT. This milestone marks a significant achievement for India's AI industry, showcasing its potential to compete with international leaders.",
+        "date_published": "2026-02-10",
+        "source_name": "ET CIO - AI",
         "category": "AI Start-Up News",
         "state_codes": [
           "IN"
@@ -2299,7 +2413,7 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }

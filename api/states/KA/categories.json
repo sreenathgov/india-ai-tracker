@@ -353,6 +353,25 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "Sarvam AI outperforms Google Gemini and ChatGPT on India-specific AI tasks",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/sarvam-ai-surpasses-google-gemini-and-chatgpt-in-indian-language-tasks/128146073",
+        "summary": "Sarvam AI's new models, Sarvam Vision and Bulbul V3, have outperformed industry giants like Google Gemini and ChatGPT on India-specific AI tasks. The Bengaluru-based company is making a significant impact in the global AI scene with its innovative models. Sarvam AI's achievement surpasses that of major players like Google and OpenAI.",
+        "date_published": "2026-02-10",
+        "source_name": "ET CIO - AI",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Loop AI raises $14 M in Series A round led by Nyca Partners",
         "url": "https://yourstory.com/2026/02/loop-ai-raises-series-a-round-led-by-nyca-partners",

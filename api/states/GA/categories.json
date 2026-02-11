@@ -25,6 +25,25 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 13,
+        "title": "Govt depts, corporations identifying problems to resolve through AI",
+        "url": "https://timesofindia.indiatimes.com/city/goa/govt-depts-corporations-identifying-problems-to-resolve-through-ai/articleshow/128171918.cms",
+        "summary": "Government departments and corporations are identifying problems to be resolved through artificial intelligence. They are working to utilize AI to address various issues, although specific details on the problems and AI solutions are not provided. The initiative aims to leverage AI technology to improve operations and efficiency.",
+        "date_published": "2026-02-11",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 20,
         "title": "AI traffic signals with smart cameras at 92 locations in Goa",
         "url": "https://timesofindia.indiatimes.com/city/goa/ai-traffic-signals-with-smart-cameras-at-92-locations-in-goa/articleshow/127808624.cms",
@@ -46,5 +65,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

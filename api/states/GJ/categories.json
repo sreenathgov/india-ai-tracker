@@ -102,6 +102,44 @@
     ],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "IIT Gandhinagar develops AI framework for pollen image classification",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/iit-gandhinagar-develops-ai-framework-for-pollen-image-classification/articleshow/128173340.cms",
+        "summary": "IIT Gandhinagar has developed an AI framework for classifying pollen images, utilizing artificial intelligence technology. The framework is designed to improve the accuracy of pollen image classification, which can have various applications in fields such as botany and environmental science. This development is a significant achievement in the field of AI research and its potential applications.",
+        "date_published": "2026-02-11",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "From cowsheds to cloud: Amul Diary launches AI assistant ‘Sarlaben’",
+        "url": "https://timesofindia.indiatimes.com/city/vadodara/from-cowsheds-to-cloud-amul-diary-launches-ai-assistant-sarlaben/articleshow/128172572.cms",
+        "summary": "Amul Dairy has launched an AI assistant named 'Sarlaben' to enhance its operations. The AI assistant is expected to improve efficiency and productivity in the dairy's various functions. Sarlaben marks a significant technological advancement for Amul, transitioning from traditional cowsheds to cloud-based services.",
+        "date_published": "2026-02-11",
+        "source_name": "Times of India - Vadodara",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 161,
         "title": "IIM-A gets Rs 100cr endowment to establish school of AI",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/iim-a-gets-rs-100cr-endowment-to-establish-school-of-ai/articleshow/127784244.cms",
@@ -183,5 +221,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
