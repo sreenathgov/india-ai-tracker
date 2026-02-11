@@ -443,7 +443,19 @@ async function openStatePanel(stateName) {
     const stateCode = STATE_CODE_MAP[stateName];
     if (!stateCode) {
         console.warn(`State "${stateName}" not found in STATE_CODE_MAP.`);
-        showPanel(stateName, '<div class="no-updates">This region is not yet configured in the tracker.</div>');
+        showPanel(stateName, `
+            <div class="no-updates">
+                <dotlottie-player
+                    src="added-assets/Box empty.lottie"
+                    background="transparent"
+                    speed="1"
+                    style="width: 200px; height: 200px; margin: 0 auto;"
+                    loop
+                    autoplay>
+                </dotlottie-player>
+                <p style="margin-top: 1rem; color: var(--text-tertiary);">This region is not yet configured in the tracker.</p>
+            </div>
+        `);
         return;
     }
 
@@ -474,7 +486,19 @@ function buildCategoryCards(categories, todayUpdates = []) {
     });
 
     if (totalUpdates === 0) {
-        return '<div class="no-updates">No AI policy updates available yet for this state.</div>';
+        return `
+            <div class="no-updates">
+                <dotlottie-player
+                    src="added-assets/Box empty.lottie"
+                    background="transparent"
+                    speed="1"
+                    style="width: 200px; height: 200px; margin: 0 auto;"
+                    loop
+                    autoplay>
+                </dotlottie-player>
+                <p style="margin-top: 1rem; color: var(--text-tertiary);">No AI policy updates available yet for this state.</p>
+            </div>
+        `;
     }
 
     let html = '<div class="category-rail">';
