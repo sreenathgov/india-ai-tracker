@@ -19,6 +19,9 @@
                 </a>
             </div>
             <div class="flex items-center space-x-4">
+                <button onclick="openExportModal()" class="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 shadow-sm">
+                    📥 Export Data
+                </button>
                 {% if pending.has_changes %}
                 <button onclick="publishChanges()" class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 shadow-sm">
                     💾 Save & Publish
@@ -161,6 +164,94 @@
     {% endif %}
 </main>
 
+<!-- Export Modal -->
+<div id="exportModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden items-center justify-center z-50" onclick="closeExportModal(event)">
+    <div class="bg-white rounded-lg p-6 max-w-md mx-auto" onclick="event.stopPropagation()">
+        <h3 class="text-lg font-semibold mb-4">Export Articles</h3>
+
+        <div class="space-y-4">
+            <!-- Time Period -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Time Period</label>
+                <select id="exportTimePeriod" class="w-full border border-gray-300 rounded-md px-3 py-2" onchange="toggleCustomDateRange()">
+                    <option value="7">Last 7 days</option>
+                    <option value="14">Last 14 days</option>
+                    <option value="21">Last 21 days</option>
+                    <option value="30">Last 30 days</option>
+                    <option value="custom">Custom date range</option>
+                </select>
+            </div>
+
+            <!-- Custom Date Range (hidden by default) -->
+            <div id="customDateRange" class="hidden space-y-2">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Start Date</label>
+                    <input type="date" id="exportStartDate" class="w-full border border-gray-300 rounded-md px-3 py-2">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">End Date</label>
+                    <input type="date" id="exportEndDate" class="w-full border border-gray-300 rounded-md px-3 py-2">
+                </div>
+            </div>
+
+            <!-- Format -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Format</label>
+                <select id="exportFormat" class="w-full border border-gray-300 rounded-md px-3 py-2">
+                    <option value="csv">CSV (Excel compatible)</option>
+                    <option value="xlsx">XLSX (Excel native)</option>
+                </select>
+            </div>
+
+            <!-- Category Filter (Optional) -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Category (Optional)</label>
+                <select id="exportCategory" class="w-full border border-gray-300 rounded-md px-3 py-2">
+                    <option value="">All Categories</option>
+                    <option value="Policies and Initiatives">Policies and Initiatives</option>
+                    <option value="Events">Events</option>
+                    <option value="Major AI Developments">Major AI Developments</option>
+                    <option value="AI Start-Up News">AI Start-Up News</option>
+                </select>
+            </div>
+
+            <!-- State Filter (Optional) -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">State (Optional)</label>
+                <select id="exportState" class="w-full border border-gray-300 rounded-md px-3 py-2">
+                    <option value="">All States</option>
+                    <option value="IN">All India</option>
+                    <option value="TN">Tamil Nadu</option>
+                    <option value="KA">Karnataka</option>
+                    <option value="MH">Maharashtra</option>
+                    <option value="DL">Delhi</option>
+                    <option value="TG">Telangana</option>
+                    <option value="AP">Andhra Pradesh</option>
+                    <option value="WB">West Bengal</option>
+                    <option value="GJ">Gujarat</option>
+                    <option value="RJ">Rajasthan</option>
+                    <option value="UP">Uttar Pradesh</option>
+                    <option value="KL">Kerala</option>
+                    <option value="PB">Punjab</option>
+                    <option value="HR">Haryana</option>
+                    <option value="MP">Madhya Pradesh</option>
+                    <option value="GA">Goa</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex gap-3 mt-6">
+            <button onclick="closeExportModal()" class="flex-1 px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50">
+                Cancel
+            </button>
+            <button onclick="downloadExport()" class="flex-1 px-4 py-2 bg-green-600 text-white rounded-md text-sm font-medium hover:bg-green-700">
+                📥 Download
+            </button>
+        </div>
+    </div>
+</div>
+
 <script>
 function publishChanges() {
     if (!confirm('Are you sure you want to save and publish all changes to GitHub?')) {
@@ -261,6 +352,109 @@ function discardChanges() {
             alert('❌ Error: ' + (data.error || 'Unknown error'));
         }
     });
+}
+
+// ==================== EXPORT FUNCTIONS ====================
+
+function openExportModal() {
+    // Set default dates
+    const today = new Date().toISOString().split('T')[0];
+    const sevenDaysAgo = new Date();
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+
+    document.getElementById('exportStartDate').value = sevenDaysAgo.toISOString().split('T')[0];
+    document.getElementById('exportEndDate').value = today;
+
+    // Show modal
+    document.getElementById('exportModal').classList.remove('hidden');
+    document.getElementById('exportModal').classList.add('flex');
+}
+
+function closeExportModal(event) {
+    // Close if clicking backdrop or close button
+    if (!event || event.target.id === 'exportModal') {
+        document.getElementById('exportModal').classList.add('hidden');
+        document.getElementById('exportModal').classList.remove('flex');
+    }
+}
+
+function toggleCustomDateRange() {
+    const period = document.getElementById('exportTimePeriod').value;
+    const customRange = document.getElementById('customDateRange');
+
+    if (period === 'custom') {
+        customRange.classList.remove('hidden');
+    } else {
+        customRange.classList.add('hidden');
+    }
+}
+
+async function downloadExport() {
+    const timePeriod = document.getElementById('exportTimePeriod').value;
+    const format = document.getElementById('exportFormat').value;
+    const category = document.getElementById('exportCategory').value;
+    const state = document.getElementById('exportState').value;
+
+    // Build URL parameters
+    let params = new URLSearchParams({
+        format: format,
+        approved_only: 'true'
+    });
+
+    if (category) params.append('category', category);
+    if (state) params.append('state', state);
+
+    if (timePeriod === 'custom') {
+        const startDate = document.getElementById('exportStartDate').value;
+        const endDate = document.getElementById('exportEndDate').value;
+
+        if (!startDate || !endDate) {
+            alert('Please select both start and end dates');
+            return;
+        }
+
+        params.append('start_date', startDate);
+        params.append('end_date', endDate);
+    } else {
+        params.append('days', timePeriod);
+    }
+
+    try {
+        // Fetch the export file
+        const response = await fetch(`/api/export?${params.toString()}`);
+
+        if (!response.ok) {
+            const error = await response.json();
+            alert(`Export failed: ${error.error || 'Unknown error'}`);
+            return;
+        }
+
+        // Get filename from Content-Disposition header
+        const contentDisposition = response.headers.get('content-disposition');
+        let filename = `export.${format}`;
+        if (contentDisposition) {
+            const match = contentDisposition.match(/filename="?(.+)"?/);
+            if (match) filename = match[1];
+        }
+
+        // Download the file
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+
+        // Close modal and show success message
+        closeExportModal();
+        alert(`✅ Exported successfully: ${filename}`);
+    } catch (error) {
+        console.error('Export error:', error);
+        alert(`❌ Export failed: ${error.message}`);
+    }
 }
 </script>
 {% endblock %}

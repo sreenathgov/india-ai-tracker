@@ -757,6 +757,7 @@
                         <option value="true">Approved</option>
                         <option value="false">Pending</option>
                     </select>
+                    <button class="btn btn-secondary" onclick="openExportModal()">📥 Export Data</button>
                 </div>
 
                 <!-- Bulk Actions Bar -->
@@ -1057,6 +1058,53 @@
         </div>
     </div>
 
+    <!-- Export Modal -->
+    <div class="modal" id="exportModal">
+        <div class="modal-content" style="max-width: 500px;">
+            <h2>Export Data</h2>
+            <p style="color: var(--tertiary); margin-bottom: 1.5rem;">Download approved articles as CSV or XLSX</p>
+
+            <div style="margin-bottom: 1rem;">
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Time Period</label>
+                <select id="exportTimePeriod" style="width: 100%; padding: 0.5rem; border: 1px solid var(--accent); border-radius: 4px;">
+                    <option value="custom">Custom Date Range</option>
+                    <option value="7">Last 7 days</option>
+                    <option value="14">Last 14 days</option>
+                    <option value="21">Last 21 days</option>
+                    <option value="30">Last 30 days</option>
+                </select>
+            </div>
+
+            <div id="customDateRange" style="margin-bottom: 1rem;">
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Start Date</label>
+                <input type="date" id="exportStartDate" style="width: 100%; padding: 0.5rem; border: 1px solid var(--accent); border-radius: 4px; margin-bottom: 0.5rem;">
+
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">End Date</label>
+                <input type="date" id="exportEndDate" style="width: 100%; padding: 0.5rem; border: 1px solid var(--accent); border-radius: 4px;">
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Format</label>
+                <select id="exportFormat" style="width: 100%; padding: 0.5rem; border: 1px solid var(--accent); border-radius: 4px;">
+                    <option value="csv">CSV (Excel compatible)</option>
+                    <option value="xlsx">XLSX (Excel native)</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: flex; align-items: center; cursor: pointer;">
+                    <input type="checkbox" id="exportApprovedOnly" checked style="margin-right: 0.5rem;">
+                    <span>Only export approved articles</span>
+                </label>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeExportModal()">Cancel</button>
+                <button class="btn btn-success" onclick="downloadExport()">📥 Download</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Toast notification -->
     <div class="toast" id="toast"></div>
 
@@ -1217,7 +1265,7 @@
             }
 
             tbody.innerHTML = updates.map(u => `
-                <tr data-id="${u.id}" class="${document.querySelector(`.row-select[value="${u.id}"]`)?.checked ? 'selected' : ''}">
+                <tr data-id="${u.id}">
                     <td><input type="checkbox" class="row-select" value="${u.id}" onchange="updateBulkUI()"></td>
                     <td class="title-cell">
                         <a href="${u.url}" target="_blank" title="${u.title}">${u.title}</a>
@@ -1762,6 +1810,92 @@
                 }
             } catch (error) {
                 showToast('Import failed', 'error');
+            }
+        }
+
+        // ==================== EXPORT ====================
+        function openExportModal() {
+            // Set default date to today
+            const today = new Date().toISOString().split('T')[0];
+            const thirtyDaysAgo = new Date();
+            thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+
+            document.getElementById('exportStartDate').value = thirtyDaysAgo.toISOString().split('T')[0];
+            document.getElementById('exportEndDate').value = today;
+
+            // Show/hide custom date range based on selection
+            document.getElementById('exportTimePeriod').addEventListener('change', function() {
+                const customRange = document.getElementById('customDateRange');
+                customRange.style.display = this.value === 'custom' ? 'block' : 'none';
+            });
+
+            // Trigger initial state
+            document.getElementById('customDateRange').style.display = 'block';
+
+            document.getElementById('exportModal').style.display = 'flex';
+        }
+
+        function closeExportModal() {
+            document.getElementById('exportModal').style.display = 'none';
+        }
+
+        async function downloadExport() {
+            const timePeriod = document.getElementById('exportTimePeriod').value;
+            const format = document.getElementById('exportFormat').value;
+            const approvedOnly = document.getElementById('exportApprovedOnly').checked;
+
+            let url = `${API_BASE}/admin/export?format=${format}&approved_only=${approvedOnly}`;
+
+            if (timePeriod === 'custom') {
+                const startDate = document.getElementById('exportStartDate').value;
+                const endDate = document.getElementById('exportEndDate').value;
+
+                if (!startDate || !endDate) {
+                    showToast('Please select both start and end dates', 'error');
+                    return;
+                }
+
+                url += `&start_date=${startDate}&end_date=${endDate}`;
+            } else {
+                url += `&days=${timePeriod}`;
+            }
+
+            try {
+                showToast('Preparing export...', '');
+
+                // Fetch the file
+                const response = await fetch(url, { credentials: 'include' });
+
+                if (!response.ok) {
+                    const error = await response.json();
+                    showToast(`Export failed: ${error.error || 'Unknown error'}`, 'error');
+                    return;
+                }
+
+                // Get filename from Content-Disposition header or create default
+                const contentDisposition = response.headers.get('content-disposition');
+                let filename = `export.${format}`;
+                if (contentDisposition) {
+                    const match = contentDisposition.match(/filename="?(.+)"?/);
+                    if (match) filename = match[1];
+                }
+
+                // Download the file
+                const blob = await response.blob();
+                const downloadUrl = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = downloadUrl;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(downloadUrl);
+                document.body.removeChild(a);
+
+                showToast(`Exported successfully: ${filename}`, 'success');
+                closeExportModal();
+            } catch (error) {
+                console.error('Export error:', error);
+                showToast('Export failed. Check console for details.', 'error');
             }
         }
 

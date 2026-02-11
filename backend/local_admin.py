@@ -16,7 +16,7 @@ import sys
 # Add backend directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from flask import Flask, render_template, request, redirect, url_for, jsonify, flash
+from flask import Flask, render_template, request, redirect, url_for, jsonify, flash, send_file
 from admin.services.data_manager import DataManager
 from admin.services.git_manager import GitManager
 from datetime import datetime
@@ -289,6 +289,94 @@ def discard_changes():
     """Discard all pending changes"""
     data_mgr.discard_changes()
     return jsonify({'success': True, 'message': 'All changes discarded'})
+
+
+@app.route('/api/export', methods=['GET'])
+def export_articles():
+    """
+    Export articles from JSON files with time-range filtering
+
+    Query Parameters:
+        - days: int (7, 14, 21, or 30) - Look back N days from today
+        - start_date: str (YYYY-MM-DD) - Custom start date
+        - end_date: str (YYYY-MM-DD) - Custom end date
+        - format: str ('csv' or 'xlsx') - Export format (default: 'csv')
+        - approved_only: str ('true' or 'false') - Filter to approved articles (default: 'true')
+        - category: str - Optional category filter
+        - state: str - Optional state filter
+
+    Returns:
+        File download with appropriate Content-Type and Content-Disposition headers
+    """
+    try:
+        # Lazy import to avoid circular dependency
+        from admin.services.export_service import ExportService
+
+        # Parse query parameters
+        days = request.args.get('days', type=int)
+        start_date = request.args.get('start_date')
+        end_date = request.args.get('end_date')
+        format_type = request.args.get('format', 'csv').lower()
+        approved_only = request.args.get('approved_only', 'true').lower() == 'true'
+        category = request.args.get('category')
+        state = request.args.get('state')
+
+        # Validate parameters
+        if not any([days, (start_date and end_date)]):
+            return jsonify({
+                'error': 'Must specify either "days" parameter or both "start_date" and "end_date"',
+                'examples': [
+                    '/api/export?days=7&format=csv',
+                    '/api/export?start_date=2026-01-01&end_date=2026-01-31&format=xlsx'
+                ]
+            }), 400
+
+        if format_type not in ['csv', 'xlsx']:
+            return jsonify({
+                'error': f'Invalid format: {format_type}. Must be "csv" or "xlsx"'
+            }), 400
+
+        # Load data from JSON files
+        data_mgr.load_all_data()
+
+        # Generate export
+        try:
+            file_buffer, stats = ExportService.generate_export_from_json(
+                data_manager=data_mgr,
+                format=format_type,
+                days=days,
+                start_date=start_date,
+                end_date=end_date,
+                approved_only=approved_only,
+                category=category,
+                state=state
+            )
+        except ValueError as e:
+            return jsonify({'error': f'Invalid parameters: {str(e)}'}), 400
+        except RuntimeError as e:
+            return jsonify({'error': str(e)}), 500
+
+        # Generate filename with timestamp and date range
+        timestamp = datetime.utcnow().strftime('%Y%m%d_%H%M%S')
+        filename = f"india_ai_tracker_export_{stats['start_date']}_to_{stats['end_date']}_{timestamp}.{format_type}"
+
+        # Set appropriate Content-Type
+        content_type = 'text/csv' if format_type == 'csv' else 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+
+        # Return file with download headers
+        return send_file(
+            file_buffer,
+            mimetype=content_type,
+            as_attachment=True,
+            download_name=filename
+        )
+
+    except Exception as e:
+        # Log error for debugging
+        print(f"Export error: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return jsonify({'error': f'Export failed: {str(e)}'}), 500
 
 
 @app.route('/updates/<path:article_url>/delete', methods=['POST'])

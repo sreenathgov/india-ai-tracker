@@ -2,7 +2,7 @@
 India AI Policy Tracker - Backend
 """
 
-from flask import Flask, jsonify, request, session, redirect, url_for, render_template_string
+from flask import Flask, jsonify, request, session, redirect, url_for, render_template_string, send_file
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from functools import wraps
@@ -921,18 +921,110 @@ def admin_import_sources():
         return jsonify({'error': str(e)}), 500
 
 
+# ==================== ADMIN EXPORT ROUTE ====================
+
+@app.route('/api/admin/export', methods=['GET'])
+@login_required
+def admin_export_articles():
+    """
+    Export admitted articles within a time range
+
+    Query Parameters:
+        - days: int (7, 14, 21, or 30) - Look back N days from today
+        - start_date: str (YYYY-MM-DD) - Custom start date
+        - end_date: str (YYYY-MM-DD) - Custom end date
+        - format: str ('csv' or 'xlsx') - Export format (default: 'csv')
+        - approved_only: str ('true' or 'false') - Filter to approved articles (default: 'true')
+
+    Returns:
+        File download with appropriate Content-Type and Content-Disposition headers
+
+    Examples:
+        /api/admin/export?days=7&format=csv
+        /api/admin/export?start_date=2026-01-01&end_date=2026-01-31&format=xlsx
+        /api/admin/export?days=14&format=csv&approved_only=false
+    """
+    try:
+        # Lazy import to avoid circular dependency
+        from admin.services.export_service import ExportService
+
+        # Parse query parameters
+        days = request.args.get('days', type=int)
+        start_date = request.args.get('start_date')
+        end_date = request.args.get('end_date')
+        format_type = request.args.get('format', 'csv').lower()
+        approved_only = request.args.get('approved_only', 'true').lower() == 'true'
+
+        # Validate parameters
+        if not any([days, (start_date and end_date)]):
+            return jsonify({
+                'error': 'Must specify either "days" parameter or both "start_date" and "end_date"',
+                'examples': [
+                    '/api/admin/export?days=7&format=csv',
+                    '/api/admin/export?start_date=2026-01-01&end_date=2026-01-31&format=xlsx'
+                ]
+            }), 400
+
+        if format_type not in ['csv', 'xlsx']:
+            return jsonify({
+                'error': f'Invalid format: {format_type}. Must be "csv" or "xlsx"'
+            }), 400
+
+        # Initialize export service
+        export_service = ExportService(db.session)
+
+        # Generate export
+        try:
+            file_buffer, stats = export_service.generate_export(
+                format=format_type,
+                days=days,
+                start_date=start_date,
+                end_date=end_date,
+                approved_only=approved_only
+            )
+        except ValueError as e:
+            return jsonify({'error': f'Invalid parameters: {str(e)}'}), 400
+        except RuntimeError as e:
+            return jsonify({'error': str(e)}), 500
+
+        # Generate filename with timestamp and date range
+        timestamp = datetime.utcnow().strftime('%Y%m%d_%H%M%S')
+        filename = f"india_ai_tracker_export_{stats['start_date']}_to_{stats['end_date']}_{timestamp}.{format_type}"
+
+        # Set appropriate Content-Type
+        content_type = 'text/csv' if format_type == 'csv' else 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+
+        # Return file with download headers
+        return send_file(
+            file_buffer,
+            mimetype=content_type,
+            as_attachment=True,
+            download_name=filename
+        )
+
+    except Exception as e:
+        # Log error for debugging
+        app.logger.error(f"Export error: {str(e)}", exc_info=True)
+        return jsonify({'error': f'Export failed: {str(e)}'}), 500
+
+
 # ==================== ADMIN PAGE ROUTE ====================
 
-@app.route('/admin')
-@login_required
-def admin_page():
-    """Serve the admin panel (redirect to static file or serve template)."""
-    # Read and serve the admin.html file
-    admin_html_path = Path(__file__).parent.parent / 'admin.html'
-    if admin_html_path.exists():
-        with open(admin_html_path, 'r') as f:
-            return f.read()
-    return redirect('/admin/login')
+# OLD ADMIN ROUTE - DEPRECATED as of 2026-02-11
+# The old admin.html has been moved to archive/admin_old.html
+# New admin interface is at backend/local_admin.py (port 5002)
+# To use the new admin: cd backend && python local_admin.py
+#
+# @app.route('/admin')
+# @login_required
+# def admin_page():
+#     """Serve the admin panel (redirect to static file or serve template)."""
+#     # Read and serve the admin.html file
+#     admin_html_path = Path(__file__).parent.parent / 'admin.html'
+#     if admin_html_path.exists():
+#         with open(admin_html_path, 'r') as f:
+#             return f.read()
+#     return redirect('/admin/login')
 
 
 if __name__ == '__main__':
