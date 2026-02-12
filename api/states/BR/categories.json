@@ -25,6 +25,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 19,
+        "title": "Govt plans to set up AI centre of excellence at IIT-P",
+        "url": "https://timesofindia.indiatimes.com/city/patna/govt-plans-to-set-up-ai-centre-of-excellence-at-iit-p/articleshow/128222272.cms",
+        "summary": "The government plans to establish an AI centre of excellence at the Indian Institute of Technology Patna (IIT-P). This initiative aims to promote research and development in artificial intelligence. The centre will be set up to foster innovation and advancements in the field of AI.",
+        "date_published": "2026-02-12",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 12,
         "title": "CNLU holds round table conference on AI",
         "url": "https://timesofindia.indiatimes.com/city/patna/cnlu-holds-round-table-conference-on-ai/articleshow/128125769.cms",
@@ -46,5 +65,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

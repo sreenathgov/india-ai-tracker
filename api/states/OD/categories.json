@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 18,
+        "title": "Govt signs MoU with ARF for AI-driven urban governance",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/govt-signs-mou-with-arf-for-ai-driven-urban-governance/articleshow/128218526.cms",
+        "summary": "Odisha's housing department has partnered with IIT Kanpur's AIRAWAT Research Foundation to enhance urban governance through artificial intelligence. The collaboration aims to leverage AI for better urban planning and service delivery, and an AI Project Management Unit will be established. This initiative will create a multi-year AI roadmap for Odisha's urban development goals.",
+        "date_published": "2026-02-12",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "OD",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 14,
         "title": "1,700 delegates from 24 countries to attend AI, fintech meet: Govt",
         "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/1700-delegates-from-24-countries-to-attend-ai-fintech-meet-govt/articleshow/127916531.cms",
@@ -65,5 +85,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

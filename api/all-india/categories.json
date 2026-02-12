@@ -3,6 +3,25 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 8,
+        "title": "IndiaAI Mission join hands with Coursera to offer ‘YUVA AI for ALL’ foundational course on AI",
+        "url": "https://government.economictimes.indiatimes.com/news/news/indiaai-mission-join-hands-with-coursera-to-offer-yuva-ai-for-all-foundational-course-on-ai/127973382",
+        "summary": "IndiaAI Mission has partnered with Coursera to offer a free foundational AI course called \"YUVA AI for ALL\" to equip citizens with essential artificial intelligence skills. The course covers AI applications, safety, and ethics, and learners will receive a government certificate upon completion. This initiative supports India's goal of becoming an AI-enabled nation.",
+        "date_published": "2026-02-11",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Indian govt issues new AI content rules for social media, sets 3-hour takedown window",
         "url": "https://www.etnownews.com/technology/indian-govt-issues-new-ai-content-rules-for-social-media-sets-3-hour-takedown-window-article-153592263",
@@ -603,6 +622,63 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Voice AI moves from an add-on to the core for Indian companies",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/voice-ai-moves-from-an-add-on-to-the-core-for-indian-companies/128236280",
+        "summary": "Indian companies are shifting their focus from text-based to voice-led AI systems, incorporating Indic languages to better serve tier-II and III cities and rural areas. This move is driven by the increasing reach of digital services in these regions. Voice AI is becoming a core component for companies, rather than just an add-on feature.",
+        "date_published": "2026-02-12",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India at the digital turning point: How virtual twins, AI and data are rewiring industry",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-at-the-digital-turning-point-how-virtual-twins-ai-and-data-are-rewiring-industry/128236196",
+        "summary": "India's manufacturers, energy majors, and infrastructure leaders are accelerating digital adoption, shifting focus from pilot projects to real impact. Virtual twins, AI, and data are key technologies driving this transformation, improving productivity, safety, and competitiveness. Industry leaders from companies like Godrej Industries and IndianOil Adani Ventures are leveraging these technologies to reshape their operations.",
+        "date_published": "2026-02-12",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Lenskart unlocks 'compounding' growth phase; Meet the women in the sciences",
+        "url": "https://yourstory.com/2026/02/lenskart-unlocks-compounding-growth-phase-meet-the-women-in-the-sciences",
+        "summary": "Lenskart is experiencing \"compounding\" growth due to its focus on market creation through remote eye testing and a centralized supply chain. Indian women are making significant contributions to scientific research, policy, and practice. Global Capability Centers (GCCs) in India are prioritizing investments in artificial intelligence (AI).",
+        "date_published": "2026-02-12",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "From AI for analytics to agents for action",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/from-ai-for-analytics-to-agents-for-action/128187518",
@@ -647,6 +723,63 @@
         "summary": "The IndiaAI 'Yuva AI for All' Mobile Showcase was launched at India Gate. The event marked the beginning of a mobile showcase that aims to promote AI awareness and education. The 'Yuva AI for All' initiative is designed to make AI accessible to all, particularly the youth of India.",
         "date_published": "2026-02-11",
         "source_name": "Digital India - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "AI, defence and energy transition to drive India’s next capex wave",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/ai-defence-and-energy-transition-to-drive-indias-next-capex-wave/128196703",
+        "summary": "India is poised for a strong industrial revival driven by a global upturn, exports, and capital expenditure. Key drivers of this growth include investments in AI infrastructure, defense spending, and energy transition. A favorable economic environment, with low inflation and no expected rate hikes until 2027, is expected to support India's growth.",
+        "date_published": "2026-02-11",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Freshworks registers profit in Q4 of 2025",
+        "url": "https://yourstory.com/2026/02/freshworks-registers-profit-in-q4-of-2025",
+        "summary": "Freshworks reported a 14% increase in revenues in the fourth quarter of 2025. The company's growth was driven in part by its AI-powered software. This surge in revenue also led to Freshworks registering a profit in the same quarter.",
+        "date_published": "2026-02-11",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 15,
+        "title": "Govt committed to protecting  farmers’ interests, says Sinha",
+        "url": "https://www.tribuneindia.com/news/j-k/govt-committed-to-protecting-farmers-interests-says-sinha",
+        "summary": "L-G Manoj Sinha has assured that the government will protect farmers' interests in the Indo-US trade deal. He highlighted the significance of agriculture for India's and J&K's development, emphasizing the need for technological advancements. Sinha advocated for the use of AI, digital farm twins, and other tools to boost yields and reduce costs in farming.",
+        "date_published": "2026-02-11",
+        "source_name": "Tribune - J&K",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -1937,6 +2070,25 @@
     "AI Start-Up News": [
       {
         "id": 7,
+        "title": "W Health Ventures announces first close of Fund II at Rs 550 Cr",
+        "url": "https://entrackr.com/snippets/w-health-ventures-announces-first-close-of-fund-ii-at-rs-550-cr-11098839",
+        "summary": "W Health Ventures has announced the first close of its second fund at Rs 550 crore, with a target corpus of Rs 630 crore. The fund will invest in 8-10 healthcare startups, with cheque sizes ranging between Rs 30-50 crore, focusing on early-stage companies. The investment focus will be on segments such as AI-enabled healthcare services, chronic care, and oncology, among others.",
+        "date_published": "2026-02-12",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
         "title": "ThirdAI raises $3 Mn led by Endiya Partners and Capria Ventures",
         "url": "https://entrackr.com/snippets/thirdai-raises-3-mn-led-by-endiya-partners-and-capria-ventures-11095630",
         "summary": "Deeptech startup ThirdAI has raised $3 million in a seed funding round co-led by Endiya Partners and Capria Ventures. The company plans to use the fresh capital to scale product development, expand its teams, and accelerate deployments with semiconductor toolmakers and fabrication facilities. ThirdAI is an India-US-based company building a causal AI-powered platform for root cause analysis and troubleshooting in semiconductor manufacturing.",
@@ -2432,7 +2584,7 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }

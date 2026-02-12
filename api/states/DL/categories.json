@@ -160,6 +160,63 @@
     ],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "‘Used to it’, say homeless, as another shift beckons ahead of Delhi AI summit",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/used-to-it-say-homeless-as-another-shift-beckons/articleshow/128221153.cms",
+        "summary": "Delhi is relocating its homeless population in preparation for a major AI summit to ensure smooth traffic and security for visiting dignitaries. Homeless individuals have expressed concerns about shelter conditions and safety, but many are accustomed to temporary displacement during such events. Authorities have assured that shelter homes will provide locker facilities and security for those relocated.",
+        "date_published": "2026-02-12",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "Traffic Cops Bring Schools On Board For AI Summit",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/traffic-cops-bring-schools-on-board-for-ai-summit/articleshow/128220879.cms",
+        "summary": "Traffic police are collaborating with schools to participate in an AI summit, aiming to promote awareness and education about artificial intelligence. The initiative brings together traffic cops and schools to explore the potential of AI in various fields. The summit is expected to foster a better understanding of AI among students and the community.",
+        "date_published": "2026-02-12",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 14,
+        "title": "Challenge is not whether to use AI, but how to use it: Justice Karol",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/challenge-is-not-whether-to-use-ai-but-how-to-use-it-justice-karol/articleshow/128218953.cms",
+        "summary": "Justice Karol states that the challenge is no longer about deciding whether to use artificial intelligence, but rather about determining how to effectively utilize it. This shift in perspective acknowledges the inevitability of AI integration and focuses on responsible implementation. The statement highlights the need for thoughtful consideration in AI adoption.",
+        "date_published": "2026-02-12",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Care.fi raises $8 Mn in Series A round led by July Ventures",
         "url": "https://entrackr.com/snippets/carefi-raises-8-mn-in-series-a-round-led-by-july-ventures-11096132",
@@ -354,7 +411,6 @@
     ]
   },
   "today_updates": [
-    "Events",
     "Major AI Developments"
   ]
 }

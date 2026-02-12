@@ -3,6 +3,45 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 9,
+        "title": "Digi push: Govt allocates Rs 225cr for UP AI Mission",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/digi-push-govt-allocates-rs-225cr-for-up-ai-mission/articleshow/128224554.cms",
+        "summary": "The Indian government has allocated Rs 225 crore for the UP AI Mission, a significant investment in the state's digital push. This allocation aims to promote artificial intelligence in Uttar Pradesh, driving technological advancements and innovation. The funding is expected to support various AI-related initiatives and projects in the region.",
+        "date_published": "2026-02-12",
+        "source_name": "Times of India - Lucknow",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 18,
+        "title": "Govt signs MoU with ARF for AI-driven urban governance",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/govt-signs-mou-with-arf-for-ai-driven-urban-governance/articleshow/128218526.cms",
+        "summary": "Odisha's housing department has partnered with IIT Kanpur's AIRAWAT Research Foundation to enhance urban governance through artificial intelligence. The collaboration aims to leverage AI for better urban planning and service delivery, and an AI Project Management Unit will be established. This initiative will create a multi-year AI roadmap for Odisha's urban development goals.",
+        "date_published": "2026-02-12",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "OD",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "How UP is leveraging AI to transform public healthcare",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/how-up-is-leveraging-ai-to-transform-public-healthcare/articleshow/127870724.cms",
@@ -84,5 +123,7 @@
     "Major AI Developments": [],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }
