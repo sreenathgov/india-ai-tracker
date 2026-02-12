@@ -34,6 +34,9 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
 <body>
+    <!-- Infrastructure Grid Background -->
+    <canvas id="infrastructure-grid" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;"></canvas>
+
     <div class="page-wrapper">
         <!-- LAYER 1: Institutional Header (Persistent) -->
         <!-- Note: Staggered menu will be injected here by staggered-menu.js -->
@@ -128,6 +131,7 @@
         </footer>
     </div>
 
+    <script src="js/infrastructure-grid.js"></script>
     <script src="js/staggered-menu.js"></script>
     <script src="js/app-final.js?v=17"></script>
 </body>
