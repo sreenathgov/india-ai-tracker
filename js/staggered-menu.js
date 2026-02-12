@@ -12,7 +12,7 @@ class StaggeredMenu {
       socialItems: [],
       displaySocials: true,
       displayItemNumbering: true,
-      logoUrl: 'assets/images/KANAN-LABS-WEBSITELOGO.png',
+      logoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png',
       mobileLogoUrl: 'KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png',
       mobileOpenLogoUrl: 'KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-WHITEBG.png',
       menuButtonColor: '#f4ebd0',

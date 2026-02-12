@@ -328,10 +328,12 @@ async function initMap() {
     });
 
     // Add tile layer with buffer for pre-loading tiles beyond viewport
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    // Using light_nolabels for clean appearance (no city/country names)
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
         keepBuffer: 4,         // Pre-load 4 tile rows/columns beyond viewport
         updateWhenIdle: false, // Update tiles during panning, not after
-        updateWhenZooming: true
+        updateWhenZooming: true,
+        attribution: '&copy; <a href="https://carto.com/">CARTO</a>'
     }).addTo(map);
 
     // Pre-fetch recent updates count for all states
@@ -359,7 +361,7 @@ async function fetchRecentUpdates() {
 }
 
 function loadGeoJSON() {
-    fetch('js/india-states.geojson')
+    fetch('js/india-states-clean.geojson')
         .then(r => r.json())
         .then(data => {
             // Use canvas renderer with padding for smoother panning
@@ -473,12 +475,21 @@ async function openStatePanel(stateName) {
 
     currentCategoriesData = data.categories;
     currentTodayUpdates = data.todayUpdates;
-    showPanel(stateName, buildCategoryCards(data.categories, data.todayUpdates));
+    const cardsHtml = buildCategoryCards(data.categories, data.todayUpdates);
+    showPanel(stateName, cardsHtml);
+
+    // Initialize Magic Bento effects after DOM update
+    setTimeout(() => {
+        const bentoGrid = document.querySelector('#panelContent .bento-grid');
+        if (bentoGrid && typeof window.initMagicBento === 'function') {
+            window.initMagicBento(bentoGrid);
+        }
+    }, 100);
 }
 
-// Build horizontal category cards (collapsed by default)
+// Build premium bento-box category cards
 function buildCategoryCards(categories, todayUpdates = []) {
-    console.log('Building category cards with todayUpdates:', todayUpdates);
+    console.log('Building bento cards with todayUpdates:', todayUpdates);
 
     let totalUpdates = 0;
     CATEGORY_ORDER.forEach(cat => {
@@ -501,7 +512,7 @@ function buildCategoryCards(categories, todayUpdates = []) {
         `;
     }
 
-    let html = '<div class="category-rail">';
+    let html = '<div class="bento-grid bento-section" id="bentoGrid">';
 
     CATEGORY_ORDER.forEach((categoryName, index) => {
         const updates = categories[categoryName] || [];
@@ -514,23 +525,21 @@ function buildCategoryCards(categories, todayUpdates = []) {
             console.log(`✓ ${categoryName} has today updates - adding indicator`);
         }
 
+        // Simple centered title only
+        const cardTitle = config.shortName;
+        const badgeText = count === 0 ? 'No updates' : `${count}`;
+
         html += `
-            <div class="category-card-compact ${hasUpdates ? '' : 'empty'}"
+            <div class="magic-bento-card ${hasUpdates ? '' : 'empty'}"
                  data-category="${categoryName}"
                  data-index="${index}"
                  onclick="expandCategory('${categoryName}')">
-                <div class="card-icon">
-                    ${config.icon}
-                    ${hasTodayUpdates ? '<span class="new-indicator" title="New updates today"></span>' : ''}
-                </div>
-                <div class="card-info">
-                    <span class="card-name">${config.shortName}</span>
-                    <span class="card-count">${count} update${count !== 1 ? 's' : ''}</span>
-                </div>
-                <div class="card-expand-hint">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
+                <div class="magic-bento-card__content">
+                    <h2 class="magic-bento-card__title">${cardTitle}</h2>
+                    <div class="magic-bento-card__badge">
+                        ${badgeText}
+                        ${hasTodayUpdates ? '<span class="new-indicator" title="New updates today"></span>' : ''}
+                    </div>
                 </div>
             </div>
         `;
@@ -567,7 +576,7 @@ function expandCategory(categoryName) {
 
     // Update active state on cards within the current view's container
     const containerSelector = currentViewMode === 'allIndia' ? '#allIndiaPanelContent' : '#panelContent';
-    document.querySelectorAll(`${containerSelector} .category-card-compact`).forEach(card => {
+    document.querySelectorAll(`${containerSelector} .magic-bento-card`).forEach(card => {
         card.classList.remove('active');
         if (card.dataset.category === categoryName) {
             card.classList.add('active');
@@ -752,7 +761,7 @@ function collapseCategory() {
 
     // Remove active state from cards in the current view's container
     const containerSelector = currentViewMode === 'allIndia' ? '#allIndiaPanelContent' : '#panelContent';
-    document.querySelectorAll(`${containerSelector} .category-card-compact`).forEach(card => {
+    document.querySelectorAll(`${containerSelector} .magic-bento-card`).forEach(card => {
         card.classList.remove('active');
     });
 
@@ -841,7 +850,7 @@ function closePanel() {
         });
     }, TRANSITION_DURATION);
 
-    // Show feed panel AFTER side panel fully closes
+    // Show feed panel AFTER side panel fully closes (clean handoff)
     setTimeout(() => {
         showFeedPanel();
     }, TRANSITION_DURATION + 100);
@@ -940,7 +949,16 @@ async function loadAllIndiaContent() {
 
         currentCategoriesData = data.categories;
         currentTodayUpdates = data.today_updates || [];
-        contentEl.innerHTML = buildCategoryCards(data.categories, data.today_updates || []);
+        const cardsHtml = buildCategoryCards(data.categories, data.today_updates || []);
+        contentEl.innerHTML = cardsHtml;
+
+        // Initialize Magic Bento effects after DOM update
+        setTimeout(() => {
+            const bentoGrid = document.querySelector('#allIndiaPanelContent .bento-grid');
+            if (bentoGrid && typeof window.initMagicBento === 'function') {
+                window.initMagicBento(bentoGrid);
+            }
+        }, 100);
     } catch (error) {
         console.error('Error fetching All India data:', error);
         contentEl.innerHTML = '<div class="no-updates">Failed to load. Check if backend is running.</div>';
