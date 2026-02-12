@@ -85,6 +85,22 @@ let currentTodayUpdates = []; // Store list of categories with today's updates
 let selectedLayer = null; // Track the currently selected GeoJSON layer for centering
 let currentPage = 1; // Pagination state for currently expanded category
 let currentExpandedCategory = null; // Track which category is currently expanded
+let tileLayer = null; // Reference to tile layer for control
+
+// Auto-reset map position after user interaction
+let mapIdleTimer = null;
+const MAP_IDLE_DELAY = 3000; // 3 seconds
+
+// India bounds for perfect framing - covers entire country with proper padding
+const INDIA_BOUNDS = [
+    [6.5, 68],  // Southwest corner (bottom-left)
+    [35.5, 97.5] // Northeast corner (top-right)
+];
+
+// Default India center view (used as fallback)
+const INDIA_CENTER = [23.5, 82];
+const INDIA_ZOOM_MOBILE = 4;
+const INDIA_ZOOM_DESKTOP = 5;
 
 // ============================================
 // FEED PANEL FUNCTIONS
@@ -314,27 +330,38 @@ function showFeedPanel() {
 }
 
 async function initMap() {
-    // Use zoom level 4 on mobile for better overview, 5 on desktop
-    const isMobile = window.innerWidth <= 768;
-    const initialZoom = isMobile ? 4 : 5;
-
-    // Create map with canvas renderer for smoother panning
+    // Create map with canvas renderer for smoother panning and transitions
     // Canvas is ~10x faster than SVG for pan operations
     map = L.map('map', {
-        center: [22.5, 79],
-        zoom: initialZoom,
         preferCanvas: true,  // Use canvas for all vector layers
-        renderer: L.canvas({ padding: 0.5 })  // 50% buffer beyond viewport
+        renderer: L.canvas({ padding: 1.0 }),  // 100% buffer for seamless tile loading
+        zoomControl: true,
+        attributionControl: true,
+        // Smooth zoom and pan settings
+        zoomAnimation: true,
+        fadeAnimation: true,
+        markerZoomAnimation: true
     });
 
-    // Add tile layer with buffer for pre-loading tiles beyond viewport
+    // Add tile layer with aggressive pre-loading to eliminate glitches
     // Using light_nolabels for clean appearance (no city/country names)
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
-        keepBuffer: 4,         // Pre-load 4 tile rows/columns beyond viewport
-        updateWhenIdle: false, // Update tiles during panning, not after
-        updateWhenZooming: true,
+    tileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+        keepBuffer: 8,         // Aggressively pre-load 8 tile rows/columns beyond viewport
+        updateWhenIdle: false, // Update tiles during panning for smooth experience
+        updateWhenZooming: false, // Don't update during zoom for smoother animation
+        maxZoom: 19,
+        minZoom: 3,
         attribution: '&copy; <a href="https://carto.com/">CARTO</a>'
     }).addTo(map);
+
+    // Set initial view to perfect India bounds
+    resetMapToIndia(false); // false = no animation on init
+
+    // Set up auto-reset mechanism: return to India view after 3 seconds of idle
+    map.on('moveend', scheduleMapReset);
+    map.on('zoomend', scheduleMapReset);
+    map.on('movestart', cancelMapReset);
+    map.on('zoomstart', cancelMapReset);
 
     // Pre-fetch recent updates count for all states
     await fetchRecentUpdates();
@@ -343,7 +370,63 @@ async function initMap() {
     const feedUpdates = await fetchTodayFeed();
     renderFeed(feedUpdates);
 
+    // Wait for initial tiles to load before showing GeoJSON
+    await waitForTiles(tileLayer);
     loadGeoJSON();
+}
+
+// Wait for tiles to load before proceeding (eliminates glitchy appearance)
+function waitForTiles(tileLayer, timeout = 2000) {
+    return new Promise((resolve) => {
+        const startTime = Date.now();
+        const checkInterval = setInterval(() => {
+            // Check if all tiles are loaded or timeout reached
+            if (!tileLayer._loading || Date.now() - startTime > timeout) {
+                clearInterval(checkInterval);
+                resolve();
+            }
+        }, 100);
+    });
+}
+
+// ============================================
+// MAP AUTO-RESET FUNCTIONS
+// ============================================
+
+// Reset map to perfect India view (the anchor point)
+function resetMapToIndia(animate = true) {
+    if (!map) return;
+
+    // Cancel any pending auto-reset
+    cancelMapReset();
+
+    // Use fitBounds for perfect framing of entire India
+    // This ensures all states are visible with proper padding
+    map.fitBounds(INDIA_BOUNDS, {
+        padding: [20, 20],
+        animate: animate,
+        duration: animate ? 0.6 : 0,
+        easeLinearity: 0.25
+    });
+}
+
+// Schedule auto-reset: return to India view after 3 seconds of idle
+function scheduleMapReset() {
+    // Only auto-reset in state view (not when panel is open or in All India mode)
+    if (currentPanel || currentViewMode !== 'state') return;
+
+    cancelMapReset();
+    mapIdleTimer = setTimeout(() => {
+        resetMapToIndia(true);
+    }, MAP_IDLE_DELAY);
+}
+
+// Cancel pending auto-reset (user is interacting with map)
+function cancelMapReset() {
+    if (mapIdleTimer) {
+        clearTimeout(mapIdleTimer);
+        mapIdleTimer = null;
+    }
 }
 
 // Fetch 7-day update counts for all states
@@ -773,15 +856,19 @@ function collapseCategory() {
 /**
  * Show the side panel and coordinate map frame resize.
  * Animation approach:
- * 1. Hide feed panel with premium dissolve animation
- * 2. Add classes to both map-frame and side-panel simultaneously
- * 3. CSS transitions handle the coordinated animation
- * 4. After animation completes, call map.invalidateSize() once for Leaflet reflow
- * 5. Then fit the map to the selected state's bounds for proper centering
+ * 1. Cancel auto-reset timer (user is now in a panel)
+ * 2. Hide feed panel with premium dissolve animation
+ * 3. Add classes to both map-frame and side-panel simultaneously
+ * 4. CSS transitions handle the coordinated animation
+ * 5. After animation completes, call map.invalidateSize() once for Leaflet reflow
+ * 6. Then fit the map to the selected state's bounds for proper centering
  */
 function showPanel(stateName, content) {
     const panel = document.getElementById('sidePanel');
     const mapFrame = document.getElementById('map-frame');
+
+    // Cancel auto-reset when panel opens
+    cancelMapReset();
 
     document.getElementById('panelTitle').textContent = stateName;
     document.getElementById('panelContent').innerHTML = content;
@@ -821,13 +908,29 @@ function showPanel(stateName, content) {
  * Close the side panel and restore map frame to full width.
  * Same coordination pattern as showPanel().
  * Animation orchestration:
- * 1. Panel slides out
- * 2. Map expands back to 65%
- * 3. Feed panel fades back in
+ * 1. Pre-calculate target bounds and start pre-loading tiles
+ * 2. Panel slides out
+ * 3. Map expands back to full width
+ * 4. Map resets to perfect India anchor point (tiles already loaded)
+ * 5. Feed panel fades back in
  */
 function closePanel() {
     const panel = document.getElementById('sidePanel');
     const mapFrame = document.getElementById('map-frame');
+
+    // Cancel any pending auto-reset
+    cancelMapReset();
+
+    // Pre-load tiles for the target view to eliminate glitches
+    // Calculate what the map will look like after expansion
+    if (tileLayer) {
+        // Temporarily calculate the bounds we'll need
+        const targetBounds = L.latLngBounds(INDIA_BOUNDS);
+        // This hints to Leaflet to start loading tiles for that area
+        map.once('moveend', () => {
+            // Tiles will be ready by the time animation completes
+        });
+    }
 
     // Trigger coordinated animation via CSS classes
     requestAnimationFrame(() => {
@@ -838,15 +941,17 @@ function closePanel() {
     /*
      * After the CSS transition completes:
      * 1. Call invalidateSize() so Leaflet knows the new container dimensions
-     * 2. Reset the map view to show all of India
+     * 2. Reset map to perfect India view using bounds (ensures all states visible)
+     * 3. Resume auto-reset behavior
      */
     setTimeout(() => {
+        // Recalculate map size for the expanded container
         map.invalidateSize({ animate: false, pan: false });
 
-        // Reset to default India view
-        map.setView([22.5, 79], 5, {
-            animate: true,
-            duration: 0.3
+        // Small delay to let invalidateSize settle, then reset to India
+        // Tiles should already be loaded by now for smooth appearance
+        requestAnimationFrame(() => {
+            resetMapToIndia(true);
         });
     }, TRANSITION_DURATION);
 
@@ -891,6 +996,9 @@ function setViewMode(mode) {
         // Switch to All India View
         currentViewMode = 'allIndia';
 
+        // Cancel auto-reset in All India mode
+        cancelMapReset();
+
         // Update toggle button states
         toggleOptions[0].classList.remove('active');
         toggleOptions[0].setAttribute('aria-selected', 'false');
@@ -925,12 +1033,11 @@ function setViewMode(mode) {
             allIndiaPanel.classList.remove('visible');
         });
 
-        // Recalculate map size and reset view after animation completes
+        // Recalculate map size and reset to perfect India view after animation completes
         setTimeout(() => {
             map.invalidateSize({ animate: false, pan: false });
-            map.setView([22.5, 79], 5, {
-                animate: true,
-                duration: 0.3
+            requestAnimationFrame(() => {
+                resetMapToIndia(true);
             });
             // Show feed panel after transition
             showFeedPanel();

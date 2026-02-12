@@ -107,7 +107,7 @@ body {
 
 .page-wrapper {
     position: relative;
-    z-index: 1;
+    /* z-index removed: allows grid canvas (z-index:0) to show through transparent header */
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -168,7 +168,7 @@ body {
    ============================================ */
 
 .product-hero {
-    background: var(--brand-navy);
+    background: transparent; /* Transparent so grid flows through seamlessly */
     padding: 0.375rem 2rem 0.375rem 2rem;
     text-align: center;
     flex-shrink: 0;
@@ -324,8 +324,8 @@ header {
 .main-container {
     flex: 1;
     display: flex;
-    padding: 0.75rem 1rem 0.5rem 1rem;
-    gap: 1rem;
+    padding: 0.75rem 2rem 0.5rem 2rem; /* Wider horizontal padding for centered composition */
+    gap: 32px; /* Fixed 32px gap between map and feed panel */
     min-height: 0;
     position: relative;
     overflow: hidden;
@@ -433,20 +433,25 @@ header {
    ============================================ */
 
 .feed-panel {
-    flex: 0 0 35%;
+    flex: 1 1 38%; /* Increased from 35% to fill right-side negative space */
     min-width: 280px;
-    max-width: 400px;
     display: flex;
     flex-direction: column;
     background: var(--brand-navy);
     border-radius: var(--frame-radius);
     border: 1px solid var(--frame-border);
-    box-shadow: 0 2px 12px var(--frame-shadow);
+    /* Static shadow - no transition for better performance */
+    box-shadow: 0 30px 80px rgba(0,0,0,0.15);
     overflow: hidden;
+    /* Synchronized transitions with all other panels for buttery smoothness */
     transition:
-        opacity 450ms cubic-bezier(0.22, 1, 0.36, 1),
-        flex 450ms cubic-bezier(0.22, 1, 0.36, 1);
-    will-change: opacity, flex;
+        opacity var(--transition-duration) cubic-bezier(0.22, 1, 0.36, 1),
+        flex var(--transition-duration) cubic-bezier(0.22, 1, 0.36, 1),
+        min-width var(--transition-duration) cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, flex, min-width;
+    /* Force GPU acceleration for buttery smooth animations */
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 /* When state panel opens, feed dissolves */
@@ -603,18 +608,22 @@ header {
 
 /* Map frame adjustments for new layout */
 .map-frame {
-    flex: 0 0 65%;
+    flex: 1 1 58%; /* Reduced from 65% to rebalance composition */
     min-width: 0;
     position: relative;
     background: var(--bg-primary);
     border-radius: var(--frame-radius);
     border: 1px solid var(--frame-border);
-    box-shadow: 0 2px 12px var(--frame-shadow);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.15); /* Strengthened institutional elevation */
     overflow: hidden;
+    /* Synchronized transition for buttery smooth animations */
     transition:
-        flex 500ms cubic-bezier(0.22, 1, 0.36, 1),
-        opacity var(--transition-duration) var(--transition-easing);
+        flex var(--transition-duration) cubic-bezier(0.22, 1, 0.36, 1),
+        opacity var(--transition-duration) cubic-bezier(0.22, 1, 0.36, 1);
     will-change: flex, opacity;
+    /* Force GPU acceleration for smoother animations */
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 /* ============================================
@@ -630,6 +639,7 @@ header {
     background: var(--bg-primary);
     border-radius: var(--frame-radius);
     border: 1px solid var(--frame-border);
+    /* Static shadow - no transition for better performance */
     box-shadow:
         0 8px 32px var(--frame-shadow),
         0 0 0 1px rgba(255, 255, 255, 0.04) inset;
@@ -640,13 +650,17 @@ header {
     opacity: 0;
     /*
      * Panel slides in synchronized with map frame shrinking.
-     * Both use the same timing for coordinated animation.
+     * Smooth cubic-bezier easing for buttery transitions.
+     * Note: box-shadow is NOT transitioned for better GPU performance.
      */
     transition:
-        width var(--transition-duration) var(--transition-easing),
-        min-width var(--transition-duration) var(--transition-easing),
-        opacity var(--transition-duration) var(--transition-easing);
-    will-change: width, opacity;
+        width var(--transition-duration) cubic-bezier(0.22, 1, 0.36, 1),
+        min-width var(--transition-duration) cubic-bezier(0.22, 1, 0.36, 1),
+        opacity var(--transition-duration) cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: width, min-width, opacity;
+    /* Force GPU acceleration for buttery smooth animations */
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .side-panel.open {
@@ -701,6 +715,9 @@ header {
     -webkit-overflow-scrolling: touch;
     padding: 1.5rem;
     background: var(--bg-secondary);
+    /* Force GPU acceleration for smoother scrolling and animations */
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 /* ============================================
