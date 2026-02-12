@@ -830,7 +830,6 @@ function closePanel() {
      * After the CSS transition completes:
      * 1. Call invalidateSize() so Leaflet knows the new container dimensions
      * 2. Reset the map view to show all of India
-     * 3. Show feed panel with fade-in animation
      */
     setTimeout(() => {
         map.invalidateSize({ animate: false, pan: false });
@@ -840,10 +839,12 @@ function closePanel() {
             animate: true,
             duration: 0.3
         });
+    }, TRANSITION_DURATION);
 
-        // Show feed panel after map transition
+    // Show feed panel AFTER side panel fully closes
+    setTimeout(() => {
         showFeedPanel();
-    }, TRANSITION_DURATION + 50);
+    }, TRANSITION_DURATION + 100);
 
     currentPanel = null;
     currentCategoriesData = null;
