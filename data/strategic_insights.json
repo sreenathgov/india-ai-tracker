@@ -1,72 +1,72 @@
 {
-  "lastUpdated": "2026-02-12",
+  "lastUpdated": "2026-02-13",
   "cards": [
     {
       "id": "stat-1",
       "type": "stat",
-      "title": "States with AI Policies",
+      "title": "Active States",
       "value": "12",
-      "suffix": "/28",
-      "description": "Indian states with formal AI policy documents"
+      "suffix": "",
+      "description": "Over a dozen states recorded significant AI policy movements, infrastructure launches, or regional summits this week."
     },
     {
       "id": "stat-2",
       "type": "stat",
-      "title": "Total Updates Tracked",
-      "value": "847",
+      "title": "Startup Capital",
+      "value": "$220M",
       "suffix": "+",
-      "description": "Policy updates, events, and development news items"
+      "description": "Total funding raised by Indian AI and tech startups this week, led by 26 deals across various growth stages."
     },
     {
       "id": "stat-3",
       "type": "stat",
-      "title": "AI Startups Covered",
-      "value": "230",
+      "title": "Weekly Updates",
+      "value": "60",
       "suffix": "+",
-      "description": "Emerging AI companies tracked across Indian states"
+      "description": "The tracker captured over 60 high-impact news items."
     },
     {
       "id": "stat-4",
       "type": "stat",
-      "title": "Categories Monitored",
-      "value": "4",
-      "suffix": "",
-      "description": "Policies, Events, Developments, and Startup News"
+      "title": "Research Submissions",
+      "value": "250",
+      "suffix": "+",
+      "description": "The India AI Impact Summit symposium saw massive engagement, indicating high academic and research momentum nationwide."
     },
     {
       "id": "insight-1",
       "type": "insight",
-      "title": "Southern states lead in AI policy adoption",
-      "description": "Karnataka, Tamil Nadu, Telangana, and Kerala have each published comprehensive AI strategies, accounting for over 60% of all tracked policy developments.",
+      "title": "Sovereign AI Ascent",
+      "description": "India is pivoting toward a \"Sovereign AI\" strategy, prioritizing homegrown foundational models that rival international standards. The success of startups like Sarvam AI has garnered high-level government praise, signaling a strategic shift toward domestic infrastructure. This approach aims to ensure India's AI future is built on indigenous technology rather than external dependencies.",
       "metadata": {
-        "region": "South India"
+        "region": "National Strategy"
       }
     },
     {
       "id": "insight-2",
       "type": "insight",
-      "title": "National AI Mission gaining momentum",
-      "description": "The India AI Mission, backed by significant central funding, is accelerating compute infrastructure, talent development, and sector-specific AI applications nationwide.",
+      "title": "The GPU Gateway",
+      "description": "An interim trade deal with the US is set to lower import duties on high-end GPUs and data centre equipment. This policy shift addresses India's compute gap and is expected to attract massive private investment into localized AI hardware. For founders and researchers, this translates to significantly reduced costs for training large-scale models domestically.",
       "metadata": {
-        "region": "National"
+        "region": "Infrastructure"
       }
     },
     {
       "id": "insight-3",
       "type": "insight",
-      "title": "Northeast emerging as AI innovation hub",
-      "description": "Assam and Meghalaya are piloting AI in agriculture and disaster management, signaling growing interest in the region.",
+      "title": "Ethical Boundaries Tested",
+      "description": "The deployment of AI-generated voices in Maharashtra's polls has triggered a national debate on political ethics and deepfake accountability. Simultaneously, the government's anti-misinformation tool faced \"snooping\" allegations, highlighting friction between security and privacy. These developments emphasize the urgent need for a unified, transparent AI governance framework.",
       "metadata": {
-        "region": "Northeast India"
+        "region": "Governance"
       }
     },
     {
       "id": "insight-4",
       "type": "insight",
-      "title": "Private sector investment accelerating rapidly",
-      "description": "Indian AI startups raised over $3.2 billion in 2025, with Bengaluru and Hyderabad leading as primary hubs for enterprise AI and deep-tech ventures.",
+      "title": "Foundational Literacy",
+      "description": "Maharashtra has proposed a landmark policy to introduce AI and ICT education starting from Class 1 to ensure long-term workforce readiness. This is mirrored by massive skilling efforts, such as Samsung certifying 2,000 students in Bengaluru in AI-first skills. India is rapidly moving to integrate AI not just as a technical tool, but as a core educational pillar.",
       "metadata": {
-        "region": "Pan-India"
+        "region": "Skilling"
       }
     }
   ],
