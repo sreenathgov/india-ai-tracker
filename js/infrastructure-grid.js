@@ -108,13 +108,33 @@ class InfrastructureGrid {
 
     window.addEventListener('resize', handleResize);
 
-    // Scroll-based fade
+    // Scroll-based fade: grid persists through Section 1 + velocity band + bento grid,
+    // disappears where the newsletter orange strip begins
     if (this.config.enableFadeOnScroll) {
       const handleScroll = () => {
-        const scrollY = window.scrollY || window.pageYOffset;
-        const fadeRange = this.config.fadeCompleteScroll - this.config.fadeStartScroll;
-        const scrollProgress = Math.min(1, Math.max(0, (scrollY - this.config.fadeStartScroll) / fadeRange));
-        this.canvas.style.opacity = 1 - scrollProgress;
+        const newsletterStrip = document.getElementById('newsletterHeroSection');
+        if (newsletterStrip) {
+          const stripRect = newsletterStrip.getBoundingClientRect();
+          const viewportH = window.innerHeight;
+          // Grid at full opacity until the orange strip top reaches viewport bottom
+          // Fade completes when strip top reaches 60% of viewport height
+          const fadeStart = viewportH;  // strip top at viewport bottom
+          const fadeEnd = viewportH * 0.6; // strip top at 60% from top
+          if (stripRect.top >= fadeStart) {
+            this.canvas.style.opacity = 1;
+          } else if (stripRect.top <= fadeEnd) {
+            this.canvas.style.opacity = 0;
+          } else {
+            const progress = (fadeStart - stripRect.top) / (fadeStart - fadeEnd);
+            this.canvas.style.opacity = 1 - progress;
+          }
+        } else {
+          // Fallback to config-based scroll fade
+          const scrollY = window.scrollY || window.pageYOffset;
+          const fadeRange = this.config.fadeCompleteScroll - this.config.fadeStartScroll;
+          const scrollProgress = Math.min(1, Math.max(0, (scrollY - this.config.fadeStartScroll) / fadeRange));
+          this.canvas.style.opacity = 1 - scrollProgress;
+        }
       };
 
       window.addEventListener('scroll', handleScroll, { passive: true });

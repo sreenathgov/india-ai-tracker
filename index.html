@@ -29,9 +29,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-    <link rel="stylesheet" href="css/styles-v2.css?v=20">
+    <link rel="stylesheet" href="css/styles-v2.css?v=21">
     <link rel="stylesheet" href="css/staggered-menu.css">
+    <link rel="stylesheet" href="css/strategic-insights.css?v=3">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <!-- Infrastructure Grid Background -->
@@ -119,6 +121,37 @@
             </div>
         </main>
 
+        <!-- Scroll Velocity Band (Transition from Section 1 to Section 2) -->
+        <section class="scroll-velocity-band" id="scrollVelocityBand">
+            <!-- Populated by scroll-velocity.js -->
+        </section>
+
+        <!-- Section 2: Strategic Insights -->
+        <section class="strategic-insights-section" id="strategicInsightsSection">
+            <div class="strategic-insights-container">
+                <div class="strategic-bento-grid bento-section" id="strategicBentoGrid">
+                    <!-- Populated dynamically from data/strategic_insights.json -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Orange Strip CTA — Floating above grid, full-width -->
+        <section class="newsletter-hero-section" id="newsletterHeroSection">
+            <div class="newsletter-hero-container">
+                <div class="newsletter-hero-text">
+                    <h3 class="newsletter-hero-title" id="newsletterHeroTitle">Subscribe to the Kanan Labs Weekly Brief</h3>
+                    <p class="newsletter-hero-subtitle" id="newsletterHeroSubtitle">Get the latest tips, tutorials, and insight on no code development.</p>
+                </div>
+                <form class="newsletter-hero-form" id="newsletterHeroForm">
+                    <input type="email" placeholder="Enter your email" required autocomplete="email" />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div style="max-width: 960px; margin: 0 auto;">
+                <p class="newsletter-success-message" id="newsletterSuccessMsg">Thank you, looking forward to keeping you updated on India's AI revolution!</p>
+            </div>
+        </section>
+
         <footer class="site-footer">
             <p class="footer-byline">A public AI governance intelligence tool by Sreenath Govindarajan, Founder of Kanan Labs</p>
             <p class="footer-links">
@@ -133,7 +166,9 @@
 
     <script src="js/infrastructure-grid.js"></script>
     <script src="js/magic-bento.js"></script>
+    <script src="js/scroll-velocity.js"></script>
+    <script src="js/strategic-insights.js"></script>
     <script src="js/staggered-menu.js"></script>
-    <script src="js/app-final.js?v=19"></script>
+    <script src="js/app-final.js?v=20"></script>
 </body>
 </html>

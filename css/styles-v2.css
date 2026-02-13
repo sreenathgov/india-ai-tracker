@@ -27,6 +27,14 @@
 }
 
 @font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../assets/fonts/CormorantGaramond-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'Telegraf';
     src: url('../assets/fonts/Telegraf-Regular.otf') format('opentype');
     font-weight: 400;
@@ -88,10 +96,12 @@
 }
 
 html, body {
-    height: 100%;
-    height: 100dvh; /* Dynamic viewport height for mobile browsers */
-    height: calc(var(--vh, 1vh) * 100); /* JavaScript-calculated viewport height */
-    overflow: hidden;
+    height: auto;
+    min-height: 100%;
+    min-height: 100dvh;
+    min-height: calc(var(--vh, 1vh) * 100);
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 body {
@@ -110,10 +120,10 @@ body {
     /* z-index removed: allows grid canvas (z-index:0) to show through transparent header */
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    height: 100dvh; /* Dynamic viewport height for mobile browsers */
-    height: calc(var(--vh, 1vh) * 100); /* JavaScript-calculated viewport height */
-    overflow: hidden;
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-height: calc(var(--vh, 1vh) * 100);
+    overflow: visible;
 }
 
 /* ============================================
@@ -322,10 +332,12 @@ header {
    ============================================ */
 
 .main-container {
-    flex: 1;
+    flex: 0 0 auto;
+    height: calc(100vh - 110px);
+    height: calc(100dvh - 110px);
     display: flex;
     padding: 0.75rem 2rem 0.5rem 2rem; /* Wider horizontal padding for centered composition */
-    gap: 32px; /* Fixed 32px gap between map and feed panel */
+    gap: 16px; /* Reduced gap for better panel fit */
     min-height: 0;
     position: relative;
     overflow: hidden;
@@ -338,9 +350,9 @@ header {
 
 /* Note: .map-frame base styles are defined in the Feed Panel section above */
 
-/* When state panel opens, map frame shrinks to 30% */
+/* When state panel opens, map frame shrinks to 40% */
 .map-frame.panel-open {
-    flex: 0 0 30%;
+    flex: 0 0 40%;
 }
 
 /* When switching to All India view, map frame fades and collapses */
@@ -439,9 +451,12 @@ header {
     flex-direction: column;
     background: var(--brand-navy);
     border-radius: var(--frame-radius);
-    border: 1px solid var(--frame-border);
-    /* Static shadow - no transition for better performance */
-    box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+    border: 1px solid rgba(244, 235, 208, 0.08);
+    /* Premium floating shadow - multi-layered for depth */
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.25),
+        0 4px 12px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(244, 235, 208, 0.03) inset;
     overflow: hidden;
     /* Synchronized transitions with all other panels for buttery smoothness */
     transition:
@@ -613,8 +628,12 @@ header {
     position: relative;
     background: var(--bg-primary);
     border-radius: var(--frame-radius);
-    border: 1px solid var(--frame-border);
-    box-shadow: 0 30px 80px rgba(0,0,0,0.15); /* Strengthened institutional elevation */
+    border: 1px solid rgba(244, 235, 208, 0.08);
+    /* Premium floating shadow - multi-layered for depth */
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.25),
+        0 4px 12px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(244, 235, 208, 0.03) inset;
     overflow: hidden;
     /* Synchronized transition for buttery smooth animations */
     transition:
@@ -631,7 +650,7 @@ header {
    ============================================ */
 
 .side-panel {
-    width: 0;
+    flex: 0 0 0%;
     min-width: 0;
     min-height: 0; /* Critical: Allow flex child to shrink */
     height: 100%; /* Explicit height constraint */
@@ -648,24 +667,20 @@ header {
     flex-direction: column;
     overflow: hidden;
     opacity: 0;
-    /*
-     * Panel slides in synchronized with map frame shrinking.
-     * Smooth cubic-bezier easing for buttery transitions.
-     * Note: box-shadow is NOT transitioned for better GPU performance.
-     */
+    /* Synchronized flex transition matching other panels */
     transition:
-        width var(--transition-duration) cubic-bezier(0.22, 1, 0.36, 1),
+        flex var(--transition-duration) cubic-bezier(0.22, 1, 0.36, 1),
         min-width var(--transition-duration) cubic-bezier(0.22, 1, 0.36, 1),
         opacity var(--transition-duration) cubic-bezier(0.22, 1, 0.36, 1);
-    will-change: width, min-width, opacity;
+    will-change: flex, min-width, opacity;
     /* Force GPU acceleration for buttery smooth animations */
     transform: translateZ(0);
     backface-visibility: hidden;
 }
 
 .side-panel.open {
-    width: 70%;
-    min-width: 400px;
+    flex: 0 0 58%;
+    min-width: 0;
     opacity: 1;
     /* Ensure panel can shrink to fit container */
     max-height: 100%;
@@ -1567,7 +1582,7 @@ header {
     }
 
     .side-panel.open {
-        width: 75%;
+        flex: 0 0 75%;
         min-width: 350px;
     }
 }
@@ -1634,6 +1649,8 @@ header {
         padding: 0.5rem;
         gap: 0.5rem;
         min-height: 0;
+        height: calc(100vh - 100px);
+        height: calc(100dvh - 100px);
         flex-direction: column;
         overflow-y: auto;
         overflow-x: hidden;
@@ -1669,7 +1686,7 @@ header {
     }
 
     .side-panel.open {
-        width: 100%;
+        flex: 0 0 100%;
         min-width: 0;
     }
 

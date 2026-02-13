@@ -97,10 +97,10 @@ const INDIA_BOUNDS = [
     [35.5, 97.5] // Northeast corner (top-right)
 ];
 
-// Default India center view (used as fallback)
-const INDIA_CENTER = [23.5, 82];
-const INDIA_ZOOM_MOBILE = 4;
-const INDIA_ZOOM_DESKTOP = 5;
+// Default India center view - optimized position to show entire country (matches Image #7)
+const INDIA_CENTER = [22.3, 82.2];
+const INDIA_ZOOM_MOBILE = 4.3;
+const INDIA_ZOOM_DESKTOP = 5.0;
 
 // ============================================
 // FEED PANEL FUNCTIONS
@@ -317,18 +317,6 @@ function hideFeedPanel() {
     }
 }
 
-// Show feed panel (when state panel closes)
-function showFeedPanel() {
-    const feedPanel = document.getElementById('feedPanel');
-    if (feedPanel) {
-        feedPanel.classList.remove('hidden');
-        // Restart auto-scroll after a delay for the transition
-        setTimeout(() => {
-            initAutoScroll();
-        }, 400);
-    }
-}
-
 async function initMap() {
     // Create map with canvas renderer for smoother panning and transitions
     // Canvas is ~10x faster than SVG for pan operations
@@ -340,15 +328,24 @@ async function initMap() {
         // Smooth zoom and pan settings
         zoomAnimation: true,
         fadeAnimation: true,
-        markerZoomAnimation: true
+        markerZoomAnimation: true,
+        // Restrict map bounds to India region for optimized tile loading
+        maxBounds: [
+            [3, 63],   // Southwest corner (extra padding for smooth panning)
+            [38, 102]  // Northeast corner (extra padding)
+        ],
+        maxBoundsViscosity: 0.8  // Smooth boundary resistance
     });
 
-    // Add tile layer with aggressive pre-loading to eliminate glitches
+    // Add tile layer with ultra-aggressive pre-loading to eliminate ALL latency
     // Using light_nolabels for clean appearance (no city/country names)
     tileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
-        keepBuffer: 8,         // Aggressively pre-load 8 tile rows/columns beyond viewport
+        keepBuffer: 40,        // Maximum: keep all India tiles in memory across zoom levels
         updateWhenIdle: false, // Update tiles during panning for smooth experience
-        updateWhenZooming: false, // Don't update during zoom for smoother animation
+        updateWhenZooming: true, // Update tiles when zooming for smooth transitions
+        updateInterval: 50,    // Update tiles every 50ms for responsive loading
+        tileSize: 256,         // Standard tile size
+        zoomOffset: 0,
         maxZoom: 19,
         minZoom: 3,
         attribution: '&copy; <a href="https://carto.com/">CARTO</a>'
@@ -400,10 +397,12 @@ function resetMapToIndia(animate = true) {
     // Cancel any pending auto-reset
     cancelMapReset();
 
-    // Use fitBounds for perfect framing of entire India
-    // This ensures all states are visible with proper padding
-    map.fitBounds(INDIA_BOUNDS, {
-        padding: [20, 20],
+    // Use fixed center and zoom for consistent positioning
+    // This ensures predictable, smooth transitions without dynamic calculations
+    const isMobile = window.innerWidth <= 768;
+    const targetZoom = isMobile ? INDIA_ZOOM_MOBILE : INDIA_ZOOM_DESKTOP;
+
+    map.setView(INDIA_CENTER, targetZoom, {
         animate: animate,
         duration: animate ? 0.6 : 0,
         easeLinearity: 0.25
@@ -905,59 +904,34 @@ function showPanel(stateName, content) {
 }
 
 /**
- * Close the side panel and restore map frame to full width.
- * Same coordination pattern as showPanel().
- * Animation orchestration:
- * 1. Pre-calculate target bounds and start pre-loading tiles
- * 2. Panel slides out
- * 3. Map expands back to full width
- * 4. Map resets to perfect India anchor point (tiles already loaded)
- * 5. Feed panel fades back in
+ * Close the side panel - simple, synchronized animation:
+ * 1. Remove classes simultaneously
+ * 2. CSS handles smooth transitions
+ * 3. Map resets after animation completes
+ * High keepBuffer (40) ensures India tiles stay cached for smooth zoom-out
  */
 function closePanel() {
     const panel = document.getElementById('sidePanel');
     const mapFrame = document.getElementById('map-frame');
+    const feedPanel = document.getElementById('feedPanel');
 
     // Cancel any pending auto-reset
     cancelMapReset();
 
-    // Pre-load tiles for the target view to eliminate glitches
-    // Calculate what the map will look like after expansion
-    if (tileLayer) {
-        // Temporarily calculate the bounds we'll need
-        const targetBounds = L.latLngBounds(INDIA_BOUNDS);
-        // This hints to Leaflet to start loading tiles for that area
-        map.once('moveend', () => {
-            // Tiles will be ready by the time animation completes
-        });
-    }
+    // Simultaneously: panel slides out, map grows, feed slides in
+    panel.classList.remove('open');
+    mapFrame.classList.remove('panel-open');
+    feedPanel.classList.remove('hidden');
 
-    // Trigger coordinated animation via CSS classes
-    requestAnimationFrame(() => {
-        panel.classList.remove('open');
-        mapFrame.classList.remove('panel-open');
-    });
-
-    /*
-     * After the CSS transition completes:
-     * 1. Call invalidateSize() so Leaflet knows the new container dimensions
-     * 2. Reset map to perfect India view using bounds (ensures all states visible)
-     * 3. Resume auto-reset behavior
-     */
+    // After animation completes: resize map and reset to India position
     setTimeout(() => {
-        // Recalculate map size for the expanded container
         map.invalidateSize({ animate: false, pan: false });
-
-        // Small delay to let invalidateSize settle, then reset to India
-        // Tiles should already be loaded by now for smooth appearance
-        requestAnimationFrame(() => {
-            resetMapToIndia(true);
-        });
+        resetMapToIndia(true);
     }, TRANSITION_DURATION);
 
-    // Show feed panel AFTER side panel fully closes (clean handoff)
+    // Restart auto-scroll after transition
     setTimeout(() => {
-        showFeedPanel();
+        initAutoScroll();
     }, TRANSITION_DURATION + 100);
 
     currentPanel = null;
