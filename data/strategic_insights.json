@@ -1,0 +1,80 @@
+{
+  "lastUpdated": "2026-02-12",
+  "cards": [
+    {
+      "id": "stat-1",
+      "type": "stat",
+      "title": "States with AI Policies",
+      "value": "12",
+      "suffix": "/28",
+      "description": "Indian states with formal AI policy documents"
+    },
+    {
+      "id": "stat-2",
+      "type": "stat",
+      "title": "Total Updates Tracked",
+      "value": "847",
+      "suffix": "+",
+      "description": "Policy updates, events, and development news items"
+    },
+    {
+      "id": "stat-3",
+      "type": "stat",
+      "title": "AI Startups Covered",
+      "value": "230",
+      "suffix": "+",
+      "description": "Emerging AI companies tracked across Indian states"
+    },
+    {
+      "id": "stat-4",
+      "type": "stat",
+      "title": "Categories Monitored",
+      "value": "4",
+      "suffix": "",
+      "description": "Policies, Events, Developments, and Startup News"
+    },
+    {
+      "id": "insight-1",
+      "type": "insight",
+      "title": "Southern states lead in AI policy adoption",
+      "description": "Karnataka, Tamil Nadu, Telangana, and Kerala have each published comprehensive AI strategies, accounting for over 60% of all tracked policy developments.",
+      "metadata": {
+        "region": "South India"
+      }
+    },
+    {
+      "id": "insight-2",
+      "type": "insight",
+      "title": "National AI Mission gaining momentum",
+      "description": "The India AI Mission, backed by significant central funding, is accelerating compute infrastructure, talent development, and sector-specific AI applications nationwide.",
+      "metadata": {
+        "region": "National"
+      }
+    },
+    {
+      "id": "insight-3",
+      "type": "insight",
+      "title": "Northeast emerging as AI innovation hub",
+      "description": "Assam and Meghalaya are piloting AI in agriculture and disaster management, signaling growing interest in the region.",
+      "metadata": {
+        "region": "Northeast India"
+      }
+    },
+    {
+      "id": "insight-4",
+      "type": "insight",
+      "title": "Private sector investment accelerating rapidly",
+      "description": "Indian AI startups raised over $3.2 billion in 2025, with Bengaluru and Hyderabad leading as primary hubs for enterprise AI and deep-tech ventures.",
+      "metadata": {
+        "region": "Pan-India"
+      }
+    }
+  ],
+  "newsletter": {
+    "title": "Subscribe to the Kanan Labs Weekly Brief",
+    "subtitle": "Get the latest tips, tutorials, and insight on no code development.",
+    "ctaText": "Subscribe",
+    "ctaPlaceholder": "Enter your email",
+    "successMessage": "Thank you, looking forward to keeping you updated on India's AI revolution!"
+  }
+}

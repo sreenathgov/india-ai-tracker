@@ -85,6 +85,22 @@ let currentTodayUpdates = []; // Store list of categories with today's updates
 let selectedLayer = null; // Track the currently selected GeoJSON layer for centering
 let currentPage = 1; // Pagination state for currently expanded category
 let currentExpandedCategory = null; // Track which category is currently expanded
+let tileLayer = null; // Reference to tile layer for control
+
+// Auto-reset map position after user interaction
+let mapIdleTimer = null;
+const MAP_IDLE_DELAY = 3000; // 3 seconds
+
+// India bounds for perfect framing - covers entire country with proper padding
+const INDIA_BOUNDS = [
+    [6.5, 68],  // Southwest corner (bottom-left)
+    [35.5, 97.5] // Northeast corner (top-right)
+];
+
+// Default India center view - optimized position to show entire country (matches Image #7)
+const INDIA_CENTER = [22.3, 82.2];
+const INDIA_ZOOM_MOBILE = 4.3;
+const INDIA_ZOOM_DESKTOP = 5.0;
 
 // ============================================
 // FEED PANEL FUNCTIONS
@@ -301,38 +317,48 @@ function hideFeedPanel() {
     }
 }
 
-// Show feed panel (when state panel closes)
-function showFeedPanel() {
-    const feedPanel = document.getElementById('feedPanel');
-    if (feedPanel) {
-        feedPanel.classList.remove('hidden');
-        // Restart auto-scroll after a delay for the transition
-        setTimeout(() => {
-            initAutoScroll();
-        }, 400);
-    }
-}
-
 async function initMap() {
-    // Use zoom level 4 on mobile for better overview, 5 on desktop
-    const isMobile = window.innerWidth <= 768;
-    const initialZoom = isMobile ? 4 : 5;
-
-    // Create map with canvas renderer for smoother panning
+    // Create map with canvas renderer for smoother panning and transitions
     // Canvas is ~10x faster than SVG for pan operations
     map = L.map('map', {
-        center: [22.5, 79],
-        zoom: initialZoom,
         preferCanvas: true,  // Use canvas for all vector layers
-        renderer: L.canvas({ padding: 0.5 })  // 50% buffer beyond viewport
+        renderer: L.canvas({ padding: 1.0 }),  // 100% buffer for seamless tile loading
+        zoomControl: true,
+        attributionControl: true,
+        // Smooth zoom and pan settings
+        zoomAnimation: true,
+        fadeAnimation: true,
+        markerZoomAnimation: true,
+        // Restrict map bounds to India region for optimized tile loading
+        maxBounds: [
+            [3, 63],   // Southwest corner (extra padding for smooth panning)
+            [38, 102]  // Northeast corner (extra padding)
+        ],
+        maxBoundsViscosity: 0.8  // Smooth boundary resistance
     });
 
-    // Add tile layer with buffer for pre-loading tiles beyond viewport
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        keepBuffer: 4,         // Pre-load 4 tile rows/columns beyond viewport
-        updateWhenIdle: false, // Update tiles during panning, not after
-        updateWhenZooming: true
+    // Add tile layer with ultra-aggressive pre-loading to eliminate ALL latency
+    // Using light_nolabels for clean appearance (no city/country names)
+    tileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+        keepBuffer: 40,        // Maximum: keep all India tiles in memory across zoom levels
+        updateWhenIdle: false, // Update tiles during panning for smooth experience
+        updateWhenZooming: true, // Update tiles when zooming for smooth transitions
+        updateInterval: 50,    // Update tiles every 50ms for responsive loading
+        tileSize: 256,         // Standard tile size
+        zoomOffset: 0,
+        maxZoom: 19,
+        minZoom: 3,
+        attribution: '&copy; <a href="https://carto.com/">CARTO</a>'
     }).addTo(map);
+
+    // Set initial view to perfect India bounds
+    resetMapToIndia(false); // false = no animation on init
+
+    // Set up auto-reset mechanism: return to India view after 3 seconds of idle
+    map.on('moveend', scheduleMapReset);
+    map.on('zoomend', scheduleMapReset);
+    map.on('movestart', cancelMapReset);
+    map.on('zoomstart', cancelMapReset);
 
     // Pre-fetch recent updates count for all states
     await fetchRecentUpdates();
@@ -341,7 +367,65 @@ async function initMap() {
     const feedUpdates = await fetchTodayFeed();
     renderFeed(feedUpdates);
 
+    // Wait for initial tiles to load before showing GeoJSON
+    await waitForTiles(tileLayer);
     loadGeoJSON();
+}
+
+// Wait for tiles to load before proceeding (eliminates glitchy appearance)
+function waitForTiles(tileLayer, timeout = 2000) {
+    return new Promise((resolve) => {
+        const startTime = Date.now();
+        const checkInterval = setInterval(() => {
+            // Check if all tiles are loaded or timeout reached
+            if (!tileLayer._loading || Date.now() - startTime > timeout) {
+                clearInterval(checkInterval);
+                resolve();
+            }
+        }, 100);
+    });
+}
+
+// ============================================
+// MAP AUTO-RESET FUNCTIONS
+// ============================================
+
+// Reset map to perfect India view (the anchor point)
+function resetMapToIndia(animate = true) {
+    if (!map) return;
+
+    // Cancel any pending auto-reset
+    cancelMapReset();
+
+    // Use fixed center and zoom for consistent positioning
+    // This ensures predictable, smooth transitions without dynamic calculations
+    const isMobile = window.innerWidth <= 768;
+    const targetZoom = isMobile ? INDIA_ZOOM_MOBILE : INDIA_ZOOM_DESKTOP;
+
+    map.setView(INDIA_CENTER, targetZoom, {
+        animate: animate,
+        duration: animate ? 0.6 : 0,
+        easeLinearity: 0.25
+    });
+}
+
+// Schedule auto-reset: return to India view after 3 seconds of idle
+function scheduleMapReset() {
+    // Only auto-reset in state view (not when panel is open or in All India mode)
+    if (currentPanel || currentViewMode !== 'state') return;
+
+    cancelMapReset();
+    mapIdleTimer = setTimeout(() => {
+        resetMapToIndia(true);
+    }, MAP_IDLE_DELAY);
+}
+
+// Cancel pending auto-reset (user is interacting with map)
+function cancelMapReset() {
+    if (mapIdleTimer) {
+        clearTimeout(mapIdleTimer);
+        mapIdleTimer = null;
+    }
 }
 
 // Fetch 7-day update counts for all states
@@ -359,7 +443,7 @@ async function fetchRecentUpdates() {
 }
 
 function loadGeoJSON() {
-    fetch('js/india-states.geojson')
+    fetch('js/india-states-clean.geojson')
         .then(r => r.json())
         .then(data => {
             // Use canvas renderer with padding for smoother panning
@@ -473,12 +557,21 @@ async function openStatePanel(stateName) {
 
     currentCategoriesData = data.categories;
     currentTodayUpdates = data.todayUpdates;
-    showPanel(stateName, buildCategoryCards(data.categories, data.todayUpdates));
+    const cardsHtml = buildCategoryCards(data.categories, data.todayUpdates);
+    showPanel(stateName, cardsHtml);
+
+    // Initialize Magic Bento effects after DOM update
+    setTimeout(() => {
+        const bentoGrid = document.querySelector('#panelContent .bento-grid');
+        if (bentoGrid && typeof window.initMagicBento === 'function') {
+            window.initMagicBento(bentoGrid);
+        }
+    }, 100);
 }
 
-// Build horizontal category cards (collapsed by default)
+// Build premium bento-box category cards
 function buildCategoryCards(categories, todayUpdates = []) {
-    console.log('Building category cards with todayUpdates:', todayUpdates);
+    console.log('Building bento cards with todayUpdates:', todayUpdates);
 
     let totalUpdates = 0;
     CATEGORY_ORDER.forEach(cat => {
@@ -501,7 +594,7 @@ function buildCategoryCards(categories, todayUpdates = []) {
         `;
     }
 
-    let html = '<div class="category-rail">';
+    let html = '<div class="bento-grid bento-section" id="bentoGrid">';
 
     CATEGORY_ORDER.forEach((categoryName, index) => {
         const updates = categories[categoryName] || [];
@@ -514,23 +607,21 @@ function buildCategoryCards(categories, todayUpdates = []) {
             console.log(`✓ ${categoryName} has today updates - adding indicator`);
         }
 
+        // Simple centered title only
+        const cardTitle = config.shortName;
+        const badgeText = count === 0 ? 'No updates' : `${count}`;
+
         html += `
-            <div class="category-card-compact ${hasUpdates ? '' : 'empty'}"
+            <div class="magic-bento-card ${hasUpdates ? '' : 'empty'}"
                  data-category="${categoryName}"
                  data-index="${index}"
                  onclick="expandCategory('${categoryName}')">
-                <div class="card-icon">
-                    ${config.icon}
-                    ${hasTodayUpdates ? '<span class="new-indicator" title="New updates today"></span>' : ''}
-                </div>
-                <div class="card-info">
-                    <span class="card-name">${config.shortName}</span>
-                    <span class="card-count">${count} update${count !== 1 ? 's' : ''}</span>
-                </div>
-                <div class="card-expand-hint">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
+                <div class="magic-bento-card__content">
+                    <h2 class="magic-bento-card__title">${cardTitle}</h2>
+                    <div class="magic-bento-card__badge">
+                        ${badgeText}
+                        ${hasTodayUpdates ? '<span class="new-indicator" title="New updates today"></span>' : ''}
+                    </div>
                 </div>
             </div>
         `;
@@ -567,7 +658,7 @@ function expandCategory(categoryName) {
 
     // Update active state on cards within the current view's container
     const containerSelector = currentViewMode === 'allIndia' ? '#allIndiaPanelContent' : '#panelContent';
-    document.querySelectorAll(`${containerSelector} .category-card-compact`).forEach(card => {
+    document.querySelectorAll(`${containerSelector} .magic-bento-card`).forEach(card => {
         card.classList.remove('active');
         if (card.dataset.category === categoryName) {
             card.classList.add('active');
@@ -752,7 +843,7 @@ function collapseCategory() {
 
     // Remove active state from cards in the current view's container
     const containerSelector = currentViewMode === 'allIndia' ? '#allIndiaPanelContent' : '#panelContent';
-    document.querySelectorAll(`${containerSelector} .category-card-compact`).forEach(card => {
+    document.querySelectorAll(`${containerSelector} .magic-bento-card`).forEach(card => {
         card.classList.remove('active');
     });
 
@@ -764,15 +855,19 @@ function collapseCategory() {
 /**
  * Show the side panel and coordinate map frame resize.
  * Animation approach:
- * 1. Hide feed panel with premium dissolve animation
- * 2. Add classes to both map-frame and side-panel simultaneously
- * 3. CSS transitions handle the coordinated animation
- * 4. After animation completes, call map.invalidateSize() once for Leaflet reflow
- * 5. Then fit the map to the selected state's bounds for proper centering
+ * 1. Cancel auto-reset timer (user is now in a panel)
+ * 2. Hide feed panel with premium dissolve animation
+ * 3. Add classes to both map-frame and side-panel simultaneously
+ * 4. CSS transitions handle the coordinated animation
+ * 5. After animation completes, call map.invalidateSize() once for Leaflet reflow
+ * 6. Then fit the map to the selected state's bounds for proper centering
  */
 function showPanel(stateName, content) {
     const panel = document.getElementById('sidePanel');
     const mapFrame = document.getElementById('map-frame');
+
+    // Cancel auto-reset when panel opens
+    cancelMapReset();
 
     document.getElementById('panelTitle').textContent = stateName;
     document.getElementById('panelContent').innerHTML = content;
@@ -809,41 +904,35 @@ function showPanel(stateName, content) {
 }
 
 /**
- * Close the side panel and restore map frame to full width.
- * Same coordination pattern as showPanel().
- * Animation orchestration:
- * 1. Panel slides out
- * 2. Map expands back to 65%
- * 3. Feed panel fades back in
+ * Close the side panel - simple, synchronized animation:
+ * 1. Remove classes simultaneously
+ * 2. CSS handles smooth transitions
+ * 3. Map resets after animation completes
+ * High keepBuffer (40) ensures India tiles stay cached for smooth zoom-out
  */
 function closePanel() {
     const panel = document.getElementById('sidePanel');
     const mapFrame = document.getElementById('map-frame');
+    const feedPanel = document.getElementById('feedPanel');
 
-    // Trigger coordinated animation via CSS classes
-    requestAnimationFrame(() => {
-        panel.classList.remove('open');
-        mapFrame.classList.remove('panel-open');
-    });
+    // Cancel any pending auto-reset
+    cancelMapReset();
 
-    /*
-     * After the CSS transition completes:
-     * 1. Call invalidateSize() so Leaflet knows the new container dimensions
-     * 2. Reset the map view to show all of India
-     * 3. Show feed panel with fade-in animation
-     */
+    // Simultaneously: panel slides out, map grows, feed slides in
+    panel.classList.remove('open');
+    mapFrame.classList.remove('panel-open');
+    feedPanel.classList.remove('hidden');
+
+    // After animation completes: resize map and reset to India position
     setTimeout(() => {
         map.invalidateSize({ animate: false, pan: false });
+        resetMapToIndia(true);
+    }, TRANSITION_DURATION);
 
-        // Reset to default India view
-        map.setView([22.5, 79], 5, {
-            animate: true,
-            duration: 0.3
-        });
-
-        // Show feed panel after map transition
-        showFeedPanel();
-    }, TRANSITION_DURATION + 50);
+    // Restart auto-scroll after transition
+    setTimeout(() => {
+        initAutoScroll();
+    }, TRANSITION_DURATION + 100);
 
     currentPanel = null;
     currentCategoriesData = null;
@@ -881,6 +970,9 @@ function setViewMode(mode) {
         // Switch to All India View
         currentViewMode = 'allIndia';
 
+        // Cancel auto-reset in All India mode
+        cancelMapReset();
+
         // Update toggle button states
         toggleOptions[0].classList.remove('active');
         toggleOptions[0].setAttribute('aria-selected', 'false');
@@ -915,12 +1007,11 @@ function setViewMode(mode) {
             allIndiaPanel.classList.remove('visible');
         });
 
-        // Recalculate map size and reset view after animation completes
+        // Recalculate map size and reset to perfect India view after animation completes
         setTimeout(() => {
             map.invalidateSize({ animate: false, pan: false });
-            map.setView([22.5, 79], 5, {
-                animate: true,
-                duration: 0.3
+            requestAnimationFrame(() => {
+                resetMapToIndia(true);
             });
             // Show feed panel after transition
             showFeedPanel();
@@ -939,7 +1030,16 @@ async function loadAllIndiaContent() {
 
         currentCategoriesData = data.categories;
         currentTodayUpdates = data.today_updates || [];
-        contentEl.innerHTML = buildCategoryCards(data.categories, data.today_updates || []);
+        const cardsHtml = buildCategoryCards(data.categories, data.today_updates || []);
+        contentEl.innerHTML = cardsHtml;
+
+        // Initialize Magic Bento effects after DOM update
+        setTimeout(() => {
+            const bentoGrid = document.querySelector('#allIndiaPanelContent .bento-grid');
+            if (bentoGrid && typeof window.initMagicBento === 'function') {
+                window.initMagicBento(bentoGrid);
+            }
+        }, 100);
     } catch (error) {
         console.error('Error fetching All India data:', error);
         contentEl.innerHTML = '<div class="no-updates">Failed to load. Check if backend is running.</div>';
