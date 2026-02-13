@@ -317,6 +317,14 @@ function hideFeedPanel() {
     }
 }
 
+function showFeedPanel() {
+    const feedPanel = document.getElementById('feedPanel');
+    if (feedPanel) {
+        feedPanel.classList.remove('hidden');
+        startAutoScroll();
+    }
+}
+
 async function initMap() {
     // Create map with canvas renderer for smoother panning and transitions
     // Canvas is ~10x faster than SVG for pan operations
@@ -668,7 +676,7 @@ function expandCategory(categoryName) {
     if (updates.length === 0) {
         expandedContent.innerHTML = `
             <div class="expanded-header">
-                <h3>${config.icon} ${categoryName}</h3>
+                <h3>${categoryName}</h3>
                 <button class="collapse-btn" onclick="collapseCategory()">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="18 15 12 9 6 15"></polyline>
@@ -700,7 +708,7 @@ function expandCategory(categoryName) {
 
     let html = `
         <div class="expanded-header">
-            <h3>${config.icon} ${categoryName}</h3>
+            <h3>${categoryName}</h3>
             <button class="collapse-btn" onclick="collapseCategory()">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polyline points="18 15 12 9 6 15"></polyline>
@@ -1009,13 +1017,19 @@ function setViewMode(mode) {
 
         // Recalculate map size and reset to perfect India view after animation completes
         setTimeout(() => {
-            map.invalidateSize({ animate: false, pan: false });
+            // Force recalculation of map container size
+            window.dispatchEvent(new Event('resize'));
+            // Give the map time to process the resize
             requestAnimationFrame(() => {
-                resetMapToIndia(true);
+                map.invalidateSize({ animate: false, pan: false });
+                // Reset map view after size recalculation
+                requestAnimationFrame(() => {
+                    resetMapToIndia(false); // Don't animate, just snap to correct position
+                });
             });
             // Show feed panel after transition
             showFeedPanel();
-        }, TRANSITION_DURATION + 50);
+        }, TRANSITION_DURATION + 100);
     }
 }
 

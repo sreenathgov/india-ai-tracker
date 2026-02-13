@@ -35,6 +35,14 @@
 }
 
 @font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../assets/fonts/CormorantGaramond-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'Telegraf';
     src: url('../assets/fonts/Telegraf-Regular.otf') format('opentype');
     font-weight: 400;
@@ -687,13 +695,13 @@ header {
 }
 
 .panel-header {
-    background: var(--brand-cream);
-    color: var(--brand-navy);
+    background: #224d78; /* Panel header blue */
+    color: #f4ebd0; /* Brand white */
     padding: 1.25rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid var(--accent-amber);
+    border-bottom: 2px solid rgba(244, 235, 208, 0.15);
     flex-shrink: 0;
     border-radius: var(--frame-radius) var(--frame-radius) 0 0;
 }
@@ -702,14 +710,14 @@ header {
     font-family: 'Cormorant Garamond', 'Playfair Display', serif;
     font-size: 1.375rem;
     font-weight: 600;
-    color: var(--brand-navy);
+    color: #f4ebd0; /* Brand white */
     letter-spacing: -0.01em;
 }
 
 .close-btn {
     background: transparent;
     border: none;
-    color: var(--brand-navy);
+    color: #f4ebd0; /* Brand white */
     cursor: pointer;
     padding: 6px;
     border-radius: 6px;
@@ -720,7 +728,7 @@ header {
 }
 
 .close-btn:hover {
-    background: rgba(10, 47, 82, 0.1);
+    background: rgba(244, 235, 208, 0.1);
 }
 
 .panel-content {
@@ -1150,9 +1158,12 @@ header {
 }
 
 .expanded-header h3 {
-    font-size: 1rem;
-    font-weight: 600;
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
     color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -1197,7 +1208,7 @@ header {
     background: var(--bg-primary);
     padding: 1rem 1.25rem;
     border-radius: 8px;
-    border-left: 3px solid var(--accent-primary);
+    border-left: 3px solid #224d78;
     transition: all 0.15s ease;
 }
 
@@ -1207,9 +1218,10 @@ header {
 }
 
 .update-title {
-    font-size: 0.9rem;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1rem;
     font-weight: 600;
-    color: var(--accent-primary);
+    color: #224d78;
     text-decoration: none;
     display: block;
     margin-bottom: 6px;
@@ -1222,6 +1234,7 @@ header {
 }
 
 .update-summary {
+    font-family: 'Telegraf', 'Inter', sans-serif;
     font-size: 0.8125rem;
     color: var(--text-secondary);
     line-height: 1.6;
@@ -1979,10 +1992,12 @@ header {
     }
 
     .update-title {
-        font-size: 0.85rem;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 0.9rem;
     }
 
     .update-summary {
+        font-family: 'Telegraf', 'Inter', sans-serif;
         font-size: 0.75rem;
     }
 
@@ -1997,7 +2012,9 @@ header {
     }
 
     .expanded-header h3 {
-        font-size: 0.9375rem;
+        font-family: 'Telegraf', 'Inter', sans-serif;
+        font-size: 0.8125rem;
+        text-transform: uppercase;
     }
 
     /* Optimize pagination for landscape */
