@@ -3,6 +3,25 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 9,
+        "title": "Maharashtra govt to hold Artificial Intelligence in Agriculture and Investment Summit on Feb 22",
+        "url": "https://www.thehindu.com/news/cities/mumbai/maharashtra-govt-to-hold-artificial-intelligence-in-agriculture-and-investment-summit-on-feb-22/article70625226.ece",
+        "summary": "The Maharashtra government will host an Artificial Intelligence in Agriculture and Investment Summit on February 22. The event is part of the state's Agriculture Artificial Intelligence policy, which aims to promote AI use in agriculture and allied sectors. The policy also involves developing digital infrastructure, including MahaAgriX, a Maharashtra Agriculture Data Exchange, and AI-enabled traceability systems.",
+        "date_published": "2026-02-13",
+        "source_name": "The Hindu - Mumbai",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Before the first missiles fly: AI, cyber &amp; electronic warfare - how India is preparing for invisible battlefields",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/before-the-first-missiles-fly-ai-cyber-electronic-warfare-how-india-is-preparing-for-invisible-battlefields/127707922",
@@ -391,5 +410,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

@@ -3,8 +3,30 @@
   "categories": {
     "Policies and Initiatives": [],
     "Events": [],
-    "Major AI Developments": [],
+    "Major AI Developments": [
+      {
+        "id": 14,
+        "title": "Samsung opens pre-reserve for next Galaxy AI phone in India",
+        "url": "https://www.greaterkashmir.com/business/samsung-opens-pre-reserve-for-next-galaxy-ai-phone-in-india/",
+        "summary": "Samsung has begun accepting pre-reserves for its upcoming Galaxy AI phone in India. The move indicates an imminent launch of the device in the country, although a specific release date has not been announced. The pre-reserve option allows interested customers to express their intent to purchase the phone before its official launch.",
+        "date_published": "2026-02-13",
+        "source_name": "Greater Kashmir - Business",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "JK"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

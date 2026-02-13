@@ -623,6 +623,63 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "Is AI rewriting the rules for $250 billion Indian IT industry?",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/is-ai-rewriting-the-rules-for-250-billion-indian-it-industry/128286461",
+        "summary": "India's $250 billion IT industry is facing a downturn due to AI advancements, causing significant market value losses for major firms. The traditional outsourcing model is being questioned by investors, leading to a valuation reset in the industry. The future of the sector remains uncertain, with upcoming sessions set to determine if the worst is over for affected stocks.",
+        "date_published": "2026-02-13",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "AI could add $550 billion to India&#039;s economy by 2035",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/ai-could-add-550-billion-to-indias-economy-by-2035/128248352",
+        "summary": "Artificial intelligence is expected to add nearly $550 billion to India's economy by 2035. This contribution will be across five key sectors, including agriculture, education, energy, healthcare, and manufacturing. The potential economic boost is outlined in a recent report highlighting AI's impact on India's economy.",
+        "date_published": "2026-02-13",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "SmartTerra is using AI to plug India’s massive water loss problem",
+        "url": "https://yourstory.com/2026/02/smartterra-ai-water-loss-management-india-leak-detection",
+        "summary": "SmartTerra is utilizing AI to address India's significant water loss issue, where up to half of urban water is lost before reaching taps. The company uses AI to analyze pipeline data and predict leaks, helping to reduce water loss. SmartTerra's technology is being applied in cities and industries across India and Southeast Asia.",
+        "date_published": "2026-02-13",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Voice AI moves from an add-on to the core for Indian companies",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/voice-ai-moves-from-an-add-on-to-the-core-for-indian-companies/128236280",
         "summary": "Indian companies are shifting their focus from text-based to voice-led AI systems, incorporating Indic languages to better serve tier-II and III cities and rural areas. This move is driven by the increasing reach of digital services in these regions. Voice AI is becoming a core component for companies, rather than just an add-on feature.",
@@ -666,6 +723,44 @@
         "summary": "Lenskart is experiencing \"compounding\" growth due to its focus on market creation through remote eye testing and a centralized supply chain. Indian women are making significant contributions to scientific research, policy, and practice. Global Capability Centers (GCCs) in India are prioritizing investments in artificial intelligence (AI).",
         "date_published": "2026-02-12",
         "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Deepfake, Content Labeling & Safe Harbor Risks for Global Platforms: India’s 2026 AI Regulation",
+        "url": "https://www.india-briefing.com/news/india-ai-regulation-2026-foreign-platform-compliance-42745.html/",
+        "summary": "India's 2026 AI regulation will impact global platforms, focusing on deepfake detection, content labeling, and safe harbor risks. The regulation aims to address concerns surrounding AI-generated content and its potential misuse. Global platforms will need to comply with these new regulations to avoid risks and ensure a safe online environment.",
+        "date_published": "2026-02-12",
+        "source_name": "India Briefing - Legal & Regulatory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 15,
+        "title": "Anurag Thakur counters Rahul Gandhi’s ‘dead economy’ jibe, says India a dominating global force",
+        "url": "https://www.tribuneindia.com/news/himachal/thakur-counters-rahuls-dead-economy-jibe-says-india-a-dominating-global-force",
+        "summary": "Anurag Thakur has countered Rahul Gandhi's claim that India's economy is \"dead\", citing the country's economic growth and global standing under the current government. Thakur pointed to increased capital expenditure, infrastructure improvements, and AI initiatives as evidence of India's progress. He also criticized Gandhi for undermining democratic processes, particularly the Election Commission.",
+        "date_published": "2026-02-12",
+        "source_name": "Tribune - Himachal",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -2584,7 +2679,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

@@ -3,6 +3,25 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 7,
+        "title": "1M1B Foundation launches green skills &amp; applied AI centre of excellence in Bengaluru",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/1m1b-foundation-and-microsoft-launch-green-skills-applied-ai-centre-of-excellence-in-bengaluru/128257536",
+        "summary": "The 1M1B Foundation has launched a centre of excellence for green skills and applied AI in Bengaluru. This is the first of five planned centres under the Green Skills and Applied AI for Climate Action programme. The programme is a joint initiative between 1M1B, Microsoft, and MeitY Startup Hub.",
+        "date_published": "2026-02-12",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 15,
         "title": "Karnataka plans integrated Cyber Command Centre with AI-driven policing",
         "url": "https://www.thehindu.com/news/national/karnataka/karnataka-plans-integrated-cyber-command-centre-with-ai-driven-policing/article70571852.ece",
@@ -141,10 +160,48 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "SoftBank posts OpenAI-driven gains; Setting deeptech startups up for success",
+        "url": "https://yourstory.com/2026/02/softbank-posts-openai-driven-gains-setting-deeptech-startups-up-for-success",
+        "summary": "SoftBank Group Corp reported a net profit of 248.6 billion yen for the July-September quarter, driven in part by gains related to OpenAI. The company is also supporting deeptech startups, such as SmartTerra, which uses AI to analyze pipeline data and predict leaks. This support is facilitated through the FSID centre at IISC, which provides all-around support to deeptech startups.",
+        "date_published": "2026-02-13",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "How Indian AI startups are learning to scale from demo to deployment without breaking the bank",
         "url": "https://yourstory.com/2026/02/indian-ai-startups-scale-demo-deployment-without-breaking-bank",
         "summary": "Indian AI startups are facing challenges in scaling their technology from prototype to production without incurring significant costs. Founders and ecosystem builders recently discussed these challenges at a mixer hosted by E2E Networks, NVIDIA, and YourStory in Bengaluru. The event aimed to address the difficulties of taking AI from demo to deployment in a cost-effective manner.",
+        "date_published": "2026-02-12",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "UN-accredited org 1M1B’s push to empower climate-ready workforce",
+        "url": "https://yourstory.com/2026/02/un-accredited-org-1m1b-push-empower-climate-ai-ready-workforce",
+        "summary": "1M1B has launched a green skills and applied AI centre of excellence in Bengaluru in collaboration with Microsoft, MeitY Startup Hub, and the Government of Karnataka. The centre is part of 1M1B's plan to train 1 lakh youth by 2030 for careers in sustainability. This initiative aims to empower a climate-ready workforce through skills training and applied AI.",
         "date_published": "2026-02-12",
         "source_name": "YourStory",
         "category": "Major AI Developments",
