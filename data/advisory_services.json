@@ -2,14 +2,23 @@
   "lastUpdated": "2026-02-14",
   "hero": {
     "heading": "STRATEGIC AI POLICY",
-    "body": [
-      "India's AI regulatory ecosystem is expanding across data governance, compute infrastructure, sectoral supervision, and public incentive frameworks. Strategic exposure is increasing in parallel.",
-      "Kanan Labs integrates regulatory foresight directly into product development and market strategy, enabling enterprises to reduce long-term compliance risk while positioning for institutional alignment."
-    ],
-    "outcomes": [
-      "Regulatory strategy embedded within product development cycles",
-      "Structured navigation of government AI schemes and incentives",
-      "Institutional AI governance capability building"
+    "bodyParagraphs": [
+      {
+        "text": "India's AI regulatory ecosystem is rapidly developing across data governance, compute infrastructure alongside various schemes and incentives.",
+        "bold": false
+      },
+      {
+        "text": "Strategic exposure is increasing in parallel.",
+        "bold": true
+      },
+      {
+        "text": "Kanan Labs embeds regulatory foresight directly into product development and market strategy. We help organisations reduce redesign risk and position confidently for what comes next.",
+        "bold": false
+      },
+      {
+        "text": "Schedule a free consultation to assess your AI governance needs.",
+        "bold": true
+      }
     ]
   },
   "cardStack": [

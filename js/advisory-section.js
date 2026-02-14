@@ -87,7 +87,7 @@ class AdvisorySection {
   }
 
   /**
-   * Render the two-column hero: left text + right card stack with outcomes below
+   * Render the two-column hero: left text content + right heading & card stack
    */
   renderHero(hero, cardStackData) {
     if (!hero) return;
@@ -95,22 +95,28 @@ class AdvisorySection {
     const heroEl = document.createElement('div');
     heroEl.className = 'advisory-hero';
 
-    // LEFT column — heading + body paragraphs
+    // LEFT column — body paragraphs (with bold support)
     const textCol = document.createElement('div');
     textCol.className = 'advisory-hero__text advisory-animate';
 
-    const bodyHTML = Array.isArray(hero.body)
-      ? hero.body.map(p => `<p class="advisory-hero__body">${this.escapeHTML(p)}</p>`).join('')
-      : `<p class="advisory-hero__body">${this.escapeHTML(hero.body)}</p>`;
+    const bodyHTML = Array.isArray(hero.bodyParagraphs)
+      ? hero.bodyParagraphs.map(p => {
+          const className = p.bold ? 'advisory-hero__body advisory-hero__body--bold' : 'advisory-hero__body';
+          return `<p class="${className}">${this.escapeHTML(p.text)}</p>`;
+        }).join('')
+      : '';
 
-    textCol.innerHTML = `
-      <h2 class="advisory-hero__heading">${this.escapeHTML(hero.heading)}</h2>
-      ${bodyHTML}
-    `;
+    textCol.innerHTML = bodyHTML;
 
-    // RIGHT column — card stack + outcomes below
+    // RIGHT column — heading + card stack
     const cardsCol = document.createElement('div');
     cardsCol.className = 'advisory-hero__cards advisory-animate';
+
+    // Add heading to right column
+    const heading = document.createElement('h2');
+    heading.className = 'advisory-hero__heading';
+    heading.textContent = hero.heading;
+    cardsCol.appendChild(heading);
 
     const stackEl = document.createElement('div');
     stackEl.className = 'card-stack';

@@ -15,6 +15,15 @@
     font-display: swap;
 }
 
+/* --- Telegraf Bold Font Import --- */
+@font-face {
+    font-family: 'Telegraf';
+    src: url('../telegraf/Telegraf%20UltraBold%20800.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* --- Section wrapper --- */
 .advisory-section {
     background: #f7f5ee;
@@ -51,78 +60,57 @@
     display: grid;
     grid-template-columns: 1.5fr 2.5fr;
     gap: 40px;
-    align-items: start;
+    align-items: center;
     margin-bottom: 60px;
 }
 
-/* LEFT column */
+/* LEFT column — body content, vertically centered */
 .advisory-hero__text {
-    padding-top: 1rem;
-}
-
-.advisory-hero__heading {
-    font-family: 'Six Caps', sans-serif;
-    font-weight: 400;
-    font-size: clamp(5rem, 7.5vw, 7.5rem);
-    color: #0a2f52;
-    line-height: 0.9;
-    margin: 0 0 1.25rem 0;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+    padding-top: 0;
 }
 
 .advisory-hero__body {
     font-family: 'Telegraf', 'Inter', sans-serif;
-    font-size: 1.15rem;
-    color: #0a2f52;
-    opacity: 0.7;
+    font-size: 0.95rem;
+    color: #4c6786;
     line-height: 1.65;
-    margin: 0 0 0.875rem 0;
-}
-
-.advisory-hero__body:last-of-type {
-    margin-bottom: 2rem;
-}
-
-.advisory-hero__outcomes {
-    list-style: none;
-    padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    width: 100%;
+    text-align: right;
+    font-weight: 400;
 }
 
-.advisory-hero__outcomes li {
+.advisory-hero__body--bold {
     font-family: 'Telegraf', 'Inter', sans-serif;
-    font-size: 0.8rem;
-    color: #0a2f52;
-    line-height: 1.55;
-    padding-left: 1.25rem;
-    position: relative;
+    font-weight: 700;
+    font-variation-settings: 'wght' 700;
 }
 
-.advisory-hero__outcomes li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.55em;
-    width: 6px;
-    height: 6px;
-    background: #db4a2b;
-    border-radius: 50%;
+/* RIGHT column — heading moved here, centered vertically */
+.advisory-hero__heading {
+    font-family: 'Six Caps', sans-serif;
+    font-weight: 400;
+    font-size: clamp(5rem, 7.5vw, 7.5rem);
+    color: #db4a2b;
+    line-height: 0.9;
+    margin: 0 0 2rem 0;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
 }
 
-/* RIGHT column: Card Stack area */
+/* RIGHT column: Heading + Card Stack area */
 .advisory-hero__cards {
     position: relative;
-    min-height: 480px;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-end;
-    padding-top: 40px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
 }
 
 
@@ -434,12 +422,8 @@
     }
 
     .advisory-hero__body {
-        font-size: 1.05rem;
-    }
-
-    .advisory-hero__cards {
-        min-height: 420px;
-        padding-top: 30px;
+        font-size: 0.9rem;
+        text-align: right;
     }
 
     .card-stack {
@@ -473,19 +457,25 @@
         grid-template-columns: 1fr;
         gap: 30px;
         margin-bottom: 50px;
+        align-items: start;
+    }
+
+    .advisory-hero__text {
+        order: 2;
+    }
+
+    .advisory-hero__cards {
+        order: 1;
     }
 
     .advisory-hero__heading {
         font-size: 4.375rem;
+        white-space: normal;
     }
 
     .advisory-hero__body {
-        font-size: 1rem;
-    }
-
-    .advisory-hero__cards {
-        min-height: auto;
-        padding-top: 20px;
+        font-size: 0.85rem;
+        text-align: right;
     }
 
     .card-stack {
@@ -544,10 +534,12 @@
 
     .advisory-hero__heading {
         font-size: 3.75rem;
+        white-space: normal;
     }
 
     .advisory-hero__body {
-        font-size: 0.95rem;
+        font-size: 0.8rem;
+        text-align: right;
     }
 
     .card-stack {
@@ -597,10 +589,6 @@
     .advisory-service-item__text {
         font-size: 0.8rem;
     }
-
-    .advisory-hero__outcomes li {
-        font-size: 0.75rem;
-    }
 }
 
 
@@ -616,6 +604,15 @@
     .advisory-hero {
         grid-template-columns: 1fr 1fr;
         gap: 30px;
+        align-items: center;
+    }
+
+    .advisory-hero__text {
+        order: 0;
+    }
+
+    .advisory-hero__cards {
+        order: 0;
     }
 
     .advisory-service-items {
