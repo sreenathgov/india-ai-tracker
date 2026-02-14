@@ -1,0 +1,34 @@
+{
+  "name": "india-ai-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build:text-pressure": "vite build",
+    "dev:text-pressure": "vite build --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/sreenathgov/india-ai-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sreenathgov/india-ai-tracker/issues"
+  },
+  "homepage": "https://github.com/sreenathgov/india-ai-tracker#readme",
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.4",
+    "vite": "^7.3.1"
+  }
+}

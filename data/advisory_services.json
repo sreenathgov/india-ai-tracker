@@ -1,0 +1,79 @@
+{
+  "lastUpdated": "2026-02-14",
+  "hero": {
+    "heading": "STRATEGIC AI POLICY",
+    "body": [
+      "India's AI regulatory ecosystem is expanding across data governance, compute infrastructure, sectoral supervision, and public incentive frameworks. Strategic exposure is increasing in parallel.",
+      "Kanan Labs integrates regulatory foresight directly into product development and market strategy, enabling enterprises to reduce long-term compliance risk while positioning for institutional alignment."
+    ],
+    "outcomes": [
+      "Regulatory strategy embedded within product development cycles",
+      "Structured navigation of government AI schemes and incentives",
+      "Institutional AI governance capability building"
+    ]
+  },
+  "cardStack": [
+    {
+      "id": "doc-1",
+      "title": "AI Relevant Legislation – 2026 India",
+      "descriptor": "Assessment of existing governance signals.",
+      "meta": "PDF • 18 pages • Updated Jan 2026",
+      "pdfUrl": "assets/advisory/ai-legislation-2026.pdf"
+    },
+    {
+      "id": "doc-2",
+      "title": "National & State AI Incentive Architecture",
+      "descriptor": "Operational pathways for subsidy access and infrastructure alignment.",
+      "meta": "Brief • 12 pages • Updated Dec 2025",
+      "pdfUrl": "assets/advisory/ai-incentive-architecture.pdf"
+    },
+    {
+      "id": "doc-3",
+      "title": "Sample Enterprise AI Governance Framework",
+      "descriptor": "Internal deployment mapping model for AI systems.",
+      "meta": "Framework • 10 pages • Updated Feb 2026",
+      "pdfUrl": "assets/advisory/enterprise-governance-framework.pdf"
+    }
+  ],
+  "services": [
+    {
+      "id": "svc-group-1",
+      "title": "REGULATORY TRAJECTORY & PRODUCT FUTURE-PROOFING",
+      "subline": "Translate emerging AI regulation into concrete product and architecture decisions.",
+      "items": [
+        "Regulatory Direction analysis (India + global)",
+        "Product architecture risk review",
+        "Data sourcing & governance exposure mapping",
+        "Model monitoring & auditability gaps",
+        "3–5 year policy outlook for your sector",
+        "Clear build-differently recommendations"
+      ]
+    },
+    {
+      "id": "svc-group-2",
+      "title": "INCENTIVE & SCHEME STRUCTURING",
+      "subline": "Identify, structure, and secure policy-linked benefits without compliance surprises.",
+      "items": [
+        "Central & state scheme identification",
+        "Eligibility fit analysis",
+        "Application & documentation roadmap",
+        "Sandbox participation strategy",
+        "Post-approval compliance planning",
+        "Ongoing policy opportunity monitoring"
+      ]
+    },
+    {
+      "id": "svc-group-3",
+      "title": "AI GOVERNANCE READINESS & ENTERPRISE WORKSHOPS",
+      "subline": "Establish defensible internal AI governance aligned with regulatory expectations.",
+      "items": [
+        "AI use-case inventory & risk categorization",
+        "Data & automation exposure mapping",
+        "Governance framework design",
+        "Policy drafting support",
+        "Executive risk briefing",
+        "Organization-wide guidance session"
+      ]
+    }
+  ]
+}
