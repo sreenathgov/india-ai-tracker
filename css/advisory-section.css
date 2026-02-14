@@ -89,135 +89,145 @@
     font-variation-settings: 'wght' 700;
 }
 
-/* RIGHT column — heading moved here, centered vertically */
+/* RIGHT column — heading moved here, sits above card swap */
 .advisory-hero__heading {
     font-family: 'Six Caps', sans-serif;
     font-weight: 400;
     font-size: clamp(5rem, 7.5vw, 7.5rem);
     color: #db4a2b;
     line-height: 0.9;
-    margin: 0 0 2rem 0;
+    margin: -2.5rem 0 2rem 0;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     white-space: nowrap;
     text-align: center;
 }
 
-/* RIGHT column: Heading + Card Stack area */
+/* RIGHT column: Heading + Card Swap area */
 .advisory-hero__cards {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding-top: 0;
 }
 
 
 /* ============================================
-   CARD STACK — "Policy archive" feel
+   CARD SWAP — ReactBits-style 3D animated stack
    ============================================ */
 
-.card-stack {
+.card-swap-container {
     position: relative;
     width: 100%;
-    height: 480px;
+    height: 420px;
+    margin-top: 1.5rem;
+    perspective: 900px;
+    overflow: visible;
 }
 
-.card-stack__item {
+.card-swap-card {
     position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background: #ffffff;
-    border: 1px solid rgba(10, 47, 82, 0.1);
-    border-radius: 8px;
-    padding: 1.5rem 1.75rem;
+    top: 35%;
+    left: 50%;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     cursor: pointer;
-    text-decoration: none;
-    display: block;
-    color: inherit;
-    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-                box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-                opacity 0.5s ease;
-    box-shadow: 0 4px 20px rgba(10, 47, 82, 0.06);
+    transform-style: preserve-3d;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.25rem 2rem;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
 }
 
-.card-stack__item:hover {
-    box-shadow: 0 8px 30px rgba(10, 47, 82, 0.1);
-}
-
-/* Stacking depth via data-index attribute */
-.card-stack__item[data-index="0"] {
-    z-index: 3;
-    transform: translateY(0) scale(1);
-    opacity: 1;
-}
-
-.card-stack__item[data-index="1"] {
-    z-index: 2;
-    transform: translateY(20px) scale(0.97);
-    opacity: 0.65;
-}
-
-.card-stack__item[data-index="2"] {
-    z-index: 1;
-    transform: translateY(40px) scale(0.94);
-    opacity: 0.35;
-}
-
-.card-stack__title {
+/* --- Card inner content --- */
+.card-swap-card__title {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: #0a2f52;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2;
     margin: 0 0 0.5rem 0;
-    line-height: 1.25;
+    color: inherit;
 }
 
-.card-stack__descriptor {
+.card-swap-card__subline {
     font-family: 'Telegraf', 'Inter', sans-serif;
-    font-size: 0.75rem;
-    color: #0a2f52;
-    opacity: 0.6;
-    line-height: 1.5;
-    margin: 0 0 0.75rem 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.55;
+    margin: 0;
+    opacity: 0.75;
+    color: inherit;
 }
 
-.card-stack__meta {
-    font-family: 'Telegraf', 'Inter', sans-serif;
-    font-size: 0.6875rem;
-    color: rgba(10, 47, 82, 0.4);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+.card-swap-card__footer {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 1.5rem;
 }
 
-.card-stack__meta svg {
+.card-swap-card__meta {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.5;
+    color: inherit;
+}
+
+/* Download button — visible on hover */
+.card-swap-card__download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: inherit;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    pointer-events: none;
+}
+
+.card-swap-card__download svg {
     width: 14px;
     height: 14px;
-    opacity: 0.5;
     flex-shrink: 0;
 }
 
-/* Click hint on front card */
-.card-stack__item[data-index="0"]::after {
-    content: 'Click to browse';
-    position: absolute;
-    bottom: 2rem;
-    right: 2.25rem;
-    font-family: 'Telegraf', 'Inter', sans-serif;
-    font-size: 0.625rem;
-    color: rgba(10, 47, 82, 0.2);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    transition: opacity 0.3s ease;
+.card-swap-card:hover .card-swap-card__download {
+    opacity: 0.85;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
-.card-stack__item[data-index="0"]:hover::after {
-    opacity: 0.5;
+/* Color theme overrides */
+.card-swap-card--red {
+    background: #db4a2b;
+    color: #ffffff;
+}
+
+.card-swap-card--navy {
+    background: #224d78;
+    color: #ffffff;
+}
+
+.card-swap-card--cream {
+    background: #f4ebd0;
+    color: #0a2f52;
+    border-color: rgba(10, 47, 82, 0.1);
 }
 
 
@@ -257,7 +267,7 @@
 .advisory-service-group__title {
     font-family: 'Telegraf', 'Inter', sans-serif;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.05rem;
     color: #ff6105;
     margin: 0;
     letter-spacing: 0.02em;
@@ -269,7 +279,7 @@
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-weight: 400;
     font-style: italic;
-    font-size: 1.15rem;
+    font-size: 0.98rem;
     color: #0a2f52;
     opacity: 1;
     line-height: 1.4;
@@ -339,8 +349,8 @@
 
 .advisory-service-item__text {
     font-family: 'Telegraf', 'Inter', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 0.83rem;
+    font-weight: 400;
     color: #0a2f52;
     line-height: 1.5;
     margin: 0;
@@ -426,8 +436,8 @@
         text-align: right;
     }
 
-    .card-stack {
-        height: 420px;
+    .card-swap-container {
+        height: 380px;
     }
 
     .advisory-services__heading {
@@ -478,8 +488,20 @@
         text-align: right;
     }
 
-    .card-stack {
-        height: 280px;
+    .card-swap-container {
+        height: 260px;
+    }
+
+    .card-swap-card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .card-swap-card__title {
+        font-size: 1.2rem;
+    }
+
+    .card-swap-card__subline {
+        font-size: 0.75rem;
     }
 
     .advisory-services-container {
@@ -497,11 +519,11 @@
     }
 
     .advisory-service-group__title {
-        font-size: 1.25rem;
+        font-size: 0.875rem;
     }
 
     .advisory-service-group__subline {
-        font-size: 1rem;
+        font-size: 0.85rem;
     }
 
     .advisory-service-item {
@@ -513,7 +535,7 @@
     }
 
     .advisory-service-item__text {
-        font-size: 0.85rem;
+        font-size: 0.7rem;
     }
 }
 
@@ -542,19 +564,19 @@
         text-align: right;
     }
 
-    .card-stack {
-        height: 240px;
+    .card-swap-container {
+        height: 220px;
     }
 
-    .card-stack__item {
-        padding: 1.25rem 1.5rem;
+    .card-swap-card {
+        padding: 1.25rem 1rem;
     }
 
-    .card-stack__title {
-        font-size: 0.95rem;
+    .card-swap-card__title {
+        font-size: 1.1rem;
     }
 
-    .card-stack__descriptor {
+    .card-swap-card__subline {
         font-size: 0.7rem;
     }
 
@@ -571,11 +593,11 @@
     }
 
     .advisory-service-group__title {
-        font-size: 1.125rem;
+        font-size: 0.8rem;
     }
 
     .advisory-service-group__subline {
-        font-size: 0.95rem;
+        font-size: 0.8rem;
     }
 
     .advisory-service-item {
@@ -587,7 +609,7 @@
     }
 
     .advisory-service-item__text {
-        font-size: 0.8rem;
+        font-size: 0.67rem;
     }
 }
 
