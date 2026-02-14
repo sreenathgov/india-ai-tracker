@@ -64,6 +64,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "AI in Romance: How Gen Z Uses AI for Dating App Messages and Love Notes",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/ai-in-romance-how-gen-z-uses-ai-for-dating-app-messages-and-love-notes/articleshow/128337709.cms",
+        "summary": "Gen Z is using AI to assist with dating app messages and love notes, viewing it as a tool to translate genuine feelings into words. AI is being leveraged for tone checks, smoother communication in long-distance relationships, and to boost confidence in expressing affection. The use of AI in romance has seen a significant rise, particularly among dating app users.",
+        "date_published": "2026-02-14",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 13,
         "title": "UK firm opens its new AI-first Global Capability Centre in Hyd",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/uk-firm-opens-its-new-ai-first-global-capability-centre-in-hyd/articleshow/127917274.cms",
@@ -409,5 +428,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

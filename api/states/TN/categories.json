@@ -83,6 +83,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Intellect Design Arena targets mid-sized firms for AI platform",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/intellect-design-arena-targets-mid-sized-firms-for-ai-platform/articleshow/128320229.cms",
+        "summary": "Intellect Design Arena is targeting mid-sized firms to adopt its AI platform, aiming to expand its customer base. The company's AI platform is designed to help businesses improve their operations and decision-making capabilities. Intellect Design Arena's move is expected to increase the adoption of AI technology among mid-sized firms.",
+        "date_published": "2026-02-14",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "AI demand presents a golden opportunity for India to crack the $400 bn chip equipment supply chain",
         "url": "https://timesofindia.indiatimes.com/city/chennai/ai-demand-presents-a-golden-opportunity-for-india-to-crack-the-400-bn-chip-equipment-supply-chain/articleshow/127847444.cms",
@@ -142,5 +161,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

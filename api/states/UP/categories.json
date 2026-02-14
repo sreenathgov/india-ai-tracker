@@ -178,11 +178,28 @@
         "importance_score": 0.0,
         "premium_processed": false,
         "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "AM group, Invest UP sign MoU to set up $25 billion AI data centre in Uttar Pradesh",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/am-group-invest-up-sign-mou-to-set-up-25-billion-ai-data-centre-in-uttar-pradesh/128305808",
+        "summary": "The AM group and Invest UP have signed a Memorandum of Understanding to establish a $25 billion AI data centre in Uttar Pradesh. The Yeida authority has allotted 289 acres of land for the project, which will be a 1 GW carbon-free facility. The data centre aims to reach full operational capacity by 2030.",
+        "date_published": "2026-02-13",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
       }
     ],
     "AI Start-Up News": []
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
