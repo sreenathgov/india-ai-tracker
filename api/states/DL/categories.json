@@ -160,6 +160,120 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Rubrik chief says New Delhi summit can reposition AI as a tool for solutions, growth and inclusive progress",
+        "url": "https://telanganatoday.com/rubrik-chief-says-new-delhi-summit-can-reposition-ai-as-a-tool-for-solutions-growth-and-inclusive-progress",
+        "summary": "India is set to host the AI Impact Summit, which can help reposition AI as a tool for solutions and growth. According to Rubrik CEO Bipul Sinha, the country can leverage its tech workforce, infrastructure investments, and applied AI expertise to shift the global AI narrative. This shift can focus on real-world solutions rather than risks associated with AI.",
+        "date_published": "2026-02-15",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Tech to tulips: City gets ready for AI Summit",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/tech-to-tulips-city-gets-ready-for-ai-summit/articleshow/128358815.cms",
+        "summary": "The city is preparing to host an AI Summit, bringing together technology and innovation. The event is expected to showcase the latest advancements in artificial intelligence. Details of the summit, including its date and agenda, are not specified in the available information.",
+        "date_published": "2026-02-15",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "Avoid these routes: Delhi Police issue traffic advisory for India AI Impact Summit 2026",
+        "url": "https://indianexpress.com/article/cities/delhi/delhi-police-traffic-advisory-india-ai-impact-summit-2026-10533103/",
+        "summary": "Delhi Police have issued a traffic advisory for the India AI Impact Summit 2026, warning commuters to avoid certain routes. The advisory aims to minimize congestion and ensure smooth traffic flow during the event. Specific routes to avoid have been identified, although they are not specified in the initial report.",
+        "date_published": "2026-02-15",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "AI Impact Summit 2026 in Delhi: Traffic advisory issued for school students as CBSE exams begin on Feb 17",
+        "url": "https://indianexpress.com/article/cities/delhi/ai-impact-summit-2026-in-delhi-traffic-advisory-issued-for-school-students-as-cbse-exams-begin-on-feb-17-10532426/",
+        "summary": "A traffic advisory has been issued in Delhi due to the AI Impact Summit 2026. The advisory is particularly relevant for school students as CBSE exams are set to begin on February 17. The summit and exams may cause traffic disruptions, prompting the need for alternative travel arrangements.",
+        "date_published": "2026-02-15",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "AI Impact Summit 2026: Delhi Police issues traffic advisory for Feb 16-20; check suggested routes for airport, railway stations",
+        "url": "https://indianexpress.com/article/cities/delhi/ai-impact-summit-2026-delhi-police-issues-traffic-advisory-for-feb-16-20-check-suggested-routes-for-airports-railway-stations-10532558/",
+        "summary": "Delhi Police has issued a traffic advisory for February 16-20 due to the AI Impact Summit 2026. The advisory includes suggested routes for traveling to and from the airport and railway stations during this period. Commuters are advised to plan their routes in advance to avoid potential traffic congestion.",
+        "date_published": "2026-02-14",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 14,
+        "title": "NDMC ups security ahead of AI Summit in Delhi",
+        "url": "https://www.tribuneindia.com/news/aiinindia/ndmc-ups-security-ahead-of-ai-summit",
+        "summary": "The New Delhi Municipal Council (NDMC) is enhancing security and preparations in Delhi ahead of the India AI Impact Summit-2026. The preparations include improved surveillance, waste management, and environmental monitoring, as well as beautification efforts. The summit aims to showcase India's leadership in artificial intelligence.",
+        "date_published": "2026-02-14",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Rs 2 lakh crore AI hub to come up off Yamuna Expressway in 2 years",
         "url": "https://timesofindia.indiatimes.com/city/noida/rs-2-lakh-crore-ai-hub-to-come-up-off-yamuna-expressway-in-2-years/articleshow/128274033.cms",
@@ -450,5 +564,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

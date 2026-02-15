@@ -3,8 +3,30 @@
   "categories": {
     "Policies and Initiatives": [],
     "Events": [],
-    "Major AI Developments": [],
+    "Major AI Developments": [
+      {
+        "id": 15,
+        "title": "Indian stock markets shed around 1% this week amid AI-related fears",
+        "url": "https://www.greaterkashmir.com/business/indian-stock-markets-shed-around-1-this-week-amid-ai-related-fears/",
+        "summary": "Indian stock markets declined by approximately 1% this week due to concerns related to artificial intelligence. The drop in the market is attributed to AI-related fears, although specific details are not provided. This decline reflects investor uncertainty and caution in response to AI's potential impact on the market.",
+        "date_published": "2026-02-15",
+        "source_name": "Greater Kashmir - Business",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "JK"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

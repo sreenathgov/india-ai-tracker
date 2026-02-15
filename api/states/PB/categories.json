@@ -3,8 +3,30 @@
   "categories": {
     "Policies and Initiatives": [],
     "Events": [],
-    "Major AI Developments": [],
+    "Major AI Developments": [
+      {
+        "id": 16,
+        "title": "AI in the orchard: Punjab Agricultural University for adopting smart horticulture.",
+        "url": "https://timesofindia.indiatimes.com/city/ludhiana/ai-in-the-orchard-punjab-agricultural-university-for-adopting-smart-horticulture-/articleshow/128366124.cms",
+        "summary": "Punjab Agricultural University is adopting smart horticulture by utilizing AI in orchards. The initiative aims to improve efficiency and productivity in the horticulture sector. The university is promoting the use of AI technology to enhance farming practices and decision-making.",
+        "date_published": "2026-02-15",
+        "source_name": "Times of India - Punjab",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

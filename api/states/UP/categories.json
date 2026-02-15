@@ -141,6 +141,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "‘AI, strong primary healthcare must for affordable med facility’",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/ai-strong-primary-healthcare-must-for-affordable-med-facility/articleshow/128360679.cms",
+        "summary": "Artificial intelligence and strong primary healthcare are essential for providing affordable medical facilities. A robust primary healthcare system, combined with AI, can help make medical care more accessible and cost-effective. This integration is crucial for improving the overall healthcare infrastructure and making medical services more affordable for all.",
+        "date_published": "2026-02-15",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Rs 2 lakh crore AI hub to come up off Yamuna Expressway in 2 years",
         "url": "https://timesofindia.indiatimes.com/city/noida/rs-2-lakh-crore-ai-hub-to-come-up-off-yamuna-expressway-in-2-years/articleshow/128274033.cms",
@@ -201,5 +220,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
