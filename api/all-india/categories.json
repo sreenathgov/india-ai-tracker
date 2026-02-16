@@ -544,6 +544,25 @@
     ],
     "Events": [
       {
+        "id": 24,
+        "title": "AI Impact Summit 2026: PM Modi hails India as rising global AI powerhouse, calls it a defining moment",
+        "url": "https://www.tribuneindia.com/news/india/ai-impact-summit-2026-pm-modi-hails-india-as-rising-global-ai-powerhouse-calls-it-a-defining-moment",
+        "summary": "India is hosting the India AI Impact Summit Expo 2026, which PM Modi sees as a defining moment for the country's AI leadership. The event will focus on human-centric AI progress and global collaboration for a progressive future. India is being hailed as a rising global AI powerhouse at the summit.",
+        "date_published": "2026-02-16",
+        "source_name": "Tribune - Delhi",
+        "category": "Events",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "GBS 2026: India to host world’s largest AI summit; AI to drive ‘Fifth Industrial Revolution,’ says Ashwini Vaishnaw | ET NOW Global Business Summit 2026",
         "url": "https://www.etnownews.com/technology/gbs-2026-india-to-host-worlds-largest-ai-summit-ai-to-drive-fifth-industrial-revolution-says-ashwini-vaishnaw-et-now-global-business-summit-2026-article-153609892",
@@ -641,6 +660,82 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "India’s IT sector is successfully navigating GenAI transition",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-it-sector-is-successfully-navigating-genai-transition/128405544",
+        "summary": "India's IT sector is successfully transitioning to Generative AI, which is boosting productivity and altering job roles without causing widespread job losses. Hiring is moderating at entry levels, while demand for hybrid skills is increasing. The IT industry expects net job growth driven by global AI demand, with evolving roles and skill needs.",
+        "date_published": "2026-02-16",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "India gears up for global dialogue on artificial intelligence",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-to-host-ai-impact-summit-2026-global-leaders-to-discuss-the-future-of-artificial-intelligence/128405354",
+        "summary": "India is preparing for a global dialogue on artificial intelligence, aiming to be a key architect of responsible AI solutions. The discussions will focus on AI safety, governance, and the future of work. India's goal is to play a leading role in shaping the development of responsible AI.",
+        "date_published": "2026-02-16",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "AI Startups To Watch: 5 Indian AI Startups That Caught Our Eye In February",
+        "url": "https://inc42.com/startups/ai-startups-to-watch-5-indian-ai-startups-that-caught-our-eye-in-february/",
+        "summary": "The Indian AI startup ecosystem is gaining momentum, with several startups catching attention in February. Five Indian AI startups have been identified as notable, although their specific details are not provided. These startups are part of a larger trend of growing interest and investment in AI in India, with global leaders like Google and OpenAI taking notice.",
+        "date_published": "2026-02-16",
+        "source_name": "Inc42 Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Wealthtech startup Otto Money raises $1.3 Mn led by Pravega Ventures",
+        "url": "https://entrackr.com/snippets/wealthtech-startup-otto-money-raises-13-mn-led-by-pravega-ventures-11110193",
+        "summary": "Wealthtech startup Otto Money has raised $1.3 million in a pre-seed funding round led by Pravega Ventures, with participation from angel investors and existing backers. The funds will be used to enhance the company's AI models, personalization features, and goal-based advisory capabilities over the next 12-18 months. Otto Money plans to expand its engineering and data science teams and launch go-to-market initiatives across tier I cities.",
+        "date_published": "2026-02-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "AI in India to drive productivity and quality: BCGX",
         "url": "https://yourstory.com/2026/02/ai-in-india-to-drive-productivity-and-quality-bcgx",
@@ -685,6 +780,63 @@
         "summary": "India's AI leadership framework is structured around three guiding principles: People, Planet, and Progress. Seven thematic working groups, termed \"Chakras\", are being formed under this framework. The focus is on developing human-centric and inclusive AI, with the framework guiding the country's AI initiatives.",
         "date_published": "2026-02-15",
         "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India AI Impact Expo 2026: PM Modi to open mega AI showcase - 300 curated exhibition pavilions and live demonstrations from 13 countries",
+        "url": "https://www.etnownews.com/technology/india-ai-impact-expo-2026-pm-modi-to-open-mega-ai-showcase-300-curated-exhibition-pavilions-and-live-demonstrations-from-13-countries-article-153610350",
+        "summary": "India's Prime Minister Modi will open the India AI Impact Expo 2026, featuring 300 curated exhibition pavilions and live demonstrations. The expo will include pavilions from 13 countries, showcasing international collaboration in the AI ecosystem. Participating countries include Australia, Japan, the UK, and several European and Asian nations.",
+        "date_published": "2026-02-15",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "India AI Impact Summit 2026: Finalists announced for 3 global AI impact challenges; Top 70 teams to showcase scalable solutions",
+        "url": "https://www.etnownews.com/technology/india-ai-impact-summit-2026-finalists-announced-for-3-global-ai-impact-challenges-top-70-teams-to-showcase-scalable-solutions-article-153616588",
+        "summary": "The India AI Impact Summit 2026 has announced its top 70 finalist teams for the Grand Finale and Awards Felicitation Ceremony. These teams will showcase scalable solutions for three global AI impact challenges. The ceremony is scheduled to take place on February 16 and 17 at Bharat Mandapam and Sushma Swaraj Bhawan.",
+        "date_published": "2026-02-15",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 15,
+        "title": "IndiaAI Mission drives innovation under 7-Sutra framework",
+        "url": "https://telanganatoday.com/indiaai-mission-drives-innovation-under-7-sutra-framework",
+        "summary": "India has released AI Governance Guidelines based on a 7-Sutra framework to promote \"AI for All\" and drive innovation. The framework aims to balance innovation with safeguards, supporting inclusive growth. This initiative aligns with the national aspiration of Viksit Bharat 2047, a vision for India's development by 2047.",
+        "date_published": "2026-02-15",
+        "source_name": "Telangana Today - Tech",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -2297,6 +2449,44 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 8,
+        "title": "ValleyNXT Ventures floats Rs 400 Cr fund to back seed- to pre-Series A startups",
+        "url": "https://entrackr.com/snippets/valleynxt-ventures-floats-rs-400-cr-fund-to-back-seed-to-pre-series-a-startups-11110461",
+        "summary": "ValleyNXT Ventures has launched a Rs 400 crore fund, Bharat Breakthrough Fund-I, to support seed to pre-Series A startups. The fund aims to address the challenges faced by startups during the validation and scale phase through a unique VC-plus-accelerator model. The model is powered by ValleyNXT's MIB framework, which includes mentorship, investment, and business connects.",
+        "date_published": "2026-02-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "No DeepSeek-like splash: India will showcase small AI, early startups at Summit",
+        "url": "https://www.livemint.com/ai/artificial-intelligence-startups-deepseek-moment-ashwini-vaishnaw-11771131529218.html",
+        "summary": "India's AI Impact Summit will feature early-stage, small AI models and startups, rather than large-scale breakthroughs like DeepSeek. The focus will be on an enterprise-first approach to foundational AI, indicating a cautious strategy. This approach will be taken by both startups and policymakers at the summit.",
+        "date_published": "2026-02-15",
+        "source_name": "LiveMint AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Uptiq raises $25M in Series B funding, plans expansion of India research hub",
         "url": "https://yourstory.com/2026/02/uptiq-raises-25m-in-series-b-plans-expansion-of-india-research-hub",
@@ -2812,6 +3002,8 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News",
+    "Events"
   ]
 }

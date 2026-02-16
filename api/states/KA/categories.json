@@ -160,6 +160,64 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "LocalHost raises $2.5 Mn from InVideo, RedBull India, and others",
+        "url": "https://entrackr.com/snippets/localhost-raises-25-mn-from-invideo-redbull-india-and-others-11110610",
+        "summary": "LocalHost, a launchpad for startups, has raised $2.5 million in an angel funding round from investors including InVideo, RedBull India, and Eros International. The funds will be used to expand infrastructure, strengthen hardware capabilities, and support early-stage startups globally. LocalHost aims to scale its operational teams and support additional founder cohorts with the fresh investment.",
+        "date_published": "2026-02-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "High costs for AI solution to monitor fake news raises eyebrows",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/high-costs-for-ai-solution-to-monitor-fake-news-raises-eyebrows/articleshow/128390835.cms",
+        "summary": "A new AI solution aimed at monitoring fake news has sparked concern due to its high costs. The expensive nature of the technology has raised eyebrows, prompting questions about its feasibility and accessibility. The AI solution's cost has become a point of contention, with many wondering if the benefits outweigh the financial burden.",
+        "date_published": "2026-02-16",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 29,
+        "title": "Six East Coast Railway trains part of railways’ onboard services reform",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/six-east-coast-railway-trains-part-of-railways-onboard-services-reform/articleshow/128391091.cms",
+        "summary": "East Coast Railway has selected six long-distance trains for Indian Railways' 'Better Onboard Services' reform, aiming to enhance cleanliness and passenger amenities. The initiative will introduce continuous cleaning models, technology-enabled teams, and multi-tasking teams for minor repairs. AI-powered monitoring will also be used to ensure compliance with the new onboard services standards.",
+        "date_published": "2026-02-16",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "OD",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "SoftBank posts OpenAI-driven gains; Setting deeptech startups up for success",
         "url": "https://yourstory.com/2026/02/softbank-posts-openai-driven-gains-setting-deeptech-startups-up-for-success",
@@ -429,6 +487,25 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 11,
+        "title": "Semiconductor startup C2i Semiconductors raises $15 Mn led by Peak XV",
+        "url": "https://entrackr.com/news/semiconductor-startup-c2i-semiconductors-raises-15-mn-led-by-peak-xv-11110040",
+        "summary": "C2i Semiconductors, a Bengaluru-based startup, has raised $15 million in funding led by Peak XV Partners, with participation from Yali Deeptech and TDK Ventures. The company had previously raised $4 million from Yali Capital in November 2024. The new funding will support global expansion, including setting up a US office and building a team in Taiwan.",
+        "date_published": "2026-02-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Sarvam AI outperforms Google Gemini and ChatGPT on India-specific AI tasks",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/sarvam-ai-surpasses-google-gemini-and-chatgpt-in-indian-language-tasks/128146073",
@@ -544,5 +621,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments",
+    "AI Start-Up News"
+  ]
 }

@@ -64,6 +64,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 29,
+        "title": "Six East Coast Railway trains part of railways’ onboard services reform",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/six-east-coast-railway-trains-part-of-railways-onboard-services-reform/articleshow/128391091.cms",
+        "summary": "East Coast Railway has selected six long-distance trains for Indian Railways' 'Better Onboard Services' reform, aiming to enhance cleanliness and passenger amenities. The initiative will introduce continuous cleaning models, technology-enabled teams, and multi-tasking teams for minor repairs. AI-powered monitoring will also be used to ensure compliance with the new onboard services standards.",
+        "date_published": "2026-02-16",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "OD",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 12,
         "title": "Odisha readies for smooth conduct of HS exams",
         "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/odisha-readies-for-smooth-conduct-of-hs-exams/articleshow/128081387.cms",
@@ -85,5 +105,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

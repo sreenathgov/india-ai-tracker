@@ -3,6 +3,25 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 12,
+        "title": "Gen AI startup Neysa turns unicorn after Blackstone-led $1.2 Bn funding",
+        "url": "https://entrackr.com/news/gen-ai-startup-neysa-turns-unicorn-after-blackstone-led-12-bn-funding-11109995",
+        "summary": "Neysa, a Mumbai-based AI acceleration cloud platform, has raised over $1.2 billion in funding led by Blackstone, becoming a unicorn. The funding includes $600 million in equity capital and plans for an additional $600 million in debt financing. This marks one of the largest capital raises in India's AI infrastructure space, with other investors including Teachers' Venture Growth and Nexus Venture Partners.",
+        "date_published": "2026-02-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Maharashtra govt to hold Artificial Intelligence in Agriculture and Investment Summit on Feb 22",
         "url": "https://www.thehindu.com/news/cities/mumbai/maharashtra-govt-to-hold-artificial-intelligence-in-agriculture-and-investment-summit-on-feb-22/article70625226.ece",
@@ -139,6 +158,25 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 10,
+        "title": "Fractal Analytics makes muted market debut, lists at nearly 3% discount",
+        "url": "https://entrackr.com/news/fractal-analytics-makes-muted-market-debut-lists-at-nearly-3-discount-11110136",
+        "summary": "Fractal Analytics, an AI-focused analytics firm, made a subdued market debut, listing at a nearly 3% discount to its issue price. The company's shares opened at Rs 876 on the National Stock Exchange, below the upper end of its IPO price band of Rs 900. The muted debut follows a moderately subscribed IPO that booked nearly 2.66 times at the time of bid closure.",
+        "date_published": "2026-02-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
       {
         "id": 8,
         "title": "India needs to develop its own AI, says Shaurya Doval of India Foundation",
@@ -449,6 +487,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "Policies and Initiatives"
   ]
 }
