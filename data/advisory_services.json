@@ -25,23 +25,26 @@
     {
       "id": "doc-1",
       "title": "AI Relevant Legislation – 2026 India",
-      "descriptor": "Assessment of existing governance signals.",
+      "descriptor": "Assessment of existing governance signals across central and state frameworks.",
       "meta": "PDF • 18 pages • Updated Jan 2026",
-      "pdfUrl": "assets/advisory/ai-legislation-2026.pdf"
+      "pdfUrl": "assets/advisory/ai-legislation-2026.pdf",
+      "colorTheme": "red"
     },
     {
       "id": "doc-2",
       "title": "National & State AI Incentive Architecture",
       "descriptor": "Operational pathways for subsidy access and infrastructure alignment.",
       "meta": "Brief • 12 pages • Updated Dec 2025",
-      "pdfUrl": "assets/advisory/ai-incentive-architecture.pdf"
+      "pdfUrl": "assets/advisory/ai-incentive-architecture.pdf",
+      "colorTheme": "navy"
     },
     {
       "id": "doc-3",
       "title": "Sample Enterprise AI Governance Framework",
-      "descriptor": "Internal deployment mapping model for AI systems.",
+      "descriptor": "Internal deployment mapping model for AI systems across product lifecycle.",
       "meta": "Framework • 10 pages • Updated Feb 2026",
-      "pdfUrl": "assets/advisory/enterprise-governance-framework.pdf"
+      "pdfUrl": "assets/advisory/enterprise-governance-framework.pdf",
+      "colorTheme": "cream"
     }
   ],
   "services": [

@@ -1,10 +1,253 @@
 /**
  * Advisory Section — Section 3 Orchestrator
  * Fetches data from data/advisory_services.json
- * Renders two-column hero (text + card stack) and services bento grid
- * Reuses existing magic-bento.js spotlight system (adapted for light background)
- * Follows same architecture as strategic-insights.js
+ * Renders two-column hero (text + CardSwap animated stack) and services grid
+ * CardSwap converted from ReactBits React component to vanilla JS
+ * Uses GSAP for 3D card swap animations with elastic easing
  */
+
+/* ============================================
+   CardSwap — Vanilla JS conversion of ReactBits CardSwap
+   Original: React + Framer Motion → Vanilla JS + GSAP
+   ============================================ */
+
+class CardSwap {
+  constructor(containerEl, cards, options = {}) {
+    this.container = containerEl;
+    this.cards = cards; // Array of card data objects
+    this.cardEls = [];  // DOM elements for each card
+
+    // Config with defaults matching ReactBits
+    this.width = options.width || 480;
+    this.height = options.height || 340;
+    this.cardDistance = options.cardDistance || 55;
+    this.verticalDistance = options.verticalDistance || 60;
+    this.delay = options.delay || 5000;
+    this.pauseOnHover = options.pauseOnHover !== false;
+    this.skewAmount = options.skewAmount || 6;
+    this.easing = options.easing || 'elastic';
+
+    // State
+    this.order = [];
+    this.timeline = null;
+    this.intervalId = null;
+
+    // Easing config
+    this.config = this.easing === 'elastic'
+      ? {
+          ease: 'elastic.out(0.6, 0.9)',
+          durDrop: 1.2,
+          durMove: 1.2,
+          durReturn: 1.2,
+          promoteOverlap: 0.9,
+          returnDelay: 0.05
+        }
+      : {
+          ease: 'power1.inOut',
+          durDrop: 0.5,
+          durMove: 0.5,
+          durReturn: 0.5,
+          promoteOverlap: 0.45,
+          returnDelay: 0.2
+        };
+
+    this.init();
+  }
+
+  /**
+   * Calculate stacking slot position for card at index i
+   */
+  makeSlot(i) {
+    const total = this.cards.length;
+    return {
+      x: i * this.cardDistance,
+      y: i * this.verticalDistance,       // Positive: back cards stack DOWNWARD (away from heading)
+      z: -i * this.cardDistance * 1.5,
+      zIndex: total - i
+    };
+  }
+
+  /**
+   * Immediately place element at slot position (no animation)
+   */
+  placeNow(el, slot) {
+    gsap.set(el, {
+      x: slot.x,
+      y: slot.y,
+      z: slot.z,
+      xPercent: -50,
+      yPercent: -50,
+      skewY: this.skewAmount,
+      transformOrigin: 'center center',
+      zIndex: slot.zIndex,
+      force3D: true
+    });
+  }
+
+  init() {
+    if (typeof gsap === 'undefined') {
+      console.warn('CardSwap: GSAP required');
+      return;
+    }
+
+    // Set container dimensions
+    this.container.style.width = this.width + 'px';
+    this.container.style.height = this.height + 'px';
+
+    // Build card DOM elements
+    this.buildCards();
+
+    // Initialize order: [0, 1, 2, ...]
+    this.order = Array.from({ length: this.cards.length }, (_, i) => i);
+
+    // Place all cards at initial positions
+    this.cardEls.forEach((el, i) => {
+      this.placeNow(el, this.makeSlot(i));
+    });
+
+    // Run first swap + start auto interval
+    this.swap();
+    this.intervalId = window.setInterval(() => this.swap(), this.delay);
+
+    // Pause on hover
+    if (this.pauseOnHover) {
+      this.container.addEventListener('mouseenter', () => {
+        if (this.timeline) this.timeline.pause();
+        clearInterval(this.intervalId);
+      });
+      this.container.addEventListener('mouseleave', () => {
+        if (this.timeline) this.timeline.play();
+        this.intervalId = window.setInterval(() => this.swap(), this.delay);
+      });
+    }
+
+    // Click to swap
+    this.container.addEventListener('click', (e) => {
+      // Don't swap if clicking the download link
+      if (e.target.closest('.card-swap-card__download')) return;
+      this.swap();
+    });
+  }
+
+  buildCards() {
+    const downloadIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>`;
+
+    this.cards.forEach((card, i) => {
+      const el = document.createElement('div');
+      el.className = `card-swap-card card-swap-card--${card.colorTheme || 'navy'}`;
+      el.style.width = this.width + 'px';
+      el.style.height = this.height + 'px';
+      el.setAttribute('data-card-index', i);
+
+      el.innerHTML = `
+        <div>
+          <div class="card-swap-card__title">${this.escapeHTML(card.title)}</div>
+          <div class="card-swap-card__subline">${this.escapeHTML(card.descriptor)}</div>
+        </div>
+        <div class="card-swap-card__footer">
+          <span class="card-swap-card__meta">${this.escapeHTML(card.meta)}</span>
+          <a href="${this.escapeHTML(card.pdfUrl || '#')}" target="_blank" rel="noopener" class="card-swap-card__download" onclick="event.stopPropagation()">
+            ${downloadIcon} Download PDF
+          </a>
+        </div>
+      `;
+
+      this.container.appendChild(el);
+      this.cardEls.push(el);
+    });
+  }
+
+  /**
+   * Animated swap: front card drops out, others shift forward, front returns to back
+   * Order updates IMMEDIATELY so rapid clicks always target the correct front card
+   */
+  swap() {
+    if (this.order.length < 2) return;
+
+    // Kill any running animation and snap all cards to their current target positions
+    if (this.timeline) {
+      this.timeline.progress(1, false);
+      this.timeline.kill();
+    }
+
+    const [front, ...rest] = this.order;
+    const elFront = this.cardEls[front];
+    const total = this.cardEls.length;
+
+    // Update order IMMEDIATELY so next click targets the correct card
+    this.order = [...rest, front];
+
+    const tl = gsap.timeline();
+    this.timeline = tl;
+
+    // 1. Drop the front card down and out (further below the downward stack)
+    tl.to(elFront, {
+      y: '+=250',
+      duration: this.config.durDrop,
+      ease: this.config.ease
+    });
+
+    // 2. Promote remaining cards forward (overlapping with drop)
+    tl.addLabel('promote', `-=${this.config.durDrop * this.config.promoteOverlap}`);
+    rest.forEach((idx, i) => {
+      const el = this.cardEls[idx];
+      const slot = this.makeSlot(i);
+      tl.set(el, { zIndex: slot.zIndex }, 'promote');
+      tl.to(
+        el,
+        {
+          x: slot.x,
+          y: slot.y,
+          z: slot.z,
+          duration: this.config.durMove,
+          ease: this.config.ease
+        },
+        `promote+=${i * 0.15}`
+      );
+    });
+
+    // 3. Return front card to back position
+    const backSlot = this.makeSlot(total - 1);
+    tl.addLabel('return', `promote+=${this.config.durMove * this.config.returnDelay}`);
+    tl.call(
+      () => { gsap.set(elFront, { zIndex: backSlot.zIndex }); },
+      undefined,
+      'return'
+    );
+    tl.to(
+      elFront,
+      {
+        x: backSlot.x,
+        y: backSlot.y,
+        z: backSlot.z,
+        duration: this.config.durReturn,
+        ease: this.config.ease
+      },
+      'return'
+    );
+  }
+
+  escapeHTML(str) {
+    if (!str) return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  destroy() {
+    if (this.intervalId) clearInterval(this.intervalId);
+    if (this.timeline) this.timeline.kill();
+  }
+}
+
+
+/* ============================================
+   AdvisorySection — Section 3 Orchestrator
+   ============================================ */
 
 class AdvisorySection {
   constructor() {
@@ -12,6 +255,7 @@ class AdvisorySection {
     this.containerEl = null;
     this.data = null;
     this.advisoryGrid = null;
+    this.cardSwap = null;
   }
 
   async init() {
@@ -30,7 +274,7 @@ class AdvisorySection {
       this.renderHero(this.data.hero, this.data.cardStack);
       this.renderServices(this.data.services);
       this.initGrid();
-      this.initCardStack();
+      this.initCardSwap(this.data.cardStack);
       this.initEntranceAnimations();
     } catch (err) {
       console.warn('Advisory Section: Failed to initialize', err);
@@ -87,7 +331,7 @@ class AdvisorySection {
   }
 
   /**
-   * Render the two-column hero: left text content + right heading & card stack
+   * Render the two-column hero: left text content + right heading & card swap area
    */
   renderHero(hero, cardStackData) {
     if (!hero) return;
@@ -108,7 +352,7 @@ class AdvisorySection {
 
     textCol.innerHTML = bodyHTML;
 
-    // RIGHT column — heading + card stack
+    // RIGHT column — heading + CardSwap container
     const cardsCol = document.createElement('div');
     cardsCol.className = 'advisory-hero__cards advisory-animate';
 
@@ -118,40 +362,40 @@ class AdvisorySection {
     heading.textContent = hero.heading;
     cardsCol.appendChild(heading);
 
-    const stackEl = document.createElement('div');
-    stackEl.className = 'card-stack';
-    stackEl.id = 'advisoryCardStack';
-
-    // Render stacked document cards
-    const downloadIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-      <polyline points="7 10 12 15 17 10"/>
-      <line x1="12" y1="15" x2="12" y2="3"/>
-    </svg>`;
-
-    (cardStackData || []).forEach((card, index) => {
-      const cardEl = document.createElement('a');
-      cardEl.className = 'card-stack__item';
-      cardEl.href = card.pdfUrl || '#';
-      cardEl.target = '_blank';
-      cardEl.rel = 'noopener';
-      cardEl.setAttribute('data-index', index);
-      cardEl.setAttribute('data-card-id', card.id);
-
-      cardEl.innerHTML = `
-        <div class="card-stack__title">${this.escapeHTML(card.title)}</div>
-        <div class="card-stack__descriptor">${this.escapeHTML(card.descriptor)}</div>
-        <div class="card-stack__meta">${downloadIcon} ${this.escapeHTML(card.meta)}</div>
-      `;
-
-      stackEl.appendChild(cardEl);
-    });
-
-    cardsCol.appendChild(stackEl);
+    // Create CardSwap container (cards rendered by initCardSwap)
+    const swapContainer = document.createElement('div');
+    swapContainer.className = 'card-swap-container';
+    swapContainer.id = 'advisoryCardSwap';
+    cardsCol.appendChild(swapContainer);
 
     heroEl.appendChild(textCol);
     heroEl.appendChild(cardsCol);
     this.containerEl.appendChild(heroEl);
+  }
+
+  /**
+   * Initialize CardSwap with GSAP 3D animated card stack
+   */
+  initCardSwap(cardStackData) {
+    const swapEl = document.getElementById('advisoryCardSwap');
+    if (!swapEl || !cardStackData || cardStackData.length === 0) return;
+    if (typeof gsap === 'undefined') return;
+
+    // Responsive sizing based on container width
+    const containerWidth = swapEl.parentElement.offsetWidth;
+    const cardW = Math.min(480, containerWidth - 40);
+    const cardH = Math.round(cardW * 0.7);
+
+    this.cardSwap = new CardSwap(swapEl, cardStackData, {
+      width: cardW,
+      height: cardH,
+      cardDistance: Math.round(cardW * 0.11),
+      verticalDistance: Math.round(cardH * 0.17),
+      delay: 5000,
+      pauseOnHover: true,
+      skewAmount: 6,
+      easing: 'elastic'
+    });
   }
 
   /**
@@ -224,49 +468,6 @@ class AdvisorySection {
   }
 
   /**
-   * Card Stack interaction — placeholder click-to-cycle
-   * Will be replaced with full ReactBits CardSwap conversion
-   * when user provides the React component code
-   */
-  initCardStack() {
-    const stackEl = document.getElementById('advisoryCardStack');
-    if (!stackEl) return;
-
-    const cards = stackEl.querySelectorAll('.card-stack__item');
-    if (cards.length === 0) return;
-
-    stackEl.addEventListener('click', (e) => {
-      // Find the clicked card
-      const clickedCard = e.target.closest('.card-stack__item');
-      if (!clickedCard) return;
-
-      // Only cycle if clicking the front card (index 0)
-      if (clickedCard.getAttribute('data-index') !== '0') return;
-
-      e.preventDefault();
-      this.cycleCards(stackEl);
-    });
-  }
-
-  /**
-   * Cycle card stack: front card goes to back, others shift forward
-   */
-  cycleCards(stackEl) {
-    const cards = Array.from(stackEl.querySelectorAll('.card-stack__item'));
-    const total = cards.length;
-    if (total === 0) return;
-
-    // Rotate: current index N becomes (N - 1 + total) % total
-    // So index 0 → last, index 1 → 0, index 2 → 1
-    cards.forEach(card => {
-      const current = parseInt(card.getAttribute('data-index'), 10);
-      const next = (current - 1 + total) % total;
-      card.setAttribute('data-index', next);
-    });
-  }
-
-
-  /**
    * GSAP ScrollTrigger entrance animations
    */
   initEntranceAnimations() {
@@ -315,6 +516,9 @@ class AdvisorySection {
   destroy() {
     if (this.advisoryGrid) {
       this.advisoryGrid.destroy();
+    }
+    if (this.cardSwap) {
+      this.cardSwap.destroy();
     }
   }
 }
