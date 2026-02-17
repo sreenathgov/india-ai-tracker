@@ -25,6 +25,25 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 32,
+        "title": "Himanta opens new assembly secretariat building",
+        "url": "https://timesofindia.indiatimes.com/city/guwahati/himanta-opens-new-assembly-secretariat-building/articleshow/128434271.cms",
+        "summary": "Chief Minister Himanta Biswa Sarma has inaugurated a new 17-storey assembly secretariat building in Assam, featuring a cutting-edge digital museum and an AI-driven information system called 'ALISA'. The secretariat is equipped with a centralized Building Management System to optimize functionality. The digital museum showcases the Assembly's role in Assam's political evolution.",
+        "date_published": "2026-02-17",
+        "source_name": "Times of India - Guwahati",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AS"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 14,
         "title": "Assam Cong lodges FIR against AI-made video of CM Sarma",
         "url": "https://timesofindia.indiatimes.com/city/guwahati/assam-cong-lodges-fir-against-ai-made-video-of-cm-sarma/articleshow/128171191.cms",
@@ -85,5 +104,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

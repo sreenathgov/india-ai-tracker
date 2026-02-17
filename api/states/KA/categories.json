@@ -218,6 +218,25 @@
         "posted_to_x_at": null
       },
       {
+        "id": 17,
+        "title": "Anthropic opens Bengaluru office, expands India partnerships across sectors",
+        "url": "https://yourstory.com/2026/02/anthropic-opens-bengaluru-office-expands-india-partnerships-across-sectors",
+        "summary": "Anthropic has opened an office in Bengaluru, India, to expand its partnerships across various sectors. The company views India as a promising market for responsible AI adoption due to its developer ecosystem and digital infrastructure. This expansion aims to bring AI to a broad base of users in the country.",
+        "date_published": "2026-02-16",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "SoftBank posts OpenAI-driven gains; Setting deeptech startups up for success",
         "url": "https://yourstory.com/2026/02/softbank-posts-openai-driven-gains-setting-deeptech-startups-up-for-success",
@@ -487,6 +506,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 20,
+        "title": "AI consulting startup Navikenz raises $11.6 Mn led by Sekar PRC and Sudip Nandy",
+        "url": "https://entrackr.com/snippets/ai-consulting-startup-navikenz-raises-116-mn-led-by-sekar-prc-and-sudip-nandy-11121310",
+        "summary": "Navikenz, an AI consulting startup, has raised $11.6 million in a funding round co-led by Sekar PRC and Sudip Nandy. The Noida-based company had previously secured $8 million in funding, and this new investment will be used to expand its team and technology. Navikenz aims to help enterprises adopt AI-driven solutions to enhance business processes and drive digital transformation.",
+        "date_published": "2026-02-17",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Semiconductor startup C2i Semiconductors raises $15 Mn led by Peak XV",
         "url": "https://entrackr.com/news/semiconductor-startup-c2i-semiconductors-raises-15-mn-led-by-peak-xv-11110040",
@@ -622,7 +661,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
     "AI Start-Up News"
   ]
 }

@@ -3,8 +3,31 @@
   "categories": {
     "Policies and Initiatives": [],
     "Events": [],
-    "Major AI Developments": [],
+    "Major AI Developments": [
+      {
+        "id": 34,
+        "title": "Objectionable AI video of Golden Temple spark outrage",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/objectionable-ai-video-of-golden-temple-spark-outrage/articleshow/128433762.cms",
+        "summary": "An AI-generated video featuring the Golden Temple in an objectionable manner has sparked widespread outrage. The video's content has not been specified, but it has drawn strong reactions from the public. The incident highlights growing concerns over the misuse of AI technology to create offensive content.",
+        "date_published": "2026-02-17",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "CH",
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

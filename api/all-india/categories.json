@@ -3,6 +3,25 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 9,
+        "title": "India giving necessary policy backing to accelerate AI, semiconductor push, highlights MeitY Secretary",
+        "url": "https://government.economictimes.indiatimes.com/news/policy/india-giving-necessary-policy-backing-to-accelerate-ai-semiconductor-push-highlights-meity-secretary/128423276",
+        "summary": "India is entering a crucial phase in its semiconductor and AI development, driven by sustained policy support and long-term investments. The government aims to build sovereign capabilities in these areas through competitive compute pricing and strategic investments. Secretary of MeitY S. Krishnan highlighted the importance of policy backing in accelerating India's AI and semiconductor push.",
+        "date_published": "2026-02-16",
+        "source_name": "ET Government - Policy",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "IndiaAI Mission join hands with Coursera to offer ‘YUVA AI for ALL’ foundational course on AI",
         "url": "https://government.economictimes.indiatimes.com/news/news/indiaai-mission-join-hands-with-coursera-to-offer-yuva-ai-for-all-foundational-course-on-ai/127973382",
@@ -660,6 +679,196 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Opportunity is bigger than before, says Infosys chairman Nilekani on disruption posed by GenAI tools",
+        "url": "https://www.livemint.com/ai/infosys-nandan-nilekani-artificial-intelligence-it-services-11771309720680.html",
+        "summary": "Infosys chairman Nandan Nilekani believes the disruption caused by GenAI tools will create new opportunities for IT services. A lag in enterprise adoption of AI is expected to drive fresh demand, despite investor anxiety and pressure on tech stocks. Nilekani sees this as a bigger opportunity than before for the industry.",
+        "date_published": "2026-02-17",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Bharat-VISTAAR launches today- All about the AI tool to help farmers via a simple phone call",
+        "url": "https://www.livemint.com/news/bharatvistaar-launches-today-all-about-the-ai-tool-to-help-farmers-via-a-simple-phone-call-11771289721533.html",
+        "summary": "Bharat-VISTAAR, a multilingual AI tool, has been launched to support Indian agriculture. The tool integrates AgriStack portals and ICAR practices to enhance productivity for farmers. It allows farmers to access information and assistance through a simple phone call.",
+        "date_published": "2026-02-17",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Day one of India’s global AI pitch descends into chaos",
+        "url": "https://www.livemint.com/ai/ai-impact-summit-first-day-problems-global-tech-conference-management-11771253322088.html",
+        "summary": "India's premier AI summit began in chaos due to security lockdowns and network failures. International attendees and exhibitors were frustrated by the disruptions on the first day of the event. The issues marred the country's attempt to showcase its AI capabilities on a global stage.",
+        "date_published": "2026-02-17",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Ottonomy showcases Made-in-India Autonomous Delivery Ecosystem at India AI Impact Summit",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/ottonomy-showcases-made-in-india-autonomous-delivery-ecosystem-at-india-ai-impact-summit-11771252031697.html",
+        "summary": "Ottonomy has showcased its Made-in-India Autonomous Delivery Ecosystem at the India AI Impact Summit. The ecosystem features Ottonomy's Level-4 autonomous delivery robots, called 'Ottobots', which integrate with smart storage infrastructure and drone logistics capabilities. This integrated system aims to enhance delivery efficiency through autonomous technology.",
+        "date_published": "2026-02-17",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Market for apps, funding pitches to precede policy declaration at AI summit",
+        "url": "https://www.livemint.com/ai/india-ai-impact-summit-ai-summit-artificial-intelligence-app-funding-11771225648526.html",
+        "summary": "India's AI Impact Summit will feature a market for apps and funding pitches, aiming to attract global investors and businesses for data centres and AI applications. The event will showcase Indian startups and private enterprises working on AI to a global audience. This will be a key focus of the summit, given the current lack of a binding international coalition on AI.",
+        "date_published": "2026-02-17",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "India can play a key role in shaping global AI rulebook",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-pivotal-role-in-establishing-global-ai-governance/128419370",
+        "summary": "India can play a crucial role in shaping the global AI rulebook due to its large population and significant data generation. The country is home to over 1.4 billion people and generates around 20% of the world's data. India also has the second-largest AI talent base globally and over 700 million digitally connected citizens.",
+        "date_published": "2026-02-17",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 16,
+        "title": "Infosys, Anthropic partner to build AI tools for complex, regulated industries",
+        "url": "https://yourstory.com/2026/02/infosys-anthropic-partner-ai-tools-complex-regulated-industries",
+        "summary": "Infosys has partnered with Anthropic to develop AI tools for complex and regulated industries. The collaboration aims to automate complex workflows and accelerate software delivery while ensuring governance and transparency. This partnership will help enterprises in regulated industries adopt AI with confidence.",
+        "date_published": "2026-02-17",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 21,
+        "title": "Razorpay becomes India payments partner for Replit’s global AI platform",
+        "url": "https://entrackr.com/snippets/razorpay-becomes-india-payments-partner-for-replits-global-ai-platform-11119108",
+        "summary": "Razorpay has partnered with Replit to become the India payments partner for its global AI platform, enabling seamless subscription payments and monetization of AI-built products. The integration allows AI-built products to accept UPI payments from the start. Replit will use Razorpay's International Payments Suite to allow Indian users to pay in INR via methods like UPI and cards.",
+        "date_published": "2026-02-17",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 25,
+        "title": "Summit should establish India as leading AI player globally: NITI Aayog’s Anna...",
+        "url": "https://cellit.in/summit-should-establish-india-as-leading-ai-player-globally-niti-aayogs-anna-roy/",
+        "summary": "NITI Aayog's Anna Roy suggests that a summit should position India as a leading global player in artificial intelligence. The goal is to establish India's prominence in the AI sector on a global scale. This move aims to showcase India's capabilities and advancements in AI technology.",
+        "date_published": "2026-02-17",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 27,
+        "title": "French President Emmanuel Macron arrives in India for AI Impact summit, bilateral talks",
+        "url": "https://www.thehindu.com/news/national/pm-modi-french-president-macron-meeting-in-mumbai/article70638174.ece",
+        "summary": "French President Emmanuel Macron has arrived in India to attend the AI Impact summit and engage in bilateral talks with Prime Minister Narendra Modi. The discussions will aim to strengthen strategic ties between the two countries and explore new areas of cooperation. Key areas of focus will include emerging technologies, particularly artificial intelligence.",
+        "date_published": "2026-02-17",
+        "source_name": "The Hindu - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "India’s IT sector is successfully navigating GenAI transition",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-it-sector-is-successfully-navigating-genai-transition/128405544",
@@ -723,6 +932,101 @@
         "summary": "Wealthtech startup Otto Money has raised $1.3 million in a pre-seed funding round led by Pravega Ventures, with participation from angel investors and existing backers. The funds will be used to enhance the company's AI models, personalization features, and goal-based advisory capabilities over the next 12-18 months. Otto Money plans to expand its engineering and data science teams and launch go-to-market initiatives across tier I cities.",
         "date_published": "2026-02-16",
         "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "India AI Impact Summit 2026: What does responsible AI for Bharat look like?",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-ai-impact-summit-2026-what-does-responsible-ai-for-bharat-look-like/128419735",
+        "summary": "India's AI development requires a multifaceted approach, including governance, talent upskilling, investment, and practical applications, to build responsible AI. Experts emphasize the need for additional layers to make India's AI story comprehensive. Key areas of focus include governance, talent, and investment to drive responsible AI growth in the country.",
+        "date_published": "2026-02-16",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 14,
+        "title": "Telecom networks shift focus to AI infrastructure at India AI Impact Summit 2026",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/telecom-networks-shift-focus-to-ai-infrastructure-at-india-ai-impact-summit-2026/128411441",
+        "summary": "Data consumption in India has reached 32 GB per user per month, with 5G subscriptions expected to exceed 1 billion by 2031. Telecom networks are shifting focus to AI infrastructure, indicating a significant change in the industry. The next phase is expected to prioritize autonomy, efficiency, and sustainability.",
+        "date_published": "2026-02-16",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 18,
+        "title": "NPCI pilots ‘UPI One World’ wallet for foreign delegates at India AI summit",
+        "url": "https://yourstory.com/2026/02/npci-pilots-upi-one-world-wallet-for-foreign-delegates-india-ai-summit",
+        "summary": "NPCI has launched a pilot for 'UPI One World' wallet, targeting foreign delegates at an India AI summit. The pilot aims to facilitate cross-border transactions and visitor use cases. This move is part of India's efforts to expand its domestic payments infrastructure for international use.",
+        "date_published": "2026-02-16",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 23,
+        "title": "India’s principal scientific advisor Ajay Sood bats for techno-legal framework to boost AI safety",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/indias-new-ai-safety-framework-insights-from-principal-scientific-adviser-ajay-sood/128423577",
+        "summary": "India's principal scientific advisor Ajay Sood is advocating for a techno-legal framework to enhance AI safety. A white paper has been released, outlining the proposed framework. The move aims to boost safety in the development and deployment of artificial intelligence in the country.",
+        "date_published": "2026-02-16",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 24,
+        "title": "American chipmaker Micron to begin commercial production in India by month-end: Meity official",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/american-chipmaker-micron-to-begin-commercial-production-in-india-by-month-end-meity-official/128423113",
+        "summary": "Micron, a US-based chipmaker, will start commercial production in India by the end of the month. The company is working on high bandwidth memory, a crucial component for expanding AI usage. This development is expected to support the growth of AI applications, according to a Meity official.",
+        "date_published": "2026-02-16",
+        "source_name": "ET Government - Technology",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -2449,12 +2753,50 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 19,
+        "title": "Don’t panic, AI won’t take your job; AI startup Neysa’s $1.2B funding",
+        "url": "https://yourstory.com/2026/02/dont-panic-ai-wont-take-your-job",
+        "summary": "Sanjeev Bhikchandani believes historical trends suggest concerns over large-scale job losses due to AI are exaggerated. AI startup Neysa has received $1.2B in funding, amidst ongoing debate about AI's impact on employment in India. This development highlights the growing presence of AI in the job market, but Bhikchandani's comments aim to alleviate fears of widespread job displacement.",
+        "date_published": "2026-02-17",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "ValleyNXT Ventures floats Rs 400 Cr fund to back seed- to pre-Series A startups",
         "url": "https://entrackr.com/snippets/valleynxt-ventures-floats-rs-400-cr-fund-to-back-seed-to-pre-series-a-startups-11110461",
         "summary": "ValleyNXT Ventures has launched a Rs 400 crore fund, Bharat Breakthrough Fund-I, to support seed to pre-Series A startups. The fund aims to address the challenges faced by startups during the validation and scale phase through a unique VC-plus-accelerator model. The model is powered by ValleyNXT's MIB framework, which includes mentorship, investment, and business connects.",
         "date_published": "2026-02-16",
         "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 15,
+        "title": "From 300ms latency to 30,000 concurrent calls: Inside India's voice AI production systems",
+        "url": "https://yourstory.com/2026/02/300ms-latency-30000-concurrent-calls-indias-voice-ai-production-systems",
+        "summary": "India's voice AI production systems have made significant advancements, reducing latency from 300ms to near real-time and increasing capacity to 30,000 concurrent calls. A recent webinar by YourStory featured E2E Networks, Nvidia, and Gnani.ai, showcasing their approaches to deploying voice AI at scale. The discussion covered topics such as GPU instance management and handling complex code-mixed conversations.",
+        "date_published": "2026-02-16",
+        "source_name": "YourStory",
         "category": "AI Start-Up News",
         "state_codes": [
           "IN"
@@ -3003,7 +3345,6 @@
   },
   "today_updates": [
     "Major AI Developments",
-    "AI Start-Up News",
-    "Events"
+    "AI Start-Up News"
   ]
 }

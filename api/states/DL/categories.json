@@ -3,6 +3,25 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 6,
+        "title": "One year, 12 startups: India AI Mission faces its first real test",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/one-year-12-startups-india-ai-mission-faces-its-first-real-test-11771238929085.html",
+        "summary": "The India AI Mission is facing its first major test as government-backed startups prepare to showcase their models at the India AI Impact Summit. The event comes as shifting AI economics are putting New Delhi's compute-led strategy under scrutiny. The summit will feature 12 startups that have been supported over the past year, marking a critical milestone for the mission.",
+        "date_published": "2026-02-17",
+        "source_name": "LiveMint AI News",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 108,
         "title": "In face-recognition first, Delhi Police personnel to wear AI smart glasses in R-Day crime fight",
         "url": "https://indianexpress.com/article/cities/delhi/delhi-police-personnel-ai-smart-glasses-republic-day-parade-10487992/",
@@ -101,6 +120,25 @@
     ],
     "Events": [
       {
+        "id": 28,
+        "title": "India AI Impact Summit 2026: Heading to Delhi's Bharat Mandapam? Here’s how to avoid getting into traffic jam",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/india-ai-impact-summit-2026-heading-to-delhis-bharat-mandapam-heres-how-to-avoid-getting-into-traffic-jam/articleshow/128444966.cms",
+        "summary": "The India AI Impact Summit 2026 is being held at Delhi's Bharat Mandapam, with traffic curbs in place to manage the event. While Day 1 saw some localized jams near the venue, the expo's public opening on Day 2 is expected to have no official road closures. VIP movement on Day 3 may cause brief traffic disruptions on Mathura Road, but Day 5 is expected to have no restrictions.",
+        "date_published": "2026-02-17",
+        "source_name": "Times of India - Delhi",
+        "category": "Events",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 27,
         "title": "CPRG to host key policy dialogues at India AI Impact Summit-2026",
         "url": "https://www.tribuneindia.com/news/delhi/cprg-to-host-key-policy-dialogues-at-india-ai-impact-summit-2026",
@@ -178,6 +216,120 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 7,
+        "title": "Delhi set to host first AI Film Festival: Check date, ticket rates, venue and dress code",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/delhi-set-to-host-first-ai-film-festival-check-date-ticket-rates-venue-and-dress-code-11771234072090.html",
+        "summary": "Delhi is set to host its first AI Film Festival, which will include short films, expert panels, and awards. The event aims to cater to a diverse audience, including directors, tech enthusiasts, academics, and the general public. The festival's date, ticket rates, venue, and dress code have been announced.",
+        "date_published": "2026-02-17",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "AI Impact Summit 2026: 6 strategic takeaways for CIOs",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-impact-summit-2026-key-insights-for-cios-navigating-ai-governance-and-innovation/128447044",
+        "summary": "The AI Impact Summit 2026 in New Delhi is the first major global AI gathering in the Global South, bringing together world leaders and tech giants. The summit aims to redefine how artificial intelligence is governed, deployed, and measured for public and business value. Key stakeholders are gathering to discuss strategic AI implementation and its impact.",
+        "date_published": "2026-02-17",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "AI Impact Summit 2026: India&#039;s role in global AI transformation, jobs, and innovation",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-impact-summit-2026-navigating-job-displacement-data-sovereignty-and-workforce-transformation/128419611",
+        "summary": "India is poised to play a key role in the global transformation of AI, shifting from safety debates to real-world impact. The AI Impact Summit 2026 warns that automation will both erase and create jobs, emphasizing the need for startup-led employment and rapid upskilling. AI is seen as a strategic choice for India's future in areas such as education, healthcare, and the economy.",
+        "date_published": "2026-02-17",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 26,
+        "title": "India AI Impact Expo powerful convergence of ideas, innovation, intent: PM Modi",
+        "url": "https://telanganatoday.com/india-ai-impact-expo-powerful-convergence-of-ideas-innovation-intent-pm-modi",
+        "summary": "Prime Minister Narendra Modi inaugurated the India AI Impact Expo 2026 in New Delhi, emphasizing India's commitment to responsible and inclusive AI. The expo features 600 startups and 13 country pavilions, showcasing global technology collaborations. The event is being held at Bharat Mandapam, bringing together a convergence of ideas, innovation, and intent.",
+        "date_published": "2026-02-17",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 29,
+        "title": "As AI-generated fake prescriptions 'grave threat to health', chemists write to PM Narendra Modi",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/as-ai-generated-fake-prescriptions-trigger-health-alarm-chemists-write-to-pm/articleshow/128434636.cms",
+        "summary": "The All India Organisation of Chemists and Druggists has warned PM Narendra Modi about the public health threat posed by AI-generated fake medical prescriptions. Unregulated e-pharmacies are exploiting loopholes to sell restricted medicines with minimal checks. The organization is urging immediate regulatory action to address this issue.",
+        "date_published": "2026-02-17",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 30,
+        "title": "Team at IGIA to aid global AI delegates",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/team-at-igia-to-aid-global-ai-delegates/articleshow/128434530.cms",
+        "summary": "A team has been set up at Indira Gandhi International Airport (IGIA) to assist global delegates attending an AI event. The team will provide support and facilitate the arrival and departure of international attendees. The move aims to ensure a smooth experience for AI delegates visiting from around the world.",
+        "date_published": "2026-02-17",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
       {
         "id": 14,
         "title": "Can’t afford delay in using AI for inclusive growth, says CEA Nageswaran",
@@ -297,6 +449,25 @@
         "title": "AI summit coincides with board exams: Delhi braces for security clamp, traffic curbs",
         "url": "https://www.tribuneindia.com/news/delhi/ai-summit-coincides-with-board-exams-delhi-braces-for-security-clamp-traffic-curbs",
         "summary": "Delhi is implementing strict security measures for the AI Impact Summit, deploying over 10,000 police officers, including 5,000 for traffic management. The city will experience restrictions and diversions on key roads, but essential services will have uninterrupted access. Special arrangements will be made to aid students taking board exams during this time.",
+        "date_published": "2026-02-16",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 31,
+        "title": "Tele-robotics to transform healthcare via AI: Union Minister Dr Jitendra Singh",
+        "url": "https://www.tribuneindia.com/news/delhi/tele-robotics-to-transform-healthcare-via-ai-minister",
+        "summary": "Tele-robotics powered by AI is set to transform healthcare by enabling remote ultrasound examinations, allowing doctors to perform real-time scans on patients in remote locations. Developed by AIIMS Delhi, IIT Delhi, and the Ministry of Earth Sciences, the system has already been used to scan patients in locations like Antarctica. This technology has the potential for broader applications in challenging environments, aiding in critical medical decisions and reducing costly evacuations.",
         "date_published": "2026-02-16",
         "source_name": "Tribune - Delhi",
         "category": "Major AI Developments",
@@ -734,6 +905,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 20,
+        "title": "AI consulting startup Navikenz raises $11.6 Mn led by Sekar PRC and Sudip Nandy",
+        "url": "https://entrackr.com/snippets/ai-consulting-startup-navikenz-raises-116-mn-led-by-sekar-prc-and-sudip-nandy-11121310",
+        "summary": "Navikenz, an AI consulting startup, has raised $11.6 million in a funding round co-led by Sekar PRC and Sudip Nandy. The Noida-based company had previously secured $8 million in funding, and this new investment will be used to expand its team and technology. Navikenz aims to help enterprises adopt AI-driven solutions to enhance business processes and drive digital transformation.",
+        "date_published": "2026-02-17",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "1Buy.AI raises Rs 32.5 Cr in seed round led by 100Unicorns",
         "url": "https://entrackr.com/snippets/1buyai-raises-rs-325-cr-in-seed-round-led-by-100unicorns-11039023",
@@ -755,6 +946,9 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "Policies and Initiatives",
+    "AI Start-Up News",
+    "Events"
   ]
 }

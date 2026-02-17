@@ -159,6 +159,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 22,
+        "title": "French President Macron begins India visit; AI summit and strategic ties in focus",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/macrons-india-visit-ai-summit-and-strengthening-strategic-ties-with-modi/128451254",
+        "summary": "French President Emmanuel Macron has begun a three-day visit to India, focusing on artificial intelligence cooperation and innovation partnerships. The visit aims to strengthen strategic ties between the two countries. Macron's trip will explore opportunities for cooperation in AI and other areas of mutual interest.",
+        "date_published": "2026-02-17",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Fractal Analytics makes muted market debut, lists at nearly 3% discount",
         "url": "https://entrackr.com/news/fractal-analytics-makes-muted-market-debut-lists-at-nearly-3-discount-11110136",
@@ -487,7 +506,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "Policies and Initiatives"
+    "Major AI Developments"
   ]
 }
