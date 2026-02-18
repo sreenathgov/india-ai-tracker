@@ -13,8 +13,8 @@ class StaggeredMenu {
       displaySocials: true,
       displayItemNumbering: true,
       logoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png',
-      mobileLogoUrl: 'KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png',
-      mobileOpenLogoUrl: 'KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-WHITEBG.png',
+      mobileLogoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-KANANLABS-LETTERLOGO.png',
+      mobileOpenLogoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-KANANLABS-LETTERLOGO.png',
       menuButtonColor: '#f4ebd0',
       openMenuButtonColor: '#fff',
       accentColor: '#db4a2b',
@@ -56,6 +56,8 @@ class StaggeredMenu {
       isLight: false,
       darkLogoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png',
       lightLogoUrl: 'KANANLABS-LOGO-SET/BLUE of KANAN-LABS-WEBSITELOGO.png',
+      mobileDarkLogoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-KANANLABS-LETTERLOGO.png',
+      mobileLightLogoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-DARK-KANANLABS-LETTERLOGO.png',
       darkMenuColor: '#f4ebd0',
       lightMenuColor: '#0a2f52',
       currentMenuColor: '#f4ebd0'
@@ -98,7 +100,6 @@ class StaggeredMenu {
     wrapper.appendChild(header);
     wrapper.appendChild(panel);
 
-    // Insert at beginning of body
     document.body.insertBefore(wrapper, document.body.firstChild);
 
     this.refs.wrapper = wrapper;
@@ -777,6 +778,12 @@ class StaggeredMenu {
           gsap.to(logoImg, { opacity: 1, duration: 0.35, ease: 'power2.out' });
         }
       });
+    } else if (logoImg) {
+      // Mobile logo swap: use mobile-specific transparent logos
+      const mobileLogoUrl = this.theme.isLight
+        ? this.theme.mobileLightLogoUrl
+        : this.theme.mobileDarkLogoUrl;
+      logoImg.src = mobileLogoUrl;
     }
   }
 
@@ -879,7 +886,7 @@ document.addEventListener('DOMContentLoaded', function() {
     accentColor: '#db4a2b',
     changeMenuColorOnOpen: true,
     logoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png',
-    mobileLogoUrl: 'KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png',
-    mobileOpenLogoUrl: 'KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-WHITEBG.png'
+    mobileLogoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-KANANLABS-LETTERLOGO.png',
+    mobileOpenLogoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-KANANLABS-LETTERLOGO.png'
   });
 });

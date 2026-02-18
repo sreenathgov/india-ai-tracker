@@ -55,7 +55,7 @@
 
 @media (max-width: 768px) {
     .shiny-text-container {
-        padding: 4vh 1rem 2vh 1rem; /* Half spacing for mobile */
+        padding: 1.25rem 1rem 1.5rem 1rem;
     }
 
     .shiny-text {
@@ -74,6 +74,6 @@
 
 @media (max-width: 768px) and (orientation: landscape) {
     .shiny-text-container {
-        padding: 4vh 1rem 2vh 1rem;
+        padding: 1rem 1rem 1.25rem 1rem;
     }
 }

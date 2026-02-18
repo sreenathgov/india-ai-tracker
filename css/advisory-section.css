@@ -476,6 +476,7 @@
 
     .advisory-hero__cards {
         order: 1;
+        padding-bottom: 80px;
     }
 
     .advisory-hero__heading {
@@ -555,13 +556,14 @@
     }
 
     .advisory-hero__heading {
-        font-size: 3.75rem;
+        font-size: 3rem;
         white-space: normal;
     }
 
     .advisory-hero__body {
         font-size: 0.8rem;
-        text-align: right;
+        text-align: left;
+        line-height: 1.75;
     }
 
     .card-swap-container {
@@ -570,14 +572,35 @@
 
     .card-swap-card {
         padding: 1.25rem 1rem;
+        max-width: calc(100vw - 3rem);
+        overflow: hidden;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .card-swap-card__title {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        line-height: 1.25;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .card-swap-card__subline {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
+        line-height: 1.45;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .card-swap-card__footer {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+
+    .card-swap-card__meta {
+        font-size: 0.625rem;
     }
 
     .advisory-hero__cards {
@@ -589,15 +612,18 @@
     }
 
     .advisory-services__heading {
-        font-size: 3.75rem;
+        font-size: 3rem;
+        margin-bottom: 1.25rem;
     }
 
     .advisory-service-group__title {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+        line-height: 1.35;
     }
 
     .advisory-service-group__subline {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+        line-height: 1.5;
     }
 
     .advisory-service-item {

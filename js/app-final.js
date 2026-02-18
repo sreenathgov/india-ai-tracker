@@ -154,40 +154,75 @@ function renderFeed(updates) {
         return;
     }
 
-    // On mobile/tablet, show only top 7 updates (no scrolling)
-    // On desktop, show all updates with auto-scroll
     const isMobileOrTablet = window.innerWidth <= 768;
-    const displayUpdates = isMobileOrTablet ? updates.slice(0, 7) : updates;
 
-    let html = '';
-    displayUpdates.forEach(update => {
-        const stateCode = STATE_CODE_MAP[update.state] || '';
-        const relativeTime = getRelativeTime(update.date_published);
+    if (isMobileOrTablet) {
+        // Mobile: horizontal paginated carousel, 5 items per page
+        const PAGE_SIZE = 5;
+        const displayUpdates = updates.slice(0, 15);
+        const pages = [];
+        for (let i = 0; i < displayUpdates.length; i += PAGE_SIZE) {
+            pages.push(displayUpdates.slice(i, i + PAGE_SIZE));
+        }
 
-        html += `
-            <a href="${update.url}" target="_blank" rel="noopener"
-               class="feed-item"
-               data-state="${stateCode}"
-               data-state-name="${update.state}">
-                <div class="feed-item-title">${update.title}</div>
-                <div class="feed-item-meta">
-                    <span class="feed-item-state">${update.state}</span>
-                    <span class="separator">·</span>
-                    <span class="feed-item-time">${relativeTime}</span>
-                    <span class="separator">·</span>
-                    <span class="feed-item-category">${update.category}</span>
-                </div>
-            </a>
+        const pagesHtml = pages.map(pageItems => {
+            const itemsHtml = pageItems.map(update => {
+                const stateCode = STATE_CODE_MAP[update.state] || '';
+                const relativeTime = getRelativeTime(update.date_published);
+                return `<a href="${update.url}" target="_blank" rel="noopener"
+                           class="feed-item"
+                           data-state="${stateCode}"
+                           data-state-name="${update.state}">
+                            <div class="feed-item-title">${update.title}</div>
+                            <div class="feed-item-meta">
+                                <span class="feed-item-state">${update.state}</span>
+                                <span class="separator">·</span>
+                                <span class="feed-item-time">${relativeTime}</span>
+                                <span class="separator">·</span>
+                                <span class="feed-item-category">${update.category}</span>
+                            </div>
+                        </a>`;
+            }).join('');
+            return `<div class="feed-carousel-page">${itemsHtml}</div>`;
+        }).join('');
+
+        const dotsHtml = pages.map((_, i) =>
+            `<button class="feed-carousel-dot${i === 0 ? ' active' : ''}" data-page="${i}" aria-label="Page ${i + 1}"></button>`
+        ).join('');
+
+        feedContent.innerHTML = `
+            <div class="feed-carousel-wrapper">
+                <div class="feed-carousel-track" id="feedCarouselTrack">${pagesHtml}</div>
+            </div>
+            <div class="feed-carousel-dots" id="feedCarouselDots">${dotsHtml}</div>
         `;
-    });
 
-    feedContent.innerHTML = html;
-
-    // Add hover listeners for map highlighting
-    initFeedHoverHighlighting();
-
-    // Initialize auto-scroll only on desktop (not mobile/tablet)
-    if (!isMobileOrTablet) {
+        initFeedHoverHighlighting();
+        initMobileCarousel(pages.length);
+    } else {
+        // Desktop: flat list with vertical auto-scroll
+        let html = '';
+        updates.forEach(update => {
+            const stateCode = STATE_CODE_MAP[update.state] || '';
+            const relativeTime = getRelativeTime(update.date_published);
+            html += `
+                <a href="${update.url}" target="_blank" rel="noopener"
+                   class="feed-item"
+                   data-state="${stateCode}"
+                   data-state-name="${update.state}">
+                    <div class="feed-item-title">${update.title}</div>
+                    <div class="feed-item-meta">
+                        <span class="feed-item-state">${update.state}</span>
+                        <span class="separator">·</span>
+                        <span class="feed-item-time">${relativeTime}</span>
+                        <span class="separator">·</span>
+                        <span class="feed-item-category">${update.category}</span>
+                    </div>
+                </a>
+            `;
+        });
+        feedContent.innerHTML = html;
+        initFeedHoverHighlighting();
         initAutoScroll();
     }
 }
@@ -251,6 +286,7 @@ function stopAutoScroll() {
         clearInterval(autoScrollInterval);
         autoScrollInterval = null;
     }
+    stopMobileCarousel();
 }
 
 function pauseAutoScroll() {
@@ -261,6 +297,85 @@ function resumeAutoScrollDelayed() {
     setTimeout(() => {
         isAutoScrollPaused = false;
     }, AUTO_SCROLL_PAUSE_DELAY);
+}
+
+// ============================================
+// MOBILE CAROUSEL (horizontal pagination)
+// ============================================
+
+let carouselCurrentPage = 0;
+let carouselTotalPages = 0;
+let carouselAutoAdvanceTimer = null;
+let carouselTouchStartX = 0;
+
+function initMobileCarousel(totalPages) {
+    carouselCurrentPage = 0;
+    carouselTotalPages = totalPages;
+    stopMobileCarousel();
+
+    const track = document.getElementById('feedCarouselTrack');
+    if (!track) return;
+
+    // Touch swipe support
+    track.addEventListener('touchstart', (e) => {
+        carouselTouchStartX = e.touches[0].clientX;
+        // Pause auto-advance while user is swiping
+        stopMobileCarousel();
+    }, { passive: true });
+
+    track.addEventListener('touchend', (e) => {
+        const deltaX = e.changedTouches[0].clientX - carouselTouchStartX;
+        if (Math.abs(deltaX) > 40) {
+            if (deltaX < 0) {
+                carouselGoToPage(carouselCurrentPage + 1); // swipe left → next
+            } else {
+                carouselGoToPage(carouselCurrentPage - 1); // swipe right → prev
+            }
+        }
+        // Restart auto-advance after 8s
+        setTimeout(() => startCarouselAutoAdvance(), 8000);
+    }, { passive: true });
+
+    // Dot click navigation
+    const dots = document.getElementById('feedCarouselDots');
+    if (dots) {
+        dots.addEventListener('click', (e) => {
+            const dot = e.target.closest('.feed-carousel-dot');
+            if (dot) {
+                carouselGoToPage(parseInt(dot.dataset.page, 10));
+                stopMobileCarousel();
+                setTimeout(() => startCarouselAutoAdvance(), 8000);
+            }
+        });
+    }
+
+    startCarouselAutoAdvance();
+}
+
+function carouselGoToPage(page) {
+    if (page < 0) page = carouselTotalPages - 1;
+    if (page >= carouselTotalPages) page = 0;
+    carouselCurrentPage = page;
+
+    const track = document.getElementById('feedCarouselTrack');
+    if (track) track.style.transform = `translateX(-${page * 100}%)`;
+
+    const dots = document.querySelectorAll('.feed-carousel-dot');
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === page));
+}
+
+function startCarouselAutoAdvance() {
+    stopMobileCarousel();
+    carouselAutoAdvanceTimer = setInterval(() => {
+        carouselGoToPage(carouselCurrentPage + 1);
+    }, 5000);
+}
+
+function stopMobileCarousel() {
+    if (carouselAutoAdvanceTimer) {
+        clearInterval(carouselAutoAdvanceTimer);
+        carouselAutoAdvanceTimer = null;
+    }
 }
 
 // Initialize feed item hover highlighting on map
@@ -321,7 +436,7 @@ function showFeedPanel() {
     const feedPanel = document.getElementById('feedPanel');
     if (feedPanel) {
         feedPanel.classList.remove('hidden');
-        startAutoScroll();
+        initAutoScroll();
     }
 }
 
@@ -880,35 +995,112 @@ function showPanel(stateName, content) {
     document.getElementById('panelTitle').textContent = stateName;
     document.getElementById('panelContent').innerHTML = content;
 
-    // Step 1: Hide feed panel with premium animation
-    hideFeedPanel();
+    // Step 1: On desktop, hide feed and collapse map alongside panel open.
+    // On mobile the panel is a fixed overlay — underlying layout is untouched.
+    if (window.innerWidth > 768) {
+        hideFeedPanel();
+    }
 
-    // Step 2: Trigger coordinated animation via CSS classes (slight delay for orchestration)
+    // Step 2: Open panel; desktop also collapses map frame
     requestAnimationFrame(() => {
         panel.classList.add('open');
-        mapFrame.classList.add('panel-open');
+        if (window.innerWidth > 768) {
+            mapFrame.classList.add('panel-open');
+        }
     });
 
-    /*
-     * After the CSS transition completes:
-     * 1. Call invalidateSize() so Leaflet knows the new container dimensions
-     * 2. Fit the map to the selected state's bounds so it remains centered
-     */
-    setTimeout(() => {
-        map.invalidateSize({ animate: false, pan: false });
+    // After transition: resize map to new dimensions (desktop only — map doesn't move on mobile overlay)
+    if (window.innerWidth > 768) {
+        setTimeout(() => {
+            map.invalidateSize({ animate: false, pan: false });
 
-        // Center on the selected state's bounds after resize
-        if (selectedLayer) {
-            const bounds = selectedLayer.getBounds();
-            map.fitBounds(bounds, {
-                padding: [30, 30],
-                animate: true,
-                duration: 0.3
-            });
-        }
-    }, TRANSITION_DURATION + 50);
+            if (selectedLayer) {
+                const bounds = selectedLayer.getBounds();
+                map.fitBounds(bounds, {
+                    padding: [30, 30],
+                    animate: true,
+                    duration: 0.3
+                });
+            }
+        }, TRANSITION_DURATION + 50);
+    }
 
     currentPanel = stateName;
+
+    // Attach swipe-to-close gesture on mobile
+    if (window.innerWidth <= 768) {
+        initPanelSwipe();
+    }
+}
+
+// Flag: panel was already animated out by swipe — closePanel() should skip re-animation
+let swipeDismissing = false;
+
+/**
+ * Swipe-to-close for the mobile overlay panel.
+ * Drag handle area = entire panel (but respects internal scroll position).
+ * Threshold: 100px downward OR velocity > 0.4 px/ms → dismiss.
+ * Below threshold → spring back with bouncy easing.
+ */
+function initPanelSwipe() {
+    const panel = document.getElementById('sidePanel');
+    if (!panel) return;
+
+    let startY = 0;
+    let currentDeltaY = 0;
+    let isDragging = false;
+    let startTime = 0;
+
+    function onTouchStart(e) {
+        // If panel content is scrolled down, let the scroll reach top first
+        const content = panel.querySelector('.panel-content');
+        if (content && content.scrollTop > 0) return;
+        startY = e.touches[0].clientY;
+        currentDeltaY = 0;
+        startTime = Date.now();
+        isDragging = true;
+        panel.style.transition = 'none';
+    }
+
+    function onTouchMove(e) {
+        if (!isDragging) return;
+        const d = e.touches[0].clientY - startY;
+        if (d < 0) { isDragging = false; panel.style.transition = ''; return; }
+        currentDeltaY = d;
+        panel.style.transform = `translateY(${d}px)`;
+    }
+
+    function onTouchEnd() {
+        if (!isDragging) return;
+        isDragging = false;
+        const elapsed = Date.now() - startTime || 1;
+        const velocity = currentDeltaY / elapsed;
+
+        if (currentDeltaY > 100 || velocity > 0.4) {
+            // Commit to dismiss — animate off-screen then call closePanel
+            const duration = Math.min(320, Math.max(160, (window.innerHeight - currentDeltaY) / (velocity || 1)));
+            panel.style.transition = `transform ${duration}ms cubic-bezier(0.22, 1, 0.36, 1)`;
+            panel.style.transform = 'translateY(110vh)';
+            swipeDismissing = true;
+            setTimeout(() => closePanel(), duration);
+        } else {
+            // Spring back with bouncy easing
+            panel.style.transition = 'transform 420ms cubic-bezier(0.34, 1.56, 0.64, 1)';
+            panel.style.transform = 'translateY(0)';
+            setTimeout(() => { panel.style.transition = ''; panel.style.transform = ''; }, 420);
+        }
+    }
+
+    panel.addEventListener('touchstart', onTouchStart, { passive: true });
+    panel.addEventListener('touchmove', onTouchMove, { passive: true });
+    panel.addEventListener('touchend', onTouchEnd, { passive: true });
+
+    panel._removeSwipe = () => {
+        panel.removeEventListener('touchstart', onTouchStart);
+        panel.removeEventListener('touchmove', onTouchMove);
+        panel.removeEventListener('touchend', onTouchEnd);
+        delete panel._removeSwipe;
+    };
 }
 
 /**
@@ -923,19 +1115,39 @@ function closePanel() {
     const mapFrame = document.getElementById('map-frame');
     const feedPanel = document.getElementById('feedPanel');
 
+    // Remove swipe listeners
+    if (panel && panel._removeSwipe) panel._removeSwipe();
+
     // Cancel any pending auto-reset
     cancelMapReset();
 
-    // Simultaneously: panel slides out, map grows, feed slides in
-    panel.classList.remove('open');
-    mapFrame.classList.remove('panel-open');
-    feedPanel.classList.remove('hidden');
+    if (swipeDismissing) {
+        // Panel already animated off-screen by swipe — suppress CSS re-animation
+        swipeDismissing = false;
+        panel.style.transition = 'none';
+        panel.style.transform = '';
+        panel.classList.remove('open');
+        void panel.offsetHeight; // force reflow
+        panel.style.transition = '';
+    } else {
+        // Normal close — CSS transition handles the animation
+        panel.classList.remove('open');
+    }
 
-    // After animation completes: resize map and reset to India position
-    setTimeout(() => {
-        map.invalidateSize({ animate: false, pan: false });
-        resetMapToIndia(true);
-    }, TRANSITION_DURATION);
+    // Desktop: restore map and feed to their pre-panel state.
+    // Mobile: overlay never touched the layout — nothing to restore.
+    if (window.innerWidth > 768) {
+        mapFrame.classList.remove('panel-open');
+        feedPanel.classList.remove('hidden');
+    }
+
+    // Desktop: resize map back to full width and reset India view
+    if (window.innerWidth > 768) {
+        setTimeout(() => {
+            map.invalidateSize({ animate: false, pan: false });
+            resetMapToIndia(true);
+        }, TRANSITION_DURATION);
+    }
 
     // Restart auto-scroll after transition
     setTimeout(() => {
@@ -995,6 +1207,14 @@ function setViewMode(mode) {
             allIndiaPanel.classList.add('visible');
         });
 
+        // Lock page scroll on mobile
+        if (window.innerWidth <= 768) {
+            const scrollY = window.scrollY;
+            document.body.dataset.scrollY = scrollY;
+            document.body.style.top = `-${scrollY}px`;
+            document.body.classList.add('all-india-open');
+        }
+
         // Load All India data
         loadAllIndiaContent();
 
@@ -1009,11 +1229,21 @@ function setViewMode(mode) {
         toggleOptions[1].setAttribute('aria-selected', 'false');
         viewToggle.classList.remove('all-india-active');
 
-        // Show map frame, hide All India panel, show feed panel
+        // Show map frame, hide All India panel, restore feed panel immediately
+        // Feed content is already in the DOM — no reason to delay its reveal
         requestAnimationFrame(() => {
             mapFrame.classList.remove('hidden');
             allIndiaPanel.classList.remove('visible');
+            showFeedPanel();
         });
+
+        // Restore page scroll on mobile
+        if (document.body.classList.contains('all-india-open')) {
+            document.body.classList.remove('all-india-open');
+            document.body.style.top = '';
+            const savedScrollY = parseInt(document.body.dataset.scrollY || '0', 10);
+            window.scrollTo(0, savedScrollY);
+        }
 
         // Recalculate map size and reset to perfect India view after animation completes
         setTimeout(() => {
@@ -1027,8 +1257,6 @@ function setViewMode(mode) {
                     resetMapToIndia(false); // Don't animate, just snap to correct position
                 });
             });
-            // Show feed panel after transition
-            showFeedPanel();
         }, TRANSITION_DURATION + 100);
     }
 }
@@ -1154,6 +1382,23 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentViewMode === 'allIndia') setViewMode('state');
         }
     });
+
+    // Mobile: swipe down (pull from top) to dismiss All India panel
+    const allIndiaContentEl = document.querySelector('.all-india-content');
+    if (allIndiaContentEl) {
+        let aiTouchStartY = 0;
+        allIndiaContentEl.addEventListener('touchstart', (e) => {
+            aiTouchStartY = e.touches[0].clientY;
+        }, { passive: true });
+        allIndiaContentEl.addEventListener('touchend', (e) => {
+            if (currentViewMode !== 'allIndia') return;
+            const deltaY = e.changedTouches[0].clientY - aiTouchStartY;
+            // Pull-down gesture (finger moves down) while content is at the top
+            if (deltaY > 70 && allIndiaContentEl.scrollTop <= 0) {
+                setViewMode('state');
+            }
+        }, { passive: true });
+    }
 
     // Handle Deep Linking (Query Parameters + Clean URLs)
     const params = new URLSearchParams(window.location.search);

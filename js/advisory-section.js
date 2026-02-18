@@ -403,7 +403,7 @@ class AdvisorySection {
 
     // Responsive sizing based on container width
     const containerWidth = swapEl.parentElement.offsetWidth;
-    const cardW = Math.min(480, containerWidth - 40);
+    const cardW = Math.min(480, containerWidth - 80);
     const cardH = Math.round(cardW * 0.7);
 
     this.cardSwap = new CardSwap(swapEl, cardStackData, {

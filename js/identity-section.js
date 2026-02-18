@@ -94,7 +94,6 @@ class IdentitySection {
   }
 
   initGridBackground() {
-    if (window.innerWidth <= 768) return;
     if (typeof RippleGrid === 'undefined') return;
 
     this.gridInstance = new RippleGrid(this.sectionEl, {

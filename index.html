@@ -31,6 +31,9 @@
     <meta name="keywords"
         content="AI India, artificial intelligence India, AI policy India, AI startups India, AI tracker, governance intelligence">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/KANAN-LABS-WEBSITELOGO.png">
+
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="e4NN5-5uDwKoApKLmA1I8ZDmL1Dy0BGhlP-IpKbEbSo" />
 
@@ -68,19 +71,9 @@
                 <!-- View Mode Toggle -->
                 <div class="view-toggle" role="tablist">
                     <button class="toggle-option active" onclick="setViewMode('state')" role="tab" aria-selected="true">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
                         State View
                     </button>
                     <button class="toggle-option" onclick="setViewMode('allIndia')" role="tab" aria-selected="false">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                        </svg>
                         All India
                     </button>
                     <div class="toggle-indicator"></div>
@@ -134,6 +127,16 @@
             <!-- All India Panel (Full Width View) -->
             <div id="allIndiaPanel" class="all-india-panel">
                 <div class="all-india-header">
+                    <!-- Mobile-only view toggle (mirrors product-hero toggle) -->
+                    <div class="all-india-panel-toggle" role="tablist">
+                        <button class="toggle-option" onclick="setViewMode('state')" role="tab" aria-selected="false">
+                            State View
+                        </button>
+                        <button class="toggle-option active" role="tab" aria-selected="true">
+                            All India
+                        </button>
+                        <div class="toggle-indicator"></div>
+                    </div>
                     <h2>All India Developments</h2>
                     <p class="all-india-subtitle">National-level AI policy updates and developments</p>
                 </div>

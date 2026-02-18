@@ -296,9 +296,4 @@
     .kl-footer__tagline {
         font-size: 0.9375rem;
     }
-
-    .kl-footer__watermark-img {
-        width: 80%;
-        opacity: 0.04;
-    }
 }
