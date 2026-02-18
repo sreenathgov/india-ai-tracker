@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About & Disclosures - India AI Tracker</title>
+    <title>Disclaimers - India AI Tracker</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-v2.css?v=13">
     <link rel="stylesheet" href="css/staggered-menu.css">
@@ -12,13 +12,12 @@
     <link rel="stylesheet" href="css/back-button.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <style>
-        /* Override the overflow:hidden from main stylesheet */
         html {
             height: auto !important;
             overflow: auto !important;
         }
 
-        body.about-page {
+        body.legal-page {
             height: auto !important;
             overflow: auto !important;
             min-height: 100vh;
@@ -27,44 +26,14 @@
             background: var(--brand-navy);
         }
 
-        .about-header {
-            background: var(--brand-navy);
-            color: var(--brand-cream);
-            padding: 1.25rem 2.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(244, 235, 208, 0.15);
-        }
-
-        .about-header h1 {
-            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--brand-cream);
-        }
-
-        .about-header a {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            color: var(--brand-cream);
-            opacity: 0.7;
-            text-decoration: none;
-            font-size: 0.8125rem;
-            transition: opacity 0.15s ease;
-        }
-
-        .about-header a:hover {
-            opacity: 1;
-        }
-
-        .about-content {
+        .legal-content {
             flex: 1;
             max-width: 720px;
             margin: 0 auto;
             padding: 3rem 2rem;
         }
 
-        .about-content h2 {
+        .legal-content h2 {
             font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
             font-size: 1.75rem;
             font-weight: 600;
@@ -72,21 +41,31 @@
             margin-bottom: 0;
         }
 
-        .about-content .kl-page-title-row {
+        .legal-content .kl-page-title-row {
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-meta {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: rgba(244, 235, 208, 0.38);
             margin-bottom: 2.5rem;
             padding-bottom: 1rem;
             border-bottom: 2px solid rgba(244, 235, 208, 0.2);
         }
 
-        .about-section {
+        .legal-section {
             margin-bottom: 2.5rem;
         }
 
-        .about-section:last-of-type {
+        .legal-section:last-of-type {
             margin-bottom: 0;
         }
 
-        .about-section h3 {
+        .legal-section h3 {
             font-family: 'Telegraf', 'Inter', sans-serif;
             font-size: 1rem;
             font-weight: 600;
@@ -95,7 +74,7 @@
             margin-bottom: 0.75rem;
         }
 
-        .about-section p {
+        .legal-section p {
             font-family: 'Telegraf', 'Inter', sans-serif;
             font-size: 0.9375rem;
             color: var(--brand-cream);
@@ -104,151 +83,97 @@
             margin-bottom: 0.75rem;
         }
 
-        .about-section p:last-child {
+        .legal-section p:last-child {
             margin-bottom: 0;
         }
 
-        .about-section a {
+        .legal-section a {
             color: var(--brand-cream);
             opacity: 0.9;
             text-decoration: underline;
             text-underline-offset: 2px;
         }
 
-        .about-section a:hover {
+        .legal-section a:hover {
             opacity: 1;
         }
 
-        /* CTA Section */
-        .cta-section {
-            margin-top: 3rem;
-            padding: 2rem;
-            background: rgba(244, 235, 208, 0.08);
-            border-radius: 8px;
-            border: 1px solid rgba(244, 235, 208, 0.15);
-            text-align: center;
-        }
-
-        .cta-section h3 {
-            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--brand-cream);
-            margin-bottom: 0.75rem;
-        }
-
-        .cta-section p {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.875rem;
-            color: var(--brand-cream);
-            opacity: 0.7;
-            margin-bottom: 1.25rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--brand-navy);
-            background: var(--brand-cream);
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            transition: all 0.15s ease;
-        }
-
-        .cta-button:hover {
-            background: #fff;
-            transform: translateY(-1px);
-        }
-
-        .about-footer {
+        .legal-footer {
             margin-top: auto;
             background: var(--brand-navy);
             border-top: 1px solid rgba(244, 235, 208, 0.1);
         }
 
-        .about-footer .footer-attribution,
-        .about-footer .footer-links,
-        .about-footer .footer-description {
+        .legal-footer .footer-attribution,
+        .legal-footer .footer-links,
+        .legal-footer .footer-description {
             color: var(--brand-cream);
         }
 
-        .about-footer .footer-links a {
+        .legal-footer .footer-links a {
             color: var(--brand-cream);
         }
 
-        @media (max-width: 768px) {
-            .about-header {
-                flex-direction: column;
-                gap: 0.75rem;
-                text-align: center;
-                padding: 1rem 1.5rem;
-            }
-
-            .about-content {
-                padding: 2rem 1.5rem;
-            }
-
-            .about-content h2 {
-                font-size: 1.5rem;
-            }
-
-            .cta-section {
-                padding: 1.5rem;
-                margin-top: 2rem;
-            }
-        }
-        /* Override staggered menu colors for about page */
         .sm-toggle {
             color: var(--brand-cream) !important;
         }
+
+        @media (max-width: 768px) {
+            .legal-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .legal-content h2 {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
-<body class="about-page">
-    <!-- Staggered menu will be injected here by staggered-menu.js -->
+<body class="legal-page">
 
-    <div style="height: 80px;"></div> <!-- Spacer for menu -->
+    <div style="height: 80px;"></div>
 
-    <main class="about-content">
+    <main class="legal-content">
         <div class="kl-page-title-row">
             <a href="index.html" class="kl-back-btn" aria-label="Back to home">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                     <path d="M7.5 2L3.5 6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </a>
-            <h2>About & Disclosures</h2>
+            <h2>Disclaimers</h2>
         </div>
+        <p class="legal-meta">Last updated: February 2026</p>
 
-        <section class="about-section">
-            <h3>What this site is</h3>
-            <p>The India AI Tracker is an independent platform that aggregates publicly available news, policy updates, government announcements, and industry developments related to artificial intelligence across Indian states and at the national level.</p>
-            <p>The site is intended as a research and discovery tool for policymakers, researchers, journalists, and professionals seeking to monitor AI governance and technology developments in India.</p>
+        <section class="legal-section">
+            <h3>Nature of this platform</h3>
+            <p>The India AI Tracker is an independent aggregation platform maintained by Kanan Labs. It collates publicly available news, policy updates, government announcements, and industry developments related to artificial intelligence in India — at both the state and national level.</p>
+            <p>This site is intended as a research and discovery tool for policymakers, researchers, journalists, and professionals seeking to monitor AI governance and technology developments in India. It does not produce original reporting, editorial content, or independent analysis.</p>
         </section>
 
-        <section class="about-section">
-            <h3>What this site is not</h3>
-            <p>This platform does not produce original reporting, analysis, or editorial content. It does not claim ownership over any third-party material, nor does it host, reproduce, or republish full articles from external sources.</p>
-            <p>The site is not affiliated with any government body, news organisation, or commercial entity. All content aggregated here remains the intellectual property of its original publishers.</p>
+        <section class="legal-section">
+            <h3>No affiliation</h3>
+            <p>The India AI Tracker is not affiliated with any government body, regulatory authority, news organisation, or commercial entity. Views, statements, or positions expressed in aggregated third-party content belong solely to their original publishers and do not represent the views of Kanan Labs or its operators.</p>
         </section>
 
-        <section class="about-section">
-            <h3>Attribution & traffic intent</h3>
-            <p>Every entry on this platform links directly to the original source article or announcement. Brief summaries are provided solely to aid discovery and contextual understanding, not to substitute for or compete with original reporting.</p>
-            <p>The explicit intent of this platform is to direct readers to primary publishers and original sources. No content is paywalled, monetised, or presented in a manner intended to divert traffic from source publications.</p>
+        <section class="legal-section">
+            <h3>Intellectual property</h3>
+            <p>This platform does not claim ownership over any third-party material. All content aggregated here — including articles, announcements, and reports — remains the intellectual property of its original publishers. Every entry on this platform links directly to the original source, and no content is hosted, reproduced, or republished in full.</p>
+            <p>Brief summaries are provided solely to aid discovery and contextual understanding. The explicit intent of this platform is to direct readers to primary publishers and original sources. No content is paywalled, monetised, or presented in a manner intended to divert traffic from source publications.</p>
         </section>
 
-        <section class="about-section">
-            <h3>Feedback & corrections</h3>
-            <p>Accuracy and fair representation are priorities for this project. If you are a publisher, researcher, or reader who has identified an error, wishes to request removal of a specific entry, or would like to suggest an update or missing development, please contact <a href="mailto:sreenath.govin@gmail.com">sreenath.govin@gmail.com</a>.</p>
-            <p>All reasonable requests will be reviewed and addressed promptly.</p>
+        <section class="legal-section">
+            <h3>Source removal requests</h3>
+            <p>If you represent a news outlet, publisher, or content owner that would prefer not to be included in this aggregation, we will respect that preference without question. Please write to us at <a href="mailto:sreenath.govin@gmail.com">sreenath.govin@gmail.com</a> identifying the relevant entries or source, and we will remove them promptly.</p>
         </section>
 
-        <section class="cta-section">
-            <h3>Interested in collaborating?</h3>
-            <p>I'm always open to connecting with researchers, policymakers, and professionals working on AI governance and technology policy.</p>
-            <a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank" rel="noopener" class="cta-button">Connect on LinkedIn</a>
+        <section class="legal-section">
+            <h3>Accuracy & corrections</h3>
+            <p>While we endeavour to represent all aggregated material accurately and fairly, we cannot guarantee the completeness or currency of the information presented. If you have identified an error, a missing development, or a misattribution, please contact <a href="mailto:sreenath.govin@gmail.com">sreenath.govin@gmail.com</a>. All reasonable correction requests will be reviewed and addressed promptly.</p>
+        </section>
+
+        <section class="legal-section">
+            <h3>No legal or professional advice</h3>
+            <p>Nothing on this platform constitutes legal, regulatory, financial, or professional advice of any kind. Content is provided for informational purposes only. Readers should consult appropriate professionals before acting on any information found here.</p>
         </section>
     </main>
 

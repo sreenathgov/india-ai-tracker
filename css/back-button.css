@@ -1,0 +1,48 @@
+/* ============================================
+   PAGE TITLE ROW: back chevron + page title
+   Sits inline above the page content.
+   ============================================ */
+
+.kl-page-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.kl-back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(244, 235, 208, 0.18);
+    border-radius: 50%;
+    text-decoration: none;
+    color: rgba(244, 235, 208, 0.45);
+    transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.kl-back-btn:hover {
+    color: rgba(244, 235, 208, 0.85);
+    border-color: rgba(244, 235, 208, 0.45);
+    background: rgba(244, 235, 208, 0.05);
+}
+
+.kl-back-btn svg {
+    display: block;
+}
+
+/* The h2 sits inside the row — reset its own bottom margin
+   since spacing is now handled by the row's parent */
+.kl-page-title-row h2 {
+    margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+    .kl-back-btn {
+        width: 26px;
+        height: 26px;
+    }
+}

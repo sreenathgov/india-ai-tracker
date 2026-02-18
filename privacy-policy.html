@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About & Disclosures - India AI Tracker</title>
+    <title>Privacy Policy - India AI Tracker</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-v2.css?v=13">
     <link rel="stylesheet" href="css/staggered-menu.css">
@@ -12,13 +12,12 @@
     <link rel="stylesheet" href="css/back-button.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <style>
-        /* Override the overflow:hidden from main stylesheet */
         html {
             height: auto !important;
             overflow: auto !important;
         }
 
-        body.about-page {
+        body.legal-page {
             height: auto !important;
             overflow: auto !important;
             min-height: 100vh;
@@ -27,44 +26,14 @@
             background: var(--brand-navy);
         }
 
-        .about-header {
-            background: var(--brand-navy);
-            color: var(--brand-cream);
-            padding: 1.25rem 2.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(244, 235, 208, 0.15);
-        }
-
-        .about-header h1 {
-            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--brand-cream);
-        }
-
-        .about-header a {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            color: var(--brand-cream);
-            opacity: 0.7;
-            text-decoration: none;
-            font-size: 0.8125rem;
-            transition: opacity 0.15s ease;
-        }
-
-        .about-header a:hover {
-            opacity: 1;
-        }
-
-        .about-content {
+        .legal-content {
             flex: 1;
             max-width: 720px;
             margin: 0 auto;
             padding: 3rem 2rem;
         }
 
-        .about-content h2 {
+        .legal-content h2 {
             font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
             font-size: 1.75rem;
             font-weight: 600;
@@ -72,21 +41,31 @@
             margin-bottom: 0;
         }
 
-        .about-content .kl-page-title-row {
+        .legal-content .kl-page-title-row {
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-meta {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: rgba(244, 235, 208, 0.38);
             margin-bottom: 2.5rem;
             padding-bottom: 1rem;
             border-bottom: 2px solid rgba(244, 235, 208, 0.2);
         }
 
-        .about-section {
+        .legal-section {
             margin-bottom: 2.5rem;
         }
 
-        .about-section:last-of-type {
+        .legal-section:last-of-type {
             margin-bottom: 0;
         }
 
-        .about-section h3 {
+        .legal-section h3 {
             font-family: 'Telegraf', 'Inter', sans-serif;
             font-size: 1rem;
             font-weight: 600;
@@ -95,7 +74,7 @@
             margin-bottom: 0.75rem;
         }
 
-        .about-section p {
+        .legal-section p {
             font-family: 'Telegraf', 'Inter', sans-serif;
             font-size: 0.9375rem;
             color: var(--brand-cream);
@@ -104,151 +83,98 @@
             margin-bottom: 0.75rem;
         }
 
-        .about-section p:last-child {
+        .legal-section p:last-child {
             margin-bottom: 0;
         }
 
-        .about-section a {
+        .legal-section a {
             color: var(--brand-cream);
             opacity: 0.9;
             text-decoration: underline;
             text-underline-offset: 2px;
         }
 
-        .about-section a:hover {
+        .legal-section a:hover {
             opacity: 1;
         }
 
-        /* CTA Section */
-        .cta-section {
-            margin-top: 3rem;
-            padding: 2rem;
-            background: rgba(244, 235, 208, 0.08);
-            border-radius: 8px;
-            border: 1px solid rgba(244, 235, 208, 0.15);
-            text-align: center;
-        }
-
-        .cta-section h3 {
-            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--brand-cream);
-            margin-bottom: 0.75rem;
-        }
-
-        .cta-section p {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.875rem;
-            color: var(--brand-cream);
-            opacity: 0.7;
-            margin-bottom: 1.25rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--brand-navy);
-            background: var(--brand-cream);
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            transition: all 0.15s ease;
-        }
-
-        .cta-button:hover {
-            background: #fff;
-            transform: translateY(-1px);
-        }
-
-        .about-footer {
+        .legal-footer {
             margin-top: auto;
             background: var(--brand-navy);
             border-top: 1px solid rgba(244, 235, 208, 0.1);
         }
 
-        .about-footer .footer-attribution,
-        .about-footer .footer-links,
-        .about-footer .footer-description {
+        .legal-footer .footer-attribution,
+        .legal-footer .footer-links,
+        .legal-footer .footer-description {
             color: var(--brand-cream);
         }
 
-        .about-footer .footer-links a {
+        .legal-footer .footer-links a {
             color: var(--brand-cream);
         }
 
-        @media (max-width: 768px) {
-            .about-header {
-                flex-direction: column;
-                gap: 0.75rem;
-                text-align: center;
-                padding: 1rem 1.5rem;
-            }
-
-            .about-content {
-                padding: 2rem 1.5rem;
-            }
-
-            .about-content h2 {
-                font-size: 1.5rem;
-            }
-
-            .cta-section {
-                padding: 1.5rem;
-                margin-top: 2rem;
-            }
-        }
-        /* Override staggered menu colors for about page */
         .sm-toggle {
             color: var(--brand-cream) !important;
         }
+
+        @media (max-width: 768px) {
+            .legal-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .legal-content h2 {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
-<body class="about-page">
-    <!-- Staggered menu will be injected here by staggered-menu.js -->
+<body class="legal-page">
 
-    <div style="height: 80px;"></div> <!-- Spacer for menu -->
+    <div style="height: 80px;"></div>
 
-    <main class="about-content">
+    <main class="legal-content">
         <div class="kl-page-title-row">
             <a href="index.html" class="kl-back-btn" aria-label="Back to home">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                     <path d="M7.5 2L3.5 6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </a>
-            <h2>About & Disclosures</h2>
+            <h2>Privacy Policy</h2>
         </div>
+        <p class="legal-meta">Effective date: February 2026</p>
 
-        <section class="about-section">
-            <h3>What this site is</h3>
-            <p>The India AI Tracker is an independent platform that aggregates publicly available news, policy updates, government announcements, and industry developments related to artificial intelligence across Indian states and at the national level.</p>
-            <p>The site is intended as a research and discovery tool for policymakers, researchers, journalists, and professionals seeking to monitor AI governance and technology developments in India.</p>
+        <section class="legal-section">
+            <h3>Scope</h3>
+            <p>This policy applies to the India AI Tracker website, operated by Kanan Labs. It covers the limited personal information we collect through two specific channels: newsletter subscriptions and consultation scheduling requests.</p>
+            <p>We do not collect personal data through any other means, and this site does not use tracking pixels, third-party analytics cookies, or behavioural advertising tools.</p>
         </section>
 
-        <section class="about-section">
-            <h3>What this site is not</h3>
-            <p>This platform does not produce original reporting, analysis, or editorial content. It does not claim ownership over any third-party material, nor does it host, reproduce, or republish full articles from external sources.</p>
-            <p>The site is not affiliated with any government body, news organisation, or commercial entity. All content aggregated here remains the intellectual property of its original publishers.</p>
+        <section class="legal-section">
+            <h3>Newsletter subscriptions</h3>
+            <p>When you subscribe to our Weekly Brief, we collect your email address solely for the purpose of delivering the newsletter. Your email address will not be sold, rented, licensed, or disclosed to any third party for any reason.</p>
+            <p>You may unsubscribe at any time by contacting us at <a href="mailto:sreenath.govin@gmail.com">sreenath.govin@gmail.com</a>. Upon request, your email address will be deleted promptly from our records.</p>
         </section>
 
-        <section class="about-section">
-            <h3>Attribution & traffic intent</h3>
-            <p>Every entry on this platform links directly to the original source article or announcement. Brief summaries are provided solely to aid discovery and contextual understanding, not to substitute for or compete with original reporting.</p>
-            <p>The explicit intent of this platform is to direct readers to primary publishers and original sources. No content is paywalled, monetised, or presented in a manner intended to divert traffic from source publications.</p>
+        <section class="legal-section">
+            <h3>Consultation scheduling</h3>
+            <p>When you submit a request to schedule a consultation, we collect the details you choose to provide — such as your name, email address, organisation, and the nature of your enquiry. This information is used only to respond to your request and facilitate the consultation.</p>
+            <p>Details submitted through consultation requests are held in strict confidence and will not be shared with any individual, organisation, or third-party service beyond what is strictly necessary to process your request.</p>
         </section>
 
-        <section class="about-section">
-            <h3>Feedback & corrections</h3>
-            <p>Accuracy and fair representation are priorities for this project. If you are a publisher, researcher, or reader who has identified an error, wishes to request removal of a specific entry, or would like to suggest an update or missing development, please contact <a href="mailto:sreenath.govin@gmail.com">sreenath.govin@gmail.com</a>.</p>
-            <p>All reasonable requests will be reviewed and addressed promptly.</p>
+        <section class="legal-section">
+            <h3>Data retention</h3>
+            <p>We retain personal information only for as long as necessary to fulfil the purpose for which it was collected. Newsletter subscriber data is retained until you unsubscribe. Consultation enquiry data is retained only for the duration of the engagement or correspondence.</p>
         </section>
 
-        <section class="cta-section">
-            <h3>Interested in collaborating?</h3>
-            <p>I'm always open to connecting with researchers, policymakers, and professionals working on AI governance and technology policy.</p>
-            <a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank" rel="noopener" class="cta-button">Connect on LinkedIn</a>
+        <section class="legal-section">
+            <h3>Your rights</h3>
+            <p>You have the right to request access to, correction of, or deletion of any personal information we hold about you. To exercise any of these rights, please write to us at <a href="mailto:sreenath.govin@gmail.com">sreenath.govin@gmail.com</a>. All requests will be acknowledged and addressed promptly.</p>
+        </section>
+
+        <section class="legal-section">
+            <h3>Contact</h3>
+            <p>Questions, concerns, or requests relating to this privacy policy may be directed to <a href="mailto:sreenath.govin@gmail.com">sreenath.govin@gmail.com</a>.</p>
         </section>
     </main>
 

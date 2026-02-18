@@ -7,6 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-v2.css?v=21">
     <link rel="stylesheet" href="css/staggered-menu.css">
+    <link rel="stylesheet" href="css/footer.css?v=3">
+    <link rel="stylesheet" href="css/contact-panel.css?v=1">
+    <link rel="stylesheet" href="css/back-button.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <style>
@@ -107,7 +110,14 @@
             autoplay>
         </dotlottie-player>
 
-        <p class="coming-soon-label">Publications</p>
+        <div class="kl-page-title-row" style="justify-content: center;">
+            <a href="index.html" class="kl-back-btn" aria-label="Back to home">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                    <path d="M7.5 2L3.5 6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <p class="coming-soon-label" style="margin-bottom: 0;">Publications</p>
+        </div>
         <h1 class="coming-soon-title">Coming Soon</h1>
         <p class="coming-soon-description">
             In-depth reports and analysis on AI governance, policy developments, and regulatory trends across India are on their way.
@@ -115,17 +125,109 @@
         <a href="index.html" class="coming-soon-back">Back to Tracker</a>
     </main>
 
-    <footer class="site-footer">
-        <p class="footer-attribution">Built and maintained by Sreenath Govindarajan</p>
-        <p class="footer-links">
-            <a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank" rel="noopener">LinkedIn</a>
-            <span class="separator">·</span>
-            <a href="mailto:sreenath.govin@gmail.com">Email</a>
-            <span class="separator">·</span>
-            <a href="about.html">About this project</a>
-        </p>
-    </footer>
+    <footer class="kl-footer">
+        <div class="kl-footer__inner">
 
+            <div class="kl-footer__content">
+
+                <!-- LEFT: Brand zone -->
+                <div class="kl-footer__brand">
+
+                    <img
+                        src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png"
+                        alt="Kanan Labs"
+                        class="kl-footer__logo"
+                        draggable="false"
+                    >
+
+                    <p class="kl-footer__tagline">India's AI Governance Intelligence</p>
+
+                    <!-- Newsletter mini-form -->
+                    <div>
+                        <p class="kl-footer__nl-label">Weekly Brief</p>
+                        <form class="kl-footer__nl-form" id="footerNewsletterForm">
+                            <input
+                                type="email"
+                                class="kl-footer__nl-input"
+                                placeholder="Your email address"
+                                autocomplete="email"
+                                required
+                            >
+                            <button type="submit" class="kl-footer__nl-submit">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <!-- Schedule Consultation -->
+                    <button
+                        class="kl-footer__consult"
+                        type="button"
+                        onclick="if(window.contactPanel) window.contactPanel.open()"
+                    >
+                        Schedule Consultation →
+                    </button>
+
+                </div>
+
+                <!-- RIGHT: Sitemap grid -->
+                <div class="kl-footer__sitemap">
+
+                    <!-- Col 1: Advisory -->
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Advisory</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="index.html#advisory">Regulatory Trajectory</a></li>
+                            <li><a href="index.html#advisory">Incentive Structuring</a></li>
+                            <li><a href="index.html#advisory">Governance Readiness</a></li>
+                            <li><a href="index.html#advisory">Cross-Border Advisory</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 2: Company -->
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Company</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                            <li><a href="mailto:sreenath.govin@gmail.com">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3: Follow -->
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Follow</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a href="#" target="_blank" rel="noopener">Twitter</a></li>
+                            <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 4: Legal -->
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Legal</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="disclaimers.html">Disclaimers</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BOTTOM: Watermark logo -->
+            <div class="kl-footer__watermark">
+                <img
+                    src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png"
+                    alt=""
+                    class="kl-footer__watermark-img"
+                    aria-hidden="true"
+                    draggable="false"
+                >
+            </div>
+
+        </div>
+    </footer>
+    <script src="js/contact-panel.js"></script>
     <script src="js/staggered-menu.js"></script>
 </body>
 </html>

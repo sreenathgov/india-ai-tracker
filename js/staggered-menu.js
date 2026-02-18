@@ -151,9 +151,10 @@ class StaggeredMenu {
     header.setAttribute('aria-label', 'Main navigation header');
 
     // Logo
-    const logoDiv = document.createElement('div');
+    const logoDiv = document.createElement('a');
     logoDiv.className = 'sm-logo';
-    logoDiv.setAttribute('aria-label', 'Logo');
+    logoDiv.href = 'index.html';
+    logoDiv.setAttribute('aria-label', 'Go to home page');
 
     const logoImg = document.createElement('img');
     logoImg.src = this.options.logoUrl;
@@ -566,11 +567,12 @@ class StaggeredMenu {
     if (this.animations.spinTween) this.animations.spinTween.kill();
 
     if (opening) {
-      // Transform to X: top line rotates 45deg, middle disappears, bottom rotates -45deg
+      // Transform to X: both lines move to center of icon container, then rotate
+      // y:4 / y:-4 brings each line's center to the icon's vertical midpoint (works for both 10px and 9px container heights)
       this.animations.spinTween = gsap.timeline()
-        .to(line1, { y: 0, rotate: 45, duration: 0.3, ease: 'power2.out' }, 0)
+        .to(line1, { y: 4, rotate: 45, duration: 0.3, ease: 'power2.out' }, 0)
         .to(line2, { opacity: 0, duration: 0.2, ease: 'power2.out' }, 0)
-        .to(line3, { y: 0, rotate: -45, duration: 0.3, ease: 'power2.out' }, 0);
+        .to(line3, { y: -4, rotate: -45, duration: 0.3, ease: 'power2.out' }, 0);
     } else {
       // Transform back to hamburger
       this.animations.spinTween = gsap.timeline()
@@ -880,7 +882,7 @@ document.addEventListener('DOMContentLoaded', function() {
       { label: 'GitHub', link: 'https://github.com/sreenathgov' }
     ],
     displaySocials: true,
-    displayItemNumbering: true,
+    displayItemNumbering: false, // set to true to re-enable numbered labels beside menu items
     menuButtonColor: '#f4ebd0',
     openMenuButtonColor: '#db4a2b',
     accentColor: '#db4a2b',

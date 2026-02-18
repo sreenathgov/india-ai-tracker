@@ -81,8 +81,7 @@ class InfrastructureGrid {
   }
 
   startAnimation() {
-    // Only animate on desktop/tablet (not mobile)
-    if (window.innerWidth > 768 && !this.prefersReducedMotion()) {
+    if (!this.prefersReducedMotion()) {
       this.animationId = requestAnimationFrame(() => this.updateAnimation());
     }
   }
