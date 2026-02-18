@@ -5,7 +5,7 @@ const { execSync } = require('child_process');
 // Configuration
 const PROJECT_ROOT = path.resolve(__dirname, '../');
 const DIST_DIR = path.join(PROJECT_ROOT, 'dist');
-const ASSETS_TO_COPY = ['js', 'css', 'data', 'assets', 'added-assets', 'api'];
+const ASSETS_TO_COPY = ['js', 'css', 'data', 'assets', 'added-assets', 'api', 'KANANLABS-LOGO-SET'];
 const FILES_TO_COPY = [
     'index.html',
     'about.html',
