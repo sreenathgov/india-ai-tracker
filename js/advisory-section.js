@@ -343,14 +343,34 @@ class AdvisorySection {
     const textCol = document.createElement('div');
     textCol.className = 'advisory-hero__text advisory-animate';
 
-    const bodyHTML = Array.isArray(hero.bodyParagraphs)
-      ? hero.bodyParagraphs.map(p => {
-          const className = p.bold ? 'advisory-hero__body advisory-hero__body--bold' : 'advisory-hero__body';
-          return `<p class="${className}">${this.escapeHTML(p.text)}</p>`;
-        }).join('')
-      : '';
+    if (Array.isArray(hero.bodyParagraphs)) {
+      hero.bodyParagraphs.forEach(p => {
+        const pEl = document.createElement('p');
+        pEl.className = p.bold ? 'advisory-hero__body advisory-hero__body--bold' : 'advisory-hero__body';
+        pEl.textContent = p.text || '';
 
-    textCol.innerHTML = bodyHTML;
+        // Make "Schedule a consultation" text clickable to open contact panel
+        if (p.bold && p.text && p.text.toLowerCase().includes('schedule')) {
+          pEl.setAttribute('role', 'button');
+          pEl.setAttribute('tabindex', '0');
+          pEl.style.cursor = 'pointer';
+          pEl.style.textDecoration = 'underline';
+          pEl.style.textDecorationColor = 'rgba(10, 47, 82, 0.3)';
+          pEl.style.textUnderlineOffset = '3px';
+          pEl.addEventListener('click', () => {
+            if (window.contactPanel) window.contactPanel.open();
+          });
+          pEl.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              if (window.contactPanel) window.contactPanel.open();
+            }
+          });
+        }
+
+        textCol.appendChild(pEl);
+      });
+    }
 
     // RIGHT column — heading + CardSwap container
     const cardsCol = document.createElement('div');

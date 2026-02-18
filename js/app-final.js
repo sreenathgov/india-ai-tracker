@@ -288,8 +288,8 @@ function highlightStateOnMap(stateName) {
 
     geojsonLayer.eachLayer(layer => {
         const name = layer.feature?.properties?.ST_NM ||
-                     layer.feature?.properties?.name ||
-                     layer.feature?.properties?.NAME;
+            layer.feature?.properties?.name ||
+            layer.feature?.properties?.NAME;
         if (name === stateName) {
             layer.setStyle({
                 weight: 3,
@@ -696,7 +696,7 @@ function expandCategory(categoryName) {
     const isMobile = window.innerWidth <= 768;
     const ITEMS_PER_PAGE = isMobile ? 6 : 10;
     const totalPages = Math.ceil(updates.length / ITEMS_PER_PAGE);
-    
+
     // Ensure currentPage is within valid range
     if (currentPage < 1) currentPage = 1;
     if (currentPage > totalPages && totalPages > 0) currentPage = totalPages;
@@ -724,7 +724,7 @@ function expandCategory(categoryName) {
                 month: 'short',
                 day: 'numeric',
                 year: 'numeric'
-              })
+            })
             : 'Date unknown';
 
         html += `
@@ -757,10 +757,10 @@ function expandCategory(categoryName) {
     }
 
     expandedContent.innerHTML = html;
-    
+
     // Force reflow before adding visible class to ensure proper rendering
     expandedContent.offsetHeight;
-    
+
     expandedContent.classList.add('visible');
 
     // Scroll to top of expanded content after rendering
@@ -773,7 +773,7 @@ function expandCategory(categoryName) {
 // Scroll to top of expanded content
 function scrollToTopOfExpandedContent(expandedContent) {
     if (!expandedContent) return;
-    
+
     // Find the parent scrollable container
     let scrollableContainer;
     if (currentViewMode === 'allIndia') {
@@ -781,7 +781,7 @@ function scrollToTopOfExpandedContent(expandedContent) {
     } else {
         scrollableContainer = document.querySelector('.panel-content');
     }
-    
+
     if (scrollableContainer && expandedContent) {
         // Find the expanded header (first child) to scroll to
         const expandedHeader = expandedContent.querySelector('.expanded-header');
@@ -791,7 +791,7 @@ function scrollToTopOfExpandedContent(expandedContent) {
             const headerRect = expandedHeader.getBoundingClientRect();
             const scrollTop = scrollableContainer.scrollTop;
             const relativeTop = headerRect.top - containerRect.top + scrollTop;
-            
+
             // Scroll to the header with smooth behavior
             scrollableContainer.scrollTo({
                 top: Math.max(0, relativeTop - 10), // Small offset for better visibility
@@ -808,11 +808,11 @@ function goToPage(categoryName, page) {
     const isMobile = window.innerWidth <= 768;
     const ITEMS_PER_PAGE = isMobile ? 6 : 10;
     const totalPages = Math.ceil(updates.length / ITEMS_PER_PAGE);
-    
+
     // Validate page number
     if (page < 1) page = 1;
     if (page > totalPages) page = totalPages;
-    
+
     currentPage = page;
     expandCategory(categoryName);
 }
@@ -829,7 +829,7 @@ function goToNextPage(categoryName) {
     const isMobile = window.innerWidth <= 768;
     const ITEMS_PER_PAGE = isMobile ? 6 : 10;
     const totalPages = Math.ceil(updates.length / ITEMS_PER_PAGE);
-    
+
     if (currentPage < totalPages) {
         goToPage(categoryName, currentPage + 1);
     }
@@ -1154,4 +1154,49 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentViewMode === 'allIndia') setViewMode('state');
         }
     });
+
+    // Handle Deep Linking (Query Parameters + Clean URLs)
+    const params = new URLSearchParams(window.location.search);
+    const stateParam = params.get('state');
+    const viewParam = params.get('view');
+    const path = window.location.pathname;
+
+    let targetState = null;
+    let targetView = null;
+
+    if (viewParam === 'allIndia' || path.includes('/all-india')) {
+        targetView = 'allIndia';
+    } else if (stateParam) {
+        targetState = decodeURIComponent(stateParam);
+    } else if (path.includes('/states/')) {
+        // format: /states/tamil-nadu/
+        const match = path.match(/\/states\/([^/]+)/);
+        if (match && match[1]) {
+            const slug = match[1];
+            // Find state name from slug (reverse lookup)
+            // Slug is usually lowercase with hyphens: tamil-nadu -> Tamil Nadu
+            // We need a helper to iterate STATE_CODE_MAP keys and compare slugs
+            const stateName = Object.keys(STATE_CODE_MAP).find(key =>
+                key.toLowerCase().replace(/\s+/g, '-') === slug.toLowerCase()
+            );
+            if (stateName) targetState = stateName;
+        }
+    }
+
+    if (targetView === 'allIndia') {
+        setViewMode('allIndia');
+    } else if (targetState) {
+        console.log('Deep linking to state:', targetState);
+
+        // Wait for map and data to be ready
+        const checkReady = setInterval(() => {
+            if (geojsonLayer && Object.keys(recentUpdatesCache).length > 0) {
+                clearInterval(checkReady);
+                openStatePanel(targetState);
+            }
+        }, 100);
+
+        // Safety timeout
+        setTimeout(() => clearInterval(checkReady), 10000);
+    }
 });

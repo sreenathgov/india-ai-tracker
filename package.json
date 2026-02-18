@@ -9,11 +9,12 @@
   "scripts": {
     "build:text-pressure": "vite build",
     "dev:text-pressure": "vite build --watch",
+    "build": "node scripts/build-full-site.js && node scripts/generate-static-pages.js && node scripts/generate-sitemap.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://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@github.com/sreenathgov/india-ai-tracker.git"
+    "url": "git+https://github.com/sreenathgov/india-ai-tracker.git"
   },
   "keywords": [],
   "author": "",

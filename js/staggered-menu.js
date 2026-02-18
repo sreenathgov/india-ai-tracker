@@ -52,6 +52,19 @@ class StaggeredMenu {
       itemEntranceTween: null
     };
 
+    this.theme = {
+      isLight: false,
+      darkLogoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png',
+      lightLogoUrl: 'KANANLABS-LOGO-SET/BLUE of KANAN-LABS-WEBSITELOGO.png',
+      darkMenuColor: '#f4ebd0',
+      lightMenuColor: '#0a2f52',
+      currentMenuColor: '#f4ebd0'
+    };
+
+    this._headerHidden = false;
+    this._showHeader = null;
+    this._hideHeader = null;
+
     this.init();
   }
 
@@ -60,6 +73,8 @@ class StaggeredMenu {
     this.cacheRefs();
     this.setupInitialState();
     this.attachEventListeners();
+    this.initThemeSwitching();
+    this.initScrollHide();
   }
 
   createMarkup() {
@@ -233,6 +248,17 @@ class StaggeredMenu {
         label.className = 'sm-panel-itemLabel';
         label.textContent = item.label;
 
+        // Handle custom actions (e.g., opening contact panel)
+        if (item.action === 'openContactPanel') {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.closeMenu();
+            setTimeout(() => {
+              if (window.contactPanel) window.contactPanel.open();
+            }, 400);
+          });
+        }
+
         link.appendChild(label);
         li.appendChild(link);
         menuList.appendChild(li);
@@ -292,6 +318,7 @@ class StaggeredMenu {
     this.refs.textInner = wrapper.querySelector('.sm-toggle-textInner');
     this.refs.textWrap = wrapper.querySelector('.sm-toggle-textWrap');
     this.refs.toggleBtn = wrapper.querySelector('.sm-toggle');
+    this.refs.logoImg = wrapper.querySelector('.sm-logo-img');
   }
 
   setupInitialState() {
@@ -559,7 +586,7 @@ class StaggeredMenu {
     if (this.animations.colorTween) this.animations.colorTween.kill();
 
     if (this.options.changeMenuColorOnOpen) {
-      const targetColor = opening ? this.options.openMenuButtonColor : this.options.menuButtonColor;
+      const targetColor = opening ? this.options.openMenuButtonColor : this.theme.currentMenuColor;
       this.animations.colorTween = gsap.to(toggleBtn, {
         color: targetColor,
         delay: 0.18,
@@ -636,6 +663,7 @@ class StaggeredMenu {
     }
 
     if (target) {
+      if (this._showHeader) this._showHeader();
       this.playOpen();
       this.updateLogoForFullScreen(true);
     } else {
@@ -676,7 +704,8 @@ class StaggeredMenu {
         }
       });
     } else {
-      // Desktop: Keep full logo, no change needed
+      // Desktop: Keep full logo — theme switcher manages the src, don't override
+      if (this.theme && this.theme.isLight) return;
       if (!logoImg.src.includes(this.options.logoUrl)) {
         logoImg.src = this.options.logoUrl;
       }
@@ -701,7 +730,129 @@ class StaggeredMenu {
       this.animateIcon(false);
       this.animateColor(false);
       this.animateText(false);
+
+      // Re-apply theme that may have changed while menu was open
+      if (this.theme.isLight) {
+        this._applyTheme(this.theme.lightMenuColor, this.theme.lightLogoUrl);
+      } else {
+        this._applyTheme(this.theme.darkMenuColor, this.theme.darkLogoUrl);
+      }
     }
+  }
+
+  // ─── THEME SWITCHING ────────────────────────────────────────────
+
+  switchToLightTheme() {
+    if (this.theme.isLight) return;
+    this.theme.isLight = true;
+    this.theme.currentMenuColor = this.theme.lightMenuColor;
+    if (this.state.open) return; // defer visual until menu closes
+    this._applyTheme(this.theme.lightMenuColor, this.theme.lightLogoUrl);
+  }
+
+  switchToDarkTheme() {
+    if (!this.theme.isLight) return;
+    this.theme.isLight = false;
+    this.theme.currentMenuColor = this.theme.darkMenuColor;
+    if (this.state.open) return;
+    this._applyTheme(this.theme.darkMenuColor, this.theme.darkLogoUrl);
+  }
+
+  _applyTheme(menuColor, logoUrl) {
+    const { toggleBtn, logoImg } = this.refs;
+
+    // Animate menu button color (icon lines inherit via currentColor in CSS)
+    if (toggleBtn) {
+      gsap.to(toggleBtn, { color: menuColor, duration: 0.4, ease: 'power2.out' });
+    }
+
+    // Desktop logo swap with fade
+    if (logoImg && window.innerWidth > 1024) {
+      gsap.to(logoImg, {
+        opacity: 0,
+        duration: 0.2,
+        ease: 'power2.in',
+        onComplete: () => {
+          logoImg.src = logoUrl;
+          gsap.to(logoImg, { opacity: 1, duration: 0.35, ease: 'power2.out' });
+        }
+      });
+    }
+  }
+
+  initThemeSwitching() {
+    const lightSections = [
+      document.querySelector('.advisory-section'),
+      document.querySelector('.identity-section')
+    ].filter(Boolean);
+
+    if (!lightSections.length) return;
+
+    const checkTheme = () => {
+      const headerMid = window.scrollY + 30;
+      const isLight = lightSections.some(s => {
+        return headerMid >= s.offsetTop && headerMid < (s.offsetTop + s.offsetHeight);
+      });
+      isLight ? this.switchToLightTheme() : this.switchToDarkTheme();
+    };
+
+    window.addEventListener('scroll', checkTheme, { passive: true });
+    window.addEventListener('resize', checkTheme, { passive: true });
+    checkTheme();
+  }
+
+  // ─── SCROLL HIDE / HOVER REVEAL ─────────────────────────────────
+
+  initScrollHide() {
+    const header = this.refs.wrapper.querySelector('.staggered-menu-header');
+    if (!header) return;
+
+    // Ghost zone: invisible strip at top edge that reveals header on hover
+    const ghost = document.createElement('div');
+    ghost.className = 'sm-ghost-zone';
+    document.body.appendChild(ghost);
+
+    const showHeader = () => {
+      if (!this._headerHidden) return;
+      this._headerHidden = false;
+      ghost.style.pointerEvents = 'none';
+      gsap.to(header, { y: 0, opacity: 1, duration: 0.4, ease: 'power2.out' });
+    };
+
+    const hideHeader = () => {
+      if (this._headerHidden || this.state.open) return;
+      this._headerHidden = true;
+      ghost.style.pointerEvents = 'auto';
+      gsap.to(header, { y: -80, opacity: 0, duration: 0.45, ease: 'power2.inOut' });
+    };
+
+    this._showHeader = showHeader;
+    this._hideHeader = hideHeader;
+
+    // Hover reveal
+    ghost.addEventListener('mouseenter', showHeader);
+    header.addEventListener('mouseenter', showHeader);
+
+    // Scroll detection
+    let lastY = window.scrollY;
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        const delta = y - lastY;
+        if (y < 80) {
+          showHeader();
+        } else if (delta > 4 && !this.state.open) {
+          hideHeader();
+        } else if (delta < -4) {
+          showHeader();
+        }
+        lastY = y;
+        ticking = false;
+      });
+    }, { passive: true });
   }
 }
 
@@ -714,7 +865,7 @@ document.addEventListener('DOMContentLoaded', function() {
       { label: 'Home', ariaLabel: 'Go to home page', link: 'index.html' },
       { label: 'About', ariaLabel: 'Learn about this project', link: 'about.html' },
       { label: 'Publications', ariaLabel: 'View publications', link: 'publications.html' },
-      { label: 'Contact', ariaLabel: 'Get in touch', link: 'mailto:sreenath.govin@gmail.com' }
+      { label: 'Schedule Consultation', ariaLabel: 'Schedule a strategic consultation', link: '#', action: 'openContactPanel' }
     ],
     socialItems: [
       { label: 'LinkedIn', link: 'https://www.linkedin.com/in/sreenathgovindarajan' },
