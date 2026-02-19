@@ -1078,44 +1078,6 @@
         "posted_to_x_at": null
       },
       {
-        "id": 55,
-        "title": "Grokepedia an unrealistic idea that won’t work: Wikipedia Co-founder at AI Summit",
-        "url": "https://telanganatoday.com/grokepedia-an-unrealistic-idea-that-wont-work-wikipedia-co-founder-at-ai-summit",
-        "summary": "Wikipedia co-founder Jimmy Wales has dismissed AI-driven platforms like Grokepedia as unrealistic. He emphasized the importance of human collaboration, transparency, and attribution in Wikipedia's success. Wales acknowledged the rise of AI and noted India's potential in the evolving technology landscape.",
-        "date_published": "2026-02-18",
-        "source_name": "Telangana Today - Tech",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "IN"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 61,
-        "title": "IT Minister Sridhar Babu to speak at India AI Impact Summit",
-        "url": "https://www.thehindu.com/news/cities/Hyderabad/it-minister-sridhar-babu-to-speak-at-india-ai-impact-summit/article70648102.ece",
-        "summary": "IT Minister Sridhar Babu will be a speaker at the India AI Impact Summit. The event aims to discuss the impact of artificial intelligence in India, but specific details about the summit are not provided. Minister Babu's participation is expected to shed light on the government's stance and initiatives on AI development in the country.",
-        "date_published": "2026-02-18",
-        "source_name": "The Hindu - Hyderabad",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "IN"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
-      {
         "id": 76,
         "title": "Moving past Galgotias row, desi tech emerges real showstopper at AI Impact Summit",
         "url": "https://www.tribuneindia.com/news/aiineducation/moving-past-galgotias-row-desi-tech-emerges-real-showstopper-at-ai-impact-summit",
@@ -3443,25 +3405,6 @@
         "summary": "India has debuted its foundational AI models, Sarvam and BharatGen, which are trained on large datasets to understand and generate text, images, and other content. These models can power various modern AI applications and are part of India's effort to develop sovereign AI capabilities. The development of these models is a step towards India's AI Mission 2.0.",
         "date_published": "2026-02-18",
         "source_name": "LiveMint AI News",
-        "category": "AI Start-Up News",
-        "state_codes": [
-          "IN"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 19,
-        "title": "Sarvam unveils two new large language models focused on real-time use, advanced reasoning",
-        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/sarvam-unveils-two-new-large-language-models-focused-on-real-time-use-advanced-reasoning/128507078",
-        "summary": "Sarvam has introduced two new large language models, including the Sarvam-30B, designed for efficient real-time use. The Sarvam-30B model supports a context window of up to 32,000 tokens and has been trained on 16 trillion tokens. It is intended for applications requiring fast and advanced language processing capabilities.",
-        "date_published": "2026-02-18",
-        "source_name": "ET CIO - AI",
         "category": "AI Start-Up News",
         "state_codes": [
           "IN"
