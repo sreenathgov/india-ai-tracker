@@ -189,7 +189,7 @@ class CardSwap {
         </div>
         <div class="card-swap-card__footer">
           <span class="card-swap-card__meta">${this.escapeHTML(card.meta)}</span>
-          <a href="${card.pdfUrl ? this.escapeHTML(card.pdfUrl) : 'javascript:void(0)'}" ${card.pdfUrl ? 'download' : ''} rel="noopener" class="card-swap-card__download" onclick="event.stopPropagation()">
+          <a href="${card.pdfUrl ? this.escapeHTML(card.pdfUrl) : 'javascript:void(0)'}" ${card.pdfUrl ? `download="${card.pdfUrl.split('/').pop()}"` : ''} rel="noopener" class="card-swap-card__download" onclick="event.stopPropagation()">
             ${downloadIcon} Download PDF
           </a>
         </div>
