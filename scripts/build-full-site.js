@@ -10,6 +10,8 @@ const FILES_TO_COPY = [
     'index.html',
     'about.html',
     'publications.html',
+    'privacy-policy.html',
+    'disclaimers.html',
     'tracker.db'
 ];
 
