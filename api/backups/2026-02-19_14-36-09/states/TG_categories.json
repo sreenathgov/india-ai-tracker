@@ -64,11 +64,11 @@
     ],
     "Major AI Developments": [
       {
-        "id": 13,
-        "title": "UK firm opens its new AI-first Global Capability Centre in Hyd",
-        "url": "https://timesofindia.indiatimes.com/city/hyderabad/uk-firm-opens-its-new-ai-first-global-capability-centre-in-hyd/articleshow/127917274.cms",
-        "summary": "A UK-based firm has launched its new AI-first Global Capability Centre in Hyderabad. The centre is expected to leverage artificial intelligence to drive innovation and growth. This move marks a significant expansion of the company's presence in India, focusing on AI-driven technologies.",
-        "date_published": "2026-02-05",
+        "id": 71,
+        "title": "60TB billing data, 1.77 lakh restaurant IDs: How AI uncovered Rs 70,000 crore tax evasion scam starting with Hyderabad biryani chains",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/i-t-probe-into-hyd-biryani-joints-blows-lid-off-multi-crore-tax-evasion-scam-across-india/articleshow/128522871.cms",
+        "summary": "An Income Tax investigation into Hyderabad biryani chains uncovered a massive tax evasion scam across India's food and beverage industry. The probe analyzed 60 terabytes of billing data and found suppressed sales turnover of at least Rs 70,000 crore since 2019-20. The scam involved deletion and under-reporting of cash transactions, affecting over 1.77 lakh restaurant IDs across the country.",
+        "date_published": "2026-02-19",
         "source_name": "Times of India - Bhopal",
         "category": "Major AI Developments",
         "state_codes": [
@@ -83,12 +83,50 @@
         "posted_to_x_at": null
       },
       {
-        "id": 18,
-        "title": "Download AI Framework (2020)",
-        "url": "https://invest.telangana.gov.in/wp-content/uploads/2024/07/AI_Framework-PRINT-24-Pages-1-1.pdf",
-        "summary": "The article appears to be about a downloadable AI framework released in 2020. There is no detailed information provided about the framework's features or capabilities. The title and content suggest a straightforward announcement or notification about the availability of the framework for download.",
+        "id": 72,
+        "title": "End-to-end adoption of AI expedites drug development timelines, say leaders at BioAsia conference in Hyderabad",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/end-to-end-adoption-of-ai-expedites-drug-development-timelines-say-leaders-at-bioasia-conference-in-hyderabad/articleshow/128520792.cms",
+        "summary": "Leaders at the BioAsia conference in Hyderabad stated that adopting AI from start to finish can accelerate drug development timelines. This end-to-end AI adoption is expected to significantly impact the pharmaceutical industry. The conference highlighted the potential of AI to revolutionize the drug development process, making it faster and more efficient.",
+        "date_published": "2026-02-19",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "AI in Romance: How Gen Z Uses AI for Dating App Messages and Love Notes",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/ai-in-romance-how-gen-z-uses-ai-for-dating-app-messages-and-love-notes/articleshow/128337709.cms",
+        "summary": "Gen Z is using AI to assist with dating app messages and love notes, viewing it as a tool to translate genuine feelings into words. AI is being leveraged for tone checks, smoother communication in long-distance relationships, and to boost confidence in expressing affection. The use of AI in romance has seen a significant rise, particularly among dating app users.",
+        "date_published": "2026-02-14",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "UK firm opens its new AI-first Global Capability Centre in Hyd",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/uk-firm-opens-its-new-ai-first-global-capability-centre-in-hyd/articleshow/127917274.cms",
+        "summary": "A UK-based firm has launched its new AI-first Global Capability Centre in Hyderabad. The centre is expected to leverage artificial intelligence to drive innovation and growth. This move marks a significant expansion of the company's presence in India, focusing on AI-driven technologies.",
         "date_published": "2026-02-05",
-        "source_name": "Invest Telangana - Emerging Tech",
+        "source_name": "Times of India - Bhopal",
         "category": "Major AI Developments",
         "state_codes": [
           "TG"
@@ -331,6 +369,25 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 8,
+        "title": "Global HealthX crosses $15 Mn in healthcare investments, unveils startup cohort",
+        "url": "https://entrackr.com/snippets/global-healthx-crosses-15-mn-in-healthcare-investments-unveils-startup-cohort-11089283",
+        "summary": "Global HealthX, a healthcare and life sciences innovation hub, has surpassed $15 million in investments across startups and studio-built ventures over the past two years. The platform operates at the intersection of healthcare, life sciences, and technology to address gaps in India's healthcare ecosystem. Global HealthX aims to improve access, affordability, and continuity of care through its integrated model of venture studio, strategic investments, and market-access partnerships.",
+        "date_published": "2026-02-09",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
       {
         "id": 4,
         "title": "US startup sets eyes on real-world AI applications in India",

@@ -342,13 +342,13 @@
       "name": "Conference Alerts India - AI",
       "url": "https://www.conferencealerts.in/india/ai",
       "type": "web",
-      "scraper": "conference_alerts",
+      "scraper": "conference_alerts_in",
       "state": null,
       "is_state_specific": false,
       "category_hint": "Events",
       "priority": "very_high",
-      "enabled": true,
-      "notes": "AI conferences and events across India - requires custom scraper"
+      "enabled": false,
+      "notes": "DISABLED - JavaScript/AJAX-loaded content. Static HTML only contains navigation elements. Requires headless browser."
     },
     {
       "name": "TechCircle - Policy",
@@ -1321,14 +1321,14 @@
       "name": "Conference Alerts - Jaipur",
       "url": "https://www.conferencealerts.in/india/jaipur",
       "type": "web",
-      "scraper": "conference_alerts",
+      "scraper": "conference_alerts_in",
       "state": "RJ",
       "is_state_specific": true,
       "geo_mode": "strict",
       "category_hint": "Events",
       "priority": "high",
-      "enabled": true,
-      "notes": "Conferences and events in Jaipur"
+      "enabled": false,
+      "notes": "DISABLED - JavaScript/AJAX-loaded content. Requires headless browser."
     }
   ],
   "kerala": [

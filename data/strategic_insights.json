@@ -1,43 +1,43 @@
 {
-  "lastUpdated": "2026-02-13",
+  "lastUpdated": "2026-02-19",
   "cards": [
     {
       "id": "stat-1",
       "type": "stat",
-      "title": "Active States",
-      "value": "12",
-      "suffix": "",
-      "description": "Over a dozen states recorded significant AI policy movements, infrastructure launches, or regional summits this week."
+      "title": "Capital Influx",
+      "value": "$1.4Bn",
+      "suffix": "+",
+      "description": "A historic week driven by Neysa AI's unicorn round and aggressive deeptech funding across the ecosystem."
     },
     {
       "id": "stat-2",
       "type": "stat",
-      "title": "Startup Capital",
-      "value": "$220M",
-      "suffix": "+",
-      "description": "Total funding raised by Indian AI and tech startups this week, led by 26 deals across various growth stages."
+      "title": "Infra Pledge",
+      "value": "$125Bn",
+      "suffix": "",
+      "description": "Massive private commitments from Adani and AM Group to build green, renewable-powered AI data centres by 2035."
     },
     {
       "id": "stat-3",
       "type": "stat",
-      "title": "Weekly Updates",
-      "value": "60",
-      "suffix": "+",
-      "description": "The tracker captured over 60 high-impact news items."
+      "title": "Global Talent",
+      "value": "16",
+      "suffix": "%",
+      "description": "A new whitepaper reveals India now houses nearly one-fifth of the world's total AI workforce, solidifying its talent dominance."
     },
     {
       "id": "stat-4",
       "type": "stat",
-      "title": "Research Submissions",
-      "value": "250",
-      "suffix": "+",
-      "description": "The India AI Impact Summit symposium saw massive engagement, indicating high academic and research momentum nationwide."
+      "title": "Sovereign Models",
+      "value": "2",
+      "suffix": "",
+      "description": "Sarvam AI and BharatGen debuted as India's first indigenous foundational models, reducing reliance on foreign tech stacks."
     },
     {
       "id": "insight-1",
       "type": "insight",
-      "title": "Sovereign AI Ascent",
-      "description": "India is pivoting toward a \"Sovereign AI\" strategy, prioritizing homegrown foundational models that rival international standards. The success of startups like Sarvam AI has garnered high-level government praise, signaling a strategic shift toward domestic infrastructure. This approach aims to ensure India's AI future is built on indigenous technology rather than external dependencies.",
+      "title": "Compute Sovereignty",
+      "description": "India is aggressively pivoting from an AI consumer to a creator. With the launch of indigenous foundational models like Sarvam and BharatGen, coupled with the government's push for a \"sovereign compute\" stack, the nation is building the hardware and software backbone necessary to secure strategic autonomy in the AI era.",
       "metadata": {
         "region": "National Strategy"
       }
@@ -45,17 +45,17 @@
     {
       "id": "insight-2",
       "type": "insight",
-      "title": "The GPU Gateway",
-      "description": "An interim trade deal with the US is set to lower import duties on high-end GPUs and data centre equipment. This policy shift addresses India's compute gap and is expected to attract massive private investment into localized AI hardware. For founders and researchers, this translates to significantly reduced costs for training large-scale models domestically.",
+      "title": "The 'Third Way' Doctrine",
+      "description": "The India AI Impact Summit highlighted a geopolitical alignment between India and France, pitching a \"Third Way\" that avoids total dependence on US or Chinese models. Through the \"MANAV\" vision and the 7-Sutra framework, India is positioning itself as the leader for responsible, human-centric AI governance for the Global South.",
       "metadata": {
-        "region": "Infrastructure"
+        "region": "Geopolitics"
       }
     },
     {
       "id": "insight-3",
       "type": "insight",
-      "title": "Ethical Boundaries Tested",
-      "description": "The deployment of AI-generated voices in Maharashtra's polls has triggered a national debate on political ethics and deepfake accountability. Simultaneously, the government's anti-misinformation tool faced \"snooping\" allegations, highlighting friction between security and privacy. These developments emphasize the urgent need for a unified, transparent AI governance framework.",
+      "title": "Algorithmic Enforcement",
+      "description": "AI has moved from back-office efficiency to frontline enforcement. The discovery of a ₹70,000 crore tax evasion scam using advanced data analytics signals a new era of algorithmic governance. Simultaneously, corporate India is restructuring to meet this reality, with a reported surge in \"Chief AI Officer\" hirings across enterprise sectors.",
       "metadata": {
         "region": "Governance"
       }
@@ -63,10 +63,10 @@
     {
       "id": "insight-4",
       "type": "insight",
-      "title": "Foundational Literacy",
-      "description": "Maharashtra has proposed a landmark policy to introduce AI and ICT education starting from Class 1 to ensure long-term workforce readiness. This is mirrored by massive skilling efforts, such as Samsung certifying 2,000 students in Bengaluru in AI-first skills. India is rapidly moving to integrate AI not just as a technical tool, but as a core educational pillar.",
+      "title": "The Deeptech Renaissance",
+      "description": "The unicorn drought has ended with Neysa AI's massive $1.2Bn valuation, signalling renewed investor confidence in India's deeptech capabilities. Validating this shift, global giants like Qualcomm ($150M fund) and Google (undersea cables) are moving beyond service contracts to invest directly in India's IP creation and infrastructure.",
       "metadata": {
-        "region": "Skilling"
+        "region": "Ecosystem"
       }
     }
   ],

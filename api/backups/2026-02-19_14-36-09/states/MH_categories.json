@@ -3,15 +3,33 @@
   "categories": {
     "Policies and Initiatives": [
       {
-        "id": 6,
-        "title": "Cancer hospital likely to startnext year: Rane",
-        "url": "https://timesofindia.indiatimes.com/city/goa/cancer-hospital-likely-to-startnext-year-rane/articleshow/127893523.cms",
-        "summary": "Goa's health minister has announced plans to launch a new cancer hospital by the end of 2027, featuring Israeli equipment and collaboration with Tata Memorial Centre. The state is also implementing AI-driven lung cancer screening, which has already analyzed over 1 lakh chest X-rays. This initiative aims to speed up diagnosis and identify critical lung nodules more efficiently.",
-        "date_published": "2026-02-04",
-        "source_name": "Times of India - Rajasthan",
+        "id": 12,
+        "title": "Gen AI startup Neysa turns unicorn after Blackstone-led $1.2 Bn funding",
+        "url": "https://entrackr.com/news/gen-ai-startup-neysa-turns-unicorn-after-blackstone-led-12-bn-funding-11109995",
+        "summary": "Neysa, a Mumbai-based AI acceleration cloud platform, has raised over $1.2 billion in funding led by Blackstone, becoming a unicorn. The funding includes $600 million in equity capital and plans for an additional $600 million in debt financing. This marks one of the largest capital raises in India's AI infrastructure space, with other investors including Teachers' Venture Growth and Nexus Venture Partners.",
+        "date_published": "2026-02-16",
+        "source_name": "Entrackr - AI & Startups",
         "category": "Policies and Initiatives",
         "state_codes": [
-          "GA",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Maharashtra govt to hold Artificial Intelligence in Agriculture and Investment Summit on Feb 22",
+        "url": "https://www.thehindu.com/news/cities/mumbai/maharashtra-govt-to-hold-artificial-intelligence-in-agriculture-and-investment-summit-on-feb-22/article70625226.ece",
+        "summary": "The Maharashtra government will host an Artificial Intelligence in Agriculture and Investment Summit on February 22. The event is part of the state's Agriculture Artificial Intelligence policy, which aims to promote AI use in agriculture and allied sectors. The policy also involves developing digital infrastructure, including MahaAgriX, a Maharashtra Agriculture Data Exchange, and AI-enabled traceability systems.",
+        "date_published": "2026-02-13",
+        "source_name": "The Hindu - Mumbai",
+        "category": "Policies and Initiatives",
+        "state_codes": [
           "MH"
         ],
         "is_approved": true,
@@ -141,12 +159,186 @@
     ],
     "Major AI Developments": [
       {
-        "id": 12,
-        "title": "Google revenues cross $400 billion as Gemini AI user base surges",
-        "url": "https://telanganatoday.com/google-revenues-cross-400-billion-as-gemini-ai-user-base-surges",
-        "summary": "Google's annual revenues have surpassed $400 billion for the first time, driven by growth in areas such as Gemini AI, cloud services, and YouTube. The company is also making significant investments in AI and has formed a strategic partnership with Reliance Jio. Alphabet and Google CEO Sundar Pichai announced these developments, highlighting the surge in Gemini AI's user base.",
-        "date_published": "2026-02-05",
+        "id": 52,
+        "title": "India built what no one else did: Macron shares street vendor’s story",
+        "url": "https://telanganatoday.com/india-built-what-no-one-else-did-macron-shares-street-vendors-story",
+        "summary": "French President Emmanuel Macron praised India's digital transformation at the India-AI Impact Summit 2026, citing a Mumbai street vendor's adoption of digital payments. He highlighted the importance of strategic AI cooperation with India, led by Prime Minister Narendra Modi. Macron emphasized the need for innovation, sovereignty, and responsible technology in AI development.",
+        "date_published": "2026-02-19",
         "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 36,
+        "title": "Truboard Partners raises Rs 20 Cr led by Earth Fund",
+        "url": "https://entrackr.com/snippets/truboard-partners-raises-rs-20-cr-led-by-earth-fund-11125735",
+        "summary": "Truboard Partners, an asset performance platform, has raised Rs 20 crore ($2.2 million) in a funding round led by Earth Fund, a sustainability-focused venture capital platform. The Mumbai-based company had previously raised $2.7 million in July 2022. The new funds will be used to strengthen its product foundation and scale the platform across asset classes.",
+        "date_published": "2026-02-18",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 54,
+        "title": "Bengaluru, Delhi-NCR account for over half of India’s AI job openings: Report",
+        "url": "https://telanganatoday.com/bengaluru-delhi-ncr-account-for-over-half-of-indias-ai-job-openings-report",
+        "summary": "Bengaluru, Delhi-NCR, and Mumbai account for nearly 70% of India's AI-related job openings. These cities have a high demand for skills in software engineering, data science, and customer operations. Bengaluru and Delhi-NCR alone account for over half of the country's AI job openings.",
+        "date_published": "2026-02-18",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "MH",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 22,
+        "title": "French President Macron begins India visit; AI summit and strategic ties in focus",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/macrons-india-visit-ai-summit-and-strengthening-strategic-ties-with-modi/128451254",
+        "summary": "French President Emmanuel Macron has begun a three-day visit to India, focusing on artificial intelligence cooperation and innovation partnerships. The visit aims to strengthen strategic ties between the two countries. Macron's trip will explore opportunities for cooperation in AI and other areas of mutual interest.",
+        "date_published": "2026-02-17",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Fractal Analytics makes muted market debut, lists at nearly 3% discount",
+        "url": "https://entrackr.com/news/fractal-analytics-makes-muted-market-debut-lists-at-nearly-3-discount-11110136",
+        "summary": "Fractal Analytics, an AI-focused analytics firm, made a subdued market debut, listing at a nearly 3% discount to its issue price. The company's shares opened at Rs 876 on the National Stock Exchange, below the upper end of its IPO price band of Rs 900. The muted debut follows a moderately subscribed IPO that booked nearly 2.66 times at the time of bid closure.",
+        "date_published": "2026-02-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "India needs to develop its own AI, says Shaurya Doval of India Foundation",
+        "url": "https://timesofindia.indiatimes.com/city/pune/india-needs-to-develop-its-own-ai-says-shaurya-doval-of-india-foundation/articleshow/128359625.cms",
+        "summary": "Shaurya Doval of India Foundation emphasizes the need for India to develop its own artificial intelligence. He believes this is essential for the country's growth and development. India should not rely on foreign AI technologies, according to Doval.",
+        "date_published": "2026-02-15",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Maharashtra sharpens AI, cybersecurity push to anchor digital transformation",
+        "url": "https://government.economictimes.indiatimes.com/news/digital-india/maharashtras-digital-transformation-leveraging-ai-and-cybersecurity-for-economic-growth/128304276?utm_source=top_news&utm_medium=tagListing",
+        "summary": "Maharashtra is enhancing its focus on artificial intelligence (AI) and cybersecurity to drive digital transformation. The state aims to leverage AI and cybersecurity to anchor its digital transformation efforts, although specific details of the plan are not provided. Maharashtra's push for AI and cybersecurity is part of its broader strategy to embrace digital technologies.",
+        "date_published": "2026-02-14",
+        "source_name": "ET Government - Maharashtra",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "DevSparks Pune 2026: What’s in store at India’s flagship developer summit?",
+        "url": "https://yourstory.com/2026/02/devsparks-pune-2026-whats-in-store-at-indias-flagship-developer-summit",
+        "summary": "DevSparks, India's flagship developer summit, is returning to Pune in 2026 with a focus on agentic AI. The event will explore the transformational impact of AI across software development. Key discussions will center around the role of agentic AI in shaping the future of the industry.",
+        "date_published": "2026-02-10",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "Problem-solving ability will be the real strength of the future, says Dr. Tapan Singhel at IMDR’s 51st convocation ceremony",
+        "url": "https://timesofindia.indiatimes.com/city/pune/problem-solving-ability-will-be-the-real-strength-of-the-future-says-dr-tapan-singhel-at-imdrs-51st-convocation-ceremony/articleshow/128097736.cms",
+        "summary": "Dr. Tapan Singhel emphasized the importance of problem-solving ability as the key strength for future success, particularly for young professionals. Despite AI's impact on entry-level roles, those with strong skills and innovative thinking will still find high-paying jobs. Dr. Singhel urged graduates to develop problem-solving abilities, learn from failure, and embrace opportunities for career success.",
+        "date_published": "2026-02-09",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Three language policy panel submits report to Maharashtra CM, proposes AI and ICT education from Class 1",
+        "url": "https://indianexpress.com/article/cities/mumbai/three-language-policy-panel-submits-report-cm-proposes-ai-ict-education-10523229/",
+        "summary": "A three-language policy panel has submitted a report to the Maharashtra Chief Minister, recommending the introduction of AI and ICT education from Class 1. The proposal aims to integrate technology into the curriculum from an early age, potentially enhancing students' skills in these areas. The report's submission marks a significant step towards potentially reforming the state's education system.",
+        "date_published": "2026-02-09",
+        "source_name": "Indian Express - Mumbai",
         "category": "Major AI Developments",
         "state_codes": [
           "MH"
@@ -166,25 +358,6 @@
         "summary": "Generative AI is being used by 95% of developers in Southeast Asia on a weekly basis, leading to higher engagement and productivity gains of up to 70%. This increased productivity is allowing for more time to be spent on upskilling, mentoring, and complex work. The adoption of GenAI is also improving global collaboration and helping to address talent shortages in the region.",
         "date_published": "2026-02-04",
         "source_name": "ET CIO - AI",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "MH"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 3,
-        "title": "From measurements to menus, AI is powering professional kitchens",
-        "url": "https://timesofindia.indiatimes.com/city/pune/from-measurements-to-menus-ai-is-powering-professional-kitchens/articleshow/127893880.cms",
-        "summary": "AI technology is being increasingly used in professional kitchens to streamline various tasks, from measurements to menu planning. This integration of AI aims to improve efficiency and productivity in the culinary industry. AI-powered tools are helping chefs and kitchen staff with tasks such as recipe optimization, inventory management, and personalized menu creation.",
-        "date_published": "2026-02-04",
-        "source_name": "Times of India - Mumbai",
         "category": "Major AI Developments",
         "state_codes": [
           "MH"
@@ -333,44 +506,6 @@
         "posted_to_x_at": null
       },
       {
-        "id": 4,
-        "title": "Ather Energy sees 50% rise in Q3 revenue; A brandy giant betting on luxury whisky",
-        "url": "https://yourstory.com/2026/02/ather-energy-sees-50-rise-in-q3-revenue-a-brandy-giant-betting-on-luxury-whisky",
-        "summary": "Ather Energy experienced a 50% increase in Q3 revenue, but expects challenges from volatile commodity prices. Tilaknagar Industries is shifting focus to luxury whisky, while Bharat Intelligence is using AI to address farm labour issues in Maharashtra. These developments indicate diverse growth and innovation strategies in various industries.",
-        "date_published": "2026-02-03",
-        "source_name": "YourStory",
-        "category": "AI Start-Up News",
-        "state_codes": [
-          "MH"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 3,
-        "title": "63SATS Cybertech raises Rs 245 Cr to build cybersecurity for the AI era",
-        "url": "https://yourstory.com/2026/02/63sats-cybertech-raises-rs-245-cr-to-build-cybersecurity-for-the-ai-era",
-        "summary": "63SATS Cybertech, an Indian cybersecurity firm, has raised Rs 245 Cr to develop cybersecurity solutions for the AI era. The company aims to secure AI models, data pipelines, and automated decision systems, positioning itself at the intersection of AI adoption and trust. This funding will support the company's growth as a subsidiary of 63 moons technologies limited.",
-        "date_published": "2026-02-02",
-        "source_name": "YourStory",
-        "category": "AI Start-Up News",
-        "state_codes": [
-          "MH"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
-      {
         "id": 17,
         "title": "Maharashtra poised to lead India’s public-sector AI adoption: Wadhwani AI",
         "url": "https://government.economictimes.indiatimes.com/tag/maharashtra",
@@ -431,7 +566,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

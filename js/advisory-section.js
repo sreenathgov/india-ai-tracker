@@ -121,12 +121,51 @@ class CardSwap {
       });
     }
 
-    // Click to swap
+    // Click to swap (download links handle themselves via direct listeners)
     this.container.addEventListener('click', (e) => {
-      // Don't swap if clicking the download link
       if (e.target.closest('.card-swap-card__download')) return;
       this.swap();
     });
+  }
+
+  static showComingSoonToast() {
+    const existing = document.getElementById('card-swap-toast');
+    if (existing) existing.remove();
+
+    const toast = document.createElement('div');
+    toast.id = 'card-swap-toast';
+    toast.textContent = 'Coming soon — please check back in a few days.';
+    toast.style.cssText = [
+      'position:fixed',
+      'bottom:32px',
+      'left:50%',
+      'transform:translateX(-50%) translateY(20px)',
+      'background:#0a2f52',
+      'color:#fff',
+      'padding:12px 28px',
+      'border-radius:8px',
+      'font-size:13px',
+      'letter-spacing:0.06em',
+      'text-transform:uppercase',
+      'z-index:9999',
+      'opacity:0',
+      'transition:opacity 0.3s ease,transform 0.3s ease',
+      'pointer-events:none',
+      'white-space:nowrap',
+      'box-shadow:0 4px 20px rgba(0,0,0,0.25)'
+    ].join(';');
+    document.body.appendChild(toast);
+
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateX(-50%) translateY(0)';
+    }));
+
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateX(-50%) translateY(20px)';
+      setTimeout(() => toast.remove(), 300);
+    }, 3000);
   }
 
   buildCards() {
@@ -150,11 +189,20 @@ class CardSwap {
         </div>
         <div class="card-swap-card__footer">
           <span class="card-swap-card__meta">${this.escapeHTML(card.meta)}</span>
-          <a href="${this.escapeHTML(card.pdfUrl || '#')}" target="_blank" rel="noopener" class="card-swap-card__download" onclick="event.stopPropagation()">
+          <a href="${card.pdfUrl ? this.escapeHTML(card.pdfUrl) : 'javascript:void(0)'}" ${card.pdfUrl ? 'download' : ''} rel="noopener" class="card-swap-card__download" onclick="event.stopPropagation()">
             ${downloadIcon} Download PDF
           </a>
         </div>
       `;
+
+      // Coming-soon cards: intercept download click directly
+      if (!card.pdfUrl) {
+        el.querySelector('.card-swap-card__download').addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          CardSwap.showComingSoonToast();
+        });
+      }
 
       this.container.appendChild(el);
       this.cardEls.push(el);
