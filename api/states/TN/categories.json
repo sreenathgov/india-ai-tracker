@@ -83,6 +83,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 51,
+        "title": "IIT-M research foundation to set up AI innovation centre in Dubai",
+        "url": "https://timesofindia.indiatimes.com/city/coimbatore/iit-m-research-foundation-to-set-up-ai-innovation-centre-in-dubai/articleshow/128522535.cms",
+        "summary": "IIT-M research foundation is establishing an AI innovation centre in Dubai to promote artificial intelligence advancements. The centre aims to foster collaboration and innovation in the field of AI, although specific details about the project are not provided. The initiative is expected to contribute to the growth of AI technology in the region.",
+        "date_published": "2026-02-19",
+        "source_name": "Times of India - Tamil Nadu (Alt)",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Intellect Design Arena targets mid-sized firms for AI platform",
         "url": "https://timesofindia.indiatimes.com/city/chennai/intellect-design-arena-targets-mid-sized-firms-for-ai-platform/articleshow/128320229.cms",
@@ -161,5 +180,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

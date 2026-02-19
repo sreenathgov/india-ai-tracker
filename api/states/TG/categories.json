@@ -64,6 +64,44 @@
     ],
     "Major AI Developments": [
       {
+        "id": 71,
+        "title": "60TB billing data, 1.77 lakh restaurant IDs: How AI uncovered Rs 70,000 crore tax evasion scam starting with Hyderabad biryani chains",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/i-t-probe-into-hyd-biryani-joints-blows-lid-off-multi-crore-tax-evasion-scam-across-india/articleshow/128522871.cms",
+        "summary": "An Income Tax investigation into Hyderabad biryani chains uncovered a massive tax evasion scam across India's food and beverage industry. The probe analyzed 60 terabytes of billing data and found suppressed sales turnover of at least Rs 70,000 crore since 2019-20. The scam involved deletion and under-reporting of cash transactions, affecting over 1.77 lakh restaurant IDs across the country.",
+        "date_published": "2026-02-19",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 72,
+        "title": "End-to-end adoption of AI expedites drug development timelines, say leaders at BioAsia conference in Hyderabad",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/end-to-end-adoption-of-ai-expedites-drug-development-timelines-say-leaders-at-bioasia-conference-in-hyderabad/articleshow/128520792.cms",
+        "summary": "Leaders at the BioAsia conference in Hyderabad stated that adopting AI from start to finish can accelerate drug development timelines. This end-to-end AI adoption is expected to significantly impact the pharmaceutical industry. The conference highlighted the potential of AI to revolutionize the drug development process, making it faster and more efficient.",
+        "date_published": "2026-02-19",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "AI in Romance: How Gen Z Uses AI for Dating App Messages and Love Notes",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/ai-in-romance-how-gen-z-uses-ai-for-dating-app-messages-and-love-notes/articleshow/128337709.cms",
@@ -428,5 +466,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

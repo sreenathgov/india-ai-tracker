@@ -64,6 +64,63 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 73,
+        "title": "Odisha Plus II exams begin smoothly: No malpractice reported, AI cameras monitor",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/odisha-plus-ii-exams-begin-smoothly-no-malpractice-reported-ai-cameras-monitor/articleshow/128520476.cms",
+        "summary": "Odisha's higher secondary examinations began smoothly with over 96,000 science students taking the first paper under tight security, including AI-powered CCTV surveillance. No malpractice was reported, although a minor question paper discrepancy was addressed. The exams were conducted statewide with the Chief Minister encouraging students to approach the exams with calmness and confidence.",
+        "date_published": "2026-02-19",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 74,
+        "title": "Jumbo deaths averted with installation of AI towers",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/jumbo-deaths-averted-with-installation-of-ai-towers/articleshow/128520277.cms",
+        "summary": "Rourkela forest division has successfully prevented train-elephant collisions for a year using AI-enabled protection towers, the first in Odisha. The system issued 880 alerts, preventing 46 incidents and saving approximately 270 elephants. This technology has marked a significant step towards wildlife conservation and coexistence.",
+        "date_published": "2026-02-19",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 75,
+        "title": "Proposed AI hub in state to shift economic trajectory, says official at AI summit",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/proposed-ai-hub-in-state-to-shift-economic-trajectory-says-official-at-ai-summit/articleshow/128516888.cms",
+        "summary": "Odisha is set to become India's next AI hub with a proposed Rs 20,000 crore sovereign AI hub, creating 5,000 high-skilled jobs. The state aims to integrate AI across various sectors, including healthcare, education, and governance, to drive technology-led growth. This initiative seeks to provide inclusive digital services to all citizens, particularly in rural areas.",
+        "date_published": "2026-02-19",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 29,
         "title": "Six East Coast Railway trains part of railways’ onboard services reform",
         "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/six-east-coast-railway-trains-part-of-railways-onboard-services-reform/articleshow/128391091.cms",
@@ -105,5 +162,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

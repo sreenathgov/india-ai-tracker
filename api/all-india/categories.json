@@ -3,6 +3,44 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 1,
+        "title": "India unveils frontier AI commitments to drive measurable outcomes",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/india-global-ai-commitments-responsible-development-regulation-deepfakes-11771482893155.html",
+        "summary": "India has announced a voluntary framework to drive AI adoption, focusing on transparency and multilingual capabilities. The framework aims to promote measurable outcomes in AI development and usage. The move is part of the government's efforts to sharpen its regulatory approach to artificial intelligence.",
+        "date_published": "2026-02-19",
+        "source_name": "LiveMint AI News",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Centre plans market platform for AI startups in next mission phase: MeitY",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/centre-plans-market-platform-for-ai-startups-in-next-mission-phase-meity-11771427337373.html",
+        "summary": "The Indian government's Ministry of Electronics and Information Technology (MeitY) plans to create a market platform for AI startups as part of its next phase. This move comes after the ministry's first large-scale AI initiative, which will inform next year's plans through incorporated feedback on challenges faced. The initiative is part of the IndiaAI Mission, led by Abhishek Singh, additional secretary of MeitY.",
+        "date_published": "2026-02-19",
+        "source_name": "LiveMint AI News",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "India giving necessary policy backing to accelerate AI, semiconductor push, highlights MeitY Secretary",
         "url": "https://government.economictimes.indiatimes.com/news/policy/india-giving-necessary-policy-backing-to-accelerate-ai-semiconductor-push-highlights-meity-secretary/128423276",
@@ -563,6 +601,25 @@
     ],
     "Events": [
       {
+        "id": 10,
+        "title": "India AI Impact Summit 2026: PM Modi to lead opening ceremony - Important entry protocols, traffic advisory for February 19",
+        "url": "https://www.etnownews.com/technology/india-ai-impact-summit-2026-pm-modi-to-lead-opening-ceremony-important-entry-protocols-traffic-advisory-for-february-19-article-153639506",
+        "summary": "PM Modi will lead the opening ceremony of the India AI Impact Summit 2026 on February 19 at 9:40 AM. The ceremony will also be addressed by the President of France, the Secretary-General of the United Nations, and top industry leaders. The event is scheduled to take place on February 19, with specific entry protocols and traffic advisories in place.",
+        "date_published": "2026-02-18",
+        "source_name": "ET Now Technology",
+        "category": "Events",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 24,
         "title": "AI Impact Summit 2026: PM Modi hails India as rising global AI powerhouse, calls it a defining moment",
         "url": "https://www.tribuneindia.com/news/india/ai-impact-summit-2026-pm-modi-hails-india-as-rising-global-ai-powerhouse-calls-it-a-defining-moment",
@@ -678,6 +735,405 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 2,
+        "title": "India's AI stack rouses interest from African startups",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/indias-ai-stack-rouses-interest-from-african-startups-11771420841198.html",
+        "summary": "African AI startups are showing interest in India's AI stack due to its cost-effectiveness. India's subsidized GPU infrastructure offers costs 70% lower than Western providers, making it an attractive option for scaling localized solutions. This has led to African startups considering India as a viable alternative for their AI needs.",
+        "date_published": "2026-02-19",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 15,
+        "title": "Agentic AI Era: Cloud security shifts from asset protection to identity-first zero trust",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/navigating-the-agentic-ai-era-transforming-cloud-security-to-identity-first-zero-trust/128538349",
+        "summary": "The cloud security landscape is shifting from asset protection to identity-first zero trust due to the rise of agentic AI workloads. This change is driven by the need for faster detection and tighter control planes in response to identity compromise threats. Experts like Starbucks India CTO Nikhil Bhushan and Jio's Gaurav Duggal are advocating for a \"shift-left\" governance approach to address these challenges.",
+        "date_published": "2026-02-19",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 16,
+        "title": "Can India lead the global AI race?",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-poised-to-lead-global-ai-race-insights-from-qualcomm-ceo/128537225",
+        "summary": "Qualcomm CEO Cristiano Amon believes India has the potential to lead the global AI race due to its scale, young population, and mobile ecosystem. He emphasized the importance of sovereign AI and hybrid architectures for context-aware agents. Qualcomm has launched a $150 million fund to invest in Indian AI startups, supporting the country's AI development.",
+        "date_published": "2026-02-19",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 41,
+        "title": "AI Summit: Ashwini Vaishnaw lays out five-layer strategy to power inclusive growth",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/ai-summit-ashwini-vaishnaw-lays-out-five-layer-strategy-to-power-inclusive-growth/128540155",
+        "summary": "India is developing a five-layer strategy to promote inclusive growth through AI, focusing on democratizing technology and its benefits. The country is creating specialized AI models and investing in compute infrastructure to support this goal. India aims to become a trusted global AI hub, aligning its AI progress with overall development.",
+        "date_published": "2026-02-19",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 46,
+        "title": "‘MANAV’ Vision for AI: PM Modi calls for human-centric, transparent global framework",
+        "url": "https://cellit.in/manav-vision-for-ai-pm-modi-calls-for-human-centric-transparent-global-framework/",
+        "summary": "PM Modi has introduced the \"MANAV\" vision for AI, emphasizing a human-centric approach. The framework aims to prioritize transparency and accountability in AI development and deployment. Modi is advocating for a global framework that aligns with these principles to ensure AI benefits society as a whole.",
+        "date_published": "2026-02-19",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 47,
+        "title": "Google aiming to infuse AI at all levels in India: Sundar Pichai",
+        "url": "https://cellit.in/google-aiming-to-infuse-ai-at-all-levels-in-india-sundar-pichai/",
+        "summary": "Google is planning to integrate AI across all levels in India, according to Sundar Pichai. This initiative aims to promote the use of artificial intelligence in various sectors. Sundar Pichai announced Google's goal to make AI more accessible in India.",
+        "date_published": "2026-02-19",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Galgotias controversy shouldn’t overshadow efforts at India AI summit: Meity secy on Chinese robot row",
+        "url": "https://www.livemint.com/ai/controversy-shouldn-t-overshadow-efforts-meity-secy-on-galgotias-controversy-11771407028809.html",
+        "summary": "The Indian government ordered the removal of Galgotias Institute's stalls from an expo after a controversy involving a Chinese robot. The Ministry of Electronics and Information Technology (Meity) secretary downplayed the incident, stating it should not overshadow the efforts at the India AI summit. The secretary emphasized the importance of focusing on the event's purpose rather than creating unnecessary noise.",
+        "date_published": "2026-02-18",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "AI in Indian companies: Your next boss might be a chief AI officer.",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/india-inc-artificial-intelligence-leadership-roles-csuite-transformation-11771390631207.html",
+        "summary": "Indian companies have made significant investments in AI leadership, with at least 50 senior AI-focused hires announced in the past 12 months. This trend suggests a growing importance of AI in Indian businesses, potentially leading to the emergence of chief AI officers. The increasing presence of AI leaders may indicate a shift in company structures, with AI playing a more central role in decision-making.",
+        "date_published": "2026-02-18",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Qualcomm chief pledges $150mn fund for AI startups in India visit",
+        "url": "https://www.livemint.com/ai/qualcomm-ventures-fund-ai-startups-india-ai-summit-jio-platforms-11771389696424.html",
+        "summary": "Qualcomm's chief has announced a $150 million fund for AI startups during a visit to India. The fund will be operated by Qualcomm Ventures, the company's venture capital division. The strategic AI ventures fund will be made available to support AI startups in India.",
+        "date_published": "2026-02-18",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Vinod Khosla predicts AI will kill Indian IT sector in five years",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/vinod-khosla-predicts-ai-will-kill-indian-it-sector-in-five-years-11771343050947.html",
+        "summary": "Vinod Khosla, a veteran venture capitalist, predicts that AI will significantly impact the Indian IT sector, potentially killing it within five years. He suggests making AI a public-sector utility to democratize its capabilities in India. This move could help spread the benefits of AI technology across the country.",
+        "date_published": "2026-02-18",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Algorithm action: AI platforms disrupt silver screen at India AI Film Festival",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/algorithm-action-ai-platforms-disrupt-silver-screen-at-india-ai-film-festival-11771343246864.html",
+        "summary": "AI platforms showcased at the India AI Film Festival aim to reduce production costs and make filmmaking more accessible. This development is expected to democratize the film industry, but also raises concerns about significant job losses. The impact could be substantial, given India's status as the world's largest film industry.",
+        "date_published": "2026-02-18",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "EXCLUSIVE: India AI Impact Summit - Will AI replace jobs? Zoho Founder Sridhar Vembu's take on India’s AI transition | WATCH",
+        "url": "https://www.etnownews.com/technology/exclusive-india-ai-impact-summit-will-ai-replace-jobs-zoho-founder-sridhar-vembus-take-on-indias-ai-transition-watch-article-153637051",
+        "summary": "Zoho Founder Sridhar Vembu expressed uncertainty about AI's impact on jobs, citing past tech shifts that created new opportunities. He emphasized the importance of experimentation, adaptability, and open-mindedness as India prepares for AI-driven changes. Vembu's comments come as India navigates its transition to an AI-driven economy.",
+        "date_published": "2026-02-18",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "Google's new project in India REVEALED: Tech giant announces fiber-optic link routes between India-US | Deal details HERE",
+        "url": "https://www.etnownews.com/technology/googles-new-project-in-india-revealed-tech-giant-announces-fiber-optic-link-routes-between-india-us-deal-details-here-article-153636432",
+        "summary": "Google has announced a new project in India, which includes a $30 million pledge through Google.org to advance AI research and improve public services. The investment aims to accelerate innovation and support global scientific research in artificial intelligence. The project also involves establishing fiber-optic link routes between India and the US.",
+        "date_published": "2026-02-18",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 18,
+        "title": "India, France share &quot;same objective&quot; on AI innovation, not &quot;totally dependent&quot; on US, Chinese models: Macron",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-france-share-same-objective-on-ai-innovation-not-totally-dependent-on-us-chinese-models-macron/128507690",
+        "summary": "French President Emmanuel Macron stated that India and France share the same objective on AI innovation, seeking to avoid total dependence on US and Chinese models. Macron emphasized the need for a balanced and sovereign approach to emerging technologies. India and France aim to collaborate on AI development, reducing reliance on dominant US and Chinese models.",
+        "date_published": "2026-02-18",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 20,
+        "title": "AI on cloud moves from pilots to enterprise scale as leaders push for process redesign, data readiness and measurable outcomes",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-on-cloud-transition-from-pilot-programs-to-enterprise-solutions/128505474",
+        "summary": "Executives from top companies, including Wipro and TCS, discussed the challenges of implementing AI on cloud at the ETCIO Cloud Summit. They noted that AI projects often fail due to weak orchestration, unclear KPIs, and legacy foundations, rather than issues with the models themselves. To achieve enterprise-scale AI, leaders are focusing on process redesign, data readiness, and measurable outcomes.",
+        "date_published": "2026-02-18",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 21,
+        "title": "India AI Impact Summit 2026: Trust in the age of synthetic media",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-ai-impact-summit-2026-trust-in-the-age-of-synthetic-media/128459811",
+        "summary": "Policymakers and industry leaders discussed the challenge of synthetic media in India, focusing on building trust without stifling innovation. The Coalition for Content Provenance and Authenticity (CTPA) was highlighted as a potential solution, using cryptographic metadata to verify content origin. Leaders from MeitY, Google, Adobe, and ITI participated in the discussions at the India AI Impact Summit 2026.",
+        "date_published": "2026-02-18",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 23,
+        "title": "India AI Impact Summit 2026: How infrastructure limits digital growth",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-ai-impact-summit-2026-how-infrastructure-limits-digital-growth/128457132",
+        "summary": "The India AI Impact Summit 2026 discussed how infrastructure limitations hinder digital growth, particularly with AI facilities compressing years of demand into months. This rapid acceleration forces utilities and regulators to rethink infrastructure design and deployment. The mismatch between quickly scalable AI capacity and slower grid development poses a significant challenge for synchronization between digital ambitions and grid readiness.",
+        "date_published": "2026-02-18",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 34,
+        "title": "“End-to-end AI” films are here: Kuku’s AI Impact summit demo hints at a content flood",
+        "url": "https://yourstory.com/2026/02/kuku-fm-ai-first-micro-drama-lal-chand-bisu-ai-impact",
+        "summary": "Kuku FM's CEO, Lal Chand Bisu, unveiled India's first \"AI-first micro drama\" at the AI Impact Summit 2026. This demo hints at the emergence of \"end-to-end AI\" films, suggesting a potential flood of AI-generated content. The unveiling marks a significant milestone in the integration of AI in the entertainment industry.",
+        "date_published": "2026-02-18",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 55,
+        "title": "Grokepedia an unrealistic idea that won’t work: Wikipedia Co-founder at AI Summit",
+        "url": "https://telanganatoday.com/grokepedia-an-unrealistic-idea-that-wont-work-wikipedia-co-founder-at-ai-summit",
+        "summary": "Wikipedia co-founder Jimmy Wales has dismissed AI-driven platforms like Grokepedia as unrealistic. He emphasized the importance of human collaboration, transparency, and attribution in Wikipedia's success. Wales acknowledged the rise of AI and noted India's potential in the evolving technology landscape.",
+        "date_published": "2026-02-18",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 61,
+        "title": "IT Minister Sridhar Babu to speak at India AI Impact Summit",
+        "url": "https://www.thehindu.com/news/cities/Hyderabad/it-minister-sridhar-babu-to-speak-at-india-ai-impact-summit/article70648102.ece",
+        "summary": "IT Minister Sridhar Babu will be a speaker at the India AI Impact Summit. The event aims to discuss the impact of artificial intelligence in India, but specific details about the summit are not provided. Minister Babu's participation is expected to shed light on the government's stance and initiatives on AI development in the country.",
+        "date_published": "2026-02-18",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 76,
+        "title": "Moving past Galgotias row, desi tech emerges real showstopper at AI Impact Summit",
+        "url": "https://www.tribuneindia.com/news/aiineducation/moving-past-galgotias-row-desi-tech-emerges-real-showstopper-at-ai-impact-summit",
+        "summary": "The India AI Impact Summit showcased indigenous innovation in AI, featuring universities and startups demonstrating AI-powered drones, robotics, and full-stack robotics. Education-focused initiatives and grassroots STEM programs were also highlighted, emphasizing practical application and hands-on learning. The summit moved beyond recent controversies, such as the Galgotias robot dog incident, to focus on homegrown tech advancements.",
+        "date_published": "2026-02-18",
+        "source_name": "Tribune - Punjab",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
       {
         "id": 1,
         "title": "Opportunity is bigger than before, says Infosys chairman Nilekani on disruption posed by GenAI tools",
@@ -856,6 +1312,177 @@
         "summary": "French President Emmanuel Macron has arrived in India to attend the AI Impact summit and engage in bilateral talks with Prime Minister Narendra Modi. The discussions will aim to strengthen strategic ties between the two countries and explore new areas of cooperation. Key areas of focus will include emerging technologies, particularly artificial intelligence.",
         "date_published": "2026-02-17",
         "source_name": "The Hindu - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 24,
+        "title": "India AI Summit may issue declaration for democratised AI",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-ai-summit-may-issue-declaration-for-democratised-ai/128452621",
+        "summary": "The India AI Summit is expected to issue a declaration calling for greater democratisation of AI resources. The declaration will also advocate for a standardised framework for AI deployment across sectors. A global creative commons regime for AI is also anticipated to be part of the joint statement.",
+        "date_published": "2026-02-17",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 25,
+        "title": "India AI Impact Summit 2026: Centre seeks to make every citizen AI-ready",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-ai-impact-summit-2026-centre-seeks-to-make-every-citizen-ai-ready/128453332",
+        "summary": "India is working to make every citizen AI-ready by connecting every village with high-speed internet through significant investments in 5G and fiber optics. The country's digital infrastructure is attracting global investors, with broadband subscribers surging dramatically as AI reaches rural areas. Network security and data protection measures are also being strengthened to support this initiative.",
+        "date_published": "2026-02-17",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 26,
+        "title": "AI is a big opportunity for India, not a threat for businesses",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-is-a-big-opportunity-for-india-not-a-threat-for-businesses/128451957",
+        "summary": "Artificial intelligence presents significant opportunities for Indian companies, rather than posing a threat to businesses. Indian professionals are expected to deploy AI globally, offering a major chance for the nation, with roles evolving rather than resulting in job losses. The government and private sectors are training 1.5 lakh people in AI to capitalize on this opportunity.",
+        "date_published": "2026-02-17",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 43,
+        "title": "Niti Aayog member flags AI as key to healthcare overhaul in India",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/ai-integration-a-game-changer-for-healthcare-in-india/128468120",
+        "summary": "Niti Aayog member highlights AI as a crucial factor in transforming India's healthcare system, enhancing primary care and disease surveillance. AI can aid in early diagnosis and improve healthcare outcomes. Collaboration between government, academia, and industry is necessary for developing effective AI solutions in healthcare.",
+        "date_published": "2026-02-17",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 44,
+        "title": "India eyes investments worth $200 billion in data centres: Ashwini Vaishnaw at AI Summit",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/india-eyes-investments-worth-200-billion-in-data-centres-ashwini-vaishnaw-at-ai-summit/128461763",
+        "summary": "India aims to attract $200 billion in investments for data centres, according to Union Minister Ashwini Vaishnaw. The government seeks to develop India into a world-class data hub, covering all five layers of the AI technology stack. This includes infrastructure, computing, storage, applications, and energy requirements to support the growth of the sector.",
+        "date_published": "2026-02-17",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 45,
+        "title": "India AI Impact Summit: Amitabh Kant says current AI models may deepen inequality, calls for inclusive approach for Global South",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/amitabh-kant-addresses-ai-inequality-at-india-ai-impact-summit-2026/128457340",
+        "summary": "Amitabh Kant warned that current AI models may exacerbate inequality, emphasizing the need for an inclusive approach. He stressed that AI deployment should improve lives and promote inclusive growth for people in the Global South. Kant's comments came as AI adoption continues to accelerate globally, highlighting the importance of equitable technology use.",
+        "date_published": "2026-02-17",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 58,
+        "title": "PM Modi calls India AI Impact Expo 2026 powerful convergence",
+        "url": "https://telanganatoday.com/pm-modi-calls-india-ai-impact-expo-2026-powerful-convergence",
+        "summary": "Prime Minister Narendra Modi praised the India AI Impact Expo 2026 as a powerful convergence of talent and innovation. He reaffirmed India's commitment to responsible and inclusive Artificial Intelligence during the event. The Expo saw strong global participation, highlighting India's growing presence in the AI sector.",
+        "date_published": "2026-02-17",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 59,
+        "title": "Writing code will not be main goal in AI era: Infosys Chairman",
+        "url": "https://telanganatoday.com/writing-code-will-not-be-main-goal-in-ai-era-infosys-chairman",
+        "summary": "Infosys Chairman Nandan Nilekani stated that artificial intelligence will revolutionize software development, shifting the primary task for tech professionals away from coding. According to Nilekani, companies must adapt to this change by focusing on institutional transformation, acquiring new skills, and adopting AI. This shift is expected to address growing concerns about industry disruption caused by AI.",
+        "date_published": "2026-02-17",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 60,
+        "title": "India contributes 16 per cent of world AI talent, white paper reveals",
+        "url": "https://telanganatoday.com/india-contributes-16-per-cent-of-world-ai-talent-white-paper-reveals",
+        "summary": "India is home to 16% of the world's AI talent, according to a recent white paper. The country is expected to play a significant role in global economic growth, potentially contributing nearly 20% of incremental global GDP growth over the next 15 years. This highlights India's growing importance in the global AI landscape and its potential for future economic impact.",
+        "date_published": "2026-02-17",
+        "source_name": "Telangana Today - Tech",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -2753,12 +3380,183 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 14,
+        "title": "Make in India, think in dialects: Why Sarvam’s AI bet feels personal",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/make-in-india-think-in-dialects-why-sarvams-ai-bet-feels-personal/128537368",
+        "summary": "Sarvam AI has unveiled two indigenous large language models built from scratch for Indian languages at the India AI Impact Summit. This launch marks a significant step in India's development of sovereign AI infrastructure tailored to its linguistic diversity. The move aims to cater to the country's unique device realities and language needs.",
+        "date_published": "2026-02-19",
+        "source_name": "ET CIO - AI",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 17,
+        "title": "Sarvam AI showcases futuristic solutions tailor made for India&#039;s needs",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/sarvam-ai-showcases-futuristic-solutions-tailor-made-for-indias-needs/128501728",
+        "summary": "Sarvam AI has developed AI products and solutions tailored to India's specific needs, focusing on listening, understanding, and responding to user requirements. These solutions aim to cater to day-to-day life needs in India, addressing unique use cases in the country. Sarvam AI is one of 12 indigenous AI models being developed for this purpose.",
+        "date_published": "2026-02-19",
+        "source_name": "ET CIO - AI",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 49,
+        "title": "Brandworks Technologies Partners MeitY Startup Hub, Unveils AI Hardware & LLM Stack...",
+        "url": "https://cellit.in/brandworks-technologies-partners-meity-startup-hub-unveils-ai-hardware-llm-stack-at-india-ai-summit-2026/",
+        "summary": "Brandworks Technologies has partnered with MeitY Startup Hub to unveil its AI hardware and Large Language Model (LLM) stack. This collaboration aims to drive innovation in the AI sector, although specific details of the partnership and its goals are not provided. The partnership is expected to contribute to the growth of AI technology in the region.",
+        "date_published": "2026-02-19",
+        "source_name": "CellIt Magazine",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Indian foundational models debut; next stop AI Mission 2.0",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/first-foundational-indian-ai-models-launched-as-expo-chaos-spills-to-day-three-11771422374519.html",
+        "summary": "India has debuted its foundational AI models, Sarvam and BharatGen, which are trained on large datasets to understand and generate text, images, and other content. These models can power various modern AI applications and are part of India's effort to develop sovereign AI capabilities. The development of these models is a step towards India's AI Mission 2.0.",
+        "date_published": "2026-02-18",
+        "source_name": "LiveMint AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 19,
+        "title": "Sarvam unveils two new large language models focused on real-time use, advanced reasoning",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/sarvam-unveils-two-new-large-language-models-focused-on-real-time-use-advanced-reasoning/128507078",
+        "summary": "Sarvam has introduced two new large language models, including the Sarvam-30B, designed for efficient real-time use. The Sarvam-30B model supports a context window of up to 32,000 tokens and has been trained on 16 trillion tokens. It is intended for applications requiring fast and advanced language processing capabilities.",
+        "date_published": "2026-02-18",
+        "source_name": "ET CIO - AI",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 32,
+        "title": "An actor turned AI founder: Bhumi Pednekar’s big play for India’s untold stories",
+        "url": "https://yourstory.com/2026/02/bhumi-pednekar-ai-startup-maya-animation",
+        "summary": "Bhumi Pednekar, a well-known actor, has ventured into the startup world as a founder, focusing on using AI to tell India's untold stories. She was introduced as a startup founder by Shradha Sharma at the AI Impact Summit. Pednekar's new role highlights her efforts to explore the potential of AI in storytelling and promoting Indian narratives.",
+        "date_published": "2026-02-18",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 42,
+        "title": "Sarvam Kaze: PM Modi wears Made-in-India AI-powered smart glasses at India AI Impact Summit",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/pm-modi-showcases-innovative-ai-powered-smart-glasses-at-india-ai-impact-summit-2026/128508836",
+        "summary": "PM Modi wore Made-in-India AI-powered smart glasses, called Sarvam Kaze, at the India AI Impact Summit. The smart glasses feature real-time voice and visual intelligence, making them a unique device. They are expected to be available in the market by May.",
+        "date_published": "2026-02-18",
+        "source_name": "ET Government - Technology",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 19,
         "title": "Don’t panic, AI won’t take your job; AI startup Neysa’s $1.2B funding",
         "url": "https://yourstory.com/2026/02/dont-panic-ai-wont-take-your-job",
         "summary": "Sanjeev Bhikchandani believes historical trends suggest concerns over large-scale job losses due to AI are exaggerated. AI startup Neysa has received $1.2B in funding, amidst ongoing debate about AI's impact on employment in India. This development highlights the growing presence of AI in the job market, but Bhikchandani's comments aim to alleviate fears of widespread job displacement.",
         "date_published": "2026-02-17",
         "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "What Neysa AI’s $1.2 billion raise means for Indian startups and AI policy?",
+        "url": "https://www.etnownews.com/technology/what-neysa-ais-1-2-billion-raise-means-for-indian-startups-and-ai-policy-article-153630624",
+        "summary": "Neysa AI's $1.2 billion funding is a significant boost to India's AI infrastructure ambitions. The investment is expected to expand domestic GPU capacity and reduce reliance on global cloud providers. This development could position India as a major player in the global artificial intelligence ecosystem.",
+        "date_published": "2026-02-17",
+        "source_name": "ET Now Technology",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 39,
+        "title": "Peak XV invests in five early stage AI companies at Impact AI PitchFest",
+        "url": "https://entrackr.com/snippets/peak-xv-invests-in-five-early-stage-ai-companies-at-impact-ai-pitchfest-11122187",
+        "summary": "Peak XV has invested in five early-stage AI companies, including Companion Labs, Kello, Memfold AI, Round1, and Zoop, at the Impact AI PitchFest held during the India AI Impact Summit 2026. The investments were announced after founders presented to investors and ecosystem leaders at the event. These startups aim to develop innovative AI solutions, such as interactive entertainment experiences and other specialized services.",
+        "date_published": "2026-02-17",
+        "source_name": "Entrackr - AI & Startups",
         "category": "AI Start-Up News",
         "state_codes": [
           "IN"
@@ -3344,7 +4142,8 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "AI Start-Up News",
+    "Policies and Initiatives",
+    "Major AI Developments"
   ]
 }

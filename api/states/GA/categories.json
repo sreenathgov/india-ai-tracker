@@ -25,6 +25,25 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 48,
+        "title": "Goa strengthens AI commitment at India AI Impact Summit 2026",
+        "url": "https://cellit.in/goa-strengthens-ai-commitment-at-india-ai-impact-summit-2026/",
+        "summary": "Goa has reaffirmed its dedication to artificial intelligence at the India AI Impact Summit 2026. The summit highlights Goa's efforts to leverage AI for growth and development. Goa's participation demonstrates its commitment to embracing AI technology and innovation.",
+        "date_published": "2026-02-19",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 13,
         "title": "Govt depts, corporations identifying problems to resolve through AI",
         "url": "https://timesofindia.indiatimes.com/city/goa/govt-depts-corporations-identifying-problems-to-resolve-through-ai/articleshow/128171918.cms",
@@ -65,5 +84,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
