@@ -1,27 +1,26 @@
 {
   "version": 2,
   "public": true,
+  "functions": {
+    "functions/subscribe.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/subscribe", "destination": "/functions/subscribe" }
+  ],
   "headers": [
     {
       "source": "/api/subscribe",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-store"
-        }
+        { "key": "Cache-Control", "value": "no-store" }
       ]
     },
     {
       "source": "/api/((?!subscribe).*)",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=300"
-        },
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=300" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
       ]
     }
   ]
