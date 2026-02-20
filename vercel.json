@@ -2,14 +2,6 @@
   "version": 2,
   "public": true,
   "outputDirectory": "dist",
-  "functions": {
-    "functions/subscribe.js": {
-      "runtime": "nodejs20.x"
-    }
-  },
-  "rewrites": [
-    { "source": "/api/subscribe", "destination": "/functions/subscribe" }
-  ],
   "headers": [
     {
       "source": "/api/subscribe",
