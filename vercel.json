@@ -3,7 +3,16 @@
   "public": true,
   "headers": [
     {
-      "source": "/api/(.*)",
+      "source": "/api/subscribe",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/api/((?!subscribe).*)",
       "headers": [
         {
           "key": "Cache-Control",

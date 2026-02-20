@@ -164,26 +164,35 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = input ? input.value.trim() : '';
       if (!email) return;
 
-      try {
-        const existing = JSON.parse(localStorage.getItem('newsletter_emails') || '[]');
-        if (!existing.includes(email)) {
-          existing.push(email);
-          localStorage.setItem('newsletter_emails', JSON.stringify(existing));
-        }
-      } catch (err) { /* silently fail */ }
-
       const btn = footerForm.querySelector('.kl-footer__nl-submit');
-      if (input) input.value = '';
-      if (btn) {
-        btn.textContent = 'Subscribed';
-        btn.style.color = 'rgba(255,255,255,0.85)';
-        btn.style.borderColor = 'rgba(255,255,255,0.35)';
-        setTimeout(() => {
-          btn.textContent = 'Subscribe';
-          btn.style.color = '';
-          btn.style.borderColor = '';
-        }, 3000);
-      }
+      if (btn) { btn.disabled = true; btn.textContent = 'Subscribing…'; }
+      if (input) input.disabled = true;
+
+      const subscribePromise = typeof window.brevoSubscribe === 'function'
+        ? window.brevoSubscribe(email)
+        : Promise.reject(new Error('brevoSubscribe not loaded'));
+
+      subscribePromise
+        .then(() => {
+          if (input) { input.value = ''; input.disabled = false; }
+          if (btn) {
+            btn.disabled = false;
+            btn.textContent = 'Subscribed ✓';
+            btn.style.color = 'rgba(255,255,255,0.85)';
+            btn.style.borderColor = 'rgba(255,255,255,0.35)';
+            setTimeout(() => {
+              btn.textContent = 'Subscribe';
+              btn.style.color = '';
+              btn.style.borderColor = '';
+            }, 3000);
+          }
+        })
+        .catch((err) => {
+          console.error('Newsletter subscription failed:', err);
+          if (input) input.disabled = false;
+          if (btn) { btn.disabled = false; btn.textContent = 'Subscribe'; }
+          alert('Something went wrong. Please try again.');
+        });
     });
   }
 });

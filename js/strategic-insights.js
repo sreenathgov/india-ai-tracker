@@ -143,38 +143,36 @@ class StrategicInsights {
 
     if (!email) return;
 
-    // Store to localStorage as placeholder
-    try {
-      const existing = JSON.parse(localStorage.getItem('newsletter_emails') || '[]');
-      if (!existing.includes(email)) {
-        existing.push(email);
-        localStorage.setItem('newsletter_emails', JSON.stringify(existing));
-      }
-    } catch (err) {
-      // Silently fail — localStorage may not be available
-    }
-
-    // Show success state on form
-    form.classList.add('success');
     const button = form.querySelector('button');
-    if (button) {
-      button.textContent = 'Subscribed';
-      button.disabled = true;
-    }
-    if (input) {
-      input.value = '';
-      input.placeholder = 'Thank you!';
-      input.disabled = true;
-    }
 
-    // Show the success message with fade-in
-    const successMsg = document.getElementById('newsletterSuccessMsg');
-    if (successMsg) {
-      // Small delay for visual effect
-      setTimeout(() => {
-        successMsg.classList.add('visible');
-      }, 200);
-    }
+    // Disable form while submitting
+    if (button) { button.disabled = true; button.textContent = 'Subscribing…'; }
+    if (input) input.disabled = true;
+
+    // Subscribe via Brevo
+    const subscribePromise = typeof window.brevoSubscribe === 'function'
+      ? window.brevoSubscribe(email)
+      : Promise.reject(new Error('brevoSubscribe not loaded'));
+
+    subscribePromise
+      .then(() => {
+        // Show success state
+        form.classList.add('success');
+        if (button) button.textContent = 'Subscribed';
+        if (input) { input.value = ''; input.placeholder = 'Thank you!'; }
+
+        const successMsg = document.getElementById('newsletterSuccessMsg');
+        if (successMsg) {
+          setTimeout(() => { successMsg.classList.add('visible'); }, 200);
+        }
+      })
+      .catch((err) => {
+        console.error('Newsletter subscription failed:', err);
+        // Re-enable form so user can try again
+        if (button) { button.disabled = false; button.textContent = 'Subscribe'; }
+        if (input) { input.disabled = false; }
+        alert('Something went wrong. Please try again.');
+      });
   }
 
   initSpotlight() {
