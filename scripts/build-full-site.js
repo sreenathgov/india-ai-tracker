@@ -47,11 +47,14 @@ function buildSite() {
     });
 
     // 4. Copy Directories (recursive)
+    // Files to exclude from copying into dist/ (serverless functions must stay at project root)
+    const EXCLUDE_FROM_DIST = new Set(['api/subscribe.js']);
+
     ASSETS_TO_COPY.forEach(dirName => {
         const src = path.join(PROJECT_ROOT, dirName);
         const dest = path.join(DIST_DIR, dirName);
         if (fs.existsSync(src)) {
-            copyRecursiveSync(src, dest);
+            copyRecursiveSync(src, dest, EXCLUDE_FROM_DIST, dirName);
             console.log(`✓ Copied directory: ${dirName}`);
         }
     });
@@ -59,7 +62,7 @@ function buildSite() {
     console.log('✅ Base build complete. Ready for static page generation.');
 }
 
-function copyRecursiveSync(src, dest) {
+function copyRecursiveSync(src, dest, excludeSet = new Set(), relativePrefix = '') {
     if (fs.existsSync(src)) {
         if (!fs.existsSync(dest)) {
             fs.mkdirSync(dest, { recursive: true });
@@ -68,8 +71,15 @@ function copyRecursiveSync(src, dest) {
         fs.readdirSync(src).forEach(entry => {
             const srcPath = path.join(src, entry);
             const destPath = path.join(dest, entry);
+            const relativePath = relativePrefix ? `${relativePrefix}/${entry}` : entry;
+
+            if (excludeSet.has(relativePath)) {
+                console.log(`  ⤷ Skipped (serverless function): ${relativePath}`);
+                return;
+            }
+
             if (fs.lstatSync(srcPath).isDirectory()) {
-                copyRecursiveSync(srcPath, destPath);
+                copyRecursiveSync(srcPath, destPath, excludeSet, relativePath);
             } else {
                 fs.copyFileSync(srcPath, destPath);
             }
