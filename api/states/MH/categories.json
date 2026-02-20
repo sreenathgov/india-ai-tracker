@@ -159,6 +159,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 19,
+        "title": "Klassroom files DRHP for SME IPO; revenue jumps 120% in FY25",
+        "url": "https://entrackr.com/news/klassroom-files-drhp-for-sme-ipo-revenue-jumps-120-in-fy25-11135594",
+        "summary": "Klassroom, an edtech startup, has filed its Draft Red Herring Prospectus (DRHP) for an SME IPO on the Bombay Stock Exchange. The proposed IPO will consist of a fresh issue of equity shares and an offer-for-sale by existing shareholders. Klassroom's revenue has jumped 120% in FY25, and the IPO proceeds will be used for debt repayment, technology enhancement, and marketing initiatives.",
+        "date_published": "2026-02-20",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 54,
         "title": "Bengaluru, Delhi-NCR account for over half of India’s AI job openings: Report",
         "url": "https://telanganatoday.com/bengaluru-delhi-ncr-account-for-over-half-of-indias-ai-job-openings-report",
@@ -448,6 +467,25 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 33,
+        "title": "Startup Infiheal bags honour at AI Impact Summit",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/startup-infiheal-bags-honour-at-ai-impact-summit/articleshow/128574984.cms",
+        "summary": "Startup Infiheal received an honor at the AI Impact Summit, a recognition of its achievements in the field of artificial intelligence. The award acknowledges the company's innovative contributions to AI. Infiheal's win highlights its potential for growth and impact in the industry.",
+        "date_published": "2026-02-20",
+        "source_name": "Times of India - Thane",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "This startup is bringing the benefits of AI to retail stock market investors",
         "url": "https://yourstory.com/2026/02/startup-bringing-benefits-of-ai-retail-stock-market-investors",
@@ -527,6 +565,7 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

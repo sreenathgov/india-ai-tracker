@@ -5,6 +5,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 46,
+        "title": "SGPC to meet AI firms to curb misleading content",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/sgpc-to-meet-ai-firms-to-curb-misleading-content/articleshow/128574369.cms",
+        "summary": "The Shiromani Gurdwara Parbandhak Committee (SGPC) plans to meet with AI firms to address the issue of misleading content. The goal is to curb the spread of false information, particularly related to the Sikh community. The SGPC aims to collaborate with AI companies to find a solution to this problem.",
+        "date_published": "2026-02-20",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "CH",
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 34,
         "title": "Objectionable AI video of Golden Temple spark outrage",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/objectionable-ai-video-of-golden-temple-spark-outrage/articleshow/128433762.cms",
@@ -46,5 +66,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

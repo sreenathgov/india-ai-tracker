@@ -5,6 +5,45 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 26,
+        "title": "Andhra to sign agreements to strengthen AI infrastructure at New Delhi summit",
+        "url": "https://cellit.in/andhra-to-sign-agreements-to-strengthen-ai-infrastructure-at-new-delhi-summit/",
+        "summary": "Andhra is set to sign agreements to strengthen its AI infrastructure at a summit in New Delhi. The agreements aim to enhance the state's artificial intelligence capabilities. The summit will facilitate partnerships to boost Andhra's AI ecosystem.",
+        "date_published": "2026-02-20",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "AI Impact Summit: Pichai bets $15 billion on India’s AI future, calls it the ‘biggest platform shift’",
+        "url": "https://www.livemint.com/ai/ai-impact-summit-pichai-bets-15-billion-on-india-s-ai-future-calls-it-the-biggest-platform-shift-11771484101929.html",
+        "summary": "Sundar Pichai announced Google's $15 billion investment in India's AI future at the AI Impact Summit. The investment will include the establishment of a Vizag AI hub and a focus on responsible AI. This move aims to power jobs, infrastructure, and public services in India, which Pichai described as the \"biggest platform shift\".",
+        "date_published": "2026-02-19",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 33,
         "title": "Google to lay new undersea cable routes between US and India: CEO Sundar Pichai",
         "url": "https://yourstory.com/2026/02/google-undersea-cable-routes-us-india-ceo-sundar-pichai-build-ai-backbone",
@@ -123,5 +162,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

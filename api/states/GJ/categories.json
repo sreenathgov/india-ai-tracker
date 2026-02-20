@@ -102,6 +102,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 36,
+        "title": "Gujarat: OpenAI partners with IIM-A, others for AI collaboration and applications",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/gujarat-openai-partners-with-iim-a-others-for-ai-collaboration-and-applications/articleshow/128572701.cms",
+        "summary": "OpenAI has partnered with the Indian Institute of Management Ahmedabad (IIM-A) and other organizations to collaborate on AI applications. The partnership aims to explore and develop various AI-related projects and initiatives. This collaboration is expected to drive AI innovation and adoption in the region.",
+        "date_published": "2026-02-20",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 27,
         "title": "Adani Group to invest $100 billion in renewable-powered AI data centres by 2035",
         "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/adani-group-to-invest-100-billion-in-renewable-powered-ai-data-centres-by-2035/128492505",
@@ -278,5 +297,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

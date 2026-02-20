@@ -41,6 +41,44 @@
         "posted_to_x_at": null
       },
       {
+        "id": 3,
+        "title": "India pitches inclusive AI roadmap to the world",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/india-pitches-inclusive-ai-roadmap-to-the-world-at-ai-impact-summit-11771508333617.html",
+        "summary": "India has introduced a voluntary AI roadmap that promotes inclusive and responsible development. Union IT Minister Ashwini Vaishnaw unveiled guidelines that encourage signatories to achieve measurable outcomes in these areas. The initiative aims to push for a more equitable approach to AI development globally.",
+        "date_published": "2026-02-19",
+        "source_name": "LiveMint AI News",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 23,
+        "title": "PM Modi presents ‘MANAV Vision’ framework for AI at India AI Impact Summit 2026; flags deepfake threat",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/pm-modi-unveils-manav-vision-framework-for-ethical-ai-at-india-ai-impact-summit-2026/128550537",
+        "summary": "PM Modi presented the 'MANAV Vision' framework for AI at the India AI Impact Summit 2026, emphasizing a human-centric approach with a focus on ethics and accountability. The framework aims to address the threat of deepfakes and promote trust in artificial intelligence. It prioritizes data sovereignty and watermarking norms to ensure responsible AI development.",
+        "date_published": "2026-02-19",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "India giving necessary policy backing to accelerate AI, semiconductor push, highlights MeitY Secretary",
         "url": "https://government.economictimes.indiatimes.com/news/policy/india-giving-necessary-policy-backing-to-accelerate-ai-semiconductor-push-highlights-meity-secretary/128423276",
@@ -736,6 +774,196 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "India stands at AI inflection point amid infrastructure shift",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-stands-at-ai-inflection-point-amid-infrastructure-shift/128591981",
+        "summary": "India is at a crucial point in its AI development, with the technology representing an infrastructure shift rather than just an upgrade. The \"India AI Impact Summit 2026\" brought together industry leaders and experts to discuss this shift. According to them, infrastructure determines power, making AI a key factor in India's future.",
+        "date_published": "2026-02-20",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "World leaders to declare shared stance on AI at India summit",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/world-leaders-to-declare-shared-stance-on-ai-at-india-summit/128589277",
+        "summary": "Dozens of world leaders and ministers are set to declare a shared stance on artificial intelligence at a summit in India on Friday. The declaration will conclude a five-day summit focused on the technology and its implications. Indian Prime Minister Narendra Modi noted that humans and AI systems are increasingly co-creating, co-working, and co-evolving.",
+        "date_published": "2026-02-20",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "India’s MSMEs are a “ton of gold” for AI, if startups crack the cost and language challenge",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-msmes-are-a-ton-of-gold-for-ai-if-startups-crack-the-cost-and-language-challenge/128549138",
+        "summary": "India's MSMEs are seen as a key growth area for AI adoption, with cost-effective and linguistically diverse solutions needed to tap into this market. Leaders at the India AI Impact Summit 2026 discussed scaling AI adoption to benefit citizens and businesses nationwide. Successful AI deployments in India's MSME sector could offer inclusive models with global relevance.",
+        "date_published": "2026-02-20",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "At India AI Summit, Sam Altman says superintelligence could be here by 2028",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/sam-altman-predicts-superintelligence-by-2028-at-indiaai-summit/128575608",
+        "summary": "OpenAI CEO Sam Altman predicts that superintelligence could arrive as early as 2028. He emphasized India's crucial role in shaping the future of AI during the India AI Summit. Altman also warned about the potential risks of power concentration associated with AI development.",
+        "date_published": "2026-02-20",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 15,
+        "title": "General Catalyst to invest $5B in India over the next five years",
+        "url": "https://yourstory.com/2026/02/general-catalyst-to-invest-5b-in-india-over-next-five-years",
+        "summary": "General Catalyst plans to invest $5 billion in India over the next five years, driven by optimism about the country's innovations. The firm has previously backed notable companies such as Canva, Zepto, and Anthropic. This investment is expected to support India's growing tech industry.",
+        "date_published": "2026-02-20",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 25,
+        "title": "TATA Group and OpenAI forge foundational partnership to advance AI transformation in...",
+        "url": "https://cellit.in/tata-group-and-openai-forge-foundational-partnership-to-advance-ai-transformation-in-india-and-globally/",
+        "summary": "TATA Group has formed a foundational partnership with OpenAI to drive AI transformation. The collaboration aims to advance AI capabilities, although specific details of the partnership are not provided. This alliance is expected to leverage OpenAI's expertise to propel TATA Group's AI initiatives forward.",
+        "date_published": "2026-02-20",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 27,
+        "title": "New AI models tailored to address local needs in India, Global South:...",
+        "url": "https://cellit.in/new-ai-models-tailored-to-address-local-needs-in-india-global-south-meta-ai-chief/",
+        "summary": "New AI models are being developed to address local needs in India and the Global South. These models aim to provide solutions tailored to the specific requirements of these regions. The development of such models is expected to have a significant impact on the local communities by providing more relevant and effective AI solutions.",
+        "date_published": "2026-02-20",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 28,
+        "title": "Reliance Group to invest Rs 10 lakh crore in AI, create new...",
+        "url": "https://cellit.in/reliance-group-to-invest-rs-10-lakh-crore-in-ai-create-new-high-skill-work-opportunities-mukesh-ambani/",
+        "summary": "Reliance Group plans to invest Rs 10 lakh crore in artificial intelligence (AI). The investment aims to create new opportunities and drive growth in the AI sector. This significant investment underscores the company's commitment to emerging technologies and innovation.",
+        "date_published": "2026-02-20",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 29,
+        "title": "Tharoor breaks ranks, backs India’s AI summit as PM Modi charts global push",
+        "url": "https://telanganatoday.com/tharoor-breaks-ranks-backs-indias-ai-summit-as-pm-modi-charts-global-push",
+        "summary": "Congress leader Shashi Tharoor supported India's Bharat AI Impact Summit, differing from his party colleagues Rahul Gandhi and Mallikarjun Kharge. Prime Minister Narendra Modi emphasized the need for equitable access to AI, global consensus, and regulatory safeguards at the summit. The event is part of Modi's push for India to play a key role in the global AI landscape.",
+        "date_published": "2026-02-20",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 45,
+        "title": "8-year-old Sikh boy becomes youngest keynote speaker at India AI Impact Summit 2026",
+        "url": "https://www.tribuneindia.com/news/punjab/8-year-old-sikh-boy-becomes-youngest-keynote-speaker-at-india-ai-impact-summit-2026",
+        "summary": "Ranvir Sachdeva, an 8-year-old Sikh boy, became the youngest keynote speaker at the India AI Impact Summit 2026. He discussed connecting ancient philosophies with AI and showcased an Indian AI model he contributed to. Sachdeva emphasized the importance of indigenous AI development and technological self-reliance.",
+        "date_published": "2026-02-20",
+        "source_name": "Tribune - Punjab",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "India's AI stack rouses interest from African startups",
         "url": "https://www.livemint.com/ai/artificial-intelligence/indias-ai-stack-rouses-interest-from-african-startups-11771420841198.html",
@@ -837,6 +1065,196 @@
         "summary": "Google is planning to integrate AI across all levels in India, according to Sundar Pichai. This initiative aims to promote the use of artificial intelligence in various sectors. Sundar Pichai announced Google's goal to make AI more accessible in India.",
         "date_published": "2026-02-19",
         "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Reliance announces $110 bn AI push; TCS seals deal with OpenAI",
+        "url": "https://www.livemint.com/ai/reliance-tata-india-ai-infrastructure-investment-data-centers-tcs-11771510508587.html",
+        "summary": "Reliance Industries and Jio plan to invest $110 billion in an AI push, building India's sovereign compute infrastructure. The infrastructure will include multi-gigawatt AI-ready data centres and a nationwide edge network. Additionally, TCS has sealed a deal with OpenAI, further solidifying the AI initiative.",
+        "date_published": "2026-02-19",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "AI costs are dropping fast—and India stands to gain: OpenAI CEO Sam Altman",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/sam-altman-openai-artificial-intelligence-costs-india-market-future-11771507738440.html",
+        "summary": "OpenAI CEO Sam Altman stated that decreasing computing and inference costs are making artificial intelligence more accessible. This trend is expected to benefit India, where AI can now be more widely adopted. Altman also downplayed concerns that AI would disrupt India's IT services industry.",
+        "date_published": "2026-02-19",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "Can India&#039;s AI talent bridge the gap between advanced tech and real-world enterprise adoption?",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/can-indias-ai-talent-bridge-the-gap-between-advanced-tech-and-real-world-enterprise-adoption/128546434",
+        "summary": "India is a global hub for AI talent, with the number of professionals in AI roles expected to double by 2027. To achieve successful AI integration, companies must modernize their systems, curate data, and build confidence, as well as reskill their employees. India's experience in complex enterprise modernization makes it well-positioned to develop scalable AI solutions.",
+        "date_published": "2026-02-19",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "AI next big infrastructure like electricity, internet, must reach every citizen",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-next-big-infrastructure-like-electricity-internet-must-reach-every-citizen/128541319",
+        "summary": "Tata Sons Chairman N Chandrasekaran stated that artificial intelligence is the next major infrastructure that will significantly impact society. He compared AI's potential impact to that of transformative technologies like steam engines, electricity, and the internet. Chandrasekaran emphasized that AI must be accessible to every citizen to realize its full potential.",
+        "date_published": "2026-02-19",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 17,
+        "title": "India fastest-growing market for OpenAI’s vibe coder Codex, Altman says",
+        "url": "https://yourstory.com/2026/02/india-fastest-growing-market-for-openais-vibe-coder-codex-altman-says",
+        "summary": "India is the fastest-growing market for OpenAI's Codex, according to Altman. The country's rapid uptake of the technology is evidence of its increasing influence in shaping the next phase of AI deployment. This growth highlights India's emerging role in the global AI landscape.",
+        "date_published": "2026-02-19",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 20,
+        "title": "Humans and AI will co-create, co-work, and co-evolve, says PM Modi at India AI Impact Summit",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/pm-modi-emphasizes-co-creation-with-ai-at-india-ai-impact-summit/128551352",
+        "summary": "Indian Prime Minister Narendra Modi emphasized the importance of humans and AI co-creating, co-working, and co-evolving at the India AI Impact Summit. He highlighted the need for a mass movement focused on skilling, reskilling, and lifelong learning to prepare workers for upcoming structural changes. This movement aims to equip workers with the necessary skills to adapt to an AI-driven future.",
+        "date_published": "2026-02-19",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 21,
+        "title": "PM Modi calls to ‘democratise AI’ at India AI Impact Summit; says humans not ‘raw material’",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/pm-modi-calls-to-democratise-ai-at-india-ai-impact-summit-says-humans-not-raw-material/128550851",
+        "summary": "PM Narendra Modi spoke at the India AI Impact Summit 2026, referring to AI as a transformative force that should be developed in an inclusive and human-centric manner. He emphasized the need to \"democratise AI\" and stated that humans should not be treated as \"raw material\". Modi's remarks highlighted the importance of responsible AI development that prioritizes human well-being.",
+        "date_published": "2026-02-19",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 22,
+        "title": "AI Impact Summit: French President Macron calls for for AI sovereignty, warns against data extraction by foreign players",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/ai-impact-summit-french-president-macron-calls-for-for-ai-sovereignty-warns-against-data-extraction-by-foreign-players/128550681",
+        "summary": "French President Macron emphasized the need for AI sovereignty and warned against data extraction by foreign entities. He discussed this issue with Indian Prime Minister Modi, focusing on sovereign artificial intelligence and strategic tech cooperation. Macron's comments highlighted concerns about data dependence and the importance of maintaining control over AI development.",
+        "date_published": "2026-02-19",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 24,
+        "title": "AI in ‘hyper progress’ era, can help emerging economies leapfrog: Google CEO Sundar Pichai",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/ai-in-hyper-progress-era-can-help-emerging-economies-leapfrog-google-ceo-sundar-pichai/128548740",
+        "summary": "Google CEO Sundar Pichai believes AI is in a \"hyper progress\" era, with the potential to transform various sectors. He thinks AI can help emerging economies leapfrog, bringing significant benefits. Pichai noted that no technology has inspired him to \"dream bigger\" than AI, due to its vast transformative potential.",
+        "date_published": "2026-02-19",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 30,
+        "title": "India’s AI opportunity is amazing: Sam Altman",
+        "url": "https://telanganatoday.com/indias-ai-opportunity-is-amazing-sam-altman",
+        "summary": "Sam Altman described India as a rapidly growing AI market with over 100 million weekly ChatGPT users at the India AI Impact Summit 2026. He announced the 'OpenAI for India' initiative to build local AI infrastructure and skills. The initiative is in partnership with the Tata Group, aiming to leverage India's AI potential.",
+        "date_published": "2026-02-19",
+        "source_name": "Telangana Today - Tech",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -3342,6 +3760,44 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 1,
+        "title": "Sarvam to launch ChatGPT-like app with limited access soon",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/sarvam-to-launch-chatgpt-like-app-with-limited-access-soon-11771514340238.html",
+        "summary": "Sarvam is set to launch a ChatGPT-like app with limited access soon, backed by $45 million in funding. The company aims to localize General Artificial Intelligence (GenAI) for use in India's public and private sectors. This initiative is also supported by government incentives.",
+        "date_published": "2026-02-20",
+        "source_name": "LiveMint AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 18,
+        "title": "Lending infra startup Roopya raises seed round led by IPV",
+        "url": "https://entrackr.com/snippets/lending-infra-startup-roopya-raises-seed-round-led-by-ipv-11138087",
+        "summary": "Roopya, a SaaS-based lending infrastructure platform, has raised Rs 4 crore in a seed funding round led by Inflection Point Ventures. The funds will be used to scale its lending infrastructure and expand embedded finance capabilities. Roopya's platform offers a no-code, AI-powered Lending-as-a-Service stack, enabling financial institutions to launch loan products quickly.",
+        "date_published": "2026-02-20",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 14,
         "title": "Make in India, think in dialects: Why Sarvam’s AI bet feels personal",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/make-in-india-think-in-dialects-why-sarvams-ai-bet-feels-personal/128537368",
@@ -4086,7 +4542,6 @@
   },
   "today_updates": [
     "AI Start-Up News",
-    "Policies and Initiatives",
     "Major AI Developments"
   ]
 }
