@@ -6,7 +6,7 @@
  *   BREVO_LIST_ID  — the Brevo list ID (currently 2)
  */
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // Only allow POST
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
@@ -54,4 +54,4 @@ export default async function handler(req, res) {
     console.error('Subscribe handler error:', err);
     return res.status(500).json({ message: 'Server error. Please try again.' });
   }
-}
+};
