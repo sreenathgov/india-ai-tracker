@@ -179,6 +179,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 24,
+        "title": "I love Bengaluru because of AQI, its amazing: Netherlands PM Dick Schoof",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/love-the-smell-of-bengaluru-says-netherlands-prime-minister/articleshow/128617510.cms",
+        "summary": "Netherlands Prime Minister Dick Schoof praised Bengaluru's air quality and vibrant atmosphere during his visit. He was impressed by AI advancements in healthcare, such as an AI-enabled stethoscope. The Prime Minister also commended the city's tech-driven traffic management system, ASTraM, which uses real-time data to combat congestion.",
+        "date_published": "2026-02-21",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Reliance to invest  ₹10 trillion to build AI ecosystem: Mukesh Ambani at AI summit",
         "url": "https://www.livemint.com/ai/reliance-industries-ai-investment-jio-ai-mukesh-ambani-ril-adani-ai-11771487554132.html",
@@ -817,6 +836,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

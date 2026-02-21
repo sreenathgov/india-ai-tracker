@@ -64,6 +64,82 @@
     ],
     "Major AI Developments": [
       {
+        "id": 27,
+        "title": "Telangana govt prepared to meet challenges posed by rapid rise of AI: IT Minister",
+        "url": "https://www.thehindu.com/news/cities/Hyderabad/telangana-govt-prepared-to-meet-challenges-posed-by-rapid-rise-of-ai-it-minister/article70657194.ece",
+        "summary": "The Telangana government is prepared to address the challenges arising from the rapid growth of Artificial Intelligence (AI). According to the IT Minister, the government is taking steps to meet these challenges. The minister's statement highlights the government's proactive approach to navigating the impact of AI.",
+        "date_published": "2026-02-21",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 36,
+        "title": "CM to PM: We need AI war room, AI ministries",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/cm-to-pm-we-need-ai-war-room-ai-ministries/articleshow/128622243.cms",
+        "summary": "A chief minister has proposed the creation of an AI war room and AI ministries to the prime minister. The suggestion aims to leverage artificial intelligence for the country's development and growth. The proposal highlights the need for a dedicated framework to harness the potential of AI.",
+        "date_published": "2026-02-21",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 37,
+        "title": "Telangana banking on AI to open new career avenues, says minister Sridhar Babu",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/telangana-banking-on-ai-to-open-new-career-avenues-says-minister-sridhar-babu/articleshow/128620835.cms",
+        "summary": "Telangana is leveraging artificial intelligence to create new career opportunities, according to Minister Sridhar Babu. The state aims to utilize AI to open up fresh avenues for employment and growth. Minister Babu highlighted the potential of AI in driving innovation and job creation in the region.",
+        "date_published": "2026-02-21",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 38,
+        "title": "AP ties up with IBM, BharatGen &amp; NxtGen for Swadeshi AI stack",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/ap-ties-up-with-ibm-bharatgen-nxtgen-for-swadeshi-ai-stack/articleshow/128620828.cms",
+        "summary": "The Andhra Pradesh government has partnered with IBM, BharatGen, and NxtGen to develop a \"Swadeshi AI stack\". This collaboration aims to create an indigenous artificial intelligence ecosystem. The partnership is expected to drive innovation and growth in the state's AI sector.",
+        "date_published": "2026-02-21",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 41,
         "title": "Univs must become architects of indigenous AI solutions, says guv Jishnu Dev Varma",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/univs-must-become-architects-of-indigenous-ai-solutions-says-guv-jishnu-dev-varma/articleshow/128573107.cms",
@@ -408,6 +484,25 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 23,
+        "title": "CM Revanth Reddy moots AI Start-up Village in Telangana, AI War Room...",
+        "url": "https://cellit.in/cm-revanth-reddy-moots-ai-start-up-village-in-telangana-ai-war-room-in-hyderabad/",
+        "summary": "CM Revanth Reddy has proposed the establishment of an AI Start-up Village in Telangana. He also suggested setting up an AI War Room to foster innovation and development in the field of artificial intelligence. The initiatives aim to promote AI growth and entrepreneurship in the region.",
+        "date_published": "2026-02-21",
+        "source_name": "CellIt Magazine",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Global HealthX crosses $15 Mn in healthcare investments, unveils startup cohort",
         "url": "https://entrackr.com/snippets/global-healthx-crosses-15-mn-in-healthcare-investments-unveils-startup-cohort-11089283",
@@ -505,6 +600,7 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

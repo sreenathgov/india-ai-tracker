@@ -159,12 +159,50 @@
     ],
     "Major AI Developments": [
       {
+        "id": 28,
+        "title": "BJP workers show black flags to Rahul Gandhi in Mumbai over Youth Congress AI summit protest",
+        "url": "https://www.thehindu.com/news/national/maharashtra/rahul-gandhi-black-flag-bjp-workers-mumbai-maharashtra-ai-summit-protest/article70659120.ece",
+        "summary": "BJP workers protested against Rahul Gandhi in Mumbai, showing him black flags at Mulund toll naka. The protest was in response to Gandhi's opposition to Prime Minister Narendra Modi's initiatives, particularly a recent Youth Congress AI summit. The demonstrators raised slogans against the Congress leader during the protest.",
+        "date_published": "2026-02-21",
+        "source_name": "The Hindu - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 19,
         "title": "Klassroom files DRHP for SME IPO; revenue jumps 120% in FY25",
         "url": "https://entrackr.com/news/klassroom-files-drhp-for-sme-ipo-revenue-jumps-120-in-fy25-11135594",
         "summary": "Klassroom, an edtech startup, has filed its Draft Red Herring Prospectus (DRHP) for an SME IPO on the Bombay Stock Exchange. The proposed IPO will consist of a fresh issue of equity shares and an offer-for-sale by existing shareholders. Klassroom's revenue has jumped 120% in FY25, and the IPO proceeds will be used for debt repayment, technology enhancement, and marketing initiatives.",
         "date_published": "2026-02-20",
         "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 29,
+        "title": "India AI Impact Summit 2026: Maharashtra will ensure AI moves beyond pilot projects and reaches farmers, says CM Devendra Fadnavis",
+        "url": "https://indianexpress.com/article/cities/mumbai/india-ai-impact-summit-2026-maharashtra-ai-moves-beyond-pilot-projects-and-reaches-farmers-says-cm-devendra-fadnavis-10542386/",
+        "summary": "Maharashtra Chief Minister Devendra Fadnavis stated that the state will ensure AI technology moves beyond pilot projects and is implemented to benefit farmers. This announcement was made at the India AI Impact Summit 2026, highlighting the government's commitment to leveraging AI for agricultural development. The initiative aims to expand AI adoption beyond experimental stages and make a tangible impact on the farming community.",
+        "date_published": "2026-02-20",
+        "source_name": "Indian Express - Mumbai",
         "category": "Major AI Developments",
         "state_codes": [
           "MH"
@@ -565,7 +603,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
     "Major AI Developments"
   ]
 }
