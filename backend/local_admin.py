@@ -390,6 +390,72 @@ def delete_article_route(article_url):
     return redirect(url_for('updates_list'))
 
 
+@app.route('/consultations')
+def consultations_list():
+    """List all consultation submissions from Brevo list #6"""
+    import urllib.request
+    import json as json_lib
+
+    api_key = os.environ.get('BREVO_API_KEY', '')
+    contacts = []
+    error = None
+
+    if not api_key:
+        error = 'BREVO_API_KEY environment variable not set. Run: export BREVO_API_KEY=your_key'
+    else:
+        try:
+            url = 'https://api.brevo.com/v3/contacts/lists/6/contacts?limit=100&sort=desc'
+            req = urllib.request.Request(url, headers={
+                'api-key': api_key,
+                'Accept': 'application/json'
+            })
+            with urllib.request.urlopen(req) as response:
+                data = json_lib.loads(response.read().decode())
+                raw_contacts = data.get('contacts', [])
+
+            # For each contact, fetch full details including attributes
+            enriched = []
+            for c in raw_contacts:
+                try:
+                    detail_url = f"https://api.brevo.com/v3/contacts/{urllib.request.quote(c['email'])}"
+                    detail_req = urllib.request.Request(detail_url, headers={
+                        'api-key': api_key,
+                        'Accept': 'application/json'
+                    })
+                    with urllib.request.urlopen(detail_req) as detail_response:
+                        detail = json_lib.loads(detail_response.read().decode())
+                        attrs = detail.get('attributes', {})
+                        enriched.append({
+                            'email': c['email'],
+                            'created_at': c.get('createdAt', ''),
+                            'engagement_type': attrs.get('ENGAGEMENT_TYPE', ''),
+                            'company': attrs.get('COMPANY', ''),
+                            'website': attrs.get('WEBSITE', ''),
+                            'sector': attrs.get('SECTOR', ''),
+                            'stage': attrs.get('STAGE', ''),
+                            'role': attrs.get('ROLE', ''),
+                            'context': attrs.get('CONTEXT', ''),
+                            'submitted_at': attrs.get('SUBMITTED_AT', c.get('createdAt', '')),
+                            'firstname': attrs.get('FIRSTNAME', ''),
+                            'lastname': attrs.get('LASTNAME', ''),
+                        })
+                except Exception:
+                    # Fall back to basic info if detail fetch fails
+                    enriched.append({
+                        'email': c['email'],
+                        'created_at': c.get('createdAt', ''),
+                        'engagement_type': '', 'company': '', 'website': '',
+                        'sector': '', 'stage': '', 'role': '', 'context': '',
+                        'submitted_at': c.get('createdAt', ''),
+                        'firstname': '', 'lastname': '',
+                    })
+            contacts = enriched
+        except Exception as e:
+            error = f'Failed to fetch from Brevo: {str(e)}'
+
+    return render_template('consultations.html', contacts=contacts, error=error)
+
+
 if __name__ == '__main__':
     print("\n" + "="*60)
     print("India AI Tracker - Local Admin Tool")

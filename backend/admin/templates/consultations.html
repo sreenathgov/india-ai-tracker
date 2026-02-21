@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+
+{% block title %}Consultations - India AI Tracker Admin{% endblock %}
+
+{% block content %}
+<!-- Navigation -->
+<nav class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex space-x-8">
+                <a href="{{ url_for('dashboard') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                    Dashboard
+                </a>
+                <a href="{{ url_for('updates_list') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                    Updates
+                </a>
+                <a href="{{ url_for('sources_list') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                    Sources
+                </a>
+                <a href="{{ url_for('consultations_list') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-blue-500 text-sm font-medium text-gray-900">
+                    Consultations
+                </a>
+            </div>
+            <div class="flex items-center">
+                <a href="{{ url_for('consultations_list') }}" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-200">
+                    ↻ Refresh
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex items-center justify-between mb-6">
+        <div>
+            <h1 class="text-3xl font-bold text-gray-900">Consultations</h1>
+            <p class="text-sm text-gray-500 mt-1">All consultation requests submitted via kananlabs.in</p>
+        </div>
+        <div class="text-right">
+            <span class="text-2xl font-bold text-blue-600">{{ contacts|length }}</span>
+            <p class="text-xs text-gray-500">total submissions</p>
+        </div>
+    </div>
+
+    {% if error %}
+    <!-- Error state -->
+    <div class="bg-red-50 border border-red-200 rounded-lg p-6 mb-6">
+        <div class="flex items-start">
+            <span class="text-red-500 text-xl mr-3">⚠</span>
+            <div>
+                <h3 class="font-semibold text-red-800 mb-1">Could not load consultations</h3>
+                <p class="text-red-700 text-sm font-mono">{{ error }}</p>
+                {% if 'BREVO_API_KEY' in error %}
+                <p class="text-red-600 text-sm mt-2">Run the admin tool with: <code class="bg-red-100 px-1 py-0.5 rounded">BREVO_API_KEY=your_key python local_admin.py</code></p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    {% elif contacts|length == 0 %}
+    <!-- Empty state -->
+    <div class="bg-white shadow rounded-lg p-12 text-center">
+        <p class="text-4xl mb-4">📬</p>
+        <h3 class="text-lg font-medium text-gray-900 mb-2">No consultations yet</h3>
+        <p class="text-gray-500 text-sm">Submissions from kananlabs.in will appear here.</p>
+    </div>
+
+    {% else %}
+    <!-- Filter bar -->
+    <div class="bg-white shadow rounded-lg p-4 mb-4 flex items-center gap-4">
+        <label class="text-sm text-gray-600 font-medium">Filter by type:</label>
+        <select id="typeFilter" onchange="filterTable()" class="text-sm border border-gray-300 rounded px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="">All engagement types</option>
+            <option value="Regulatory & Product Advisory">Regulatory & Product Advisory</option>
+            <option value="Incentive & Scheme Structuring">Incentive & Scheme Structuring</option>
+            <option value="Governance Assessment">Governance Assessment</option>
+            <option value="Cross-Border Readiness">Cross-Border Readiness</option>
+            <option value="General Inquiry">General Inquiry</option>
+        </select>
+        <span id="filterCount" class="text-sm text-gray-400 ml-auto"></span>
+    </div>
+
+    <!-- Table -->
+    <div class="bg-white shadow rounded-lg overflow-hidden">
+        <table class="min-w-full divide-y divide-gray-200" id="consultTable">
+            <thead class="bg-gray-50">
+                <tr>
+                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-36">Date</th>
+                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-24">Role</th>
+                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Company</th>
+                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Engagement Type</th>
+                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-16">Detail</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-100" id="consultBody">
+                {% for c in contacts %}
+                {% set full_name = ((c.firstname or '') + ' ' + (c.lastname or '')).strip() or c.email %}
+                <tr class="hover:bg-gray-50 consult-row" data-type="{{ c.engagement_type }}">
+                    <td class="px-4 py-3 text-xs text-gray-500 whitespace-nowrap">
+                        {% if c.submitted_at %}
+                            {{ c.submitted_at[:10] }}<br>
+                            <span class="text-gray-400">{{ c.submitted_at[11:16] if c.submitted_at|length > 10 else '' }}</span>
+                        {% else %}—{% endif %}
+                    </td>
+                    <td class="px-4 py-3 text-sm font-medium text-gray-900">{{ full_name }}</td>
+                    <td class="px-4 py-3 text-sm text-blue-600">
+                        <a href="mailto:{{ c.email }}" class="hover:underline">{{ c.email }}</a>
+                    </td>
+                    <td class="px-4 py-3 text-sm text-gray-600">{{ c.role or '—' }}</td>
+                    <td class="px-4 py-3 text-sm text-gray-700">
+                        {{ c.company or '—' }}
+                        {% if c.website %}
+                        <a href="{{ c.website }}" target="_blank" class="text-gray-400 hover:text-blue-500 ml-1 text-xs">↗</a>
+                        {% endif %}
+                    </td>
+                    <td class="px-4 py-3">
+                        {% if c.engagement_type %}
+                        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium
+                            {% if 'Regulatory' in c.engagement_type %}bg-purple-100 text-purple-800
+                            {% elif 'Incentive' in c.engagement_type %}bg-green-100 text-green-800
+                            {% elif 'Governance' in c.engagement_type %}bg-blue-100 text-blue-800
+                            {% elif 'Cross-Border' in c.engagement_type %}bg-orange-100 text-orange-800
+                            {% else %}bg-gray-100 text-gray-700{% endif %}">
+                            {{ c.engagement_type }}
+                        </span>
+                        {% else %}—{% endif %}
+                    </td>
+                    <td class="px-4 py-3 text-center">
+                        <button onclick="toggleDetail('detail-{{ loop.index }}')"
+                            class="text-gray-400 hover:text-blue-600 text-lg leading-none transition-transform duration-200"
+                            id="btn-detail-{{ loop.index }}" title="View details">▼</button>
+                    </td>
+                </tr>
+                <!-- Expanded detail row -->
+                <tr id="detail-{{ loop.index }}" class="hidden bg-blue-50 consult-detail" data-type="{{ c.engagement_type }}">
+                    <td colspan="7" class="px-6 py-4">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                            <div>
+                                <p class="text-xs font-medium text-gray-500 uppercase mb-1">Sector / Stage</p>
+                                <p class="text-gray-700">{{ c.sector or '—' }} / {{ c.stage or '—' }}</p>
+                            </div>
+                            {% if c.website %}
+                            <div>
+                                <p class="text-xs font-medium text-gray-500 uppercase mb-1">Website</p>
+                                <a href="{{ c.website }}" target="_blank" class="text-blue-600 hover:underline break-all">{{ c.website }}</a>
+                            </div>
+                            {% endif %}
+                            <div class="md:col-span-{% if c.website %}1{% else %}2{% endif %}">
+                                <p class="text-xs font-medium text-gray-500 uppercase mb-1">Strategic Context</p>
+                                <p class="text-gray-700 whitespace-pre-line leading-relaxed">{{ c.context or 'No context provided.' }}</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-blue-100 flex gap-3">
+                            <a href="mailto:{{ c.email }}?subject=Re: Your consultation request — Kanan Labs"
+                                class="inline-flex items-center gap-1 text-xs bg-blue-600 text-white px-3 py-1.5 rounded hover:bg-blue-700">
+                                ✉ Reply via Email
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+</main>
+
+<script>
+function toggleDetail(id) {
+    const row = document.getElementById(id);
+    const idx = id.split('-')[1];
+    const btn = document.getElementById('btn-' + id);
+    if (row.classList.contains('hidden')) {
+        row.classList.remove('hidden');
+        if (btn) { btn.textContent = '▲'; btn.classList.add('rotate-180'); }
+    } else {
+        row.classList.add('hidden');
+        if (btn) { btn.textContent = '▼'; btn.classList.remove('rotate-180'); }
+    }
+}
+
+function filterTable() {
+    const val = document.getElementById('typeFilter').value;
+    const rows = document.querySelectorAll('.consult-row');
+    const details = document.querySelectorAll('.consult-detail');
+    let visible = 0;
+    rows.forEach(row => {
+        const match = !val || row.dataset.type === val;
+        row.style.display = match ? '' : 'none';
+        visible += match ? 1 : 0;
+    });
+    // Hide detail rows for filtered-out entries
+    details.forEach(detail => {
+        const match = !val || detail.dataset.type === val;
+        if (!match) detail.classList.add('hidden');
+    });
+    const countEl = document.getElementById('filterCount');
+    if (countEl) countEl.textContent = val ? `Showing ${visible} of ${rows.length}` : '';
+}
+</script>
+{% endblock %}
