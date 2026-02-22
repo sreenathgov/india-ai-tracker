@@ -64,6 +64,25 @@
     ],
     "Major AI Developments": [
       {
+        "id": 21,
+        "title": "Congress slams Centre for ‘excluding’ opposition from AI summit",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/congress-slams-centre-for-excluding-opposition-from-ai-summit/articleshow/128653819.cms",
+        "summary": "Congress has criticized the Centre for allegedly excluding opposition parties from an AI summit. The exclusion has sparked controversy, with the Congress accusing the Centre of being non-inclusive. The incident highlights a perceived lack of cooperation between the government and opposition parties on key issues like AI development.",
+        "date_published": "2026-02-22",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 27,
         "title": "Telangana govt prepared to meet challenges posed by rapid rise of AI: IT Minister",
         "url": "https://www.thehindu.com/news/cities/Hyderabad/telangana-govt-prepared-to-meet-challenges-posed-by-rapid-rise-of-ai-it-minister/article70657194.ece",
@@ -600,7 +619,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
     "Major AI Developments"
   ]
 }
