@@ -30,9 +30,9 @@ app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=24)
 
-# Admin credentials (hardcoded as requested)
-ADMIN_USERNAME = 'admin'
-ADMIN_PASSWORD = 'sreenath'
+# Admin credentials (read from .env — never hardcode passwords in code)
+ADMIN_USERNAME = os.getenv('ADMIN_USERNAME', 'admin')
+ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD')
 
 db = SQLAlchemy(app)
 
@@ -232,6 +232,11 @@ class Update(db.Model):
     importance_score = db.Column(db.Float, default=0.0)  # Importance score from Layer 3
     premium_processed = db.Column(db.Boolean, default=False)  # Whether refined by Layer 3
 
+    # Sector tagging (added 2026-02-23 — set by Layer 2 Groq batch processing)
+    # Values: healthtech | fintech | agritech | edtech | govtech | defence |
+    #         manufacturing | research | enterprise | general
+    sector = db.Column(db.String(50), nullable=True)
+
     # X (Twitter) posting tracking
     posted_to_x_at = db.Column(db.DateTime, nullable=True)  # When posted to X, NULL if not posted
 
@@ -251,6 +256,7 @@ class Update(db.Model):
             'processing_attempts': self.processing_attempts,
             'importance_score': self.importance_score,
             'premium_processed': self.premium_processed,
+            'sector': self.sector,
             'posted_to_x_at': self.posted_to_x_at.isoformat() if self.posted_to_x_at else None
         }
 
@@ -1029,5 +1035,6 @@ def admin_export_articles():
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5001))
+    debug_mode = os.getenv('FLASK_ENV', 'production') == 'development'
     print(f"Starting server on http://localhost:{port}")
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='127.0.0.1', port=port, debug=debug_mode)

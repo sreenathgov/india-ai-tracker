@@ -348,7 +348,19 @@
       "category_hint": "Events",
       "priority": "very_high",
       "enabled": false,
-      "notes": "DISABLED - JavaScript/AJAX-loaded content. Static HTML only contains navigation elements. Requires headless browser."
+      "notes": "DISABLED - JavaScript/AJAX-loaded content. Static HTML only contains navigation elements, not actual conferences. Requires headless browser."
+    },
+    {
+      "name": "Conference Alerts Co.in - AI",
+      "url": "https://conferencealerts.co.in/india/ai",
+      "type": "web",
+      "scraper": "conference_alerts_coin",
+      "state": null,
+      "is_state_specific": false,
+      "category_hint": "Events",
+      "priority": "very_high",
+      "enabled": false,
+      "notes": "DISABLED - Behind Cloudflare bot protection (HTTP 403). Would require headless browser or advanced headers to bypass."
     },
     {
       "name": "TechCircle - Policy",
@@ -409,6 +421,66 @@
       "priority": "high",
       "enabled": true,
       "notes": "All India conferences and events"
+    },
+    {
+      "name": "IIT Madras - RBCDSAI News",
+      "url": "https://rbcdsai.iitm.ac.in/news/",
+      "type": "web",
+      "state": "TN",
+      "is_state_specific": true,
+      "category_hint": "Major AI Developments",
+      "geo_mode": "force",
+      "priority": "high",
+      "enabled": true,
+      "notes": "Robert Bosch Centre for Data Science and AI at IIT Madras — leading AI research institute"
+    },
+    {
+      "name": "IISc Bangalore - News",
+      "url": "https://iisc.ac.in/news/",
+      "type": "web",
+      "state": "KA",
+      "is_state_specific": true,
+      "category_hint": "Major AI Developments",
+      "geo_mode": "force",
+      "priority": "high",
+      "enabled": true,
+      "notes": "Indian Institute of Science Bangalore — premier research university with strong AI/ML output"
+    },
+    {
+      "name": "IIT Bombay - News",
+      "url": "https://www.iitb.ac.in/en/newsevents/recent-news",
+      "type": "web",
+      "state": "MH",
+      "is_state_specific": true,
+      "category_hint": "Major AI Developments",
+      "geo_mode": "force",
+      "priority": "high",
+      "enabled": true,
+      "notes": "IIT Bombay news — significant AI and ML research activity"
+    },
+    {
+      "name": "IIT Delhi - News",
+      "url": "https://home.iitd.ac.in/news.php",
+      "type": "web",
+      "state": "DL",
+      "is_state_specific": true,
+      "category_hint": "Major AI Developments",
+      "geo_mode": "force",
+      "priority": "high",
+      "enabled": true,
+      "notes": "IIT Delhi — AI research collaborations and faculty achievements"
+    },
+    {
+      "name": "IIIT Hyderabad - News",
+      "url": "https://www.iiit.ac.in/news/",
+      "type": "web",
+      "state": "TG",
+      "is_state_specific": true,
+      "category_hint": "Major AI Developments",
+      "geo_mode": "force",
+      "priority": "high",
+      "enabled": true,
+      "notes": "IIIT Hyderabad — one of India's leading AI research institutions, Language Technologies Research Centre"
     }
   ],
   "tamil_nadu": [
@@ -1329,6 +1401,19 @@
       "priority": "high",
       "enabled": false,
       "notes": "DISABLED - JavaScript/AJAX-loaded content. Requires headless browser."
+    },
+    {
+      "name": "Conference Alerts Co.in - Jaipur",
+      "url": "https://conferencealerts.co.in/india/jaipur",
+      "type": "web",
+      "scraper": "conference_alerts_coin",
+      "state": "RJ",
+      "is_state_specific": true,
+      "geo_mode": "strict",
+      "category_hint": "Events",
+      "priority": "high",
+      "enabled": false,
+      "notes": "DISABLED - Behind Cloudflare bot protection (HTTP 403). Would require headless browser or advanced headers to bypass."
     }
   ],
   "kerala": [
@@ -2912,11 +2997,6 @@
         "name": "New Indian Express TN",
         "url": "https://www.newindianexpress.com/states/tamil-nadu",
         "reason": "Blocks automated requests"
-      },
-      {
-        "name": "Conference Alerts",
-        "url": "https://www.conferencealerts.in/india/ai",
-        "reason": "AJAX-loaded content, needs headless browser"
       },
       {
         "name": "OneIndia Bengaluru",

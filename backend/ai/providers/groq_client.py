@@ -147,6 +147,20 @@ class GroqClient:
 
    BAD (too long/vague): "This is a really exciting development in the AI space that could potentially transform..."
 
+5. Sector: Identify the PRIMARY industry/application area this AI story relates to.
+   Choose EXACTLY ONE from this list:
+
+   healthtech    → healthcare, hospitals, diagnostics, pharma, medical devices, clinical AI
+   fintech       → banking, payments, insurance, NBFC, lending, credit, UPI, RBI, wealth
+   agritech      → agriculture, farming, crops, irrigation, rural economy, food supply, kisan
+   edtech        → education, schools, universities, students, learning, upskilling, training
+   govtech       → e-governance, smart city, public services, civic tech, municipality
+   defence       → military, defense, DRDO, cybersecurity, surveillance, border security
+   manufacturing → factory automation, automobile, EV, MSME, industrial AI, production
+   research      → IIT/university lab, research papers, academic AI, scientific innovation
+   enterprise    → B2B software, SaaS, cloud platforms, ERP, corporate productivity tools
+   general       → cross-sector AI, foundational models, infrastructure, or doesn't fit above
+
 Articles to analyze:
 
 """
@@ -172,12 +186,14 @@ IMPORTANT: Respond ONLY with valid JSON in this exact format:
     "confidence": 95,
     "category": "Major AI Developments",
     "state_codes": ["KA"],
-    "summary": "Summary text here."
+    "summary": "Summary text here.",
+    "sector": "fintech"
   },
   ...
 ]
 
 Ensure the JSON is valid and parseable. Include ALL articles in order.
+Every result MUST include a "sector" field from the approved list.
 """
 
         return prompt
@@ -212,16 +228,29 @@ Ensure the JSON is valid and parseable. Include ALL articles in order.
             if len(results) != num_articles:
                 print(f"⚠️  Expected {num_articles} results, got {len(results)}")
 
+            # Valid sector values the AI may return
+            valid_sectors = {
+                'healthtech', 'fintech', 'agritech', 'edtech', 'govtech',
+                'defence', 'manufacturing', 'research', 'enterprise', 'general'
+            }
+
             # Standardize format
             standardized = []
             for result in results:
+                raw_sector = result.get('sector', 'general')
+                # Normalise: lowercase, strip whitespace, fall back to 'general'
+                sector = raw_sector.lower().strip() if raw_sector else 'general'
+                if sector not in valid_sectors:
+                    sector = 'general'
+
                 standardized.append({
                     'article_number': result.get('article_number', 0),
                     'is_relevant': result.get('is_relevant', False),
                     'confidence': float(result.get('confidence', 0)),
                     'category': result.get('category', 'Uncategorized'),
                     'state_codes': result.get('state_codes', []),
-                    'summary': result.get('summary', '')
+                    'summary': result.get('summary', ''),
+                    'sector': sector
                 })
 
             return standardized
@@ -237,6 +266,7 @@ Ensure the JSON is valid and parseable. Include ALL articles in order.
                 'category': 'Parse Error',
                 'state_codes': [],
                 'summary': '',
+                'sector': 'general',
                 'error': str(e)
             } for i in range(1, num_articles + 1)]
 
@@ -478,8 +508,9 @@ def test_groq_client():
             print(f"Article {i}:")
             print(f"  Relevant: {result['is_relevant']} (confidence: {result['confidence']}%)")
             print(f"  Category: {result['category']}")
-            print(f"  States: {result['state_codes']}")
-            print(f"  Summary: {result['summary'][:80]}...")
+            print(f"  Sector:   {result.get('sector', 'MISSING ⚠️')}")
+            print(f"  States:   {result['state_codes']}")
+            print(f"  Summary:  {result['summary'][:80]}...")
             print()
 
         print("✅ Groq client test passed!")

@@ -39,16 +39,22 @@ class IntegratedPipeline:
 
     def __init__(self,
                  layer2_provider: str = 'auto',
-                 layer3_top_n: int = 50,
+                 layer3_top_n: int = None,
                  batch_size: int = 10):
         """
         Initialize integrated pipeline.
 
         Args:
             layer2_provider: 'groq', 'ollama', or 'auto' (default)
-            layer3_top_n: Number of top articles for premium processing
+            layer3_top_n: Number of top articles for Gemini premium processing.
+                          Defaults to LAYER3_TOP_N env var (recommended: 4,
+                          giving ~120 Gemini calls/month). Falls back to 4.
             batch_size: Batch size for Layer 2
         """
+        # Resolve layer3 cap: explicit arg > env var > safe default of 4
+        if layer3_top_n is None:
+            layer3_top_n = int(os.getenv('LAYER3_TOP_N', '4'))
+
         # Initialize layers
         self.layer1 = RuleBasedFilter()
         self.layer2 = Layer2Processor(
@@ -56,6 +62,8 @@ class IntegratedPipeline:
             batch_size=batch_size
         )
         self.layer3 = Layer3Processor(provider='gemini', top_n=layer3_top_n)
+        print(f"ℹ️  Layer 3 cap: top {layer3_top_n} articles per run "
+              f"(~{layer3_top_n * 30} Gemini calls/month)")
 
         # Stats
         self.stats = {
@@ -138,6 +146,7 @@ class IntegratedPipeline:
                     update.summary = result.get('summary', '')
                     update.importance_score = result.get('importance_score', 0)
                     update.premium_processed = result.get('premium_processed', False)
+                    update.sector = result.get('sector', None)
                     update.processing_state = 'PROCESSED'
                     update.last_processing_attempt = datetime.utcnow()
 
@@ -349,8 +358,9 @@ def main():
     parser.add_argument('--limit', type=int, help='Limit number of articles to process')
     parser.add_argument('--layer2-provider', default='auto', choices=['groq', 'ollama', 'auto'],
                         help='Layer 2 provider (default: auto)')
-    parser.add_argument('--layer3-top-n', type=int, default=50,
-                        help='Number of top articles for Layer 3 (default: 50)')
+    parser.add_argument('--layer3-top-n', type=int, default=None,
+                        help='Number of top articles for Layer 3 '
+                             '(default: LAYER3_TOP_N env var, or 4)')
     parser.add_argument('--no-report', action='store_true',
                         help='Skip saving JSON report')
 

@@ -1,0 +1,433 @@
+{
+  "generated_at": "2026-02-23",
+  "week_of": "2026-02-23",
+  "lookback_days": 30,
+  "states_scored": 25,
+  "scores": {
+    "AP": {
+      "score": 4,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 0,
+        "startup": 3,
+        "velocity": 1,
+        "research": 0
+      },
+      "article_count": 8,
+      "top_category": "Major AI Developments",
+      "policy_articles": 0,
+      "startup_articles": 1,
+      "research_articles": 0,
+      "rank": 18,
+      "state_name": "Andhra Pradesh"
+    },
+    "AR": {
+      "score": 6,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 0,
+        "startup": 0,
+        "velocity": 6,
+        "research": 0
+      },
+      "article_count": 1,
+      "top_category": "Events",
+      "policy_articles": 0,
+      "startup_articles": 0,
+      "research_articles": 0,
+      "rank": 13,
+      "state_name": "Arunachal Pradesh"
+    },
+    "AS": {
+      "score": 1,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 0,
+        "startup": 0,
+        "velocity": 1,
+        "research": 0
+      },
+      "article_count": 3,
+      "top_category": "Major AI Developments",
+      "policy_articles": 0,
+      "startup_articles": 0,
+      "research_articles": 0,
+      "rank": 22,
+      "state_name": "Assam"
+    },
+    "BR": {
+      "score": 6,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 0,
+        "startup": 0,
+        "velocity": 0,
+        "research": 6
+      },
+      "article_count": 4,
+      "top_category": "Major AI Developments",
+      "policy_articles": 0,
+      "startup_articles": 0,
+      "research_articles": 3,
+      "rank": 14,
+      "state_name": "Bihar"
+    },
+    "CG": {
+      "score": 0,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 0,
+        "startup": 0,
+        "velocity": 0,
+        "research": 0
+      },
+      "article_count": 1,
+      "top_category": "Events",
+      "policy_articles": 0,
+      "startup_articles": 0,
+      "research_articles": 0,
+      "rank": 23,
+      "state_name": "Chhattisgarh"
+    },
+    "CH": {
+      "score": 26,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 0,
+        "startup": 0,
+        "velocity": 24,
+        "research": 2
+      },
+      "article_count": 3,
+      "top_category": "Major AI Developments",
+      "policy_articles": 0,
+      "startup_articles": 0,
+      "research_articles": 1,
+      "rank": 2,
+      "state_name": "Chandigarh"
+    },
+    "DL": {
+      "score": 37,
+      "label": "Active",
+      "breakdown": {
+        "policy": 1,
+        "startup": 1,
+        "velocity": 25,
+        "research": 10
+      },
+      "article_count": 86,
+      "top_category": "Major AI Developments",
+      "policy_articles": 2,
+      "startup_articles": 4,
+      "research_articles": 5,
+      "rank": 1,
+      "state_name": "Delhi"
+    },
+    "GA": {
+      "score": 24,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 0,
+        "startup": 0,
+        "velocity": 24,
+        "research": 0
+      },
+      "article_count": 4,
+      "top_category": "Major AI Developments",
+      "policy_articles": 0,
+      "startup_articles": 0,
+      "research_articles": 0,
+      "rank": 3,
+      "state_name": "Goa"
+    },
+    "GJ": {
+      "score": 18,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 6,
+        "startup": 0,
+        "velocity": 2,
+        "research": 10
+      },
+      "article_count": 15,
+      "top_category": "Major AI Developments",
+      "policy_articles": 3,
+      "startup_articles": 0,
+      "research_articles": 5,
+      "rank": 6,
+      "state_name": "Gujarat"
+    },
+    "HP": {
+      "score": 5,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 0,
+        "startup": 0,
+        "velocity": 5,
+        "research": 0
+      },
+      "article_count": 4,
+      "top_category": "Major AI Developments",
+      "policy_articles": 0,
+      "startup_articles": 0,
+      "research_articles": 0,
+      "rank": 15,
+      "state_name": "Himachal Pradesh"
+    },
+    "JH": {
+      "score": 0,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 0,
+        "startup": 0,
+        "velocity": 0,
+        "research": 0
+      },
+      "article_count": 1,
+      "top_category": "Major AI Developments",
+      "policy_articles": 0,
+      "startup_articles": 0,
+      "research_articles": 0,
+      "rank": 24,
+      "state_name": "Jharkhand"
+    },
+    "JK": {
+      "score": 4,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 0,
+        "startup": 0,
+        "velocity": 4,
+        "research": 0
+      },
+      "article_count": 5,
+      "top_category": "Major AI Developments",
+      "policy_articles": 0,
+      "startup_articles": 0,
+      "research_articles": 0,
+      "rank": 19,
+      "state_name": "Jammu & Kashmir"
+    },
+    "KA": {
+      "score": 20,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 3,
+        "startup": 6,
+        "velocity": 4,
+        "research": 6
+      },
+      "article_count": 32,
+      "top_category": "Major AI Developments",
+      "policy_articles": 3,
+      "startup_articles": 8,
+      "research_articles": 3,
+      "rank": 5,
+      "state_name": "Karnataka"
+    },
+    "KL": {
+      "score": 2,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 0,
+        "startup": 0,
+        "velocity": 0,
+        "research": 2
+      },
+      "article_count": 1,
+      "top_category": "Major AI Developments",
+      "policy_articles": 0,
+      "startup_articles": 0,
+      "research_articles": 1,
+      "rank": 21,
+      "state_name": "Kerala"
+    },
+    "MH": {
+      "score": 11,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 4,
+        "startup": 3,
+        "velocity": 2,
+        "research": 2
+      },
+      "article_count": 23,
+      "top_category": "Major AI Developments",
+      "policy_articles": 3,
+      "startup_articles": 3,
+      "research_articles": 1,
+      "rank": 11,
+      "state_name": "Maharashtra"
+    },
+    "MP": {
+      "score": 0,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 0,
+        "startup": 0,
+        "velocity": 0,
+        "research": 0
+      },
+      "article_count": 1,
+      "top_category": "Major AI Developments",
+      "policy_articles": 0,
+      "startup_articles": 0,
+      "research_articles": 0,
+      "rank": 25,
+      "state_name": "Madhya Pradesh"
+    },
+    "NL": {
+      "score": 4,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 0,
+        "startup": 0,
+        "velocity": 4,
+        "research": 0
+      },
+      "article_count": 1,
+      "top_category": "Major AI Developments",
+      "policy_articles": 0,
+      "startup_articles": 0,
+      "research_articles": 0,
+      "rank": 20,
+      "state_name": "Nagaland"
+    },
+    "OD": {
+      "score": 18,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 15,
+        "startup": 0,
+        "velocity": 1,
+        "research": 2
+      },
+      "article_count": 6,
+      "top_category": "Policies and Initiatives",
+      "policy_articles": 3,
+      "startup_articles": 0,
+      "research_articles": 1,
+      "rank": 7,
+      "state_name": "Odisha"
+    },
+    "PB": {
+      "score": 5,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 0,
+        "startup": 0,
+        "velocity": 1,
+        "research": 4
+      },
+      "article_count": 4,
+      "top_category": "Major AI Developments",
+      "policy_articles": 0,
+      "startup_articles": 0,
+      "research_articles": 2,
+      "rank": 16,
+      "state_name": "Punjab"
+    },
+    "SK": {
+      "score": 14,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 0,
+        "startup": 0,
+        "velocity": 14,
+        "research": 0
+      },
+      "article_count": 1,
+      "top_category": "Events",
+      "policy_articles": 0,
+      "startup_articles": 0,
+      "research_articles": 0,
+      "rank": 8,
+      "state_name": "Sikkim"
+    },
+    "TG": {
+      "score": 12,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 2,
+        "startup": 4,
+        "velocity": 5,
+        "research": 2
+      },
+      "article_count": 19,
+      "top_category": "Major AI Developments",
+      "policy_articles": 1,
+      "startup_articles": 3,
+      "research_articles": 1,
+      "rank": 10,
+      "state_name": "Telangana"
+    },
+    "TN": {
+      "score": 9,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 0,
+        "startup": 6,
+        "velocity": 0,
+        "research": 2
+      },
+      "article_count": 4,
+      "top_category": "Major AI Developments",
+      "policy_articles": 0,
+      "startup_articles": 1,
+      "research_articles": 1,
+      "rank": 12,
+      "state_name": "Tamil Nadu"
+    },
+    "TR": {
+      "score": 5,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 0,
+        "startup": 0,
+        "velocity": 5,
+        "research": 0
+      },
+      "article_count": 2,
+      "top_category": "Major AI Developments",
+      "policy_articles": 0,
+      "startup_articles": 0,
+      "research_articles": 0,
+      "rank": 17,
+      "state_name": "Tripura"
+    },
+    "UP": {
+      "score": 14,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 8,
+        "startup": 0,
+        "velocity": 1,
+        "research": 6
+      },
+      "article_count": 20,
+      "top_category": "Major AI Developments",
+      "policy_articles": 5,
+      "startup_articles": 0,
+      "research_articles": 3,
+      "rank": 9,
+      "state_name": "Uttar Pradesh"
+    },
+    "WB": {
+      "score": 21,
+      "label": "Emerging",
+      "breakdown": {
+        "policy": 10,
+        "startup": 8,
+        "velocity": 0,
+        "research": 2
+      },
+      "article_count": 3,
+      "top_category": "Policies and Initiatives",
+      "policy_articles": 1,
+      "startup_articles": 1,
+      "research_articles": 1,
+      "rank": 4,
+      "state_name": "West Bengal"
+    }
+  }
+}
