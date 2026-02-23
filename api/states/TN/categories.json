@@ -178,7 +178,30 @@
         "posted_to_x_at": null
       }
     ],
-    "AI Start-Up News": []
+    "AI Start-Up News": [
+      {
+        "id": 7,
+        "title": "The ePlane Company plans $40–50 Mn funding in Series C round: Report",
+        "url": "https://entrackr.com/news/the-eplane-company-plans-4050-mn-in-series-c-round-report-11146365",
+        "summary": "The ePlane Company, an electric aircraft company, is planning to raise $40-50 million in a Series C funding round. Speciale Invest will co-lead the round, which will be a mix of equity and convertible instruments. The Chennai-based company has previously raised $20 million from Speciale Invest and others.",
+        "date_published": "2026-02-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

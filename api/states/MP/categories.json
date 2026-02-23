@@ -5,6 +5,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 15,
+        "title": "Shirtless protest at AI Summit: Delhi Police nabs Youth Congress worker in Gwalior, total arrests 5",
+        "url": "https://www.tribuneindia.com/news/madhya-pradesh/shirtless-protest-at-ai-summit-delhi-police-nabs-youth-congress-worker-in-gwalior-total-arrests-5",
+        "summary": "Delhi Police arrested Jitendra Yadav, a Youth Congress worker, in Gwalior in connection with a protest at the AI Impact Summit, bringing the total arrests to five. The protest involved Indian Youth Congress members displaying slogans and removing their shirts inside the venue. The arrests were made in response to the disruption caused by the protesters.",
+        "date_published": "2026-02-23",
+        "source_name": "Tribune - Madhya Pradesh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MP",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 146,
         "title": "IIT Indore develops AI-driven system to improve road safety, ease traffic",
         "url": "https://www.tribuneindia.com/news/madhya-pradesh/iit-indore-develops-ai-driven-system-to-improve-road-safety-ease-traffic",
@@ -26,5 +46,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
