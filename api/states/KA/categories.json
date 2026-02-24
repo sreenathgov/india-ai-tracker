@@ -719,6 +719,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 6,
+        "title": "HireBound raises $2 Mn in seed round led by Kalaari Capital",
+        "url": "https://entrackr.com/snippets/hirebound-raises-2-mn-in-seed-round-led-by-kalaari-capital-11149693",
+        "summary": "HireBound, an AI-powered recruitment platform, has raised $2 million in a seed funding round led by Kalaari Capital, with participation from Antler, Infinyte Club, and CareerNet. The Bengaluru-based startup plans to use the funds to strengthen product development, expand operations, and scale globally. HireBound aims to achieve a 5x increase in annual recurring revenue (ARR) over the next 12-18 months.",
+        "date_published": "2026-02-24",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "India&#039;s AI ambitions: Homegrown tech at New Delhi Summit aims for global impact",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-ambitions-homegrown-tech-at-new-delhi-summit-aims-for-global-impact/128589199",
@@ -932,6 +952,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }

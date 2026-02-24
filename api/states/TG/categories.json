@@ -64,6 +64,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "Solvathon 2026",
+        "url": "https://www.iiit.ac.in/solvathon-2026/",
+        "summary": "IIIT Hyderabad is advancing various AI initiatives, including early cancer detection with AI and genetic insights, chip design for healthcare and mobility, and a data-driven study on fairness in justice delivery. The institution is also promoting AI education with a six-month training program for women graduate engineers and hosting events like the Urban AI Forum. Additionally, IIIT Hyderabad has launched a platform for mapping news and urban livability, showcasing its commitment to leveraging AI for societal impact.",
+        "date_published": "2026-02-24",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 16,
         "title": "Harvard invites Revanth to speak at AI policy symposium",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/harvard-invites-revanth-to-speak-at-ai-policy-symposium/articleshow/128686645.cms",
@@ -80,6 +100,26 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Hyderabad becomes The Hartford’s first home in India",
+        "url": "https://telanganatoday.com/hyderabad-becomes-the-hartfords-first-home-in-india",
+        "summary": "The Hartford has launched its first Global Technology Centre in Hyderabad, India, covering 1,60,000 sq. ft. and focusing on AI, digital innovation, and engineering. The centre plans to scale up to 1,200 employees, supporting the company's global technology transformation. This marks The Hartford's entry into India, with Hyderabad serving as its first home in the country.",
+        "date_published": "2026-02-23",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {

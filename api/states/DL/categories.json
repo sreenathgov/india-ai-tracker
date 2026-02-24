@@ -236,6 +236,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "91 countries and global organisations join New Delhi Declaration on AI Impact",
+        "url": "https://telanganatoday.com/91-countries-and-global-organisations-join-new-delhi-declaration-on-ai-impact",
+        "summary": "Ninety-one countries and organisations have endorsed the New Delhi Declaration on AI Impact, which aims to promote equitable, trustworthy, and accessible AI. The declaration emphasizes global cooperation, open ecosystems, and inclusive growth under shared development principles. It was adopted following the AI Impact Summit 2026, highlighting the importance of collaborative efforts in shaping the future of AI.",
+        "date_published": "2026-02-24",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Voluntary commitment can make a bigger difference: MeitY secretary on AI summit declaration",
         "url": "https://www.livemint.com/ai/artificial-intelligence/india-ai-impact-summit-declaration-startups-meity-secretary-s-krishnan-principles-pledges-11771748743033.html",
@@ -1793,7 +1813,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

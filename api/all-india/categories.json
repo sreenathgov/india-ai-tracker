@@ -793,6 +793,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "Indian Youth Congress president Uday Bhanu Chib arrested over ‘shirtless protest’ at AI Summit",
+        "url": "https://indianexpress.com/article/cities/delhi/indian-youth-congress-president-uday-bhanu-chib-arrested-over-shirtless-protest-at-ai-summit-10548714/",
+        "summary": "Uday Bhanu Chib, the president of the Indian Youth Congress, was arrested for staging a \"shirtless protest\" at an AI Summit. The protest was a form of demonstration, although the specific cause or issue being protested is not specified. Chib's arrest was a direct result of his participation in the unusual protest.",
+        "date_published": "2026-02-24",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "AMD bets big on India’s AI ambitions with Helios; open ecosystem push",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/amd-bets-big-on-indias-ai-ambitions-with-helios-open-ecosystem-push/128699407",
@@ -866,6 +886,106 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "The rise of the agentic enterprise: How India is scaling the next peak of AI",
+        "url": "https://www.livemint.com/ai/the-rise-of-the-agentic-enterprise-how-india-is-scaling-the-next-peak-of-ai-11771870202107.html",
+        "summary": "India is emerging as a leader in deploying autonomous digital systems, marking a significant shift in business operations. The conversation around AI has shifted to focus on strategic partnerships and measurable return on investment (ROI). This has made AI a key component of technology budgets, driving its integral role in business operations.",
+        "date_published": "2026-02-23",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "AI will augment, create new jobs in India: World Bank",
+        "url": "https://www.livemint.com/ai/ai-will-augment-create-new-jobs-in-india-world-bank-11771869194487.html",
+        "summary": "The World Bank believes AI will augment and create new jobs in India, according to discussions at the India AI Summit. Experts highlighted AI's potential to bridge gaps in healthcare and education, particularly in rural communities. AI applications can aid rural areas and improve livelihoods, with a focus on small-scale implementations.",
+        "date_published": "2026-02-23",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "India AI Impact Summit recognised as landmark event for Global South",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-ai-impact-summit-recognised-as-landmark-event-for-global-south/128707339",
+        "summary": "The India AI Impact Summit 2026, held in the national capital, is considered the most significant AI gathering in the Global South. It is described as the world's biggest AI summit to date, attracting international attention. The event has been recognized as a landmark for the Global South, marking a major milestone in the region's AI development.",
+        "date_published": "2026-02-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "DPI to daily life: India&#039;s AI pitch goes beyond code",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/dpi-to-daily-life-indias-ai-pitch-goes-beyond-code/128701318",
+        "summary": "India showcased its Digital Public Infrastructure (DPI) at the India AI Impact Summit 2026, demonstrating its potential to enhance daily life. A coffee stall at the event exemplified this, where Google CEO Sundar Pichai sampled GI-tagged coffee and made a payment using UPI. This highlights India's efforts to integrate AI and technology into everyday experiences.",
+        "date_published": "2026-02-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "AMD bets big on India’s AI ambitions with Helios; open ecosystem push",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/amd-bets-big-on-indias-ai-ambitions-with-helios-open-ecosystem-push/128701079",
+        "summary": "AMD is investing in India's AI ambitions through its Helios initiative, focusing on exascale computing and public-private partnerships. The company aims to create an open ecosystem, as outlined by Senior VP Thomas Zacharia. This push is part of AMD's broader roadmap for deeper engagement in the Indian market.",
+        "date_published": "2026-02-23",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -5187,7 +5307,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }
