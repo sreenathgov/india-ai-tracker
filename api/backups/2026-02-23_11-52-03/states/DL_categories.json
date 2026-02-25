@@ -57,7 +57,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -77,7 +76,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -97,7 +95,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -118,7 +115,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -138,7 +134,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       }
     ],
@@ -217,7 +212,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -237,150 +231,10 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       }
     ],
     "Major AI Developments": [
-      {
-        "id": 14,
-        "title": "'Operated from behind the scene': Delhi court on Youth Congress chief Uday Bhanu Chib in AI summit protest case",
-        "url": "https://timesofindia.indiatimes.com/city/delhi/ai-protest-youth-congress-chief-uday-bhanu-chib-sent-to-4-day-police-custody/articleshow/128766303.cms",
-        "summary": "Youth Congress chief Uday Bhanu Chib was remanded to 4-day police custody by a Delhi court for allegedly orchestrating a protest at the India AI Impact Summit. The court allowed Chib to meet his lawyer, noting that national security claims don't automatically justify lengthy custody. Chib was also provided with a copy of the FIR, which is crucial for his defense.",
-        "date_published": "2026-02-25",
-        "source_name": "Times of India - Delhi",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "DL"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "sector": null,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 15,
-        "title": "AI summit protest row: Delhi cops probe ‘larger &amp; well-planned conspiracy’",
-        "url": "https://timesofindia.indiatimes.com/city/delhi/police-probe-larger-and-well-planned-conspiracy/articleshow/128760953.cms",
-        "summary": "Delhi Police has arrested Indian Youth Congress president Uday Bhanu Chib in connection with a protest at the AI summit, suspecting a \"larger and well-planned conspiracy\". The crime branch is investigating the incident, which involved anti-PM slogans and a security breach attempt. Several individuals have been identified, arrested, or are being raided in other states as part of the ongoing probe.",
-        "date_published": "2026-02-25",
-        "source_name": "Times of India - Delhi",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "DL"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "sector": null,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 9,
-        "title": "91 countries and global organisations join New Delhi Declaration on AI Impact",
-        "url": "https://telanganatoday.com/91-countries-and-global-organisations-join-new-delhi-declaration-on-ai-impact",
-        "summary": "Ninety-one countries and organisations have endorsed the New Delhi Declaration on AI Impact, which aims to promote equitable, trustworthy, and accessible AI. The declaration emphasizes global cooperation, open ecosystems, and inclusive growth under shared development principles. It was adopted following the AI Impact Summit 2026, highlighting the importance of collaborative efforts in shaping the future of AI.",
-        "date_published": "2026-02-24",
-        "source_name": "Telangana Today - Tech",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "DL"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "sector": null,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 6,
-        "title": "Mukesh Ambani unveils Rs 10 lakh crore AI push, vows to make India a global intelligence power",
-        "url": "https://yourstory.com/2026/02/mukesh-ambani-reliance-jio-ai-plan-10-lakh-crore-sovereign-compute",
-        "summary": "Mukesh Ambani has announced a Rs 10 lakh crore investment in artificial intelligence, aiming to make India a global leader in the field. The investment is part of a broader effort to establish India as a major player in the global AI landscape. Ambani unveiled the plan at the India AI Impact Summit 2026 in New Delhi.",
-        "date_published": "2026-02-24",
-        "source_name": "YourStory",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "DL"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "sector": null,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 16,
-        "title": "Protest at AI Impact Summit: Here’s what Delhi Police’s SIT, Crime Branch will probe",
-        "url": "https://indianexpress.com/article/cities/delhi/protest-ai-impact-summit-police-sit-crime-branch-10550226/",
-        "summary": "Delhi Police's Special Investigation Team (SIT) and Crime Branch will investigate a protest that occurred at the AI Impact Summit. The probe will focus on the circumstances surrounding the protest, but specific details of the investigation have not been disclosed. The AI Impact Summit was the site of the disturbance, which prompted police intervention.",
-        "date_published": "2026-02-24",
-        "source_name": "Indian Express - Delhi",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "DL"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "sector": null,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 1,
-        "title": "Voluntary commitment can make a bigger difference: MeitY secretary on AI summit declaration",
-        "url": "https://www.livemint.com/ai/artificial-intelligence/india-ai-impact-summit-declaration-startups-meity-secretary-s-krishnan-principles-pledges-11771748743033.html",
-        "summary": "A declaration signed in New Delhi emphasizes the establishment of two platforms for global sharing of AI tools and principles. The declaration also includes a global network of scientific institutes committed to collaborating on AI research. This initiative aims to promote international cooperation and advancement in the field of artificial intelligence.",
-        "date_published": "2026-02-23",
-        "source_name": "LiveMint AI News",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "DL"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 15,
-        "title": "Shirtless protest at AI Summit: Delhi Police nabs Youth Congress worker in Gwalior, total arrests 5",
-        "url": "https://www.tribuneindia.com/news/madhya-pradesh/shirtless-protest-at-ai-summit-delhi-police-nabs-youth-congress-worker-in-gwalior-total-arrests-5",
-        "summary": "Delhi Police arrested Jitendra Yadav, a Youth Congress worker, in Gwalior in connection with a protest at the AI Impact Summit, bringing the total arrests to five. The protest involved Indian Youth Congress members displaying slogans and removing their shirts inside the venue. The arrests were made in response to the disruption caused by the protesters.",
-        "date_published": "2026-02-23",
-        "source_name": "Tribune - Madhya Pradesh",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "MP",
-          "DL"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
       {
         "id": 6,
         "title": "Delhi declaration urges democratic AI for social good",
@@ -409,64 +263,6 @@
         "source_name": "Times of India - Delhi",
         "category": "Major AI Developments",
         "state_codes": [
-          "DL"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 11,
-        "title": "Congress used AI summit for its &#8216;gandi aur nangi&#8217; politics: PM Modi",
-        "url": "https://www.tribuneindia.com/news/uttar-pradesh/congress-used-ai-summit-for-its-gandi-aur-nangi-politics-pm-modi",
-        "summary": "PM Modi criticized the Congress for a \"shirtless\" protest at an AI summit in Delhi, calling it \"dirty and shameless\" politics. He accused the party of defaming India and hindering parliamentary proceedings. Modi also appreciated criticism of the incident from other opposition parties, indicating a divide within the opposition over the protest.",
-        "date_published": "2026-02-22",
-        "source_name": "Tribune - Uttar Pradesh",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "DL"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 14,
-        "title": "Court denies bail to 4 Youth Cong workers",
-        "url": "https://www.tribuneindia.com/news/bharatmandapamincident/court-denies-bail-to-4-youth-cong-workers",
-        "summary": "A Delhi court denied bail to four Youth Congress workers who staged a shirtless protest at an AI summit. The court cited the premeditated nature of the act and potential harm to India's image as reasons for the denial. The protest was deemed a violation of public order rather than protected dissent.",
-        "date_published": "2026-02-22",
-        "source_name": "Tribune - Delhi",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "DL"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 18,
-        "title": "Himachal Youth Congress protests arrest of workers over AI summit stir",
-        "url": "https://www.tribuneindia.com/news/himachal/youth-cong-protests-arrest-of-workers-over-ai-summit-stir",
-        "summary": "Youth Congress members protested the arrest of their workers who demonstrated at an AI summit in Delhi, demanding their release and criticizing the government for suppressing dissent. The protesters also expressed embarrassment over the display of a Chinese robotic dog at the summit. They accused the BJP of hypocrisy in its handling of protests, sparking further controversy.",
-        "date_published": "2026-02-22",
-        "source_name": "Tribune - Himachal",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "HP",
           "DL"
         ],
         "is_approved": true,
@@ -544,6 +340,26 @@
         "category": "Major AI Developments",
         "state_codes": [
           "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 39,
+        "title": "BJP Yuva Morcha protests in Jammu, seeks Rahul’s apology for ‘shirtless protest’ at AI Summit",
+        "url": "https://www.tribuneindia.com/news/j-k/bjp-yuva-morcha-protests-in-jammu-seeks-rahuls-apology-for-shirtless-protest-at-ai-summit",
+        "summary": "BJP Yuva Morcha members protested in Jammu against a \"shirtless protest\" by Congress youth members at an AI summit in Delhi. The protest targeted Rahul Gandhi, with demonstrators burning his effigy and demanding an apology for allegedly disrespecting the nation. Four Indian Youth Congress leaders were arrested during the initial protest at the AI summit.",
+        "date_published": "2026-02-21",
+        "source_name": "Tribune - J&K",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "JK"
         ],
         "is_approved": true,
         "is_deleted": false,
@@ -1795,7 +1611,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -1815,31 +1630,10 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       }
     ],
     "AI Start-Up News": [
-      {
-        "id": 7,
-        "title": "The ePlane Company plans $40–50 Mn funding in Series C round: Report",
-        "url": "https://entrackr.com/news/the-eplane-company-plans-4050-mn-in-series-c-round-report-11146365",
-        "summary": "The ePlane Company, an electric aircraft company, is planning to raise $40-50 million in a Series C funding round. Speciale Invest will co-lead the round, which will be a mix of equity and convertible instruments. The Chennai-based company has previously raised $20 million from Speciale Invest and others.",
-        "date_published": "2026-02-23",
-        "source_name": "Entrackr - AI & Startups",
-        "category": "AI Start-Up News",
-        "state_codes": [
-          "DL",
-          "TN"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
       {
         "id": 9,
         "title": "India&#039;s AI ambitions: Homegrown tech at New Delhi Summit aims for global impact",
@@ -1881,10 +1675,10 @@
         "posted_to_x_at": null
       },
       {
-        "id": 153,
+        "id": 9,
         "title": "1Buy.AI raises Rs 32.5 Cr in seed round led by 100Unicorns",
         "url": "https://entrackr.com/snippets/1buyai-raises-rs-325-cr-in-seed-round-led-by-100unicorns-11039023",
-        "summary": "1Buy.AI, a procurement and cost-reduction platform, has raised Rs 32.5 crore in a seed funding round led by 100Unicorns. The funding round also saw participation from investors such as Ashish Kacholia, Gruhas, and FJ Labs. The fresh funds will be used to develop compliant SaaS platforms and expand global data pipes.",
+        "summary": "1Buy.AI, a procurement and cost-reduction platform, has raised Rs 32.5 crore in a seed funding round led by 100Unicorns. The funding round also saw participation from investors such as Ashish Kacholia, Gruhas, and FJ Labs. The fresh funds will be used to accelerate the development of the company's SaaS platforms and expand its global data pipes.",
         "date_published": "2026-01-29",
         "source_name": "Entrackr - AI & Startups",
         "category": "AI Start-Up News",
@@ -1897,7 +1691,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       }
     ]

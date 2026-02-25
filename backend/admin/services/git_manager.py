@@ -374,6 +374,23 @@ class GitManager:
         _, _, code = self._run_git_command(['diff', '--cached', '--quiet'], check=False)
         return code != 0  # Non-zero means there ARE staged changes
 
+    def get_modified_api_files(self) -> List[str]:
+        """
+        Return tracked files that git sees as modified and belong to the API output
+        (api/**/*.json or backend/sources.json).  Used when there are no in-memory
+        pending changes but AJAX operations have already written directly to disk.
+        """
+        stdout, _, code = self._run_git_command(['diff', '--name-only'], check=False)
+        if code != 0 or not stdout:
+            return []
+        files = [f.strip() for f in stdout.split('\n') if f.strip()]
+        return [
+            f for f in files
+            if (
+                f.startswith('api/') and f.endswith('.json') and not f.startswith('api/backups/')
+            ) or f == 'backend/sources.json'
+        ]
+
     def get_full_status(self) -> Dict[str, any]:
         """
         Get comprehensive git status including remote sync state

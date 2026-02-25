@@ -1,75 +1,58 @@
 #!/usr/bin/env python3
 """
-Generate weekly State AI Performance Scores.
+Generate State AI Feature Vectors — v2
 
-Reads the canonical JSON files in api/states/*/categories.json and
-api/all-india/categories.json, calculates a composite score for each
-state, and writes api/state-scores.json.
+Produces disaggregated feature vectors per state for NotebookLM intelligence.
+Instead of flattening to a single score, outputs 8 independent 0-100 vectors,
+momentum deltas, state tiering, and raw breakdowns.
 
-Run this manually or via the Sunday GitHub Actions workflow.
+Feature Vectors (each 0-100):
+  - policy_readiness_score      Government AI engagement
+  - enabling_policy_score       Pro-growth policy activity (grants, funds, schemes)
+  - restrictive_policy_score    Regulatory/compliance policy activity
+  - innovation_velocity_score   Startup and entrepreneurial AI activity
+  - research_academic_score     Academic/research institution AI activity
+  - infrastructure_depth_score  AI infrastructure (data centres, compute, chips)
+  - incumbent_activity_score    Major corporate AI deployments
+  - challenger_activity_score   Grassroots startup/disruptor activity
 
-Score formula (0-100):
-  Policy Activity       30% — share of a state's articles in "Policies and Initiatives"
-  Startup Ecosystem     25% — share of a state's articles in "AI Start-Up News"
-  Development Velocity  25% — articles per million population, normalised 0-100
-  Research Signal       20% — articles mentioning IIT/IISc/university (capped at 20)
+State Tiering:
+  Tier 1: KA, MH, DL, TG, TN, HR, GJ, UP (established AI hubs)
+  Tier 2: All other states/UTs
+
+Minimum Activity Gate: ≥5 articles → "sufficient", else "insufficient"
 
 Usage:
     python3 backend/scripts/generate_state_scores.py
 """
 
 import json
+import math
 import os
 import re
 import sys
 from datetime import datetime, timedelta
 
-# ── Population data (2024 estimates, millions) ──────────────────────────────
-# Used for velocity normalisation (articles per million people).
-# Source: Census 2011 projections + UNFPA estimates. Roughly correct, never
-# needs to be exact — the purpose is relative ranking, not absolute accuracy.
-STATE_POPULATION_M = {
-    'AN': 0.4,    # Andaman & Nicobar Islands
-    'AP': 53.0,   # Andhra Pradesh
-    'AR': 1.7,    # Arunachal Pradesh
-    'AS': 35.0,   # Assam
-    'BR': 125.0,  # Bihar
-    'CH': 1.2,    # Chandigarh
-    'CG': 32.0,   # Chhattisgarh
-    'DD': 0.6,    # Daman & Diu + Dadra & NH
-    'DL': 33.0,   # Delhi
-    'DN': 0.6,    # Dadra & Nagar Haveli
-    'GA': 1.6,    # Goa
-    'GJ': 70.0,   # Gujarat
-    'HP': 7.5,    # Himachal Pradesh
-    'HR': 31.0,   # Haryana
-    'JH': 38.0,   # Jharkhand
-    'JK': 13.5,   # Jammu & Kashmir
-    'KA': 68.0,   # Karnataka
-    'KL': 35.0,   # Kerala
-    'LA': 0.3,    # Ladakh
-    'LD': 0.07,   # Lakshadweep
-    'MH': 126.0,  # Maharashtra
-    'ML': 3.5,    # Meghalaya
-    'MN': 3.3,    # Manipur
-    'MP': 85.0,   # Madhya Pradesh
-    'MZ': 1.3,    # Mizoram
-    'NL': 2.2,    # Nagaland
-    'OD': 46.0,   # Odisha
-    'PB': 30.0,   # Punjab
-    'PY': 1.6,    # Puducherry
-    'RJ': 81.0,   # Rajasthan
-    'SK': 0.7,    # Sikkim
-    'TN': 80.0,   # Tamil Nadu
-    'TG': 40.0,   # Telangana
-    'TR': 4.2,    # Tripura
-    'UK': 11.0,   # Uttarakhand
-    'UP': 240.0,  # Uttar Pradesh
-    'UT': 11.0,   # Uttarakhand (alias — same as UK)
-    'WB': 100.0,  # West Bengal
+
+# ══════════════════════════════════════════════════════════════════════════
+# CONFIGURATION
+# ══════════════════════════════════════════════════════════════════════════
+
+LOOKBACK_DAYS = 30
+MIN_ARTICLES_GATE = 5
+
+# Tier 1: Established AI hub states
+TIER_1_STATES = {
+    'KA',   # Karnataka (Bengaluru)
+    'MH',   # Maharashtra (Mumbai/Pune)
+    'DL',   # Delhi (NCR)
+    'TG',   # Telangana (Hyderabad)
+    'TN',   # Tamil Nadu (Chennai)
+    'HR',   # Haryana (Gurugram/NCR)
+    'GJ',   # Gujarat (Ahmedabad/GIFT City)
+    'UP',   # Uttar Pradesh (Noida/NCR)
 }
 
-# Human-readable state names for output
 STATE_NAMES = {
     'AN': 'Andaman & Nicobar', 'AP': 'Andhra Pradesh',
     'AR': 'Arunachal Pradesh', 'AS': 'Assam', 'BR': 'Bihar',
@@ -86,32 +69,148 @@ STATE_NAMES = {
     'WB': 'West Bengal',
 }
 
-# Regex for research signal: articles mentioning academic institutions
-RESEARCH_RE = re.compile(
-    r'\b(iit|iits|iisc|iim|iims|iiser|iiit|nit |nits|'
-    r'university|universities|college|research institute|'
-    r'anna university|jadavpur|osmania|pune university)\b',
+
+# ══════════════════════════════════════════════════════════════════════════
+# KEYWORD PATTERNS (compiled once)
+# ══════════════════════════════════════════════════════════════════════════
+
+# Policy classification: Enabling vs Restrictive
+ENABLING_KEYWORDS = re.compile(
+    r'\b('
+    r'grant|fund(?:ing|s|ed)?|subsid(?:y|ies)|'
+    r'incubat(?:or|ion)|accelerat(?:or|e)|'
+    r'scheme|mission|allocation|'
+    r'skill(?:ing|s|ed)?|train(?:ing|ed)?|'
+    r'invest(?:ment|ed|ing)?|partnership|'
+    r'launch(?:ed|es|ing)?|promot(?:e|ing|ion)|'
+    r'support(?:ed|ing)?|initiative|'
+    r'boost|develop(?:ment|ed|ing)?|establish(?:ed|ing)?|'
+    r'centre of excellence|center of excellence|'
+    r'startup|start-up|innovation|'
+    r'digital india|smart city|e-governance'
+    r')\b',
     re.IGNORECASE
 )
 
-# Look-back window for article relevance (days)
-LOOKBACK_DAYS = 30
+RESTRICTIVE_KEYWORDS = re.compile(
+    r'\b('
+    r'regulat(?:ion|ory|e|ed|ing)|'
+    r'compliance|ban(?:ned|ning)?|'
+    r'committee|commission(?:ed)?|'
+    r'data (?:law|protection|privacy)|'
+    r'restrict(?:ion|ed|ive|ing)?|'
+    r'audit(?:ed|ing)?|mandat(?:e|ory|ed)|'
+    r'framework|guideline|oversight|'
+    r'penalt(?:y|ies)|fine(?:d|s)?|'
+    r'enforce(?:ment|d|ing)?|monitor(?:ing|ed)?|'
+    r'govern(?:ance|ing)|liability|'
+    r'transparency|accountability|'
+    r'safety standard|ethical|bias'
+    r')\b',
+    re.IGNORECASE
+)
 
+# Research: Academic/research institution patterns
+# Premier institutions (IIT, IISc, IIM, national labs)
+RESEARCH_PREMIER_RE = re.compile(
+    r'\b('
+    r'iit[- ]?\w+|iits\b|iit\b|'
+    r'iisc\b|'
+    r'iim[- ]?\w+|iims\b|iim\b|'
+    r'aiims[- ]?\w*|aiims\b|'
+    r'isro|drdo|csir|tifr|'
+    r'barc|icar|icmr|dae\b|'
+    r'isi kolkata|isi\b|nasscom'
+    r')\b',
+    re.IGNORECASE
+)
+
+# Broader academic patterns
+RESEARCH_BROAD_RE = re.compile(
+    r'\b('
+    r'nit[- ]?\w+|nits\b|nit\b|'
+    r'iiit[- ]?\w+|iiits\b|iiit\b|'
+    r'iiser[- ]?\w*|bits[- ]?\w*|'
+    r'university|universities|'
+    r'research cent(?:re|er)|research lab|research institute|'
+    r'professor|faculty|ph\.?d|doctoral|'
+    r'academic|innovation hub|incubator|'
+    r'centre of excellence|center of excellence'
+    r')\b',
+    re.IGNORECASE
+)
+
+# Infrastructure keywords
+INFRA_RE = re.compile(
+    r'\b('
+    r'data cent(?:re|er)|gpu|tpu|'
+    r'semiconductor|chip\b|fab\b|fabrication|'
+    r'computing infrastructure|cloud infrastructure|'
+    r'server farm|hyperscale|'
+    r'india ai mission|indiaai|digital india|'
+    r'bharatgpt|bhashini|airawat|'
+    r'supercomputer|param\b|'
+    r'national ai mission|national ai portal|'
+    r'5g\b|fibre\b|fiber\b|'
+    r'smart city|digital infrastructure|'
+    r'ai compute|compute capacity'
+    r')\b',
+    re.IGNORECASE
+)
+
+# Incumbent companies (major established corporations)
+INCUMBENT_COMPANIES = re.compile(
+    r'\b('
+    # Major Indian
+    r'infosys|tcs\b|tata consultancy|wipro|'
+    r'hcl tech|tech mahindra|'
+    r'reliance|jio\b|tata group|tata sons|'
+    r'adani|mahindra|l&t\b|larsen|'
+    r'bharti|airtel|'
+    r'hdfc|icici|sbi\b|bajaj|axis bank|'
+    r'vedanta|jsw|godrej|'
+    # Major Global
+    r'google|microsoft|amazon|aws\b|'
+    r'meta\b|ibm\b|sap\b|samsung|'
+    r'intel\b|nvidia|apple|qualcomm|'
+    r'accenture|deloitte|oracle|'
+    r'cisco|dell\b|salesforce'
+    r')\b',
+    re.IGNORECASE
+)
+
+# Challenger / startup keywords
+CHALLENGER_RE = re.compile(
+    r'\b('
+    r'seed round|pre-seed|angel round|angel funding|'
+    r'series [a-e]|raised|funding round|fund raise|'
+    r'new startup|start-?up|founded|launched|'
+    r'bootstrap(?:ped)?|disruption|pivot(?:ed)?|'
+    r'unicorn|soonicorn|'
+    r'venture capital|vc |angel investor'
+    r')\b',
+    re.IGNORECASE
+)
+
+
+# ══════════════════════════════════════════════════════════════════════════
+# ARTICLE LOADING
+# ══════════════════════════════════════════════════════════════════════════
 
 def load_state_articles(api_root: str) -> dict:
     """
-    Load all articles from state JSON files.
+    Load all articles from state JSON files within the lookback window.
 
-    Returns a dict: { state_code: [article, ...] }
+    Returns: { state_code: [article, ...] }
     """
     states_dir = os.path.join(api_root, 'states')
     state_articles = {}
 
     if not os.path.isdir(states_dir):
-        print(f"⚠️  States directory not found: {states_dir}")
+        print(f"  States directory not found: {states_dir}")
         return state_articles
 
-    cutoff_date = (datetime.utcnow() - timedelta(days=LOOKBACK_DAYS)).strftime('%Y-%m-%d')
+    cutoff = (datetime.utcnow() - timedelta(days=LOOKBACK_DAYS)).strftime('%Y-%m-%d')
 
     for entry in sorted(os.listdir(states_dir)):
         state_dir = os.path.join(states_dir, entry)
@@ -124,22 +223,20 @@ def load_state_articles(api_root: str) -> dict:
             with open(cat_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
         except Exception as e:
-            print(f"  ⚠️  Could not read {cat_file}: {e}")
+            print(f"  Could not read {cat_file}: {e}")
             continue
 
         articles = []
         for category, items in data.get('categories', {}).items():
             for article in items:
-                # Only count approved, non-deleted, processed articles
                 if not article.get('is_approved'):
                     continue
                 if article.get('is_deleted'):
                     continue
                 if article.get('processing_state') != 'PROCESSED':
                     continue
-                # Only count articles within look-back window
                 pub_date = article.get('date_published', '')
-                if pub_date and pub_date < cutoff_date:
+                if pub_date and pub_date < cutoff:
                     continue
                 articles.append({**article, 'category': category})
 
@@ -149,204 +246,427 @@ def load_state_articles(api_root: str) -> dict:
     return state_articles
 
 
-def score_state(state_code: str, articles: list) -> dict:
+# ══════════════════════════════════════════════════════════════════════════
+# FEATURE VECTOR CALCULATION
+# ══════════════════════════════════════════════════════════════════════════
+
+def _text_of(article: dict) -> str:
+    """Get searchable text from an article (title + summary, lowered)."""
+    return f"{article.get('title', '')} {article.get('summary', '')}".lower()
+
+
+def _hybrid_score(count: int, total: int, per_item: int = 6,
+                  abs_cap: int = 60, share_weight: int = 40) -> float:
     """
-    Calculate the AI performance score for a single state.
+    Hybrid scoring: absolute count + share of total.
+    Rewards both volume and concentration without penalizing diverse states.
+    """
+    absolute = min(count * per_item, abs_cap)
+    share = (count / total * share_weight) if total > 0 else 0
+    return absolute + share
 
-    Args:
-        state_code: Two-letter state code (e.g. 'KA')
-        articles: List of article dicts for this state
 
-    Returns:
-        Score breakdown dict
+def classify_policy_article(article: dict) -> str:
+    """
+    Classify a policy article as 'enabling' or 'restrictive'.
+    Returns 'enabling' or 'restrictive'.
+    """
+    text = _text_of(article)
+    enabling_hits = len(ENABLING_KEYWORDS.findall(text))
+    restrictive_hits = len(RESTRICTIVE_KEYWORDS.findall(text))
+
+    if restrictive_hits > enabling_hits:
+        return 'restrictive'
+    return 'enabling'  # default: assume proactive
+
+
+def compute_feature_vectors(state_code: str, articles: list) -> dict:
+    """
+    Compute all feature vectors for a single state.
+
+    Returns raw (unnormalized) scores and article breakdowns.
+    Normalization across states happens in the caller.
     """
     total = len(articles)
-    if total == 0:
-        return {
-            'score': 0,
-            'breakdown': {'policy': 0, 'startup': 0, 'velocity': 0, 'research': 0},
-            'article_count': 0,
-            'top_category': None
-        }
 
-    # Count by category
+    # ── Article classification ────────────────────────────────────────────
+    policy_articles = []
+    enabling_articles = []
+    restrictive_articles = []
+    startup_articles = []
+    research_articles = []
+    infra_articles = []
+    incumbent_articles = []
+    challenger_articles = []
+
     category_counts = {}
+    sector_counts = {}
+
     for article in articles:
+        text = _text_of(article)
         cat = article.get('category', 'Major AI Developments')
+        sector = article.get('sector', None)
+
         category_counts[cat] = category_counts.get(cat, 0) + 1
+        if sector:
+            sector_counts[sector] = sector_counts.get(sector, 0) + 1
 
-    policy_count = category_counts.get('Policies and Initiatives', 0)
-    startup_count = category_counts.get('AI Start-Up News', 0)
+        # Policy classification
+        if cat == 'Policies and Initiatives':
+            policy_articles.append(article)
+            pol_type = classify_policy_article(article)
+            if pol_type == 'enabling':
+                enabling_articles.append(article)
+            else:
+                restrictive_articles.append(article)
 
-    # ── Component 1: Policy Activity (30%) ──────────────────────────────────
-    # % of articles about policy, mapped to 0-30 scale
-    policy_pct = (policy_count / total) * 100
-    policy_pts = round((policy_pct / 100) * 30, 1)
+        # Startup / innovation
+        if cat == 'AI Start-Up News':
+            startup_articles.append(article)
 
-    # ── Component 2: Startup Ecosystem (25%) ────────────────────────────────
-    startup_pct = (startup_count / total) * 100
-    startup_pts = round((startup_pct / 100) * 25, 1)
+        # Research: prefer Groq sector tag, fall back to regex
+        is_research = False
+        if sector == 'research':
+            is_research = True
+        elif RESEARCH_PREMIER_RE.search(text) or RESEARCH_BROAD_RE.search(text):
+            is_research = True
+        if is_research:
+            research_articles.append(article)
 
-    # ── Component 3: Development Velocity (25%) ─────────────────────────────
-    # Articles per million population, normalised to 0-25
-    # We'll normalise across all states at the end (done in caller)
-    pop_m = STATE_POPULATION_M.get(state_code, 10.0)
-    raw_velocity = total / pop_m  # articles per million people
-    # Store raw value; normalisation happens in generate_scores()
-    velocity_raw = raw_velocity
+        # Infrastructure
+        if INFRA_RE.search(text):
+            infra_articles.append(article)
 
-    # ── Component 4: Research Signal (20%) ──────────────────────────────────
-    research_count = sum(
-        1 for a in articles
-        if RESEARCH_RE.search(f"{a.get('title', '')} {a.get('summary', '')}")
+        # Incumbent vs Challenger
+        has_incumbent = bool(INCUMBENT_COMPANIES.search(text))
+        has_challenger = bool(CHALLENGER_RE.search(text))
+
+        if has_incumbent:
+            incumbent_articles.append(article)
+        if has_challenger and not has_incumbent:
+            # Pure challenger: startup activity without incumbent involvement
+            challenger_articles.append(article)
+        elif cat == 'AI Start-Up News' and not has_incumbent:
+            # Startup category articles without incumbent mention = challenger
+            challenger_articles.append(article)
+
+    # ── Raw scores (before normalization) ─────────────────────────────────
+
+    # Policy readiness
+    policy_raw = _hybrid_score(len(policy_articles), total)
+
+    # Enabling / Restrictive policy (same hybrid formula)
+    enabling_raw = _hybrid_score(len(enabling_articles), total)
+    restrictive_raw = _hybrid_score(len(restrictive_articles), total)
+
+    # Innovation velocity
+    innovation_raw = _hybrid_score(len(startup_articles), total)
+
+    # Research academic
+    # Quality bonus: articles matching premier institutions get extra weight
+    premier_count = sum(
+        1 for a in research_articles
+        if RESEARCH_PREMIER_RE.search(_text_of(a))
     )
-    # Each research mention = +2 pts, capped at 20
-    research_pts = min(research_count * 2, 20)
+    research_base = min(len(research_articles) * 10, 70)
+    research_quality = min(premier_count * 5, 30)
+    research_raw = research_base + research_quality
 
-    # Determine top category
+    # Infrastructure depth (each infra article is high-signal)
+    infra_raw = min(len(infra_articles) * 15, 100)
+
+    # Incumbent activity
+    # Bonus: diversity of incumbents mentioned
+    incumbent_names_seen = set()
+    for a in incumbent_articles:
+        matches = INCUMBENT_COMPANIES.findall(_text_of(a))
+        incumbent_names_seen.update(m.lower() for m in matches)
+    incumbent_base = min(len(incumbent_articles) * 8, 80)
+    incumbent_diversity = 20 if len(incumbent_names_seen) >= 3 else 0
+    incumbent_raw = incumbent_base + incumbent_diversity
+
+    # Challenger activity
+    # Bonus: sector diversity among challengers
+    challenger_sectors = set()
+    for a in challenger_articles:
+        s = a.get('sector')
+        if s and s != 'general':
+            challenger_sectors.add(s)
+    challenger_base = min(len(challenger_articles) * 8, 80)
+    challenger_diversity = 20 if len(challenger_sectors) >= 3 else 0
+    challenger_raw = challenger_base + challenger_diversity
+
+    # Top category and sector
     top_category = max(category_counts, key=category_counts.get) if category_counts else None
+    top_sector = max(sector_counts, key=sector_counts.get) if sector_counts else None
 
     return {
-        '_policy_pts': policy_pts,
-        '_startup_pts': startup_pts,
-        '_velocity_raw': velocity_raw,
-        '_research_pts': research_pts,
+        'raw_vectors': {
+            'policy_readiness': policy_raw,
+            'enabling_policy': enabling_raw,
+            'restrictive_policy': restrictive_raw,
+            'innovation_velocity': innovation_raw,
+            'research_academic': research_raw,
+            'infrastructure_depth': infra_raw,
+            'incumbent_activity': incumbent_raw,
+            'challenger_activity': challenger_raw,
+        },
+        'breakdown': {
+            'policy_articles': len(policy_articles),
+            'enabling_policy_articles': len(enabling_articles),
+            'restrictive_policy_articles': len(restrictive_articles),
+            'startup_articles': len(startup_articles),
+            'research_articles': len(research_articles),
+            'infrastructure_articles': len(infra_articles),
+            'incumbent_articles': len(incumbent_articles),
+            'challenger_articles': len(challenger_articles),
+            'top_category': top_category,
+            'top_sector': top_sector,
+            'sector_distribution': sector_counts,
+        },
         'article_count': total,
-        'top_category': top_category,
-        'policy_articles': policy_count,
-        'startup_articles': startup_count,
-        'research_articles': research_count,
     }
 
 
-def generate_scores(state_articles: dict) -> dict:
+def normalize_vectors(all_raw: dict) -> dict:
     """
-    Calculate final scores for all states, normalising velocity.
+    Normalize raw vectors to 0-100 scale across all states.
 
-    Args:
-        state_articles: { state_code: [articles] }
-
-    Returns:
-        { state_code: score_dict }
+    For each vector dimension, find the max across all states and scale
+    all values to 0-100 relative to that max.
     """
-    # First pass: compute raw scores for each state
-    raw_scores = {}
-    for state_code, articles in state_articles.items():
-        raw_scores[state_code] = score_state(state_code, articles)
+    vector_names = [
+        'policy_readiness', 'enabling_policy', 'restrictive_policy',
+        'innovation_velocity', 'research_academic', 'infrastructure_depth',
+        'incumbent_activity', 'challenger_activity',
+    ]
 
-    # Normalise velocity: map the highest velocity to 25 pts
-    max_velocity = max(
-        (s.get('_velocity_raw', 0) for s in raw_scores.values()),
-        default=1
-    )
-    if max_velocity == 0:
-        max_velocity = 1
-
-    # Second pass: compute final scores
-    final_scores = {}
-    for state_code, raw in raw_scores.items():
-        policy_pts = raw.get('_policy_pts', 0)
-        startup_pts = raw.get('_startup_pts', 0)
-        velocity_pts = round((raw.get('_velocity_raw', 0) / max_velocity) * 25, 1)
-        research_pts = raw.get('_research_pts', 0)
-
-        total_score = round(policy_pts + startup_pts + velocity_pts + research_pts)
-        total_score = min(total_score, 100)  # Cap at 100
-
-        label = (
-            'Leader' if total_score >= 70 else
-            'Strong' if total_score >= 50 else
-            'Active' if total_score >= 30 else
-            'Emerging'
+    # Find max for each dimension
+    maxes = {}
+    for vname in vector_names:
+        max_val = max(
+            (data['raw_vectors'].get(vname, 0) for data in all_raw.values()),
+            default=1
         )
+        maxes[vname] = max_val if max_val > 0 else 1
 
-        final_scores[state_code] = {
-            'score': total_score,
-            'label': label,
-            'breakdown': {
-                'policy': round(policy_pts),
-                'startup': round(startup_pts),
-                'velocity': round(velocity_pts),
-                'research': round(research_pts),
-            },
-            'article_count': raw.get('article_count', 0),
-            'top_category': raw.get('top_category'),
-            'policy_articles': raw.get('policy_articles', 0),
-            'startup_articles': raw.get('startup_articles', 0),
-            'research_articles': raw.get('research_articles', 0),
-        }
+    # Normalize each state
+    normalized = {}
+    for state_code, data in all_raw.items():
+        vectors = {}
+        for vname in vector_names:
+            raw_val = data['raw_vectors'].get(vname, 0)
+            normalized_val = round((raw_val / maxes[vname]) * 100)
+            vectors[vname + '_score'] = min(normalized_val, 100)
 
-    return final_scores
+        normalized[state_code] = vectors
 
+    return normalized
+
+
+def compute_momentum(current_vectors: dict, trends_path: str) -> dict:
+    """
+    Compute week-over-week momentum deltas for each feature vector.
+
+    Returns: { state_code: { vector_name_delta: int, ... } }
+    Returns None values if no previous week data exists.
+    """
+    momentum = {}
+    prev_week_data = None
+
+    # Load previous week from trends file
+    if os.path.exists(trends_path):
+        try:
+            with open(trends_path, 'r', encoding='utf-8') as f:
+                trends = json.load(f)
+            # Get the most recent week (first key when sorted descending)
+            weeks = sorted(trends.keys(), reverse=True)
+            if weeks:
+                prev_week_data = trends[weeks[0]]
+                print(f"  Previous week data loaded: {weeks[0]}")
+        except Exception as e:
+            print(f"  Could not load trends for momentum: {e}")
+
+    vector_keys = [
+        'policy_readiness_score', 'innovation_velocity_score',
+        'research_academic_score', 'infrastructure_depth_score',
+        'incumbent_activity_score', 'challenger_activity_score',
+    ]
+
+    for state_code, vectors in current_vectors.items():
+        state_momentum = {}
+
+        if prev_week_data and state_code in prev_week_data:
+            prev = prev_week_data[state_code]
+            for vk in vector_keys:
+                delta_key = vk.replace('_score', '_delta')
+                current_val = vectors.get(vk, 0)
+                prev_val = prev.get(vk, 0)
+                state_momentum[delta_key] = current_val - prev_val
+
+            # Article count delta
+            state_momentum['article_count_delta'] = (
+                vectors.get('_article_count', 0) -
+                prev.get('article_count', 0)
+            )
+        else:
+            # No previous data — all deltas null
+            for vk in vector_keys:
+                delta_key = vk.replace('_score', '_delta')
+                state_momentum[delta_key] = None
+            state_momentum['article_count_delta'] = None
+
+        momentum[state_code] = state_momentum
+
+    return momentum
+
+
+# ══════════════════════════════════════════════════════════════════════════
+# MAIN PIPELINE
+# ══════════════════════════════════════════════════════════════════════════
 
 def generate_state_scores():
-    """Main entry point — read JSON files, score states, write output."""
+    """Main entry point — compute feature vectors, momentum, write output."""
 
-    # Locate api/ directory (2 levels up from this script)
     script_dir = os.path.dirname(os.path.abspath(__file__))
     api_root = os.path.normpath(os.path.join(script_dir, '..', '..', 'api'))
+    trends_dir = os.path.join(api_root, 'trends')
+    trends_path = os.path.join(trends_dir, 'state-activity.json')
 
-    print("=" * 60)
-    print("GENERATING STATE AI PERFORMANCE SCORES")
-    print("=" * 60)
-    print(f"\n📁 API root: {api_root}")
-    print(f"📅 Look-back window: last {LOOKBACK_DAYS} days\n")
+    print("=" * 70)
+    print("STATE AI FEATURE VECTOR GENERATOR v2")
+    print("=" * 70)
+    print(f"\n  API root:        {api_root}")
+    print(f"  Lookback:        {LOOKBACK_DAYS} days")
+    print(f"  Activity gate:   {MIN_ARTICLES_GATE} articles")
+    print(f"  Tier 1 states:   {', '.join(sorted(TIER_1_STATES))}")
+    print()
 
-    # Load articles
-    print("📥 Loading state articles from canonical JSON files...")
+    # ── Load articles ─────────────────────────────────────────────────────
+    print("Loading state articles...")
     state_articles = load_state_articles(api_root)
 
     if not state_articles:
-        print("⚠️  No state articles found. Aborting.")
+        print("  No state articles found. Aborting.")
         sys.exit(1)
 
-    print(f"✅ Loaded articles from {len(state_articles)} states\n")
+    total_articles = sum(len(v) for v in state_articles.values())
+    print(f"  Loaded {total_articles} articles from {len(state_articles)} states\n")
 
-    # Score states
-    print("🧮 Scoring states...")
-    scores = generate_scores(state_articles)
+    # ── Compute raw vectors ───────────────────────────────────────────────
+    print("Computing feature vectors...")
+    all_raw = {}
+    for state_code, articles in state_articles.items():
+        all_raw[state_code] = compute_feature_vectors(state_code, articles)
 
-    # Rank by score (highest first)
-    ranked = sorted(scores.items(), key=lambda x: x[1]['score'], reverse=True)
+    # ── Normalize to 0-100 ────────────────────────────────────────────────
+    print("Normalizing vectors across states...")
+    normalized = normalize_vectors(all_raw)
 
-    # Add rank field
-    for rank, (state_code, data) in enumerate(ranked, 1):
-        scores[state_code]['rank'] = rank
-        scores[state_code]['state_name'] = STATE_NAMES.get(state_code, state_code)
+    # Attach article count to normalized for momentum calculation
+    for state_code in normalized:
+        normalized[state_code]['_article_count'] = all_raw[state_code]['article_count']
 
-    # Build output
+    # ── Compute momentum ──────────────────────────────────────────────────
+    print("Computing momentum deltas...")
+    momentum = compute_momentum(normalized, trends_path)
+
+    # ── Build output ──────────────────────────────────────────────────────
     today = datetime.utcnow().date()
-    # Week starts on Monday
     week_start = today - timedelta(days=today.weekday())
+
+    states_output = {}
+    for state_code in sorted(all_raw.keys()):
+        article_count = all_raw[state_code]['article_count']
+        tier = 1 if state_code in TIER_1_STATES else 2
+        sufficiency = 'sufficient' if article_count >= MIN_ARTICLES_GATE else 'insufficient'
+
+        # Build feature vectors dict (remove internal _article_count)
+        vectors = {k: v for k, v in normalized[state_code].items()
+                   if not k.startswith('_')}
+
+        states_output[state_code] = {
+            'state_name': STATE_NAMES.get(state_code, state_code),
+            'tier': tier,
+            'article_count': article_count,
+            'data_sufficiency': sufficiency,
+            'feature_vectors': vectors,
+            'momentum': momentum.get(state_code, {}),
+            'breakdown': all_raw[state_code]['breakdown'],
+        }
 
     output = {
         'generated_at': today.isoformat(),
         'week_of': week_start.isoformat(),
         'lookback_days': LOOKBACK_DAYS,
-        'states_scored': len(scores),
-        'scores': scores,
+        'states_scored': len(states_output),
+        'states': states_output,
     }
 
-    # Write output
+    # ── Write output ──────────────────────────────────────────────────────
     output_path = os.path.join(api_root, 'state-scores.json')
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    # Print leaderboard
-    print(f"\n🏆 STATE AI LEADERBOARD (top 10 of {len(ranked)})")
-    print("-" * 55)
-    print(f"{'Rank':<5} {'State':<22} {'Score':>5}  {'Label':<10} {'Articles':>8}")
-    print("-" * 55)
+    # ── Print summary ─────────────────────────────────────────────────────
+    print(f"\n{'=' * 70}")
+    print("FEATURE VECTOR SUMMARY")
+    print(f"{'=' * 70}\n")
 
-    for i, (state_code, data) in enumerate(ranked[:10], 1):
-        name = STATE_NAMES.get(state_code, state_code)
-        print(f"{i:<5} {name:<22} {data['score']:>5}  {data['label']:<10} {data['article_count']:>8}")
+    # Sort by innovation velocity for display
+    sorted_states = sorted(
+        states_output.items(),
+        key=lambda x: x[1]['feature_vectors'].get('innovation_velocity_score', 0),
+        reverse=True
+    )
 
-    print("-" * 55)
-    print(f"\n✅ Scores written to: {output_path}")
-    print(f"   {len(scores)} states scored")
+    header = (f"{'State':<18} {'Tier':>4} {'Art':>4} {'Suff':>6}  "
+              f"{'Policy':>6} {'Innov':>6} {'Rsrch':>6} {'Infra':>6} "
+              f"{'Incum':>6} {'Chall':>6}")
+    print(header)
+    print("-" * len(header))
+
+    for state_code, data in sorted_states:
+        fv = data['feature_vectors']
+        suff = "✓" if data['data_sufficiency'] == 'sufficient' else "✗"
+        name = data['state_name'][:17]
+        print(f"{name:<18} {data['tier']:>4} {data['article_count']:>4} {suff:>6}  "
+              f"{fv.get('policy_readiness_score', 0):>6} "
+              f"{fv.get('innovation_velocity_score', 0):>6} "
+              f"{fv.get('research_academic_score', 0):>6} "
+              f"{fv.get('infrastructure_depth_score', 0):>6} "
+              f"{fv.get('incumbent_activity_score', 0):>6} "
+              f"{fv.get('challenger_activity_score', 0):>6}")
+
+    print(f"\n  Tier 1 states: {sum(1 for _, d in sorted_states if d['tier'] == 1)}")
+    print(f"  Tier 2 states: {sum(1 for _, d in sorted_states if d['tier'] == 2)}")
+    print(f"  Sufficient data: {sum(1 for _, d in sorted_states if d['data_sufficiency'] == 'sufficient')}")
+    print(f"  Insufficient:    {sum(1 for _, d in sorted_states if d['data_sufficiency'] == 'insufficient')}")
+
+    # Show policy split for top states
+    print(f"\n{'=' * 70}")
+    print("POLICY SPLIT (Enabling vs Restrictive)")
+    print(f"{'=' * 70}\n")
+
+    policy_states = [(sc, d) for sc, d in sorted_states
+                     if d['breakdown']['policy_articles'] > 0]
+    if policy_states:
+        for state_code, data in policy_states[:10]:
+            bd = data['breakdown']
+            fv = data['feature_vectors']
+            print(f"  {data['state_name']:<20} "
+                  f"Policy:{bd['policy_articles']} "
+                  f"(Enabling:{bd['enabling_policy_articles']} "
+                  f"Restrictive:{bd['restrictive_policy_articles']})  "
+                  f"Scores: E={fv.get('enabling_policy_score', 0)} "
+                  f"R={fv.get('restrictive_policy_score', 0)}")
+    else:
+        print("  No states with policy articles in this period.")
+
+    print(f"\n  Output: {output_path}")
+    print(f"  {len(states_output)} states scored\n")
 
 
 if __name__ == "__main__":

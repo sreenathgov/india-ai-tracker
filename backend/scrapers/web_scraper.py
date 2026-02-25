@@ -35,6 +35,7 @@ class WebScraper(BaseScraper):
             'deccan_herald': self._scrape_deccan_herald,
             'meity': self._scrape_meity,
             'niti_aayog': self._scrape_niti_aayog,
+            'startup_india_regs': self._scrape_startup_india_regs,
             # New scrapers
             'et_cio_events': self._scrape_et_cio_events,
             'digital_india_events': self._scrape_digital_india_events,
@@ -54,7 +55,9 @@ class WebScraper(BaseScraper):
             'invest_telangana': self._scrape_invest_telangana,
             'delhi_it_gov': self._scrape_delhi_it_gov,
             # New scrapers for Rajasthan, Kerala, Madhya Pradesh
-            'conference_alerts': self._scrape_conference_alerts,
+            'conference_alerts': self._scrape_conference_alerts,  # Legacy name
+            'conference_alerts_in': self._scrape_conference_alerts,  # conferencealerts.in (static HTML)
+            'conference_alerts_coin': self._scrape_conference_alerts_coin,  # conferencealerts.co.in (static HTML)
             'doitc_rajasthan': self._scrape_doitc_rajasthan,
             'istart_rajasthan': self._scrape_istart_rajasthan,
             'istart_events': self._scrape_istart_events,
@@ -659,6 +662,77 @@ class WebScraper(BaseScraper):
 
         except Exception as e:
             print(f"  Error scraping NITI Aayog: {e}")
+            return []
+
+    def _scrape_startup_india_regs(self, url):
+        """Scrape Startup India regulatory updates (DPIIT).
+
+        Page: https://www.startupindia.gov.in/content/sih/en/startupgov/regulatory_updates.html
+        Table columns: S.No. | Date of Amendment | Ministry/Department | Description | Know More (download link)
+        Each row is a government gazette/notification PDF.
+        date_published is set to today (discovery date) so it always passes the time-window filter.
+        """
+        try:
+            response = self.fetch_url(url)
+            if not response:
+                return []
+
+            soup = self.parse_html(response.content)
+            articles = []
+
+            table_rows = soup.find_all('tr')
+
+            for row in table_rows[:50]:
+                try:
+                    cells = row.find_all(['td', 'th'])
+                    if len(cells) < 4:
+                        continue
+
+                    # Skip header rows (th elements or no download link)
+                    if cells[0].name == 'th' or row.find('th'):
+                        continue
+
+                    # Col 1 = Date of Amendment, Col 2 = Ministry/Dept (link), Col 3 = Description, Col 4 = Download
+                    date_text = cells[1].get_text(strip=True) if len(cells) > 1 else ''
+                    ministry_elem = cells[2].find('a') if len(cells) > 2 else None
+                    ministry = ministry_elem.get_text(strip=True) if ministry_elem else cells[2].get_text(strip=True)
+                    description = cells[3].get_text(strip=True) if len(cells) > 3 else ''
+
+                    # Download link is in the last cell
+                    download_elem = cells[-1].find('a', href=True)
+                    if not download_elem:
+                        continue
+
+                    href = download_elem.get('href', '')
+                    download_url = urljoin('https://www.startupindia.gov.in', href)
+
+                    if not description or len(description) < 10:
+                        continue
+
+                    # Build a descriptive title
+                    ministry_prefix = f"{ministry}: " if ministry else ""
+                    title = f"{ministry_prefix}{description[:120]}{'...' if len(description) > 120 else ''}"
+
+                    # Content includes amendment date for context
+                    content = description
+                    if date_text:
+                        content = f"[Amended: {date_text}] {description}"
+
+                    articles.append({
+                        'title': title,
+                        'url': download_url,
+                        'content': content,
+                        'date_published': datetime.now().date(),
+                        'source_url': url
+                    })
+                except Exception:
+                    continue
+
+            print(f"  Scraped {len(articles)} regulatory updates from Startup India (DPIIT)")
+            return articles
+
+        except Exception as e:
+            print(f"  Error scraping Startup India regulatory updates: {e}")
             return []
 
     def _parse_date_text(self, date_text):
@@ -1616,7 +1690,18 @@ class WebScraper(BaseScraper):
                     full_url = urljoin(url, href)
 
                     # Skip navigation/very short titles
-                    if not title or len(title) < 10:
+                    if not title or len(title) < 15:
+                        continue
+
+                    # Skip navigation items and generic links
+                    nav_keywords = ['home', 'about', 'contact', 'login', 'register', 'sign up', 'sign in',
+                                   'privacy', 'terms', 'return home', 'back to', 'view all', 'more',
+                                   'browse', 'search', 'filter', 'andaman', 'nicobar', 'states', 'cities']
+                    if any(nav in title.lower() for nav in nav_keywords):
+                        continue
+
+                    # Skip URLs that look like navigation
+                    if any(nav in href.lower() for nav in ['#', 'javascript:', '/login', '/register', '/profile']):
                         continue
 
                     # Look for date
@@ -1653,6 +1738,165 @@ class WebScraper(BaseScraper):
 
         except Exception as e:
             print(f"  Error scraping Conference Alerts: {e}")
+            return []
+
+    def _scrape_conference_alerts_coin(self, url):
+        """
+        Scrape Conference Alerts Co.in (conferencealerts.co.in).
+
+        This site has static featured events in HTML that can be scraped
+        with BeautifulSoup. We look for conference cards, featured events,
+        and table listings.
+        """
+        try:
+            response = self.fetch_url(url)
+            if not response:
+                return []
+
+            soup = self.parse_html(response.content)
+            articles = []
+
+            # APPROACH 1: Look for featured/highlighted conference cards
+            # These are typically in card/grid layouts
+            featured = soup.find_all(['div', 'article', 'section', 'a'],
+                class_=lambda x: x and any(kw in str(x).lower()
+                for kw in ['featured', 'highlight', 'card', 'conference', 'event', 'listing']))
+
+            for item in featured[:25]:
+                try:
+                    # Find link first (most important)
+                    link = item.find('a', href=True) if item.name != 'a' else item
+                    if not link or not link.get('href'):
+                        continue
+
+                    href = link.get('href', '')
+                    full_url = urljoin(url, href)
+
+                    # Skip navigation/generic links
+                    if any(skip in href.lower() for skip in ['javascript:', '#', 'login', 'register', 'profile']):
+                        continue
+
+                    # Find title - try multiple selectors
+                    title_el = item.find(['h2', 'h3', 'h4', 'h5', 'strong', 'b'])
+                    if not title_el:
+                        title_el = link
+
+                    title = self.extract_text(title_el).strip()
+
+                    # Skip navigation/very short titles
+                    if not title or len(title) < 15:
+                        continue
+
+                    # Skip generic navigation and non-conference content
+                    nav_keywords = ['home', 'about', 'contact', 'login', 'register', 'sign up', 'sign in',
+                                   'privacy', 'terms', 'return home', 'back to', 'view all', 'more',
+                                   'browse', 'search', 'filter', 'andaman', 'nicobar', 'states', 'cities',
+                                   'profile', 'dashboard', 'settings', 'help', 'faq']
+                    if any(nav in title.lower() for nav in nav_keywords):
+                        continue
+
+                    # Get all text for location and date extraction
+                    text = item.get_text(separator=' ', strip=True)
+
+                    # Extract location
+                    location = ''
+                    loc_match = re.search(
+                        r'\b(Mumbai|Delhi|NCR|New Delhi|Bangalore|Bengaluru|Hyderabad|Chennai|'
+                        r'Kolkata|Pune|Ahmedabad|Jaipur|Lucknow|Bhopal|Indore|Chandigarh|'
+                        r'Kochi|Cochin|Thiruvananthapuram|Coimbatore|Nagpur|Visakhapatnam|'
+                        r'Gurgaon|Gurugram|Noida|Ghaziabad|Kanpur|Patna|Surat|Vadodara|'
+                        r'India|Virtual|Online|Hybrid)\b',
+                        text, re.IGNORECASE)
+                    if loc_match:
+                        location = loc_match.group(1).title()
+
+                    # Extract date - try multiple patterns
+                    date_text = ''
+                    date_patterns = [
+                        r'(\d{1,2}[-/]\d{1,2}[-/]\d{4})',  # DD-MM-YYYY or DD/MM/YYYY
+                        r'(\d{4}[-/]\d{1,2}[-/]\d{1,2})',  # YYYY-MM-DD
+                        r'(\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{4})',  # DD Month YYYY
+                        r'((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2},?\s+\d{4})',  # Month DD, YYYY
+                        r'((?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4})'  # Full month
+                    ]
+
+                    for pattern in date_patterns:
+                        date_match = re.search(pattern, text, re.IGNORECASE)
+                        if date_match:
+                            date_text = date_match.group(1)
+                            break
+
+                    date_published = self._parse_date_text(date_text)
+
+                    # Build content
+                    content = f"{title}. Location: {location}" if location else title
+
+                    articles.append({
+                        'title': title,
+                        'url': full_url,
+                        'content': content,
+                        'date_published': date_published,
+                        'source_url': url
+                    })
+                except Exception:
+                    continue
+
+            # APPROACH 2: If no featured events, try table structure
+            if len(articles) < 3:
+                table_rows = soup.find_all('tr')
+
+                for row in table_rows[:30]:
+                    try:
+                        link = row.find('a', href=True)
+                        if not link:
+                            continue
+
+                        href = link.get('href', '')
+                        full_url = urljoin(url, href)
+
+                        # Skip navigation
+                        if any(skip in href.lower() for skip in ['javascript:', '#', 'login', 'register']):
+                            continue
+
+                        title = self.extract_text(link).strip()
+                        if not title or len(title) < 15:
+                            continue
+
+                        # Get text for extraction
+                        text = row.get_text(separator=' ', strip=True)
+
+                        # Extract location
+                        location = ''
+                        loc_match = re.search(
+                            r'\b(Mumbai|Delhi|Bangalore|Bengaluru|Hyderabad|Chennai|'
+                            r'Kolkata|Pune|Ahmedabad|Jaipur|Lucknow|India|Virtual|Online)\b',
+                            text, re.IGNORECASE)
+                        if loc_match:
+                            location = loc_match.group(1).title()
+
+                        # Extract date
+                        date_match = re.search(
+                            r'(\d{1,2}\s+\w+\s+\d{4}|\w+\s+\d{1,2},?\s+\d{4})', text)
+                        date_published = self._parse_date_text(
+                            date_match.group(1) if date_match else '')
+
+                        content = f"{title}. Location: {location}" if location else title
+
+                        articles.append({
+                            'title': title,
+                            'url': full_url,
+                            'content': content,
+                            'date_published': date_published,
+                            'source_url': url
+                        })
+                    except Exception:
+                        continue
+
+            print(f"  Scraped {len(articles)} conferences from Conference Alerts CO.IN")
+            return articles
+
+        except Exception as e:
+            print(f"  Error scraping Conference Alerts CO.IN: {e}")
             return []
 
     def _scrape_doitc_rajasthan(self, url):

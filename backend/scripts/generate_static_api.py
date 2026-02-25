@@ -376,17 +376,18 @@ def merge_articles_into_json(filepath, new_articles, scope_name):
             continue
 
         if key in canonical_index:
-            # Article exists - apply "latest wins" policy
+            # Article exists - always refresh from DB to pick up new fields
+            # (e.g., sector, importance_score added after initial export)
             existing = canonical_index[key]
             new_date = new_article.get('date_published', '')
             existing_date = existing.get('date_published', '')
 
-            if new_date > existing_date:
-                # New article is newer - update
+            if new_date >= existing_date:
+                # Same or newer date - update with latest DB data
                 canonical_index[key] = new_article
                 stats['updated'] += 1
             else:
-                # Existing article is newer or same - keep it
+                # Existing article has a newer date - keep it
                 stats['skipped_older'] += 1
         else:
             # New article - add to index

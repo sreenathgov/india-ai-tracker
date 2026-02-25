@@ -1,171 +1,130 @@
 {% extends "base.html" %}
+{% block title %}Dashboard — India AI Tracker Admin{% endblock %}
 
-{% block title %}Dashboard - India AI Tracker Admin{% endblock %}
+{% block nav_actions %}
+<button onclick="openExportModal()"
+        class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm">
+    Export Data
+</button>
+<button onclick="publishChanges()"
+        class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm">
+    Publish to GitHub
+</button>
+{% endblock %}
 
 {% block content %}
-<!-- Navigation -->
-<nav class="bg-white shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex space-x-8">
-                <a href="{{ url_for('dashboard') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-blue-500 text-sm font-medium text-gray-900">
-                    Dashboard
-                </a>
-                <a href="{{ url_for('updates_list') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
-                    Updates
-                </a>
-                <a href="{{ url_for('sources_list') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
-                    Sources
-                </a>
-                <a href="{{ url_for('consultations_list') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
-                    Consultations
-                </a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button onclick="openExportModal()" class="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 shadow-sm">
-                    📥 Export Data
-                </button>
-                {% if pending.has_changes %}
-                <button onclick="publishChanges()" class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 shadow-sm">
-                    💾 Save & Publish
-                </button>
-                <button onclick="discardChanges()" class="bg-gray-200 text-gray-700 px-3 py-2 rounded-md text-sm hover:bg-gray-300">
-                    ✕ Discard
-                </button>
-                {% else %}
-                <span class="text-sm text-gray-500">✓ No pending changes</span>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</nav>
+<div class="max-w-screen-xl mx-auto px-5 py-6">
+    <h1 class="text-xl font-bold text-slate-900 mb-5">Dashboard</h1>
 
-<!-- Main Content -->
-<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <h1 class="text-3xl font-bold text-gray-900 mb-8">Dashboard</h1>
-
-    <!-- Git Status Card -->
-    <div class="bg-white shadow rounded-lg p-6 mb-6">
-        <h2 class="text-xl font-semibold text-gray-900 mb-4">📋 Git Status</h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <!-- Git Status -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 mb-5">
+        <h2 class="text-sm font-semibold text-slate-700 uppercase tracking-wide mb-4">Git Status</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
             <div>
-                <p class="text-sm text-gray-500">Current Branch</p>
-                <p class="text-lg font-medium text-gray-900">{{ git_status.branch }}</p>
+                <p class="text-xs text-slate-500 font-medium mb-1">Branch</p>
+                <p class="text-base font-semibold text-slate-900 font-mono">{{ git_status.branch }}</p>
             </div>
             <div>
-                <p class="text-sm text-gray-500">Last Commit</p>
-                <p class="text-sm font-mono text-gray-900">{{ last_commit.hash_short }}</p>
-                <p class="text-xs text-gray-600 truncate">{{ last_commit.message }}</p>
+                <p class="text-xs text-slate-500 font-medium mb-1">Last Commit</p>
+                <p class="text-sm font-mono font-semibold text-slate-900">{{ last_commit.hash_short }}</p>
+                <p class="text-xs text-slate-500 truncate mt-0.5">{{ last_commit.message }}</p>
             </div>
             <div>
-                <p class="text-sm text-gray-500">Commit Date</p>
-                <p class="text-sm text-gray-900">{{ last_commit.date }}</p>
+                <p class="text-xs text-slate-500 font-medium mb-1">Committed</p>
+                <p class="text-sm text-slate-700">{{ last_commit.date }}</p>
             </div>
             <div>
-                <p class="text-sm text-gray-500">Remote Sync</p>
+                <p class="text-xs text-slate-500 font-medium mb-1">Remote</p>
                 {% if git_status.remote and not git_status.remote.error %}
                     {% if git_status.remote.synced %}
-                    <p class="text-sm text-green-600 font-medium">✓ In sync</p>
+                    <p class="text-sm font-semibold text-emerald-600">✓ In sync</p>
                     {% elif git_status.remote.ahead > 0 and git_status.remote.behind > 0 %}
-                    <p class="text-sm text-red-600 font-medium">⚠️ Diverged ({{ git_status.remote.ahead }} ahead, {{ git_status.remote.behind }} behind)</p>
+                    <p class="text-sm font-semibold text-red-600">⚠ Diverged</p>
                     {% elif git_status.remote.ahead > 0 %}
-                    <p class="text-sm text-blue-600 font-medium">↑ {{ git_status.remote.ahead }} commit(s) ahead</p>
+                    <p class="text-sm font-semibold text-indigo-600">↑ {{ git_status.remote.ahead }} ahead</p>
                     {% elif git_status.remote.behind > 0 %}
-                    <p class="text-sm text-orange-600 font-medium">↓ {{ git_status.remote.behind }} commit(s) behind</p>
+                    <p class="text-sm font-semibold text-amber-600">↓ {{ git_status.remote.behind }} behind</p>
                     {% endif %}
                 {% else %}
-                <p class="text-sm text-gray-500">Unknown</p>
+                <p class="text-sm text-slate-400">Unknown</p>
                 {% endif %}
             </div>
         </div>
+
         {% if not git_status.clean %}
-        <div class="mt-4 p-3 bg-orange-50 border border-orange-200 rounded-md">
-            <p class="text-sm text-orange-800">
-                ⚠️ You have {{ git_status.total_changes }} uncommitted change(s) in your working directory.
-            </p>
+        <div class="mt-4 rounded-xl bg-amber-50 border border-amber-200 px-4 py-3 text-sm text-amber-800">
+            ⚠ {{ git_status.total_changes }} uncommitted change(s) in your working directory.
         </div>
         {% endif %}
+
         {% if git_status.remote and git_status.remote.behind > 0 %}
-        <div class="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-md flex items-center justify-between">
-            <p class="text-sm text-blue-800">
-                📥 Remote has {{ git_status.remote.behind }} new commit(s). Sync to get latest changes.
-            </p>
-            <button onclick="syncWithRemote()" class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm font-medium hover:bg-blue-700">
-                🔄 Sync with Remote
+        <div class="mt-3 rounded-xl bg-blue-50 border border-blue-200 px-4 py-3 flex items-center justify-between">
+            <p class="text-sm text-blue-800">Remote has {{ git_status.remote.behind }} new commit(s). Sync to get latest changes.</p>
+            <button onclick="syncWithRemote()"
+                    class="ml-4 px-3 py-1.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors whitespace-nowrap">
+                Sync
             </button>
         </div>
         {% endif %}
     </div>
 
-    <!-- Article Stats Card -->
-    <div class="bg-white shadow rounded-lg p-6 mb-6">
-        <h2 class="text-xl font-semibold text-gray-900 mb-4">📊 Article Statistics</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="bg-blue-50 p-4 rounded-lg">
-                <p class="text-sm text-blue-600 font-medium">Total Articles</p>
-                <p class="text-3xl font-bold text-blue-900">{{ stats.total_articles }}</p>
+    <!-- Stats -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 mb-5">
+        <h2 class="text-sm font-semibold text-slate-700 uppercase tracking-wide mb-4">Article Statistics</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-5">
+            <div class="bg-blue-50 rounded-xl p-4">
+                <p class="text-xs font-semibold text-blue-600 uppercase tracking-wide">Total</p>
+                <p class="text-3xl font-bold text-blue-900 mt-1">{{ stats.total_articles }}</p>
             </div>
-            <div class="bg-green-50 p-4 rounded-lg">
-                <p class="text-sm text-green-600 font-medium">National</p>
-                <p class="text-3xl font-bold text-green-900">{{ stats.national_articles }}</p>
+            <div class="bg-emerald-50 rounded-xl p-4">
+                <p class="text-xs font-semibold text-emerald-600 uppercase tracking-wide">National</p>
+                <p class="text-3xl font-bold text-emerald-900 mt-1">{{ stats.national_articles }}</p>
             </div>
-            <div class="bg-purple-50 p-4 rounded-lg">
-                <p class="text-sm text-purple-600 font-medium">State-Specific</p>
-                <p class="text-3xl font-bold text-purple-900">{{ stats.state_articles }}</p>
+            <div class="bg-violet-50 rounded-xl p-4">
+                <p class="text-xs font-semibold text-violet-600 uppercase tracking-wide">State-Specific</p>
+                <p class="text-3xl font-bold text-violet-900 mt-1">{{ stats.state_articles }}</p>
             </div>
-            <div class="bg-gray-50 p-4 rounded-lg">
-                <p class="text-sm text-gray-600 font-medium">Sources</p>
-                <p class="text-3xl font-bold text-gray-900">{{ stats.total_sources }}</p>
+            <div class="bg-slate-100 rounded-xl p-4">
+                <p class="text-xs font-semibold text-slate-600 uppercase tracking-wide">Sources</p>
+                <p class="text-3xl font-bold text-slate-900 mt-1">{{ stats.total_sources }}</p>
             </div>
         </div>
-
-        <!-- By Category -->
-        <div class="mt-6">
-            <h3 class="text-sm font-medium text-gray-700 mb-3">By Category</h3>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
-                {% for category, count in stats.by_category.items() %}
-                <div class="border border-gray-200 p-3 rounded-md">
-                    <p class="text-xs text-gray-600">{{ category }}</p>
-                    <p class="text-xl font-semibold text-gray-900">{{ count }}</p>
-                </div>
-                {% endfor %}
+        <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3">By Category</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {% for category, count in stats.by_category.items() %}
+            <div class="border border-slate-200 rounded-xl p-3">
+                <p class="text-xs text-slate-500 mb-1 truncate">{{ category }}</p>
+                <p class="text-xl font-bold text-slate-900">{{ count }}</p>
             </div>
+            {% endfor %}
         </div>
     </div>
 
-    <!-- Pending Changes Card -->
-    {% if pending.has_changes %}
-    <div class="bg-orange-50 border border-orange-200 shadow rounded-lg p-6 mb-6">
-        <h2 class="text-xl font-semibold text-orange-900 mb-4">⚡ Pending Changes (Not Saved)</h2>
-        <div class="space-y-2">
-            {% if pending.article_updates > 0 %}
-            <p class="text-sm text-orange-800">• {{ pending.article_updates }} article update(s)</p>
-            {% endif %}
-            {% if pending.article_adds > 0 %}
-            <p class="text-sm text-orange-800">• {{ pending.article_adds }} new article(s)</p>
-            {% endif %}
-            {% if pending.article_deletes > 0 %}
-            <p class="text-sm text-orange-800">• {{ pending.article_deletes }} article deletion(s)</p>
-            {% endif %}
-            {% if pending.source_updates > 0 %}
-            <p class="text-sm text-orange-800">• {{ pending.source_updates }} source update(s)</p>
-            {% endif %}
-        </div>
-        <div class="mt-4 flex space-x-3">
-            <button onclick="publishChanges()" class="bg-orange-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-orange-700">
-                💾 Save & Publish Now
+    <!-- Publish status -->
+    <div class="rounded-2xl px-5 py-4 border
+                {% if pending.has_changes %}bg-amber-50 border-amber-200{% else %}bg-emerald-50 border-emerald-200{% endif %}">
+        {% if pending.has_changes %}
+        <p class="text-sm font-semibold text-amber-800 mb-3">
+            ⚡ {{ pending.article_updates + pending.article_adds + pending.article_deletes }} in-memory change(s) not yet published to GitHub.
+        </p>
+        <div class="flex space-x-3">
+            <button onclick="publishChanges()"
+                    class="px-4 py-2 text-sm font-semibold text-white bg-amber-600 hover:bg-amber-700 rounded-xl transition-colors shadow-sm">
+                Publish to GitHub
             </button>
-            <button onclick="previewChanges()" class="bg-white border border-orange-300 text-orange-700 px-4 py-2 rounded-md text-sm font-medium hover:bg-orange-50">
-                👁️ Preview (Dry Run)
+            <button onclick="discardChanges()"
+                    class="px-4 py-2 text-sm font-medium text-amber-700 bg-white hover:bg-amber-100 border border-amber-300 rounded-xl transition-colors">
+                Discard
             </button>
         </div>
+        {% else %}
+        <p class="text-sm font-medium text-emerald-800">
+            ✓ All in-memory changes published. Use <strong>Publish to GitHub</strong> (top right) to push any direct file edits.
+        </p>
+        {% endif %}
     </div>
-    {% else %}
-    <div class="bg-green-50 border border-green-200 shadow rounded-lg p-6">
-        <p class="text-green-800">✓ No pending changes. All changes have been saved and published.</p>
-    </div>
-    {% endif %}
-</main>
+
+</div>
 
 <!-- Export Modal -->
 <div id="exportModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden items-center justify-center z-50" onclick="closeExportModal(event)">

@@ -279,6 +279,7 @@ def run_all_scrapers(target_states=None):
                 article['is_state_specific_source'] = source.get('is_state_specific', False)
                 article['geo_mode'] = source.get('geo_mode', 'default')
                 article['category_hint'] = source.get('category_hint')
+                article['bypass_ai_validation'] = source.get('bypass_ai_validation', False)
 
             all_articles.extend(articles)
             print(f"  Found {len(articles)} articles")
@@ -358,6 +359,14 @@ def run_all_scrapers(target_states=None):
     ai_passed_articles = []
     ai_dropped = 0
     for article in all_articles:
+        # Bypass AI validation for trusted government policy sources (e.g. DPIIT regulatory notifications)
+        if article.get('bypass_ai_validation'):
+            article['ai_score'] = 1.0
+            article['ai_validation_reason'] = 'bypass_ai_validation=true (trusted government policy source)'
+            article['ai_archetype'] = 'policy_regulation'
+            ai_passed_articles.append(article)
+            continue
+
         # Phase 3: AISubjectValidator validates AI is materially discussed
         ai_result = ai_validator.validate(
             article['title'],

@@ -38,7 +38,7 @@
       "is_state_specific": false,
       "category_hint": "Events",
       "priority": "medium",
-      "enabled": false,
+      "enabled": true,
       "notes": "AI events feed - DISABLED: feed format changed, returning HTML"
     },
     {
@@ -233,6 +233,20 @@
       "priority": "very_high",
       "enabled": true,
       "notes": "Critical for AI policy reports - includes Roadmap on AI"
+    },
+    {
+      "name": "Startup India Regulatory Updates (DPIIT)",
+      "url": "https://www.startupindia.gov.in/content/sih/en/startupgov/regulatory_updates.html",
+      "type": "web",
+      "scraper": "startup_india_regs",
+      "state": null,
+      "is_state_specific": false,
+      "geo_mode": "default",
+      "category_hint": "Policies and Initiatives",
+      "bypass_ai_validation": true,
+      "priority": "very_high",
+      "enabled": true,
+      "notes": "DPIIT startup regulatory notifications — rarely updated but high-value. Each row is a government gazette/notification PDF linked directly. bypass_ai_validation=true because content is general startup policy, not AI-specific."
     },
     {
       "name": "Entrackr - AI & Startups",
@@ -2130,8 +2144,8 @@
       "type": "web",
       "scraper": "greater_kashmir",
       "state": "JK",
-      "is_state_specific": true,
-      "geo_mode": "force",
+      "is_state_specific": false,
+      "geo_mode": "default",
       "category_hint": "Major AI Developments",
       "priority": "high",
       "enabled": true,

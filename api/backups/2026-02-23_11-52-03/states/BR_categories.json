@@ -1,7 +1,27 @@
 {
   "state": "BR",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 41,
+        "title": "Uproar in assembly over UGC equity rules",
+        "url": "https://timesofindia.indiatimes.com/city/patna/uproar-in-assembly-over-ugc-equity-rules/articleshow/128621473.cms",
+        "summary": "Bihar Assembly witnessed an uproar as CPI(ML) MLA Sandeep Sourav demanded implementation of UGC equity guidelines, citing caste discrimination in higher education. Deputy CM Vijay Kumar Sinha countered, referencing Ambedkar's vision of a casteless society and sharing his personal experience with caste ragging. The Speaker intervened, expunging a controversial term used during the debate.",
+        "date_published": "2026-02-21",
+        "source_name": "Times of India - Patna",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [
       {
         "id": 137,
@@ -20,31 +40,10 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       }
     ],
     "Major AI Developments": [
-      {
-        "id": 20,
-        "title": "Workshop on AI at IGIMS",
-        "url": "https://timesofindia.indiatimes.com/city/patna/workshop-on-ai-at-igims/articleshow/128759991.cms",
-        "summary": "A workshop on artificial intelligence (AI) was held at the Indira Gandhi Institute of Medical Sciences (IGIMS). The event aimed to explore the potential of AI in the medical field, although specific details of the workshop are not provided. The workshop was reported by the Times of India, with a link to the full article available for more information.",
-        "date_published": "2026-02-25",
-        "source_name": "Times of India - Patna",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "BR"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "sector": null,
-        "posted_to_x_at": null
-      },
       {
         "id": 40,
         "title": "NDA attacks Congress over protest at AI Summit",
@@ -105,7 +104,5 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

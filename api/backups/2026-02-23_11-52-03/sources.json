@@ -342,13 +342,25 @@
       "name": "Conference Alerts India - AI",
       "url": "https://www.conferencealerts.in/india/ai",
       "type": "web",
-      "scraper": "conference_alerts",
+      "scraper": "conference_alerts_in",
       "state": null,
       "is_state_specific": false,
       "category_hint": "Events",
       "priority": "very_high",
-      "enabled": true,
-      "notes": "AI conferences and events across India - requires custom scraper"
+      "enabled": false,
+      "notes": "DISABLED - JavaScript/AJAX-loaded content. Static HTML only contains navigation elements, not actual conferences. Requires headless browser."
+    },
+    {
+      "name": "Conference Alerts Co.in - AI",
+      "url": "https://conferencealerts.co.in/india/ai",
+      "type": "web",
+      "scraper": "conference_alerts_coin",
+      "state": null,
+      "is_state_specific": false,
+      "category_hint": "Events",
+      "priority": "very_high",
+      "enabled": false,
+      "notes": "DISABLED - Behind Cloudflare bot protection (HTTP 403). Would require headless browser or advanced headers to bypass."
     },
     {
       "name": "TechCircle - Policy",
@@ -1321,14 +1333,27 @@
       "name": "Conference Alerts - Jaipur",
       "url": "https://www.conferencealerts.in/india/jaipur",
       "type": "web",
-      "scraper": "conference_alerts",
+      "scraper": "conference_alerts_in",
       "state": "RJ",
       "is_state_specific": true,
       "geo_mode": "strict",
       "category_hint": "Events",
       "priority": "high",
-      "enabled": true,
-      "notes": "Conferences and events in Jaipur"
+      "enabled": false,
+      "notes": "DISABLED - JavaScript/AJAX-loaded content. Requires headless browser."
+    },
+    {
+      "name": "Conference Alerts Co.in - Jaipur",
+      "url": "https://conferencealerts.co.in/india/jaipur",
+      "type": "web",
+      "scraper": "conference_alerts_coin",
+      "state": "RJ",
+      "is_state_specific": true,
+      "geo_mode": "strict",
+      "category_hint": "Events",
+      "priority": "high",
+      "enabled": false,
+      "notes": "DISABLED - Behind Cloudflare bot protection (HTTP 403). Would require headless browser or advanced headers to bypass."
     }
   ],
   "kerala": [
@@ -2912,11 +2937,6 @@
         "name": "New Indian Express TN",
         "url": "https://www.newindianexpress.com/states/tamil-nadu",
         "reason": "Blocks automated requests"
-      },
-      {
-        "name": "Conference Alerts",
-        "url": "https://www.conferencealerts.in/india/ai",
-        "reason": "AJAX-loaded content, needs headless browser"
       },
       {
         "name": "OneIndia Bengaluru",

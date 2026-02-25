@@ -1,86 +1,579 @@
 {% extends "base.html" %}
+{% block title %}Sources — India AI Tracker Admin{% endblock %}
 
-{% block title %}Sources - India AI Tracker Admin{% endblock %}
+{% block nav_actions %}
+<button onclick="openAddSource()"
+        class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm">
+    + Add Source
+</button>
+{% endblock %}
 
 {% block content %}
-<!-- Navigation -->
-<nav class="bg-white shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex space-x-8">
-                <a href="{{ url_for('dashboard') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
-                    Dashboard
-                </a>
-                <a href="{{ url_for('updates_list') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
-                    Updates
-                </a>
-                <a href="{{ url_for('sources_list') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-blue-500 text-sm font-medium text-gray-900">
-                    Sources
-                </a>
-                <a href="{{ url_for('consultations_list') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
-                    Consultations
-                </a>
-            </div>
-            <div class="flex items-center space-x-4">
-            </div>
+<div class="max-w-screen-xl mx-auto px-5 py-6">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-5">
+        <div>
+            <h1 class="text-xl font-bold text-slate-900">Manage Sources</h1>
+            <p class="text-sm text-slate-500 mt-0.5" id="sourceCount">{{ sources|length }} total sources</p>
         </div>
     </div>
-</nav>
 
-<!-- Main Content -->
-<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="flex justify-between items-center mb-6">
-        <h1 class="text-3xl font-bold text-gray-900">Manage Sources</h1>
-        <span class="text-sm text-gray-500">{{ sources|length }} total sources</span>
-    </div>
-
-    <div class="bg-yellow-50 border border-yellow-200 rounded-md p-4 mb-6">
-        <p class="text-sm text-yellow-800">
-            ⚠️ Source management is currently view-only. Full editing capabilities coming soon.
-        </p>
+    <!-- Filters -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 px-5 py-4 mb-4">
+        <div class="flex flex-wrap gap-3 items-end">
+            <div class="flex-1 min-w-44">
+                <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Search</label>
+                <input type="text" id="srcSearch" placeholder="Name or URL…" oninput="filterSources()"
+                       class="w-full rounded-xl border border-slate-200 bg-slate-50 text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+            </div>
+            <div class="min-w-36">
+                <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Type</label>
+                <select id="srcTypeFilter" onchange="filterSources()"
+                        class="w-full rounded-xl border border-slate-200 bg-slate-50 text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="">All Types</option>
+                    <option value="rss">RSS</option>
+                    <option value="web">Web</option>
+                </select>
+            </div>
+            <div class="min-w-36">
+                <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Status</label>
+                <select id="srcStatusFilter" onchange="filterSources()"
+                        class="w-full rounded-xl border border-slate-200 bg-slate-50 text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="">All</option>
+                    <option value="active">Active</option>
+                    <option value="disabled">Disabled</option>
+                </select>
+            </div>
+            <div class="min-w-40">
+                <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Scope</label>
+                <select id="srcScopeFilter" onchange="filterSources()"
+                        class="w-full rounded-xl border border-slate-200 bg-slate-50 text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="">All Scopes</option>
+                    <option value="National">National</option>
+                    <option value="State">State-specific</option>
+                </select>
+            </div>
+            <button onclick="clearSourceFilters()"
+                    class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors">
+                Clear
+            </button>
+        </div>
     </div>
 
     <!-- Sources Table -->
-    <div class="bg-white shadow rounded-lg overflow-hidden">
-        <table class="min-w-full divide-y divide-gray-200">
-            <thead class="bg-gray-50">
-                <tr>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Scope</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Priority</th>
-                </tr>
-            </thead>
-            <tbody class="bg-white divide-y divide-gray-200">
-                {% for source in sources %}
-                <tr class="hover:bg-gray-50">
-                    <td class="px-6 py-4">
-                        <div class="text-sm font-medium text-gray-900">{{ source.name }}</div>
-                        <div class="text-xs text-gray-500 truncate max-w-md">{{ source.url }}</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">{{ source.type or 'rss' }}</span>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {% if source._scope == 'National' %}
-                        <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-800">National</span>
-                        {% else %}
-                        <span class="px-2 py-1 text-xs rounded-full bg-purple-100 text-purple-800">{{ source._state }}</span>
-                        {% endif %}
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm">
-                        {% if source.enabled == False %}
-                        <span class="px-2 py-1 text-xs rounded-full bg-red-100 text-red-800">❌ Disabled</span>
-                        {% else %}
-                        <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">✅ Active</span>
-                        {% endif %}
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ source.priority or 'medium' }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="overflow-x-auto">
+            <table class="min-w-full table-sticky">
+                <thead>
+                    <tr class="bg-slate-50 border-b border-slate-200">
+                        <th class="px-5 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider bg-slate-50">Name / URL</th>
+                        <th class="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider bg-slate-50 w-20">Type</th>
+                        <th class="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider bg-slate-50 w-28">Scope</th>
+                        <th class="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider bg-slate-50 w-24">Priority</th>
+                        <th class="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider bg-slate-50 w-24">Status</th>
+                        <th class="px-4 py-3 text-right text-xs font-semibold text-slate-500 uppercase tracking-wider bg-slate-50 w-36">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100" id="sourcesBody">
+                    {% for source in sources %}
+                    <tr class="hover:bg-slate-50/70 transition-colors source-row"
+                        data-name="{{ source.name | e }}"
+                        data-url="{{ source.url | e }}"
+                        data-type="{{ source.type or 'rss' }}"
+                        data-scope="{{ source._scope }}"
+                        data-enabled="{{ 'true' if source.enabled != False else 'false' }}"
+                        data-priority="{{ source.priority or 'medium' }}">
+                        <td class="px-5 py-3 max-w-0">
+                            <div class="text-sm font-semibold text-slate-900 truncate">{{ source.name }}</div>
+                            <a href="{{ source.url }}" target="_blank"
+                               class="text-xs text-slate-400 hover:text-indigo-600 truncate block max-w-lg transition-colors font-mono"
+                               title="{{ source.url }}">{{ source.url }}</a>
+                            {% if source.notes %}
+                            <p class="text-xs text-slate-400 mt-0.5 truncate">{{ source.notes }}</p>
+                            {% endif %}
+                        </td>
+                        <td class="px-4 py-3 whitespace-nowrap">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 uppercase">
+                                {{ source.type or 'rss' }}
+                            </span>
+                        </td>
+                        <td class="px-4 py-3 whitespace-nowrap">
+                            {% if source._scope == 'National' %}
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700">National</span>
+                            {% else %}
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-violet-100 text-violet-700">{{ source._state }}</span>
+                            {% endif %}
+                        </td>
+                        <td class="px-4 py-3 whitespace-nowrap">
+                            {% set p = source.priority or 'medium' %}
+                            <span class="text-xs font-medium
+                                {% if p == 'very_high' %}text-red-600
+                                {% elif p == 'high' %}text-orange-600
+                                {% elif p == 'medium' %}text-slate-600
+                                {% else %}text-slate-400{% endif %}">
+                                {{ p.replace('_', ' ').title() }}
+                            </span>
+                        </td>
+                        <td class="px-4 py-3 whitespace-nowrap">
+                            <label class="toggle-wrap" title="Toggle enabled/disabled">
+                                <input type="checkbox"
+                                       {% if source.enabled != False %}checked{% endif %}
+                                       onchange="toggleSource('{{ source.url | e }}', this)">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </td>
+                        <td class="px-4 py-3">
+                            <div class="flex items-center justify-end space-x-0.5">
+                                <!-- Test -->
+                                <button onclick="testSource('{{ source.url | e }}')"
+                                        title="Test feed URL"
+                                        class="p-1.5 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </button>
+                                <!-- Edit -->
+                                <button onclick="openEditSource('{{ source.url | e }}')"
+                                        title="Edit source"
+                                        class="p-1.5 rounded-lg text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                                    </svg>
+                                </button>
+                                <!-- Delete -->
+                                <button onclick="deleteSource('{{ source.url | e }}')"
+                                        title="Delete source"
+                                        class="p-1.5 rounded-lg text-slate-400 hover:text-red-600 hover:bg-red-50 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% if not sources %}
+        <div class="text-center py-12 text-slate-400">
+            <p class="font-medium">No sources loaded.</p>
+        </div>
+        {% endif %}
     </div>
-</main>
+</div>
+
+<!-- ========================================================= -->
+<!-- Add / Edit Source Modal                                   -->
+<!-- ========================================================= -->
+<div id="srcModal" class="fixed inset-0 bg-black/40 modal-backdrop z-50 hidden items-center justify-center">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-xl mx-4 overflow-hidden">
+        <div class="flex items-center justify-between px-6 py-4 border-b border-slate-200">
+            <h3 id="srcModalTitle" class="text-base font-semibold text-slate-900">Add Source</h3>
+            <button onclick="closeSrcModal()"
+                    class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="px-6 py-5 space-y-4 max-h-[80vh] overflow-y-auto">
+            <input type="hidden" id="srcOrigUrl">
+
+            <!-- URL row with Test button -->
+            <div>
+                <label class="block text-sm font-medium text-slate-700 mb-1">Feed / Page URL <span class="text-red-500">*</span></label>
+                <div class="flex space-x-2">
+                    <input type="url" id="srcUrl" required placeholder="https://example.com/feed.xml"
+                           class="flex-1 rounded-xl border border-slate-200 bg-slate-50 text-sm px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition font-mono">
+                    <button type="button" onclick="testSrcModalUrl()" id="testSrcBtn"
+                            class="px-3 py-2 text-sm font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-xl transition-colors whitespace-nowrap">
+                        Test Feed
+                    </button>
+                </div>
+                <!-- Test result -->
+                <div id="testResult" class="mt-2 hidden"></div>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-slate-700 mb-1">Display Name <span class="text-red-500">*</span></label>
+                <input type="text" id="srcName" required placeholder="e.g. Analytics India Magazine – AI News"
+                       class="w-full rounded-xl border border-slate-200 bg-slate-50 text-sm px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition">
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Type</label>
+                    <select id="srcType"
+                            class="w-full rounded-xl border border-slate-200 bg-slate-50 text-sm px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition">
+                        <option value="rss">RSS / Atom feed</option>
+                        <option value="web">Web scrape</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Priority</label>
+                    <select id="srcPriority"
+                            class="w-full rounded-xl border border-slate-200 bg-slate-50 text-sm px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition">
+                        <option value="very_high">Very High</option>
+                        <option value="high">High</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-slate-700 mb-1">Geography</label>
+                <select id="srcStateCode"
+                        class="w-full rounded-xl border border-slate-200 bg-slate-50 text-sm px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition">
+                    <option value="IN">National (All India)</option>
+                    <option value="TN">Tamil Nadu</option>
+                    <option value="KA">Karnataka</option>
+                    <option value="MH">Maharashtra</option>
+                    <option value="TG">Telangana</option>
+                    <option value="AP">Andhra Pradesh</option>
+                    <option value="GJ">Gujarat</option>
+                    <option value="DL">Delhi</option>
+                    <option value="UP">Uttar Pradesh</option>
+                    <option value="RJ">Rajasthan</option>
+                    <option value="WB">West Bengal</option>
+                    <option value="KL">Kerala</option>
+                    <option value="AS">Assam</option>
+                    <option value="MP">Madhya Pradesh</option>
+                    <option value="HR">Haryana</option>
+                    <option value="PB">Punjab</option>
+                    <option value="GA">Goa</option>
+                    <option value="BR">Bihar</option>
+                    <option value="SK">Sikkim</option>
+                    <option value="HP">Himachal Pradesh</option>
+                    <option value="UK">Uttarakhand</option>
+                    <option value="JH">Jharkhand</option>
+                    <option value="CT">Chhattisgarh</option>
+                    <option value="OR">Odisha</option>
+                    <option value="MN">Manipur</option>
+                    <option value="TR">Tripura</option>
+                    <option value="NL">Nagaland</option>
+                    <option value="MZ">Mizoram</option>
+                    <option value="AR">Arunachal Pradesh</option>
+                    <option value="ML">Meghalaya</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-slate-700 mb-1">Category Hint <span class="text-slate-400 font-normal">(optional)</span></label>
+                <select id="srcCatHint"
+                        class="w-full rounded-xl border border-slate-200 bg-slate-50 text-sm px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition">
+                    <option value="">No hint (auto-classify)</option>
+                    <option value="Policies and Initiatives">Policies and Initiatives</option>
+                    <option value="Events">Events</option>
+                    <option value="Major AI Developments">Major AI Developments</option>
+                    <option value="AI Start-Up News">AI Start-Up News</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-slate-700 mb-1">Notes <span class="text-slate-400 font-normal">(optional)</span></label>
+                <input type="text" id="srcNotes" placeholder="Brief note about this source…"
+                       class="w-full rounded-xl border border-slate-200 bg-slate-50 text-sm px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition">
+            </div>
+
+            <!-- Footer -->
+            <div class="flex justify-end space-x-3 pt-3 border-t border-slate-100">
+                <button type="button" onclick="closeSrcModal()"
+                        class="px-4 py-2 text-sm font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors">
+                    Cancel
+                </button>
+                <button type="button" onclick="saveSrcModal()" id="srcSaveBtn"
+                        class="px-4 py-2 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition-colors shadow-sm">
+                    Save Source
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Embed source data for JS -->
+<script>
+var _sources = {{ sources | tojson }};
+var _srcByUrl = {};
+_sources.forEach(function(s) { _srcByUrl[s.url] = s; });
+</script>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// ============================================================
+// Filter
+// ============================================================
+function filterSources() {
+    var q      = document.getElementById('srcSearch').value.toLowerCase();
+    var type   = document.getElementById('srcTypeFilter').value.toLowerCase();
+    var status = document.getElementById('srcStatusFilter').value;
+    var scope  = document.getElementById('srcScopeFilter').value;
+
+    var rows = document.querySelectorAll('.source-row');
+    var visible = 0;
+    rows.forEach(function(row) {
+        var name    = (row.dataset.name || '').toLowerCase();
+        var url     = (row.dataset.url  || '').toLowerCase();
+        var rowType = (row.dataset.type || '').toLowerCase();
+        var rowScope = row.dataset.scope || '';
+        var enabled = row.dataset.enabled === 'true';
+
+        var matchQ      = !q      || name.includes(q) || url.includes(q);
+        var matchType   = !type   || rowType === type;
+        var matchStatus = !status || (status === 'active' ? enabled : !enabled);
+        var matchScope  = !scope  || (scope === 'National' ? rowScope === 'National' : rowScope !== 'National');
+
+        var show = matchQ && matchType && matchStatus && matchScope;
+        row.style.display = show ? '' : 'none';
+        if (show) visible++;
+    });
+    document.getElementById('sourceCount').textContent = visible + ' source' + (visible !== 1 ? 's' : '') + ' shown';
+}
+
+function clearSourceFilters() {
+    ['srcSearch','srcTypeFilter','srcStatusFilter','srcScopeFilter'].forEach(function(id) {
+        var el = document.getElementById(id);
+        el.value = '';
+    });
+    filterSources();
+}
+
+// ============================================================
+// Toggle
+// ============================================================
+async function toggleSource(url, checkbox) {
+    try {
+        var resp = await fetch('/api/sources/toggle', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({url: url})
+        });
+        var data = await resp.json();
+        if (data.success) {
+            var row = document.querySelector('.source-row[data-url="' + CSS.escape(url) + '"]');
+            if (row) row.dataset.enabled = checkbox.checked ? 'true' : 'false';
+            showToast(data.message, 'success');
+        } else {
+            checkbox.checked = !checkbox.checked; // revert
+            showToast('Error: ' + data.error, 'error');
+        }
+    } catch (e) {
+        checkbox.checked = !checkbox.checked;
+        showToast('Network error: ' + e.message, 'error');
+    }
+}
+
+// ============================================================
+// Delete
+// ============================================================
+function deleteSource(url) {
+    var row  = document.querySelector('.source-row[data-url="' + CSS.escape(url) + '"]');
+    var name = row ? row.dataset.name : url;
+    showConfirm(
+        'Delete Source',
+        'Remove "' + name + '"? This cannot be undone. The scraper will no longer poll this feed.',
+        async function() {
+            try {
+                var resp = await fetch('/api/sources/delete', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({url: url})
+                });
+                var data = await resp.json();
+                if (data.success) {
+                    if (row) {
+                        row.style.transition = 'opacity 0.3s';
+                        row.style.opacity = '0';
+                        setTimeout(function() { row.remove(); updateCount(); }, 320);
+                    }
+                    delete _srcByUrl[url];
+                    showToast('Source deleted', 'success');
+                } else {
+                    showToast('Error: ' + data.error, 'error');
+                }
+            } catch (e) {
+                showToast('Network error: ' + e.message, 'error');
+            }
+        }
+    );
+}
+
+function updateCount() {
+    var n = document.querySelectorAll('.source-row').length;
+    document.getElementById('sourceCount').textContent = n + ' total source' + (n !== 1 ? 's' : '');
+}
+
+// ============================================================
+// Test URL (standalone — click Test button on table row)
+// ============================================================
+async function testSource(url) {
+    showToast('Testing feed…', 'info');
+    try {
+        var resp = await fetch('/api/sources/test', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({url: url})
+        });
+        var data = await resp.json();
+        if (data.success) {
+            showToast('✓ ' + data.message, 'success');
+        } else {
+            showToast('✗ ' + (data.message || data.error), 'error');
+        }
+    } catch (e) {
+        showToast('Network error: ' + e.message, 'error');
+    }
+}
+
+// ============================================================
+// Add / Edit Modal
+// ============================================================
+function openAddSource() {
+    document.getElementById('srcModalTitle').textContent = 'Add Source';
+    document.getElementById('srcOrigUrl').value = '';
+    ['srcUrl','srcName','srcNotes'].forEach(function(id) { document.getElementById(id).value = ''; });
+    document.getElementById('srcType').value      = 'rss';
+    document.getElementById('srcPriority').value  = 'medium';
+    document.getElementById('srcStateCode').value = 'IN';
+    document.getElementById('srcCatHint').value   = '';
+    document.getElementById('testResult').classList.add('hidden');
+    _showSrcModal();
+}
+
+function openEditSource(url) {
+    var src = _srcByUrl[url];
+    if (!src) { showToast('Source not found', 'error'); return; }
+
+    document.getElementById('srcModalTitle').textContent = 'Edit Source';
+    document.getElementById('srcOrigUrl').value  = url;
+    document.getElementById('srcUrl').value      = src.url      || '';
+    document.getElementById('srcName').value     = src.name     || '';
+    document.getElementById('srcType').value     = src.type     || 'rss';
+    document.getElementById('srcPriority').value = src.priority || 'medium';
+    document.getElementById('srcNotes').value    = src.notes    || '';
+    document.getElementById('srcCatHint').value  = src.category_hint || '';
+    document.getElementById('testResult').classList.add('hidden');
+
+    // state_code: derive from _scope / _state
+    var sc = src._state || 'IN';
+    document.getElementById('srcStateCode').value = sc;
+
+    _showSrcModal();
+}
+
+function _showSrcModal() {
+    var m = document.getElementById('srcModal');
+    m.classList.remove('hidden'); m.classList.add('flex');
+    setTimeout(function() { document.getElementById('srcUrl').focus(); }, 50);
+}
+
+function closeSrcModal() {
+    var m = document.getElementById('srcModal');
+    m.classList.add('hidden'); m.classList.remove('flex');
+}
+
+document.getElementById('srcModal').addEventListener('click', function(e) {
+    if (e.target === this) closeSrcModal();
+});
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeSrcModal();
+});
+
+// Test URL inside modal
+async function testSrcModalUrl() {
+    var url = document.getElementById('srcUrl').value.trim();
+    if (!url) { showToast('Enter a URL first', 'warning'); return; }
+
+    var btn = document.getElementById('testSrcBtn');
+    btn.textContent = 'Testing…'; btn.disabled = true;
+
+    var resultEl = document.getElementById('testResult');
+    resultEl.classList.remove('hidden');
+    resultEl.innerHTML = '<span class="text-xs text-slate-500">Checking…</span>';
+
+    try {
+        var resp = await fetch('/api/sources/test', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({url: url})
+        });
+        var data = await resp.json();
+
+        if (data.success) {
+            resultEl.innerHTML =
+                '<div class="rounded-xl bg-emerald-50 border border-emerald-200 px-3 py-2 text-xs text-emerald-800 font-medium">' +
+                '✓ ' + data.message + '</div>';
+            // Auto-fill name if empty
+            if (!document.getElementById('srcName').value && data.title && data.title !== 'Unknown') {
+                document.getElementById('srcName').value = data.title;
+            }
+            // Auto-detect type
+            if (data.type === 'rss' || data.type === 'atom') {
+                document.getElementById('srcType').value = 'rss';
+            }
+        } else {
+            resultEl.innerHTML =
+                '<div class="rounded-xl bg-red-50 border border-red-200 px-3 py-2 text-xs text-red-800 font-medium">' +
+                '✗ ' + (data.message || data.error) + '</div>';
+        }
+    } catch (e) {
+        resultEl.innerHTML =
+            '<div class="rounded-xl bg-red-50 border border-red-200 px-3 py-2 text-xs text-red-800 font-medium">Network error: ' + e.message + '</div>';
+    } finally {
+        btn.textContent = 'Test Feed'; btn.disabled = false;
+    }
+}
+
+async function saveSrcModal() {
+    var origUrl = document.getElementById('srcOrigUrl').value;
+    var url     = document.getElementById('srcUrl').value.trim();
+    var name    = document.getElementById('srcName').value.trim();
+
+    if (!url || !name) { showToast('Name and URL are required', 'warning'); return; }
+
+    var btn = document.getElementById('srcSaveBtn');
+    btn.disabled = true; btn.textContent = 'Saving…';
+
+    var payload = {
+        original_url:  origUrl,
+        url:           url,
+        name:          name,
+        type:          document.getElementById('srcType').value,
+        priority:      document.getElementById('srcPriority').value,
+        state_code:    document.getElementById('srcStateCode').value,
+        category_hint: document.getElementById('srcCatHint').value || null,
+        notes:         document.getElementById('srcNotes').value.trim(),
+    };
+
+    try {
+        var endpoint = origUrl ? '/api/sources/update' : '/api/sources/add';
+        var resp = await fetch(endpoint, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(payload)
+        });
+        var data = await resp.json();
+
+        if (data.success) {
+            closeSrcModal();
+            showToast(data.message || 'Source saved', 'success');
+            // Reload the page to show updated table
+            setTimeout(function() { window.location.reload(); }, 800);
+        } else {
+            showToast('Error: ' + data.error, 'error');
+        }
+    } catch (e) {
+        showToast('Network error: ' + e.message, 'error');
+    } finally {
+        btn.disabled = false; btn.textContent = 'Save Source';
+    }
+}
+</script>
 {% endblock %}

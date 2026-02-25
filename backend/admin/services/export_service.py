@@ -29,6 +29,9 @@ class ExportService:
         ('title', 'title', 'Title', None),
         ('category', 'category', 'Category', None),
         ('state_codes', 'state_codes', 'States', 'flatten_states'),
+        ('sector', 'sector', 'Sector', None),
+        ('importance_score', 'importance_score', 'Importance Score', 'format_score'),
+        ('premium_processed', 'premium_processed', 'Premium Processed', 'format_bool'),
         ('summary', 'summary', 'Summary', None),
     ]
 
@@ -145,6 +148,12 @@ class ExportService:
                 except (json.JSONDecodeError, TypeError):
                     return ''
             return ''
+        elif transform_fn == 'format_score':
+            if value is not None:
+                return str(round(float(value)))
+            return '0'
+        elif transform_fn == 'format_bool':
+            return 'Yes' if value else 'No'
         else:
             # Default: convert to string
             return str(value) if value is not None else ''
@@ -318,6 +327,12 @@ class ExportService:
             if value and isinstance(value, list):
                 return ', '.join(value)
             return ''
+        elif transform_fn == 'format_score':
+            if value is not None:
+                return str(round(float(value)))
+            return '0'
+        elif transform_fn == 'format_bool':
+            return 'Yes' if value else 'No'
         else:
             # Default: convert to string
             return str(value) if value is not None else ''

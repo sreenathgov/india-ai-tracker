@@ -5,6 +5,25 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 43,
+        "title": "India will become global AI Platform: CM",
+        "url": "https://tripurachronicle.in/local-news/india-will-become-global-ai-platform-cm/",
+        "summary": "India is expected to become a global platform for Artificial Intelligence (AI) according to the Chief Minister. The country aims to leverage its technological capabilities to achieve this goal. This development is anticipated to establish India as a major player in the global AI landscape.",
+        "date_published": "2026-02-20",
+        "source_name": "Tripura Chronicle - Local News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "DI Talk Show on India AI Impact Summit 2026 and Digital India Initiatives in Tripura",
         "url": "https://www.digitalindia.gov.in/events/di-talk-show-on-india-ai-impact-summit-2026-and-digital-india-initiatives-in-tripura/",
@@ -26,7 +45,5 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

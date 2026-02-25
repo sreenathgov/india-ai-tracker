@@ -1,137 +1,492 @@
 {% extends "base.html" %}
+{% block title %}Updates — India AI Tracker Admin{% endblock %}
 
-{% block title %}Updates - India AI Tracker Admin{% endblock %}
+{% block nav_actions %}
+<a href="{{ url_for('add_article_form') }}"
+   class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm">
+    + Add Article
+</a>
+{% endblock %}
 
 {% block content %}
-<!-- Navigation -->
-<nav class="bg-white shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex space-x-8">
-                <a href="{{ url_for('dashboard') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
-                    Dashboard
-                </a>
-                <a href="{{ url_for('updates_list') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-blue-500 text-sm font-medium text-gray-900">
-                    Updates
-                </a>
-                <a href="{{ url_for('sources_list') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
-                    Sources
-                </a>
-                <a href="{{ url_for('consultations_list') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
-                    Consultations
-                </a>
-            </div>
-            <div class="flex items-center space-x-4">
-            </div>
-        </div>
-    </div>
-</nav>
+<div class="max-w-screen-xl mx-auto px-5 py-6">
 
-<!-- Main Content -->
-<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="flex justify-between items-center mb-6">
-        <h1 class="text-3xl font-bold text-gray-900">Manage Updates</h1>
-        <div class="flex items-center space-x-4">
-            <span class="text-sm text-gray-500">{{ total }} total articles</span>
-            <a href="{{ url_for('add_article_form') }}"
-               class="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 shadow-sm">
-                ➕ Add Article
-            </a>
+    <!-- Page header -->
+    <div class="flex items-center justify-between mb-5">
+        <div>
+            <h1 class="text-xl font-bold text-slate-900">Manage Updates</h1>
+            <p class="text-sm text-slate-500 mt-0.5">{{ total }} total articles</p>
+        </div>
+        <!-- Batch action bar — shown when rows are selected -->
+        <div id="batchBar" class="hidden items-center space-x-3">
+            <span id="batchCount" class="text-sm font-semibold text-slate-700"></span>
+            <button onclick="batchDelete()"
+                    class="px-3 py-1.5 bg-red-600 hover:bg-red-700 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm">
+                Delete Selected
+            </button>
+            <button onclick="clearSelection()"
+                    class="px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-slate-900 bg-white hover:bg-slate-100 border border-slate-200 rounded-lg transition-colors">
+                Clear
+            </button>
         </div>
     </div>
 
-    <!-- Search and Filter -->
-    <div class="bg-white shadow rounded-lg p-4 mb-6">
-        <form method="GET" action="{{ url_for('updates_list') }}" class="grid grid-cols-1 md:grid-cols-5 gap-4">
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-1">Search</label>
-                <input type="text" name="search" value="{{ search }}" placeholder="Title, URL, or summary..."
-                       class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm border px-3 py-2">
+    <!-- Filters -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 px-5 py-4 mb-4">
+        <form method="GET" action="{{ url_for('updates_list') }}" class="flex flex-wrap gap-3 items-end">
+            <div class="flex-1 min-w-44">
+                <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Search</label>
+                <input type="text" name="search" value="{{ search }}" placeholder="Title, URL, or summary…"
+                       class="w-full rounded-xl border border-slate-200 text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-slate-50">
             </div>
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-1">Category</label>
-                <select name="category" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm border px-3 py-2">
+            <div class="min-w-44">
+                <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Category</label>
+                <select name="category" class="w-full rounded-xl border border-slate-200 text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-slate-50">
                     <option value="">All Categories</option>
                     {% for cat in categories %}
                     <option value="{{ cat }}" {% if category == cat %}selected{% endif %}>{{ cat }}</option>
                     {% endfor %}
                 </select>
             </div>
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-1">Geography</label>
-                <select name="state" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm border px-3 py-2">
+            <div class="min-w-44">
+                <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Geography</label>
+                <select name="state" class="w-full rounded-xl border border-slate-200 text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-slate-50">
                     <option value="">All Locations</option>
-                    {% for state_code in states %}
-                    <option value="{{ state_code }}" {% if state == state_code %}selected{% endif %}>
-                        {{ state_names[state_code] }}
-                    </option>
+                    {% for sc in states %}
+                    <option value="{{ sc }}" {% if state == sc %}selected{% endif %}>{{ state_names[sc] }}</option>
                     {% endfor %}
                 </select>
             </div>
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-1">Sort By</label>
-                <select name="sort" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm border px-3 py-2">
+            <div class="min-w-36">
+                <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">Sort</label>
+                <select name="sort" class="w-full rounded-xl border border-slate-200 text-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-slate-50">
                     <option value="newest" {% if sort_order == 'newest' %}selected{% endif %}>Newest First</option>
                     <option value="oldest" {% if sort_order == 'oldest' %}selected{% endif %}>Oldest First</option>
                 </select>
             </div>
-            <div class="flex items-end">
-                <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700">
-                    🔍 Search
+            <div class="flex items-center space-x-2">
+                <button type="submit"
+                        class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-xl transition-colors shadow-sm">
+                    Search
                 </button>
+                <a href="{{ url_for('updates_list') }}"
+                   class="px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors">
+                    Clear
+                </a>
             </div>
         </form>
     </div>
 
-    <!-- Articles Table -->
-    <div class="bg-white shadow rounded-lg overflow-hidden">
-        <table class="min-w-full divide-y divide-gray-200">
-            <thead class="bg-gray-50">
-                <tr>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Geography</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
-                </tr>
-            </thead>
-            <tbody class="bg-white divide-y divide-gray-200">
-                {% for article in articles %}
-                <tr class="hover:bg-gray-50">
-                    <td class="px-6 py-4">
-                        <div class="text-sm font-medium text-gray-900 truncate max-w-md">{{ article.title }}</div>
-                        <div class="text-xs text-gray-500 truncate max-w-md">{{ article.url }}</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ article._category }}</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ article._geography }}</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ article.date_published or article.date or 'N/A' }}</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                        <a href="{{ url_for('edit_article', article_url=article.url) }}" class="text-blue-600 hover:text-blue-900 mr-3">Edit</a>
-                        <form method="POST" action="{{ url_for('delete_article_route', article_url=article.url) }}" class="inline" onsubmit="return confirm('Are you sure you want to delete this article? This action cannot be undone.');">
-                            <button type="submit" class="text-red-600 hover:text-red-900 font-medium">Delete</button>
-                        </form>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+    <!-- Table -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="overflow-x-auto">
+            <table class="min-w-full table-sticky">
+                <thead>
+                    <tr class="bg-slate-50 border-b border-slate-200">
+                        <th class="w-10 px-4 py-3 bg-slate-50">
+                            <input type="checkbox" id="selectAll" onchange="toggleSelectAll(this)"
+                                   class="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                        </th>
+                        <th class="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider bg-slate-50">Title</th>
+                        <th class="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider bg-slate-50 w-48">Category</th>
+                        <th class="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider bg-slate-50 w-32">Geography</th>
+                        <th class="px-4 py-3 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider bg-slate-50 w-28">Date</th>
+                        <th class="px-4 py-3 text-right text-xs font-semibold text-slate-500 uppercase tracking-wider bg-slate-50 w-28">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100" id="articlesBody">
+                    {% for article in articles %}
+                    <tr class="hover:bg-slate-50/70 transition-colors article-row" data-url="{{ article.url | e }}">
+                        <td class="px-4 py-3">
+                            <input type="checkbox" class="article-cb h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer"
+                                   value="{{ article.url | e }}" onchange="updateSelection()">
+                        </td>
+                        <td class="px-4 py-3 max-w-0">
+                            <div class="text-sm font-medium text-slate-900 truncate" title="{{ article.title }}">{{ article.title }}</div>
+                            <a href="{{ article.url }}" target="_blank"
+                               class="text-xs text-slate-400 hover:text-indigo-600 truncate block max-w-md transition-colors"
+                               title="{{ article.url }}">{{ article.url }}</a>
+                        </td>
+                        <td class="px-4 py-3 whitespace-nowrap">
+                            <span class="cat-badge inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium
+                                {% if article._category == 'Major AI Developments' %}bg-blue-100 text-blue-700
+                                {% elif article._category == 'AI Start-Up News' %}bg-emerald-100 text-emerald-700
+                                {% elif article._category == 'Policies and Initiatives' %}bg-violet-100 text-violet-700
+                                {% elif article._category == 'Events' %}bg-amber-100 text-amber-700
+                                {% else %}bg-slate-100 text-slate-600{% endif %}">
+                                {{ article._category }}
+                            </span>
+                        </td>
+                        <td class="px-4 py-3 whitespace-nowrap">
+                            <span class="text-xs {% if article._geography == 'National' %}text-blue-600 font-medium{% else %}text-slate-500{% endif %}">
+                                {{ article._geography }}
+                            </span>
+                        </td>
+                        <td class="px-4 py-3 whitespace-nowrap">
+                            <span class="text-xs text-slate-500 font-mono">{{ article.date_published or article.date or '—' }}</span>
+                        </td>
+                        <td class="px-4 py-3">
+                            <div class="flex items-center justify-end space-x-0.5">
+                                <!-- Quick edit -->
+                                <button onclick="openQuickEdit('{{ article.url | e }}')"
+                                        title="Quick edit"
+                                        class="p-1.5 rounded-lg text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                                    </svg>
+                                </button>
+                                <!-- Full edit (preserves back-state) -->
+                                <a href="{{ url_for('edit_article', article_url=article.url, back_page=page, back_search=search, back_category=category, back_state=state, back_sort=sort_order) }}"
+                                   title="Full edit"
+                                   class="p-1.5 rounded-lg text-slate-400 hover:text-blue-600 hover:bg-blue-50 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                                <!-- Delete -->
+                                <button onclick="deleteArticle('{{ article.url | e }}')"
+                                        title="Delete"
+                                        class="p-1.5 rounded-lg text-slate-400 hover:text-red-600 hover:bg-red-50 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    {% if not articles %}
+                    <tr>
+                        <td colspan="6" class="px-4 py-16 text-center">
+                            <p class="text-slate-400 font-medium">No articles match your filters.</p>
+                            <a href="{{ url_for('updates_list') }}" class="text-indigo-600 text-sm hover:underline mt-1 inline-block">Clear all filters</a>
+                        </td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- Pagination -->
     {% if total > per_page %}
-    <div class="mt-6 flex items-center justify-between">
-        <div class="text-sm text-gray-700">
-            Showing {{ ((page - 1) * per_page + 1) }} to {{ [page * per_page, total] | min }} of {{ total }} results
-        </div>
-        <div class="flex space-x-2">
+    {% set total_pages = ((total - 1) // per_page) + 1 %}
+    <div class="mt-4 flex items-center justify-between">
+        <p class="text-sm text-slate-500">
+            Showing
+            <span class="font-semibold text-slate-700">{{ ((page - 1) * per_page + 1) }}</span>–<span class="font-semibold text-slate-700">{{ [page * per_page, total] | min }}</span>
+            of <span class="font-semibold text-slate-700">{{ total }}</span>
+        </p>
+        <div class="flex items-center space-x-1">
             {% if page > 1 %}
-            <a href="?page={{ page - 1 }}&search={{ search }}&category={{ category }}&state={{ state }}&sort={{ sort_order }}" class="px-3 py-2 border border-gray-300 rounded-md text-sm text-gray-700 hover:bg-gray-50">Previous</a>
+            <a href="?page={{ page - 1 }}&search={{ search }}&category={{ category }}&state={{ state }}&sort={{ sort_order }}"
+               class="px-3 py-1.5 text-sm font-medium text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 rounded-xl transition-colors">
+                ← Prev
+            </a>
             {% endif %}
+            {% set start_p = [page - 2, 1] | max %}
+            {% set end_p   = [start_p + 4, total_pages] | min %}
+            {% for p in range(start_p, end_p + 1) %}
+            <a href="?page={{ p }}&search={{ search }}&category={{ category }}&state={{ state }}&sort={{ sort_order }}"
+               class="px-3 py-1.5 text-sm font-medium rounded-xl transition-colors
+                      {% if p == page %}bg-indigo-600 text-white shadow-sm{% else %}text-slate-700 bg-white hover:bg-slate-50 border border-slate-200{% endif %}">
+                {{ p }}
+            </a>
+            {% endfor %}
             {% if page * per_page < total %}
-            <a href="?page={{ page + 1 }}&search={{ search }}&category={{ category }}&state={{ state }}&sort={{ sort_order }}" class="px-3 py-2 border border-gray-300 rounded-md text-sm text-gray-700 hover:bg-gray-50">Next</a>
+            <a href="?page={{ page + 1 }}&search={{ search }}&category={{ category }}&state={{ state }}&sort={{ sort_order }}"
+               class="px-3 py-1.5 text-sm font-medium text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 rounded-xl transition-colors">
+                Next →
+            </a>
             {% endif %}
         </div>
     </div>
     {% endif %}
-</main>
+
+</div><!-- /max-w -->
+
+<!-- ========================================================= -->
+<!-- Quick Edit Modal                                          -->
+<!-- ========================================================= -->
+<div id="qeModal" class="fixed inset-0 bg-black/40 modal-backdrop z-50 hidden items-center justify-center">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 overflow-hidden">
+        <!-- Header -->
+        <div class="flex items-center justify-between px-6 py-4 border-b border-slate-200">
+            <h3 class="text-base font-semibold text-slate-900">Quick Edit</h3>
+            <button onclick="closeQuickEdit()"
+                    class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <!-- Form -->
+        <form id="qeForm" class="px-6 py-5 space-y-4 max-h-[75vh] overflow-y-auto">
+            <input type="hidden" id="qeOrigUrl">
+            <div>
+                <label class="block text-sm font-medium text-slate-700 mb-1">Title <span class="text-red-500">*</span></label>
+                <input type="text" id="qeTitle" required
+                       class="w-full rounded-xl border border-slate-200 bg-slate-50 text-sm px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent focus:bg-white transition">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-slate-700 mb-1">URL <span class="text-red-500">*</span></label>
+                <input type="url" id="qeUrl" required
+                       class="w-full rounded-xl border border-slate-200 bg-slate-50 text-sm px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent focus:bg-white transition font-mono">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-slate-700 mb-1">Summary</label>
+                <textarea id="qeSummary" rows="4"
+                          class="w-full rounded-xl border border-slate-200 bg-slate-50 text-sm px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent focus:bg-white transition resize-none"></textarea>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-slate-700 mb-1">Category <span class="text-red-500">*</span></label>
+                <select id="qeCategory" required
+                        class="w-full rounded-xl border border-slate-200 bg-slate-50 text-sm px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition">
+                    {% for cat in categories %}
+                    <option value="{{ cat }}">{{ cat }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <!-- Footer inside form -->
+            <div class="flex items-center justify-between pt-3 border-t border-slate-100">
+                <a id="qeFullEditLink" href="#" class="text-sm text-indigo-600 hover:text-indigo-800 font-medium">
+                    Full edit (geography/date) →
+                </a>
+                <div class="flex space-x-3">
+                    <button type="button" onclick="closeQuickEdit()"
+                            class="px-4 py-2 text-sm font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors">
+                        Cancel
+                    </button>
+                    <button type="submit" id="qeSaveBtn"
+                            class="px-4 py-2 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition-colors shadow-sm">
+                        Save Changes
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Embed article data for JS modal population -->
+<script>
+var _articles = {{ articles | tojson }};
+var _byUrl = {};
+_articles.forEach(function(a) { _byUrl[a.url] = a; });
+var _categories = {{ categories | tojson }};
+var _catColors = {
+    'Major AI Developments':   'bg-blue-100 text-blue-700',
+    'AI Start-Up News':        'bg-emerald-100 text-emerald-700',
+    'Policies and Initiatives':'bg-violet-100 text-violet-700',
+    'Events':                  'bg-amber-100 text-amber-700'
+};
+var _currentPage     = {{ page }};
+var _currentSearch   = {{ search | tojson }};
+var _currentCategory = {{ category | tojson }};
+var _currentState    = {{ state | tojson }};
+var _currentSort     = {{ sort_order | tojson }};
+</script>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// ============================================================
+// Selection helpers
+// ============================================================
+function updateSelection() {
+    var cbs    = document.querySelectorAll('.article-cb:checked');
+    var allCbs = document.querySelectorAll('.article-cb');
+    var n      = cbs.length;
+    var bar    = document.getElementById('batchBar');
+    var cnt    = document.getElementById('batchCount');
+
+    if (n > 0) {
+        bar.classList.remove('hidden'); bar.classList.add('flex');
+        cnt.textContent = n + ' selected';
+    } else {
+        bar.classList.add('hidden'); bar.classList.remove('flex');
+    }
+
+    var sa = document.getElementById('selectAll');
+    sa.indeterminate = n > 0 && n < allCbs.length;
+    sa.checked = n > 0 && n === allCbs.length;
+
+    document.querySelectorAll('.article-row').forEach(function(row) {
+        var cb = row.querySelector('.article-cb');
+        if (cb && cb.checked) row.classList.add('bg-indigo-50');
+        else row.classList.remove('bg-indigo-50');
+    });
+}
+
+function toggleSelectAll(cb) {
+    document.querySelectorAll('.article-cb').forEach(function(c) { c.checked = cb.checked; });
+    updateSelection();
+}
+
+function clearSelection() {
+    document.querySelectorAll('.article-cb, #selectAll').forEach(function(c) {
+        c.checked = false; c.indeterminate = false;
+    });
+    updateSelection();
+}
+
+// ============================================================
+// Delete
+// ============================================================
+function deleteArticle(url) {
+    showConfirm(
+        'Delete Article',
+        'This article will be permanently removed and blacklisted so the scraper won\'t re-add it.',
+        function() { _doDelete([url]); }
+    );
+}
+
+function batchDelete() {
+    var urls = Array.from(document.querySelectorAll('.article-cb:checked')).map(function(cb) { return cb.value; });
+    if (!urls.length) return;
+    showConfirm(
+        'Delete ' + urls.length + ' Articles',
+        'All ' + urls.length + ' selected articles will be permanently deleted and blacklisted.',
+        function() { _doDelete(urls); }
+    );
+}
+
+async function _doDelete(urls) {
+    try {
+        var resp = await fetch('/api/articles/batch-delete', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({urls: urls})
+        });
+        var data = await resp.json();
+        if (data.success) {
+            urls.forEach(function(url) {
+                var row = document.querySelector('.article-row[data-url="' + CSS.escape(url) + '"]');
+                if (row) {
+                    row.style.transition = 'opacity 0.3s, transform 0.3s';
+                    row.style.opacity = '0';
+                    row.style.transform = 'scaleY(0)';
+                    setTimeout(function() { row.remove(); }, 320);
+                }
+                delete _byUrl[url];
+            });
+            clearSelection();
+            showToast((urls.length === 1 ? '1 article' : urls.length + ' articles') + ' deleted', 'success');
+        } else {
+            showToast('Error: ' + data.error, 'error');
+        }
+    } catch (e) {
+        showToast('Network error: ' + e.message, 'error');
+    }
+}
+
+// ============================================================
+// Quick Edit Modal
+// ============================================================
+function openQuickEdit(url) {
+    var art = _byUrl[url];
+    if (!art) { showToast('Article not found in page data', 'error'); return; }
+
+    document.getElementById('qeOrigUrl').value   = url;
+    document.getElementById('qeTitle').value     = art.title    || '';
+    document.getElementById('qeUrl').value       = art.url      || '';
+    document.getElementById('qeSummary').value   = art.summary  || '';
+    document.getElementById('qeCategory').value  = art._category || '';
+
+    var params = new URLSearchParams({
+        back_page: _currentPage, back_search: _currentSearch,
+        back_category: _currentCategory, back_state: _currentState, back_sort: _currentSort
+    });
+    document.getElementById('qeFullEditLink').href = '/updates/' + encodeURIComponent(url) + '/edit?' + params.toString();
+
+    var m = document.getElementById('qeModal');
+    m.classList.remove('hidden'); m.classList.add('flex');
+    setTimeout(function() { document.getElementById('qeTitle').focus(); }, 50);
+}
+
+function closeQuickEdit() {
+    var m = document.getElementById('qeModal');
+    m.classList.add('hidden'); m.classList.remove('flex');
+}
+
+document.getElementById('qeModal').addEventListener('click', function(e) {
+    if (e.target === this) closeQuickEdit();
+});
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeQuickEdit();
+});
+
+document.getElementById('qeForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('qeSaveBtn');
+    btn.disabled = true; btn.textContent = 'Saving…';
+
+    var origUrl = document.getElementById('qeOrigUrl').value;
+    var updates = {
+        original_url: origUrl,
+        title:    document.getElementById('qeTitle').value.trim(),
+        url:      document.getElementById('qeUrl').value.trim(),
+        summary:  document.getElementById('qeSummary').value.trim(),
+        category: document.getElementById('qeCategory').value
+    };
+
+    try {
+        var resp = await fetch('/api/articles/update', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(updates)
+        });
+        var data = await resp.json();
+
+        if (data.success) {
+            // Update in-memory lookup
+            var art = _byUrl[origUrl];
+            if (art) {
+                art.title    = updates.title;
+                art.url      = updates.url;
+                art.summary  = updates.summary;
+                art._category = updates.category;
+            }
+            if (updates.url !== origUrl) {
+                _byUrl[updates.url] = art;
+                delete _byUrl[origUrl];
+            }
+
+            // Update the DOM row without a page reload
+            var row = document.querySelector('.article-row[data-url="' + CSS.escape(origUrl) + '"]');
+            if (row) {
+                row.setAttribute('data-url', updates.url);
+                row.querySelector('.article-cb').value = updates.url;
+                var cells = row.querySelectorAll('td');
+                // Title cell
+                cells[1].querySelector('.text-sm.font-medium').textContent = updates.title;
+                var link = cells[1].querySelector('a');
+                link.textContent = updates.url;
+                link.href        = updates.url;
+                link.title       = updates.url;
+                // Category badge
+                var badge = cells[2].querySelector('.cat-badge');
+                if (badge) {
+                    badge.textContent = updates.category;
+                    badge.className = 'cat-badge inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ' +
+                        (_catColors[updates.category] || 'bg-slate-100 text-slate-600');
+                }
+                // Flash green
+                row.classList.add('row-saved');
+                setTimeout(function() { row.classList.remove('row-saved'); }, 1300);
+            }
+            closeQuickEdit();
+            showToast('Article updated', 'success');
+        } else {
+            showToast('Error: ' + data.error, 'error');
+        }
+    } catch (err) {
+        showToast('Network error: ' + err.message, 'error');
+    } finally {
+        btn.disabled = false; btn.textContent = 'Save Changes';
+    }
+});
+</script>
 {% endblock %}

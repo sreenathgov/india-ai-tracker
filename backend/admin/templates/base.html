@@ -3,51 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}India AI Tracker - Local Admin{% endblock %}</title>
+    <title>{% block title %}India AI Tracker Admin{% endblock %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        /* Toast animation */
+        .toast { animation: toastIn 0.25s ease-out; }
+        @keyframes toastIn {
+            from { transform: translateX(110%); opacity: 0; }
+            to   { transform: translateX(0);    opacity: 1; }
         }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
+
+        /* Toggle switch */
+        .toggle-wrap { position: relative; display: inline-block; width: 40px; height: 22px; }
+        .toggle-wrap input { opacity: 0; width: 0; height: 0; }
+        .toggle-slider {
+            position: absolute; cursor: pointer; inset: 0;
+            background: #cbd5e1; border-radius: 22px; transition: .25s;
         }
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 4px;
+        .toggle-slider:before {
+            content: ""; position: absolute;
+            height: 16px; width: 16px; left: 3px; bottom: 3px;
+            background: white; border-radius: 50%; transition: .25s;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
+        input:checked + .toggle-slider { background: #10b981; }
+        input:checked + .toggle-slider:before { transform: translateX(18px); }
+
+        /* Modal backdrop blur */
+        .modal-backdrop { backdrop-filter: blur(3px); }
+
+        /* Row fade-out on delete */
+        .row-deleting { animation: rowFade 0.4s forwards; }
+        @keyframes rowFade {
+            to { opacity: 0; transform: scaleY(0); height: 0; padding: 0; }
         }
+
+        /* Subtle flash on save */
+        .row-saved { animation: rowFlash 1.2s ease-out; }
+        @keyframes rowFlash {
+            0%   { background-color: #d1fae5; }
+            100% { background-color: transparent; }
+        }
+
+        /* Spinner */
+        .spin { animation: spin 1s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Table sticky header */
+        .table-sticky thead th { position: sticky; top: 0; z-index: 10; }
     </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Flash messages -->
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            <div class="fixed top-4 right-4 z-50 space-y-2">
-                {% for category, message in messages %}
-                <div class="bg-{% if category == 'error' %}red{% elif category == 'success' %}green{% else %}blue{% endif %}-100 border border-{% if category == 'error' %}red{% elif category == 'success' %}green{% else %}blue{% endif %}-400 text-{% if category == 'error' %}red{% elif category == 'success' %}green{% else %}blue{% endif %}-700 px-4 py-3 rounded relative shadow-lg" role="alert">
-                    <span class="block sm:inline">{{ message }}</span>
-                </div>
-                {% endfor %}
-            </div>
-        {% endif %}
-    {% endwith %}
+<body class="bg-slate-50 min-h-screen antialiased">
 
+<!-- ========================================================= -->
+<!-- Top Navigation Bar                                        -->
+<!-- ========================================================= -->
+<header class="bg-slate-900 fixed top-0 inset-x-0 h-14 z-40 flex items-center shadow-lg">
+    <div class="flex items-center justify-between w-full px-5">
+        <!-- Brand -->
+        <div class="flex items-center space-x-5">
+            <span class="text-white font-semibold text-sm tracking-tight select-none whitespace-nowrap">
+                🇮🇳 India AI Tracker
+            </span>
+            <nav class="flex items-center space-x-0.5">
+                <a href="{{ url_for('dashboard') }}"
+                   class="px-3 py-1.5 rounded-md text-sm font-medium transition-colors
+                          {% if request.endpoint == 'dashboard' %}bg-white/10 text-white
+                          {% else %}text-slate-400 hover:text-white hover:bg-white/5{% endif %}">
+                    Dashboard
+                </a>
+                <a href="{{ url_for('updates_list') }}"
+                   class="px-3 py-1.5 rounded-md text-sm font-medium transition-colors
+                          {% if request.endpoint in ['updates_list', 'edit_article', 'add_article_form'] %}bg-white/10 text-white
+                          {% else %}text-slate-400 hover:text-white hover:bg-white/5{% endif %}">
+                    Updates
+                </a>
+                <a href="{{ url_for('sources_list') }}"
+                   class="px-3 py-1.5 rounded-md text-sm font-medium transition-colors
+                          {% if request.endpoint == 'sources_list' %}bg-white/10 text-white
+                          {% else %}text-slate-400 hover:text-white hover:bg-white/5{% endif %}">
+                    Sources
+                </a>
+                <a href="{{ url_for('consultations_list') }}"
+                   class="px-3 py-1.5 rounded-md text-sm font-medium transition-colors
+                          {% if request.endpoint == 'consultations_list' %}bg-white/10 text-white
+                          {% else %}text-slate-400 hover:text-white hover:bg-white/5{% endif %}">
+                    Consultations
+                </a>
+            </nav>
+        </div>
+
+        <!-- Right-side slot -->
+        <div class="flex items-center space-x-2">
+            {% block nav_actions %}{% endblock %}
+        </div>
+    </div>
+</header>
+
+<!-- Toast Container -->
+<div id="toastContainer" class="fixed top-16 right-4 z-50 space-y-2 w-80 pointer-events-none"></div>
+
+<!-- Flash Messages (server-side, rendered once) -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div id="flashContainer" class="fixed top-16 right-4 z-50 space-y-2 w-80">
+        {% for category, message in messages %}
+        <div class="flash-msg rounded-lg shadow-lg px-4 py-3 flex items-start space-x-3
+                    {% if category == 'error' %}bg-red-50 border border-red-200 text-red-800
+                    {% elif category == 'success' %}bg-emerald-50 border border-emerald-200 text-emerald-800
+                    {% else %}bg-blue-50 border border-blue-200 text-blue-800{% endif %}">
+            <span class="text-base font-bold leading-none mt-0.5">
+                {% if category == 'error' %}✗{% elif category == 'success' %}✓{% else %}ℹ{% endif %}
+            </span>
+            <span class="text-sm flex-1">{{ message }}</span>
+            <button onclick="this.closest('.flash-msg').remove()" class="opacity-50 hover:opacity-100 font-bold text-lg leading-none">×</button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+{% endwith %}
+
+<!-- Confirm Modal (shared) -->
+<div id="confirmModal" class="fixed inset-0 bg-black/40 modal-backdrop z-50 hidden items-center justify-center">
+    <div class="bg-white rounded-2xl shadow-2xl p-6 max-w-sm w-full mx-4">
+        <h3 id="confirmTitle" class="text-base font-semibold text-slate-900 mb-2">Confirm</h3>
+        <p id="confirmMessage" class="text-sm text-slate-600 mb-6 leading-relaxed">Are you sure?</p>
+        <div class="flex justify-end space-x-3">
+            <button onclick="closeConfirmModal()"
+                    class="px-4 py-2 text-sm font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors">
+                Cancel
+            </button>
+            <button id="confirmBtn"
+                    class="px-4 py-2 text-sm font-medium text-white bg-red-600 hover:bg-red-700 rounded-xl transition-colors">
+                Delete
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Main content (offset for fixed nav) -->
+<main class="pt-14">
     {% block content %}{% endblock %}
+</main>
 
-    <script>
-        // Auto-hide flash messages after 5 seconds
-        setTimeout(() => {
-            document.querySelectorAll('[role="alert"]').forEach(alert => {
-                alert.style.transition = 'opacity 0.5s';
-                alert.style.opacity = '0';
-                setTimeout(() => alert.remove(), 500);
-            });
-        }, 5000);
-    </script>
+<script>
+// ============================================================
+// Shared utilities
+// ============================================================
+
+// Toast notifications
+function showToast(message, type) {
+    type = type || 'success';
+    const colors = {
+        success: 'bg-emerald-600', error: 'bg-red-600',
+        info: 'bg-blue-600',       warning: 'bg-amber-500'
+    };
+    const icons = { success: '✓', error: '✗', info: 'ℹ', warning: '⚠' };
+    const el = document.createElement('div');
+    el.className = 'toast pointer-events-auto ' + (colors[type] || colors.info) +
+        ' text-white rounded-xl px-4 py-3 shadow-xl text-sm font-medium flex items-start space-x-2';
+    el.innerHTML =
+        '<span class="font-bold leading-none mt-0.5">' + (icons[type] || '·') + '</span>' +
+        '<span class="flex-1">' + message + '</span>' +
+        '<button onclick="this.parentElement.remove()" class="opacity-60 hover:opacity-100 font-bold text-base leading-none ml-1">×</button>';
+    const c = document.getElementById('toastContainer');
+    c.appendChild(el);
+    setTimeout(function() {
+        el.style.transition = 'opacity 0.4s';
+        el.style.opacity = '0';
+        setTimeout(function() { el.remove(); }, 400);
+    }, 4500);
+}
+
+// Confirm modal
+var _confirmCb = null;
+function showConfirm(title, message, onConfirm, btnText, btnClass) {
+    btnText  = btnText  || 'Delete';
+    btnClass = btnClass || 'bg-red-600 hover:bg-red-700';
+    document.getElementById('confirmTitle').textContent   = title;
+    document.getElementById('confirmMessage').textContent = message;
+    var btn = document.getElementById('confirmBtn');
+    btn.textContent  = btnText;
+    btn.className = 'px-4 py-2 text-sm font-medium text-white ' + btnClass + ' rounded-xl transition-colors';
+    _confirmCb = onConfirm;
+    var m = document.getElementById('confirmModal');
+    m.classList.remove('hidden'); m.classList.add('flex');
+}
+function closeConfirmModal() {
+    var m = document.getElementById('confirmModal');
+    m.classList.add('hidden'); m.classList.remove('flex');
+    _confirmCb = null;
+}
+document.getElementById('confirmBtn').addEventListener('click', function() {
+    if (_confirmCb) _confirmCb();
+    closeConfirmModal();
+});
+document.getElementById('confirmModal').addEventListener('click', function(e) {
+    if (e.target === this) closeConfirmModal();
+});
+
+// Auto-hide flash messages after 6 s
+setTimeout(function() {
+    document.querySelectorAll('.flash-msg').forEach(function(el) {
+        el.style.transition = 'opacity 0.5s';
+        el.style.opacity = '0';
+        setTimeout(function() { el.remove(); }, 500);
+    });
+}, 6000);
+</script>
+
+{% block scripts %}{% endblock %}
 </body>
 </html>

@@ -38,7 +38,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -58,7 +57,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -78,7 +76,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       }
     ],
@@ -104,84 +101,6 @@
       }
     ],
     "Major AI Developments": [
-      {
-        "id": 13,
-        "title": "Gujarat HC flags AI-generated case law in GST order",
-        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/gujarat-hc-flags-ai-generated-case-law-in-gst-order/articleshow/128762363.cms",
-        "summary": "The Gujarat High Court has identified AI-generated case law in a Goods and Services Tax (GST) order. This incident highlights the potential issue of artificial intelligence-generated content being used in legal proceedings. The court's observation raises concerns about the authenticity and reliability of AI-generated case law in judicial decisions.",
-        "date_published": "2026-02-25",
-        "source_name": "Times of India - Ahmedabad",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "GJ"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "sector": null,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 11,
-        "title": "CWG blueprint: AI, renewables, legacy assets are key points",
-        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/cwg-blueprint-ai-renewables-legacy-assets-are-key-points/articleshow/128726583.cms",
-        "summary": "The CWG blueprint highlights key points including the integration of AI, the use of renewables, and the utilization of legacy assets. These elements are expected to play a crucial role in the development and implementation of the plan. The blueprint aims to incorporate innovative technologies and sustainable practices to achieve its objectives.",
-        "date_published": "2026-02-24",
-        "source_name": "Times of India - Ahmedabad",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "GJ"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "sector": null,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 12,
-        "title": "Organizations launch AI in healthcare declaration in Ahmedabad",
-        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/organizations-launch-ai-in-healthcare-declaration-in-ahmedabad/articleshow/128686917.cms",
-        "summary": "Organizations have launched an AI in healthcare declaration in Ahmedabad, marking a significant step towards integrating artificial intelligence in the healthcare sector. The declaration aims to promote the use of AI in healthcare to improve patient outcomes and enhance the overall quality of care. This initiative is expected to revolutionize the healthcare industry by leveraging AI technology.",
-        "date_published": "2026-02-23",
-        "source_name": "Times of India - Ahmedabad",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "GJ"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 13,
-        "title": "AI desperate for linguists, but state univs miss the prompt",
-        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ai-desperate-for-linguists-but-state-univs-miss-the-prompt/articleshow/128686856.cms",
-        "summary": "The AI industry is facing a shortage of linguists, but state universities are not adequately responding to the demand. As a result, the industry is struggling to find skilled professionals to meet its needs. State universities are missing the opportunity to provide relevant training and education in linguistics to support the growing AI sector.",
-        "date_published": "2026-02-23",
-        "source_name": "Times of India - Ahmedabad",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "GJ"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
       {
         "id": 31,
         "title": "Air India, AI Express to shift domestic ops to T2 from March 29",
@@ -332,7 +251,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -352,7 +270,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -373,7 +290,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       }
     ],
@@ -396,12 +312,9 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

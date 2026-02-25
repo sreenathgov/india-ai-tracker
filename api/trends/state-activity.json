@@ -1,304 +1,279 @@
 {
   "2026-02-23": {
     "AP": {
-      "score": 4,
-      "rank": 18,
       "article_count": 8,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 0,
-        "startup": 3,
-        "velocity": 1,
-        "research": 0
-      }
+      "policy_readiness_score": 0,
+      "enabling_policy_score": 0,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 19,
+      "research_academic_score": 0,
+      "infrastructure_depth_score": 0,
+      "incumbent_activity_score": 21,
+      "challenger_activity_score": 10
     },
     "AR": {
-      "score": 6,
-      "rank": 13,
       "article_count": 1,
-      "top_category": "Events",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 6,
-        "research": 0
-      }
+      "policy_readiness_score": 0,
+      "enabling_policy_score": 0,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 0,
+      "infrastructure_depth_score": 33,
+      "incumbent_activity_score": 0,
+      "challenger_activity_score": 0
     },
     "AS": {
-      "score": 1,
-      "rank": 22,
       "article_count": 3,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 1,
-        "research": 0
-      }
+      "policy_readiness_score": 0,
+      "enabling_policy_score": 0,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 0,
+      "infrastructure_depth_score": 0,
+      "incumbent_activity_score": 0,
+      "challenger_activity_score": 0
     },
     "BR": {
-      "score": 6,
-      "rank": 14,
       "article_count": 4,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 0,
-        "research": 6
-      }
+      "policy_readiness_score": 0,
+      "enabling_policy_score": 0,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 47,
+      "infrastructure_depth_score": 0,
+      "incumbent_activity_score": 0,
+      "challenger_activity_score": 10
     },
     "CG": {
-      "score": 0,
-      "rank": 23,
       "article_count": 1,
-      "top_category": "Events",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 0,
-        "research": 0
-      }
+      "policy_readiness_score": 0,
+      "enabling_policy_score": 0,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 0,
+      "infrastructure_depth_score": 33,
+      "incumbent_activity_score": 0,
+      "challenger_activity_score": 0
     },
     "CH": {
-      "score": 26,
-      "rank": 2,
       "article_count": 3,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 24,
-        "research": 2
-      }
+      "policy_readiness_score": 0,
+      "enabling_policy_score": 0,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 12,
+      "infrastructure_depth_score": 0,
+      "incumbent_activity_score": 0,
+      "challenger_activity_score": 0
     },
     "DL": {
-      "score": 37,
-      "rank": 1,
       "article_count": 86,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 1,
-        "startup": 1,
-        "velocity": 25,
-        "research": 10
-      }
+      "policy_readiness_score": 32,
+      "enabling_policy_score": 32,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 45,
+      "research_academic_score": 100,
+      "infrastructure_depth_score": 67,
+      "incumbent_activity_score": 68,
+      "challenger_activity_score": 100
     },
     "GA": {
-      "score": 24,
-      "rank": 3,
       "article_count": 4,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 24,
-        "research": 0
-      }
+      "policy_readiness_score": 0,
+      "enabling_policy_score": 0,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 0,
+      "infrastructure_depth_score": 0,
+      "incumbent_activity_score": 0,
+      "challenger_activity_score": 0
     },
     "GJ": {
-      "score": 18,
-      "rank": 6,
       "article_count": 15,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 6,
-        "startup": 0,
-        "velocity": 2,
-        "research": 10
-      }
+      "policy_readiness_score": 65,
+      "enabling_policy_score": 65,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 94,
+      "infrastructure_depth_score": 100,
+      "incumbent_activity_score": 11,
+      "challenger_activity_score": 30
     },
     "HP": {
-      "score": 5,
-      "rank": 15,
       "article_count": 4,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 5,
-        "research": 0
-      }
+      "policy_readiness_score": 0,
+      "enabling_policy_score": 0,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 0,
+      "infrastructure_depth_score": 0,
+      "incumbent_activity_score": 0,
+      "challenger_activity_score": 0
     },
     "JH": {
-      "score": 0,
-      "rank": 24,
       "article_count": 1,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 0,
-        "research": 0
-      }
+      "policy_readiness_score": 0,
+      "enabling_policy_score": 0,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 0,
+      "infrastructure_depth_score": 0,
+      "incumbent_activity_score": 0,
+      "challenger_activity_score": 0
     },
     "JK": {
-      "score": 4,
-      "rank": 19,
       "article_count": 5,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 4,
-        "research": 0
-      }
+      "policy_readiness_score": 0,
+      "enabling_policy_score": 0,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 12,
+      "infrastructure_depth_score": 0,
+      "incumbent_activity_score": 11,
+      "challenger_activity_score": 0
     },
     "KA": {
-      "score": 20,
-      "rank": 5,
       "article_count": 32,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 3,
-        "startup": 6,
-        "velocity": 4,
-        "research": 6
-      }
+      "policy_readiness_score": 54,
+      "enabling_policy_score": 54,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 100,
+      "research_academic_score": 71,
+      "infrastructure_depth_score": 100,
+      "incumbent_activity_score": 100,
+      "challenger_activity_score": 100
     },
     "KL": {
-      "score": 2,
-      "rank": 21,
       "article_count": 1,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 0,
-        "research": 2
-      }
+      "policy_readiness_score": 0,
+      "enabling_policy_score": 0,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 12,
+      "infrastructure_depth_score": 0,
+      "incumbent_activity_score": 0,
+      "challenger_activity_score": 0
     },
     "MH": {
-      "score": 11,
-      "rank": 11,
       "article_count": 23,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 4,
-        "startup": 3,
-        "velocity": 2,
-        "research": 2
-      }
+      "policy_readiness_score": 58,
+      "enabling_policy_score": 58,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 40,
+      "research_academic_score": 18,
+      "infrastructure_depth_score": 33,
+      "incumbent_activity_score": 11,
+      "challenger_activity_score": 60
     },
     "MP": {
-      "score": 0,
-      "rank": 25,
       "article_count": 1,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 0,
-        "research": 0
-      }
+      "policy_readiness_score": 0,
+      "enabling_policy_score": 0,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 0,
+      "infrastructure_depth_score": 0,
+      "incumbent_activity_score": 0,
+      "challenger_activity_score": 10
     },
     "NL": {
-      "score": 4,
-      "rank": 20,
       "article_count": 1,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 4,
-        "research": 0
-      }
+      "policy_readiness_score": 0,
+      "enabling_policy_score": 0,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 0,
+      "infrastructure_depth_score": 33,
+      "incumbent_activity_score": 0,
+      "challenger_activity_score": 0
     },
     "OD": {
-      "score": 18,
-      "rank": 7,
       "article_count": 6,
-      "top_category": "Policies and Initiatives",
-      "breakdown": {
-        "policy": 15,
-        "startup": 0,
-        "velocity": 1,
-        "research": 2
-      }
+      "policy_readiness_score": 95,
+      "enabling_policy_score": 95,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 18,
+      "infrastructure_depth_score": 67,
+      "incumbent_activity_score": 0,
+      "challenger_activity_score": 0
     },
     "PB": {
-      "score": 5,
-      "rank": 16,
       "article_count": 4,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 1,
-        "research": 4
-      }
+      "policy_readiness_score": 0,
+      "enabling_policy_score": 0,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 24,
+      "infrastructure_depth_score": 0,
+      "incumbent_activity_score": 0,
+      "challenger_activity_score": 0
     },
     "SK": {
-      "score": 14,
-      "rank": 8,
       "article_count": 1,
-      "top_category": "Events",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 14,
-        "research": 0
-      }
+      "policy_readiness_score": 0,
+      "enabling_policy_score": 0,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 0,
+      "infrastructure_depth_score": 33,
+      "incumbent_activity_score": 0,
+      "challenger_activity_score": 0
     },
     "TG": {
-      "score": 12,
-      "rank": 10,
       "article_count": 19,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 2,
-        "startup": 4,
-        "velocity": 5,
-        "research": 2
-      }
+      "policy_readiness_score": 20,
+      "enabling_policy_score": 20,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 42,
+      "research_academic_score": 24,
+      "infrastructure_depth_score": 0,
+      "incumbent_activity_score": 58,
+      "challenger_activity_score": 50
     },
     "TN": {
-      "score": 9,
-      "rank": 12,
       "article_count": 4,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 0,
-        "startup": 6,
-        "velocity": 0,
-        "research": 2
-      }
+      "policy_readiness_score": 0,
+      "enabling_policy_score": 0,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 28,
+      "research_academic_score": 18,
+      "infrastructure_depth_score": 33,
+      "incumbent_activity_score": 0,
+      "challenger_activity_score": 10
     },
     "TR": {
-      "score": 5,
-      "rank": 17,
       "article_count": 2,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 5,
-        "research": 0
-      }
+      "policy_readiness_score": 0,
+      "enabling_policy_score": 0,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 0,
+      "infrastructure_depth_score": 33,
+      "incumbent_activity_score": 0,
+      "challenger_activity_score": 0
     },
     "UP": {
-      "score": 14,
-      "rank": 9,
       "article_count": 20,
-      "top_category": "Major AI Developments",
-      "breakdown": {
-        "policy": 8,
-        "startup": 0,
-        "velocity": 1,
-        "research": 6
-      }
+      "policy_readiness_score": 100,
+      "enabling_policy_score": 100,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 0,
+      "research_academic_score": 53,
+      "infrastructure_depth_score": 100,
+      "incumbent_activity_score": 11,
+      "challenger_activity_score": 10
     },
     "WB": {
-      "score": 21,
-      "rank": 4,
       "article_count": 3,
-      "top_category": "Policies and Initiatives",
-      "breakdown": {
-        "policy": 10,
-        "startup": 8,
-        "velocity": 0,
-        "research": 2
-      }
+      "policy_readiness_score": 48,
+      "enabling_policy_score": 48,
+      "restrictive_policy_score": 0,
+      "innovation_velocity_score": 33,
+      "research_academic_score": 18,
+      "infrastructure_depth_score": 0,
+      "incumbent_activity_score": 11,
+      "challenger_activity_score": 10
     }
   }
 }

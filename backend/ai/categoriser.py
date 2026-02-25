@@ -248,6 +248,11 @@ class Categoriser:
         r'\binitiative\b',
         r'\bcouncil\b', r'\bcommittee\b',
         r'\bapproves?\b', r'\bclears?\b',
+        # Government action verbs — safe because _is_policy() also requires govt context
+        r'\blaunch(?:es|ed|ing)?\b',
+        r'\binaugurat(?:es?|ed|ing)\b',
+        r'\bunveils?\b',
+        r'\brolls?\s+out\b',
     ]
 
     # =========================================================================

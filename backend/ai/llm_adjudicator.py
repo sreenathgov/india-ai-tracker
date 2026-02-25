@@ -194,16 +194,17 @@ ANSWER THESE 5 QUESTIONS:
    - NO if: Global news with no substantive India component
 
 3. CORRECT CATEGORY (select ONE):
-   - "Policies and Initiatives": Government ONLY (laws, policies, minister statements, govt programs)
+   - "Policies and Initiatives": Government is the ACTOR — launching/inaugurating centres, announcing policies, minister statements, govt programs, setting up infrastructure, government schemes, MoUs by govt bodies. If a CM/minister/govt body launches, inaugurates, or sets up ANY facility (innovation centre, AI hub, research lab, etc.), this IS "Policies and Initiatives" even if a private company (IBM, Google, etc.) is the partner.
    - "AI Start-Up News": Indian startup is subject/object (funding, launch, acquisition)
    - "Events": Conferences, summits, hackathons, workshops
-   - "Major AI Developments": Everything else (big tech, research, market trends)
+   - "Major AI Developments": Everything else (big tech, research, market trends) — use this ONLY when government is NOT the driving actor
 
 4. CORRECT STATE CODES:
    - Use 2-letter codes: TN, KA, MH, DL, TG, etc.
    - Use ["IN"] for national/all-India/multi-state
-   - ONLY tag states that are SUBSTANTIVELY discussed
+   - ONLY tag states that are SUBSTANTIVELY discussed in the article content
    - DO NOT tag based on company HQ if news is global
+   - DO NOT tag based on the publication source (e.g., an article from a Kashmir newspaper about a national India topic should be ["IN"], NOT ["JK"]). The news must be materially or substantively ABOUT a state to warrant that state code.
 
 5. EVENT STATUS (if category is Events):
    - "future": Event is upcoming (registration open, "to be held", future date)

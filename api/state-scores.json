@@ -3,431 +3,956 @@
   "week_of": "2026-02-23",
   "lookback_days": 30,
   "states_scored": 25,
-  "scores": {
+  "states": {
     "AP": {
-      "score": 4,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 0,
-        "startup": 3,
-        "velocity": 1,
-        "research": 0
-      },
+      "state_name": "Andhra Pradesh",
+      "tier": 2,
       "article_count": 8,
-      "top_category": "Major AI Developments",
-      "policy_articles": 0,
-      "startup_articles": 1,
-      "research_articles": 0,
-      "rank": 18,
-      "state_name": "Andhra Pradesh"
+      "data_sufficiency": "sufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 0,
+        "enabling_policy_score": 0,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 19,
+        "research_academic_score": 0,
+        "infrastructure_depth_score": 0,
+        "incumbent_activity_score": 21,
+        "challenger_activity_score": 10
+      },
+      "momentum": {
+        "policy_readiness_delta": 0,
+        "innovation_velocity_delta": 19,
+        "research_academic_delta": 0,
+        "infrastructure_depth_delta": 0,
+        "incumbent_activity_delta": 21,
+        "challenger_activity_delta": 10,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 0,
+        "enabling_policy_articles": 0,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 1,
+        "research_articles": 0,
+        "infrastructure_articles": 0,
+        "incumbent_articles": 2,
+        "challenger_articles": 1,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "AR": {
-      "score": 6,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 6,
-        "research": 0
-      },
+      "state_name": "Arunachal Pradesh",
+      "tier": 2,
       "article_count": 1,
-      "top_category": "Events",
-      "policy_articles": 0,
-      "startup_articles": 0,
-      "research_articles": 0,
-      "rank": 13,
-      "state_name": "Arunachal Pradesh"
+      "data_sufficiency": "insufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 0,
+        "enabling_policy_score": 0,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 0,
+        "infrastructure_depth_score": 33,
+        "incumbent_activity_score": 0,
+        "challenger_activity_score": 0
+      },
+      "momentum": {
+        "policy_readiness_delta": 0,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 0,
+        "infrastructure_depth_delta": 33,
+        "incumbent_activity_delta": 0,
+        "challenger_activity_delta": 0,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 0,
+        "enabling_policy_articles": 0,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 0,
+        "infrastructure_articles": 1,
+        "incumbent_articles": 0,
+        "challenger_articles": 0,
+        "top_category": "Events",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "AS": {
-      "score": 1,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 1,
-        "research": 0
-      },
+      "state_name": "Assam",
+      "tier": 2,
       "article_count": 3,
-      "top_category": "Major AI Developments",
-      "policy_articles": 0,
-      "startup_articles": 0,
-      "research_articles": 0,
-      "rank": 22,
-      "state_name": "Assam"
+      "data_sufficiency": "insufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 0,
+        "enabling_policy_score": 0,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 0,
+        "infrastructure_depth_score": 0,
+        "incumbent_activity_score": 0,
+        "challenger_activity_score": 0
+      },
+      "momentum": {
+        "policy_readiness_delta": 0,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 0,
+        "infrastructure_depth_delta": 0,
+        "incumbent_activity_delta": 0,
+        "challenger_activity_delta": 0,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 0,
+        "enabling_policy_articles": 0,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 0,
+        "infrastructure_articles": 0,
+        "incumbent_articles": 0,
+        "challenger_articles": 0,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "BR": {
-      "score": 6,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 0,
-        "research": 6
-      },
+      "state_name": "Bihar",
+      "tier": 2,
       "article_count": 4,
-      "top_category": "Major AI Developments",
-      "policy_articles": 0,
-      "startup_articles": 0,
-      "research_articles": 3,
-      "rank": 14,
-      "state_name": "Bihar"
+      "data_sufficiency": "insufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 0,
+        "enabling_policy_score": 0,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 47,
+        "infrastructure_depth_score": 0,
+        "incumbent_activity_score": 0,
+        "challenger_activity_score": 10
+      },
+      "momentum": {
+        "policy_readiness_delta": 0,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 47,
+        "infrastructure_depth_delta": 0,
+        "incumbent_activity_delta": 0,
+        "challenger_activity_delta": 10,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 0,
+        "enabling_policy_articles": 0,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 3,
+        "infrastructure_articles": 0,
+        "incumbent_articles": 0,
+        "challenger_articles": 1,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "CG": {
-      "score": 0,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 0,
-        "research": 0
-      },
+      "state_name": "Chhattisgarh",
+      "tier": 2,
       "article_count": 1,
-      "top_category": "Events",
-      "policy_articles": 0,
-      "startup_articles": 0,
-      "research_articles": 0,
-      "rank": 23,
-      "state_name": "Chhattisgarh"
+      "data_sufficiency": "insufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 0,
+        "enabling_policy_score": 0,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 0,
+        "infrastructure_depth_score": 33,
+        "incumbent_activity_score": 0,
+        "challenger_activity_score": 0
+      },
+      "momentum": {
+        "policy_readiness_delta": 0,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 0,
+        "infrastructure_depth_delta": 33,
+        "incumbent_activity_delta": 0,
+        "challenger_activity_delta": 0,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 0,
+        "enabling_policy_articles": 0,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 0,
+        "infrastructure_articles": 1,
+        "incumbent_articles": 0,
+        "challenger_articles": 0,
+        "top_category": "Events",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "CH": {
-      "score": 26,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 24,
-        "research": 2
-      },
+      "state_name": "Chandigarh",
+      "tier": 2,
       "article_count": 3,
-      "top_category": "Major AI Developments",
-      "policy_articles": 0,
-      "startup_articles": 0,
-      "research_articles": 1,
-      "rank": 2,
-      "state_name": "Chandigarh"
+      "data_sufficiency": "insufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 0,
+        "enabling_policy_score": 0,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 12,
+        "infrastructure_depth_score": 0,
+        "incumbent_activity_score": 0,
+        "challenger_activity_score": 0
+      },
+      "momentum": {
+        "policy_readiness_delta": 0,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 12,
+        "infrastructure_depth_delta": 0,
+        "incumbent_activity_delta": 0,
+        "challenger_activity_delta": 0,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 0,
+        "enabling_policy_articles": 0,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 1,
+        "infrastructure_articles": 0,
+        "incumbent_articles": 0,
+        "challenger_articles": 0,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "DL": {
-      "score": 37,
-      "label": "Active",
-      "breakdown": {
-        "policy": 1,
-        "startup": 1,
-        "velocity": 25,
-        "research": 10
-      },
+      "state_name": "Delhi",
+      "tier": 1,
       "article_count": 86,
-      "top_category": "Major AI Developments",
-      "policy_articles": 2,
-      "startup_articles": 4,
-      "research_articles": 5,
-      "rank": 1,
-      "state_name": "Delhi"
+      "data_sufficiency": "sufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 32,
+        "enabling_policy_score": 32,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 45,
+        "research_academic_score": 100,
+        "infrastructure_depth_score": 67,
+        "incumbent_activity_score": 68,
+        "challenger_activity_score": 100
+      },
+      "momentum": {
+        "policy_readiness_delta": 32,
+        "innovation_velocity_delta": 45,
+        "research_academic_delta": 100,
+        "infrastructure_depth_delta": 67,
+        "incumbent_activity_delta": 68,
+        "challenger_activity_delta": 100,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 2,
+        "enabling_policy_articles": 2,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 4,
+        "research_articles": 7,
+        "infrastructure_articles": 2,
+        "incumbent_articles": 4,
+        "challenger_articles": 12,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "GA": {
-      "score": 24,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 24,
-        "research": 0
-      },
+      "state_name": "Goa",
+      "tier": 2,
       "article_count": 4,
-      "top_category": "Major AI Developments",
-      "policy_articles": 0,
-      "startup_articles": 0,
-      "research_articles": 0,
-      "rank": 3,
-      "state_name": "Goa"
+      "data_sufficiency": "insufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 0,
+        "enabling_policy_score": 0,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 0,
+        "infrastructure_depth_score": 0,
+        "incumbent_activity_score": 0,
+        "challenger_activity_score": 0
+      },
+      "momentum": {
+        "policy_readiness_delta": 0,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 0,
+        "infrastructure_depth_delta": 0,
+        "incumbent_activity_delta": 0,
+        "challenger_activity_delta": 0,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 0,
+        "enabling_policy_articles": 0,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 0,
+        "infrastructure_articles": 0,
+        "incumbent_articles": 0,
+        "challenger_articles": 0,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "GJ": {
-      "score": 18,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 6,
-        "startup": 0,
-        "velocity": 2,
-        "research": 10
-      },
+      "state_name": "Gujarat",
+      "tier": 1,
       "article_count": 15,
-      "top_category": "Major AI Developments",
-      "policy_articles": 3,
-      "startup_articles": 0,
-      "research_articles": 5,
-      "rank": 6,
-      "state_name": "Gujarat"
+      "data_sufficiency": "sufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 65,
+        "enabling_policy_score": 65,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 94,
+        "infrastructure_depth_score": 100,
+        "incumbent_activity_score": 11,
+        "challenger_activity_score": 30
+      },
+      "momentum": {
+        "policy_readiness_delta": 65,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 94,
+        "infrastructure_depth_delta": 100,
+        "incumbent_activity_delta": 11,
+        "challenger_activity_delta": 30,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 3,
+        "enabling_policy_articles": 3,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 6,
+        "infrastructure_articles": 3,
+        "incumbent_articles": 1,
+        "challenger_articles": 3,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "HP": {
-      "score": 5,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 5,
-        "research": 0
-      },
+      "state_name": "Himachal Pradesh",
+      "tier": 2,
       "article_count": 4,
-      "top_category": "Major AI Developments",
-      "policy_articles": 0,
-      "startup_articles": 0,
-      "research_articles": 0,
-      "rank": 15,
-      "state_name": "Himachal Pradesh"
+      "data_sufficiency": "insufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 0,
+        "enabling_policy_score": 0,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 0,
+        "infrastructure_depth_score": 0,
+        "incumbent_activity_score": 0,
+        "challenger_activity_score": 0
+      },
+      "momentum": {
+        "policy_readiness_delta": 0,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 0,
+        "infrastructure_depth_delta": 0,
+        "incumbent_activity_delta": 0,
+        "challenger_activity_delta": 0,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 0,
+        "enabling_policy_articles": 0,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 0,
+        "infrastructure_articles": 0,
+        "incumbent_articles": 0,
+        "challenger_articles": 0,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "JH": {
-      "score": 0,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 0,
-        "research": 0
-      },
+      "state_name": "Jharkhand",
+      "tier": 2,
       "article_count": 1,
-      "top_category": "Major AI Developments",
-      "policy_articles": 0,
-      "startup_articles": 0,
-      "research_articles": 0,
-      "rank": 24,
-      "state_name": "Jharkhand"
+      "data_sufficiency": "insufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 0,
+        "enabling_policy_score": 0,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 0,
+        "infrastructure_depth_score": 0,
+        "incumbent_activity_score": 0,
+        "challenger_activity_score": 0
+      },
+      "momentum": {
+        "policy_readiness_delta": 0,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 0,
+        "infrastructure_depth_delta": 0,
+        "incumbent_activity_delta": 0,
+        "challenger_activity_delta": 0,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 0,
+        "enabling_policy_articles": 0,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 0,
+        "infrastructure_articles": 0,
+        "incumbent_articles": 0,
+        "challenger_articles": 0,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "JK": {
-      "score": 4,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 4,
-        "research": 0
-      },
+      "state_name": "Jammu & Kashmir",
+      "tier": 2,
       "article_count": 5,
-      "top_category": "Major AI Developments",
-      "policy_articles": 0,
-      "startup_articles": 0,
-      "research_articles": 0,
-      "rank": 19,
-      "state_name": "Jammu & Kashmir"
+      "data_sufficiency": "sufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 0,
+        "enabling_policy_score": 0,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 12,
+        "infrastructure_depth_score": 0,
+        "incumbent_activity_score": 11,
+        "challenger_activity_score": 0
+      },
+      "momentum": {
+        "policy_readiness_delta": 0,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 12,
+        "infrastructure_depth_delta": 0,
+        "incumbent_activity_delta": 11,
+        "challenger_activity_delta": 0,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 0,
+        "enabling_policy_articles": 0,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 1,
+        "infrastructure_articles": 0,
+        "incumbent_articles": 1,
+        "challenger_articles": 0,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "KA": {
-      "score": 20,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 3,
-        "startup": 6,
-        "velocity": 4,
-        "research": 6
-      },
+      "state_name": "Karnataka",
+      "tier": 1,
       "article_count": 32,
-      "top_category": "Major AI Developments",
-      "policy_articles": 3,
-      "startup_articles": 8,
-      "research_articles": 3,
-      "rank": 5,
-      "state_name": "Karnataka"
+      "data_sufficiency": "sufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 54,
+        "enabling_policy_score": 54,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 100,
+        "research_academic_score": 71,
+        "infrastructure_depth_score": 100,
+        "incumbent_activity_score": 100,
+        "challenger_activity_score": 100
+      },
+      "momentum": {
+        "policy_readiness_delta": 54,
+        "innovation_velocity_delta": 100,
+        "research_academic_delta": 71,
+        "infrastructure_depth_delta": 100,
+        "incumbent_activity_delta": 100,
+        "challenger_activity_delta": 100,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 3,
+        "enabling_policy_articles": 3,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 8,
+        "research_articles": 5,
+        "infrastructure_articles": 3,
+        "incumbent_articles": 7,
+        "challenger_articles": 11,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "KL": {
-      "score": 2,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 0,
-        "research": 2
-      },
+      "state_name": "Kerala",
+      "tier": 2,
       "article_count": 1,
-      "top_category": "Major AI Developments",
-      "policy_articles": 0,
-      "startup_articles": 0,
-      "research_articles": 1,
-      "rank": 21,
-      "state_name": "Kerala"
+      "data_sufficiency": "insufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 0,
+        "enabling_policy_score": 0,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 12,
+        "infrastructure_depth_score": 0,
+        "incumbent_activity_score": 0,
+        "challenger_activity_score": 0
+      },
+      "momentum": {
+        "policy_readiness_delta": 0,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 12,
+        "infrastructure_depth_delta": 0,
+        "incumbent_activity_delta": 0,
+        "challenger_activity_delta": 0,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 0,
+        "enabling_policy_articles": 0,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 1,
+        "infrastructure_articles": 0,
+        "incumbent_articles": 0,
+        "challenger_articles": 0,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "MH": {
-      "score": 11,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 4,
-        "startup": 3,
-        "velocity": 2,
-        "research": 2
-      },
+      "state_name": "Maharashtra",
+      "tier": 1,
       "article_count": 23,
-      "top_category": "Major AI Developments",
-      "policy_articles": 3,
-      "startup_articles": 3,
-      "research_articles": 1,
-      "rank": 11,
-      "state_name": "Maharashtra"
+      "data_sufficiency": "sufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 58,
+        "enabling_policy_score": 58,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 40,
+        "research_academic_score": 18,
+        "infrastructure_depth_score": 33,
+        "incumbent_activity_score": 11,
+        "challenger_activity_score": 60
+      },
+      "momentum": {
+        "policy_readiness_delta": 58,
+        "innovation_velocity_delta": 40,
+        "research_academic_delta": 18,
+        "infrastructure_depth_delta": 33,
+        "incumbent_activity_delta": 11,
+        "challenger_activity_delta": 60,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 3,
+        "enabling_policy_articles": 3,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 3,
+        "research_articles": 1,
+        "infrastructure_articles": 1,
+        "incumbent_articles": 1,
+        "challenger_articles": 6,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "MP": {
-      "score": 0,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 0,
-        "research": 0
-      },
+      "state_name": "Madhya Pradesh",
+      "tier": 2,
       "article_count": 1,
-      "top_category": "Major AI Developments",
-      "policy_articles": 0,
-      "startup_articles": 0,
-      "research_articles": 0,
-      "rank": 25,
-      "state_name": "Madhya Pradesh"
+      "data_sufficiency": "insufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 0,
+        "enabling_policy_score": 0,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 0,
+        "infrastructure_depth_score": 0,
+        "incumbent_activity_score": 0,
+        "challenger_activity_score": 10
+      },
+      "momentum": {
+        "policy_readiness_delta": 0,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 0,
+        "infrastructure_depth_delta": 0,
+        "incumbent_activity_delta": 0,
+        "challenger_activity_delta": 10,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 0,
+        "enabling_policy_articles": 0,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 0,
+        "infrastructure_articles": 0,
+        "incumbent_articles": 0,
+        "challenger_articles": 1,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "NL": {
-      "score": 4,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 4,
-        "research": 0
-      },
+      "state_name": "Nagaland",
+      "tier": 2,
       "article_count": 1,
-      "top_category": "Major AI Developments",
-      "policy_articles": 0,
-      "startup_articles": 0,
-      "research_articles": 0,
-      "rank": 20,
-      "state_name": "Nagaland"
+      "data_sufficiency": "insufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 0,
+        "enabling_policy_score": 0,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 0,
+        "infrastructure_depth_score": 33,
+        "incumbent_activity_score": 0,
+        "challenger_activity_score": 0
+      },
+      "momentum": {
+        "policy_readiness_delta": 0,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 0,
+        "infrastructure_depth_delta": 33,
+        "incumbent_activity_delta": 0,
+        "challenger_activity_delta": 0,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 0,
+        "enabling_policy_articles": 0,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 0,
+        "infrastructure_articles": 1,
+        "incumbent_articles": 0,
+        "challenger_articles": 0,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "OD": {
-      "score": 18,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 15,
-        "startup": 0,
-        "velocity": 1,
-        "research": 2
-      },
+      "state_name": "Odisha",
+      "tier": 2,
       "article_count": 6,
-      "top_category": "Policies and Initiatives",
-      "policy_articles": 3,
-      "startup_articles": 0,
-      "research_articles": 1,
-      "rank": 7,
-      "state_name": "Odisha"
+      "data_sufficiency": "sufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 95,
+        "enabling_policy_score": 95,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 18,
+        "infrastructure_depth_score": 67,
+        "incumbent_activity_score": 0,
+        "challenger_activity_score": 0
+      },
+      "momentum": {
+        "policy_readiness_delta": 95,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 18,
+        "infrastructure_depth_delta": 67,
+        "incumbent_activity_delta": 0,
+        "challenger_activity_delta": 0,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 3,
+        "enabling_policy_articles": 3,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 1,
+        "infrastructure_articles": 2,
+        "incumbent_articles": 0,
+        "challenger_articles": 0,
+        "top_category": "Policies and Initiatives",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "PB": {
-      "score": 5,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 1,
-        "research": 4
-      },
+      "state_name": "Punjab",
+      "tier": 2,
       "article_count": 4,
-      "top_category": "Major AI Developments",
-      "policy_articles": 0,
-      "startup_articles": 0,
-      "research_articles": 2,
-      "rank": 16,
-      "state_name": "Punjab"
+      "data_sufficiency": "insufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 0,
+        "enabling_policy_score": 0,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 24,
+        "infrastructure_depth_score": 0,
+        "incumbent_activity_score": 0,
+        "challenger_activity_score": 0
+      },
+      "momentum": {
+        "policy_readiness_delta": 0,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 24,
+        "infrastructure_depth_delta": 0,
+        "incumbent_activity_delta": 0,
+        "challenger_activity_delta": 0,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 0,
+        "enabling_policy_articles": 0,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 2,
+        "infrastructure_articles": 0,
+        "incumbent_articles": 0,
+        "challenger_articles": 0,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "SK": {
-      "score": 14,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 14,
-        "research": 0
-      },
+      "state_name": "Sikkim",
+      "tier": 2,
       "article_count": 1,
-      "top_category": "Events",
-      "policy_articles": 0,
-      "startup_articles": 0,
-      "research_articles": 0,
-      "rank": 8,
-      "state_name": "Sikkim"
+      "data_sufficiency": "insufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 0,
+        "enabling_policy_score": 0,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 0,
+        "infrastructure_depth_score": 33,
+        "incumbent_activity_score": 0,
+        "challenger_activity_score": 0
+      },
+      "momentum": {
+        "policy_readiness_delta": 0,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 0,
+        "infrastructure_depth_delta": 33,
+        "incumbent_activity_delta": 0,
+        "challenger_activity_delta": 0,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 0,
+        "enabling_policy_articles": 0,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 0,
+        "infrastructure_articles": 1,
+        "incumbent_articles": 0,
+        "challenger_articles": 0,
+        "top_category": "Events",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "TG": {
-      "score": 12,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 2,
-        "startup": 4,
-        "velocity": 5,
-        "research": 2
-      },
+      "state_name": "Telangana",
+      "tier": 1,
       "article_count": 19,
-      "top_category": "Major AI Developments",
-      "policy_articles": 1,
-      "startup_articles": 3,
-      "research_articles": 1,
-      "rank": 10,
-      "state_name": "Telangana"
+      "data_sufficiency": "sufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 20,
+        "enabling_policy_score": 20,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 42,
+        "research_academic_score": 24,
+        "infrastructure_depth_score": 0,
+        "incumbent_activity_score": 58,
+        "challenger_activity_score": 50
+      },
+      "momentum": {
+        "policy_readiness_delta": 20,
+        "innovation_velocity_delta": 42,
+        "research_academic_delta": 24,
+        "infrastructure_depth_delta": 0,
+        "incumbent_activity_delta": 58,
+        "challenger_activity_delta": 50,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 1,
+        "enabling_policy_articles": 1,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 3,
+        "research_articles": 2,
+        "infrastructure_articles": 0,
+        "incumbent_articles": 3,
+        "challenger_articles": 5,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "TN": {
-      "score": 9,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 0,
-        "startup": 6,
-        "velocity": 0,
-        "research": 2
-      },
+      "state_name": "Tamil Nadu",
+      "tier": 1,
       "article_count": 4,
-      "top_category": "Major AI Developments",
-      "policy_articles": 0,
-      "startup_articles": 1,
-      "research_articles": 1,
-      "rank": 12,
-      "state_name": "Tamil Nadu"
+      "data_sufficiency": "insufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 0,
+        "enabling_policy_score": 0,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 28,
+        "research_academic_score": 18,
+        "infrastructure_depth_score": 33,
+        "incumbent_activity_score": 0,
+        "challenger_activity_score": 10
+      },
+      "momentum": {
+        "policy_readiness_delta": 0,
+        "innovation_velocity_delta": 28,
+        "research_academic_delta": 18,
+        "infrastructure_depth_delta": 33,
+        "incumbent_activity_delta": 0,
+        "challenger_activity_delta": 10,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 0,
+        "enabling_policy_articles": 0,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 1,
+        "research_articles": 1,
+        "infrastructure_articles": 1,
+        "incumbent_articles": 0,
+        "challenger_articles": 1,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "TR": {
-      "score": 5,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 0,
-        "startup": 0,
-        "velocity": 5,
-        "research": 0
-      },
+      "state_name": "Tripura",
+      "tier": 2,
       "article_count": 2,
-      "top_category": "Major AI Developments",
-      "policy_articles": 0,
-      "startup_articles": 0,
-      "research_articles": 0,
-      "rank": 17,
-      "state_name": "Tripura"
+      "data_sufficiency": "insufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 0,
+        "enabling_policy_score": 0,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 0,
+        "infrastructure_depth_score": 33,
+        "incumbent_activity_score": 0,
+        "challenger_activity_score": 0
+      },
+      "momentum": {
+        "policy_readiness_delta": 0,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 0,
+        "infrastructure_depth_delta": 33,
+        "incumbent_activity_delta": 0,
+        "challenger_activity_delta": 0,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 0,
+        "enabling_policy_articles": 0,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 0,
+        "infrastructure_articles": 1,
+        "incumbent_articles": 0,
+        "challenger_articles": 0,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "UP": {
-      "score": 14,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 8,
-        "startup": 0,
-        "velocity": 1,
-        "research": 6
-      },
+      "state_name": "Uttar Pradesh",
+      "tier": 1,
       "article_count": 20,
-      "top_category": "Major AI Developments",
-      "policy_articles": 5,
-      "startup_articles": 0,
-      "research_articles": 3,
-      "rank": 9,
-      "state_name": "Uttar Pradesh"
+      "data_sufficiency": "sufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 100,
+        "enabling_policy_score": 100,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 0,
+        "research_academic_score": 53,
+        "infrastructure_depth_score": 100,
+        "incumbent_activity_score": 11,
+        "challenger_activity_score": 10
+      },
+      "momentum": {
+        "policy_readiness_delta": 100,
+        "innovation_velocity_delta": 0,
+        "research_academic_delta": 53,
+        "infrastructure_depth_delta": 100,
+        "incumbent_activity_delta": 11,
+        "challenger_activity_delta": 10,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 5,
+        "enabling_policy_articles": 5,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 0,
+        "research_articles": 3,
+        "infrastructure_articles": 3,
+        "incumbent_articles": 1,
+        "challenger_articles": 1,
+        "top_category": "Major AI Developments",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     },
     "WB": {
-      "score": 21,
-      "label": "Emerging",
-      "breakdown": {
-        "policy": 10,
-        "startup": 8,
-        "velocity": 0,
-        "research": 2
-      },
+      "state_name": "West Bengal",
+      "tier": 2,
       "article_count": 3,
-      "top_category": "Policies and Initiatives",
-      "policy_articles": 1,
-      "startup_articles": 1,
-      "research_articles": 1,
-      "rank": 4,
-      "state_name": "West Bengal"
+      "data_sufficiency": "insufficient",
+      "feature_vectors": {
+        "policy_readiness_score": 48,
+        "enabling_policy_score": 48,
+        "restrictive_policy_score": 0,
+        "innovation_velocity_score": 33,
+        "research_academic_score": 18,
+        "infrastructure_depth_score": 0,
+        "incumbent_activity_score": 11,
+        "challenger_activity_score": 10
+      },
+      "momentum": {
+        "policy_readiness_delta": 48,
+        "innovation_velocity_delta": 33,
+        "research_academic_delta": 18,
+        "infrastructure_depth_delta": 0,
+        "incumbent_activity_delta": 11,
+        "challenger_activity_delta": 10,
+        "article_count_delta": 0
+      },
+      "breakdown": {
+        "policy_articles": 1,
+        "enabling_policy_articles": 1,
+        "restrictive_policy_articles": 0,
+        "startup_articles": 1,
+        "research_articles": 1,
+        "infrastructure_articles": 0,
+        "incumbent_articles": 1,
+        "challenger_articles": 1,
+        "top_category": "Policies and Initiatives",
+        "top_sector": null,
+        "sector_distribution": {}
+      }
     }
   }
 }

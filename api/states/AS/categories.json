@@ -19,6 +19,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       }
     ],
@@ -99,6 +100,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       }
     ],

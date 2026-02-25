@@ -76,7 +76,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -97,7 +96,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -117,7 +115,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -137,7 +134,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       }
     ],
@@ -159,14 +155,13 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
-        "id": 33,
+        "id": 10,
         "title": "Data to Decisions: Powering Bharat’s AI Revolution",
         "url": "https://cio.economictimes.indiatimes.com/powering-ai-revolution?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
-        "summary": "A new initiative called \"Data to Decisions\" is powering India's AI revolution, particularly in Bharat. The initiative is focused on leveraging data to drive decision-making and is based in Bangalore. This effort aims to propel India's growth in the field of artificial intelligence.",
+        "summary": "The \"Data to Decisions\" initiative is driving India's AI revolution, particularly in Bharat. This movement is focused on leveraging data to inform decision-making and power innovation. The initiative is based in Bangalore, a major hub for technology and AI development in India.",
         "date_published": "2025-12-01",
         "source_name": "CIO ET - Events",
         "category": "Events",
@@ -179,112 +174,10 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       }
     ],
     "Major AI Developments": [
-      {
-        "id": 10,
-        "title": "Student mobility startup ZeroMoblt raises pre-seed round",
-        "url": "https://entrackr.com/snippets/student-mobility-startup-zeromobit-raises-pre-seed-round-11150709",
-        "summary": "Student mobility startup ZeroMoblt has raised Rs 1.5 crore in a pre-seed funding round co-led by JioMart CEO Sandeep Varaganti and others. The funds will be used to develop its AI-native technology, expand operations, and build infrastructure. ZeroMoblt, founded in 2024, offers a student mobility platform with integrated logistics, safety, and tracking services, and plans to expand its operations.",
-        "date_published": "2026-02-24",
-        "source_name": "Entrackr - AI & Startups",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "KA",
-          "TN",
-          "AP",
-          "TG",
-          "MH"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "sector": null,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 11,
-        "title": "Kris@Work raises $3 Mn in Seed round led by Infoedge Ventures",
-        "url": "https://entrackr.com/snippets/kriswork-raises-3-mn-in-seed-round-led-by-infoedge-ventures-11150272",
-        "summary": "Kris@Work, an AI-native go-to-market execution platform, has raised $3 million in a seed funding round led by Info Edge Ventures. The funding will be used to expand its enterprise customer base, strengthen partnerships, and complete platform development. The company aims to enhance its system of work and insights for enterprise revenue teams.",
-        "date_published": "2026-02-24",
-        "source_name": "Entrackr - AI & Startups",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "KA"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "sector": null,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 8,
-        "title": "AI boost for Bengaluru police: Robbery down 47%, chain snatching drops 53%, major decline in night crimes",
-        "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-boost-for-bengaluru-police-robbery-down-47-chain-snatching-drops-53/articleshow/128699663.cms",
-        "summary": "Bengaluru police have reported a significant decline in crimes, with robbery down 47% and chain snatching dropping 53%, attributed to the integration of Artificial Intelligence. The use of AI has reduced response times by automatically tracing caller locations and dispatching the nearest patrol vehicles. This, combined with enhanced night patrolling and increased oversight, has contributed to the overall decrease in criminal activities.",
-        "date_published": "2026-02-23",
-        "source_name": "Times of India - Bangalore",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "KA"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 9,
-        "title": "Chaos at AI Summit forced us to shift meeting to Karnataka Bhavan: Priyank",
-        "url": "https://timesofindia.indiatimes.com/city/bengaluru/chaos-at-ai-summit-forced-us-to-shift-meeting-to-karnataka-bhavan-priyank/articleshow/128683495.cms",
-        "summary": "Chaos at an AI summit prompted organizers to relocate a meeting to Karnataka Bhavan, according to Priyank. The sudden change in venue was made due to the unforeseen disruptions at the original location. The meeting was successfully held at the new venue, Karnataka Bhavan.",
-        "date_published": "2026-02-23",
-        "source_name": "Times of India - Bangalore",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "KA"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 10,
-        "title": "Bengaluru’s data centre boom deepens water crisis",
-        "url": "https://timesofindia.indiatimes.com/city/bengaluru/bengalurus-data-centre-boom-deepens-water-crisis/articleshow/128669922.cms",
-        "summary": "Bengaluru's booming data centre sector, which is crucial for AI and cloud computing, is exacerbating the city's water crisis due to its immense water needs for cooling. The city is home to 31 of the state's 32 data centres, putting a significant strain on the existing water deficits. The crisis is so severe that it is affecting the city's ability to secure basic drinking water for its residents.",
-        "date_published": "2026-02-23",
-        "source_name": "Times of India - Bangalore",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "KA"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "posted_to_x_at": null
-      },
       {
         "id": 9,
         "title": "Align recruitment with AI, Siddaramaiah advises universities",
@@ -649,7 +542,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -669,7 +561,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -689,7 +580,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -709,7 +599,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -730,7 +619,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -750,7 +638,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -770,51 +657,10 @@
         "processing_attempts": 0,
         "importance_score": 8.0,
         "premium_processed": true,
-        "sector": null,
         "posted_to_x_at": null
       }
     ],
     "AI Start-Up News": [
-      {
-        "id": 9,
-        "title": "Deep-tech robotics startup Armatrix raises $2.1 Mn led by pi Ventures",
-        "url": "https://entrackr.com/snippets/deep-tech-robotics-startup-armatrix-raises-21-mn-led-by-pi-ventures-11152392",
-        "summary": "Armatrix, a deep-tech robotics startup, has raised $2.1 million in a pre-seed funding round led by pi Ventures. The funding will be used to develop its proprietary snake-like flexible robotic arm technology and expand its engineering and R&D team. The company plans to accelerate pilot deployments with industrial customers using the raised capital.",
-        "date_published": "2026-02-25",
-        "source_name": "Entrackr - AI & Startups",
-        "category": "AI Start-Up News",
-        "state_codes": [
-          "KA"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "sector": null,
-        "posted_to_x_at": null
-      },
-      {
-        "id": 6,
-        "title": "HireBound raises $2 Mn in seed round led by Kalaari Capital",
-        "url": "https://entrackr.com/snippets/hirebound-raises-2-mn-in-seed-round-led-by-kalaari-capital-11149693",
-        "summary": "HireBound, an AI-powered recruitment platform, has raised $2 million in a seed funding round led by Kalaari Capital, with participation from Antler, Infinyte Club, and CareerNet. The Bengaluru-based startup plans to use the funds to strengthen product development, expand operations, and scale globally. HireBound aims to achieve a 5x increase in annual recurring revenue (ARR) over the next 12-18 months.",
-        "date_published": "2026-02-24",
-        "source_name": "Entrackr - AI & Startups",
-        "category": "AI Start-Up News",
-        "state_codes": [
-          "KA"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "sector": null,
-        "posted_to_x_at": null
-      },
       {
         "id": 9,
         "title": "India&#039;s AI ambitions: Homegrown tech at New Delhi Summit aims for global impact",
@@ -967,7 +813,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -987,7 +832,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -1007,7 +851,6 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -1027,12 +870,11 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
-        "sector": null,
         "posted_to_x_at": null
       }
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

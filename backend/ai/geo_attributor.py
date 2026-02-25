@@ -489,6 +489,8 @@ class GeoAttributor:
         r'\bindia\s+targets\b',
         r'\bindia\s+aims\b',
         r'\bindia\s+launches\b',
+        # "in India" — catches "centre in India", "launched in India", etc.
+        r'\bin\s+india\b',
     ]
 
     def __init__(self):

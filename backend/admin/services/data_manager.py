@@ -689,6 +689,221 @@ class DataManager:
             'pending_changes': self.get_pending_changes_summary()
         }
 
+    # ----------------------------------------------------------------
+    # Immediate (AJAX-friendly) article operations — save to disk now
+    # ----------------------------------------------------------------
+
+    def delete_article_immediate(self, url: str) -> Tuple[bool, str]:
+        """Delete article from all JSON files and write to disk immediately."""
+        self.load_all_data()
+        found = False
+        modified_files: set = set()
+
+        # All-india
+        for cat in list((self.all_india_data or {}).get('categories', {}).keys()):
+            arts = self.all_india_data['categories'][cat]
+            before = len(arts)
+            self.all_india_data['categories'][cat] = [a for a in arts if a.get('url') != url]
+            if len(self.all_india_data['categories'][cat]) < before:
+                found = True
+                modified_files.add('all-india')
+
+        # States
+        for state_code, state_data in self.states_data.items():
+            for cat in list(state_data.get('categories', {}).keys()):
+                arts = state_data['categories'][cat]
+                before = len(arts)
+                state_data['categories'][cat] = [a for a in arts if a.get('url') != url]
+                if len(state_data['categories'][cat]) < before:
+                    found = True
+                    modified_files.add(f'states/{state_code}')
+
+        if not found:
+            return False, f'Article not found: {url}'
+
+        self._write_modified_files(modified_files)
+        self._add_to_blacklist([url])
+        return True, 'Article deleted'
+
+    def batch_delete_immediate(self, urls: List[str]) -> Tuple[bool, int, str]:
+        """Delete multiple articles and write to disk once."""
+        self.load_all_data()
+        url_set = set(urls)
+        modified_files: set = set()
+
+        for cat in list((self.all_india_data or {}).get('categories', {}).keys()):
+            arts = self.all_india_data['categories'][cat]
+            before = len(arts)
+            self.all_india_data['categories'][cat] = [a for a in arts if a.get('url') not in url_set]
+            if len(self.all_india_data['categories'][cat]) < before:
+                modified_files.add('all-india')
+
+        for state_code, state_data in self.states_data.items():
+            for cat in list(state_data.get('categories', {}).keys()):
+                arts = state_data['categories'][cat]
+                before = len(arts)
+                state_data['categories'][cat] = [a for a in arts if a.get('url') not in url_set]
+                if len(state_data['categories'][cat]) < before:
+                    modified_files.add(f'states/{state_code}')
+
+        if not modified_files:
+            return False, 0, 'No matching articles found'
+
+        self._write_modified_files(modified_files)
+        self._add_to_blacklist(list(url_set))
+        return True, len(urls), f'Deleted {len(urls)} article(s)'
+
+    def update_article_simple(self, url: str, updates: Dict) -> Tuple[bool, str]:
+        """
+        Update article fields in-place (title, summary, url, category).
+        Handles category moves within the same file.  Saves to disk immediately.
+        Does NOT handle state_codes/geography changes — use the full edit page.
+        """
+        new_category = updates.get('category')
+        new_url = updates.get('url', url)
+
+        if new_category and new_category not in self.VALID_CATEGORIES:
+            return False, f'Invalid category: {new_category}'
+
+        def _apply(art, cat, data_container, file_key):
+            for k, v in updates.items():
+                if k not in ('category',) and not k.startswith('_') and v is not None:
+                    art[k] = v
+
+            if new_category and new_category != cat:
+                data_container['categories'][cat].remove(art)
+                if new_category not in data_container['categories']:
+                    data_container['categories'][new_category] = []
+                data_container['categories'][new_category].append(art)
+
+            return file_key
+
+        # Search all-india
+        for cat, arts in list((self.all_india_data or {}).get('categories', {}).items()):
+            for art in arts:
+                if art.get('url') == url:
+                    file_key = _apply(art, cat, self.all_india_data, 'all-india')
+                    self._write_modified_files({file_key})
+                    return True, 'Article updated'
+
+        # Search states
+        for state_code, state_data in self.states_data.items():
+            for cat, arts in list(state_data.get('categories', {}).items()):
+                for art in arts:
+                    if art.get('url') == url:
+                        file_key = _apply(art, cat, state_data, f'states/{state_code}')
+                        self._write_modified_files({file_key})
+                        return True, 'Article updated'
+
+        return False, 'Article not found'
+
+    def _write_modified_files(self, file_keys: set):
+        """Write the listed data-file keys (e.g. 'all-india', 'states/KA') to disk."""
+        for key in file_keys:
+            if key == 'all-india':
+                path = os.path.join(self.api_dir, 'all-india', 'categories.json')
+                with open(path, 'w', encoding='utf-8') as f:
+                    json.dump(self.all_india_data, f, indent=2, ensure_ascii=False)
+            elif key.startswith('states/'):
+                state_code = key.replace('states/', '')
+                path = os.path.join(self.api_dir, 'states', state_code, 'categories.json')
+                with open(path, 'w', encoding='utf-8') as f:
+                    json.dump(self.states_data[state_code], f, indent=2, ensure_ascii=False)
+
+    # ----------------------------------------------------------------
+    # Source management
+    # ----------------------------------------------------------------
+
+    def add_source(self, source_data: Dict) -> Tuple[bool, str]:
+        """Add a new source entry to sources.json (in-memory only; call save_sources() to persist)."""
+        if not source_data.get('name') or not source_data.get('url'):
+            return False, 'Name and URL are required'
+
+        state_code = source_data.get('state_code', 'IN') or 'IN'
+        if state_code == 'IN':
+            section = 'national'
+        else:
+            reverse_map = {v: k for k, v in self.SOURCE_STATE_MAP.items()}
+            section = reverse_map.get(state_code)
+            if not section:
+                return False, f'Unknown state code: {state_code}'
+
+        new_source = {
+            'name': source_data['name'],
+            'url': source_data['url'],
+            'type': source_data.get('type', 'rss'),
+            'state': None if state_code == 'IN' else state_code,
+            'is_state_specific': state_code != 'IN',
+            'category_hint': source_data.get('category_hint') or None,
+            'priority': source_data.get('priority', 'medium'),
+            'enabled': True,
+            'notes': source_data.get('notes', ''),
+        }
+
+        if not self.sources_data:
+            self.sources_data = {'national': []}
+        if section not in self.sources_data:
+            self.sources_data[section] = []
+
+        for src in self.sources_data[section]:
+            if src.get('url') == new_source['url']:
+                return False, 'A source with this URL already exists'
+
+        self.sources_data[section].append(new_source)
+        return True, f"Source '{source_data['name']}' added"
+
+    def toggle_source(self, source_url: str) -> Tuple[bool, str]:
+        """Toggle a source's enabled state (identified by URL)."""
+        if not self.sources_data:
+            return False, 'No sources loaded'
+        for section, items in self.sources_data.items():
+            if section.startswith('_') or not isinstance(items, list):
+                continue
+            for source in items:
+                if source.get('url') == source_url:
+                    source['enabled'] = not source.get('enabled', True)
+                    status = 'enabled' if source['enabled'] else 'disabled'
+                    return True, f'Source {status}'
+        return False, f'Source not found: {source_url}'
+
+    def delete_source(self, source_url: str) -> Tuple[bool, str]:
+        """Remove a source (identified by URL)."""
+        if not self.sources_data:
+            return False, 'No sources loaded'
+        for section, items in self.sources_data.items():
+            if section.startswith('_') or not isinstance(items, list):
+                continue
+            for i, source in enumerate(items):
+                if source.get('url') == source_url:
+                    name = source.get('name', source_url)
+                    items.pop(i)
+                    return True, f"Source '{name}' deleted"
+        return False, f'Source not found: {source_url}'
+
+    def update_source(self, original_url: str, updates: Dict) -> Tuple[bool, str]:
+        """Update source fields (identified by original URL)."""
+        if not self.sources_data:
+            return False, 'No sources loaded'
+        for section, items in self.sources_data.items():
+            if section.startswith('_') or not isinstance(items, list):
+                continue
+            for source in items:
+                if source.get('url') == original_url:
+                    for k, v in updates.items():
+                        if v is not None:
+                            source[k] = v
+                    return True, 'Source updated'
+        return False, f'Source not found: {original_url}'
+
+    def save_sources(self) -> Tuple[bool, str]:
+        """Write sources.json to disk."""
+        try:
+            with open(self.sources_file, 'w', encoding='utf-8') as f:
+                json.dump(self.sources_data, f, indent=2, ensure_ascii=False)
+            return True, 'Sources saved'
+        except Exception as e:
+            return False, f'Failed to save sources: {str(e)}'
+
     def _add_to_blacklist(self, urls: list):
         """
         Add URLs to the blacklist to prevent re-scraping.

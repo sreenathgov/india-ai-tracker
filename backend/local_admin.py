@@ -105,23 +105,31 @@ def updates_list():
 
 @app.route('/updates/<path:article_url>/edit', methods=['GET', 'POST'])
 def edit_article(article_url):
-    """Edit a single article"""
-    if request.method == 'POST':
-        # Get state_codes as list (checkboxes return multiple values)
-        state_codes = request.form.getlist('state_codes')
+    """Edit a single article (full form with geography)"""
+    # Capture return-state query params (GET or POST hidden fields)
+    back_page     = request.args.get('back_page') or request.form.get('back_page', '1')
+    back_search   = request.args.get('back_search') or request.form.get('back_search', '')
+    back_category = request.args.get('back_category') or request.form.get('back_category', '')
+    back_state    = request.args.get('back_state') or request.form.get('back_state', '')
+    back_sort     = request.args.get('back_sort') or request.form.get('back_sort', 'newest')
 
+    if request.method == 'POST':
+        state_codes = request.form.getlist('state_codes')
         updates = {
-            'url': request.form.get('url'),
-            'title': request.form.get('title'),
-            'summary': request.form.get('summary'),
-            'category': request.form.get('category'),
-            'state_codes': state_codes  # List like ['IN', 'TN', 'KA']
+            'url':        request.form.get('url'),
+            'title':      request.form.get('title'),
+            'summary':    request.form.get('summary'),
+            'category':   request.form.get('category'),
+            'state_codes': state_codes,
         }
 
         success, message = data_mgr.update_article(article_url, updates)
         if success:
+            # Also save to disk immediately
+            data_mgr.save_changes()
             flash(message, 'success')
-            return redirect(url_for('updates_list'))
+            return redirect(url_for('updates_list', page=back_page, search=back_search,
+                                    category=back_category, state=back_state, sort=back_sort))
         else:
             flash(message, 'error')
 
@@ -131,10 +139,15 @@ def edit_article(article_url):
         return redirect(url_for('updates_list'))
 
     return render_template('edit_article.html',
-                         article=article,
-                         categories=DataManager.VALID_CATEGORIES,
-                         states=DataManager.VALID_STATES,
-                         state_names=DataManager.STATE_NAMES)
+                           article=article,
+                           categories=DataManager.VALID_CATEGORIES,
+                           states=DataManager.VALID_STATES,
+                           state_names=DataManager.STATE_NAMES,
+                           back_page=back_page,
+                           back_search=back_search,
+                           back_category=back_category,
+                           back_state=back_state,
+                           back_sort=back_sort)
 
 
 @app.route('/updates/add', methods=['GET', 'POST'])
@@ -223,10 +236,6 @@ def publish():
         )
         return jsonify({'success': True, 'preview': preview, 'dry_run': True})
 
-    # Note: We no longer block on uncommitted changes since the admin only
-    # commits API files. Local working files (tracker.db, sources.json, etc.)
-    # are not pushed to git anyway.
-
     # Create backup
     backup_success, backup_path, backup_msg = data_mgr.create_backup()
     if not backup_success:
@@ -235,17 +244,21 @@ def publish():
     # Get pending changes summary BEFORE save (it gets cleared after)
     pending = data_mgr.get_pending_changes_summary()
 
-    # Save changes to disk
-    save_success, modified_files, save_msg = data_mgr.save_changes()
-    if not save_success:
-        return jsonify({'success': False, 'error': save_msg}), 500
+    if pending['has_changes']:
+        # Traditional in-memory pending changes → save to disk
+        save_success, modified_files, save_msg = data_mgr.save_changes()
+        if not save_success:
+            return jsonify({'success': False, 'error': save_msg}), 500
+    else:
+        # AJAX operations already saved directly to disk — ask git what changed
+        modified_files = git_mgr.get_modified_api_files()
 
-    # Filter to only files that exist (some state files may not exist yet)
+    # Filter to only files that exist
     import os
     files_to_stage = [f for f in modified_files if os.path.exists(os.path.join(REPO_ROOT, f))]
 
     if not files_to_stage:
-        return jsonify({'success': False, 'error': 'No files were modified'}), 400
+        return jsonify({'success': False, 'error': 'No modified API files found to publish. Make sure you have unsaved edits or recently deleted/edited articles.'}), 400
 
     # Git operations
     # Stage files
@@ -262,7 +275,10 @@ def publish():
         })
 
     # Commit
-    commit_msg = f"Admin edit: {pending['article_updates']} article updates, {pending['article_adds']} new articles, {pending['article_deletes']} deletions"
+    if pending['has_changes']:
+        commit_msg = f"Admin edit: {pending['article_updates']} article updates, {pending['article_adds']} new articles, {pending['article_deletes']} deletions"
+    else:
+        commit_msg = f"Admin: data update ({len(files_to_stage)} file(s) modified)"
     commit_success, commit_hash, commit_result = git_mgr.commit(commit_msg)
     if not commit_success:
         return jsonify({'success': False, 'error': commit_result}), 500
@@ -381,13 +397,168 @@ def export_articles():
 
 @app.route('/updates/<path:article_url>/delete', methods=['POST'])
 def delete_article_route(article_url):
-    """Delete an article"""
-    success, message = data_mgr.delete_article(article_url)
+    """Delete an article (form-based, preserves page state via query params)"""
+    # Preserve filter/page state
+    page     = request.form.get('page', '1')
+    search   = request.form.get('search', '')
+    category = request.form.get('category', '')
+    state    = request.form.get('state', '')
+    sort     = request.form.get('sort', 'newest')
+
+    success, message = data_mgr.delete_article_immediate(article_url)
+    flash(message, 'success' if success else 'error')
+    return redirect(url_for('updates_list', page=page, search=search,
+                            category=category, state=state, sort=sort))
+
+
+# ============================================================
+# AJAX Article API
+# ============================================================
+
+@app.route('/api/articles/batch-delete', methods=['POST'])
+def api_batch_delete():
+    """AJAX: delete one or more articles immediately."""
+    body = request.get_json() or {}
+    urls = body.get('urls', [])
+    if not urls:
+        return jsonify({'success': False, 'error': 'No URLs provided'}), 400
+    success, count, msg = data_mgr.batch_delete_immediate(urls)
     if success:
-        flash(message, 'success')
-    else:
-        flash(message, 'error')
-    return redirect(url_for('updates_list'))
+        return jsonify({'success': True, 'deleted': count, 'message': msg})
+    return jsonify({'success': False, 'error': msg}), 400
+
+
+@app.route('/api/articles/update', methods=['POST'])
+def api_update_article():
+    """AJAX: quick-update article (title, summary, url, category). No geography change."""
+    body = request.get_json() or {}
+    original_url = body.get('original_url')
+    if not original_url:
+        return jsonify({'success': False, 'error': 'original_url required'}), 400
+
+    updates = {k: v for k, v in {
+        'url':      body.get('url'),
+        'title':    body.get('title'),
+        'summary':  body.get('summary'),
+        'category': body.get('category'),
+    }.items() if v is not None}
+
+    success, msg = data_mgr.update_article_simple(original_url, updates)
+    if success:
+        return jsonify({'success': True, 'message': msg})
+    return jsonify({'success': False, 'error': msg}), 400
+
+
+# ============================================================
+# AJAX Sources API
+# ============================================================
+
+@app.route('/api/sources/add', methods=['POST'])
+def api_add_source():
+    """AJAX: add a new source."""
+    body = request.get_json() or {}
+    success, msg = data_mgr.add_source(body)
+    if success:
+        save_ok, save_msg = data_mgr.save_sources()
+        if save_ok:
+            return jsonify({'success': True, 'message': msg})
+        return jsonify({'success': False, 'error': save_msg}), 500
+    return jsonify({'success': False, 'error': msg}), 400
+
+
+@app.route('/api/sources/toggle', methods=['POST'])
+def api_toggle_source():
+    """AJAX: enable/disable a source by URL."""
+    body = request.get_json() or {}
+    source_url = body.get('url')
+    if not source_url:
+        return jsonify({'success': False, 'error': 'url required'}), 400
+    success, msg = data_mgr.toggle_source(source_url)
+    if success:
+        save_ok, save_msg = data_mgr.save_sources()
+        if save_ok:
+            return jsonify({'success': True, 'message': msg})
+        return jsonify({'success': False, 'error': save_msg}), 500
+    return jsonify({'success': False, 'error': msg}), 400
+
+
+@app.route('/api/sources/delete', methods=['POST'])
+def api_delete_source():
+    """AJAX: delete a source by URL."""
+    body = request.get_json() or {}
+    source_url = body.get('url')
+    if not source_url:
+        return jsonify({'success': False, 'error': 'url required'}), 400
+    success, msg = data_mgr.delete_source(source_url)
+    if success:
+        save_ok, save_msg = data_mgr.save_sources()
+        if save_ok:
+            return jsonify({'success': True, 'message': msg})
+        return jsonify({'success': False, 'error': save_msg}), 500
+    return jsonify({'success': False, 'error': msg}), 400
+
+
+@app.route('/api/sources/update', methods=['POST'])
+def api_update_source():
+    """AJAX: update source fields by original URL."""
+    body = request.get_json() or {}
+    original_url = body.get('original_url')
+    if not original_url:
+        return jsonify({'success': False, 'error': 'original_url required'}), 400
+    updates = {k: v for k, v in {
+        'name':          body.get('name'),
+        'url':           body.get('url'),
+        'type':          body.get('type'),
+        'priority':      body.get('priority'),
+        'category_hint': body.get('category_hint'),
+        'notes':         body.get('notes'),
+    }.items() if v is not None}
+    success, msg = data_mgr.update_source(original_url, updates)
+    if success:
+        save_ok, save_msg = data_mgr.save_sources()
+        if save_ok:
+            return jsonify({'success': True, 'message': msg})
+        return jsonify({'success': False, 'error': save_msg}), 500
+    return jsonify({'success': False, 'error': msg}), 400
+
+
+@app.route('/api/sources/test', methods=['POST'])
+def api_test_source():
+    """AJAX: check whether a URL is a reachable RSS/Atom feed."""
+    import urllib.request as ureq
+    import xml.etree.ElementTree as ET
+    body = request.get_json() or {}
+    url = body.get('url', '').strip()
+    if not url:
+        return jsonify({'success': False, 'error': 'url required'}), 400
+    try:
+        req = ureq.Request(url, headers={'User-Agent': 'Mozilla/5.0 (India AI Tracker feed tester)'})
+        with ureq.urlopen(req, timeout=12) as resp:
+            content = resp.read()
+        try:
+            root = ET.fromstring(content)
+            # RSS 2.0
+            channel = root.find('channel')
+            if channel is not None:
+                title = channel.findtext('title', 'Unknown')
+                items = channel.findall('item')
+                return jsonify({'success': True, 'type': 'rss', 'title': title,
+                                'item_count': len(items), 'message': f'Valid RSS feed — "{title}" ({len(items)} items)'})
+            # Atom
+            ns = '{http://www.w3.org/2005/Atom}'
+            title_el = root.find(f'{ns}title')
+            entries = root.findall(f'{ns}entry')
+            if title_el is not None:
+                return jsonify({'success': True, 'type': 'atom', 'title': title_el.text or '',
+                                'item_count': len(entries), 'message': f'Valid Atom feed — "{title_el.text}" ({len(entries)} entries)'})
+            return jsonify({'success': True, 'type': 'xml', 'title': 'XML document',
+                            'item_count': 0, 'message': 'URL reachable — XML document (not RSS/Atom)'})
+        except ET.ParseError:
+            return jsonify({'success': True, 'type': 'html', 'title': 'HTML page',
+                            'item_count': 0, 'message': 'URL reachable but not an RSS/Atom feed'})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e),
+                        'message': f'Cannot reach URL: {str(e)}'}), 200
 
 
 @app.route('/consultations')
