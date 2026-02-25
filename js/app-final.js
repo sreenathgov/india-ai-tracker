@@ -68,6 +68,36 @@ const CATEGORY_ORDER = [
     'AI Start-Up News',
 ];
 
+// Official state startup policy PDFs (sourced from Startup India incubator schemes page)
+const STARTUP_POLICY_MAP = {
+    'AN': { label: 'A&N Startup Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/A&Nstartup%20final_cp.pdf' },
+    'AS': { label: 'Assam Startup Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/Assam_State_Policy.pdf' },
+    'BR': { label: 'Bihar Startup Policy', url: 'https://state.bihar.gov.in/industries/cache/26/01-Jul-22/SHOW_DOCS/circular-td-1502-dtd-27-06-22%20English.pdf' },
+    'CG': { label: 'Chhattisgarh Startup Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/ChhattisgarhPolicy2016-min.pdf' },
+    'GA': { label: 'Goa Startup Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/GoaStart-up-Policy2017-dated-19-9-2017.pdf' },
+    'GJ': { label: 'Gujarat Startup Policy', url: 'https://startup.gujarat.gov.in/files/2020/11/67fa51ad-d410-49be-8ff3-f93adc784118_13-GR_02092020.pdf' },
+    'HR': { label: 'Haryana Startup Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/Haryana_Startup-Policy.pdf' },
+    'HP': { label: 'Himachal Pradesh Startup Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/Himachal%20startup%20policy.pdf' },
+    'JH': { label: 'Jharkhand Startup Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/Jharkhand%20Startup%20Policy.pdf' },
+    'KA': { label: 'Karnataka Startup Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/Karnataka_Startup_Policy.pdf' },
+    'MP': { label: 'Madhya Pradesh Startup Policy', url: 'https://startup.mp.gov.in/uploads/media/Startup_Policy_2022_(eng).pdf' },
+    'MH': { label: 'Maharashtra Startup Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/Maharashtra_State_Innovative_Startup_Policy_2018.pdf' },
+    'MN': { label: 'Manipur Startup Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/Manipur_Startup_Policy.pdf' },
+    'NL': { label: 'Nagaland Startup Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/Nagaland-Policy-2019.pdf' },
+    'OD': { label: 'Odisha Startup Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/Odisha2016StartupPolicy.pdf' },
+    'PB': { label: 'Punjab Industrial & Business Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Industrial_and_Business_Development_Policy_2017.pdf' },
+    'PY': { label: 'Puducherry Startup Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/Puducherry%20startup%20policy%202019.pdf' },
+    'RJ': { label: 'Rajasthan Startup Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/Rajasthan-startup-policy-2015.pdf' },
+    'TN': [
+        { label: 'Tamil Nadu Startup Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/Tamil_Nadu_Startup_Policy.pdf' },
+        { label: 'Puducherry Startup Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/Puducherry%20startup%20policy%202019.pdf' },
+    ],
+    'TG': { label: 'Telangana Innovation Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/Telangana-Innovation-Policy-Issued-GO.pdf' },
+    'UP': { label: 'Uttar Pradesh Startup Policy', url: 'https://invest.up.gov.in/wp-content/themes/investup/pdf/Startup-Policy-2020.pdf' },
+    'UK': { label: 'Uttarakhand Startup Policy', url: 'https://www.startuputtarakhand.com/attachments/1645842195.pdf' },
+    'WB': { label: 'West Bengal Startup Policy', url: 'https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/state_startup_policies/West%20Bengal_Start-up-Policy-2016-2021.pdf' },
+};
+
 // Animation timing constant - single source of truth
 const TRANSITION_DURATION = 450;
 
@@ -680,7 +710,7 @@ async function openStatePanel(stateName) {
 
     currentCategoriesData = data.categories;
     currentTodayUpdates = data.todayUpdates;
-    const cardsHtml = buildCategoryCards(data.categories, data.todayUpdates);
+    const cardsHtml = buildCategoryCards(data.categories, data.todayUpdates, stateCode);
     showPanel(stateName, cardsHtml);
 
     // Initialize Magic Bento effects after DOM update
@@ -693,7 +723,7 @@ async function openStatePanel(stateName) {
 }
 
 // Build premium bento-box category cards
-function buildCategoryCards(categories, todayUpdates = []) {
+function buildCategoryCards(categories, todayUpdates = [], stateCode = null) {
     console.log('Building bento cards with todayUpdates:', todayUpdates);
 
     let totalUpdates = 0;
@@ -749,6 +779,24 @@ function buildCategoryCards(categories, todayUpdates = []) {
             </div>
         `;
     });
+
+    // Startup policy card — shown only for states with a known policy URL
+    const policyEntry = stateCode ? STARTUP_POLICY_MAP[stateCode] : null;
+    if (policyEntry) {
+        const entries = Array.isArray(policyEntry) ? policyEntry : [policyEntry];
+        const isMulti = entries.length > 1;
+        html += '<div class="startup-policy-card">';
+        entries.forEach(e => {
+            const btnLabel = isMulti ? e.label : 'State Policy for Start-Ups';
+            html += `
+            <a href="${e.url}" target="_blank" rel="noopener noreferrer" class="startup-policy-btn">
+                <svg class="startup-policy-btn__icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+                ${btnLabel}
+                <svg class="startup-policy-btn__arrow" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7,7 17,7 17,17"/></svg>
+            </a>`;
+        });
+        html += '</div>';
+    }
 
     html += '</div>';
     html += '<div id="expanded-category-content" class="expanded-content"></div>';
