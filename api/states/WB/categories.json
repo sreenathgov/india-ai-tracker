@@ -25,6 +25,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 19,
+        "title": "IIT Kharagpur to offer BS in AI &amp; data science in Bangla from 2026 session",
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/iit-kharagpur-to-offer-bs-in-ai-data-science-in-bangla-from-2026-session/articleshow/128762594.cms",
+        "summary": "IIT Kharagpur will offer a Bachelor of Science degree in AI and data science, with courses taught in Bengali, starting from the 2026 academic session. This initiative aims to increase accessibility to these fields for students who are more comfortable with the Bengali language. The program is set to begin in 2026, marking a significant step in making AI and data science education more inclusive.",
+        "date_published": "2026-02-25",
+        "source_name": "Times of India - Kolkata",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Google Gemini launches JEE Main mock test papers: IIT Kharagpur alumnus Sundar Pichai goes nostalgic, ‘If I could…’",
         "url": "https://www.livemint.com/ai/artificial-intelligence/google-gemini-launches-jee-main-mock-test-papers-iit-kharagpur-alumnus-sundar-pichai-goes-nostalgic-if-i-could-11769670590061.html",
@@ -66,5 +86,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

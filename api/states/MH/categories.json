@@ -159,6 +159,50 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "BFSI leaders to chart the AI-first roadmap for 2026",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/bfsi-leaders-to-chart-the-ai-first-roadmap-for-2026/128768879",
+        "summary": "BFSI technology leaders will gather at the 10th ETBFSI CIO Digital Conclave to discuss the future of finance with a focus on \"AI Integration and Automation\". The event will address key questions on AI governance, explainability, and cyber-resilience in the regulated industry. The conclave aims to chart an AI-first roadmap for 2026, exploring the evolving role of the CIO in an AI-driven enterprise.",
+        "date_published": "2026-02-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Student mobility startup ZeroMoblt raises pre-seed round",
+        "url": "https://entrackr.com/snippets/student-mobility-startup-zeromobit-raises-pre-seed-round-11150709",
+        "summary": "Student mobility startup ZeroMoblt has raised Rs 1.5 crore in a pre-seed funding round co-led by JioMart CEO Sandeep Varaganti and others. The funds will be used to develop its AI-native technology, expand operations, and build infrastructure. ZeroMoblt, founded in 2024, offers a student mobility platform with integrated logistics, safety, and tracking services, and plans to expand its operations.",
+        "date_published": "2026-02-24",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "TN",
+          "AP",
+          "TG",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "DevSparks 2026 Pune: From prompt to production in the age of agentic AI",
         "url": "https://yourstory.com/2026/02/devsparks-2026-pune-from-prompt-to-production-in-the-age-of-agentic-ai",
@@ -622,5 +666,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

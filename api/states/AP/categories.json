@@ -1,9 +1,54 @@
 {
   "state": "AP",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 12,
+        "title": "A.P. Cabinet clears ₹2,388-crore semiconductor facility at Tarluvada",
+        "url": "https://www.thehindu.com/news/national/andhra-pradesh/ap-cabinet-clears-2388-crore-semiconductor-facility-at-tarluvada/article70672076.ece",
+        "summary": "The Andhra Pradesh Cabinet has approved a ₹2,388-crore semiconductor facility at Tarluvada. A total of 601.4 acres will be allotted for the project, which includes a 1,000 MW AI data centre cluster. The project will be implemented through three Special Purpose Vehicles in Visakhapatnam and Anakapalli districts.",
+        "date_published": "2026-02-24",
+        "source_name": "The Hindu - Andhra Pradesh",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [],
     "Major AI Developments": [
+      {
+        "id": 10,
+        "title": "Student mobility startup ZeroMoblt raises pre-seed round",
+        "url": "https://entrackr.com/snippets/student-mobility-startup-zeromobit-raises-pre-seed-round-11150709",
+        "summary": "Student mobility startup ZeroMoblt has raised Rs 1.5 crore in a pre-seed funding round co-led by JioMart CEO Sandeep Varaganti and others. The funds will be used to develop its AI-native technology, expand operations, and build infrastructure. ZeroMoblt, founded in 2024, offers a student mobility platform with integrated logistics, safety, and tracking services, and plans to expand its operations.",
+        "date_published": "2026-02-24",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "TN",
+          "AP",
+          "TG",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 11,
         "title": "BJYM condemns Youth Congress conduct at AI Summit",
