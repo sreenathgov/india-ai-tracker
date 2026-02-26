@@ -814,12 +814,112 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Intelligent fields: How AI is powering the future of Indian agriculture",
+        "url": "https://yourstory.com/2026/02/intelligent-fields-ai-powering-future-indian-agriculture",
+        "summary": "Indian farmers are turning to AI-led innovations to optimize their harvests amidst rapid urbanization and increasingly erratic climate patterns. This adoption of AI is expected to power the future of Indian agriculture. AI is helping farmers to improve their yields and adapt to changing environmental conditions.",
+        "date_published": "2026-02-26",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "TCS urges employees to use AI even if it cuts revenue: CEO...",
+        "url": "https://cellit.in/tcs-urges-employees-to-use-ai-even-if-it-cuts-revenue-ceo-krithivasan/",
+        "summary": "TCS CEO is encouraging employees to utilize AI, even if it potentially reduces revenue. The move aims to promote AI adoption and explore its benefits, despite possible financial implications. This approach reflects the company's commitment to embracing technological advancements and innovation.",
+        "date_published": "2026-02-26",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "India, Sweden sign AI pact; launch SITAC to boost tech, trade ties",
+        "url": "https://cellit.in/india-sweden-sign-ai-pact-launch-sitac-to-boost-tech-trade-ties/",
+        "summary": "India and Sweden have signed an artificial intelligence (AI) pact to strengthen their technological and trade relationships. The two countries have also launched the Sweden-India Tech Alliance Council (SITAC) to promote cooperation in the tech sector. This initiative aims to boost innovation, trade, and investment between India and Sweden.",
+        "date_published": "2026-02-26",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Using AI to detect breast cancer; Building credit models for India's informal economy",
         "url": "https://yourstory.com/2026/02/using-ai-to-detect-breast-cancer-credit-model-informal-sector",
         "summary": "Breast cancer is the most common cancer in women in India, with cases rising from 2.13 lakh in 2021 to nearly 2.4 lakh in 2025. The National Cancer Registry Programme reported this significant increase, highlighting the need for improved detection and treatment methods. AI is being explored as a potential tool to detect breast cancer and improve patient outcomes.",
         "date_published": "2026-02-25",
         "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Akamai to convene India’s tech leaders for closed-door summit on running AI at real-world scale",
+        "url": "https://yourstory.com/2026/02/akamai-convene-indias-tech-leaders-closed-door-summit-running-ai-real-world-scale",
+        "summary": "Akamai and YourStory are hosting a closed-door summit to discuss running AI at scale. The event will bring together India's tech leaders to explore the realities of implementing AI in production, focusing on scale, cost, and resilience. The summit aims to move the AI conversation beyond models and into real-world applications.",
+        "date_published": "2026-02-25",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "AI labs, new CBSE school and Rs 4,248 crore push by BMC on education",
+        "url": "https://indianexpress.com/article/cities/mumbai/ai-labs-new-cbse-school-and-rs-4248-crore-push-by-bmc-on-education-10551396/",
+        "summary": "The Brihan Mumbai Municipal Corporation (BMC) is investing Rs 4,248 crore to boost education, including the establishment of AI labs and a new CBSE school. This significant investment aims to enhance the city's educational infrastructure and provide students with access to cutting-edge technology. The initiative is expected to improve the overall quality of education in the region.",
+        "date_published": "2026-02-25",
+        "source_name": "Indian Express - Mumbai",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -4499,6 +4599,26 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 1,
+        "title": "AI driving unicorn creation in India, elsewhere faster than ever",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-driving-unicorn-creation-in-india-elsewhere-faster-than-ever/128772750",
+        "summary": "The creation of unicorns, or startups with a valuation of $1 billion and above, is surging in the AI era. AI companies are achieving unicorn status at a rapid pace, with an average time of 4.7 years. This trend is observed not only in India but also in other parts of the world.",
+        "date_published": "2026-02-25",
+        "source_name": "ET CIO - AI",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 6,
         "title": "Deeptech IoT startup DATOMS raises Rs 25 Cr in Series A led by Big Capital JSC",

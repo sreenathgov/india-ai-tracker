@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "embedUR systems expects edge AI platform to drive growth",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/embedur-systems-expects-edge-ai-platform-to-drive-growth/articleshow/128793173.cms",
+        "summary": "EmbedUR Systems anticipates significant growth driven by its edge AI platform. The company expects this platform to be a key factor in its expansion. Edge AI technology enables faster and more efficient processing of data at the source, reducing reliance on cloud computing.",
+        "date_published": "2026-02-26",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 51,
         "title": "IIT-M research foundation to set up AI innovation centre in Dubai",
         "url": "https://timesofindia.indiatimes.com/city/coimbatore/iit-m-research-foundation-to-set-up-ai-innovation-centre-in-dubai/articleshow/128522535.cms",
@@ -207,5 +227,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

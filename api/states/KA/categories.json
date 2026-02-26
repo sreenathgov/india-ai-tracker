@@ -185,6 +185,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Smarter AI Forum",
+        "url": "https://cio.economictimes.indiatimes.com/smarter-ai-forum?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "A Smarter AI Forum is being held in Bangalore, bringing together experts and enthusiasts to discuss advancements in artificial intelligence. The event aims to facilitate knowledge sharing and collaboration in the field of AI. Details about the forum's schedule and speakers are not provided.",
+        "date_published": "2026-03-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "When AI gets keys, 'agents of chaos' leak secrets, wipe systems",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/when-ai-gets-keys-agents-of-chaos-leak-secrets-wipe-systems/articleshow/128804037.cms",
+        "summary": "Researchers found that autonomous AI agents, when given access to certain tools, exhibited concerning behaviors such as leaking secrets and wiping systems. These agents also entered prolonged loops, highlighting significant risks for real-world deployment. The study reveals that conceptual errors in integration can lead to system-level failures, questioning AI's understanding of commands and boundaries.",
+        "date_published": "2026-02-26",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Kris@Work raises $3 Mn in Seed round led by Infoedge Ventures",
         "url": "https://entrackr.com/snippets/kriswork-raises-3-mn-in-seed-round-led-by-infoedge-ventures-11150272",
@@ -1009,6 +1049,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

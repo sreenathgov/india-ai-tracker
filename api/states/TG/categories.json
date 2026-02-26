@@ -63,14 +63,16 @@
         "premium_processed": false,
         "sector": null,
         "posted_to_x_at": null
-      },
+      }
+    ],
+    "Major AI Developments": [
       {
-        "id": 8,
-        "title": "Solvathon 2026",
-        "url": "https://www.iiit.ac.in/solvathon-2026/",
-        "summary": "IIIT Hyderabad is advancing various AI initiatives, including early cancer detection with AI and genetic insights, chip design for healthcare and mobility, and a data-driven study on fairness in justice delivery. The institution is also promoting AI education with a six-month training program for women graduate engineers and hosting events like the Urban AI Forum. Additionally, IIIT Hyderabad has launched a platform for mapping news and urban livability, showcasing its commitment to leveraging AI for societal impact.",
-        "date_published": "2026-02-24",
-        "source_name": "IIIT Hyderabad - News",
+        "id": 17,
+        "title": "Will Use AI To Streamline Traffic, Says Hyderabad Police Commissioner VC Sajjanar",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/will-use-ai-to-streamline-traffic-says-hyderabad-police-commissioner-vc-sajjanar/articleshow/128760930.cms",
+        "summary": "Hyderabad Police Commissioner VC Sajjanar announced plans to utilize AI to streamline traffic in the city. The initiative aims to improve traffic management and reduce congestion. The use of AI technology is expected to enhance the efficiency of traffic monitoring and control systems.",
+        "date_published": "2026-02-25",
+        "source_name": "Times of India - Bhopal",
         "category": "Major AI Developments",
         "state_codes": [
           "TG"
@@ -83,16 +85,14 @@
         "premium_processed": false,
         "sector": null,
         "posted_to_x_at": null
-      }
-    ],
-    "Major AI Developments": [
+      },
       {
-        "id": 17,
-        "title": "Will Use AI To Streamline Traffic, Says Hyderabad Police Commissioner VC Sajjanar",
-        "url": "https://timesofindia.indiatimes.com/city/hyderabad/will-use-ai-to-streamline-traffic-says-hyderabad-police-commissioner-vc-sajjanar/articleshow/128760930.cms",
-        "summary": "Hyderabad Police Commissioner VC Sajjanar announced plans to utilize AI to streamline traffic in the city. The initiative aims to improve traffic management and reduce congestion. The use of AI technology is expected to enhance the efficiency of traffic monitoring and control systems.",
-        "date_published": "2026-02-25",
-        "source_name": "Times of India - Bhopal",
+        "id": 8,
+        "title": "Solvathon 2026",
+        "url": "https://www.iiit.ac.in/solvathon-2026/",
+        "summary": "IIIT Hyderabad is advancing various AI initiatives, including early cancer detection with AI and genetic insights, chip design for healthcare and mobility, and a data-driven study on fairness in justice delivery. The institution is also promoting AI education with a six-month training program for women graduate engineers and hosting events like the Urban AI Forum. Additionally, IIIT Hyderabad has launched a platform for mapping news and urban livability, showcasing its commitment to leveraging AI for societal impact.",
+        "date_published": "2026-02-24",
+        "source_name": "IIIT Hyderabad - News",
         "category": "Major AI Developments",
         "state_codes": [
           "TG"
@@ -713,7 +713,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

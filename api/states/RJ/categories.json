@@ -5,6 +5,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "Rajasthan deploys AI face recognition for exams, law enforcement, and identification",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/rajasthan-government-deploys-ai-facial-recognition-for-exams-policing-and-identification/128772631",
+        "summary": "Rajasthan's IT department has implemented AI-powered face recognition technology for various applications, including exam candidate verification and law enforcement. The face similarity search system is deployed at a state data centre, enabling matches against large databases of individuals. This technology will aid in identifying offenders, missing persons, and exam candidates, enhancing security and efficiency in these areas.",
+        "date_published": "2026-02-25",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "RJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 92,
         "title": "Rajasthan rolls out AI-enabled ‘My Career Advisor’ app for students",
         "url": "https://government.economictimes.indiatimes.com/news/technology/rajasthan-rolls-out-ai-enabled-my-career-advisor-app-for-students/126351612",
@@ -27,7 +47,5 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
