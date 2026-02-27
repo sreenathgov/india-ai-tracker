@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 16,
+        "title": "AI in school curriculum; students in Telangana to get breakfast, milk",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/ai-in-school-curriculum-students-in-t-to-get-breakfast-milk/articleshow/128824984.cms",
+        "summary": "Telangana's education system will undergo a significant change with the integration of AI in schools starting from 2026-27, along with AI training for teachers. The state also plans to upgrade government schools with modern facilities and introduce Telangana Public Schools in 100 constituencies. Additionally, reports on private school fees and a new education policy have been presented as part of the overhaul.",
+        "date_published": "2026-02-27",
+        "source_name": "Times of India - Bhopal",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 141,
         "title": "Hyderabad Police launch AI-driven system to overhaul CAR duty allocation",
         "url": "https://www.thehindu.com/news/cities/Hyderabad/hyderabad-police-launch-ai-driven-system-to-overhaul-car-duty-allocation/article70557894.ece",
@@ -66,6 +86,26 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 10,
+        "title": "Call for sovereign AI models in India",
+        "url": "https://www.iiit.ac.in/call-for-sovereign-ai-models-in-india/",
+        "summary": "India is being called upon to develop sovereign AI models. The International Institute of Information Technology Hyderabad (IIIT-H) is involved in various AI initiatives, including a six-month AI/ML training program for women graduate engineers. IIIT-H is also hosting events such as the Urban AI Forum to promote AI development and application in India.",
+        "date_published": "2026-02-27",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 17,
         "title": "Will Use AI To Streamline Traffic, Says Hyderabad Police Commissioner VC Sajjanar",
@@ -713,5 +753,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives",
+    "Major AI Developments"
+  ]
 }

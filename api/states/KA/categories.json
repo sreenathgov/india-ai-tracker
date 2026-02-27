@@ -225,6 +225,46 @@
         "posted_to_x_at": null
       },
       {
+        "id": 6,
+        "title": "Gushwork secures $9 Mn led by Susquehanna Asia VC",
+        "url": "https://entrackr.com/snippets/gushwork-secures-9-mn-led-by-susquehanna-asia-vc-11157636",
+        "summary": "Gushwork, an AI-driven B2B marketing platform, has raised $9 million in a funding round led by Susquehanna Asia VC, with participation from existing investors. The Bengaluru-based startup had previously secured $2.1 million in a pre-seed funding round in July 2023. The new funds will be used to accelerate product development, improve AI accuracy, and expand engineering teams.",
+        "date_published": "2026-02-26",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "Swami Muktidanandaji unveils logo of Nypunya PU College",
+        "url": "https://starofmysore.com/swami-muktidanandaji-unveils-logo-of-nypunya-pu-college/",
+        "summary": "Swami Muktidanandaji, President of Sri Ramakrishna Ashram, unveiled the logo of Nypunya PU College in Mysuru, which is set to start functioning from the next academic year. The college aims to promote traditional education amidst the growing influence of Artificial Intelligence (AI). Swami Muktidanandaji emphasized the importance of preserving traditional education in the face of AI's increasing presence.",
+        "date_published": "2026-02-26",
+        "source_name": "Star of Mysore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Kris@Work raises $3 Mn in Seed round led by Infoedge Ventures",
         "url": "https://entrackr.com/snippets/kriswork-raises-3-mn-in-seed-round-led-by-infoedge-ventures-11150272",
@@ -792,6 +832,27 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 8,
+        "title": "Peak XV leads $2.5 Mn round in Companion Labs",
+        "url": "https://entrackr.com/snippets/peak-xv-leads-25-mn-round-in-companion-labs-11157241",
+        "summary": "Companion Labs, a consumer AI company, has raised $2.5 million in a seed funding round led by Peak XV's Surge, with participation from other investors. The company aims to build interactive experiences for India's vernacular and culturally diverse audiences. The funding will be used to accelerate product development.",
+        "date_published": "2026-02-26",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Deep-tech robotics startup Armatrix raises $2.1 Mn led by pi Ventures",
         "url": "https://entrackr.com/snippets/deep-tech-robotics-startup-armatrix-raises-21-mn-led-by-pi-ventures-11152392",
@@ -1048,7 +1109,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

@@ -1,7 +1,28 @@
 {
   "state": "TR",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 17,
+        "title": "Tripura to roll out India’s 1st state-level AI policy: Saha",
+        "url": "https://timesofindia.indiatimes.com/city/guwahati/tripura-to-roll-out-indias-1st-state-level-ai-policy-saha/articleshow/128823697.cms",
+        "summary": "Tripura is set to roll out India's first state-level AI policy, introduced by Chief Minister Manik Saha. This policy makes Tripura the first state in India to have its own AI policy. The move is expected to be a significant development in the country's AI landscape.",
+        "date_published": "2026-02-27",
+        "source_name": "Times of India - Guwahati",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "TR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [],
     "Major AI Developments": [
       {
@@ -45,5 +66,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

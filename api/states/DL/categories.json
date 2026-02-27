@@ -243,6 +243,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 15,
+        "title": "AI no longer a shortcut, it's part of students' daily study routine now",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/ai-no-longer-a-shortcut-its-part-of-students-daily-study-routine-now/articleshow/128835840.cms",
+        "summary": "A new study finds that nearly 70% of Class XI and XII students use AI tools on a weekly basis, incorporating them into their daily study routine. AI aids students in information search and writing, but they still rely on teachers and traditional preparation methods for important exams. The increasing use of AI among students has also raised early concerns about mental health impacts.",
+        "date_published": "2026-02-27",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "upGrad acquires early-talent marketplace Internshala",
         "url": "https://entrackr.com/news/upgrad-acquires-early-talent-marketplace-internshala-11156922",
@@ -1842,6 +1862,27 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 8,
+        "title": "Peak XV leads $2.5 Mn round in Companion Labs",
+        "url": "https://entrackr.com/snippets/peak-xv-leads-25-mn-round-in-companion-labs-11157241",
+        "summary": "Companion Labs, a consumer AI company, has raised $2.5 million in a seed funding round led by Peak XV's Surge, with participation from other investors. The company aims to build interactive experiences for India's vernacular and culturally diverse audiences. The funding will be used to accelerate product development.",
+        "date_published": "2026-02-26",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 5,
         "title": "Wootz.work raises $6.6 Mn in Series A round led by Z47",
