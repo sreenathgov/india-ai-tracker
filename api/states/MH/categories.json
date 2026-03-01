@@ -164,6 +164,46 @@
     "Major AI Developments": [
       {
         "id": 3,
+        "title": "VR &amp; AI reshape shoulder surgical training in Pune",
+        "url": "https://timesofindia.indiatimes.com/city/pune/vr-ai-reshape-shoulder-surgical-training-in-pune/articleshow/128910771.cms",
+        "summary": "Orthopaedic surgeons in Pune are utilizing VR headsets and AI to enhance shoulder surgical training, with VR platforms allowing practice on 3D models in virtual operating rooms. AI-powered systems aid in pre-operative planning by analyzing scans and simulating surgical designs, improving patient safety. This integration of VR and AI technology aims to enhance surgeons' skills and decision-making capabilities.",
+        "date_published": "2026-03-01",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Reliance on borrowed algorithms for AI could cost India its autonomy: Former foreign secretary",
+        "url": "https://timesofindia.indiatimes.com/city/pune/reliance-on-borrowed-algorithms-for-ai-could-cost-india-its-autonomy-former-foreign-secretary/articleshow/128897635.cms",
+        "summary": "Former foreign secretary warns that India's reliance on borrowed algorithms for AI could compromise its autonomy. This over-reliance may hinder India's ability to make independent decisions and maintain control over its technological advancements. India's use of foreign algorithms could ultimately undermine its sovereignty in the field of artificial intelligence.",
+        "date_published": "2026-03-01",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "Art of building local AI systems with NVIDIA DGX Spark: Decode with RP Tech, an NVIDIA partner",
         "url": "https://yourstory.com/2026/02/devsparks-pune-rp-tech-nvidia-partner-dgx-spark-powered-masterclasses",
         "summary": "NVIDIA DGX Spark is being utilized to build local AI systems through masterclasses hosted by DevSparks Pune and RP Tech, an NVIDIA partner. These masterclasses aim to redefine how AI is built, deployed, and owned. The collaboration focuses on addressing common AI development challenges such as rising costs and latency.",
@@ -671,5 +711,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -855,6 +855,26 @@
       },
       {
         "id": 1,
+        "title": "Funding and acquisitions in Indian startup this week [Feb 23 - Feb 28]",
+        "url": "https://entrackr.com/report/weekly-funding-report/funding-and-acquisitions-in-indian-startup-this-week-feb-23-feb-28-11163180",
+        "summary": "Indian startups raised around $222.87 million in funding this week, with 43 startups securing investments, including 3 growth-stage and 36 early-stage deals. In comparison, the previous week saw 29 startups collectively secure about $1.3 billion in funding. Four startups kept their funding amounts undisclosed during this period.",
+        "date_published": "2026-02-28",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "India&#039;s engineering workforce faces a widening AI-confidence-capability gap",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-engineering-workforce-faces-a-widening-ai-confidence-capability-gap/128836095",
         "summary": "A study of 400 Indian software engineers and tech recruiters found a significant gap between perceived AI readiness and actual expertise. While 89% of engineers believe they are AI-ready, only 19% are deeply engaged in building AI/ML systems. This disparity highlights a substantial confidence-capability gap in India's engineering workforce.",
@@ -5829,7 +5849,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

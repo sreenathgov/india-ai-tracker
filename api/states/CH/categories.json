@@ -5,6 +5,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "BJP MLA Randhir Sharma seeks Central probe alleging HP CM’s role in AI Summit row",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/bjp-mla-randhir-sharma-seeks-central-probe-alleging-hp-cms-role-in-ai-summit-row/articleshow/128897304.cms",
+        "summary": "BJP MLA Randhir Sharma is seeking a Central probe into the AI Summit row, alleging the involvement of Himachal Pradesh Chief Minister. Sharma's allegations suggest the CM's role in the controversy surrounding the AI Summit. A Central investigation has been requested to look into the matter.",
+        "date_published": "2026-03-01",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "PB",
+          "CH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 43,
         "title": "BFUHS joins Consortium of Innovative Health Universities at India AI Impact Summit",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/bfuhs-joins-consortium-of-innovative-health-universities-at-india-ai-impact-summit/articleshow/128620417.cms",
@@ -67,5 +88,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

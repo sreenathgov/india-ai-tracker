@@ -283,6 +283,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 5,
+        "title": "AI Summit ‘shirtless’ protest: Delhi court grants bail to IYC president Uday Chib",
+        "url": "https://indianexpress.com/article/cities/delhi/ai-summit-shirtless-protest-court-bail-iyc-president-uday-chib-10557415/",
+        "summary": "A Delhi court has granted bail to Indian Youth Congress (IYC) president Uday Chib, who was arrested for a 'shirtless' protest at the AI Summit. Chib's protest was a form of demonstration, although the details of the protest are not specified. The court's decision allows Chib to be released on bail.",
+        "date_published": "2026-02-28",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 15,
         "title": "AI no longer a shortcut, it's part of students' daily study routine now",
         "url": "https://timesofindia.indiatimes.com/city/delhi/ai-no-longer-a-shortcut-its-part-of-students-daily-study-routine-now/articleshow/128835840.cms",
@@ -2025,7 +2045,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
