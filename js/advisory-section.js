@@ -477,7 +477,7 @@ class AdvisorySection {
 
     const heading = document.createElement('h3');
     heading.className = 'advisory-services__heading advisory-animate';
-    heading.textContent = 'ADVISORY SERVICES';
+    heading.textContent = 'SERVICES OFFERED';
     block.appendChild(heading);
 
     const container = document.createElement('div');

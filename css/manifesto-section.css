@@ -1,0 +1,64 @@
+/* ============================================
+   MANIFESTO SECTION — Full-viewport scroll-reveal statement
+   Replaces "Core Principles" expandable rows.
+   Transparent bg lets fixed navy grid show through.
+   ============================================ */
+
+.manifesto-section {
+    min-height: 120vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem 5rem;
+    background: transparent;
+    position: relative;
+}
+
+.manifesto-mount {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1200px) {
+    .manifesto-section {
+        padding: 3.5rem 3rem 4.5rem;
+    }
+    .manifesto-mount {
+        max-width: 900px;
+    }
+}
+
+/* iPad portrait — trim the excess height down from 120vh */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .manifesto-section {
+        min-height: 65vh;
+        padding: 3rem 2.5rem 4rem;
+    }
+    .manifesto-mount {
+        max-width: 760px;
+    }
+}
+
+/* Phone — full viewport so quote owns the screen */
+@media (max-width: 768px) {
+    .manifesto-section {
+        min-height: 100vh;
+        padding: 4rem 1.5rem;
+    }
+    .manifesto-mount {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .manifesto-section {
+        padding: 4rem 1.25rem;
+    }
+}

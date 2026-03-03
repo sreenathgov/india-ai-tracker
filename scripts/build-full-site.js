@@ -18,13 +18,33 @@ const FILES_TO_COPY = [
 function buildSite() {
     console.log('🚀 Starting Full Site Build...');
 
-    // 1. Run Vite Build (for React components)
+    // 1a. Run Vite Build — Text Pressure widget
     // This creates dist/text-pressure-bundle.js
     try {
-        console.log('📦 running Vite build for widgets...');
+        console.log('📦 Running Vite build for Text Pressure widget...');
         execSync('npm run build:text-pressure', { stdio: 'inherit', cwd: PROJECT_ROOT });
     } catch (e) {
-        console.error('❌ Vite build failed.');
+        console.error('❌ Text Pressure Vite build failed.');
+        process.exit(1);
+    }
+
+    // 1b. Run Vite Build — Spline Globe widget
+    // This creates dist/spline-globe-bundle.js (emptyOutDir: false preserves step 1a output)
+    try {
+        console.log('📦 Running Vite build for Spline Globe widget...');
+        execSync('npm run build:spline-globe', { stdio: 'inherit', cwd: PROJECT_ROOT });
+    } catch (e) {
+        console.error('❌ Spline Globe Vite build failed.');
+        process.exit(1);
+    }
+
+    // 1c. Run Vite Build — Scroll Reveal widget
+    // This creates dist/scroll-reveal-bundle.js (emptyOutDir: false preserves previous outputs)
+    try {
+        console.log('📦 Running Vite build for Scroll Reveal widget...');
+        execSync('npm run build:scroll-reveal', { stdio: 'inherit', cwd: PROJECT_ROOT });
+    } catch (e) {
+        console.error('❌ Scroll Reveal Vite build failed.');
         process.exit(1);
     }
 

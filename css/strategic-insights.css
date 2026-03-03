@@ -392,10 +392,6 @@ html {
    ============================================ */
 
 @media (max-width: 1200px) {
-    .strategic-bento-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .bento-stat-card {
         padding: 2rem 1.25rem;
         min-height: 150px;
@@ -408,6 +404,28 @@ html {
 
     .newsletter-hero-form {
         justify-content: center;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — Tablet portrait / small tablet (≤900px)
+   ============================================ */
+
+@media (max-width: 900px) {
+    .strategic-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bento-insight-card {
+        grid-column: span 1;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+    .bento-insight-card {
+        justify-content: flex-start;
+        overflow: hidden;
+        padding: 1.5rem 1.25rem;
     }
 }
 

@@ -107,11 +107,12 @@ class InfrastructureGrid {
 
     window.addEventListener('resize', handleResize);
 
-    // Scroll-based fade: grid persists through Section 1 + velocity band + bento grid,
-    // disappears where the newsletter orange strip begins
+    // Scroll-based fade: grid persists through Section 1 + velocity band + bento grid
+    // + newsletter orange strip + Sector Watch platform section,
+    // disappears where the waitlist orange strip begins (bridging into advisory section)
     if (this.config.enableFadeOnScroll) {
       const handleScroll = () => {
-        const newsletterStrip = document.getElementById('newsletterHeroSection');
+        const newsletterStrip = document.getElementById('waitlistHeroSection');
         if (newsletterStrip) {
           const stripRect = newsletterStrip.getBoundingClientRect();
           const viewportH = window.innerHeight;
@@ -170,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
     speed: 0.12,                              // Very slow, systematic movement
     borderColor: 'rgba(255, 255, 255, 0.08)', // Subtle white lines
     squareSize: 30,                           // Dense blueprint grid (40% reduction)
-    enableFadeOnScroll: true,                 // Fade on scroll
+    enableFadeOnScroll: false,                // Grid persists at full opacity — no fade
     fadeStartScroll: 0,                       // Start fading immediately
     fadeCompleteScroll: 300                   // Fully transparent at 300px
   };
