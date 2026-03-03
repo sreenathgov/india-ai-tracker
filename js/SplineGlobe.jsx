@@ -1,14 +1,43 @@
 /**
  * SplineGlobe — React island for 3D Earth visualization
  *
- * - Mobile (≤768px): CSS fallback sphere only
- * - Desktop: React.lazy + Suspense, transparent WebGL background
- * - No interact button
+ * - iOS/iPadOS (all browsers): CSS fallback sphere
+ *   Reason: iOS forces WebKit on all browsers; mix-blend-mode+WebGL is broken
+ *   because the GPU-composited canvas is composited outside the DOM blend stack.
+ * - Narrow screens (<640px, phones): CSS fallback sphere
+ *   Reason: Spline camera is calibrated for a ~530px column; on narrow phones
+ *   you only see a zoomed-in crop of the globe instead of the full sphere.
+ * - All other devices (Android tablet, desktop): Spline WebGL globe
  */
 
 import React, { useState, Suspense, lazy } from 'react';
 
 const Spline = lazy(() => import('@splinetool/react-spline'));
+
+// iOS detection — covers iPhone, iPad (legacy UA), and modern iPads that
+// report themselves as MacIntel but expose multiple touch points
+const isIOS = typeof navigator !== 'undefined' && (
+  /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+);
+
+// Narrow-screen detection — phones regardless of OS
+const isNarrowScreen = typeof window !== 'undefined' && window.innerWidth < 640;
+
+// CSS fallback is needed when mix-blend-mode+WebGL won't work
+const FORCE_CSS_FALLBACK = isIOS || isNarrowScreen;
+
+// Set data-fallback attribute immediately at module load — defer scripts run
+// after the DOM is parsed so the elements already exist at this point.
+// This ensures the CSS fallback rules apply BEFORE React's first paint.
+if (FORCE_CSS_FALLBACK && typeof document !== 'undefined') {
+  const mount = document.getElementById('splineGlobeContainer');
+  if (mount) {
+    mount.setAttribute('data-fallback', 'true');
+    const right = mount.closest('.platform-split__right');
+    if (right) right.setAttribute('data-fallback', 'true');
+  }
+}
 
 function GlobeFallback() {
   return React.createElement('div', { className: 'spline-globe__fallback' },
@@ -70,19 +99,24 @@ export default function SplineGlobe() {
     background: 'transparent',
   };
 
-  // Load Spline on all devices — CSS sphere fallback covers WebGL failures
+  // iOS and narrow phones get the CSS sphere — clean, fast, works everywhere
+  if (FORCE_CSS_FALLBACK || hasError) {
+    return React.createElement('div', { style: wrapperStyle, className: 'spline-globe' },
+      React.createElement(GlobeFallback)
+    );
+  }
+
+  // Desktop + Android tablet: Spline WebGL globe with mix-blend-mode:screen
   return React.createElement('div', { style: wrapperStyle, className: 'spline-globe' },
-    hasError
-      ? React.createElement(GlobeFallback)
-      : React.createElement(Suspense, {
-          fallback: React.createElement(GlobeFallback)
-        },
-          React.createElement(Spline, {
-            scene: '/added-assets/earth-realistic.splinecode',
-            style: { width: '100%', height: '100%', background: 'transparent' },
-            onLoad: makeTransparent,
-            onError: () => setHasError(true),
-          })
-        )
+    React.createElement(Suspense, {
+      fallback: React.createElement(GlobeFallback)
+    },
+      React.createElement(Spline, {
+        scene: '/added-assets/earth-realistic.splinecode',
+        style: { width: '100%', height: '100%', background: 'transparent' },
+        onLoad: makeTransparent,
+        onError: () => setHasError(true),
+      })
+    )
   );
 }

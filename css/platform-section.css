@@ -614,6 +614,25 @@
 
 
 /* ============================================
+   CSS FALLBACK STATE — iOS / narrow screens
+   JS sets data-fallback="true" before first paint when:
+     - iOS/iPadOS (mix-blend-mode+WebGL broken on WebKit)
+     - Screen width < 640px (Spline camera shows wrong crop)
+   Reset the WebGL-specific effects so the CSS sphere renders naturally.
+   ============================================ */
+
+.spline-globe-mount[data-fallback="true"] {
+    filter: none;
+    mask-image: none;
+    -webkit-mask-image: none;
+}
+
+.platform-split__right[data-fallback="true"] {
+    mix-blend-mode: normal;
+}
+
+
+/* ============================================
    TELEMETRY GRID — 2×2 pipeline flowchart
    Snake path: 01 → 02 ↓ 03 ← 04
    ============================================ */
