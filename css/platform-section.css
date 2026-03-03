@@ -618,17 +618,15 @@
    JS sets data-fallback="true" before first paint when:
      - iOS/iPadOS (mix-blend-mode+WebGL broken on WebKit)
      - Screen width < 640px (Spline camera shows wrong crop)
-   Reset the WebGL-specific effects so the CSS sphere renders naturally.
+   Only remove the ellipse mask — on non-square containers it creates an oval.
+   filter and mix-blend-mode are KEPT: the CSS sphere is a regular DOM element
+   (not WebGL), so mix-blend-mode:screen works correctly on iOS for it.
+   The filter gives the sphere its depth and glow as designed.
    ============================================ */
 
 .spline-globe-mount[data-fallback="true"] {
-    filter: none;
     mask-image: none;
     -webkit-mask-image: none;
-}
-
-.platform-split__right[data-fallback="true"] {
-    mix-blend-mode: normal;
 }
 
 
