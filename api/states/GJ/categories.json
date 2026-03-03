@@ -105,6 +105,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "AI effect? Helplines no longer ringingoff the hook with student distress calls",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ai-effect-helplines-no-longer-ringingoff-the-hook-with-student-distress-calls/articleshow/128954294.cms",
+        "summary": "Student helplines are receiving fewer distress calls, potentially due to the impact of AI. This trend suggests that AI may be helping students cope with their issues, reducing the need for human support. The decline in calls indicates a significant shift in how students are managing their emotional and academic struggles.",
+        "date_published": "2026-03-03",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 13,
         "title": "Gujarat Board exams: Swadesh, AI and India of My Dreams were essay topics on Class 10 language papers",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/gujarat-board-exams-swadesh-ai-and-india-of-my-dreams-were-essay-topics-on-class-10-language-papers/articleshow/128823877.cms",
@@ -461,5 +481,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

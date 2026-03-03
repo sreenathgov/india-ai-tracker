@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 2,
+        "title": "India AI Impact Summit 2026: $240 billion investment pledged by top firms",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-ai-impact-summit-2026-240-billion-investment-from-global-leaders/128958486",
+        "summary": "Top firms including Reliance Industries, Google, and Tata Group pledged $240 billion in investments at the India AI Impact Summit 2026. Over $200 billion of this investment will target AI infrastructure, hardware, and applications. The summit drew 6 lakh attendees from 100 countries, aiming to strengthen India's sovereign compute capacity and national AI infrastructure.",
+        "date_published": "2026-03-03",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Govt weighs new cyber framework as Airtel unveils AI Threat Research Centre",
         "url": "https://www.livemint.com/ai/artificial-intelligence/govt-weighs-new-cyber-framework-as-airtel-unveils-ai-threat-research-centre-11771601289911.html",
@@ -814,6 +834,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "India AI Impact Summit 2026: Global Backing, Rs 16.6 lakh cr investment commitments; AI development and other insights",
+        "url": "https://www.etnownews.com/technology/india-ai-impact-summit-2026-global-backing-rs-16-6-lakh-cr-investment-commitments-ai-development-and-other-insights-article-153735454",
+        "summary": "The India AI Impact Summit 2026 has garnered global backing and secured investment commitments worth Rs 16.6 lakh crore. The summit aimed to give a head start to India's AI development, which is still in its early stages. The event saw significant developments and insights into AI, marking a crucial step for the country's AI growth.",
+        "date_published": "2026-03-02",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "AI marches ahead to disrupt India&#039;s back office which it built for the world",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-marches-ahead-to-disrupt-indias-back-office-which-it-built-for-the-world/128943880",
+        "summary": "India's $300 billion outsourcing industry is facing disruption due to automation tools, leading to slower hiring and workforce cuts. The industry, which was built to serve the world, is now racing to adapt to the changing landscape. Automation is gaining ground, forcing the sector to transform and evolve to remain competitive.",
+        "date_published": "2026-03-02",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "India&#039;s AI data advantage, from user base to global superpower",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-data-advantage-from-user-base-to-global-superpower/128940369",
+        "summary": "India has a significant advantage in AI data due to its large user base, positioning it to become a global AI superpower. To achieve this, the country must invest in talent and computing capabilities. Leveraging its data for domestic AI development is also crucial for India's growth in the AI sector.",
+        "date_published": "2026-03-02",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "India&#039;s AI data advantage, from user base to global superpower",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-data-advantage-from-user-base-to-global-superpower/128845556",
@@ -1000,6 +1080,26 @@
         "summary": "IIIT-Una hosted a seminar on Indian Knowledge Systems, exploring ancient wisdom for a holistic future. The seminar featured discussions on Bharatiya Darshan, yoga, and indigenous science by RC Verma, and the director highlighted the importance of indigenous technology and conceptual thinking. Director Manish Gaur also drew parallels between Panini's grammar and AI.",
         "date_published": "2026-02-27",
         "source_name": "Tribune - Himachal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Spintly raises $8 Mn from Accel, ENRISSION India and others",
+        "url": "https://entrackr.com/snippets/spintly-raises-8-mn-from-accel-enrission-india-and-others-11160379",
+        "summary": "Spintly, a proptech startup, has raised $8 million in a Series A round led by Accel, with participation from ENRISSION India Capital, Chakra Growth Fund, Alumni Ventures, and Spyre VC. This funding round follows the company's previous raises, including Rs 3.5 crore in an extended seed round and $5.36 million from investors such as Letsventure and Accel Nest. The latest funding brings the total amount raised by Spintly to over $13 million.",
+        "date_published": "2026-02-27",
+        "source_name": "Entrackr - AI & Startups",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -5806,28 +5906,10 @@
         "premium_processed": false,
         "sector": null,
         "posted_to_x_at": null
-      },
-      {
-        "id": 5,
-        "title": "Spintly raises $8 Mn from Accel, ENRISSION India and others",
-        "url": "https://entrackr.com/snippets/spintly-raises-8-mn-from-accel-enrission-india-and-others-11160379",
-        "summary": "Spintly, a proptech startup, has raised $8 million in a Series A round led by Accel, with participation from ENRISSION India Capital, Chakra Growth Fund, Alumni Ventures, and Spyre VC. This funding round follows the company's previous raises, including Rs 3.5 crore in an extended seed round and $5.36 million from investors such as Letsventure and Accel Nest. The latest funding brings the total amount raised by Spintly to over $13 million.",
-        "date_published": "2026-02-27",
-        "source_name": "Entrackr - AI & Startups",
-        "category": "Major AI Developments",
-        "state_codes": [
-          "IN"
-        ],
-        "is_approved": true,
-        "is_deleted": false,
-        "processing_state": "PROCESSED",
-        "processing_attempts": 0,
-        "importance_score": 0.0,
-        "premium_processed": false,
-        "sector": null,
-        "posted_to_x_at": null
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

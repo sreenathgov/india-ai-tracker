@@ -181,6 +181,28 @@
         "premium_processed": false,
         "sector": null,
         "posted_to_x_at": null
+      }
+    ],
+    "Major AI Developments": [
+      {
+        "id": 7,
+        "title": "Karnataka to set up exclusive AI cell to power policy and scheme delivery",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/karnataka-to-set-up-exclusive-ai-cell-to-power-policy-and-scheme-delivery/articleshow/128951339.cms",
+        "summary": "Karnataka is establishing an exclusive AI cell to enhance policy and scheme delivery. The AI cell aims to leverage artificial intelligence to improve the state's governance and public services. This initiative is part of the state's efforts to harness technology for better administration and citizen welfare.",
+        "date_published": "2026-03-03",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
       },
       {
         "id": 6,
@@ -201,9 +223,7 @@
         "premium_processed": false,
         "sector": null,
         "posted_to_x_at": null
-      }
-    ],
-    "Major AI Developments": [
+      },
       {
         "id": 6,
         "title": "Scaling AI Beyond Pilots: The Operating Model Challenge for Tech Leaders",
@@ -1149,5 +1169,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

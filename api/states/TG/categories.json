@@ -88,6 +88,26 @@
     "Major AI Developments": [
       {
         "id": 6,
+        "title": "Trust, but verify: Rethinking our reliance on AI",
+        "url": "https://www.iiit.ac.in/trust-but-verify-rethinking-our-reliance-on-ai/",
+        "summary": "India is rethinking its reliance on AI, with a focus on developing sovereign AI models. The IIIT-H is advancing AI research and applications, including chip design for healthcare and mobility, and fairness in justice delivery systems. Various initiatives, such as training programs for women engineers and forums like the Urban AI Forum, are also being launched to promote AI development and adoption.",
+        "date_published": "2026-03-03",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
         "title": "AI, robotics to shape future battle-ready systems, says Lt Gen Neeraj Varshney",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/ai-robotics-to-shape-future-battle-ready-systems-says-lt-gen-neeraj-varshney/articleshow/128892442.cms",
         "summary": "Lt Gen Neeraj Varshney stated that AI and robotics will play a crucial role in shaping future battle-ready systems. He emphasized the importance of these technologies in transforming the military's capabilities. The integration of AI and robotics is expected to enhance the military's preparedness and effectiveness in future battles.",
@@ -773,5 +793,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
