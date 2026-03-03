@@ -79,6 +79,21 @@ function buildSite() {
         }
     });
 
+    // 5. Mirror Vite bundles into dist/dist/ so that dist/index.html can resolve
+    //    <script src="dist/spline-globe-bundle.js"> correctly when Vercel serves from dist/
+    const BUNDLE_NAMES = ['text-pressure-bundle.js', 'spline-globe-bundle.js', 'scroll-reveal-bundle.js'];
+    const distDistDir = path.join(DIST_DIR, 'dist');
+    if (!fs.existsSync(distDistDir)) {
+        fs.mkdirSync(distDistDir, { recursive: true });
+    }
+    BUNDLE_NAMES.forEach(bundle => {
+        const src = path.join(DIST_DIR, bundle);
+        if (fs.existsSync(src)) {
+            fs.copyFileSync(src, path.join(distDistDir, bundle));
+            console.log(`✓ Mirrored bundle → dist/dist/${bundle}`);
+        }
+    });
+
     console.log('✅ Base build complete. Ready for static page generation.');
 }
 
