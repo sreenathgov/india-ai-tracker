@@ -36,8 +36,8 @@
     }
 }
 
-/* iPad (both orientations) — compact height, content-driven */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* iPad landscape — compact */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
     .manifesto-section {
         min-height: 50vh;
         padding: 3.5rem 3rem;
@@ -45,6 +45,19 @@
 
     .manifesto-mount {
         max-width: 720px;
+    }
+}
+
+/* iPad portrait — generous equal breathing room above & below the text */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+    .manifesto-section {
+        min-height: 85vh;
+        padding: 7rem 3rem;
+        /* align-items: center (from base) keeps the text perfectly centred */
+    }
+
+    .manifesto-mount {
+        max-width: 640px;
     }
 }
 
