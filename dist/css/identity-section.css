@@ -1,0 +1,418 @@
+/* ============================================
+   SECTION 4: IDENTITY SECTION
+   Background: #f7f5ee (matches advisory section)
+   Grid lines: #db4a2b (brand orange-red)
+   ============================================ */
+
+/* --- Transition zone from advisory to identity --- */
+.identity-transition {
+    position: relative;
+    z-index: 2;
+    height: 1px;
+    background: rgba(10, 47, 82, 0.08);
+    pointer-events: none;
+}
+
+/* --- Section wrapper --- */
+.identity-section {
+    background: #f7f5ee;
+    position: relative;
+    z-index: 2;
+    padding: 60px 4rem 0;
+    overflow: hidden;
+}
+
+/* --- Content container --- */
+.identity-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: center;
+}
+
+/* --- Left column: Portrait --- */
+.identity-portrait {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+
+.identity-portrait__image {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    filter: grayscale(100%) contrast(1.1);
+    border-radius: 4px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* --- Right column: text --- */
+.identity-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Statement block -- visual anchor */
+.identity-statement {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(1.7rem, 3.1vw, 2.5rem);
+    color: #0a2f52;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+.identity-statement em {
+    font-style: italic;
+}
+
+/* CTA button */
+.identity-cta {
+    display: inline-block;
+    align-self: flex-start;
+    background: #0a2f52;
+    color: #f4ebd0;
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: none;
+    border-radius: 4px;
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+    transition: background 300ms ease, transform 150ms ease;
+}
+
+.identity-cta:hover {
+    background: #0d3a66;
+    transform: translateY(-1px);
+}
+
+.identity-cta:active {
+    transform: translateY(0);
+}
+
+/* Name and meta block */
+.identity-meta {
+    display: flex;
+    flex-direction: column;
+    margin-top: -0.75rem;
+}
+
+.identity-name {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    color: #0a2f52;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin: 0;
+}
+
+.identity-title {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #4c6786;
+    margin: 0.25rem 0 0 0;
+    letter-spacing: 0.02em;
+}
+
+/* Credentials list */
+.identity-credentials {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.identity-credentials li {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.8125rem;
+    color: #4c6786;
+    line-height: 1.5;
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.identity-credentials li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: rgba(10, 47, 82, 0.25);
+    font-size: 0.7rem;
+    line-height: 1.7;
+}
+
+/* --- Entrance animation targets --- */
+.identity-animate {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* --- Footer override (identity section precedes footer) --- */
+.identity-section ~ .site-footer {
+    background: #f7f5ee;
+    border-top: 1px solid rgba(10, 47, 82, 0.06);
+    padding: 2rem 2rem 1.5rem;
+}
+
+.identity-section ~ .site-footer .footer-byline {
+    color: #0a2f52;
+    opacity: 0.4;
+}
+
+.identity-section ~ .site-footer .footer-links {
+    color: #0a2f52;
+    opacity: 0.35;
+}
+
+.identity-section ~ .site-footer .footer-links a {
+    color: #0a2f52;
+}
+
+.identity-section ~ .site-footer .footer-links a:hover {
+    opacity: 0.8;
+}
+
+.identity-section ~ .site-footer .footer-links .separator {
+    color: #0a2f52;
+    opacity: 0.2;
+}
+
+/* ============================================
+   RESPONSIVE: Tablet (<=1200px)
+   ============================================ */
+@media (max-width: 1200px) {
+    .identity-section {
+        padding: 50px 3rem 0;
+    }
+
+    .identity-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .identity-text {
+        padding-left: 60px;
+        padding-bottom: 50px;
+    }
+
+    .identity-statement {
+        font-size: clamp(1.55rem, 2.8vw, 2.25rem);
+    }
+
+    .identity-portrait__image {
+        max-width: 460px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE: Mobile (<=768px)
+   ============================================ */
+@media (max-width: 768px) {
+    .identity-transition {
+        height: 1px;
+    }
+
+    /* Top padding only — no bottom, photo flushes to footer */
+    .identity-section {
+        padding: 52px 1.5rem 0;
+    }
+
+    /* Single column, no gap — portrait margin-top handles spacing */
+    .identity-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+        align-items: start;
+    }
+
+    /* Text column: first visually, centered */
+    .identity-text {
+        order: 1;
+        padding-left: 0;
+        border-left: none;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    /* Re-order text children: statement → meta → cta */
+    .identity-statement {
+        order: 1;
+        font-size: 1.5rem;
+        line-height: 1.35;
+    }
+
+    /* Meta block: order middle, center its children */
+    .identity-meta {
+        order: 2;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    /* Divider between quote and name — no DOM change needed */
+    .identity-meta::before {
+        content: '';
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        height: 1px;
+        background: rgba(10, 47, 82, 0.12);
+        margin: 0 auto 1.5rem auto;
+    }
+
+    .identity-name {
+        font-size: 0.8125rem;
+        text-align: center;
+    }
+
+    .identity-title {
+        text-align: center;
+        margin-top: 0.25rem;
+    }
+
+    /* Center the credentials block; keep text left-aligned inside it */
+    .identity-credentials {
+        width: fit-content;
+        margin: 0.875rem auto 0 auto;
+        text-align: left;
+    }
+
+    .identity-credentials li {
+        font-size: 0.75rem;
+        text-align: left;
+    }
+
+    /* CTA: last among text children, full width */
+    .identity-cta {
+        order: 3;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        align-self: stretch;
+        text-align: center;
+    }
+
+    /* Portrait: second in grid (after text), bottom flush to footer */
+    .identity-portrait {
+        order: 2;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 1.25rem;
+        margin-bottom: 0;
+    }
+
+    .identity-portrait__image {
+        display: block;
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+        margin-bottom: 0;
+    }
+}
+
+/* ============================================
+   RESPONSIVE: Small phone (<=480px)
+   ============================================ */
+@media (max-width: 480px) {
+    .identity-section {
+        padding: 40px 1rem 0;
+    }
+
+    .identity-statement {
+        font-size: 1.35rem;
+        line-height: 1.4;
+    }
+
+    .identity-meta::before {
+        max-width: 220px;
+        margin-bottom: 1.25rem;
+    }
+
+    .identity-portrait {
+        margin-top: 1rem;
+    }
+
+    .identity-portrait__image {
+        max-width: 320px;
+    }
+
+    .identity-cta {
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* ============================================
+   RESPONSIVE: Landscape (<=768px)
+   ============================================ */
+@media (max-width: 768px) and (orientation: landscape) {
+    .identity-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        align-items: center;
+    }
+
+    /* Restore DOM order in landscape */
+    .identity-portrait {
+        order: unset;
+        margin-top: 0;
+        padding-left: 20px;
+    }
+
+    .identity-text {
+        order: unset;
+        padding-left: 2rem;
+        text-align: left;
+        gap: 1.25rem;
+    }
+
+    .identity-statement { order: unset; }
+
+    .identity-meta {
+        order: unset;
+        align-items: flex-start;
+        margin-top: -0.75rem;
+    }
+
+    /* No divider in two-column landscape */
+    .identity-meta::before {
+        display: none;
+    }
+
+    .identity-credentials {
+        width: auto;
+        margin: 0.875rem 0 0 0;
+        text-align: left;
+    }
+
+    .identity-cta {
+        order: unset;
+        display: inline-block;
+        width: auto;
+        align-self: flex-start;
+    }
+
+    .identity-portrait__image {
+        max-width: 320px;
+        margin-bottom: 0;
+    }
+}

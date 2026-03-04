@@ -8,7 +8,7 @@
 
 .platform-section {
     background: transparent;
-    padding: 3rem 2rem 3rem;
+    padding: 5rem 2rem 3rem;
     position: relative;
     /* z-index intentionally omitted — a stacking context here blocks mix-blend-mode
        from reaching the page background (the fixed grid canvas). The section
@@ -26,13 +26,12 @@
     gap: 0;
     max-width: 1400px;
     margin: 0 auto;
-    min-height: 560px;
+    min-height: 700px;
     align-items: stretch;
 }
 
 .platform-split__left {
-    padding: 0 3rem 0 0;
-    /* right gap only — header is now above the split */
+    padding: 2rem 3rem 2rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,10 +40,10 @@
 .platform-split__right {
     position: relative;
     overflow: hidden;
-    min-height: 0;
+    min-height: 500px;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -53,10 +52,7 @@
    ============================================ */
 
 .platform-header {
-    max-width: 1400px;
-    margin: 0 auto 1.75rem;
-    /* Aligns left-edge with platform-split — no extra padding needed,
-       section's own 2rem horizontal padding handles spacing */
+    margin-bottom: 2rem;
 }
 
 .platform-title {
@@ -67,18 +63,10 @@
     text-transform: uppercase;
     letter-spacing: 0.02em;
     line-height: 0.9;
-    margin: 0 0 0.875rem 0;
+    margin: 0 0 1rem 0;
     user-select: none;
-    /* CSS fallback gradient — guarantees visibility before ShinyText JS runs.
-       ShinyText overrides backgroundImage and backgroundPosition at runtime. */
-    background-image: linear-gradient(120deg,
-            rgba(244, 235, 208, 1) 0%,
-            rgba(244, 235, 208, 1) 35%,
-            #ffffff 50%,
-            rgba(244, 235, 208, 1) 65%,
-            rgba(244, 235, 208, 1) 100%);
+    /* Gradient shine setup — animated by ShinyText JS */
     background-size: 200% auto;
-    background-position: 0% center;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -171,7 +159,8 @@
 
 .sector-video-wrapper {
     width: 100%;
-    height: 100%;
+    max-width: 600px;
+    aspect-ratio: 5 / 4;
     position: relative;
     border-radius: 12px;
     overflow: hidden;
@@ -184,7 +173,7 @@
 .sector-video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
     background: transparent;
 }
@@ -441,13 +430,9 @@
 
     .platform-split__right {
         min-height: auto;
-        order: 0;
-        /* Video on top on tablet */
+        order: 0; /* Video on top on tablet */
     }
 
-    .platform-header {
-        margin-bottom: 1.5rem;
-    }
 }
 
 
@@ -461,7 +446,7 @@
     }
 
     .platform-header {
-        margin-bottom: 1.25rem;
+        margin-bottom: 1.5rem;
     }
 
     .platform-split__right {
@@ -563,307 +548,208 @@
    ============================================ */
 
 .telemetry-grid {
-    display: grid;
-    grid-template-columns: 1fr 44px 1fr;
-    grid-template-rows: auto 56px auto;
-    grid-template-areas:
-        "n01    hconn1  n02"
-        ".      .       vconn"
-        "n04    hconn2  n03";
-    align-items: stretch;
+  display: grid;
+  grid-template-columns: 1fr 44px 1fr;
+  grid-template-rows: auto 56px auto;
+  grid-template-areas:
+    "n01    hconn1  n02"
+    ".      .       vconn"
+    "n04    hconn2  n03";
+  align-items: stretch;
 }
 
-.tg-n01 {
-    grid-area: n01;
-}
-
-.tg-hconn1 {
-    grid-area: hconn1;
-}
-
-.tg-n02 {
-    grid-area: n02;
-}
-
-.tg-vconn {
-    grid-area: vconn;
-}
-
-.tg-n03 {
-    grid-area: n03;
-}
-
-.tg-hconn2 {
-    grid-area: hconn2;
-}
-
-.tg-n04 {
-    grid-area: n04;
-}
+.tg-n01    { grid-area: n01; }
+.tg-hconn1 { grid-area: hconn1; }
+.tg-n02    { grid-area: n02; }
+.tg-vconn  { grid-area: vconn; }
+.tg-n03    { grid-area: n03; }
+.tg-hconn2 { grid-area: hconn2; }
+.tg-n04    { grid-area: n04; }
 
 /* NODE CARD — glassmorphism */
 .telemetry-node {
-    background: rgba(8, 38, 68, 0.45);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(244, 235, 208, 0.07);
-    border-top: 2px solid rgba(230, 81, 0, 0.45);
-    border-radius: 10px;
-    padding: 1.25rem;
-    box-sizing: border-box;
-    /* min-height ensures the shorter row grows to match the taller row
+  background: rgba(8, 38, 68, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(244, 235, 208, 0.07);
+  border-top: 2px solid rgba(230, 81, 0, 0.45);
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  /* min-height ensures the shorter row grows to match the taller row
      without letting cards balloon beyond their content */
-    min-height: 195px;
-    transition: border-top-color 0.3s ease, background 0.3s ease;
+  min-height: 195px;
+  transition: border-top-color 0.3s ease, background 0.3s ease;
 }
-
 .telemetry-node:hover {
-    border-top-color: rgba(230, 81, 0, 0.9);
-    background: rgba(8, 38, 68, 0.65);
+  border-top-color: rgba(230, 81, 0, 0.9);
+  background: rgba(8, 38, 68, 0.65);
 }
-
 .telemetry-node__id {
-    font-family: 'Courier New', monospace;
-    font-size: 0.6rem;
-    color: #e65100;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    display: block;
-    margin-bottom: 0.4rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.6rem;
+  color: #e65100;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: block;
+  margin-bottom: 0.4rem;
 }
-
 .telemetry-node__title {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 600;
-    font-size: clamp(0.9rem, 1.3vw, 1.1rem);
-    color: #f4ebd0;
-    line-height: 1.2;
-    margin: 0 0 0.5rem;
-    letter-spacing: 0.03em;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+  color: #f4ebd0;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.03em;
 }
-
 .telemetry-node__body {
-    font-family: 'Telegraf', 'Inter', sans-serif;
-    font-size: 0.7rem;
-    color: rgba(244, 235, 208, 0.55);
-    line-height: 1.6;
-    margin: 0;
+  font-family: 'Telegraf', 'Inter', sans-serif;
+  font-size: 0.7rem;
+  color: rgba(244, 235, 208, 0.55);
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* HORIZONTAL CONNECTORS */
 .telemetry-h-conn {
-    position: relative;
-    display: flex;
-    align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
-
 .telemetry-h-conn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 4px;
-    right: 8px;
-    height: 2px;
-    transform: translateY(-50%);
-    background: repeating-linear-gradient(to right,
-            rgba(230, 81, 0, 0.45) 0, rgba(230, 81, 0, 0.45) 4px,
-            transparent 4px, transparent 8px);
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  right: 8px;
+  height: 2px;
+  transform: translateY(-50%);
+  background: repeating-linear-gradient(
+    to right,
+    rgba(230, 81, 0, 0.45) 0, rgba(230, 81, 0, 0.45) 4px,
+    transparent 4px, transparent 8px
+  );
 }
-
 /* Arrowhead right (→) */
 .telemetry-h-conn::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 7px solid rgba(230, 81, 0, 0.7);
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0; height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid rgba(230, 81, 0, 0.7);
 }
-
 /* Arrowhead left (←) */
-.telemetry-h-conn--rev::before {
-    left: 8px;
-    right: 4px;
-}
-
+.telemetry-h-conn--rev::before { left: 8px; right: 4px; }
 .telemetry-h-conn--rev::after {
-    right: auto;
-    left: 0;
-    border-left: none;
-    border-right: 7px solid rgba(230, 81, 0, 0.7);
+  right: auto;
+  left: 0;
+  border-left: none;
+  border-right: 7px solid rgba(230, 81, 0, 0.7);
 }
 
 /* Animated dot — shared */
 .telemetry-conn-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #e65100;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #e65100;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
-
 .telemetry-h-conn .telemetry-conn-dot {
-    animation: h-pulse-fwd 2.2s linear infinite;
+  animation: h-pulse-fwd 2.2s linear infinite;
 }
-
 .telemetry-h-conn--rev .telemetry-conn-dot {
-    animation: h-pulse-rev 2.2s linear infinite;
-    animation-delay: 1.1s;
+  animation: h-pulse-rev 2.2s linear infinite;
+  animation-delay: 1.1s;
 }
 
 @keyframes h-pulse-fwd {
-    0% {
-        left: 4px;
-        opacity: 0;
-    }
-
-    8% {
-        opacity: 0.9;
-    }
-
-    88% {
-        opacity: 0.35;
-    }
-
-    100% {
-        left: calc(100% - 10px);
-        opacity: 0;
-    }
+  0%   { left: 4px;              opacity: 0; }
+  8%   { opacity: 0.9; }
+  88%  { opacity: 0.35; }
+  100% { left: calc(100% - 10px); opacity: 0; }
 }
-
 @keyframes h-pulse-rev {
-    0% {
-        left: calc(100% - 10px);
-        opacity: 0;
-    }
-
-    8% {
-        opacity: 0.9;
-    }
-
-    88% {
-        opacity: 0.35;
-    }
-
-    100% {
-        left: 4px;
-        opacity: 0;
-    }
+  0%   { left: calc(100% - 10px); opacity: 0; }
+  8%   { opacity: 0.9; }
+  88%  { opacity: 0.35; }
+  100% { left: 4px;              opacity: 0; }
 }
 
 /* VERTICAL CONNECTOR (right column, ↓) */
 .telemetry-v-conn {
-    position: relative;
-    display: flex;
-    justify-content: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
-
 .telemetry-v-conn::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 4px;
-    bottom: 8px;
-    width: 2px;
-    transform: translateX(-50%);
-    background: repeating-linear-gradient(to bottom,
-            rgba(230, 81, 0, 0.45) 0, rgba(230, 81, 0, 0.45) 4px,
-            transparent 4px, transparent 8px);
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 4px; bottom: 8px;
+  width: 2px;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(230, 81, 0, 0.45) 0, rgba(230, 81, 0, 0.45) 4px,
+    transparent 4px, transparent 8px
+  );
 }
-
 /* Arrowhead down */
 .telemetry-v-conn::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 7px solid rgba(230, 81, 0, 0.7);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid rgba(230, 81, 0, 0.7);
 }
-
 .telemetry-v-conn .telemetry-conn-dot {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
-    animation: v-pulse-down 2.2s linear infinite;
-    animation-delay: 0.6s;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  animation: v-pulse-down 2.2s linear infinite;
+  animation-delay: 0.6s;
 }
-
 @keyframes v-pulse-down {
-    0% {
-        top: 4px;
-        opacity: 0;
-    }
-
-    8% {
-        opacity: 0.9;
-    }
-
-    88% {
-        opacity: 0.35;
-    }
-
-    100% {
-        top: calc(100% - 10px);
-        opacity: 0;
-    }
+  0%   { top: 4px;              opacity: 0; }
+  8%   { opacity: 0.9; }
+  88%  { opacity: 0.35; }
+  100% { top: calc(100% - 10px); opacity: 0; }
 }
 
 /* MOBILE: collapse to vertical flex stack */
 @media (max-width: 1024px) {
-    .telemetry-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .telemetry-h-conn,
-    .telemetry-v-conn {
-        display: none;
-    }
-
-    /* Restore node reading order via order property */
-    .tg-n01 {
-        order: 1;
-    }
-
-    .tg-n02 {
-        order: 2;
-    }
-
-    .tg-n03 {
-        order: 3;
-    }
-
-    .tg-n04 {
-        order: 4;
-    }
-
-    /* Simple vertical connector between stacked cards */
-    .telemetry-node:not(:last-child) {
-        margin-bottom: 0;
-        border-radius: 10px 10px 0 0;
-        border-bottom: none;
-    }
-
-    .telemetry-node__title {
-        font-size: 1rem;
-    }
-
-    .telemetry-node__body {
-        font-size: 0.68rem;
-    }
+  .telemetry-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .telemetry-h-conn,
+  .telemetry-v-conn { display: none; }
+  /* Restore node reading order via order property */
+  .tg-n01 { order: 1; }
+  .tg-n02 { order: 2; }
+  .tg-n03 { order: 3; }
+  .tg-n04 { order: 4; }
+  /* Simple vertical connector between stacked cards */
+  .telemetry-node:not(:last-child) {
+    margin-bottom: 0;
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+  }
+  .telemetry-node__title { font-size: 1rem; }
+  .telemetry-node__body { font-size: 0.68rem; }
 }
 
 

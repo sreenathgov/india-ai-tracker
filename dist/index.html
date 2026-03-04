@@ -5,10 +5,10 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EF8EXSDV07"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-EF8EXSDV07');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EF8EXSDV07');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="css/advisory-section.css?v=6">
     <link rel="stylesheet" href="css/contact-panel.css?v=1">
     <link rel="stylesheet" href="css/identity-section.css?v=6">
-    <link rel="stylesheet" href="css/platform-section.css?v=7">
+    <link rel="stylesheet" href="css/platform-section.css?v=3">
     <link rel="stylesheet" href="css/manifesto-section.css?v=1">
     <link rel="stylesheet" href="css/footer.css?v=3">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -197,70 +197,56 @@
 
         <!-- Section 2.5: Sector Watch Platform -->
         <section class="platform-section" id="platformSection">
-            <!-- Full-width header above the split — aligns with split's max-width -->
-            <div class="platform-header">
-                <h2 class="platform-title platform-animate" id="platformTitle">Sector Watch</h2>
-                <p class="platform-intro platform-animate">An AI-native advisory platform that helps businesses navigate
-                    trade, policy, and compliance complexity with confidence.</p>
-            </div>
-            <div class="platform-split">
-                <!-- LEFT: Telemetry Architecture Flowchart -->
-                <div class="platform-split__left">
-                    <div class="telemetry-grid">
-                        <!-- Node 01 — top left -->
-                        <div class="telemetry-node tg-n01 platform-animate">
-                            <span class="telemetry-node__id">[ SYS.NODE_01 ]</span>
-                            <h3 class="telemetry-node__title">GLOBAL POLICY INTELLIGENCE</h3>
-                            <p class="telemetry-node__body">We monitor trade, regulatory, and industrial policy
-                                developments across major markets and translate them into structured signals your
-                                business can act on. No PDFs. No static alerts. Just a continuously updated intelligence
-                                layer aligned to your sector.</p>
-                        </div>
-                        <!-- H-connector → -->
-                        <div class="telemetry-h-conn tg-hconn1" aria-hidden="true"><span
-                                class="telemetry-conn-dot"></span></div>
-                        <!-- Node 02 — top right -->
-                        <div class="telemetry-node tg-n02 platform-animate">
-                            <span class="telemetry-node__id">[ SYS.NODE_02 ]</span>
-                            <h3 class="telemetry-node__title">BUSINESS CONTEXT ENGINE</h3>
-                            <p class="telemetry-node__body">Every regulation does not apply to every company. We align
-                                global policy shifts with your products, markets, and operating footprint. You clearly
-                                see what matters, what does not, and where exposure is building.</p>
-                        </div>
-                        <!-- V-connector ↓ (right column) -->
-                        <div class="telemetry-v-conn tg-vconn" aria-hidden="true"><span
-                                class="telemetry-conn-dot"></span></div>
-                        <!-- Node 03 — bottom right -->
-                        <div class="telemetry-node tg-n03 platform-animate">
-                            <span class="telemetry-node__id">[ SYS.NODE_03 ]</span>
-                            <h3 class="telemetry-node__title">STRATEGIC RESPONSE MODELLING</h3>
-                            <p class="telemetry-node__body">When conditions change, you need clarity and speed. We
-                                evaluate impact scenarios and outline practical response pathways, whether that involves
-                                compliance alignment, market repositioning, or incentive utilisation.</p>
-                        </div>
-                        <!-- H-connector ← -->
-                        <div class="telemetry-h-conn telemetry-h-conn--rev tg-hconn2" aria-hidden="true"><span
-                                class="telemetry-conn-dot"></span></div>
-                        <!-- Node 04 — bottom left -->
-                        <div class="telemetry-node tg-n04 platform-animate">
-                            <span class="telemetry-node__id">[ SYS.NODE_04 ]</span>
-                            <h3 class="telemetry-node__title">EMBEDDED AI ADVISORY</h3>
-                            <p class="telemetry-node__body">Regulatory intelligence should not sit outside your
-                                operations. Our platform functions as a continuous advisory layer, delivering alerts,
-                                structured briefs, and decision support directly within your workflow.</p>
-                        </div>
-                    </div>
-                </div> <!-- end .platform-split__left -->
-                <!-- RIGHT: Sector Watch Video -->
-                <div class="platform-split__right">
-                    <div class="sector-video-wrapper">
-                        <video class="sector-video" autoplay loop muted playsinline disablepictureinpicture>
-                            <source src="added-assets/sector-watch-web-video-KL-HEVC.mp4" type="video/mp4; codecs=hvc1">
-                            <source src="added-assets/sector-watch-web-video-KL.webm" type="video/webm">
-                        </video>
-                    </div>
+          <div class="platform-split">
+            <!-- LEFT: Telemetry Architecture Flowchart -->
+            <div class="platform-split__left">
+              <div class="platform-header">
+                <h2 class="platform-title platform-animate" id="platformTitle">Sector-Watch</h2>
+                <p class="platform-intro platform-animate">An AI-native advisory platform that helps businesses navigate trade, policy, and compliance complexity with confidence.</p>
+              </div>
+              <div class="telemetry-grid">
+                <!-- Node 01 — top left -->
+                <div class="telemetry-node tg-n01 platform-animate">
+                  <span class="telemetry-node__id">[ SYS.NODE_01 ]</span>
+                  <h3 class="telemetry-node__title">GLOBAL POLICY INTELLIGENCE</h3>
+                  <p class="telemetry-node__body">We monitor trade, regulatory, and industrial policy developments across major markets and translate them into structured signals your business can act on. No PDFs. No static alerts. Just a continuously updated intelligence layer aligned to your sector.</p>
                 </div>
+                <!-- H-connector → -->
+                <div class="telemetry-h-conn tg-hconn1" aria-hidden="true"><span class="telemetry-conn-dot"></span></div>
+                <!-- Node 02 — top right -->
+                <div class="telemetry-node tg-n02 platform-animate">
+                  <span class="telemetry-node__id">[ SYS.NODE_02 ]</span>
+                  <h3 class="telemetry-node__title">BUSINESS CONTEXT ENGINE</h3>
+                  <p class="telemetry-node__body">Every regulation does not apply to every company. We align global policy shifts with your products, markets, and operating footprint. You clearly see what matters, what does not, and where exposure is building.</p>
+                </div>
+                <!-- V-connector ↓ (right column) -->
+                <div class="telemetry-v-conn tg-vconn" aria-hidden="true"><span class="telemetry-conn-dot"></span></div>
+                <!-- Node 03 — bottom right -->
+                <div class="telemetry-node tg-n03 platform-animate">
+                  <span class="telemetry-node__id">[ SYS.NODE_03 ]</span>
+                  <h3 class="telemetry-node__title">STRATEGIC RESPONSE MODELLING</h3>
+                  <p class="telemetry-node__body">When conditions change, you need clarity and speed. We evaluate impact scenarios and outline practical response pathways, whether that involves compliance alignment, market repositioning, or incentive utilisation.</p>
+                </div>
+                <!-- H-connector ← -->
+                <div class="telemetry-h-conn telemetry-h-conn--rev tg-hconn2" aria-hidden="true"><span class="telemetry-conn-dot"></span></div>
+                <!-- Node 04 — bottom left -->
+                <div class="telemetry-node tg-n04 platform-animate">
+                  <span class="telemetry-node__id">[ SYS.NODE_04 ]</span>
+                  <h3 class="telemetry-node__title">EMBEDDED AI ADVISORY</h3>
+                  <p class="telemetry-node__body">Regulatory intelligence should not sit outside your operations. Our platform functions as a continuous advisory layer, delivering alerts, structured briefs, and decision support directly within your workflow.</p>
+                </div>
+              </div>
             </div>
+            <!-- RIGHT: Sector Watch Video -->
+            <div class="platform-split__right">
+              <div class="sector-video-wrapper">
+                <video class="sector-video" autoplay loop muted playsinline disablepictureinpicture>
+                  <source src="added-assets/sector-watch-web-video-KL-HEVC.mp4" type="video/mp4; codecs=hvc1">
+                  <source src="added-assets/sector-watch-web-video-KL.webm" type="video/webm">
+                </video>
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- MANIFESTO: Full-viewport scroll-reveal statement -->
@@ -270,23 +256,21 @@
 
         <!-- Waitlist Orange Strip CTA -->
         <section class="waitlist-hero-section" id="waitlistHeroSection">
-            <div class="waitlist-hero-container">
-                <div class="waitlist-hero-text">
-                    <h3 class="waitlist-hero-title" id="waitlistHeroTitle">Request Platform Access</h3>
-                    <p class="waitlist-hero-subtitle" id="waitlistHeroSubtitle">Join the waitlist for early access to
-                        Kanan Labs' intelligence platform.</p>
-                </div>
-                <form class="waitlist-hero-form" id="platformWaitlistForm">
-                    <input type="text" name="name" placeholder="Full Name" required />
-                    <input type="text" name="company" placeholder="Company / Organisation" required />
-                    <input type="email" name="email" placeholder="Work Email" required />
-                    <button type="submit">Join Waitlist</button>
-                </form>
+          <div class="waitlist-hero-container">
+            <div class="waitlist-hero-text">
+              <h3 class="waitlist-hero-title" id="waitlistHeroTitle">Request Platform Access</h3>
+              <p class="waitlist-hero-subtitle" id="waitlistHeroSubtitle">Join the waitlist for early access to Kanan Labs' intelligence platform.</p>
             </div>
-            <div style="max-width: 960px; margin: 0 auto;">
-                <p class="waitlist-success-message" id="platformWaitlistSuccess">Thank you — we'll be in touch shortly
-                    with platform access details.</p>
-            </div>
+            <form class="waitlist-hero-form" id="platformWaitlistForm">
+              <input type="text" name="name" placeholder="Full Name" required />
+              <input type="text" name="company" placeholder="Company / Organisation" required />
+              <input type="email" name="email" placeholder="Work Email" required />
+              <button type="submit">Join Waitlist</button>
+            </form>
+          </div>
+          <div style="max-width: 960px; margin: 0 auto;">
+            <p class="waitlist-success-message" id="platformWaitlistSuccess">Thank you — we'll be in touch shortly with platform access details.</p>
+          </div>
         </section>
 
         <!-- Section 3: Strategic Advisory Layer -->
@@ -315,8 +299,12 @@
                     <!-- LEFT: Brand zone -->
                     <div class="kl-footer__brand">
 
-                        <img src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png" alt="Kanan Labs"
-                            class="kl-footer__logo" draggable="false">
+                        <img
+                            src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png"
+                            alt="Kanan Labs"
+                            class="kl-footer__logo"
+                            draggable="false"
+                        >
 
                         <p class="kl-footer__tagline">India's AI Governance Intelligence</p>
 
@@ -324,15 +312,23 @@
                         <div>
                             <p class="kl-footer__nl-label">Weekly Brief</p>
                             <form class="kl-footer__nl-form" id="footerNewsletterForm">
-                                <input type="email" class="kl-footer__nl-input" placeholder="Your email address"
-                                    autocomplete="email" required>
+                                <input
+                                    type="email"
+                                    class="kl-footer__nl-input"
+                                    placeholder="Your email address"
+                                    autocomplete="email"
+                                    required
+                                >
                                 <button type="submit" class="kl-footer__nl-submit">Subscribe</button>
                             </form>
                         </div>
 
                         <!-- Schedule Consultation -->
-                        <button class="kl-footer__consult" type="button"
-                            onclick="if(window.contactPanel) window.contactPanel.open()">
+                        <button
+                            class="kl-footer__consult"
+                            type="button"
+                            onclick="if(window.contactPanel) window.contactPanel.open()"
+                        >
                             Schedule Consultation →
                         </button>
 
@@ -345,10 +341,8 @@
                         <div class="kl-footer__col">
                             <h4 class="kl-footer__col-heading">Advisory</h4>
                             <ul class="kl-footer__col-links">
-                                <li><a href="#" data-engagement="Regulatory &amp; Product Advisory">Regulatory
-                                        Trajectory</a></li>
-                                <li><a href="#" data-engagement="Incentive &amp; Scheme Structuring">Incentive
-                                        Structuring</a></li>
+                                <li><a href="#" data-engagement="Regulatory &amp; Product Advisory">Regulatory Trajectory</a></li>
+                                <li><a href="#" data-engagement="Incentive &amp; Scheme Structuring">Incentive Structuring</a></li>
                                 <li><a href="#" data-engagement="Governance Assessment">Governance Readiness</a></li>
                                 <li><a href="#" data-engagement="Cross-Border Readiness">Cross-Border Advisory</a></li>
                             </ul>
@@ -368,8 +362,7 @@
                         <div class="kl-footer__col">
                             <h4 class="kl-footer__col-heading">Follow</h4>
                             <ul class="kl-footer__col-links">
-                                <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank"
-                                        rel="noopener">LinkedIn</a></li>
+                                <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank" rel="noopener">LinkedIn</a></li>
                                 <li><a href="#" target="_blank" rel="noopener">Twitter</a></li>
                                 <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
                             </ul>
@@ -389,8 +382,13 @@
 
                 <!-- BOTTOM: Watermark logo -->
                 <div class="kl-footer__watermark">
-                    <img src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png" alt=""
-                        class="kl-footer__watermark-img" aria-hidden="true" draggable="false">
+                    <img
+                        src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png"
+                        alt=""
+                        class="kl-footer__watermark-img"
+                        aria-hidden="true"
+                        draggable="false"
+                    >
                 </div>
 
             </div>

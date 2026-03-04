@@ -14,8 +14,7 @@ venv/
 env/
 ENV/
 *.egg-info/
-dist/
-build/
+dist/assets/
 
 # Database
 *.db

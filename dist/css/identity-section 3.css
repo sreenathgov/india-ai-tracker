@@ -1,0 +1,275 @@
+/* ============================================
+   SECTION 4: IDENTITY SECTION
+   White base + contained ripple grid canvas
+   Transition from advisory #f7f5ee to white
+   ============================================ */
+
+/* --- Transition zone from advisory to identity --- */
+.identity-transition {
+    position: relative;
+    z-index: 2;
+    height: 120px;
+    background: linear-gradient(to bottom, #f7f5ee 0%, #ffffff 100%);
+    pointer-events: none;
+}
+
+/* --- Section wrapper --- */
+.identity-section {
+    background: #ffffff;
+    position: relative;
+    z-index: 2;
+    padding: 80px 2rem 100px;
+    overflow: hidden;
+    min-height: 60vh;
+}
+
+/* --- Section-contained canvas background --- */
+.identity-section__canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+/* --- Content container --- */
+.identity-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* --- Left column --- */
+.identity-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* Statement block -- visual anchor */
+.identity-statement {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+    color: #0a2f52;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+.identity-statement em {
+    font-style: italic;
+}
+
+/* Name and meta block */
+.identity-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.identity-name {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: #0a2f52;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin: 0;
+}
+
+.identity-title {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.8125rem;
+    color: #4c6786;
+    margin: 0.25rem 0 0 0;
+    letter-spacing: 0.02em;
+}
+
+/* Credentials list */
+.identity-credentials {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.identity-credentials li {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.8125rem;
+    color: #4c6786;
+    line-height: 1.5;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.identity-credentials li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 4px;
+    height: 4px;
+    background: #db4a2b;
+    border-radius: 50%;
+}
+
+/* --- Right column: Portrait --- */
+.identity-portrait {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.identity-portrait__image {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    filter: grayscale(100%) contrast(1.1);
+    border-radius: 4px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* --- Entrance animation targets --- */
+.identity-animate {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* --- Footer override (identity section precedes footer) --- */
+.identity-section ~ .site-footer {
+    background: #ffffff;
+    border-top: 1px solid rgba(10, 47, 82, 0.06);
+    padding: 2rem 2rem 1.5rem;
+}
+
+.identity-section ~ .site-footer .footer-byline {
+    color: #0a2f52;
+    opacity: 0.4;
+}
+
+.identity-section ~ .site-footer .footer-links {
+    color: #0a2f52;
+    opacity: 0.35;
+}
+
+.identity-section ~ .site-footer .footer-links a {
+    color: #0a2f52;
+}
+
+.identity-section ~ .site-footer .footer-links a:hover {
+    opacity: 0.8;
+}
+
+.identity-section ~ .site-footer .footer-links .separator {
+    color: #0a2f52;
+    opacity: 0.2;
+}
+
+/* ============================================
+   RESPONSIVE: Tablet (<=1200px)
+   ============================================ */
+@media (max-width: 1200px) {
+    .identity-section {
+        padding: 60px 2rem 80px;
+    }
+
+    .identity-container {
+        gap: 40px;
+    }
+
+    .identity-statement {
+        font-size: clamp(1.5rem, 3vw, 2.25rem);
+    }
+
+    .identity-portrait__image {
+        max-width: 320px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE: Mobile (<=768px)
+   ============================================ */
+@media (max-width: 768px) {
+    .identity-transition {
+        height: 80px;
+    }
+
+    .identity-section {
+        padding: 40px 1rem 60px;
+    }
+
+    .identity-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .identity-portrait {
+        order: -1;
+    }
+
+    .identity-portrait__image {
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
+    .identity-statement {
+        font-size: 1.5rem;
+    }
+
+    .identity-name {
+        font-size: 0.8125rem;
+    }
+
+    .identity-credentials li {
+        font-size: 0.75rem;
+    }
+}
+
+/* ============================================
+   RESPONSIVE: Small phone (<=480px)
+   ============================================ */
+@media (max-width: 480px) {
+    .identity-transition {
+        height: 60px;
+    }
+
+    .identity-section {
+        padding: 30px 0.75rem 50px;
+    }
+
+    .identity-container {
+        gap: 30px;
+    }
+
+    .identity-statement {
+        font-size: 1.35rem;
+    }
+
+    .identity-portrait__image {
+        max-width: 220px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE: Landscape (<=768px)
+   ============================================ */
+@media (max-width: 768px) and (orientation: landscape) {
+    .identity-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .identity-portrait {
+        order: 0;
+    }
+}

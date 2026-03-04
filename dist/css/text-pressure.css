@@ -1,0 +1,134 @@
+/* ============================================================================
+   Text Pressure Section — Interactive text transition between Sections
+   ========================================================================= */
+
+.text-pressure-section {
+  width: 100%;
+  background: transparent;
+  padding: 6vh 0;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#textPressureContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.text-pressure-island {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Base Text Pressure Component Styling */
+.text-pressure-component {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500;
+  font-style: italic;
+  color: rgba(244, 235, 208, 1); /* Data cream (#f4ebd0) */
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-align: center;
+  user-select: none;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+/* Both components - Same size and styling */
+.text-pressure-weekly,
+.text-pressure-insights {
+  font-size: clamp(3rem, 6vw, 5rem);
+  opacity: 1;
+  letter-spacing: 0.15em;
+}
+
+/* ============================================================================
+   Responsive Design
+   ========================================================================= */
+
+/* Tablet: ≤1200px */
+@media (max-width: 1200px) {
+  .text-pressure-section {
+    padding: 5vh 0;
+  }
+
+  .text-pressure-weekly,
+  .text-pressure-insights {
+    font-size: clamp(2.5rem, 5.5vw, 4rem);
+  }
+}
+
+/* Mobile: ≤768px */
+@media (max-width: 768px) {
+  .text-pressure-section {
+    padding: 4vh 0;
+  }
+
+  #textPressureContainer {
+    padding: 0 16px;
+    gap: 0.75rem;
+  }
+
+  .text-pressure-component {
+    letter-spacing: 0.12em;
+  }
+
+  .text-pressure-weekly,
+  .text-pressure-insights {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+}
+
+/* Small Mobile: ≤480px */
+@media (max-width: 480px) {
+  .text-pressure-section {
+    padding: 3vh 0;
+  }
+
+  #textPressureContainer {
+    padding: 0 12px;
+    gap: 0.5rem;
+  }
+
+  .text-pressure-component {
+    letter-spacing: 0.08em;
+  }
+
+  .text-pressure-weekly,
+  .text-pressure-insights {
+    font-size: clamp(1.5rem, 4.5vw, 2.5rem);
+  }
+}
+
+/* ============================================================================
+   Accessibility
+   ========================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .text-pressure-component {
+    transition: none !important;
+  }
+}
+
+/* Ensure text remains readable in all contexts */
+@media (prefers-contrast: more) {
+  .text-pressure-component {
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+
+  .text-pressure-weekly {
+    opacity: 1;
+  }
+}
