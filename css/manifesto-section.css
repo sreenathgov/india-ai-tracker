@@ -30,19 +30,21 @@
     .manifesto-section {
         padding: 3.5rem 3rem 4.5rem;
     }
+
     .manifesto-mount {
         max-width: 900px;
     }
 }
 
-/* iPad portrait — trim the excess height down from 120vh */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* iPad portrait — let text drive height, replace 65vh with generous padding */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
     .manifesto-section {
-        min-height: 65vh;
-        padding: 3rem 2.5rem 4rem;
+        min-height: auto;
+        padding: 5rem 3rem;
     }
+
     .manifesto-mount {
-        max-width: 760px;
+        max-width: 680px;
     }
 }
 
@@ -52,6 +54,7 @@
         min-height: 100vh;
         padding: 4rem 1.5rem;
     }
+
     .manifesto-mount {
         max-width: 100%;
     }

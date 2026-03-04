@@ -437,6 +437,7 @@
     .platform-split__left {
         padding: 0 1rem;
         order: 1;
+        justify-content: flex-start;
     }
 
     .platform-split__right {
@@ -447,6 +448,42 @@
 
     .platform-header {
         margin-bottom: 1.5rem;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — iPad portrait
+   Fix node balloon, video aspect, reduce manifesto
+   ============================================ */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+    .platform-section {
+        padding: 2rem 1.5rem 2rem;
+    }
+
+    .platform-header {
+        margin-bottom: 1rem;
+    }
+
+    /* Video: explicit 16/9 so it doesn't collapse to zero height */
+    .sector-video-wrapper {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    /* Nodes: remove the fixed min-height that causes huge empty boxes */
+    .telemetry-node {
+        min-height: auto;
+        padding: 1rem 1.25rem;
+    }
+
+    .telemetry-node__title {
+        font-size: 0.9rem;
+    }
+
+    .telemetry-node__body {
+        font-size: 0.7rem;
+        line-height: 1.5;
     }
 }
 
