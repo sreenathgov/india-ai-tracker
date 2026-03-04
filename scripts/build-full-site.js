@@ -28,17 +28,7 @@ function buildSite() {
         process.exit(1);
     }
 
-    // 1b. Run Vite Build — Spline Globe widget
-    // This creates dist/spline-globe-bundle.js (emptyOutDir: false preserves step 1a output)
-    try {
-        console.log('📦 Running Vite build for Spline Globe widget...');
-        execSync('npm run build:spline-globe', { stdio: 'inherit', cwd: PROJECT_ROOT });
-    } catch (e) {
-        console.error('❌ Spline Globe Vite build failed.');
-        process.exit(1);
-    }
-
-    // 1c. Run Vite Build — Scroll Reveal widget
+    // 1b. Run Vite Build — Scroll Reveal widget
     // This creates dist/scroll-reveal-bundle.js (emptyOutDir: false preserves previous outputs)
     try {
         console.log('📦 Running Vite build for Scroll Reveal widget...');
@@ -80,8 +70,8 @@ function buildSite() {
     });
 
     // 5. Mirror Vite bundles into dist/dist/ so that dist/index.html can resolve
-    //    <script src="dist/spline-globe-bundle.js"> correctly when Vercel serves from dist/
-    const BUNDLE_NAMES = ['text-pressure-bundle.js', 'spline-globe-bundle.js', 'scroll-reveal-bundle.js'];
+    //    <script src="dist/...bundle.js"> correctly when Vercel serves from dist/
+    const BUNDLE_NAMES = ['text-pressure-bundle.js', 'scroll-reveal-bundle.js'];
     const distDistDir = path.join(DIST_DIR, 'dist');
     if (!fs.existsSync(distDistDir)) {
         fs.mkdirSync(distDistDir, { recursive: true });

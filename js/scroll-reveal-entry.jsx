@@ -1,7 +1,7 @@
 /**
  * Scroll Reveal Manifesto — React Island Entry Point
  * Mounts ScrollReveal (GSAP) into #scrollRevealContainer
- * Follows the same IIFE island pattern as spline-globe-entry.jsx
+ * IIFE island pattern — mounts a standalone React component into a DOM container
  */
 
 import React from 'react';

@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="css/advisory-section.css?v=6">
     <link rel="stylesheet" href="css/contact-panel.css?v=1">
     <link rel="stylesheet" href="css/identity-section.css?v=6">
-    <link rel="stylesheet" href="css/platform-section.css?v=2">
+    <link rel="stylesheet" href="css/platform-section.css?v=3">
     <link rel="stylesheet" href="css/manifesto-section.css?v=1">
     <link rel="stylesheet" href="css/footer.css?v=3">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -237,9 +237,14 @@
                 </div>
               </div>
             </div>
-            <!-- RIGHT: 3D Spline Globe (React island) -->
+            <!-- RIGHT: Sector Watch Video -->
             <div class="platform-split__right">
-              <div id="splineGlobeContainer" class="spline-globe-mount"></div>
+              <div class="sector-video-wrapper">
+                <video class="sector-video" autoplay loop muted playsinline disablepictureinpicture>
+                  <source src="added-assets/sector-watch-web-video-KL-HEVC.mp4" type="video/mp4; codecs=hvc1">
+                  <source src="added-assets/sector-watch-web-video-KL.webm" type="video/webm">
+                </video>
+              </div>
             </div>
           </div>
         </section>
@@ -396,7 +401,7 @@
     <script src="js/brevo-subscribe.js"></script>
     <script src="js/strategic-insights.js"></script>
     <script src="js/platform-section.js"></script>
-    <script src="dist/spline-globe-bundle.js" defer></script>
+
     <script src="dist/scroll-reveal-bundle.js" defer></script>
     <script src="js/advisory-section.js"></script>
     <script src="js/contact-panel.js"></script>

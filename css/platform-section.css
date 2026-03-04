@@ -1,7 +1,7 @@
 /* ============================================
    SECTION 2.5: SECTOR WATCH PLATFORM
    Enterprise Regulatory Intelligence Infrastructure
-   Split-screen: Glassmorphism cards (L) + Spline Globe (R)
+   Split-screen: Glassmorphism cards (L) + Video (R)
    + Core Principles stack below
    Transparent bg so fixed navy grid shows through
    ============================================ */
@@ -17,7 +17,7 @@
 
 
 /* ============================================
-   SPLIT LAYOUT — 50/50 grid, cards left, globe right
+   SPLIT LAYOUT — 55/45 grid, cards left, video right
    ============================================ */
 
 .platform-split {
@@ -41,25 +41,9 @@
     position: relative;
     overflow: hidden;
     min-height: 500px;
-}
-
-/* Radial overlay: paints the page background colour over the globe edges,
-   creating the circular fade-to-background effect that mask-image used to
-   provide. Using an overlay (paint) instead of mask (transparency) avoids
-   all Safari/WebKit WebGL compositing issues — this is a pure CSS paint
-   operation that works identically on every browser and OS. */
-.platform-split__right::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: 2;          /* above the Spline canvas layer */
-    pointer-events: none;
-    background: radial-gradient(
-        circle at 50% 50%,
-        transparent 30%,
-        rgba(10, 47, 82, 0.45) 52%,
-        rgba(10, 47, 82, 1.0) 70%
-    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -169,93 +153,29 @@
 
 
 /* ============================================
-   SPLINE GLOBE — Mount point + CSS fallback
+   SECTOR VIDEO — Looping video in right column
+   5:4 aspect ratio, contained within the split area
    ============================================ */
 
-.spline-globe-mount {
-    /* Absolutely positioned so it CANNOT contribute to parent sizing —
-       eliminates the height feedback loop (child 100% → parent grows → repeat).
-       Negative offsets make the mount ~10% larger than the column. */
-    position: absolute;
-    top: -5%;
-    left: -5%;
-    right: -5%;
-    bottom: -5%;
-    background: transparent;
-    /* CSS filter only — standard functions (no url() SVG reference).
-       Safari/WebKit cannot correctly apply url() SVG filters to GPU-composited
-       WebGL canvas content: the compositor cannot serialize WebGL pixel data
-       into the CPU-based SVG filter engine, producing wrong colours on all
-       Apple devices. Standard CSS filter functions ARE applied correctly by
-       the OS compositor (Metal) on Safari even on WebGL content.
-       Edge fade is handled by the ::before overlay on .platform-split__right. */
-    filter: contrast(1.6) brightness(1.05) saturate(0.65);
-}
-
-.spline-globe {
+.sector-video-wrapper {
     width: 100%;
-    height: 100%;
-    background: transparent;
-}
-
-.spline-globe canvas {
-    touch-action: pan-y;
-    background: transparent !important;
-    /* mix-blend-mode moved to parent .platform-split__right — applying it
-       on the canvas element itself fails because GPU-composited WebGL layers
-       don't properly capture the page backdrop at the canvas level. */
-}
-
-/* CSS-only fallback sphere */
-.spline-globe__fallback {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.spline-globe__sphere {
-    width: clamp(200px, 35vw, 350px);
-    height: clamp(200px, 35vw, 350px);
-    border-radius: 50%;
-    background: radial-gradient(
-        circle at 35% 35%,
-        rgba(74, 144, 226, 0.25) 0%,
-        rgba(10, 47, 82, 0.7) 45%,
-        rgba(5, 20, 40, 0.95) 100%
-    );
+    max-width: 600px;
+    aspect-ratio: 5 / 4;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(244, 235, 208, 0.08);
     box-shadow:
-        0 0 80px rgba(74, 144, 226, 0.1),
-        0 0 40px rgba(10, 47, 82, 0.3),
-        inset 0 0 60px rgba(0, 0, 0, 0.4);
-    animation: sphere-pulse 6s ease-in-out infinite;
+        0 0 40px rgba(74, 144, 226, 0.08),
+        0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes sphere-pulse {
-    0%, 100% {
-        box-shadow:
-            0 0 80px rgba(74, 144, 226, 0.1),
-            0 0 40px rgba(10, 47, 82, 0.3),
-            inset 0 0 60px rgba(0, 0, 0, 0.4);
-    }
-    50% {
-        box-shadow:
-            0 0 100px rgba(74, 144, 226, 0.18),
-            0 0 60px rgba(10, 47, 82, 0.4),
-            inset 0 0 50px rgba(0, 0, 0, 0.3);
-    }
-}
-
-.spline-globe__loading-text {
-    font-family: 'Telegraf', 'Inter', sans-serif;
-    font-size: 0.6875rem;
-    color: rgba(244, 235, 208, 0.3);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin: 0;
+.sector-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: transparent;
 }
 
 
@@ -494,7 +414,7 @@
 
 /* ============================================
    RESPONSIVE — Tablet (<=1024px)
-   Stack split vertically, globe on top
+   Stack split vertically, video on top
    ============================================ */
 
 @media (max-width: 1024px) {
@@ -509,8 +429,8 @@
     }
 
     .platform-split__right {
-        min-height: 400px;
-        order: 0; /* Globe on top on tablet */
+        min-height: auto;
+        order: 0; /* Video on top on tablet */
     }
 
 }
@@ -530,7 +450,11 @@
     }
 
     .platform-split__right {
-        min-height: 250px;
+        min-height: auto;
+    }
+
+    .sector-video-wrapper {
+        max-width: 100%;
     }
 
     .platform-cards {
@@ -616,23 +540,6 @@
     }
 }
 
-
-/* ============================================
-   CSS FALLBACK STATE — narrow screens (<640px)
-   JS sets data-fallback="true" on the mount before first paint.
-   Strip all CSS filters so the subtle gradient sphere displays naturally.
-   Also hide the radial overlay so it doesn't cover the CSS sphere.
-   ============================================ */
-
-.spline-globe-mount[data-fallback="true"] {
-    filter: none;
-}
-
-/* Hide radial overlay when showing the CSS sphere fallback.
-   :has() is supported in Safari 15.4+, Chrome 105+, Firefox 121+. */
-.platform-split__right:has(.spline-globe-mount[data-fallback="true"])::before {
-    display: none;
-}
 
 
 /* ============================================
@@ -861,7 +768,7 @@
     }
 
     .platform-split__right {
-        min-height: 300px;
+        min-height: auto;
         order: unset;
     }
 
