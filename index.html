@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="css/advisory-section.css?v=6">
     <link rel="stylesheet" href="css/contact-panel.css?v=1">
     <link rel="stylesheet" href="css/identity-section.css?v=6">
-    <link rel="stylesheet" href="css/platform-section.css?v=1">
+    <link rel="stylesheet" href="css/platform-section.css?v=2">
     <link rel="stylesheet" href="css/manifesto-section.css?v=1">
     <link rel="stylesheet" href="css/footer.css?v=3">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -66,28 +66,7 @@
 </head>
 
 <body>
-<!-- SVG filter: all globe colour-grading in one pass — no CSS filter mixing.
-     Safari does NOT support mixing filter functions (contrast/brightness/grayscale)
-     with url() SVG filters in the same CSS filter declaration; the entire property
-     is silently dropped. Using a single url() reference works on Chrome, Safari,
-     and Firefox identically. Operations encoded here (left-to-right order):
-       1. contrast(5) × brightness(1.2)  → feComponentTransfer slope=6 intercept=-2.4
-       2. grayscale(0.55)                → feColorMatrix saturate values=0.45
-       3. luminanceToAlpha               → bright=opaque, dark=transparent
-       4. feComposite in                 → apply luminance-derived alpha to colour -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <filter id="globe-fx" color-interpolation-filters="sRGB"
-          x="0%" y="0%" width="100%" height="100%">
-    <feComponentTransfer result="graded">
-      <feFuncR type="linear" slope="6" intercept="-2.4"/>
-      <feFuncG type="linear" slope="6" intercept="-2.4"/>
-      <feFuncB type="linear" slope="6" intercept="-2.4"/>
-    </feComponentTransfer>
-    <feColorMatrix type="saturate" values="0.45" in="graded" result="desat"/>
-    <feColorMatrix type="luminanceToAlpha" in="desat" result="luma"/>
-    <feComposite in="desat" in2="luma" operator="in"/>
-  </filter>
-</svg>
+
     <!-- Infrastructure Grid Background -->
     <canvas id="infrastructure-grid"
         style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;"></canvas>

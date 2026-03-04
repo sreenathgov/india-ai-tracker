@@ -41,12 +41,25 @@
     position: relative;
     overflow: hidden;
     min-height: 500px;
-    /* mix-blend-mode:screen REMOVED — it relies on compositor-level blending
-       which Safari/WebKit handles incorrectly with WebGL + filtered content.
-       The "dark pixels → transparent" effect is now handled by an inline SVG
-       luminanceToAlpha filter applied directly in the .spline-globe-mount
-       filter chain. This is a per-pixel operation that works identically
-       on Chrome, Safari, and Firefox. */
+}
+
+/* Radial overlay: paints the page background colour over the globe edges,
+   creating the circular fade-to-background effect that mask-image used to
+   provide. Using an overlay (paint) instead of mask (transparency) avoids
+   all Safari/WebKit WebGL compositing issues — this is a pure CSS paint
+   operation that works identically on every browser and OS. */
+.platform-split__right::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;          /* above the Spline canvas layer */
+    pointer-events: none;
+    background: radial-gradient(
+        circle at 50% 50%,
+        transparent 30%,
+        rgba(10, 47, 82, 0.45) 52%,
+        rgba(10, 47, 82, 1.0) 70%
+    );
 }
 
 
@@ -162,35 +175,21 @@
 .spline-globe-mount {
     /* Absolutely positioned so it CANNOT contribute to parent sizing —
        eliminates the height feedback loop (child 100% → parent grows → repeat).
-       Negative offsets make the mount ~10% larger than the column without
-       needing CSS transform: scale(), which would force per-frame rasterisation
-       when combined with the heavy filter chain below. */
+       Negative offsets make the mount ~10% larger than the column. */
     position: absolute;
     top: -5%;
     left: -5%;
     right: -5%;
     bottom: -5%;
     background: transparent;
-    /* Pure SVG filter reference — no mixing of CSS filter functions with url().
-       Safari silently drops any filter declaration that mixes standard functions
-       (contrast/brightness/grayscale) with a url() SVG reference. Using only
-       url(#globe-fx) works identically on Chrome, Safari, and Firefox.
-       The SVG filter encodes: contrast(5)×brightness(1.2) → grayscale(0.55)
-       → luminanceToAlpha, making dark Spline atmosphere transparent and keeping
-       bright wireframe lines opaque. */
-    filter: url(#globe-fx);
-    /* Radial mask fades edges to transparent so the globe dissolves into the
-       navy grid rather than sitting inside a hard rectangular boundary.
-       Uses circle (not ellipse) so the shape stays circular on non-square
-       containers (e.g. phone portrait). */
-    mask-image: radial-gradient(circle at 50% 50%,
-        black 30%,
-        rgba(0, 0, 0, 0.6) 52%,
-        transparent 68%);
-    -webkit-mask-image: radial-gradient(circle at 50% 50%,
-        black 30%,
-        rgba(0, 0, 0, 0.6) 52%,
-        transparent 68%);
+    /* CSS filter only — standard functions (no url() SVG reference).
+       Safari/WebKit cannot correctly apply url() SVG filters to GPU-composited
+       WebGL canvas content: the compositor cannot serialize WebGL pixel data
+       into the CPU-based SVG filter engine, producing wrong colours on all
+       Apple devices. Standard CSS filter functions ARE applied correctly by
+       the OS compositor (Metal) on Safari even on WebGL content.
+       Edge fade is handled by the ::before overlay on .platform-split__right. */
+    filter: contrast(1.6) brightness(1.05) saturate(0.65);
 }
 
 .spline-globe {
@@ -621,14 +620,18 @@
 /* ============================================
    CSS FALLBACK STATE — narrow screens (<640px)
    JS sets data-fallback="true" on the mount before first paint.
-   Strip the globe-fx SVG filter — it would crush the CSS sphere's
-   subtle gradient to invisible (contrast(5) makes low-contrast blacks opaque).
+   Strip all CSS filters so the subtle gradient sphere displays naturally.
+   Also hide the radial overlay so it doesn't cover the CSS sphere.
    ============================================ */
 
 .spline-globe-mount[data-fallback="true"] {
     filter: none;
-    mask-image: none;
-    -webkit-mask-image: none;
+}
+
+/* Hide radial overlay when showing the CSS sphere fallback.
+   :has() is supported in Safari 15.4+, Chrome 105+, Firefox 121+. */
+.platform-split__right:has(.spline-globe-mount[data-fallback="true"])::before {
+    display: none;
 }
 
 
