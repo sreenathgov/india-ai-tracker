@@ -1,0 +1,32 @@
+{
+  "state": "TR",
+  "categories": {
+    "Policies and Initiatives": [],
+    "Events": [],
+    "Major AI Developments": [
+      {
+        "id": 4,
+        "title": "DI Talk Show on India AI Impact Summit 2026 and Digital India Initiatives in Tripura",
+        "url": "https://www.digitalindia.gov.in/events/di-talk-show-on-india-ai-impact-summit-2026-and-digital-india-initiatives-in-tripura/",
+        "summary": "A DI Talk Show discussed the India AI Impact Summit 2026 and Digital India initiatives in Tripura. The event highlighted the potential impact of AI on India's growth and development. Digital India initiatives in Tripura were also explored, focusing on the state's digital transformation.",
+        "date_published": "2026-02-07",
+        "source_name": "Digital India - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
+    "AI Start-Up News": []
+  },
+  "today_updates": [
+    "Major AI Developments"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "state": "HP",
+  "categories": {
+    "Policies and Initiatives": [],
+    "Events": [],
+    "Major AI Developments": [
+      {
+        "id": 16,
+        "title": "AI-powered traffic systems to curb violations in Himachal&#8217;s Nurpur",
+        "url": "https://www.tribuneindia.com/news/aiintraffic/ai-powered-traffic-systems-to-curb-violations-in-nurpur",
+        "summary": "Nurpur police have implemented an AI-powered Intelligent Traffic Management System (ITMS) to enforce traffic rules and issue e-challans. The system includes the installation of CCTV cameras, funded by a Rs 20 lakh grant, to enhance surveillance in areas such as Jassur town. The initiative aims to curb traffic violations and improve overall road safety in the region.",
+        "date_published": "2026-02-11",
+        "source_name": "Tribune - Himachal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "HP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
+    "AI Start-Up News": []
+  },
+  "today_updates": []
+}
