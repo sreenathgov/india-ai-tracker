@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EF8EXSDV07"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-EF8EXSDV07');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Sector Watch - Kanan Labs</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles-v2.css?v=13">
+    <link rel="stylesheet" href="css/staggered-menu.css">
+    <link rel="stylesheet" href="css/footer.css?v=3">
+    <link rel="stylesheet" href="css/contact-panel.css?v=1">
+    <link rel="stylesheet" href="css/back-button.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <style>
+        /* Override the overflow:hidden from main stylesheet */
+        html {
+            height: auto !important;
+            overflow: auto !important;
+        }
+
+        body.about-page {
+            height: auto !important;
+            overflow: auto !important;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: var(--brand-navy);
+        }
+
+        .about-header {
+            background: var(--brand-navy);
+            color: var(--brand-cream);
+            padding: 1.25rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(244, 235, 208, 0.15);
+        }
+
+        .about-header h1 {
+            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--brand-cream);
+        }
+
+        .about-header a {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            color: var(--brand-cream);
+            opacity: 0.7;
+            text-decoration: none;
+            font-size: 0.8125rem;
+            transition: opacity 0.15s ease;
+        }
+
+        .about-header a:hover {
+            opacity: 1;
+        }
+
+        .about-content {
+            flex: 1;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .about-content h2 {
+            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--brand-cream);
+            margin-bottom: 0;
+        }
+
+        .about-content .kl-page-title-row {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(244, 235, 208, 0.2);
+        }
+
+        .about-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .about-section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .about-section h3 {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--brand-cream);
+            opacity: 0.9;
+            margin-bottom: 0.75rem;
+        }
+
+        .about-section p {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.9375rem;
+            color: var(--brand-cream);
+            opacity: 0.7;
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+
+        .about-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-section a {
+            color: var(--brand-cream);
+            opacity: 0.9;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .about-section a:hover {
+            opacity: 1;
+        }
+
+        .about-section ul {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.9375rem;
+            color: var(--brand-cream);
+            opacity: 0.7;
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+            padding-left: 2rem;
+            list-style-type: disc;
+        }
+
+        .about-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(244, 235, 208, 0.08);
+            border-radius: 8px;
+            border: 1px solid rgba(244, 235, 208, 0.15);
+            text-align: center;
+        }
+
+        .cta-section h3 {
+            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--brand-cream);
+            margin-bottom: 0.75rem;
+        }
+
+        .cta-section p {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.875rem;
+            color: var(--brand-cream);
+            opacity: 0.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--brand-navy);
+            background: var(--brand-cream);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.15s ease;
+        }
+
+        .cta-button:hover {
+            background: #fff;
+            transform: translateY(-1px);
+        }
+
+        .cta-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .cta-section form input {
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            border: 1px solid rgba(244, 235, 208, 0.2);
+            background: rgba(244, 235, 208, 0.05);
+            color: var(--brand-cream);
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.875rem;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .cta-section form input::placeholder {
+            color: rgba(244, 235, 208, 0.4);
+        }
+
+        .cta-section form input:focus {
+            border-color: rgba(244, 235, 208, 0.5);
+        }
+
+        .cta-section form button {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            margin-top: 0.25rem;
+        }
+
+        .cta-success {
+            display: none;
+            margin-top: 1.25rem !important;
+            color: #4ade80 !important;
+            font-weight: 500;
+            opacity: 1 !important;
+        }
+
+        .about-footer {
+            margin-top: auto;
+            background: var(--brand-navy);
+            border-top: 1px solid rgba(244, 235, 208, 0.1);
+        }
+
+        .about-footer .footer-attribution,
+        .about-footer .footer-links,
+        .about-footer .footer-description {
+            color: var(--brand-cream);
+        }
+
+        .about-footer .footer-links a {
+            color: var(--brand-cream);
+        }
+
+        @media (max-width: 768px) {
+            .about-header {
+                flex-direction: column;
+                gap: 0.75rem;
+                text-align: center;
+                padding: 1rem 1.5rem;
+            }
+
+            .about-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .about-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .cta-section {
+                padding: 1.5rem;
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="about-page">
+    <!-- Staggered menu will be injected here by staggered-menu.js -->
+
+    <div style="height: 80px;"></div> <!-- Spacer for menu -->
+
+    <main class="about-content">
+        <div class="kl-page-title-row">
+            <a href="index.html" class="kl-back-btn" aria-label="Back to home">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                    <path d="M7.5 2L3.5 6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+            <h2>About Sector Watch</h2>
+        </div>
+
+        <section class="about-section">
+            <h3>Building Sector Watch<br><span
+                    style="font-weight: 400; opacity: 0.8; font-size: 0.9em; display: inline-block; margin-top: 0.25rem;">Agentic
+                    Regulatory Intelligence</span></h3>
+            <p>Regulation has become a structural variable in global trade. It shapes pricing, supply chains, market
+                access, and competitive positioning. For export-oriented firms, regulatory shifts are no longer episodic
+                events, they have become ongoing strategic inputs.</p>
+            <p>Today, companies respond through a mix of internal monitoring, external advisory retainers, and
+                fragmented interpretation cycles. The result is cost, delay, and uneven clarity. Kanan Labs is building
+                a different model.</p>
+            <p>We are developing an AI-native regulatory intelligence system designed to function as a continuous
+                strategic layer for businesses operating across jurisdictions. The objective is not to surface documents
+                or summarise policy updates. The objective is to translate regulatory movement into actionable business
+                understanding.</p>
+            <p>The platform is being built to:</p>
+            <ul>
+                <li>Track and interpret regulatory and institutional developments across major export corridors</li>
+                <li>Contextualise those developments against a firm's operating profile</li>
+                <li>Identify material exposure shifts</li>
+                <li>Enable structured discussion around strategic response</li>
+            </ul>
+            <p>The system does not replace executive judgment. It operationalises structured intelligence so that
+                judgment becomes faster, more informed, and less dependent on episodic external advisory cycles. It
+                behaves less like a dashboard and more like a persistent strategic counterpart. The user remains in
+                control.</p>
+        </section>
+
+        <section class="about-section">
+            <h3>Current Stage</h3>
+            <p>The initial MVP is concentrated on the Auto and EV export ecosystem spanning India, the European Union,
+                and the United States. This sector presents sustained regulatory evolution and meaningful trade policy
+                exposure, making it a disciplined environment for validation.</p>
+            <p>The build is intentionally infrastructure-led and conservative in scope. Priority is given to
+                interpretability, system stability, and enterprise reliability.</p>
+            <p>Projected MVP completion is targeted for September 2026. Pilot engagement will follow internal
+                validation.</p>
+        </section>
+
+        <section class="about-section">
+            <h3>Direction</h3>
+            <p>Kanan Labs is an AI infrastructure company focused on regulatory intelligence. The long-term ambition
+                extends beyond a single industry. The underlying system is being designed to support multi-sector
+                expansion across export-intensive domains over time.</p>
+            <p>The ambition is simple. To enable firms to participate in the global economy with greater confidence and
+                clarity by transforming regulatory complexity into structured strategic input.</p>
+        </section>
+
+        <section class="cta-section">
+            <h3>Interested in investing?</h3>
+            <p>I'm open to exploring opportunities and partnerships. Feel free to reach out directly.</p>
+            <a href="mailto:sreenath@kananlabs.in" class="cta-button">Email me</a>
+        </section>
+        <section class="cta-section" style="margin-top: 2rem;">
+            <h3>Request Platform Access</h3>
+            <p>Join the waitlist for early access to Kanan Labs' intelligence platform.</p>
+            <form id="platformWaitlistForm">
+                <input type="text" name="name" placeholder="Full Name" required />
+                <input type="text" name="company" placeholder="Company / Organisation" required />
+                <input type="email" name="email" placeholder="Work Email" required />
+                <button type="submit" class="cta-button">Join Waitlist</button>
+            </form>
+            <p class="cta-success" id="platformWaitlistSuccess">Thank you — we'll be in touch shortly with platform
+                access details.</p>
+        </section>
+    </main>
+
+    <footer class="kl-footer">
+        <div class="kl-footer__inner">
+            <div class="kl-footer__content">
+                <!-- LEFT: Brand zone -->
+                <div class="kl-footer__brand">
+                    <img src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png" alt="Kanan Labs"
+                        class="kl-footer__logo" draggable="false">
+                    <p class="kl-footer__tagline">India's AI Governance Intelligence</p>
+
+                    <!-- Newsletter mini-form -->
+                    <div>
+                        <p class="kl-footer__nl-label">Weekly Brief</p>
+                        <form class="kl-footer__nl-form" id="footerNewsletterForm">
+                            <input type="email" class="kl-footer__nl-input" placeholder="Your email address"
+                                autocomplete="email" required>
+                            <button type="submit" class="kl-footer__nl-submit">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <!-- Schedule Consultation -->
+                    <button class="kl-footer__consult" type="button"
+                        onclick="if(window.contactPanel) window.contactPanel.open()">
+                        Schedule Consultation →
+                    </button>
+                </div>
+
+                <!-- RIGHT: Sitemap grid -->
+                <div class="kl-footer__sitemap">
+                    <!-- Col 1: Advisory -->
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Advisory</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="index.html#advisory">Regulatory Trajectory</a></li>
+                            <li><a href="index.html#advisory">Incentive Structuring</a></li>
+                            <li><a href="index.html#advisory">Governance Readiness</a></li>
+                            <li><a href="index.html#advisory">Cross-Border Advisory</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 2: Company -->
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Company</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="sector-watch.html">Sector Watch</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                            <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3: Follow -->
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Follow</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank"
+                                    rel="noopener">LinkedIn</a></li>
+                            <li><a href="#" target="_blank" rel="noopener">Twitter</a></li>
+                            <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 4: Legal -->
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Legal</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="disclaimers.html">Disclaimers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTTOM: Watermark logo -->
+            <div class="kl-footer__watermark">
+                <img src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png" alt=""
+                    class="kl-footer__watermark-img" aria-hidden="true" draggable="false">
+            </div>
+        </div>
+    </footer>
+    <script src="js/contact-panel.js"></script>
+    <script src="js/staggered-menu.js"></script>
+    <!-- Basic logic to handle waitlist form submission, similar to index.html -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('platformWaitlistForm');
+            const successMsg = document.getElementById('platformWaitlistSuccess');
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    form.style.display = 'none';
+                    if (successMsg) {
+                        successMsg.style.display = 'block';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

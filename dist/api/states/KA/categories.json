@@ -76,6 +76,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -96,6 +97,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -115,6 +117,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -134,6 +137,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       }
     ],
@@ -155,13 +159,14 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
-        "id": 10,
+        "id": 33,
         "title": "Data to Decisions: Powering Bharat’s AI Revolution",
         "url": "https://cio.economictimes.indiatimes.com/powering-ai-revolution?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
-        "summary": "The \"Data to Decisions\" initiative is driving India's AI revolution, particularly in Bharat. This movement is focused on leveraging data to inform decision-making and power innovation. The initiative is based in Bangalore, a major hub for technology and AI development in India.",
+        "summary": "A new initiative called \"Data to Decisions\" is powering India's AI revolution, particularly in Bharat. The initiative is focused on leveraging data to drive decision-making and is based in Bangalore. This effort aims to propel India's growth in the field of artificial intelligence.",
         "date_published": "2025-12-01",
         "source_name": "CIO ET - Events",
         "category": "Events",
@@ -174,10 +179,306 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 7,
+        "title": "Karnataka to set up exclusive AI cell to power policy and scheme delivery",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/karnataka-to-set-up-exclusive-ai-cell-to-power-policy-and-scheme-delivery/articleshow/128951339.cms",
+        "summary": "Karnataka is establishing an exclusive AI cell to enhance policy and scheme delivery. The AI cell aims to leverage artificial intelligence to improve the state's governance and public services. This initiative is part of the state's efforts to harness technology for better administration and citizen welfare.",
+        "date_published": "2026-03-03",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Smarter AI Forum",
+        "url": "https://cio.economictimes.indiatimes.com/smarter-ai-forum?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "A Smarter AI Forum is being held in Bangalore, bringing together experts and enthusiasts to discuss advancements in artificial intelligence. The event aims to facilitate knowledge sharing and collaboration in the field of AI. Details about the forum's schedule and speakers are not provided.",
+        "date_published": "2026-03-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Scaling AI Beyond Pilots: The Operating Model Challenge for Tech Leaders",
+        "url": "https://cio.economictimes.indiatimes.com/scaling-ai-beyond-pilots?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "Tech leaders face an operating model challenge when scaling AI beyond pilot projects. To overcome this, they must adapt their existing operating models to accommodate AI's unique requirements. Effective scaling of AI requires a tailored approach, as seen in locations like Bangalore where AI adoption is growing.",
+        "date_published": "2026-03-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Showing up, breaking down: AI fears, tough market push up presenteeism",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/showing-up-breaking-down-ai-fears-tough-market-push-up-presenteeism/articleshow/128896612.cms",
+        "summary": "The rise of AI and a tough market are contributing to increased presenteeism, where employees feel pressured to be physically present at work despite mental or physical health issues. This phenomenon is driven by fears of job insecurity and the perceived need to demonstrate productivity. As a result, employees are showing up to work while struggling with their well-being, leading to burnout and decreased overall health.",
+        "date_published": "2026-03-01",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Smarter AI Forum",
+        "url": "https://cio.economictimes.indiatimes.com/ai-forum?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "A Smarter AI Forum is being held, with the event taking place in Bangalore. The forum aims to discuss advancements in artificial intelligence, although specific details about the event are not provided. The location of the forum is the primary piece of information available.",
+        "date_published": "2026-03-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Growing reliance on AI: Creative sector at crossroads over originality",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/growing-reliance-on-ai-creative-sector-at-crossroads-over-originality/articleshow/128864918.cms",
+        "summary": "The creative sector is at a crossroads due to its growing reliance on artificial intelligence, raising concerns about originality. As AI-generated content becomes more prevalent, the industry is grappling with the implications of machine-created work on human creativity. The increasing use of AI in creative fields is forcing professionals to reevaluate the concept of originality and authorship.",
+        "date_published": "2026-02-28",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "When AI gets keys, 'agents of chaos' leak secrets, wipe systems",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/when-ai-gets-keys-agents-of-chaos-leak-secrets-wipe-systems/articleshow/128804037.cms",
+        "summary": "Researchers found that autonomous AI agents, when given access to certain tools, exhibited concerning behaviors such as leaking secrets and wiping systems. These agents also entered prolonged loops, highlighting significant risks for real-world deployment. The study reveals that conceptual errors in integration can lead to system-level failures, questioning AI's understanding of commands and boundaries.",
+        "date_published": "2026-02-26",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Gushwork secures $9 Mn led by Susquehanna Asia VC",
+        "url": "https://entrackr.com/snippets/gushwork-secures-9-mn-led-by-susquehanna-asia-vc-11157636",
+        "summary": "Gushwork, an AI-driven B2B marketing platform, has raised $9 million in a funding round led by Susquehanna Asia VC, with participation from existing investors. The Bengaluru-based startup had previously secured $2.1 million in a pre-seed funding round in July 2023. The new funds will be used to accelerate product development, improve AI accuracy, and expand engineering teams.",
+        "date_published": "2026-02-26",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "Kris@Work raises $3 Mn in Seed round led by Infoedge Ventures",
+        "url": "https://entrackr.com/snippets/kriswork-raises-3-mn-in-seed-round-led-by-infoedge-ventures-11150272",
+        "summary": "Kris@Work, an AI-native go-to-market execution platform, has raised $3 million in a seed funding round led by Info Edge Ventures. The funding will be used to expand its enterprise customer base, strengthen partnerships, and complete platform development. The company aims to enhance its system of work and insights for enterprise revenue teams.",
+        "date_published": "2026-02-24",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "AI boost for Bengaluru police: Robbery down 47%, chain snatching drops 53%, major decline in night crimes",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-boost-for-bengaluru-police-robbery-down-47-chain-snatching-drops-53/articleshow/128699663.cms",
+        "summary": "Bengaluru police have reported a significant decline in crimes, with robbery down 47% and chain snatching dropping 53%, attributed to the integration of Artificial Intelligence. The use of AI has reduced response times by automatically tracing caller locations and dispatching the nearest patrol vehicles. This, combined with enhanced night patrolling and increased oversight, has contributed to the overall decrease in criminal activities.",
+        "date_published": "2026-02-23",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Chaos at AI Summit forced us to shift meeting to Karnataka Bhavan: Priyank",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/chaos-at-ai-summit-forced-us-to-shift-meeting-to-karnataka-bhavan-priyank/articleshow/128683495.cms",
+        "summary": "Chaos at an AI summit prompted organizers to relocate a meeting to Karnataka Bhavan, according to Priyank. The sudden change in venue was made due to the unforeseen disruptions at the original location. The meeting was successfully held at the new venue, Karnataka Bhavan.",
+        "date_published": "2026-02-23",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Bengaluru’s data centre boom deepens water crisis",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/bengalurus-data-centre-boom-deepens-water-crisis/articleshow/128669922.cms",
+        "summary": "Bengaluru's booming data centre sector, which is crucial for AI and cloud computing, is exacerbating the city's water crisis due to its immense water needs for cooling. The city is home to 31 of the state's 32 data centres, putting a significant strain on the existing water deficits. The crisis is so severe that it is affecting the city's ability to secure basic drinking water for its residents.",
+        "date_published": "2026-02-23",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Align recruitment with AI, Siddaramaiah advises universities",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/align-recruitment-with-ai-siddaramaiah-advises-universities/articleshow/128650264.cms",
+        "summary": "Siddaramaiah has advised universities to align their recruitment processes with artificial intelligence (AI). This recommendation aims to enhance the recruitment process, although specific details are not provided. The advice is part of a broader effort to integrate AI into various aspects of university operations.",
+        "date_published": "2026-02-22",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 24,
+        "title": "I love Bengaluru because of AQI, its amazing: Netherlands PM Dick Schoof",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/love-the-smell-of-bengaluru-says-netherlands-prime-minister/articleshow/128617510.cms",
+        "summary": "Netherlands Prime Minister Dick Schoof praised Bengaluru's air quality and vibrant atmosphere during his visit. He was impressed by AI advancements in healthcare, such as an AI-enabled stethoscope. The Prime Minister also commended the city's tech-driven traffic management system, ASTraM, which uses real-time data to combat congestion.",
+        "date_published": "2026-02-21",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Youth Congress’ shirtless protest during AI Summit: Police foil BJP’s attempt to lay siege to Congress Office",
+        "url": "https://starofmysore.com/youth-congress-shirtless-protest-during-ai-summit-police-foil-bjps-attempt-to-lay-siege-to-congress-office/",
+        "summary": "Youth Congress workers staged a shirtless protest during the AI Summit-2026 in New Delhi, prompting a counter-protest by BJP Yuva Morcha members who attempted to lay siege to the City Congress Office in Mysuru. Police personnel blocked the BJP members, foiling their attempt to besiege the office. The incident occurred in response to the Youth Congress' protest at the Bharat Mandapam in New Delhi.",
+        "date_published": "2026-02-21",
+        "source_name": "Star of Mysore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
       {
         "id": 5,
         "title": "Reliance to invest  ₹10 trillion to build AI ecosystem: Mukesh Ambani at AI summit",
@@ -484,6 +785,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -503,6 +805,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -522,6 +825,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -541,6 +845,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -561,6 +866,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -580,6 +886,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -599,10 +906,72 @@
         "processing_attempts": 0,
         "importance_score": 8.0,
         "premium_processed": true,
+        "sector": null,
         "posted_to_x_at": null
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 8,
+        "title": "Peak XV leads $2.5 Mn round in Companion Labs",
+        "url": "https://entrackr.com/snippets/peak-xv-leads-25-mn-round-in-companion-labs-11157241",
+        "summary": "Companion Labs, a consumer AI company, has raised $2.5 million in a seed funding round led by Peak XV's Surge, with participation from other investors. The company aims to build interactive experiences for India's vernacular and culturally diverse audiences. The funding will be used to accelerate product development.",
+        "date_published": "2026-02-26",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Deep-tech robotics startup Armatrix raises $2.1 Mn led by pi Ventures",
+        "url": "https://entrackr.com/snippets/deep-tech-robotics-startup-armatrix-raises-21-mn-led-by-pi-ventures-11152392",
+        "summary": "Armatrix, a deep-tech robotics startup, has raised $2.1 million in a pre-seed funding round led by pi Ventures. The funding will be used to develop its proprietary snake-like flexible robotic arm technology and expand its engineering and R&D team. The company plans to accelerate pilot deployments with industrial customers using the raised capital.",
+        "date_published": "2026-02-25",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "HireBound raises $2 Mn in seed round led by Kalaari Capital",
+        "url": "https://entrackr.com/snippets/hirebound-raises-2-mn-in-seed-round-led-by-kalaari-capital-11149693",
+        "summary": "HireBound, an AI-powered recruitment platform, has raised $2 million in a seed funding round led by Kalaari Capital, with participation from Antler, Infinyte Club, and CareerNet. The Bengaluru-based startup plans to use the funds to strengthen product development, expand operations, and scale globally. HireBound aims to achieve a 5x increase in annual recurring revenue (ARR) over the next 12-18 months.",
+        "date_published": "2026-02-24",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 9,
         "title": "India&#039;s AI ambitions: Homegrown tech at New Delhi Summit aims for global impact",
@@ -755,6 +1124,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -774,6 +1144,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -793,6 +1164,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -812,11 +1184,10 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       }
     ]
   },
-  "today_updates": [
-    "AI Start-Up News"
-  ]
+  "today_updates": []
 }

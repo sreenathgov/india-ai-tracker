@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 16,
+        "title": "AI in school curriculum; students in Telangana to get breakfast, milk",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/ai-in-school-curriculum-students-in-t-to-get-breakfast-milk/articleshow/128824984.cms",
+        "summary": "Telangana's education system will undergo a significant change with the integration of AI in schools starting from 2026-27, along with AI training for teachers. The state also plans to upgrade government schools with modern facilities and introduce Telangana Public Schools in 100 constituencies. Additionally, reports on private school fees and a new education policy have been presented as part of the overhaul.",
+        "date_published": "2026-02-27",
+        "source_name": "Times of India - Bhopal",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 141,
         "title": "Hyderabad Police launch AI-driven system to overhaul CAR duty allocation",
         "url": "https://www.thehindu.com/news/cities/Hyderabad/hyderabad-police-launch-ai-driven-system-to-overhaul-car-duty-allocation/article70557894.ece",
@@ -19,6 +39,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -38,6 +59,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       }
     ],
@@ -59,10 +81,265 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 11,
+        "title": "Revanth orders facial recognition for welfare beneficiaries",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/revanth-orders-facial-recognition-for-welfare-beneficiaries/articleshow/128986932.cms",
+        "summary": "Revanth has ordered the implementation of facial recognition technology to verify the identities of welfare beneficiaries. This move aims to enhance the security and efficiency of welfare distribution. The use of facial recognition will help prevent fraud and ensure that benefits reach the intended recipients.",
+        "date_published": "2026-03-04",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Trust, but verify: Rethinking our reliance on AI",
+        "url": "https://www.iiit.ac.in/trust-but-verify-rethinking-our-reliance-on-ai/",
+        "summary": "India is rethinking its reliance on AI, with a focus on developing sovereign AI models. The IIIT-H is advancing AI research and applications, including chip design for healthcare and mobility, and fairness in justice delivery systems. Various initiatives, such as training programs for women engineers and forums like the Urban AI Forum, are also being launched to promote AI development and adoption.",
+        "date_published": "2026-03-03",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "AI, robotics to shape future battle-ready systems, says Lt Gen Neeraj Varshney",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/ai-robotics-to-shape-future-battle-ready-systems-says-lt-gen-neeraj-varshney/articleshow/128892442.cms",
+        "summary": "Lt Gen Neeraj Varshney stated that AI and robotics will play a crucial role in shaping future battle-ready systems. He emphasized the importance of these technologies in transforming the military's capabilities. The integration of AI and robotics is expected to enhance the military's preparedness and effectiveness in future battles.",
+        "date_published": "2026-03-01",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Call for sovereign AI models in India",
+        "url": "https://www.iiit.ac.in/call-for-sovereign-ai-models-in-india/",
+        "summary": "India is being called upon to develop sovereign AI models. The International Institute of Information Technology Hyderabad (IIIT-H) is involved in various AI initiatives, including a six-month AI/ML training program for women graduate engineers. IIIT-H is also hosting events such as the Urban AI Forum to promote AI development and application in India.",
+        "date_published": "2026-02-27",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 17,
+        "title": "Will Use AI To Streamline Traffic, Says Hyderabad Police Commissioner VC Sajjanar",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/will-use-ai-to-streamline-traffic-says-hyderabad-police-commissioner-vc-sajjanar/articleshow/128760930.cms",
+        "summary": "Hyderabad Police Commissioner VC Sajjanar announced plans to utilize AI to streamline traffic in the city. The initiative aims to improve traffic management and reduce congestion. The use of AI technology is expected to enhance the efficiency of traffic monitoring and control systems.",
+        "date_published": "2026-02-25",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Solvathon 2026",
+        "url": "https://www.iiit.ac.in/solvathon-2026/",
+        "summary": "IIIT Hyderabad is advancing various AI initiatives, including early cancer detection with AI and genetic insights, chip design for healthcare and mobility, and a data-driven study on fairness in justice delivery. The institution is also promoting AI education with a six-month training program for women graduate engineers and hosting events like the Urban AI Forum. Additionally, IIIT Hyderabad has launched a platform for mapping news and urban livability, showcasing its commitment to leveraging AI for societal impact.",
+        "date_published": "2026-02-24",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 16,
+        "title": "Harvard invites Revanth to speak at AI policy symposium",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/harvard-invites-revanth-to-speak-at-ai-policy-symposium/articleshow/128686645.cms",
+        "summary": "Harvard has invited Revanth to speak at an AI policy symposium, a significant event focused on artificial intelligence. The invitation highlights Revanth's expertise and contributions to the field of AI policy. The symposium aims to discuss and shape the future of AI policy, with Revanth's participation expected to provide valuable insights.",
+        "date_published": "2026-02-23",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Hyderabad becomes The Hartford’s first home in India",
+        "url": "https://telanganatoday.com/hyderabad-becomes-the-hartfords-first-home-in-india",
+        "summary": "The Hartford has launched its first Global Technology Centre in Hyderabad, India, covering 1,60,000 sq. ft. and focusing on AI, digital innovation, and engineering. The centre plans to scale up to 1,200 employees, supporting the company's global technology transformation. This marks The Hartford's entry into India, with Hyderabad serving as its first home in the country.",
+        "date_published": "2026-02-23",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 21,
+        "title": "Congress slams Centre for ‘excluding’ opposition from AI summit",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/congress-slams-centre-for-excluding-opposition-from-ai-summit/articleshow/128653819.cms",
+        "summary": "Congress has criticized the Centre for allegedly excluding opposition parties from an AI summit. The exclusion has sparked controversy, with the Congress accusing the Centre of being non-inclusive. The incident highlights a perceived lack of cooperation between the government and opposition parties on key issues like AI development.",
+        "date_published": "2026-02-22",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 27,
+        "title": "Telangana govt prepared to meet challenges posed by rapid rise of AI: IT Minister",
+        "url": "https://www.thehindu.com/news/cities/Hyderabad/telangana-govt-prepared-to-meet-challenges-posed-by-rapid-rise-of-ai-it-minister/article70657194.ece",
+        "summary": "The Telangana government is prepared to address the challenges arising from the rapid growth of Artificial Intelligence (AI). According to the IT Minister, the government is taking steps to meet these challenges. The minister's statement highlights the government's proactive approach to navigating the impact of AI.",
+        "date_published": "2026-02-21",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 36,
+        "title": "CM to PM: We need AI war room, AI ministries",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/cm-to-pm-we-need-ai-war-room-ai-ministries/articleshow/128622243.cms",
+        "summary": "A chief minister has proposed the creation of an AI war room and AI ministries to the prime minister. The suggestion aims to leverage artificial intelligence for the country's development and growth. The proposal highlights the need for a dedicated framework to harness the potential of AI.",
+        "date_published": "2026-02-21",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 37,
+        "title": "Telangana banking on AI to open new career avenues, says minister Sridhar Babu",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/telangana-banking-on-ai-to-open-new-career-avenues-says-minister-sridhar-babu/articleshow/128620835.cms",
+        "summary": "Telangana is leveraging artificial intelligence to create new career opportunities, according to Minister Sridhar Babu. The state aims to utilize AI to open up fresh avenues for employment and growth. Minister Babu highlighted the potential of AI in driving innovation and job creation in the region.",
+        "date_published": "2026-02-21",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 38,
+        "title": "AP ties up with IBM, BharatGen &amp; NxtGen for Swadeshi AI stack",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/ap-ties-up-with-ibm-bharatgen-nxtgen-for-swadeshi-ai-stack/articleshow/128620828.cms",
+        "summary": "The Andhra Pradesh government has partnered with IBM, BharatGen, and NxtGen to develop a \"Swadeshi AI stack\". This collaboration aims to create an indigenous artificial intelligence ecosystem. The partnership is expected to drive innovation and growth in the state's AI sector.",
+        "date_published": "2026-02-21",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
       {
         "id": 41,
         "title": "Univs must become architects of indigenous AI solutions, says guv Jishnu Dev Varma",
@@ -213,10 +490,11 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
-        "id": 16,
+        "id": 156,
         "title": "Google rolls out AI-powered photo editing feature in India",
         "url": "https://telanganatoday.com/google-rolls-out-ai-powered-photo-editing-feature-in-india",
         "summary": "Google has launched an AI-powered photo editing feature in India, allowing users to edit images in Google Photos using voice or text prompts. The feature, powered by Gemini, supports multiple Indian languages and offers conversational editing tools. It also provides personalised editing options for users.",
@@ -232,6 +510,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -251,6 +530,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -270,6 +550,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -289,6 +570,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -308,6 +590,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -327,6 +610,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -346,6 +630,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -365,6 +650,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -384,6 +670,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -403,10 +690,30 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 23,
+        "title": "CM Revanth Reddy moots AI Start-up Village in Telangana, AI War Room...",
+        "url": "https://cellit.in/cm-revanth-reddy-moots-ai-start-up-village-in-telangana-ai-war-room-in-hyderabad/",
+        "summary": "CM Revanth Reddy has proposed the establishment of an AI Start-up Village in Telangana. He also suggested setting up an AI War Room to foster innovation and development in the field of artificial intelligence. The initiatives aim to promote AI growth and entrepreneurship in the region.",
+        "date_published": "2026-02-21",
+        "source_name": "CellIt Magazine",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
       {
         "id": 8,
         "title": "Global HealthX crosses $15 Mn in healthcare investments, unveils startup cohort",
@@ -462,6 +769,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -500,6 +808,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       }
     ]

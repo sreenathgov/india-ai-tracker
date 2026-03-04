@@ -41,10 +41,10 @@
         "posted_to_x_at": null
       },
       {
-        "id": 4,
+        "id": 150,
         "title": "Before the first missiles fly: AI, cyber &amp; electronic warfare - how India is preparing for invisible battlefields",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/before-the-first-missiles-fly-ai-cyber-electronic-warfare-how-india-is-preparing-for-invisible-battlefields/127707922",
-        "summary": "India is integrating AI, cyber, and electronic warfare into its military, adopting a process-centric doctrine over a platform-centric one. This shift, as seen in Operation Sindoor, aims to enhance intelligence, surveillance, and reconnaissance capabilities. The goal is to achieve strategic dominance and reduce reliance on foreign technology in future conflicts.",
+        "summary": "India is integrating AI, cyber, and electronic warfare into its military, shifting towards a process-centric doctrine. This integration, as seen in Operation Sindoor, aims to enhance intelligence, surveillance, and reconnaissance capabilities. The goal is to achieve strategic dominance and reduce reliance on foreign technology in future conflicts.",
         "date_published": "2026-01-28",
         "source_name": "ET CIO - AI",
         "category": "Policies and Initiatives",
@@ -57,6 +57,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -76,6 +77,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -95,6 +97,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       }
     ],
@@ -154,10 +157,150 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 9,
+        "title": "Doctors warn against self-medicating with weight-loss injectables",
+        "url": "https://timesofindia.indiatimes.com/city/pune/doctors-warn-against-self-medicating-with-weight-loss-injectables/articleshow/128988561.cms",
+        "summary": "Doctors are warning against self-medicating with weight-loss injectables, citing the risk of serious side effects. These injectables, known as GLP-1 drugs, are effective for weight loss but require prescription and supervision from endocrinologists or bariatric physicians. Experts are calling for tighter regulation due to unsupervised and cosmetic use of these potent medications.",
+        "date_published": "2026-03-04",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "VR &amp; AI reshape shoulder surgical training in Pune",
+        "url": "https://timesofindia.indiatimes.com/city/pune/vr-ai-reshape-shoulder-surgical-training-in-pune/articleshow/128910771.cms",
+        "summary": "Orthopaedic surgeons in Pune are utilizing VR headsets and AI to enhance shoulder surgical training, with VR platforms allowing practice on 3D models in virtual operating rooms. AI-powered systems aid in pre-operative planning by analyzing scans and simulating surgical designs, improving patient safety. This integration of VR and AI technology aims to enhance surgeons' skills and decision-making capabilities.",
+        "date_published": "2026-03-01",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Reliance on borrowed algorithms for AI could cost India its autonomy: Former foreign secretary",
+        "url": "https://timesofindia.indiatimes.com/city/pune/reliance-on-borrowed-algorithms-for-ai-could-cost-india-its-autonomy-former-foreign-secretary/articleshow/128897635.cms",
+        "summary": "Former foreign secretary warns that India's reliance on borrowed algorithms for AI could compromise its autonomy. This over-reliance may hinder India's ability to make independent decisions and maintain control over its technological advancements. India's use of foreign algorithms could ultimately undermine its sovereignty in the field of artificial intelligence.",
+        "date_published": "2026-03-01",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Art of building local AI systems with NVIDIA DGX Spark: Decode with RP Tech, an NVIDIA partner",
+        "url": "https://yourstory.com/2026/02/devsparks-pune-rp-tech-nvidia-partner-dgx-spark-powered-masterclasses",
+        "summary": "NVIDIA DGX Spark is being utilized to build local AI systems through masterclasses hosted by DevSparks Pune and RP Tech, an NVIDIA partner. These masterclasses aim to redefine how AI is built, deployed, and owned. The collaboration focuses on addressing common AI development challenges such as rising costs and latency.",
+        "date_published": "2026-02-26",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "BFSI leaders to chart the AI-first roadmap for 2026",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/bfsi-leaders-to-chart-the-ai-first-roadmap-for-2026/128768879",
+        "summary": "BFSI technology leaders will gather at the 10th ETBFSI CIO Digital Conclave to discuss the future of finance with a focus on \"AI Integration and Automation\". The event will address key questions on AI governance, explainability, and cyber-resilience in the regulated industry. The conclave aims to chart an AI-first roadmap for 2026, exploring the evolving role of the CIO in an AI-driven enterprise.",
+        "date_published": "2026-02-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "DevSparks 2026 Pune: From prompt to production in the age of agentic AI",
+        "url": "https://yourstory.com/2026/02/devsparks-2026-pune-from-prompt-to-production-in-the-age-of-agentic-ai",
+        "summary": "AWS' Hands-on-Lab at DevSparks Pune 2026 will demonstrate how AI accelerates full-stack development, from idea to deployment. The event highlights the evolving Indian developer ecosystem, which requires advanced tools to keep pace. AI-powered tools are transforming software development, enabling faster deployment of applications.",
+        "date_published": "2026-02-23",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "IIM-Nagpur to use AI to set question papers, check answers",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/iim-n-to-arm-faculty-with-ai-tools-to-set-ques-check-answer-scripts/articleshow/128653390.cms",
+        "summary": "IIM-Nagpur is implementing AI to set question papers and check answer scripts, aiming to reduce evaluation time from two weeks to a couple of days. AI will assist in initial grading, but human intervention will still be necessary for final assessment and to ensure creativity. The use of AI is expected to speed up the evaluation process while maintaining the importance of human judgment.",
+        "date_published": "2026-02-22",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
       {
         "id": 19,
         "title": "Klassroom files DRHP for SME IPO; revenue jumps 120% in FY25",
@@ -165,6 +308,25 @@
         "summary": "Klassroom, an edtech startup, has filed its Draft Red Herring Prospectus (DRHP) for an SME IPO on the Bombay Stock Exchange. The proposed IPO will consist of a fresh issue of equity shares and an offer-for-sale by existing shareholders. Klassroom's revenue has jumped 120% in FY25, and the IPO proceeds will be used for debt repayment, technology enhancement, and marketing initiatives.",
         "date_published": "2026-02-20",
         "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 29,
+        "title": "India AI Impact Summit 2026: Maharashtra will ensure AI moves beyond pilot projects and reaches farmers, says CM Devendra Fadnavis",
+        "url": "https://indianexpress.com/article/cities/mumbai/india-ai-impact-summit-2026-maharashtra-ai-moves-beyond-pilot-projects-and-reaches-farmers-says-cm-devendra-fadnavis-10542386/",
+        "summary": "Maharashtra Chief Minister Devendra Fadnavis stated that the state will ensure AI technology moves beyond pilot projects and is implemented to benefit farmers. This announcement was made at the India AI Impact Summit 2026, highlighting the government's commitment to leveraging AI for agricultural development. The initiative aims to expand AI adoption beyond experimental stages and make a tangible impact on the farming community.",
+        "date_published": "2026-02-20",
+        "source_name": "Indian Express - Mumbai",
         "category": "Major AI Developments",
         "state_codes": [
           "MH"
@@ -424,6 +586,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -443,6 +606,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -462,6 +626,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       }
     ],
@@ -541,6 +706,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -560,12 +726,12 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       }
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

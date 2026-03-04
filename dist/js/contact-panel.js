@@ -438,16 +438,40 @@ class ContactPanel {
 
     if (hasError) return;
 
-    // Store in localStorage (matches newsletter pattern)
-    try {
-      const existing = JSON.parse(localStorage.getItem('consultation_requests') || '[]');
-      existing.push(formData);
-      localStorage.setItem('consultation_requests', JSON.stringify(existing));
-    } catch (err) {
-      // silently fail
+    // Disable submit button and show loading state
+    const submitBtn = this.formEl.querySelector('[type="submit"]');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting…';
     }
 
-    this.showSuccessState();
+    // Send to serverless API
+    fetch('/api/consult', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+      .then(res => res.ok ? res.json() : res.json().then(e => Promise.reject(e)))
+      .then(() => {
+        this.showSuccessState();
+      })
+      .catch(err => {
+        console.error('Consultation submit error:', err);
+        // Re-enable button
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit Request';
+        }
+        // Show inline error
+        let errorEl = this.formEl.querySelector('.contact-panel__submit-error');
+        if (!errorEl) {
+          errorEl = document.createElement('p');
+          errorEl.className = 'contact-panel__submit-error';
+          errorEl.style.cssText = 'color:#c0392b;font-size:13px;margin-top:8px;text-align:center';
+          submitBtn ? submitBtn.parentNode.insertBefore(errorEl, submitBtn.nextSibling) : this.formEl.appendChild(errorEl);
+        }
+        errorEl.textContent = err.message || 'Something went wrong. Please try again.';
+      });
   }
 
   preselectEngagement(typeName) {
@@ -481,7 +505,7 @@ class ContactPanel {
         successEl.className = 'contact-panel__success';
         successEl.innerHTML = `
           <h3>Request Received</h3>
-          <p>Your consultation request has been recorded. We will respond within two business days.</p>
+          <p>Sreenath Govindarajan will be in touch with you within 24 hours. A confirmation has been sent to your email.</p>
           <p class="contact-panel__footer-note">All consultations are structured and confidential.</p>
         `;
         this.scrollEl.appendChild(successEl);

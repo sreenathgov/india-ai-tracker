@@ -167,31 +167,31 @@
 }
 
 /* --- Footer override (identity section precedes footer) --- */
-.identity-section ~ .site-footer {
+.identity-section~.site-footer {
     background: #f7f5ee;
     border-top: 1px solid rgba(10, 47, 82, 0.06);
     padding: 2rem 2rem 1.5rem;
 }
 
-.identity-section ~ .site-footer .footer-byline {
+.identity-section~.site-footer .footer-byline {
     color: #0a2f52;
     opacity: 0.4;
 }
 
-.identity-section ~ .site-footer .footer-links {
+.identity-section~.site-footer .footer-links {
     color: #0a2f52;
     opacity: 0.35;
 }
 
-.identity-section ~ .site-footer .footer-links a {
+.identity-section~.site-footer .footer-links a {
     color: #0a2f52;
 }
 
-.identity-section ~ .site-footer .footer-links a:hover {
+.identity-section~.site-footer .footer-links a:hover {
     opacity: 0.8;
 }
 
-.identity-section ~ .site-footer .footer-links .separator {
+.identity-section~.site-footer .footer-links .separator {
     color: #0a2f52;
     opacity: 0.2;
 }
@@ -385,7 +385,9 @@
         gap: 1.25rem;
     }
 
-    .identity-statement { order: unset; }
+    .identity-statement {
+        order: unset;
+    }
 
     .identity-meta {
         order: unset;
@@ -414,5 +416,88 @@
     .identity-portrait__image {
         max-width: 320px;
         margin-bottom: 0;
+    }
+}
+
+/* ============================================
+   RESPONSIVE: iPad portrait (769px–1024px)
+   Single column, text above, portrait below & flush to footer
+   ============================================ */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+    .identity-section {
+        padding: 52px 2rem 0;
+    }
+
+    .identity-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+        align-items: start;
+    }
+
+    /* Text first */
+    .identity-text {
+        order: 1;
+        padding-left: 0;
+        padding-bottom: 2.5rem;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .identity-statement {
+        font-size: clamp(1.5rem, 3.5vw, 2rem);
+    }
+
+    .identity-meta {
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .identity-meta::before {
+        content: '';
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        height: 1px;
+        background: rgba(10, 47, 82, 0.12);
+        margin: 0 auto 1.5rem auto;
+    }
+
+    .identity-name {
+        text-align: center;
+    }
+
+    .identity-title {
+        text-align: center;
+    }
+
+    .identity-credentials {
+        width: fit-content;
+        margin: 0.875rem auto 0 auto;
+        text-align: left;
+    }
+
+    .identity-cta {
+        display: block;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* Portrait: second — wider, flush to section bottom */
+    .identity-portrait {
+        order: 2;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 0;
+    }
+
+    .identity-portrait__image {
+        display: block;
+        width: 55vw;
+        max-width: 440px;
+        height: auto;
+        margin: 0 auto;
     }
 }

@@ -18,6 +18,7 @@
     max-width: 1100px;
     width: 100%;
     margin: 0 auto;
+    text-align: center;
 }
 
 
@@ -29,16 +30,44 @@
     .manifesto-section {
         padding: 3.5rem 3rem 4.5rem;
     }
+
     .manifesto-mount {
         max-width: 900px;
     }
 }
 
+/* iPad landscape — compact */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+    .manifesto-section {
+        min-height: 50vh;
+        padding: 3.5rem 3rem;
+    }
+
+    .manifesto-mount {
+        max-width: 720px;
+    }
+}
+
+/* iPad portrait — generous equal breathing room above & below the text */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+    .manifesto-section {
+        min-height: 85vh;
+        padding: 7rem 3rem;
+        /* align-items: center (from base) keeps the text perfectly centred */
+    }
+
+    .manifesto-mount {
+        max-width: 640px;
+    }
+}
+
+/* Phone — full viewport so quote owns the screen */
 @media (max-width: 768px) {
     .manifesto-section {
-        padding: 3rem 1.5rem 4rem;
-        min-height: 60vh;
+        min-height: 100vh;
+        padding: 4rem 1.5rem;
     }
+
     .manifesto-mount {
         max-width: 100%;
     }
@@ -46,7 +75,6 @@
 
 @media (max-width: 480px) {
     .manifesto-section {
-        padding: 2.5rem 1.25rem 3rem;
-        min-height: auto;
+        padding: 4rem 1.25rem;
     }
 }

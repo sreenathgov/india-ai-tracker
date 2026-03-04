@@ -3,6 +3,45 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 2,
+        "title": "India AI Impact Summit 2026: $240 billion investment pledged by top firms",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-ai-impact-summit-2026-240-billion-investment-from-global-leaders/128958486",
+        "summary": "Top firms including Reliance Industries, Google, and Tata Group pledged $240 billion in investments at the India AI Impact Summit 2026. Over $200 billion of this investment will target AI infrastructure, hardware, and applications. The summit drew 6 lakh attendees from 100 countries, aiming to strengthen India's sovereign compute capacity and national AI infrastructure.",
+        "date_published": "2026-03-03",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Govt weighs new cyber framework as Airtel unveils AI Threat Research Centre",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/govt-weighs-new-cyber-framework-as-airtel-unveils-ai-threat-research-centre-11771601289911.html",
+        "summary": "India is planning new cybersecurity laws to combat AI-powered threats. Airtel has unveiled an AI Threat Research Centre in partnership with Zscaler to monitor and combat these threats. The centre will track 500 billion daily transactions to identify potential security risks.",
+        "date_published": "2026-02-20",
+        "source_name": "LiveMint AI News",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "India unveils frontier AI commitments to drive measurable outcomes",
         "url": "https://www.livemint.com/ai/artificial-intelligence/india-global-ai-commitments-responsible-development-regulation-deepfakes-11771482893155.html",
@@ -292,13 +331,14 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
-        "id": 7,
+        "id": 143,
         "title": "60% of businesses confident in scaling AI, but gaps remain: Nasscom Report",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/60-of-indian-businesses-confident-in-scaling-responsible-ai-despite-challenges-nasscom-report/127146897",
-        "summary": "Indian businesses are showing confidence in scaling AI, with 60% expressing optimism, and many prioritizing Responsible AI, with 30% having mature practices. The BFSI sector leads in AI maturity, but challenges such as hallucinations and privacy concerns remain. Businesses with higher AI maturity are better prepared for emerging technologies, but require framework updates for advanced AI systems.",
+        "summary": "Indian businesses are increasingly adopting Responsible AI, with 30% having mature practices and 45% implementing formal frameworks, marking a significant increase from 2023. Despite 60% of businesses being confident in scaling AI, challenges such as hallucinations and privacy concerns persist. Businesses with higher AI maturity are better prepared for emerging technologies, but require framework updates for advanced AI systems.",
         "date_published": "2026-01-28",
         "source_name": "ET CIO - AI",
         "category": "Policies and Initiatives",
@@ -311,13 +351,14 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
-        "id": 5,
+        "id": 151,
         "title": "Dell, NxtGen to build &#039;India’s largest AI training cluster&#039; under sovereign cloud",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/dell-and-nxtgen-collaborate-to-create-indias-largest-ai-training-cluster/127699336",
-        "summary": "Dell and NxtGen are collaborating to build India's largest AI training cluster under a sovereign cloud project. The project will utilize over 4,000 NVIDIA GPUs to enhance domestic AI computing capabilities. This initiative aims to support enterprises, startups, academia, and the government in expanding their AI computing capacity.",
+        "summary": "Dell and NxtGen are collaborating to build India's largest AI training cluster under a sovereign cloud project. The project will utilize over 4,000 NVIDIA GPUs to enhance domestic AI computing capabilities. This initiative aims to support enterprises, startups, academia, and government entities.",
         "date_published": "2026-01-28",
         "source_name": "ET CIO - AI",
         "category": "Policies and Initiatives",
@@ -330,6 +371,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -349,6 +391,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -368,6 +411,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -387,6 +431,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -406,6 +451,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -425,6 +471,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -444,6 +491,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -463,6 +511,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -482,6 +531,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -501,6 +551,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -520,6 +571,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -539,6 +591,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -558,6 +611,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -577,6 +631,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -596,6 +651,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -615,6 +671,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -634,6 +691,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       }
     ],
@@ -750,6 +808,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -769,10 +828,1037 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 8,
+        "title": "Adani Group’s $100 billion plan for renewable-powered AI data centres seen as...",
+        "url": "https://cellit.in/adani-groups-100-billion-plan-for-renewable-powered-ai-data-centres-seen-as-game-changer-for-india/",
+        "summary": "Adani Group has unveiled a $100 billion plan to develop renewable-powered AI data centres. The initiative aims to harness renewable energy to power AI data centres, although specific details about the project are not provided. The massive investment underscores Adani Group's commitment to sustainable and technologically advanced infrastructure development.",
+        "date_published": "2026-03-04",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "In a first, India notifies cloud, data centre and AI ethics standards",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/india-ai-cloud-data-centre-ethical-standards-government-digital-infrastructure-11772509557877.html",
+        "summary": "India has notified its first standards for cloud computing, data centre performance, and AI ethics. This move comes as AI systems become increasingly integrated into digital infrastructure. The new standards aim to establish guidelines for the development and use of AI in the country.",
+        "date_published": "2026-03-03",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Orders based on AI-generated judgments will be construed as misconduct",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/orders-based-on-ai-generated-judgments-will-be-construed-as-misconduct/128959743",
+        "summary": "The Supreme Court has warned that orders based on AI-generated judgments will be considered judicial misconduct. The court is examining the consequences and accountability of using AI in judicial processes. Notices have been issued to the Attorney General, Solicitor General, and the Bar Council of India regarding this matter.",
+        "date_published": "2026-03-03",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "The trinity of Digital Public Infrastructure, Open Network for Agriculture, and AI: Driving the next phase of agritech",
+        "url": "https://yourstory.com/2026/03/digital-public-infrastructure-open-networkai-next-phase-of-agritech",
+        "summary": "The convergence of Digital Public Infrastructure, Open Networks for Agriculture, and AI is driving the next phase of agritech. This convergence marks the evolution from 'agritech' to 'agriAI', representing a significant inflection point for Indian agriculture. It has the potential to bring about transformative changes in the sector, leveraging technology to improve outcomes.",
+        "date_published": "2026-03-03",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "The AI prompt engineer job: Hype or real career path?",
+        "url": "https://yourstory.com/2026/02/ai-prompt-engineer-job-career-path",
+        "summary": "Prompt engineering is evolving into AI context engineering in India, emerging as a potential career path. The field involves in-demand skills and offers various job opportunities, with notable hiring hubs and competitive salaries. As the industry continues to grow, prompt engineering is expected to shape future career trends in AI.",
+        "date_published": "2026-03-03",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Hiring in India rises 12% in February on AI push, IT sector recovery: Report",
+        "url": "https://yourstory.com/2026/03/hiring-in-india-rises-12-pc-in-february-on-ai-push-it-sector-recovery-report",
+        "summary": "India's white-collar job market saw a 12% increase in hiring in February, with the Naukri JobSpeak Index reaching 3,233 points. This growth is attributed to the push for artificial intelligence and recovery in the IT sector. The February performance is the strongest in recent years, according to the report.",
+        "date_published": "2026-03-03",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "‘Rahul Gandhi’s soldiers will not get scared’: IYC chief Uday Bhanu Chib walks out of jail",
+        "url": "https://www.tribuneindia.com/news/delhi/rahul-gandhis-soldiers-will-not-get-scared-iyc-chief-uday-bhanu-chib-walks-out-of-jail",
+        "summary": "Indian Youth Congress president Uday Bhanu Chib and nine others were released from jail after a court found their arrests during an AI Summit protest to be unjustified. Chib had been protesting against an alleged \"anti-India US trade deal\" and vowed to continue the fight. The Patiala House Court ordered their release, allowing Chib to resume his activism.",
+        "date_published": "2026-03-03",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "India AI Impact Summit 2026: Global Backing, Rs 16.6 lakh cr investment commitments; AI development and other insights",
+        "url": "https://www.etnownews.com/technology/india-ai-impact-summit-2026-global-backing-rs-16-6-lakh-cr-investment-commitments-ai-development-and-other-insights-article-153735454",
+        "summary": "The India AI Impact Summit 2026 has garnered global backing and secured investment commitments worth Rs 16.6 lakh crore. The summit aimed to give a head start to India's AI development, which is still in its early stages. The event saw significant developments and insights into AI, marking a crucial step for the country's AI growth.",
+        "date_published": "2026-03-02",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "AI marches ahead to disrupt India&#039;s back office which it built for the world",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-marches-ahead-to-disrupt-indias-back-office-which-it-built-for-the-world/128943880",
+        "summary": "India's $300 billion outsourcing industry is facing disruption due to automation tools, leading to slower hiring and workforce cuts. The industry, which was built to serve the world, is now racing to adapt to the changing landscape. Automation is gaining ground, forcing the sector to transform and evolve to remain competitive.",
+        "date_published": "2026-03-02",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "India&#039;s AI data advantage, from user base to global superpower",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-data-advantage-from-user-base-to-global-superpower/128940369",
+        "summary": "India has a significant advantage in AI data due to its large user base, positioning it to become a global AI superpower. To achieve this, the country must invest in talent and computing capabilities. Leveraging its data for domestic AI development is also crucial for India's growth in the AI sector.",
+        "date_published": "2026-03-02",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India&#039;s AI data advantage, from user base to global superpower",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-data-advantage-from-user-base-to-global-superpower/128845556",
+        "summary": "India has a significant advantage in AI data due to its large user base, positioning it to become a global AI superpower. To achieve this, the country needs to invest in talent and computing capabilities. Leveraging its data for domestic AI development is also crucial for India's growth in the AI sector.",
+        "date_published": "2026-02-28",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Bridging the gap between ambition and assurance in India’s critical infrastructure AI transformation",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/bridging-the-gap-between-ambition-and-assurance-in-indias-critical-infrastructure-ai-transformation/128838149",
+        "summary": "India's rapid integration of AI into critical infrastructure is outpacing its architectural readiness, creating a coordination gap. This gap poses national security risks due to a lack of visibility into AI stacks and inconsistent state-level oversight. Building assurance alongside capability is crucial for secure and accountable AI adoption at scale.",
+        "date_published": "2026-02-28",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Funding and acquisitions in Indian startup this week [Feb 23 - Feb 28]",
+        "url": "https://entrackr.com/report/weekly-funding-report/funding-and-acquisitions-in-indian-startup-this-week-feb-23-feb-28-11163180",
+        "summary": "Indian startups raised around $222.87 million in funding this week, with 43 startups securing investments, including 3 growth-stage and 36 early-stage deals. In comparison, the previous week saw 29 startups collectively secure about $1.3 billion in funding. Four startups kept their funding amounts undisclosed during this period.",
+        "date_published": "2026-02-28",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "India&#039;s engineering workforce faces a widening AI-confidence-capability gap",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-engineering-workforce-faces-a-widening-ai-confidence-capability-gap/128836095",
+        "summary": "A study of 400 Indian software engineers and tech recruiters found a significant gap between perceived AI readiness and actual expertise. While 89% of engineers believe they are AI-ready, only 19% are deeply engaged in building AI/ML systems. This disparity highlights a substantial confidence-capability gap in India's engineering workforce.",
+        "date_published": "2026-02-27",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "AI safety hangs in balance as India rushes in",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-safety-hangs-in-balance-as-india-rushes-in/128835907",
+        "summary": "New nonprofit groups like Fathom, Current AI, and IASEAI have emerged to address AI risks, working with governments and industry to create safeguards. As AI spreads, safety is becoming a core concern, prompting researchers and policymakers to join efforts to manage its impact. India's rapid adoption of AI has added urgency to these efforts to ensure the technology is developed and used responsibly.",
+        "date_published": "2026-02-27",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "How AI is shaping agriculture; Non-profits keeping heritage alive",
+        "url": "https://yourstory.com/2026/02/how-ai-is-shaping-agriculture-non-profits-keeping-heritage-alive",
+        "summary": "Algorithms, AI models, and satellite imaging are transforming agricultural practices by informing crop planning, growth, and harvesting decisions. Non-profits are working to preserve India's traditional art and culture for future generations. AI technology is playing a significant role in shaping the agriculture sector.",
+        "date_published": "2026-02-27",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Info Edge launches Rs 250 Cr growth-stage investment fund",
+        "url": "https://entrackr.com/snippets/info-edge-launches-rs-250-cr-growth-stage-investment-fund-11159997",
+        "summary": "Info Edge has launched a Rs 250 crore growth-stage investment fund called B8 Fund-I, its first dedicated vehicle for later-stage companies. The fund may also raise capital from external sponsors, potentially increasing its total corpus beyond the initial amount. This new fund adds to Info Edge's existing four early-stage investment platforms, including Info Edge Ventures and Redstart Labs.",
+        "date_published": "2026-02-27",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "LTM to Modernize India’s Tax Analytics Platform Leveraging NVIDIA AI Technology",
+        "url": "https://cellit.in/ltm-to-modernize-indias-tax-analytics-platform-leveraging-nvidia-ai-technology/",
+        "summary": "LTM is set to modernize India's tax analytics platform using NVIDIA AI technology. This collaboration aims to enhance the country's tax analytics capabilities, although specific details of the project are not provided. The partnership will likely utilize NVIDIA's AI solutions to improve the efficiency and accuracy of India's tax systems.",
+        "date_published": "2026-02-27",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Jio Finsider App: Jio Finance rolls out AI-backed mobile platform; features and latest updates",
+        "url": "https://www.etnownews.com/technology/jio-finsider-app-jio-finance-rolls-out-ai-backed-platform-features-and-updates-article-153711616",
+        "summary": "Triumph plans to launch new 350cc motorcycles in India by April 2026 to take advantage of lower GST rates. The move aims to make Triumph bikes more affordable and competitive against rivals like Royal Enfield. This strategy was confirmed by Rajiv Bajaj, targeting the mid-capacity segment.",
+        "date_published": "2026-02-27",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Seminar on Indian knowledge systems organised at IIIT-Una",
+        "url": "https://www.tribuneindia.com/news/ancientwisdom/seminar-on-indian-knowledge-systems-organised-at-iiit-una-2",
+        "summary": "IIIT-Una hosted a seminar on Indian Knowledge Systems, exploring ancient wisdom for a holistic future. The seminar featured discussions on Bharatiya Darshan, yoga, and indigenous science by RC Verma, and the director highlighted the importance of indigenous technology and conceptual thinking. Director Manish Gaur also drew parallels between Panini's grammar and AI.",
+        "date_published": "2026-02-27",
+        "source_name": "Tribune - Himachal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Spintly raises $8 Mn from Accel, ENRISSION India and others",
+        "url": "https://entrackr.com/snippets/spintly-raises-8-mn-from-accel-enrission-india-and-others-11160379",
+        "summary": "Spintly, a proptech startup, has raised $8 million in a Series A round led by Accel, with participation from ENRISSION India Capital, Chakra Growth Fund, Alumni Ventures, and Spyre VC. This funding round follows the company's previous raises, including Rs 3.5 crore in an extended seed round and $5.36 million from investors such as Letsventure and Accel Nest. The latest funding brings the total amount raised by Spintly to over $13 million.",
+        "date_published": "2026-02-27",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Intelligent fields: How AI is powering the future of Indian agriculture",
+        "url": "https://yourstory.com/2026/02/intelligent-fields-ai-powering-future-indian-agriculture",
+        "summary": "Indian farmers are turning to AI-led innovations to optimize their harvests amidst rapid urbanization and increasingly erratic climate patterns. This adoption of AI is expected to power the future of Indian agriculture. AI is helping farmers to improve their yields and adapt to changing environmental conditions.",
+        "date_published": "2026-02-26",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "TCS urges employees to use AI even if it cuts revenue: CEO...",
+        "url": "https://cellit.in/tcs-urges-employees-to-use-ai-even-if-it-cuts-revenue-ceo-krithivasan/",
+        "summary": "TCS CEO is encouraging employees to utilize AI, even if it potentially reduces revenue. The move aims to promote AI adoption and explore its benefits, despite possible financial implications. This approach reflects the company's commitment to embracing technological advancements and innovation.",
+        "date_published": "2026-02-26",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "India, Sweden sign AI pact; launch SITAC to boost tech, trade ties",
+        "url": "https://cellit.in/india-sweden-sign-ai-pact-launch-sitac-to-boost-tech-trade-ties/",
+        "summary": "India and Sweden have signed an artificial intelligence (AI) pact to strengthen their technological and trade relationships. The two countries have also launched the Sweden-India Tech Alliance Council (SITAC) to promote cooperation in the tech sector. This initiative aims to boost innovation, trade, and investment between India and Sweden.",
+        "date_published": "2026-02-26",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 19,
+        "title": "Rs 2-crore innovation fund set up to upgrade skills of youth: Dharmani",
+        "url": "https://www.tribuneindia.com/news/himachal/rs-2-crore-innovation-fund-set-up-to-upgrade-skills-of-youth-dharmani",
+        "summary": "A Rs 2 crore innovation fund has been established to enhance the skills of youth and promote entrepreneurship. The fund aims to boost the start-up ecosystem and support future-ready technical education, including digital and AI skills. New courses in areas like horticulture, natural farming, and dairy are also being developed.",
+        "date_published": "2026-02-26",
+        "source_name": "Tribune - Himachal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "India&#039;s engineering workforce faces a widening AI-confidence-capability gap",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-engineering-workforce-faces-a-widening-ai-confidence-capability-gap/128808732",
+        "summary": "India's engineering workforce is experiencing a growing AI confidence-capability gap, with many engineers feeling ready for AI roles but lacking practical skills. This disparity is creating hiring challenges and career risks, particularly for women engineers who face additional barriers. Companies are now prioritizing hands-on experience over self-assessment to find skilled AI professionals.",
+        "date_published": "2026-02-26",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Using AI to detect breast cancer; Building credit models for India's informal economy",
+        "url": "https://yourstory.com/2026/02/using-ai-to-detect-breast-cancer-credit-model-informal-sector",
+        "summary": "Breast cancer is the most common cancer in women in India, with cases rising from 2.13 lakh in 2021 to nearly 2.4 lakh in 2025. The National Cancer Registry Programme reported this significant increase, highlighting the need for improved detection and treatment methods. AI is being explored as a potential tool to detect breast cancer and improve patient outcomes.",
+        "date_published": "2026-02-25",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Akamai to convene India’s tech leaders for closed-door summit on running AI at real-world scale",
+        "url": "https://yourstory.com/2026/02/akamai-convene-indias-tech-leaders-closed-door-summit-running-ai-real-world-scale",
+        "summary": "Akamai and YourStory are hosting a closed-door summit to discuss running AI at scale. The event will bring together India's tech leaders to explore the realities of implementing AI in production, focusing on scale, cost, and resilience. The summit aims to move the AI conversation beyond models and into real-world applications.",
+        "date_published": "2026-02-25",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "AI labs, new CBSE school and Rs 4,248 crore push by BMC on education",
+        "url": "https://indianexpress.com/article/cities/mumbai/ai-labs-new-cbse-school-and-rs-4248-crore-push-by-bmc-on-education-10551396/",
+        "summary": "The Brihan Mumbai Municipal Corporation (BMC) is investing Rs 4,248 crore to boost education, including the establishment of AI labs and a new CBSE school. This significant investment aims to enhance the city's educational infrastructure and provide students with access to cutting-edge technology. The initiative is expected to improve the overall quality of education in the region.",
+        "date_published": "2026-02-25",
+        "source_name": "Indian Express - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "EXCLUSIVE | 'AI's ability is not to take away jobs, but...' says Paytm CEO Vijay Shekhar Sharma on impact of AI on jobs – Here's what he said Watch",
+        "url": "https://www.etnownews.com/technology/exclusive-ais-ability-is-not-to-take-away-jobs-but-says-paytm-ceo-vijay-shekhar-sharma-on-impact-of-ai-on-jobs-heres-what-he-said-watch-article-153685194",
+        "summary": "Paytm CEO Vijay Shekhar Sharma shared his views on the impact of AI on jobs, stating that AI's ability is not to take away jobs. He discussed how artificial intelligence will reshape jobs, businesses, and India's startup ecosystem in an exclusive conversation with ET Now. Sharma's comments aimed to address concerns about AI's role in the job market.",
+        "date_published": "2026-02-24",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Climate, capital &amp; AI: Mosambi 2.0 reinforces India’s role in Global South climate innovation",
+        "url": "https://government.economictimes.indiatimes.com/news/policy/climate-capital-and-ai-mosambi-2-0-reinforces-indias-role-in-global-south-climate-innovation/128755291",
+        "summary": "Mosambi Climate Conference 2.0 is reinforcing India's role in Global South climate innovation by aligning capital, policy, and climate technology. The conference aims to accelerate the deployment of digital energy systems and blended finance. This initiative strengthens India's position as a key player in Global South climate innovation.",
+        "date_published": "2026-02-24",
+        "source_name": "ET Government - Policy",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "2026 will be the year of mass AI adoption: OpenAI&#039;s Brad Lightcap",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/2026-will-be-the-year-of-mass-ai-adoption-openais-brad-lightcap/128753022",
+        "summary": "OpenAI's COO Brad Lightcap predicts 2026 will be the year of mass AI adoption, driven by strong demand from enterprises, startups, and developers. India is currently OpenAI's second-largest market with 100 million active users and may soon become the largest due to rapid growth. Partnerships with major companies like Tata Group and TCS will play a key role in driving large-scale AI adoption.",
+        "date_published": "2026-02-24",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "How Flo Mobility’s AI Stack & Robots Are Disrupting The Construction Sector",
+        "url": "https://inc42.com/startups/flo-mobility-ai-stack-robots-are-disrupting-the-construction-sector/",
+        "summary": "Flo Mobility is using its AI stack and robots to disrupt the construction sector, streamlining traditional labor-intensive processes. The company's technology aims to increase efficiency and productivity on construction sites, potentially replacing manual tasks such as moving materials. This innovation has the potential to transform India's construction industry, where manual labor is currently prevalent.",
+        "date_published": "2026-02-24",
+        "source_name": "Inc42 Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "AMD bets big on India’s AI ambitions with Helios; open ecosystem push",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/amd-bets-big-on-indias-ai-ambitions-with-helios-open-ecosystem-push/128699407",
+        "summary": "AMD is investing in India's AI growth with Helios, a fully integrated AI system. Helios represents a shift from individual components to comprehensive AI building blocks. The system is designed around open standards, marking a significant change in AMD's approach.",
+        "date_published": "2026-02-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Dell releases AI India Blueprint at India AI Impact Summit 2026",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/dell-releases-ai-india-blueprint-at-india-ai-impact-summit-2026/128596227",
+        "summary": "Dell Technologies has released an AI India Blueprint to scale artificial intelligence across India, focusing on three key areas: computing power, skilled workforce, and governance. The plan aims to address the significant growth expected in AI workloads and compute demand in India by 2030. The blueprint is part of Dell's efforts to support India's AI development and growth.",
+        "date_published": "2026-02-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "India&#039;s AI ambition spans full tech stack; combines domestic impact, global outlook",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-ambition-spans-full-tech-stack-combines-domestic-impact-global-outlook/128697412",
+        "summary": "India's AI ambitions encompass the entire tech stack, aiming for both domestic impact and global influence. The evolution of networks is expected to play a crucial role in the country's AI journey. AI is anticipated to advance from optimizing 5G networks to more complex forms like agentic AI and physical AI, including robots and humanoids.",
+        "date_published": "2026-02-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "India AI Impact Summit: major announcements at a glance",
+        "url": "https://yourstory.com/2026/02/india-ai-impact-summit-major-announcements-at-a-glance",
+        "summary": "The India AI Impact Summit 2026 drew 250,000 attendees and featured major tech names, with $250 billion in pledges announced. The event brought together key players in the industry to discuss AI's impact and future. The summit's large attendance and significant pledges underscore India's growing importance in the global AI landscape.",
+        "date_published": "2026-02-23",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "The rise of the agentic enterprise: How India is scaling the next peak of AI",
+        "url": "https://www.livemint.com/ai/the-rise-of-the-agentic-enterprise-how-india-is-scaling-the-next-peak-of-ai-11771870202107.html",
+        "summary": "India is emerging as a leader in deploying autonomous digital systems, marking a significant shift in business operations. The conversation around AI has shifted to focus on strategic partnerships and measurable return on investment (ROI). This has made AI a key component of technology budgets, driving its integral role in business operations.",
+        "date_published": "2026-02-23",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "AI will augment, create new jobs in India: World Bank",
+        "url": "https://www.livemint.com/ai/ai-will-augment-create-new-jobs-in-india-world-bank-11771869194487.html",
+        "summary": "The World Bank believes AI will augment and create new jobs in India, according to discussions at the India AI Summit. Experts highlighted AI's potential to bridge gaps in healthcare and education, particularly in rural communities. AI applications can aid rural areas and improve livelihoods, with a focus on small-scale implementations.",
+        "date_published": "2026-02-23",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "India AI Impact Summit recognised as landmark event for Global South",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-ai-impact-summit-recognised-as-landmark-event-for-global-south/128707339",
+        "summary": "The India AI Impact Summit 2026, held in the national capital, is considered the most significant AI gathering in the Global South. It is described as the world's biggest AI summit to date, attracting international attention. The event has been recognized as a landmark for the Global South, marking a major milestone in the region's AI development.",
+        "date_published": "2026-02-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "DPI to daily life: India&#039;s AI pitch goes beyond code",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/dpi-to-daily-life-indias-ai-pitch-goes-beyond-code/128701318",
+        "summary": "India showcased its Digital Public Infrastructure (DPI) at the India AI Impact Summit 2026, demonstrating its potential to enhance daily life. A coffee stall at the event exemplified this, where Google CEO Sundar Pichai sampled GI-tagged coffee and made a payment using UPI. This highlights India's efforts to integrate AI and technology into everyday experiences.",
+        "date_published": "2026-02-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "AMD bets big on India’s AI ambitions with Helios; open ecosystem push",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/amd-bets-big-on-indias-ai-ambitions-with-helios-open-ecosystem-push/128701079",
+        "summary": "AMD is investing in India's AI ambitions through its Helios initiative, focusing on exascale computing and public-private partnerships. The company aims to create an open ecosystem, as outlined by Senior VP Thomas Zacharia. This push is part of AMD's broader roadmap for deeper engagement in the Indian market.",
+        "date_published": "2026-02-23",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 19,
+        "title": "AI and employment in India: Demographic dividend or demographic disruption?",
+        "url": "https://www.tribuneindia.com/news/himachal/ai-and-employment-in-india-demographic-dividend-or-demographic-disruption",
+        "summary": "India's demographic dividend is threatened by AI-driven automation, which may lead to job polarization, particularly in the informal sector. AI can bring productivity gains, but it also poses risks to the workforce. To mitigate these risks, India needs effective governance, including reskilling, labor law adjustments, and inclusive growth strategies.",
+        "date_published": "2026-02-22",
+        "source_name": "Tribune - Himachal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "India emerging as manufacturing hub; AI to boost automation",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-ascends-as-global-manufacturing-hub-ais-role-in-automation-and-6g/128605207",
+        "summary": "India is emerging as a manufacturing hub, with artificial intelligence (AI) expected to boost automation in the country. According to Amon, India has an incredible opportunity with AI-driven transformation, which can create new opportunities for Indians. This shift in technology is poised to drive growth and development in India's manufacturing sector.",
+        "date_published": "2026-02-21",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "India AI Impact Summit 2026: How AI can deepen customer trust in the BFSI sector",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-ai-impact-summit-2026-how-ai-can-deepen-customer-trust-in-the-bfsi-sector/128608896",
+        "summary": "At the India AI Impact Summit 2026, industry leaders discussed the role of AI in the BFSI sector, focusing on its potential to enhance customer trust. They highlighted the importance of responsible AI practices, including compliance-by-design and human oversight, to maintain trust. Key areas of AI implementation include customer service, engineering, and operations, where productivity gains are being realized.",
+        "date_published": "2026-02-21",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "The invisible cost of AI drift in Indian enterprises",
+        "url": "https://yourstory.com/2026/02/the-invisible-cost-of-ai-drift-in-indian-enterprises",
+        "summary": "AI drift is becoming a significant operational and business risk for Indian enterprises as AI becomes more integrated into daily workflows. This shift is transforming drift from a purely technical concern to a broader business issue. As a result, Indian companies must now consider the potential costs and implications of AI drift on their operations.",
+        "date_published": "2026-02-21",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 16,
+        "title": "India AI Summit draws $250B infrastructure commitments, $20B VC investments in deeptech",
+        "url": "https://yourstory.com/2025/11/india-ai-summit-nfrastructure-commitments-vc-investments-in-deeptech",
+        "summary": "The India AI Summit secured $250 billion in infrastructure commitments and $20 billion in venture capital investments in deeptech. The event drew over 5 lakh visitors, demonstrating significant domestic and global interest in India's AI initiatives. Union IT Minister Ashwini Vaishnaw announced the summit's notable participation and investment figures.",
+        "date_published": "2026-02-21",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Meet Ranvir Sachdeva: Youngest coder who addressed India AI Impact Summit 2026; meets Sundar Pichai, Sam Altman and other tech titans",
+        "url": "https://www.etnownews.com/technology/meet-ranvir-sachdeva-youngest-coder-who-addressed-india-ai-impact-summit-2026-meets-sundar-pichai-sam-altman-and-other-tech-titans-article-153663695",
+        "summary": "Ranvir Sachdeva, an 8-year-old coder, became the youngest speaker at the India AI Impact Summit 2026. He presented on how ancient Indian philosophy can influence modern Artificial Intelligence development. Sachdeva also met with prominent tech leaders, including Sundar Pichai and Sam Altman, at the summit.",
+        "date_published": "2026-02-21",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "AI and digital to power India’s CX industry growth to Rs 30.88 lakh cr by 2027: Report",
+        "url": "https://www.etnownews.com/technology/ai-and-digital-to-power-indias-cx-industry-growth-to-rs-30-88-lakh-cr-by-2027-report-article-153662167",
+        "summary": "India's CX industry is expected to grow to Rs 30.88 lakh cr by 2027, driven by the expansion of digital CX solutions and integration of generative AI. The industry is shifting from cost-driven outsourcing to intelligence-led service delivery, with AI playing a key role in this transformation. The market is projected to remain resilient and substantial despite initial concerns of shrinkage.",
+        "date_published": "2026-02-21",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "India advances privacy-first, multilingual AI with handheld open hardware prototype",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/india-unveils-multilingual-ai-prototype-for-privacy-and-accessibility/128638952",
+        "summary": "India has developed a handheld open hardware prototype that supports multilingual AI queries, prioritizing user privacy by processing data on-device. The prototype is a result of collaboration with Digital India BHASHINI, Current AI, and Kalpa Impact. It aims to facilitate rural deployment and privacy-first AI applications.",
+        "date_published": "2026-02-21",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 19,
+        "title": "4 Youth Congress workers sent to 5-day police custody",
+        "url": "https://www.tribuneindia.com/news/bharatmandapam/4-youth-cong-workers-sent-to-5-day-police-custody",
+        "summary": "Four Indian Youth Congress workers were arrested for protesting at an AI Summit and sent to 5-day police custody. They were accused of raising anti-national slogans, wearing objectionable T-shirts, and violating prohibitory orders. The workers claimed they were peacefully protesting for employment, according to their defense.",
+        "date_published": "2026-02-21",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 20,
+        "title": "Congress faces heat from several quarters over ‘shirtless’ protest at AI summit",
+        "url": "https://www.tribuneindia.com/news/india/congress-faces-heat-from-several-quarters-over-shirtless-protest-at-ai-summit",
+        "summary": "Youth Congress workers staged a \"shirtless\" protest at the India AI Impact Summit, sparking outrage from the BJP and other parties. The BJP accused the Congress of harming India's image and alleged \"treason,\" with several IYC workers being arrested. The protest was widely condemned across multiple states.",
+        "date_published": "2026-02-21",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
       {
         "id": 7,
         "title": "India stands at AI inflection point amid infrastructure shift",
@@ -945,10 +2031,219 @@
         "posted_to_x_at": null
       },
       {
-        "id": 45,
-        "title": "8-year-old Sikh boy becomes youngest keynote speaker at India AI Impact Summit 2026",
-        "url": "https://www.tribuneindia.com/news/punjab/8-year-old-sikh-boy-becomes-youngest-keynote-speaker-at-india-ai-impact-summit-2026",
-        "summary": "Ranvir Sachdeva, an 8-year-old Sikh boy, became the youngest keynote speaker at the India AI Impact Summit 2026. He discussed connecting ancient philosophies with AI and showcased an Indian AI model he contributed to. Sachdeva emphasized the importance of indigenous AI development and technological self-reliance.",
+        "id": 2,
+        "title": "AI Impact Summit: Meet ‘LuSI’, the ‘Made in India’ AI-integrated robotic baby revolutionising medical training",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/ai-impact-summit-meet-lusi-the-made-in-india-ai-integrated-robotic-baby-revolutionising-medical-training-11771607449943.html",
+        "summary": "The IITI DRISHTI CPS Foundation has unveiled \"LuSI\", a 2.5 kg robotic newborn with AI integration, designed to aid in medical training. LuSI, which stands for Lungs Simulator, is a realistic robotic baby that helps bridge the gap between theoretical knowledge and practical clinical experience for doctors and students. This innovation is a \"Made in India\" product showcased at the AI Impact Summit.",
+        "date_published": "2026-02-20",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "India AI Impact Summit 2026: The case for small AI",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-ai-impact-summit-2026-the-case-for-small-ai/128604068",
+        "summary": "Tech leaders argue that small, task-specific AI models are more effective in resource-constrained settings, such as rural areas, due to their ability to function on basic phones and unreliable internet. These models are seen as more deployable in such areas, making them a viable alternative to massive AI models. Collective action is necessary for AI to successfully scale to remote regions, according to experts.",
+        "date_published": "2026-02-20",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Sundar Pichai says India’s AI story can be extraordinary",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/sundar-pichai-says-indias-ai-story-can-be-extraordinary/128598136",
+        "summary": "Google CEO Sundar Pichai believes India has the potential for an extraordinary AI story, citing the country's significant role in shaping global products. Pichai emphasized the importance of the US-India partnership in shaping the next phase of AI development. He made these comments at the India AI Impact Summit 2026.",
+        "date_published": "2026-02-20",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "Razorpay’s Harshil Mathur bets on AI to make commerce conversational again",
+        "url": "https://yourstory.com/2026/02/razorpay-harshil-mathur-ai-bets-ecommerce-conversational-mcp-agentic",
+        "summary": "Razorpay has launched Agentic Payments on Claude, a platform that allows users to make payments within a chat interface. This feature enables users to order from food delivery services such as Zomato, Swiggy, and Zepto through conversational commerce. The move aims to make commerce more conversational using AI technology.",
+        "date_published": "2026-02-20",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 15,
+        "title": "India is going to lead in AI through entrepreneurship: General Catalyst’s Hemant Taneja",
+        "url": "https://yourstory.com/2026/02/india-lead-ai-entrepreneurship-general-catalyst-hemant-taneja",
+        "summary": "General Catalyst's Hemant Taneja believes India will take the lead in AI through entrepreneurship. This statement was made during his keynote address at the India AI Impact Summit 2026. General Catalyst plans to invest $5 billion in India over the next five years, as announced a day prior to the summit.",
+        "date_published": "2026-02-20",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 18,
+        "title": "US-India partnership has critical role to play to make AI benefits available to everyone: Sundar Pichai",
+        "url": "https://yourstory.com/2026/02/us-india-partnership-ai-benefits-available-to-everyone-google-ceo-sundar-pichai",
+        "summary": "Google CEO Sundar Pichai emphasized the importance of the US-India partnership in making AI benefits accessible to everyone. This statement came after his meeting with Prime Minister Narendra Modi, where they discussed India's AI ambitions and Google's potential role. The partnership aims to accelerate India's AI development and transformation through talent development, digital infrastructure, and sectoral growth.",
+        "date_published": "2026-02-20",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 19,
+        "title": "Indian AI Startup Tracker: 170+ Startups Putting India On The Global AI Map",
+        "url": "https://inc42.com/startups/indian-ai-startup-tracker/",
+        "summary": "Over 170 Indian AI startups are making a mark on the global AI landscape, contributing to the country's growing presence in the industry. The Indian AI ecosystem has been gaining momentum, particularly after the launch of ChatGPT in late 2022, which brought AI into the mainstream. These startups are helping put India on the global AI map, showcasing the country's potential in the field.",
+        "date_published": "2026-02-20",
+        "source_name": "Inc42 Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 20,
+        "title": "Livspace lays off 1,000 employees amid co-founder exit and AI shift",
+        "url": "https://entrackr.com/news/livspace-lays-off-1000-employees-amid-co-founder-exit-and-ai-shift-11140571",
+        "summary": "Livspace has laid off around 1,000 employees, approximately 12% of its workforce, as part of a reorganisation to become an AI-native organisation. The layoffs come amid a lack of external funding and uncertainty about the company's path to profitability. The actual number of affected employees may be as high as 25%, according to some reports.",
+        "date_published": "2026-02-20",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 22,
+        "title": "Razorpay and NPCI bring agentic payments to Claude at India AI Impact Summit",
+        "url": "https://entrackr.com/snippets/razorpay-and-npci-bring-agentic-payments-to-claude-at-india-ai-impact-summit-11138579",
+        "summary": "Razorpay and NPCI have partnered to introduce Agentic Payments to Claude, enabling users to make purchases through AI. The platform, currently in its pilot phase, allows users to order essentials from services like Zomato and Swiggy without leaving the conversation. This integration brings payments directly into the AI experience, streamlining the shopping process.",
+        "date_published": "2026-02-20",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 26,
+        "title": "AI will create new jobs even as it transforms roles: Vice President",
+        "url": "https://telanganatoday.com/ai-will-create-new-jobs-even-as-it-transforms-roles-vice-president",
+        "summary": "Vice President C.P. Radhakrishnan stated that artificial intelligence will create new job opportunities while transforming existing roles. India is strengthening its position in the global AI ecosystem, with AI having potential across key sectors. The India AI Impact Summit 2026 highlighted AI's potential and its impact on various industries.",
+        "date_published": "2026-02-20",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 35,
+        "title": "Youth Cong protesters enter AI Summit venue using QR codes",
+        "url": "https://www.tribuneindia.com/news/delhi/4-youth-cong-workers-held-for-staging-protest-at-ai-summit",
+        "summary": "Youth Congress workers in India protested at the AI Impact Summit by registering as visitors and using QR codes to gain entry. They were subsequently arrested and charged with unlawful assembly and other offenses. The protest was held against perceived compromises of India's interests, prompting heightened security measures.",
+        "date_published": "2026-02-20",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 42,
+        "title": "World Punjabi Conference deliberates on role of AI in preserving language",
+        "url": "https://www.tribuneindia.com/news/amritsar/conference-deliberates-on-role-of-ai-in-preserving-punjabi-language",
+        "summary": "Guru Nanak Dev University hosted the World Punjabi Conference to discuss AI's impact on the Punjabi language, culture, and society. A Rs 1 crore grant was announced for an Ethical AI Centre to promote the integration of AI with Punjabi. The conference aims to leverage AI while preserving Punjabi heritage and emphasizing ethical considerations.",
         "date_published": "2026-02-20",
         "source_name": "Tribune - Punjab",
         "category": "Major AI Developments",
@@ -3298,6 +4593,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3317,6 +4613,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3336,10 +4633,11 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
-        "id": 8,
+        "id": 144,
         "title": "PwC India report projects AI to unlock USD 550 billion across five sectors by 2035",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-to-drive-550-billion-growth-in-agriculture-education-energy-healthcare-and-manufacturing-by-2035-pwc-india-report/127596756",
         "summary": "PwC India's report projects AI to add $550 billion to five key sectors by 2035. The report introduces a 3A2I framework for scaling AI, focusing on access, acceptance, and assimilation, as well as implementation and institutionalization. This framework aims to unlock broader public and economic benefits from AI adoption.",
@@ -3355,6 +4653,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3374,6 +4673,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3393,6 +4693,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3412,6 +4713,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3431,6 +4733,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3450,6 +4753,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3469,6 +4773,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3489,6 +4794,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3508,6 +4814,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3527,6 +4834,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3546,6 +4854,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3565,6 +4874,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3584,6 +4894,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3603,6 +4914,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3622,6 +4934,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3641,6 +4954,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3660,6 +4974,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3679,6 +4994,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3698,13 +5014,14 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
-        "id": 12,
+        "id": 100,
         "title": "AI-led data centre expansion gathers pace in India amid power, policy challenges",
         "url": "https://www.techcircle.in/2026/01/13/ai-led-data-centre-expansion-gathers-pace-in-india-amid-power-policy-challenges",
-        "summary": "India is experiencing a rapid expansion of AI-led data centres despite facing challenges related to power and policy. The growth is driven by increasing demand for data storage and processing, with several major companies investing in the sector. However, the industry's progress is hindered by issues such as power shortages and unclear regulatory frameworks.",
+        "summary": "India is experiencing a rapid expansion of AI-led data centres despite facing challenges related to power and policy. The growth is driven by increasing demand for data storage and processing capabilities. Data centre operators are working to address the power and policy hurdles to sustain the expansion.",
         "date_published": "2026-01-01",
         "source_name": "TechCircle - Policy",
         "category": "Major AI Developments",
@@ -3717,6 +5034,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3736,6 +5054,7 @@
         "processing_attempts": 0,
         "importance_score": 18.0,
         "premium_processed": true,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -3755,10 +5074,126 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 1,
+        "title": "AI driving unicorn creation in India, elsewhere faster than ever",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-driving-unicorn-creation-in-india-elsewhere-faster-than-ever/128772750",
+        "summary": "The creation of unicorns, or startups with a valuation of $1 billion and above, is surging in the AI era. AI companies are achieving unicorn status at a rapid pace, with an average time of 4.7 years. This trend is observed not only in India but also in other parts of the world.",
+        "date_published": "2026-02-25",
+        "source_name": "ET CIO - AI",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Deeptech IoT startup DATOMS raises Rs 25 Cr in Series A led by Big Capital JSC",
+        "url": "https://entrackr.com/snippets/deeptech-iot-startup-datoms-raises-rs-25-cr-in-series-a-led-by-big-capital-jsc-11146538",
+        "summary": "DATOMS, an Indian industrial deeptech IoT startup, has raised Rs 25 crore ($2.76 million) in a Series A funding round led by Big Capital JSC. The round also saw participation from IvyCap Ventures and follow-on investment from YourNest Venture Capital. This funding round was previously reported by Entrackr earlier this month, with DATOMS having raised $1.2 million in a previous round led by YourNest.",
+        "date_published": "2026-02-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Why Blackstone’s $1.2 billion bet on Neysa matters for India’s AI future",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/blackstone-neysa-investment-india-ai-future-compute-infrastructure-11771578426661.html",
+        "summary": "Blackstone has invested $1.2 billion in Neysa, a significant bet that is expected to power India's AI ambitions. This investment will reportedly boost India's local compute capabilities, driving the country's AI future. Neysa's CEO, Sharad Sanghi, believes this funding will have a substantial impact on India's AI development.",
+        "date_published": "2026-02-21",
+        "source_name": "LiveMint AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 17,
+        "title": "Sarvam targets AI beyond languages; General Catalyst’s $5B India bet",
+        "url": "https://yourstory.com/2026/02/sarvam-targets-ai-beyond-languages-general-catalysts-5b-india-bet",
+        "summary": "Sarvam AI is developing AI innovations that go beyond languages, marking a new direction for the company. General Catalyst's CEO, Hemant Taneja, is betting big on India with a $5 billion investment, believing Indian entrepreneurs will drive the next generation of companies. This investment is expected to fuel growth in areas like agentic commerce, predicted to emerge in the near future by Razorpay CEO Harshil Mathur.",
+        "date_published": "2026-02-21",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Funding and acquisitions in Indian startup this week [Feb 16 - Feb 21]",
+        "url": "https://entrackr.com/report/weekly-funding-report/funding-and-acquisitions-in-indian-startup-this-week-feb-16-feb-21-11141675",
+        "summary": "Indian startups raised around $1.3 billion in funding this week, with 29 startups securing investments, including 3 growth-stage and 19 early-stage deals. This surpasses the $236 million raised by 37 startups in the previous week. The funding amounts for 7 of the startups remained undisclosed.",
+        "date_published": "2026-02-21",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 17,
+        "title": "Global AI race: CEEW founder on how India can scale data centres sustainably and its climate impact",
+        "url": "https://indianexpress.com/article/cities/delhi/global-ai-race-ceew-founder-india-data-centres-climate-impact-10544453/",
+        "summary": "India can scale data centres sustainably by adopting renewable energy sources and energy-efficient technologies. The Centre for Energy Finance founder discusses the importance of sustainable data centre development in India to mitigate its climate impact. India's growing data centre industry poses significant climate risks if not managed sustainably.",
+        "date_published": "2026-02-21",
+        "source_name": "Indian Express - Delhi",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
       {
         "id": 1,
         "title": "Sarvam to launch ChatGPT-like app with limited access soon",
@@ -3785,6 +5220,63 @@
         "summary": "Roopya, a SaaS-based lending infrastructure platform, has raised Rs 4 crore in a seed funding round led by Inflection Point Ventures. The funds will be used to scale its lending infrastructure and expand embedded finance capabilities. Roopya's platform offers a no-code, AI-powered Lending-as-a-Service stack, enabling financial institutions to launch loan products quickly.",
         "date_published": "2026-02-20",
         "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Sarvam’s 105-bn model puts India on the frontier AI map",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/sarvams-105-bn-model-puts-india-on-the-frontier-ai-map/128593821",
+        "summary": "Sarvam, an Indian startup, has launched a 105-billion-parameter foundational LLM, the largest trained from scratch in India with no external data dependency. The model excels in Indic languages and aims to provide efficient, cost-effective AI solutions. It also targets expansion into devices like smart glasses and feature phones for broader inclusion and natural interaction.",
+        "date_published": "2026-02-20",
+        "source_name": "ET CIO - AI",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "Adobe's mission is to empower everyone to create, says CEO Shantanu Narayen",
+        "url": "https://yourstory.com/2025/11/adobe-mission-is-to-empower-everyone-to-create-ceo-shantanu-narayen",
+        "summary": "Adobe CEO Shantanu Narayen believes AI removes barriers to expression and creativity, aligning with the company's mission to empower everyone to create. He shared this perspective at the India AI Impact Summit 2026, in a conversation with YourStory's CEO and Founder, Shraddha Sharma. Narayen views AI as a key technology in achieving Adobe's creative empowerment goals.",
+        "date_published": "2026-02-20",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "Sarvam AI sets roadmap to build models that look beyond languages",
+        "url": "https://yourstory.com/2026/02/sarvam-ai-sets-roadmap-build-models-beyond-languages-ai-summit",
+        "summary": "Sarvam AI aims to develop AI models that transcend language barriers, recognizing the vast potential for AI deployment in the country. Citizens and governments are showing keen interest in adopting this technology, driving the demand for innovative AI solutions. Sarvam AI is poised to capitalize on this trend by building inclusive models.",
+        "date_published": "2026-02-20",
+        "source_name": "YourStory",
         "category": "AI Start-Up News",
         "state_codes": [
           "IN"
@@ -4232,6 +5724,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -4251,10 +5744,11 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
-        "id": 6,
+        "id": 142,
         "title": "Over 100 Indian AI startup founders moving to US for funds and talent",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/100-indian-ai-founders-relocate-to-us-for-growth-and-talent/127676735",
         "summary": "Over 100 Indian AI startup founders are relocating to the US in search of funding and talent. Several startups, including Composio and Meetstream.ai, have already made the move over the past couple of years. Others, such as Smallest.ai and Beatoven.ai, are also shifting their base to the US.",
@@ -4270,6 +5764,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -4289,6 +5784,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -4308,6 +5804,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -4327,6 +5824,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -4346,6 +5844,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -4365,6 +5864,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -4384,6 +5884,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -4403,6 +5904,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -4422,6 +5924,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -4441,6 +5944,7 @@
         "processing_attempts": 0,
         "importance_score": 20.0,
         "premium_processed": true,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -4460,6 +5964,7 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -4479,6 +5984,7 @@
         "processing_attempts": 0,
         "importance_score": 20.0,
         "premium_processed": true,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -4498,6 +6004,7 @@
         "processing_attempts": 0,
         "importance_score": 15.0,
         "premium_processed": true,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -4517,6 +6024,7 @@
         "processing_attempts": 0,
         "importance_score": 20.0,
         "premium_processed": true,
+        "sector": null,
         "posted_to_x_at": null
       },
       {
@@ -4536,12 +6044,12 @@
         "processing_attempts": 0,
         "importance_score": 0.0,
         "premium_processed": false,
+        "sector": null,
         "posted_to_x_at": null
       }
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

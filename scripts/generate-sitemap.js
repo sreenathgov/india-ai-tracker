@@ -8,6 +8,7 @@ const BASE_URL = 'https://kananlabs.in';
 const staticRoutes = [
   '/',
   '/about.html',
+  '/sector-watch.html',
   '/publications.html'
 ];
 

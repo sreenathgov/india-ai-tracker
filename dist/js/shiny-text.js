@@ -185,20 +185,35 @@ class ShinyText {
 // Initialize when DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   const element = document.getElementById('shinyText');
-  if (!element) return;
+  if (element) {
+    const shinyText = new ShinyText(element, {
+      text: 'WEEKLY INSIGHTS',
+      speed: 4,
+      color: 'rgba(244, 235, 208, 1)',
+      shineColor: '#ffffff',
+      spread: 120,
+      direction: 'left',
+      yoyo: false,
+      pauseOnHover: false,
+      delay: 0
+    });
+    window.shinyText = shinyText;
+  }
 
-  const shinyText = new ShinyText(element, {
-    text: 'WEEKLY INSIGHTS',
-    speed: 4,
-    color: 'rgba(244, 235, 208, 1)', // Match site beige color
-    shineColor: '#ffffff',
-    spread: 120,
-    direction: 'left',
-    yoyo: false,
-    pauseOnHover: false,
-    delay: 0
-  });
-
-  // Expose for debugging
-  window.shinyText = shinyText;
+  // Platform section title — same effect, preserves existing text content
+  const platformTitle = document.getElementById('platformTitle');
+  if (platformTitle) {
+    const platformShiny = new ShinyText(platformTitle, {
+      text: platformTitle.textContent.trim(),
+      speed: 5,
+      color: 'rgba(244, 235, 208, 1)',
+      shineColor: '#ffffff',
+      spread: 120,
+      direction: 'left',
+      yoyo: false,
+      pauseOnHover: false,
+      delay: 0
+    });
+    window.platformShiny = platformShiny;
+  }
 });

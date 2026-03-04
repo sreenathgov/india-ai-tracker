@@ -1,0 +1,30 @@
+{
+  "state": "NL",
+  "categories": {
+    "Policies and Initiatives": [],
+    "Events": [],
+    "Major AI Developments": [
+      {
+        "id": 8,
+        "title": "DI Talk Show on India AI Impact Summit 2026 and Digital India Initiatives in Nagaland",
+        "url": "https://www.digitalindia.gov.in/events/di-talk-show-on-india-ai-impact-summit-2026-and-digital-india-initiatives-in-nagaland/",
+        "summary": "The DI Talk Show discussed the upcoming India AI Impact Summit 2026 and its potential impact. The show also explored Digital India initiatives in Nagaland, highlighting the region's digital transformation efforts. Key discussions centered around AI adoption and digital growth in the country.",
+        "date_published": "2026-02-06",
+        "source_name": "Digital India - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "NL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      }
+    ],
+    "AI Start-Up News": []
+  },
+  "today_updates": []
+}

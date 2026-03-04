@@ -5,6 +5,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 43,
+        "title": "BFUHS joins Consortium of Innovative Health Universities at India AI Impact Summit",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/bfuhs-joins-consortium-of-innovative-health-universities-at-india-ai-impact-summit/articleshow/128620417.cms",
+        "summary": "Baba Farid University of Health Sciences (BFUHS) has joined the Consortium of Innovative Health Universities at the India AI Impact Summit. This collaboration aims to leverage artificial intelligence in the healthcare sector, although specific details of the partnership are not provided. The summit facilitated the union, promoting innovation and AI adoption in health universities.",
+        "date_published": "2026-02-21",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "CH",
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "posted_to_x_at": null
+      },
+      {
         "id": 46,
         "title": "SGPC to meet AI firms to curb misleading content",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/sgpc-to-meet-ai-firms-to-curb-misleading-content/articleshow/128574369.cms",
@@ -45,9 +65,29 @@
         "posted_to_x_at": null
       }
     ],
-    "AI Start-Up News": []
+    "AI Start-Up News": [
+      {
+        "id": 5,
+        "title": "Bubble Me raises Rs 1.5 Cr in pre-seed round led by AJVC",
+        "url": "https://entrackr.com/snippets/bubble-me-raises-rs-15-cr-in-pre-seed-round-led-by-ajvc-11171125",
+        "summary": "Chandigarh-based wellness startup Bubble Me has raised Rs 1.5 crore in a pre-seed funding round led by AJVC. The funds will be used to enhance magnesium research, product testing, and formulation, as well as strengthen supply chain and quality control systems. Bubble Me is a magnesium-focused wellness brand targeting sleep, stress relief, and muscle recovery, founded by Akshina Jindal.",
+        "date_published": "2026-03-03",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "CH",
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

@@ -371,7 +371,7 @@ class StaggeredMenu {
     const { panel, toggleBtn } = this.refs;
 
     if (panel && !panel.contains(event.target) &&
-        toggleBtn && !toggleBtn.contains(event.target)) {
+      toggleBtn && !toggleBtn.contains(event.target)) {
       this.closeMenu();
     }
   }
@@ -866,15 +866,16 @@ class StaggeredMenu {
 }
 
 // Initialize menu when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   new StaggeredMenu({
     position: 'right',
     colors: ['#0a2f52', '#db4a2b', '#f4ebd0'],
     items: [
       { label: 'Home', ariaLabel: 'Go to home page', link: 'index.html' },
       { label: 'About', ariaLabel: 'Learn about this project', link: 'about.html' },
+      { label: 'Sector-Watch', ariaLabel: 'View Sector Watch', link: 'sector-watch.html' },
       { label: 'Publications', ariaLabel: 'View publications', link: 'publications.html' },
-      { label: 'Schedule Consultation', ariaLabel: 'Schedule a strategic consultation', link: '#', action: 'openContactPanel' }
+      { label: 'Consultation', ariaLabel: 'Schedule a strategic consultation', link: '#', action: 'openContactPanel' }
     ],
     socialItems: [
       { label: 'LinkedIn', link: 'https://www.linkedin.com/in/sreenathgovindarajan' },
