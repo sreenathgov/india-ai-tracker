@@ -66,6 +66,14 @@
 </head>
 
 <body>
+<!-- SVG filter: converts luminance → alpha so dark pixels become transparent.
+     Replaces unreliable mix-blend-mode:screen (broken on Safari/WebKit). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="luma-fade" color-interpolation-filters="sRGB">
+    <feColorMatrix type="luminanceToAlpha" result="luma"/>
+    <feComposite in="SourceGraphic" in2="luma" operator="in"/>
+  </filter>
+</svg>
     <!-- Infrastructure Grid Background -->
     <canvas id="infrastructure-grid"
         style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;"></canvas>

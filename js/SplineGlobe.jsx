@@ -1,41 +1,33 @@
 /**
  * SplineGlobe — React island for 3D Earth visualization
  *
- * - iOS/iPadOS (all browsers): CSS fallback sphere
- *   Reason: iOS forces WebKit on all browsers; mix-blend-mode+WebGL is broken
- *   because the GPU-composited canvas is composited outside the DOM blend stack.
- * - Narrow screens (<640px, phones): CSS fallback sphere
- *   Reason: Spline camera is calibrated for a ~530px column; on narrow phones
- *   you only see a zoomed-in crop of the globe instead of the full sphere.
- * - All other devices (Android tablet, desktop): Spline WebGL globe
+ * Rendering pipeline (cross-browser):
+ *   CSS filter chain on .spline-globe-mount:
+ *     contrast(5) → brightness(1.2) → grayscale(0.55) → url(#luma-fade)
+ *   The SVG luma-fade filter (luminanceToAlpha) maps dark pixels to transparent
+ *   and bright pixels to opaque. This replaces mix-blend-mode:screen which was
+ *   unreliable on Safari/WebKit.
+ *
+ * - Narrow screens (<640px): CSS fallback sphere
+ *   Reason: Spline camera is calibrated for a ~530px column; on phones
+ *   you only see a zoomed-in crop instead of the full sphere.
+ * - All other devices: Spline WebGL globe (works on Chrome, Safari, Firefox)
  */
 
 import React, { useState, Suspense, lazy } from 'react';
 
 const Spline = lazy(() => import('@splinetool/react-spline'));
 
-// iOS detection — covers iPhone, iPad (legacy UA), and modern iPads that
-// report themselves as MacIntel but expose multiple touch points
-const isIOS = typeof navigator !== 'undefined' && (
-  /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
-);
-
-// Narrow-screen detection — phones regardless of OS
+// Narrow-screen detection — phones get CSS fallback (Spline camera framing is wrong)
 const isNarrowScreen = typeof window !== 'undefined' && window.innerWidth < 640;
+const FORCE_CSS_FALLBACK = isNarrowScreen;
 
-// CSS fallback is needed when mix-blend-mode+WebGL won't work
-const FORCE_CSS_FALLBACK = isIOS || isNarrowScreen;
-
-// Set data-fallback attribute immediately at module load — defer scripts run
-// after the DOM is parsed so the elements already exist at this point.
-// This ensures the CSS fallback rules apply BEFORE React's first paint.
+// Set data-fallback attribute on the mount container before React renders.
+// Defer scripts run after DOM is parsed so the element exists at this point.
 if (FORCE_CSS_FALLBACK && typeof document !== 'undefined') {
   const mount = document.getElementById('splineGlobeContainer');
   if (mount) {
     mount.setAttribute('data-fallback', 'true');
-    const right = mount.closest('.platform-split__right');
-    if (right) right.setAttribute('data-fallback', 'true');
   }
 }
 
@@ -74,11 +66,9 @@ function makeTransparent(app) {
   try {
     const controls = app._animationControls;
     if (controls) {
-      // Global AnimationMixer timeScale — affects every clip uniformly
       if (controls.mixer && typeof controls.mixer.timeScale !== 'undefined') {
         controls.mixer.timeScale = 0.8;
       }
-      // Belt-and-braces: also set on each individual AnimationAction
       if (controls.clipIdToAction) {
         Object.values(controls.clipIdToAction).forEach(action => {
           if (action && typeof action.timeScale === 'number') action.timeScale = 0.8;
@@ -99,14 +89,14 @@ export default function SplineGlobe() {
     background: 'transparent',
   };
 
-  // iOS and narrow phones get the CSS sphere — clean, fast, works everywhere
+  // Narrow phones get the CSS sphere — clean, fast, correct aspect ratio
   if (FORCE_CSS_FALLBACK || hasError) {
     return React.createElement('div', { style: wrapperStyle, className: 'spline-globe' },
       React.createElement(GlobeFallback)
     );
   }
 
-  // Desktop + Android tablet: Spline WebGL globe with mix-blend-mode:screen
+  // All other devices: Spline WebGL globe
   return React.createElement('div', { style: wrapperStyle, className: 'spline-globe' },
     React.createElement(Suspense, {
       fallback: React.createElement(GlobeFallback)

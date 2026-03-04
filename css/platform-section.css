@@ -41,14 +41,12 @@
     position: relative;
     overflow: hidden;
     min-height: 500px;
-    /* Screen-blend this entire column against the page background.
-       Black WebGL pixels become transparent (screen(black, x) = x),
-       the holographic earth lines remain bright.
-       Applied at the parent level so Chrome's compositor captures
-       the actual visual backdrop (the navy grid) correctly.
-       IMPORTANT: overflow MUST stay hidden — overflow:visible + mix-blend-mode
-       + WebGL = persistent flicker. */
-    mix-blend-mode: screen;
+    /* mix-blend-mode:screen REMOVED — it relies on compositor-level blending
+       which Safari/WebKit handles incorrectly with WebGL + filtered content.
+       The "dark pixels → transparent" effect is now handled by an inline SVG
+       luminanceToAlpha filter applied directly in the .spline-globe-mount
+       filter chain. This is a per-pixel operation that works identically
+       on Chrome, Safari, and Firefox. */
 }
 
 
@@ -173,16 +171,22 @@
     right: -5%;
     bottom: -5%;
     background: transparent;
-    /* Filter pushes dark Spline atmosphere to black (→ transparent via parent
-       mix-blend-mode:screen) while preserving bright wireframe lines. */
-    filter: contrast(5) brightness(1.2) grayscale(0.55);
+    /* Pipeline: contrast+brightness push dark Spline atmosphere to black and
+       amplify bright wireframe lines. grayscale desaturates for the holographic
+       look. url(#luma-fade) is an SVG luminanceToAlpha filter that maps
+       luminance→alpha: black pixels become transparent, bright pixels stay
+       opaque. This replaces the old mix-blend-mode:screen on the parent,
+       which was unreliable on Safari/WebKit. */
+    filter: contrast(5) brightness(1.2) grayscale(0.55) url(#luma-fade);
     /* Radial mask fades edges to transparent so the globe dissolves into the
-       navy grid rather than sitting inside a hard rectangular boundary. */
-    mask-image: radial-gradient(ellipse 75% 75% at 50% 50%,
+       navy grid rather than sitting inside a hard rectangular boundary.
+       Uses circle (not ellipse) so the shape stays circular on non-square
+       containers (e.g. phone portrait). */
+    mask-image: radial-gradient(circle at 50% 50%,
         black 30%,
         rgba(0, 0, 0, 0.6) 52%,
         transparent 68%);
-    -webkit-mask-image: radial-gradient(ellipse 75% 75% at 50% 50%,
+    -webkit-mask-image: radial-gradient(circle at 50% 50%,
         black 30%,
         rgba(0, 0, 0, 0.6) 52%,
         transparent 68%);
@@ -614,17 +618,14 @@
 
 
 /* ============================================
-   CSS FALLBACK STATE — iOS / narrow screens
-   JS sets data-fallback="true" before first paint when:
-     - iOS/iPadOS (mix-blend-mode+WebGL broken on WebKit)
-     - Screen width < 640px (Spline camera shows wrong crop)
-   Only remove the ellipse mask — on non-square containers it creates an oval.
-   filter and mix-blend-mode are KEPT: the CSS sphere is a regular DOM element
-   (not WebGL), so mix-blend-mode:screen works correctly on iOS for it.
-   The filter gives the sphere its depth and glow as designed.
+   CSS FALLBACK STATE — narrow screens (<640px)
+   JS sets data-fallback="true" on the mount before first paint.
+   Strip the WebGL-specific filter pipeline — the contrast(5) + SVG luma
+   filter would crush the CSS sphere's subtle gradient to invisible.
    ============================================ */
 
 .spline-globe-mount[data-fallback="true"] {
+    filter: none;
     mask-image: none;
     -webkit-mask-image: none;
 }
