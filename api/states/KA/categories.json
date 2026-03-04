@@ -266,6 +266,26 @@
       },
       {
         "id": 7,
+        "title": "Smarter AI Forum",
+        "url": "https://cio.economictimes.indiatimes.com/ai-forum?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "A Smarter AI Forum is being held, with the event taking place in Bangalore. The forum aims to discuss advancements in artificial intelligence, although specific details about the event are not provided. The location of the forum is the primary piece of information available.",
+        "date_published": "2026-03-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
         "title": "Growing reliance on AI: Creative sector at crossroads over originality",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/growing-reliance-on-ai-creative-sector-at-crossroads-over-originality/articleshow/128864918.cms",
         "summary": "The creative sector is at a crossroads due to its growing reliance on artificial intelligence, raising concerns about originality. As AI-generated content becomes more prevalent, the industry is grappling with the implications of machine-created work on human creativity. The increasing use of AI in creative fields is forcing professionals to reevaluate the concept of originality and authorship.",
@@ -1169,7 +1189,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
