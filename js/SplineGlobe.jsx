@@ -46,6 +46,13 @@ function makeTransparent(app) {
       if (typeof renderer.setClearColor === 'function') renderer.setClearColor(0x000000, 0);
       if (typeof renderer.setClearAlpha === 'function') renderer.setClearAlpha(0);
 
+      // Cap pixel ratio to 2x — on 3x retina displays (most modern phones/iPads)
+      // the default 3x renders 9× more pixels than 1x. Capping at 2x cuts GPU load
+      // by 56% without a visible quality difference at typical viewing distances.
+      if (typeof renderer.setPixelRatio === 'function') {
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      }
+
       // Spline uses a custom post-processing pipeline with its own clearPass.
       // setBackgroundDisabled(true) makes the pipeline null out scene.background
       // before each render, preventing the opaque scene background from drawing.
