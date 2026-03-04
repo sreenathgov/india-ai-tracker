@@ -453,7 +453,7 @@
 
 /* ============================================
    RESPONSIVE — iPad portrait
-   Fix node balloon, video aspect, reduce manifesto
+   Video gets explicit aspect-ratio so it doesn't collapse
    ============================================ */
 @media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
     .platform-section {
@@ -469,21 +469,6 @@
         width: 100%;
         height: auto;
         aspect-ratio: 16 / 9;
-    }
-
-    /* Nodes: remove the fixed min-height that causes huge empty boxes */
-    .telemetry-node {
-        min-height: auto;
-        padding: 1rem 1.25rem;
-    }
-
-    .telemetry-node__title {
-        font-size: 0.9rem;
-    }
-
-    .telemetry-node__body {
-        font-size: 0.7rem;
-        line-height: 1.5;
     }
 }
 
@@ -887,7 +872,13 @@
         order: 4;
     }
 
-    /* Simple vertical connector between stacked cards */
+    /* Remove fixed min-height — content drives card height when stacked */
+    .telemetry-node {
+        min-height: auto;
+        padding: 1.1rem 1.25rem;
+    }
+
+    /* Fuse stacked cards — no gap, top radius only on all-but-last */
     .telemetry-node:not(:last-child) {
         margin-bottom: 0;
         border-radius: 10px 10px 0 0;

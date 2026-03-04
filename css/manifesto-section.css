@@ -36,15 +36,15 @@
     }
 }
 
-/* iPad portrait — let text drive height, replace 65vh with generous padding */
-@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+/* iPad (both orientations) — compact height, content-driven */
+@media (min-width: 769px) and (max-width: 1024px) {
     .manifesto-section {
-        min-height: auto;
-        padding: 5rem 3rem;
+        min-height: 50vh;
+        padding: 3.5rem 3rem;
     }
 
     .manifesto-mount {
-        max-width: 680px;
+        max-width: 720px;
     }
 }
 
