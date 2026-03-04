@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="css/advisory-section.css?v=6">
     <link rel="stylesheet" href="css/contact-panel.css?v=1">
     <link rel="stylesheet" href="css/identity-section.css?v=6">
-    <link rel="stylesheet" href="css/platform-section.css?v=3">
+    <link rel="stylesheet" href="css/platform-section.css?v=4">
     <link rel="stylesheet" href="css/manifesto-section.css?v=1">
     <link rel="stylesheet" href="css/footer.css?v=3">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -197,13 +197,14 @@
 
         <!-- Section 2.5: Sector Watch Platform -->
         <section class="platform-section" id="platformSection">
+          <!-- Full-width header above the split — aligns with split's max-width -->
+          <div class="platform-header">
+            <h2 class="platform-title platform-animate" id="platformTitle">Sector Watch</h2>
+            <p class="platform-intro platform-animate">An AI-native advisory platform that helps businesses navigate trade, policy, and compliance complexity with confidence.</p>
+          </div>
           <div class="platform-split">
             <!-- LEFT: Telemetry Architecture Flowchart -->
             <div class="platform-split__left">
-              <div class="platform-header">
-                <h2 class="platform-title platform-animate" id="platformTitle">Sector-Watch</h2>
-                <p class="platform-intro platform-animate">An AI-native advisory platform that helps businesses navigate trade, policy, and compliance complexity with confidence.</p>
-              </div>
               <div class="telemetry-grid">
                 <!-- Node 01 — top left -->
                 <div class="telemetry-node tg-n01 platform-animate">
@@ -236,7 +237,7 @@
                   <p class="telemetry-node__body">Regulatory intelligence should not sit outside your operations. Our platform functions as a continuous advisory layer, delivering alerts, structured briefs, and decision support directly within your workflow.</p>
                 </div>
               </div>
-            </div>
+            </div> <!-- end .platform-split__left -->
             <!-- RIGHT: Sector Watch Video -->
             <div class="platform-split__right">
               <div class="sector-video-wrapper">
