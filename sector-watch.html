@@ -12,7 +12,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About & Disclosures - India AI Tracker</title>
+    <title>About Sector Watch - Kanan Labs</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
         rel="stylesheet">
@@ -130,6 +130,21 @@
             opacity: 1;
         }
 
+        .about-section ul {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.9375rem;
+            color: var(--brand-cream);
+            opacity: 0.7;
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+            padding-left: 2rem;
+            list-style-type: disc;
+        }
+
+        .about-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
         /* CTA Section */
         .cta-section {
             margin-top: 3rem;
@@ -172,6 +187,49 @@
         .cta-button:hover {
             background: #fff;
             transform: translateY(-1px);
+        }
+
+        .cta-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .cta-section form input {
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            border: 1px solid rgba(244, 235, 208, 0.2);
+            background: rgba(244, 235, 208, 0.05);
+            color: var(--brand-cream);
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.875rem;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .cta-section form input::placeholder {
+            color: rgba(244, 235, 208, 0.4);
+        }
+
+        .cta-section form input:focus {
+            border-color: rgba(244, 235, 208, 0.5);
+        }
+
+        .cta-section form button {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            margin-top: 0.25rem;
+        }
+
+        .cta-success {
+            display: none;
+            margin-top: 1.25rem !important;
+            color: #4ade80 !important;
+            font-weight: 500;
+            opacity: 1 !important;
         }
 
         .about-footer {
@@ -227,66 +285,82 @@
                         stroke-linejoin="round" />
                 </svg>
             </a>
-            <h2>About & Disclosures</h2>
+            <h2>About Sector Watch</h2>
         </div>
 
         <section class="about-section">
-            <h3>What this site is</h3>
-            <p>The India AI Tracker is an independent platform that aggregates publicly available news, policy updates,
-                government announcements, and industry developments related to artificial intelligence across Indian
-                states and at the national level.</p>
-            <p>The site is intended as a research and discovery tool for policymakers, researchers, journalists, and
-                professionals seeking to monitor AI governance and technology developments in India.</p>
+            <h3>Building Sector Watch<br><span
+                    style="font-weight: 400; opacity: 0.8; font-size: 0.9em; display: inline-block; margin-top: 0.25rem;">Agentic
+                    Regulatory Intelligence</span></h3>
+            <p>Regulation has become a structural variable in global trade. It shapes pricing, supply chains, market
+                access, and competitive positioning. For export-oriented firms, regulatory shifts are no longer episodic
+                events, they have become ongoing strategic inputs.</p>
+            <p>Today, companies respond through a mix of internal monitoring, external advisory retainers, and
+                fragmented interpretation cycles. The result is cost, delay, and uneven clarity. Kanan Labs is building
+                a different model.</p>
+            <p>We are developing an AI-native regulatory intelligence system designed to function as a continuous
+                strategic layer for businesses operating across jurisdictions. The objective is not to surface documents
+                or summarise policy updates. The objective is to translate regulatory movement into actionable business
+                understanding.</p>
+            <p>The platform is being built to:</p>
+            <ul>
+                <li>Track and interpret regulatory and institutional developments across major export corridors</li>
+                <li>Contextualise those developments against a firm's operating profile</li>
+                <li>Identify material exposure shifts</li>
+                <li>Enable structured discussion around strategic response</li>
+            </ul>
+            <p>The system does not replace executive judgment. It operationalises structured intelligence so that
+                judgment becomes faster, more informed, and less dependent on episodic external advisory cycles. It
+                behaves less like a dashboard and more like a persistent strategic counterpart. The user remains in
+                control.</p>
         </section>
 
         <section class="about-section">
-            <h3>What this site is not</h3>
-            <p>This platform does not produce original reporting, analysis, or editorial content. It does not claim
-                ownership over any third-party material, nor does it host, reproduce, or republish full articles from
-                external sources.</p>
-            <p>The site is not affiliated with any government body, news organisation, or commercial entity. All content
-                aggregated here remains the intellectual property of its original publishers.</p>
+            <h3>Current Stage</h3>
+            <p>The initial MVP is concentrated on the Auto and EV export ecosystem spanning India, the European Union,
+                and the United States. This sector presents sustained regulatory evolution and meaningful trade policy
+                exposure, making it a disciplined environment for validation.</p>
+            <p>The build is intentionally infrastructure-led and conservative in scope. Priority is given to
+                interpretability, system stability, and enterprise reliability.</p>
+            <p>Projected MVP completion is targeted for September 2026. Pilot engagement will follow internal
+                validation.</p>
         </section>
 
         <section class="about-section">
-            <h3>Attribution & traffic intent</h3>
-            <p>Every entry on this platform links directly to the original source article or announcement. Brief
-                summaries are provided solely to aid discovery and contextual understanding, not to substitute for or
-                compete with original reporting.</p>
-            <p>The explicit intent of this platform is to direct readers to primary publishers and original sources. No
-                content is paywalled, monetised, or presented in a manner intended to divert traffic from source
-                publications.</p>
-        </section>
-
-        <section class="about-section">
-            <h3>Feedback & corrections</h3>
-            <p>Accuracy and fair representation are priorities for this project. If you are a publisher, researcher, or
-                reader who has identified an error, wishes to request removal of a specific entry, or would like to
-                suggest an update or missing development, please contact <a
-                    href="mailto:feedback@kananlabs.in">feedback@kananlabs.in</a>.</p>
-            <p>All reasonable requests will be reviewed and addressed promptly.</p>
+            <h3>Direction</h3>
+            <p>Kanan Labs is an AI infrastructure company focused on regulatory intelligence. The long-term ambition
+                extends beyond a single industry. The underlying system is being designed to support multi-sector
+                expansion across export-intensive domains over time.</p>
+            <p>The ambition is simple. To enable firms to participate in the global economy with greater confidence and
+                clarity by transforming regulatory complexity into structured strategic input.</p>
         </section>
 
         <section class="cta-section">
-            <h3>Interested in collaborating?</h3>
-            <p>I'm always open to connecting with researchers, policymakers, and professionals working on AI governance
-                and technology policy.</p>
-            <a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank" rel="noopener"
-                class="cta-button">Connect on LinkedIn</a>
+            <h3>Interested in investing?</h3>
+            <p>I'm open to exploring opportunities and partnerships. Feel free to reach out directly.</p>
+            <a href="mailto:sreenath@kananlabs.in" class="cta-button">Email me</a>
+        </section>
+        <section class="cta-section" style="margin-top: 2rem;">
+            <h3>Request Platform Access</h3>
+            <p>Join the waitlist for early access to Kanan Labs' intelligence platform.</p>
+            <form id="platformWaitlistForm">
+                <input type="text" name="name" placeholder="Full Name" required />
+                <input type="text" name="company" placeholder="Company / Organisation" required />
+                <input type="email" name="email" placeholder="Work Email" required />
+                <button type="submit" class="cta-button">Join Waitlist</button>
+            </form>
+            <p class="cta-success" id="platformWaitlistSuccess">Thank you — we'll be in touch shortly with platform
+                access details.</p>
         </section>
     </main>
 
     <footer class="kl-footer">
         <div class="kl-footer__inner">
-
             <div class="kl-footer__content">
-
                 <!-- LEFT: Brand zone -->
                 <div class="kl-footer__brand">
-
                     <img src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png" alt="Kanan Labs"
                         class="kl-footer__logo" draggable="false">
-
                     <p class="kl-footer__tagline">India's AI Governance Intelligence</p>
 
                     <!-- Newsletter mini-form -->
@@ -304,12 +378,10 @@
                         onclick="if(window.contactPanel) window.contactPanel.open()">
                         Schedule Consultation →
                     </button>
-
                 </div>
 
                 <!-- RIGHT: Sitemap grid -->
                 <div class="kl-footer__sitemap">
-
                     <!-- Col 1: Advisory -->
                     <div class="kl-footer__col">
                         <h4 class="kl-footer__col-heading">Advisory</h4>
@@ -351,7 +423,6 @@
                             <li><a href="disclaimers.html">Disclaimers</a></li>
                         </ul>
                     </div>
-
                 </div>
             </div>
 
@@ -360,11 +431,26 @@
                 <img src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png" alt=""
                     class="kl-footer__watermark-img" aria-hidden="true" draggable="false">
             </div>
-
         </div>
     </footer>
     <script src="js/contact-panel.js"></script>
     <script src="js/staggered-menu.js"></script>
+    <!-- Basic logic to handle waitlist form submission, similar to index.html -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('platformWaitlistForm');
+            const successMsg = document.getElementById('platformWaitlistSuccess');
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    form.style.display = 'none';
+                    if (successMsg) {
+                        successMsg.style.display = 'block';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
