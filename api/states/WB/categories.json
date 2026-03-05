@@ -25,6 +25,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Alumnus gifts IIT-Kgp 46cr to set up digi-engg-AI school",
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/alumnus-gifts-iit-kgp-46cr-to-set-up-digi-engg-ai-school/articleshow/129042857.cms",
+        "summary": "An alumnus of IIT-Kgp has donated 46 crore to establish a school focused on digital engineering and artificial intelligence. The gift is intended to support the development of a new academic program at the institution. The donation is expected to enhance the university's capabilities in emerging technologies.",
+        "date_published": "2026-03-05",
+        "source_name": "Times of India - Kolkata",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 19,
         "title": "IIT Kharagpur to offer BS in AI &amp; data science in Bangla from 2026 session",
         "url": "https://timesofindia.indiatimes.com/city/kolkata/iit-kharagpur-to-offer-bs-in-ai-data-science-in-bangla-from-2026-session/articleshow/128762594.cms",
@@ -86,5 +106,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
