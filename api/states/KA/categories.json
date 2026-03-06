@@ -186,6 +186,26 @@
     "Major AI Developments": [
       {
         "id": 7,
+        "title": "Healthtech startup Cent secures funding from OneFlow, South Park Commons",
+        "url": "https://entrackr.com/snippets/healthtech-startup-cent-secures-funding-from-oneflow-south-park-commons-11179508",
+        "summary": "Healthtech startup Cent has raised funding from OneFlow Holdings and South Park Commons to support its AI-led early disease detection platform. The platform, founded by Practo founder Shashank ND and others, aims to identify serious conditions like cancer and cardiac diseases at early stages. Cent operates on a direct-to-consumer model, offering scans to detect diseases before symptoms appear.",
+        "date_published": "2026-03-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
         "title": "Karnataka to set up exclusive AI cell to power policy and scheme delivery",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/karnataka-to-set-up-exclusive-ai-cell-to-power-policy-and-scheme-delivery/articleshow/128951339.cms",
         "summary": "Karnataka is establishing an exclusive AI cell to enhance policy and scheme delivery. The AI cell aims to leverage artificial intelligence to improve the state's governance and public services. This initiative is part of the state's efforts to harness technology for better administration and citizen welfare.",
@@ -1189,5 +1209,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -5,6 +5,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "HC notice to Centre, others on plea for regulation of AI-generated content",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/hc-notice-to-centre-others-on-plea-for-regulation-of-ai-generated-content/articleshow/129112789.cms",
+        "summary": "The High Court has issued a notice to the Centre and other parties regarding a plea for regulation of AI-generated content. The notice is in response to a petition seeking guidelines to control and monitor AI-generated content. The court's decision is pending, with the Centre and other parties required to respond to the plea.",
+        "date_published": "2026-03-06",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "PB",
+          "CH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 20,
         "title": "Cyber cons made off with Rs 740 crore in five years in Punjab",
         "url": "https://www.tribuneindia.com/news/punjab/cyber-cons-made-off-with-740-crore-in-five-years-in-state",
@@ -128,5 +149,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -834,6 +834,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Evaluate Agentic AI use cases on outcomes, data maturity, integration feasibility &amp; governance readiness: Harnath Babu, KPMG",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/overcoming-the-pitfalls-of-agentic-ai-insights-from-kpmgs-harnath-babu/129129590",
+        "summary": "Harnath Babu, KPMG India Partner and CIO, emphasizes evaluating agentic AI use cases based on outcomes, data maturity, integration feasibility, and governance readiness. This approach is crucial for successfully scaling up agentic AI projects from pilot to production. Babu outlines a roadmap for effective implementation, focusing on key factors that drive AI project success.",
+        "date_published": "2026-03-06",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Beyond the hype: How enterprises can shape trust and regulation for India’s AI future",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/building-trust-and-governance-for-indias-ai-future-strategies-for-enterprises/129070185",
+        "summary": "Indian businesses are increasingly adopting Artificial Intelligence in critical operations, requiring trust and strong governance. To achieve this, organizations must focus on reliable systems, transparent decision-making, and high-quality data. Building trust in AI will become a significant competitive advantage for enterprises in the coming years.",
+        "date_published": "2026-03-06",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "China says it is the world leader in R&amp;D for AI, vows to boost tech self-reliance",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/china-says-it-is-the-world-leader-in-rd-for-ai-vows-to-boost-tech-self-reliance/129067166",
@@ -860,6 +900,66 @@
         "summary": "Infosys and Intel are expanding their strategic partnership to help enterprises unlock the value of artificial intelligence (AI). The collaboration aims to accelerate the adoption of AI and other emerging technologies among businesses. This partnership will enable Infosys to leverage Intel's technology and expertise to develop innovative AI solutions for its clients.",
         "date_published": "2026-03-05",
         "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "From step counts to ‘second brains’: India’s AI wearables bet",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/india-ai-wearables-second-brain-startups-smartwatch-slowdown-pendants-earbuds-glasses-11772542939260.html",
+        "summary": "India's tech industry is shifting focus to AI-powered wearables such as pendants, earbuds, and glasses. These devices offer advanced features like memory, voice assistance, and real-time translation. The move aims to revive demand in a market where smartwatch shipments are declining.",
+        "date_published": "2026-03-05",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "IBM launches its first infrastructure innovation centre in India to accelerate enterprise-scale AI",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ibm-launches-its-first-infrastructure-innovation-centre-in-india-to-accelerate-enterprise-scale-ai/129078313",
+        "summary": "IBM has launched its first Infrastructure Innovation Center, the Sangam Infrastructure Innovation Center, in India to drive co-creation and innovation in AI. The center is located within the new India Systems Development Lab (ISDL) campus and will serve both domestic and global markets. This investment underscores IBM's commitment to India as a strategic hub for advanced infrastructure engineering and AI innovation.",
+        "date_published": "2026-03-05",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "AI helps wealthtech firms do more with leaner teams",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-helps-wealthtech-firms-do-more-with-leaner-teams/129074667",
+        "summary": "Indian wealthtech platforms are integrating AI to personalize investing and speed up product launches, enhancing user experience and internal productivity. Companies like INDmoney, Upstox, and Groww are leveraging AI to achieve this. This enables them to scale operations and deliver new products efficiently without significant increases in headcount.",
+        "date_published": "2026-03-05",
+        "source_name": "ET CIO - AI",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -5120,6 +5220,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 6,
+        "title": "Stellaris Venture Partners’ AI playbook; UKG’s bet on its India GCC",
+        "url": "https://yourstory.com/2026/03/stellaris-venture-partners-ai-playbook-ukg-bet-on-its-india-gcc",
+        "summary": "Stellaris Venture Partners is increasing its investment in AI and deeptech startups in India, but with a cautious approach. Meanwhile, UKG, a workforce management solutions provider, has established a strong presence in India with skilled leadership and expertise. This development highlights the growing importance of India in the global AI and technology landscape.",
+        "date_published": "2026-03-06",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "AI driving unicorn creation in India, elsewhere faster than ever",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-driving-unicorn-creation-in-india-elsewhere-faster-than-ever/128772750",
@@ -6090,6 +6210,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }

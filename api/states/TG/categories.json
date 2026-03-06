@@ -87,6 +87,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "ANRF Awards Advanced Grants",
+        "url": "https://www.iiit.ac.in/anrf-awards-advanced-grants/",
+        "summary": "ANRF has awarded advanced grants to support various AI-related initiatives. The grants aim to promote sovereign AI models in India and advance chip design for healthcare and mobility. Additionally, research is being conducted on using AI for early cancer detection and fairness in justice delivery systems.",
+        "date_published": "2026-03-06",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Cheerio AI raises Rs 8 Cr in seed round led by Artha Venture Fund",
+        "url": "https://entrackr.com/snippets/cheerio-ai-raises-rs-8-cr-in-seed-round-led-by-artha-venture-fund-11177469",
+        "summary": "Cheerio AI, an AI-powered customer engagement platform, has raised Rs 8 crore in a seed funding round led by Artha Venture Fund. The round also saw participation from other investors, including Hyderabad Angels and LetsVenture. The funds will be used to build multi-modal AI capabilities, expand into new channels, and strengthen automation features and infrastructure.",
+        "date_published": "2026-03-05",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Revanth orders facial recognition for welfare beneficiaries",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/revanth-orders-facial-recognition-for-welfare-beneficiaries/articleshow/128986932.cms",
@@ -813,5 +853,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
