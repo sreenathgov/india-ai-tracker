@@ -834,6 +834,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "IBM launches 1st infrastructure innovation centre in India to boost AI innovation",
+        "url": "https://cellit.in/ibm-launches-1st-infrastructure-innovation-centre-in-india-to-boost-ai-innovation/",
+        "summary": "IBM has launched its first infrastructure innovation centre in India, aiming to boost AI innovation. The centre is expected to drive advancements in artificial intelligence and related technologies. This launch marks a significant investment by IBM in India's growing tech industry.",
+        "date_published": "2026-03-07",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India helping democratise AI for developing world: IMF Chief",
+        "url": "https://cellit.in/india-helping-democratise-ai-for-developing-world-imf-chief/",
+        "summary": "IMF Chief acknowledges India's role in democratizing AI for the developing world. This effort aims to make AI more accessible and beneficial to less developed countries. India's contributions are seen as a significant step in bridging the technological gap between developed and developing nations.",
+        "date_published": "2026-03-07",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Evaluate Agentic AI use cases on outcomes, data maturity, integration feasibility &amp; governance readiness: Harnath Babu, KPMG",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/overcoming-the-pitfalls-of-agentic-ai-insights-from-kpmgs-harnath-babu/129129590",
@@ -6210,7 +6250,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

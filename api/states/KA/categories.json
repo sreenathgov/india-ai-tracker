@@ -932,6 +932,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "Karnataka budget: Pressing AI accelerator to boost farming, education &amp; more",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/karnataka-budget-pressing-ai-accelerator-to-boost-farming-education-more/articleshow/129172425.cms",
+        "summary": "Karnataka's budget aims to leverage artificial intelligence to enhance various sectors, including farming and education. The state plans to utilize AI to drive growth and improvement in these areas. The initiative is part of a broader effort to accelerate digital transformation and boost development in the region.",
+        "date_published": "2026-03-07",
+        "source_name": "Times of India - Bangalore",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Peak XV leads $2.5 Mn round in Companion Labs",
         "url": "https://entrackr.com/snippets/peak-xv-leads-25-mn-round-in-companion-labs-11157241",
@@ -1210,6 +1230,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }
