@@ -26,6 +26,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Goa shares draft AI policy with stakeholders for inputs",
+        "url": "https://timesofindia.indiatimes.com/city/goa/goa-shares-draft-ai-policy-with-stakeholders-for-inputs/articleshow/129230660.cms",
+        "summary": "The state of Goa has shared a draft Artificial Intelligence (AI) policy with stakeholders to gather their inputs. This move aims to incorporate feedback and suggestions from various stakeholders before finalizing the policy. The draft policy is part of Goa's efforts to develop a comprehensive AI strategy.",
+        "date_published": "2026-03-08",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 27,
         "title": "Youth Congress protest at AI Summit tarnished India’s image: Pramod Sawant",
         "url": "https://www.thehindu.com/news/national/goa/goa-chief-minister-pramod-sawant-ai-summit-congress-shirtless-protest/article70659250.ece",
@@ -104,5 +124,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -105,6 +105,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "'Injected anaesthetic drug': Two college friends die by suicide inside Gujarat temple washroom; used ChatGPT to find ways, say cops",
+        "url": "https://timesofindia.indiatimes.com/city/surat/two-college-girls-end-lives-inside-temples-washroom/articleshow/129229489.cms",
+        "summary": "Two 18- and 20-year-old college friends were found dead in a temple washroom in Surat, Gujarat, after allegedly injecting themselves with anesthetic drugs. Police found evidence of drug vials, syringes, and mobile phone data showing searches for suicide methods, including the use of ChatGPT. The girls had left for college but did not return home, leading to the discovery of their bodies.",
+        "date_published": "2026-03-08",
+        "source_name": "Times of India - Rajkot",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "AI effect? Helplines no longer ringingoff the hook with student distress calls",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ai-effect-helplines-no-longer-ringingoff-the-hook-with-student-distress-calls/articleshow/128954294.cms",
@@ -481,5 +501,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
