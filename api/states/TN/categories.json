@@ -87,6 +87,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Chennai UPHCs to use AI in X-ray screening to detect TB cases early",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/chennai-uphcs-to-use-ai-in-x-ray-screening-to-detect-tb-cases-early/articleshow/129284922.cms",
+        "summary": "Chennai's Urban Primary Health Centres (UPHCs) will utilize artificial intelligence (AI) in X-ray screening to detect tuberculosis (TB) cases at an early stage. This initiative aims to improve diagnosis and treatment of TB patients. The AI-powered X-ray screening is expected to enhance the efficiency of TB detection in the city.",
+        "date_published": "2026-03-09",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "SRMIST introduces AI agent for faculty hiring",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/srmist-introduces-ai-agent-for-faculty-hiring/articleshow/129284556.cms",
+        "summary": "SRMIST has introduced an AI agent to streamline its faculty hiring process. The AI agent is designed to simplify the recruitment of faculty members, although specific details of its functionality are not provided. This move marks a significant step towards leveraging technology in academic hiring processes.",
+        "date_published": "2026-03-09",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "embedUR systems expects edge AI platform to drive growth",
         "url": "https://timesofindia.indiatimes.com/city/chennai/embedur-systems-expects-edge-ai-platform-to-drive-growth/articleshow/128793173.cms",
@@ -227,5 +267,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

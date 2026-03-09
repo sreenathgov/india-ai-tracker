@@ -243,6 +243,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "CBSE to introduce computational thinking AI for classes three to eight",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/cbse-to-introduce-computational-thinking-ai-for-classes-three-to-eight/articleshow/129283525.cms",
+        "summary": "The Central Board of Secondary Education (CBSE) plans to introduce computational thinking and artificial intelligence (AI) for students in classes three to eight. This initiative aims to enhance students' problem-solving skills and prepare them for emerging technologies. The introduction of AI and computational thinking will be a part of the CBSE curriculum.",
+        "date_published": "2026-03-09",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Protest during AI Summit: Two more held",
         "url": "https://timesofindia.indiatimes.com/city/delhi/protest-during-ai-summit-two-more-held/articleshow/128863952.cms",
@@ -1963,5 +1983,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

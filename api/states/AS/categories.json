@@ -26,6 +26,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "IIT-G partners with UK institute to strengthen AI use in healthcare",
+        "url": "https://timesofindia.indiatimes.com/city/guwahati/iit-g-partners-with-uk-institute-to-strengthen-ai-use-in-healthcare/articleshow/129284038.cms",
+        "summary": "IIT-G has partnered with a UK institute to enhance the use of artificial intelligence in healthcare. The collaboration aims to strengthen AI applications in the medical field, although specific details of the partnership are not provided. This partnership is expected to improve healthcare outcomes through the integration of AI technology.",
+        "date_published": "2026-03-09",
+        "source_name": "Times of India - Guwahati",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AS"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "This deeptech venture is building indigenous AI for geophysical exploration in Assam",
         "url": "https://yourstory.com/2026/03/deeptech-venture-building-indigenous-ai-geophysical-exploration",
@@ -126,5 +146,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
