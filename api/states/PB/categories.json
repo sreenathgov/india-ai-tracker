@@ -5,6 +5,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "Value of AI is unlocked only through discipline, says governance expert at Punjab Agricultural University.",
+        "url": "https://timesofindia.indiatimes.com/city/ludhiana/value-of-ai-is-unlocked-only-through-discipline-says-governance-expert-at-punjab-agricultural-university-/articleshow/129351543.cms",
+        "summary": "A governance expert at Punjab Agricultural University emphasized that the value of AI can only be unlocked through discipline. This statement highlights the importance of responsible and structured approaches to leveraging artificial intelligence. The expert's remarks underscore the need for careful governance and management of AI systems to maximize their potential benefits.",
+        "date_published": "2026-03-10",
+        "source_name": "Times of India - Punjab",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "HC notice to Centre, others on plea for regulation of AI-generated content",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/hc-notice-to-centre-others-on-plea-for-regulation-of-ai-generated-content/articleshow/129112789.cms",
@@ -170,5 +190,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

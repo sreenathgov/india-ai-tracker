@@ -185,6 +185,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Anthropic vs Anthropic: AI giant appears before Karnataka court in brand dispute case filed by Belagavi startup",
+        "url": "https://timesofindia.indiatimes.com/city/hubballi/anthropic-vs-anthropic-ai-giant-appears-before-karnataka-court-in-brand-dispute-case-filed-by-belagavi-startup/articleshow/129373165.cms",
+        "summary": "An Indian IT startup, Anthropic Softwares Private Limited, is in a brand dispute with US AI firm Anthropic PBC and its Indian subsidiary, Anthropic India Private Limited. The case was heard in a Karnataka court, where Anthropic India argued it is a separate legal entity. The dispute revolves around the use of the \"Anthropic\" brand name.",
+        "date_published": "2026-03-10",
+        "source_name": "Times of India - Hubli",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Healthtech startup Cent secures funding from OneFlow, South Park Commons",
         "url": "https://entrackr.com/snippets/healthtech-startup-cent-secures-funding-from-oneflow-south-park-commons-11179508",
@@ -1229,5 +1249,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

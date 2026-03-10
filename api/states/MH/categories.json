@@ -163,6 +163,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "PMC to explore AI to detect unassessed properties, increase tax revenue",
+        "url": "https://timesofindia.indiatimes.com/city/pune/pmc-to-explore-ai-to-detect-unassessed-properties-increase-tax-revenue/articleshow/129352818.cms",
+        "summary": "The Pune Municipal Corporation (PMC) plans to utilize Artificial Intelligence (AI) to identify unassessed properties and boost tax revenue. This initiative aims to increase the city's tax collection by detecting properties that are not currently paying taxes. The PMC will explore AI technology to achieve this goal and enhance its revenue streams.",
+        "date_published": "2026-03-10",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Doctors warn against self-medicating with weight-loss injectables",
         "url": "https://timesofindia.indiatimes.com/city/pune/doctors-warn-against-self-medicating-with-weight-loss-injectables/articleshow/128988561.cms",
@@ -731,5 +751,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
