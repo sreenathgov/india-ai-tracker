@@ -855,6 +855,26 @@
       },
       {
         "id": 1,
+        "title": "In the age of AI, trust becomes a shared responsibility across regulators, universities, industry and tech providers",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/in-the-age-of-ai-trust-becomes-a-shared-responsibility-across-regulators-universities-industry-and-tech-providers/129380647",
+        "summary": "Leaders at the TechEdu India Summit 2026 discussed the shared responsibility of ensuring trust in AI among regulators, universities, industry, and tech providers. The discussion focused on safeguarding quality, ethics, and accountability as AI transforms assessments, admissions, and academic governance. Key stakeholders must collaborate to address these concerns as AI reshapes the education sector.",
+        "date_published": "2026-03-10",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "AI disruption hits India&#039;s core IT revenue model",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-disruption-hits-indias-core-it-revenue-model/129308468",
         "summary": "Indian IT firms experienced a slowdown in 2025 due to uncertain global tech spending and geopolitical tensions, affecting revenue growth and margins. The sector's challenges worsened in 2026 with the impact of AI-driven transformation. This led to significant underperformance in the Nifty IT index, further disrupting India's core IT revenue model.",
@@ -5380,6 +5400,46 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "Invention Engine’s four portfolio startups secure $2.5 Mn",
+        "url": "https://entrackr.com/snippets/invention-engines-four-portfolio-startups-secure-25-mn-11191462",
+        "summary": "Invention Engine's four portfolio startups, including Sonic Lamb, Cheerio AI, Desible.ai, and Magicroll, have secured a combined $2.5 million in funding. Sonic Lamb, a deep-tech startup, raised $1 million to scale its India-designed headphones globally and expand into new applications. The funding will support the growth and development of these early-stage AI and deep tech companies.",
+        "date_published": "2026-03-10",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Verdant Impact raises $3 Mn in seed round led by Unicorn India Ventures",
+        "url": "https://entrackr.com/snippets/verdant-impact-raises-3-mn-in-seed-round-led-by-unicorn-india-ventures-11190942",
+        "summary": "Agritech startup Verdant Impact has raised $3 million in a seed funding round led by Unicorn India Ventures, with participation from other investors. The funds will be used for team expansion, market penetration, research and development, and upgrading its Pashu.AI platform with blockchain integration. Verdant Impact uses AI to build solutions for livestock management and bovine genetics through its Pashu.AI platform.",
+        "date_published": "2026-03-10",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Stellaris Venture Partners’ AI playbook; UKG’s bet on its India GCC",
         "url": "https://yourstory.com/2026/03/stellaris-venture-partners-ai-playbook-ukg-bet-on-its-india-gcc",
@@ -6369,7 +6429,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

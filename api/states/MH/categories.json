@@ -163,6 +163,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "From pilots to production: What it really takes to scale AI in GCCs",
+        "url": "https://yourstory.com/2026/03/pilots-to-production-what-really-takes-scale-ai-in-gccs",
+        "summary": "Leaders from various companies, including Vertiv, NielsenIQ, and XPO, discussed the challenges of scaling AI at a recent roundtable in Pune. The key hurdles to overcome include infrastructure, governance, and talent acquisition. These challenges must be addressed to transition AI from experimentation to enterprise-scale deployment.",
+        "date_published": "2026-03-11",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Neeri-developed AI tool maps vehicular pollution",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/neeri-developed-ai-tool-maps-vehicular-pollution/articleshow/129417373.cms",
+        "summary": "Researchers at Neeri have developed an AI tool that maps vehicular pollution, utilizing artificial intelligence to track and analyze pollution caused by vehicles. The tool aims to provide insights into pollution patterns and help mitigate its effects. The development is a significant step towards addressing environmental concerns related to vehicular emissions.",
+        "date_published": "2026-03-11",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "PMC to explore AI to detect unassessed properties, increase tax revenue",
         "url": "https://timesofindia.indiatimes.com/city/pune/pmc-to-explore-ai-to-detect-unassessed-properties-increase-tax-revenue/articleshow/129352818.cms",

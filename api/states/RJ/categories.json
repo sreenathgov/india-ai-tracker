@@ -5,6 +5,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Lumikai leads $1.5 Mn seed round in NPrep",
+        "url": "https://entrackr.com/snippets/lumikai-leads-15-mn-seed-round-in-nprep-11193962",
+        "summary": "NPrep, an AI-powered skilling platform for nursing students and professionals, has raised $1.5 million in a seed funding round led by Lumikai. The round also saw participation from existing investor All In Capital and other investors, including Velo Partners and angel investors. This funding follows a previous pre-seed round led by All In Capital, with the amount undisclosed.",
+        "date_published": "2026-03-11",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ",
+          "RJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Rajasthan deploys AI face recognition for exams, law enforcement, and identification",
         "url": "https://government.economictimes.indiatimes.com/news/technology/rajasthan-government-deploys-ai-facial-recognition-for-exams-policing-and-identification/128772631",
@@ -47,5 +68,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
