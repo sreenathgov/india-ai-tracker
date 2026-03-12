@@ -834,6 +834,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Digital India Ask Our Experts on Outcomes of India AI Impact Summit",
+        "url": "https://www.digitalindia.gov.in/events/digital-india-ask-our-experts-on-outcomes-of-india-ai-impact-summit/",
+        "summary": "The India AI Impact Summit was recently held as part of the Digital India initiative. Experts are being asked to share their insights and outcomes from the summit, highlighting the potential impact of AI on India's digital transformation. The summit aimed to explore the opportunities and challenges of AI adoption in India.",
+        "date_published": "2026-03-12",
+        "source_name": "Digital India - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "AI-related deflation for Indian IT firms likely to be offset by stronger demand",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-related-deflation-for-indian-it-firms-likely-to-be-offset-by-stronger-demand/129371351",
@@ -6429,5 +6449,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

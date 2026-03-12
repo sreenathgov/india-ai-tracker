@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 5,
+        "title": "Data governance framework being developed for AI systems to reduce bias, strengthen data security: Gujarat govt",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/data-governance-framework-being-developed-for-ai-systems-to-reduce-bias-strengthen-data-security-gujarat-govt/articleshow/129477521.cms",
+        "summary": "The Gujarat government is developing a data governance framework for AI systems to reduce bias and strengthen data security. This framework aims to ensure the responsible use of AI and protect sensitive information. The initiative is part of the government's efforts to promote trustworthy AI systems.",
+        "date_published": "2026-03-12",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 36,
         "title": "Centre’s ISM 2.0 to turbocharge Guj’s semicon industry",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/centres-ism-2-0-to-turbocharge-gujs-semicon-industry/articleshow/127847558.cms",
@@ -543,6 +563,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Policies and Initiatives"
   ]
 }

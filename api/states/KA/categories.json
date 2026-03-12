@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 3,
+        "title": "Karnataka govt sets up committee on Responsible AI",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/karnataka-govt-sets-up-committee-on-responsible-ai/articleshow/129493892.cms",
+        "summary": "Karnataka has established a Committee on Responsible Artificial Intelligence, becoming the first Indian state to address the ethical deployment of AI. The initiative aims to leverage the state's AI talent and companies to promote responsible AI integration into governance and public services. This move positions Karnataka to become a future AI capital, prioritizing transparency and accountability in AI development.",
+        "date_published": "2026-03-12",
+        "source_name": "Times of India - Bangalore",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 31,
         "title": "Karnataka showcases its AI prowess at India AI Impact Summit",
         "url": "https://yourstory.com/2026/02/karnataka-showcases-its-ai-prowess-at-india-ai-impact-summit",
@@ -1249,5 +1269,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }
