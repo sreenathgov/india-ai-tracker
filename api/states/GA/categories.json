@@ -26,6 +26,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "Join AI attendance or face pay cut, says panchayats minister",
+        "url": "https://timesofindia.indiatimes.com/city/goa/join-ai-attendance-or-face-pay-cut-says-panchayats-minister/articleshow/129521609.cms",
+        "summary": "The panchayats minister has announced that employees must join the AI attendance system or face a pay cut. This move aims to track employee attendance and increase accountability. The minister's directive is part of an effort to modernize and streamline attendance tracking using artificial intelligence.",
+        "date_published": "2026-03-13",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Goa shares draft AI policy with stakeholders for inputs",
         "url": "https://timesofindia.indiatimes.com/city/goa/goa-shares-draft-ai-policy-with-stakeholders-for-inputs/articleshow/129230660.cms",
@@ -124,5 +144,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

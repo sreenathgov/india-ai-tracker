@@ -23,6 +23,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 4,
+        "title": "Karnataka constitutes responsible AI committee to shape state's AI governance framework",
+        "url": "https://yourstory.com/2026/03/karnataka-constitutes-responsible-ai-committee-to-shape-states-ai-governance-framework",
+        "summary": "Karnataka has formed a responsible AI committee to develop the state's AI governance framework. The committee will create a comprehensive policy to ensure the ethical, safe, and transparent use of AI in government systems and public services. This framework aims to guide the deployment of AI across the state.",
+        "date_published": "2026-03-12",
+        "source_name": "YourStory",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 31,
         "title": "Karnataka showcases its AI prowess at India AI Impact Summit",
         "url": "https://yourstory.com/2026/02/karnataka-showcases-its-ai-prowess-at-india-ai-impact-summit",
@@ -1269,7 +1289,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Policies and Initiatives"
-  ]
+  "today_updates": []
 }

@@ -834,12 +834,52 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Snowflake research reveals 71% of Indian firms see positive ROI from Gen AI",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/snowflake-research-reveals-71-of-indian-firms-see-positive-roi-from-gen-ai/129535497",
+        "summary": "Indian firms are seeing significant benefits from generative AI, with 71% reporting a positive return on investment. The country ranks among the top three global adopters of gen AI, with widespread adoption across various business functions. Indian businesses plan to increase their gen AI budget allocation, indicating continued aggressive investment in the technology.",
+        "date_published": "2026-03-13",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Digital India Ask Our Experts on Outcomes of India AI Impact Summit",
         "url": "https://www.digitalindia.gov.in/events/digital-india-ask-our-experts-on-outcomes-of-india-ai-impact-summit/",
         "summary": "The India AI Impact Summit was recently held as part of the Digital India initiative. Experts are being asked to share their insights and outcomes from the summit, highlighting the potential impact of AI on India's digital transformation. The summit aimed to explore the opportunities and challenges of AI adoption in India.",
         "date_published": "2026-03-12",
         "source_name": "Digital India - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Nine in 10 Indian professionals say AI improves their productivity",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-boosts-productivity-89-of-indian-professionals-benefiting-from-technology/129497840",
+        "summary": "A survey found that 9 in 10 Indian professionals believe AI improves their productivity, showing a positive outlook on growth despite economic pressures. Indian professionals are adopting AI at a high rate and have evolving expectations for flexibility in their work. They remain confident, but rising costs are leading some to consider taking on second jobs.",
+        "date_published": "2026-03-12",
+        "source_name": "ET CIO - AI",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -5419,6 +5459,46 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 3,
+        "title": "Sarvam partners EkStep, AI4Bharat to deploy multilingual voice AI agents across India",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/sarvam-partners-ekstep-ai4bharat-to-deploy-multilingual-voice-ai-agents-across-india/129493025",
+        "summary": "Sarvam AI has partnered with EkStep Foundation and AI4Bharat to launch \"Listen at Scale\", a programme using multilingual voice AI agents for two-way conversations. The programme has reached around 50 lakh users in 31 days, covering areas such as healthcare, agriculture, and governance. It aims to facilitate verification, feedback, grievance redressal, and policy insights in local languages.",
+        "date_published": "2026-03-12",
+        "source_name": "ET CIO - AI",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Gupshup appoints Ravi Dugar as Chief Financial Officer",
+        "url": "https://entrackr.com/snippets/gupshup-appoints-ravi-dugar-as-chief-financial-officer-11205346",
+        "summary": "Gupshup, a conversational AI platform, has appointed Ravi Dugar as its Chief Financial Officer to lead the company's financial strategy and drive growth. Dugar brings nearly two decades of finance leadership experience from high-growth companies and global businesses. He previously held senior finance roles at Bharti Airtel, Livguard Energy Technologies, and Awfis, where he helped prepare the company for its public market debut in 2024.",
+        "date_published": "2026-03-12",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 4,
         "title": "Invention Engine’s four portfolio startups secure $2.5 Mn",
