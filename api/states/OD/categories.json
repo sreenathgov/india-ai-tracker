@@ -64,6 +64,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "Soura art helps woman eke livelihood, win praise",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/soura-art-helps-woman-eke-livelihood-win-praise/articleshow/129559903.cms",
+        "summary": "Sukanti Das, a non-Soura artist, has revitalized the traditional Soura art form and turned it into a sustainable livelihood using AI on mobile phones. Her vibrant paintings have gained national recognition and international interest, earning her a monthly income of Rs 15,000 to Rs 25,000. She now trains other women, empowering them through this unique artistic venture.",
+        "date_published": "2026-03-14",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 74,
         "title": "Jumbo deaths averted with installation of AI towers",
         "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/jumbo-deaths-averted-with-installation-of-ai-towers/articleshow/128520277.cms",
@@ -123,5 +143,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

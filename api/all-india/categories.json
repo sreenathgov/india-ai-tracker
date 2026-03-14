@@ -834,12 +834,112 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Simon India Partners Japan’s Givery to Develop Generative AI Solutions",
+        "url": "https://cellit.in/simon-india-partners-japans-givery-to-develop-generative-ai-solutions/",
+        "summary": "Simon India has partnered with Japan's Givery to develop generative AI solutions. This collaboration aims to leverage Givery's expertise in AI technology to create innovative solutions. The partnership is expected to drive growth and advancement in the field of generative AI.",
+        "date_published": "2026-03-14",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Snowflake research reveals 71% of Indian firms see positive ROI from Gen AI",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/snowflake-research-reveals-71-of-indian-firms-see-positive-roi-from-gen-ai/129535497",
         "summary": "Indian firms are seeing significant benefits from generative AI, with 71% reporting a positive return on investment. The country ranks among the top three global adopters of gen AI, with widespread adoption across various business functions. Indian businesses plan to increase their gen AI budget allocation, indicating continued aggressive investment in the technology.",
         "date_published": "2026-03-13",
         "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Google ‘Ask Maps’ Feature: Gemini-powered maps in India launched; Immersive navigation, 3D view and more",
+        "url": "https://www.etnownews.com/technology/google-ask-maps-feature-gemini-powered-maps-in-india-launched-immersive-navigation-3d-view-and-more-article-153826883",
+        "summary": "Google has launched its Gemini-powered \"Ask Maps\" feature in India and the US, enabling conversational search and immersive navigation. This update marks the platform's biggest upgrade in over a decade, offering personalized recommendations and a 3D view. The feature is powered by Google's AI tool, Gemini, and is available on Google Maps.",
+        "date_published": "2026-03-13",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India poised for best scalable indigenous AI products starting with voice‑led apps",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-poised-for-best-scalable-indigenous-ai-products-starting-with-voiceled-apps/129546012",
+        "summary": "India has a strong foundation for developing scalable artificial intelligence products due to its large digital user base and low user acquisition costs. The country's first consumer AI app to reach 200 million users is expected to be voice-led, rather than relying on English prompts. This trend is likely to drive the growth of indigenous AI products in India.",
+        "date_published": "2026-03-13",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "NxtGen gears up for enterprise play with its Rs 3,600 crore sovereign AI factory",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/nxtgen-gears-up-for-enterprise-play-with-its-rs-3600-crore-sovereign-ai-factory/129543794",
+        "summary": "NxtGen is launching a Rs 3,600 crore sovereign AI factory to cater to enterprise needs. The company has partnered with major tech firms including Dell, Nvidia, CommScope, and Vertiv to support enterprise inference. This move aims to establish NxtGen as a key player in the enterprise AI market.",
+        "date_published": "2026-03-13",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "India’s data centre capacity rises fourfold to 1,500 MW since 2020: Govt",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/indias-data-centre-capacity-rises-fourfold-to-1500-mw-since-2020-govt/129558711",
+        "summary": "India's data centre capacity has increased fourfold to 1,500 MW since 2020, driven by rising demand for AI-led infrastructure. The government is supporting data centre expansion through measures such as compute subsidies and transmission planning. Emerging nuclear energy reforms are also playing a role in this growth.",
+        "date_published": "2026-03-13",
+        "source_name": "ET Government - Technology",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
