@@ -243,6 +243,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "AI summit: Interim bail for accused in ‘shirtless protest’",
+        "url": "https://www.tribuneindia.com/news/delhi/ai-summit-interim-bail-for-accused-in-shirtless-protest",
+        "summary": "A Delhi court granted interim anticipatory bail to Rajeev Kumar, an accused in the \"shirtless protest\" during the AI summit, until March 28. The court directed Kumar to join the investigation, with the order passed by Additional Sessions Judge Amit Bansal. Kumar is accused of participating in the protest, but the specific charges against him were not detailed.",
+        "date_published": "2026-03-15",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Constems AI Systems raises $2 Mn led by Finvolve and India Accelerator",
         "url": "https://entrackr.com/snippets/constems-ai-systems-raises-2-mn-led-by-finvolve-and-india-accelerator-11203937",
@@ -1883,6 +1903,26 @@
     "AI Start-Up News": [
       {
         "id": 4,
+        "title": "GIMS expands AI startup clinic to Purvanchal",
+        "url": "https://timesofindia.indiatimes.com/city/noida/gims-expands-ai-startup-clinic-to-purvanchal/articleshow/129580505.cms",
+        "summary": "GIMS is expanding its AI startup clinic to Purvanchal, aiming to support artificial intelligence startups in the region. The expansion is part of GIMS' efforts to promote innovation and entrepreneurship in the field of AI. The clinic will provide resources and guidance to AI startups, helping them grow and develop.",
+        "date_published": "2026-03-15",
+        "source_name": "Times of India - Noida",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
         "title": "Exclusive: PhysicsWallah co-founder Prateek Boob set to invest in Newton School",
         "url": "https://entrackr.com/exclusive/exclusive-physicswallah-co-founder-prateek-boob-set-to-invest-in-newton-school-11209111",
         "summary": "Newton School, a certification-based technical training platform, is set to raise around Rs 25 crore in fresh funding from Prateek Boob, co-founder of PhysicsWallah, as part of an extension of its Series B round. The investment will be made through the issue of 72,738 Series B1 preference shares at Rs 3,437 per share. This funding comes after a gap of nearly four years for the Gurugram-based company.",
@@ -2025,5 +2065,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments",
+    "AI Start-Up News"
+  ]
 }

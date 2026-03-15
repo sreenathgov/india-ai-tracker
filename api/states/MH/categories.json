@@ -163,6 +163,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "In AI Age, Adaptability Is Key: VIP MD To Students",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/in-ai-age-adaptability-is-key-vip-md-to-students/articleshow/129580629.cms",
+        "summary": "A VIP MD recently addressed students, emphasizing the importance of adaptability in the age of artificial intelligence. The MD encouraged students to be flexible and open to new technologies and changes. This advice is crucial for students to thrive in a rapidly evolving job market dominated by AI.",
+        "date_published": "2026-03-15",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Maharashtra to adopt AI solutions to tackle human-animal conflict: Forest Minister Ganesh Naik",
         "url": "https://indianexpress.com/article/cities/mumbai/maharashtra-to-adopt-ai-solutions-to-tackle-human-animal-conflict-forest-minister-ganesh-naik-10578011/",
@@ -811,5 +831,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

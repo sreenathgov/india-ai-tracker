@@ -5,6 +5,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "Punjab to integrate AI across depts; Mohali to be AI hub",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/punjab-to-integrate-ai-across-depts-mohali-to-be-ai-hub/articleshow/129580221.cms",
+        "summary": "Punjab plans to integrate artificial intelligence across its departments to enhance efficiency. The city of Mohali is set to be developed as a hub for AI, driving innovation and growth in the region. This initiative aims to leverage AI technology to improve governance and public services in Punjab.",
+        "date_published": "2026-03-15",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "PB",
+          "CH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Three arrested by Punjab cybercrime police for online fraud, AI blackmail",
         "url": "https://indianexpress.com/article/cities/chandigarh/three-arrested-by-punjab-cybercrime-police-for-online-fraud-ai-blackmail-10578034/",
@@ -210,5 +231,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

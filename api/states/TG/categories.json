@@ -88,6 +88,26 @@
     "Major AI Developments": [
       {
         "id": 6,
+        "title": "AI should aid, not replace lawyers and judges, says SC judge",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/ai-should-aid-not-replace-lawyers-and-judges-says-sc-judge/articleshow/129580137.cms",
+        "summary": "A Supreme Court judge has stated that artificial intelligence should be used to aid lawyers and judges, rather than replacing them. The judge's comment emphasizes the importance of human involvement in the legal system, with AI serving as a supportive tool. This perspective highlights the potential benefits of AI in augmenting legal work without displacing professionals.",
+        "date_published": "2026-03-15",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
         "title": "Hyd-Phuket AI Express flight suffers hard landing; airport closed for hours",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/hyd-phuket-ai-express-flight-suffers-hard-landing-airport-closed-for-hours/articleshow/129478148.cms",
         "summary": "An Air India Express flight from Hyderabad to Phuket experienced a hard landing, resulting in the closure of the airport for several hours. The incident led to a temporary disruption of flight operations, with the airport eventually reopening after the issue was resolved. The hard landing occurred on a flight from Hyderabad to Phuket, prompting an immediate response from airport authorities.",
@@ -873,5 +893,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
