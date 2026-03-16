@@ -226,6 +226,26 @@
     "Major AI Developments": [
       {
         "id": 5,
+        "title": "Bengaluru startup Hooly is building an AI fitness coach that understands motivation",
+        "url": "https://yourstory.com/2026/03/bengaluru-startup-hooly-building-ai-fitness-coach-that-understands-motivation",
+        "summary": "Hooly, a Bengaluru startup, is developing an AI-powered fitness coach that utilizes motivation to promote physical activity. The healthtech company leverages AI, WhatsApp, and behavioral nudges to encourage users, particularly those over 35, to stay committed to their fitness goals. This innovative approach aims to provide personalized support and accountability for individuals seeking to improve their physical well-being.",
+        "date_published": "2026-03-16",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
         "title": "Anthropic vs Anthropic: AI giant appears before Karnataka court in brand dispute case filed by Belagavi startup",
         "url": "https://timesofindia.indiatimes.com/city/hubballi/anthropic-vs-anthropic-ai-giant-appears-before-karnataka-court-in-brand-dispute-case-filed-by-belagavi-startup/articleshow/129373165.cms",
         "summary": "An Indian IT startup, Anthropic Softwares Private Limited, is in a brand dispute with US AI firm Anthropic PBC and its Indian subsidiary, Anthropic India Private Limited. The case was heard in a Karnataka court, where Anthropic India argued it is a separate legal entity. The dispute revolves around the use of the \"Anthropic\" brand name.",
@@ -992,6 +1012,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 6,
+        "title": "Peak XV alumni to launch Ambition Capital targeting $250 Mn early-stage fund: Report",
+        "url": "https://entrackr.com/snippets/peak-xv-alumni-to-launch-ambition-capital-targeting-250-mn-early-stage-fund-report-11216418",
+        "summary": "Former Peak XV Partners executives are launching Ambition Capital, a new venture capital firm aiming to raise $250 million for early-stage investments. The fund is being set up by Shailesh Lakhani, Harshjit Sethi, and Mayank Porwal, all former Peak XV associates. Ambition Capital, based in Bengaluru, plans to invest in seed and Series A rounds.",
+        "date_published": "2026-03-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Karnataka budget: Pressing AI accelerator to boost farming, education &amp; more",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/karnataka-budget-pressing-ai-accelerator-to-boost-farming-education-more/articleshow/129172425.cms",
@@ -1289,5 +1329,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments",
+    "AI Start-Up News"
+  ]
 }

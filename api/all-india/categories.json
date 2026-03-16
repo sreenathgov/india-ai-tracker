@@ -854,6 +854,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "India eyes AI foundation model to support national requirements, reduce external dependence",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-eyes-ai-foundation-model-to-support-national-requirements-reduce-external-dependence/129600305",
+        "summary": "India is developing an AI foundation model to support national requirements and reduce dependence on external technologies. Foundation models are a crucial component in modern AI systems, allowing for adaptability across various applications. This initiative aims to minimize the need for training separate models for each task, increasing efficiency and self-sufficiency.",
+        "date_published": "2026-03-16",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Next AI unicorns will come from India",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/next-ai-unicorns-will-come-from-india/129599679",
+        "summary": "Google AI Futures Fund, a global AI startup investor, was launched in May 2025 and introduced in India in November 2025 through a partnership with Accel India's Atoms platform. This initiative aims to support AI startups in India, potentially leading to the emergence of new AI unicorns. The fund's expansion into India marks a significant step in fostering the country's growing AI ecosystem.",
+        "date_published": "2026-03-16",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "AI in India: IMF sees artificial intelligence-driven businesses, innovation growth but flags skill gaps; here’s what it said",
+        "url": "https://www.etnownews.com/technology/imf-sees-artificial-intelligence-driven-businesses-innovation-growth-but-flags-skill-gaps-article-153838244",
+        "summary": "The International Monetary Fund reports that around 60% of Indian firms use some form of artificial intelligence, exceeding global averages. AI-driven productivity gains could increase total factor productivity in emerging Asia, including India, by 0.3 to 3 percentage points over a decade. The IMF notes significant potential for AI-driven businesses and innovation growth in India, despite existing skill gaps.",
+        "date_published": "2026-03-15",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Simon India Partners Japan’s Givery to Develop Generative AI Solutions",
         "url": "https://cellit.in/simon-india-partners-japans-givery-to-develop-generative-ai-solutions/",
@@ -5580,6 +5640,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 1,
+        "title": "EXCLUSIVE: Neysa's Karan Kirpalani explains AI infra, sovereign cloud strategy and future of enterprise AI in India",
+        "url": "https://www.etnownews.com/technology/exclusive-neysas-karan-kirpalani-explains-ai-infra-sovereign-cloud-strategy-and-future-of-enterprise-ai-in-india-article-153838734",
+        "summary": "Karan Kirpalani of Neysa discusses the company's approach to AI infrastructure and sovereign cloud strategy in India. He shares insights on the future of enterprise AI in the country, highlighting key trends and developments. Kirpalani's expertise provides a unique perspective on India's growing AI landscape and its potential for innovation.",
+        "date_published": "2026-03-15",
+        "source_name": "ET Now Technology",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Sarvam partners EkStep, AI4Bharat to deploy multilingual voice AI agents across India",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/sarvam-partners-ekstep-ai4bharat-to-deploy-multilingual-voice-ai-agents-across-india/129493025",
@@ -6649,5 +6729,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
