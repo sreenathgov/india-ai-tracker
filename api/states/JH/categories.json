@@ -5,6 +5,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 14,
+        "title": "Jharkhand rural dept pioneers AI training programme; Aiming for improved efficiency and transparency in project execution",
+        "url": "https://timesofindia.indiatimes.com/city/ranchi/jharkhand-rural-dept-pioneers-ai-training-programme-aiming-for-improved-efficiency-and-transparency-in-project-execution/articleshow/129617611.cms",
+        "summary": "Jharkhand's rural development department is adopting artificial intelligence to improve efficiency and transparency in project execution. The department has launched an AI Support Cell and is providing extensive training programs for its employees. This initiative aims to enable employees to utilize AI tools for efficient document handling and data analysis.",
+        "date_published": "2026-03-17",
+        "source_name": "Times of India - Ranchi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "JH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 18,
         "title": "Campus Diary",
         "url": "https://timesofindia.indiatimes.com/city/ranchi/campus-diary/articleshow/128823816.cms",
@@ -46,5 +66,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

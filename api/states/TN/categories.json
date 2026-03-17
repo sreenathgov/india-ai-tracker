@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "IIT Madras Expands Free Digital Education Initiative Vidya Shakti to Reach More Rural Students",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/iit-madras-expands-free-digital-education-initiative-vidya-shakti-to-reach-more-rural-students/articleshow/129616355.cms",
+        "summary": "IIT Madras is expanding its Vidya Shakti program, a free digital education initiative that provides online classes in math, science, and English to rural students. The program aims to reach 10,000 more students next year, utilizing virtual reality and AI tools to enhance learning outcomes. This expansion seeks to improve education across India, particularly in rural areas.",
+        "date_published": "2026-03-17",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Future transit systems, AI yoga among IIT students’ innovations",
         "url": "https://timesofindia.indiatimes.com/city/chennai/future-transit-systems-ai-yoga-among-iit-students-innovations/articleshow/129580171.cms",
@@ -327,5 +347,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

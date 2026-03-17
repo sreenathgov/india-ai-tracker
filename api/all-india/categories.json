@@ -854,6 +854,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "India investing in next-gen tech, transforming how defence solutions are born",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/india-investing-in-next-gen-tech-transforming-how-defence-solutions-are-born/129623150",
+        "summary": "India is emerging as a global hub for defence innovation, investing in next-generation technologies such as AI and unmanned systems. The nation is committed to 'Aatmanirbhar Bharat' and global connectivity, as highlighted by Union Minister Rajnath Singh. India aims to foster sustainable security and an open international order through collaboration, co-development, and knowledge sharing.",
+        "date_published": "2026-03-17",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "When data is scarce: How India is building military AI differently",
+        "url": "https://yourstory.com/2026/03/when-data-is-scarce-how-india-is-building-military-ai-differently",
+        "summary": "India's defence sector and deeptech startups are developing military AI using smaller language models and edge AI due to limited data availability. This approach differs from the US and China, which rely on large-scale data. India's strategy aims to create smarter battlefield systems despite data constraints.",
+        "date_published": "2026-03-17",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "India eyes AI foundation model to support national requirements, reduce external dependence",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-eyes-ai-foundation-model-to-support-national-requirements-reduce-external-dependence/129600305",
@@ -880,6 +920,26 @@
         "summary": "Google AI Futures Fund, a global AI startup investor, was launched in May 2025 and introduced in India in November 2025 through a partnership with Accel India's Atoms platform. This initiative aims to support AI startups in India, potentially leading to the emergence of new AI unicorns. The fund's expansion into India marks a significant step in fostering the country's growing AI ecosystem.",
         "date_published": "2026-03-16",
         "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "AI Startups To Watch: 5 Indian AI Startups That Caught Our Eye In March",
+        "url": "https://inc42.com/startups/ai-startups-to-watch-5-indian-ai-startups-that-caught-our-eye-in-march/",
+        "summary": "The Indian AI ecosystem is experiencing a complex phase with technological advancements, selective funding, and growing geopolitical uncertainty. Five Indian AI startups have been identified as notable in March, showcasing the country's emerging AI talent. These startups are navigating the challenges and opportunities in the evolving Indian AI landscape.",
+        "date_published": "2026-03-16",
+        "source_name": "Inc42 Startups",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -5640,6 +5700,46 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "Peak XV leads $6.6 Mn funding round in BambooBox",
+        "url": "https://entrackr.com/snippets/peak-xv-leads-66-mn-funding-round-in-bamboobox-11219662",
+        "summary": "BambooBox, an AI-driven orchestration platform, has raised $6.6 million in funding led by Peak XV Partners, with participation from several other investors. The company, which provides managed account-based marketing services for enterprise B2B teams, was part of Peak XV's accelerator program Surge. The fresh funds will be used to expand globally and invest in AI capabilities.",
+        "date_published": "2026-03-17",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Accel Atoms and Google’s AI Futures Fund announce AI cohort 2026",
+        "url": "https://entrackr.com/snippets/accel-atoms-and-googles-ai-futures-fund-announce-ai-cohort-2026-11216974",
+        "summary": "Accel Atoms and Google's AI Futures Fund have announced the 2026 AI cohort, selecting five startups from over 4,000 applications. Each startup will receive a co-investment of up to $2 million and $350,000 in compute credits from Google Cloud, Gemini, and Google DeepMind resources. The partnership aims to support early-stage Indian teams in scaling their AI concepts globally.",
+        "date_published": "2026-03-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "EXCLUSIVE: Neysa's Karan Kirpalani explains AI infra, sovereign cloud strategy and future of enterprise AI in India",
         "url": "https://www.etnownews.com/technology/exclusive-neysas-karan-kirpalani-explains-ai-infra-sovereign-cloud-strategy-and-future-of-enterprise-ai-in-india-article-153838734",
@@ -6730,6 +6830,7 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

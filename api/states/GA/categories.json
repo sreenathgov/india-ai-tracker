@@ -26,6 +26,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "AI traffic cameras to have number plate recognition",
+        "url": "https://timesofindia.indiatimes.com/city/goa/ai-traffic-cameras-to-have-number-plate-recognition/articleshow/129617132.cms",
+        "summary": "AI-powered traffic cameras are being introduced with number plate recognition capabilities. These cameras will utilize artificial intelligence to identify and record vehicle license plates, enhancing traffic management and enforcement. The technology aims to improve road safety and efficiency by automatically detecting and responding to traffic violations.",
+        "date_published": "2026-03-17",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Join AI attendance or face pay cut, says panchayats minister",
         "url": "https://timesofindia.indiatimes.com/city/goa/join-ai-attendance-or-face-pay-cut-says-panchayats-minister/articleshow/129521609.cms",
@@ -144,5 +164,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

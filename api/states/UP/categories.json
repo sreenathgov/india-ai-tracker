@@ -143,6 +143,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "‘Indianised database must for efficacy of AI tools’",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/indianised-database-must-for-efficacy-of-ai-tools/articleshow/129618453.cms",
+        "summary": "Experts emphasize the need for an Indianised database to ensure the efficacy of AI tools, as current databases are largely based on Western data. This is crucial for AI tools to effectively understand and process Indian languages, accents, and cultural nuances. An Indianised database would enable AI tools to provide more accurate and relevant results for Indian users.",
+        "date_published": "2026-03-17",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "8 data centre parks to turn into digital, AI hub",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/8-data-centre-parks-to-turn-into-digital-ai-hub/articleshow/129618366.cms",
+        "summary": "Eight data centre parks are set to be transformed into a digital and AI hub, marking a significant development in the tech industry. The initiative aims to create a centralized location for data processing and AI operations, potentially boosting the region's digital capabilities. This transformation is expected to have a major impact on the area's technological landscape.",
+        "date_published": "2026-03-17",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "LU expands AI courses to all depts",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/lu-expands-ai-courses-to-all-depts/articleshow/129618310.cms",
+        "summary": "Lucknow University (LU) is expanding its artificial intelligence (AI) courses to all departments. The move aims to provide students with a broader understanding of AI and its applications across various fields. This expansion will enable students from different disciplines to acquire AI skills and knowledge.",
+        "date_published": "2026-03-17",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Constems AI Systems raises $2 Mn led by Finvolve and India Accelerator",
         "url": "https://entrackr.com/snippets/constems-ai-systems-raises-2-mn-led-by-finvolve-and-india-accelerator-11203937",
@@ -433,5 +493,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

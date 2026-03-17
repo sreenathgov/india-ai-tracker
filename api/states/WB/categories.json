@@ -25,6 +25,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "LTM Partners with IIT Kharagpur to Upskill Its Workforce in AI",
+        "url": "https://cellit.in/ltm-partners-with-iit-kharagpur-to-upskill-its-workforce-in-ai/",
+        "summary": "LTM has partnered with the Indian Institute of Technology Kharagpur (IIT Kharagpur) to upskill its workforce in artificial intelligence (AI). This partnership aims to enhance the skills of LTM's employees in AI and related technologies. The collaboration is expected to drive innovation and growth within the company.",
+        "date_published": "2026-03-17",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Alumnus gifts IIT-Kgp 46cr to set up digi-engg-AI school",
         "url": "https://timesofindia.indiatimes.com/city/kolkata/alumnus-gifts-iit-kgp-46cr-to-set-up-digi-engg-ai-school/articleshow/129042857.cms",
@@ -127,5 +147,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
