@@ -894,6 +894,46 @@
         "posted_to_x_at": null
       },
       {
+        "id": 1,
+        "title": "Jansen Huang’s prediction! Nvidia’s AI processors would help generate Rs 100000 cr in sales; check timeline",
+        "url": "https://www.etnownews.com/technology/jansen-huangs-prediction-nvidias-ai-processors-would-help-generate-rs-100000-cr-in-sales-check-timeline-article-153855125",
+        "summary": "Nvidia's AI processors are expected to drive significant revenue growth, potentially generating ₹1 lakh crore by 2027. Jensen Huang made this prediction, citing surging global demand for AI computing and increased investment in high-performance infrastructure. This growth is anticipated to be driven by the adoption of next-generation artificial intelligence applications.",
+        "date_published": "2026-03-17",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Indian commercial interiors startup Officebanao raises $7.7M",
+        "url": "https://yourstory.com/2026/03/indian-commercial-interiors-startup-officebanao-raises-77-million",
+        "summary": "Officebanao, an Indian commercial interiors startup, has raised $7.7 million in funding. The funds will be used to enhance the company's technology platform by integrating AI and machine learning. This integration will enable automated design, predictive scheduling, and intelligent procurement matching.",
+        "date_published": "2026-03-17",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "India eyes AI foundation model to support national requirements, reduce external dependence",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-eyes-ai-foundation-model-to-support-national-requirements-reduce-external-dependence/129600305",
@@ -6829,8 +6869,5 @@
       }
     ]
   },
-  "today_updates": [
-    "AI Start-Up News",
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

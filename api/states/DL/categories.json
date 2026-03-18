@@ -244,6 +244,26 @@
     "Major AI Developments": [
       {
         "id": 5,
+        "title": "11 AI Companies in Delhi to Know",
+        "url": "https://builtindelhi.in/articles/ai-companies-in-delhi",
+        "summary": "There are 11 notable AI companies in Delhi that are making significant contributions to the field of artificial intelligence. These companies are working on various AI applications, including machine learning, natural language processing, and computer vision. The presence of these companies in Delhi highlights the city's growing importance as a hub for AI innovation and development.",
+        "date_published": "2026-03-18",
+        "source_name": "Built in Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
         "title": "AI summit: Interim bail for accused in ‘shirtless protest’",
         "url": "https://www.tribuneindia.com/news/delhi/ai-summit-interim-bail-for-accused-in-shirtless-protest",
         "summary": "A Delhi court granted interim anticipatory bail to Rajeev Kumar, an accused in the \"shirtless protest\" during the AI summit, until March 28. The court directed Kumar to join the investigation, with the order passed by Additional Sessions Judge Amit Bansal. Kumar is accused of participating in the protest, but the specific charges against him were not detailed.",
@@ -2065,5 +2085,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

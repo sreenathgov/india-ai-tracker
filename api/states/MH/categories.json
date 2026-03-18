@@ -183,6 +183,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 2,
+        "title": "Rethinking GenAI development with NVIDIA DGX Spark at DevSparks 2026",
+        "url": "https://yourstory.com/2026/03/rethinking-genai-development-nvidia-dgx-spark-devsparks-2026",
+        "summary": "NVIDIA's Sunil Patel showcased DGX Spark at DevSparks 2026, highlighting its ability to enable local prototyping and fine-tuning of large AI models. This capability dramatically reduces infrastructure barriers for developers, making it easier to work with GenAI. DGX Spark was demonstrated in Pune at the DevSparks 2026 event.",
+        "date_published": "2026-03-17",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "165 women cops using AI to register routine complaints within minutes",
         "url": "https://timesofindia.indiatimes.com/city/nagpur/165-women-cops-using-ai-to-register-routine-complaints-within-minutes/articleshow/129595338.cms",
@@ -871,7 +891,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
