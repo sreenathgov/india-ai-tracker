@@ -225,6 +225,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "E-commerce accelerator Assiduus Global raises $25 Mn led by Bajaj Finserv",
+        "url": "https://entrackr.com/news/e-commerce-accelerator-assiduus-global-raises-25-mn-led-by-bajaj-finserv-11226649",
+        "summary": "Assiduus Global, an AI-powered e-commerce accelerator, has raised $25 million in a pre-Series B funding round led by Bajaj Finserv. The round also saw participation from Uncorrelated Ventures, Aaruha Technology Fund, and other investors. The company had previously raised $15 million in its Series A round in October 2022.",
+        "date_published": "2026-03-19",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Enterprise procurement platform Aerchain secures $13 Mn in Series A round",
+        "url": "https://entrackr.com/news/enterprise-procurement-platform-aerchain-secures-13-mn-in-series-a-round-11225084",
+        "summary": "Aerchain, an AI-native enterprise procurement platform, has raised $13 million in a Series A funding round led by Pavestone VC, with participation from IndiaMART and other investors. The Bengaluru-based startup had previously secured $3 million in a pre-Series A round in 2021. The fresh funds will be used to accelerate global expansion and enhance AI capabilities to build the \"Spend Operating System\".",
+        "date_published": "2026-03-18",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Bengaluru startup Hooly is building an AI fitness coach that understands motivation",
         "url": "https://yourstory.com/2026/03/bengaluru-startup-hooly-building-ai-fitness-coach-that-understands-motivation",
@@ -1012,6 +1052,51 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "Tech startup Aerchain raises $13M in Series A round led by Pavestone VC",
+        "url": "https://yourstory.com/2026/03/tech-startup-aerchain-raises-series-a-round-led-by-pavestone-vc",
+        "summary": "Aerchain, a Bengaluru-based tech startup, has raised $13M in a Series A funding round led by Pavestone VC. The startup plans to utilize the funding to expand its market presence and enhance its AI capabilities. The funding will support Aerchain's growth in the procurement segment.",
+        "date_published": "2026-03-18",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Prashant Pitti’s Optimo Capital raises Rs 100 Cr from PNB",
+        "url": "https://entrackr.com/snippets/prashant-pittis-optimo-capital-raises-rs-100-cr-from-pnb-11224352",
+        "summary": "Optimo Capital, a tech-led NBFC, has raised Rs 100 crore in debt funding from Punjab National Bank and partnered with Godrej Finance to co-lend Rs 200 crore over 12 months. This development comes six months after the company secured Rs 150 crore in equity funding led by Blume Ventures and Omnivore. Optimo Capital focuses on MSME lending, offering digital secured loan-against-property products to borrowers with limited access to formal credit.",
+        "date_published": "2026-03-18",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "AP",
+          "MP",
+          "PB",
+          "KA",
+          "TN",
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Peak XV alumni to launch Ambition Capital targeting $250 Mn early-stage fund: Report",
         "url": "https://entrackr.com/snippets/peak-xv-alumni-to-launch-ambition-capital-targeting-250-mn-early-stage-fund-report-11216418",
@@ -1329,5 +1414,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -163,6 +163,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 10,
+        "title": "High-resolution cameras, AI helped track culprits who threw stones at Vande Bharat train: Vaishnaw",
+        "url": "https://www.tribuneindia.com/news/uttar-pradesh/high-resolution-cameras-ai-helped-track-culprits-who-threw-stones-at-vande-bharat-train-vaishnaw",
+        "summary": "High-resolution cameras and AI technology installed in a Vande Bharat train helped authorities identify and catch individuals who threw stones at the train in Uttar Pradesh. Railway Minister Ashwini Vaishnaw disclosed this information in the Lok Sabha, highlighting the train's advanced safety features. The technology enabled successful tracking of the culprits in the Muzaffarnagar area.",
+        "date_published": "2026-03-18",
+        "source_name": "Tribune - Uttar Pradesh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "‘Indianised database must for efficacy of AI tools’",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/indianised-database-must-for-efficacy-of-ai-tools/articleshow/129618453.cms",
@@ -513,7 +533,5 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

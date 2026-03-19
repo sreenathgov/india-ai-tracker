@@ -209,6 +209,31 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 8,
+        "title": "Prashant Pitti’s Optimo Capital raises Rs 100 Cr from PNB",
+        "url": "https://entrackr.com/snippets/prashant-pittis-optimo-capital-raises-rs-100-cr-from-pnb-11224352",
+        "summary": "Optimo Capital, a tech-led NBFC, has raised Rs 100 crore in debt funding from Punjab National Bank and partnered with Godrej Finance to co-lend Rs 200 crore over 12 months. This development comes six months after the company secured Rs 150 crore in equity funding led by Blume Ventures and Omnivore. Optimo Capital focuses on MSME lending, offering digital secured loan-against-property products to borrowers with limited access to formal credit.",
+        "date_published": "2026-03-18",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "AP",
+          "MP",
+          "PB",
+          "KA",
+          "TN",
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Rajpura lineman’s daughter uses AI to secure 51st rank in UPSC exam",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/rajpura-linemans-daughter-uses-ai-to-secure-51st-rank-in-upsc-exam/articleshow/129175421.cms",
@@ -252,7 +277,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

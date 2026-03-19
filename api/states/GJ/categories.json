@@ -125,6 +125,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "New hostel to come up at AI 171 crash site: Gujarat govt",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/new-hostel-to-come-up-at-ai-171-crash-site-gujarat-govt/articleshow/129664098.cms",
+        "summary": "The Gujarat government has announced plans to build a new hostel at the site of the Air India 171 crash. The project aims to commemorate the incident and provide accommodation facilities. The hostel's construction is a part of the government's efforts to develop the area.",
+        "date_published": "2026-03-19",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Lumikai leads $1.5 Mn seed round in NPrep",
         "url": "https://entrackr.com/snippets/lumikai-leads-15-mn-seed-round-in-nprep-11193962",
@@ -562,5 +582,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

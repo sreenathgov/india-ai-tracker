@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "T vision document will help state tackle AI hit to jobs: CM",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/t-vision-document-will-help-state-tackle-ai-hit-to-jobs-cm/articleshow/129665030.cms",
+        "summary": "The state's T vision document is expected to help tackle the impact of artificial intelligence on jobs, according to the Chief Minister. The document aims to address the challenges posed by AI to the job market and provide a framework for the state's response. The Chief Minister believes the T vision document will play a crucial role in mitigating the effects of AI on employment.",
+        "date_published": "2026-03-19",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "National Mobility Summit: Policymakers call for tech-driven urban transport system",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/national-mobility-summit-policymakers-call-for-tech-driven-urban-transport-system/articleshow/129640484.cms",
@@ -835,6 +855,31 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 8,
+        "title": "Prashant Pitti’s Optimo Capital raises Rs 100 Cr from PNB",
+        "url": "https://entrackr.com/snippets/prashant-pittis-optimo-capital-raises-rs-100-cr-from-pnb-11224352",
+        "summary": "Optimo Capital, a tech-led NBFC, has raised Rs 100 crore in debt funding from Punjab National Bank and partnered with Godrej Finance to co-lend Rs 200 crore over 12 months. This development comes six months after the company secured Rs 150 crore in equity funding led by Blume Ventures and Omnivore. Optimo Capital focuses on MSME lending, offering digital secured loan-against-property products to borrowers with limited access to formal credit.",
+        "date_published": "2026-03-18",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "AP",
+          "MP",
+          "PB",
+          "KA",
+          "TN",
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 23,
         "title": "CM Revanth Reddy moots AI Start-up Village in Telangana, AI War Room...",

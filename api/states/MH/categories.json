@@ -792,6 +792,46 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "AI made developers faster. So why are product teams still slow?",
+        "url": "https://yourstory.com/2026/03/ai-made-developers-faster-so-why-are-product-teams-still-slow",
+        "summary": "AI-driven coding tools have increased developer speed, but product teams remain slow due to limitations in implementing these gains at the team level. Anand Hariharan discussed this issue at DevSparks 2026, highlighting the need for context engineering and spec-driven development to bridge the gap. He proposed these approaches as solutions to fully leverage AI-driven coding benefits.",
+        "date_published": "2026-03-18",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Can AI help healthcare systems make sense of their data?",
+        "url": "https://yourstory.com/2026/03/ai-help-healthcare-systems-make-sense-of-their-data",
+        "summary": "Gaurav Tripathi, Co-founder and Group CTO at Partex.AI, discussed how AI technologies can aid healthcare systems in analyzing medical data. Federated learning, knowledge graphs, and agentic AI are key solutions that can help institutions make sense of fragmented data. These technologies can achieve this goal without compromising patient privacy, according to Tripathi's presentation at DevSparks 2026 in Pune.",
+        "date_published": "2026-03-18",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 33,
         "title": "Startup Infiheal bags honour at AI Impact Summit",
         "url": "https://timesofindia.indiatimes.com/city/nagpur/startup-infiheal-bags-honour-at-ai-impact-summit/articleshow/128574984.cms",
