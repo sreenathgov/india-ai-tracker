@@ -143,6 +143,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "‘AI not just a wave, but here to reshape careers’",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/ai-not-just-a-wave-but-here-to-reshape-careers/articleshow/129687196.cms",
+        "summary": "Artificial intelligence is not just a passing trend, but a transformative force that will reshape various careers. AI is expected to have a significant impact on the job market, changing the way industries operate and creating new opportunities. The integration of AI will require workers to adapt and acquire new skills to remain relevant in the changing career landscape.",
+        "date_published": "2026-03-20",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Hackathon: Neural Nova gets 1st prize",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/hackathon-neural-nova-gets-1st-prize/articleshow/129641347.cms",
@@ -533,5 +553,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

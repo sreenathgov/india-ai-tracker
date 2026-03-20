@@ -855,6 +855,26 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "Why Global AI and SaaS startups are rethinking cross-border payments",
+        "url": "https://yourstory.com/2026/03/global-ai-saas-founders-turning-ecl-flow-faster-cross-border-payments",
+        "summary": "Global AI and SaaS startups are reevaluating their cross-border payment strategies as they expand across international markets, particularly between the US and India. To address challenges such as delays and high foreign exchange costs, startups are turning to platforms like ECL Flow for support. These platforms aim to streamline global money movement, increasing efficiency and reducing costs for growing businesses.",
+        "date_published": "2026-03-20",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "'India is first world in digital payments, but fraud patterns evolving fast,' ¬- NPST CEO Deepak Chand Thakur",
         "url": "https://www.etnownews.com/technology/india-is-first-world-in-digital-payments-but-fraud-patterns-evolving-fast-npst-ceo-deepak-chand-thakur-article-153865190",
         "summary": "India is leading in digital payments, but fraud patterns are rapidly evolving, according to NPST CEO Deepak Chand Thakur. NPST's AI-driven \"Merchant DNA\" mapping achieves 98% fraud detection accuracy by using predictive underwriting. This approach enables the company to identify high-risk patterns weeks before a breach occurs.",
@@ -6929,5 +6949,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
