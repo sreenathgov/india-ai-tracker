@@ -5,6 +5,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "JSFDA conclave focuses on modernizing teaching methods; Calls for integration of technology and AI in classrooms",
+        "url": "https://timesofindia.indiatimes.com/city/ranchi/jsfda-conclave-focuses-on-modernizing-teaching-methods-calls-for-integration-of-technology-and-ai-in-classrooms/articleshow/129705963.cms",
+        "summary": "Jharkhand's Faculty Development Academy held its inaugural conclave, emphasizing the need to modernize teaching methods by integrating technology and AI in classrooms. The event focused on equipping students to become nation-builders and promoting entrepreneurship using state resources. The conclave aimed to achieve the transformative goals of the National Education Policy 2020.",
+        "date_published": "2026-03-21",
+        "source_name": "Times of India - Ranchi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "JH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 14,
         "title": "Jharkhand rural dept pioneers AI training programme; Aiming for improved efficiency and transparency in project execution",
         "url": "https://timesofindia.indiatimes.com/city/ranchi/jharkhand-rural-dept-pioneers-ai-training-programme-aiming-for-improved-efficiency-and-transparency-in-project-execution/articleshow/129617611.cms",
@@ -66,5 +86,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

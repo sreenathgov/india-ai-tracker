@@ -854,12 +854,92 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "India&#039;s AI opportunity: From adoption to defining the future with sovereign capabilities",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-opportunity-from-adoption-to-defining-the-future-with-sovereign-capabilities/129712560",
+        "summary": "India has a unique opportunity to lead in AI, leveraging its strong digital infrastructure, talent pool, and domestic market. The nation can develop sovereign AI capabilities by focusing on building AI products, platforms, and intellectual property. This strategic focus is crucial for India's future global tech leadership, moving beyond its IT services past.",
+        "date_published": "2026-03-21",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "If data is king, India is sitting on the throne",
+        "url": "https://yourstory.com/2026/03/data-is-king-india-holds-the-crown",
+        "summary": "India has a significant advantage in AI due to the vast amount and richness of its real-world data. This data, spanning areas such as payments, healthcare, and logistics, could be more valuable than computing power in the long run. India's unique position is driven by the scale and diversity of its data, rather than its computing infrastructure.",
+        "date_published": "2026-03-21",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Zomato hikes platform fee; Microsoft unveils MAI-Image-2",
+        "url": "https://yourstory.com/2026/03/zomato-hikes-platform-fee-microsoft-mai-image-2",
+        "summary": "Zomato has increased its platform fee by 19.2% to Rs 14.90. Microsoft has introduced MAI-Image-2, its latest in-house text-to-image model, as part of efforts to develop proprietary AI capabilities. This move aims to reduce Microsoft's reliance on external AI providers.",
+        "date_published": "2026-03-21",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Why Global AI and SaaS startups are rethinking cross-border payments",
         "url": "https://yourstory.com/2026/03/global-ai-saas-founders-turning-ecl-flow-faster-cross-border-payments",
         "summary": "Global AI and SaaS startups are reevaluating their cross-border payment strategies as they expand across international markets, particularly between the US and India. To address challenges such as delays and high foreign exchange costs, startups are turning to platforms like ECL Flow for support. These platforms aim to streamline global money movement, increasing efficiency and reducing costs for growing businesses.",
         "date_published": "2026-03-20",
         "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Building startups is a continuous, evolving process: Indian Angel Network’s Padmaja Ruparel | ETNow.in Business Conclave & Awards 2026",
+        "url": "https://www.etnownews.com/technology/building-startups-is-a-continuous-evolving-process-indian-angel-networks-padmaja-ruparel-etnow-in-business-conclave-awards-2026-article-153881964",
+        "summary": "Indian Angel Network's Padmaja Ruparel notes that building startups is a continuous and evolving process. Key factors driving the next phase of innovation in India include a renewed focus on top-line growth and faster government-backed funding for deep tech. Geopolitical developments are also reshaping the ecosystem, according to Ruparel.",
+        "date_published": "2026-03-20",
+        "source_name": "ET Now Technology",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -5819,6 +5899,26 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 2,
+        "title": "AI is not 'Rocket Science': Teen founder Raul John on building AI, jobs, and rethinking education | ETNow.in Business Conclave & Awards 2026",
+        "url": "https://www.etnownews.com/technology/ai-is-not-rocket-science-teen-founder-raul-john-on-building-ai-jobs-and-rethinking-education-etnow-in-business-conclave-awards-2026-article-153879928",
+        "summary": "Teen founder Raul John discussed his experiences with AI and education at the ETNow.in Business Conclave & Awards 2026. He credited India's education system with teaching him structure and discipline, despite its limitations. John's perspective emphasizes the value of traditional education in laying a foundation for future innovation and entrepreneurship.",
+        "date_published": "2026-03-20",
+        "source_name": "ET Now Technology",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 4,
         "title": "Peak XV leads $6.6 Mn funding round in BambooBox",
