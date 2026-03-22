@@ -225,6 +225,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "AI should be a tool to help judges, not replace them: Chief Justice of India",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-should-be-a-tool-to-help-judges-not-replace-them-chief-justice-of-india/articleshow/129723142.cms",
+        "summary": "The Chief Justice of India stated that AI should be utilized as a tool to assist judges, rather than replace them. This approach aims to leverage AI's capabilities to support the judicial process while maintaining human judgment and oversight. The Chief Justice emphasized the importance of striking a balance between technology and human decision-making in the legal system.",
+        "date_published": "2026-03-22",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "E-commerce accelerator Assiduus Global raises $25 Mn led by Bajaj Finserv",
         "url": "https://entrackr.com/news/e-commerce-accelerator-assiduus-global-raises-25-mn-led-by-bajaj-finserv-11226649",
@@ -1414,5 +1434,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

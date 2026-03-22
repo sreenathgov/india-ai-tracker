@@ -26,6 +26,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Man arrested from Bihar for posting AI-generated images of PM",
+        "url": "https://indianexpress.com/article/cities/delhi/man-arrested-from-bihar-for-posting-ai-generated-images-of-pm-10594644/",
+        "summary": "A man from Bihar has been arrested for posting AI-generated images of the Prime Minister. The arrest was made in response to the man's online activities, which allegedly involved creating and sharing fake images using artificial intelligence. The incident highlights the growing concern over the misuse of AI technology for creating and disseminating false information.",
+        "date_published": "2026-03-21",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 20,
         "title": "Workshop on AI at IGIMS",
         "url": "https://timesofindia.indiatimes.com/city/patna/workshop-on-ai-at-igims/articleshow/128759991.cms",
