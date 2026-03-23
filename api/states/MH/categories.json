@@ -163,6 +163,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Digital lending marketplace Finfinity raises $2.4 Mn in seed round",
+        "url": "https://entrackr.com/snippets/digital-lending-marketplace-finfinity-raises-24-mn-in-seed-round-11254722",
+        "summary": "Finfinity, a digital lending marketplace, has raised $2.4 million in a seed funding round led by Mankind Pharma Promoter's Family Office. The funding round also saw participation from several other investors, including Vi-John Group and individual investors. The raised capital will be used to enhance Finfinity's technology platform, expand partnerships, and scale its operations.",
+        "date_published": "2026-03-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Neuro-rehabilitation startup Rymo Technologies secures Rs 10 Cr in seed round",
         "url": "https://entrackr.com/snippets/neuro-rehabilitation-startup-rymo-technologies-secures-rs-10-cr-in-seed-round-11228049",
@@ -951,5 +971,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
