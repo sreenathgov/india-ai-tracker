@@ -5,6 +5,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "IIT-Ropar to deploy 100 AI weather stations across Punjab",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/iit-ropar-to-deploy-100-ai-weather-stations-across-punjab/articleshow/129761852.cms",
+        "summary": "IIT-Ropar is set to deploy 100 AI-powered weather stations across Punjab. The initiative aims to provide accurate and real-time weather forecasts, leveraging artificial intelligence technology. The deployment of these weather stations will enhance weather monitoring and prediction capabilities in the region.",
+        "date_published": "2026-03-24",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "PB",
+          "CH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Crop diversification necessary to ensure sustainability: Experts at Kisan Mela in Ludhiana",
         "url": "https://www.tribuneindia.com/news/agriculturalexcellence/crop-diversification-necessary-to-ensure-sustainability-experts-at-kisan-mela-in-ludhiana",
@@ -297,5 +318,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

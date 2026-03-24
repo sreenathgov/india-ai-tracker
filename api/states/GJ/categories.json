@@ -125,6 +125,53 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Art, science and tech converge at IIT-Gn curiosity conference",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/art-science-and-tech-converge-at-iit-gn-curiosity-conference/articleshow/129761018.cms",
+        "summary": "The Indian Institute of Technology Gandhinagar (IIT-Gn) hosted a curiosity conference where art, science, and technology converged. The event brought together various disciplines to foster innovation and exploration. The conference showcased the intersection of art, science, and tech, promoting a culture of curiosity and creativity.",
+        "date_published": "2026-03-24",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Magical Nest operator Raanro raises pre-seed round",
+        "url": "https://entrackr.com/snippets/magical-nest-operator-raanro-raises-pre-seed-round-11256761",
+        "summary": "Raanro Interior Technology, the parent company of Magical Nest, has raised Rs 4.12 crore in a pre-seed funding round at a pre-money valuation of Rs 60 crore. The round was participated by Stargazer Fund and several angel investors, including Kunal Shah and Ankit Nagori. The company will use the funds to develop an AI-powered platform for streamlining interior design workflows.",
+        "date_published": "2026-03-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB",
+          "MH",
+          "KL",
+          "KA",
+          "GJ",
+          "TN",
+          "DL",
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Ahmedabad police nab 7 in Rs 2.4 crore fake currency racket; AI tools and Chinese-sourced paper used to forge Rs 500 notes",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/rs-2-4cr-in-counterfeit-notes-seized-by-abad-crime-branch-7-arrested/articleshow/129686045.cms",
@@ -602,5 +649,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

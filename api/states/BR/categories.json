@@ -1,7 +1,28 @@
 {
   "state": "BR",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 7,
+        "title": "Youth are foundation of national progress: Minister",
+        "url": "https://timesofindia.indiatimes.com/city/patna/youth-are-foundation-of-national-progress-minister/articleshow/129760236.cms",
+        "summary": "Bihar's Agriculture Minister Ram Kripal Yadav emphasized the importance of youth in national progress, urging them to be architects of India's future. He stressed the need for innovation and skill development during his address at Dr C V Raman University's convocation. The event also featured the launch of an AI Literacy Meet and other initiatives.",
+        "date_published": "2026-03-24",
+        "source_name": "Times of India - Patna",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [
       {
         "id": 137,
@@ -125,5 +146,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }
