@@ -143,6 +143,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "Crisil, IIT-K join hands for AI research systems",
+        "url": "https://timesofindia.indiatimes.com/city/kanpur/crisil-iit-k-join-hands-for-ai-research-systems/articleshow/129786199.cms",
+        "summary": "Crisil has partnered with IIT-Kanpur to collaborate on AI research systems. The partnership aims to advance research in artificial intelligence, although specific details of the collaboration are not provided. This joint effort brings together Crisil's expertise with IIT-Kanpur's academic capabilities to explore AI applications.",
+        "date_published": "2026-03-25",
+        "source_name": "Times of India - Andhra Pradesh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "LU to introduce new BCA, MSc programmes in AI and cyber security",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/lu-to-introduce-new-bca-msc-programmes-in-ai-and-cyber-security/articleshow/129708534.cms",
@@ -573,5 +593,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

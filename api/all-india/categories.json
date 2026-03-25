@@ -874,6 +874,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Tagbin’s bet on AI and immersive tech; CashKaro’s Swati Bhargava’s journey",
+        "url": "https://yourstory.com/2026/03/tagbin-bet-on-ai-immersive-tech-cashkaro-swati-bhargava-journey",
+        "summary": "Tagbin utilizes AI and immersive technologies like AR, VR, and holograms to create engaging experiences for museums and public spaces. CashKaro's Swati Bhargava shared her entrepreneurial journey at SheSparks 2026, discussing her path to building a Rs 600-crore business despite health challenges. Bhargava's story highlights her perseverance and business acumen in the face of adversity.",
+        "date_published": "2026-03-25",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Operant AI launches ecosystem programme to secure India’s rapidly expanding AI infra",
+        "url": "https://cellit.in/operant-ai-launches-ecosystem-programme-to-secure-indias-rapidly-expanding-ai-infra/",
+        "summary": "Operant AI has launched an ecosystem programme aimed at securing India's rapidly growing artificial intelligence infrastructure. The programme's details are not specified, but its goal is to address the security needs of India's expanding AI sector. This initiative is a response to the country's increasing reliance on AI technology.",
+        "date_published": "2026-03-25",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "India&#039;s AI opportunity: From adoption to defining the future with sovereign capabilities",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-opportunity-from-adoption-to-defining-the-future-with-sovereign-capabilities/129712560",
@@ -5920,6 +5960,66 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 6,
+        "title": "Accel, Prosus back six startups under Atoms X programme",
+        "url": "https://entrackr.com/snippets/accel-prosus-back-six-startups-under-atoms-x-programme-11261219",
+        "summary": "Accel and Prosus have invested in six early-stage Indian startups under their Atoms X programme, with the selected companies operating in sectors such as air purification and spacetech. The investors will provide funding ranging from $200,000 to $1 million each, allowing startups to access up to $2 million in total. The six startups were chosen from over 2,000 applications, with companies including Praan and QOSMIC receiving backing under the programme.",
+        "date_published": "2026-03-25",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Consumer AI startup Primetrace reports Rs 200 Cr EBITDA run rate",
+        "url": "https://yourstory.com/2026/03/consumer-ai-startup-primetrace-reports-rs-200-cr-ebitda-run-rate",
+        "summary": "Primetrace, a consumer AI startup, has achieved an EBITDA run rate of Rs 200 Cr and an ARR of Rs 550 crore, marking a 50x growth in three years. The company's portfolio of AI apps has crossed 350 million in cumulative downloads, making it a rare profitable startup in India's consumer app market. This significant growth underscores Primetrace's success in the industry.",
+        "date_published": "2026-03-24",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "T. N. Prathapan rolls out 10 guarantees for Manalur, unveils local manifesto",
+        "url": "https://www.thehindu.com/elections/kerala-assembly/t-n-prathapan-rolls-out-10-guarantees-for-manalur-unveils-local-manifesto/article70779691.ece",
+        "summary": "UDF candidate T. N. Prathapan has unveiled a local manifesto for Manalur, promising 10 key guarantees if elected. The guarantees include the establishment of a dialysis centre, a low-cost pharmacy, and an AI lab, among other initiatives. Additionally, Prathapan has pledged to introduce a Rs 10 lunch scheme and a startup park to support local development.",
+        "date_published": "2026-03-24",
+        "source_name": "The Hindu - Kerala",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Razorpay partners Sarvam to power voice-first conversational commerce",
         "url": "https://entrackr.com/snippets/razorpay-partners-sarvam-to-power-voice-first-conversational-commerce-11255035",
@@ -7089,5 +7189,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments",
+    "AI Start-Up News"
+  ]
 }

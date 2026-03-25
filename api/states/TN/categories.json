@@ -333,6 +333,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "How Attox Research Lab is helping doctors fight the growing threat of superbugs",
+        "url": "https://yourstory.com/2026/03/attox-research-lab-is-helping-doctors-fight-growing-threat-of-superbugs",
+        "summary": "Attox Research Lab, a Chennai-based healthtech startup, has developed a device for rapid antibiotic sensitivity analysis. The device uses AI to determine the effective antibiotic for a specific bacteria in just two hours. This significantly reduces the time compared to traditional methods, which take 24-78 hours.",
+        "date_published": "2026-03-25",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Prashant Pitti’s Optimo Capital raises Rs 100 Cr from PNB",
         "url": "https://entrackr.com/snippets/prashant-pittis-optimo-capital-raises-rs-100-cr-from-pnb-11224352",
@@ -399,5 +419,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

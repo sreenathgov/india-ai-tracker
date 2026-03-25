@@ -3,7 +3,28 @@
   "categories": {
     "Policies and Initiatives": [],
     "Events": [],
-    "Major AI Developments": [],
+    "Major AI Developments": [
+      {
+        "id": 5,
+        "title": "How Tagbin turned an early bet on AR, VR, and AI into a Rs 250 Cr government-tech powerhouse",
+        "url": "https://yourstory.com/2026/03/tagbin-ar-vr-ai-govtech-india",
+        "summary": "Tagbin, founded in 2013 by three IIT Roorkee graduates, utilizes AI and immersive technologies like AR, VR, and holograms to aid governments in decision-making and create engaging public experiences. The company has grown into a significant government-tech entity, valued at Rs 250 Cr. Tagbin's innovative approach helps museums, exhibitions, and public spaces create interactive experiences.",
+        "date_published": "2026-03-24",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UK"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ],
     "AI Start-Up News": []
   },
   "today_updates": []

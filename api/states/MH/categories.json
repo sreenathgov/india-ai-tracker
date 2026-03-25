@@ -203,6 +203,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 2,
+        "title": "From prototype to production: How developers can make agentic AI reliable",
+        "url": "https://yourstory.com/2026/03/prototype-production-developers-make-agentic-ai-reliable",
+        "summary": "Anannya Roy of AWS emphasized the importance of observability, evaluation frameworks, and human oversight in making autonomous AI systems reliable. These elements are crucial for transitioning agentic AI from prototype to production. Roy discussed this topic at DevSparks Pune 2026, highlighting the need for a robust approach to ensure production-ready AI systems.",
+        "date_published": "2026-03-24",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Digital lending marketplace Finfinity raises $2.4 Mn in seed round",
         "url": "https://entrackr.com/snippets/digital-lending-marketplace-finfinity-raises-24-mn-in-seed-round-11254722",
@@ -1038,7 +1058,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
