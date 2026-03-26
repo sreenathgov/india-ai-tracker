@@ -874,6 +874,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Plum Insurance raises $20.5 Mn in Series B round led by Peak XV",
+        "url": "https://entrackr.com/news/plum-insurance-raises-205-mn-in-series-b-round-led-by-peak-xv-11264489",
+        "summary": "Plum Insurance has raised $20.5 million in its Series B round, led by Peak XV Partners, with existing investor Tanglin Venture Partners increasing its stake and GMO VenturePartners joining as a new investor. The company's previous funding round was a $15.6 million Series A in 2021, led by Tiger Global. Plum Insurance plans to use the fresh capital to invest in talent and further growth.",
+        "date_published": "2026-03-26",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Tagbin’s bet on AI and immersive tech; CashKaro’s Swati Bhargava’s journey",
         "url": "https://yourstory.com/2026/03/tagbin-bet-on-ai-immersive-tech-cashkaro-swati-bhargava-journey",
@@ -900,6 +920,86 @@
         "summary": "Operant AI has launched an ecosystem programme aimed at securing India's rapidly growing artificial intelligence infrastructure. The programme's details are not specified, but its goal is to address the security needs of India's expanding AI sector. This initiative is a response to the country's increasing reliance on AI technology.",
         "date_published": "2026-03-25",
         "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Why Indian enterprise could lead adoption of agentic AI",
+        "url": "https://www.livemint.com/ai/why-indian-enterprise-could-lead-adoption-of-agentic-ai-11774453881465.html",
+        "summary": "India is poised to lead the adoption of agentic AI, driven by its large developer base and robust digital infrastructure. The country is expected to shift towards autonomous AI execution by 2026, focusing on redefining business models and overcoming challenges. This shift aims to achieve substantial outcomes through AI, leveraging India's strong technological foundation.",
+        "date_published": "2026-03-25",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Mint Explainer | AI at war: The guardrails debate—and India’s absence",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/ai-at-war-voluntary-guardrails-india-gap-11774430446132.html",
+        "summary": "AI tools are being used in conflict zones, highlighting the gap between Big Tech's voluntary safeguards and real-world use. This has raised concerns about the credibility of these safeguards. India's absence from the debate on AI guardrails in warfare is also notable.",
+        "date_published": "2026-03-25",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Fashion supply startup Thread Factory raises pre-seed funding led by AJVC",
+        "url": "https://entrackr.com/snippets/fashion-supply-startup-thread-factory-raises-pre-seed-funding-led-by-ajvc-11261936",
+        "summary": "Fashion supply startup Thread Factory has raised Rs 1.5 crore in a pre-seed funding round led by AJVC. The funds will be used to enhance its technology, expand its team, and build a data-driven supply infrastructure for the apparel ecosystem in India. Thread Factory is a B2B platform connecting independent apparel retailers with manufacturers across India, aiming to streamline the discovery and sourcing process.",
+        "date_published": "2026-03-25",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Kiran Mani exits JioStar, joins OpenAI to lead APAC expansion",
+        "url": "https://entrackr.com/snippets/kiran-mani-exits-jiostar-joins-openai-to-lead-apac-expansion-11261930",
+        "summary": "Kiran Mani has left his position as CEO Digital at JioStar to join OpenAI as Managing Director for the Asia Pacific region. He will be based in Singapore, the company's regional hub, and report to Chief Strategy Officer Jason Kwon. Mani's appointment is part of OpenAI's expansion plans in India and the broader Asia Pacific region.",
+        "date_published": "2026-03-25",
+        "source_name": "Entrackr - AI & Startups",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -7190,7 +7290,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

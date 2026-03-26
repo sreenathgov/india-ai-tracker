@@ -26,6 +26,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "Kerala cyber police file case against X over ‘defamatory’ AI video on PM, ECI",
+        "url": "https://www.thehindu.com/news/national/kerala/kerala-cyber-police-file-case-against-x-over-defamatory-ai-video-on-pm-eci/article70786915.ece",
+        "summary": "Kerala cyber police have filed a case against an individual, referred to as X, over a allegedly defamatory AI-generated video targeting the Prime Minister and the Election Commission of India. A case has also been registered against the X account associated with the video. The action was taken in response to the video's purportedly defamatory content.",
+        "date_published": "2026-03-26",
+        "source_name": "The Hindu - Kerala",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Magical Nest operator Raanro raises pre-seed round",
         "url": "https://entrackr.com/snippets/magical-nest-operator-raanro-raises-pre-seed-round-11256761",
@@ -74,5 +94,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
