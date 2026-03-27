@@ -125,6 +125,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "AI school inaugurated at IIM Ahmedabad",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ai-school-inaugurated-at-iim-ahmedabad/articleshow/129832367.cms",
+        "summary": "An AI school has been inaugurated at the Indian Institute of Management (IIM) Ahmedabad. The establishment of the AI school aims to promote research and education in the field of artificial intelligence. This initiative is expected to enhance the institute's capabilities in AI and related technologies.",
+        "date_published": "2026-03-27",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Art, science and tech converge at IIT-Gn curiosity conference",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/art-science-and-tech-converge-at-iit-gn-curiosity-conference/articleshow/129761018.cms",
@@ -649,5 +669,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

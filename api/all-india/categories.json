@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 4,
+        "title": "IndiaAI Mission onboards 38,231 GPUs, 190 projects approved: Jitin Prasada",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indiaai-mission-onboards-38231-gpus-190-projects-approved-jitin-prasada/129819970",
+        "summary": "India's IndiaAI Mission has onboarded 38,231 GPUs and approved 190 projects to enhance the country's artificial intelligence ecosystem. The mission aims to strengthen the nation's AI capabilities. Additionally, the Semicon India Programme has cleared 10 semiconductor units to promote domestic chip manufacturing.",
+        "date_published": "2026-03-26",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Funding and acquisitions in Indian startup this week [Mar 16 - Mar 21]",
         "url": "https://entrackr.com/report/weekly-funding-report/funding-and-acquisitions-in-indian-startup-this-week-mar-16-mar-21-11250390",
@@ -880,6 +900,86 @@
         "summary": "Plum Insurance has raised $20.5 million in its Series B round, led by Peak XV Partners, with existing investor Tanglin Venture Partners increasing its stake and GMO VenturePartners joining as a new investor. The company's previous funding round was a $15.6 million Series A in 2021, led by Tiger Global. Plum Insurance plans to use the fresh capital to invest in talent and further growth.",
         "date_published": "2026-03-26",
         "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "AI spend in Indian financial services set to double in 2026; new infra-led models emerge",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-spend-in-indian-financial-services-set-to-double-in-2026-new-infra-led-models-emerge/129822191",
+        "summary": "AI spend in India's financial services sector is expected to double by 2026, driven by rising fraud risks and regulatory complexity. New operating models are emerging in areas such as fraud detection, compliance, and voice AI. India's digital public infrastructure is also accelerating this AI-led transformation, creating opportunities for fintech innovation.",
+        "date_published": "2026-03-26",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Zomato cuts $11M in support costs with MongoDB powered AI platform",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/zomato-cuts-11m-in-support-costs-with-mongodb-powered-ai-platform/129820023",
+        "summary": "Zomato has reduced its support costs by $11 million using a MongoDB-powered AI platform. The platform handles millions of customer conversations monthly, resulting in a 55% reduction in support costs. This has also led to improved agent productivity and the expansion of the platform as an enterprise offering across various industries.",
+        "date_published": "2026-03-26",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "India&#039;s Grade A office boom &amp; rapid AI adoption expose resilience gap for commercial real estate landlords",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-grade-a-office-boom-rapid-ai-adoption-expose-resilience-gap-for-commercial-real-estate-landlords/129816454",
+        "summary": "India's office market is experiencing a boom driven by Global Capability Centres, but landlords face a resilience gap in meeting the constant connectivity and system performance needs of AI adopters. This infrastructure gap poses a threat to business continuity and also increases the risk of cyber threats to smart building systems. Landlords must prioritize digital resilience to attract top occupiers and protect asset value.",
+        "date_published": "2026-03-26",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "realme 16 5G to launch in India on April 2 with dual 50MP cameras",
+        "url": "https://telanganatoday.com/realme-16-5g-to-launch-in-india-on-april-2-with-dual-50mp-cameras",
+        "summary": "The realme 16 5G will launch in India on April 2, featuring dual 50MP cameras and AI imaging tools. The mid-range smartphone also boasts a segment-first rear selfie mirror and a large 7000mAh battery. The device is targeted towards photography-focused users, offering advanced camera capabilities.",
+        "date_published": "2026-03-26",
+        "source_name": "Telangana Today - Tech",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -6061,6 +6161,46 @@
     "AI Start-Up News": [
       {
         "id": 6,
+        "title": "Plum Insurance raises Rs 193 Cr in Series B round led by Peak XV Partners",
+        "url": "https://yourstory.com/2026/03/plum-insurance-raises-rs-193-cr-in-series-b-round-led-by-peak-xv-partners",
+        "summary": "Plum Insurance has raised Rs 193 Cr in a Series B funding round led by Peak XV Partners. The insurtech startup plans to utilize the funds for hiring, technology upgrades, and enhancing its security and claims operations. The capital will also be used to integrate its services with HR and payroll systems using AI-driven operations.",
+        "date_published": "2026-03-26",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Pentathlon Ventures closes Fund II at Rs 255 Cr",
+        "url": "https://entrackr.com/snippets/pentathlon-ventures-closes-fund-ii-at-rs-255-cr-11274941",
+        "summary": "Pentathlon Ventures, a B2B technology-focused venture capital firm, has closed its second fund at Rs 255 crore. The fund will invest in 16-20 seed-stage startups, expanding its focus to areas like Enterprise AI Transformation, Fintech, and Cybersecurity. The fund is backed by a diverse set of family offices, HNIs, and entrepreneurs from India, the US, and the Middle East.",
+        "date_published": "2026-03-26",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
         "title": "Accel, Prosus back six startups under Atoms X programme",
         "url": "https://entrackr.com/snippets/accel-prosus-back-six-startups-under-atoms-x-programme-11261219",
         "summary": "Accel and Prosus have invested in six early-stage Indian startups under their Atoms X programme, with the selected companies operating in sectors such as air purification and spacetech. The investors will provide funding ranging from $200,000 to $1 million each, allowing startups to access up to $2 million in total. The six startups were chosen from over 2,000 applications, with companies including Praan and QOSMIC receiving backing under the programme.",
@@ -7289,7 +7429,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
