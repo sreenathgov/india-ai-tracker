@@ -88,6 +88,67 @@
     "Major AI Developments": [
       {
         "id": 4,
+        "title": "IIIT-H’s Social Tech Incubator & EPAM launch 4th ESIIP Cohort for Deep-Tech Climate Impact",
+        "url": "https://www.iiit.ac.in/iiit-hs-social-tech-incubator-epam-launch-4th-esiip-cohort-for-deep-tech-climate-impact/",
+        "summary": "IIIT-H's Social Tech Incubator and EPAM have launched the 4th ESIIP Cohort, focusing on deep-tech climate impact. This initiative is part of IIIT-H's efforts to promote innovation and technology for social good. The institute has also been involved in other initiatives, including a roundtable on quantum technologies and hosting a solvathon, to drive technological advancements.",
+        "date_published": "2026-03-28",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Tax AI for job losses, Revanth’s pitch at Harvard amid tech disruption fears",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/tax-ai-for-job-losses-revanths-pitch-at-harvard-amid-tech-disruption-fears/articleshow/129852956.cms",
+        "summary": "Revanth proposed taxing AI for job losses at a Harvard event, addressing concerns about tech disruption. The pitch aims to mitigate the impact of AI on employment, as technological advancements continue to replace human workers. This idea comes amid growing fears of job displacement due to automation and AI integration.",
+        "date_published": "2026-03-28",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Pavestone leads $3 Mn seed round in lending solutions platform Uncia",
+        "url": "https://entrackr.com/snippets/pavestone-leads-3-mn-seed-round-in-lending-solutions-platform-uncia-11364581",
+        "summary": "Uncia, a lending solutions platform, has raised $3 million in a seed funding round led by Pavestone, a Hyderabad-based venture capital firm. The funds will be used to accelerate growth in India and support the company's expansion into the Middle East, North Africa, and North America. Uncia is an AI-native lending technology firm that provides digital infrastructure for banks and non-banking financial companies (NBFCs).",
+        "date_published": "2026-03-27",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN",
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
         "title": "Deccan AI raises $25 Mn from A91 Partners, Prosus and SIG",
         "url": "https://entrackr.com/snippets/deccan-ai-raises-25-mn-from-a91-partners-prosus-and-sig-11264952",
         "summary": "Deccan AI, a startup providing post-training data and evaluation services, has raised $25 million in a Series A round led by A91 Partners. The funding round also saw participation from Susquehanna International Group (SIG) and Prosus Ventures. The proceeds will be used to expand Deccan AI's enterprise-focused AI offerings and strengthen its platform capabilities.",
@@ -1127,5 +1188,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

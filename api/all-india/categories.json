@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 6,
+        "title": "UP govt scraps Rs 25,000-crore MoU with Puch AI: ‘Firm lacks net worth, financial linkages’",
+        "url": "https://indianexpress.com/article/cities/lucknow/up-govt-scraps-mou-with-puch-ai-firm-lacks-net-worth-financial-linkages-10603518/",
+        "summary": "The Uttar Pradesh government has canceled a Rs 25,000-crore Memorandum of Understanding (MoU) with Puch AI due to the company's lack of net worth and financial linkages. The decision was made after reviewing the firm's financial capabilities, which were deemed insufficient to support the massive investment. The scrapped MoU was initially intended to facilitate a significant investment in the state.",
+        "date_published": "2026-03-27",
+        "source_name": "Indian Express - Lucknow",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "IndiaAI Mission onboards 38,231 GPUs, 190 projects approved: Jitin Prasada",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indiaai-mission-onboards-38231-gpus-190-projects-approved-jitin-prasada/129819970",
@@ -6159,6 +6179,26 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 2,
+        "title": "Beyond modernisation: The new playbook for enterprise reinvention",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/beyond-modernisation-the-new-playbook-for-enterprise-reinvention/129839341",
+        "summary": "KaarTech's CEO, Maran Nagarajan, discusses the company's evolution into an AI-led transformation leader with a focus on platform-enabled solutions like KTern.AI. The company is shifting from services to outcome-driven reinvention, going beyond mere modernization. Nagarajan highlights the advantages and challenges for Indian tech firms globally and KaarTech's growth trajectory in this new direction.",
+        "date_published": "2026-03-27",
+        "source_name": "ET CIO - AI",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 6,
         "title": "Plum Insurance raises Rs 193 Cr in Series B round led by Peak XV Partners",

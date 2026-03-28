@@ -3,6 +3,27 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 1,
+        "title": "UP govt scraps  ₹25,000 crore MoU with Bengaluru-based Puch AI citing credibility concerns",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/up-govt-scraps-25-000-crore-mou-with-bengaluru-based-puch-ai-citing-credibility-concerns-11774610427507.html",
+        "summary": "Uttar Pradesh has cancelled a ₹25,000 crore MoU with Bengaluru-based Puch AI due to financial credibility concerns. The decision was made after a review process found the startup unable to meet necessary financial requirements. The agreement was terminated to maintain integrity in governance.",
+        "date_published": "2026-03-27",
+        "source_name": "LiveMint AI News",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Karnataka govt sets up committee on Responsible AI",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/karnataka-govt-sets-up-committee-on-responsible-ai/articleshow/129493892.cms",

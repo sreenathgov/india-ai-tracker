@@ -163,6 +163,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "ZP Budget Crosses ₹50 Crore Mark For First Time, Solar, AI &amp; Rural Infra In Focus",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/zp-budget-crosses-50-crore-mark-for-first-time-solar-ai-rural-infra-in-focus/articleshow/129852978.cms",
+        "summary": "The ZP budget has exceeded ₹50 crore for the first time, with a focus on solar energy, artificial intelligence, and rural infrastructure development. This significant increase in budget allocation is expected to drive growth and improvement in these key areas. The new budget prioritizes innovative technologies like AI and renewable energy sources like solar power.",
+        "date_published": "2026-03-28",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "BFSI Tech Conclave 2026 | 19th & 20th June 2026",
         "url": "https://www.expresscomputer.in/event/bfsi-tech-conclave-2026-19th-20th-june-2026/",
@@ -1058,5 +1078,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
