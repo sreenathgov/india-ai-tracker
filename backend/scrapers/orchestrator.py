@@ -31,7 +31,10 @@ from ai.date_extractor import DateExtractor
 from utils.canonical_key import get_canonical_key
 from datetime import datetime, timedelta, date
 import json
+import logging
 import os
+
+logger = logging.getLogger(__name__)
 
 
 def load_canonical_urls_from_json():
@@ -61,7 +64,7 @@ def load_canonical_urls_from_json():
                         if key:
                             canonical_urls.add(key)
         except Exception as e:
-            print(f"  Warning: Could not load all-india canonical data: {e}")
+            logger.warning("Could not load all-india canonical data: %s", e)
 
     # Load from all states
     state_codes = [
@@ -83,7 +86,7 @@ def load_canonical_urls_from_json():
                             if key:
                                 canonical_urls.add(key)
             except Exception as e:
-                pass  # Silently skip - state might not have data
+                logger.warning("Could not load canonical data for state file %s: %s", state_path, e)
 
     return canonical_urls
 
@@ -105,7 +108,7 @@ def load_blacklist():
             data = json.load(f)
             return set(data.get('urls', []))
     except Exception as e:
-        print(f"  Warning: Could not load blacklist: {e}")
+        logger.warning("Could not load blacklist: %s", e)
         return set()
 
 
@@ -137,7 +140,7 @@ def add_to_blacklist(url: str) -> bool:
 
         return True
     except Exception as e:
-        print(f"  Error adding to blacklist: {e}")
+        logger.error("Error adding to blacklist: %s", e)
         return False
 
 
@@ -285,7 +288,7 @@ def run_all_scrapers(target_states=None):
             print(f"  Found {len(articles)} articles")
 
         except Exception as e:
-            print(f"  Error: {e}")
+            logger.error("Error scraping source '%s': %s", source.get('name', 'unknown'), e, exc_info=True)
             continue
 
     stats['total_scraped'] = len(all_articles)
@@ -739,7 +742,7 @@ def save_to_database(articles):
                 print(f"  Saved: {article['title'][:50]}...")
 
             except Exception as e:
-                print(f"  Error saving: {e}")
+                logger.error("Error saving article '%s': %s", article.get('title', 'unknown')[:50], e, exc_info=True)
                 continue
 
         try:
@@ -747,7 +750,7 @@ def save_to_database(articles):
             print(f"\nCommitted {saved_count} articles to database")
         except Exception as e:
             db.session.rollback()
-            print(f"\nDatabase commit error: {e}")
+            logger.error("Database commit error: %s", e, exc_info=True)
             return 0
 
     # CRITICAL: Force write to disk OUTSIDE the app context

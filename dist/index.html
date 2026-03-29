@@ -51,7 +51,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
         rel="stylesheet">
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <link rel="stylesheet" href="css/styles-v2.css?v=21">
     <link rel="stylesheet" href="css/staggered-menu.css?v=2">
@@ -63,8 +62,6 @@
     <link rel="stylesheet" href="css/platform-section.css?v=9">
     <link rel="stylesheet" href="css/manifesto-section.css?v=4">
     <link rel="stylesheet" href="css/footer.css?v=3">
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -256,7 +253,7 @@
                 <!-- RIGHT: Sector Watch Video -->
                 <div class="platform-split__right">
                     <div class="sector-video-wrapper">
-                        <video class="sector-video" autoplay loop muted playsinline disablepictureinpicture>
+                        <video class="sector-video" autoplay loop muted playsinline disablepictureinpicture preload="none">
                             <source src="added-assets/sector-watch-web-video-KL-HEVC.mp4" type="video/mp4; codecs=hvc1">
                             <source src="added-assets/sector-watch-web-video-KL.webm" type="video/webm">
                         </video>
@@ -400,6 +397,9 @@
         </footer>
     </div>
 
+    <!-- GSAP moved from <head> to avoid render-blocking -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="js/infrastructure-grid.js"></script>
     <script src="js/magic-bento.js"></script>
     <script src="js/shiny-text.js"></script>
@@ -413,6 +413,8 @@
     <script src="js/ripple-grid.js"></script>
     <script src="js/identity-section.js"></script>
     <script src="js/staggered-menu.js"></script>
+    <!-- Leaflet moved from <head> to avoid render-blocking; app-final.js depends on it -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/app-final.js?v=20"></script>
 </body>
 

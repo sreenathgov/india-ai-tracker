@@ -7,6 +7,8 @@ from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from functools import wraps
 from datetime import datetime, timedelta, timezone
+import logging
+import logging.handlers
 import os
 import json
 from dotenv import load_dotenv
@@ -14,6 +16,24 @@ from pathlib import Path
 import threading
 
 load_dotenv()
+
+# Logging configuration: writes to stdout AND a rotating log file
+_log_dir = os.path.join(os.path.dirname(__file__), 'logs')
+os.makedirs(_log_dir, exist_ok=True)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s %(levelname)s %(name)s: %(message)s',
+    handlers=[
+        logging.StreamHandler(),
+        logging.handlers.RotatingFileHandler(
+            os.path.join(_log_dir, 'app.log'),
+            maxBytes=5 * 1024 * 1024,  # 5 MB
+            backupCount=5,
+            encoding='utf-8',
+        ),
+    ],
+)
+logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 CORS(app,
@@ -298,7 +318,7 @@ class ScraperSource(db.Model):
 
 with app.app_context():
     db.create_all()
-    print("✅ Database initialized!")
+    logger.info("Database initialized")
 
 @app.route('/')
 def home():
@@ -454,11 +474,11 @@ def get_recent_update_counts():
 def run_pipeline_background(scraped_count):
     """Run the processing pipeline in background after scraping."""
     if scraped_count == 0:
-        print("No new articles to process")
+        logger.info("No new articles to process")
         return
 
     try:
-        print(f"Starting background pipeline for {scraped_count} articles...")
+        logger.info("Starting background pipeline for %d articles...", scraped_count)
         from ai.integrated_pipeline import IntegratedPipeline
 
         pipeline = IntegratedPipeline(
@@ -467,9 +487,9 @@ def run_pipeline_background(scraped_count):
         )
 
         stats = pipeline.run(limit=None, save_report=True)
-        print(f"✅ Pipeline complete: {stats['database']['updated']} articles processed")
+        logger.info("Pipeline complete: %d articles processed", stats['database']['updated'])
     except Exception as e:
-        print(f"❌ Pipeline error: {e}")
+        logger.error("Pipeline error: %s", e, exc_info=True)
 
 
 @app.route('/api/admin/scrape/run', methods=['POST'])
@@ -1036,5 +1056,5 @@ def admin_export_articles():
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5001))
     debug_mode = os.getenv('FLASK_ENV', 'production') == 'development'
-    print(f"Starting server on http://localhost:{port}")
+    logger.info("Starting server on http://localhost:%d", port)
     app.run(host='127.0.0.1', port=port, debug=debug_mode)
