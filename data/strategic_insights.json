@@ -1,72 +1,72 @@
 {
-  "lastUpdated": "2026-02-19",
+  "lastUpdated": "2026-03-29",
   "cards": [
     {
       "id": "stat-1",
       "type": "stat",
-      "title": "Capital Influx",
-      "value": "$1.4Bn",
-      "suffix": "+",
-      "description": "A historic week driven by Neysa AI's unicorn round and aggressive deeptech funding across the ecosystem."
+      "title": "Steady Startup Capital",
+      "value": "$286M",
+      "suffix": "",
+      "description": "30 Indian startups secured substantial funding this week, indicating a consistent flow of investments into the ecosystem."
     },
     {
       "id": "stat-2",
       "type": "stat",
-      "title": "Infra Pledge",
-      "value": "$125Bn",
+      "title": "Sovereign GPUs Onboarded",
+      "value": "38,231",
       "suffix": "",
-      "description": "Massive private commitments from Adani and AM Group to build green, renewable-powered AI data centres by 2035."
+      "description": "The IndiaAI Mission achieved a major compute milestone by onboarding thousands of GPUs and approving 190 strategic projects."
     },
     {
       "id": "stat-3",
       "type": "stat",
-      "title": "Global Talent",
-      "value": "16",
-      "suffix": "%",
-      "description": "A new whitepaper reveals India now houses nearly one-fifth of the world's total AI workforce, solidifying its talent dominance."
+      "title": "Enterprise ROI Proven",
+      "value": "$11M",
+      "suffix": "",
+      "description": "Zomato demonstrated the tangible financial impact of applied AI by massively slashing its customer support costs via an AI-powered platform."
     },
     {
       "id": "stat-4",
       "type": "stat",
-      "title": "Sovereign Models",
-      "value": "2",
+      "title": "Due Diligence Tightens",
+      "value": "₹25,000 Cr",
       "suffix": "",
-      "description": "Sarvam AI and BharatGen debuted as India's first indigenous foundational models, reducing reliance on foreign tech stacks."
+      "description": "Uttar Pradesh scrapped a massive AI investment MoU over a startup's lack of financial credibility, signaling stricter governmental scrutiny."
     },
     {
       "id": "insight-1",
       "type": "insight",
-      "title": "Compute Sovereignty",
-      "description": "India is aggressively pivoting from an AI consumer to a creator. With the launch of indigenous foundational models like Sarvam and BharatGen, coupled with the government's push for a \"sovereign compute\" stack, the nation is building the hardware and software backbone necessary to secure strategic autonomy in the AI era.",
+      "title": "The Vernacular Voice Boom",
+      "description": "The push for inclusive digital commerce is accelerating as major platforms shift toward voice-first generative AI. Razorpay has partnered with sovereign model Sarvam AI to enable multilingual conversational commerce, while Meesho launched the Gen AI assistant \"Vaani\". These developments highlight a strategic pivot to capture Tier-2 markets through natural voice interactions rather than traditional typed searches.",
       "metadata": {
-        "region": "National Strategy"
+        "region": "Consumer AI"
       }
     },
     {
       "id": "insight-2",
       "type": "insight",
-      "title": "The 'Third Way' Doctrine",
-      "description": "The India AI Impact Summit highlighted a geopolitical alignment between India and France, pitching a \"Third Way\" that avoids total dependence on US or Chinese models. Through the \"MANAV\" vision and the 7-Sutra framework, India is positioning itself as the leader for responsible, human-centric AI governance for the Global South.",
-      "metadata": {
-        "region": "Geopolitics"
-      }
-    },
-    {
-      "id": "insight-3",
-      "type": "insight",
-      "title": "Algorithmic Enforcement",
-      "description": "AI has moved from back-office efficiency to frontline enforcement. The discovery of a ₹70,000 crore tax evasion scam using advanced data analytics signals a new era of algorithmic governance. Simultaneously, corporate India is restructuring to meet this reality, with a reported surge in \"Chief AI Officer\" hirings across enterprise sectors.",
+      "title": "Friction in the Machine",
+      "description": "Rapid AI integration is facing growing pushback from judicial, political, and law enforcement leadership. The Chief Justice of India firmly asserted that AI must remain an assistive tool rather than a replacement for human judgment. Concurrently, leaders are proposing \"AI taxes\" to offset job displacement, while police forces are actively registering cases against social platforms over defamatory, AI-generated election deepfakes.",
       "metadata": {
         "region": "Governance"
       }
     },
     {
+      "id": "insight-3",
+      "type": "insight",
+      "title": "The Agentic Enterprise",
+      "description": "Enterprise AI in India is rapidly shifting from experimental prototypes to autonomous, outcome-driven deployments. Driven by rising regulatory complexity, AI spending in the Indian financial sector is projected to double by 2026. This operational shift is validated by immense cost savings across industries, proving that production-ready AI models can now deliver massive, measurable enterprise returns on investment.",
+      "metadata": {
+        "region": "Enterprise Adoption"
+      }
+    },
+    {
       "id": "insight-4",
       "type": "insight",
-      "title": "The Deeptech Renaissance",
-      "description": "The unicorn drought has ended with Neysa AI's massive $1.2Bn valuation, signalling renewed investor confidence in India's deeptech capabilities. Validating this shift, global giants like Qualcomm ($150M fund) and Google (undersea cables) are moving beyond service contracts to invest directly in India's IP creation and infrastructure.",
+      "title": "Computing the Foundation",
+      "description": "India is aggressively securing its base compute capacity, spearheaded by the IndiaAI Mission heavily onboarding domestic GPUs. However, this rapid scale-up is exposing physical and financial constraints. Commercial real estate is grappling with an \"AI resilience gap\" to support intense connectivity demands, and state governments are rigorously tightening due diligence to prevent unviable multi-billion dollar infrastructure commitments.",
       "metadata": {
-        "region": "Ecosystem"
+        "region": "Infrastructure"
       }
     }
   ],
