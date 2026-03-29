@@ -47,6 +47,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Conference of gatro surgeons kicks off at IGIMS, to focus on AI in surgery",
+        "url": "https://timesofindia.indiatimes.com/city/patna/conference-of-gatro-surgeons-kicks-off-at-igims-to-focus-on-ai-in-surgery/articleshow/129870464.cms",
+        "summary": "A conference of gastro surgeons has begun at IGIMS, focusing on the role of artificial intelligence in surgery. The event aims to explore the potential applications and benefits of AI in surgical procedures. The conference brings together experts to discuss and share knowledge on the latest advancements in AI-powered surgery.",
+        "date_published": "2026-03-29",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Man arrested from Bihar for posting AI-generated images of PM",
         "url": "https://indianexpress.com/article/cities/delhi/man-arrested-from-bihar-for-posting-ai-generated-images-of-pm-10594644/",
@@ -146,5 +166,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

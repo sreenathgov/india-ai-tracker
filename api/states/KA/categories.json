@@ -246,6 +246,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Keep an eye out for rising cases of computer vision syndrome, say Bengaluru doctors",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/keep-an-eye-out-for-rising-cases-of-computer-vision-syndrome-say-bengaluru-doctors/articleshow/129871450.cms",
+        "summary": "Bengaluru doctors are warning about a rise in cases of computer vision syndrome, a condition caused by prolonged screen time. This condition can lead to eye strain, headaches, and blurred vision, among other symptoms. Doctors are advising individuals to take precautions to mitigate the risks associated with extended computer use.",
+        "date_published": "2026-03-29",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Deccan AI raises $25 Mn from A91 Partners, Prosus and SIG",
         "url": "https://entrackr.com/snippets/deccan-ai-raises-25-mn-from-a91-partners-prosus-and-sig-11264952",
@@ -1202,6 +1222,27 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "Funding and acquisitions in Indian startup this week [Mar 23 - Mar 28]",
+        "url": "https://entrackr.com/report/weekly-funding-report/funding-and-acquisitions-in-indian-startup-this-week-mar-23-mar-28-11429211",
+        "summary": "30 Indian startups raised around $286.52 million in funding this week, with 7 growth-stage, 17 early-stage, and 6 undisclosed deals. This amount is nearly equal to the $286.54 million secured by 26 startups in the previous week. The funding landscape remains steady, with a consistent flow of investments in Indian startups.",
+        "date_published": "2026-03-28",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "TN",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Tech startup Aerchain raises $13M in Series A round led by Pavestone VC",
         "url": "https://yourstory.com/2026/03/tech-startup-aerchain-raises-series-a-round-led-by-pavestone-vc",
@@ -1564,5 +1605,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
