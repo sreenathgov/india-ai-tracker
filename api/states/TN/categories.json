@@ -88,6 +88,26 @@
     "Major AI Developments": [
       {
         "id": 3,
+        "title": "Tamil Nadu elections: CM MK Stalin counters EPS’s fridge promise with Rs 8k for non-tax paying women",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-elections-mk-stalin-counters-epss-fridge-promise-with-rs-8k-for-non-tax-paying-women/articleshow/129890641.cms",
+        "summary": "Tamil Nadu Chief Minister MK Stalin has unveiled the DMK's new manifesto, promising significant welfare boosts, including doubling women's monthly aid to Rs 2,000. Non-tax paying women will also receive Rs 8,000 household coupons, while farmers will get free motor pumpsets. The party aims to drive FDI growth, job creation, and AI development, along with supporting fishermen.",
+        "date_published": "2026-03-30",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "Pavestone leads $3 Mn seed round in lending solutions platform Uncia",
         "url": "https://entrackr.com/snippets/pavestone-leads-3-mn-seed-round-in-lending-solutions-platform-uncia-11364581",
         "summary": "Uncia, a lending solutions platform, has raised $3 million in a seed funding round led by Pavestone, a Hyderabad-based venture capital firm. The funds will be used to accelerate growth in India and support the company's expansion into the Middle East, North Africa, and North America. Uncia is an AI-native lending technology firm that provides digital infrastructure for banks and non-banking financial companies (NBFCs).",
@@ -501,5 +521,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

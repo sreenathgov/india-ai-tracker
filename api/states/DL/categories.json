@@ -263,6 +263,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Cedar Hill Capital leads $1.5 Mn round in fraud intelligence startup Sign3",
+        "url": "https://entrackr.com/snippets/cedar-hill-capital-leads-15-mn-round-in-fraud-intelligence-startup-sign3-11434197",
+        "summary": "Cedar Hill Capital has led a $1.5 million funding round in Sign3, a fraud intelligence and risk management startup based in Gurugram. The investment is Cedar Hill Capital's third and second in AI-led enterprise technology, with participation from existing investor Smile Group and several angel investors. Sign3 was founded in 2022 and develops an AI-native customer intelligence platform for real-time fraud prevention.",
+        "date_published": "2026-03-30",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "AI-focused centres of excellence, new policies on drones and semiconductors among highlights in Delhi Budget 2026-27",
         "url": "https://indianexpress.com/article/cities/delhi/delhi-budget-rekha-gupta-drone-semiconductor-ai-policy-startups-10599110/",
@@ -2172,5 +2192,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
