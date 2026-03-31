@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 2,
+        "title": "Memory chip shortage due to AI buildout, not West Asia conflict, says IT Minister Ashwini Vaishnaw",
+        "url": "https://www.etnownews.com/technology/memory-chip-shortage-due-to-ai-buildout-not-west-asia-conflict-says-it-minister-ashwini-vaishnaw-article-153955378",
+        "summary": "India's IT Minister Ashwini Vaishnaw attributes the memory chip shortage to the AI buildout, rather than the West Asia conflict. The Indian government is actively promoting semiconductor manufacturing, with the Prime Minister inaugurating the country's first semiconductor plant last month and another one scheduled for next month. This indicates a positive approach by the government towards addressing semiconductor concerns.",
+        "date_published": "2026-03-30",
+        "source_name": "ET Now Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "UP govt scraps Rs 25,000-crore MoU with Puch AI: ‘Firm lacks net worth, financial linkages’",
         "url": "https://indianexpress.com/article/cities/lucknow/up-govt-scraps-mou-with-puch-ai-firm-lacks-net-worth-financial-linkages-10603518/",
@@ -913,6 +933,86 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 1,
+        "title": "India is waiting for AI's UPI-like moment",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/india-artificial-intelligence-widespread-adoption-upi-moment-experts-discuss-11774858328968.html",
+        "summary": "Experts at the Mint India Investment Summit believe that a single breakthrough moment, similar to the launch of the Unified Payments Interface (UPI), could drive widespread adoption of artificial intelligence (AI) in India. This moment could set AI on a transformative path, leading to significant advancements in the country. India is currently waiting for this catalyst to spark mainstream AI adoption.",
+        "date_published": "2026-03-30",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "MS Dhoni joins Kuku as investor and brand ambassador of microdrama app",
+        "url": "https://yourstory.com/2026/03/ms-dhoni-joins-kuku-as-investor-brand-ambassador-of-microdrama-app",
+        "summary": "MS Dhoni has invested in Kuku, an AI-driven storytelling platform, and will also serve as its brand ambassador. As brand ambassador of Kuku TV, Dhoni will promote high-quality microdramas in India and globally. This partnership aims to expand Kuku's reach in domestic and international markets.",
+        "date_published": "2026-03-30",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "CoinDCX launches Rs 100 Cr cyber safety initiative after impersonation fraud",
+        "url": "https://entrackr.com/news/coindcx-launches-rs-100-cr-cyber-safety-initiative-after-impersonation-fraud-11436317",
+        "summary": "CoinDCX has launched a Rs 100 crore cyber safety initiative called the Digital Suraksha Network to strengthen India's digital finance ecosystem. The move comes after the company's co-founders were granted bail in a fraud case linked to an impersonation website. The fraud was executed through a fake domain with no connection to CoinDCX or its systems.",
+        "date_published": "2026-03-30",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "MS Dhoni invests in Kuku, joins as brand ambassador for Kuku TV",
+        "url": "https://entrackr.com/snippets/ms-dhoni-invests-in-kuku-joins-as-brand-ambassador-for-kuku-tv-11435734",
+        "summary": "MS Dhoni has invested in Kuku, an AI-driven storytelling platform, and joined as the brand ambassador for its microdrama app, Kuku TV. As part of the partnership, Kuku has launched a campaign featuring Dhoni to promote its short-format content offerings. The investment comes as Kuku expands into new areas, including film production.",
+        "date_published": "2026-03-30",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 1,
         "title": "Inside S45’s Plan To Revamp Investment Banking, IPO Journeys With AI",

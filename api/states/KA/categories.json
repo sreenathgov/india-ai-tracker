@@ -246,6 +246,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "AI may be used to park cars and trace violators in Bengaluru",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-may-be-used-to-park-cars-and-trace-violators-in-bengaluru/articleshow/129910440.cms",
+        "summary": "Bengaluru is considering the use of AI to manage car parking and track violators. The technology would aim to streamline parking and identify those who break parking rules. This initiative is part of the city's efforts to improve traffic management and enforcement.",
+        "date_published": "2026-03-31",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Keep an eye out for rising cases of computer vision syndrome, say Bengaluru doctors",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/keep-an-eye-out-for-rising-cases-of-computer-vision-syndrome-say-bengaluru-doctors/articleshow/129871450.cms",
@@ -1626,6 +1646,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }
