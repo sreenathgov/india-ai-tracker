@@ -934,6 +934,86 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "B2B metal procurement startup NowPurchase raises $8.6 Mn led by Bajaj Finserv",
+        "url": "https://entrackr.com/news/b2b-metal-procurement-startup-nowpurchase-raises-86-mn-led-by-bajaj-finserv-11441827",
+        "summary": "NowPurchase, a B2B metal procurement startup, has raised $8.6 million in funding led by Bajaj Finserv, with participation from other investors. This brings the company's total funding to $18 million, following a $6 million raise in September 2024. The new funds will be used to expand the company's scrap recycling and other operations.",
+        "date_published": "2026-04-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Smartphone prices on rise: Why Indian mobile market saw 9% dip in 2026; check causes",
+        "url": "https://www.etnownews.com/technology/smartphone-prices-on-rise-why-indian-mobile-market-saw-9-dip-in-2026-check-causes-article-153964960",
+        "summary": "India's smartphone market declined 9% in Q1 2026 due to rising memory chip prices, which increased by 20%. The higher costs, combined with the need for more RAM to support AI features, led to increased retail prices. This price hike caused budget-conscious buyers to delay purchasing new phones.",
+        "date_published": "2026-03-31",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Healthcare, education drive early demand for India&#039;s sovereign AI push",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/healthcare-education-drive-early-demand-for-indias-sovereign-ai-push/129922701",
+        "summary": "India's sovereign AI development is gaining momentum, driven by demand from healthcare and educational institutions. Companies like Tech Mahindra and Fractal Analytics are seeing interest in their country-specific AI models for localized applications. Enterprise adoption remains limited, with a focus on building models for specific use cases.",
+        "date_published": "2026-03-31",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Wealthtech startup Bachatt raises $12 Mn in Series A led by Accel",
+        "url": "https://entrackr.com/news/wealthtech-startup-bachatt-raises-12-mn-in-series-a-led-by-accel-11438527",
+        "summary": "Bachatt, an AI-led savings and wealth platform, has raised $12 million in a Series A funding round led by Accel, with participation from Lightspeed and Info Edge Ventures. This funding round follows a $4 million seed funding round in April last year, also backed by Lightspeed and Info Edge Venture. The new funds will be used to scale user acquisition and launch new AI-led wealth and credit products.",
+        "date_published": "2026-03-31",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "India is waiting for AI's UPI-like moment",
         "url": "https://www.livemint.com/ai/artificial-intelligence/india-artificial-intelligence-widespread-adoption-upi-moment-experts-discuss-11774858328968.html",
@@ -7589,5 +7669,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

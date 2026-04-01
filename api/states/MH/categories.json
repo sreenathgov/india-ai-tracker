@@ -163,6 +163,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Agentic AI for BFSI",
+        "url": "https://cio.economictimes.indiatimes.com/agentic-ai-bfsi?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "Agentic AI is being utilized in the Banking, Financial Services, and Insurance (BFSI) sector. The implementation of Agentic AI in BFSI is taking place in Mumbai. This integration aims to enhance operations and services within the industry.",
+        "date_published": "2026-04-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "ZP Budget Crosses ₹50 Crore Mark For First Time, Solar, AI &amp; Rural Infra In Focus",
         "url": "https://timesofindia.indiatimes.com/city/nagpur/zp-budget-crosses-50-crore-mark-for-first-time-solar-ai-rural-infra-in-focus/articleshow/129852978.cms",
@@ -1078,5 +1098,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

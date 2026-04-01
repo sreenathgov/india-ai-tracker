@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "With $10mn raise, Gnani aims to scale voice AI models, tap global markets",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/with-10mn-raise-gnani-aims-to-scale-voice-ai-models-tap-global-markets/articleshow/129935337.cms",
+        "summary": "Gnani has raised $10 million to scale its voice AI models and expand into global markets. The funding will enable the company to enhance its AI capabilities and tap into new international markets. This investment is expected to drive Gnani's growth and increase its global presence.",
+        "date_published": "2026-04-01",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Tamil Nadu elections: CM MK Stalin counters EPS’s fridge promise with Rs 8k for non-tax paying women",
         "url": "https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-elections-mk-stalin-counters-epss-fridge-promise-with-rs-8k-for-non-tax-paying-women/articleshow/129890641.cms",
@@ -521,5 +541,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

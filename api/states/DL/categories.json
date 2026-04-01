@@ -263,6 +263,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Merak Ventures leads pre-Series A round in CredResolve",
+        "url": "https://entrackr.com/snippets/merak-ventures-leads-pre-series-a-round-in-credresolve-11441882",
+        "summary": "CredResolve, a debt collections infrastructure company, has raised an undisclosed amount in a pre-Series A round led by Merak Ventures. Existing investors Unleash Capital Partners and CDM Capital also participated in the round. The funds will be used to expand operations to 15 states and scale its AI and voice capabilities.",
+        "date_published": "2026-04-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "AI-generated petition: Delhi court fines litigant Rs 20,000 for wasting its time",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/this-aint-done-delhi-court-imposes-rs-20k-fine-over-incoherent-plea/articleshow/129933884.cms",
+        "summary": "A Delhi court has fined a litigant Rs 20,000 for submitting a poorly written petition that wasted the court's time. The court suspected the complaint was generated using artificial intelligence due to its incoherent phrases and grammatical errors. The fine aims to discourage frivolous filings and highlights concerns over the use of AI in creating legal documents.",
+        "date_published": "2026-04-01",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Cedar Hill Capital leads $1.5 Mn round in fraud intelligence startup Sign3",
         "url": "https://entrackr.com/snippets/cedar-hill-capital-leads-15-mn-round-in-fraud-intelligence-startup-sign3-11434197",
@@ -2192,5 +2232,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
