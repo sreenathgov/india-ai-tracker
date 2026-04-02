@@ -613,14 +613,19 @@ def run_all_scrapers(target_states=None):
     print("STEP 6: GENERATING SUMMARIES")
     print("-" * 40)
 
+    inconsistent_count = 0
     for i, article in enumerate(unique_articles):
         print(f"  Summarizing {i+1}/{len(unique_articles)}...", end='\r')
-        article['summary'] = summarizer.summarize(
+        summary, is_consistent = summarizer.summarize_with_check(
             article['title'],
             article.get('content', '')
         )
+        article['summary'] = summary
+        if not is_consistent:
+            inconsistent_count += 1
+            print(f"\n  [WARN] Title-summary mismatch detected: {article['title'][:80]}")
 
-    print(f"\nGenerated {len(unique_articles)} summaries")
+    print(f"\nGenerated {len(unique_articles)} summaries ({inconsistent_count} title-summary mismatches flagged)")
 
     # STEP 7: Save to Database
     print()

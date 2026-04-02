@@ -14,8 +14,23 @@ class IdentitySection {
     if (!this.sectionEl) return;
 
     this.renderContent();
-    this.initGridBackground();
-    this.initEntranceAnimations();
+
+    // Defer grid + animations until portrait is loaded so the section has its
+    // correct height when RippleGrid first measures container.offsetHeight.
+    // Without this, the canvas buffer is set to ~200px (text-only height) and
+    // CSS-stretches to fill the full ~750px section once the image loads,
+    // making grid cells appear coarse and blocky.
+    const img = this.sectionEl.querySelector('.identity-portrait__image');
+    const start = () => {
+      this.initGridBackground();
+      this.initEntranceAnimations();
+    };
+
+    if (img && !img.complete) {
+      img.addEventListener('load', start, { once: true });
+    } else {
+      start();
+    }
   }
 
   renderContent() {
@@ -30,7 +45,7 @@ class IdentitySection {
     img.className = 'identity-portrait__image';
     img.src = 'added-assets/SG-TRANSPARENT.png';
     img.alt = 'Sreenath Govindarajan';
-    img.loading = 'lazy';
+    img.loading = 'eager';
     img.draggable = false;
 
     portraitCol.appendChild(img);
@@ -63,22 +78,14 @@ class IdentitySection {
 
     const title = document.createElement('p');
     title.className = 'identity-title';
-    title.textContent = 'AI Policy Strategist';
+    title.textContent = 'Founder';
 
     const credList = document.createElement('ul');
     credList.className = 'identity-credentials';
 
-    const credentials = [
-      'Multi-jurisdictionally trained (5+ jurisdictions)',
-      'Advisory across product, policy, and institutional alignment',
-      'India-focused, globally literate'
-    ];
-
-    credentials.forEach(text => {
-      const li = document.createElement('li');
-      li.textContent = text;
-      credList.appendChild(li);
-    });
+    const li = document.createElement('li');
+    li.textContent = 'Kanan Labs is founded by Sreenath Govindarajan, with a background in law, policy, and AI governance.';
+    credList.appendChild(li);
 
     metaBlock.appendChild(name);
     metaBlock.appendChild(title);

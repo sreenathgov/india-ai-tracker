@@ -82,6 +82,16 @@
 }
 
 /* --- Header --- */
+
+.contact-panel__badge {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #ff6105;
+    margin: 0 0 0.75rem 0;
+}
 .contact-panel__title {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-weight: 600;

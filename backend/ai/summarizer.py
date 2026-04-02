@@ -5,6 +5,7 @@ AI Summarizer - Generates article summaries using Groq API
 import os
 import re
 from pathlib import Path
+from typing import Tuple
 from dotenv import load_dotenv
 
 # Load .env file from backend directory
@@ -77,6 +78,47 @@ Content: {content[:800] if content else title}"""
             summary = re.sub(pattern, '', summary, flags=re.IGNORECASE).strip()
 
         return summary
+
+    def summarize_with_check(self, title: str, content: str) -> Tuple[str, bool]:
+        """
+        Generate a summary and check title-summary topical consistency.
+
+        Returns:
+            (summary, is_consistent) — is_consistent is False when the summary
+            shares no significant keywords with the title, indicating the scraper
+            likely fetched wrong or mixed page content.
+        """
+        summary = self.summarize(title, content)
+        is_consistent = self._is_summary_consistent(title, summary)
+        return summary, is_consistent
+
+    def _is_summary_consistent(self, title: str, summary: str) -> bool:
+        """
+        Check that the summary shares at least one significant keyword with the title.
+
+        Returns True (consistent) when the topics overlap, False when there is
+        zero keyword overlap — a strong signal that the scraped body came from the
+        wrong page or contained unrelated injected content.
+        """
+        _STOP_WORDS = {
+            'a', 'an', 'the', 'is', 'are', 'was', 'were', 'be', 'been', 'being',
+            'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
+            'should', 'may', 'might', 'must', 'shall', 'can', 'and', 'but', 'or',
+            'so', 'that', 'this', 'these', 'those', 'it', 'its', 'as', 'how',
+            'what', 'when', 'where', 'who', 'which', 'of', 'in', 'to', 'for',
+            'with', 'on', 'at', 'by', 'from', 'up', 'into', 'new', 'latest',
+            'india', 'indian', 'says', 'said', 'also', 'over', 'about', 'more',
+        }
+
+        title_words = {
+            w.lower() for w in re.findall(r'\b\w{4,}\b', title)
+            if w.lower() not in _STOP_WORDS
+        }
+        if not title_words:
+            return True  # Too short to judge; give benefit of the doubt
+
+        summary_lower = summary.lower()
+        return any(w in summary_lower for w in title_words)
 
     def _fallback_summary(self, title, content):
         """Create a basic summary without AI."""

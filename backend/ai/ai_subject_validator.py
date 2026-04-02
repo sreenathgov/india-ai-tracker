@@ -64,7 +64,7 @@ class AISubjectValidator:
         r'\b(?:GPT|ChatGPT|Claude|Gemini|Llama|Mistral|Phi)\b',
         r'\b(?:neural\s+network)s?\b',
         r'\b(?:NLP|natural\s+language\s+processing)\b',
-        r'\b(?:computer\s+vision)\b',  # Removed CV - too ambiguous
+        r'\b(?:computer\s+vision)\b(?!\s+syndrome)',  # Exclude "Computer Vision Syndrome" (medical condition)
         r'\b(?:transformer|diffusion)\s+model\b',
         # AI alone (but not AI-powered/AI-driven which are weak)
         r'\bAI\b(?!\s*-?\s*(?:powered|driven|enabled|based))',
@@ -145,6 +145,14 @@ class AISubjectValidator:
         r'\b(?:accident|crime|murder|theft|arrest|robbery|death)\b',
         r'\b(?:recipe|cooking|food|restaurant|cuisine)\b(?!.*\b(?:AI|ML|artificial)\b)',
         r'\b(?:horoscope|astrology|zodiac)\b',
+        # Medical/health advisories — no AI context in title
+        r'\b(?:doctors?\s+(?:warn|caution|advise|recommend))\b(?!.*\b(?:AI|ML|artificial\s+intelligence)\b)',
+        r'\b(?:self[- ]medic(?:at|ing)|GLP-?1|semaglutide|liraglutide)\b',
+        r'\bweight[- ]loss\s+(?:inject|drug|pill|supplement)s?\b',
+        # Agricultural extension events — no AI context in title
+        r'\b(?:kisan\s+mela|crop\s+diversif)\b(?!.*\b(?:AI|ML|artificial)\b)',
+        # Screen-time eye health (not computer vision AI)
+        r'\b(?:computer\s+vision\s+syndrome|eye\s+strain)\b.*\b(?:screen\s+time|display|monitor)\b(?!.*\b(?:AI|ML)\b)',
     ]
 
     # AI SUBSTANCE SIGNALS (content check)
@@ -321,8 +329,9 @@ class AISubjectValidator:
             )
 
         # STEP 5: Borderline case - use LLM
+        # At this point there is no title AI signal, so be conservative on API failure
         if total_signals >= 1:
-            llm_result = self._llm_verify(title, content[:500])
+            llm_result = self._llm_verify(title, content[:500], has_title_signal=False)
             return ValidationResult(
                 passed=llm_result['is_subject'],
                 reason=f"LLM_VERIFIED:{llm_result['classification']}",
@@ -341,13 +350,15 @@ class AISubjectValidator:
             confidence='high'
         )
 
-    def _llm_verify(self, title: str, content: str) -> Dict[str, Any]:
+    def _llm_verify(self, title: str, content: str, has_title_signal: bool = True) -> Dict[str, Any]:
         """
         Use LLM to verify if AI is the subject.
 
         Args:
             title: Article title
             content: First 500 chars of content
+            has_title_signal: Whether the title contained any AI signal.
+                When False, API failures default to DROP (conservative).
 
         Returns:
             Dict with is_subject (bool) and classification (str)
@@ -359,8 +370,10 @@ class AISubjectValidator:
 
             api_key = os.getenv('GROQ_API_KEY')
             if not api_key:
-                # No API key - lean toward PASS (high recall preference)
-                return {'is_subject': True, 'classification': 'NO_API_KEY_PASS'}
+                # No API key - lean toward PASS only if title had an AI signal
+                if has_title_signal:
+                    return {'is_subject': True, 'classification': 'NO_API_KEY_PASS'}
+                return {'is_subject': False, 'classification': 'NO_API_KEY_DROP'}
 
             client = Groq(api_key=api_key)
 
@@ -398,8 +411,11 @@ Answer with ONE word: SUBJECT, MENTIONED, or NEITHER
                 'classification': classification
             }
         except Exception as e:
-            # On LLM failure, lean toward PASS (high recall preference)
-            return {'is_subject': True, 'classification': f'FALLBACK_PASS:{str(e)[:30]}'}
+            # On LLM failure: PASS if title had an AI signal (preserve recall),
+            # DROP if no title signal at all (be conservative for zero-evidence articles)
+            if has_title_signal:
+                return {'is_subject': True, 'classification': f'FALLBACK_PASS:{str(e)[:30]}'}
+            return {'is_subject': False, 'classification': f'FALLBACK_DROP:{str(e)[:30]}'}
 
     def filter_article(self, article: Dict[str, Any]) -> Dict[str, Any]:
         """

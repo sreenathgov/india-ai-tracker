@@ -126,10 +126,12 @@ def process_batch_with_gemini(articles):
                 )
 
                 # Step 4: Summarization
-                summary = summarizer.summarize(
+                summary, is_consistent = summarizer.summarize_with_check(
                     article.title,
                     article.content or ''
                 )
+                if not is_consistent:
+                    print(f"  [WARN] Title-summary mismatch: {article.title[:80]}")
 
                 results.append({
                     'is_relevant': True,

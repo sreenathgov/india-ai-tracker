@@ -49,7 +49,7 @@ class ContactPanel {
     panel.className = 'contact-panel';
     panel.setAttribute('role', 'dialog');
     panel.setAttribute('aria-modal', 'true');
-    panel.setAttribute('aria-label', 'Schedule a strategic consultation');
+    panel.setAttribute('aria-label', 'Join the Sector Watch waitlist');
 
     // Drag handle
     const handle = document.createElement('div');
@@ -59,7 +59,7 @@ class ContactPanel {
     // Close button
     const closeBtn = document.createElement('button');
     closeBtn.className = 'contact-panel__close';
-    closeBtn.setAttribute('aria-label', 'Close consultation panel');
+    closeBtn.setAttribute('aria-label', 'Close panel');
     closeBtn.type = 'button';
     closeBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
 
@@ -88,114 +88,68 @@ class ContactPanel {
     const header = document.createElement('div');
     header.className = 'contact-panel__section';
     header.innerHTML = `
-      <h2 class="contact-panel__title">Schedule a Strategic Consultation</h2>
-      <p class="contact-panel__subtitle">Structured advisory for organisations navigating AI regulation, policy alignment, and governance readiness in India.</p>
+      <p class="contact-panel__badge">Sector Watch &middot; Early Access</p>
+      <h2 class="contact-panel__title">Get Early Access to Sector Watch</h2>
+      <p class="contact-panel__subtitle">Sector Watch is a trade intelligence platform built from India, for the world. We're inviting a select group of early adopters to shape it. Tell us what you need and we'll set up a quick discovery call.</p>
     `;
     form.appendChild(header);
 
-    // Engagement Type
-    const engSection = document.createElement('div');
-    engSection.className = 'contact-panel__section';
+    // Trade needs (multi-select checkboxes)
+    const needsSection = document.createElement('div');
+    needsSection.className = 'contact-panel__section';
 
-    const engLegend = document.createElement('p');
-    engLegend.className = 'contact-panel__legend';
-    engLegend.textContent = 'Engagement Type';
-    engSection.appendChild(engLegend);
+    const needsLegend = document.createElement('p');
+    needsLegend.className = 'contact-panel__legend';
+    needsLegend.textContent = 'What matters most to you right now?';
+    needsSection.appendChild(needsLegend);
 
-    const radioGroup = document.createElement('div');
-    radioGroup.className = 'contact-panel__radio-group';
+    const checkGroup = document.createElement('div');
+    checkGroup.className = 'contact-panel__radio-group';
 
-    const types = [
-      'Regulatory & Product Advisory',
-      'Incentive & Scheme Structuring',
-      'Governance Assessment',
-      'Cross-Border Readiness',
-      'General Inquiry'
+    const needs = [
+      'Regulatory risk mapping & strategy',
+      'Entering new markets',
+      'Supply chain analysis',
+      'Identifying compatible incentives'
     ];
 
-    types.forEach((type, idx) => {
+    needs.forEach(need => {
       const label = document.createElement('label');
       label.className = 'contact-panel__radio-option';
 
       const input = document.createElement('input');
-      input.type = 'radio';
-      input.name = 'engagementType';
-      input.value = type;
-      if (idx === 0) input.required = true;
+      input.type = 'checkbox';
+      input.name = 'tradeNeeds';
+      input.value = need;
 
       const span = document.createElement('span');
-      span.textContent = type;
+      span.textContent = need;
 
       label.appendChild(input);
       label.appendChild(span);
 
       label.addEventListener('click', () => {
-        radioGroup.querySelectorAll('.contact-panel__radio-option')
-          .forEach(opt => opt.classList.remove('selected'));
-        label.classList.add('selected');
-        radioGroup.classList.remove('error');
+        // Toggle selected state after checkbox updates (next tick)
+        setTimeout(() => {
+          label.classList.toggle('selected', input.checked);
+          checkGroup.classList.remove('error');
+        }, 0);
       });
 
-      radioGroup.appendChild(label);
+      checkGroup.appendChild(label);
     });
 
-    engSection.appendChild(radioGroup);
-    form.appendChild(engSection);
-
-    // Company Context
-    const compSection = document.createElement('div');
-    compSection.className = 'contact-panel__section';
-    compSection.innerHTML = `
-      <p class="contact-panel__legend">Company Context</p>
-      <div class="contact-panel__row">
-        <div class="contact-panel__field">
-          <label class="contact-panel__label" for="cp-company">Company Name</label>
-          <input class="contact-panel__input" type="text" id="cp-company" name="companyName" autocomplete="organization">
-        </div>
-        <div class="contact-panel__field">
-          <label class="contact-panel__label" for="cp-website">Website</label>
-          <input class="contact-panel__input" type="url" id="cp-website" name="website" placeholder="https://" autocomplete="url">
-        </div>
-      </div>
-      <div class="contact-panel__row">
-        <div class="contact-panel__field">
-          <label class="contact-panel__label" for="cp-sector">Sector</label>
-          <input class="contact-panel__input" type="text" id="cp-sector" name="sector">
-        </div>
-        <div class="contact-panel__field">
-          <label class="contact-panel__label" for="cp-stage">Stage</label>
-          <select class="contact-panel__select" id="cp-stage" name="stage">
-            <option value="" disabled selected>Select stage</option>
-            <option value="Pre-Revenue">Pre-Revenue</option>
-            <option value="Growth">Growth</option>
-            <option value="Enterprise">Enterprise</option>
-            <option value="Public Sector / Institution">Public Sector / Institution</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-      </div>
-    `;
-    form.appendChild(compSection);
-
-    // Strategic Context
-    const stratSection = document.createElement('div');
-    stratSection.className = 'contact-panel__section';
-    stratSection.innerHTML = `
-      <p class="contact-panel__legend">Strategic Context</p>
-      <div class="contact-panel__field">
-        <textarea class="contact-panel__textarea" name="strategicContext" rows="5" placeholder="Briefly describe your AI deployment or regulatory concern."></textarea>
-      </div>
-    `;
-    form.appendChild(stratSection);
+    needsSection.appendChild(checkGroup);
+    form.appendChild(needsSection);
 
     // Contact Details
     const contactSection = document.createElement('div');
     contactSection.className = 'contact-panel__section';
     contactSection.innerHTML = `
-      <p class="contact-panel__legend">Contact Details</p>
+      <p class="contact-panel__legend">About You</p>
       <div class="contact-panel__row">
         <div class="contact-panel__field">
-          <label class="contact-panel__label" for="cp-name">Full Name *</label>
+          <label class="contact-panel__label" for="cp-name">Name *</label>
           <input class="contact-panel__input" type="text" id="cp-name" name="contactName" required autocomplete="name">
         </div>
         <div class="contact-panel__field">
@@ -204,8 +158,8 @@ class ContactPanel {
         </div>
       </div>
       <div class="contact-panel__field" style="max-width: 50%;">
-        <label class="contact-panel__label" for="cp-role">Role / Title</label>
-        <input class="contact-panel__input" type="text" id="cp-role" name="role" autocomplete="organization-title">
+        <label class="contact-panel__label" for="cp-org">Organisation</label>
+        <input class="contact-panel__input" type="text" id="cp-org" name="organisation" autocomplete="organization">
       </div>
     `;
     form.appendChild(contactSection);
@@ -217,12 +171,12 @@ class ContactPanel {
     const submitBtn = document.createElement('button');
     submitBtn.className = 'contact-panel__submit';
     submitBtn.type = 'submit';
-    submitBtn.textContent = 'Request Consultation';
+    submitBtn.textContent = 'Reserve My Spot →';
     submitSection.appendChild(submitBtn);
 
     const footerNote = document.createElement('p');
     footerNote.className = 'contact-panel__footer-note';
-    footerNote.textContent = 'Consultations are structured and confidential.';
+    footerNote.textContent = 'No commitment required. We\'ll reach out to schedule a 20-minute discovery call.';
     submitSection.appendChild(footerNote);
 
     form.appendChild(submitSection);
@@ -406,23 +360,22 @@ class ContactPanel {
     // Clear previous error states
     this.formEl.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
 
+    const checkedNeeds = Array.from(
+      this.formEl.querySelectorAll('input[name="tradeNeeds"]:checked')
+    ).map(cb => cb.value);
+
     const formData = {
-      engagementType: this.getSelectedRadio(),
-      companyName: this.formEl.querySelector('[name="companyName"]')?.value.trim() || '',
-      website: this.formEl.querySelector('[name="website"]')?.value.trim() || '',
-      sector: this.formEl.querySelector('[name="sector"]')?.value.trim() || '',
-      stage: this.formEl.querySelector('[name="stage"]')?.value || '',
-      strategicContext: this.formEl.querySelector('[name="strategicContext"]')?.value.trim() || '',
+      tradeNeeds: checkedNeeds,
       contactName: this.formEl.querySelector('[name="contactName"]')?.value.trim() || '',
       email: this.formEl.querySelector('[name="email"]')?.value.trim() || '',
-      role: this.formEl.querySelector('[name="role"]')?.value.trim() || '',
+      organisation: this.formEl.querySelector('[name="organisation"]')?.value.trim() || '',
       submittedAt: new Date().toISOString()
     };
 
     // Validate required fields
     let hasError = false;
 
-    if (!formData.engagementType) {
+    if (formData.tradeNeeds.length === 0) {
       this.formEl.querySelector('.contact-panel__radio-group')?.classList.add('error');
       hasError = true;
     }
@@ -442,7 +395,7 @@ class ContactPanel {
     const submitBtn = this.formEl.querySelector('[type="submit"]');
     if (submitBtn) {
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Submitting…';
+      submitBtn.textContent = 'Reserving…';
     }
 
     // Send to serverless API
@@ -460,7 +413,7 @@ class ContactPanel {
         // Re-enable button
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Submit Request';
+          submitBtn.textContent = 'Reserve My Spot →';
         }
         // Show inline error
         let errorEl = this.formEl.querySelector('.contact-panel__submit-error');
@@ -474,10 +427,10 @@ class ContactPanel {
       });
   }
 
-  preselectEngagement(typeName) {
-    const inputs = this.formEl.querySelectorAll('input[name="engagementType"]');
+  preselectEngagement(needValue) {
+    const inputs = this.formEl.querySelectorAll('input[name="tradeNeeds"]');
     inputs.forEach(input => {
-      if (input.value === typeName) {
+      if (input.value === needValue) {
         input.checked = true;
         const label = input.closest('.contact-panel__radio-option');
         if (label) {
@@ -486,11 +439,6 @@ class ContactPanel {
         }
       }
     });
-  }
-
-  getSelectedRadio() {
-    const selected = this.formEl.querySelector('input[name="engagementType"]:checked');
-    return selected ? selected.value : null;
   }
 
   showSuccessState() {
@@ -504,9 +452,8 @@ class ContactPanel {
         const successEl = document.createElement('div');
         successEl.className = 'contact-panel__success';
         successEl.innerHTML = `
-          <h3>Request Received</h3>
-          <p>Sreenath Govindarajan will be in touch with you within 24 hours. A confirmation has been sent to your email.</p>
-          <p class="contact-panel__footer-note">All consultations are structured and confidential.</p>
+          <h3>You're on the list.</h3>
+          <p>Sreenath will be in touch shortly to schedule your discovery call.</p>
         `;
         this.scrollEl.appendChild(successEl);
 

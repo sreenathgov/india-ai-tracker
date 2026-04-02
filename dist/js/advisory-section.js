@@ -297,6 +297,11 @@ class CardSwap {
    AdvisorySection — Section 3 Orchestrator
    ============================================ */
 
+// Toggle: set to true to re-enable the entire advisory section
+const SHOW_ADVISORY_SECTION = false;
+// Toggle: set to true to re-enable the Services Offered sub-section (only applies when SHOW_ADVISORY_SECTION is true)
+const SHOW_SERVICES = false;
+
 class AdvisorySection {
   constructor() {
     this.sectionEl = document.getElementById('advisorySection');
@@ -308,6 +313,11 @@ class AdvisorySection {
 
   async init() {
     if (!this.sectionEl) return;
+    if (!SHOW_ADVISORY_SECTION) {
+      this.sectionEl.style.display = 'none';
+      window.dispatchEvent(new Event('resize'));
+      return;
+    }
 
     this.containerEl = this.sectionEl.querySelector('.advisory-container');
     if (!this.containerEl) return;
@@ -320,7 +330,7 @@ class AdvisorySection {
       }
 
       this.renderHero(this.data.hero, this.data.cardStack);
-      this.renderServices(this.data.services);
+      if (SHOW_SERVICES) this.renderServices(this.data.services);
       this.initGrid();
       this.initCardSwap(this.data.cardStack);
       this.initEntranceAnimations();
