@@ -286,6 +286,46 @@
         "posted_to_x_at": null
       },
       {
+        "id": 7,
+        "title": "Xovian Aerospace raises $2 Mn led by Ashish Kacholia",
+        "url": "https://entrackr.com/snippets/xovian-aerospace-raises-2-mn-led-by-ashish-kacholia-11442879",
+        "summary": "Xovian Aerospace, a satellite RF intelligence startup, has raised $2 million in a strategic investment round led by Ashish Kacholia. The Bengaluru-based company had previously raised $2.5 million in a pre-seed round in August last year. The fresh capital will be used for satellite development, team expansion, and strengthening commercial partnerships.",
+        "date_published": "2026-04-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "AI Masterclass From Intelligence to Code",
+        "url": "https://cio.economictimes.indiatimes.com/ai-intelligence-code?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "An AI masterclass is being offered, covering the spectrum from intelligence to code. The event is located in Bangalore, providing a comprehensive learning experience for attendees. The masterclass aims to equip participants with in-depth knowledge of AI concepts and coding skills.",
+        "date_published": "2026-04-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "AI may be used to park cars and trace violators in Bengaluru",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-may-be-used-to-park-cars-and-trace-violators-in-bengaluru/articleshow/129910440.cms",
@@ -1685,7 +1725,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

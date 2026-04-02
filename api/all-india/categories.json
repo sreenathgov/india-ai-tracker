@@ -934,10 +934,110 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "FY27 Outlook: Geopolitical pressure and AI disruption set to reshape India Inc",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/fy27-outlook-geopolitical-pressure-and-ai-disruption-set-to-reshape-india-inc/129966535",
+        "summary": "Corporate India is expected to face uncertainty in FY26-27 due to geopolitical tensions and the disruptive impact of AI. Certain sectors, such as banking and FMCG, anticipate improvements, with banking expecting a gradual NIM recovery and FMCG expecting better earnings visibility. The IT sector, however, will likely grapple with AI concerns and global macro issues, leading to selective opportunities.",
+        "date_published": "2026-04-02",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "ixigo-backed SqaaS launches AI agent platform ShellBot",
+        "url": "https://entrackr.com/snippets/ixigo-backed-sqaas-launches-ai-agent-platform-shellbot-11445112",
+        "summary": "ixigo-backed AI startup SqaaS has launched ShellBot, a platform that enables users to create their own personal AI assistants. The launch follows ixigo's acquisition of a 45.02% stake in SqaaS in February 2026, as the company deepens its push into AI investments. ShellBot aims to evolve AI agents into autonomous systems embedded in everyday workflows, automating complex tasks with ease, security, and control.",
+        "date_published": "2026-04-02",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "B2B metal procurement startup NowPurchase raises $8.6 Mn led by Bajaj Finserv",
         "url": "https://entrackr.com/news/b2b-metal-procurement-startup-nowpurchase-raises-86-mn-led-by-bajaj-finserv-11441827",
         "summary": "NowPurchase, a B2B metal procurement startup, has raised $8.6 million in funding led by Bajaj Finserv, with participation from other investors. This brings the company's total funding to $18 million, following a $6 million raise in September 2024. The new funds will be used to expand the company's scrap recycling and other operations.",
+        "date_published": "2026-04-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "HCLTech unveils AI force 2.0; advancing 'Agentic AI' for enterprise-scale software engineering | Know all about it",
+        "url": "https://www.etnownews.com/technology/hcltech-unveils-ai-force-2-0-advancing-agentic-ai-for-enterprise-scale-software-engineering-know-all-about-it-article-153974302",
+        "summary": "HCLTech has launched AI Force 2.0, an upgraded platform that enables \"agentic\" autonomy in software engineering. The platform allows AI agents to plan and execute tasks independently, reducing the need for manual coding. This aims to significantly decrease technical debt and manual coding overhead in enterprise-scale software engineering.",
+        "date_published": "2026-04-01",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "NowPurchase secures Rs 80 Cr in funding led by Bajaj Finserv",
+        "url": "https://yourstory.com/2026/04/nowpurchase-secures-80-crore-in-funding-led-by-bajaj-finserv",
+        "summary": "NowPurchase has secured Rs 80 Cr in funding led by Bajaj Finserv to drive expansion. The funds will be used to grow its scrap recycling and branded products businesses, as well as its AI platform MetalCloud. MetalCloud aims to digitise and optimise metal manufacturing and procurement processes.",
+        "date_published": "2026-04-01",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Rediff files confidential IPO papers; targets Rs 600–800 Cr fundraise",
+        "url": "https://entrackr.com/news/rediff-files-confidential-ipo-papers-targets-rs-600800-cr-fundraise-11442381",
+        "summary": "Rediff.com India Limited has filed confidential draft papers with the Securities and Exchange Board of India for an initial public offering (IPO) to raise Rs 600-800 crore. The company is using the confidential pre-filing route, which allows it to delay disclosing key details such as financials and valuation. The IPO aims to support the company's shift under new management.",
         "date_published": "2026-04-01",
         "source_name": "Entrackr - AI & Startups",
         "category": "Major AI Developments",
@@ -6380,6 +6480,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 6,
+        "title": "Indian startup funding climbs to nearly $4 Bn in Q1 2026, powered by Neysa and early-stage deals",
+        "url": "https://entrackr.com/report/quarterly-funding-report/indian-startup-funding-climbs-to-nearly-4-bn-in-q1-2026-powered-by-neysa-and-early-stage-deals-11445029",
+        "summary": "Indian startups received nearly $4 billion in funding in Q1 2026, one of the highest quarterly totals in recent years. Neysa's $1.2 billion funding round led the surge, with other notable rounds from startups like Weaver Services, Arya.ag, and Emergent. Early-stage deals also contributed significantly to the total funding, driving the strong quarterly performance.",
+        "date_published": "2026-04-02",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Beyond modernisation: The new playbook for enterprise reinvention",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/beyond-modernisation-the-new-playbook-for-enterprise-reinvention/129839341",
@@ -7670,6 +7790,7 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

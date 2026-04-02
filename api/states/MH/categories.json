@@ -183,6 +183,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 10,
+        "title": "Getting More Value from IT, Cloud & AI Investments: A CIO Perspective",
+        "url": "https://cio.economictimes.indiatimes.com/getting-more-value-from-it?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "A recent event in Mumbai focused on helping CIOs maximize value from their IT, cloud, and AI investments. The event provided a platform for CIOs to discuss strategies and best practices for optimizing returns on these investments. Key discussions centered around leveraging technology to drive business growth and innovation.",
+        "date_published": "2026-04-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "ZP Budget Crosses ₹50 Crore Mark For First Time, Solar, AI &amp; Rural Infra In Focus",
         "url": "https://timesofindia.indiatimes.com/city/nagpur/zp-budget-crosses-50-crore-mark-for-first-time-solar-ai-rural-infra-in-focus/articleshow/129852978.cms",
@@ -1098,7 +1118,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

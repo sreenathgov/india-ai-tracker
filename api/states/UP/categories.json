@@ -164,6 +164,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "Experts explore growing role of AI in media, communication",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/experts-explore-growing-role-of-ai-in-media-communication/articleshow/129961732.cms",
+        "summary": "Experts are examining the increasing presence of artificial intelligence in media and communication. The role of AI in these fields is expanding, with potential applications and implications being explored. This growth is being discussed by experts in the industry, highlighting the significance of AI in modern media and communication.",
+        "date_published": "2026-04-02",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "The UKSC’s “Any Hardware” Shortcut: Why Emotional Perception AI Raises More Questions Than It Answers — And Why India’s Framework Does Better",
+        "url": "https://spicyip.com/2026/04/the-ukscs-any-hardware-shortcut-why-emotional-perception-ai-raises-more-questions-than-it-answers-and-why-indias-framework-does-better.html",
+        "summary": "The UK Supreme Court's decision in Emotional Perception AI Limited v Comptroller General of Patents has changed how subject-matter eligibility questions for computer programs are evaluated. The judgment introduces a new test, but the court chose not to apply it, and contains errors of reasoning. In contrast, India's framework for evaluating similar issues is considered more effective.",
+        "date_published": "2026-04-01",
+        "source_name": "SpicyIP",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Crisil, IIT-K join hands for AI research systems",
         "url": "https://timesofindia.indiatimes.com/city/kanpur/crisil-iit-k-join-hands-for-ai-research-systems/articleshow/129786199.cms",
@@ -614,5 +654,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
