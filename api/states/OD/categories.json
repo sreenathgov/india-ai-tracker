@@ -141,7 +141,30 @@
         "posted_to_x_at": null
       }
     ],
-    "AI Start-Up News": []
+    "AI Start-Up News": [
+      {
+        "id": 3,
+        "title": "Aquapulse raises Rs 25 Cr in Series A led by NABVENTURES",
+        "url": "https://entrackr.com/snippets/aquapulse-raises-rs-25-cr-in-series-a-led-by-nabventures-11446411",
+        "summary": "Aquapulse, an aquaculture tech startup, has raised Rs 25 crore in a Series A round led by NABVENTURES. The funds will be used to expand its farmer network, set up a processing facility, and enhance its technology stack, including AI-led systems. Founded in 2022, Aquapulse aims to improve efficiency in the seafood value chain through its operations in aquaculture, infrastructure, and technology.",
+        "date_published": "2026-04-02",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "AP",
+          "OD",
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ]
   },
   "today_updates": []
 }

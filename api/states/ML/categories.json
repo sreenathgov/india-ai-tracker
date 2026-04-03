@@ -3,8 +3,31 @@
   "categories": {
     "Policies and Initiatives": [],
     "Events": [],
-    "Major AI Developments": [],
+    "Major AI Developments": [
+      {
+        "id": 6,
+        "title": "AI, shifting industries are redefining careers: Market experts",
+        "url": "https://www.thehindu.com/news/national/meghalaya/ai-shifting-industries-are-redefining-careers-market-experts/article70818775.ece",
+        "summary": "Market experts are warning that AI and shifting industries are redefining careers, requiring graduates to adapt beyond their traditional learning. Financial experts are advising students at the Indian Institute of Management-Shillong to be prepared for these changes. This shift is expected to impact the job market and career paths for new graduates and postgraduates.",
+        "date_published": "2026-04-03",
+        "source_name": "The Hindu - Meghalaya",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "ML"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

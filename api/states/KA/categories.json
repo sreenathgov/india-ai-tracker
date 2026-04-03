@@ -1322,6 +1322,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 1,
+        "title": "Flipkart-backed NeuroPixel.AI shuts operations amid financial strain",
+        "url": "https://entrackr.com/news/flipkart-backed-neuropixelai-shuts-operations-amid-financial-strain-11448982",
+        "summary": "NeuroPixel.AI, a Bengaluru-based AI startup, has shut down its operations after six years due to limited business penetration and rising competition. The startup, which developed AI-led solutions for the fashion ecommerce sector, cited the launch of advanced image generation models by global companies as a key factor in intensifying competition. Founded in 2020, NeuroPixel.AI was backed by Flipkart, but ultimately succumbed to financial strain.",
+        "date_published": "2026-04-03",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Exclusive: Gnani.ai kicks off Series B round led by Aavishkaar Capital",
         "url": "https://entrackr.com/exclusive/exclusive-gnaniai-kicks-off-series-b-round-led-by-aavishkaar-capital-11433897",
@@ -1725,5 +1745,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

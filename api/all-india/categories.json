@@ -6501,6 +6501,66 @@
       },
       {
         "id": 2,
+        "title": "Fidelity slashes Gupshup’s valuation further to $300 Mn",
+        "url": "https://entrackr.com/news/fidelity-slashes-gupshups-valuation-further-to-300-mn-11448042",
+        "summary": "Fidelity Investments has reduced the value of its investment in conversational AI startup Gupshup to $3.35 million, down from its original $16.2 million investment in 2021. This markdown implies a valuation of Gupshup at around $280-300 million, an 80% decline from its previous valuation of $1.4 billion. The significant decrease reflects a sharp reduction in the company's worth since its 2021 funding round.",
+        "date_published": "2026-04-02",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Gupshup India’s profit falls 52% amid flat scale in FY25",
+        "url": "https://entrackr.com/fintrackr/gupshup-indias-profit-falls-52-amid-flat-scale-in-fy25-11446181",
+        "summary": "Gupshup, a conversational AI platform, reported a 52% decline in profit in the fiscal year ended March 2025, despite surpassing the Rs 2,000 crore revenue milestone in FY24. The company's India revenue from operations declined by 5.3% to Rs 1,943 crore in FY25 from Rs 2,051 crore in FY24. Gupshup's operating scale remained flat during the same period, with profits declining by over 50%.",
+        "date_published": "2026-04-02",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Gabify raises $175K in pre-seed round led by Inflection Point Ventures",
+        "url": "https://entrackr.com/snippets/gabify-raises-175k-in-pre-seed-round-led-by-inflection-point-ventures-11445677",
+        "summary": "Gabify, a healthtech startup focused on neurodevelopmental care, has raised $175,000 in a pre-seed funding round led by Inflection Point Ventures. The startup also received Rs 25 lakh under the Nidhi Seed Support Scheme from GHRTBI. The funds will be used for clinical validation, technology development, and team expansion to target impact across one million children by 2028.",
+        "date_published": "2026-04-02",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "Beyond modernisation: The new playbook for enterprise reinvention",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/beyond-modernisation-the-new-playbook-for-enterprise-reinvention/129839341",
         "summary": "KaarTech's CEO, Maran Nagarajan, discusses the company's evolution into an AI-led transformation leader with a focus on platform-enabled solutions like KTern.AI. The company is shifting from services to outcome-driven reinvention, going beyond mere modernization. Nagarajan highlights the advantages and challenges for Indian tech firms globally and KaarTech's growth trajectory in this new direction.",
@@ -7789,8 +7849,5 @@
       }
     ]
   },
-  "today_updates": [
-    "AI Start-Up News",
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

@@ -5,6 +5,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "’13 bombs’ threat: Punjab and Haryana High Court targeted in AI-generated threat mail",
+        "url": "https://indianexpress.com/article/cities/chandigarh/punjab-and-haryana-high-court-targeted-in-ai-generated-bomb-threat-mail-10615283/",
+        "summary": "The Punjab and Haryana High Court received a threat email claiming 13 bombs had been planted in the building. The email was generated using artificial intelligence, according to reports. Authorities are investigating the threat, which has raised security concerns at the court.",
+        "date_published": "2026-04-02",
+        "source_name": "Indian Express - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "HR",
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "IIT-Ropar to deploy 100 AI weather stations across Punjab",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/iit-ropar-to-deploy-100-ai-weather-stations-across-punjab/articleshow/129761852.cms",
