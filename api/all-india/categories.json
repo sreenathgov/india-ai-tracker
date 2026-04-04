@@ -934,6 +934,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Coforge, Solstice Innovations bring Agentic AI led P&amp;C Insurance modernization",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/coforge-solstice-innovations-bring-agentic-ai-led-pc-insurance-modernization/130013652",
+        "summary": "Coforge and Solstice Innovations are collaborating to modernize P&C insurance using Agentic AI. The partnership utilizes Coforge's Forge-X as the primary accelerator to transition clients from legacy environments to the Equinox platform. This transition aims to achieve greater speed, lower risk, and reduced implementation costs.",
+        "date_published": "2026-04-04",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "FY27 Outlook: Geopolitical pressure and AI disruption set to reshape India Inc",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/fy27-outlook-geopolitical-pressure-and-ai-disruption-set-to-reshape-india-inc/129966535",
@@ -7849,5 +7869,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -164,6 +164,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Khwaja varsity offers courses in AI, biotech",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/khwaja-varsity-offers-courses-in-ai-biotech/articleshow/130009106.cms",
+        "summary": "Khwaja university is introducing new courses in artificial intelligence (AI) and biotechnology. The move aims to provide students with skills in emerging technologies. The university's decision is part of its efforts to stay updated with the latest advancements in the field.",
+        "date_published": "2026-04-04",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Experts explore growing role of AI in media, communication",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/experts-explore-growing-role-of-ai-in-media-communication/articleshow/129961732.cms",
@@ -654,5 +674,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
