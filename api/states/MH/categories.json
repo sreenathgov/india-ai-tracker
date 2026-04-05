@@ -163,6 +163,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "AI In Classroom: NMC Teachers Upskill To Power Digital-age Learning",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/ai-in-classroom-nmc-teachers-upskill-to-power-digital-age-learning/articleshow/130026482.cms",
+        "summary": "Nagpur Municipal Corporation (NMC) teachers are upskilling to incorporate AI in the classroom, enabling digital-age learning. This initiative aims to enhance the teaching process and provide students with a more modern and effective education. The move is part of a broader effort to power digital-age learning in NMC classrooms.",
+        "date_published": "2026-04-05",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Agentic AI for BFSI",
         "url": "https://cio.economictimes.indiatimes.com/agentic-ai-bfsi?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
@@ -1118,5 +1138,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

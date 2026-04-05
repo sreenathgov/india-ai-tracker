@@ -264,6 +264,26 @@
     "Major AI Developments": [
       {
         "id": 3,
+        "title": "Shirtless protest at AI Summit in Delhi: To track Youth Congress members, police seek videos recorded by media houses",
+        "url": "https://indianexpress.com/article/cities/delhi/shirtless-protest-at-ai-summit-in-delhi-members-10619616/",
+        "summary": "A shirtless protest occurred at an AI Summit in Delhi, prompting police to seek videos from media houses to track down Youth Congress members involved. The police are attempting to identify the protesters to take further action. The incident highlights the tensions between authorities and protesters at the summit.",
+        "date_published": "2026-04-05",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "Merak Ventures leads pre-Series A round in CredResolve",
         "url": "https://entrackr.com/snippets/merak-ventures-leads-pre-series-a-round-in-credresolve-11441882",
         "summary": "CredResolve, a debt collections infrastructure company, has raised an undisclosed amount in a pre-Series A round led by Merak Ventures. Existing investors Unleash Capital Partners and CDM Capital also participated in the round. The funds will be used to expand operations to 15 states and scale its AI and voice capabilities.",
@@ -2232,5 +2252,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

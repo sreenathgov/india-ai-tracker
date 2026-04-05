@@ -125,6 +125,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "HC comes out with policy for AI use",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/hc-comes-out-with-policy-for-ai-use/articleshow/130025798.cms",
+        "summary": "The High Court has introduced a policy for the use of Artificial Intelligence. This policy aims to regulate and guide the implementation of AI within the court's operations. The details of the policy can be found in a recent article on the Times of India website.",
+        "date_published": "2026-04-05",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "AI school inaugurated at IIM Ahmedabad",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ai-school-inaugurated-at-iim-ahmedabad/articleshow/129832367.cms",
@@ -669,5 +689,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -48,6 +48,26 @@
     "Major AI Developments": [
       {
         "id": 4,
+        "title": "CPI(ML) seeks joint meeting of GA partners in Bihar",
+        "url": "https://timesofindia.indiatimes.com/city/patna/cpiml-seeks-joint-meeting-of-ga-partners-in-bihar/articleshow/130025484.cms",
+        "summary": "CPI(ML) state secretary Kunal is calling for a joint meeting of Grand Alliance partners in Bihar to address urgent issues. The meeting aims to organize protests against the LPG crisis, rising violence against women, and increased electricity tariffs. These protests will bring attention to the escalating problems in the state.",
+        "date_published": "2026-04-05",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
         "title": "Conference of gatro surgeons kicks off at IGIMS, to focus on AI in surgery",
         "url": "https://timesofindia.indiatimes.com/city/patna/conference-of-gatro-surgeons-kicks-off-at-igims-to-focus-on-ai-in-surgery/articleshow/129870464.cms",
         "summary": "A conference of gastro surgeons has begun at IGIMS, focusing on the role of artificial intelligence in surgery. The event aims to explore the potential applications and benefits of AI in surgical procedures. The conference brings together experts to discuss and share knowledge on the latest advancements in AI-powered surgery.",
@@ -166,5 +186,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
