@@ -47,6 +47,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 13,
+        "title": "Experts call for data-driven reforms in Bihar healthcare",
+        "url": "https://timesofindia.indiatimes.com/city/patna/experts-call-for-data-driven-reforms-in-bihar-healthcare/articleshow/130069543.cms",
+        "summary": "Healthcare experts in Bihar are advocating for data-driven reforms to shift from reactive treatment to a proactive health system. They recommend evidence-based practices, including AI-assisted diagnostics and digital health records. Experts also emphasize the need for advanced training for healthcare workers to support these reforms.",
+        "date_published": "2026-04-07",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "CPI(ML) seeks joint meeting of GA partners in Bihar",
         "url": "https://timesofindia.indiatimes.com/city/patna/cpiml-seeks-joint-meeting-of-ga-partners-in-bihar/articleshow/130025484.cms",
@@ -186,5 +206,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

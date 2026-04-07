@@ -935,6 +935,26 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "From resilience to reinvention: The AI advantage for India’s small businesses",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/harnessing-ai-a-game-changer-for-indias-small-businesses/130052758",
+        "summary": "India's micro, small, and medium enterprises can leverage artificial intelligence to enhance growth and compete globally. AI tools can help MSMEs improve customer service and streamline operations by addressing specific challenges. Successful adoption of AI requires upskilling teams to maximize its benefits.",
+        "date_published": "2026-04-07",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Coforge, Solstice Innovations bring Agentic AI led P&amp;C Insurance modernization",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/coforge-solstice-innovations-bring-agentic-ai-led-pc-insurance-modernization/130013652",
         "summary": "Coforge and Solstice Innovations are collaborating to modernize P&C insurance using Agentic AI. The partnership utilizes Coforge's Forge-X as the primary accelerator to transition clients from legacy environments to the Equinox platform. This transition aims to achieve greater speed, lower risk, and reduced implementation costs.",
@@ -6500,6 +6520,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "Agentic AI startups Xccelera raises funding from Ramakant Sharma, others",
+        "url": "https://entrackr.com/snippets/agentic-ai-startups-xccelera-raises-rs-12-cr-from-ramakant-sharma-others-11460932",
+        "summary": "Xccelera, an agentic AI startup, has raised Rs 1.2 crore in funding from investors including Ramakant Sharma, Asad Khan, and Amiya Pathak. The funds will be used to expand its engineering team, strengthen its multi-agent AI systems, and scale enterprise deployments. Xccelera is building a \"services-as-software\" platform that uses AI agents to automate enterprise workflows, replacing manual processes with autonomous systems.",
+        "date_published": "2026-04-07",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Indian startup funding climbs to nearly $4 Bn in Q1 2026, powered by Neysa and early-stage deals",
         "url": "https://entrackr.com/report/quarterly-funding-report/indian-startup-funding-climbs-to-nearly-4-bn-in-q1-2026-powered-by-neysa-and-early-stage-deals-11445029",
@@ -7869,5 +7909,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News",
+    "Major AI Developments"
+  ]
 }

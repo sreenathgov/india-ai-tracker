@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "BRS leader KT Rama Rao flags AI threat, urges youth to upgrade skills",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/brs-leader-kt-rama-rao-flags-ai-threat-urges-youth-to-upgrade-skills/articleshow/130066715.cms",
+        "summary": "BRS leader KT Rama Rao has warned of the threat posed by Artificial Intelligence (AI) and urged youth to upgrade their skills to remain relevant. He emphasized the need for young people to acquire new skills in order to compete in an AI-driven job market. Rao's warning highlights the growing concern about the impact of AI on employment and the need for workers to adapt to changing technological landscape.",
+        "date_published": "2026-04-07",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "IIIT-H’s Social Tech Incubator & EPAM launch 4th ESIIP Cohort for Deep-Tech Climate Impact",
         "url": "https://www.iiit.ac.in/iiit-hs-social-tech-incubator-epam-launch-4th-esiip-cohort-for-deep-tech-climate-impact/",
@@ -1188,5 +1208,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

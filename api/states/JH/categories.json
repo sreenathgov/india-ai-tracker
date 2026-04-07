@@ -5,6 +5,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "Governor Gangwar inaugurates IInvenTiv 2026 at IIT (ISM) Dhanbad; Aims to transform tech advances into real-world solutions",
+        "url": "https://timesofindia.indiatimes.com/city/ranchi/governor-gangwar-inaugurates-iinventiv-2026-at-iit-ism-dhanbad-aims-to-transform-tech-advances-into-real-world-solutions/articleshow/130069251.cms",
+        "summary": "Jharkhand Governor Santosh Kumar Gangwar inaugurated IInvenTiv 2026 at IIT (ISM) Dhanbad, aiming to transform technological advancements into practical solutions. The initiative focuses on innovations in AI, healthcare, and materials to create real-world applications. IInvenTiv 2026 is a pivotal effort to harness these innovations for tangible impact.",
+        "date_published": "2026-04-07",
+        "source_name": "Times of India - Ranchi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "JH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "JSFDA conclave focuses on modernizing teaching methods; Calls for integration of technology and AI in classrooms",
         "url": "https://timesofindia.indiatimes.com/city/ranchi/jsfda-conclave-focuses-on-modernizing-teaching-methods-calls-for-integration-of-technology-and-ai-in-classrooms/articleshow/129705963.cms",
@@ -86,5 +106,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
