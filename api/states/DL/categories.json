@@ -263,6 +263,27 @@
     ],
     "Major AI Developments": [
       {
+        "id": 13,
+        "title": "Fashinza acquires Qckin to build tech-enabled manufacturing platform",
+        "url": "https://entrackr.com/snippets/fashinza-acquires-qckin-to-build-tech-enabled-manufacturing-platform-11469960",
+        "summary": "Fashinza, a fashion supply chain platform, has acquired Qckin, a design-to-delivery startup, to build a tech-enabled manufacturing platform. The acquisition aims to integrate technology-led sourcing with specialized manufacturing, enabling global fashion brands to produce faster and more cost-efficiently. This move strengthens Fashinza's manufacturing ecosystem and provides a more resilient supply chain amid geopolitical shifts and evolving trade dynamics.",
+        "date_published": "2026-04-07",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Dam Good Fish raises strategic funding at Rs 30 Cr valuation",
         "url": "https://entrackr.com/snippets/dam-good-fish-raises-strategic-funding-at-rs-30-cr-valuation-11457953",
@@ -2111,6 +2132,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 10,
+        "title": "EV mobility startup Trev Mobility raises angel round to expand across Delhi NCR",
+        "url": "https://entrackr.com/snippets/ev-mobility-startup-trev-mobility-raises-angel-round-to-expand-across-delhi-ncr-11657382",
+        "summary": "Trev Mobility, an EV mobility startup, has raised Rs 3.65 crore in an angel funding round from its existing users. The funds will be used to expand its electric vehicle fleet and scale operations across the Delhi NCR region. The startup had previously secured Rs 20 lakh from the Startup India Seed Fund Scheme, and aims to reimagine urban travel in India through sustainable mobility solutions.",
+        "date_published": "2026-04-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "GIMS expands AI startup clinic to Purvanchal",
         "url": "https://timesofindia.indiatimes.com/city/noida/gims-expands-ai-startup-clinic-to-purvanchal/articleshow/129580505.cms",
@@ -2274,5 +2315,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

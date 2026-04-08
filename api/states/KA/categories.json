@@ -246,6 +246,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "A platform for ‘social coding’; LEAD bets on AI personalisation solution",
+        "url": "https://yourstory.com/2026/04/a-platform-for-social-coding",
+        "summary": "Two brothers from Bengaluru are developing a platform for \"social coding\" that could rival GitHub. The platform utilizes an AI personalization solution, which is being backed by LEAD. This innovative approach aims to disrupt the existing developer platform landscape.",
+        "date_published": "2026-04-08",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "‘Being honest with the story is the only way forward in this world of AI’",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/being-honest-with-the-story-is-the-only-way-forward-in-this-world-of-ai/articleshow/130058234.cms",
@@ -254,6 +274,47 @@
         "source_name": "Times of India - Bangalore",
         "category": "Major AI Developments",
         "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "WorkOnGrid raises Rs 22.5 Cr led by Transition Venture Capital",
+        "url": "https://entrackr.com/snippets/workongrid-raises-rs-225-cr-led-by-transition-venture-capital-11631783",
+        "summary": "WorkOnGrid, an AI-powered operations intelligence platform for utilities, has raised Rs 22.5 crore in funding led by Transition Venture Capital and participated by Indian Angel Network. The startup had previously secured Rs 1 crore in 2020 and Rs 5 crore in 2022 from various investors. The fresh capital will be used to scale global market efforts, enhance AI capabilities, and build international infrastructure.",
+        "date_published": "2026-04-07",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "Fashinza acquires Qckin to build tech-enabled manufacturing platform",
+        "url": "https://entrackr.com/snippets/fashinza-acquires-qckin-to-build-tech-enabled-manufacturing-platform-11469960",
+        "summary": "Fashinza, a fashion supply chain platform, has acquired Qckin, a design-to-delivery startup, to build a tech-enabled manufacturing platform. The acquisition aims to integrate technology-led sourcing with specialized manufacturing, enabling global fashion brands to produce faster and more cost-efficiently. This move strengthens Fashinza's manufacturing ecosystem and provides a more resilient supply chain amid geopolitical shifts and evolving trade dynamics.",
+        "date_published": "2026-04-07",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
           "KA"
         ],
         "is_approved": true,
@@ -1383,6 +1444,46 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 6,
+        "title": "How two Bengaluru brothers are building a GitHub alternative for the AI age from Finland",
+        "url": "https://yourstory.com/2026/04/bengaluru-brothers-building-github-alternative-ai-age-finland",
+        "summary": "Tangled, a company founded by brothers Akshay and Anirudh Oppiliappan, is developing a GitHub alternative tailored for the AI era. The platform aims to facilitate collaboration among developers in a future where AI agents will play a significant role in writing and reviewing code. The company is based in Finland and is reimagining developer collaboration for this new landscape.",
+        "date_published": "2026-04-07",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "H2LooP raises $2 Mn in seed round from Speciale Invest and 3one4 Capital",
+        "url": "https://entrackr.com/snippets/h2loop-raises-2-mn-in-seed-round-from-speciale-invest-and-3one4-capital-11481816",
+        "summary": "Deeptech startup H2LooP has raised $2 million in a seed funding round co-led by Speciale Invest and 3one4 Capital. The funds will be used to expand into high-complexity sectors such as data centres, UAVs, and robotics. H2LooP is a deeptech startup focused on AI-driven development tools for embedded systems, hardware engineering, and software that powers hardware.",
+        "date_published": "2026-04-07",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 2,
         "title": "Funding and acquisitions in Indian startup this week [Mar 30 - Apr 4]",

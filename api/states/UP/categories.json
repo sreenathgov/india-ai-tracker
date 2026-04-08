@@ -164,6 +164,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 17,
+        "title": "‘Need to connect schoolkids with AI, empower teachers’",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/need-to-connect-schoolkids-with-ai-empower-teachers/articleshow/130096561.cms",
+        "summary": "There is a need to connect school children with Artificial Intelligence (AI) to enhance their learning experience. Empowering teachers with the necessary skills and knowledge to effectively integrate AI in the classroom is also crucial. This integration aims to improve the education system and prepare students for the future.",
+        "date_published": "2026-04-08",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Khwaja varsity offers courses in AI, biotech",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/khwaja-varsity-offers-courses-in-ai-biotech/articleshow/130009106.cms",
@@ -674,5 +694,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
