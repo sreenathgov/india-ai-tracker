@@ -26,6 +26,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "Kerala deploys AI surveillance for polls; real-time alerts track queues, crowd at booths",
+        "url": "https://www.thehindu.com/elections/kerala-assembly/kerala-deploys-ai-surveillance-for-polls-real-time-alerts-track-queues-crowd-at-booths/article70841407.ece",
+        "summary": "Kerala is utilizing AI-powered surveillance for the upcoming polls, enabling real-time monitoring of queues and crowds at polling stations. Live webcasting has been set up in all polling stations, with two cameras installed at each location, one inside and one outside. This technology aims to enhance the efficiency and transparency of the voting process on April 9.",
+        "date_published": "2026-04-09",
+        "source_name": "The Hindu - Kerala",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 12,
         "title": "Kerala cyber police file case against X over ‘defamatory’ AI video on PM, ECI",
         "url": "https://www.thehindu.com/news/national/kerala/kerala-cyber-police-file-case-against-x-over-defamatory-ai-video-on-pm-eci/article70786915.ece",
@@ -112,7 +132,30 @@
         "posted_to_x_at": null
       }
     ],
-    "AI Start-Up News": []
+    "AI Start-Up News": [
+      {
+        "id": 8,
+        "title": "IAN Alpha Fund leads Rs 22 Cr round in deep-tech startup RoshAi",
+        "url": "https://entrackr.com/snippets/ian-alpha-fund-leads-rs-22-cr-round-in-deep-tech-startup-roshai-11701674",
+        "summary": "RoshAi, a deep-tech autonomy company, has raised Rs 22 crore ($2.36 million) in a funding round led by IAN Group's Alpha Fund. The Kochi-based startup had previously raised $1.71 million in seed funding from investors including Caret Capital and Ev2 Ventures. The fresh funds will be used to strengthen its product and expand its presence in global industrial markets.",
+        "date_published": "2026-04-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

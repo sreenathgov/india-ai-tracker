@@ -203,6 +203,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 2,
+        "title": "Private, local, and fully yours: NVIDIA's vision for AI development at DevSparks Pune 2026, with RP Tech, an NVIDIA partner",
+        "url": "https://yourstory.com/2026/04/nvidias-vision-ai-development-devsparks-pune-2026-rp-tech-nvidia-partner",
+        "summary": "NVIDIA's partner RP Tech showcased NVIDIA DGX Spark at DevSparks Pune 2026, allowing developers to run full AI workflows locally from a single device. This enables private and local AI development, giving developers full control over their work. NVIDIA DGX Spark is a key component of this vision, providing a self-contained platform for AI development.",
+        "date_published": "2026-04-07",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Dam Good Fish raises strategic funding at Rs 30 Cr valuation",
         "url": "https://entrackr.com/snippets/dam-good-fish-raises-strategic-funding-at-rs-30-cr-valuation-11457953",
@@ -1061,6 +1081,50 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "DAAKit raises $138K in pre-seed round led by Inflection Point Ventures",
+        "url": "https://entrackr.com/snippets/daakit-raises-138k-in-pre-seed-round-led-by-inflection-point-ventures-11704251",
+        "summary": "DAAKit, a hyperlocal fulfillment and last-mile logistics startup, has raised $138K in a pre-seed funding round led by Inflection Point Ventures. The funds will be used to expand operations, launch new dark stores, and strengthen its technology infrastructure and team. DAAKit was founded in 2024 and operates an asset-light logistics model, currently serving cities including Delhi, Gurugram, and Mumbai.",
+        "date_published": "2026-04-09",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL",
+          "UP",
+          "WB",
+          "MH",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "MSN biggest investor in battlefield AI systems maker Tsecond.ai",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/msn-biggest-investor-in-battlefield-ai-systems-maker-tsecond-ai/articleshow/130123596.cms",
+        "summary": "MSN is the largest investor in Tsecond.ai, a company that develops battlefield AI systems. Tsecond.ai creates artificial intelligence technologies for military use, with MSN holding a significant stake in the company. The investment underscores MSN's interest in AI-powered defense technologies.",
+        "date_published": "2026-04-09",
+        "source_name": "Times of India - Thane",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "AI made developers faster. So why are product teams still slow?",
         "url": "https://yourstory.com/2026/03/ai-made-developers-faster-so-why-are-product-teams-still-slow",
@@ -1200,5 +1264,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

@@ -1445,6 +1445,30 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "DAAKit raises $138K in pre-seed round led by Inflection Point Ventures",
+        "url": "https://entrackr.com/snippets/daakit-raises-138k-in-pre-seed-round-led-by-inflection-point-ventures-11704251",
+        "summary": "DAAKit, a hyperlocal fulfillment and last-mile logistics startup, has raised $138K in a pre-seed funding round led by Inflection Point Ventures. The funds will be used to expand operations, launch new dark stores, and strengthen its technology infrastructure and team. DAAKit was founded in 2024 and operates an asset-light logistics model, currently serving cities including Delhi, Gurugram, and Mumbai.",
+        "date_published": "2026-04-09",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL",
+          "UP",
+          "WB",
+          "MH",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "How two Bengaluru brothers are building a GitHub alternative for the AI age from Finland",
         "url": "https://yourstory.com/2026/04/bengaluru-brothers-building-github-alternative-ai-age-finland",
@@ -1929,6 +1953,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }

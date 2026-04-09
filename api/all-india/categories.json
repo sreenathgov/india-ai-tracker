@@ -934,6 +934,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "Enterprise AI startup Nava raises $22 Mn led by Greenoaks Capital",
+        "url": "https://entrackr.com/news/enterprise-ai-startup-nava-raises-22-mn-led-by-greenoaks-capital-11703910",
+        "summary": "Nava, an enterprise AI startup, has raised $22 million in a funding round led by Greenoaks Capital, with participation from RTP Global and Unicorn India Ventures. This funding round follows a previous seed round of $9.6 million led by RTP Global in July last year. The proceeds will be used to build a full-stack AI cloud infrastructure platform focused on the Asia-Pacific region.",
+        "date_published": "2026-04-09",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "AI boosts D2C delivery rates by 11% in Tier-2 markets",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-boosts-d2c-delivery-rates-by-11-in-tier-2-markets/130080696",
@@ -1020,6 +1040,26 @@
         "summary": "Lenovo has launched its latest ultra-premium AI PCs in India, featuring the Yoga series. These new PCs are designed to provide advanced AI capabilities and enhanced user experience. The launch aims to redefine the ultra-premium PC segment in the Indian market.",
         "date_published": "2026-04-08",
         "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "AI is core to national resilience, but India&#039;s adoption gap remains",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/bridging-the-ai-adoption-gap-indias-journey-towards-national-resilience/130103697",
+        "summary": "India's government is leading in AI adoption, but the country's enterprises are lagging due to execution challenges and security concerns. Experts stress the need for bold action, robust infrastructure, and upskilling to unlock AI's potential, particularly in data-intensive sectors. Successful AI integration in India also requires trust and imagination, according to experts.",
+        "date_published": "2026-04-08",
+        "source_name": "ET CIO - AI",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -6641,6 +6681,66 @@
     "AI Start-Up News": [
       {
         "id": 3,
+        "title": "NVIDIA DGX Spark brings sovereign AI to your desktop",
+        "url": "https://yourstory.com/2026/04/nvidia-dgx-spark-brings-sovereign-ai-to-your-desktop",
+        "summary": "NVIDIA's DGX Spark enables sovereign AI on personal desktops, allowing users to deploy large models. A technical session hosted by RP Tech, an NVIDIA partner, will demonstrate how to deploy models like Sarvam 30B and Param-2-17B. This session will showcase the capabilities of the DGX Spark as a personal AI supercomputer.",
+        "date_published": "2026-04-09",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Astranova Mobility raises Rs 60 Cr in funding round led by IvyCap Ventures",
+        "url": "https://yourstory.com/2026/04/astranova-mobility-raises-rs-60-cr-funding-round-ivycap-ventures",
+        "summary": "Astranova Mobility has raised Rs 60 Cr in a funding round led by IvyCap Ventures. The company plans to utilize a significant portion of the funds to enhance its data, AI, and engineering capabilities. This investment is expected to support the company's growth and development.",
+        "date_published": "2026-04-09",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "VerSe Innovation appoints Prasanna Prasad as CPTO",
+        "url": "https://entrackr.com/snippets/verse-innovation-appoints-prasanna-prasad-as-cpto-11704129",
+        "summary": "VerSe Innovation has appointed Prasanna Prasad as Chief Product and Technology Officer (CPTO) to lead its engineering, product, and data science functions. Prasad will focus on advancing AI-led capabilities across VerSe's platforms, including Dailyhunt and Josh. He joins from Verve Group Inc., where he served as Chief Technology Officer and Head of Product and AI, bringing over two decades of experience in product engineering and data science.",
+        "date_published": "2026-04-09",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "Agentic AI startups Xccelera raises funding from Ramakant Sharma, others",
         "url": "https://entrackr.com/snippets/agentic-ai-startups-xccelera-raises-rs-12-cr-from-ramakant-sharma-others-11460932",
         "summary": "Xccelera, an agentic AI startup, has raised Rs 1.2 crore in funding from investors including Ramakant Sharma, Asad Khan, and Amiya Pathak. The funds will be used to expand its engineering team, strengthen its multi-agent AI systems, and scale enterprise deployments. Xccelera is building a \"services-as-software\" platform that uses AI agents to automate enterprise workflows, replacing manual processes with autonomous systems.",
@@ -8050,6 +8150,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }

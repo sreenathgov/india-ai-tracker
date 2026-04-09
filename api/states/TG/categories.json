@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "Teaching Drones to Adapt",
+        "url": "https://www.iiit.ac.in/teaching-drones-to-adapt/",
+        "summary": "IIIT-H's Social Tech Incubator and EPAM have launched the 4th ESIIP Cohort for deep-tech climate impact, focusing on teaching drones to adapt. The initiative is part of the institute's efforts to promote innovation in deep-tech and climate impact. IIIT-H is also hosting various events and showcases, including a roundtable on quantum technologies and an R&D showcase, to promote technological advancements.",
+        "date_published": "2026-04-09",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "BRS leader KT Rama Rao flags AI threat, urges youth to upgrade skills",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/brs-leader-kt-rama-rao-flags-ai-threat-urges-youth-to-upgrade-skills/articleshow/130066715.cms",
@@ -1208,5 +1228,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
