@@ -955,6 +955,26 @@
       },
       {
         "id": 1,
+        "title": "AI for networking is entering the self-driving era",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-for-networking-is-entering-the-self-driving-era/130133738",
+        "summary": "Enterprise networks are evolving to prioritize proactive issue detection, prediction, and resolution to minimize business impact. The focus is shifting from just uptime to a more holistic approach that incorporates sensing and resolving problems early. This shift is driven by the growing complexity of distributed enterprise environments.",
+        "date_published": "2026-04-09",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "AI boosts D2C delivery rates by 11% in Tier-2 markets",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-boosts-d2c-delivery-rates-by-11-in-tier-2-markets/130080696",
         "summary": "Digital-first brands are using AI-led interventions to improve last-mile delivery success in Tier-2 and smaller Indian cities. These strategies have boosted delivery rates by 11% in such markets. AI-led interventions include voice calls, automated verification, and COD-to-prepaid conversion to overcome delivery challenges.",
@@ -6740,6 +6760,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 2,
+        "title": "Astranova Mobility raises Rs 60 Cr in Series A led by IvyCap Ventures",
+        "url": "https://entrackr.com/snippets/astranova-mobility-raises-rs-60-cr-in-series-a-led-by-ivycap-ventures-11704150",
+        "summary": "Astranova Mobility, an EV financing and asset management platform, has raised Rs 60 crore in a Series A funding round led by IvyCap Ventures. The round also saw participation from existing investors, including Asian Development Bank and Advantedge Founders. The funds will be used to enhance the company's data, AI, and engineering capabilities and scale its EV financing platform.",
+        "date_published": "2026-04-09",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Agentic AI startups Xccelera raises funding from Ramakant Sharma, others",
         "url": "https://entrackr.com/snippets/agentic-ai-startups-xccelera-raises-rs-12-cr-from-ramakant-sharma-others-11460932",
@@ -8149,8 +8189,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
-  ]
+  "today_updates": []
 }
