@@ -87,6 +87,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "‘AI adoption likely to spur consolidation in data analytics space’",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/ai-adoption-likely-to-spur-consolidation-in-data-analytics-space/articleshow/130177492.cms",
+        "summary": "The adoption of artificial intelligence is expected to drive consolidation in the data analytics space. As AI becomes more prevalent, companies may look to acquire or merge with other firms to enhance their data analytics capabilities. This consolidation is likely to reshape the data analytics industry in the near future.",
+        "date_published": "2026-04-11",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "IIT Madras director advocates Sanskrit’s role in advancing AI technology",
+        "url": "https://www.thehindu.com/news/national/andhra-pradesh/iitm-director-dwells-on-intersecting-sanskrit-and-ai/article70847567.ece",
+        "summary": "The director of IIT Madras has spoken out about the potential benefits of Sanskrit in advancing AI technology. According to the director, Sanskrit can play a significant role in the development of artificial intelligence. The ancient language's unique grammatical structure is seen as a potential asset in improving AI systems.",
+        "date_published": "2026-04-10",
+        "source_name": "The Hindu - Andhra Pradesh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Chennai college asks students to declare AI use in assignments",
         "url": "https://timesofindia.indiatimes.com/city/chennai/chennai-college-asks-students-to-declare-ai-use-in-assignments/articleshow/130069965.cms",
@@ -561,5 +601,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

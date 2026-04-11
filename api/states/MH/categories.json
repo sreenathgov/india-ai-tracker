@@ -1081,6 +1081,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 7,
+        "title": "‘AI investor’ Lemonbuddy takes position to evaluate startup ideas",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/ai-investor-lemonbuddy-takes-position-to-evaluate-startup-ideas/articleshow/130179467.cms",
+        "summary": "Lemonbuddy, an AI investor, has taken a position to evaluate startup ideas, utilizing its artificial intelligence capabilities to assess potential investments. This move aims to identify and support promising startups, providing them with the necessary resources to grow and succeed. Lemonbuddy's AI-driven approach is expected to streamline the evaluation process and make more informed investment decisions.",
+        "date_published": "2026-04-11",
+        "source_name": "Times of India - Thane",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "DAAKit raises $138K in pre-seed round led by Inflection Point Ventures",
         "url": "https://entrackr.com/snippets/daakit-raises-138k-in-pre-seed-round-led-by-inflection-point-ventures-11704251",
@@ -1264,5 +1284,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

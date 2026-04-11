@@ -125,6 +125,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "Gujarat police introduce AI tool to sharpen NDPS probes, boost conviction rates",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/gujarat-police-introduce-ai-tool-to-sharpen-ndps-probes-boost-conviction-rates/articleshow/130179349.cms",
+        "summary": "Gujarat police have introduced an AI tool to enhance investigations under the Narcotic Drugs and Psychotropic Substances (NDPS) Act. The tool aims to sharpen probes and boost conviction rates by analyzing evidence and providing insights. This initiative is expected to improve the effectiveness of NDPS cases in the state.",
+        "date_published": "2026-04-11",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Gujarat govt plans to deploy AI to detect ITC scams in GST",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/gujarat-govt-plans-to-deploy-ai-to-detect-itc-scams-in-gst/articleshow/130178935.cms",
+        "summary": "The Gujarat government plans to utilize artificial intelligence (AI) to detect Input Tax Credit (ITC) scams in the Goods and Services Tax (GST) system. This initiative aims to prevent tax evasion and improve the overall efficiency of the tax collection process. The AI system will help identify potential scams and anomalies in GST returns.",
+        "date_published": "2026-04-11",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "World Health Day: AI now powers diagnoses, surgeries at top hospitals in Ahmedabad",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/world-health-day-ai-now-powers-diagnoses-surgeries-at-top-hospitals-in-ahmedabad/articleshow/130069361.cms",
@@ -769,5 +809,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

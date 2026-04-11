@@ -5,6 +5,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Jaipur students launch AI platform for defence families​",
+        "url": "https://cellit.in/jaipur-students-launch-ai-platform-for-defence-families/",
+        "summary": "Students from Jaipur have launched an AI platform designed to support families of defence personnel. The platform aims to provide various services and assistance to these families, leveraging artificial intelligence technology. The launch is a notable initiative by the students to contribute to the welfare of defence families.",
+        "date_published": "2026-04-11",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "RJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Lumikai leads $1.5 Mn seed round in NPrep",
         "url": "https://entrackr.com/snippets/lumikai-leads-15-mn-seed-round-in-nprep-11193962",
@@ -68,5 +88,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

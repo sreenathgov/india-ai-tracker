@@ -934,6 +934,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Using tech to bridge rural agri knowledge gap; Meta and CoreWeave’s $21B AI deal",
+        "url": "https://yourstory.com/2026/04/-using-tech-to-bridge-rural-agri-knowledge-gap-meta",
+        "summary": "Digital Green India has partnered with state agencies to reach over 5.5 million smallholder farmers across nine states. Nearly 50% of the farmers reached are women, helping to bridge the rural agricultural knowledge gap. This initiative aims to utilize technology to improve agricultural practices and livelihoods in rural areas.",
+        "date_published": "2026-04-11",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Enterprise AI startup Nava raises $22 Mn led by Greenoaks Capital",
         "url": "https://entrackr.com/news/enterprise-ai-startup-nava-raises-22-mn-led-by-greenoaks-capital-11703910",
@@ -8189,5 +8209,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

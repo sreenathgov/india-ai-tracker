@@ -87,6 +87,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Prof. Hussain wins YFRF for sleep monitoring app",
+        "url": "https://www.iiit.ac.in/prof-hussain-wins-yfrf-for-sleep-monitoring-app/",
+        "summary": "Prof. Hussain has been awarded the YFRF for developing a sleep monitoring app. The award recognizes innovative solutions, and in this case, Prof. Hussain's app has been acknowledged for its potential impact. The details of the app and its functionality are not specified, but the award highlights Prof. Hussain's contribution to the field of technology and healthcare.",
+        "date_published": "2026-04-11",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "AI push, tight monitoring helped revenue surge: Bhatti",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/ai-push-tight-monitoring-helped-revenue-surge-bhatti/articleshow/130179021.cms",
+        "summary": "Bhatti attributes the recent revenue surge to a strong push for AI adoption and tight monitoring. This combination has reportedly led to a significant increase in revenue, although specific figures are not provided. The AI push and monitoring efforts have been key factors in driving the revenue growth, according to Bhatti.",
+        "date_published": "2026-04-11",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Teaching Drones to Adapt",
         "url": "https://www.iiit.ac.in/teaching-drones-to-adapt/",
@@ -1228,5 +1268,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
