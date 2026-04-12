@@ -6720,6 +6720,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 1,
+        "title": "Funding and acquisitions in Indian startup this week [Apr 6 - Apr 11]",
+        "url": "https://entrackr.com/report/weekly-funding-report/funding-and-acquisitions-in-indian-startup-this-week-apr-6-apr-11-11714653",
+        "summary": "Indian startups raised around $594.39 million in funding this week, with 2 growth-stage and 26 early-stage deals, and 3 undisclosed funding rounds. This amount surpasses the $100 million collectively secured by 21 startups in the previous week. The funding was distributed among 31 Indian startups.",
+        "date_published": "2026-04-11",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "NVIDIA DGX Spark brings sovereign AI to your desktop",
         "url": "https://yourstory.com/2026/04/nvidia-dgx-spark-brings-sovereign-ai-to-your-desktop",
@@ -8209,7 +8229,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

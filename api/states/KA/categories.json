@@ -246,6 +246,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "K’taka drafts AI-focused law to tighten social media regulation",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/ktaka-drafts-ai-focused-law-to-tighten-social-media-regulation/articleshow/130198799.cms",
+        "summary": "Karnataka has drafted a law focused on artificial intelligence to regulate social media platforms more effectively. The new law aims to tighten social media regulation, although specific details of the draft have not been disclosed. The move is part of a broader effort to increase oversight of online content and platforms.",
+        "date_published": "2026-04-12",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "A platform for ‘social coding’; LEAD bets on AI personalisation solution",
         "url": "https://yourstory.com/2026/04/a-platform-for-social-coding",
@@ -1952,5 +1972,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

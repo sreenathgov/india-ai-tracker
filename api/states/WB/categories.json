@@ -25,6 +25,46 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Abhishek flays Kabir on home turf. Don’t fall for AI clips: PM",
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/abhishek-flays-kabir-on-home-turf-dont-fall-for-ai-clips-pm/articleshow/130198834.cms",
+        "summary": "Prime Minister Abhishek criticized Kabir on his home turf, warning people not to fall for AI-generated clips. The PM's statement comes as a caution against the spread of misinformation through artificial intelligence. Abhishek's warning highlights the potential risks of AI-generated content.",
+        "date_published": "2026-04-12",
+        "source_name": "Times of India - Kolkata",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "West Bengal polls: PM Modi accuses TMC of AI conspiracy, promises UCC",
+        "url": "https://www.thehindu.com/videos/west-bengal-polls-pm-modi-accuses-tmc-of-ai-conspiracy-promises-ucc/article70850810.ece",
+        "summary": "Prime Minister Narendra Modi accused the Trinamool Congress (TMC) of using AI-generated fake videos as part of a conspiracy ahead of the West Bengal polls. He made these comments while addressing a rally in Jangipur, Murshidabad. Modi also promised to implement the Uniform Civil Code (UCC) in the state.",
+        "date_published": "2026-04-11",
+        "source_name": "The Hindu - West Bengal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Firms take on AI chatbots in visibility fight",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/firms-take-on-ai-chatbots-in-visibility-fight/130077404",
@@ -240,5 +280,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
