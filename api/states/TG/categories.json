@@ -88,6 +88,27 @@
     "Major AI Developments": [
       {
         "id": 3,
+        "title": "'DL and TS': Hyderabad doctor with 'James Bond-like switch' on BMW to flip no. plates arrested",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/doc-with-bond-like-switch-on-bmw-to-flip-no-plates-held-in-drunk-drive-check/articleshow/130219470.cms",
+        "summary": "A Hyderabad doctor was arrested for drunk driving after police discovered his BMW had a hidden device to flip between Delhi and Telangana registration plates. The device, likened to a \"James Bond-like switch,\" allowed the doctor to switch between \"DL\" and \"TS\" number plates, raising suspicions of road tax evasion. The doctor was charged with drunk driving, cheating, and impersonation after refusing to provide details to police.",
+        "date_published": "2026-04-13",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "Prof. Hussain wins YFRF for sleep monitoring app",
         "url": "https://www.iiit.ac.in/prof-hussain-wins-yfrf-for-sleep-monitoring-app/",
         "summary": "Prof. Hussain has been awarded the YFRF for developing a sleep monitoring app. The award recognizes innovative solutions, and in this case, Prof. Hussain's app has been acknowledged for its potential impact. The details of the app and its functionality are not specified, but the award highlights Prof. Hussain's contribution to the field of technology and healthcare.",
@@ -1268,5 +1289,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -935,6 +935,26 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "AI adoption drives demand: Tech Inc hiring cold but MNCs, local companies covet its leaders",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-adoption-drives-demand-tech-inc-hiring-cold-but-mncs-local-companies-covet-its-leaders/130219654",
+        "summary": "Demand for senior technology leaders in India is surging, driven by the need for experts to lead AI adoption and digital transformation. Both domestic and multinational corporations are actively recruiting for these roles, despite a broader tech hiring slowdown. India is emerging as a key hub for global tech leadership, with companies coveting its top tech talent.",
+        "date_published": "2026-04-13",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Using tech to bridge rural agri knowledge gap; Meta and CoreWeave’s $21B AI deal",
         "url": "https://yourstory.com/2026/04/-using-tech-to-bridge-rural-agri-knowledge-gap-meta",
         "summary": "Digital Green India has partnered with state agencies to reach over 5.5 million smallholder farmers across nine states. Nearly 50% of the farmers reached are women, helping to bridge the rural agricultural knowledge gap. This initiative aims to utilize technology to improve agricultural practices and livelihoods in rural areas.",
@@ -6720,6 +6740,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "Smart Garage raises Rs 2.4 Cr in pre-Series A round",
+        "url": "https://entrackr.com/snippets/smart-garage-raises-rs-24-cr-in-pre-series-a-round-11720170",
+        "summary": "Smart Garage, an AI-driven auto-service marketplace, has raised Rs 2.4 crore in a pre-Series A funding round as part of its plan to raise a total of Rs 15 crore. The company plans to use the funds to enhance its AI capabilities, expand its partner network, and achieve a Rs 80 crore revenue run rate by the end of FY27. The remaining Rs 12.6 crore is expected to be raised over the next 12-18 months to fuel expansion.",
+        "date_published": "2026-04-13",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Funding and acquisitions in Indian startup this week [Apr 6 - Apr 11]",
         "url": "https://entrackr.com/report/weekly-funding-report/funding-and-acquisitions-in-indian-startup-this-week-apr-6-apr-11-11714653",
@@ -8229,5 +8269,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments",
+    "AI Start-Up News"
+  ]
 }
