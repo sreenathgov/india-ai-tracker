@@ -1081,6 +1081,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "AI will automate work. India’s next startup wave will sell experiences",
+        "url": "https://yourstory.com/2026/04/ai-will-automate-work-indias-next-startup-wave-will-sell-experiences",
+        "summary": "India's next startup wave is expected to focus on selling experiences, as AI automates work and people seek unique human interactions. This shift is driven by the desire for authentic, unscripted experiences that cannot be replicated by technology. The value of human connection and storytelling will become a key differentiator in the market.",
+        "date_published": "2026-04-14",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "‘AI investor’ Lemonbuddy takes position to evaluate startup ideas",
         "url": "https://timesofindia.indiatimes.com/city/nagpur/ai-investor-lemonbuddy-takes-position-to-evaluate-startup-ideas/articleshow/130179467.cms",
@@ -1284,5 +1304,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

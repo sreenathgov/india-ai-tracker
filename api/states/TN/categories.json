@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "AI hologram campaigns take TN polls by storm as Vijay’s virtual avatar draws crowds",
+        "url": "https://telanganatoday.com/ai-hologram-campaigns-take-tn-polls-by-storm-as-vijays-virtual-avatar-draws-crowds",
+        "summary": "AI-powered holograms of Vijay are being used in election campaigns in Tamil Nadu, allowing for virtual outreach and immersive voter engagement. This technology is being adopted by political parties to enhance their visibility and appeal ahead of the Assembly elections. The use of holograms is transforming the election campaign landscape in the state, drawing large crowds and increasing voter interaction.",
+        "date_published": "2026-04-14",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "‘AI adoption likely to spur consolidation in data analytics space’",
         "url": "https://timesofindia.indiatimes.com/city/chennai/ai-adoption-likely-to-spur-consolidation-in-data-analytics-space/articleshow/130177492.cms",
@@ -601,5 +621,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

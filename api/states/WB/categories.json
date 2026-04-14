@@ -25,6 +25,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "IIT-Kgp launches online programmes on AI, ML",
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/iit-kgp-launches-online-programmes-on-ai-ml/articleshow/130246616.cms",
+        "summary": "IIT Kharagpur has launched online programs focused on Artificial Intelligence (AI) and Machine Learning (ML). The institute aims to provide accessible education on these emerging technologies through its online platform. The launch is part of the institute's efforts to expand its educational offerings and cater to a wider audience.",
+        "date_published": "2026-04-14",
+        "source_name": "Times of India - Kolkata",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Abhishek flays Kabir on home turf. Don’t fall for AI clips: PM",
         "url": "https://timesofindia.indiatimes.com/city/kolkata/abhishek-flays-kabir-on-home-turf-dont-fall-for-ai-clips-pm/articleshow/130198834.cms",
@@ -280,5 +300,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

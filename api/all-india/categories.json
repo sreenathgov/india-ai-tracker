@@ -955,6 +955,66 @@
       },
       {
         "id": 1,
+        "title": "India’s manufacturing giants are embracing agentic AI to enhance efficiencies",
+        "url": "https://www.livemint.com/ai/indias-manufacturing-giants-are-embracing-agentic-ai-to-enhance-efficiencies-11776070161868.html",
+        "summary": "India's manufacturing sector is shifting towards an Agentic Enterprise model, where AI enhances decision-making and logistics. This shift requires reskilling workers and integrating AI into daily operations. The model aims to increase efficiencies by leveraging AI as a strategic teammate.",
+        "date_published": "2026-04-13",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "How ClearTax is using AI Agents to simplify tax filing in India",
+        "url": "https://www.livemint.com/ai/how-clear-is-using-ai-agents-to-simplify-tax-filing-in-india-11776062108888.html",
+        "summary": "ClearTax has developed AI-powered tools to simplify tax filing in India, including a WhatsApp tax-filing service. The company spent two years developing these tools, which aim to provide genuine utility beyond just hype. ClearTax's CTO Suvesh Malhotra emphasizes the importance of cultural commitment and infrastructure in achieving AI success.",
+        "date_published": "2026-04-13",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Cashfree Payments appoints Sameer Gandhi as CFO",
+        "url": "https://entrackr.com/snippets/cashfree-payments-appoints-sameer-gandhi-as-cfo-11720935",
+        "summary": "Cashfree Payments has appointed Sameer Gandhi as its Chief Financial Officer, bringing over two decades of experience from global financial institutions. Gandhi will lead the company's financial strategy, focusing on operational efficiency and revenue planning to drive growth and profitability. He previously served as Head of Finance at Visa India, leading financial operations and planning.",
+        "date_published": "2026-04-13",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Using tech to bridge rural agri knowledge gap; Meta and CoreWeave’s $21B AI deal",
         "url": "https://yourstory.com/2026/04/-using-tech-to-bridge-rural-agri-knowledge-gap-meta",
         "summary": "Digital Green India has partnered with state agencies to reach over 5.5 million smallholder farmers across nine states. Nearly 50% of the farmers reached are women, helping to bridge the rural agricultural knowledge gap. This initiative aims to utilize technology to improve agricultural practices and livelihoods in rural areas.",
@@ -6740,6 +6800,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "TraqCheck raises $8 Mn Series A led by IvyCap Ventures",
+        "url": "https://entrackr.com/snippets/traqcheck-raises-8-mn-series-a-led-by-ivycap-ventures-11723958",
+        "summary": "TraqCheck, an AI enterprise startup, has raised $8 million in a Series A funding round led by IvyCap Ventures. The funds will be used to expand into Europe, enhance its AI agent offerings, and scale its go-to-market efforts. TraqCheck is developing AI agents to automate hiring workflows, including talent sourcing, screening, and background verification.",
+        "date_published": "2026-04-14",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Smart Garage raises Rs 2.4 Cr in pre-Series A round",
         "url": "https://entrackr.com/snippets/smart-garage-raises-rs-24-cr-in-pre-series-a-round-11720170",
@@ -8270,7 +8350,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
     "AI Start-Up News"
   ]
 }
