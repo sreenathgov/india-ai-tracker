@@ -247,6 +247,27 @@
     "Major AI Developments": [
       {
         "id": 3,
+        "title": "DevSparks Bengaluru 2026 returns to decode AI—and the future of developers",
+        "url": "https://yourstory.com/2026/04/devsparks-bengaluru-2026-returns-to-decode-aiand-future-developers",
+        "summary": "YourStory's DevSparks Bengaluru 2026 will take place on May 30, focusing on AI and the future of developers. The event follows a successful edition in Pune and aims to turn uncertainty into opportunity. It will serve as a flagship developer summit in Bengaluru.",
+        "date_published": "2026-04-15",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "K’taka drafts AI-focused law to tighten social media regulation",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/ktaka-drafts-ai-focused-law-to-tighten-social-media-regulation/articleshow/130198799.cms",
         "summary": "Karnataka has drafted a law focused on artificial intelligence to regulate social media platforms more effectively. The new law aims to tighten social media regulation, although specific details of the draft have not been disclosed. The move is part of a broader effort to increase oversight of online content and platforms.",
@@ -1993,6 +2014,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

@@ -163,6 +163,67 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "DevSparks Bengaluru 2026 returns to decode AI—and the future of developers",
+        "url": "https://yourstory.com/2026/04/devsparks-bengaluru-2026-returns-to-decode-aiand-future-developers",
+        "summary": "YourStory's DevSparks Bengaluru 2026 will take place on May 30, focusing on AI and the future of developers. The event follows a successful edition in Pune and aims to turn uncertainty into opportunity. It will serve as a flagship developer summit in Bengaluru.",
+        "date_published": "2026-04-15",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Access, Not Excess: Inside Ai+’s Pricing and Ecosystem Play",
+        "url": "https://timesofindia.indiatimes.com/city/pune/access-not-excess-inside-ais-pricing-and-ecosystem-play/articleshow/130257840.cms",
+        "summary": "Ai+'s approach focuses on providing access to its services rather than excess, with a pricing strategy that aims to make its offerings more widely available. The company is working to build a robust ecosystem that supports its mission of accessibility. Ai+ is implementing a unique pricing and ecosystem play to achieve its goals.",
+        "date_published": "2026-04-15",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "AI &amp; Stipend Demand Take Centre Stage In DBA Polls",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/ai-stipend-demand-take-centre-stage-in-dba-polls/articleshow/130267997.cms",
+        "summary": "AI and stipend demands are key issues in the DBA polls, with candidates focusing on these topics. The polls are taking place, with AI being a central theme, although specific details of the demands are not provided. The election is being covered by news outlets, including the Times of India, which is reporting on the developments.",
+        "date_published": "2026-04-15",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Beyond the cloud: NVIDIA explores local AI systems at DevSparks Pune 2026, with RP Tech, an NVIDIA partner",
         "url": "https://yourstory.com/2026/04/nvidia-explores-local-ai-systems-devsparks-pune-2026-rp-tech-nvidia-partner",
@@ -1305,6 +1366,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

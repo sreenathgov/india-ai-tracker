@@ -935,6 +935,86 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "Entry-level IT roles down 20–25% as AI pushes India toward specialised hiring",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/indiaitjobsaishiftentryleveldeclinenewskilldemand-11776168572879.html",
+        "summary": "India's IT industry is experiencing a shift with entry-level roles decreasing by 20-25% due to AI. Meanwhile, demand is increasing for higher-skilled jobs, creating a gap between job opportunities and workforce preparedness. This transition is driven by the growing use of AI, which is automating routine tasks and changing the industry's hiring needs.",
+        "date_published": "2026-04-15",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "GobbleCube raises $15 Mn in Series A round led by Susquehanna",
+        "url": "https://entrackr.com/news/gobblecube-raises-15-mn-in-series-a-round-led-by-susquehanna-11727235",
+        "summary": "GobbleCube, an AI-based brand analytics platform, has raised $15 million in a Series A funding round led by Susquehanna Venture Capital. The round also saw participation from existing investors InfoEdge Ventures and Kae Capital, adding to the $3.5 million raised in a pre-Series A round in July 2025. The funds will be used for product development, hiring, and expanding its global presence, as well as advancing its AI capabilities.",
+        "date_published": "2026-04-15",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India&#039;s AI infrastructure buildup will bolster Southeast Asian tech hubs",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-infrastructure-buildup-will-bolster-southeast-asian-tech-hubs/130255989",
+        "summary": "India's development of artificial intelligence infrastructure is expected to enhance regional AI capacity. This buildup will not divert investment away from established Southeast Asian tech hubs like Singapore and Malaysia, according to industry leaders. The move is likely to bolster the overall tech ecosystem in the region.",
+        "date_published": "2026-04-14",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "LinkedIn tests AI training roles offering up to Rs 14,000 per hour",
+        "url": "https://telanganatoday.com/linkedin-tests-ai-training-roles-offering-up-to-rs-14000-per-hour",
+        "summary": "LinkedIn is testing an AI labour marketplace that offers training roles with hourly pay of up to Rs 14,000. The platform aims to hire trainers across various sectors to enhance AI systems. The trials are currently underway in the US with limited availability.",
+        "date_published": "2026-04-14",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "AI adoption drives demand: Tech Inc hiring cold but MNCs, local companies covet its leaders",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-adoption-drives-demand-tech-inc-hiring-cold-but-mncs-local-companies-covet-its-leaders/130219654",
         "summary": "Demand for senior technology leaders in India is surging, driven by the need for experts to lead AI adoption and digital transformation. Both domestic and multinational corporations are actively recruiting for these roles, despite a broader tech hiring slowdown. India is emerging as a key hub for global tech leadership, with companies coveting its top tech talent.",
@@ -8350,6 +8430,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }
