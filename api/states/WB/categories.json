@@ -25,6 +25,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "Netting hilsa with AI: Smart maps locate rich zones but raise overfishing concerns",
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/netting-hilsa-with-ai-smart-maps-locate-rich-zones-but-raise-overfishing-concerns/articleshow/130298144.cms",
+        "summary": "An AI-powered forecasting system called XGBoost has been launched to help fishers locate hilsa shoals in the Bay of Bengal by analyzing environmental data. The system, developed by INCOIS, aims to boost catches by predicting fish-rich zones. However, its introduction has raised concerns about sustainability and potential overfishing among some fishing communities.",
+        "date_published": "2026-04-16",
+        "source_name": "Times of India - Kolkata",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "IIT-Kgp launches online programmes on AI, ML",
         "url": "https://timesofindia.indiatimes.com/city/kolkata/iit-kgp-launches-online-programmes-on-ai-ml/articleshow/130246616.cms",
@@ -300,5 +320,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
