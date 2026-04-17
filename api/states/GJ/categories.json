@@ -125,6 +125,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "71 students part of first BPGP-BA&amp;AI batch at IIM Ah",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/71-students-part-of-first-bpgp-baai-batch-at-iim-ah/articleshow/130316886.cms",
+        "summary": "The Indian Institute of Management Ahmedabad (IIM-A) has introduced its first batch of Business Analytics and Artificial Intelligence (BA&AI) under the BPGP program. A total of 71 students are part of this inaugural batch. The BPGP-BA&AI program aims to equip students with skills in business analytics and artificial intelligence.",
+        "date_published": "2026-04-17",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Gujarat police introduce AI tool to sharpen NDPS probes, boost conviction rates",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/gujarat-police-introduce-ai-tool-to-sharpen-ndps-probes-boost-conviction-rates/articleshow/130179349.cms",
@@ -809,5 +829,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

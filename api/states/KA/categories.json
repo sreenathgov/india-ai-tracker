@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 7,
+        "title": "Karnataka Cabinet approves AI Centre of Excellence at Electronics City in Bengaluru",
+        "url": "https://www.thehindu.com/news/national/karnataka/karnataka-cabinet-approves-ai-centre-of-excellence-at-electronics-city-in-bengaluru/article70872478.ece",
+        "summary": "The Karnataka Cabinet has approved the establishment of an AI Centre of Excellence at Electronics City in Bengaluru. A Technology & Innovation Museum will also be developed in east Bengaluru under a Public-Private Partnership model. The total project cost for the museum is ₹100 crore.",
+        "date_published": "2026-04-17",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "UP govt scraps  ₹25,000 crore MoU with Bengaluru-based Puch AI citing credibility concerns",
         "url": "https://www.livemint.com/ai/artificial-intelligence/up-govt-scraps-25-000-crore-mou-with-bengaluru-based-puch-ai-citing-credibility-concerns-11774610427507.html",
@@ -2033,5 +2053,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

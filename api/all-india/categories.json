@@ -4,6 +4,66 @@
     "Policies and Initiatives": [
       {
         "id": 2,
+        "title": "Centre forms high-level inter-ministerial body to steer AI governance strategy",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/centre-forms-high-level-inter-ministerial-body-to-steer-ai-governance-strategy/130322122",
+        "summary": "India has formed a high-level inter-ministerial body called AIGEG, headed by Union IT Minister Ashwini Vaishnaw, to guide the nation's AI governance strategy. AIGEG will coordinate policies across ministries and regulators, and assess AI's impact on the labor market. The group will develop a roadmap for AI deployment over the next decade.",
+        "date_published": "2026-04-17",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Brandworks Technologies Signs MoU with MeitY Startup Hub to Boost AI-Led Electronics...",
+        "url": "https://cellit.in/brandworks-technologies-signs-mou-with-meity-startup-hub-to-boost-ai-led-electronics-manufacturing-systems/",
+        "summary": "Brandworks Technologies has signed a Memorandum of Understanding (MoU) with MeitY Startup Hub to promote AI-led electronics manufacturing. The partnership aims to foster innovation and growth in the electronics sector through artificial intelligence. This collaboration is expected to boost the development of AI-driven electronics in India.",
+        "date_published": "2026-04-17",
+        "source_name": "CellIt Magazine",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Govt forms high-level AI governance panel to steer policy framework; Vaishnaw to lead",
+        "url": "https://www.tribuneindia.com/news/india/govt-forms-high-level-ai-governance-panel-to-steer-policy-framework-vaishnaw-to-lead",
+        "summary": "The Indian government has formed a high-level inter-ministerial body, the AI Governance and Economic Group (AIGEG), to oversee the country's artificial intelligence policy framework. Union Minister Ashwini Vaishnaw will lead the panel, which will serve as the central institutional mechanism for AI governance, policy development, and coordination. The AIGEG aims to steer India's AI policy framework, with MeitY constituting the group.",
+        "date_published": "2026-04-17",
+        "source_name": "Tribune - Delhi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "Memory chip shortage due to AI buildout, not West Asia conflict, says IT Minister Ashwini Vaishnaw",
         "url": "https://www.etnownews.com/technology/memory-chip-shortage-due-to-ai-buildout-not-west-asia-conflict-says-it-minister-ashwini-vaishnaw-article-153955378",
         "summary": "India's IT Minister Ashwini Vaishnaw attributes the memory chip shortage to the AI buildout, rather than the West Asia conflict. The Indian government is actively promoting semiconductor manufacturing, with the Prime Minister inaugurating the country's first semiconductor plant last month and another one scheduled for next month. This indicates a positive approach by the government towards addressing semiconductor concerns.",
@@ -934,6 +994,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Indian digital ad market likely to double to USD 22 billion by 2030",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/indias-digital-advertising-market-set-to-surge-to-22-billion-by-2030/130323334",
+        "summary": "India's digital advertising market is projected to double to $22 billion by 2030, outpacing the broader economy. Mobile advertising is expected to continue dominating the market, with a focus on privacy, AI, and data driving future growth. This expansion will favor companies that adapt to these emerging trends and technologies.",
+        "date_published": "2026-04-17",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "AI Startups To Watch: 5 Indian AI Startups That Caught Our Eye In April",
         "url": "https://inc42.com/startups/ai-startups-to-watch-5-indian-ai-startups-that-caught-our-eye-in-april/",
@@ -960,6 +1040,66 @@
         "summary": "Intellithink, an industrial AI startup, has raised Rs 17 crore in a seed round led by Pentathlon Ventures, with participation from Anicut Capital and Veltis Capital. The company will use the funds to expand its customer base across India and the Middle East. Intellithink's AI platform focuses on machine health and energy efficiency, providing predictive maintenance, remote monitoring, and fault diagnosis solutions.",
         "date_published": "2026-04-16",
         "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Which Indian city has most ChatGPT users? India among top nations in AI adoption, says OpenAI study - FULL details",
+        "url": "https://www.etnownews.com/technology/which-indian-city-has-most-chatgpt-users-india-among-top-nations-in-ai-adoption-says-openai-study-full-details-article-154090629",
+        "summary": "India is among the top nations in AI adoption, with a significant concentration of users in a few major metropolitan cities. According to OpenAI, the country's AI usage is led by a select number of cities, although the specific city with the most ChatGPT users is not specified. India's high AI adoption rate places it among the world's leading countries in this field.",
+        "date_published": "2026-04-16",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Freshworks to host webinar on tackling IT complexity in the age of AI",
+        "url": "https://yourstory.com/2026/04/freshworks-webinar-tackling-complexity-in-the-age-of-ai",
+        "summary": "Freshworks is hosting a webinar on managing IT complexity in the age of AI. The webinar aims to help organizations deliver more without adding complexity. It will focus on adopting AI, streamlining operations, and driving measurable impact.",
+        "date_published": "2026-04-16",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Lumio launches Vision 9 (2026) smart TVs with focus on speed and immersive viewing",
+        "url": "https://telanganatoday.com/lumio-launches-vision-9-2026-smart-tvs-with-focus-on-speed-and-immersive-viewing",
+        "summary": "Lumio has launched its Vision 9 (2026) smart TVs in India, featuring enhanced performance and immersive viewing capabilities. The TVs boast QD MiniLED display, Dolby Atmos audio, and AI-powered content discovery. The models will be available starting April 24, with prices starting at Rs 72,999.",
+        "date_published": "2026-04-16",
+        "source_name": "Telangana Today - Tech",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -7040,6 +7180,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "Ola’s Krutrim AI assistant Kruti inaccessible across web and app stores",
+        "url": "https://entrackr.com/news/olas-krutrim-ai-assistant-kruti-inaccessible-across-web-and-app-stores-11731476",
+        "summary": "Ola's AI assistant Kruti is currently inaccessible across web and mobile platforms, with the app no longer available on app stores and its web interface not functional. A message on the website indicates that Kruti AI is under maintenance, suggesting a service disruption. The reason for the disruption is not specified, but the company promises to be back soon with something new.",
+        "date_published": "2026-04-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "TraqCheck raises $8 Mn Series A led by IvyCap Ventures",
         "url": "https://entrackr.com/snippets/traqcheck-raises-8-mn-series-a-led-by-ivycap-ventures-11723958",
@@ -8590,6 +8750,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "Policies and Initiatives"
   ]
 }
