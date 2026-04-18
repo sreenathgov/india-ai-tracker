@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 1,
+        "title": "National AI policy for healthcare in the works",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/national-ai-policy-for-healthcare-in-the-works/130346486",
+        "summary": "India is developing a national policy for Artificial Intelligence in healthcare to shape the future of its healthcare system. The Ayushman Bharat scheme has been successful in reducing financial burdens on citizens, and data and AI are expected to play a key role in healthcare. Maharashtra is also leveraging advanced technology, including launching menopause clinics, as part of its digital health mission.",
+        "date_published": "2026-04-18",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 12,
         "title": "Gen AI startup Neysa turns unicorn after Blackstone-led $1.2 Bn funding",
         "url": "https://entrackr.com/news/gen-ai-startup-neysa-turns-unicorn-after-blackstone-led-12-bn-funding-11109995",
@@ -162,6 +182,26 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 5,
+        "title": "Shantakumar calls for AI-driven sugarcane farming model in K’taka, citing Maharashtra’s success",
+        "url": "https://timesofindia.indiatimes.com/city/hubballi/shantakumar-calls-for-ai-driven-sugarcane-farming-model-in-ktaka-citing-maharashtras-success/articleshow/130340134.cms",
+        "summary": "Shantakumar is advocating for an AI-driven sugarcane farming model in Karnataka, inspired by Maharashtra's successful implementation. He cites Maharashtra's success as a reason to adopt this approach in Karnataka. The proposed model aims to improve sugarcane farming efficiency using artificial intelligence.",
+        "date_published": "2026-04-18",
+        "source_name": "Times of India - Hubli",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 3,
         "title": "DevSparks Bengaluru 2026 returns to decode AI—and the future of developers",
@@ -1365,5 +1405,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments",
+    "Policies and Initiatives"
+  ]
 }

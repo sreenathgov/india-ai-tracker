@@ -25,6 +25,46 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "Alumnus’s son pledges 15cr to IIT-Kgp to launch AI centre for mining solutions",
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/alumnuss-son-pledges-15cr-to-iit-kgp-to-launch-ai-centre-for-mining-solutions/articleshow/130341136.cms",
+        "summary": "An alumnus's son has pledged 15 crore to IIT-Kharagpur to establish an AI centre focused on mining solutions. The centre aims to leverage artificial intelligence to improve mining operations and outcomes. This significant donation will support the development of innovative technologies and research in the field of mining.",
+        "date_published": "2026-04-18",
+        "source_name": "Times of India - Kolkata",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "IIT Kharagpur launches Rs 15 cr AI centre for mining innovation",
+        "url": "https://indianexpress.com/article/cities/kolkata/iit-kharagpur-launches-rs-15-cr-ai-centre-for-mining-innovation-10642661/",
+        "summary": "IIT Kharagpur has launched a new AI centre with a budget of Rs 15 crore to drive innovation in the mining sector. The centre aims to leverage artificial intelligence for advancements in mining technology. This initiative is expected to enhance mining operations and safety through AI-powered solutions.",
+        "date_published": "2026-04-18",
+        "source_name": "Indian Express - Kolkata",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Netting hilsa with AI: Smart maps locate rich zones but raise overfishing concerns",
         "url": "https://timesofindia.indiatimes.com/city/kolkata/netting-hilsa-with-ai-smart-maps-locate-rich-zones-but-raise-overfishing-concerns/articleshow/130298144.cms",
@@ -320,5 +360,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -1015,6 +1015,26 @@
       },
       {
         "id": 4,
+        "title": "Bigbasket appoints Arpit Jaiswal as Chief Growth Officer",
+        "url": "https://entrackr.com/snippets/bigbasket-appoints-arpit-jaiswal-as-chief-growth-officer-11736424",
+        "summary": "BigBasket has appointed Arpit Jaiswal as its Chief Growth Officer to drive profitable growth and category leadership. Jaiswal will lead growth initiatives across product, user acquisition, and market expansion, working closely with cross-functional teams. He will focus on deepening customer engagement, driving monetization efficiency, and scaling BigBasket's presence in urban and emerging markets.",
+        "date_published": "2026-04-17",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
         "title": "AI Startups To Watch: 5 Indian AI Startups That Caught Our Eye In April",
         "url": "https://inc42.com/startups/ai-startups-to-watch-5-indian-ai-startups-that-caught-our-eye-in-april/",
         "summary": "India's AI ecosystem faced challenges in April, despite OpenAI's dominance with a $122 Bn valuation. Five Indian AI startups caught attention for their innovative approaches. These startups are making a mark in the country's growing AI landscape, showcasing potential for growth and development.",
@@ -7180,6 +7200,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "Funding and acquisitions in Indian startup this week [Apr 13 - Apr 18]",
+        "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startup-this-week-apr-13-apr-18-11739056",
+        "summary": "Indian startups raised around $129 million in funding this week, with 17 startups securing investments across 2 growth-stage and 12 early-stage deals. In comparison, the previous week saw 31 startups collectively secure about $594.4 million. The current week's funding amount is significantly lower than the previous week's total.",
+        "date_published": "2026-04-18",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Ola’s Krutrim AI assistant Kruti inaccessible across web and app stores",
         "url": "https://entrackr.com/news/olas-krutrim-ai-assistant-kruti-inaccessible-across-web-and-app-stores-11731476",
@@ -8750,7 +8790,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "Policies and Initiatives"
+    "AI Start-Up News"
   ]
 }

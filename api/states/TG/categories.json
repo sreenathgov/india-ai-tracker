@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "LPL Financial’s GCC in Hyderabad; QAI Ventures’ focus on quantum AI startups",
+        "url": "https://yourstory.com/2026/04/lpl-financials-gcc-hyderabad-qai-ventures-focus-on-quantum-ai-startups",
+        "summary": "LPL Financial, a US-based wealth management firm, has opened a global capability centre in Hyderabad. QAI Ventures, a Switzerland-headquartered VC firm, is planning to establish a presence in India. The VC firm is focused on investing in quantum AI startups, although specific details about its India plans are not disclosed.",
+        "date_published": "2026-04-18",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "'DL and TS': Hyderabad doctor with 'James Bond-like switch' on BMW to flip no. plates arrested",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/doc-with-bond-like-switch-on-bmw-to-flip-no-plates-held-in-drunk-drive-check/articleshow/130219470.cms",
@@ -1289,5 +1309,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
