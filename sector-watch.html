@@ -12,7 +12,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Sector Watch - Kanan Labs</title>
+    <title>Sector Watch — Kanan Labs</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
         rel="stylesheet">
@@ -23,347 +23,1092 @@
     <link rel="stylesheet" href="css/back-button.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <style>
-        /* Override the overflow:hidden from main stylesheet */
         html {
             height: auto !important;
             overflow: auto !important;
+            scroll-behavior: smooth;
         }
 
-        body.about-page {
+        body.sw-page {
             height: auto !important;
             overflow: auto !important;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            background: var(--brand-navy);
+            background: #0a2f52;
         }
 
-        .about-header {
-            background: var(--brand-navy);
-            color: var(--brand-cream);
-            padding: 1.25rem 2.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(244, 235, 208, 0.15);
-        }
-
-        .about-header h1 {
-            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--brand-cream);
-        }
-
-        .about-header a {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            color: var(--brand-cream);
-            opacity: 0.7;
-            text-decoration: none;
-            font-size: 0.8125rem;
-            transition: opacity 0.15s ease;
-        }
-
-        .about-header a:hover {
-            opacity: 1;
-        }
-
-        .about-content {
-            flex: 1;
-            max-width: 720px;
+        /* ══════════════════════════════════
+           SHARED
+        ══════════════════════════════════ */
+        .sw-container {
+            max-width: 1040px;
             margin: 0 auto;
-            padding: 3rem 2rem;
+            padding: 0 3rem;
+            width: 100%;
         }
 
-        .about-content h2 {
-            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-            font-size: 1.75rem;
+        .sw-divider {
+            border: none;
+            border-top: 1px solid rgba(244, 235, 208, 0.07);
+            margin: 0;
+        }
+
+        .sw-section-label {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.6875rem;
             font-weight: 600;
-            color: var(--brand-cream);
-            margin-bottom: 0;
-        }
-
-        .about-content .kl-page-title-row {
-            margin-bottom: 2.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid rgba(244, 235, 208, 0.2);
-        }
-
-        .about-section {
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #f4ebd0;
+            opacity: 0.4;
             margin-bottom: 2.5rem;
         }
 
-        .about-section:last-of-type {
-            margin-bottom: 0;
+        /* ══════════════════════════════════
+           A. HERO — FULL-BLEED VIEWPORT
+        ══════════════════════════════════ */
+
+        /* Hero occupies the full viewport */
+        .sw-hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background: #0a2f52;
         }
 
-        .about-section h3 {
+        /* SVG as absolute full-bleed background */
+        .sw-hero__svg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+            display: block;
+            pointer-events: none;
+        }
+
+        /* Full-cover gradient — heavier at bottom for legibility */
+        .sw-hero__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(10, 47, 82, 0.18) 0%,
+                transparent 28%,
+                transparent 42%,
+                rgba(10, 47, 82, 0.52) 68%,
+                rgba(10, 47, 82, 0.88) 85%,
+                #0a2f52 100%
+            );
+            pointer-events: none;
+        }
+
+        /* Content block — pushed to the bottom via margin-top: auto */
+        .sw-hero__content {
+            position: relative;
+            z-index: 2;
+            margin-top: auto;
+            padding: 0 4rem 5.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;         /* right-align the column */
+            text-align: right;
+        }
+
+        .sw-hero__title {
+            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+            font-size: clamp(5rem, 9vw, 8.5rem);
+            font-weight: 400;
+            color: #f4ebd0;
+            line-height: 0.9;
+            letter-spacing: -0.01em;
+            margin: 0 0 1.5rem 0;
+        }
+
+        .sw-hero__tagline {
             font-family: 'Telegraf', 'Inter', sans-serif;
             font-size: 1rem;
+            color: #f4ebd0;
+            opacity: 0.68;
+            line-height: 1.65;
+            white-space: nowrap;
+            margin-bottom: 2.25rem;
+        }
+
+        .sw-hero__actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 1rem;
+        }
+
+        .sw-btn-primary {
+            display: inline-block;
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.8125rem;
             font-weight: 600;
-            color: var(--brand-cream);
-            opacity: 0.9;
-            margin-bottom: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #0a2f52;
+            background: #f4ebd0;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            white-space: nowrap;
         }
 
-        .about-section p {
+        .sw-btn-primary:hover {
+            background: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(244, 235, 208, 0.12);
+        }
+
+        .sw-btn-secondary {
             font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.9375rem;
-            color: var(--brand-cream);
-            opacity: 0.7;
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
+            font-size: 0.8125rem;
+            color: #f4ebd0;
+            opacity: 0.45;
+            text-decoration: none;
+            transition: opacity 0.15s ease;
+            letter-spacing: 0.04em;
         }
 
-        .about-section p:last-child {
-            margin-bottom: 0;
+        .sw-btn-secondary:hover {
+            opacity: 0.85;
         }
 
-        .about-section a {
-            color: var(--brand-cream);
-            opacity: 0.9;
-            text-decoration: underline;
-            text-underline-offset: 2px;
+        /* ══════════════════════════════════
+           B. WHAT IT DOES
+        ══════════════════════════════════ */
+        .sw-what {
+            padding: 5rem 0 4rem;
         }
 
-        .about-section a:hover {
-            opacity: 1;
+        .sw-what__grid {
+            display: grid;
+            grid-template-columns: 1fr 1px 1.65fr;
+            gap: 0 5rem;
+            align-items: center;
         }
 
-        .about-section ul {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.9375rem;
-            color: var(--brand-cream);
-            opacity: 0.7;
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
-            padding-left: 2rem;
-            list-style-type: disc;
+        .sw-what__divider {
+            width: 1px;
+            height: 100%;
+            min-height: 200px;
+            align-self: stretch;
+            background: linear-gradient(
+                to bottom,
+                transparent 0%,
+                rgba(244, 235, 208, 0.15) 20%,
+                rgba(244, 235, 208, 0.22) 50%,
+                rgba(244, 235, 208, 0.15) 80%,
+                transparent 100%
+            );
         }
 
-        .about-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            margin-top: 3rem;
-            padding: 2rem;
-            background: rgba(244, 235, 208, 0.08);
-            border-radius: 8px;
-            border: 1px solid rgba(244, 235, 208, 0.15);
-            text-align: center;
-        }
-
-        .cta-section h3 {
+        .sw-what__headline {
             font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--brand-cream);
-            margin-bottom: 0.75rem;
+            font-size: clamp(1.85rem, 3vw, 2.65rem);
+            font-weight: 400;
+            color: #f4ebd0;
+            line-height: 1.18;
+            margin-top: 1.25rem;
         }
 
-        .cta-section p {
+        .sw-what__body {
+            padding-top: 3.5rem;
+        }
+
+        .sw-what__body p {
             font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.875rem;
-            color: var(--brand-cream);
-            opacity: 0.7;
+            font-size: 1.0625rem;
+            color: #f4ebd0;
+            opacity: 0.62;
+            line-height: 1.85;
             margin-bottom: 1.25rem;
         }
 
-        .cta-button {
-            display: inline-block;
+        .sw-what__body p:last-child { margin-bottom: 0; }
+
+        .sw-what__body strong {
+            color: #f4ebd0;
+            opacity: 1;
+            font-weight: 600;
+        }
+
+        /* ══════════════════════════════════
+           C. WHO IT IS FOR
+        ══════════════════════════════════ */
+        .sw-who {
+            padding: 4rem 0;
+        }
+
+        .sw-who__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: rgba(244, 235, 208, 0.07);
+            border: 1px solid rgba(244, 235, 208, 0.07);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .sw-who__card {
+            background: #0d3662;
+            padding: 2rem 1.75rem 2.25rem;
+            transition: background 0.2s ease;
+        }
+
+        .sw-who__card:hover {
+            background: #0f3e73;
+        }
+
+        .sw-who__card-num {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.625rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            color: #db4a2b;
+            opacity: 0.8;
+            margin-bottom: 1.25rem;
+        }
+
+        .sw-who__card-title {
+            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #f4ebd0;
+            margin-bottom: 0.875rem;
+            line-height: 1.25;
+        }
+
+        .sw-who__card-body {
             font-family: 'Telegraf', 'Inter', sans-serif;
             font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--brand-navy);
-            background: var(--brand-cream);
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            transition: all 0.15s ease;
+            color: #f4ebd0;
+            opacity: 0.45;
+            line-height: 1.72;
         }
 
-        .cta-button:hover {
-            background: #fff;
-            transform: translateY(-1px);
+        /* ══════════════════════════════════
+           D. HOW IT WORKS — numbered pipeline
+        ══════════════════════════════════ */
+        .sw-how {
+            padding: 4rem 0;
         }
 
-        .cta-section form {
+        /* 4-column horizontal pipeline — equal columns, no overflow */
+        .sw-process {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            position: relative;
+        }
+
+        /* Connecting line running across all steps */
+        .sw-process::before {
+            content: '';
+            position: absolute;
+            top: 2.1rem;                    /* align to centre of step number */
+            left: calc(1.75rem / 2);        /* start at centre of first number */
+            right: calc(1.75rem / 2);
+            height: 1px;
+            background: linear-gradient(
+                to right,
+                rgba(219, 74, 43, 0.5),
+                rgba(244, 235, 208, 0.12) 60%,
+                rgba(244, 235, 208, 0.06)
+            );
+            pointer-events: none;
+        }
+
+        .sw-process__step {
+            padding: 0 2rem 0 0;
+            position: relative;
+        }
+
+        .sw-process__step:last-child { padding-right: 0; }
+
+        .sw-process__num {
+            font-family: 'Telegraf', 'Inter', monospace;
+            font-size: 0.625rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            color: #db4a2b;
+            opacity: 0.9;
+            background: #0a2f52;
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            padding-right: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .sw-process__title {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #f4ebd0;
+            opacity: 0.9;
+            margin-bottom: 0.875rem;
+            line-height: 1.3;
+            white-space: nowrap;
+        }
+
+        .sw-process__body {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.875rem;
+            color: #f4ebd0;
+            opacity: 0.45;
+            line-height: 1.72;
+        }
+
+        /* ══════════════════════════════════
+           E. PRODUCT PREVIEW
+        ══════════════════════════════════ */
+        .sw-preview {
+            padding: 4rem 0 6rem;
+        }
+
+        .sw-preview__wide {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            width: 100%;
+        }
+
+        .sw-preview__intro {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.9375rem;
+            color: #f4ebd0;
+            opacity: 0.48;
+            margin-bottom: 3rem;
+            max-width: 580px;
+            line-height: 1.7;
+        }
+
+        .sw-preview__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Mock UI card */
+        .mock-card {
+            background: rgba(34, 77, 120, 0.3);
+            border: 1px solid rgba(244, 235, 208, 0.09);
+            border-radius: 8px;
+            overflow: hidden;
+            font-family: 'Telegraf', 'Inter', monospace, sans-serif;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                        box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                        border-color 0.4s ease;
+            will-change: transform;
+        }
+
+        .mock-card:hover {
+            transform: scale(1.028);
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(244, 235, 208, 0.13);
+            border-color: rgba(244, 235, 208, 0.18);
+        }
+
+        .mock-card__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.1rem 1.75rem;
+            border-bottom: 1px solid rgba(244, 235, 208, 0.07);
+            background: rgba(244, 235, 208, 0.03);
+        }
+
+        .mock-card__header-label {
+            font-size: 0.625rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #f4ebd0;
+            opacity: 0.32;
+        }
+
+        .mock-card__preview-badge {
+            font-size: 0.5625rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #db4a2b;
+            opacity: 0.75;
+            border: 1px solid rgba(219, 74, 43, 0.3);
+            padding: 0.25rem 0.6rem;
+            border-radius: 2px;
+        }
+
+        .mock-card__body {
+            padding: 2rem 1.75rem;
+        }
+
+        /* Signal feed rows */
+        .signal-row {
+            display: grid;
+            grid-template-columns: 96px 1fr;
+            align-items: start;
+            gap: 1.25rem;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid rgba(244, 235, 208, 0.05);
+        }
+
+        .signal-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .signal-status {
+            flex-shrink: 0;
+            width: 96px;
+            text-align: center;
+            font-size: 0.5625rem;
+            font-weight: 700;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            padding: 0.3rem 0;
+            border-radius: 2px;
+            margin-top: 0.2rem;
+            white-space: nowrap;
+        }
+
+        .signal-status--open    { color: #4ade80; background: rgba(74, 222, 128, 0.08); border: 1px solid rgba(74, 222, 128, 0.2); }
+        .signal-status--blocked { color: #f87171; background: rgba(248, 113, 113, 0.08); border: 1px solid rgba(248, 113, 113, 0.2); }
+        .signal-status--cond    { color: #fbbf24; background: rgba(251, 191, 36, 0.08); border: 1px solid rgba(251, 191, 36, 0.2); }
+        .signal-status--unclear { color: #94a3b8; background: rgba(148, 163, 184, 0.08); border: 1px solid rgba(148, 163, 184, 0.2); }
+
+        .signal-text { flex: 1; }
+
+        .signal-text__title {
+            font-size: 0.9375rem;
+            color: #f4ebd0;
+            opacity: 0.82;
+            margin-bottom: 0.35rem;
+            line-height: 1.5;
+        }
+
+        .signal-text__meta {
+            font-size: 0.625rem;
+            color: #f4ebd0;
+            opacity: 0.3;
+            letter-spacing: 0.06em;
+        }
+
+        /* Decision context card */
+        .decision-card { padding: 2rem 1.75rem; }
+
+        .decision-card__row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.3rem;
+            padding-bottom: 1.3rem;
+            border-bottom: 1px solid rgba(244, 235, 208, 0.05);
+        }
+
+        .decision-card__row:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .decision-card__field {
+            font-size: 0.625rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #f4ebd0;
+            opacity: 0.28;
+            margin-bottom: 0.4rem;
+        }
+
+        .decision-card__value {
+            font-size: 1rem;
+            color: #f4ebd0;
+            opacity: 0.82;
+            line-height: 1.4;
+        }
+
+        .decision-card__value--orange { color: #db4a2b; opacity: 1; font-weight: 600; }
+        .decision-card__value--yellow { color: #fbbf24; opacity: 1; font-weight: 600; }
+
+        .preview-disclaimer {
+            margin-top: 1.75rem;
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.6875rem;
+            color: #f4ebd0;
+            opacity: 0.22;
+            text-align: center;
+            letter-spacing: 0.04em;
+        }
+
+        /* ══════════════════════════════════
+           F. UNDERLYING SYSTEM
+        ══════════════════════════════════ */
+        .sw-engine {
+            padding: 4rem 0;
+        }
+
+        .sw-engine__block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .sw-engine__text h3 {
+            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            font-weight: 600;
+            color: #f4ebd0;
+            margin-bottom: 1.5rem;
+            line-height: 1.18;
+        }
+
+        .sw-engine__text p {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #f4ebd0;
+            opacity: 0.62;
+            line-height: 1.82;
+            margin-bottom: 1rem;
+        }
+
+        .sw-engine__text p:last-child { margin-bottom: 0; }
+
+        .sw-engine__visual {
+            background: rgba(34, 77, 120, 0.25);
+            border: 1px solid rgba(244, 235, 208, 0.08);
+            border-radius: 5px;
+            padding: 2.25rem;
+        }
+
+        .engine-layer {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(244, 235, 208, 0.05);
+        }
+
+        .engine-layer:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .engine-layer__dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #db4a2b;
+            flex-shrink: 0;
+            opacity: 0.45;
+        }
+
+        .engine-layer__label {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #f4ebd0;
+            opacity: 0.45;
+            flex: 1;
+        }
+
+        .engine-layer__status {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.5625rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #f4ebd0;
+            opacity: 0.2;
+        }
+
+        /* ══════════════════════════════════
+           H. ACCESS CTA
+        ══════════════════════════════════ */
+        .sw-access {
+            margin-top: 4rem;
+            background: rgba(34, 77, 120, 0.2);
+            border-top: 1px solid rgba(219, 74, 43, 0.2);
+            padding: 6.5rem 3rem;
+        }
+
+        .sw-access__inner {
+            max-width: 1040px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .sw-access__text h2 {
+            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 600;
+            color: #f4ebd0;
+            margin-bottom: 1.25rem;
+            line-height: 1.15;
+        }
+
+        .sw-access__text p {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.9375rem;
+            color: #f4ebd0;
+            opacity: 0.52;
+            line-height: 1.8;
+        }
+
+        .sw-access__form {
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
-            max-width: 400px;
-            margin: 0 auto;
+            gap: 0.875rem;
         }
 
-        .cta-section form input {
-            padding: 0.75rem 1rem;
-            border-radius: 6px;
-            border: 1px solid rgba(244, 235, 208, 0.2);
-            background: rgba(244, 235, 208, 0.05);
-            color: var(--brand-cream);
+        .sw-access__input {
+            padding: 0.9rem 1.1rem;
+            border-radius: 4px;
+            border: 1px solid rgba(244, 235, 208, 0.14);
+            background: rgba(244, 235, 208, 0.04);
+            color: #f4ebd0;
             font-family: 'Telegraf', 'Inter', sans-serif;
             font-size: 0.875rem;
             outline: none;
             transition: border-color 0.2s ease;
         }
 
-        .cta-section form input::placeholder {
-            color: rgba(244, 235, 208, 0.4);
-        }
+        .sw-access__input::placeholder { color: rgba(244, 235, 208, 0.28); }
 
-        .cta-section form input:focus {
-            border-color: rgba(244, 235, 208, 0.5);
-        }
+        .sw-access__input:focus { border-color: rgba(244, 235, 208, 0.32); }
 
-        .cta-section form button {
-            width: 100%;
+        .sw-access__submit {
+            padding: 1rem 1.5rem;
+            border-radius: 4px;
             border: none;
+            background: #f4ebd0;
+            color: #0a2f52;
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
             cursor: pointer;
-            margin-top: 0.25rem;
+            transition: all 0.2s ease;
+            margin-top: 0.35rem;
         }
 
-        .cta-success {
+        .sw-access__submit:hover {
+            background: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        .sw-access__success {
             display: none;
-            margin-top: 1.25rem !important;
-            color: #4ade80 !important;
-            font-weight: 500;
-            opacity: 1 !important;
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.875rem;
+            color: #4ade80;
+            line-height: 1.6;
+            margin-top: 0.75rem;
         }
 
-        .about-footer {
-            margin-top: auto;
-            background: var(--brand-navy);
-            border-top: 1px solid rgba(244, 235, 208, 0.1);
+        .sw-access__note {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.6875rem;
+            color: #f4ebd0;
+            opacity: 0.25;
+            margin-top: 0.25rem;
+            line-height: 1.6;
         }
 
-        .about-footer .footer-attribution,
-        .about-footer .footer-links,
-        .about-footer .footer-description {
-            color: var(--brand-cream);
-        }
+        /* ══════════════════════════════════
+           RESPONSIVE
+        ══════════════════════════════════ */
+        @media (max-width: 920px) {
+            .sw-what__grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
 
-        .about-footer .footer-links a {
-            color: var(--brand-cream);
+            .sw-what__divider {
+                display: none;
+            }
+
+            .sw-what__body {
+                padding-top: 0;
+            }
+
+            .sw-process {
+                grid-template-columns: 1fr 1fr;
+                gap: 2.5rem;
+            }
+
+            .sw-process::before { display: none; }
+
+
+            .sw-engine__block {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .sw-access__inner {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
         }
 
         @media (max-width: 768px) {
-            .about-header {
+            .sw-hero__content {
+                padding: 0 2rem 4rem;
+            }
+
+            .sw-container {
+                padding: 0 1.75rem;
+            }
+
+            .sw-who__grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .sw-preview__wide {
+                padding: 0 1.75rem;
+            }
+
+            .sw-preview__grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .mock-card:hover {
+                transform: none;
+            }
+
+            .sw-access {
+                padding: 4rem 1.75rem;
+            }
+
+            .milestone {
+                flex-wrap: wrap;
+                gap: 0.875rem;
+            }
+
+            .milestone__desc {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .sw-what, .sw-who, .sw-how, .sw-preview, .sw-engine {
+                padding: 3.5rem 0;
+            }
+
+            .sw-who__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sw-process {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sw-hero__title {
+                font-size: clamp(3.5rem, 14vw, 5rem);
+            }
+
+            .sw-hero__content {
+                padding: 0 1.5rem 3.5rem;
+            }
+
+            .sw-hero__tagline {
+                white-space: normal;
+                font-size: 0.9375rem;
+            }
+
+            .sw-hero__actions {
                 flex-direction: column;
-                gap: 0.75rem;
-                text-align: center;
-                padding: 1rem 1.5rem;
-            }
-
-            .about-content {
-                padding: 2rem 1.5rem;
-            }
-
-            .about-content h2 {
-                font-size: 1.5rem;
-            }
-
-            .cta-section {
-                padding: 1.5rem;
-                margin-top: 2rem;
+                align-items: flex-end;
+                gap: 0.875rem;
             }
         }
     </style>
 </head>
 
-<body class="about-page">
-    <!-- Staggered menu will be injected here by staggered-menu.js -->
+<body class="sw-page">
+    <!-- Nav floats over hero (no spacer needed — hero is 100vh) -->
 
-    <div style="height: 80px;"></div> <!-- Spacer for menu -->
+    <!-- ════════════════════════
+         A. HERO
+    ════════════════════════ -->
+    <header class="sw-hero">
 
-    <main class="about-content">
-        <div class="kl-page-title-row">
-            <a href="index.html" class="kl-back-btn" aria-label="Back to home">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                    <path d="M7.5 2L3.5 6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </a>
-            <h2>About Sector Watch</h2>
+        <!-- SVG: full-bleed background -->
+        <img
+            src="added-assets/sectorwatch-web-image2.svg"
+            alt=""
+            class="sw-hero__svg"
+            aria-hidden="true"
+            draggable="false"
+        >
+
+        <!-- Gradient overlay -->
+        <div class="sw-hero__overlay" aria-hidden="true"></div>
+
+        <!-- Title + tagline + CTAs — anchored to bottom-right -->
+        <div class="sw-hero__content">
+            <h1 class="sw-hero__title">Sector Watch</h1>
+            <p class="sw-hero__tagline">A regulatory intelligence platform for firms navigating trade, compliance, and market-entry pressure.</p>
+            <div class="sw-hero__actions">
+                <a href="#access" class="sw-btn-primary">Request Early Access</a>
+                <a href="#preview" class="sw-btn-secondary">View product preview ↓</a>
+            </div>
         </div>
 
-        <section class="about-section">
-            <h3>Building Sector Watch<br><span
-                    style="font-weight: 400; opacity: 0.8; font-size: 0.9em; display: inline-block; margin-top: 0.25rem;">Agentic
-                    Regulatory Intelligence</span></h3>
-            <p>Regulation has become a structural variable in global trade. It shapes pricing, supply chains, market
-                access, and competitive positioning. For export-oriented firms, regulatory shifts are no longer episodic
-                events, they have become ongoing strategic inputs.</p>
-            <p>Today, companies respond through a mix of internal monitoring, external advisory retainers, and
-                fragmented interpretation cycles. The result is cost, delay, and uneven clarity. Kanan Labs is building
-                a different model.</p>
-            <p>We are developing an AI-native regulatory intelligence system designed to function as a continuous
-                strategic layer for businesses operating across jurisdictions. The objective is not to surface documents
-                or summarise policy updates. The objective is to translate regulatory movement into actionable business
-                understanding.</p>
-            <p>The platform is being built to:</p>
-            <ul>
-                <li>Track and interpret regulatory and institutional developments across major export corridors</li>
-                <li>Contextualise those developments against a firm's operating profile</li>
-                <li>Identify material exposure shifts</li>
-                <li>Enable structured discussion around strategic response</li>
-            </ul>
-            <p>The system does not replace executive judgment. It operationalises structured intelligence so that
-                judgment becomes faster, more informed, and less dependent on episodic external advisory cycles. It
-                behaves less like a dashboard and more like a persistent strategic counterpart. The user remains in
-                control.</p>
-        </section>
+    </header>
 
-        <section class="about-section">
-            <h3>Current Stage</h3>
-            <p>The initial MVP is concentrated on the Auto and EV export ecosystem spanning India, the European Union,
-                and the United States. This sector presents sustained regulatory evolution and meaningful trade policy
-                exposure, making it a disciplined environment for validation.</p>
-            <p>The build is intentionally infrastructure-led and conservative in scope. Priority is given to
-                interpretability, system stability, and enterprise reliability.</p>
-            <p>Projected MVP completion is targeted for September 2026. Pilot engagement will follow internal
-                validation.</p>
-        </section>
+    <hr class="sw-divider">
 
-        <section class="about-section">
-            <h3>Direction</h3>
-            <p>Kanan Labs is an AI infrastructure company focused on regulatory intelligence. The long-term ambition
-                extends beyond a single industry. The underlying system is being designed to support multi-sector
-                expansion across export-intensive domains over time.</p>
-            <p>The ambition is simple. To enable firms to participate in the global economy with greater confidence and
-                clarity by transforming regulatory complexity into structured strategic input.</p>
-        </section>
+    <!-- ════════════════════════
+         B. WHAT IT DOES
+    ════════════════════════ -->
+    <section class="sw-what">
+        <div class="sw-container">
+            <div class="sw-what__grid">
+                <div class="sw-what__left">
+                    <p class="sw-section-label">What it does</p>
+                    <h2 class="sw-what__headline">A decision system for firms operating under trade and regulatory pressure.</h2>
+                </div>
+                <div class="sw-what__divider" aria-hidden="true"></div>
+                <div class="sw-what__body">
+                    <p>Sector Watch is being built for firms that need to understand how trade policy, regulatory change, and market-access conditions affect specific commercial decisions.</p>
+                    <p>The platform is designed to answer a practical question with clarity: what is <strong>open, blocked, conditional, or still unclear</strong> for this firm, this product, and this corridor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section class="cta-section">
-            <h3>Interested in investing?</h3>
-            <p>I'm open to exploring opportunities and partnerships. Feel free to reach out directly.</p>
-            <a href="mailto:sreenath@kananlabs.in" class="cta-button">Email me</a>
-        </section>
-        <section class="cta-section" style="margin-top: 2rem;">
-            <h3>Request Platform Access</h3>
-            <p>Join the waitlist for early access to Kanan Labs' intelligence platform.</p>
-            <form id="platformWaitlistForm">
-                <input type="text" name="name" placeholder="Full Name" required />
-                <input type="text" name="company" placeholder="Company / Organisation" required />
-                <input type="email" name="email" placeholder="Work Email" required />
-                <button type="submit" class="cta-button">Join Waitlist</button>
-            </form>
-            <p class="cta-success" id="platformWaitlistSuccess">Thank you — we'll be in touch shortly with platform
-                access details.</p>
-        </section>
-    </main>
+    <!-- ════════════════════════
+         C. WHO IT IS FOR
+    ════════════════════════ -->
+    <section class="sw-who">
+        <div class="sw-container">
+            <p class="sw-section-label" style="margin-bottom:1.5rem;">Who it is for</p>
+            <div class="sw-who__grid">
 
+                <div class="sw-who__card">
+                    <p class="sw-who__card-num">01</p>
+                    <h3 class="sw-who__card-title">Cross-border manufacturers and exporters</h3>
+                    <p class="sw-who__card-body">Firms navigating shifting trade rules, tariff exposure, and market-access conditions across multiple jurisdictions simultaneously.</p>
+                </div>
+
+                <div class="sw-who__card">
+                    <p class="sw-who__card-num">02</p>
+                    <h3 class="sw-who__card-title">Firms evaluating market entry or compliance exposure</h3>
+                    <p class="sw-who__card-body">Companies assessing what evidence, certifications, or regulatory alignment is required before entering or expanding in a regulated market.</p>
+                </div>
+
+                <div class="sw-who__card">
+                    <p class="sw-who__card-num">03</p>
+                    <h3 class="sw-who__card-title">Firms in trade-exposed value chains</h3>
+                    <p class="sw-who__card-body">Organisations whose supply chains, inputs, or outputs are directly affected by trade policy, industrial incentives, or geopolitical pressure.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════
+         D. HOW IT WORKS
+    ════════════════════════ -->
+    <section class="sw-how">
+        <div class="sw-container">
+            <p class="sw-section-label" style="margin-bottom:2.5rem;">How it works</p>
+            <div class="sw-process">
+
+                <div class="sw-process__step">
+                    <div class="sw-process__num">01</div>
+                    <h3 class="sw-process__title">Regulatory Sensing</h3>
+                    <p class="sw-process__body">Continuous structured intake from policy, trade, and institutional sources. Classified, linked, and filtered for commercial relevance across key jurisdictions.</p>
+                </div>
+
+                <div class="sw-process__step">
+                    <div class="sw-process__num">02</div>
+                    <h3 class="sw-process__title">Context Resolution</h3>
+                    <p class="sw-process__body">Incoming developments are assessed against firm-specific variables such as product type, corridor, jurisdiction, and exposure profile. What matters is surfaced. What does not is filtered out.</p>
+                </div>
+
+                <div class="sw-process__step">
+                    <div class="sw-process__num">03</div>
+                    <h3 class="sw-process__title">Decision Engine</h3>
+                    <p class="sw-process__body">A proprietary internal system structures the signal environment into deterministic, traceable outputs. Each decision state is classified as open, blocked, conditional, or unclear.</p>
+                </div>
+
+                <div class="sw-process__step">
+                    <div class="sw-process__num">04</div>
+                    <h3 class="sw-process__title">Structured Output</h3>
+                    <p class="sw-process__body">Firms receive a decision surface that shows what changed, why it matters, and where action or evidence is required.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════
+         E. PRODUCT PREVIEW
+    ════════════════════════ -->
+    <section class="sw-preview" id="preview">
+        <div class="sw-preview__wide">
+            <p class="sw-section-label">Product preview</p>
+            <p class="sw-preview__intro">The following surfaces are representative of the platform currently in development. They reflect the product's output logic and decision structure, not a final interface.</p>
+
+            <div class="sw-preview__grid">
+
+                <!-- Signal Feed -->
+                <div class="mock-card">
+                    <div class="mock-card__header">
+                        <span class="mock-card__header-label">Regulatory Signal Feed / EV and Auto Export</span>
+                        <span class="mock-card__preview-badge">Preview</span>
+                    </div>
+                    <div class="mock-card__body">
+
+                        <div class="signal-row">
+                            <span class="signal-status signal-status--cond">Conditional</span>
+                            <div class="signal-text">
+                                <p class="signal-text__title">EU Battery Regulation: Phase 2 compliance trigger activated</p>
+                                <p class="signal-text__meta">EU &nbsp;·&nbsp; Auto / EV &nbsp;·&nbsp; Supply Chain Certification &nbsp;·&nbsp; Q3 2025</p>
+                            </div>
+                        </div>
+
+                        <div class="signal-row">
+                            <span class="signal-status signal-status--blocked">Blocked</span>
+                            <div class="signal-text">
+                                <p class="signal-text__title">US Section 301 tariff list: India EV components added</p>
+                                <p class="signal-text__meta">US &nbsp;·&nbsp; Auto / EV &nbsp;·&nbsp; Tariff Exposure &nbsp;·&nbsp; Effective immediately</p>
+                            </div>
+                        </div>
+
+                        <div class="signal-row">
+                            <span class="signal-status signal-status--open">Open</span>
+                            <div class="signal-text">
+                                <p class="signal-text__title">PLI Scheme Tranche 3: BMS manufacturers eligible</p>
+                                <p class="signal-text__meta">India &nbsp;·&nbsp; Auto / EV &nbsp;·&nbsp; Incentive &nbsp;·&nbsp; Application window open</p>
+                            </div>
+                        </div>
+
+                        <div class="signal-row">
+                            <span class="signal-status signal-status--unclear">Unclear</span>
+                            <div class="signal-text">
+                                <p class="signal-text__title">India-EU FTA, EV chapter: negotiation status unresolved</p>
+                                <p class="signal-text__meta">IN / EU &nbsp;·&nbsp; Market Entry &nbsp;·&nbsp; Pending clarity</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Decision Context Card -->
+                <div class="mock-card">
+                    <div class="mock-card__header">
+                        <span class="mock-card__header-label">Decision Context / Firm Position</span>
+                        <span class="mock-card__preview-badge">Preview</span>
+                    </div>
+                    <div class="decision-card">
+
+                        <div class="decision-card__row">
+                            <div>
+                                <p class="decision-card__field">Signal</p>
+                                <p class="decision-card__value">EU Battery Regulation: Phase 2</p>
+                            </div>
+                            <div style="text-align:right;">
+                                <p class="decision-card__field">Materiality</p>
+                                <p class="decision-card__value decision-card__value--orange">&#9679; High</p>
+                            </div>
+                        </div>
+
+                        <div class="decision-card__row">
+                            <div>
+                                <p class="decision-card__field">Jurisdiction</p>
+                                <p class="decision-card__value">EU</p>
+                            </div>
+                            <div>
+                                <p class="decision-card__field">Sector</p>
+                                <p class="decision-card__value">Auto / EV Export</p>
+                            </div>
+                        </div>
+
+                        <div class="decision-card__row">
+                            <div>
+                                <p class="decision-card__field">Firm Position</p>
+                                <p class="decision-card__value decision-card__value--yellow">CONDITIONAL</p>
+                            </div>
+                            <div>
+                                <p class="decision-card__field">Operative Date</p>
+                                <p class="decision-card__value">Q3 2025, Active</p>
+                            </div>
+                        </div>
+
+                        <div class="decision-card__row">
+                            <div>
+                                <p class="decision-card__field">Affected Dimension</p>
+                                <p class="decision-card__value">Supply chain certification: battery passport requirement</p>
+                            </div>
+                        </div>
+
+                        <div class="decision-card__row">
+                            <div>
+                                <p class="decision-card__field">Missing Evidence</p>
+                                <p class="decision-card__value" style="opacity:0.5;">Carbon footprint declaration not yet compiled for cell-level inputs</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="preview-disclaimer">Interface in development. Representative surfaces only. Output structure and classification logic are accurate to the product's intended design.</p>
+        </div>
+    </section>
+
+    <!-- ════════════════════════
+         H. ACCESS CTA
+    ════════════════════════ -->
+    <section class="sw-access" id="access">
+        <div class="sw-access__inner">
+            <div class="sw-access__text">
+                <h2>Request Early Access</h2>
+                <p>Sector Watch is currently accepting early-access requests from qualified firms. We are prioritising the Auto and EV export value chain for initial pilots, with focus on firms operating across India, the EU, and the US. If your firm operates in a trade-exposed environment and is evaluating market access, compliance exposure, or supply chain positioning, we would like to hear from you.</p>
+            </div>
+            <div>
+                <form class="sw-access__form" id="sectorWatchAccessForm">
+                    <input class="sw-access__input" type="text" name="name" placeholder="Full Name" required />
+                    <input class="sw-access__input" type="text" name="company" placeholder="Company or Organisation" required />
+                    <input class="sw-access__input" type="email" name="email" placeholder="Work Email" required />
+                    <button type="submit" class="sw-access__submit">Request Access</button>
+                    <p class="sw-access__note">We do not share your information with third parties. Early-access responses are reviewed individually.</p>
+                </form>
+                <p class="sw-access__success" id="sectorWatchSuccess">Your request has been received. We will be in touch shortly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Footer ─── -->
     <footer class="kl-footer">
         <div class="kl-footer__inner">
             <div class="kl-footer__content">
-                <!-- LEFT: Brand zone -->
+
                 <div class="kl-footer__brand">
                     <img src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png" alt="Kanan Labs"
                         class="kl-footer__logo" draggable="false">
-                    <p class="kl-footer__tagline">India's AI Governance Intelligence</p>
+                    <p class="kl-footer__tagline">Trade Intelligence Infrastructure</p>
 
-                    <!-- Newsletter mini-form -->
                     <div>
                         <p class="kl-footer__nl-label">Weekly Brief</p>
                         <form class="kl-footer__nl-form" id="footerNewsletterForm">
@@ -373,49 +1118,39 @@
                         </form>
                     </div>
 
-                    <!-- Schedule Consultation -->
-                    <button class="kl-footer__consult" type="button"
-                        onclick="if(window.contactPanel) window.contactPanel.open()">
-                        Schedule Consultation →
-                    </button>
+                    <a href="#access" class="kl-footer__consult">Request Early Access &#8594;</a>
                 </div>
 
-                <!-- RIGHT: Sitemap grid -->
                 <div class="kl-footer__sitemap">
-                    <!-- Col 1: Advisory -->
+
                     <div class="kl-footer__col">
-                        <h4 class="kl-footer__col-heading">Advisory</h4>
+                        <h4 class="kl-footer__col-heading">Platform</h4>
                         <ul class="kl-footer__col-links">
-                            <li><a href="index.html#advisory">Regulatory Trajectory</a></li>
-                            <li><a href="index.html#advisory">Incentive Structuring</a></li>
-                            <li><a href="index.html#advisory">Governance Readiness</a></li>
-                            <li><a href="index.html#advisory">Cross-Border Advisory</a></li>
+                            <li><a href="index.html">India AI Tracker</a></li>
+                            <li><a href="sector-watch.html">Sector Watch</a></li>
+                            <li><a href="publications.html">Publications</a></li>
                         </ul>
                     </div>
 
-                    <!-- Col 2: Company -->
                     <div class="kl-footer__col">
                         <h4 class="kl-footer__col-heading">Company</h4>
                         <ul class="kl-footer__col-links">
-                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="team.html">Team</a></li>
                             <li><a href="sector-watch.html">Sector Watch</a></li>
-                            <li><a href="publications.html">Publications</a></li>
                             <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
                         </ul>
                     </div>
 
-                    <!-- Col 3: Follow -->
                     <div class="kl-footer__col">
                         <h4 class="kl-footer__col-heading">Follow</h4>
                         <ul class="kl-footer__col-links">
-                            <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank"
-                                    rel="noopener">LinkedIn</a></li>
-                            <li><a href="#" target="_blank" rel="noopener">Twitter</a></li>
-                            <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a href="https://x.com/indiaAItracker" target="_blank" rel="noopener">Twitter</a></li>
+                            <li><a href="https://github.com/sreenathgov" target="_blank" rel="noopener">GitHub</a></li>
                         </ul>
                     </div>
 
-                    <!-- Col 4: Legal -->
                     <div class="kl-footer__col">
                         <h4 class="kl-footer__col-heading">Legal</h4>
                         <ul class="kl-footer__col-links">
@@ -423,30 +1158,28 @@
                             <li><a href="disclaimers.html">Disclaimers</a></li>
                         </ul>
                     </div>
+
                 </div>
             </div>
 
-            <!-- BOTTOM: Watermark logo -->
             <div class="kl-footer__watermark">
                 <img src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png" alt=""
                     class="kl-footer__watermark-img" aria-hidden="true" draggable="false">
             </div>
         </div>
     </footer>
+
     <script src="js/contact-panel.js"></script>
     <script src="js/staggered-menu.js"></script>
-    <!-- Basic logic to handle waitlist form submission, similar to index.html -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('platformWaitlistForm');
-            const successMsg = document.getElementById('platformWaitlistSuccess');
+            const form = document.getElementById('sectorWatchAccessForm');
+            const success = document.getElementById('sectorWatchSuccess');
             if (form) {
                 form.addEventListener('submit', function (e) {
                     e.preventDefault();
                     form.style.display = 'none';
-                    if (successMsg) {
-                        successMsg.style.display = 'block';
-                    }
+                    if (success) success.style.display = 'block';
                 });
             }
         });

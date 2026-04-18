@@ -12,7 +12,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Kanan Labs - India AI Tracker</title>
+    <title>About — Kanan Labs</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
         rel="stylesheet">
@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="css/back-button.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <style>
-        /* Override the overflow:hidden from main stylesheet */
         html {
             height: auto !important;
             overflow: auto !important;
@@ -38,264 +37,453 @@
             background: var(--brand-navy);
         }
 
-        .about-header {
-            background: var(--brand-navy);
-            color: var(--brand-cream);
-            padding: 1.25rem 2.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(244, 235, 208, 0.15);
+        /* ─── Page hero ─── */
+        .about-hero {
+            padding: 4rem 2.5rem 2rem;
+            max-width: 960px;
+            margin: 0 auto;
+            width: 100%;
+            background: transparent;
+            border: none;
         }
 
-        .about-header h1 {
+        .about-hero__eyebrow {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--brand-cream);
+            opacity: 0.45;
+            margin-bottom: 1.25rem;
+        }
+
+        .about-hero__title {
             font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-            font-size: 1.5rem;
+            font-size: clamp(2.25rem, 5vw, 3.5rem);
             font-weight: 600;
             color: var(--brand-cream);
+            line-height: 1.12;
+            max-width: 680px;
         }
 
-        .about-header a {
+        /* ─── Shared section wrapper ─── */
+        .about-content {
+            flex: 1;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2.5rem;
+            width: 100%;
+        }
+
+        .about-divider {
+            border: none;
+            border-top: 1px solid rgba(244, 235, 208, 0.1);
+            margin: 0;
+        }
+
+        /* ─── Company story ─── */
+        .story-section {
+            padding: 3rem 0;
+        }
+
+        .story-section p {
             font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 1rem;
             color: var(--brand-cream);
-            opacity: 0.7;
-            text-decoration: none;
-            font-size: 0.8125rem;
-            transition: opacity 0.15s ease;
+            opacity: 0.72;
+            line-height: 1.8;
+            max-width: 700px;
+            margin-bottom: 1rem;
         }
 
-        .about-header a:hover {
+        .story-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ─── Section label ─── */
+        .section-label {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.625rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--brand-cream);
+            opacity: 0.38;
+            margin-bottom: 1.75rem;
+        }
+
+        /* ─── Live products grid ─── */
+        .products-section {
+            padding: 3rem 0;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+
+        .product-card {
+            background: rgba(244, 235, 208, 0.04);
+            border: 1px solid rgba(244, 235, 208, 0.1);
+            border-top: 2px solid rgba(244, 235, 208, 0.15);
+            border-radius: 6px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .product-card:hover {
+            background: rgba(244, 235, 208, 0.06);
+            border-color: rgba(244, 235, 208, 0.18);
+        }
+
+        .product-card--live {
+            border-top-color: #4ade80;
+        }
+
+        .product-card--dev {
+            border-top-color: #db4a2b;
+        }
+
+        .product-card__status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.625rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .product-card--live .product-card__status {
+            color: #4ade80;
+        }
+
+        .product-card--dev .product-card__status {
+            color: #db4a2b;
+        }
+
+        .product-card__status-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: currentColor;
+        }
+
+        .product-card--live .product-card__status-dot {
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .product-card__name {
+            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: var(--brand-cream);
+            line-height: 1.2;
+        }
+
+        .product-card__body {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.875rem;
+            color: var(--brand-cream);
+            opacity: 0.62;
+            line-height: 1.7;
+            flex: 1;
+        }
+
+        .product-card__link {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--brand-cream);
+            opacity: 0.55;
+            text-decoration: none;
+            transition: opacity 0.15s ease;
+            align-self: flex-start;
+        }
+
+        .product-card__link:hover {
             opacity: 1;
         }
 
-        .about-content {
-            flex: 1;
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
+        /* ─── How we think ─── */
+        .thinking-section {
+            padding: 3rem 0;
         }
 
-        .about-content h2 {
-            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-            font-size: 1.75rem;
-            font-weight: 600;
-            color: var(--brand-cream);
-            margin-bottom: 0;
+        .thinking-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            border: 1px solid rgba(244, 235, 208, 0.1);
+            border-radius: 6px;
+            overflow: hidden;
         }
 
-        .about-content .kl-page-title-row {
-            margin-bottom: 2.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid rgba(244, 235, 208, 0.2);
+        .thinking-item {
+            padding: 2rem;
+            border-right: 1px solid rgba(244, 235, 208, 0.1);
         }
 
-        .about-section {
-            margin-bottom: 2.5rem;
+        .thinking-item:last-child {
+            border-right: none;
         }
 
-        .about-section:last-of-type {
-            margin-bottom: 0;
-        }
-
-        .about-section h3 {
+        .thinking-item__number {
             font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 1rem;
+            font-size: 0.625rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            color: var(--brand-cream);
+            opacity: 0.3;
+            margin-bottom: 1rem;
+        }
+
+        .thinking-item__title {
+            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+            font-size: 1.125rem;
             font-weight: 600;
             color: var(--brand-cream);
             opacity: 0.9;
             margin-bottom: 0.75rem;
+            line-height: 1.3;
         }
 
-        .about-section p {
+        .thinking-item__body {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.8125rem;
+            color: var(--brand-cream);
+            opacity: 0.55;
+            line-height: 1.7;
+        }
+
+        /* ─── Build stage ─── */
+        .build-section {
+            padding: 3rem 0;
+        }
+
+        .build-block {
+            background: rgba(219, 74, 43, 0.06);
+            border: 1px solid rgba(219, 74, 43, 0.2);
+            border-left: 3px solid #db4a2b;
+            border-radius: 0 6px 6px 0;
+            padding: 1.75rem 2rem;
+        }
+
+        .build-block__label {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.625rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #db4a2b;
+            margin-bottom: 0.75rem;
+        }
+
+        .build-block__text {
             font-family: 'Telegraf', 'Inter', sans-serif;
             font-size: 0.9375rem;
             color: var(--brand-cream);
-            opacity: 0.7;
+            opacity: 0.75;
             line-height: 1.7;
-            margin-bottom: 0.75rem;
+            max-width: 640px;
         }
 
-        .about-section p:last-child {
-            margin-bottom: 0;
+        /* ─── Disclosures ─── */
+        .disclosure-section {
+            padding: 2.5rem 0 4rem;
         }
 
-        .about-section a {
+        .disclosure-section__title {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.625rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
             color: var(--brand-cream);
-            opacity: 0.9;
+            opacity: 0.3;
+            margin-bottom: 1.25rem;
+        }
+
+        .disclosure-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .disclosure-item {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.8125rem;
+            color: var(--brand-cream);
+            opacity: 0.42;
+            line-height: 1.6;
+        }
+
+        .disclosure-item a {
+            color: var(--brand-cream);
+            opacity: 0.7;
             text-decoration: underline;
             text-underline-offset: 2px;
         }
 
-        .about-section a:hover {
+        .disclosure-item a:hover {
             opacity: 1;
         }
 
-        /* CTA Section */
-        .cta-section {
-            margin-top: 3rem;
-            padding: 2rem;
-            background: rgba(244, 235, 208, 0.08);
-            border-radius: 8px;
-            border: 1px solid rgba(244, 235, 208, 0.15);
-            text-align: center;
-        }
-
-        .cta-section h3 {
-            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--brand-cream);
-            margin-bottom: 0.75rem;
-        }
-
-        .cta-section p {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.875rem;
-            color: var(--brand-cream);
-            opacity: 0.7;
-            margin-bottom: 1.25rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--brand-navy);
-            background: var(--brand-cream);
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            transition: all 0.15s ease;
-        }
-
-        .cta-button:hover {
-            background: #fff;
-            transform: translateY(-1px);
-        }
-
-        .about-footer {
-            margin-top: auto;
-            background: var(--brand-navy);
-            border-top: 1px solid rgba(244, 235, 208, 0.1);
-        }
-
-        .about-footer .footer-attribution,
-        .about-footer .footer-links,
-        .about-footer .footer-description {
-            color: var(--brand-cream);
-        }
-
-        .about-footer .footer-links a {
-            color: var(--brand-cream);
-        }
-
+        /* ─── Responsive ─── */
         @media (max-width: 768px) {
-            .about-header {
-                flex-direction: column;
-                gap: 0.75rem;
-                text-align: center;
-                padding: 1rem 1.5rem;
+            .about-hero {
+                padding: 3rem 1.5rem 2.5rem;
             }
 
             .about-content {
-                padding: 2rem 1.5rem;
+                padding: 0 1.5rem;
             }
 
-            .about-content h2 {
-                font-size: 1.5rem;
+            .products-grid {
+                grid-template-columns: 1fr;
             }
 
-            .cta-section {
-                padding: 1.5rem;
-                margin-top: 2rem;
+            .thinking-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .thinking-item {
+                border-right: none;
+                border-bottom: 1px solid rgba(244, 235, 208, 0.1);
+            }
+
+            .thinking-item:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-hero__title {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 
 <body class="about-page">
-    <!-- Staggered menu will be injected here by staggered-menu.js -->
+    <!-- Nav injected by staggered-menu.js -->
+    <div style="height: 80px;"></div>
 
-    <div style="height: 80px;"></div> <!-- Spacer for menu -->
+    <!-- ─── Hero ─── -->
+    <header class="about-hero">
+        <h1 class="about-hero__title">About Us</h1>
+    </header>
 
     <main class="about-content">
-        <div class="kl-page-title-row">
-            <a href="index.html" class="kl-back-btn" aria-label="Back to home">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                    <path d="M7.5 2L3.5 6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </a>
-            <h2>About Kanan Labs</h2>
-        </div>
 
-        <section class="about-section">
-            <p>Kanan Labs is building regulatory intelligence infrastructure for markets shaped by policy, trade, and
-                compliance change.</p>
-            <p>The company focuses on turning fragmented legal, regulatory, and institutional developments into
-                structured intelligence systems that can be monitored, queried, and operationalised. The objective is
-                not simply to describe policy movement, but to make it usable inside real commercial decision-making.</p>
-            <p>Kanan Labs is currently developing products and data systems oriented around two related problems. The
-                first is continuous visibility into fast-moving technology and regulatory developments. The second is
-                the translation of those developments into business-relevant context for firms operating in
-                regulation-sensitive environments.</p>
-            <p>Our work begins from a simple premise: policy is no longer external background. In many sectors, it
-                shapes market access, capital flows, supply chain design, and competitive positioning. That makes
-                regulatory change a data problem as much as a legal one.</p>
+        <!-- ─── Company Story ─── -->
+        <hr class="about-divider">
+        <section class="story-section">
+            <p>Kanan Labs is an AI-native trade intelligence company. We build software products and data systems that turn complex trade, regulatory, and market environments into structured operating context that firms can act on.</p>
+            <p>The company operates at the intersection of trade, regulation, industrial policy, and AI-driven structured intelligence. In markets increasingly shaped by geopolitical pressure, trade fragmentation, and regulatory complexity, access to structured, current, firm-relevant intelligence is itself a strategic advantage. We are building the infrastructure to deliver it.</p>
+            <p>Kanan Labs is founded and led by <a href="team.html" style="color:var(--brand-cream); opacity:0.9; text-decoration:underline; text-underline-offset:2px;">Sreenath Govindarajan</a> — a builder whose background spans law, business, and cross-jurisdictional trade and regulatory analysis.</p>
         </section>
 
-        <section class="about-section">
-            <h3>India AI Tracker</h3>
-            <p>India AI Tracker is the first public-facing surface of this broader intelligence architecture.</p>
-            <p>It tracks developments across India's AI ecosystem, including policy announcements, institutional shifts,
-                infrastructure build-out, state-level activity, and market developments. The system is designed to
-                create a more structured view of how AI is evolving across India rather than treating developments as
-                isolated news items.</p>
-            <p>Each update is linked to its original source. Brief summaries are provided to improve navigation and
-                context, while preserving direct access to the underlying material.</p>
+        <!-- ─── What Is Live ─── -->
+        <hr class="about-divider">
+        <section class="products-section">
+            <p class="section-label">What we have built</p>
+            <div class="products-grid">
+
+                <div class="product-card product-card--live">
+                    <div class="product-card__status">
+                        <span class="product-card__status-dot"></span>
+                        Live
+                    </div>
+                    <h3 class="product-card__name">India AI Tracker</h3>
+                    <p class="product-card__body">The first public-facing surface of the Kanan Labs intelligence architecture. Tracks AI policy, institutional developments, infrastructure build-out, state-level activity, and market developments across India — structured, sourced, and continuously updated.</p>
+                    <a href="index.html" class="product-card__link">View the tracker →</a>
+                </div>
+
+                <div class="product-card product-card--dev">
+                    <div class="product-card__status">
+                        <span class="product-card__status-dot"></span>
+                        In Development
+                    </div>
+                    <h3 class="product-card__name">Sector Watch</h3>
+                    <p class="product-card__body">A trade diagnostic and decision-support system in active development. Designed for firms operating in trade-exposed value chains — helping them understand what is open, blocked, conditional, or still unknown across market entry, compliance, and regulatory exposure.</p>
+                    <a href="sector-watch.html" class="product-card__link">See Sector Watch →</a>
+                </div>
+
+            </div>
         </section>
 
-        <section class="about-section">
-            <h3>Platform Direction</h3>
-            <p>Kanan Labs is being built toward a broader regulatory intelligence stack for sectors where policy change
-                carries direct operational consequences.</p>
-            <p>This includes systems for continuous monitoring, structured classification, context resolution, and
-                decision support. Over time, these layers will support product experiences that help organisations
-                understand what has changed, what is relevant to them, and where exposure or opportunity is emerging.</p>
-            <p>Sector Watch is part of that direction: a product architecture focused on translating external regulatory
-                change into firm-relevant signals, structured pathways, and usable operating context.</p>
+        <!-- ─── How We Think ─── -->
+        <hr class="about-divider">
+        <section class="thinking-section">
+            <p class="section-label">How we think about the problem</p>
+            <div class="thinking-grid">
+
+                <div class="thinking-item">
+                    <p class="thinking-item__number">01</p>
+                    <h3 class="thinking-item__title">Trade complexity as an intelligence problem</h3>
+                    <p class="thinking-item__body">Regulatory and trade change is not background. It is a live operating variable that shapes market access, supply chains, and competitive positioning. We treat it as a structured intelligence problem — not a documentation problem.</p>
+                </div>
+
+                <div class="thinking-item">
+                    <p class="thinking-item__number">02</p>
+                    <h3 class="thinking-item__title">Structured outputs, not summaries</h3>
+                    <p class="thinking-item__body">The goal is not to surface documents or produce reports. It is to produce traceable, firm-relevant operating context that reduces decision friction inside real commercial workflows. Intelligence that cannot be acted on is not intelligence.</p>
+                </div>
+
+                <div class="thinking-item">
+                    <p class="thinking-item__number">03</p>
+                    <h3 class="thinking-item__title">Infrastructure first</h3>
+                    <p class="thinking-item__body">We build deterministic, interpretable systems where reliability and traceability are load-bearing architectural properties. The knowledge layer beneath the product surface must be sound before the output surface can be trusted.</p>
+                </div>
+
+            </div>
         </section>
 
-        <section class="about-section">
-            <h3>Sources, Attribution, and Use</h3>
-            <p>India AI Tracker and other public-facing surfaces within Kanan Labs are built on publicly available
-                materials, including government announcements, institutional releases, and third-party reporting.</p>
-            <p>Ownership of third-party material remains with the original publisher or issuing body. Kanan Labs does
-                not reproduce full source articles as a substitute for original access. The purpose of the platform is
-                to improve discoverability, structure, and contextual understanding while maintaining source
-                attribution.</p>
+        <!-- ─── Build Stage ─── -->
+        <hr class="about-divider">
+        <section class="build-section">
+            <p class="section-label">Current stage</p>
+            <div class="build-block">
+                <p class="build-block__label">MVP in active development</p>
+                <p class="build-block__text">Kanan Labs is in its MVP-building phase. Sector Watch is the primary product in active development, with an initial focus on the EV and automotive export value chain spanning India, the EU, and the US. Enterprise pilot engagement is planned to follow internal validation, targeted for 2026.</p>
+            </div>
         </section>
 
-        <section class="about-section">
-            <h3>Feedback</h3>
-            <p>If you identify an error, require a correction, or wish to raise a source-related issue, please contact
-                <a href="mailto:feedback@kananlabs.in">feedback@kananlabs.in</a>.</p>
+        <!-- ─── Disclosures ─── -->
+        <hr class="about-divider">
+        <section class="disclosure-section">
+            <p class="disclosure-section__title">Attribution &amp; Disclosures</p>
+            <div class="disclosure-list">
+                <p class="disclosure-item">India AI Tracker and other public-facing surfaces are built on publicly available materials, including government announcements, institutional releases, and third-party reporting. Ownership of third-party material remains with the original publisher. Kanan Labs does not reproduce full source articles and maintains source attribution throughout.</p>
+                <p class="disclosure-item">Kanan Labs has no affiliation with the Government of India, any regulatory authority, or any news organisation. Third-party content linked on this platform represents the views of the original publisher.</p>
+                <p class="disclosure-item">For corrections, source issues, or feedback: <a href="mailto:feedback@kananlabs.in">feedback@kananlabs.in</a></p>
+            </div>
         </section>
+
     </main>
 
+    <!-- ─── Footer ─── -->
     <footer class="kl-footer">
         <div class="kl-footer__inner">
-
             <div class="kl-footer__content">
 
                 <!-- LEFT: Brand zone -->
                 <div class="kl-footer__brand">
-
                     <img src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png" alt="Kanan Labs"
                         class="kl-footer__logo" draggable="false">
-
-                    <p class="kl-footer__tagline">India's AI Governance Intelligence</p>
+                    <p class="kl-footer__tagline">Trade Intelligence Infrastructure</p>
 
                     <!-- Newsletter mini-form -->
                     <div>
@@ -307,25 +495,22 @@
                         </form>
                     </div>
 
-                    <!-- Schedule Consultation -->
-                    <button class="kl-footer__consult" type="button"
-                        onclick="if(window.contactPanel) window.contactPanel.open()">
-                        Schedule Consultation →
-                    </button>
-
+                    <!-- Request Access -->
+                    <a href="sector-watch.html#access" class="kl-footer__consult">
+                        Request Early Access →
+                    </a>
                 </div>
 
                 <!-- RIGHT: Sitemap grid -->
                 <div class="kl-footer__sitemap">
 
-                    <!-- Col 1: Advisory -->
+                    <!-- Col 1: Platform -->
                     <div class="kl-footer__col">
-                        <h4 class="kl-footer__col-heading">Advisory</h4>
+                        <h4 class="kl-footer__col-heading">Platform</h4>
                         <ul class="kl-footer__col-links">
-                            <li><a href="index.html#advisory">Regulatory Trajectory</a></li>
-                            <li><a href="index.html#advisory">Incentive Structuring</a></li>
-                            <li><a href="index.html#advisory">Governance Readiness</a></li>
-                            <li><a href="index.html#advisory">Cross-Border Advisory</a></li>
+                            <li><a href="index.html">India AI Tracker</a></li>
+                            <li><a href="sector-watch.html">Sector Watch</a></li>
+                            <li><a href="publications.html">Publications</a></li>
                         </ul>
                     </div>
 
@@ -333,9 +518,9 @@
                     <div class="kl-footer__col">
                         <h4 class="kl-footer__col-heading">Company</h4>
                         <ul class="kl-footer__col-links">
-                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="team.html">Team</a></li>
                             <li><a href="sector-watch.html">Sector Watch</a></li>
-                            <li><a href="publications.html">Publications</a></li>
                             <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
                         </ul>
                     </div>
@@ -346,8 +531,8 @@
                         <ul class="kl-footer__col-links">
                             <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank"
                                     rel="noopener">LinkedIn</a></li>
-                            <li><a href="#" target="_blank" rel="noopener">Twitter</a></li>
-                            <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+                            <li><a href="https://x.com/indiaAItracker" target="_blank" rel="noopener">Twitter</a></li>
+                            <li><a href="https://github.com/sreenathgov" target="_blank" rel="noopener">GitHub</a></li>
                         </ul>
                     </div>
 
@@ -363,14 +548,14 @@
                 </div>
             </div>
 
-            <!-- BOTTOM: Watermark logo -->
+            <!-- BOTTOM: Watermark -->
             <div class="kl-footer__watermark">
                 <img src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png" alt=""
                     class="kl-footer__watermark-img" aria-hidden="true" draggable="false">
             </div>
-
         </div>
     </footer>
+
     <script src="js/contact-panel.js"></script>
     <script src="js/staggered-menu.js"></script>
 </body>

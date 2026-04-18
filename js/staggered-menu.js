@@ -872,10 +872,10 @@ document.addEventListener('DOMContentLoaded', function () {
     colors: ['#0a2f52', '#db4a2b', '#f4ebd0'],
     items: [
       { label: 'Home', ariaLabel: 'Go to home page', link: 'index.html' },
-      { label: 'About', ariaLabel: 'Learn about this project', link: 'about.html' },
-      { label: 'Sector-Watch', ariaLabel: 'View Sector Watch', link: 'sector-watch.html' },
-      { label: 'Publications', ariaLabel: 'View publications', link: 'publications.html' },
-      { label: 'Consultation', ariaLabel: 'Schedule a strategic consultation', link: '#', action: 'openContactPanel' }
+      { label: 'About', ariaLabel: 'Learn about Kanan Labs', link: 'about.html' },
+      { label: 'Sector Watch', ariaLabel: 'View Sector Watch platform', link: 'sector-watch.html' },
+      { label: 'Team', ariaLabel: 'Meet the founder', link: 'team.html' },
+      { label: 'Publications', ariaLabel: 'View publications', link: 'publications.html' }
     ],
     socialItems: [
       { label: 'LinkedIn', link: 'https://www.linkedin.com/in/sreenathgovindarajan' },

@@ -60,13 +60,10 @@ class IdentitySection {
     statement.innerHTML = 'Policy is not an external constraint.<br>It is a <em>design variable</em>.';
 
     // CTA button
-    const ctaBtn = document.createElement('button');
+    const ctaBtn = document.createElement('a');
     ctaBtn.className = 'identity-cta identity-animate';
-    ctaBtn.type = 'button';
-    ctaBtn.textContent = 'GET IN TOUCH';
-    ctaBtn.addEventListener('click', () => {
-      if (window.contactPanel) window.contactPanel.open();
-    });
+    ctaBtn.href = 'sector-watch.html';
+    ctaBtn.textContent = 'VIEW SECTOR WATCH';
 
     // Name + Title + Credentials
     const metaBlock = document.createElement('div');
@@ -83,9 +80,16 @@ class IdentitySection {
     const credList = document.createElement('ul');
     credList.className = 'identity-credentials';
 
-    const li = document.createElement('li');
-    li.textContent = 'Kanan Labs is founded by Sreenath Govindarajan, with a background in law, policy, and AI governance.';
-    credList.appendChild(li);
+    const bioLines = [
+      'Sreenath Govindarajan is building Kanan Labs as an AI-native trade intelligence company.',
+      'He is focused on turning complex trade, regulatory, and market environments into structured software systems that firms can act on.',
+      'His background spans law, business, and cross-jurisdictional trade and regulatory analysis.'
+    ];
+    bioLines.forEach(text => {
+      const li = document.createElement('li');
+      li.textContent = text;
+      credList.appendChild(li);
+    });
 
     metaBlock.appendChild(name);
     metaBlock.appendChild(title);
