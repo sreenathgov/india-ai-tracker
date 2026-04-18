@@ -9,6 +9,7 @@ const ASSETS_TO_COPY = ['js', 'css', 'data', 'assets', 'added-assets', 'api', 'K
 const FILES_TO_COPY = [
     'index.html',
     'about.html',
+    'team.html',
     'sector-watch.html',
     'publications.html',
     'privacy-policy.html',
