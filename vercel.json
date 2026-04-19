@@ -12,6 +12,15 @@
       ]
     },
     {
+      "source": "/api/early-access",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "POST, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
+      ]
+    },
+    {
       "source": "/api/consult",
       "headers": [
         { "key": "Cache-Control", "value": "no-store" },

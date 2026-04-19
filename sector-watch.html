@@ -1175,11 +1175,47 @@
         document.addEventListener('DOMContentLoaded', function () {
             const form = document.getElementById('sectorWatchAccessForm');
             const success = document.getElementById('sectorWatchSuccess');
+            const submitBtn = form ? form.querySelector('.sw-access__submit') : null;
+
             if (form) {
-                form.addEventListener('submit', function (e) {
+                form.addEventListener('submit', async function (e) {
                     e.preventDefault();
-                    form.style.display = 'none';
-                    if (success) success.style.display = 'block';
+
+                    const name = form.querySelector('[name="name"]').value.trim();
+                    const company = form.querySelector('[name="company"]').value.trim();
+                    const email = form.querySelector('[name="email"]').value.trim();
+
+                    // Split full name into first/last for Brevo
+                    const nameParts = name.split(' ');
+                    const firstName = nameParts[0] || name;
+                    const lastName = nameParts.slice(1).join(' ') || '';
+
+                    // Loading state
+                    submitBtn.textContent = 'Submitting…';
+                    submitBtn.disabled = true;
+
+                    try {
+                        const res = await fetch('/api/early-access', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ name, company, email })
+                        });
+
+                        if (res.ok) {
+                            // Success
+                            form.style.display = 'none';
+                            if (success) success.style.display = 'block';
+                        } else {
+                            const err = await res.json().catch(() => ({}));
+                            console.error('Brevo error:', err);
+                            submitBtn.textContent = 'Something went wrong — try again';
+                            submitBtn.disabled = false;
+                        }
+                    } catch (networkErr) {
+                        console.error('Network error:', networkErr);
+                        submitBtn.textContent = 'Connection error — try again';
+                        submitBtn.disabled = false;
+                    }
                 });
             }
         });
