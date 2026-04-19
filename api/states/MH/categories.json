@@ -183,6 +183,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "AI tools in govt schools help students with learning, basic maths",
+        "url": "https://timesofindia.indiatimes.com/city/pune/ai-tools-in-govt-schools-help-students-with-learning-basic-maths/articleshow/130361628.cms",
+        "summary": "AI tools are being used in government schools to assist students with learning and basic math skills. These tools aim to improve student understanding and performance in key subjects. The implementation of AI in government schools is a notable development in education technology.",
+        "date_published": "2026-04-19",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Shantakumar calls for AI-driven sugarcane farming model in K’taka, citing Maharashtra’s success",
         "url": "https://timesofindia.indiatimes.com/city/hubballi/shantakumar-calls-for-ai-driven-sugarcane-farming-model-in-ktaka-citing-maharashtras-success/articleshow/130340134.cms",
@@ -1406,7 +1426,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "Policies and Initiatives"
+    "Major AI Developments"
   ]
 }

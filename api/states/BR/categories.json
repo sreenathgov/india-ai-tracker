@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 4,
+        "title": "CM: Take steps to project Bihar’s achievements at national level",
+        "url": "https://timesofindia.indiatimes.com/city/patna/cm-take-steps-to-project-bihars-achievements-at-national-level/articleshow/130359285.cms",
+        "summary": "Bihar's Chief Minister, Samrat Choudhary, has directed the information department to strengthen national branding of the state's development achievements. He also tasked officials with identifying government land for revenue generation and improving tourist information at heritage sites. The CM emphasized the use of technology, including AI, to monitor government work in real-time.",
+        "date_published": "2026-04-19",
+        "source_name": "Times of India - Patna",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Youth are foundation of national progress: Minister",
         "url": "https://timesofindia.indiatimes.com/city/patna/youth-are-foundation-of-national-progress-minister/articleshow/129760236.cms",
@@ -206,5 +226,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

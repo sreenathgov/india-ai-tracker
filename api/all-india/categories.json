@@ -994,6 +994,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Don’t fear AI, but don’t trust it blindly: CJI Surya Kant",
+        "url": "https://telanganatoday.com/dont-fear-ai-but-dont-trust-it-blindly-cji-surya-kant",
+        "summary": "Chief Justice Surya Kant advises judges to use AI cautiously, recognizing its potential to aid human judgment without replacing it. He warns against over-reliance on AI due to risks such as inaccuracies and misuse. Kant emphasizes the importance of maintaining judicial independence and upholding constitutional values when utilizing AI.",
+        "date_published": "2026-04-18",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Indian digital ad market likely to double to USD 22 billion by 2030",
         "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/indias-digital-advertising-market-set-to-surge-to-22-billion-by-2030/130323334",
@@ -8789,7 +8809,5 @@
       }
     ]
   },
-  "today_updates": [
-    "AI Start-Up News"
-  ]
+  "today_updates": []
 }

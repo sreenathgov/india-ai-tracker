@@ -64,6 +64,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "CM to lay stone for country’s 1st advanced chip packaging unit today",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/cm-to-lay-stone-for-countrys-1st-advanced-chip-packaging-unit-today/articleshow/130361305.cms",
+        "summary": "Odisha's capital will host India's first advanced 3D glass semiconductor packaging unit, a Rs 1,943 crore project by 3D Glass Solutions. The facility will introduce sophisticated chip packaging technology and create 2,500 jobs. It aims to bolster India's semiconductor capabilities, particularly for strategic sectors like aerospace and AI.",
+        "date_published": "2026-04-19",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Soura art helps woman eke livelihood, win praise",
         "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/soura-art-helps-woman-eke-livelihood-win-praise/articleshow/129559903.cms",
@@ -166,5 +186,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
