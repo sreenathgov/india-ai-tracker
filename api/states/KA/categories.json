@@ -266,6 +266,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "AI majors building India base in Bengaluru boosting space demand",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-majors-building-india-base-in-bengaluru-boosting-space-demand/130382147",
+        "summary": "Bengaluru is emerging as a global hub for AI innovation with major tech companies like Anthropic and OpenAI setting up new offices. The city's deep engineering talent is attracting other firms, including European company Mistral AI, which is in talks to open a capability center. This influx of AI companies is boosting demand for space in the city.",
+        "date_published": "2026-04-20",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "AI, education, policy alignment key to India’s $30 trillion goal, say experts at Bengaluru event",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-education-policy-alignment-key-to-indias-30-trillion-goal-say-experts-at-bengaluru-event/articleshow/130377079.cms",
+        "summary": "Experts at a Bengaluru event stated that aligning AI, education, and policy is crucial for India to achieve its $30 trillion goal. They emphasized the importance of these factors in driving the country's growth and development. India aims to reach this economic milestone through strategic alignment and effective utilization of AI and education.",
+        "date_published": "2026-04-20",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Amritsar Class 10 student lands ISRO’s YUVIKA programme after ChatGPT suggestion",
         "url": "https://www.tribuneindia.com/news/amritsar/amritsar-class-10-student-lands-isros-yuvika-programme-after-chatgpt-suggestion",
@@ -2074,5 +2114,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -25,6 +25,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "EC set to use AI tech to monitor polling booths",
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/ec-set-to-use-ai-tech-to-monitor-polling-booths/articleshow/130376462.cms",
+        "summary": "The Election Commission (EC) is set to utilize AI technology to monitor polling booths. This initiative aims to enhance the surveillance and security of the voting process. The EC will leverage AI to ensure fair and transparent elections.",
+        "date_published": "2026-04-20",
+        "source_name": "Times of India - Kolkata",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Alumnus’s son pledges 15cr to IIT-Kgp to launch AI centre for mining solutions",
         "url": "https://timesofindia.indiatimes.com/city/kolkata/alumnuss-son-pledges-15cr-to-iit-kgp-to-launch-ai-centre-for-mining-solutions/articleshow/130341136.cms",
@@ -360,5 +380,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -994,6 +994,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "India’s AI moment isn’t about speed, it is about control",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-moment-isnt-about-speed-it-is-about-control/130257492",
+        "summary": "India's digital acceleration is heavily reliant on AI, but controlling these systems poses significant security and governance challenges. As AI increases the attack surface and quantum risks emerge, digital sovereignty has become a necessity. A unified architectural approach focused on control is essential for building resilience in AI systems.",
+        "date_published": "2026-04-20",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "50,000 daily orders mean nothing: Taskbob founder Aseem Khare on PMF myth in quick home services",
+        "url": "https://entrackr.com/interview/50000-daily-orders-mean-nothing-taskbob-founder-aseem-khare-on-pmf-myth-in-quick-home-services-11744869",
+        "summary": "The quick home services space is gaining attention with new startups like Pronto and Snabbit raising funding rounds, while Urban Company doubles down despite losses. Urban Company's InstaHelp has scaled to over 50,000 daily bookings, with 1 million bookings in March, and Snabbit also reported 1 million orders in the same month. These numbers indicate significant momentum in the industry, with Pronto also achieving notable growth.",
+        "date_published": "2026-04-20",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Don’t fear AI, but don’t trust it blindly: CJI Surya Kant",
         "url": "https://telanganatoday.com/dont-fear-ai-but-dont-trust-it-blindly-cji-surya-kant",
@@ -8809,5 +8849,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

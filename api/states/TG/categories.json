@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Human touch trumps AI as youth back Tele-MANAS",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/human-touch-trumps-ai-as-youth-back-tele-manas/articleshow/130377219.cms",
+        "summary": "Youth are preferring Tele-MANAS, a mental health service, over AI-powered alternatives due to its human touch. Tele-MANAS provides a human connection, which is seen as more effective than AI-driven solutions for mental health support. The service has gained popularity among young people seeking help for their mental well-being.",
+        "date_published": "2026-04-20",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "LPL Financial’s GCC in Hyderabad; QAI Ventures’ focus on quantum AI startups",
         "url": "https://yourstory.com/2026/04/lpl-financials-gcc-hyderabad-qai-ventures-focus-on-quantum-ai-startups",
@@ -1309,5 +1329,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
