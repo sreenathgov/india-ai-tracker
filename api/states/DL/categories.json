@@ -2196,6 +2196,26 @@
     "AI Start-Up News": [
       {
         "id": 5,
+        "title": "Legal-tech startup Lawyered bags $2.5 Mn led by Rainmatter and Turbostart",
+        "url": "https://entrackr.com/snippets/legal-tech-startup-lawyered-bags-25-mn-led-by-rainmatter-and-turbostart-11747865",
+        "summary": "Lawyered, a legal-tech startup, has raised $2.5 million in a pre-Series A funding round co-led by Rainmatter and Turbostart, with participation from existing investor Finvolve. The Gurugram-based startup had previously secured Rs 8.5 crore at a Rs 120 crore pre-money valuation. This funding round brings new investment to support the company's growth.",
+        "date_published": "2026-04-21",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
         "title": "DAAKit raises $138K in pre-seed round led by Inflection Point Ventures",
         "url": "https://entrackr.com/snippets/daakit-raises-138k-in-pre-seed-round-led-by-inflection-point-ventures-11704251",
         "summary": "DAAKit, a hyperlocal fulfillment and last-mile logistics startup, has raised $138K in a pre-seed funding round led by Inflection Point Ventures. The funds will be used to expand operations, launch new dark stores, and strengthen its technology infrastructure and team. DAAKit was founded in 2024 and operates an asset-light logistics model, currently serving cities including Delhi, Gurugram, and Mumbai.",
@@ -2402,5 +2422,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

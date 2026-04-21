@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 4,
+        "title": "KRAFTON, Naver officially launch Rs 6,000 Cr India Unicorn Growth Fund with Mirae Asset",
+        "url": "https://entrackr.com/news/krafton-naver-officially-launch-rs-6000-cr-india-unicorn-growth-fund-with-mirae-asset-11748832",
+        "summary": "KRAFTON Inc. and Naver Corporation have partnered with Mirae Asset Venture Investments to launch a Rs 6,000 crore India-focused Unicorn Growth Fund. The fund, announced in December, is one of the largest capital pools raised from Asia for Indian startups. The official launch was attended by high-level government officials, including Union Minister Piyush Goyal and South Korea's Minister of Trade, Industry and Resources Jung Kwan Kim.",
+        "date_published": "2026-04-21",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Centre forms high-level inter-ministerial body to steer AI governance strategy",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/centre-forms-high-level-inter-ministerial-body-to-steer-ai-governance-strategy/130322122",
@@ -993,6 +1013,66 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 1,
+        "title": "Zombie Projects: The role of AI in enhancing team productivity and decision-making",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/unlocking-productivity-the-ai-solution-to-zombie-projects-in-indian-workplaces/130299366",
+        "summary": "Indian workplaces are hindered by \"zombie projects\" that consume resources and hinder growth. AI collaboration can help identify valuable initiatives and enhance team productivity and decision-making. By prioritizing outcomes over activity and stopping low-value work, leaders can free up resources for innovation and improve overall performance.",
+        "date_published": "2026-04-21",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "AI co NudgeBee secures funding; Startups reimagining breast cancer treatment in India",
+        "url": "https://yourstory.com/2026/04/ai-co-nudgebee-secures-funding",
+        "summary": "NudgeBee, an AI company founded by Rakesh Rajendran and Shiv Pratap Singh in 2024, has secured funding to support its mission. The company aims to address a specific issue in modern computing, although the exact problem is not specified. NudgeBee is part of a larger trend of startups in India working to reimagine breast cancer treatment using innovative technologies.",
+        "date_published": "2026-04-21",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "The Inventor is still Human: Indian Patent Office’s DABUS Refusal",
+        "url": "https://spicyip.com/2026/04/the-inventor-is-still-human-indian-patent-offices-dabus-refusal.html",
+        "summary": "The Indian Patent Office has refused a patent application from Dr. Stephen Thaler that sought to recognize his AI system DABUS as the inventor of a food container. The decision aligns with a global trend of refusing AI systems as inventors, and also examines the patentability of the claimed invention. The refusal is consistent with other jurisdictions that have rejected similar applications, reaffirming that inventors must be human.",
+        "date_published": "2026-04-21",
+        "source_name": "SpicyIP",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 2,
         "title": "India’s AI moment isn’t about speed, it is about control",
@@ -8850,6 +8930,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "Policies and Initiatives"
   ]
 }
