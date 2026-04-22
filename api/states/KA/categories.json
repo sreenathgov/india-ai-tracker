@@ -266,6 +266,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "How Gumo is building an AI co-pilot for travel planning",
+        "url": "https://yourstory.com/2026/04/how-gumo-is-building-an-ai-co-pilot-for-travel-planning",
+        "summary": "Gumo, a Bengaluru-based company, is developing an AI-powered travel planning co-pilot to combat travel decision fatigue. The platform uses context-led planning and personalized match scores to assist users. It has already gained traction, reaching 22,000 monthly active users through its AI-first approach.",
+        "date_published": "2026-04-22",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "IISc’s Centre for Brain Research launches ₹2 crore AI challenge for early detection of cognitive decline",
         "url": "https://www.thehindu.com/news/national/karnataka/iiscs-centre-for-brain-research-launches-2-crore-ai-challenge-for-early-detection-of-cognitive-decline/article70885709.ece",

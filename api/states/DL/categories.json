@@ -263,6 +263,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "‘AI will get better with age & practice’: How Delhi lawyers are adopting tech, but cautiously",
+        "url": "https://indianexpress.com/article/cities/delhi/delhi-lawyers-senior-advocates-ai-legal-practice-claude-chatgpt-10647411/",
+        "summary": "Delhi lawyers are cautiously adopting artificial intelligence technology in their practices. They believe that AI will improve with time and experience, but are currently using it to supplement their work rather than replace it. The adoption of AI is being done in a gradual and careful manner to ensure it supports their legal work without compromising its quality.",
+        "date_published": "2026-04-21",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "'DL and TS': Hyderabad doctor with 'James Bond-like switch' on BMW to flip no. plates arrested",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/doc-with-bond-like-switch-on-bmw-to-flip-no-plates-held-in-drunk-drive-check/articleshow/130219470.cms",
@@ -2422,7 +2442,5 @@
       }
     ]
   },
-  "today_updates": [
-    "AI Start-Up News"
-  ]
+  "today_updates": []
 }
