@@ -266,12 +266,92 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Inside The Standard&#039;s Bengaluru bet: Building the AI-ready workforce of tomorrow",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/building-the-future-the-standards-ai-driven-expansion-in-bengaluru/130455992",
+        "summary": "A 119-year-old insurer is modernizing its technology estate and has established a new center in Bengaluru to build an AI-ready workforce. The center is designed to be a hub for innovation, with a focus on AI and shared accountability among teams. The goal is to empower talent to solve complex insurance problems and create a model for the future enterprise.",
+        "date_published": "2026-04-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Deep Algorithm raises Rs 16 Cr in pre-Series A led by Unicorn India Ventures",
+        "url": "https://entrackr.com/snippets/deep-algorithm-raises-rs-16-cr-in-pre-series-a-led-by-unicorn-india-ventures-11756893",
+        "summary": "Deep Algorithm, an AI-powered cybersecurity startup, has raised Rs 16 crore in a pre-Series A funding round led by Unicorn India Ventures. The funding round also saw participation from other investors, including SB Investment and individual investors. The proceeds will be used to expand into international markets and strengthen its platform with new security features.",
+        "date_published": "2026-04-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "How Gumo is building an AI co-pilot for travel planning",
         "url": "https://yourstory.com/2026/04/how-gumo-is-building-an-ai-co-pilot-for-travel-planning",
         "summary": "Gumo, a Bengaluru-based company, is developing an AI-powered travel planning co-pilot to combat travel decision fatigue. The platform uses context-led planning and personalized match scores to assist users. It has already gained traction, reaching 22,000 monthly active users through its AI-first approach.",
         "date_published": "2026-04-22",
         "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Your desk is now an AI lab: RP Tech, an NVIDIA Partner, demos NVIDIA DGX Spark in Bangalore",
+        "url": "https://yourstory.com/2026/04/ai-lab-rp-tech-nvidia-partner-demos-nvidia-dgx-spark",
+        "summary": "RP Tech, an NVIDIA partner, has demonstrated the NVIDIA DGX Spark in Bangalore, showcasing NVIDIA's end-to-end AI ecosystem. The demo highlights a range of AI technologies, including unified-memory devices and open-source models. This signals a shift towards more controlled, scalable, and developer-focused AI innovation.",
+        "date_published": "2026-04-22",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "‘Digital Twin’",
+        "url": "https://starofmysore.com/digital-twin/",
+        "summary": "The Mysuru City Corporation is launching a Rs. 15 crore project to create a 3D aerial survey of properties in the Greater Mysuru City Corporation limits. The project will utilize advanced LiDAR technology and AI to map every property. The initiative aims to create a digital twin of the city, providing a detailed and accurate representation of the area.",
+        "date_published": "2026-04-22",
+        "source_name": "Star of Mysore",
         "category": "Major AI Developments",
         "state_codes": [
           "KA"
@@ -1627,6 +1707,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "Textile tech startup STCH raises $5.5M in pre-Series A round led by Omnivore",
+        "url": "https://yourstory.com/2026/04/textile-tech-startup-stch-raises-pre-series-a-round-led-by-omnivore",
+        "summary": "STCH, a textile tech startup, has raised $5.5 million in a pre-Series A funding round led by Omnivore. The company will utilize the capital to enhance its AI capabilities and research and development. The funds will also be used to strengthen partnerships with textile mills and global fashion brands.",
+        "date_published": "2026-04-23",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Emergent launches VibeCon India, offers direct YC interview to winning team",
         "url": "https://entrackr.com/snippets/emergent-launches-vibecon-india-offers-direct-yc-interview-to-winning-team-11723832",
@@ -2155,6 +2255,7 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

@@ -67,6 +67,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "AI conclave discusses NEP 2020 roadmap for higher education",
+        "url": "https://timesofindia.indiatimes.com/city/patna/ai-conclave-discusses-nep-2020-roadmap-for-higher-education/articleshow/130450009.cms",
+        "summary": "Bihar's higher education sector is aligning with NEP 2020, focusing on AI's potential for assessments and governance. A recent summit in Patna brought together policymakers and technology leaders to discuss innovative educational reforms. The discussion emphasized the importance of ERP systems and data analytics in modernizing the education sector.",
+        "date_published": "2026-04-23",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 13,
         "title": "Experts call for data-driven reforms in Bihar healthcare",
         "url": "https://timesofindia.indiatimes.com/city/patna/experts-call-for-data-driven-reforms-in-bihar-healthcare/articleshow/130069543.cms",
@@ -226,5 +246,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

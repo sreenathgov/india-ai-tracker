@@ -1015,6 +1015,26 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "AI’s rapid rise forces India to rethink ‘light-touch’ regulations",
+        "url": "https://www.livemint.com/ai/india-starts-planning-for-dedicated-ai-regulations-11776853084814.html",
+        "summary": "India is reevaluating its \"light-touch\" approach to AI regulations due to recent controversies. The need for tighter oversight arose after explicit AI-generated content was found on Grok, a chatbot embedded in social media platform X. This development has prompted India to consider stricter regulations to address concerns surrounding AI.",
+        "date_published": "2026-04-23",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Disappointed by compliance to AI rules, Meity proposes 'continuous' watermarks",
         "url": "https://www.livemint.com/ai/artificial-intelligence/disappointed-by-compliance-to-ai-rules-meity-proposes-continuous-watermarks-11776779823178.html",
         "summary": "The Indian electronics ministry has proposed an amendment to social media regulations, requiring a continuous display of labels for AI-modified content. This move comes amid concerns over inadequate compliance with previous rules. Stakeholders have been given until 7 May to respond to the draft amendment.",
@@ -7420,6 +7440,66 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 8,
+        "title": "Former Zetwerk executives’ startup STCH raises $5.5 Mn led by Omnivore",
+        "url": "https://entrackr.com/snippets/former-zetwerk-executives-startup-stch-raises-7-mn-led-by-omnivore-11756516",
+        "summary": "STCH, an AI startup focused on fabric development and textile manufacturing, has raised $5.5 million in a pre-Series A round led by Omnivore. The funding will be used to expand its AI capabilities, build a fabric R&D lab, and scale delivery across key markets. Founded by former Zetwerk executives, STCH operates a contract development and manufacturing platform for fashion businesses, focusing on fabric innovation and sourcing.",
+        "date_published": "2026-04-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "India eyes ₹300 crore defence AI CoE with Sarvam to boost self-reliance",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-eyes-300-crore-defence-ai-coe-with-sarvam-to-boost-self-reliance/130437734",
+        "summary": "India is planning to establish a ₹300 crore Centre of Excellence for defence AI in collaboration with homegrown AI firms, led by Sarvam. The centre aims to develop indigenous AI models for various defence applications, including surveillance and battlefield decision-making. This initiative is part of India's efforts to boost self-reliance in the defence sector.",
+        "date_published": "2026-04-22",
+        "source_name": "ET CIO - AI",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Kabeer Biswas's new startup raises Rs 102 Cr from PeakXV, Blume, and CRED",
+        "url": "https://yourstory.com/2026/04/kabeer-biswass-new-startup-raises-rs-108-cr-from-peakxv-blume",
+        "summary": "Kabeer Biswas's new startup, M, has raised Rs 102 Cr from investors including PeakXV, Blume, and CRED. M is a consumer AI startup co-founded by Biswas and Kartik Mishra, focused on simplifying home management. The startup aims to automate decisions, coordination, and routine services for homeowners.",
+        "date_published": "2026-04-22",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Audio series platform Pocket FM elevates Lalit Gangwar as COO",
         "url": "https://entrackr.com/snippets/audio-series-platform-pocket-fm-elevates-lalit-gangwar-as-coo-11749554",
@@ -9030,6 +9110,7 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }
