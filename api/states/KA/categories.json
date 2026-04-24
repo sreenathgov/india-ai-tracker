@@ -266,6 +266,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "India and Japan forge data partnership to power AI-ready smart cities",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-and-japan-forge-data-partnership-to-power-ai-ready-smart-cities/130482096",
+        "summary": "India and Japan have formed a data partnership through a collaboration between ONESTRUCTION and DataKaveri to integrate construction data into urban AI platforms. The partnership aims to utilize previously lost building information for smart city applications and digital twins in both countries. This integration will help power AI-ready smart cities in India and Japan.",
+        "date_published": "2026-04-24",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Inside The Standard&#039;s Bengaluru bet: Building the AI-ready workforce of tomorrow",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/building-the-future-the-standards-ai-driven-expansion-in-bengaluru/130455992",
@@ -1706,6 +1726,26 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 4,
+        "title": "Exclusive: Oolka raises Rs 130 Cr in Series A led by Accel at Rs 730 Cr valuation",
+        "url": "https://entrackr.com/exclusive/exclusive-oolka-raises-rs-130-cr-in-series-a-led-by-accel-at-rs-730-cr-valuation-11760159",
+        "summary": "Fintech startup Oolka has raised Rs 130 crore in a Series A funding round led by Accel India, valuing the company at Rs 730 crore. Accel India invested Rs 87.22 crore, while existing investors Lightspeed and Z47 infused Rs 20.87 crore and Rs 20.86 crore, respectively. The funding round was completed through the allotment of equity shares and compulsorily convertible preference shares.",
+        "date_published": "2026-04-24",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 4,
         "title": "Textile tech startup STCH raises $5.5M in pre-Series A round led by Omnivore",

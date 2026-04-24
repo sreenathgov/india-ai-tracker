@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 8,
+        "title": "‘Leap into future’: Delhi govt plans to set up two AI centres of excellence; governance, innovation in focus",
+        "url": "https://indianexpress.com/article/cities/delhi/leap-into-future-delhi-govt-plans-to-set-up-two-ai-centres-of-excellence-governance-innovation-in-focus-10652539/",
+        "summary": "The Delhi government plans to establish two AI centres of excellence, focusing on governance and innovation. These centres aim to drive progress and improvement in various sectors through artificial intelligence. The initiative is seen as a significant step towards embracing the future of technology and governance.",
+        "date_published": "2026-04-23",
+        "source_name": "Indian Express - Delhi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "‘Vidhan Sathi’ AI chatbot to help MLAs with Budget",
         "url": "https://www.tribuneindia.com/news/delhi/vidhan-sathi-ai-chatbot-to-help-mlas-with-budget",
@@ -262,6 +282,26 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 3,
+        "title": "Part II: Flower Nahi, Fire: Delhi HC Waters the Wrong Rights (Again!)",
+        "url": "https://spicyip.com/2026/04/part-ii-flower-nahi-fire-delhi-hc-waters-the-wrong-rights-again.html",
+        "summary": "The Delhi High Court has been criticized for its approach to personality rights, failing to distinguish between different forms of unauthorized use. This conflation of fan practices, commercial merchandise, and AI-driven misuse leads to an overbroad and flawed approach. Dr. Aakanksha Kumar's analysis highlights the need for a more nuanced understanding of these distinct categories.",
+        "date_published": "2026-04-23",
+        "source_name": "SpicyIP",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 10,
         "title": "Target to earn Rs 2 crore a month, AI use, raw material sourced from China: Inside fake Mounjaro racket Gurgaon ops",

@@ -1034,6 +1034,46 @@
         "posted_to_x_at": null
       },
       {
+        "id": 2,
+        "title": "Amazon India to invest Rs 2,800 Cr to boost worker safety, expand logistics network",
+        "url": "https://yourstory.com/2026/04/amazon-india-invest-rs-2800-cr-boost-worker-safety-expand-logistics",
+        "summary": "Amazon India plans to invest Rs 2,800 Cr to enhance worker safety and expand its logistics network. This investment is part of the company's larger commitment to invest over $35 billion in India by 2030. The investment will focus on AI-led digitisation, export growth, and job creation.",
+        "date_published": "2026-04-23",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "India leads other countries, as 85 percent of patients turn to AI before doctors",
+        "url": "https://telanganatoday.com/india-leads-other-countries-as-85-percent-of-patients-turn-to-ai-before-doctors",
+        "summary": "India is leading the global adoption of AI in healthcare, with 85% of consumers consulting AI tools before doctors, according to a BCG study. The trend is primarily driven by young people, but most users still prefer a hybrid approach that combines both doctor and AI input. This hybrid model is the preferred choice, despite the high reliance on AI tools.",
+        "date_published": "2026-04-23",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Disappointed by compliance to AI rules, Meity proposes 'continuous' watermarks",
         "url": "https://www.livemint.com/ai/artificial-intelligence/disappointed-by-compliance-to-ai-rules-meity-proposes-continuous-watermarks-11776779823178.html",
@@ -9109,8 +9149,5 @@
       }
     ]
   },
-  "today_updates": [
-    "AI Start-Up News",
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
