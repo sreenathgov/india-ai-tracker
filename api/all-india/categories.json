@@ -4,6 +4,26 @@
     "Policies and Initiatives": [
       {
         "id": 4,
+        "title": "Funding and acquisitions in Indian startup this week [Apr 20 - Apr 25]",
+        "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startup-this-week-apr-20-apr-25-11763906",
+        "summary": "Indian startups raised around $47 million in funding this week, with 13 early-stage deals and 6 undisclosed transactions. This is a significant decrease from the previous week, which saw 17 startups secure around $129.07 million. The largest early-stage deal was secured by healthcare automation startup Coral, which raised $12.5 million from Z47 and Lightspeed Venture Partners.",
+        "date_published": "2026-04-25",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
         "title": "KRAFTON, Naver officially launch Rs 6,000 Cr India Unicorn Growth Fund with Mirae Asset",
         "url": "https://entrackr.com/news/krafton-naver-officially-launch-rs-6000-cr-india-unicorn-growth-fund-with-mirae-asset-11748832",
         "summary": "KRAFTON Inc. and Naver Corporation have partnered with Mirae Asset Venture Investments to launch a Rs 6,000 crore India-focused Unicorn Growth Fund. The fund, announced in December, is one of the largest capital pools raised from Asia for Indian startups. The official launch was attended by high-level government officials, including Union Minister Piyush Goyal and South Korea's Minister of Trade, Industry and Resources Jung Kwan Kim.",
@@ -1013,6 +1033,86 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 1,
+        "title": "Before Mythos goes public, Indian IT also wants access",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/before-mythos-goes-public-indian-it-also-wants-access/130507146",
+        "summary": "Mythos, a powerful AI model, is expected to expose vulnerabilities in companies' infrastructure globally. Its developer, Anthropic, has delayed a wider launch and given early access to a select group of companies to fix their systems. Indian IT companies are now seeking access to Mythos to prepare for its potential impact.",
+        "date_published": "2026-04-25",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "India’s techade to be shaped by 6G, AI, quantum technologies: Dr Pemmasani...",
+        "url": "https://cellit.in/indias-techade-to-be-shaped-by-6g-ai-quantum-technologies-dr-pemmasani-chandra-sekhar/",
+        "summary": "India's techade is expected to be shaped by emerging technologies such as 6G, AI, and quantum technologies, according to Dr. Pemmasani. These technologies will play a crucial role in defining the country's technological advancements. Dr. Pemmasani's statement highlights the significance of these technologies in India's future tech landscape.",
+        "date_published": "2026-04-25",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Swiggy opens AI commerce stack to external developers with Builders Club",
+        "url": "https://yourstory.com/2026/04/swiggy-opens-ai-commerce-stack-to-external-developers-with-builders-club",
+        "summary": "Swiggy has launched the Builders Club, an initiative that allows external developers to access its AI commerce stack. This move aims to expand Swiggy's AI ecosystem by enabling outsiders to build new applications with real-life use cases. The Builders Club provides an opportunity for developers to create innovative solutions using Swiggy's AI technology.",
+        "date_published": "2026-04-24",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "FM flags AI risks, says banks ready for challenges",
+        "url": "https://telanganatoday.com/fm-flags-ai-risks-says-banks-ready-for-challenges",
+        "summary": "Finance Minister Nirmala Sitharaman stated that Indian banks are prepared to handle technological risks, but expressed concern over potential threats from Anthropic's Mythos AI. The Ministry of Electronics and Information Technology is monitoring the situation and advocating for stronger safeguards. Indian authorities are taking a cautious approach to mitigate potential risks associated with AI.",
+        "date_published": "2026-04-24",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 1,
         "title": "AI’s rapid rise forces India to rethink ‘light-touch’ regulations",
@@ -9149,5 +9249,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments",
+    "Policies and Initiatives"
+  ]
 }

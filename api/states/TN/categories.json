@@ -88,6 +88,26 @@
     "Major AI Developments": [
       {
         "id": 7,
+        "title": "IIT Madras Swayam Plus launches three AI courses",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/iit-madras-swayam-plus-launches-three-ai-courses/articleshow/130502130.cms",
+        "summary": "IIT Madras Swayam Plus has launched three new courses focused on Artificial Intelligence. The launch is part of the institution's efforts to provide accessible education in emerging technologies like AI. These courses aim to equip students with knowledge and skills in AI, but specific details about the courses are not provided.",
+        "date_published": "2026-04-25",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
         "title": "AI hologram campaigns take TN polls by storm as Vijay’s virtual avatar draws crowds",
         "url": "https://telanganatoday.com/ai-hologram-campaigns-take-tn-polls-by-storm-as-vijays-virtual-avatar-draws-crowds",
         "summary": "AI-powered holograms of Vijay are being used in election campaigns in Tamil Nadu, allowing for virtual outreach and immersive voter engagement. This technology is being adopted by political parties to enhance their visibility and appeal ahead of the Assembly elections. The use of holograms is transforming the election campaign landscape in the state, drawing large crowds and increasing voter interaction.",
@@ -621,5 +641,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

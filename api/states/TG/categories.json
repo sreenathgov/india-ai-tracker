@@ -87,6 +87,28 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "AI engineering jobs in India surge 59.5 pc, outpacing US and Europe: LinkedIn report",
+        "url": "https://telanganatoday.com/ai-engineering-jobs-in-india-surge-59-5-pc-outpacing-us-and-europe-linkedin-report",
+        "summary": "AI engineering job postings in India increased by 59.5% year-over-year, surpassing growth in the US and Europe. This surge is driven by strong demand in cities like Bengaluru, Hyderabad, and emerging cities such as Vijayawada. The growth reflects rapid adoption of AI across various industries in India, according to a LinkedIn report.",
+        "date_published": "2026-04-24",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG",
+          "KA",
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Human touch trumps AI as youth back Tele-MANAS",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/human-touch-trumps-ai-as-youth-back-tele-manas/articleshow/130377219.cms",
@@ -1187,6 +1209,27 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "AI-powered R&D platform for consumer products; Demand for AI talent spikes in India",
+        "url": "https://yourstory.com/2026/04/-ai-powered-rd-platform-for-consumer-products-",
+        "summary": "Deeptech startup Bettrlabs is using AI to digitize product development for consumer brands, streamlining the process from idea to formulation. The demand for AI talent in India is increasing, with Bengaluru leading in AI hiring, followed by Hyderabad. Tier II cities are also emerging as hubs for AI talent in the country.",
+        "date_published": "2026-04-25",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA",
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Prashant Pitti’s Optimo Capital raises Rs 100 Cr from PNB",
         "url": "https://entrackr.com/snippets/prashant-pittis-optimo-capital-raises-rs-100-cr-from-pnb-11224352",
@@ -1329,5 +1372,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }
