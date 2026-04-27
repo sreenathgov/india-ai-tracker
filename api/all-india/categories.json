@@ -1055,6 +1055,66 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "Indian IT’s big boys admit concerns around AI-led deflation",
+        "url": "https://www.livemint.com/ai/indian-it-big-boys-admit-concerns-around-ai-led-deflation-tcs-infosys-hcltech-wipro-11777197810398.html",
+        "summary": "Top Indian IT companies, including Tata Consultancy Services and Infosys, have expressed concerns about AI-led deflation impacting their revenues. The CEOs of these companies, such as HCL Technologies and Wipro, have acknowledged the issue in recent weeks. They have also discussed the potential benefits of higher productivity resulting from AI adoption.",
+        "date_published": "2026-04-27",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "AI to accelerate India&#039;s tech industry, not a threat; tech to continue hiring people",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-to-accelerate-indias-tech-industry-not-a-threat-tech-to-continue-hiring-people/130538127",
+        "summary": "Srikanth Velamakanni has taken over as the top leader of NASSCOM amidst challenges facing the Indian IT industry, including geopolitical turmoil and AI disruption. According to Velamakanni, AI is expected to accelerate India's tech industry rather than pose a threat. The tech industry is likely to continue hiring people despite the emergence of AI.",
+        "date_published": "2026-04-27",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Gartner survey reveals 80% of CEOs say AI will force operational capability overhauls",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/gartner-survey-reveals-80-of-ceos-say-ai-will-force-operational-capability-overhauls/130538041",
+        "summary": "A Gartner survey found that 80% of CEOs believe AI will require significant overhauls of operational capabilities. By 2028, many organizations are expected to rely less on human intervention for decision-making, adopting more autonomous business models. AI is also anticipated to impact revenue streams through automated transactions and changing customer relationships.",
+        "date_published": "2026-04-27",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Data centres must coexist with frugal AI in India, say experts at Frugal Innovation Forum",
         "url": "https://www.thehindu.com/news/cities/bangalore/datacentresmust-coexist-with-frugal-ai-in-india-say-experts-at-frugal-innovation-forum/article70905954.ece",
         "summary": "Experts at the Frugal Innovation Forum discussed the need for data centres to coexist with frugal AI in India. The forum, which lasted two days, brought together innovators and policymakers from India and France. The event aimed to explore how achieving more with limited resources can drive a sustainable and inclusive future.",
@@ -9290,7 +9350,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "Policies and Initiatives"
+    "Major AI Developments"
   ]
 }

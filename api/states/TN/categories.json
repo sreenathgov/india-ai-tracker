@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Summer camps turn high-tech this year as robotics, AI keep students engaged",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/summer-camps-turn-high-tech-this-year-as-robotics-ai-keep-students-engaged/articleshow/130538462.cms",
+        "summary": "Summer camps are incorporating high-tech activities such as robotics and AI to keep students engaged. These tech-infused camps aim to provide an interactive and immersive learning experience for students during their summer break. By integrating robotics and AI, camps are making learning a fun and engaging experience for students.",
+        "date_published": "2026-04-27",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "IIT Madras Swayam Plus launches three AI courses",
         "url": "https://timesofindia.indiatimes.com/city/chennai/iit-madras-swayam-plus-launches-three-ai-courses/articleshow/130502130.cms",
@@ -641,5 +661,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

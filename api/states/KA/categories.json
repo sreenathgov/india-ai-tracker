@@ -1749,6 +1749,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "Capital-A announces first close of Rs 160 Cr for Fund II",
+        "url": "https://entrackr.com/snippets/capital-a-announces-first-close-of-rs-160-cr-for-fund-ii-11769484",
+        "summary": "Capital-A, an early-stage venture capital firm, has secured the first close of its second fund at Rs 160 crore to back startups in sectors like aerospace and energy transition. The fund is targeting a base corpus of Rs 300 crore with a greenshoe option of Rs 100 crore. The first close was largely anchored by indigenous investors, including several family offices and individual investors.",
+        "date_published": "2026-04-27",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "AI-powered R&D platform for consumer products; Demand for AI talent spikes in India",
         "url": "https://yourstory.com/2026/04/-ai-powered-rd-platform-for-consumer-products-",
@@ -2337,5 +2357,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }
