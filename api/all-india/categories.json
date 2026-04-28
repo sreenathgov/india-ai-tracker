@@ -1054,6 +1054,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "HyugaLife raises $10.5 Mn in Series A round led by IvyCap Ventures",
+        "url": "https://entrackr.com/news/hyugalife-raises-105-mn-in-series-a-round-led-by-ivycap-ventures-11773511",
+        "summary": "HyugaLife, a marketplace for proteins and supplements, has raised $10.5 million in a Series A funding round led by IvyCap Ventures. The round also saw participation from First Bridge Fund, adding to the company's previous seed round of $6.3 million in February 2024. The funding brings HyugaLife's total raised capital to $16.8 million.",
+        "date_published": "2026-04-28",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Indian IT’s big boys admit concerns around AI-led deflation",
         "url": "https://www.livemint.com/ai/indian-it-big-boys-admit-concerns-around-ai-led-deflation-tcs-infosys-hcltech-wipro-11777197810398.html",
@@ -7680,6 +7700,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "India set for AI-led venture capital growth as global funding hits record...",
+        "url": "https://cellit.in/india-set-for-ai-led-venture-capital-growth-as-global-funding-hits-record-330-9-billion/",
+        "summary": "India is poised for significant growth in AI-led venture capital, driven by a surge in global funding. Global AI funding has reached a record high, creating opportunities for Indian startups and investors. This growth is expected to propel India's AI ecosystem forward, with increased investments and innovations in the sector.",
+        "date_published": "2026-04-28",
+        "source_name": "CellIt Magazine",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Former Zetwerk executives’ startup STCH raises $5.5 Mn led by Omnivore",
         "url": "https://entrackr.com/snippets/former-zetwerk-executives-startup-stch-raises-7-mn-led-by-omnivore-11756516",
@@ -9350,6 +9390,7 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

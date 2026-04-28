@@ -46,6 +46,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Google lays foundation of Rs 1.4 lakh cr AI data centre in Visakhapatnam; India gets biggest FDI in tech history",
+        "url": "https://www.etnownews.com/technology/google-lays-foundation-of-rs-1-4-lakh-cr-ai-data-centre-in-visakhapatnam-india-gets-biggest-fdi-in-tech-history-article-154186445",
+        "summary": "Google has laid the foundation for a $15 billion AI data centre in Visakhapatnam, equivalent to Rs 1.4 lakh crore. This investment marks India's largest-ever foreign direct investment (FDI) in the tech sector. The data centre is expected to be a significant development in India's tech history.",
+        "date_published": "2026-04-28",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "AI engineering jobs in India surge 59.5 pc, outpacing US and Europe: LinkedIn report",
         "url": "https://telanganatoday.com/ai-engineering-jobs-in-india-surge-59-5-pc-outpacing-us-and-europe-linkedin-report",
@@ -373,5 +393,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
