@@ -1,7 +1,28 @@
 {
   "state": "JH",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 11,
+        "title": "Ranchi Flyovers Approved: Rs 820 Crore Boost for Traffic Congestion Relief &amp; Mobility",
+        "url": "https://timesofindia.indiatimes.com/city/ranchi/ranchi-flyovers-approved-rs-820-crore-boost-for-traffic-congestion-relief-mobility/articleshow/130587054.cms",
+        "summary": "Jharkhand's cabinet has approved Rs 820 crore for two new flyovers in Argora and Chiroundi to alleviate traffic congestion. The state will also establish a State School Standards Authority and an Innovation and Incubation Centre Foundation in Palamu. An MoU with Google for AI innovation has been approved, further boosting the state's development initiatives.",
+        "date_published": "2026-04-29",
+        "source_name": "Times of India - Ranchi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "JH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [],
     "Major AI Developments": [
       {
@@ -106,5 +127,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

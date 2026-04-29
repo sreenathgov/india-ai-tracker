@@ -183,6 +183,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "Lead the Future of AI",
+        "url": "https://cio.economictimes.indiatimes.com/lead-the-future-of-ai?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "A new AI initiative is being launched, focused on leading the future of artificial intelligence. The initiative is based in Mumbai, aiming to drive innovation and advancements in the field. This effort seeks to position Mumbai as a key hub for AI development and progress.",
+        "date_published": "2026-05-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "AI tools in govt schools help students with learning, basic maths",
         "url": "https://timesofindia.indiatimes.com/city/pune/ai-tools-in-govt-schools-help-students-with-learning-basic-maths/articleshow/130361628.cms",
@@ -1202,6 +1222,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 6,
+        "title": "IAN Alpha Fund leads Rs 32.7 Cr round in sports-tech startup SportVot",
+        "url": "https://entrackr.com/snippets/ian-alpha-fund-leads-rs-327-cr-round-in-sports-tech-startup-sportvot-11776924",
+        "summary": "SportVot, a sports-tech startup, has raised Rs 32.7 crore in a funding round led by IAN Alpha Fund, with participation from other investors. The Mumbai-based startup had previously secured Rs 9.4 crore in a pre-Series A round in February 2024. The new funding will be used to expand internationally and invest in AI-led production.",
+        "date_published": "2026-04-29",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "AI will automate work. India’s next startup wave will sell experiences",
         "url": "https://yourstory.com/2026/04/ai-will-automate-work-indias-next-startup-wave-will-sell-experiences",
@@ -1425,5 +1465,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

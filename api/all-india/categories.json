@@ -1055,11 +1055,71 @@
     "Major AI Developments": [
       {
         "id": 2,
+        "title": "From understanding AI to leading with it",
+        "url": "https://yourstory.com/2026/04/understanding-ai-to-leading-with-it",
+        "summary": "Most Indian enterprises have accepted the importance of AI, but are struggling to implement it in practice. The main challenge is determining how to effectively utilize AI in daily operations. Indian boardrooms are now focused on finding ways to lead with AI and drive transformation.",
+        "date_published": "2026-04-29",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "We committed $100 billion to build a platform that supports India’s AI...",
+        "url": "https://cellit.in/we-committed-100-billion-to-build-a-platform-that-supports-indias-ai-growth-jeet-adani/",
+        "summary": "A significant investment of $100 billion has been committed to developing a platform that supports India's artificial intelligence ecosystem. This substantial investment aims to foster growth and innovation in the country's AI sector. The platform is intended to provide a comprehensive support system for India's AI development.",
+        "date_published": "2026-04-29",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "HyugaLife raises $10.5 Mn in Series A round led by IvyCap Ventures",
         "url": "https://entrackr.com/news/hyugalife-raises-105-mn-in-series-a-round-led-by-ivycap-ventures-11773511",
         "summary": "HyugaLife, a marketplace for proteins and supplements, has raised $10.5 million in a Series A funding round led by IvyCap Ventures. The round also saw participation from First Bridge Fund, adding to the company's previous seed round of $6.3 million in February 2024. The funding brings HyugaLife's total raised capital to $16.8 million.",
         "date_published": "2026-04-28",
         "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "India’s financial sector eyes ‘productivity revolution’ through Agentic AI",
+        "url": "https://www.livemint.com/ai/indias-financial-sector-eyes-productivity-revolution-through-agentic-ai-11776075911006.html",
+        "summary": "India's financial sector is shifting from basic AI automation to a more advanced agentic AI model to boost productivity. Top executives believe that integrating autonomous agents into operations is crucial for growth. This transition is expected to drive a \"productivity revolution\" in the Indian financial services industry.",
+        "date_published": "2026-04-28",
+        "source_name": "LiveMint AI News",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -7720,6 +7780,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 4,
+        "title": "HyugaLife raises Rs 100 Cr in Series A led by IvyCap Ventures",
+        "url": "https://yourstory.com/2026/04/funding-hyugalife-rs-100-crore-series-a-ivycap-ventures",
+        "summary": "HyugaLife has raised Rs 100 Cr in a Series A funding round led by IvyCap Ventures. The company plans to utilize the funds to enhance its AI-led personalisation technology and expand its dark store network. Additionally, HyugaLife will use the funding to establish an offline retail presence.",
+        "date_published": "2026-04-28",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Former Zetwerk executives’ startup STCH raises $5.5 Mn led by Omnivore",
         "url": "https://entrackr.com/snippets/former-zetwerk-executives-startup-stch-raises-7-mn-led-by-omnivore-11756516",
@@ -9390,7 +9470,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

@@ -266,6 +266,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "Dale Vaz’s stock trading app Sahi raises $33 Mn in Series B round",
+        "url": "https://entrackr.com/news/dale-vazs-stock-trading-app-sahi-raises-33-mn-in-series-b-round-11776820",
+        "summary": "Sahi, a stock trading app, has raised $33 million in a Series B funding round led by Accel, with participation from Elevation Capital. Accel Growth contributed around $20 million, while existing backers provided the remaining capital, valuing the company at approximately $200 million. This funding round comes as the company continues to grow and expand its services for performance-driven traders.",
+        "date_published": "2026-04-29",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "India and Japan forge data partnership to power AI-ready smart cities",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-and-japan-forge-data-partnership-to-power-ai-ready-smart-cities/130482096",
@@ -2357,5 +2377,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

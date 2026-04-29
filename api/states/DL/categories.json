@@ -283,6 +283,27 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Google’s AI Hub in Visakhapatnam; Building the missing pipeline for women founders",
+        "url": "https://yourstory.com/2026/04/google-ai-hub-visakhapatnam-building-missing-pipeline-for-women-founders",
+        "summary": "Google has launched an AI hub in Visakhapatnam, a key step in India's development of large-scale digital infrastructure. The hub aims to support the country's economic growth through AI technology. Additionally, Rebalance, a Gurugram-based organization, is providing support to women-led startups through mentorship and investor access.",
+        "date_published": "2026-04-29",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AP",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "GobbleCube’s co-founders dilutes over 70% stake post Series A",
         "url": "https://entrackr.com/decoding/gobblecubes-co-founders-dilutes-over-70-stake-post-series-a-11761349",
@@ -2522,5 +2543,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

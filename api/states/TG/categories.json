@@ -87,6 +87,27 @@
     ],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "Google’s $15 bn AI hub in Vizag will be growth engine for Indian economy: Naidu",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/googles-15-bn-ai-hub-in-vizag-will-be-growth-engine-for-indian-economy-naidu/articleshow/130589566.cms",
+        "summary": "Google is investing $15 billion in an AI hub in Vizag, which is expected to drive growth in the Indian economy. According to Naidu, this hub will serve as a key growth engine for the country. The investment is anticipated to have a significant impact on India's economic development.",
+        "date_published": "2026-04-29",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG",
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "AI engineering jobs in India surge 59.5 pc, outpacing US and Europe: LinkedIn report",
         "url": "https://telanganatoday.com/ai-engineering-jobs-in-india-surge-59-5-pc-outpacing-us-and-europe-linkedin-report",
@@ -1372,5 +1393,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
