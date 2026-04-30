@@ -286,6 +286,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 7,
+        "title": "Bengaluru city police launch India’s first multilingual AI system in Namma 112 emergency service",
+        "url": "https://www.thehindu.com/news/cities/bangalore/bengaluru-city-police-launch-indias-first-multilingual-ai-system-in-namma-112-emergency-service/article70919788.ece",
+        "summary": "The Bengaluru city police have launched India's first multilingual AI system as part of the Namma 112 emergency service. The system currently supports over 10 languages, including several Indian languages and international languages like Spanish, French, and Arabic. This innovation aims to facilitate more effective communication during emergency situations.",
+        "date_published": "2026-04-29",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "India and Japan forge data partnership to power AI-ready smart cities",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-and-japan-forge-data-partnership-to-power-ai-ready-smart-cities/130482096",
@@ -1769,6 +1789,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "Credit lifecycle platform Oolka raises $14 Mn in Series A led by Accel",
+        "url": "https://entrackr.com/news/credit-lifecycle-platform-oolka-raises-14-mn-in-series-a-led-by-accel-11780445",
+        "summary": "Bengaluru-based fintech startup Oolka has raised $14 million in a Series A funding round led by Accel, with participation from existing investors Lightspeed and Z47. The funding round values Oolka at around Rs 730 crore ($87.6 million) post-money. Oolka had previously raised an undisclosed amount, with this new round increasing its valuation significantly.",
+        "date_published": "2026-04-30",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Capital-A announces first close of Rs 160 Cr for Fund II",
         "url": "https://entrackr.com/snippets/capital-a-announces-first-close-of-rs-160-cr-for-fund-ii-11769484",
@@ -2378,6 +2418,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }

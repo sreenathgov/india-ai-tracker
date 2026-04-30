@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 8,
+        "title": "Cabinet approves policy on AI, eyes over Rs 10,000 cr investment, 1.5 lakh jobs by 2031",
+        "url": "https://indianexpress.com/article/cities/mumbai/cabinet-approves-policy-on-ai-eyes-over-rs-10000-cr-investment-1-5-lakh-jobs-by-2031-10662997/",
+        "summary": "The cabinet has approved a policy on artificial intelligence, aiming to attract over Rs 10,000 crore in investment. The policy targets creating 1.5 lakh jobs in the AI sector by 2031. This initiative is expected to drive significant growth and development in India's AI industry.",
+        "date_published": "2026-04-29",
+        "source_name": "Indian Express - Mumbai",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "‘Data over dynasties’: Grok supports Modi govt over Congress’ dynastic politics",
         "url": "https://telanganatoday.com/data-over-dynasties-grok-supports-modi-govt-over-congress-dynastic-politics",
@@ -1054,6 +1074,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "How AI-led deflation is dragging Indian IT firms but spurring innovation",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/how-ai-led-deflation-is-dragging-indian-it-firms-but-spurring-innovation/130622411",
+        "summary": "AI-driven deflation is impacting Indian IT firms, with an estimated 3.5% industry deflation. This is leading to weaker-than-expected growth guidance due to a timing lag in new programme ramp-ups. Mid-tier players are seen as better positioned than larger incumbents in the current market.",
+        "date_published": "2026-04-30",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Exfinity Venture Partners exits partially from CloudSEK",
+        "url": "https://entrackr.com/snippets/exfinity-venture-partners-exits-partially-from-cloudsek-11781056",
+        "summary": "Exfinity Venture Partners has partially exited its investment in cybersecurity platform CloudSEK, achieving a 13x multiple on invested capital and an internal rate of return of over 40%. The partial exit was executed as a secondary sale to existing investors, with Exfinity retaining a meaningful ownership stake in the company. Exfinity was CloudSEK's first institutional investor, backing the company during its pre-Series A round.",
+        "date_published": "2026-04-30",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "From understanding AI to leading with it",
         "url": "https://yourstory.com/2026/04/understanding-ai-to-leading-with-it",
@@ -1080,6 +1140,26 @@
         "summary": "A significant investment of $100 billion has been committed to developing a platform that supports India's artificial intelligence ecosystem. This substantial investment aims to foster growth and innovation in the country's AI sector. The platform is intended to provide a comprehensive support system for India's AI development.",
         "date_published": "2026-04-29",
         "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Optimized Electrotech: India’s AI electro-optical systems",
+        "url": "https://yourstory.com/2026/04/optimized-electrotech-ai-surveillance",
+        "summary": "Optimized Electrotech is developing AI-powered electro-optical systems for defense applications in India. The company has received Rs 100 crore in funding to support its efforts. Its systems are already being used by Indian forces, marking a significant milestone in the country's defense technology advancements.",
+        "date_published": "2026-04-29",
+        "source_name": "YourStory",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -7759,6 +7839,26 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 2,
+        "title": "Novio raises Rs 100 Cr in Series A led by Cornerstone Ventures",
+        "url": "https://yourstory.com/2026/04/funding-novio-rs-100-crore-series-a-led-by-cornerstone-ventures",
+        "summary": "Novio, a fintech startup, has raised Rs 100 Cr in a Series A funding round led by Cornerstone Ventures. The funding will be used to scale its distribution network and enhance product development. Additionally, Novio will utilize the funds to improve its AI capabilities.",
+        "date_published": "2026-04-29",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 3,
         "title": "India set for AI-led venture capital growth as global funding hits record...",

@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 10,
+        "title": "Goa proposes curbs on social media for minors under 16; draft to be sent to Centre",
+        "url": "https://timesofindia.indiatimes.com/city/goa/social-media-curbs-for-u-16s-goa-to-move-proposal-to-centre/articleshow/130615954.cms",
+        "summary": "Goa's IT Minister has proposed nationwide restrictions on social media access for minors under 16, citing concerns over detrimental effects on students. The state will submit the proposal to the Union IT Minister for consideration. Additionally, Goa is seeking public feedback on its draft AI policy to promote AI skilling and leverage local talent.",
+        "date_published": "2026-04-30",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 101,
         "title": "AI-system to challan vehicles sans valid docus at Goa border checkposts",
         "url": "https://b2b.economictimes.indiatimes.com/news/goa/ai-system-to-challan-vehicles-sans-valid-docus-at-goa-border-checkposts/125869333",
@@ -25,6 +45,26 @@
     ],
     "Events": [],
     "Major AI Developments": [
+      {
+        "id": 9,
+        "title": "Goa to deploy AI cams to look inside tinted cars",
+        "url": "https://timesofindia.indiatimes.com/city/goa/goa-to-deploy-ai-cams-to-look-inside-tinted-cars/articleshow/130616124.cms",
+        "summary": "Goa is deploying an AI-powered surveillance system with high-speed detection and night vision to enhance law enforcement and road safety. The system, which includes 92 cameras at strategic locations, can identify individuals and capture license plates. The cameras will be monitored from a command center and rolled out in phases to effectively track offenders.",
+        "date_published": "2026-04-30",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 12,
         "title": "AI traffic cameras to have number plate recognition",
@@ -164,5 +204,8 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments",
+    "Policies and Initiatives"
+  ]
 }
