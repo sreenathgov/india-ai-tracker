@@ -109,6 +109,46 @@
     "Major AI Developments": [
       {
         "id": 5,
+        "title": "India’s challenge lies in developing AI-insulated jobs, says chief economic adviser V Anantha Nageswaran at Chennai event",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/indias-challenge-lies-in-developing-ai-insulated-jobs-says-chief-economic-adviser-v-anantha-nageswaran-at-chennai-event/articleshow/130649008.cms",
+        "summary": "India's chief economic adviser, V Anantha Nageswaran, stated that the country's challenge lies in developing jobs that are insulated from the impact of artificial intelligence. He made this statement at an event in Chennai, highlighting the need for AI-resistant employment opportunities. Nageswaran's comment emphasizes the importance of creating jobs that cannot be easily automated by AI.",
+        "date_published": "2026-05-01",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Hosp uses AI to cut radiation in lung cancer screening",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/hosp-uses-ai-to-cut-radiation-in-lung-cancer-screening/articleshow/130648474.cms",
+        "summary": "A hospital is utilizing AI technology to reduce radiation exposure in lung cancer screenings. This innovative approach aims to minimize the risks associated with traditional screening methods. The AI-powered system helps optimize radiation doses while maintaining image quality for accurate diagnoses.",
+        "date_published": "2026-05-01",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
         "title": "Summer camps turn high-tech this year as robotics, AI keep students engaged",
         "url": "https://timesofindia.indiatimes.com/city/chennai/summer-camps-turn-high-tech-this-year-as-robotics-ai-keep-students-engaged/articleshow/130538462.cms",
         "summary": "Summer camps are incorporating high-tech activities such as robotics and AI to keep students engaged. These tech-infused camps aim to provide an interactive and immersive learning experience for students during their summer break. By integrating robotics and AI, camps are making learning a fun and engaging experience for students.",
@@ -682,5 +722,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
