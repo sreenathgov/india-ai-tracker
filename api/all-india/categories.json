@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 1,
+        "title": "Funding and acquisitions in Indian startup this week [Apr 27 - May 02]",
+        "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startup-this-week-apr-27-may-02-11788965",
+        "summary": "Indian startups raised around $187.2 million in funding this week, with 17 startups securing investments across 4 growth-stage and 13 early-stage deals, as well as one undisclosed deal. This amount surpasses the $47 million raised by 19 startups in the previous week. The growth-stage startups alone raised a total of $12 million.",
+        "date_published": "2026-05-02",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Cabinet approves policy on AI, eyes over Rs 10,000 cr investment, 1.5 lakh jobs by 2031",
         "url": "https://indianexpress.com/article/cities/mumbai/cabinet-approves-policy-on-ai-eyes-over-rs-10000-cr-investment-1-5-lakh-jobs-by-2031-10662997/",
@@ -9709,7 +9729,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

@@ -5,6 +5,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Punjab Police deploy AI-powered tool PAIS to crack down on global gang networks",
+        "url": "https://www.tribuneindia.com/news/punjab/punjab-police-deploy-ai-powered-tool-pais-to-crack-down-on-global-gang-networks",
+        "summary": "Punjab Police has deployed an AI-powered tool called PAIS to combat organized crime, utilizing a voice recognition system with a database of over 84,000 known criminal and suspect voice samples. The system aims to crack down on global gang networks, including those operating from countries like Canada and the US. Nearly 60 notorious gangsters linked to Punjab are being targeted through this initiative.",
+        "date_published": "2026-05-03",
+        "source_name": "Tribune - Punjab",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Amritsar Class 10 student lands ISRO’s YUVIKA programme after ChatGPT suggestion",
         "url": "https://www.tribuneindia.com/news/amritsar/amritsar-class-10-student-lands-isros-yuvika-programme-after-chatgpt-suggestion",
@@ -359,5 +379,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
