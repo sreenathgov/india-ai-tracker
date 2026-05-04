@@ -266,6 +266,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Atlassian launches ‘Unleash’ in Bengaluru",
+        "url": "https://yourstory.com/2026/04/atlassian-launches-unleash-in-bengaluru",
+        "summary": "Atlassian has launched 'Unleash', a flagship tech summit in Bengaluru, bringing together senior technologists and product leaders. The invitation-only event will focus on the impact of AI and modern workflows on software design, build, and operation. The summit aims to discuss the transformation of team workflows through AI and modern technologies.",
+        "date_published": "2026-05-04",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Scaling AI Without Chaos",
         "url": "https://cio.economictimes.indiatimes.com/scaling-ai-without-chaos?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
@@ -2457,5 +2477,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
