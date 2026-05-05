@@ -5,6 +5,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "IIIT-H launches 3-month certificate course on Engineering Agentic AI Systems",
+        "url": "https://www.iiit.ac.in/iiit-h-launches-3-month-certificate-course-on-engineering-agentic-ai-systems/",
+        "summary": "IIIT-H has launched a 3-month certificate course on Engineering Agentic AI Systems. The course is part of the institution's efforts to advance innovation and research in AI. This initiative aims to equip students with the skills to design and develop intelligent systems.",
+        "date_published": "2026-05-05",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG",
+          "UK"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "How Tagbin turned an early bet on AR, VR, and AI into a Rs 250 Cr government-tech powerhouse",
         "url": "https://yourstory.com/2026/03/tagbin-ar-vr-ai-govtech-india",
@@ -27,5 +48,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

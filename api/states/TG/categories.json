@@ -87,6 +87,27 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "IIIT-H launches 3-month certificate course on Engineering Agentic AI Systems",
+        "url": "https://www.iiit.ac.in/iiit-h-launches-3-month-certificate-course-on-engineering-agentic-ai-systems/",
+        "summary": "IIIT-H has launched a 3-month certificate course on Engineering Agentic AI Systems. The course is part of the institution's efforts to advance innovation and research in AI. This initiative aims to equip students with the skills to design and develop intelligent systems.",
+        "date_published": "2026-05-05",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG",
+          "UK"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Google’s $15 bn AI hub in Vizag will be growth engine for Indian economy: Naidu",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/googles-15-bn-ai-hub-in-vizag-will-be-growth-engine-for-indian-economy-naidu/articleshow/130589566.cms",
@@ -1393,5 +1414,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

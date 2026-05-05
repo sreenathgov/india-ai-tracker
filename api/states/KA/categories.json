@@ -266,12 +266,72 @@
     ],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "Bengaluru airport introduces new system to enhance safety at intersection of aircraft and ground vehicle movement",
+        "url": "https://www.thehindu.com/news/cities/bangalore/bengaluru-airport-gets-integrated-smart-airside-safety-system-to-enhance-safety-where-aircraft-and-ground-vehicle-movements-intersect/article70941563.ece",
+        "summary": "Bengaluru airport has introduced a new system to enhance safety at the intersection of aircraft and ground vehicle movement. The system utilizes AI-based computer vision, intelligent automation, and centralized control to manage right-of-way and improve operational efficiency. This technology aims to increase precision in airside operations, supporting safer and more efficient airport operations.",
+        "date_published": "2026-05-05",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 14,
+        "title": "AI takes over critical airside zones at Bengaluru Airport, to prevent runway incursions",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-takes-over-critical-airside-zones-at-bengaluru-airport-to-prevent-runway-incursions/articleshow/130818653.cms",
+        "summary": "Kempegowda International Airport has introduced an AI-driven Smart Airside Safety System to enhance safety at critical intersections. The system utilizes computer vision to monitor vehicle movements, prioritizing aircraft to reduce incident risk. This initiative aims to improve efficiency and solidify Bengaluru's position as a leader in smart airport operations.",
+        "date_published": "2026-05-05",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Atlassian launches ‘Unleash’ in Bengaluru",
         "url": "https://yourstory.com/2026/04/atlassian-launches-unleash-in-bengaluru",
         "summary": "Atlassian has launched 'Unleash', a flagship tech summit in Bengaluru, bringing together senior technologists and product leaders. The invitation-only event will focus on the impact of AI and modern workflows on software design, build, and operation. The summit aims to discuss the transformation of team workflows through AI and modern technologies.",
         "date_published": "2026-05-04",
         "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 16,
+        "title": "NIMS, IISc initiate talks for AI collaboration in healthcare, focus on patient outcomes",
+        "url": "https://www.thehindu.com/news/cities/Hyderabad/nims-iisc-initiate-talks-for-ai-collaboration-in-healthcare-focus-on-patient-outcomes/article70938959.ece",
+        "summary": "NIMS and IISc have initiated discussions for a potential collaboration in the field of healthcare, leveraging artificial intelligence to improve patient outcomes. The partnership aims to combine their expertise to enhance healthcare services and research. The focus will be on utilizing AI to achieve better patient care and treatment results.",
+        "date_published": "2026-05-04",
+        "source_name": "The Hindu - Hyderabad",
         "category": "Major AI Developments",
         "state_codes": [
           "KA"

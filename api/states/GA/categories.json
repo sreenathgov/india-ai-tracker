@@ -46,6 +46,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 17,
+        "title": "Draft AI policy aims to train 50,000 professionals by 2030",
+        "url": "https://timesofindia.indiatimes.com/city/goa/draft-ai-policy-aims-to-train-50000-professionals-by-2030/articleshow/130809940.cms",
+        "summary": "A draft AI policy aims to train 50,000 professionals by 2030, focusing on developing expertise in artificial intelligence. The policy's goal is to create a skilled workforce in the AI sector, with a target completion date of 2030. The initiative is part of a broader effort to advance AI adoption and development.",
+        "date_published": "2026-05-05",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Goa to deploy AI cams to look inside tinted cars",
         "url": "https://timesofindia.indiatimes.com/city/goa/goa-to-deploy-ai-cams-to-look-inside-tinted-cars/articleshow/130616124.cms",
@@ -204,5 +224,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

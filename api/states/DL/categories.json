@@ -283,6 +283,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "CashKaro revenue grows 72% to Rs 600 Cr in FY26; narrows losses",
+        "url": "https://entrackr.com/fintrackr/cashkaro-revenue-grows-72-to-rs-600-cr-in-fy26-narrows-losses-11800662",
+        "summary": "CashKaro, a cashback and affiliate commerce platform, reported a 72% year-on-year revenue growth to Rs 600 crore in FY26, up from Rs 348 crore in FY25. The company's gross merchandise value (GMV) for partner brands also increased to over Rs 10,000 crore in FY26, from Rs 6,000 crore in the previous year. CashKaro narrowed its losses, reporting an EBITDA loss of Rs 17 crore.",
+        "date_published": "2026-05-05",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Google’s AI Hub in Visakhapatnam; Building the missing pipeline for women founders",
         "url": "https://yourstory.com/2026/04/google-ai-hub-visakhapatnam-building-missing-pipeline-for-women-founders",
@@ -2543,5 +2563,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
