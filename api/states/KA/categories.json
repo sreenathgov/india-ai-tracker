@@ -266,6 +266,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "For safer runways: Artificial Intelligence takes over at key zones at Bengaluru airport",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/for-safer-runways-artificial-intelligence-takes-over-at-key-zones-at-bengaluru-airport/articleshow/130836840.cms",
+        "summary": "Artificial Intelligence is being utilized at key zones of the Bengaluru airport to enhance runway safety. The technology is expected to improve safety measures and reduce risks at the airport. Bengaluru airport is among the first to adopt AI for safer runway operations.",
+        "date_published": "2026-05-06",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "FIR filed over provocative message against ML",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/fir-filed-over-provocative-message-against-ml/articleshow/130835368.cms",
+        "summary": "A First Information Report (FIR) has been filed over a provocative message against a machine learning (ML) model. The details of the message and the ML model in question are not specified, but the incident has led to a formal police complaint. The case is currently under investigation, with no further information available at this time.",
+        "date_published": "2026-05-06",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 12,
         "title": "Bengaluru airport introduces new system to enhance safety at intersection of aircraft and ground vehicle movement",
         "url": "https://www.thehindu.com/news/cities/bangalore/bengaluru-airport-gets-integrated-smart-airside-safety-system-to-enhance-safety-where-aircraft-and-ground-vehicle-movements-intersect/article70941563.ece",
@@ -1888,6 +1928,26 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 6,
+        "title": "Telephony infra startup Vobiz.ai raises $1 Mn led by Piper Serica",
+        "url": "https://entrackr.com/snippets/telephony-infra-startup-vobizai-raises-1-mn-led-by-piper-serica-11801843",
+        "summary": "Vobiz.ai, an API-driven telephony infrastructure platform, has raised $1 million in a seed funding round led by Piper Serica VC Fund. The funds will be used to strengthen the company's engineering and go-to-market capabilities. Vobiz.ai provides low-latency, secure voice infrastructure for AI voice agents and applications, addressing the limitations of traditional telephony in the era of conversational AI.",
+        "date_published": "2026-05-05",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 5,
         "title": "Credit lifecycle platform Oolka raises $14 Mn in Series A led by Accel",

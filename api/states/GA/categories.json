@@ -66,6 +66,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 2,
+        "title": "AI policy to train 50k professionals by 2030",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/ai-policy-to-train-50k-professionals-by-2030/130822042",
+        "summary": "Goa's new draft AI policy aims to train 50,000 certified AI professionals by 2030 and make AI a compulsory school subject from Class VI. The policy also seeks to attract five global AI companies to the state by 2028. This initiative targets a significant boost in AI talent in the region.",
+        "date_published": "2026-05-05",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Goa to deploy AI cams to look inside tinted cars",
         "url": "https://timesofindia.indiatimes.com/city/goa/goa-to-deploy-ai-cams-to-look-inside-tinted-cars/articleshow/130616124.cms",
@@ -224,7 +244,5 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

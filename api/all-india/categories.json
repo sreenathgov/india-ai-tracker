@@ -1095,6 +1095,46 @@
     "Major AI Developments": [
       {
         "id": 3,
+        "title": "Freshworks posts $228.6 Mn revenue and $4.8 Mn loss in Q1 CY26",
+        "url": "https://entrackr.com/fintrackr/freshworks-posts-2286-mn-revenue-and-48-mn-loss-in-q1-cy26-11804719",
+        "summary": "Freshworks reported a 16% year-on-year revenue growth to $228.6 million in Q1 CY26, with a modest 2% quarter-on-quarter increase. The company's revenue grew from $196.3 million in the same period last year, and from $223 million in Q4 CY25. Freshworks also posted a $4.8 million loss in Q1 CY26.",
+        "date_published": "2026-05-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Freshworks cuts 500 jobs as AI reshapes operations",
+        "url": "https://entrackr.com/news/freshworks-cuts-500-jobs-as-ai-reshapes-operations-11804417",
+        "summary": "Freshworks has laid off around 500 employees, or 11% of its global workforce, as the company restructures operations due to the rapid adoption of artificial intelligence. The layoffs will result in one-time restructuring charges of nearly $8 million and affect teams globally. The move is partly driven by Freshworks' increased use of AI, which now generates over half of its code.",
+        "date_published": "2026-05-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "AI-driven pricing pressure, cost cuts reshape India IT outlook",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-driven-pricing-pressure-cost-cuts-reshape-india-it-outlook/130785396",
         "summary": "Artificial intelligence is reshaping the growth and margin outlook for India's IT services sector, driven by rising pricing pressure. Despite new demand opportunities emerging, firms are facing increased pressure to cut costs. This shift is expected to significantly impact the sector's overall outlook, according to a recent report by Kotak Institutional Equities.",
@@ -1138,6 +1178,46 @@
         "title": "Dream11 parent officially launches stockbroking platform Dream Street",
         "url": "https://entrackr.com/snippets/dream11-parent-officially-launches-stockbroking-platform-dream-street-11800929",
         "summary": "Dream Sports, the parent company of Dream11, has launched DreamStreet, an AI-powered stockbroking platform designed for first-time investors. The platform aims to simplify stock market participation through AI-led insights and expert-backed recommendations. DreamStreet initially allows users to invest in stocks and ETFs, following a restructuring exercise at Dream Sports that reorganized operations into multiple independent units.",
+        "date_published": "2026-05-05",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "What is vibe coding and how it is different from agentic coding? Everything Indian developers need to know in 2026",
+        "url": "https://www.etnownews.com/technology/what-is-vibe-coding-and-how-it-is-different-from-agentic-coding-everything-indian-developers-need-to-know-in-2026-article-154251584",
+        "summary": "Vibe coding and agentic engineering are emerging trends in software development, driven by AI tools. The global market for these tools is valued at $4.7 billion. Indian developers are expected to play a significant role in this shift, with these technologies reshaping the software development landscape in 2026.",
+        "date_published": "2026-05-05",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Netradyne acquires Moove to expand into Europe",
+        "url": "https://entrackr.com/snippets/netradyne-acquires-moove-to-expand-into-europe-11802976",
+        "summary": "Netradyne, backed by Reliance and SoftBank, has acquired Moove Connected Mobility, a European fleet intelligence company, to expand into the European market. The acquisition combines Netradyne's AI-driven platform with Moove's local expertise and customer base, strengthening its presence in the region. Moove will operate as part of Netradyne Europe, led by former Moove CEO Jeroen Bruinooge as SVP and GM for Europe.",
         "date_published": "2026-05-05",
         "source_name": "Entrackr - AI & Startups",
         "category": "Major AI Developments",
@@ -9950,7 +10030,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

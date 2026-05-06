@@ -283,12 +283,53 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "IIT Madras’s first tech summit held in New Delhi",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/iit-madrass-first-tech-summit-held-in-new-delhi/articleshow/130837430.cms",
+        "summary": "IIT Madras held its first tech summit in New Delhi, marking a significant event for the institution. The summit aimed to bring together experts and showcase technological advancements, although specific details of the event are not provided. IIT Madras's decision to host the summit in New Delhi highlights its efforts to expand its reach and collaborate with other stakeholders in the tech industry.",
+        "date_published": "2026-05-06",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "CashKaro revenue grows 72% to Rs 600 Cr in FY26; narrows losses",
         "url": "https://entrackr.com/fintrackr/cashkaro-revenue-grows-72-to-rs-600-cr-in-fy26-narrows-losses-11800662",
         "summary": "CashKaro, a cashback and affiliate commerce platform, reported a 72% year-on-year revenue growth to Rs 600 crore in FY26, up from Rs 348 crore in FY25. The company's gross merchandise value (GMV) for partner brands also increased to over Rs 10,000 crore in FY26, from Rs 6,000 crore in the previous year. CashKaro narrowed its losses, reporting an EBITDA loss of Rs 17 crore.",
         "date_published": "2026-05-05",
         "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "AI push to fight crimes: Senior Delhi Police officers to adopt 100 police stations",
+        "url": "https://indianexpress.com/article/cities/delhi/ai-push-to-fight-crimes-senior-delhi-police-officers-to-adopt-100-police-stations-10674856/",
+        "summary": "Senior Delhi Police officers will adopt 100 police stations as part of an initiative to fight crimes using artificial intelligence. The move aims to leverage AI technology to enhance law enforcement capabilities. This adoption is expected to improve crime-fighting efforts in Delhi.",
+        "date_published": "2026-05-05",
+        "source_name": "Indian Express - Delhi",
         "category": "Major AI Developments",
         "state_codes": [
           "DL"

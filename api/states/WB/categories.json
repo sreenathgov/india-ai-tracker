@@ -25,6 +25,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 13,
+        "title": "ML questions Bengal, Tamil Nadu poll results",
+        "url": "https://timesofindia.indiatimes.com/city/patna/ml-questions-bengal-tamil-nadu-poll-results/articleshow/130837454.cms",
+        "summary": "The CPI(ML) has expressed dissatisfaction with the recent election results in West Bengal and Tamil Nadu, citing significant voter roll purges as a factor in their losses. The party claims that millions of voters were unjustly removed, which contributed to the BJP's success in Bengal and other electoral outcomes. The CPI(ML) is questioning the legitimacy of the results due to these alleged purges.",
+        "date_published": "2026-05-06",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN",
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "EC set to use AI tech to monitor polling booths",
         "url": "https://timesofindia.indiatimes.com/city/kolkata/ec-set-to-use-ai-tech-to-monitor-polling-booths/articleshow/130376462.cms",
@@ -380,5 +401,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

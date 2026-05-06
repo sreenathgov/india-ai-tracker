@@ -67,6 +67,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "Adaptive traffic system to ease congestion in Gaya",
+        "url": "https://timesofindia.indiatimes.com/city/patna/adaptive-traffic-system-to-ease-congestion-in-gaya/articleshow/130837720.cms",
+        "summary": "Gaya is set to launch an adaptive traffic system in three months to reduce congestion and minimize manual oversight. The system features automatic number plate recognition and AI-based signal modulation to manage traffic flow. This innovative solution aims to transform traffic management in the city and surrounding areas.",
+        "date_published": "2026-05-06",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "AI conclave discusses NEP 2020 roadmap for higher education",
         "url": "https://timesofindia.indiatimes.com/city/patna/ai-conclave-discusses-nep-2020-roadmap-for-higher-education/articleshow/130450009.cms",
@@ -246,5 +266,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -108,6 +108,68 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "M&amp;M eyes Rs 4,100cr auto revenue boost from AI in FY27",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/mm-eyes-rs-4100cr-auto-revenue-boost-from-ai-in-fy27/articleshow/130837978.cms",
+        "summary": "Mahindra & Mahindra (M&M) aims to increase its auto revenue by Rs 4,100cr in FY27, driven by the adoption of artificial intelligence (AI) technologies. The company expects AI to play a significant role in boosting its revenue in the upcoming fiscal year. M&M's AI-driven initiatives are anticipated to contribute substantially to its growth plans.",
+        "date_published": "2026-05-06",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "IIT Madras’s first tech summit held in New Delhi",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/iit-madrass-first-tech-summit-held-in-new-delhi/articleshow/130837430.cms",
+        "summary": "IIT Madras held its first tech summit in New Delhi, marking a significant event for the institution. The summit aimed to bring together experts and showcase technological advancements, although specific details of the event are not provided. IIT Madras's decision to host the summit in New Delhi highlights its efforts to expand its reach and collaborate with other stakeholders in the tech industry.",
+        "date_published": "2026-05-06",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "ML questions Bengal, Tamil Nadu poll results",
+        "url": "https://timesofindia.indiatimes.com/city/patna/ml-questions-bengal-tamil-nadu-poll-results/articleshow/130837454.cms",
+        "summary": "The CPI(ML) has expressed dissatisfaction with the recent election results in West Bengal and Tamil Nadu, citing significant voter roll purges as a factor in their losses. The party claims that millions of voters were unjustly removed, which contributed to the BJP's success in Bengal and other electoral outcomes. The CPI(ML) is questioning the legitimacy of the results due to these alleged purges.",
+        "date_published": "2026-05-06",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN",
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "India’s challenge lies in developing AI-insulated jobs, says chief economic adviser V Anantha Nageswaran at Chennai event",
         "url": "https://timesofindia.indiatimes.com/city/chennai/indias-challenge-lies-in-developing-ai-insulated-jobs-says-chief-economic-adviser-v-anantha-nageswaran-at-chennai-event/articleshow/130649008.cms",
@@ -722,5 +784,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
