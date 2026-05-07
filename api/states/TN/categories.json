@@ -3,6 +3,27 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 3,
+        "title": "Dharmendra Pradhan opens IIT Madras tech summit in Delhi",
+        "url": "https://yourstory.com/2026/05/dharmendra-pradhan-iit-madras-tech-summit-delhi",
+        "summary": "Education Minister Dharmendra Pradhan inaugurated the IIT Madras Technology Summit 2026 in Delhi. The summit focuses on deep-tech and industry collaboration, bringing together key stakeholders in the field. The event aims to foster innovation and partnerships between academia and industry.",
+        "date_published": "2026-05-06",
+        "source_name": "YourStory",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Vikra Ocean Tech raises $1 Mn from Finvolve and India Accelerator",
         "url": "https://entrackr.com/snippets/vikra-ocean-tech-raises-1-mn-from-finvolve-and-india-accelerator-11779394",
@@ -784,7 +805,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

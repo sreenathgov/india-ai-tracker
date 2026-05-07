@@ -23,7 +23,32 @@
         "posted_to_x_at": null
       }
     ],
-    "Major AI Developments": [],
+    "Major AI Developments": [
+      {
+        "id": 8,
+        "title": "Apna Mart lays off 10% of workforce, shifts base from Bengaluru to Gurugram",
+        "url": "https://entrackr.com/news/apna-mart-lays-off-10-of-workforce-shifts-base-from-bengaluru-to-gurugram-11805807",
+        "summary": "Apna Mart, a grocery delivery startup, has laid off around 10% of its workforce, impacting 35-40 employees, as part of a restructuring exercise linked to AI adoption. The company is relocating its base from Bengaluru to Gurugram, with product and technology teams already moved. The layoffs were due to AI-led automation making some roles redundant and relocation not being feasible for certain employees.",
+        "date_published": "2026-05-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "JH",
+          "KA",
+          "CG",
+          "WB",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ],
     "AI Start-Up News": []
   },
   "today_updates": []

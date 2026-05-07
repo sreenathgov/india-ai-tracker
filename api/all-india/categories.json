@@ -1094,6 +1094,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "US-India partnership can rev up pace of AI adoption",
+        "url": "https://cellit.in/us-india-partnership-can-rev-up-pace-of-ai-adoption/",
+        "summary": "A US-India partnership is expected to accelerate the pace of Artificial Intelligence (AI) adoption. The collaboration aims to leverage the strengths of both countries to drive innovation and growth in the AI sector. This partnership can potentially boost the development and implementation of AI technologies in various industries.",
+        "date_published": "2026-05-07",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Freshworks posts $228.6 Mn revenue and $4.8 Mn loss in Q1 CY26",
         "url": "https://entrackr.com/fintrackr/freshworks-posts-2286-mn-revenue-and-48-mn-loss-in-q1-cy26-11804719",
@@ -1118,6 +1138,86 @@
         "title": "Freshworks cuts 500 jobs as AI reshapes operations",
         "url": "https://entrackr.com/news/freshworks-cuts-500-jobs-as-ai-reshapes-operations-11804417",
         "summary": "Freshworks has laid off around 500 employees, or 11% of its global workforce, as the company restructures operations due to the rapid adoption of artificial intelligence. The layoffs will result in one-time restructuring charges of nearly $8 million and affect teams globally. The move is partly driven by Freshworks' increased use of AI, which now generates over half of its code.",
+        "date_published": "2026-05-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Tech Layoffs 2026: Freshworks among another software firm restructures its workforce; 500 employees to loose jobs to AI",
+        "url": "https://www.etnownews.com/technology/tech-layoffs-2026-freshworks-among-another-software-firm-restructures-its-workforce-500-employees-to-loose-jobs-to-ai-article-154258492",
+        "summary": "Freshworks, a software firm, is laying off 500 employees as part of a restructuring effort to adapt to artificial intelligence. The move aims to reorganize the company's workflow to incorporate AI. This decision is part of the larger trend of tech layoffs in 2026.",
+        "date_published": "2026-05-06",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Big-budget campaigns show how AI companies are racing for relevance in India",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/big-budget-campaigns-show-how-ai-companies-are-racing-for-relevance-in-india/130846057",
+        "summary": "AI giants like ChatGPT and Google Gemini are launching big-budget campaigns in India to promote their services. These campaigns, using TV and billboards, aim to show how AI can solve everyday problems and make it a daily habit for millions. The goal is to build a new category and get users to rely on AI for common tasks.",
+        "date_published": "2026-05-06",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Meesho says 70% of its code is AI-generated; AI feeds drive 75% of orders",
+        "url": "https://entrackr.com/news/meesho-says-70-of-its-code-is-ai-generated-ai-feeds-drive-75-of-orders-11807058",
+        "summary": "Meesho, a SoftBank-backed company, has significantly integrated AI into its operations, with over 70% of its code now generated using AI tools. The use of AI has improved efficiency, reducing product development turnaround time and enabling faster iteration cycles, with platform experiments doubling in Q4 FY26. Additionally, AI-driven feeds are responsible for 75% of the company's orders.",
+        "date_published": "2026-05-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Finvasia launches voice AI finance assistant jAI on jUMPP with YES Bank",
+        "url": "https://entrackr.com/snippets/finvasia-launches-voice-ai-finance-assistant-jai-on-jumpp-with-yes-bank-11805995",
+        "summary": "Finvasia has launched jAI, a voice-to-voice AI finance assistant, on its wealth management platform jUMPP in partnership with YES Bank. jAI is claimed to be India's first conversational AI finance buddy, focused on personal finance management. The feature enables users to interact through voice commands to track expenses, manage budgets, and receive credit insights.",
         "date_published": "2026-05-06",
         "source_name": "Entrackr - AI & Startups",
         "category": "Major AI Developments",
@@ -8220,6 +8320,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "Fintech startup Freo acquires IndiaLends",
+        "url": "https://entrackr.com/snippets/fintech-startup-freo-acquires-indialends-11809015",
+        "summary": "Fintech startup Freo has acquired digital lending marketplace IndiaLends, gaining full ownership of the company. The acquisition combines Freo's financial products and licenses with IndiaLends' lending marketplace and distribution network. The deal will expand Freo's ecosystem to serve over 50 million users.",
+        "date_published": "2026-05-07",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Pixxel and Sarvam to build AI data centres in space; Check full story here",
         "url": "https://www.etnownews.com/technology/pixxel-and-sarvam-to-build-ai-data-centres-in-space-check-full-story-here-article-154248682",
@@ -10030,6 +10150,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }

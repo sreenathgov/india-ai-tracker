@@ -3,6 +3,47 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 10,
+        "title": "ONODA Kimi, Dr Jitendra Singh deepen India–Japan partnership in frontier technologies",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/india-and-japan-strengthen-ties-in-quantum-science-and-healthcare-innovation/130875824",
+        "summary": "Union Minister Dr. Jitendra Singh and Japan's Minister ONODA Kimi held talks in New Delhi to strengthen India-Japan cooperation. The discussions focused on advancing collaboration in key areas such as quantum science, AI, and medical research. The meeting aimed to deepen the partnership between the two countries in frontier technologies.",
+        "date_published": "2026-05-07",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Dharmendra Pradhan opens IIT Madras tech summit in Delhi",
+        "url": "https://yourstory.com/2026/05/dharmendra-pradhan-iit-madras-tech-summit-delhi",
+        "summary": "Education Minister Dharmendra Pradhan inaugurated the IIT Madras Technology Summit 2026 in Delhi. The summit focuses on deep-tech and industry collaboration, bringing together key stakeholders in the field. The event aims to foster innovation and partnerships between academia and industry.",
+        "date_published": "2026-05-06",
+        "source_name": "YourStory",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "‘Leap into future’: Delhi govt plans to set up two AI centres of excellence; governance, innovation in focus",
         "url": "https://indianexpress.com/article/cities/delhi/leap-into-future-delhi-govt-plans-to-set-up-two-ai-centres-of-excellence-governance-innovation-in-focus-10652539/",
@@ -293,6 +334,30 @@
         "state_codes": [
           "DL",
           "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Apna Mart lays off 10% of workforce, shifts base from Bengaluru to Gurugram",
+        "url": "https://entrackr.com/news/apna-mart-lays-off-10-of-workforce-shifts-base-from-bengaluru-to-gurugram-11805807",
+        "summary": "Apna Mart, a grocery delivery startup, has laid off around 10% of its workforce, impacting 35-40 employees, as part of a restructuring exercise linked to AI adoption. The company is relocating its base from Bengaluru to Gurugram, with product and technology teams already moved. The layoffs were due to AI-led automation making some roles redundant and relocation not being feasible for certain employees.",
+        "date_published": "2026-05-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "JH",
+          "KA",
+          "CG",
+          "WB",
+          "DL"
         ],
         "is_approved": true,
         "is_deleted": false,
@@ -2605,6 +2670,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Policies and Initiatives"
   ]
 }
