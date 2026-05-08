@@ -1094,12 +1094,112 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Building India’s AI infrastructure is about empowering people and inclusive development",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/building-indias-ai-infrastructure-is-about-empowering-people-and-inclusive-development/130880772",
+        "summary": "India is building its AI infrastructure with a focus on empowering people and promoting inclusive development. The nation aims to leverage its vast data to drive economic and social growth, transforming it into opportunities for all. This approach is expected to create shared prosperity and drive value at scale.",
+        "date_published": "2026-05-08",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "WhatsApp announces AI upgrade for round-the-clock SME customer support in India",
+        "url": "https://cellit.in/whatsapp-announces-ai-upgrade-for-round-the-clock-sme-customer-support-in-india/",
+        "summary": "WhatsApp has announced an AI upgrade to provide round-the-clock customer support for small and medium-sized enterprises (SMEs) in India. This upgrade aims to enhance customer support capabilities for SMEs, allowing them to respond to customer inquiries 24/7. The AI-powered support will help SMEs improve their customer service and overall business operations.",
+        "date_published": "2026-05-08",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "IBM, Yotta plan agentic AI platform hosted on India-based cloud for domestic...",
+        "url": "https://cellit.in/ibm-yotta-plan-agentic-ai-platform-hosted-on-india-based-cloud-for-domestic-enterprises/",
+        "summary": "IBM and Yotta are collaborating on an agentic AI platform to be hosted on an India-based cloud. The platform is intended for domestic use, leveraging India's cloud infrastructure. This partnership aims to provide AI solutions tailored to the Indian market.",
+        "date_published": "2026-05-08",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "US-India partnership can rev up pace of AI adoption",
         "url": "https://cellit.in/us-india-partnership-can-rev-up-pace-of-ai-adoption/",
         "summary": "A US-India partnership is expected to accelerate the pace of Artificial Intelligence (AI) adoption. The collaboration aims to leverage the strengths of both countries to drive innovation and growth in the AI sector. This partnership can potentially boost the development and implementation of AI technologies in various industries.",
         "date_published": "2026-05-07",
         "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Is Anthropic’s AI model threat to Indian banking system? What Financial Services Secretary M Nagaraju said",
+        "url": "https://www.etnownews.com/technology/is-anthropics-ai-model-threat-to-indian-banking-system-what-financial-services-secretary-m-nagaraju-said-article-154267699",
+        "summary": "Anthropic's AI model has sparked concern over its potential impact on the Indian banking system. Financial Services Secretary M Nagaraju has commented on the issue, although the specifics of his statement are not provided. The popularity of Anthropic has led to discussions and worries about its effects on various sectors, including finance.",
+        "date_published": "2026-05-07",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "AI, cloud, and cybersecurity driving IT jobs demand, says foundit report",
+        "url": "https://yourstory.com/2026/05/ai-cloud-and-cybersecurity-driving-it-jobs-demand-says-foundit-report",
+        "summary": "Hiring in India's IT sector is undergoing a structural shift, prioritizing value-based roles over volume-focused recruitment. The demand for IT jobs is being driven by emerging technologies such as AI, cloud, and cybersecurity. This shift is transforming the job market, with a greater emphasis on specialized skills and expertise.",
+        "date_published": "2026-05-07",
+        "source_name": "YourStory",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -10150,7 +10250,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

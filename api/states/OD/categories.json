@@ -85,6 +85,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "IIT develops AI model for accurate rainfall prediction",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/iit-develops-ai-model-for-accurate-rainfall-prediction/articleshow/130912936.cms",
+        "summary": "IIT Bhubaneswar has developed an AI model for accurate rainfall prediction, significantly boosting accuracy at the district level. The new system outperforms traditional methods, promising more reliable warnings for heavy downpours. This upgrade is crucial for mitigating flood risks in Odisha, where accurate rainfall predictions are essential.",
+        "date_published": "2026-05-08",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "CM to lay stone for country’s 1st advanced chip packaging unit today",
         "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/cm-to-lay-stone-for-countrys-1st-advanced-chip-packaging-unit-today/articleshow/130361305.cms",
@@ -207,5 +227,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

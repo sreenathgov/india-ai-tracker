@@ -164,6 +164,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "UP using AI &amp; Swiss tech for building quality e-ways",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/up-using-ai-swiss-tech-for-building-quality-e-ways/articleshow/130922419.cms",
+        "summary": "The state of Uttar Pradesh is utilizing artificial intelligence and Swiss technology to construct high-quality expressways. This initiative aims to improve the construction process and ensure the durability of the roads. The use of AI and Swiss technology is expected to enhance the overall quality of the expressways being built.",
+        "date_published": "2026-05-08",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "UP eyes deep-tech leadership, CM Yogi pushes time-bound innovation roadmap",
         "url": "https://government.economictimes.indiatimes.com/news/technology/up-eyes-deep-tech-leadership-cm-yogi-pushes-time-bound-innovation-roadmap/130186046",
@@ -740,5 +760,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

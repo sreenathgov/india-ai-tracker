@@ -184,6 +184,26 @@
     "Major AI Developments": [
       {
         "id": 8,
+        "title": "Maha’s 1st AI policy bets big on Rs 10,000cr investment over 5 yrs",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/mahas-1st-ai-policy-bets-big-on-rs-10000cr-investment-over-5-yrs/articleshow/130921245.cms",
+        "summary": "Maharashtra has unveiled its first AI policy, aiming to attract Rs 10,000cr in investments over the next five years. The policy seeks to establish the state as a hub for artificial intelligence, driving growth and innovation. This initiative is expected to boost the state's economy and create new opportunities in the AI sector.",
+        "date_published": "2026-05-08",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
         "title": "Lead the Future of AI",
         "url": "https://cio.economictimes.indiatimes.com/lead-the-future-of-ai?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
         "summary": "A new AI initiative is being launched, focused on leading the future of artificial intelligence. The initiative is based in Mumbai, aiming to drive innovation and advancements in the field. This effort seeks to position Mumbai as a key hub for AI development and progress.",
@@ -1222,6 +1242,27 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "Figtree Pharmacy raises seed funding from AJVC Fund",
+        "url": "https://entrackr.com/snippets/figtree-pharmacy-raises-seed-funding-from-ajvc-fund-11812221",
+        "summary": "Mumbai-based pharmacy startup Figtree Pharmacy has raised seed funding from AJVC Fund and other investors, with plans to use the funds to strengthen logistics, build its technology stack, and expand operations. The startup aims to scale its network to 25 stores, focusing on neighbourhood-focused pharmacies across Mumbai and Delhi. Figtree was founded in 2025 by Adrit Chaturvedi and Yatin Sharma, with the goal of expanding its private-label medicines and store operations.",
+        "date_published": "2026-05-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "IAN Alpha Fund leads Rs 32.7 Cr round in sports-tech startup SportVot",
         "url": "https://entrackr.com/snippets/ian-alpha-fund-leads-rs-327-cr-round-in-sports-tech-startup-sportvot-11776924",
@@ -1465,5 +1506,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments",
+    "AI Start-Up News"
+  ]
 }
