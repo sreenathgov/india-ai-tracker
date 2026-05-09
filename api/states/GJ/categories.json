@@ -125,6 +125,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Air India AI 171 crash probe in final stage, report likely in a month: Aviation minister Rammohan Naidu",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/air-india-ai-171-crash-probe-in-final-stage-report-likely-in-a-month-aviation-minister-rammohan-naidu/articleshow/130969321.cms",
+        "summary": "The investigation into the Air India flight AI 171 crash, which occurred on June 12, 2025, and claimed 260 lives, is in its final stage. The Aircraft Accident Investigation Bureau's report is expected to be released within a month, according to Union Civil Aviation Minister Rammohan Naidu. The crash resulted in the loss of 241 lives on board and 19 on the ground.",
+        "date_published": "2026-05-09",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Soon, AI app to guide drivers to empty parking slots in Ahmedabad",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/soon-ai-app-to-guide-drivers-to-empty-parking-slots-in-ahmedabad/articleshow/130966275.cms",
+        "summary": "An AI-powered app is being developed to guide drivers to empty parking slots in Ahmedabad. The app will utilize real-time data from CCTVs installed at 135 locations to provide accurate parking information. This initiative aims to simplify the parking process and reduce congestion in the city.",
+        "date_published": "2026-05-09",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "JobsUPI raises pre-seed round from IIMA Ventures and others",
         "url": "https://entrackr.com/snippets/jobsupi-raises-pre-seed-round-from-iima-ventures-and-others-11806024",
@@ -869,5 +909,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

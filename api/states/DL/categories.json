@@ -324,6 +324,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Fashinza co-founder Pawan Gupta quits",
+        "url": "https://entrackr.com/snippets/fashinza-co-founder-pawan-gupta-quits-11813045",
+        "summary": "Fashinza co-founder and former CEO Pawan Gupta has left the company to explore opportunities in artificial intelligence. Abhishek Sharma will continue as the sole founder and CEO of the B2B fashion supply chain startup. Gupta's exit was reportedly a personal decision and not related to the company's business performance.",
+        "date_published": "2026-05-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "IIT Madras’s first tech summit held in New Delhi",
         "url": "https://timesofindia.indiatimes.com/city/chennai/iit-madrass-first-tech-summit-held-in-new-delhi/articleshow/130837430.cms",
@@ -2690,7 +2710,5 @@
       }
     ]
   },
-  "today_updates": [
-    "AI Start-Up News"
-  ]
+  "today_updates": []
 }

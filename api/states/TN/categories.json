@@ -129,6 +129,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "TTV Dhinakaran accuses TVK chief Vijay of indulging in forgery to become Tamil Nadu CM",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/ttv-dhinakaran-accuses-tvk-chief-vijay-of-indulging-in-forgery-to-become-tamil-nadu-cm/articleshow/130972438.cms",
+        "summary": "AMMK leader TTV Dhinakaran has accused TVK chief Vijay of forgery in an attempt to become the Tamil Nadu CM. Dhinakaran claims a video showing his party's winning candidate supporting TVK is AI-generated. He has demanded an inquiry into the allegedly forged letter submitted to the Governor.",
+        "date_published": "2026-05-09",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "M&amp;M eyes Rs 4,100cr auto revenue boost from AI in FY27",
         "url": "https://timesofindia.indiatimes.com/city/chennai/mm-eyes-rs-4100cr-auto-revenue-boost-from-ai-in-fy27/articleshow/130837978.cms",
@@ -805,5 +825,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
