@@ -1095,6 +1095,46 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "India underperforms Asian rivals amid earnings and valuation strain",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-underperforms-asian-rivals-amid-earnings-and-valuation-strain/131003185",
+        "summary": "Indian stocks are experiencing losses while other Asian economies gain, driven by a global AI investment surge benefiting companies like Samsung Electronics and SK Hynix. India's lack of direct AI exposure has resulted in lower corporate earnings growth, making it less attractive to foreign investors. This has led to foreign investors seeking better returns in other markets, negatively impacting the Indian market.",
+        "date_published": "2026-05-11",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "86 pc Indian employees use AI, but ROI and governance lag: Report",
+        "url": "https://telanganatoday.com/86-pc-indian-employees-use-ai-but-roi-and-governance-lag-report",
+        "summary": "A report reveals that 86% of Indian employees are using AI at work, indicating growing adoption and increasing training efforts. However, only about 35% of employees believe AI has delivered the expected returns on investment. The study also notes gaps in AI governance and measurable benefits in Indian workplaces.",
+        "date_published": "2026-05-11",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "AI and data modernisation emerge as biggest drivers of India&#039;s tech spending surge",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-and-data-modernisation-emerge-as-biggest-drivers-of-indias-tech-spending-surge/130956733",
         "summary": "Artificial intelligence and data-led transformation are expected to drive 40-45% of India's change-related technology spending in 2026. This surge is due to companies accelerating investments in modernising their digital infrastructure. According to Bain & Company's report, AI and data modernisation are the biggest drivers of India's tech spending surge.",
@@ -10289,5 +10329,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
