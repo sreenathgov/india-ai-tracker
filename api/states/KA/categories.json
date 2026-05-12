@@ -266,6 +266,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Bengaluru expo showcases student innovation, emerging tech",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/bengaluru-expo-showcases-student-innovation-emerging-tech/articleshow/131022311.cms",
+        "summary": "A recent expo in Bengaluru highlighted innovative projects and emerging technologies developed by students. The event showcased various student innovations, demonstrating their creativity and skills in emerging tech fields. The expo provided a platform for students to display their talents and inventions, promoting innovation and technological advancement.",
+        "date_published": "2026-05-12",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "PM-JAY explores AI shield against healthcare insurance fraud at IISc Bengaluru",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/pm-jay-explores-ai-shield-against-healthcare-insurance-fraud-at-iisc-bengaluru/articleshow/130988080.cms",
@@ -2681,5 +2701,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

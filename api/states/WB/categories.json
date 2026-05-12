@@ -25,6 +25,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Women in 2026 assembly elections; Building AI tool for healthcare",
+        "url": "https://yourstory.com/2026/05/women-in-2026-assembly-elections",
+        "summary": "West Bengal, a state with a strong record of women's representation, elected 37 women in the 2026 assembly elections. The state is also working on building an AI tool for healthcare, although details of the project are not specified. The election results highlight the state's continued progress in promoting women's participation in politics.",
+        "date_published": "2026-05-12",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 13,
         "title": "ML questions Bengal, Tamil Nadu poll results",
         "url": "https://timesofindia.indiatimes.com/city/patna/ml-questions-bengal-tamil-nadu-poll-results/articleshow/130837454.cms",
@@ -425,5 +445,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

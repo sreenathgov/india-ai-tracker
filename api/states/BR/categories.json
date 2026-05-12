@@ -67,6 +67,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "IIT-P’s AI initiative set to break India’s digital language barrier",
+        "url": "https://timesofindia.indiatimes.com/city/patna/iit-ps-ai-initiative-set-to-break-indias-digital-language-barrier/articleshow/131021449.cms",
+        "summary": "IIT-Patna's COIL-D initiative is developing machine translation systems through the BHASHINI program to bridge India's linguistic divides. The project aims to create an inclusive AI ecosystem that empowers individuals from various language backgrounds. This initiative seeks to break India's digital language barrier with accessible and user-friendly technology.",
+        "date_published": "2026-05-12",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 12,
         "title": "Adaptive traffic system to ease congestion in Gaya",
         "url": "https://timesofindia.indiatimes.com/city/patna/adaptive-traffic-system-to-ease-congestion-in-gaya/articleshow/130837720.cms",
@@ -266,5 +286,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

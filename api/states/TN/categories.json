@@ -129,6 +129,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Enquiries on AI and Data Science courses remain top in Coimbatore colleges",
+        "url": "https://timesofindia.indiatimes.com/city/coimbatore/enquiries-on-ai-and-data-science-courses-remain-top-in-coimbatore-colleges/articleshow/131023080.cms",
+        "summary": "Enquiries for AI and Data Science courses are the most popular in Coimbatore colleges. These courses have garnered significant interest among students, indicating a growing demand for education in these fields. Coimbatore colleges are witnessing a high volume of enquiries for these courses, reflecting the increasing appeal of AI and Data Science programs.",
+        "date_published": "2026-05-12",
+        "source_name": "Times of India - Tamil Nadu (Alt)",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "TTV calls TVK’s video AI; party claims support voluntary",
         "url": "https://timesofindia.indiatimes.com/city/chennai/ttv-calls-tvks-video-ai-party-claims-support-voluntary/articleshow/130988316.cms",
@@ -845,5 +865,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
