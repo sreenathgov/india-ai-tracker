@@ -46,6 +46,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 16,
+        "title": "Goa turns to AI to convert piles of govt paperwork to digital records",
+        "url": "https://timesofindia.indiatimes.com/city/goa/goa-turns-to-ai-to-convert-piles-of-govt-paperwork-to-digital-records/articleshow/131048393.cms",
+        "summary": "The Indian state of Goa is utilizing AI technology to digitize large amounts of government paperwork. This initiative aims to convert physical records into digital formats, increasing efficiency and accessibility. The project is part of Goa's efforts to modernize its administrative processes and reduce paper waste.",
+        "date_published": "2026-05-13",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 17,
         "title": "Draft AI policy aims to train 50,000 professionals by 2030",
         "url": "https://timesofindia.indiatimes.com/city/goa/draft-ai-policy-aims-to-train-50000-professionals-by-2030/articleshow/130809940.cms",
@@ -244,5 +264,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

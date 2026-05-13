@@ -266,6 +266,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "IPL’s TV slump and changing viewer habits; An AI scientist to speed up drug discovery",
+        "url": "https://yourstory.com/2026/05/ipl-tv-slump-viewer-habits-ai-scientist-speed-up-drug-discovery",
+        "summary": "IPL's TV ratings have declined significantly in the first half of the 2026 season, while digital viewership continues to rise. Meanwhile, a biotech company called LiteFold is utilizing AI to speed up drug discovery through computational biology. LiteFold is based in Bengaluru and Delaware, and aims to accelerate workflows in the field.",
+        "date_published": "2026-05-13",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Bengaluru expo showcases student innovation, emerging tech",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/bengaluru-expo-showcases-student-innovation-emerging-tech/articleshow/131022311.cms",
@@ -2033,6 +2053,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "Meet LiteFold, a biotech startup using proprietary AI to speed up drug discovery",
+        "url": "https://yourstory.com/2026/05/litefold-biotech-startup-using-proprietary-ai-speed-up-drug-discovery",
+        "summary": "LiteFold is a biotech startup utilizing proprietary AI to expedite drug discovery. The company is based in Bengaluru and Delaware, operating as an AI-native platform. It aims to accelerate computational biology workflows through its innovative technology.",
+        "date_published": "2026-05-13",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Telephony infra startup Vobiz.ai raises $1 Mn led by Piper Serica",
         "url": "https://entrackr.com/snippets/telephony-infra-startup-vobizai-raises-1-mn-led-by-piper-serica-11801843",
@@ -2702,6 +2742,7 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

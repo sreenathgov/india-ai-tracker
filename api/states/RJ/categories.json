@@ -5,6 +5,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "Silicon Road Ventures partners Ajay Mahajan to float Rs 150 Cr AI fund",
+        "url": "https://entrackr.com/snippets/silicon-road-ventures-partners-ajay-mahajan-to-float-rs-150-cr-ai-fund-11829026",
+        "summary": "Silicon Road Ventures has partnered with Ajay Mahajan to launch a Rs 150 crore alternative investment fund focused on early-stage startups building agentic AI solutions in B2B commerce technology. The fund will target areas such as multi-channel commerce, supply chain, and fintech, and has received Category-II registration from Sebi. The investment fund aims to support startups developing innovative AI solutions for the B2B commerce sector.",
+        "date_published": "2026-05-13",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "RJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Jaipur students launch AI platform for defence families​",
         "url": "https://cellit.in/jaipur-students-launch-ai-platform-for-defence-families/",
@@ -88,5 +108,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -324,6 +324,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 14,
+        "title": "Will it rain in your neighbourhood? New AI tool offers 10-day forecasts for every 1km across UP",
+        "url": "https://timesofindia.indiatimes.com/city/noida/will-it-rain-in-your-neighbourhood-new-ai-tool-offers-10-day-forecasts-for-every-1km-across-up/articleshow/131048240.cms",
+        "summary": "A new AI tool offers 10-day weather forecasts for every 1km area across Uttar Pradesh, providing hyperlocal predictions. The tool aims to serve various sectors, including agriculture, water resource management, disaster relief, and urban planning. It can help authorities and residents make informed decisions with its precise and localized weather forecasts.",
+        "date_published": "2026-05-13",
+        "source_name": "Times of India - Noida",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Enterprise intelligence startup SCIKIQ secures $1.5 Mn in pre-Series A",
+        "url": "https://entrackr.com/snippets/enterprise-intelligence-startup-scikiq-secures-15-mn-in-pre-series-a-11826466",
+        "summary": "Enterprise intelligence platform SCIKIQ has raised $1.5 million in a pre-Series A funding round led by Triton Fund II. The funds will be used to support global expansion, strengthen AI capabilities, and scale the platform. SCIKIQ is an AI-native platform that helps enterprises convert fragmented data into business-ready intelligence, founded in 2023 by Gaurav Shinh and Rohit Kumar.",
+        "date_published": "2026-05-12",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 15,
+        "title": "523 graduates, future docs set to meet public healthcare pressure",
+        "url": "https://www.tribuneindia.com/news/delhi/523-graduates-future-docs-set-to-meet-public-healthcare-pressure",
+        "summary": "The All India Institute of Medical Sciences (AIIMS) in Delhi held its 51st convocation, graduating 523 students who will help meet public healthcare demands. The event emphasized the importance of empathy in healthcare, despite advancements in artificial intelligence (AI). These new graduates are expected to make a significant impact in the healthcare sector.",
+        "date_published": "2026-05-12",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Fashinza co-founder Pawan Gupta quits",
         "url": "https://entrackr.com/snippets/fashinza-co-founder-pawan-gupta-quits-11813045",
@@ -2710,5 +2770,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

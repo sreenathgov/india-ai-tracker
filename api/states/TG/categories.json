@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 17,
+        "title": "Adapt or perish: AI skills now needed in all engineering disciplines",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/adapt-or-perish-ai-skills-now-needed-in-all-engineering-disciplines/articleshow/131047520.cms",
+        "summary": "Experts warn that engineers must acquire AI skills to remain relevant, as artificial intelligence is increasingly being used across all engineering disciplines. AI is blurring the lines between traditional engineering branches, making it essential for students to learn cross-discipline skills and handle AI tools. This shift requires engineers to adapt and develop new skills to stay competitive in their fields.",
+        "date_published": "2026-05-13",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "IIIT-H launches 3-month certificate course on Engineering Agentic AI Systems",
         "url": "https://www.iiit.ac.in/iiit-h-launches-3-month-certificate-course-on-engineering-agentic-ai-systems/",
@@ -1414,5 +1434,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

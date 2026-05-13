@@ -183,6 +183,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "AI NEXT 2026",
+        "url": "https://cio.economictimes.indiatimes.com/ai-next?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "AI NEXT 2026 is an upcoming event, with the location set to be Mumbai. The event is expected to focus on advancements and innovations in the field of artificial intelligence. Further details about the event, such as dates and agenda, are not specified.",
+        "date_published": "2026-06-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "AI NEXT 2026: Where Enterprise Infrastructure Meets Strategy",
+        "url": "https://cio.economictimes.indiatimes.com/ai-next-enterprise?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "AI NEXT 2026 is an event focused on the intersection of enterprise infrastructure and strategy. The event is scheduled to take place in Mumbai, although the exact dates are not specified. It aims to bring together key stakeholders to discuss the future of AI in enterprise settings.",
+        "date_published": "2026-06-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "From Legacy Data Estates to AI-Ready Banking",
+        "url": "https://cio.economictimes.indiatimes.com/ai-ready-banking?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "A banking transformation is underway in Mumbai, focusing on converting legacy data estates into AI-ready systems. This shift aims to enhance banking operations and decision-making capabilities through artificial intelligence. The goal is to create a more efficient and modern banking infrastructure.",
+        "date_published": "2026-06-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Maha’s 1st AI policy bets big on Rs 10,000cr investment over 5 yrs",
         "url": "https://timesofindia.indiatimes.com/city/nagpur/mahas-1st-ai-policy-bets-big-on-rs-10000cr-investment-over-5-yrs/articleshow/130921245.cms",
