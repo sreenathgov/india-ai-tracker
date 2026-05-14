@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 6,
+        "title": "Cabinet approves Rs72k crore borrowing plan, AI initiative",
+        "url": "https://timesofindia.indiatimes.com/city/patna/cabinet-approves-rs72k-crore-borrowing-plan-ai-initiative/articleshow/131074817.cms",
+        "summary": "Bihar's government has approved a Rs 72,901 crore borrowing plan to enhance development and administrative functions. The plan includes an AI initiative in collaboration with Singapore's GFTN to foster an AI ecosystem. This initiative aims to empower thousands through training and support the startup landscape.",
+        "date_published": "2026-05-14",
+        "source_name": "Times of India - Patna",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "CM: Take steps to project Bihar’s achievements at national level",
         "url": "https://timesofindia.indiatimes.com/city/patna/cm-take-steps-to-project-bihars-achievements-at-national-level/articleshow/130359285.cms",
@@ -286,5 +306,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }
