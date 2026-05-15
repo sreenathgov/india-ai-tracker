@@ -129,6 +129,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "TN Deploys AIoT-based Automated Water Level Recorder Systems At 44 Dams, Reservoirs And Regulator Sites",
+        "url": "https://timesofindia.indiatimes.com/city/coimbatore/tn-deploys-aiot-based-automated-water-level-recorder-systems-at-44-dams-reservoirs-and-regulator-sites/articleshow/131102243.cms",
+        "summary": "Tamil Nadu has deployed AIoT-based automated water level recorder systems at 44 dams, reservoirs, and regulator sites. The systems aim to provide real-time monitoring and data collection, enhancing water management and flood control efforts. This initiative marks a significant step in leveraging technology to improve water resource management in the state.",
+        "date_published": "2026-05-15",
+        "source_name": "Times of India - Tamil Nadu (Alt)",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Enquiries on AI and Data Science courses remain top in Coimbatore colleges",
         "url": "https://timesofindia.indiatimes.com/city/coimbatore/enquiries-on-ai-and-data-science-courses-remain-top-in-coimbatore-colleges/articleshow/131023080.cms",
@@ -865,5 +885,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

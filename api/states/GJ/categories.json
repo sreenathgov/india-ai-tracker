@@ -125,6 +125,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "AI urban observatory in Ahmedabad to predict heatwaves, floods 72 hours early",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ai-urban-observatory-in-ahmedabad-to-predict-heatwaves-floods-72-hours-early/articleshow/131101997.cms",
+        "summary": "An AI urban observatory is being set up in Ahmedabad to predict heatwaves and floods 72 hours in advance. The observatory will utilize an AI-based dashboard to provide street-level data, enabling quick response to emergencies. This initiative by the Ahmedabad Municipal Corporation aims to enhance the city's disaster management capabilities.",
+        "date_published": "2026-05-15",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Uber to set up its first India data centre with Adani Group",
         "url": "https://entrackr.com/snippets/uber-to-set-up-its-first-india-data-centre-with-adani-group-11830654",
@@ -930,5 +950,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
