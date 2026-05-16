@@ -5,6 +5,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "How AI and smart grids will power Rajasthan’s next renewable energy phase",
+        "url": "https://government.economictimes.indiatimes.com/news/policy/harnessing-ai-and-smart-grids-rajasthans-renewable-energy-revolution/131132926",
+        "summary": "Industry leaders at the ET Government Rajasthan Energy Conclave 2026 emphasized the importance of digital technologies, storage, and predictive analytics in managing Rajasthan's expanding renewable energy sector. AI and smart grids are expected to play a key role in this next phase of renewable energy development. Rajasthan's energy ecosystem will rely on these technologies to optimize its growing renewable energy capacity.",
+        "date_published": "2026-05-16",
+        "source_name": "ET Government - Policy",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "RJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Silicon Road Ventures partners Ajay Mahajan to float Rs 150 Cr AI fund",
         "url": "https://entrackr.com/snippets/silicon-road-ventures-partners-ajay-mahajan-to-float-rs-150-cr-ai-fund-11829026",
@@ -108,5 +128,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

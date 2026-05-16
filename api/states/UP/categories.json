@@ -164,6 +164,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Pay or go viral: UP woman blackmailed using AI-generated obscene photos; Cyber cafe operator, brother booked",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/pay-or-go-viral-up-woman-blackmailed-using-ai-generated-obscene-photos-cyber-cafe-operator-brother-booked/articleshow/131132657.cms",
+        "summary": "A 25-year-old woman in Uttar Pradesh was blackmailed using AI-generated obscene photos by a cyber cafe operator and his brother, who extorted Rs 50,000 from her. The brothers threatened to upload the morphed photos online if their demands were not met, and later targeted the woman's husband. The police have booked the brothers and suspect they may have blackmailed other women as well.",
+        "date_published": "2026-05-16",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "UP using AI &amp; Swiss tech for building quality e-ways",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/up-using-ai-swiss-tech-for-building-quality-e-ways/articleshow/130922419.cms",
@@ -760,5 +780,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

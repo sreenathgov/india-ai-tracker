@@ -1115,11 +1115,91 @@
     "Major AI Developments": [
       {
         "id": 2,
+        "title": "How AI is changing what gets sold—and where—at Tata Consumer",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/tata-consumer-embraces-ai-revolutionizing-sales-and-supply-chain-strategies/131092610",
+        "summary": "Tata Consumer is integrating AI into daily decision-making processes, affecting various aspects of its business. The company is using AI to reshape product movement, adaptation, and competition in a volatile market. This initiative is led by Global Chief Digital Officer Rajesh Gopal, who oversees the implementation of AI in areas such as sales and product distribution.",
+        "date_published": "2026-05-16",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Win the AI race by winning the data race",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-race-to-ai-dominance-bridging-data-silos-for-future-success/131056779",
+        "summary": "India is emerging as a global AI leader with significant investment in AI infrastructure, hinging on unified data access and robust security. To drive innovation, organizations must modernize their data architecture for cost-effective AI solutions. This strategic approach will position India for sustained growth and competitive advantage in the AI-driven marketplace.",
+        "date_published": "2026-05-16",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Funding and acquisitions in Indian startups this week [May 11 - May 16]",
+        "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-may-11-may-16-11840734",
+        "summary": "Indian startups raised around $292.52 million in funding this week, with 20 startups securing investments across 3 growth-stage and 13 early-stage deals. This amount surpasses the $158.8 million raised by 24 startups in the previous week. The funding breakdown includes 4 undisclosed deals, with the remaining investments totaling $292.52 million.",
+        "date_published": "2026-05-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "AI Startups To Watch: 5 Startups That Caught Our Eye In May",
         "url": "https://inc42.com/startups/ai-startups-to-watch-5-startups-that-caught-our-eye-in-may/",
         "summary": "Google is investing $15 billion in an AI hub, dominating the AI narrative in India. Amidst this, several AI startups have caught attention, showcasing innovative solutions. Five notable AI startups have been identified as ones to watch in May, highlighting their potential in the growing Indian AI landscape.",
         "date_published": "2026-05-15",
         "source_name": "Inc42 Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "India&#039;s AI ambitions require public-private partnership model for scalability: AI4India",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/indias-ai-ambitions-public-private-partnerships-necessary-for-scalability/131116095",
+        "summary": "India's goal of leading the global AI landscape requires a public-private partnership model to achieve scalability. This model will help balance rapid innovation with digital sovereignty, according to AI4India. The partnership is necessary for the nation to successfully advance its AI ambitions.",
+        "date_published": "2026-05-15",
+        "source_name": "ET Government - Technology",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
