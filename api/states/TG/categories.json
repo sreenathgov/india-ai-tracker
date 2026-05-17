@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Case Law Meets Code As AI Enters Telangana Classrooms",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/case-law-meets-code-as-ai-enters-telangana-classrooms/articleshow/131144805.cms",
+        "summary": "AI is being introduced in Telangana classrooms, marking a significant integration of technology in education. The initiative aims to enhance learning experiences by combining case law with code, although specific details of the program are not provided. This development is part of a broader effort to incorporate AI in various aspects of life, including education, in the region.",
+        "date_published": "2026-05-17",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 17,
         "title": "Adapt or perish: AI skills now needed in all engineering disciplines",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/adapt-or-perish-ai-skills-now-needed-in-all-engineering-disciplines/articleshow/131047520.cms",
@@ -1434,5 +1454,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
