@@ -243,6 +243,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 2,
+        "title": "Craft beer &amp; some conversations with researchers on AI, evolution, outer space",
+        "url": "https://timesofindia.indiatimes.com/city/pune/craft-beer-some-conversations-with-researchers-on-ai-evolution-outer-space/articleshow/131160720.cms",
+        "summary": "Researchers discussed AI, evolution, and outer space over craft beer, exploring the intersection of these topics. The conversations delved into the latest advancements and discoveries in these fields. The event brought together experts to share their insights and knowledge on these complex and fascinating subjects.",
+        "date_published": "2026-05-18",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Maha’s 1st AI policy bets big on Rs 10,000cr investment over 5 yrs",
         "url": "https://timesofindia.indiatimes.com/city/nagpur/mahas-1st-ai-policy-bets-big-on-rs-10000cr-investment-over-5-yrs/articleshow/130921245.cms",
@@ -1566,5 +1586,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -85,6 +85,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "IIM Sambalpur, IIM Ahmedabad launch AI4Odisha initiative to empower MSMEs",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/iim-sambalpur-iim-ahmedabad-launch-ai4odisha-initiative-to-empower-msmes/articleshow/131160433.cms",
+        "summary": "IIM Sambalpur and IIM Ahmedabad have launched the AI4Odisha initiative to promote AI-led growth among MSMEs and local entrepreneurs. The program kicked off with a workshop attended by over 350 industry delegates, focusing on practical AI applications for business expansion. The initiative aims to empower MSMEs in the region through artificial intelligence.",
+        "date_published": "2026-05-18",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ",
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "IIT develops AI model for accurate rainfall prediction",
         "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/iit-develops-ai-model-for-accurate-rainfall-prediction/articleshow/130912936.cms",
@@ -227,5 +248,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

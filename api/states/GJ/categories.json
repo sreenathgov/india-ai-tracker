@@ -125,6 +125,47 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Mission admission: AI, data science courses surge across Gujarat campuses",
+        "url": "https://timesofindia.indiatimes.com/city/vadodara/mission-admission-ai-data-science-courses-surge-across-gujarat-campuses/articleshow/131160885.cms",
+        "summary": "Universities across Gujarat are introducing specialized courses in AI and data science, aligning with industry demands and emerging technologies. This surge in AI and data science programs is driven by the growing need for skilled professionals in these fields. Gujarat campuses are now offering a range of courses, from undergraduate to postgraduate levels, to cater to the increasing interest in AI and data science.",
+        "date_published": "2026-05-18",
+        "source_name": "Times of India - Vadodara",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "IIM Sambalpur, IIM Ahmedabad launch AI4Odisha initiative to empower MSMEs",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/iim-sambalpur-iim-ahmedabad-launch-ai4odisha-initiative-to-empower-msmes/articleshow/131160433.cms",
+        "summary": "IIM Sambalpur and IIM Ahmedabad have launched the AI4Odisha initiative to promote AI-led growth among MSMEs and local entrepreneurs. The program kicked off with a workshop attended by over 350 industry delegates, focusing on practical AI applications for business expansion. The initiative aims to empower MSMEs in the region through artificial intelligence.",
+        "date_published": "2026-05-18",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ",
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "AI urban observatory in Ahmedabad to predict heatwaves, floods 72 hours early",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ai-urban-observatory-in-ahmedabad-to-predict-heatwaves-floods-72-hours-early/articleshow/131101997.cms",
@@ -950,5 +991,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

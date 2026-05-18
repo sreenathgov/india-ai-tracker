@@ -1214,6 +1214,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 1,
+        "title": "TCS scales up ‘Human+AI’ strategy amid enterprise AI push: Chairman N Chandrasekaran",
+        "url": "https://telanganatoday.com/tcs-scales-up-humanai-strategy-amid-enterprise-ai-push-chairman-n-chandrasekaran",
+        "summary": "TCS is expanding its \"Human+AI\" strategy as part of a broader push into enterprise AI. The company aims to become the world's largest AI-led technology services company by FY27, according to CEO and MD K Krithivasan. TCS is sharpening its focus on full-stack artificial intelligence solutions to achieve this goal.",
+        "date_published": "2026-05-16",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "AI Startups To Watch: 5 Startups That Caught Our Eye In May",
         "url": "https://inc42.com/startups/ai-startups-to-watch-5-startups-that-caught-our-eye-in-may/",
@@ -10729,7 +10749,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

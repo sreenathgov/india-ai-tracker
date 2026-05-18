@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Nalanda University revives ancient ‘Shastrarth’ tradition",
+        "url": "https://timesofindia.indiatimes.com/city/patna/nalanda-university-revives-ancient-shastrarth-tradition/articleshow/131157744.cms",
+        "summary": "Nalanda University has revived the ancient tradition of \"Shastrarth\" through a new academic event, \"Shastrarth 2026\", which promotes intellectual dialogue and research. The event features public dissertation defenses and thematic debates, and will precede the university's third convocation. Vice-Chancellor Sachin Chaturvedi highlighted the importance of intellectual struggle beyond AI, with new awards to recognize excellence in discourse.",
+        "date_published": "2026-05-18",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "IIT-P’s AI initiative set to break India’s digital language barrier",
         "url": "https://timesofindia.indiatimes.com/city/patna/iit-ps-ai-initiative-set-to-break-indias-digital-language-barrier/articleshow/131021449.cms",
@@ -306,5 +326,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
