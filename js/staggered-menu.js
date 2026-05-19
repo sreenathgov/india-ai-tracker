@@ -873,11 +873,12 @@ document.addEventListener('DOMContentLoaded', function () {
     colors: ['#db4a2b', '#f4ebd0', '#0a2f52'],
     items: [
       { label: 'Home', ariaLabel: 'Go to home page', link: 'index.html' },
-      { label: 'About', ariaLabel: 'Learn about Kanan Labs', link: 'about.html' },
       { label: 'TradeWatch', ariaLabel: 'View TradeWatch product', link: 'tradewatch.html' },
-      { label: 'Sector Watch', ariaLabel: 'View Sector Watch platform', link: 'sector-watch.html' },
-      { label: 'Team', ariaLabel: 'Meet the founder', link: 'team.html' },
-      { label: 'Publications', ariaLabel: 'View publications', link: 'publications.html' }
+      { label: 'India AI Tracker', ariaLabel: 'View the India AI Tracker', link: 'tracker.html' },
+      { label: 'SectorWatch', ariaLabel: 'View SectorWatch platform', link: 'sector-watch.html' },
+      { label: 'Publications', ariaLabel: 'View publications', link: 'publications.html' },
+      { label: 'About', ariaLabel: 'Learn about Kanan Labs', link: 'about.html' },
+      { label: 'Team', ariaLabel: 'Meet the founder', link: 'team.html' }
     ],
     socialItems: [
       { label: 'LinkedIn', link: 'https://www.linkedin.com/in/sreenathgovindarajan' },
