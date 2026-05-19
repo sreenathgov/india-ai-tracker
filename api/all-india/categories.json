@@ -1114,6 +1114,126 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "TCS aims to be world&#039;s largest AI tech firm",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/tcs-aims-to-be-worlds-largest-ai-tech-firm/131175337",
+        "summary": "TCS is striving to become the world's largest AI tech firm, with a majority of its top clients already partnering with them for AI solutions. The company is actively upskilling its workforce to meet the growing demand for AI. This move is expected to drive TCS' growth in the AI technology sector.",
+        "date_published": "2026-05-19",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India has enough AI strategies, it needs AI operators",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-has-enough-ai-strategies-it-needs-ai-operators/131168759",
+        "summary": "Indian companies are strong in developing AI strategies but struggle with execution, resulting in a gap between successful pilots and production-level implementation. Key challenges include inconsistent data, scattered talent, and unclear responsibilities. To achieve sustainable AI results, the focus needs to shift from capability development to establishing operational discipline and ownership.",
+        "date_published": "2026-05-19",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "The nurse who transformed healthcare in Lakshadweep; India creates over 1B ChatGPT images",
+        "url": "https://yourstory.com/2026/05/the-nurse-who-transformed-healthcare-in-lakshadweep",
+        "summary": "Hindumbi Kaurom Kakkada, an 80-year-old nurse from Lakshadweep, has dedicated over five decades to healthcare, providing care and inspiration to patients and aspiring nurses. She is a finalist for the Aster Global Guardians Nursing Award, recognizing her contributions to the field. Kakkada's work has had a transformative impact on healthcare in Lakshadweep.",
+        "date_published": "2026-05-19",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Agri finance startup ONO raises $1.2 Mn led by Aeravti Ventures",
+        "url": "https://entrackr.com/snippets/agri-finance-startup-ono-raises-12-mn-led-by-aeravti-ventures-11850109",
+        "summary": "Agri-finance startup ONO has raised $1.2 million in a pre-Series A funding round led by Aeravti Ventures, with participation from Angels and Tremis Capital. This is Aeravti Ventures' second investment in the startup, following its previous seed round lead. The new funding will be used to enhance ONO's technology platform, expand into new markets, and develop its lending infrastructure.",
+        "date_published": "2026-05-19",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "India, Netherlands deepen tech partnership with major push in semiconductors, AI and...",
+        "url": "https://cellit.in/india-netherlands-deepen-tech-partnership-with-major-push-in-semiconductors-ai-and-research/",
+        "summary": "India and the Netherlands are strengthening their technology partnership, with a significant focus on semiconductors and artificial intelligence. The collaboration aims to drive innovation and growth in these key areas. The partnership is expected to boost bilateral trade and investment between the two countries.",
+        "date_published": "2026-05-19",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "India’s SME AI ecosystem is accelerating rapidly. Here’s why recognition has become more critical than ever",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-sme-ai-ecosystem-is-accelerating-rapidly-heres-why-recognition-has-become-more-critical-than-ever/131169049",
+        "summary": "India's SMEs are rapidly adopting AI to boost efficiency and growth, intensifying competition in the sector. As a result, recognition has become crucial for credibility and visibility among these businesses. Awards platforms have emerged as a key way for SMEs to stand out and gain a competitive advantage.",
+        "date_published": "2026-05-18",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Indian AI combat drone ‘Kaal Bhairava’ to enter European manufacturing network",
         "url": "https://cellit.in/indian-ai-combat-drone-kaal-bhairava-to-enter-european-manufacturing-network/",
@@ -10749,5 +10869,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

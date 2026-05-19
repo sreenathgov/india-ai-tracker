@@ -1291,6 +1291,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "Fintech startup Kalpi raises seed round from Rainmatter Capital",
+        "url": "https://entrackr.com/snippets/fintech-startup-kalpi-raises-seed-round-from-rainmatter-capital-11850443",
+        "summary": "Hyderabad-based fintech startup Kalpi has raised Rs 3.75 crore in a seed funding round from Rainmatter Capital. The funds will be used to strengthen the team, improve product capabilities, and expand distribution across retail and institutional segments. Kalpi is building a rule-based systematic investing platform for retail and institutional investors, founded in 2025 by Ashwar Gupta.",
+        "date_published": "2026-05-19",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "AI-powered R&D platform for consumer products; Demand for AI talent spikes in India",
         "url": "https://yourstory.com/2026/04/-ai-powered-rd-platform-for-consumer-products-",
@@ -1454,5 +1474,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }
