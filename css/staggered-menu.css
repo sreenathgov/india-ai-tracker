@@ -59,7 +59,7 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  color: #f4ebd0;
+  color: #0a2f52;
   font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
   font-weight: 600;
   line-height: 1;
@@ -136,7 +136,7 @@
   right: 0;
   width: clamp(260px, 38vw, 420px);
   height: 100%;
-  background: #f4ebd0;
+  background: #0a2f52;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   display: flex;
@@ -237,7 +237,7 @@
 .sm-socials-link {
   font-size: 1rem;
   font-weight: 500;
-  color: #111;
+  color: rgba(238, 235, 227, 0.65);
   text-decoration: none;
   position: relative;
   padding: 2px 0;
@@ -268,7 +268,7 @@
 
 .sm-panel-item {
   position: relative;
-  color: #000;
+  color: #f4ebd0;
   font-weight: 600;
   font-size: 2.625rem;
   cursor: pointer;

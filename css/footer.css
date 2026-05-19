@@ -1,37 +1,25 @@
 /* ============================================
-   KANAN LABS SITE FOOTER
-   Background: #0a2f52
-   Fonts: Cormorant Garamond (brand), Telegraf (utility)
+   KANAN LABS SITE FOOTER — Light mode
+   Background: #F4EBD0 (brand cream)
    ============================================ */
 
-/* Suppress legacy footer */
-.site-footer {
-    display: none !important;
-}
+.site-footer { display: none !important; }
 
-/* ============================================
-   OUTER WRAPPER
-   ============================================ */
 .kl-footer {
-    background: #0a2f52;
+    background: #F4EBD0;
+    border-top: 1px solid rgba(10, 47, 82, 0.12);
     position: relative;
     z-index: 2;
     width: 100%;
     overflow: hidden;
 }
 
-/* ============================================
-   MAX-WIDTH CONTAINER
-   ============================================ */
 .kl-footer__inner {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 4rem;
 }
 
-/* ============================================
-   MAIN CONTENT ROW
-   ============================================ */
 .kl-footer__content {
     display: grid;
     grid-template-columns: 260px 1fr;
@@ -40,9 +28,6 @@
     align-items: start;
 }
 
-/* ============================================
-   LEFT: BRAND ZONE
-   ============================================ */
 .kl-footer__brand {
     display: flex;
     flex-direction: column;
@@ -55,27 +40,26 @@
     object-fit: contain;
     object-position: left center;
     display: block;
-    opacity: 0.92;
+    opacity: 0.90;
 }
 
 .kl-footer__tagline {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-weight: 400;
     font-size: 1.0625rem;
-    color: rgba(255, 255, 255, 0.72);
+    color: rgba(10, 47, 82, 0.68);
     line-height: 1.55;
     letter-spacing: 0.01em;
     margin: 0;
 }
 
-/* --- Newsletter block --- */
 .kl-footer__nl-label {
     font-family: 'Telegraf', 'Inter', sans-serif;
     font-size: 0.6875rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: rgba(255, 255, 255, 0.38);
+    color: rgba(10, 47, 82, 0.42);
     margin: 0 0 0.75rem 0;
 }
 
@@ -86,30 +70,30 @@
 }
 
 .kl-footer__nl-input {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(10, 47, 82, 0.14);
     border-radius: 3px;
     padding: 0.65rem 0.875rem;
     font-family: 'Telegraf', 'Inter', sans-serif;
     font-size: 0.8125rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(10, 47, 82, 0.88);
     outline: none;
     width: 100%;
     transition: border-color 200ms ease;
 }
 
 .kl-footer__nl-input::placeholder {
-    color: rgba(255, 255, 255, 0.28);
+    color: rgba(10, 47, 82, 0.32);
 }
 
 .kl-footer__nl-input:focus {
-    border-color: rgba(255, 255, 255, 0.28);
+    border-color: rgba(10, 47, 82, 0.35);
 }
 
 .kl-footer__nl-submit {
     align-self: flex-start;
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(10, 47, 82, 0.22);
     border-radius: 3px;
     padding: 0.6rem 1.25rem;
     font-family: 'Telegraf', 'Inter', sans-serif;
@@ -117,18 +101,17 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(10, 47, 82, 0.60);
     cursor: pointer;
     transition: border-color 200ms ease, color 200ms ease, background 200ms ease;
 }
 
 .kl-footer__nl-submit:hover {
-    border-color: rgba(255, 255, 255, 0.45);
-    color: #fff;
-    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(10, 47, 82, 0.50);
+    color: #0a2f52;
+    background: rgba(10, 47, 82, 0.05);
 }
 
-/* --- Consultation link --- */
 .kl-footer__consult {
     background: transparent;
     border: none;
@@ -138,33 +121,28 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: rgba(255, 255, 255, 0.38);
+    color: rgba(10, 47, 82, 0.42);
     cursor: pointer;
     text-align: left;
     transition: color 200ms ease;
 }
 
 .kl-footer__consult:hover {
-    color: rgba(255, 255, 255, 0.82);
+    color: rgba(10, 47, 82, 0.88);
 }
 
-/* ============================================
-   RIGHT: SITEMAP GRID
-   ============================================ */
 .kl-footer__sitemap {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(10, 47, 82, 0.10);
 }
 
 .kl-footer__col {
     padding: 2rem 2rem 2.5rem;
-    border-right: 1px solid rgba(255, 255, 255, 0.07);
+    border-right: 1px solid rgba(10, 47, 82, 0.10);
 }
 
-.kl-footer__col:last-child {
-    border-right: none;
-}
+.kl-footer__col:last-child { border-right: none; }
 
 .kl-footer__col-heading {
     font-family: 'Telegraf', 'Inter', sans-serif;
@@ -172,7 +150,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: rgba(255, 255, 255, 0.38);
+    color: rgba(10, 47, 82, 0.40);
     margin: 0 0 1.25rem 0;
 }
 
@@ -189,21 +167,18 @@
     font-family: 'Telegraf', 'Inter', sans-serif;
     font-size: 0.8125rem;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(10, 47, 82, 0.58);
     text-decoration: none;
     display: inline-block;
     transition: color 200ms ease;
 }
 
 .kl-footer__col-links a:hover {
-    color: #fff;
+    color: #0a2f52;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 
-/* ============================================
-   BOTTOM: WATERMARK LOGO
-   ============================================ */
 .kl-footer__watermark {
     width: 100%;
     overflow: hidden;
@@ -215,90 +190,33 @@
     width: 100%;
     height: auto;
     display: block;
-    opacity: 0.065;
+    opacity: 0.06;
+    filter: invert(1);
     user-select: none;
     -webkit-user-drag: none;
     pointer-events: none;
 }
 
-/* ============================================
-   RESPONSIVE: Tablet (≤1100px)
-   ============================================ */
 @media (max-width: 1100px) {
-    .kl-footer__content {
-        grid-template-columns: 1fr;
-        gap: 56px;
-        padding: 80px 0 16px;
-    }
-
-    .kl-footer__sitemap {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Re-draw borders for 2×2 layout */
-    .kl-footer__col:nth-child(2) {
-        border-right: none;
-    }
-
-    .kl-footer__col:nth-child(3) {
-        border-right: 1px solid rgba(255, 255, 255, 0.07);
-        border-top: 1px solid rgba(255, 255, 255, 0.07);
-    }
-
-    .kl-footer__col:nth-child(4) {
-        border-right: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.07);
-    }
+    .kl-footer__content { grid-template-columns: 1fr; gap: 56px; padding: 80px 0 16px; }
+    .kl-footer__sitemap { grid-template-columns: repeat(2, 1fr); }
+    .kl-footer__col:nth-child(2) { border-right: none; }
+    .kl-footer__col:nth-child(3) { border-right: 1px solid rgba(10,47,82,0.10); border-top: 1px solid rgba(10,47,82,0.10); }
+    .kl-footer__col:nth-child(4) { border-right: none; border-top: 1px solid rgba(10,47,82,0.10); }
 }
 
-/* ============================================
-   RESPONSIVE: Mobile (≤768px)
-   ============================================ */
 @media (max-width: 768px) {
-    .kl-footer__inner {
-        padding: 0 1.5rem;
-    }
-
-    .kl-footer__content {
-        padding: 64px 0 12px;
-    }
-
-    .kl-footer__sitemap {
-        grid-template-columns: 1fr;
-    }
-
-    .kl-footer__col {
-        border-right: none !important;
-        border-top: 1px solid rgba(255, 255, 255, 0.07);
-    }
-
-    .kl-footer__col:first-child {
-        border-top: none;
-    }
+    .kl-footer__inner { padding: 0 1.5rem; }
+    .kl-footer__content { padding: 64px 0 12px; }
+    .kl-footer__sitemap { grid-template-columns: 1fr; }
+    .kl-footer__col { border-right: none !important; border-top: 1px solid rgba(10,47,82,0.10); }
+    .kl-footer__col:first-child { border-top: none; }
 }
 
-/* ============================================
-   RESPONSIVE: Small phone (≤480px)
-   ============================================ */
 @media (max-width: 480px) {
-    .kl-footer__inner {
-        padding: 0 1rem;
-    }
-
-    .kl-footer__content {
-        padding: 48px 0 48px;
-    }
-
-    .kl-footer__logo {
-        height: 44px;
-    }
-
-    .kl-footer__tagline {
-        font-size: 0.9375rem;
-    }
-
-    .kl-footer__watermark-img {
-        width: 100%;
-        opacity: 0.04;
-    }
+    .kl-footer__inner { padding: 0 1rem; }
+    .kl-footer__content { padding: 48px 0 48px; }
+    .kl-footer__logo { height: 44px; }
+    .kl-footer__tagline { font-size: 0.9375rem; }
+    .kl-footer__watermark-img { opacity: 0.04; }
 }

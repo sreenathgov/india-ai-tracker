@@ -1,0 +1,782 @@
+/* ============================================
+   SECTION 2.5: SECTOR WATCH PLATFORM
+   Enterprise Regulatory Intelligence Infrastructure
+   Split-screen: Glassmorphism cards (L) + Video (R)
+   + Core Principles stack below
+   Transparent bg so fixed navy grid shows through
+   ============================================ */
+
+.platform-section {
+    background: transparent;
+    padding: 5rem 2rem 3rem;
+    position: relative;
+    /* z-index intentionally omitted — a stacking context here blocks mix-blend-mode
+       from reaching the page background (the fixed grid canvas). The section
+       still paints above the grid by DOM order. */
+}
+
+
+/* ============================================
+   SPLIT LAYOUT — 55/45 grid, cards left, video right
+   ============================================ */
+
+.platform-split {
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+    gap: 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 700px;
+    align-items: stretch;
+}
+
+.platform-split__left {
+    padding: 2rem 3rem 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.platform-split__right {
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ============================================
+   SECTION HEADER — Cormorant Garamond + sans hierarchy
+   ============================================ */
+
+.platform-header {
+    margin-bottom: 2rem;
+}
+
+.platform-title {
+    display: inline-block;
+    font-family: 'Six Caps', sans-serif;
+    font-weight: 400;
+    font-size: clamp(5rem, 7.5vw, 7.5rem);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 0.9;
+    margin: 0 0 1rem 0;
+    user-select: none;
+    /* Gradient shine setup — animated by ShinyText JS */
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    will-change: background-position;
+}
+
+.platform-intro {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: rgba(244, 235, 208, 0.6);
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    max-width: 560px;
+    margin: 0;
+}
+
+
+/* ============================================
+   GLASSMORPHISM CARDS — Vertical stack
+   Semi-transparent bg, backdrop blur, subtle borders
+   ============================================ */
+
+.platform-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.platform-card--glass {
+    background: rgba(10, 47, 82, 0.35);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(244, 235, 208, 0.06);
+    border-left: 3px solid rgba(201, 166, 107, 0.35);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.platform-card--glass:hover {
+    background: rgba(10, 47, 82, 0.55);
+    border-left-color: rgba(201, 166, 107, 0.7);
+    transform: translateX(4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Subtle shimmer accent on hover */
+.platform-card--glass::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(201, 166, 107, 0.03));
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.platform-card--glass:hover::after {
+    opacity: 1;
+}
+
+.platform-card__title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1rem, 1.5vw, 1.1875rem);
+    color: #f4ebd0;
+    line-height: 1.3;
+    margin: 0 0 0.375rem 0;
+}
+
+.platform-card__body {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.775rem;
+    color: rgba(244, 235, 208, 0.45);
+    line-height: 1.55;
+    margin: 0;
+}
+
+
+/* ============================================
+   SECTOR VIDEO — Looping video in right column
+   5:4 aspect ratio, contained within the split area
+   ============================================ */
+
+.sector-video-wrapper {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 5 / 4;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(244, 235, 208, 0.08);
+    box-shadow:
+        0 0 40px rgba(74, 144, 226, 0.08),
+        0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.sector-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: transparent;
+}
+
+
+/* ============================================
+   CORE PRINCIPLES — Full-width expandable rows
+   ============================================ */
+
+.platform-principles {
+    max-width: 1200px;
+    margin: 4rem auto 0;
+    border-top: 1px solid rgba(244, 235, 208, 0.1);
+}
+
+.platform-principles__heading {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    color: #f4ebd0;
+    text-align: center;
+    margin: 2.5rem 0 1.5rem;
+    line-height: 1.2;
+}
+
+.platform-principle {
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+    padding: 1.375rem 2rem;
+    border-bottom: 1px solid rgba(244, 235, 208, 0.06);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.platform-principle:hover {
+    background: rgba(244, 235, 208, 0.03);
+    padding-left: 2.75rem;
+    border-bottom-color: rgba(201, 166, 107, 0.15);
+}
+
+.platform-principle__title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.0625rem;
+    color: #f4ebd0;
+    white-space: nowrap;
+    min-width: 250px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.platform-principle__sep {
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background: rgba(201, 166, 107, 0.3);
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.platform-principle__desc {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.8125rem;
+    color: rgba(244, 235, 208, 0.45);
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* ============================================
+   WAITLIST ORANGE STRIP — Full-width CTA
+   Mirrors .newsletter-hero-section pattern
+   Bridges dark platform section to cream advisory
+   ============================================ */
+
+.waitlist-hero-section {
+    background: #db4a2b;
+    padding: 2rem 2rem;
+    position: relative;
+    z-index: 2;
+    /* Bidirectional float shadow — upward into dark platform, downward into cream advisory */
+    box-shadow:
+        0 -20px 60px rgba(0, 0, 0, 0.35),
+        0 -8px 24px rgba(0, 0, 0, 0.25),
+        0 20px 60px rgba(0, 0, 0, 0.3),
+        0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.waitlist-hero-container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    min-height: 100px;
+}
+
+.waitlist-hero-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.waitlist-hero-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: clamp(1.25rem, 2.5vw, 1.625rem);
+    color: #f4ebd0;
+    margin: 0 0 0.25rem 0;
+    line-height: 1.3;
+}
+
+.waitlist-hero-subtitle {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.8125rem;
+    color: rgba(244, 235, 208, 0.7);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.waitlist-hero-form {
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.waitlist-hero-form input {
+    width: 160px;
+    padding: 0.5625rem 1rem;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(244, 235, 208, 0.25);
+    border-radius: 6px;
+    color: #f4ebd0;
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.8125rem;
+    outline: none;
+    transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.waitlist-hero-form input::placeholder {
+    color: rgba(244, 235, 208, 0.45);
+}
+
+.waitlist-hero-form input:focus {
+    border-color: rgba(244, 235, 208, 0.6);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.waitlist-hero-form button {
+    padding: 0.5625rem 1.5rem;
+    background: #f4ebd0;
+    color: #db4a2b;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.15s ease;
+    white-space: nowrap;
+}
+
+.waitlist-hero-form button:hover {
+    background: #fff9e8;
+    transform: translateY(-1px);
+}
+
+.waitlist-hero-form button:active {
+    transform: translateY(0);
+}
+
+/* Success states */
+.waitlist-hero-form.success input {
+    border-color: rgba(244, 235, 208, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.waitlist-hero-form.success button {
+    background: #0a2f52;
+    color: #f4ebd0;
+}
+
+.waitlist-success-message {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 0.9375rem;
+    color: rgba(244, 235, 208, 0.9);
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.6s ease, transform 0.6s ease, max-height 0.6s ease, margin-top 0.6s ease;
+}
+
+.waitlist-success-message.visible {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 4rem;
+    margin-top: 0.75rem;
+}
+
+
+/* ============================================
+   ENTRANCE ANIMATIONS (ScrollTrigger targets)
+   ============================================ */
+
+.platform-animate {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+
+/* ============================================
+   RESPONSIVE — Large tablet (<=1200px)
+   ============================================ */
+
+@media (max-width: 1200px) {
+    .platform-split__left {
+        padding: 2rem 2rem 2rem 0;
+    }
+
+    .waitlist-hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .waitlist-hero-form {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* ============================================
+   RESPONSIVE — Tablet (<=1024px)
+   Stack split vertically, video on top
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .platform-split {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .platform-split__left {
+        padding: 0 1rem;
+        order: 1;
+    }
+
+    .platform-split__right {
+        min-height: auto;
+        order: 0; /* Video on top on tablet */
+    }
+
+}
+
+
+/* ============================================
+   RESPONSIVE — Mobile (<=768px)
+   ============================================ */
+
+@media (max-width: 768px) {
+    .platform-section {
+        padding: 3rem 1rem 2.5rem;
+    }
+
+    .platform-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .platform-split__right {
+        min-height: auto;
+    }
+
+    .sector-video-wrapper {
+        max-width: 100%;
+    }
+
+    .platform-cards {
+        gap: 10px;
+    }
+
+    .platform-card--glass {
+        padding: 1rem 1.25rem;
+    }
+
+    .platform-card__title {
+        font-size: 0.9375rem;
+    }
+
+    .platform-card__body {
+        font-size: 0.7rem;
+        line-height: 1.5;
+    }
+
+    .platform-intro {
+        font-size: 0.8125rem;
+    }
+
+    .waitlist-hero-section {
+        padding: 1.75rem 1rem;
+    }
+
+    .waitlist-hero-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.25rem;
+        min-height: unset;
+    }
+
+    .waitlist-hero-form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .waitlist-hero-form input {
+        width: 100%;
+    }
+
+    .waitlist-hero-form button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* ============================================
+   RESPONSIVE — Small phone (<=480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+    .platform-section {
+        padding: 2.5rem 0.75rem 2rem;
+    }
+
+    .platform-title {
+        font-size: 4.375rem;
+    }
+
+    .platform-intro {
+        font-size: 0.75rem;
+    }
+
+    .platform-card--glass {
+        padding: 0.875rem 1rem;
+    }
+
+    .platform-card__title {
+        font-size: 0.875rem;
+    }
+
+    .platform-card__body {
+        font-size: 0.65rem;
+    }
+
+    .waitlist-hero-title {
+        font-size: 1.125rem;
+    }
+}
+
+
+
+/* ============================================
+   TELEMETRY GRID — 2×2 pipeline flowchart
+   Snake path: 01 → 02 ↓ 03 ← 04
+   ============================================ */
+
+.telemetry-grid {
+  display: grid;
+  grid-template-columns: 1fr 44px 1fr;
+  grid-template-rows: auto 56px auto;
+  grid-template-areas:
+    "n01    hconn1  n02"
+    ".      .       vconn"
+    "n04    hconn2  n03";
+  align-items: stretch;
+}
+
+.tg-n01    { grid-area: n01; }
+.tg-hconn1 { grid-area: hconn1; }
+.tg-n02    { grid-area: n02; }
+.tg-vconn  { grid-area: vconn; }
+.tg-n03    { grid-area: n03; }
+.tg-hconn2 { grid-area: hconn2; }
+.tg-n04    { grid-area: n04; }
+
+/* NODE CARD — glassmorphism */
+.telemetry-node {
+  background: rgba(8, 38, 68, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(244, 235, 208, 0.07);
+  border-top: 2px solid rgba(230, 81, 0, 0.45);
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  /* min-height ensures the shorter row grows to match the taller row
+     without letting cards balloon beyond their content */
+  min-height: 195px;
+  transition: border-top-color 0.3s ease, background 0.3s ease;
+}
+.telemetry-node:hover {
+  border-top-color: rgba(230, 81, 0, 0.9);
+  background: rgba(8, 38, 68, 0.65);
+}
+.telemetry-node__id {
+  font-family: 'Courier New', monospace;
+  font-size: 0.6rem;
+  color: #e65100;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.telemetry-node__title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+  color: #f4ebd0;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.03em;
+}
+.telemetry-node__body {
+  font-family: 'Telegraf', 'Inter', sans-serif;
+  font-size: 0.7rem;
+  color: rgba(244, 235, 208, 0.55);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* HORIZONTAL CONNECTORS */
+.telemetry-h-conn {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.telemetry-h-conn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  right: 8px;
+  height: 2px;
+  transform: translateY(-50%);
+  background: repeating-linear-gradient(
+    to right,
+    rgba(230, 81, 0, 0.45) 0, rgba(230, 81, 0, 0.45) 4px,
+    transparent 4px, transparent 8px
+  );
+}
+/* Arrowhead right (→) */
+.telemetry-h-conn::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0; height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid rgba(230, 81, 0, 0.7);
+}
+/* Arrowhead left (←) */
+.telemetry-h-conn--rev::before { left: 8px; right: 4px; }
+.telemetry-h-conn--rev::after {
+  right: auto;
+  left: 0;
+  border-left: none;
+  border-right: 7px solid rgba(230, 81, 0, 0.7);
+}
+
+/* Animated dot — shared */
+.telemetry-conn-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #e65100;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.telemetry-h-conn .telemetry-conn-dot {
+  animation: h-pulse-fwd 2.2s linear infinite;
+}
+.telemetry-h-conn--rev .telemetry-conn-dot {
+  animation: h-pulse-rev 2.2s linear infinite;
+  animation-delay: 1.1s;
+}
+
+@keyframes h-pulse-fwd {
+  0%   { left: 4px;              opacity: 0; }
+  8%   { opacity: 0.9; }
+  88%  { opacity: 0.35; }
+  100% { left: calc(100% - 10px); opacity: 0; }
+}
+@keyframes h-pulse-rev {
+  0%   { left: calc(100% - 10px); opacity: 0; }
+  8%   { opacity: 0.9; }
+  88%  { opacity: 0.35; }
+  100% { left: 4px;              opacity: 0; }
+}
+
+/* VERTICAL CONNECTOR (right column, ↓) */
+.telemetry-v-conn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.telemetry-v-conn::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 4px; bottom: 8px;
+  width: 2px;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(230, 81, 0, 0.45) 0, rgba(230, 81, 0, 0.45) 4px,
+    transparent 4px, transparent 8px
+  );
+}
+/* Arrowhead down */
+.telemetry-v-conn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid rgba(230, 81, 0, 0.7);
+}
+.telemetry-v-conn .telemetry-conn-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  animation: v-pulse-down 2.2s linear infinite;
+  animation-delay: 0.6s;
+}
+@keyframes v-pulse-down {
+  0%   { top: 4px;              opacity: 0; }
+  8%   { opacity: 0.9; }
+  88%  { opacity: 0.35; }
+  100% { top: calc(100% - 10px); opacity: 0; }
+}
+
+/* MOBILE: collapse to vertical flex stack */
+@media (max-width: 1024px) {
+  .telemetry-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .telemetry-h-conn,
+  .telemetry-v-conn { display: none; }
+  /* Restore node reading order via order property */
+  .tg-n01 { order: 1; }
+  .tg-n02 { order: 2; }
+  .tg-n03 { order: 3; }
+  .tg-n04 { order: 4; }
+  /* Simple vertical connector between stacked cards */
+  .telemetry-node:not(:last-child) {
+    margin-bottom: 0;
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+  }
+  .telemetry-node__title { font-size: 1rem; }
+  .telemetry-node__body { font-size: 0.68rem; }
+}
+
+
+/* ============================================
+   RESPONSIVE — Mobile landscape
+   ============================================ */
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .platform-section {
+        padding: 3rem 1.5rem 2.5rem;
+    }
+
+    .platform-split {
+        grid-template-columns: 1fr 1fr;
+        min-height: 350px;
+    }
+
+    .platform-split__right {
+        min-height: auto;
+        order: unset;
+    }
+
+    .platform-split__left {
+        order: unset;
+    }
+
+    .waitlist-hero-section {
+        padding: 1.25rem 1rem;
+    }
+}
