@@ -1214,6 +1214,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 6,
+        "title": "IIT-Mandi harnesses AI to make climate, water data accessible across 19 languages",
+        "url": "https://www.tribuneindia.com/news/himachal/iit-mandi-harnesses-ai-to-make-climate-water-data-accessible-across-19-languages",
+        "summary": "IIT-Mandi has launched WatershedAI, an AI-powered application that generates climate and water resource assessment reports for Indian river basins and catchment areas. The tool is available on the INCLINE platform and offers reports in 19 languages. This free application aims to make climate and water data more accessible across the country.",
+        "date_published": "2026-05-19",
+        "source_name": "Tribune - Himachal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "India’s SME AI ecosystem is accelerating rapidly. Here’s why recognition has become more critical than ever",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-sme-ai-ecosystem-is-accelerating-rapidly-heres-why-recognition-has-become-more-critical-than-ever/131169049",
@@ -10869,7 +10889,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

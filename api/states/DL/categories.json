@@ -324,6 +324,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "From AI art to wall decor: Artiure is helping Indian artists monetise their work",
+        "url": "https://yourstory.com/2026/05/from-ai-art-wall-decor-artiure-helping-indian-artists-monetise-work",
+        "summary": "Artiure, a Gurugram-based company, is creating a marketplace for digital and generative art. The platform helps Indian artists monetize their work by turning it into physical products. This enables artists to achieve financial inclusion and access global markets.",
+        "date_published": "2026-05-20",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India’s AI job postings surge nearly 6x since 2019",
+        "url": "https://telanganatoday.com/indias-ai-job-postings-surge-nearly-6x-since-2019",
+        "summary": "India's artificial intelligence job postings have grown nearly six-fold since 2019, driven by the country's expanding role as a global AI talent and execution hub. This surge in AI-led hiring is expected to reshape India's office market, with demand for flexible workspaces predicted to witness strong growth over the next few years. The country's knowledge-economy office stock may see an additional demand of 79 million square feet between 2025 and 2030.",
+        "date_published": "2026-05-20",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Technical snag grounds AI flight to Delhi",
+        "url": "https://timesofindia.indiatimes.com/city/vadodara/technical-snag-grounds-ai-flight-to-delhi/articleshow/131210131.cms",
+        "summary": "An Air India flight to Delhi was grounded due to a technical snag. The issue forced the cancellation of the flight, although details on the nature of the snag were not provided. The incident highlights the ongoing challenges faced by Air India in maintaining its fleet and ensuring smooth operations.",
+        "date_published": "2026-05-20",
+        "source_name": "Times of India - Vadodara",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 14,
         "title": "Will it rain in your neighbourhood? New AI tool offers 10-day forecasts for every 1km across UP",
         "url": "https://timesofindia.indiatimes.com/city/noida/will-it-rain-in-your-neighbourhood-new-ai-tool-offers-10-day-forecasts-for-every-1km-across-up/articleshow/131048240.cms",
@@ -2790,5 +2850,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -164,6 +164,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "‘Videos, photos for Rs 350 each': UP engineer held for selling porn content to kids",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/videos-photos-for-rs-350-each-up-engineer-held-for-selling-porn-content-to-kids-on-social-media/articleshow/131215818.cms",
+        "summary": "A Prayagraj-based engineer, Vikas Singh, was arrested for operating a pornography racket on social media, selling explicit content to minors for Rs 350 each. The racket, active since 2020, earned him approximately Rs 2.5 crore. Police discovered the operation after receiving a complaint about an AI-generated video.",
+        "date_published": "2026-05-20",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Pay or go viral: UP woman blackmailed using AI-generated obscene photos; Cyber cafe operator, brother booked",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/pay-or-go-viral-up-woman-blackmailed-using-ai-generated-obscene-photos-cyber-cafe-operator-brother-booked/articleshow/131132657.cms",
@@ -780,5 +800,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
