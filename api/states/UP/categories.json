@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 6,
+        "title": "U.P. CM Adityanath conducts review of Data Centre Cluster, Project Ganga and wheat processing policy",
+        "url": "https://www.thehindu.com/news/national/uttar-pradesh/up-cm-adityanath-conducts-review-of-data-centre-cluster-project-ganga-and-wheat-processing-policy/article71003263.ece",
+        "summary": "Uttar Pradesh Chief Minister Adityanath reviewed the state's Data Centre Cluster, Project Ganga, and wheat processing policy. The Data Centre Cluster is expected to create the basic infrastructure for the state's AI mission. The project aims to establish Uttar Pradesh as a key player in the technology sector.",
+        "date_published": "2026-05-21",
+        "source_name": "The Hindu - Uttar Pradesh",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "UP govt scraps  ₹25,000 crore MoU with Bengaluru-based Puch AI citing credibility concerns",
         "url": "https://www.livemint.com/ai/artificial-intelligence/up-govt-scraps-25-000-crore-mou-with-bengaluru-based-puch-ai-citing-credibility-concerns-11774610427507.html",
@@ -801,6 +821,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Policies and Initiatives"
   ]
 }

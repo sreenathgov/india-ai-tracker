@@ -267,6 +267,26 @@
     "Major AI Developments": [
       {
         "id": 4,
+        "title": "GCCs offer 9.8% salary hikes, premium pay for AI skills: Report",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/gccs-offer-9-8-salary-hikes-premium-pay-for-ai-skills-report/articleshow/131233912.cms",
+        "summary": "Global Capability Centers (GCCs) are offering average salary hikes of 9.8% and providing premium pay for employees with artificial intelligence (AI) skills. This trend indicates a growing demand for AI expertise in the industry. The report highlights the increasing value of AI skills in the job market, with GCCs willing to pay a premium for talented professionals.",
+        "date_published": "2026-05-21",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
         "title": "By 2047, Karnataka plans to use AI to run power grid operations",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/by-2047-karnataka-plans-to-use-ai-to-run-power-grid-operations/articleshow/131142813.cms",
         "summary": "Karnataka aims to utilize artificial intelligence to manage its power grid operations by 2047. The state plans to leverage AI technology to optimize and streamline its energy distribution systems. This initiative is part of Karnataka's efforts to modernize its power infrastructure and improve efficiency.",
@@ -2781,5 +2801,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

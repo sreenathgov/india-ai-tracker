@@ -1114,6 +1114,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Bidadi township: 80% landowners agree to part with land, says DKS",
+        "url": "https://www.thehindu.com/news/cities/bangalore/bidadi-township-80-landowners-agree-to-part-with-land-dks/article71003357.ece",
+        "summary": "The Indian government plans to acquire over 6,700 acres of land to develop the country's first AI-powered integrated township. Approximately 80% of landowners in Bidadi township have agreed to sell their land for the project. The township will be India's largest and first of its kind, utilizing artificial intelligence.",
+        "date_published": "2026-05-21",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "IAN Alpha Fund leads $5.4 Mn Series A round in ANSCER Robotics",
+        "url": "https://entrackr.com/snippets/ian-alpha-fund-leads-54-mn-series-a-round-in-anscer-robotics-11856156",
+        "summary": "IAN Alpha Fund has led a $5.4 million Series A funding round in ANSCER Robotics. The investment will likely support the growth and development of ANSCER Robotics' innovative technologies. The specifics of how the funds will be utilized by the company have not been detailed in the available information.",
+        "date_published": "2026-05-20",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "jUMPP enters insurance distribution after securing IRDAI approval",
+        "url": "https://entrackr.com/snippets/jumpp-enters-insurance-distribution-after-securing-irdai-approval-11854613",
+        "summary": "Conversational fintech app jUMPP has received IRDAI approval to distribute insurance products through its platform, marking its entry into the insurance space. This move is part of jUMPP's plan to build a more integrated financial services ecosystem, expanding beyond investments into wealth creation, protection, and lending. The company aims to provide a broader financial experience to its users with the addition of insurance to its platform.",
+        "date_published": "2026-05-20",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "TCS aims to be world&#039;s largest AI tech firm",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/tcs-aims-to-be-worlds-largest-ai-tech-firm/131175337",
@@ -10889,5 +10949,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
