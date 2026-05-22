@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "2-day AI summit in Patna from tomorrow",
+        "url": "https://timesofindia.indiatimes.com/city/patna/2-day-ai-summit-in-patna-from-tomorrow/articleshow/131250765.cms",
+        "summary": "Patna is hosting Bihar's first major AI summit on May 23-24 to transform public services and boost the state's economy. The 2-day event aims to leverage AI for the state's development. This initiative is a groundbreaking step towards transforming public services in Bihar.",
+        "date_published": "2026-05-22",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Nalanda University revives ancient ‘Shastrarth’ tradition",
         "url": "https://timesofindia.indiatimes.com/city/patna/nalanda-university-revives-ancient-shastrarth-tradition/articleshow/131157744.cms",
@@ -326,5 +346,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

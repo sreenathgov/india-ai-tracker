@@ -184,6 +184,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "Min pushes faster connectivity, AI training in YEIDA meet",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/min-pushes-faster-connectivity-ai-training-in-yeida-meet/articleshow/131251699.cms",
+        "summary": "A government minister emphasized the need for faster connectivity and AI training during a meeting with the Yamuna Expressway Industrial Development Authority (YEIDA). The minister's push for improved connectivity and AI capabilities aims to drive growth and development in the region. The meeting highlighted the importance of investing in digital infrastructure and emerging technologies like AI.",
+        "date_published": "2026-05-22",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "‘Videos, photos for Rs 350 each': UP engineer held for selling porn content to kids",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/videos-photos-for-rs-350-each-up-engineer-held-for-selling-porn-content-to-kids-on-social-media/articleshow/131215818.cms",
@@ -821,6 +841,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives"
+    "Major AI Developments"
   ]
 }

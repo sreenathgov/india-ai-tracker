@@ -1114,12 +1114,92 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "As OpenAI and Anthropic soar, where do India’s AI startups stand?",
+        "url": "https://www.livemint.com/ai/openai-anthropic-ipo-india-ai-startups-global-race-11779362722464.html",
+        "summary": "India's AI startups are struggling to develop foundational models, leading to reliance on US technology and limited growth. In contrast, companies like OpenAI and Anthropic are thriving, with potential $1 trillion IPOs on the horizon. This disparity highlights the stagnant state of India's AI landscape.",
+        "date_published": "2026-05-22",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "AI must move from standalone pilots to embedded business execution: Tech leaders at ETCIO Annual Conclave",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-must-move-from-standalone-pilots-to-embedded-business-execution-tech-leaders-at-etcio-annual-conclave/131255172",
+        "summary": "Tech leaders Manas Mehra and Ujjwal Mathur emphasized the need for enterprises to move AI from standalone pilots to embedded business execution. To achieve this, they stated that companies require stronger data foundations, cloud scalability, cybersecurity, and governance. This will enable the responsible industrialization of AI within organizations.",
+        "date_published": "2026-05-22",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Bidadi township: 80% landowners agree to part with land, says DKS",
         "url": "https://www.thehindu.com/news/cities/bangalore/bidadi-township-80-landowners-agree-to-part-with-land-dks/article71003357.ece",
         "summary": "The Indian government plans to acquire over 6,700 acres of land to develop the country's first AI-powered integrated township. Approximately 80% of landowners in Bidadi township have agreed to sell their land for the project. The township will be India's largest and first of its kind, utilizing artificial intelligence.",
         "date_published": "2026-05-21",
         "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Apple WWDC 2026: Tim Cook's last conference kicks off June 8 - Check how to stream from India; iOS 27, AI upgrades expected",
+        "url": "https://www.etnownews.com/technology/apple-wwdc-2026-tim-cooks-last-conference-kicks-off-june-8-check-how-to-stream-from-india-ios-27-ai-upgrades-expected-article-154368368",
+        "summary": "Apple's WWDC 2026 will start on June 8, featuring Tim Cook's last keynote, where iOS 27 and significant Siri AI upgrades are expected to be unveiled. The event can be streamed from India, with specific timings available for viewers. The conference is anticipated to showcase major updates to Apple's operating systems and AI capabilities.",
+        "date_published": "2026-05-21",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "AI spend must be tied to business value: Tech leaders at ETCIO Annual Conclave 2026",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-investments-driving-business-value-over-mere-spending-insights-from-etcio-annual-conclave-2026/131248271",
+        "summary": "India's technology leaders emphasize the need to link AI spending to tangible business value. They advocate for a FinOps discipline and architectural governance to guide investments in AI, cloud, and modernization. Measurable business outcomes are also deemed crucial for justifying these expenditures.",
+        "date_published": "2026-05-21",
+        "source_name": "ET CIO - AI",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -9060,6 +9140,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "India's B2B AI startups see sales cycles shrink as deployments pick up",
+        "url": "https://www.livemint.com/ai/india-b2b-ai-startups-see-shorter-enterprise-sales-cycles-11779334716089.html",
+        "summary": "India's B2B AI startups are experiencing shorter sales cycles as companies rapidly adopt AI technology. Firms are moving from proof of concept to full deployment, indicating a growing demand for AI solutions. Startups like Gnani and Gupshup are closing deals faster as a result of this trend.",
+        "date_published": "2026-05-22",
+        "source_name": "LiveMint AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Dhan parent Raise acquires GreenLife to enter insurance distribution biz",
         "url": "https://entrackr.com/news/dhan-parent-raise-acquires-greenlife-to-enter-insurance-distribution-biz-11829509",
@@ -10950,6 +11050,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }

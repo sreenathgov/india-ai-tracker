@@ -324,6 +324,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Can the Indian Copyright Act Accommodate Fully Autonomous AI Generated Output?",
+        "url": "https://spicyip.com/2026/05/can-the-indian-copyright-act-accommodate-fully-autonomous-ai-generated-output.html",
+        "summary": "The Delhi High Court has directed the Registrar of Copyright to consider registering a fully AI-generated artwork under Indian copyright law, sparking debate on non-human authorship. The Indian Copyright Act's architecture and provisions are fundamentally human-centric, making it challenging to accommodate fully autonomous AI authorship. The case raises questions about whether the Act can be adapted to recognize AI-generated output as eligible for copyright protection.",
+        "date_published": "2026-05-22",
+        "source_name": "SpicyIP",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "From AI art to wall decor: Artiure is helping Indian artists monetise their work",
         "url": "https://yourstory.com/2026/05/from-ai-art-wall-decor-artiure-helping-indian-artists-monetise-work",
@@ -2850,5 +2870,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
