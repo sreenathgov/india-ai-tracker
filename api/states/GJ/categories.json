@@ -125,6 +125,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "No premature disclosure of AI-171 flight data, AAIB to Surat resident",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/no-premature-disclosure-of-ai-171-flight-data-aaib-to-surat-resident/articleshow/131267352.cms",
+        "summary": "The Aircraft Accident Investigation Bureau (AAIB) has informed a Surat resident that there will be no premature disclosure of flight data related to AI-171. The findings will instead be included in the final investigation report. The AAIB is investigating the incident and will release the results in due course.",
+        "date_published": "2026-05-23",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Mission admission: AI, data science courses surge across Gujarat campuses",
         "url": "https://timesofindia.indiatimes.com/city/vadodara/mission-admission-ai-data-science-courses-surge-across-gujarat-campuses/articleshow/131160885.cms",
@@ -991,5 +1011,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

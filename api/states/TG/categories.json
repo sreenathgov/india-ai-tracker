@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "Courtrooms to code: Young lawyers tap into AI to tackle legal hurdles",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/courtrooms-to-code-hyderabads-young-lawyers-tap-into-ai-to-tackle-legal-hurdles/articleshow/131267827.cms",
+        "summary": "Young lawyers are leveraging AI-powered coding tools to launch legal-tech startups, developing platforms for tasks such as contract drafting and document analysis. These innovations aim to address critical gaps within the legal industry, improving efficiency and assistance. This trend is gaining momentum nationwide, with numerous projects emerging globally.",
+        "date_published": "2026-05-23",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Case Law Meets Code As AI Enters Telangana Classrooms",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/case-law-meets-code-as-ai-enters-telangana-classrooms/articleshow/131144805.cms",
@@ -1474,5 +1494,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

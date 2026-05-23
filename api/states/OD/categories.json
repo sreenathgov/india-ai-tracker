@@ -85,6 +85,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "Cuttack, Bargarh and Jajpur to get new handloom hubs",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/cuttack-bargarh-and-jajpur-to-get-new-handloom-hubs/articleshow/131266672.cms",
+        "summary": "Odisha is establishing new handloom hubs in Cuttack, Bargarh, and Jajpur districts, leveraging AI and blockchain technology. The initiatives aim to increase employment and promote handloom, handicraft, and apparel production. Significant investments will be made in infrastructure and artisan support to drive these efforts.",
+        "date_published": "2026-05-23",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "IIM Sambalpur, IIM Ahmedabad launch AI4Odisha initiative to empower MSMEs",
         "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/iim-sambalpur-iim-ahmedabad-launch-ai4odisha-initiative-to-empower-msmes/articleshow/131160433.cms",
@@ -248,5 +268,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

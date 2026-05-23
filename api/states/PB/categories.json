@@ -5,6 +5,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "PGI combines AI and ultrasound for early gallbladder cancer detection",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/pgi-combines-ai-and-ultrasound-for-early-gallbladder-cancer-detection/articleshow/131267750.cms",
+        "summary": "The Postgraduate Institute of Medical Education and Research (PGI) is utilizing a combination of AI and ultrasound technology to detect gallbladder cancer at an early stage. This innovative approach aims to improve diagnosis and treatment outcomes for patients. The PGI's method has shown promise in identifying gallbladder cancer more accurately and efficiently.",
+        "date_published": "2026-05-23",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "PB",
+          "CH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Punjab Police deploy AI-powered tool PAIS to crack down on global gang networks",
         "url": "https://www.tribuneindia.com/news/punjab/punjab-police-deploy-ai-powered-tool-pais-to-crack-down-on-global-gang-networks",
@@ -379,5 +400,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

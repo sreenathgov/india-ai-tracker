@@ -3,6 +3,27 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 7,
+        "title": "Delhi govt signs pact with IIT Kanpur for AI-operated air pollution monitoring system",
+        "url": "https://www.tribuneindia.com/news/delhi/delhi-govt-signs-pact-with-iit-kanpur-for-ai-operated-air-pollution-monitoring-system",
+        "summary": "The Delhi Government has signed a memorandum of understanding with IIT Kanpur's AIRAWAT Research Foundation to develop an AI-driven air quality management system. The system aims to improve pollution monitoring and forecasting in Delhi. The partnership is between the Delhi Government's Environment Department and IIT Kanpur.",
+        "date_published": "2026-05-22",
+        "source_name": "Tribune - Delhi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "ONODA Kimi, Dr Jitendra Singh deepen India–Japan partnership in frontier technologies",
         "url": "https://government.economictimes.indiatimes.com/news/technology/india-and-japan-strengthen-ties-in-quantum-science-and-healthcare-innovation/130875824",
@@ -2870,7 +2891,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

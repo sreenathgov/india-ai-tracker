@@ -1115,6 +1115,66 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "Newgen outlines AI-era vision for NewgenONE platform in India",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/newgen-outlines-ai-era-vision-for-newgenone-platform-in-india/131254992",
+        "summary": "Newgen Software has outlined its AI-era vision for the NewgenONE platform, which unifies various business functions into a single governed execution layer. The platform prioritizes auditability, explainability, compliance, and human oversight to facilitate adaptive and intelligent operations. It aims to help enterprises, particularly in financial services, streamline workflows such as onboarding, trade finance, and mortgage processing.",
+        "date_published": "2026-05-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Acer India Unveils New Aspire 5 AI Laptop Powered by Intel Core...",
+        "url": "https://cellit.in/acer-india-unveils-new-aspire-5-ai-laptop-powered-by-intel-core-ultra-processors/",
+        "summary": "Acer India has launched the new Aspire 5 AI laptop, which is powered by Intel Core. The laptop is designed to provide enhanced performance and efficiency, leveraging the capabilities of artificial intelligence. The Aspire 5 AI laptop aims to deliver a superior computing experience with its advanced Intel Core processor and AI-driven features.",
+        "date_published": "2026-05-23",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "OPPO India expands its Find X9 Series with Next-Generation Imaging and AI...",
+        "url": "https://cellit.in/oppo-india-expands-its-find-x9-series-with-next-generation-imaging-and-ai-experiences/",
+        "summary": "OPPO India has expanded its Find X9 Series, incorporating next-generation imaging and AI capabilities. The new series aims to provide enhanced camera and artificial intelligence features. This expansion is part of OPPO's efforts to improve its smartphone offerings in the Indian market.",
+        "date_published": "2026-05-23",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "As OpenAI and Anthropic soar, where do India’s AI startups stand?",
         "url": "https://www.livemint.com/ai/openai-anthropic-ipo-india-ai-startups-global-race-11779362722464.html",
         "summary": "India's AI startups are struggling to develop foundational models, leading to reliance on US technology and limited growth. In contrast, companies like OpenAI and Anthropic are thriving, with potential $1 trillion IPOs on the horizon. This disparity highlights the stagnant state of India's AI landscape.",
@@ -1140,6 +1200,26 @@
         "summary": "Tech leaders Manas Mehra and Ujjwal Mathur emphasized the need for enterprises to move AI from standalone pilots to embedded business execution. To achieve this, they stated that companies require stronger data foundations, cloud scalability, cybersecurity, and governance. This will enable the responsible industrialization of AI within organizations.",
         "date_published": "2026-05-22",
         "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "How Pronto is turning Indian homes into training grounds for its investors’ Physical AI vision",
+        "url": "https://entrackr.com/in-depth/how-pronto-is-turning-indian-homes-into-training-grounds-for-its-investors-physical-ai-vision-11863126",
+        "summary": "Pronto, a household services platform, is exploring the development of a real-world data layer for Physical AI and robotics, leveraging Indian homes as training grounds. Investor documents, including an internal memo from Glade Brook Capital, suggest this ambitious goal. Pronto aims to formalize India's informal labor markets, generating valuable data in the process.",
+        "date_published": "2026-05-22",
+        "source_name": "Entrackr - AI & Startups",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -11050,7 +11130,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }
