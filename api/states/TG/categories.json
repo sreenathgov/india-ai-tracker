@@ -107,6 +107,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 2,
+        "title": "Hyderabad police aim to break language barriers with AI",
+        "url": "https://www.thehindu.com/news/national/telangana/hyderabad-police-aim-to-break-language-barriers-with-ai/article71014589.ece",
+        "summary": "Hyderabad police have launched an AI-powered multilingual complaint recording tool that can transcribe and translate spoken complaints. The tool supports 10 Indian languages and can convert complaints into FIR-ready documents in real time. This innovation aims to break language barriers and improve the complaint filing process for citizens.",
+        "date_published": "2026-05-23",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Case Law Meets Code As AI Enters Telangana Classrooms",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/case-law-meets-code-as-ai-enters-telangana-classrooms/articleshow/131144805.cms",
@@ -1494,7 +1514,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

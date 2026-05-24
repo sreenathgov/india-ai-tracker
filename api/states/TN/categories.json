@@ -129,6 +129,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Chartered accountants should see AI, machine learning and other tech developments as an opportunity: G Ramaswamy",
+        "url": "https://timesofindia.indiatimes.com/city/coimbatore/chartered-accountants-should-see-ai-machine-learning-and-other-tech-developments-as-an-opportunity-g-ramaswamy/articleshow/131281045.cms",
+        "summary": "Technological advancements like AI and blockchain are transforming the chartered accountant profession, pushing CAs towards higher-value advisory roles. Data literacy is becoming increasingly important, alongside technical accounting knowledge. The Institute of Chartered Accountants of India (ICAI) is expanding its reach, with growing demand for the CA course and placement opportunities.",
+        "date_published": "2026-05-24",
+        "source_name": "Times of India - Tamil Nadu (Alt)",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "TN Deploys AIoT-based Automated Water Level Recorder Systems At 44 Dams, Reservoirs And Regulator Sites",
         "url": "https://timesofindia.indiatimes.com/city/coimbatore/tn-deploys-aiot-based-automated-water-level-recorder-systems-at-44-dams-reservoirs-and-regulator-sites/articleshow/131102243.cms",
@@ -885,5 +905,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

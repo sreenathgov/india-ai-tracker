@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 5,
+        "title": "It’s ‘encounter raj’ in state now, alleges Dipankar",
+        "url": "https://timesofindia.indiatimes.com/city/patna/its-encounter-raj-in-state-now-alleges-dipankar/articleshow/131284596.cms",
+        "summary": "Dipankar Bhattacharya, leader of CPI(ML), has criticized the NDA government in Bihar, alleging a shift from \"good governance\" to \"encounter raj\" and \"bulldozer justice\". He claims that Dalits, minorities, and students are facing increased oppression under the current regime. The use of bulldozers is seen as a symbol of the BJP's dominance in the state.",
+        "date_published": "2026-05-24",
+        "source_name": "Times of India - Patna",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Cabinet approves Rs72k crore borrowing plan, AI initiative",
         "url": "https://timesofindia.indiatimes.com/city/patna/cabinet-approves-rs72k-crore-borrowing-plan-ai-initiative/articleshow/131074817.cms",
@@ -86,6 +106,46 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 4,
+        "title": "BAU students trained in drone, AI technologies",
+        "url": "https://timesofindia.indiatimes.com/city/patna/bau-students-trained-in-drone-ai-technologies/articleshow/131284615.cms",
+        "summary": "Students at BAU are receiving training in drone and AI technologies. The training aims to equip students with skills in emerging technologies. The program is part of efforts to enhance students' knowledge and expertise in innovative fields.",
+        "date_published": "2026-05-24",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "CM: AI to catch those wearing ‘green gamchha’",
+        "url": "https://timesofindia.indiatimes.com/city/patna/cm-ai-to-catch-those-wearing-green-gamchha/articleshow/131284508.cms",
+        "summary": "Bihar's Chief Minister, Samrat Choudhary, praised AI's accuracy in law enforcement, jokingly referencing its ability to identify individuals wearing green 'gamchhas', a garment associated with the RJD. He emphasized the importance of a technology-driven approach to policing, ensuring fairness and accountability for all individuals. The Chief Minister aims to utilize AI to serve justice impartially, regardless of political affiliations.",
+        "date_published": "2026-05-24",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 8,
         "title": "2-day AI summit in Patna from tomorrow",
@@ -346,5 +406,8 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments",
+    "Policies and Initiatives"
+  ]
 }
