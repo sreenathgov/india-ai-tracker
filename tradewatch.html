@@ -30,8 +30,9 @@
     <link rel="stylesheet" href="css/staggered-menu.css?v=2">
     <link rel="stylesheet" href="css/footer 2.css?v=3">
 
-    <!-- Performance: preload hero raster (AVIF) immediately alongside HTML parsing -->
-    <link rel="preload" as="image" type="image/avif" href="added-assets/tw-hero-2400.avif" fetchpriority="high">
+    <!-- Performance: preload original hero SVG (rendered source) + AVIF LQIP for fast paint -->
+    <link rel="preload" as="image" href="added-assets/sectorwatch-web-image2.svg" fetchpriority="high">
+    <link rel="preload" as="image" type="image/avif" href="added-assets/tw-hero-2400.avif">
     <!-- Performance: preload primary display font weights -->
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/CormorantGaramond-Regular.woff2">
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/CormorantGaramond-Medium.woff2">
@@ -170,6 +171,16 @@
             position: absolute;
             inset: 0;
             overflow: hidden;
+            /* LQIP: paint AVIF/JPEG raster as instant background while the
+               byte-perfect SVG decodes on top. Kills the empty-navy flash on
+               cold loads without altering the final rendered visual. */
+            background-image: image-set(
+                url("added-assets/tw-hero-2400.avif") type("image/avif"),
+                url("added-assets/tw-hero-2400.jpg") type("image/jpeg")
+            );
+            background-size: cover;
+            background-position: center 30%;
+            background-repeat: no-repeat;
         }
 
         .tw-globe-svg {
@@ -5635,11 +5646,12 @@
          ============================================================ -->
     <section class="tw-act0" aria-label="Introduction">
         <div class="tw-globe-stage" aria-hidden="true">
-            <picture>
-                <source srcset="added-assets/tw-hero-2400.avif" type="image/avif">
-                <img class="tw-globe-svg" src="added-assets/tw-hero-2400.jpg" alt=""
-                     width="2400" height="1350" decoding="async" fetchpriority="high">
-            </picture>
+            <img class="tw-globe-svg"
+                 src="added-assets/sectorwatch-web-image2.svg"
+                 alt=""
+                 width="1920" height="1080"
+                 decoding="async"
+                 fetchpriority="high">
             <canvas class="tw-particle-layer" id="twParticleLayer"></canvas>
             <div class="tw-globe-grad-top"></div>
             <div class="tw-globe-grad-bottom"></div>
@@ -8008,14 +8020,39 @@
                 startProgress();
             });
 
-            // Prime first scene and begin auto-advance
+            // Prime first scene visually, but defer auto-advance until the
+            // user scrolls the stage into view. Without this gate, scenes
+            // cycle while still off-screen and the user lands mid-film.
             setScene(0);
             updateNavState(0);
-            startProgress();
+
+            const filmRoot = document.querySelector('.tw-act4') || stageEl;
+            let filmStarted = false;
+            const startFilm = () => {
+                if (filmStarted) return;
+                filmStarted = true;
+                startProgress();
+            };
+            if (filmRoot && 'IntersectionObserver' in window) {
+                const filmIO = new IntersectionObserver((entries) => {
+                    for (const e of entries) {
+                        if (e.isIntersecting && e.intersectionRatio >= 0.25) {
+                            startFilm();
+                            filmIO.disconnect();
+                            break;
+                        }
+                    }
+                }, { threshold: 0.25, rootMargin: '0px 0px -10% 0px' });
+                filmIO.observe(filmRoot);
+            } else {
+                startFilm();
+            }
             return;
         }
 
-        // Desktop: pin and scrub through scenes
+        // Desktop: pin and scrub through scenes. immediateRender:false keeps
+        // onUpdate from firing during ScrollTrigger setup, so scene 0 stays
+        // primed until the user actually scrolls into the section.
         ScrollTrigger.create({
             trigger: track,
             start: 'top top',
@@ -8023,13 +8060,14 @@
             pin: pin,
             pinSpacing: true,
             scrub: 0.4,
+            immediateRender: false,
             onUpdate: (self) => {
                 const idx = Math.floor(self.progress * scenes.length * 0.9999);
                 setScene(idx);
             }
         });
 
-        // Prime first scene
+        // Prime first scene (desktop)
         setScene(0);
     }
 

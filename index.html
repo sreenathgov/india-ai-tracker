@@ -727,13 +727,17 @@
                 var v = document.getElementById('klHeroVideo');
                 if (!v) return;
                 var isMobile = window.matchMedia('(max-width: 768px)').matches;
+                // HEVC ahead of AV1: Apple Silicon + iPhone 7+ hardware-decode
+                // HEVC; AV1 is software-decoded on most of that fleet and is
+                // a major source of first-play stutter. Chrome/Firefox/Edge
+                // skip HEVC and grab AV1 next.
                 var sources = isMobile
                     ? [
                         { src: 'added-assets/kanan-hero-720p.h264.mp4', type: 'video/mp4' }
                       ]
                     : [
-                        { src: 'added-assets/kanan-hero-1080p.av1.mp4',  type: 'video/mp4; codecs="av01.0.05M.08"' },
                         { src: 'added-assets/kanan-hero-1080p.hevc.mp4', type: 'video/mp4; codecs=hvc1' },
+                        { src: 'added-assets/kanan-hero-1080p.av1.mp4',  type: 'video/mp4; codecs="av01.0.05M.08"' },
                         { src: 'added-assets/kanan-hero-1080p.h264.mp4', type: 'video/mp4' }
                       ];
                 sources.forEach(function (s) {
@@ -743,8 +747,27 @@
                     v.appendChild(el);
                 });
                 v.load();
-                var p = v.play();
-                if (p && typeof p.catch === 'function') p.catch(function () { /* autoplay gated */ });
+
+                // Defer playback until the browser has buffered enough frames
+                // to play through without stalling. Calling .play() before
+                // canplay causes a 1–3 s stutter on cold loads.
+                var played = false;
+                function startPlayback() {
+                    if (played) return;
+                    played = true;
+                    var p = v.play();
+                    if (p && typeof p.catch === 'function') {
+                        p.catch(function () { /* autoplay gated by browser */ });
+                    }
+                }
+                if (v.readyState >= 3 /* HAVE_FUTURE_DATA */) {
+                    startPlayback();
+                } else {
+                    v.addEventListener('canplay', startPlayback, { once: true });
+                    // Safety net for browsers that load enough but never fire
+                    // canplay for short autoplay loops.
+                    setTimeout(startPlayback, 1500);
+                }
             })();
             </script>
 

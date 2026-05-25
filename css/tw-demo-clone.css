@@ -803,11 +803,11 @@
 }
 .kl-twdemo .tw-inbox-tag {
     font-family: var(--tw-mono);
-    font-size: 0.54rem;
+    font-size: 0.48rem;
     font-weight: 700;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    padding: 0.25rem 0.55rem;
+    padding: 0.22rem 0.42rem;
     border-radius: 5px;
     color: var(--tw-conf-high);
     background: var(--tw-conf-high-bg);
@@ -816,6 +816,8 @@
     transform: scale(0.88);
     transition: opacity 0.35s ease, transform 0.35s ease;
     white-space: nowrap;
+    flex-shrink: 1;
+    min-width: 0;
 }
 .kl-twdemo .tw-inbox-row.is-tagged .tw-inbox-tag {
     opacity: 1;
@@ -1172,6 +1174,21 @@
     .kl-twdemo .tw-pkg-signoff { display: none; }
     .kl-twdemo .tw-pkg-envelopes { display: none; }
     .kl-twdemo { padding-bottom: 4rem; }
+}
+
+@media (max-width: 600px) {
+    .kl-twdemo .tw-inbox-tag {
+        font-size: 0.42rem;
+        letter-spacing: 0.08em;
+        padding: 0.18rem 0.34rem;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .kl-twdemo .tw-inbox-row {
+        grid-template-columns: 18px 1fr auto minmax(0, auto);
+        column-gap: 0.4rem;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
