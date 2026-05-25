@@ -107,6 +107,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "Tech giants hold investment talks at AI summit",
+        "url": "https://timesofindia.indiatimes.com/city/patna/tech-giants-hold-investment-talks-at-ai-summit/articleshow/131295999.cms",
+        "summary": "The Bihar AI Conference 2026 concluded with over 10,000 participants from around the world. Governor Syed Ata Hasnain highlighted the state's goal to become a leader in IT and AI, utilizing its improved infrastructure. The conference facilitated investment talks among tech giants, furthering the state's ambitions in the field.",
+        "date_published": "2026-05-25",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "BAU students trained in drone, AI technologies",
         "url": "https://timesofindia.indiatimes.com/city/patna/bau-students-trained-in-drone-ai-technologies/articleshow/131284615.cms",
@@ -407,7 +427,6 @@
     "AI Start-Up News": []
   },
   "today_updates": [
-    "Major AI Developments",
-    "Policies and Initiatives"
+    "Major AI Developments"
   ]
 }

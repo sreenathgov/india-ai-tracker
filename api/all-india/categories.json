@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 9,
+        "title": "Snabbit confirms exploring physical AI proposal with Human Archive, denies home rollout",
+        "url": "https://entrackr.com/in-depth/snabbit-confirms-exploring-physical-ai-proposal-with-human-archive-denies-home-rollout-11870375",
+        "summary": "Snabbit, a home services startup, was approached by Human Archive to explore a physical AI proposal, but ultimately decided not to move forward. Human Archive is a startup that builds datasets for embodied intelligence and robotics systems. Snabbit has denied plans for a home rollout of the proposed physical AI system.",
+        "date_published": "2026-05-25",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "ONGC plans new Rs 200 Cr startup fund, opens advisor roles",
         "url": "https://entrackr.com/news/ongc-plans-new-rs-200-cr-startup-fund-opens-advisor-roles-11823158",
@@ -1113,6 +1133,146 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 1,
+        "title": "AI transformation succeeds when enterprises simplify systems and align people: Mahindra, Airbus and Tata Motors leaders",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-transformation-succeeds-when-enterprises-simplify-systems-and-align-people-mahindra-airbus-and-tata-motors-leaders/131304770",
+        "summary": "Technology leaders from Mahindra Group, Airbus, and Tata Motors emphasized that AI transformation is successful when enterprises simplify their systems and align their people. They stated that AI readiness depends on several key factors, including organizational alignment and innovation culture. These leaders shared their insights at the ETCIO Annual Conclave 2026.",
+        "date_published": "2026-05-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "How AI-led CX can deliver revenue and trust",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/how-ai-led-cx-can-deliver-revenue-and-trust/131305103",
+        "summary": "Leaders from top companies discussed the importance of AI-led customer experience at the ETCIO Annual Conclave 2026. They emphasized the need to balance automation, empathy, and business impact in AI-driven CX. This approach can help deliver revenue and trust, according to the industry leaders.",
+        "date_published": "2026-05-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "AI must be treated as a multi-year operating model shift: Ratan Kumar, Central Bank of India",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-must-be-treated-as-a-multi-year-operating-model-shift-ratan-kumar-central-bank-of-india/131304867",
+        "summary": "Ratan Kumar of the Central Bank of India emphasized the need to treat AI as a long-term operating model shift. Banks should move beyond isolated AI pilots and integrate governance, accountability, and orchestration into their workflows. This approach will enable banks to scale AI in a responsible manner, according to Kumar.",
+        "date_published": "2026-05-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "India CIOs say AI value will come from process readiness, not adoption speed",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-cios-say-ai-value-will-come-from-process-readiness-not-adoption-speed/131304669",
+        "summary": "India's CIOs believe that the value of AI will come from process readiness rather than the speed of adoption. At the ETCIO Annual Conclave 2026, CIOs from major companies discussed the increasing scrutiny of AI investments by boards. They noted that boards are now asking tougher questions about AI's return on investment, security, governance, and measurable business impact.",
+        "date_published": "2026-05-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Why AI-ready digital cores must be built with purpose, governance and context",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/why-ai-ready-digital-cores-must-be-built-with-purpose-governance-and-context/131301485",
+        "summary": "Leaders from top companies discussed the importance of building AI-ready digital cores with purpose, governance, and context at the ETCIO Annual Conclave 2026. They emphasized that cloud strategy must align with business resilience, data quality, AI readiness, and scalable enterprise advantage. Companies such as ICICI Bank, Google Workspace, and MongoDB were represented at the conclave.",
+        "date_published": "2026-05-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Agentic AI will scale only when enterprises redesign processes, say tech leaders",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/agentic-ai-will-scale-only-when-enterprises-redesign-processes-say-tech-leaders/131301289",
+        "summary": "Tech leaders at the ETCIO Annual Conclave 2026 stated that enterprises must redesign processes to scale Agentic AI. This involves fixing workflows, defining measurable outcomes, and building governance for autonomous systems. Leaders from Axis Max Life Insurance, BSE, Adani Group, and Thoughtworks emphasized the need to move beyond AI pilots to achieve this.",
+        "date_published": "2026-05-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Governance is BFSI’s competitive advantage in scaling AI, say Indian banking leaders",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/governance-is-bfsis-competitive-advantage-in-scaling-ai-say-indian-banking-leaders/131301259",
+        "summary": "Indian banking leaders stated that governance is a key competitive advantage for the BFSI sector in scaling AI. They emphasized that AI adoption must be based on explainability, auditability, data quality, and customer trust. This comes as banks transition from pilot projects to large-scale AI deployments.",
+        "date_published": "2026-05-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 1,
         "title": "Newgen outlines AI-era vision for NewgenONE platform in India",
@@ -9220,6 +9380,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 8,
+        "title": "Astrotalk building spiritual commerce; Using AI to plan a holiday",
+        "url": "https://yourstory.com/2026/05/astrotalk-building-spiritual-commerce",
+        "summary": "Astrotalk, an astrology startup, is expanding into ecommerce, gemstones, and offline stores, leveraging AI to plan holidays. The company is betting on spirituality becoming a major consumer category in India. This move follows the success of its profitable consultations business.",
+        "date_published": "2026-05-25",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "India's B2B AI startups see sales cycles shrink as deployments pick up",
         "url": "https://www.livemint.com/ai/india-b2b-ai-startups-see-shorter-enterprise-sales-cycles-11779334716089.html",
@@ -11129,5 +11309,9 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives",
+    "Major AI Developments",
+    "AI Start-Up News"
+  ]
 }

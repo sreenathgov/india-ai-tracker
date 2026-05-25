@@ -2093,6 +2093,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 10,
+        "title": "Your cleaner may be recording you: Bengaluru startup’s head-mounted cameras trigger AI privacy storm",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/someones-watching-how-your-cleaner-became-an-ai-data-collector/articleshow/131296646.cms",
+        "summary": "A Bengaluru startup has developed head-mounted cameras for cleaners, sparking concerns over AI privacy. These cameras can potentially record and collect data on individuals, raising questions about data protection and surveillance. The use of such devices has triggered a debate about the balance between innovation and personal privacy.",
+        "date_published": "2026-05-25",
+        "source_name": "Times of India - Bangalore",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Recovery-tech platform Owners ID raises pre-seed round led by Crucifer Investments",
         "url": "https://entrackr.com/snippets/recovery-tech-platform-owners-id-raises-pre-seed-round-led-by-crucifer-investments-11847198",
@@ -2801,5 +2821,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }
