@@ -690,16 +690,39 @@
         ════════════════════════════════════════════════ -->
         <header class="kl-hero">
 
-            <!-- Multi-codec video; poster paints instantly via preload -->
-            <video class="kl-hero__video"
+            <!-- Hero video. Sources injected by inline script below based on viewport,
+                 so each device class gets a single appropriate file. The non-standard
+                 `media` attribute on <source> is honored only by Safari; Chrome/Firefox
+                 ignore it and would lock onto the desktop WebM on mobile networks. -->
+            <video class="kl-hero__video" id="klHeroVideo"
                    autoplay loop muted playsinline disablepictureinpicture
                    preload="auto"
-                   poster="added-assets/kanan-hero-poster.jpg">
-                <source src="added-assets/kanan-hero-1080p.webm"      type="video/webm" media="(min-width:769px)">
-                <source src="added-assets/kanan-hero-1080p.mp4"       type="video/mp4; codecs=hvc1" media="(min-width:769px)">
-                <source src="added-assets/kanan-hero-720p-h264.mp4"   type="video/mp4; codecs=avc1.4D401E" media="(max-width:768px)">
-                <source src="added-assets/kanan-hero-720p.mp4"        type="video/mp4; codecs=hvc1" media="(max-width:768px)">
-            </video>
+                   poster="added-assets/kanan-hero-poster.jpg"></video>
+            <script>
+            (function () {
+                var v = document.getElementById('klHeroVideo');
+                if (!v) return;
+                var isMobile = window.matchMedia('(max-width: 768px)').matches;
+                var sources = isMobile
+                    ? [
+                        { src: 'added-assets/kanan-hero-720p-h264.mp4', type: 'video/mp4' },
+                        { src: 'added-assets/kanan-hero-720p.mp4',      type: 'video/mp4; codecs=hvc1' }
+                      ]
+                    : [
+                        { src: 'added-assets/kanan-hero-1080p.webm', type: 'video/webm' },
+                        { src: 'added-assets/kanan-hero-1080p.mp4',  type: 'video/mp4; codecs=hvc1' }
+                      ];
+                sources.forEach(function (s) {
+                    var el = document.createElement('source');
+                    el.src = s.src;
+                    el.type = s.type;
+                    v.appendChild(el);
+                });
+                v.load();
+                var p = v.play();
+                if (p && typeof p.catch === 'function') p.catch(function () { /* autoplay gated */ });
+            })();
+            </script>
 
             <!-- Gradient overlay for legibility -->
             <div class="kl-hero__overlay" aria-hidden="true"></div>
