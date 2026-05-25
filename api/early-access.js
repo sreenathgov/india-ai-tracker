@@ -7,14 +7,31 @@
  *   BREVO_EARLY_ACCESS_LIST_ID — Brevo list ID (default: 7)
  */
 
+const { applyCors, rateLimit, checkHoneypot } = require('./_lib/security');
+
 module.exports = async function handler(req, res) {
+  // CORS allowlist (kananlabs.in + *.vercel.app + local dev)
+  if (!applyCors(req, res)) {
+    return res.status(403).json({ message: 'Origin not allowed' });
+  }
+
   // Handle CORS preflight
   if (req.method === 'OPTIONS') {
-    return res.status(200).end();
+    return res.status(204).end();
   }
 
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
+  }
+
+  // Rate limit: 5 requests / 10 min / IP (per warm instance)
+  if (!rateLimit(req)) {
+    return res.status(429).json({ message: 'Too many requests. Please try again later.' });
+  }
+
+  // Honeypot: silently accept and discard automated submissions
+  if (checkHoneypot(req.body)) {
+    return res.status(200).json({ success: true });
   }
 
   const { name, company, email } = req.body || {};

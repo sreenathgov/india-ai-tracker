@@ -7,9 +7,27 @@
  *   BREVO_API_KEY  — your Brevo API key
  */
 
+const { applyCors, rateLimit, checkHoneypot } = require('./_lib/security');
+
 module.exports = async function handler(req, res) {
+  if (!applyCors(req, res)) {
+    return res.status(403).json({ message: 'Origin not allowed' });
+  }
+
+  if (req.method === 'OPTIONS') {
+    return res.status(204).end();
+  }
+
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
+  }
+
+  if (!rateLimit(req)) {
+    return res.status(429).json({ message: 'Too many requests. Please try again later.' });
+  }
+
+  if (checkHoneypot(req.body)) {
+    return res.status(200).json({ success: true });
   }
 
   const {
