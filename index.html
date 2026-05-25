@@ -39,10 +39,34 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
-    <!-- Performance: preload hero poster (paints instantly while video loads) -->
-    <link rel="preload" as="image" href="added-assets/kanan-hero-poster.jpg" fetchpriority="high">
-    <!-- Performance: preload hero video (1080p WebM for modern browsers) -->
-    <link rel="preload" as="video" href="added-assets/kanan-hero-1080p.webm" type="video/webm" fetchpriority="high">
+    <!-- Performance: preload hero poster (AVIF primary, ~45KB — paints in <200ms) -->
+    <link rel="preload" as="image" href="added-assets/kanan-hero-poster.avif" type="image/avif" fetchpriority="high">
+    <!-- Performance: viewport-aware hero video preload (AV1/HEVC desktop, H.264 mobile) -->
+    <script>
+    (function () {
+        var isMobile = window.matchMedia('(max-width: 768px)').matches;
+        var canAV1 = document.createElement('video')
+            .canPlayType('video/mp4; codecs="av01.0.05M.08"') !== '';
+        var href, type;
+        if (isMobile) {
+            href = 'added-assets/kanan-hero-720p.h264.mp4';
+            type = 'video/mp4';
+        } else if (canAV1) {
+            href = 'added-assets/kanan-hero-1080p.av1.mp4';
+            type = 'video/mp4; codecs="av01.0.05M.08"';
+        } else {
+            href = 'added-assets/kanan-hero-1080p.hevc.mp4';
+            type = 'video/mp4; codecs=hvc1';
+        }
+        var link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'video';
+        link.href = href;
+        link.type = type;
+        link.setAttribute('fetchpriority', 'high');
+        document.head.appendChild(link);
+    })();
+    </script>
     <!-- Performance: preload Cormorant display font weights -->
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/CormorantGaramond-Regular.woff2">
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/CormorantGaramond-Medium.woff2">
@@ -690,14 +714,14 @@
         ════════════════════════════════════════════════ -->
         <header class="kl-hero">
 
-            <!-- Hero video. Sources injected by inline script below based on viewport,
-                 so each device class gets a single appropriate file. The non-standard
-                 `media` attribute on <source> is honored only by Safari; Chrome/Firefox
-                 ignore it and would lock onto the desktop WebM on mobile networks. -->
+            <!-- Hero video. Sources injected by inline script below based on viewport +
+                 codec support. Ladder: AV1 (smallest, sharpest — Chrome/Firefox/Edge) →
+                 HEVC (Safari) → H.264 (universal fallback). Mobile gets a single 720p
+                 H.264 to keep first-frame paint under 1s on 4G. -->
             <video class="kl-hero__video" id="klHeroVideo"
                    autoplay loop muted playsinline disablepictureinpicture
                    preload="auto"
-                   poster="added-assets/kanan-hero-poster.jpg"></video>
+                   poster="added-assets/kanan-hero-poster.avif"></video>
             <script>
             (function () {
                 var v = document.getElementById('klHeroVideo');
@@ -705,12 +729,12 @@
                 var isMobile = window.matchMedia('(max-width: 768px)').matches;
                 var sources = isMobile
                     ? [
-                        { src: 'added-assets/kanan-hero-720p-h264.mp4', type: 'video/mp4' },
-                        { src: 'added-assets/kanan-hero-720p.mp4',      type: 'video/mp4; codecs=hvc1' }
+                        { src: 'added-assets/kanan-hero-720p.h264.mp4', type: 'video/mp4' }
                       ]
                     : [
-                        { src: 'added-assets/kanan-hero-1080p.webm', type: 'video/webm' },
-                        { src: 'added-assets/kanan-hero-1080p.mp4',  type: 'video/mp4; codecs=hvc1' }
+                        { src: 'added-assets/kanan-hero-1080p.av1.mp4',  type: 'video/mp4; codecs="av01.0.05M.08"' },
+                        { src: 'added-assets/kanan-hero-1080p.hevc.mp4', type: 'video/mp4; codecs=hvc1' },
+                        { src: 'added-assets/kanan-hero-1080p.h264.mp4', type: 'video/mp4' }
                       ];
                 sources.forEach(function (s) {
                     var el = document.createElement('source');
