@@ -12,10 +12,10 @@ class StaggeredMenu {
       socialItems: [],
       displaySocials: true,
       displayItemNumbering: true,
-      logoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png',
-      mobileLogoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-KANANLABS-LETTERLOGO.png',
+      logoUrl: 'KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-WHITEBG.png',
+      mobileLogoUrl: 'KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-WHITEBG.png',
       mobileOpenLogoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-KANANLABS-LETTERLOGO.png',
-      menuButtonColor: '#f4ebd0',
+      menuButtonColor: '#0a2f52',
       openMenuButtonColor: '#fff',
       accentColor: '#db4a2b',
       changeMenuColorOnOpen: true,
@@ -129,11 +129,10 @@ class StaggeredMenu {
       ? this.options.colors.slice(0, 4)
       : ['#1e1e22', '#35353c'];
 
-    let arr = [...colors];
-    if (arr.length >= 3) {
-      const mid = Math.floor(arr.length / 2);
-      arr.splice(mid, 1);
-    }
+    // Use all provided colors as prelayers — no stripping.
+    // The panel slides in last and covers them, so all colors
+    // are visible briefly during the sweep animation.
+    const arr = [...colors];
 
     arr.forEach(color => {
       const layer = document.createElement('div');
@@ -399,9 +398,9 @@ class StaggeredMenu {
     }));
     const panelStart = Number(gsap.getProperty(panel, 'xPercent'));
 
-    // Set initial states
+    // Set initial states — start items at orange so they flash → cream during entrance
     if (itemEls.length) {
-      gsap.set(itemEls, { yPercent: 140, rotate: 10 });
+      gsap.set(itemEls, { yPercent: 140, rotate: 10, color: '#db4a2b' });
     }
     if (numberEls.length) {
       gsap.set(numberEls, { '--sm-num-opacity': 0 });
@@ -447,6 +446,7 @@ class StaggeredMenu {
         {
           yPercent: 0,
           rotate: 0,
+          color: '#f4ebd0',   // settle to brand cream as each item arrives
           duration: 1,
           ease: 'power4.out',
           stagger: { each: 0.1, from: 'start' }
@@ -542,7 +542,7 @@ class StaggeredMenu {
       onComplete: () => {
         const itemEls = Array.from(panel.querySelectorAll('.sm-panel-itemLabel'));
         if (itemEls.length) {
-          gsap.set(itemEls, { yPercent: 140, rotate: 10 });
+          gsap.set(itemEls, { yPercent: 140, rotate: 10, color: '#db4a2b' });
         }
 
         const numberEls = Array.from(panel.querySelectorAll('.sm-panel-list[data-numbering] .sm-panel-item'));
@@ -791,8 +791,9 @@ class StaggeredMenu {
 
   initThemeSwitching() {
     const lightSections = [
-      document.querySelector('.advisory-section'),
-      document.querySelector('.identity-section')
+      ...document.querySelectorAll('.advisory-section'),
+      ...document.querySelectorAll('.identity-section'),
+      ...document.querySelectorAll('[data-nav-light]')   // generic opt-in for any page
     ].filter(Boolean);
 
     if (!lightSections.length) return;
@@ -869,13 +870,15 @@ class StaggeredMenu {
 document.addEventListener('DOMContentLoaded', function () {
   new StaggeredMenu({
     position: 'right',
-    colors: ['#0a2f52', '#db4a2b', '#f4ebd0'],
+    colors: ['#db4a2b', '#f4ebd0', '#0a2f52'],
     items: [
       { label: 'Home', ariaLabel: 'Go to home page', link: 'index.html' },
-      { label: 'About', ariaLabel: 'Learn about this project', link: 'about.html' },
-      { label: 'Sector-Watch', ariaLabel: 'View Sector Watch', link: 'sector-watch.html' },
+      { label: 'TradeWatch', ariaLabel: 'View TradeWatch product', link: 'tradewatch.html' },
+      { label: 'India AI Tracker', ariaLabel: 'View the India AI Tracker', link: 'tracker.html' },
+      { label: 'SectorWatch', ariaLabel: 'View SectorWatch platform', link: 'sector-watch.html' },
       { label: 'Publications', ariaLabel: 'View publications', link: 'publications.html' },
-      { label: 'Consultation', ariaLabel: 'Schedule a strategic consultation', link: '#', action: 'openContactPanel' }
+      { label: 'About', ariaLabel: 'Learn about Kanan Labs', link: 'about.html' },
+      { label: 'Team', ariaLabel: 'Meet the founder', link: 'team.html' }
     ],
     socialItems: [
       { label: 'LinkedIn', link: 'https://www.linkedin.com/in/sreenathgovindarajan' },

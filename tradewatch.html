@@ -193,8 +193,10 @@
             transform: scale(1.08);
             transform-origin: 50% 60%;
             will-change: transform;
-            opacity: 0.95;
+            opacity: 0;
+            transition: opacity 0.55s ease;
         }
+        .tw-globe-svg.is-ready { opacity: 0.95; }
 
         .tw-particle-layer {
             position: absolute;
@@ -1192,12 +1194,15 @@
            Mobile (≤1023px) shows the editorial beats + quad grid. */
 
         /* Desktop-only elements: visible by default, hidden on mobile */
+        /* Threshold lowered from 1024 → 900 so Windows laptops with DPI scaling
+           (1366×768 @ 150% = 911 CSS px; 1920×1080 @ 200% = 960 CSS px) still
+           render the funnel instead of falling through to the mobile bento. */
         .tw-drona-desktop-only { display: block; }
-        @media (max-width: 1023px) { .tw-drona-desktop-only { display: none !important; } }
+        @media (max-width: 899px) { .tw-drona-desktop-only { display: none !important; } }
 
         /* Mobile-only elements: hidden on desktop */
         .tw-drona-mobile-only { display: block; }
-        @media (min-width: 1024px) { .tw-drona-mobile-only { display: none !important; } }
+        @media (min-width: 900px) { .tw-drona-mobile-only { display: none !important; } }
 
         /* ---------- Beat 4: moat ---------- */
         .tw-drona-vs-heading {
@@ -1277,9 +1282,262 @@
         }
         .tw-drona-credential-body p:last-child { margin-bottom: 0; }
 
+        /* Stack credential 3-col grid below 1024 (covers the new 900–1023 zone
+           opened up by the lowered desktop gate) */
+        @media (max-width: 1023px) {
+            .tw-drona-credential-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem 0;
+            }
+            .tw-drona-credential-divider {
+                display: none;
+            }
+        }
+
         /* Hide moat-quote on desktop (navy block replaces it) */
-        @media (min-width: 1024px) {
+        @media (min-width: 900px) {
             .tw-drona-moat-quote { display: none !important; }
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           DRONA — Mobile/tablet vertical story spine
+           Replaces the legacy editorial beats + pillars-intro + quad meter
+           blocks below 900px. Four numbered stations anchored to a thin
+           vertical rail; active station's dot turns red on scroll-enter.
+           ══════════════════════════════════════════════════════════════ */
+        .tw-drona-spine-mobile { display: none; }
+        @media (max-width: 899px) {
+            .tw-drona-spine-mobile {
+                display: block;
+                max-width: 640px;
+                margin: clamp(2rem, 6vh, 3.5rem) auto clamp(3rem, 8vh, 5rem);
+                padding: 0 clamp(1.25rem, 4vw, 1.75rem);
+            }
+
+            .tw-spine-rail {
+                position: relative;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            .tw-spine-rail::before {
+                content: "";
+                position: absolute;
+                left: 22px;
+                top: 0.45em;
+                bottom: 0.45em;
+                width: 1px;
+                background: var(--tw-rule-strong);
+            }
+
+            .tw-spine-station {
+                position: relative;
+                padding-left: 56px;
+                padding-bottom: clamp(2.5rem, 6vw, 3.5rem);
+            }
+            .tw-spine-station:last-child { padding-bottom: 0; }
+
+            .tw-spine-num {
+                position: absolute;
+                left: 0;
+                top: -0.1em;
+                font-family: var(--tw-display);
+                font-style: italic;
+                font-weight: 500;
+                font-size: clamp(2rem, 8vw, 2.6rem);
+                line-height: 1;
+                color: var(--tw-ink-dim);
+                transition: color 0.35s ease;
+                z-index: 1;
+            }
+            .tw-spine-num::before {
+                content: "";
+                position: absolute;
+                left: 22px;
+                top: 0.55em;
+                width: 9px;
+                height: 9px;
+                margin-left: -4.5px;
+                border-radius: 50%;
+                background: var(--tw-cream);
+                border: 1.5px solid var(--tw-rule-strong);
+                box-sizing: border-box;
+                transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+            }
+            .tw-spine-num::after {
+                content: "";
+                position: absolute;
+                left: 27px;
+                top: calc(0.55em + 4.5px);
+                width: 18px;
+                height: 1px;
+                background: var(--tw-rule);
+            }
+
+            .tw-spine-station.is-in .tw-spine-num {
+                color: var(--tw-navy);
+                font-weight: 600;
+            }
+            .tw-spine-station.is-in .tw-spine-num::before {
+                background: var(--tw-red);
+                border-color: var(--tw-red);
+                box-shadow: 0 0 0 4px rgba(219, 74, 43, 0.12);
+            }
+
+            .tw-spine-eyebrow {
+                font-family: var(--tw-mono);
+                font-size: 0.65rem;
+                font-weight: 700;
+                letter-spacing: 0.3em;
+                text-transform: uppercase;
+                color: var(--tw-red);
+                margin: 0.4em 0 0.85rem;
+            }
+            .tw-spine-head {
+                font-family: var(--tw-display);
+                font-style: italic;
+                font-weight: 500;
+                font-size: clamp(1.65rem, 6vw, 2.1rem);
+                line-height: 1.18;
+                letter-spacing: -0.005em;
+                color: var(--tw-navy);
+                margin: 0 0 1.1rem;
+            }
+
+            /* Station 01 — Source chips */
+            .tw-spine-chips {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.4rem 0.5rem;
+            }
+            .tw-spine-chips li {
+                font-family: var(--tw-mono);
+                font-size: 0.72rem;
+                line-height: 1;
+                color: var(--tw-ink);
+                padding: 0.45rem 0.7rem;
+                border: 1px solid var(--tw-rule);
+                border-radius: 999px;
+                background: transparent;
+                white-space: nowrap;
+            }
+
+            /* Station 02 — Reads / Reasons / Records rows */
+            .tw-spine-rows {
+                margin: 0;
+                padding: 0;
+            }
+            .tw-spine-row {
+                padding: 0.85rem 0;
+                border-top: 1px solid var(--tw-rule);
+            }
+            .tw-spine-row:first-child {
+                border-top: 0;
+                padding-top: 0;
+            }
+            .tw-spine-row dt {
+                font-family: var(--tw-mono);
+                font-size: 0.7rem;
+                font-weight: 700;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: var(--tw-red);
+                margin-bottom: 0.35rem;
+            }
+            .tw-spine-row dd {
+                font-family: var(--tw-mono);
+                font-size: 0.85rem;
+                line-height: 1.65;
+                color: var(--tw-ink);
+                margin: 0;
+            }
+
+            /* Station 03 — Packet cards */
+            .tw-spine-packets {
+                display: flex;
+                flex-direction: column;
+                gap: 0.7rem;
+            }
+            .tw-spine-packet {
+                padding: 0.9rem 1.05rem;
+                border-left: 2px solid var(--tw-red);
+                background: rgba(255, 255, 255, 0.45);
+                border-radius: 0 4px 4px 0;
+            }
+            .tw-spine-packet-name {
+                font-family: var(--tw-display);
+                font-style: italic;
+                font-weight: 500;
+                font-size: 1.05rem;
+                line-height: 1.25;
+                color: var(--tw-navy);
+                margin: 0 0 0.25rem;
+            }
+            .tw-spine-packet-for {
+                font-family: var(--tw-mono);
+                font-size: 0.75rem;
+                color: var(--tw-ink-dim);
+                margin: 0;
+            }
+
+            /* Station 04 — Traits coda */
+            .tw-spine-traits {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            .tw-spine-traits li {
+                display: block;
+                padding: 0.95rem 0;
+                border-top: 1px solid var(--tw-rule);
+            }
+            .tw-spine-traits li:first-child {
+                border-top: 0;
+                padding-top: 0;
+            }
+            .tw-spine-trait-name {
+                display: block;
+                font-family: var(--tw-mono);
+                font-size: 0.72rem;
+                font-weight: 700;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: var(--tw-red);
+                margin-bottom: 0.35rem;
+            }
+            .tw-spine-trait-body {
+                display: block;
+                font-family: var(--tw-mono);
+                font-size: 0.85rem;
+                line-height: 1.6;
+                color: var(--tw-ink);
+            }
+
+            /* Caption — Cormorant italic pull-quote, closes each station */
+            .tw-spine-caption {
+                font-family: var(--tw-display);
+                font-style: italic;
+                font-weight: 400;
+                font-size: 0.95rem;
+                line-height: 1.5;
+                color: var(--tw-ink-dim);
+                margin: 1.25rem 0 0;
+                padding-top: 0.9rem;
+                border-top: 1px dashed var(--tw-rule);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .tw-spine-num,
+            .tw-spine-num::before {
+                transition: none !important;
+            }
+            .tw-spine-station.is-in .tw-spine-num::before {
+                box-shadow: none;
+            }
         }
 
         .tw-drona-vs {
@@ -4120,7 +4378,7 @@
                 word-break: break-word;
                 overflow-wrap: anywhere;
             }
-            .tw-inbox-list { gap: 0.4rem; }
+            .tw-inbox-list { gap: 0.4rem; flex: none; }
             .tw-inbox-row {
                 grid-template-columns: 18px 1fr auto auto;
                 gap: 0.45rem 0.55rem;
@@ -5293,27 +5551,6 @@
             display: none;
         }
 
-        .tw-strata-foot {
-            margin-top: clamp(3rem, 6vh, 5rem);
-            display: flex;
-            justify-content: center;
-            text-align: center;
-        }
-        .tw-strata-foot-text {
-            font-family: var(--tw-display);
-            font-style: italic;
-            font-size: clamp(1.1rem, 2vw, 1.55rem);
-            color: var(--tw-ink);
-            max-width: 42rem;
-            line-height: 1.5;
-        }
-        .tw-strata-foot-text em {
-            color: var(--tw-red);
-            font-weight: 700;
-            display: inline-block;
-            transform: skewX(-9deg);
-        }
-
         /* ============================================================
            ACT VI — Founder
            ============================================================ */
@@ -6369,10 +6606,6 @@
                 <button class="tw-frag-dot" data-idx="1" aria-label="Next — Evidence Layer"></button>
                 <button class="tw-frag-dot" data-idx="2" aria-label="Later — SectorWatch"></button>
             </div>
-
-            <div class="tw-strata-foot">
-                <p class="tw-strata-foot-text">The same <em>Drona</em> backbone: structured evidence, source provenance, deterministic rule logic, and human review where judgment matters.</p>
-            </div>
         </div>
     </section>
 
@@ -6388,7 +6621,7 @@
             <p class="tw-drona-subline tw-drona-mobile-only">Most trade tools sit idle until you log in. We codified what a senior trade consultant actually does, and put it to work continuously.</p>
 
             <!-- DESKTOP: Funnel panel (hidden on mobile via .tw-drona-desktop-only) -->
-            <p class="tw-drona-hinge tw-drona-desktop-only">Here's the engine that makes that possible</p>
+            <p class="tw-drona-hinge tw-drona-desktop-only">Drona is the neurosymbolic engine that makes that possible</p>
 
             <div class="tw-drona-panel tw-drona-desktop-only">
             <div class="tw-drona-funnel" id="twDronaFunnel">
@@ -6463,66 +6696,91 @@
             </div>
             </div><!-- /.tw-drona-panel -->
 
-            <!-- MOBILE: editorial typographic layout (hidden on desktop via .tw-drona-mobile-only) -->
-            <div class="tw-drona-beats-editorial tw-drona-mobile-only">
+            <!-- MOBILE: vertical story spine (hidden on desktop via .tw-drona-mobile-only) -->
+            <div class="tw-drona-spine-mobile tw-drona-mobile-only" data-spine>
 
-                <div class="tw-drona-beat">
-                    <p class="tw-drona-beat-label">01 · Input</p>
-                    <h3 class="tw-drona-beat-heading" id="twDronaBeat1">
-                        <span class="tw-word">What</span>
-                        <span class="tw-word">we</span>
-                        <span class="tw-word">read.</span>
-                    </h3>
-                    <p class="tw-drona-beat-para">Customs notifications and circulars, quality control orders, foreign regulations and sanctions lists, customs rulings and tribunal decisions, industry standards, and insurance and banking circulars.</p>
-                    <p class="tw-drona-beat-caption">Every source kept, dated, and traceable.</p>
-                </div>
+                <ol class="tw-spine-rail" aria-label="How Drona works">
 
-                <div class="tw-drona-beat">
-                    <p class="tw-drona-beat-label">02 · Process</p>
-                    <h3 class="tw-drona-beat-heading" id="twDronaBeat2">
-                        <span class="tw-word">What</span>
-                        <span class="tw-word">we</span>
-                        <span class="tw-word">do</span>
-                        <span class="tw-word">with</span>
-                        <span class="tw-word">it.</span>
-                    </h3>
-                    <div class="tw-drona-beat-kv">
-                        <div class="tw-drona-beat-kv-row">
-                            <span class="tw-drona-beat-key">Reads</span>
-                            <span class="tw-drona-beat-val">Pulls every relevant fact. Classifies it. Marks ambiguity.</span>
+                    <li class="tw-spine-station" data-station="01">
+                        <span class="tw-spine-num" aria-hidden="true">01</span>
+                        <p class="tw-spine-eyebrow">Input</p>
+                        <h3 class="tw-spine-head">What we read.</h3>
+                        <ul class="tw-spine-chips" aria-label="Source feeds">
+                            <li>Customs notifications</li>
+                            <li>Quality control orders</li>
+                            <li>Foreign regulations</li>
+                            <li>Sanctions lists</li>
+                            <li>Customs rulings</li>
+                            <li>Tribunal decisions</li>
+                            <li>Industry standards</li>
+                            <li>Banking circulars</li>
+                        </ul>
+                        <p class="tw-spine-caption">Every source kept, dated, and traceable.</p>
+                    </li>
+
+                    <li class="tw-spine-station" data-station="02">
+                        <span class="tw-spine-num" aria-hidden="true">02</span>
+                        <p class="tw-spine-eyebrow">Process</p>
+                        <h3 class="tw-spine-head">What we do with it.</h3>
+                        <dl class="tw-spine-rows">
+                            <div class="tw-spine-row">
+                                <dt>Reads</dt>
+                                <dd>Pulls every relevant fact. Classifies it. Marks ambiguity.</dd>
+                            </div>
+                            <div class="tw-spine-row">
+                                <dt>Reasons</dt>
+                                <dd>Tests each obligation against the regulation, your shipment, and your own policy framework.</dd>
+                            </div>
+                            <div class="tw-spine-row">
+                                <dt>Records</dt>
+                                <dd>Locks the evidence, the reasoning chain, and the reviewer's sign-off. The answer can always be defended.</dd>
+                            </div>
+                        </dl>
+                        <p class="tw-spine-caption">No black box. No chatbot guessing. The answer always has a paper trail.</p>
+                    </li>
+
+                    <li class="tw-spine-station" data-station="03">
+                        <span class="tw-spine-num" aria-hidden="true">03</span>
+                        <p class="tw-spine-eyebrow">Output</p>
+                        <h3 class="tw-spine-head">What comes out.</h3>
+                        <div class="tw-spine-packets">
+                            <article class="tw-spine-packet">
+                                <p class="tw-spine-packet-name">Shipping Bill Readiness Packet</p>
+                                <p class="tw-spine-packet-for">For your customs broker.</p>
+                            </article>
+                            <article class="tw-spine-packet">
+                                <p class="tw-spine-packet-name">Marine Cargo Insurance Packet</p>
+                                <p class="tw-spine-packet-for">For your insurer.</p>
+                            </article>
                         </div>
-                        <div class="tw-drona-beat-kv-row">
-                            <span class="tw-drona-beat-key">Reasons</span>
-                            <span class="tw-drona-beat-val">Tests each obligation against the regulation, your shipment, and your own policy framework.</span>
-                        </div>
-                        <div class="tw-drona-beat-kv-row">
-                            <span class="tw-drona-beat-key">Records</span>
-                            <span class="tw-drona-beat-val">Locks the evidence, the reasoning chain, and the reviewer's sign-off. The answer can always be defended.</span>
-                        </div>
-                    </div>
-                    <p class="tw-drona-beat-caption">The work is shown. Every answer points to a source.</p>
-                </div>
+                        <p class="tw-spine-caption">Both projected from one shipment record.</p>
+                    </li>
 
-                <div class="tw-drona-beat">
-                    <p class="tw-drona-beat-label">03 · Output</p>
-                    <h3 class="tw-drona-beat-heading" id="twDronaBeat3">
-                        <span class="tw-word">What</span>
-                        <span class="tw-word">comes</span>
-                        <span class="tw-word">out.</span>
-                    </h3>
-                    <ul class="tw-drona-beat-list tw-drona-beat-list--output">
-                        <li>
-                            <span class="tw-drona-packet-name">Shipping Bill Readiness Packet</span>
-                            <span class="tw-drona-packet-for">For your customs broker.</span>
-                        </li>
-                        <li>
-                            <span class="tw-drona-packet-name">Marine Cargo Insurance Packet</span>
-                            <span class="tw-drona-packet-for">For your insurer.</span>
-                        </li>
-                    </ul>
-                    <p class="tw-drona-beat-caption">Both projected from one shipment record.</p>
-                </div>
+                    <li class="tw-spine-station tw-spine-station--coda" data-station="04">
+                        <span class="tw-spine-num" aria-hidden="true">04</span>
+                        <p class="tw-spine-eyebrow">What makes it different</p>
+                        <h3 class="tw-spine-head">Auditable.<br>Authoritative.<br>Explainable.</h3>
+                        <ul class="tw-spine-traits">
+                            <li>
+                                <span class="tw-spine-trait-name">Knowledge</span>
+                                <span class="tw-spine-trait-body">Compiled from primary sources. Dated, attributed, traceable.</span>
+                            </li>
+                            <li>
+                                <span class="tw-spine-trait-name">Reasoning</span>
+                                <span class="tw-spine-trait-body">Deterministic over the knowledge base. Not guessed.</span>
+                            </li>
+                            <li>
+                                <span class="tw-spine-trait-name">Memory</span>
+                                <span class="tw-spine-trait-body">Every shipment makes the next one easier to defend.</span>
+                            </li>
+                            <li>
+                                <span class="tw-spine-trait-name">Packet</span>
+                                <span class="tw-spine-trait-body">A reviewed packet today. A defensible record over time.</span>
+                            </li>
+                        </ul>
+                    </li>
 
+                </ol>
             </div>
 
             <!-- Moat quote: Cormorant italic scroll-reveal -->
@@ -6553,85 +6811,6 @@
 
                     </div>
                 </div>
-            </div>
-
-            <!-- MOBILE: Legora-voice intro for the pillars -->
-            <div class="tw-drona-pillars-intro tw-drona-mobile-only">
-                <p class="tw-drona-pillars-lede">Most trade software is a form. TradeWatch does the work for you, and shows every step.</p>
-                <p class="tw-drona-pillars-stamp">Auditable. Authoritative. Explainable.</p>
-            </div>
-
-            <!-- MOBILE: progressive meter pillars (hidden on desktop via .tw-drona-mobile-only) -->
-            <div class="tw-drona-quad tw-drona-mobile-only">
-
-                <!-- Card 1: Knowledge — 1 filled, 3 empty -->
-                <div class="tw-drona-quad-card">
-                    <div class="tw-drona-meter">
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/1%20-%20Brain.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--empty"></div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--empty"></div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--empty"></div>
-                    </div>
-                    <h4 class="tw-drona-quad-title">Knowledge</h4>
-                    <p class="tw-drona-quad-body">Compiled from primary sources. Dated, attributed, traceable.</p>
-                </div>
-
-                <!-- Card 2: Reasoning — 2 filled, 2 empty -->
-                <div class="tw-drona-quad-card">
-                    <div class="tw-drona-meter">
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/1%20-%20Brain.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/2%20-%20Reasoning.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--empty"></div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--empty"></div>
-                    </div>
-                    <h4 class="tw-drona-quad-title">Reasoning</h4>
-                    <p class="tw-drona-quad-body">Reasoning over a knowledge base that does not drift.</p>
-                </div>
-
-                <!-- Card 3: Memory — 3 filled, 1 empty -->
-                <div class="tw-drona-quad-card">
-                    <div class="tw-drona-meter">
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/1%20-%20Brain.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/2%20-%20Reasoning.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/3%20-%20Memory.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--empty"></div>
-                    </div>
-                    <h4 class="tw-drona-quad-title">Memory</h4>
-                    <p class="tw-drona-quad-body">Every shipment makes the next one easier to defend.</p>
-                </div>
-
-                <!-- Card 4: What you get — all 4 filled -->
-                <div class="tw-drona-quad-card">
-                    <div class="tw-drona-meter">
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/1%20-%20Brain.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/2%20-%20Reasoning.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/3%20-%20Memory.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/4%20-%20What%20you%20get.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                    </div>
-                    <h4 class="tw-drona-quad-title">What you get</h4>
-                    <p class="tw-drona-quad-body">A reviewed packet today. A defensible record over time.</p>
-                </div>
-
             </div>
 
             <!-- Spine: 4-trait infographic flowing into desk cards -->
@@ -6954,6 +7133,16 @@
                 document.getElementById('twSetter')?.classList.add('is-in');
             });
         });
+
+        // Fade in SVG over LQIP once decoded (runs on all devices)
+        const globeImg = document.querySelector('.tw-globe-svg');
+        if (globeImg) {
+            if (globeImg.complete && globeImg.naturalWidth) {
+                globeImg.classList.add('is-ready');
+            } else {
+                globeImg.addEventListener('load', () => globeImg.classList.add('is-ready'));
+            }
+        }
 
         // Subtle parallax on globe + setter (mouse) — desktop only
         if (PREFERS_REDUCED || window.matchMedia('(pointer: coarse)').matches) return;
@@ -8123,6 +8312,23 @@
         });
     }
 
+    /* ---------- Drona mobile spine — scroll-tracked active station ---------- */
+
+    function initDronaSpine() {
+        const stations = document.querySelectorAll('.tw-drona-spine-mobile .tw-spine-station');
+        if (!stations.length) return;
+        if (!('IntersectionObserver' in window)) {
+            stations.forEach(s => s.classList.add('is-in'));
+            return;
+        }
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('is-in');
+            });
+        }, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
+        stations.forEach(s => io.observe(s));
+    }
+
     /* ---------- Boot ---------- */
 
     function boot() {
@@ -8136,6 +8342,7 @@
         initSwipeCarousel('twStrata',    'twStrataDots', '.tw-stratum', 879);
         initAct4Film();
         initDrona();
+        initDronaSpine();
         initAct5();
         initAct7();
 

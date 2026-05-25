@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 1,
+        "title": "National AI policy for healthcare in the works",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/national-ai-policy-for-healthcare-in-the-works/130346486",
+        "summary": "India is developing a national policy for Artificial Intelligence in healthcare to shape the future of its healthcare system. The Ayushman Bharat scheme has been successful in reducing financial burdens on citizens, and data and AI are expected to play a key role in healthcare. Maharashtra is also leveraging advanced technology, including launching menopause clinics, as part of its digital health mission.",
+        "date_published": "2026-04-18",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 12,
         "title": "Gen AI startup Neysa turns unicorn after Blackstone-led $1.2 Bn funding",
         "url": "https://entrackr.com/news/gen-ai-startup-neysa-turns-unicorn-after-blackstone-led-12-bn-funding-11109995",
@@ -162,6 +182,736 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 10,
+        "title": "AI NEXT 2026",
+        "url": "https://cio.economictimes.indiatimes.com/ai-next?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "AI NEXT 2026 is an upcoming event, with the location set to be Mumbai. The event is expected to focus on advancements and innovations in the field of artificial intelligence. Further details about the event, such as dates and agenda, are not specified.",
+        "date_published": "2026-06-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "AI NEXT 2026: Where Enterprise Infrastructure Meets Strategy",
+        "url": "https://cio.economictimes.indiatimes.com/ai-next-enterprise?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "AI NEXT 2026 is an event focused on the intersection of enterprise infrastructure and strategy. The event is scheduled to take place in Mumbai, although the exact dates are not specified. It aims to bring together key stakeholders to discuss the future of AI in enterprise settings.",
+        "date_published": "2026-06-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "From Legacy Data Estates to AI-Ready Banking",
+        "url": "https://cio.economictimes.indiatimes.com/ai-ready-banking?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "A banking transformation is underway in Mumbai, focusing on converting legacy data estates into AI-ready systems. This shift aims to enhance banking operations and decision-making capabilities through artificial intelligence. The goal is to create a more efficient and modern banking infrastructure.",
+        "date_published": "2026-06-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Maharashtra’s Beed Police launch ‘deepeye’ pilot project using AI tools",
+        "url": "https://indianexpress.com/article/mumbai/maharashtrabeed-police-deepeye-ai-system-voice-fir-pilot-project-10700133/",
+        "summary": "Maharashtra's Beed Police have launched a pilot project called \"deepeye\" that utilizes AI tools. The project aims to leverage artificial intelligence for enhanced policing, although specific details about its applications are not provided. The \"deepeye\" initiative marks a significant step towards integrating technology in law enforcement in the region.",
+        "date_published": "2026-05-20",
+        "source_name": "Indian Express - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "From AI anxiety to black holes over beer, global science festival opens in Mumbai pub",
+        "url": "https://indianexpress.com/article/cities/mumbai/global-science-festival-mumbai-pub-ai-beer-10697471/",
+        "summary": "A global science festival has opened in a Mumbai pub, featuring discussions on various topics including AI anxiety and black holes. The unique setting allows for informal conversations about complex scientific subjects over beer. The festival aims to make science more accessible and engaging for a broader audience.",
+        "date_published": "2026-05-19",
+        "source_name": "Indian Express - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Craft beer &amp; some conversations with researchers on AI, evolution, outer space",
+        "url": "https://timesofindia.indiatimes.com/city/pune/craft-beer-some-conversations-with-researchers-on-ai-evolution-outer-space/articleshow/131160720.cms",
+        "summary": "Researchers discussed AI, evolution, and outer space over craft beer, exploring the intersection of these topics. The conversations delved into the latest advancements and discoveries in these fields. The event brought together experts to share their insights and knowledge on these complex and fascinating subjects.",
+        "date_published": "2026-05-18",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Maha’s 1st AI policy bets big on Rs 10,000cr investment over 5 yrs",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/mahas-1st-ai-policy-bets-big-on-rs-10000cr-investment-over-5-yrs/articleshow/130921245.cms",
+        "summary": "Maharashtra has unveiled its first AI policy, aiming to attract Rs 10,000cr in investments over the next five years. The policy seeks to establish the state as a hub for artificial intelligence, driving growth and innovation. This initiative is expected to boost the state's economy and create new opportunities in the AI sector.",
+        "date_published": "2026-05-08",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Lead the Future of AI",
+        "url": "https://cio.economictimes.indiatimes.com/lead-the-future-of-ai?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "A new AI initiative is being launched, focused on leading the future of artificial intelligence. The initiative is based in Mumbai, aiming to drive innovation and advancements in the field. This effort seeks to position Mumbai as a key hub for AI development and progress.",
+        "date_published": "2026-05-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "AI tools in govt schools help students with learning, basic maths",
+        "url": "https://timesofindia.indiatimes.com/city/pune/ai-tools-in-govt-schools-help-students-with-learning-basic-maths/articleshow/130361628.cms",
+        "summary": "AI tools are being used in government schools to assist students with learning and basic math skills. These tools aim to improve student understanding and performance in key subjects. The implementation of AI in government schools is a notable development in education technology.",
+        "date_published": "2026-04-19",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Shantakumar calls for AI-driven sugarcane farming model in K’taka, citing Maharashtra’s success",
+        "url": "https://timesofindia.indiatimes.com/city/hubballi/shantakumar-calls-for-ai-driven-sugarcane-farming-model-in-ktaka-citing-maharashtras-success/articleshow/130340134.cms",
+        "summary": "Shantakumar is advocating for an AI-driven sugarcane farming model in Karnataka, inspired by Maharashtra's successful implementation. He cites Maharashtra's success as a reason to adopt this approach in Karnataka. The proposed model aims to improve sugarcane farming efficiency using artificial intelligence.",
+        "date_published": "2026-04-18",
+        "source_name": "Times of India - Hubli",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "DevSparks Bengaluru 2026 returns to decode AI—and the future of developers",
+        "url": "https://yourstory.com/2026/04/devsparks-bengaluru-2026-returns-to-decode-aiand-future-developers",
+        "summary": "YourStory's DevSparks Bengaluru 2026 will take place on May 30, focusing on AI and the future of developers. The event follows a successful edition in Pune and aims to turn uncertainty into opportunity. It will serve as a flagship developer summit in Bengaluru.",
+        "date_published": "2026-04-15",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Access, Not Excess: Inside Ai+’s Pricing and Ecosystem Play",
+        "url": "https://timesofindia.indiatimes.com/city/pune/access-not-excess-inside-ais-pricing-and-ecosystem-play/articleshow/130257840.cms",
+        "summary": "Ai+'s approach focuses on providing access to its services rather than excess, with a pricing strategy that aims to make its offerings more widely available. The company is working to build a robust ecosystem that supports its mission of accessibility. Ai+ is implementing a unique pricing and ecosystem play to achieve its goals.",
+        "date_published": "2026-04-15",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "AI &amp; Stipend Demand Take Centre Stage In DBA Polls",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/ai-stipend-demand-take-centre-stage-in-dba-polls/articleshow/130267997.cms",
+        "summary": "AI and stipend demands are key issues in the DBA polls, with candidates focusing on these topics. The polls are taking place, with AI being a central theme, although specific details of the demands are not provided. The election is being covered by news outlets, including the Times of India, which is reporting on the developments.",
+        "date_published": "2026-04-15",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Beyond the cloud: NVIDIA explores local AI systems at DevSparks Pune 2026, with RP Tech, an NVIDIA partner",
+        "url": "https://yourstory.com/2026/04/nvidia-explores-local-ai-systems-devsparks-pune-2026-rp-tech-nvidia-partner",
+        "summary": "NVIDIA's DevSparks Pune 2026 masterclass session focused on building compact local AI systems, addressing data privacy and deployment challenges. Attendees learned about the software stack and built a Video Search and Summarization agent using NVIDIA DGX Spark. The session was held in partnership with RP Tech, an NVIDIA partner.",
+        "date_published": "2026-04-07",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 16,
+        "title": "AI push, power sector revamp, disaster plan: What Maharashtra Cabinet cleared today",
+        "url": "https://indianexpress.com/article/cities/mumbai/maharashtra-cabinet-it-ai-department-mahavitaran-reforms-mrdp-10623782/",
+        "summary": "The Maharashtra Cabinet has cleared several key initiatives, including a push for artificial intelligence, a revamp of the power sector, and a disaster management plan. These decisions aim to drive growth and development in the state. The cabinet's approvals are expected to have a significant impact on Maharashtra's economy and infrastructure.",
+        "date_published": "2026-04-07",
+        "source_name": "Indian Express - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Private, local, and fully yours: NVIDIA's vision for AI development at DevSparks Pune 2026, with RP Tech, an NVIDIA partner",
+        "url": "https://yourstory.com/2026/04/nvidias-vision-ai-development-devsparks-pune-2026-rp-tech-nvidia-partner",
+        "summary": "NVIDIA's partner RP Tech showcased NVIDIA DGX Spark at DevSparks Pune 2026, allowing developers to run full AI workflows locally from a single device. This enables private and local AI development, giving developers full control over their work. NVIDIA DGX Spark is a key component of this vision, providing a self-contained platform for AI development.",
+        "date_published": "2026-04-07",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Dam Good Fish raises strategic funding at Rs 30 Cr valuation",
+        "url": "https://entrackr.com/snippets/dam-good-fish-raises-strategic-funding-at-rs-30-cr-valuation-11457953",
+        "summary": "Dam Good Fish, a seafood infrastructure company, has secured strategic funding at a valuation of around Rs 30 crore ($3.6 million). The fresh capital will be used to strengthen its AI-led systems, expand infrastructure, and enter new markets. The company aims to deliver ultra-fresh, naturally raised fish directly from dams to consumers using its technology-enabled platform.",
+        "date_published": "2026-04-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH",
+          "DL",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "AI In Classroom: NMC Teachers Upskill To Power Digital-age Learning",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/ai-in-classroom-nmc-teachers-upskill-to-power-digital-age-learning/articleshow/130026482.cms",
+        "summary": "Nagpur Municipal Corporation (NMC) teachers are upskilling to incorporate AI in the classroom, enabling digital-age learning. This initiative aims to enhance the teaching process and provide students with a more modern and effective education. The move is part of a broader effort to power digital-age learning in NMC classrooms.",
+        "date_published": "2026-04-05",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Agentic AI for BFSI",
+        "url": "https://cio.economictimes.indiatimes.com/agentic-ai-bfsi?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "Agentic AI is being utilized in the Banking, Financial Services, and Insurance (BFSI) sector. The implementation of Agentic AI in BFSI is taking place in Mumbai. This integration aims to enhance operations and services within the industry.",
+        "date_published": "2026-04-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Getting More Value from IT, Cloud & AI Investments: A CIO Perspective",
+        "url": "https://cio.economictimes.indiatimes.com/getting-more-value-from-it?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "A recent event in Mumbai focused on helping CIOs maximize value from their IT, cloud, and AI investments. The event provided a platform for CIOs to discuss strategies and best practices for optimizing returns on these investments. Key discussions centered around leveraging technology to drive business growth and innovation.",
+        "date_published": "2026-04-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "ZP Budget Crosses ₹50 Crore Mark For First Time, Solar, AI &amp; Rural Infra In Focus",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/zp-budget-crosses-50-crore-mark-for-first-time-solar-ai-rural-infra-in-focus/articleshow/129852978.cms",
+        "summary": "The ZP budget has exceeded ₹50 crore for the first time, with a focus on solar energy, artificial intelligence, and rural infrastructure development. This significant increase in budget allocation is expected to drive growth and improvement in these key areas. The new budget prioritizes innovative technologies like AI and renewable energy sources like solar power.",
+        "date_published": "2026-03-28",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "BFSI Tech Conclave 2026 | 19th & 20th June 2026",
+        "url": "https://www.expresscomputer.in/event/bfsi-tech-conclave-2026-19th-20th-june-2026/",
+        "summary": "The BFSI Tech Conclave 2026 is scheduled to take place on June 19th and 20th, 2026. The event will be held at the Radisson Blu Plaza Resort & Convention Centre in Karjat, Maharashtra, India. The conclave will bring together professionals to discuss technology in the banking, financial services, and insurance sectors.",
+        "date_published": "2026-03-24",
+        "source_name": "Express Computer - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Why Real-Time Data Streaming is the True Foundation for the AI era",
+        "url": "https://cio.economictimes.indiatimes.com/why-real-time-data-streaming?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "Real-time data streaming is considered the foundation for the AI era, enabling instant decision-making and action. This technology allows for the immediate processing and analysis of vast amounts of data, driving AI applications forward. In Mumbai, the importance of real-time data streaming is being recognized as a key component of AI development.",
+        "date_published": "2026-03-24",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "From prototype to production: How developers can make agentic AI reliable",
+        "url": "https://yourstory.com/2026/03/prototype-production-developers-make-agentic-ai-reliable",
+        "summary": "Anannya Roy of AWS emphasized the importance of observability, evaluation frameworks, and human oversight in making autonomous AI systems reliable. These elements are crucial for transitioning agentic AI from prototype to production. Roy discussed this topic at DevSparks Pune 2026, highlighting the need for a robust approach to ensure production-ready AI systems.",
+        "date_published": "2026-03-24",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Digital lending marketplace Finfinity raises $2.4 Mn in seed round",
+        "url": "https://entrackr.com/snippets/digital-lending-marketplace-finfinity-raises-24-mn-in-seed-round-11254722",
+        "summary": "Finfinity, a digital lending marketplace, has raised $2.4 million in a seed funding round led by Mankind Pharma Promoter's Family Office. The funding round also saw participation from several other investors, including Vi-John Group and individual investors. The raised capital will be used to enhance Finfinity's technology platform, expand partnerships, and scale its operations.",
+        "date_published": "2026-03-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Magical Nest operator Raanro raises pre-seed round",
+        "url": "https://entrackr.com/snippets/magical-nest-operator-raanro-raises-pre-seed-round-11256761",
+        "summary": "Raanro Interior Technology, the parent company of Magical Nest, has raised Rs 4.12 crore in a pre-seed funding round at a pre-money valuation of Rs 60 crore. The round was participated by Stargazer Fund and several angel investors, including Kunal Shah and Ankit Nagori. The company will use the funds to develop an AI-powered platform for streamlining interior design workflows.",
+        "date_published": "2026-03-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB",
+          "MH",
+          "KL",
+          "KA",
+          "GJ",
+          "TN",
+          "DL",
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Neuro-rehabilitation startup Rymo Technologies secures Rs 10 Cr in seed round",
+        "url": "https://entrackr.com/snippets/neuro-rehabilitation-startup-rymo-technologies-secures-rs-10-cr-in-seed-round-11228049",
+        "summary": "Rymo Technologies, a robotic neuro-rehabilitation startup, has secured Rs 10 crore in a seed funding round led by IAN Group. The funds will be used to drive product innovation, expand manufacturing, and strengthen the company's presence in India and internationally. The startup, co-founded in 2020, aims to scale into markets including ASEAN and the Middle East.",
+        "date_published": "2026-03-19",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Unlocking Real-Time Intelligence using AI | 18th March 2026 | Mumbai",
+        "url": "https://www.expresscomputer.in/event/unlocking-real-time-intelligence-using-ai-18th-march-2026-mumbai/",
+        "summary": "An event titled \"Unlocking Real-Time Intelligence using AI\" is scheduled to take place on March 18th, 2026, in Mumbai. The event will be held at the Jio World Convention Centre, located in the Bandra Kurla Complex. The conference aims to explore the potential of AI in unlocking real-time intelligence.",
+        "date_published": "2026-03-17",
+        "source_name": "Express Computer - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Rethinking GenAI development with NVIDIA DGX Spark at DevSparks 2026",
+        "url": "https://yourstory.com/2026/03/rethinking-genai-development-nvidia-dgx-spark-devsparks-2026",
+        "summary": "NVIDIA's Sunil Patel showcased DGX Spark at DevSparks 2026, highlighting its ability to enable local prototyping and fine-tuning of large AI models. This capability dramatically reduces infrastructure barriers for developers, making it easier to work with GenAI. DGX Spark was demonstrated in Pune at the DevSparks 2026 event.",
+        "date_published": "2026-03-17",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "165 women cops using AI to register routine complaints within minutes",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/165-women-cops-using-ai-to-register-routine-complaints-within-minutes/articleshow/129595338.cms",
+        "summary": "165 women police officers are utilizing AI technology to register routine complaints in a matter of minutes. This innovative approach aims to streamline the complaint registration process, increasing efficiency and reducing wait times. The AI-powered system enables quick and convenient registration of complaints, improving overall police services.",
+        "date_published": "2026-03-16",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "In AI Age, Adaptability Is Key: VIP MD To Students",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/in-ai-age-adaptability-is-key-vip-md-to-students/articleshow/129580629.cms",
+        "summary": "A VIP MD recently addressed students, emphasizing the importance of adaptability in the age of artificial intelligence. The MD encouraged students to be flexible and open to new technologies and changes. This advice is crucial for students to thrive in a rapidly evolving job market dominated by AI.",
+        "date_published": "2026-03-15",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Maharashtra to adopt AI solutions to tackle human-animal conflict: Forest Minister Ganesh Naik",
+        "url": "https://indianexpress.com/article/cities/mumbai/maharashtra-to-adopt-ai-solutions-to-tackle-human-animal-conflict-forest-minister-ganesh-naik-10578011/",
+        "summary": "Maharashtra's Forest Minister Ganesh Naik has announced plans to adopt AI solutions to address human-animal conflict in the state. The initiative aims to mitigate the growing issue of encounters between humans and wild animals. The use of AI technology is expected to help reduce conflicts and promote coexistence between humans and animals.",
+        "date_published": "2026-03-12",
+        "source_name": "Indian Express - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "From pilots to production: What it really takes to scale AI in GCCs",
+        "url": "https://yourstory.com/2026/03/pilots-to-production-what-really-takes-scale-ai-in-gccs",
+        "summary": "Leaders from various companies, including Vertiv, NielsenIQ, and XPO, discussed the challenges of scaling AI at a recent roundtable in Pune. The key hurdles to overcome include infrastructure, governance, and talent acquisition. These challenges must be addressed to transition AI from experimentation to enterprise-scale deployment.",
+        "date_published": "2026-03-11",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Neeri-developed AI tool maps vehicular pollution",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/neeri-developed-ai-tool-maps-vehicular-pollution/articleshow/129417373.cms",
+        "summary": "Researchers at Neeri have developed an AI tool that maps vehicular pollution, utilizing artificial intelligence to track and analyze pollution caused by vehicles. The tool aims to provide insights into pollution patterns and help mitigate its effects. The development is a significant step towards addressing environmental concerns related to vehicular emissions.",
+        "date_published": "2026-03-11",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "PMC to explore AI to detect unassessed properties, increase tax revenue",
+        "url": "https://timesofindia.indiatimes.com/city/pune/pmc-to-explore-ai-to-detect-unassessed-properties-increase-tax-revenue/articleshow/129352818.cms",
+        "summary": "The Pune Municipal Corporation (PMC) plans to utilize Artificial Intelligence (AI) to identify unassessed properties and boost tax revenue. This initiative aims to increase the city's tax collection by detecting properties that are not currently paying taxes. The PMC will explore AI technology to achieve this goal and enhance its revenue streams.",
+        "date_published": "2026-03-10",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Doctors warn against self-medicating with weight-loss injectables",
+        "url": "https://timesofindia.indiatimes.com/city/pune/doctors-warn-against-self-medicating-with-weight-loss-injectables/articleshow/128988561.cms",
+        "summary": "Doctors are warning against self-medicating with weight-loss injectables, citing the risk of serious side effects. These injectables, known as GLP-1 drugs, are effective for weight loss but require prescription and supervision from endocrinologists or bariatric physicians. Experts are calling for tighter regulation due to unsupervised and cosmetic use of these potent medications.",
+        "date_published": "2026-03-04",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 3,
         "title": "VR &amp; AI reshape shoulder surgical training in Pune",
@@ -612,6 +1362,171 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "Figtree Pharmacy raises seed funding from AJVC Fund",
+        "url": "https://entrackr.com/snippets/figtree-pharmacy-raises-seed-funding-from-ajvc-fund-11812221",
+        "summary": "Mumbai-based pharmacy startup Figtree Pharmacy has raised seed funding from AJVC Fund and other investors, with plans to use the funds to strengthen logistics, build its technology stack, and expand operations. The startup aims to scale its network to 25 stores, focusing on neighbourhood-focused pharmacies across Mumbai and Delhi. Figtree was founded in 2025 by Adrit Chaturvedi and Yatin Sharma, with the goal of expanding its private-label medicines and store operations.",
+        "date_published": "2026-05-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "IAN Alpha Fund leads Rs 32.7 Cr round in sports-tech startup SportVot",
+        "url": "https://entrackr.com/snippets/ian-alpha-fund-leads-rs-327-cr-round-in-sports-tech-startup-sportvot-11776924",
+        "summary": "SportVot, a sports-tech startup, has raised Rs 32.7 crore in a funding round led by IAN Alpha Fund, with participation from other investors. The Mumbai-based startup had previously secured Rs 9.4 crore in a pre-Series A round in February 2024. The new funding will be used to expand internationally and invest in AI-led production.",
+        "date_published": "2026-04-29",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "AI will automate work. India’s next startup wave will sell experiences",
+        "url": "https://yourstory.com/2026/04/ai-will-automate-work-indias-next-startup-wave-will-sell-experiences",
+        "summary": "India's next startup wave is expected to focus on selling experiences, as AI automates work and people seek unique human interactions. This shift is driven by the desire for authentic, unscripted experiences that cannot be replicated by technology. The value of human connection and storytelling will become a key differentiator in the market.",
+        "date_published": "2026-04-14",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "‘AI investor’ Lemonbuddy takes position to evaluate startup ideas",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/ai-investor-lemonbuddy-takes-position-to-evaluate-startup-ideas/articleshow/130179467.cms",
+        "summary": "Lemonbuddy, an AI investor, has taken a position to evaluate startup ideas, utilizing its artificial intelligence capabilities to assess potential investments. This move aims to identify and support promising startups, providing them with the necessary resources to grow and succeed. Lemonbuddy's AI-driven approach is expected to streamline the evaluation process and make more informed investment decisions.",
+        "date_published": "2026-04-11",
+        "source_name": "Times of India - Thane",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "DAAKit raises $138K in pre-seed round led by Inflection Point Ventures",
+        "url": "https://entrackr.com/snippets/daakit-raises-138k-in-pre-seed-round-led-by-inflection-point-ventures-11704251",
+        "summary": "DAAKit, a hyperlocal fulfillment and last-mile logistics startup, has raised $138K in a pre-seed funding round led by Inflection Point Ventures. The funds will be used to expand operations, launch new dark stores, and strengthen its technology infrastructure and team. DAAKit was founded in 2024 and operates an asset-light logistics model, currently serving cities including Delhi, Gurugram, and Mumbai.",
+        "date_published": "2026-04-09",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL",
+          "UP",
+          "WB",
+          "MH",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "MSN biggest investor in battlefield AI systems maker Tsecond.ai",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/msn-biggest-investor-in-battlefield-ai-systems-maker-tsecond-ai/articleshow/130123596.cms",
+        "summary": "MSN is the largest investor in Tsecond.ai, a company that develops battlefield AI systems. Tsecond.ai creates artificial intelligence technologies for military use, with MSN holding a significant stake in the company. The investment underscores MSN's interest in AI-powered defense technologies.",
+        "date_published": "2026-04-09",
+        "source_name": "Times of India - Thane",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "AI made developers faster. So why are product teams still slow?",
+        "url": "https://yourstory.com/2026/03/ai-made-developers-faster-so-why-are-product-teams-still-slow",
+        "summary": "AI-driven coding tools have increased developer speed, but product teams remain slow due to limitations in implementing these gains at the team level. Anand Hariharan discussed this issue at DevSparks 2026, highlighting the need for context engineering and spec-driven development to bridge the gap. He proposed these approaches as solutions to fully leverage AI-driven coding benefits.",
+        "date_published": "2026-03-18",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Can AI help healthcare systems make sense of their data?",
+        "url": "https://yourstory.com/2026/03/ai-help-healthcare-systems-make-sense-of-their-data",
+        "summary": "Gaurav Tripathi, Co-founder and Group CTO at Partex.AI, discussed how AI technologies can aid healthcare systems in analyzing medical data. Federated learning, knowledge graphs, and agentic AI are key solutions that can help institutions make sense of fragmented data. These technologies can achieve this goal without compromising patient privacy, according to Tripathi's presentation at DevSparks 2026 in Pune.",
+        "date_published": "2026-03-18",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 33,
         "title": "Startup Infiheal bags honour at AI Impact Summit",
         "url": "https://timesofindia.indiatimes.com/city/nagpur/startup-infiheal-bags-honour-at-ai-impact-summit/articleshow/128574984.cms",
@@ -711,7 +1626,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

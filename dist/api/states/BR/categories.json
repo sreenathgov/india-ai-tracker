@@ -1,7 +1,88 @@
 {
   "state": "BR",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 5,
+        "title": "It’s ‘encounter raj’ in state now, alleges Dipankar",
+        "url": "https://timesofindia.indiatimes.com/city/patna/its-encounter-raj-in-state-now-alleges-dipankar/articleshow/131284596.cms",
+        "summary": "Dipankar Bhattacharya, leader of CPI(ML), has criticized the NDA government in Bihar, alleging a shift from \"good governance\" to \"encounter raj\" and \"bulldozer justice\". He claims that Dalits, minorities, and students are facing increased oppression under the current regime. The use of bulldozers is seen as a symbol of the BJP's dominance in the state.",
+        "date_published": "2026-05-24",
+        "source_name": "Times of India - Patna",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Cabinet approves Rs72k crore borrowing plan, AI initiative",
+        "url": "https://timesofindia.indiatimes.com/city/patna/cabinet-approves-rs72k-crore-borrowing-plan-ai-initiative/articleshow/131074817.cms",
+        "summary": "Bihar's government has approved a Rs 72,901 crore borrowing plan to enhance development and administrative functions. The plan includes an AI initiative in collaboration with Singapore's GFTN to foster an AI ecosystem. This initiative aims to empower thousands through training and support the startup landscape.",
+        "date_published": "2026-05-14",
+        "source_name": "Times of India - Patna",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "CM: Take steps to project Bihar’s achievements at national level",
+        "url": "https://timesofindia.indiatimes.com/city/patna/cm-take-steps-to-project-bihars-achievements-at-national-level/articleshow/130359285.cms",
+        "summary": "Bihar's Chief Minister, Samrat Choudhary, has directed the information department to strengthen national branding of the state's development achievements. He also tasked officials with identifying government land for revenue generation and improving tourist information at heritage sites. The CM emphasized the use of technology, including AI, to monitor government work in real-time.",
+        "date_published": "2026-04-19",
+        "source_name": "Times of India - Patna",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Youth are foundation of national progress: Minister",
+        "url": "https://timesofindia.indiatimes.com/city/patna/youth-are-foundation-of-national-progress-minister/articleshow/129760236.cms",
+        "summary": "Bihar's Agriculture Minister Ram Kripal Yadav emphasized the importance of youth in national progress, urging them to be architects of India's future. He stressed the need for innovation and skill development during his address at Dr C V Raman University's convocation. The event also featured the launch of an AI Literacy Meet and other initiatives.",
+        "date_published": "2026-03-24",
+        "source_name": "Times of India - Patna",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [
       {
         "id": 137,
@@ -25,6 +106,246 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 11,
+        "title": "Tech giants hold investment talks at AI summit",
+        "url": "https://timesofindia.indiatimes.com/city/patna/tech-giants-hold-investment-talks-at-ai-summit/articleshow/131295999.cms",
+        "summary": "The Bihar AI Conference 2026 concluded with over 10,000 participants from around the world. Governor Syed Ata Hasnain highlighted the state's goal to become a leader in IT and AI, utilizing its improved infrastructure. The conference facilitated investment talks among tech giants, furthering the state's ambitions in the field.",
+        "date_published": "2026-05-25",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "BAU students trained in drone, AI technologies",
+        "url": "https://timesofindia.indiatimes.com/city/patna/bau-students-trained-in-drone-ai-technologies/articleshow/131284615.cms",
+        "summary": "Students at BAU are receiving training in drone and AI technologies. The training aims to equip students with skills in emerging technologies. The program is part of efforts to enhance students' knowledge and expertise in innovative fields.",
+        "date_published": "2026-05-24",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "CM: AI to catch those wearing ‘green gamchha’",
+        "url": "https://timesofindia.indiatimes.com/city/patna/cm-ai-to-catch-those-wearing-green-gamchha/articleshow/131284508.cms",
+        "summary": "Bihar's Chief Minister, Samrat Choudhary, praised AI's accuracy in law enforcement, jokingly referencing its ability to identify individuals wearing green 'gamchhas', a garment associated with the RJD. He emphasized the importance of a technology-driven approach to policing, ensuring fairness and accountability for all individuals. The Chief Minister aims to utilize AI to serve justice impartially, regardless of political affiliations.",
+        "date_published": "2026-05-24",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "2-day AI summit in Patna from tomorrow",
+        "url": "https://timesofindia.indiatimes.com/city/patna/2-day-ai-summit-in-patna-from-tomorrow/articleshow/131250765.cms",
+        "summary": "Patna is hosting Bihar's first major AI summit on May 23-24 to transform public services and boost the state's economy. The 2-day event aims to leverage AI for the state's development. This initiative is a groundbreaking step towards transforming public services in Bihar.",
+        "date_published": "2026-05-22",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Nalanda University revives ancient ‘Shastrarth’ tradition",
+        "url": "https://timesofindia.indiatimes.com/city/patna/nalanda-university-revives-ancient-shastrarth-tradition/articleshow/131157744.cms",
+        "summary": "Nalanda University has revived the ancient tradition of \"Shastrarth\" through a new academic event, \"Shastrarth 2026\", which promotes intellectual dialogue and research. The event features public dissertation defenses and thematic debates, and will precede the university's third convocation. Vice-Chancellor Sachin Chaturvedi highlighted the importance of intellectual struggle beyond AI, with new awards to recognize excellence in discourse.",
+        "date_published": "2026-05-18",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "IIT-P’s AI initiative set to break India’s digital language barrier",
+        "url": "https://timesofindia.indiatimes.com/city/patna/iit-ps-ai-initiative-set-to-break-indias-digital-language-barrier/articleshow/131021449.cms",
+        "summary": "IIT-Patna's COIL-D initiative is developing machine translation systems through the BHASHINI program to bridge India's linguistic divides. The project aims to create an inclusive AI ecosystem that empowers individuals from various language backgrounds. This initiative seeks to break India's digital language barrier with accessible and user-friendly technology.",
+        "date_published": "2026-05-12",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "Adaptive traffic system to ease congestion in Gaya",
+        "url": "https://timesofindia.indiatimes.com/city/patna/adaptive-traffic-system-to-ease-congestion-in-gaya/articleshow/130837720.cms",
+        "summary": "Gaya is set to launch an adaptive traffic system in three months to reduce congestion and minimize manual oversight. The system features automatic number plate recognition and AI-based signal modulation to manage traffic flow. This innovative solution aims to transform traffic management in the city and surrounding areas.",
+        "date_published": "2026-05-06",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "AI conclave discusses NEP 2020 roadmap for higher education",
+        "url": "https://timesofindia.indiatimes.com/city/patna/ai-conclave-discusses-nep-2020-roadmap-for-higher-education/articleshow/130450009.cms",
+        "summary": "Bihar's higher education sector is aligning with NEP 2020, focusing on AI's potential for assessments and governance. A recent summit in Patna brought together policymakers and technology leaders to discuss innovative educational reforms. The discussion emphasized the importance of ERP systems and data analytics in modernizing the education sector.",
+        "date_published": "2026-04-23",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "Experts call for data-driven reforms in Bihar healthcare",
+        "url": "https://timesofindia.indiatimes.com/city/patna/experts-call-for-data-driven-reforms-in-bihar-healthcare/articleshow/130069543.cms",
+        "summary": "Healthcare experts in Bihar are advocating for data-driven reforms to shift from reactive treatment to a proactive health system. They recommend evidence-based practices, including AI-assisted diagnostics and digital health records. Experts also emphasize the need for advanced training for healthcare workers to support these reforms.",
+        "date_published": "2026-04-07",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "CPI(ML) seeks joint meeting of GA partners in Bihar",
+        "url": "https://timesofindia.indiatimes.com/city/patna/cpiml-seeks-joint-meeting-of-ga-partners-in-bihar/articleshow/130025484.cms",
+        "summary": "CPI(ML) state secretary Kunal is calling for a joint meeting of Grand Alliance partners in Bihar to address urgent issues. The meeting aims to organize protests against the LPG crisis, rising violence against women, and increased electricity tariffs. These protests will bring attention to the escalating problems in the state.",
+        "date_published": "2026-04-05",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Conference of gatro surgeons kicks off at IGIMS, to focus on AI in surgery",
+        "url": "https://timesofindia.indiatimes.com/city/patna/conference-of-gatro-surgeons-kicks-off-at-igims-to-focus-on-ai-in-surgery/articleshow/129870464.cms",
+        "summary": "A conference of gastro surgeons has begun at IGIMS, focusing on the role of artificial intelligence in surgery. The event aims to explore the potential applications and benefits of AI in surgical procedures. The conference brings together experts to discuss and share knowledge on the latest advancements in AI-powered surgery.",
+        "date_published": "2026-03-29",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Man arrested from Bihar for posting AI-generated images of PM",
+        "url": "https://indianexpress.com/article/cities/delhi/man-arrested-from-bihar-for-posting-ai-generated-images-of-pm-10594644/",
+        "summary": "A man from Bihar has been arrested for posting AI-generated images of the Prime Minister. The arrest was made in response to the man's online activities, which allegedly involved creating and sharing fake images using artificial intelligence. The incident highlights the growing concern over the misuse of AI technology for creating and disseminating false information.",
+        "date_published": "2026-03-21",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 20,
         "title": "Workshop on AI at IGIMS",
@@ -105,5 +426,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

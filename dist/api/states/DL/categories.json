@@ -3,6 +3,108 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 7,
+        "title": "Delhi govt signs pact with IIT Kanpur for AI-operated air pollution monitoring system",
+        "url": "https://www.tribuneindia.com/news/delhi/delhi-govt-signs-pact-with-iit-kanpur-for-ai-operated-air-pollution-monitoring-system",
+        "summary": "The Delhi Government has signed a memorandum of understanding with IIT Kanpur's AIRAWAT Research Foundation to develop an AI-driven air quality management system. The system aims to improve pollution monitoring and forecasting in Delhi. The partnership is between the Delhi Government's Environment Department and IIT Kanpur.",
+        "date_published": "2026-05-22",
+        "source_name": "Tribune - Delhi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "ONODA Kimi, Dr Jitendra Singh deepen India–Japan partnership in frontier technologies",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/india-and-japan-strengthen-ties-in-quantum-science-and-healthcare-innovation/130875824",
+        "summary": "Union Minister Dr. Jitendra Singh and Japan's Minister ONODA Kimi held talks in New Delhi to strengthen India-Japan cooperation. The discussions focused on advancing collaboration in key areas such as quantum science, AI, and medical research. The meeting aimed to deepen the partnership between the two countries in frontier technologies.",
+        "date_published": "2026-05-07",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Dharmendra Pradhan opens IIT Madras tech summit in Delhi",
+        "url": "https://yourstory.com/2026/05/dharmendra-pradhan-iit-madras-tech-summit-delhi",
+        "summary": "Education Minister Dharmendra Pradhan inaugurated the IIT Madras Technology Summit 2026 in Delhi. The summit focuses on deep-tech and industry collaboration, bringing together key stakeholders in the field. The event aims to foster innovation and partnerships between academia and industry.",
+        "date_published": "2026-05-06",
+        "source_name": "YourStory",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "‘Leap into future’: Delhi govt plans to set up two AI centres of excellence; governance, innovation in focus",
+        "url": "https://indianexpress.com/article/cities/delhi/leap-into-future-delhi-govt-plans-to-set-up-two-ai-centres-of-excellence-governance-innovation-in-focus-10652539/",
+        "summary": "The Delhi government plans to establish two AI centres of excellence, focusing on governance and innovation. These centres aim to drive progress and improvement in various sectors through artificial intelligence. The initiative is seen as a significant step towards embracing the future of technology and governance.",
+        "date_published": "2026-04-23",
+        "source_name": "Indian Express - Delhi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "‘Vidhan Sathi’ AI chatbot to help MLAs with Budget",
+        "url": "https://www.tribuneindia.com/news/delhi/vidhan-sathi-ai-chatbot-to-help-mlas-with-budget",
+        "summary": "The Delhi Legislative Assembly has introduced an AI-powered chatbot called 'Vidhan Sathi' to assist MLAs with real-time analysis of bills and legislative records. The chatbot is set to be rolled out during the upcoming Budget session, which starts on March 23. The initiative aims to provide MLAs with easier access to information and analysis to aid in their decision-making process.",
+        "date_published": "2026-03-19",
+        "source_name": "Tribune - Delhi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 53,
         "title": "In AI, India sees opportunity and blueprint of tomorrow: PM Modi",
         "url": "https://telanganatoday.com/in-ai-india-sees-opportunity-and-blueprint-of-tomorrow-pm-modi",
@@ -242,6 +344,686 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 6,
+        "title": "Can the Indian Copyright Act Accommodate Fully Autonomous AI Generated Output?",
+        "url": "https://spicyip.com/2026/05/can-the-indian-copyright-act-accommodate-fully-autonomous-ai-generated-output.html",
+        "summary": "The Delhi High Court has directed the Registrar of Copyright to consider registering a fully AI-generated artwork under Indian copyright law, sparking debate on non-human authorship. The Indian Copyright Act's architecture and provisions are fundamentally human-centric, making it challenging to accommodate fully autonomous AI authorship. The case raises questions about whether the Act can be adapted to recognize AI-generated output as eligible for copyright protection.",
+        "date_published": "2026-05-22",
+        "source_name": "SpicyIP",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "From AI art to wall decor: Artiure is helping Indian artists monetise their work",
+        "url": "https://yourstory.com/2026/05/from-ai-art-wall-decor-artiure-helping-indian-artists-monetise-work",
+        "summary": "Artiure, a Gurugram-based company, is creating a marketplace for digital and generative art. The platform helps Indian artists monetize their work by turning it into physical products. This enables artists to achieve financial inclusion and access global markets.",
+        "date_published": "2026-05-20",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India’s AI job postings surge nearly 6x since 2019",
+        "url": "https://telanganatoday.com/indias-ai-job-postings-surge-nearly-6x-since-2019",
+        "summary": "India's artificial intelligence job postings have grown nearly six-fold since 2019, driven by the country's expanding role as a global AI talent and execution hub. This surge in AI-led hiring is expected to reshape India's office market, with demand for flexible workspaces predicted to witness strong growth over the next few years. The country's knowledge-economy office stock may see an additional demand of 79 million square feet between 2025 and 2030.",
+        "date_published": "2026-05-20",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Technical snag grounds AI flight to Delhi",
+        "url": "https://timesofindia.indiatimes.com/city/vadodara/technical-snag-grounds-ai-flight-to-delhi/articleshow/131210131.cms",
+        "summary": "An Air India flight to Delhi was grounded due to a technical snag. The issue forced the cancellation of the flight, although details on the nature of the snag were not provided. The incident highlights the ongoing challenges faced by Air India in maintaining its fleet and ensuring smooth operations.",
+        "date_published": "2026-05-20",
+        "source_name": "Times of India - Vadodara",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 14,
+        "title": "Will it rain in your neighbourhood? New AI tool offers 10-day forecasts for every 1km across UP",
+        "url": "https://timesofindia.indiatimes.com/city/noida/will-it-rain-in-your-neighbourhood-new-ai-tool-offers-10-day-forecasts-for-every-1km-across-up/articleshow/131048240.cms",
+        "summary": "A new AI tool offers 10-day weather forecasts for every 1km area across Uttar Pradesh, providing hyperlocal predictions. The tool aims to serve various sectors, including agriculture, water resource management, disaster relief, and urban planning. It can help authorities and residents make informed decisions with its precise and localized weather forecasts.",
+        "date_published": "2026-05-13",
+        "source_name": "Times of India - Noida",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Enterprise intelligence startup SCIKIQ secures $1.5 Mn in pre-Series A",
+        "url": "https://entrackr.com/snippets/enterprise-intelligence-startup-scikiq-secures-15-mn-in-pre-series-a-11826466",
+        "summary": "Enterprise intelligence platform SCIKIQ has raised $1.5 million in a pre-Series A funding round led by Triton Fund II. The funds will be used to support global expansion, strengthen AI capabilities, and scale the platform. SCIKIQ is an AI-native platform that helps enterprises convert fragmented data into business-ready intelligence, founded in 2023 by Gaurav Shinh and Rohit Kumar.",
+        "date_published": "2026-05-12",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 15,
+        "title": "523 graduates, future docs set to meet public healthcare pressure",
+        "url": "https://www.tribuneindia.com/news/delhi/523-graduates-future-docs-set-to-meet-public-healthcare-pressure",
+        "summary": "The All India Institute of Medical Sciences (AIIMS) in Delhi held its 51st convocation, graduating 523 students who will help meet public healthcare demands. The event emphasized the importance of empathy in healthcare, despite advancements in artificial intelligence (AI). These new graduates are expected to make a significant impact in the healthcare sector.",
+        "date_published": "2026-05-12",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Fashinza co-founder Pawan Gupta quits",
+        "url": "https://entrackr.com/snippets/fashinza-co-founder-pawan-gupta-quits-11813045",
+        "summary": "Fashinza co-founder and former CEO Pawan Gupta has left the company to explore opportunities in artificial intelligence. Abhishek Sharma will continue as the sole founder and CEO of the B2B fashion supply chain startup. Gupta's exit was reportedly a personal decision and not related to the company's business performance.",
+        "date_published": "2026-05-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "IIT Madras’s first tech summit held in New Delhi",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/iit-madrass-first-tech-summit-held-in-new-delhi/articleshow/130837430.cms",
+        "summary": "IIT Madras held its first tech summit in New Delhi, marking a significant event for the institution. The summit aimed to bring together experts and showcase technological advancements, although specific details of the event are not provided. IIT Madras's decision to host the summit in New Delhi highlights its efforts to expand its reach and collaborate with other stakeholders in the tech industry.",
+        "date_published": "2026-05-06",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Apna Mart lays off 10% of workforce, shifts base from Bengaluru to Gurugram",
+        "url": "https://entrackr.com/news/apna-mart-lays-off-10-of-workforce-shifts-base-from-bengaluru-to-gurugram-11805807",
+        "summary": "Apna Mart, a grocery delivery startup, has laid off around 10% of its workforce, impacting 35-40 employees, as part of a restructuring exercise linked to AI adoption. The company is relocating its base from Bengaluru to Gurugram, with product and technology teams already moved. The layoffs were due to AI-led automation making some roles redundant and relocation not being feasible for certain employees.",
+        "date_published": "2026-05-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "JH",
+          "KA",
+          "CG",
+          "WB",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "CashKaro revenue grows 72% to Rs 600 Cr in FY26; narrows losses",
+        "url": "https://entrackr.com/fintrackr/cashkaro-revenue-grows-72-to-rs-600-cr-in-fy26-narrows-losses-11800662",
+        "summary": "CashKaro, a cashback and affiliate commerce platform, reported a 72% year-on-year revenue growth to Rs 600 crore in FY26, up from Rs 348 crore in FY25. The company's gross merchandise value (GMV) for partner brands also increased to over Rs 10,000 crore in FY26, from Rs 6,000 crore in the previous year. CashKaro narrowed its losses, reporting an EBITDA loss of Rs 17 crore.",
+        "date_published": "2026-05-05",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "AI push to fight crimes: Senior Delhi Police officers to adopt 100 police stations",
+        "url": "https://indianexpress.com/article/cities/delhi/ai-push-to-fight-crimes-senior-delhi-police-officers-to-adopt-100-police-stations-10674856/",
+        "summary": "Senior Delhi Police officers will adopt 100 police stations as part of an initiative to fight crimes using artificial intelligence. The move aims to leverage AI technology to enhance law enforcement capabilities. This adoption is expected to improve crime-fighting efforts in Delhi.",
+        "date_published": "2026-05-05",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Google’s AI Hub in Visakhapatnam; Building the missing pipeline for women founders",
+        "url": "https://yourstory.com/2026/04/google-ai-hub-visakhapatnam-building-missing-pipeline-for-women-founders",
+        "summary": "Google has launched an AI hub in Visakhapatnam, a key step in India's development of large-scale digital infrastructure. The hub aims to support the country's economic growth through AI technology. Additionally, Rebalance, a Gurugram-based organization, is providing support to women-led startups through mentorship and investor access.",
+        "date_published": "2026-04-29",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AP",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "GobbleCube’s co-founders dilutes over 70% stake post Series A",
+        "url": "https://entrackr.com/decoding/gobblecubes-co-founders-dilutes-over-70-stake-post-series-a-11761349",
+        "summary": "GobbleCube, an AI-based brand analytics platform, has raised $15 million in a Series A round led by Susquehanna Venture Capital. This is the company's second funding round within a year, with existing investors InfoEdge Ventures and Kae Capital also participating. The co-founders' stake has been diluted by over 70% following these back-to-back funding deals.",
+        "date_published": "2026-04-24",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Part II: Flower Nahi, Fire: Delhi HC Waters the Wrong Rights (Again!)",
+        "url": "https://spicyip.com/2026/04/part-ii-flower-nahi-fire-delhi-hc-waters-the-wrong-rights-again.html",
+        "summary": "The Delhi High Court has been criticized for its approach to personality rights, failing to distinguish between different forms of unauthorized use. This conflation of fan practices, commercial merchandise, and AI-driven misuse leads to an overbroad and flawed approach. Dr. Aakanksha Kumar's analysis highlights the need for a more nuanced understanding of these distinct categories.",
+        "date_published": "2026-04-23",
+        "source_name": "SpicyIP",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Target to earn Rs 2 crore a month, AI use, raw material sourced from China: Inside fake Mounjaro racket Gurgaon ops",
+        "url": "https://indianexpress.com/article/cities/delhi/target-to-earn-rs-2-crore-a-month-ai-use-raw-material-sourced-from-china-inside-fake-mounjaro-racket-gurgaon-ops-10650985/",
+        "summary": "A fake Mounjaro racket operating in Gurgaon aimed to earn Rs 2 crore per month. The operation utilized artificial intelligence and sourced raw materials from China. The racket's details have been exposed, revealing the extent of its illicit activities.",
+        "date_published": "2026-04-22",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "‘AI will get better with age & practice’: How Delhi lawyers are adopting tech, but cautiously",
+        "url": "https://indianexpress.com/article/cities/delhi/delhi-lawyers-senior-advocates-ai-legal-practice-claude-chatgpt-10647411/",
+        "summary": "Delhi lawyers are cautiously adopting artificial intelligence technology in their practices. They believe that AI will improve with time and experience, but are currently using it to supplement their work rather than replace it. The adoption of AI is being done in a gradual and careful manner to ensure it supports their legal work without compromising its quality.",
+        "date_published": "2026-04-21",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "'DL and TS': Hyderabad doctor with 'James Bond-like switch' on BMW to flip no. plates arrested",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/doc-with-bond-like-switch-on-bmw-to-flip-no-plates-held-in-drunk-drive-check/articleshow/130219470.cms",
+        "summary": "A Hyderabad doctor was arrested for drunk driving after police discovered his BMW had a hidden device to flip between Delhi and Telangana registration plates. The device, likened to a \"James Bond-like switch,\" allowed the doctor to switch between \"DL\" and \"TS\" number plates, raising suspicions of road tax evasion. The doctor was charged with drunk driving, cheating, and impersonation after refusing to provide details to police.",
+        "date_published": "2026-04-13",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "UP eyes deep-tech leadership, CM Yogi pushes time-bound innovation roadmap",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/up-eyes-deep-tech-leadership-cm-yogi-pushes-time-bound-innovation-roadmap/130186046",
+        "summary": "The state of Uttar Pradesh aims to become a leader in deep technology, with a focus on areas such as AI, quantum, green hydrogen, and drones. A time-bound innovation roadmap has been pushed by Chief Minister Yogi to drive this initiative. The Noida hub and an IIT Kanpur-led ecosystem will play key roles in scaling and promoting global outreach.",
+        "date_published": "2026-04-11",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Gurugram university hosts global summit on AI &#038; law",
+        "url": "https://www.tribuneindia.com/news/delhi/gurugram-university-hosts-global-summit-on-ai-law",
+        "summary": "Gurugram University hosted a two-day international conference on the convergence of artificial intelligence and law, which concluded on Saturday. The conference saw active participation from scholars, experts, researchers, and students from across the country and abroad. The valedictory ceremony was attended by Raj Nehru, OSD to the Chief Minister of Haryana, as the chief guest.",
+        "date_published": "2026-04-11",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "HR",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "Fashinza acquires Qckin to build tech-enabled manufacturing platform",
+        "url": "https://entrackr.com/snippets/fashinza-acquires-qckin-to-build-tech-enabled-manufacturing-platform-11469960",
+        "summary": "Fashinza, a fashion supply chain platform, has acquired Qckin, a design-to-delivery startup, to build a tech-enabled manufacturing platform. The acquisition aims to integrate technology-led sourcing with specialized manufacturing, enabling global fashion brands to produce faster and more cost-efficiently. This move strengthens Fashinza's manufacturing ecosystem and provides a more resilient supply chain amid geopolitical shifts and evolving trade dynamics.",
+        "date_published": "2026-04-07",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Dam Good Fish raises strategic funding at Rs 30 Cr valuation",
+        "url": "https://entrackr.com/snippets/dam-good-fish-raises-strategic-funding-at-rs-30-cr-valuation-11457953",
+        "summary": "Dam Good Fish, a seafood infrastructure company, has secured strategic funding at a valuation of around Rs 30 crore ($3.6 million). The fresh capital will be used to strengthen its AI-led systems, expand infrastructure, and enter new markets. The company aims to deliver ultra-fresh, naturally raised fish directly from dams to consumers using its technology-enabled platform.",
+        "date_published": "2026-04-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH",
+          "DL",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Shirtless protest at AI Summit in Delhi: To track Youth Congress members, police seek videos recorded by media houses",
+        "url": "https://indianexpress.com/article/cities/delhi/shirtless-protest-at-ai-summit-in-delhi-members-10619616/",
+        "summary": "A shirtless protest occurred at an AI Summit in Delhi, prompting police to seek videos from media houses to track down Youth Congress members involved. The police are attempting to identify the protesters to take further action. The incident highlights the tensions between authorities and protesters at the summit.",
+        "date_published": "2026-04-05",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Merak Ventures leads pre-Series A round in CredResolve",
+        "url": "https://entrackr.com/snippets/merak-ventures-leads-pre-series-a-round-in-credresolve-11441882",
+        "summary": "CredResolve, a debt collections infrastructure company, has raised an undisclosed amount in a pre-Series A round led by Merak Ventures. Existing investors Unleash Capital Partners and CDM Capital also participated in the round. The funds will be used to expand operations to 15 states and scale its AI and voice capabilities.",
+        "date_published": "2026-04-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "AI-generated petition: Delhi court fines litigant Rs 20,000 for wasting its time",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/this-aint-done-delhi-court-imposes-rs-20k-fine-over-incoherent-plea/articleshow/129933884.cms",
+        "summary": "A Delhi court has fined a litigant Rs 20,000 for submitting a poorly written petition that wasted the court's time. The court suspected the complaint was generated using artificial intelligence due to its incoherent phrases and grammatical errors. The fine aims to discourage frivolous filings and highlights concerns over the use of AI in creating legal documents.",
+        "date_published": "2026-04-01",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Cedar Hill Capital leads $1.5 Mn round in fraud intelligence startup Sign3",
+        "url": "https://entrackr.com/snippets/cedar-hill-capital-leads-15-mn-round-in-fraud-intelligence-startup-sign3-11434197",
+        "summary": "Cedar Hill Capital has led a $1.5 million funding round in Sign3, a fraud intelligence and risk management startup based in Gurugram. The investment is Cedar Hill Capital's third and second in AI-led enterprise technology, with participation from existing investor Smile Group and several angel investors. Sign3 was founded in 2022 and develops an AI-native customer intelligence platform for real-time fraud prevention.",
+        "date_published": "2026-03-30",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "AI-focused centres of excellence, new policies on drones and semiconductors among highlights in Delhi Budget 2026-27",
+        "url": "https://indianexpress.com/article/cities/delhi/delhi-budget-rekha-gupta-drone-semiconductor-ai-policy-startups-10599110/",
+        "summary": "The Delhi Budget 2026-27 includes AI-focused centres of excellence as a key highlight. New policies on drones and semiconductors are also part of the budget. These initiatives aim to drive innovation and growth in the region.",
+        "date_published": "2026-03-24",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Magical Nest operator Raanro raises pre-seed round",
+        "url": "https://entrackr.com/snippets/magical-nest-operator-raanro-raises-pre-seed-round-11256761",
+        "summary": "Raanro Interior Technology, the parent company of Magical Nest, has raised Rs 4.12 crore in a pre-seed funding round at a pre-money valuation of Rs 60 crore. The round was participated by Stargazer Fund and several angel investors, including Kunal Shah and Ankit Nagori. The company will use the funds to develop an AI-powered platform for streamlining interior design workflows.",
+        "date_published": "2026-03-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB",
+          "MH",
+          "KL",
+          "KA",
+          "GJ",
+          "TN",
+          "DL",
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Hello Gurgaon, AI chatbot calling: Clear your municipal corporation dues, please",
+        "url": "https://indianexpress.com/article/cities/delhi/hello-gurgaon-ai-chatbot-calling-clear-your-municipal-corporation-dues-please-10593708/",
+        "summary": "The Gurgaon municipal corporation has introduced an AI chatbot to remind residents to clear their pending dues. The chatbot will facilitate payment collections and help reduce outstanding debts. Residents can use the chatbot to settle their municipal corporation dues conveniently.",
+        "date_published": "2026-03-21",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "11 AI Companies in Delhi to Know",
+        "url": "https://builtindelhi.in/articles/ai-companies-in-delhi",
+        "summary": "There are 11 notable AI companies in Delhi that are making significant contributions to the field of artificial intelligence. These companies are working on various AI applications, including machine learning, natural language processing, and computer vision. The presence of these companies in Delhi highlights the city's growing importance as a hub for AI innovation and development.",
+        "date_published": "2026-03-18",
+        "source_name": "Built in Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "AI summit: Interim bail for accused in ‘shirtless protest’",
+        "url": "https://www.tribuneindia.com/news/delhi/ai-summit-interim-bail-for-accused-in-shirtless-protest",
+        "summary": "A Delhi court granted interim anticipatory bail to Rajeev Kumar, an accused in the \"shirtless protest\" during the AI summit, until March 28. The court directed Kumar to join the investigation, with the order passed by Additional Sessions Judge Amit Bansal. Kumar is accused of participating in the protest, but the specific charges against him were not detailed.",
+        "date_published": "2026-03-15",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Constems AI Systems raises $2 Mn led by Finvolve and India Accelerator",
+        "url": "https://entrackr.com/snippets/constems-ai-systems-raises-2-mn-led-by-finvolve-and-india-accelerator-11203937",
+        "summary": "Constems AI Systems has raised $2 million in a pre-Series A funding round co-led by Finvolve and India Accelerator. The round also saw participation from existing investors, including Cognify, AIF, and Inflection Point Ventures. The funds will be used to drive product innovation, global deployments, and expansion into new markets, including Southeast Asia, Japan, and the Middle East.",
+        "date_published": "2026-03-11",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "CBSE to introduce computational thinking AI for classes three to eight",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/cbse-to-introduce-computational-thinking-ai-for-classes-three-to-eight/articleshow/129283525.cms",
+        "summary": "The Central Board of Secondary Education (CBSE) plans to introduce computational thinking and artificial intelligence (AI) for students in classes three to eight. This initiative aims to enhance students' problem-solving skills and prepare them for emerging technologies. The introduction of AI and computational thinking will be a part of the CBSE curriculum.",
+        "date_published": "2026-03-09",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 8,
         "title": "Protest during AI Summit: Two more held",
@@ -1840,6 +2622,152 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 1,
+        "title": "TiE Delhi-NCR concludes India Innovation Day 2026",
+        "url": "https://entrackr.com/snippets/tie-delhi-ncr-concludes-india-innovation-day-2026-11840917",
+        "summary": "TiE Delhi-NCR concluded India Innovation Day 2026 in Gurugram, gathering over 1,200 attendees to discuss India's evolving innovation economy. The 15th edition, themed \"Audacity of Now\", focused on India's transition to an innovation-first economy, covering sectors like AI, biotech, and space. The event highlighted developments in various fields, including DeepTech, D2C, and quantum computing.",
+        "date_published": "2026-05-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Figtree Pharmacy raises seed funding from AJVC Fund",
+        "url": "https://entrackr.com/snippets/figtree-pharmacy-raises-seed-funding-from-ajvc-fund-11812221",
+        "summary": "Mumbai-based pharmacy startup Figtree Pharmacy has raised seed funding from AJVC Fund and other investors, with plans to use the funds to strengthen logistics, build its technology stack, and expand operations. The startup aims to scale its network to 25 stores, focusing on neighbourhood-focused pharmacies across Mumbai and Delhi. Figtree was founded in 2025 by Adrit Chaturvedi and Yatin Sharma, with the goal of expanding its private-label medicines and store operations.",
+        "date_published": "2026-05-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Legal-tech startup Lawyered bags $2.5 Mn led by Rainmatter and Turbostart",
+        "url": "https://entrackr.com/snippets/legal-tech-startup-lawyered-bags-25-mn-led-by-rainmatter-and-turbostart-11747865",
+        "summary": "Lawyered, a legal-tech startup, has raised $2.5 million in a pre-Series A funding round co-led by Rainmatter and Turbostart, with participation from existing investor Finvolve. The Gurugram-based startup had previously secured Rs 8.5 crore at a Rs 120 crore pre-money valuation. This funding round brings new investment to support the company's growth.",
+        "date_published": "2026-04-21",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "DAAKit raises $138K in pre-seed round led by Inflection Point Ventures",
+        "url": "https://entrackr.com/snippets/daakit-raises-138k-in-pre-seed-round-led-by-inflection-point-ventures-11704251",
+        "summary": "DAAKit, a hyperlocal fulfillment and last-mile logistics startup, has raised $138K in a pre-seed funding round led by Inflection Point Ventures. The funds will be used to expand operations, launch new dark stores, and strengthen its technology infrastructure and team. DAAKit was founded in 2024 and operates an asset-light logistics model, currently serving cities including Delhi, Gurugram, and Mumbai.",
+        "date_published": "2026-04-09",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL",
+          "UP",
+          "WB",
+          "MH",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "EV mobility startup Trev Mobility raises angel round to expand across Delhi NCR",
+        "url": "https://entrackr.com/snippets/ev-mobility-startup-trev-mobility-raises-angel-round-to-expand-across-delhi-ncr-11657382",
+        "summary": "Trev Mobility, an EV mobility startup, has raised Rs 3.65 crore in an angel funding round from its existing users. The funds will be used to expand its electric vehicle fleet and scale operations across the Delhi NCR region. The startup had previously secured Rs 20 lakh from the Startup India Seed Fund Scheme, and aims to reimagine urban travel in India through sustainable mobility solutions.",
+        "date_published": "2026-04-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "GIMS expands AI startup clinic to Purvanchal",
+        "url": "https://timesofindia.indiatimes.com/city/noida/gims-expands-ai-startup-clinic-to-purvanchal/articleshow/129580505.cms",
+        "summary": "GIMS is expanding its AI startup clinic to Purvanchal, aiming to support artificial intelligence startups in the region. The expansion is part of GIMS' efforts to promote innovation and entrepreneurship in the field of AI. The clinic will provide resources and guidance to AI startups, helping them grow and develop.",
+        "date_published": "2026-03-15",
+        "source_name": "Times of India - Noida",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Exclusive: PhysicsWallah co-founder Prateek Boob set to invest in Newton School",
+        "url": "https://entrackr.com/exclusive/exclusive-physicswallah-co-founder-prateek-boob-set-to-invest-in-newton-school-11209111",
+        "summary": "Newton School, a certification-based technical training platform, is set to raise around Rs 25 crore in fresh funding from Prateek Boob, co-founder of PhysicsWallah, as part of an extension of its Series B round. The investment will be made through the issue of 72,738 Series B1 preference shares at Rs 3,437 per share. This funding comes after a gap of nearly four years for the Gurugram-based company.",
+        "date_published": "2026-03-13",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "WB",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 8,
         "title": "Peak XV leads $2.5 Mn round in Companion Labs",

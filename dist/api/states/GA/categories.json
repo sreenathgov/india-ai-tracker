@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 10,
+        "title": "Goa proposes curbs on social media for minors under 16; draft to be sent to Centre",
+        "url": "https://timesofindia.indiatimes.com/city/goa/social-media-curbs-for-u-16s-goa-to-move-proposal-to-centre/articleshow/130615954.cms",
+        "summary": "Goa's IT Minister has proposed nationwide restrictions on social media access for minors under 16, citing concerns over detrimental effects on students. The state will submit the proposal to the Union IT Minister for consideration. Additionally, Goa is seeking public feedback on its draft AI policy to promote AI skilling and leverage local talent.",
+        "date_published": "2026-04-30",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 101,
         "title": "AI-system to challan vehicles sans valid docus at Goa border checkposts",
         "url": "https://b2b.economictimes.indiatimes.com/news/goa/ai-system-to-challan-vehicles-sans-valid-docus-at-goa-border-checkposts/125869333",
@@ -25,6 +45,146 @@
     ],
     "Events": [],
     "Major AI Developments": [
+      {
+        "id": 16,
+        "title": "Goa turns to AI to convert piles of govt paperwork to digital records",
+        "url": "https://timesofindia.indiatimes.com/city/goa/goa-turns-to-ai-to-convert-piles-of-govt-paperwork-to-digital-records/articleshow/131048393.cms",
+        "summary": "The Indian state of Goa is utilizing AI technology to digitize large amounts of government paperwork. This initiative aims to convert physical records into digital formats, increasing efficiency and accessibility. The project is part of Goa's efforts to modernize its administrative processes and reduce paper waste.",
+        "date_published": "2026-05-13",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 17,
+        "title": "Draft AI policy aims to train 50,000 professionals by 2030",
+        "url": "https://timesofindia.indiatimes.com/city/goa/draft-ai-policy-aims-to-train-50000-professionals-by-2030/articleshow/130809940.cms",
+        "summary": "A draft AI policy aims to train 50,000 professionals by 2030, focusing on developing expertise in artificial intelligence. The policy's goal is to create a skilled workforce in the AI sector, with a target completion date of 2030. The initiative is part of a broader effort to advance AI adoption and development.",
+        "date_published": "2026-05-05",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "AI policy to train 50k professionals by 2030",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/ai-policy-to-train-50k-professionals-by-2030/130822042",
+        "summary": "Goa's new draft AI policy aims to train 50,000 certified AI professionals by 2030 and make AI a compulsory school subject from Class VI. The policy also seeks to attract five global AI companies to the state by 2028. This initiative targets a significant boost in AI talent in the region.",
+        "date_published": "2026-05-05",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Goa to deploy AI cams to look inside tinted cars",
+        "url": "https://timesofindia.indiatimes.com/city/goa/goa-to-deploy-ai-cams-to-look-inside-tinted-cars/articleshow/130616124.cms",
+        "summary": "Goa is deploying an AI-powered surveillance system with high-speed detection and night vision to enhance law enforcement and road safety. The system, which includes 92 cameras at strategic locations, can identify individuals and capture license plates. The cameras will be monitored from a command center and rolled out in phases to effectively track offenders.",
+        "date_published": "2026-04-30",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "AI traffic cameras to have number plate recognition",
+        "url": "https://timesofindia.indiatimes.com/city/goa/ai-traffic-cameras-to-have-number-plate-recognition/articleshow/129617132.cms",
+        "summary": "AI-powered traffic cameras are being introduced with number plate recognition capabilities. These cameras will utilize artificial intelligence to identify and record vehicle license plates, enhancing traffic management and enforcement. The technology aims to improve road safety and efficiency by automatically detecting and responding to traffic violations.",
+        "date_published": "2026-03-17",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Join AI attendance or face pay cut, says panchayats minister",
+        "url": "https://timesofindia.indiatimes.com/city/goa/join-ai-attendance-or-face-pay-cut-says-panchayats-minister/articleshow/129521609.cms",
+        "summary": "The panchayats minister has announced that employees must join the AI attendance system or face a pay cut. This move aims to track employee attendance and increase accountability. The minister's directive is part of an effort to modernize and streamline attendance tracking using artificial intelligence.",
+        "date_published": "2026-03-13",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Goa shares draft AI policy with stakeholders for inputs",
+        "url": "https://timesofindia.indiatimes.com/city/goa/goa-shares-draft-ai-policy-with-stakeholders-for-inputs/articleshow/129230660.cms",
+        "summary": "The state of Goa has shared a draft Artificial Intelligence (AI) policy with stakeholders to gather their inputs. This move aims to incorporate feedback and suggestions from various stakeholders before finalizing the policy. The draft policy is part of Goa's efforts to develop a comprehensive AI strategy.",
+        "date_published": "2026-03-08",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 27,
         "title": "Youth Congress protest at AI Summit tarnished India’s image: Pramod Sawant",

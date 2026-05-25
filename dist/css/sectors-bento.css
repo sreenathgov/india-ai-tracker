@@ -1,0 +1,308 @@
+/* ========================================================================
+   sectors-bento.css
+   Act C — Built for the lanes you actually trade.
+   Warm peach/cream bento. The only "warm" Act on the page — intentionally
+   distinct from navy moments so the buyer feels: "this part is about me."
+   ======================================================================== */
+
+/* ---------- Section ---------- */
+.kl-sectors {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    background: #eeebe3;
+    color: #1c1c1e;
+    padding: clamp(96px, 11vw, 156px) clamp(16px, 4vw, 40px);
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Soft paper grain (warmer than the navy grain) */
+.kl-sectors::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.07  0 0 0 0 0.16  0 0 0 0 0.30  0 0 0 0.045 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    background-size: 160px 160px;
+    mix-blend-mode: multiply;
+    opacity: 0.55;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.kl-sectors__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+.kl-sectors__header {
+    max-width: 880px;
+    margin: 0 auto clamp(48px, 6vw, 76px);
+    text-align: left;
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) 1fr;
+    align-items: end;
+    gap: clamp(24px, 4vw, 56px);
+}
+
+.kl-sectors__title-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.kl-sectors__eyebrow {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: rgba(28, 28, 30, 0.42);
+    margin-bottom: 1.1rem;
+}
+
+.kl-sectors__title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(1.85rem, 3.6vw, 2.8rem);
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+    color: #1c1c1e;
+    margin: 0;
+}
+
+.kl-sectors__title em {
+    font-style: normal;
+    color: var(--kl-red, #db4a2b);
+}
+
+.kl-sectors__sub {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: clamp(0.92rem, 1.05vw, 1.05rem);
+    line-height: 1.55;
+    color: rgba(28, 28, 30, 0.72);
+    margin: 0;
+    max-width: 44ch;
+    justify-self: end;
+}
+
+/* ---------- Bento grid ---------- */
+.kl-sectors__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 1px;                                  /* hairline gutters via background */
+    background: rgba(28, 28, 30, 0.1);
+    border: 1px solid rgba(28, 28, 30, 0.1);
+}
+
+/* ---------- Single tile ---------- */
+.kl-sectors__tile {
+    background: #eeebe3;
+    padding: clamp(1.4rem, 2.2vw, 2rem);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 240px;
+    transition: background 320ms ease, transform 320ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    cursor: default;
+}
+
+/* Reducto-style corner crosshairs — a thin "+" centred on every tile corner.
+   Because tiles abut (1px gutter), shared corners merge into one crosshair at
+   each grid intersection; outer corners read as registration marks. */
+.kl-sectors__tile::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    --kl-mark: rgba(28, 28, 30, 0.34);
+    --kl-arm: 11px;
+    background-image:
+        linear-gradient(var(--kl-mark), var(--kl-mark)), linear-gradient(var(--kl-mark), var(--kl-mark)),
+        linear-gradient(var(--kl-mark), var(--kl-mark)), linear-gradient(var(--kl-mark), var(--kl-mark)),
+        linear-gradient(var(--kl-mark), var(--kl-mark)), linear-gradient(var(--kl-mark), var(--kl-mark)),
+        linear-gradient(var(--kl-mark), var(--kl-mark)), linear-gradient(var(--kl-mark), var(--kl-mark));
+    background-repeat: no-repeat;
+    background-size:
+        var(--kl-arm) 1px, 1px var(--kl-arm),   /* top-left  H, V */
+        var(--kl-arm) 1px, 1px var(--kl-arm),   /* top-right H, V */
+        var(--kl-arm) 1px, 1px var(--kl-arm),   /* bot-left  H, V */
+        var(--kl-arm) 1px, 1px var(--kl-arm);   /* bot-right H, V */
+    background-position:
+        left -5.5px top -0.5px,  left -0.5px top -5.5px,
+        right -5.5px top -0.5px, right -0.5px top -5.5px,
+        left -5.5px bottom -0.5px,  left -0.5px bottom -5.5px,
+        right -5.5px bottom -0.5px, right -0.5px bottom -5.5px;
+}
+
+.kl-sectors__tile:hover {
+    background: #f4f2ec;
+    transform: translateY(-2px);
+    z-index: 2;
+    box-shadow: 0 18px 40px -16px rgba(28, 28, 30, 0.18);
+}
+
+.kl-sectors__tile-icon {
+    width: 28px;
+    height: 28px;
+    color: #061f38;
+    margin-bottom: 1.4rem;
+}
+
+.kl-sectors__tile-icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.kl-sectors__tile-name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(1.15rem, 1.5vw, 1.4rem);
+    line-height: 1.18;
+    color: #1c1c1e;
+    margin: 0 0 0.75rem;
+    letter-spacing: -0.01em;
+}
+
+.kl-sectors__tile-desc {
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: clamp(0.82rem, 1vw, 0.92rem);
+    line-height: 1.55;
+    color: rgba(28, 28, 30, 0.72);
+}
+
+/* Decorative numeric marker, top-right corner */
+.kl-sectors__tile-num {
+    position: absolute;
+    top: 1rem;
+    right: 1.1rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    color: rgba(28, 28, 30, 0.28);
+}
+
+/* ---------- Closing line ---------- */
+.kl-sectors__close {
+    margin: clamp(40px, 5vw, 56px) auto 0;
+    text-align: center;
+    max-width: 720px;
+}
+
+.kl-sectors__close-line {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    color: rgba(28, 28, 30, 0.7);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.kl-sectors__close-link {
+    color: var(--kl-red, #db4a2b);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(219, 74, 43, 0.4);
+    padding-bottom: 1px;
+    transition: border-color 220ms ease, color 220ms ease;
+}
+
+.kl-sectors__close-link:hover {
+    color: #b53d23;
+    border-color: rgba(219, 74, 43, 0.95);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+    .kl-sectors__header {
+        grid-template-columns: 1fr;
+        align-items: start;
+    }
+    .kl-sectors__sub {
+        justify-self: start;
+    }
+    .kl-sectors__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .kl-sectors {
+        padding: clamp(44px, 9vw, 60px) clamp(14px, 4vw, 20px);
+        min-height: 100vh;
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .kl-sectors__inner {
+        width: 100%;
+    }
+    .kl-sectors__header {
+        margin-bottom: 18px;
+        gap: 8px;
+    }
+    .kl-sectors__title {
+        font-size: 1.15rem;
+        line-height: 1.22;
+    }
+    .kl-sectors__sub {
+        font-size: 0.78rem;
+        line-height: 1.45;
+    }
+    .kl-sectors__grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+    }
+    .kl-sectors__tile {
+        min-height: 0;
+        padding: 1.2rem 1.05rem 1.3rem;
+    }
+    .kl-sectors__tile-icon {
+        width: 22px;
+        height: 22px;
+        margin-bottom: 1rem;
+    }
+    .kl-sectors__tile-name {
+        font-size: 1.05rem;
+        margin-bottom: 0.5rem;
+    }
+    .kl-sectors__tile-desc {
+        font-size: 0.74rem;
+        line-height: 1.48;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .kl-sectors__tile-num {
+        font-size: 0.52rem;
+        top: 0.65rem;
+        right: 0.7rem;
+    }
+    .kl-sectors__close {
+        margin-top: 14px;
+    }
+    .kl-sectors__close-line {
+        font-size: 0.88rem;
+    }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .kl-sectors__tile {
+        transition: none !important;
+        transform: none !important;
+    }
+    .kl-sectors__tile:hover {
+        transform: none !important;
+    }
+}

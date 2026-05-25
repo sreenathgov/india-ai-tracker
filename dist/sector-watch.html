@@ -13,15 +13,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sector Watch — Kanan Labs</title>
+
+    <!-- Resource hints — parallelize third-party fetches -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+    <!-- Preload hero background (responsive WebP, served via <picture>) -->
+    <link rel="preload" as="image" type="image/webp"
+          href="added-assets/sectorwatchNEWBG-bg-1920.webp"
+          imagesrcset="added-assets/sectorwatchNEWBG-bg-1920.webp 1920w, added-assets/sectorwatchNEWBG-bg-2880.webp 2880w"
+          imagesizes="100vw"
+          fetchpriority="high">
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/styles-v2.css?v=13">
+    <link rel="stylesheet" href="css/styles-v2.css?v=21">
     <link rel="stylesheet" href="css/staggered-menu.css">
     <link rel="stylesheet" href="css/footer.css?v=3">
     <link rel="stylesheet" href="css/contact-panel.css?v=1">
     <link rel="stylesheet" href="css/back-button.css">
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <!-- New components imported from the rest of the site -->
+    <link rel="stylesheet" href="css/sectors-bento.css?v=1">
+    <link rel="stylesheet" href="css/evidence-workflow.css?v=1">
+    <link rel="stylesheet" href="css/identity-section.css?v=11">
+
+    <!-- GSAP + ScrollTrigger — deferred; inline animation scripts use DOMContentLoaded -->
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
     <style>
         html {
             height: auto !important;
@@ -48,28 +71,9 @@
             width: 100%;
         }
 
-        .sw-divider {
-            border: none;
-            border-top: 1px solid rgba(244, 235, 208, 0.07);
-            margin: 0;
-        }
-
-        .sw-section-label {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.6875rem;
-            font-weight: 600;
-            letter-spacing: 0.22em;
-            text-transform: uppercase;
-            color: #f4ebd0;
-            opacity: 0.4;
-            margin-bottom: 2.5rem;
-        }
-
         /* ══════════════════════════════════
            A. HERO — FULL-BLEED VIEWPORT
         ══════════════════════════════════ */
-
-        /* Hero occupies the full viewport */
         .sw-hero {
             position: relative;
             width: 100%;
@@ -77,10 +81,18 @@
             display: flex;
             flex-direction: column;
             overflow: hidden;
-            background: #0a2f52;
+            /* LQIP: blurred 24px-wide WebP shown instantly while the full hero loads */
+            background:
+                #0a2f52 url('data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAACwBACdASoYAA0APtFUo0uoJKMhsAgBABoJZgCdMoAlrxffQ96IR4Xfrc5abd5AAP71ldLAA2pP5T1OfchFPcXPNh5cI0wKkgihO21V6t3h+SYZifsN1Z1/xoV365g9aeLq9TA7I0T+s+ofSkhIwPqKC9b+7yFUZJFG/5khnPyoJleta45b0OcAtzqgFp71ZRvIF2oPZcSExgt7IKustO5k/bEhc13DQ/Mw5gdxGLb+m2IBs7JB7FyQu862Ha9lmACSAAAA') center 20% / cover no-repeat;
         }
 
-        /* SVG as absolute full-bleed background */
+        .sw-hero__picture {
+            position: absolute;
+            inset: 0;
+            display: block;
+            pointer-events: none;
+        }
+
         .sw-hero__svg {
             position: absolute;
             inset: 0;
@@ -92,7 +104,17 @@
             pointer-events: none;
         }
 
-        /* Full-cover gradient — heavier at bottom for legibility */
+        .sw-hero__svg-overlay {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+            display: block;
+            pointer-events: none;
+        }
+
         .sw-hero__overlay {
             position: absolute;
             inset: 0;
@@ -108,7 +130,6 @@
             pointer-events: none;
         }
 
-        /* Content block — pushed to the bottom via margin-top: auto */
         .sw-hero__content {
             position: relative;
             z-index: 2;
@@ -116,8 +137,19 @@
             padding: 0 4rem 5.5rem;
             display: flex;
             flex-direction: column;
-            align-items: flex-end;         /* right-align the column */
+            align-items: flex-end;
             text-align: right;
+        }
+
+        .sw-hero__eyebrow {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: #db4a2b;
+            opacity: 0.85;
+            margin: 0 0 1.5rem 0;
         }
 
         .sw-hero__title {
@@ -127,17 +159,28 @@
             color: #f4ebd0;
             line-height: 0.9;
             letter-spacing: -0.01em;
-            margin: 0 0 1.5rem 0;
+            margin: 0 0 1.25rem 0;
+        }
+
+        .sw-hero__subhead {
+            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+            font-style: italic;
+            font-size: clamp(1.25rem, 2vw, 1.65rem);
+            font-weight: 400;
+            color: #f4ebd0;
+            opacity: 0.82;
+            margin: 0 0 1.75rem 0;
+            line-height: 1.25;
         }
 
         .sw-hero__tagline {
             font-family: 'Telegraf', 'Inter', sans-serif;
             font-size: 1rem;
             color: #f4ebd0;
-            opacity: 0.68;
+            opacity: 0.62;
             line-height: 1.65;
-            white-space: nowrap;
-            margin-bottom: 2.25rem;
+            margin: 0 0 2.25rem 0;
+            max-width: 38rem;
         }
 
         .sw-hero__actions {
@@ -184,19 +227,68 @@
         }
 
         /* ══════════════════════════════════
-           B. WHAT IT DOES
+           B. MANIFESTO — word-reveal (lifted from index.html)
+        ══════════════════════════════════ */
+        .kl-manifesto {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background: transparent;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: clamp(4rem, 8vh, 7rem) clamp(1.5rem, 4vw, 4rem);
+            box-sizing: border-box;
+        }
+        .kl-manifesto__stage {
+            max-width: min(1360px, 92vw);
+            width: 100%;
+            text-align: center;
+        }
+        .kl-manifesto__heading {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: clamp(1.3rem, 2.2vw, 2.4rem);
+            line-height: 1.42;
+            letter-spacing: -0.008em;
+            color: #f4ebd0;
+            margin: 0;
+        }
+        .kl-manifesto__heading .kl-word {
+            display: inline-block;
+            opacity: 0.12;
+            filter: blur(4px);
+            transform: rotate(2deg);
+            transform-origin: 0% 80%;
+            margin-right: 0.14em;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .kl-manifesto__heading .kl-word {
+                opacity: 1 !important; filter: none !important; transform: none !important;
+            }
+        }
+
+        /* Override kl-flow grid for 4-stage "How it works" pipeline (original is 5 columns) */
+        .kl-flow__stages {
+            grid-template-columns: repeat(4, 1fr);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ══════════════════════════════════
+           B. WHAT IT DOES — navy, two-column
         ══════════════════════════════════ */
         .sw-what {
             padding: 5rem 0 4rem;
         }
-
         .sw-what__grid {
             display: grid;
             grid-template-columns: 1fr 1px 1.65fr;
             gap: 0 5rem;
             align-items: center;
         }
-
         .sw-what__divider {
             width: 1px;
             height: 100%;
@@ -211,7 +303,6 @@
                 transparent 100%
             );
         }
-
         .sw-what__headline {
             font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
             font-size: clamp(1.85rem, 3vw, 2.65rem);
@@ -220,11 +311,9 @@
             line-height: 1.18;
             margin-top: 1.25rem;
         }
-
         .sw-what__body {
             padding-top: 3.5rem;
         }
-
         .sw-what__body p {
             font-family: 'Telegraf', 'Inter', sans-serif;
             font-size: 1.0625rem;
@@ -233,22 +322,31 @@
             line-height: 1.85;
             margin-bottom: 1.25rem;
         }
-
         .sw-what__body p:last-child { margin-bottom: 0; }
-
         .sw-what__body strong {
             color: #f4ebd0;
             opacity: 1;
             font-weight: 600;
         }
 
-        /* ══════════════════════════════════
-           C. WHO IT IS FOR
-        ══════════════════════════════════ */
-        .sw-who {
-            padding: 4rem 0;
+        /* Shared section label for restored sw-* sections */
+        .sw-section-label {
+            font-family: 'Telegraf', 'Inter', sans-serif;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #db4a2b;
+            opacity: 0.85;
+            margin-bottom: 1rem;
         }
 
+        /* ══════════════════════════════════
+           C. WHO IT IS FOR — navy, 3-card grid
+        ══════════════════════════════════ */
+        .sw-who {
+            padding: 4rem 0 5rem;
+        }
         .sw-who__grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -258,17 +356,14 @@
             border-radius: 4px;
             overflow: hidden;
         }
-
         .sw-who__card {
             background: #0d3662;
             padding: 2rem 1.75rem 2.25rem;
             transition: background 0.2s ease;
         }
-
         .sw-who__card:hover {
             background: #0f3e73;
         }
-
         .sw-who__card-num {
             font-family: 'Telegraf', 'Inter', sans-serif;
             font-size: 0.625rem;
@@ -278,7 +373,6 @@
             opacity: 0.8;
             margin-bottom: 1.25rem;
         }
-
         .sw-who__card-title {
             font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
             font-size: 1.3rem;
@@ -287,355 +381,32 @@
             margin-bottom: 0.875rem;
             line-height: 1.25;
         }
-
         .sw-who__card-body {
             font-family: 'Telegraf', 'Inter', sans-serif;
             font-size: 0.875rem;
             color: #f4ebd0;
-            opacity: 0.45;
+            opacity: 0.55;
             line-height: 1.72;
         }
 
-        /* ══════════════════════════════════
-           D. HOW IT WORKS — numbered pipeline
-        ══════════════════════════════════ */
-        .sw-how {
-            padding: 4rem 0;
-        }
-
-        /* 4-column horizontal pipeline — equal columns, no overflow */
-        .sw-process {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            position: relative;
-        }
-
-        /* Connecting line running across all steps */
-        .sw-process::before {
-            content: '';
-            position: absolute;
-            top: 2.1rem;                    /* align to centre of step number */
-            left: calc(1.75rem / 2);        /* start at centre of first number */
-            right: calc(1.75rem / 2);
-            height: 1px;
-            background: linear-gradient(
-                to right,
-                rgba(219, 74, 43, 0.5),
-                rgba(244, 235, 208, 0.12) 60%,
-                rgba(244, 235, 208, 0.06)
-            );
-            pointer-events: none;
-        }
-
-        .sw-process__step {
-            padding: 0 2rem 0 0;
-            position: relative;
-        }
-
-        .sw-process__step:last-child { padding-right: 0; }
-
-        .sw-process__num {
-            font-family: 'Telegraf', 'Inter', monospace;
-            font-size: 0.625rem;
-            font-weight: 600;
-            letter-spacing: 0.16em;
-            color: #db4a2b;
-            opacity: 0.9;
-            background: #0a2f52;
-            position: relative;
-            z-index: 1;
-            display: inline-block;
-            padding-right: 0.75rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .sw-process__title {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: #f4ebd0;
-            opacity: 0.9;
-            margin-bottom: 0.875rem;
-            line-height: 1.3;
-            white-space: nowrap;
-        }
-
-        .sw-process__body {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.875rem;
-            color: #f4ebd0;
-            opacity: 0.45;
-            line-height: 1.72;
+        /* Responsive collapses for restored sections */
+        @media (max-width: 900px) {
+            .sw-what__grid {
+                grid-template-columns: 1fr;
+                gap: 1.75rem 0;
+            }
+            .sw-what__divider { display: none; }
+            .sw-what__body { padding-top: 0; }
+            .sw-who__grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* ══════════════════════════════════
-           E. PRODUCT PREVIEW
-        ══════════════════════════════════ */
-        .sw-preview {
-            padding: 4rem 0 6rem;
-        }
-
-        .sw-preview__wide {
-            max-width: 1320px;
-            margin: 0 auto;
-            padding: 0 3rem;
-            width: 100%;
-        }
-
-        .sw-preview__intro {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.9375rem;
-            color: #f4ebd0;
-            opacity: 0.48;
-            margin-bottom: 3rem;
-            max-width: 580px;
-            line-height: 1.7;
-        }
-
-        .sw-preview__grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        /* Mock UI card */
-        .mock-card {
-            background: rgba(34, 77, 120, 0.3);
-            border: 1px solid rgba(244, 235, 208, 0.09);
-            border-radius: 8px;
-            overflow: hidden;
-            font-family: 'Telegraf', 'Inter', monospace, sans-serif;
-            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                        box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                        border-color 0.4s ease;
-            will-change: transform;
-        }
-
-        .mock-card:hover {
-            transform: scale(1.028);
-            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(244, 235, 208, 0.13);
-            border-color: rgba(244, 235, 208, 0.18);
-        }
-
-        .mock-card__header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1.1rem 1.75rem;
-            border-bottom: 1px solid rgba(244, 235, 208, 0.07);
-            background: rgba(244, 235, 208, 0.03);
-        }
-
-        .mock-card__header-label {
-            font-size: 0.625rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: #f4ebd0;
-            opacity: 0.32;
-        }
-
-        .mock-card__preview-badge {
-            font-size: 0.5625rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: #db4a2b;
-            opacity: 0.75;
-            border: 1px solid rgba(219, 74, 43, 0.3);
-            padding: 0.25rem 0.6rem;
-            border-radius: 2px;
-        }
-
-        .mock-card__body {
-            padding: 2rem 1.75rem;
-        }
-
-        /* Signal feed rows */
-        .signal-row {
-            display: grid;
-            grid-template-columns: 96px 1fr;
-            align-items: start;
-            gap: 1.25rem;
-            padding: 1.1rem 0;
-            border-bottom: 1px solid rgba(244, 235, 208, 0.05);
-        }
-
-        .signal-row:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .signal-status {
-            flex-shrink: 0;
-            width: 96px;
-            text-align: center;
-            font-size: 0.5625rem;
-            font-weight: 700;
-            letter-spacing: 0.13em;
-            text-transform: uppercase;
-            padding: 0.3rem 0;
-            border-radius: 2px;
-            margin-top: 0.2rem;
-            white-space: nowrap;
-        }
-
-        .signal-status--open    { color: #4ade80; background: rgba(74, 222, 128, 0.08); border: 1px solid rgba(74, 222, 128, 0.2); }
-        .signal-status--blocked { color: #f87171; background: rgba(248, 113, 113, 0.08); border: 1px solid rgba(248, 113, 113, 0.2); }
-        .signal-status--cond    { color: #fbbf24; background: rgba(251, 191, 36, 0.08); border: 1px solid rgba(251, 191, 36, 0.2); }
-        .signal-status--unclear { color: #94a3b8; background: rgba(148, 163, 184, 0.08); border: 1px solid rgba(148, 163, 184, 0.2); }
-
-        .signal-text { flex: 1; }
-
-        .signal-text__title {
-            font-size: 0.9375rem;
-            color: #f4ebd0;
-            opacity: 0.82;
-            margin-bottom: 0.35rem;
-            line-height: 1.5;
-        }
-
-        .signal-text__meta {
-            font-size: 0.625rem;
-            color: #f4ebd0;
-            opacity: 0.3;
-            letter-spacing: 0.06em;
-        }
-
-        /* Decision context card */
-        .decision-card { padding: 2rem 1.75rem; }
-
-        .decision-card__row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1.3rem;
-            padding-bottom: 1.3rem;
-            border-bottom: 1px solid rgba(244, 235, 208, 0.05);
-        }
-
-        .decision-card__row:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .decision-card__field {
-            font-size: 0.625rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: #f4ebd0;
-            opacity: 0.28;
-            margin-bottom: 0.4rem;
-        }
-
-        .decision-card__value {
-            font-size: 1rem;
-            color: #f4ebd0;
-            opacity: 0.82;
-            line-height: 1.4;
-        }
-
-        .decision-card__value--orange { color: #db4a2b; opacity: 1; font-weight: 600; }
-        .decision-card__value--yellow { color: #fbbf24; opacity: 1; font-weight: 600; }
-
-        .preview-disclaimer {
-            margin-top: 1.75rem;
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.6875rem;
-            color: #f4ebd0;
-            opacity: 0.22;
-            text-align: center;
-            letter-spacing: 0.04em;
-        }
-
-        /* ══════════════════════════════════
-           F. UNDERLYING SYSTEM
-        ══════════════════════════════════ */
-        .sw-engine {
-            padding: 4rem 0;
-        }
-
-        .sw-engine__block {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-        }
-
-        .sw-engine__text h3 {
-            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-            font-size: clamp(1.75rem, 3vw, 2.5rem);
-            font-weight: 600;
-            color: #f4ebd0;
-            margin-bottom: 1.5rem;
-            line-height: 1.18;
-        }
-
-        .sw-engine__text p {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 1rem;
-            color: #f4ebd0;
-            opacity: 0.62;
-            line-height: 1.82;
-            margin-bottom: 1rem;
-        }
-
-        .sw-engine__text p:last-child { margin-bottom: 0; }
-
-        .sw-engine__visual {
-            background: rgba(34, 77, 120, 0.25);
-            border: 1px solid rgba(244, 235, 208, 0.08);
-            border-radius: 5px;
-            padding: 2.25rem;
-        }
-
-        .engine-layer {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(244, 235, 208, 0.05);
-        }
-
-        .engine-layer:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .engine-layer__dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: #db4a2b;
-            flex-shrink: 0;
-            opacity: 0.45;
-        }
-
-        .engine-layer__label {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #f4ebd0;
-            opacity: 0.45;
-            flex: 1;
-        }
-
-        .engine-layer__status {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.5625rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: #f4ebd0;
-            opacity: 0.2;
-        }
-
-        /* ══════════════════════════════════
-           H. ACCESS CTA
+           C. ACCESS CTA
         ══════════════════════════════════ */
         .sw-access {
-            margin-top: 4rem;
+            margin-top: 0;
             background: rgba(34, 77, 120, 0.2);
             border-top: 1px solid rgba(219, 74, 43, 0.2);
             padding: 6.5rem 3rem;
@@ -686,7 +457,6 @@
         }
 
         .sw-access__input::placeholder { color: rgba(244, 235, 208, 0.28); }
-
         .sw-access__input:focus { border-color: rgba(244, 235, 208, 0.32); }
 
         .sw-access__submit {
@@ -732,32 +502,6 @@
            RESPONSIVE
         ══════════════════════════════════ */
         @media (max-width: 920px) {
-            .sw-what__grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .sw-what__divider {
-                display: none;
-            }
-
-            .sw-what__body {
-                padding-top: 0;
-            }
-
-            .sw-process {
-                grid-template-columns: 1fr 1fr;
-                gap: 2.5rem;
-            }
-
-            .sw-process::before { display: none; }
-
-
-            .sw-engine__block {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-
             .sw-access__inner {
                 grid-template-columns: 1fr;
                 gap: 3rem;
@@ -768,53 +512,11 @@
             .sw-hero__content {
                 padding: 0 2rem 4rem;
             }
-
             .sw-container {
                 padding: 0 1.75rem;
             }
-
-            .sw-who__grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .sw-preview__wide {
-                padding: 0 1.75rem;
-            }
-
-            .sw-preview__grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .mock-card:hover {
-                transform: none;
-            }
-
             .sw-access {
                 padding: 4rem 1.75rem;
-            }
-
-            .milestone {
-                flex-wrap: wrap;
-                gap: 0.875rem;
-            }
-
-            .milestone__desc {
-                max-width: 100%;
-                width: 100%;
-            }
-
-            .sw-what, .sw-who, .sw-how, .sw-preview, .sw-engine {
-                padding: 3.5rem 0;
-            }
-
-            .sw-who__grid {
-                grid-template-columns: 1fr;
-            }
-
-            .sw-process {
-                grid-template-columns: 1fr;
             }
         }
 
@@ -822,16 +524,12 @@
             .sw-hero__title {
                 font-size: clamp(3.5rem, 14vw, 5rem);
             }
-
             .sw-hero__content {
                 padding: 0 1.5rem 3.5rem;
             }
-
             .sw-hero__tagline {
-                white-space: normal;
                 font-size: 0.9375rem;
             }
-
             .sw-hero__actions {
                 flex-direction: column;
                 align-items: flex-end;
@@ -842,41 +540,129 @@
 </head>
 
 <body class="sw-page">
-    <!-- Nav floats over hero (no spacer needed — hero is 100vh) -->
 
     <!-- ════════════════════════
          A. HERO
     ════════════════════════ -->
     <header class="sw-hero">
 
-        <!-- SVG: full-bleed background -->
+        <picture class="sw-hero__picture">
+            <source type="image/webp"
+                    srcset="added-assets/sectorwatchNEWBG-bg-1920.webp 1920w, added-assets/sectorwatchNEWBG-bg-2880.webp 2880w"
+                    sizes="100vw">
+            <img
+                src="added-assets/sectorwatchNEWBG-bg-1920.jpg"
+                srcset="added-assets/sectorwatchNEWBG-bg-1920.jpg 1920w, added-assets/sectorwatchNEWBG-bg-2880.jpg 2880w"
+                sizes="100vw"
+                alt=""
+                class="sw-hero__svg"
+                aria-hidden="true"
+                draggable="false"
+                fetchpriority="high"
+                decoding="async"
+                width="1920"
+                height="1053"
+            >
+        </picture>
+
         <img
-            src="added-assets/sectorwatch-web-image2.svg"
+            src="added-assets/sectorwatchNEWBG-overlay.svg"
             alt=""
-            class="sw-hero__svg"
+            class="sw-hero__svg-overlay"
             aria-hidden="true"
             draggable="false"
+            loading="eager"
+            decoding="async"
         >
 
-        <!-- Gradient overlay -->
         <div class="sw-hero__overlay" aria-hidden="true"></div>
 
-        <!-- Title + tagline + CTAs — anchored to bottom-right -->
         <div class="sw-hero__content">
+            <p class="sw-hero__eyebrow">Kanan&rsquo;s Flagship Product</p>
             <h1 class="sw-hero__title">Sector Watch</h1>
-            <p class="sw-hero__tagline">A regulatory intelligence platform for firms navigating trade, compliance, and market-entry pressure.</p>
+            <p class="sw-hero__subhead">Trade Diagnostic &amp; Decision-Support System.</p>
+            <p class="sw-hero__tagline">Built for firms operating in trade-exposed value chains &mdash; reducing decision friction across regulation, market access, evidence posture, and routing.</p>
             <div class="sw-hero__actions">
                 <a href="#access" class="sw-btn-primary">Request Early Access</a>
-                <a href="#preview" class="sw-btn-secondary">View product preview ↓</a>
+                <a href="#vision" class="sw-btn-secondary">Read the vision &darr;</a>
             </div>
         </div>
 
     </header>
 
-    <hr class="sw-divider">
+    <!-- ════════════════════════
+         B. MANIFESTO — category framing (navy, GSAP word-reveal)
+    ════════════════════════ -->
+    <section class="kl-manifesto" id="vision" aria-label="Sector Watch &mdash; category framing">
+        <div class="kl-manifesto__stage">
+            <h2 class="kl-manifesto__heading" id="klManifestoReveal">
+                <span class="kl-word">Regulation</span>
+                <span class="kl-word">has</span>
+                <span class="kl-word">become</span>
+                <span class="kl-word">a</span>
+                <span class="kl-word">structural</span>
+                <span class="kl-word">variable</span>
+                <span class="kl-word">in</span>
+                <span class="kl-word">global</span>
+                <span class="kl-word">trade</span>
+                <span class="kl-word">&mdash;</span>
+                <span class="kl-word">not</span>
+                <span class="kl-word">a</span>
+                <span class="kl-word">background</span>
+                <span class="kl-word">condition,</span>
+                <span class="kl-word">but</span>
+                <span class="kl-word">a</span>
+                <span class="kl-word">moving</span>
+                <span class="kl-word">surface</span>
+                <span class="kl-word">that</span>
+                <span class="kl-word">reshapes</span>
+                <span class="kl-word">what</span>
+                <span class="kl-word">firms</span>
+                <span class="kl-word">can</span>
+                <span class="kl-word">sell,</span>
+                <span class="kl-word">where,</span>
+                <span class="kl-word">and</span>
+                <span class="kl-word">on</span>
+                <span class="kl-word">what</span>
+                <span class="kl-word">terms.</span>
+                <span class="kl-word">Most</span>
+                <span class="kl-word">firms</span>
+                <span class="kl-word">still</span>
+                <span class="kl-word">encounter</span>
+                <span class="kl-word">it</span>
+                <span class="kl-word">through</span>
+                <span class="kl-word">episodic</span>
+                <span class="kl-word">advisory</span>
+                <span class="kl-word">work:</span>
+                <span class="kl-word">late,</span>
+                <span class="kl-word">generalised,</span>
+                <span class="kl-word">disconnected</span>
+                <span class="kl-word">from</span>
+                <span class="kl-word">the</span>
+                <span class="kl-word">specific</span>
+                <span class="kl-word">decision</span>
+                <span class="kl-word">in</span>
+                <span class="kl-word">front</span>
+                <span class="kl-word">of</span>
+                <span class="kl-word">them.</span>
+                <br>
+                <span class="kl-word kl-word--accent">Sector</span>
+                <span class="kl-word kl-word--accent">Watch</span>
+                <span class="kl-word kl-word--accent">moves</span>
+                <span class="kl-word kl-word--accent">firms</span>
+                <span class="kl-word kl-word--accent">from</span>
+                <span class="kl-word kl-word--accent">episodic</span>
+                <span class="kl-word kl-word--accent">intelligence</span>
+                <span class="kl-word kl-word--accent">toward</span>
+                <span class="kl-word kl-word--accent">persistent</span>
+                <span class="kl-word kl-word--accent">regulatory</span>
+                <span class="kl-word kl-word--accent">advantage.</span>
+            </h2>
+        </div>
+    </section>
 
     <!-- ════════════════════════
-         B. WHAT IT DOES
+         D. WHAT IT DOES — restored, navy
     ════════════════════════ -->
     <section class="sw-what">
         <div class="sw-container">
@@ -888,14 +674,14 @@
                 <div class="sw-what__divider" aria-hidden="true"></div>
                 <div class="sw-what__body">
                     <p>Sector Watch is being built for firms that need to understand how trade policy, regulatory change, and market-access conditions affect specific commercial decisions.</p>
-                    <p>The platform is designed to answer a practical question with clarity: what is <strong>open, blocked, conditional, or still unclear</strong> for this firm, this product, and this corridor.</p>
+                    <p>The system is designed to answer a practical question with clarity: what is <strong>open, blocked, conditional, or still unclear</strong> for this firm, this product, and this corridor.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ════════════════════════
-         C. WHO IT IS FOR
+         E. WHO IT IS FOR — restored, navy 3-card grid
     ════════════════════════ -->
     <section class="sw-who">
         <div class="sw-container">
@@ -925,166 +711,328 @@
     </section>
 
     <!-- ════════════════════════
-         D. HOW IT WORKS
+         F. CAPABILITIES BENTO — warm peach, 6 tiles
+         Lifted from index.html .kl-sectors; expanded to 6 to fill the native 3x2 grid.
+         Tiles 04 (Surface pathways) and 05 (Preserve provenance) lift their
+         framing from Sector Watch Constitution sections 14 and 10.
     ════════════════════════ -->
-    <section class="sw-how">
-        <div class="sw-container">
-            <p class="sw-section-label" style="margin-bottom:2.5rem;">How it works</p>
-            <div class="sw-process">
+    <section class="kl-sectors" id="klSectors" aria-label="What Sector Watch is being built to do">
+        <div class="kl-sectors__inner">
 
-                <div class="sw-process__step">
-                    <div class="sw-process__num">01</div>
-                    <h3 class="sw-process__title">Regulatory Sensing</h3>
-                    <p class="sw-process__body">Continuous structured intake from policy, trade, and institutional sources. Classified, linked, and filtered for commercial relevance across key jurisdictions.</p>
+            <div class="kl-sectors__header">
+                <div class="kl-sectors__title-block">
+                    <span class="kl-sectors__eyebrow">What it is built to do</span>
+                    <h2 class="kl-sectors__title">Six capabilities. <em>One layer.</em></h2>
                 </div>
+                <p class="kl-sectors__sub">
+                    Sector Watch is being built to operate continuously across export corridors &mdash; reading the regulatory environment, mapping it against firm-level positions, and surfacing what materially changes.
+                </p>
+            </div>
 
-                <div class="sw-process__step">
-                    <div class="sw-process__num">02</div>
-                    <h3 class="sw-process__title">Context Resolution</h3>
-                    <p class="sw-process__body">Incoming developments are assessed against firm-specific variables such as product type, corridor, jurisdiction, and exposure profile. What matters is surfaced. What does not is filtered out.</p>
-                </div>
+            <div class="kl-sectors__grid">
 
-                <div class="sw-process__step">
-                    <div class="sw-process__num">03</div>
-                    <h3 class="sw-process__title">Decision Engine</h3>
-                    <p class="sw-process__body">A proprietary internal system structures the signal environment into deterministic, traceable outputs. Each decision state is classified as open, blocked, conditional, or unclear.</p>
-                </div>
+                <article class="kl-sectors__tile">
+                    <span class="kl-sectors__tile-num">01</span>
+                    <div class="kl-sectors__tile-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="16" cy="16" r="3"/>
+                            <path d="M16 6a10 10 0 0 1 10 10" opacity="0.7"/>
+                            <path d="M16 10a6 6 0 0 1 6 6" opacity="0.7"/>
+                            <path d="M16 6a10 10 0 0 0 -10 10" opacity="0.35"/>
+                        </svg>
+                    </div>
+                    <h3 class="kl-sectors__tile-name">Track</h3>
+                    <p class="kl-sectors__tile-desc">Regulatory and institutional developments across major export corridors, monitored continuously rather than episodically.</p>
+                </article>
 
-                <div class="sw-process__step">
-                    <div class="sw-process__num">04</div>
-                    <h3 class="sw-process__title">Structured Output</h3>
-                    <p class="sw-process__body">Firms receive a decision surface that shows what changed, why it matters, and where action or evidence is required.</p>
-                </div>
+                <article class="kl-sectors__tile">
+                    <span class="kl-sectors__tile-num">02</span>
+                    <div class="kl-sectors__tile-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="13" cy="13" r="7"/>
+                            <circle cx="19" cy="13" r="7"/>
+                            <circle cx="16" cy="19" r="7"/>
+                        </svg>
+                    </div>
+                    <h3 class="kl-sectors__tile-name">Contextualise</h3>
+                    <p class="kl-sectors__tile-desc">Each development is read against the firm&rsquo;s operating profile &mdash; products, corridors, exposure &mdash; so what matters surfaces, and what does not falls away.</p>
+                </article>
+
+                <article class="kl-sectors__tile">
+                    <span class="kl-sectors__tile-num">03</span>
+                    <div class="kl-sectors__tile-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 5l11 21H5z"/>
+                            <line x1="16" y1="13" x2="16" y2="19"/>
+                            <circle cx="16" cy="23" r="0.8" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </div>
+                    <h3 class="kl-sectors__tile-name">Identify exposure</h3>
+                    <p class="kl-sectors__tile-desc">Material shifts in regulatory exposure are flagged the moment they emerge &mdash; before they become commercial constraints, certifications, or audit findings.</p>
+                </article>
+
+                <article class="kl-sectors__tile">
+                    <span class="kl-sectors__tile-num">04</span>
+                    <div class="kl-sectors__tile-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 8h20" opacity="0.85"/>
+                            <path d="M6 16h14" opacity="0.55"/>
+                            <path d="M6 24h8" opacity="0.35"/>
+                            <circle cx="26" cy="16" r="1.5" fill="currentColor" stroke="none"/>
+                            <circle cx="20" cy="24" r="1.5" fill="currentColor" stroke="none" opacity="0.65"/>
+                        </svg>
+                    </div>
+                    <h3 class="kl-sectors__tile-name">Surface pathways</h3>
+                    <p class="kl-sectors__tile-desc">Open, blocked, conditional, or unclear &mdash; pathway viability is made explicit for each decision, rather than collapsed into a single answer surface.</p>
+                </article>
+
+                <article class="kl-sectors__tile">
+                    <span class="kl-sectors__tile-num">05</span>
+                    <div class="kl-sectors__tile-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 5l9 4v8c0 6-4 9-9 10-5-1-9-4-9-10V9z"/>
+                            <path d="M12 16l3 3 6-6" opacity="0.85"/>
+                        </svg>
+                    </div>
+                    <h3 class="kl-sectors__tile-name">Preserve provenance</h3>
+                    <p class="kl-sectors__tile-desc">Every conclusion is rooted in source-aware, reviewable structure. Polished prose is not allowed to suppress uncertainty.</p>
+                </article>
+
+                <article class="kl-sectors__tile">
+                    <span class="kl-sectors__tile-num">06</span>
+                    <div class="kl-sectors__tile-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 16h18"/>
+                            <path d="M19 10l5 6-5 6"/>
+                            <circle cx="5" cy="16" r="1.5" fill="currentColor" stroke="none" opacity="0.85"/>
+                        </svg>
+                    </div>
+                    <h3 class="kl-sectors__tile-name">Enable response</h3>
+                    <p class="kl-sectors__tile-desc">Outputs are structured to support strategic discussion &mdash; faster, more informed, less dependent on episodic external advisory cycles.</p>
+                </article>
+
+            </div>
+
+            <div class="kl-sectors__close">
+                <p class="kl-sectors__close-line">
+                    The system does not replace executive judgment &mdash; it operationalises it.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ════════════════════════
+         G. HOW IT WORKS — 4-stage flow, no dates
+         Lifted from index.html .kl-flow; original 5-cell grid overridden to 4 columns above.
+    ════════════════════════ -->
+    <section class="kl-flow" id="klHow" aria-label="How Sector Watch works">
+        <div class="kl-flow__inner">
+
+            <div class="kl-flow__header">
+                <span class="kl-flow__eyebrow">How it works</span>
+                <h2 class="kl-flow__title">
+                    Continuous intake. Structured reasoning.<br>
+                    A decision surface, not a feed.
+                </h2>
+            </div>
+
+            <ol class="kl-flow__stages">
+
+                <li class="kl-flow__stage" data-stage="1">
+                    <span class="kl-flow__numeral" aria-hidden="true">I</span>
+                    <div class="kl-flow__icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 18h44" opacity="0.85"/>
+                            <path d="M14 30h36" opacity="0.55"/>
+                            <path d="M18 42h28" opacity="0.35"/>
+                            <circle cx="54" cy="18" r="2" fill="currentColor" stroke="none"/>
+                            <circle cx="50" cy="30" r="2" fill="currentColor" stroke="none" opacity="0.7"/>
+                            <circle cx="46" cy="42" r="2" fill="currentColor" stroke="none" opacity="0.45"/>
+                        </svg>
+                    </div>
+                    <h3 class="kl-flow__name">Regulatory sensing</h3>
+                    <p class="kl-flow__desc">Continuous structured intake from policy, trade, and institutional sources &mdash; classified, linked, and filtered for commercial relevance across key jurisdictions.</p>
+                </li>
+
+                <li class="kl-flow__stage" data-stage="2">
+                    <span class="kl-flow__numeral" aria-hidden="true">II</span>
+                    <div class="kl-flow__icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="22" cy="22" r="10"/>
+                            <circle cx="42" cy="22" r="10"/>
+                            <circle cx="32" cy="40" r="10"/>
+                        </svg>
+                    </div>
+                    <h3 class="kl-flow__name">Context resolution</h3>
+                    <p class="kl-flow__desc">Incoming developments are assessed against firm-specific variables &mdash; product, corridor, jurisdiction, exposure. What matters is surfaced; what does not is filtered out.</p>
+                </li>
+
+                <li class="kl-flow__stage" data-stage="3">
+                    <span class="kl-flow__numeral" aria-hidden="true">III</span>
+                    <div class="kl-flow__icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="12" y="12" width="40" height="40" rx="1"/>
+                            <line x1="12" y1="26" x2="52" y2="26" opacity="0.55"/>
+                            <line x1="12" y1="40" x2="52" y2="40" opacity="0.55"/>
+                            <line x1="26" y1="12" x2="26" y2="52" opacity="0.55"/>
+                            <line x1="40" y1="12" x2="40" y2="52" opacity="0.55"/>
+                            <circle cx="19" cy="19" r="1.5" fill="currentColor" stroke="none"/>
+                            <circle cx="47" cy="33" r="1.5" fill="currentColor" stroke="none" opacity="0.75"/>
+                            <circle cx="33" cy="47" r="1.5" fill="currentColor" stroke="none" opacity="0.55"/>
+                        </svg>
+                    </div>
+                    <h3 class="kl-flow__name">Decision engine</h3>
+                    <p class="kl-flow__desc">A bounded, deterministic-first reasoning layer structures the signal environment into traceable outputs. Each decision state is classified as open, blocked, conditional, or unclear.</p>
+                </li>
+
+                <li class="kl-flow__stage" data-stage="4">
+                    <span class="kl-flow__numeral" aria-hidden="true">IV</span>
+                    <div class="kl-flow__icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="14" y="10" width="36" height="46" rx="1"/>
+                            <line x1="20" y1="20" x2="44" y2="20" opacity="0.85"/>
+                            <line x1="20" y1="28" x2="44" y2="28" opacity="0.55"/>
+                            <line x1="20" y1="36" x2="38" y2="36" opacity="0.55"/>
+                            <line x1="20" y1="44" x2="34" y2="44" opacity="0.35"/>
+                            <circle cx="44" cy="44" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="kl-flow__name">Structured output</h3>
+                    <p class="kl-flow__desc">Firms receive a decision surface that shows what changed, why it matters, and where action or evidence is required &mdash; not a report to summarise, but a structure to act on.</p>
+                </li>
+
+            </ol>
+
+            <div class="kl-flow__close">
+                <p class="kl-flow__close-line">The architecture is bounded today. It is built to extend.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ════════════════════════
+         F. FOUNDER DOCTRINE — ivory, vision-tailored
+         Lifted from index.html .kl-founder; doctrine copy rewritten for Sector Watch.
+         (No identity-transition strip needed — kl-flow above is already cream,
+         so it flows naturally into the founder section's ivory.)
+    ════════════════════════ -->
+    <section class="kl-founder" id="founderNote" aria-labelledby="founderHeadline">
+        <div class="kl-founder__inner">
+
+            <div class="kl-founder__header">
+                <span class="kl-founder__eyebrow">Founder Note</span>
+                <h2 class="kl-founder__headline" id="founderHeadline">
+                    Sector Watch is being built because regulatory complexity has
+                    <em>outgrown</em> the advisory model that was built for it.
+                </h2>
+                <hr class="kl-founder__rule" aria-hidden="true">
+            </div>
+
+            <div class="kl-founder__columns">
+
+                <aside class="kl-founder__rail">
+                    <div class="kl-founder__cta-block">
+                        <span class="kl-founder__cta-eyebrow">Get Involved</span>
+                        <a href="#access" class="kl-founder__cta-primary">
+                            Request Early Access
+                        </a>
+                        <a href="mailto:sreenath@kananlabs.com?subject=Connect%20with%20Founder%20%E2%80%94%20Sector%20Watch"
+                           class="kl-founder__cta-secondary">
+                            Connect with Founder
+                            <span aria-hidden="true">&rarr;</span>
+                        </a>
+                    </div>
+
+                    <hr class="kl-founder__rail-divider" aria-hidden="true">
+
+                    <div class="kl-founder__attribution">
+                        <figure class="kl-founder__portrait">
+                            <img src="added-assets/SG-TRANSPARENT.png"
+                                 alt="Sreenath Govindarajan, Founder of Kanan Labs"
+                                 loading="lazy">
+                        </figure>
+                        <div class="kl-founder__signature">
+                            <p class="kl-founder__sig-name">Sreenath Govindarajan</p>
+                            <p class="kl-founder__sig-role">Founder, Kanan Labs</p>
+                            <p class="kl-founder__sig-disciplines">
+                                Cross-border law &middot; AI governance &middot;
+                                Regulatory strategy &middot; Trade intelligence
+                            </p>
+                        </div>
+                    </div>
+                </aside>
+
+                <article class="kl-founder__doctrine-card">
+                    <canvas id="founder-grid" class="kl-founder__doctrine-grid" aria-hidden="true"></canvas>
+
+                    <div class="kl-founder__doctrine-inner">
+                        <span class="kl-founder__doctrine-eyebrow">The Operating Doctrine</span>
+
+                        <div class="kl-founder__note">
+                            <p>
+                                Firms operating across jurisdictions cannot absorb the
+                                latency, cost, and ambiguity of episodic external counsel.
+                                They need a structured system that holds firm context
+                                continuously, reads regulatory movement against that
+                                context, and surfaces what materially changes.
+                            </p>
+                            <p>
+                                Sector Watch is the flagship product through which Kanan
+                                Labs is building that infrastructure. The architecture is
+                                deliberately bounded today and deliberately extensible
+                                tomorrow: a deterministic-first decision-support layer
+                                now, a persistent advisory surface later. The discipline
+                                is the same at both stages &mdash; bounded reasoning,
+                                explicit uncertainty, preserved provenance, meaningful
+                                human authority.
+                            </p>
+                        </div>
+
+                        <ol class="kl-founder__doctrine" aria-label="Operating doctrine">
+                            <li class="kl-founder__tenet">
+                                <span class="kl-founder__numeral" aria-hidden="true">I</span>
+                                <h3 class="kl-founder__tenet-title">Deterministic-first reasoning</h3>
+                                <p class="kl-founder__tenet-line">
+                                    Structured rules, typed entities, traceable evidence.
+                                    Fluent prose is not allowed to substitute for grounded
+                                    logic.
+                                </p>
+                            </li>
+                            <li class="kl-founder__tenet">
+                                <span class="kl-founder__numeral" aria-hidden="true">II</span>
+                                <h3 class="kl-founder__tenet-title">Explicit uncertainty</h3>
+                                <p class="kl-founder__tenet-line">
+                                    Where the system cannot responsibly conclude, it says
+                                    so. Unknowns are surfaced &mdash; not disguised by
+                                    polished output.
+                                </p>
+                            </li>
+                            <li class="kl-founder__tenet">
+                                <span class="kl-founder__numeral" aria-hidden="true">III</span>
+                                <h3 class="kl-founder__tenet-title">Human authority preserved</h3>
+                                <p class="kl-founder__tenet-line">
+                                    The system supports judgment by surfacing state,
+                                    provenance, and evidence. It never silently replaces
+                                    the decision.
+                                </p>
+                            </li>
+                        </ol>
+                    </div>
+                </article>
 
             </div>
         </div>
     </section>
 
     <!-- ════════════════════════
-         E. PRODUCT PREVIEW
-    ════════════════════════ -->
-    <section class="sw-preview" id="preview">
-        <div class="sw-preview__wide">
-            <p class="sw-section-label">Product preview</p>
-            <p class="sw-preview__intro">The following surfaces are representative of the platform currently in development. They reflect the product's output logic and decision structure, not a final interface.</p>
-
-            <div class="sw-preview__grid">
-
-                <!-- Signal Feed -->
-                <div class="mock-card">
-                    <div class="mock-card__header">
-                        <span class="mock-card__header-label">Regulatory Signal Feed / EV and Auto Export</span>
-                        <span class="mock-card__preview-badge">Preview</span>
-                    </div>
-                    <div class="mock-card__body">
-
-                        <div class="signal-row">
-                            <span class="signal-status signal-status--cond">Conditional</span>
-                            <div class="signal-text">
-                                <p class="signal-text__title">EU Battery Regulation: Phase 2 compliance trigger activated</p>
-                                <p class="signal-text__meta">EU &nbsp;·&nbsp; Auto / EV &nbsp;·&nbsp; Supply Chain Certification &nbsp;·&nbsp; Q3 2025</p>
-                            </div>
-                        </div>
-
-                        <div class="signal-row">
-                            <span class="signal-status signal-status--blocked">Blocked</span>
-                            <div class="signal-text">
-                                <p class="signal-text__title">US Section 301 tariff list: India EV components added</p>
-                                <p class="signal-text__meta">US &nbsp;·&nbsp; Auto / EV &nbsp;·&nbsp; Tariff Exposure &nbsp;·&nbsp; Effective immediately</p>
-                            </div>
-                        </div>
-
-                        <div class="signal-row">
-                            <span class="signal-status signal-status--open">Open</span>
-                            <div class="signal-text">
-                                <p class="signal-text__title">PLI Scheme Tranche 3: BMS manufacturers eligible</p>
-                                <p class="signal-text__meta">India &nbsp;·&nbsp; Auto / EV &nbsp;·&nbsp; Incentive &nbsp;·&nbsp; Application window open</p>
-                            </div>
-                        </div>
-
-                        <div class="signal-row">
-                            <span class="signal-status signal-status--unclear">Unclear</span>
-                            <div class="signal-text">
-                                <p class="signal-text__title">India-EU FTA, EV chapter: negotiation status unresolved</p>
-                                <p class="signal-text__meta">IN / EU &nbsp;·&nbsp; Market Entry &nbsp;·&nbsp; Pending clarity</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Decision Context Card -->
-                <div class="mock-card">
-                    <div class="mock-card__header">
-                        <span class="mock-card__header-label">Decision Context / Firm Position</span>
-                        <span class="mock-card__preview-badge">Preview</span>
-                    </div>
-                    <div class="decision-card">
-
-                        <div class="decision-card__row">
-                            <div>
-                                <p class="decision-card__field">Signal</p>
-                                <p class="decision-card__value">EU Battery Regulation: Phase 2</p>
-                            </div>
-                            <div style="text-align:right;">
-                                <p class="decision-card__field">Materiality</p>
-                                <p class="decision-card__value decision-card__value--orange">&#9679; High</p>
-                            </div>
-                        </div>
-
-                        <div class="decision-card__row">
-                            <div>
-                                <p class="decision-card__field">Jurisdiction</p>
-                                <p class="decision-card__value">EU</p>
-                            </div>
-                            <div>
-                                <p class="decision-card__field">Sector</p>
-                                <p class="decision-card__value">Auto / EV Export</p>
-                            </div>
-                        </div>
-
-                        <div class="decision-card__row">
-                            <div>
-                                <p class="decision-card__field">Firm Position</p>
-                                <p class="decision-card__value decision-card__value--yellow">CONDITIONAL</p>
-                            </div>
-                            <div>
-                                <p class="decision-card__field">Operative Date</p>
-                                <p class="decision-card__value">Q3 2025, Active</p>
-                            </div>
-                        </div>
-
-                        <div class="decision-card__row">
-                            <div>
-                                <p class="decision-card__field">Affected Dimension</p>
-                                <p class="decision-card__value">Supply chain certification: battery passport requirement</p>
-                            </div>
-                        </div>
-
-                        <div class="decision-card__row">
-                            <div>
-                                <p class="decision-card__field">Missing Evidence</p>
-                                <p class="decision-card__value" style="opacity:0.5;">Carbon footprint declaration not yet compiled for cell-level inputs</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <p class="preview-disclaimer">Interface in development. Representative surfaces only. Output structure and classification logic are accurate to the product's intended design.</p>
-        </div>
-    </section>
-
-    <!-- ════════════════════════
-         H. ACCESS CTA
+         G. ACCESS CTA
     ════════════════════════ -->
     <section class="sw-access" id="access">
         <div class="sw-access__inner">
             <div class="sw-access__text">
-                <h2>Request Early Access</h2>
-                <p>Sector Watch is currently accepting early-access requests from qualified firms. We are prioritising the Auto and EV export value chain for initial pilots, with focus on firms operating across India, the EU, and the US. If your firm operates in a trade-exposed environment and is evaluating market access, compliance exposure, or supply chain positioning, we would like to hear from you.</p>
+                <h2>Be early to Sector Watch.</h2>
+                <p>Sector Watch is Kanan Labs&rsquo; flagship product, currently in development. If your firm operates in a trade-exposed environment and is thinking seriously about regulatory exposure across jurisdictions, we&rsquo;d like to hear from you. Early-access conversations shape the system as it is built.</p>
             </div>
             <div>
                 <form class="sw-access__form" id="sectorWatchAccessForm">
@@ -1126,8 +1074,9 @@
                     <div class="kl-footer__col">
                         <h4 class="kl-footer__col-heading">Platform</h4>
                         <ul class="kl-footer__col-links">
-                            <li><a href="index.html">India AI Tracker</a></li>
-                            <li><a href="sector-watch.html">Sector Watch</a></li>
+                            <li><a href="tradewatch.html">TradeWatch</a></li>
+                            <li><a href="tracker.html">India AI Tracker</a></li>
+                            <li><a href="sector-watch.html">SectorWatch</a></li>
                             <li><a href="publications.html">Publications</a></li>
                         </ul>
                     </div>
@@ -1137,7 +1086,6 @@
                         <ul class="kl-footer__col-links">
                             <li><a href="about.html">About</a></li>
                             <li><a href="team.html">Team</a></li>
-                            <li><a href="sector-watch.html">Sector Watch</a></li>
                             <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
                         </ul>
                     </div>
@@ -1169,8 +1117,69 @@
         </div>
     </footer>
 
-    <script src="js/contact-panel.js"></script>
-    <script src="js/staggered-menu.js"></script>
+    <!-- ─── Scripts ─── -->
+    <script src="js/contact-panel.js" defer></script>
+    <script src="js/staggered-menu.js" defer></script>
+
+    <!-- Component scripts: shiny-text, evidence-workflow stagger reveal, founder doctrine canvas -->
+    <script src="js/evidence-workflow.js" defer></script>
+    <script src="js/founder-grid.js" defer></script>
+
+    <!-- Manifesto word-reveal (verbatim from index.html) -->
+    <script defer>
+    window.addEventListener('load', function () {
+        var heading = document.getElementById('klManifestoReveal');
+        if (!heading) return;
+        var words = Array.prototype.slice.call(heading.querySelectorAll('.kl-word'));
+        var accentWords = Array.prototype.slice.call(heading.querySelectorAll('.kl-word--accent'));
+        if (!words.length) return;
+
+        /* Reduced motion: reveal all immediately */
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            words.forEach(function (w) { w.style.opacity='1'; w.style.filter='none'; w.style.transform='none'; });
+            accentWords.forEach(function (w) { w.style.color='#db4a2b'; });
+            return;
+        }
+
+        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+            words.forEach(function (w) { w.style.opacity='1'; w.style.filter='none'; w.style.transform='none'; });
+            accentWords.forEach(function (w) { w.style.color='#db4a2b'; });
+            return;
+        }
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.set(words, { opacity: 0.12, filter: 'blur(4px)', rotation: 2, transformOrigin: '0% 80%' });
+        gsap.set(accentWords, { color: '#db4a2b' });
+
+        var tl = gsap.timeline();
+        tl.to(words, {
+            opacity: 1,
+            filter: 'blur(0px)',
+            rotation: 0,
+            ease: 'none',
+            stagger: { each: 0.04, from: 'start' }
+        });
+
+        ScrollTrigger.create({
+            trigger: heading,
+            start: 'top bottom',
+            end: 'top 45%',
+            scrub: 1,
+            animation: tl,
+            invalidateOnRefresh: true
+        });
+    });
+    </script>
+    <script defer>
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                if (window.ScrollTrigger) window.ScrollTrigger.refresh();
+            }, 300);
+        });
+    </script>
+
+    <!-- Access form submission handler -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const form = document.getElementById('sectorWatchAccessForm');
@@ -1202,7 +1211,6 @@
                         });
 
                         if (res.ok) {
-                            // Success
                             form.style.display = 'none';
                             if (success) success.style.display = 'block';
                         } else {

@@ -10,375 +10,1711 @@
         gtag('js', new Date());
         gtag('config', 'G-EF8EXSDV07');
     </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <title>Telengana AI Tracker | Kanan Labs</title>
 
-    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta name="description" content="Track latest AI policies, startups, and infrastructure developments in Telengana. Real-time intelligence by Kanan Labs.">
+    <meta name="keywords" content="Kanan Labs, TradeWatch, trade intelligence, trade infrastructure, customs compliance, marine cargo insurance, regulatory intelligence, India trade">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kananlabs.in/states/telengana/">
     <meta property="og:title" content="Telengana AI Tracker | Kanan Labs">
-    <meta property="og:description"
-        content="Track AI developments, policies, and startup news across all Indian states and union territories. A public AI governance intelligence tool by Kanan Labs.">
+    <meta property="og:description" content="Track latest AI policies, startups, and infrastructure developments in Telengana. Real-time intelligence by Kanan Labs.">
     <meta property="og:image" content="https://kananlabs.in/assets/images/KANAN-LABS-WEBSITELOGO.png">
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://kananlabs.in/">
-    <meta property="twitter:title" content="India AI Tracker | Kanan Labs">
-    <meta property="twitter:description"
-        content="Track AI developments, policies, and startup news across all Indian states and union territories.">
+    <meta property="twitter:title" content="Kanan Labs — Trade Intelligence Infrastructure">
+    <meta property="twitter:description" content="AI-native trade intelligence. TradeWatch is our shipment-evidence layer for customs and marine cargo insurance.">
     <meta property="twitter:image" content="https://kananlabs.in/assets/images/KANAN-LABS-WEBSITELOGO.png">
 
-    <!-- Additional Meta Tags -->
-    <meta name="description"
-        content="Track AI developments, policies, and startup news across all Indian states and union territories. A public AI governance intelligence tool by Kanan Labs.">
-    <meta name="keywords"
-        content="AI India, artificial intelligence India, AI policy India, AI startups India, AI tracker, governance intelligence">
-
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/KANAN-LABS-WEBSITELOGO.png">
-
-    <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="e4NN5-5uDwKoApKLmA1I8ZDmL1Dy0BGhlP-IpKbEbSo" />
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Resource hints — parallelize third-party fetches -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+    <!-- Performance: preload hero poster (paints instantly while video loads) -->
+    <link rel="preload" as="image" href="added-assets/kanan-hero-poster.jpg" fetchpriority="high">
+    <!-- Performance: preload hero video (1080p WebM for modern browsers) -->
+    <link rel="preload" as="video" href="added-assets/kanan-hero-1080p.webm" type="video/webm" fetchpriority="high">
+    <!-- Performance: preload Cormorant display font weights -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/CormorantGaramond-Regular.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/CormorantGaramond-Medium.woff2">
+
+    <!-- Google Fonts fallback (Cormorant + Inter) -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
     <link rel="stylesheet" href="css/styles-v2.css?v=21">
     <link rel="stylesheet" href="css/staggered-menu.css?v=2">
-    <link rel="stylesheet" href="css/strategic-insights.css?v=4">
-    <link rel="stylesheet" href="css/shiny-text.css">
-    <link rel="stylesheet" href="css/advisory-section.css?v=6">
-    <link rel="stylesheet" href="css/contact-panel.css?v=1">
-    <link rel="stylesheet" href="css/identity-section.css?v=7">
-    <link rel="stylesheet" href="css/platform-section.css?v=9">
-    <link rel="stylesheet" href="css/manifesto-section.css?v=4">
+    <link rel="stylesheet" href="css/identity-section.css?v=11">
+    <!-- manifesto-section.css removed — replaced by inline kl-manifesto styles -->
     <link rel="stylesheet" href="css/footer.css?v=3">
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="css/tw-demo-clone.css?v=1">
+    <link rel="stylesheet" href="css/triptych.css?v=1">
+    <link rel="stylesheet" href="css/drona-brain.css?v=1">
+    <link rel="stylesheet" href="css/evidence-workflow.css?v=1">
+    <link rel="stylesheet" href="css/sectors-bento.css?v=1">
+
+    <style>
+        /* ══════════════════════════════════════════════════════════
+           KANAN LABS — CORPORATE LANDING (Phase 2: Hero + Footer)
+           Design tokens align with tradewatch.html / sector-watch.html
+           ══════════════════════════════════════════════════════════ */
+
+        :root {
+            --kl-navy:        #0a2f52;
+            --kl-navy-deep:   #061f38;
+            --kl-cream:       #eeebe3;   /* Kanan White */
+            --kl-cream-soft:  rgba(238, 235, 227, 0.68);
+            --kl-cream-faint: rgba(238, 235, 227, 0.45);
+            --kl-red:         #db4a2b;
+        }
+
+        html {
+            height: auto !important;
+            overflow-x: clip; /* clip prevents h-scroll without changing scroll container */
+            scroll-behavior: smooth;
+        }
+
+        body.kl-page {
+            margin: 0;
+            min-height: 100vh;
+            background: var(--kl-navy);
+            color: var(--kl-cream);
+            font-family: 'Inter', system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ──────────────────────────────────────────────
+           A. HERO — full-bleed video
+        ────────────────────────────────────────────── */
+        .kl-hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background: var(--kl-navy);
+        }
+
+        /* Video fills the section; poster paints while it loads */
+        .kl-hero__video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 35%;
+            display: block;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Gradient overlay — light at top, heavier at bottom for legibility */
+        .kl-hero__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(10, 47, 82, 0.20) 0%,
+                rgba(10, 47, 82, 0.05) 28%,
+                rgba(10, 47, 82, 0.10) 48%,
+                rgba(10, 47, 82, 0.55) 72%,
+                rgba(10, 47, 82, 0.88) 88%,
+                var(--kl-navy) 100%
+            );
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Content block — anchored from bottom, grows upward */
+        .kl-hero__content {
+            position: absolute;
+            z-index: 2;
+            bottom: 22vh;
+            left: 4.5%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .kl-hero__title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(3rem, 6.5vw, 6.25rem);
+            font-weight: 400;
+            color: #ffffff;
+            line-height: 1.05;
+            letter-spacing: -0.01em;
+            margin: 0 0 1rem 0;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.25);
+            white-space: nowrap;
+            text-align: left;
+        }
+
+        .kl-hero__tagline {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(0.875rem, 1vw, 1rem);
+            font-weight: 400;
+            color: rgba(255,255,255,0.78);
+            line-height: 1.65;
+            max-width: 85ch;
+            margin: 0 0 2rem 0;
+            text-shadow: 0 1px 8px rgba(0,0,0,0.2);
+            text-align: left;
+        }
+
+        .kl-hero__actions {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .kl-btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--kl-navy);
+            background: var(--kl-cream);
+            padding: 1rem 2rem;
+            border-radius: 3px;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+            white-space: nowrap;
+            border: none;
+            cursor: pointer;
+        }
+
+        .kl-btn-primary:hover {
+            background: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(238, 235, 227, 0.18);
+        }
+
+        .kl-btn-primary__arrow {
+            transition: transform 0.2s ease;
+            display: inline-block;
+        }
+
+        .kl-btn-primary:hover .kl-btn-primary__arrow {
+            transform: translateX(4px);
+        }
+
+        .kl-btn-secondary {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8125rem;
+            color: var(--kl-cream);
+            opacity: 0.55;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+            letter-spacing: 0.04em;
+        }
+
+        .kl-btn-secondary:hover {
+            opacity: 0.95;
+        }
+
+        /* ──────────────────────────────────────────────
+           Responsive — mobile
+        ────────────────────────────────────────────── */
+        @media (max-width: 768px) {
+            .kl-hero__content {
+                left: 1.5rem;
+                bottom: 14vh;
+                max-width: calc(100vw - 3rem);
+            }
+            .kl-hero__title {
+                font-size: clamp(2.25rem, 9vw, 3.5rem);
+                white-space: normal;
+            }
+            .kl-hero__actions {
+                gap: 1.25rem;
+            }
+            .kl-btn-primary {
+                padding: 0.9rem 1.5rem;
+                font-size: 0.75rem;
+            }
+        }
+
+        /* ──────────────────────────────────────────────
+           Reduced motion — pause video, show poster only
+        ────────────────────────────────────────────── */
+        @media (prefers-reduced-motion: reduce) {
+            .kl-hero__video {
+                display: none;
+            }
+            .kl-hero {
+                background-image: url('added-assets/kanan-hero-poster.jpg');
+                background-size: cover;
+                background-position: center 35%;
+            }
+        }
+
+        /* Infrastructure grid sits behind everything but is hidden under hero video */
+        #infrastructure-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ──────────────────────────────────────────────
+           B. SCOPE PIN — Harvey-style vertical word cycle
+        ────────────────────────────────────────────── */
+        .kl-scope {
+            position: relative;
+            width: 100%;
+            background: transparent;
+            overflow: hidden;
+            z-index: 1;
+            margin-top: 0;
+            padding: clamp(40px, 4.5vw, 60px) 0;
+        }
+
+        /* Faint paper-grain on navy — matches the Drona section */
+        .kl-scope::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.96  0 0 0 0 0.92  0 0 0 0 0.82  0 0 0 0.04 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+            background-size: 160px 160px;
+            mix-blend-mode: overlay;
+            opacity: 0.55;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .kl-scope__inner {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            min-height: auto;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5rem;
+            display: grid;
+            grid-template-columns: 1fr 1.8fr 1fr;
+            gap: 3rem 4rem;
+            align-items: center;
+            align-content: center;
+        }
+
+        .kl-scope__label {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #f4ebd0;
+            opacity: 0.55;
+            line-height: 1.55;
+            letter-spacing: 0.01em;
+            margin: 0;
+            max-width: 22ch;
+        }
+
+        .kl-scope__label strong {
+            color: #f4ebd0;
+            opacity: 1;
+            font-weight: 500;
+        }
+
+        /* Column viewport — tight centre mask spotlights one word at a time */
+        .kl-scope__column {
+            position: relative;
+            height: 60vh;
+            min-height: 380px;
+            overflow: hidden;
+        }
+
+        /* Absolutely-positioned words; GSAP animates translateY */
+        .kl-scope__list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            inset: 0;
+        }
+
+        /* All words identical size — mask gradient does the opacity work */
+        .kl-scope__word {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(2.25rem, 3.5vw, 3.75rem);
+            font-weight: 500;
+            color: #f4ebd0;
+            line-height: 1.0;
+            letter-spacing: -0.01em;
+            padding: 0.1em 0;
+            white-space: nowrap;
+            opacity: 0;          /* hidden until GSAP positions them */
+            will-change: transform;
+        }
+
+        /* Right-column CTA — Harvey-subtle: thin border, no fill */
+        .kl-scope__cta {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .kl-scope__cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(244, 235, 208, 0.65);
+            background: transparent;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid rgba(244, 235, 208, 0.25);
+            border-radius: 3px;
+            text-decoration: none;
+            transition: color 0.2s ease, border-color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .kl-scope__cta-btn:hover {
+            color: #f4ebd0;
+            border-color: rgba(244, 235, 208, 0.6);
+        }
+
+        @media (max-width: 900px) {
+            .kl-scope {
+                min-height: 0;
+                padding: 4rem 0;
+            }
+            .kl-scope__inner {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                min-height: 0;
+                padding: 0 1.5rem;
+                gap: 0;
+                max-width: 100%;
+            }
+            .kl-scope__label {
+                opacity: 0.65;
+                max-width: none;
+                flex-shrink: 0;
+            }
+            .kl-scope__column {
+                width: 100%;
+                height: 35vh;
+                min-height: 290px;
+                flex-shrink: 0;
+                margin-top: 1.5rem;
+                -webkit-mask-image: linear-gradient(to bottom,
+                    transparent 0%,
+                    rgba(0,0,0,0.25) 8%,
+                    #000 17%,
+                    #000 83%,
+                    rgba(0,0,0,0.25) 92%,
+                    transparent 100%);
+                mask-image: linear-gradient(to bottom,
+                    transparent 0%,
+                    rgba(0,0,0,0.25) 8%,
+                    #000 17%,
+                    #000 83%,
+                    rgba(0,0,0,0.25) 92%,
+                    transparent 100%);
+            }
+            .kl-scope__word {
+                font-size: clamp(2rem, 9vw, 3rem);
+            }
+            .kl-scope__cta {
+                display: flex;
+                flex-shrink: 0;
+                margin-top: 1.5rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .kl-scope__column {
+                height: auto;
+                overflow: visible;
+                -webkit-mask-image: none;
+                mask-image: none;
+            }
+            .kl-scope__list {
+                position: static;
+            }
+            .kl-scope__word {
+                position: static;
+                opacity: 1;
+                transform: none !important;
+                display: block;
+                padding: 0.3em 0;
+            }
+            .kl-scope__word[aria-hidden="true"] {
+                display: none; /* hide clones in reduced-motion */
+            }
+        }
+
+        /* C–D styles removed — replaced by triptych.css */
+
+        /* (old C–D CSS removed) */
+
+        /* ──────────────────────────────────────────────
+           E. MANIFESTO — word-reveal scroll statement
+        ────────────────────────────────────────────── */
+        .kl-manifesto {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background: transparent;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: clamp(4rem, 8vh, 7rem) clamp(1.5rem, 4vw, 4rem);
+            box-sizing: border-box;
+        }
+        .kl-manifesto__stage {
+            max-width: min(1360px, 92vw);
+            width: 100%;
+            text-align: center;
+        }
+        .kl-manifesto__heading {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: clamp(1.3rem, 2.2vw, 2.4rem);
+            line-height: 1.42;
+            letter-spacing: -0.008em;
+            color: #f4ebd0;
+            margin: 0;
+        }
+        .kl-manifesto__heading .kl-word {
+            display: inline-block;
+            opacity: 0.12;            /* CSS fallback initial state */
+            filter: blur(4px);        /* overridden by GSAP inline styles at runtime */
+            transform: rotate(2deg);  /* NO transition — GSAP owns these properties */
+            transform-origin: 0% 80%;
+            margin-right: 0.14em;
+        }
+        /* .kl-word.is-active REMOVED — GSAP timeline animates directly, no class toggling */
+        /* .kl-word--accent colour applied by gsap.set() at initialisation */
+        @media (prefers-reduced-motion: reduce) {
+            .kl-manifesto__heading .kl-word {
+                opacity: 1 !important; filter: none !important; transform: none !important;
+            }
+        }
+
+        /* Match identity section and transition to footer's exact cream (#F4EBD0) */
+        .identity-section { background: #F4EBD0 !important; }
+        .identity-transition {
+            background: linear-gradient(to bottom, var(--kl-navy) 0%, #F4EBD0 100%) !important;
+        }
+
+
+        /* ──────────────────────────────────────────────
+           G. PLATFORM ACCESS BANNER — orange transition strip
+        ────────────────────────────────────────────── */
+        .kl-waitlist {
+            position: relative;
+            z-index: 2;
+            background: var(--kl-red);
+            padding: 2.75rem 0;
+        }
+
+        .kl-waitlist__inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 5rem;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .kl-waitlist__text { flex-shrink: 0; }
+
+        .kl-waitlist__title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--kl-cream);
+            margin: 0 0 0.35rem 0;
+            line-height: 1.2;
+        }
+
+        .kl-waitlist__sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            color: rgba(238, 235, 227, 0.7);
+            margin: 0;
+            max-width: 28ch;
+            line-height: 1.55;
+        }
+
+        .kl-waitlist__form {
+            display: flex;
+            gap: 0.65rem;
+            align-items: center;
+            flex: 1;
+            flex-wrap: wrap;
+        }
+
+        .kl-waitlist__form input {
+            flex: 1;
+            min-width: 130px;
+            background: transparent;
+            border: 1px solid rgba(238, 235, 227, 0.35);
+            border-radius: 3px;
+            padding: 0.65rem 1rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8125rem;
+            color: var(--kl-cream);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .kl-waitlist__form input:focus {
+            border-color: rgba(238, 235, 227, 0.7);
+        }
+
+        .kl-waitlist__form input::placeholder {
+            color: rgba(238, 235, 227, 0.45);
+        }
+
+        .kl-waitlist__form button {
+            background: var(--kl-cream);
+            color: var(--kl-red);
+            border: none;
+            border-radius: 3px;
+            padding: 0.65rem 1.5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .kl-waitlist__form button:hover { background: #ffffff; }
+
+        .kl-waitlist__success {
+            display: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            color: rgba(238, 235, 227, 0.9);
+            text-align: center;
+            padding-top: 0.75rem;
+        }
+
+        .kl-waitlist__success.visible {
+            display: block;
+        }
+
+        @media (max-width: 900px) {
+            .kl-waitlist {
+                padding: 1.75rem 0;
+            }
+            .kl-waitlist__inner {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 1.5rem;
+                gap: 1.1rem;
+            }
+            .kl-waitlist__title {
+                font-size: clamp(1.05rem, 4.4vw, 1.2rem);
+                line-height: 1.25;
+            }
+            .kl-waitlist__sub {
+                font-size: 0.75rem;
+                line-height: 1.5;
+                max-width: 36ch;
+            }
+            .kl-waitlist__form {
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.55rem;
+                flex-wrap: nowrap;
+            }
+            .kl-waitlist__form input {
+                width: 100%;
+                min-width: 0;
+                flex: none;
+                padding: 0.8rem 1rem;
+                font-size: 0.8125rem;
+            }
+            .kl-waitlist__form button {
+                width: 100%;
+                padding: 0.85rem 1.25rem;
+                font-size: 0.75rem;
+                letter-spacing: 0.16em;
+                margin-top: 0.15rem;
+            }
+        }
+    </style>
     <link rel="canonical" href="https://kananlabs.in/states/telengana/" />
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"GovernmentService","name":"Telengana AI Ecosystem Tracker","areaServed":{"@type":"State","name":"Telengana"},"provider":{"@type":"Organization","name":"Kanan Labs","url":"https://kananlabs.in"}}</script>
 </head>
 
-<body>
+<body class="kl-page">
 
-    <!-- Infrastructure Grid Background -->
-    <canvas id="infrastructure-grid"
-        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;"></canvas>
+    <!-- Infrastructure grid background (canvas) — hidden under hero video, revealed below -->
+    <canvas id="infrastructure-grid"></canvas>
 
     <div class="page-wrapper">
-        <!-- LAYER 1: Institutional Header (Persistent) -->
-        <!-- Note: Staggered menu will be injected here by staggered-menu.js -->
 
-        <!-- LAYER 2: Product Hero (Compact) -->
-        <section class="product-hero">
-            <h1>India AI Tracker</h1>
-            <div class="product-controls">
-                <!-- View Mode Toggle -->
-                <div class="view-toggle" role="tablist">
-                    <button class="toggle-option active" onclick="setViewMode('state')" role="tab" aria-selected="true">
-                        State View
-                    </button>
-                    <button class="toggle-option" onclick="setViewMode('allIndia')" role="tab" aria-selected="false">
-                        All India
-                    </button>
-                    <div class="toggle-indicator"></div>
+        <!-- Staggered menu injected here by staggered-menu.js -->
+
+        <!-- ════════════════════════════════════════════════
+             A. HERO — Full-bleed video
+        ════════════════════════════════════════════════ -->
+        <header class="kl-hero">
+
+            <!-- Hero video. Sources injected by inline script below based on viewport,
+                 so each device class gets a single appropriate file. The non-standard
+                 `media` attribute on <source> is honored only by Safari; Chrome/Firefox
+                 ignore it and would lock onto the desktop WebM on mobile networks. -->
+            <video class="kl-hero__video" id="klHeroVideo"
+                   autoplay loop muted playsinline disablepictureinpicture
+                   preload="auto"
+                   poster="added-assets/kanan-hero-poster.jpg"></video>
+            <script>
+            (function () {
+                var v = document.getElementById('klHeroVideo');
+                if (!v) return;
+                var isMobile = window.matchMedia('(max-width: 768px)').matches;
+                var sources = isMobile
+                    ? [
+                        { src: 'added-assets/kanan-hero-720p-h264.mp4', type: 'video/mp4' },
+                        { src: 'added-assets/kanan-hero-720p.mp4',      type: 'video/mp4; codecs=hvc1' }
+                      ]
+                    : [
+                        { src: 'added-assets/kanan-hero-1080p.webm', type: 'video/webm' },
+                        { src: 'added-assets/kanan-hero-1080p.mp4',  type: 'video/mp4; codecs=hvc1' }
+                      ];
+                sources.forEach(function (s) {
+                    var el = document.createElement('source');
+                    el.src = s.src;
+                    el.type = s.type;
+                    v.appendChild(el);
+                });
+                v.load();
+                var p = v.play();
+                if (p && typeof p.catch === 'function') p.catch(function () { /* autoplay gated */ });
+            })();
+            </script>
+
+            <!-- Gradient overlay for legibility -->
+            <div class="kl-hero__overlay" aria-hidden="true"></div>
+
+            <!-- Hero text overlay + CTAs -->
+            <div class="kl-hero__content">
+                <h1 class="kl-hero__title">Trade intelligence<br>for a contested world.</h1>
+                <p class="kl-hero__tagline">Tariffs, sanctions, technical trade-barriers, and other export controls have made the operating reality of every shipment increasingly complex. Kanan solves that for you,</p>
+                <div class="kl-hero__actions">
+                    <a href="tradewatch.html" class="kl-btn-primary">
+                        Explore TradeWatch
+                        <span class="kl-btn-primary__arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="tracker.html" class="kl-btn-secondary">View the India AI Tracker ↗</a>
                 </div>
-                <p class="system-status" id="lastUpdated"></p>
+            </div>
+
+        </header>
+
+        <!-- ════════════════════════════════════════════════
+             A2. TRADEWATCH DEMO — ambient autoplay
+                  (Clone of tradewatch.html stage, scenes 1-3,
+                   scroll-free, 5s crossfade loop)
+        ════════════════════════════════════════════════ -->
+        <section class="kl-twdemo" aria-label="TradeWatch product demo">
+            <div class="kl-twdemo__inner">
+                <h2 class="kl-twdemo__title">
+                    TradeWatch prepares evidence-ready shipment packets<br>
+                    for customs, trade insurance and <em>LC workflows</em>.
+                </h2>
+
+                <div class="tw-stage kl-twdemo__stage">
+
+                    <div class="tw-stage-chrome">
+                        <div class="tw-stage-chrome-left">
+                            <span class="tw-stage-chrome-dot" aria-hidden="true"></span>
+                            <span class="tw-stage-chrome-eyebrow">Now showing</span>
+                            <span class="tw-stage-chrome-scene" id="twChromeScene">Morning Brief</span>
+                        </div>
+                        <div class="tw-stage-chrome-right">
+                            <div class="tw-scene-meter-dots" aria-hidden="true">
+                                <span class="tw-scene-meter-dot is-active"></span>
+                                <span class="tw-scene-meter-dot"></span>
+                                <span class="tw-scene-meter-dot"></span>
+                                <span class="tw-scene-meter-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tw-stage-inner">
+                        <div class="tw-stage-main">
+                            <div class="tw-app-shell">
+
+                                <aside class="tw-rail" aria-label="Workspace navigation">
+                                    <div class="tw-rail-brand">
+                                        <span class="tw-rail-brand-mark" aria-hidden="true">K</span>
+                                        <div class="tw-rail-brand-text">
+                                            <span class="tw-rail-brand-name">TradeWatch</span>
+                                            <span class="tw-rail-brand-sub">Workspace</span>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="tw-rail-cta" tabindex="-1">New shipment</button>
+                                    <div class="tw-rail-section">
+                                        <div class="tw-rail-section-label">Workspace</div>
+                                        <div class="tw-rail-item">
+                                            <span class="tw-rail-item-icon" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 12 3l9 9"/><path d="M5 10v10h14V10"/></svg>
+                                            </span>
+                                            <span class="tw-rail-item-label">Home</span>
+                                            <span class="tw-rail-item-count">3</span>
+                                        </div>
+                                        <div class="tw-rail-item">
+                                            <span class="tw-rail-item-icon" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="13" rx="1.2"/><path d="M2 12h20"/><path d="M8 7V4h8v3"/></svg>
+                                            </span>
+                                            <span class="tw-rail-item-label">Shipments</span>
+                                            <span class="tw-rail-item-count">28</span>
+                                        </div>
+                                        <div class="tw-rail-item">
+                                            <span class="tw-rail-item-icon" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                            </span>
+                                            <span class="tw-rail-item-label">Documents</span>
+                                            <span class="tw-rail-item-count">147</span>
+                                        </div>
+                                        <div class="tw-rail-item">
+                                            <span class="tw-rail-item-icon" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><line x1="12" y1="8" x2="6.7" y2="16"/><line x1="12" y1="8" x2="17.3" y2="16"/></svg>
+                                            </span>
+                                            <span class="tw-rail-item-label">Reasoning</span>
+                                            <span class="tw-rail-item-count">live</span>
+                                        </div>
+                                    </div>
+                                    <div class="tw-rail-section">
+                                        <div class="tw-rail-section-label">Records</div>
+                                        <div class="tw-rail-item">
+                                            <span class="tw-rail-item-icon" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6z"/></svg>
+                                            </span>
+                                            <span class="tw-rail-item-label">Insurance</span>
+                                            <span class="tw-rail-item-count">12</span>
+                                        </div>
+                                        <div class="tw-rail-item">
+                                            <span class="tw-rail-item-icon" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                            </span>
+                                            <span class="tw-rail-item-label">Sealed dossiers</span>
+                                            <span class="tw-rail-item-count">104</span>
+                                        </div>
+                                    </div>
+                                    <div class="tw-rail-footer">
+                                        <span class="tw-rail-footer-avatar" aria-hidden="true">A</span>
+                                        <div class="tw-rail-footer-name">
+                                            Aarav S.
+                                            <span>Acme EV Components</span>
+                                        </div>
+                                    </div>
+                                </aside>
+
+                                <section class="tw-canvas">
+                                    <div class="tw-canvas-tab">
+                                        <strong>Home</strong>
+                                        <span class="tw-canvas-tab-sep">›</span>
+                                        <span>Today · 14 May</span>
+                                    </div>
+                                    <div class="tw-canvas-body">
+
+                                        <!-- ── Scene 1 · Morning Brief ── -->
+                                        <div class="tw-scene is-active" data-scene="1">
+                                            <div class="tw-brief">
+                                                <div class="tw-brief-head">
+                                                    <div>
+                                                        <span class="tw-brief-date">Today · 14 May</span>
+                                                        <span class="tw-brief-date-sub">Portfolio brief · 09:02 IST</span>
+                                                    </div>
+                                                    <div class="tw-brief-actions">
+                                                        <button type="button" class="tw-brief-chip tw-brief-chip--primary" tabindex="-1">Begin today's review<span class="tw-brief-chip-arrow"> →</span></button>
+                                                        <span class="tw-brief-chip tw-brief-chip--ghost">Brief me on IGM-4521</span>
+                                                        <span class="tw-brief-chip tw-brief-chip--ghost">Recap yesterday's seals</span>
+                                                    </div>
+                                                    <span class="tw-brief-alert">3 active · 1 needs you</span>
+                                                </div>
+                                                <div class="tw-brief-row">
+                                                    <div class="tw-brief-ship">
+                                                        <span class="tw-brief-ship-id">IGM-4521</span>
+                                                        <span class="tw-brief-ship-route">Pune → Hamburg</span>
+                                                    </div>
+                                                    <div class="tw-brief-note">Five documents in. Reconciliation clean. <em>Awaiting broker consent before 14:00.</em></div>
+                                                    <span class="tw-brief-status" data-state="awaiting">Awaiting consent</span>
+                                                </div>
+                                                <div class="tw-brief-row">
+                                                    <div class="tw-brief-ship">
+                                                        <span class="tw-brief-ship-id">IGM-4518</span>
+                                                        <span class="tw-brief-ship-route">Chennai → Rotterdam</span>
+                                                    </div>
+                                                    <div class="tw-brief-note">All rules OPEN. Both packets compiled. <em>Ready for your sign-off.</em></div>
+                                                    <span class="tw-brief-status" data-state="ready">Ready to seal</span>
+                                                </div>
+                                                <div class="tw-brief-row">
+                                                    <div class="tw-brief-ship">
+                                                        <span class="tw-brief-ship-id">IGM-4502</span>
+                                                        <span class="tw-brief-ship-route">Mumbai → Hamburg</span>
+                                                    </div>
+                                                    <div class="tw-brief-note">Sealed yesterday · dossier delivered to CHA and broker.</div>
+                                                    <span class="tw-brief-status" data-state="sealed">Dispatched</span>
+                                                </div>
+                                            </div>
+                                            <p class="tw-scene-cap">Nax initiates · you command · no dashboard to drive</p>
+                                        </div>
+
+                                        <!-- ── Scene 2 · Plugs into your stack ── -->
+                                        <div class="tw-scene" data-scene="2">
+                                            <div class="tw-erp">
+                                                <svg class="tw-erp-svg" viewBox="0 0 600 380" preserveAspectRatio="none" aria-hidden="true">
+                                                    <path class="tw-erp-flow" d="M 190  72 Q 245 110  255 145" />
+                                                    <path class="tw-erp-flow" d="M 410  72 Q 355 110  345 145" />
+                                                    <path class="tw-erp-flow" d="M 175 195 Q 205 195  225 195" />
+                                                    <path class="tw-erp-flow" d="M 425 195 Q 395 195  375 195" />
+                                                    <path class="tw-erp-flow" d="M 300 305 Q 300 290  300 270" />
+                                                </svg>
+                                                <div class="tw-erp-medallion">
+                                                    <span class="tw-erp-medallion-mark">N</span>
+                                                    <span class="tw-erp-medallion-label">Nax</span>
+                                                </div>
+                                                <div class="tw-erp-chips">
+                                                    <div class="tw-erp-chip" data-system="gmail">
+                                                        <span class="tw-erp-chip-logo"><img src="added-assets/Logos/Gmail_icon_(2020).svg.png" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>Gmail
+                                                    </div>
+                                                    <div class="tw-erp-chip" data-system="tally">
+                                                        <span class="tw-erp-chip-logo"><img src="added-assets/Logos/Tally_-_Logo.png" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>Tally
+                                                    </div>
+                                                    <div class="tw-erp-chip" data-system="zoho">
+                                                        <span class="tw-erp-chip-logo"><img src="added-assets/Logos/zoho%20books%207269845-middle.png" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>Zoho Books
+                                                    </div>
+                                                    <div class="tw-erp-chip" data-system="sap">
+                                                        <span class="tw-erp-chip-logo"><img src="added-assets/Logos/sap-bi.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>SAP Business One
+                                                    </div>
+                                                    <div class="tw-erp-chip" data-system="excel">
+                                                        <span class="tw-erp-chip-logo"><img src="added-assets/Logos/Microsoft_Office_Excel_(2019%E2%80%932025).svg.png" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>Excel
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="tw-scene-cap">Reads your books · watches your inbox · writes nothing back</p>
+                                        </div>
+
+                                        <!-- ── Scene 3 · Bundle arrives · Inbox ── -->
+                                        <div class="tw-scene" data-scene="3">
+                                            <div class="tw-inbox">
+                                                <div class="tw-inbox-head">
+                                                    <span class="tw-inbox-head-title">Inbox · linked to IGM-4521</span>
+                                                    <span class="tw-inbox-head-meta">5 attachments · 09:31 IST</span>
+                                                </div>
+                                                <div class="tw-inbox-dropzone">Auto-detected from <strong>rohit@acme-ev.in</strong> · classifying by document type</div>
+                                                <div class="tw-inbox-list">
+                                                    <div class="tw-inbox-row">
+                                                        <span class="tw-inbox-row-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg></span>
+                                                        <span class="tw-inbox-row-name">CI-IGM4521.pdf</span>
+                                                        <span class="tw-inbox-row-time">09:31</span>
+                                                        <span class="tw-inbox-tag">Commercial Invoice</span>
+                                                    </div>
+                                                    <div class="tw-inbox-row">
+                                                        <span class="tw-inbox-row-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg></span>
+                                                        <span class="tw-inbox-row-name">PL-IGM4521.pdf</span>
+                                                        <span class="tw-inbox-row-time">09:31</span>
+                                                        <span class="tw-inbox-tag">Packing List</span>
+                                                    </div>
+                                                    <div class="tw-inbox-row">
+                                                        <span class="tw-inbox-row-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg></span>
+                                                        <span class="tw-inbox-row-name">BL-IGM4521.pdf</span>
+                                                        <span class="tw-inbox-row-time">09:31</span>
+                                                        <span class="tw-inbox-tag">Bill of Lading</span>
+                                                    </div>
+                                                    <div class="tw-inbox-row">
+                                                        <span class="tw-inbox-row-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg></span>
+                                                        <span class="tw-inbox-row-name">COO-IGM4521.pdf</span>
+                                                        <span class="tw-inbox-row-time">09:31</span>
+                                                        <span class="tw-inbox-tag">Certificate of Origin</span>
+                                                    </div>
+                                                    <div class="tw-inbox-row">
+                                                        <span class="tw-inbox-row-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg></span>
+                                                        <span class="tw-inbox-row-name">INS-IGM4521.pdf</span>
+                                                        <span class="tw-inbox-row-time">09:31</span>
+                                                        <span class="tw-inbox-tag">Insurance Certificate</span>
+                                                    </div>
+                                                </div>
+                                                <span class="tw-inbox-stat"><strong>5 / 5</strong> classified · linked to IGM-4521</span>
+                                            </div>
+                                            <p class="tw-scene-cap">5 documents · classified deterministically · linked to one shipment</p>
+                                        </div>
+
+                                        <!-- ── Scene 4 · Reviewer signs · packets delivered ── -->
+                                        <div class="tw-scene" data-scene="4">
+                                            <div class="tw-pkg">
+                                                <span class="tw-pkg-compile-stat"><strong>2 packets</strong> compiled · <strong>22 fields</strong> · <strong>1 override</strong> recorded · ready</span>
+                                                <div class="tw-pkg-pair">
+                                                    <div class="tw-pkg-card">
+                                                        <span class="tw-pkg-tag">Packet · 01</span>
+                                                        <h5 class="tw-pkg-title">Shipping Bill Readiness Packet</h5>
+                                                        <p class="tw-pkg-route">For handoff to <strong>Customs House Agent</strong></p>
+                                                        <div class="tw-pkg-summary">
+                                                            <div class="tw-pkg-summary-cell is-open"><strong>4</strong>Open</div>
+                                                            <div class="tw-pkg-summary-cell is-cond"><strong>2</strong>Cond.</div>
+                                                            <div class="tw-pkg-summary-cell is-unclear"><strong>0</strong>Unclear</div>
+                                                            <div class="tw-pkg-summary-cell"><strong>0</strong>Blocked</div>
+                                                        </div>
+                                                        <ul class="tw-pkg-list">
+                                                            <li>Discrepancy register · 1 item</li>
+                                                            <li>e-SANCHIT references · 4 docs</li>
+                                                            <li>SCOMET screening evidence</li>
+                                                            <li>Boundary statement · CHA scope</li>
+                                                            <li>Provenance chain · 22 fields</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="tw-pkg-card">
+                                                        <span class="tw-pkg-tag">Packet · 02</span>
+                                                        <h5 class="tw-pkg-title">Marine Cargo Insurance Broker Packet</h5>
+                                                        <p class="tw-pkg-route">For handoff to <strong>IRDAI-registered broker</strong></p>
+                                                        <div class="tw-pkg-summary">
+                                                            <div class="tw-pkg-summary-cell is-open"><strong>3</strong>Open</div>
+                                                            <div class="tw-pkg-summary-cell is-cond"><strong>0</strong>Cond.</div>
+                                                            <div class="tw-pkg-summary-cell is-unclear"><strong>1</strong>Unclear</div>
+                                                            <div class="tw-pkg-summary-cell"><strong>0</strong>Blocked</div>
+                                                        </div>
+                                                        <ul class="tw-pkg-list">
+                                                            <li>Sum-insured calculation · CIF + 10%</li>
+                                                            <li>Commodity-voyage consistency note</li>
+                                                            <li>Exclusion-condition tracking</li>
+                                                            <li>Boundary statement · IRDAI scope</li>
+                                                            <li>Underwriting evidence pack</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tw-pkg-signoff">
+                                                    <div class="tw-pkg-seal">Sealed<br>&amp; signed</div>
+                                                    <div class="tw-pkg-signoff-text">
+                                                        <strong>Reviewer · Aarav S.</strong>
+                                                        <span class="tw-pkg-hash">8a7f29c4d3e1f5b6a02c8e7f4d6a91b3c5e8f0a2d4c7e9b1f3a5d7c9e2b4f6a8</span>
+                                                    </div>
+                                                    <div class="tw-pkg-meta">
+                                                        <strong>10:14 IST · 14 May 26</strong>
+                                                        Audit trail · immutable
+                                                    </div>
+                                                </div>
+                                                <div class="tw-pkg-envelopes">
+                                                    <span class="tw-pkg-envelope">
+                                                        <span class="tw-pkg-envelope-glyph">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+                                                        </span>Delivered · CHA inbox
+                                                    </span>
+                                                    <span class="tw-pkg-envelope">
+                                                        <span class="tw-pkg-envelope-glyph">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+                                                        </span>Delivered · Broker inbox
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p class="tw-scene-cap">Two PDF/A-3 packets · SHA-256 sealed · audit trail closed</p>
+                                        </div>
+
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <main class="main-container">
-            <!-- Map Frame - contains the map with rounded corners and shadow -->
-            <div id="map-frame" class="map-frame">
-                <div class="map-container">
-                    <div id="map"></div>
+        <!-- ════════════════════════════════════════════════
+             B. SCOPE PIN — Harvey-style vertical word cycle
+        ════════════════════════════════════════════════ -->
+        <section class="kl-scope" id="klScope" aria-label="What Kanan Labs works on">
+            <div class="kl-scope__inner">
+                <p class="kl-scope__label">
+                    One shipment bundle.<br>
+                    Multiple institutional handoffs.
+                </p>
+                <div class="kl-scope__column" aria-hidden="true">
+                    <div class="kl-scope__list" id="klScopeList">
+                        <div class="kl-scope__word">Shipment Evidence</div>
+                        <div class="kl-scope__word">Customs Clearance</div>
+                        <div class="kl-scope__word">Trade Insurance</div>
+                        <div class="kl-scope__word">Letter of Credit</div>
+                        <div class="kl-scope__word">Supply Chain Risk</div>
+                        <div class="kl-scope__word">Regulatory Strategy</div>
+                    </div>
                 </div>
-                <!-- Info Icon -->
-                <div class="map-info-trigger" id="infoTrigger">ⓘ</div>
-                <div class="map-info-tooltip" id="infoTooltip">
-                    <p>This platform tracks publicly reported AI-related policy, industry, and research developments
-                        across Indian states and at the national level.</p>
-                </div>
-            </div>
 
-            <!-- Feed Panel - Recent Updates -->
-            <div id="feedPanel" class="feed-panel">
-                <div class="feed-header">
-                    <h2>Recent Updates</h2>
-                    <p class="feed-subtitle">Live feed from across India</p>
+                <!-- Right column: CTA -->
+                <div class="kl-scope__cta">
+                    <a href="tradewatch.html" class="kl-scope__cta-btn">
+                        Explore TradeWatch
+                        <span aria-hidden="true">→</span>
+                    </a>
                 </div>
-                <div class="feed-content" id="feedContent">
-                    <!-- Feed items will be populated by JS -->
-                </div>
-            </div>
 
-            <!-- Side Panel for State Details -->
-            <div id="sidePanel" class="side-panel">
-                <div class="panel-header">
-                    <h2 id="panelTitle">State Name</h2>
-                    <button class="close-btn" onclick="closePanel()">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </button>
-                </div>
-                <div class="panel-content" id="panelContent">
-                    <!-- Content will be dynamically loaded -->
-                </div>
+                <!-- Screen-reader list (static, off-screen) -->
+                <ul style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" aria-label="What Kanan Labs works on">
+                    <li>Shipment Evidence</li>
+                    <li>Customs Clearance</li>
+                    <li>Trade Insurance</li>
+                    <li>Letter of Credit</li>
+                    <li>Supply Chain Risk</li>
+                    <li>Regulatory Strategy</li>
+                </ul>
             </div>
+        </section>
 
-            <!-- All India Panel (Full Width View) -->
-            <div id="allIndiaPanel" class="all-india-panel">
-                <div class="all-india-header">
-                    <!-- Mobile-only view toggle (mirrors product-hero toggle) -->
-                    <div class="all-india-panel-toggle" role="tablist">
-                        <button class="toggle-option" onclick="setViewMode('state')" role="tab" aria-selected="false">
-                            State View
+        <!-- ════════════════════════════════════════════════
+             B½. DRONA — The Regulatory Brain
+             Failure-mode tabs (left) vs With/Without contrast (right).
+        ════════════════════════════════════════════════ -->
+        <section class="kl-drona" id="klDrona" aria-label="Drona — the regulatory brain inside TradeWatch">
+
+            <div class="kl-drona__inner">
+
+                <div class="kl-drona__header">
+                    <span class="kl-drona__eyebrow">The Engine</span>
+                    <h2 class="kl-drona__title">
+                        Meet <em>Drona.</em> The brain that knows the law,<br>
+                        not just the language of it.
+                    </h2>
+                </div>
+
+                <div class="kl-drona__stage">
+
+                    <!-- Left rail: failure-mode tabs -->
+                    <div class="kl-drona__tabs" role="tablist" aria-label="What goes wrong without Drona">
+                        <button class="kl-drona__tab" type="button" role="tab" aria-selected="true"  data-drona-tab="0">
+                            <span class="kl-drona__tab-index">01</span>
+                            When the AI invents an HS code that doesn't exist.
+                            <span class="kl-drona__chevron" aria-hidden="true"></span>
                         </button>
-                        <button class="toggle-option active" role="tab" aria-selected="true">
-                            All India
+                        <button class="kl-drona__tab" type="button" role="tab" aria-selected="false" data-drona-tab="1">
+                            <span class="kl-drona__tab-index">02</span>
+                            When the model decides but cannot show why.
+                            <span class="kl-drona__chevron" aria-hidden="true"></span>
                         </button>
-                        <div class="toggle-indicator"></div>
+                        <button class="kl-drona__tab" type="button" role="tab" aria-selected="false" data-drona-tab="2">
+                            <span class="kl-drona__tab-index">03</span>
+                            When the same packet means different things in different jurisdictions.
+                            <span class="kl-drona__chevron" aria-hidden="true"></span>
+                        </button>
+                        <button class="kl-drona__tab" type="button" role="tab" aria-selected="false" data-drona-tab="3">
+                            <span class="kl-drona__tab-index">04</span>
+                            When yesterday's rule and today's rule are quietly the same answer.
+                            <span class="kl-drona__chevron" aria-hidden="true"></span>
+                        </button>
                     </div>
-                    <h2>All India Developments</h2>
-                    <p class="all-india-subtitle">National-level AI policy updates and developments</p>
-                </div>
-                <div class="all-india-content" id="allIndiaPanelContent">
-                    <!-- Content will be dynamically loaded -->
-                </div>
-            </div>
-        </main>
 
-        <!-- Shiny Text Section (Transition from Section 1 to Section 2) -->
-        <section class="shiny-text-container" id="shinyTextContainer">
-            <div class="shiny-text-wrapper">
-                <h2 class="shiny-text" id="shinyText">WEEKLY INSIGHTS</h2>
-                <p class="shiny-text-subtitle">A structured overview of India's AI capital, policy, and infrastructure
-                    movements.</p>
+                    <!-- Right side: two stacked contrast cards -->
+                    <div class="kl-drona__panels">
+                        <article class="kl-drona__panel" data-state="without" aria-live="polite">
+                            <span class="kl-drona__panel-label">Without Drona</span>
+                            <p class="kl-drona__panel-body"></p>
+                        </article>
+                        <article class="kl-drona__panel" data-state="with" aria-live="polite">
+                            <span class="kl-drona__panel-label">With Drona</span>
+                            <p class="kl-drona__panel-body"></p>
+                        </article>
+                    </div>
+
+                </div>
+
+                <div class="kl-drona__close">
+                    <p class="kl-drona__close-line">Provenance as product. Every line points home.</p>
+                </div>
+
             </div>
         </section>
 
-        <!-- Section 2: Strategic Insights -->
-        <section class="strategic-insights-section" id="strategicInsightsSection">
-            <div class="strategic-insights-container">
-                <div class="strategic-bento-grid bento-section" id="strategicBentoGrid">
-                    <!-- Populated dynamically from data/strategic_insights.json -->
+        <!-- ════════════════════════════════════════════════
+             B¾. EVIDENCE PACKET WORKFLOW — How a packet is born
+             Five numbered stages, line-art icons, scroll-stagger reveal.
+        ════════════════════════════════════════════════ -->
+        <section class="kl-flow" id="klFlow" aria-label="How an evidence packet is born">
+            <div class="kl-flow__inner">
+
+                <div class="kl-flow__header">
+                    <span class="kl-flow__eyebrow">The Flow</span>
+                    <h2 class="kl-flow__title">
+                        A shipment becomes a fact. A fact meets the rules.<br>
+                        The rules produce a packet.
+                    </h2>
                 </div>
+
+                <ol class="kl-flow__stages">
+
+                    <li class="kl-flow__stage" data-stage="1">
+                        <span class="kl-flow__numeral" aria-hidden="true">I</span>
+                        <div class="kl-flow__icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="14" y="10" width="28" height="38" rx="1"/>
+                                <rect x="20" y="16" width="32" height="38" rx="1" opacity="0.55"/>
+                                <line x1="26" y1="24" x2="42" y2="24" opacity="0.55"/>
+                                <line x1="26" y1="30" x2="46" y2="30" opacity="0.55"/>
+                                <line x1="26" y1="36" x2="40" y2="36" opacity="0.55"/>
+                                <line x1="26" y1="42" x2="46" y2="42" opacity="0.55"/>
+                            </svg>
+                        </div>
+                        <h3 class="kl-flow__name">Documents</h3>
+                        <p class="kl-flow__desc">Invoices, bills of lading, packing lists, certificates of origin. In any format your team already uses.</p>
+                    </li>
+
+                    <li class="kl-flow__stage" data-stage="2">
+                        <span class="kl-flow__numeral" aria-hidden="true">II</span>
+                        <div class="kl-flow__icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="10" y="14" width="44" height="36" rx="1"/>
+                                <rect x="16" y="20" width="14" height="6"  stroke-dasharray="2 2"/>
+                                <rect x="32" y="20" width="16" height="6"  stroke-dasharray="2 2"/>
+                                <rect x="16" y="30" width="10" height="6"  stroke-dasharray="2 2"/>
+                                <rect x="28" y="30" width="20" height="6"  stroke-dasharray="2 2"/>
+                                <rect x="16" y="40" width="32" height="4"  stroke-dasharray="2 2"/>
+                            </svg>
+                        </div>
+                        <h3 class="kl-flow__name">Reading</h3>
+                        <p class="kl-flow__desc">Drona parses each document into a structured shipment fact model — bounded, source-located, replayable.</p>
+                    </li>
+
+                    <li class="kl-flow__stage" data-stage="3">
+                        <span class="kl-flow__numeral" aria-hidden="true">III</span>
+                        <div class="kl-flow__icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="20" cy="22" r="5"/>
+                                <circle cx="44" cy="22" r="5"/>
+                                <circle cx="20" cy="44" r="5"/>
+                                <circle cx="44" cy="44" r="5"/>
+                                <line x1="25" y1="22" x2="39" y2="22" opacity="0.4"/>
+                                <line x1="20" y1="27" x2="20" y2="39" opacity="0.4"/>
+                                <line x1="44" y1="27" x2="44" y2="39" opacity="0.4"/>
+                                <line x1="25" y1="44" x2="39" y2="44" opacity="0.4"/>
+                            </svg>
+                        </div>
+                        <h3 class="kl-flow__name">States</h3>
+                        <p class="kl-flow__desc">Every obligation resolves to Open, Blocked, Conditional, or Unclear against the live rule pack for your jurisdiction.</p>
+                    </li>
+
+                    <li class="kl-flow__stage" data-stage="4">
+                        <span class="kl-flow__numeral" aria-hidden="true">IV</span>
+                        <div class="kl-flow__icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="32" cy="22" r="6"/>
+                                <path d="M16 50c2-8 9-12 16-12s14 4 16 12"/>
+                                <path d="M14 56l36 0" stroke-dasharray="2 2" opacity="0.5"/>
+                                <path d="M22 56c2-2 5-3 10-3s8 1 10 3" opacity="0.7"/>
+                            </svg>
+                        </div>
+                        <h3 class="kl-flow__name">Review</h3>
+                        <p class="kl-flow__desc">A human reviewer attests. The system records who, when, and on what evidence.</p>
+                    </li>
+
+                    <li class="kl-flow__stage" data-stage="5">
+                        <span class="kl-flow__numeral" aria-hidden="true">V</span>
+                        <div class="kl-flow__icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="14" y="12" width="32" height="40" rx="1"/>
+                                <line x1="20" y1="22" x2="40" y2="22" opacity="0.55"/>
+                                <line x1="20" y1="28" x2="40" y2="28" opacity="0.55"/>
+                                <line x1="20" y1="34" x2="36" y2="34" opacity="0.55"/>
+                                <circle cx="44" cy="46" r="8" stroke="currentColor"/>
+                                <path d="M40 46l3 3 6-6" stroke="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="kl-flow__name">Packet</h3>
+                        <p class="kl-flow__desc">Out: a hash-chained, source-stamped packet you can hand to a customs officer, an underwriter, or a banker — and defend three years from now.</p>
+                    </li>
+
+                </ol>
+
+                <div class="kl-flow__close">
+                    <p class="kl-flow__close-line">Your junior analyst. On shift forever.</p>
+                </div>
+
             </div>
         </section>
 
-        <!-- Newsletter Orange Strip CTA — Floating above grid, full-width -->
-        <section class="newsletter-hero-section" id="newsletterHeroSection">
-            <div class="newsletter-hero-container">
-                <div class="newsletter-hero-text">
-                    <h3 class="newsletter-hero-title" id="newsletterHeroTitle">Subscribe to the Kanan Labs Weekly Brief
-                    </h3>
-                    <p class="newsletter-hero-subtitle" id="newsletterHeroSubtitle">Stay updated on the shifting
-                        landscape of India's AI revolution.</p>
-                </div>
-                <form class="newsletter-hero-form" id="newsletterHeroForm">
-                    <input type="email" placeholder="Enter your email" required autocomplete="email" />
-                    <button type="submit">Subscribe</button>
-                </form>
+        <!-- ════════════════════════════════════════════════
+             C–D. TRIPTYCH — Three Kanan Labs surfaces
+        ════════════════════════════════════════════════ -->
+        <section class="kl-triptych" aria-label="Kanan Labs — three surfaces">
+            <div class="kl-triptych__header">
+                <span class="kl-triptych__eyebrow">The Kanan Intelligence Stack</span>
             </div>
-            <div style="max-width: 960px; margin: 0 auto;">
-                <p class="newsletter-success-message" id="newsletterSuccessMsg">Thank you, looking forward to keeping
-                    you updated on India's AI revolution!</p>
-            </div>
-        </section>
+            <div class="kl-triptych__row">
 
-        <!-- Section 2.5: Sector Watch Platform -->
-        <section class="platform-section" id="platformSection">
-            <!-- Full-width header above the split — aligns with split's max-width -->
-            <div class="platform-header">
-                <h2 class="platform-title platform-animate" id="platformTitle">Sector Watch</h2>
-                <p class="platform-intro platform-animate">An AI-native advisory platform that helps businesses navigate
-                    trade, policy, and compliance complexity with confidence.</p>
-            </div>
-            <div class="platform-split">
-                <!-- LEFT: Telemetry Architecture Flowchart -->
-                <div class="platform-split__left">
-                    <div class="telemetry-grid">
-                        <!-- Node 01 — top left -->
-                        <div class="telemetry-node tg-n01 platform-animate">
-                            <span class="telemetry-node__id">[ SYS.NODE_01 ]</span>
-                            <h3 class="telemetry-node__title">GLOBAL POLICY INTELLIGENCE</h3>
-                            <p class="telemetry-node__body">We monitor trade, regulatory, and industrial policy
-                                developments across major markets and translate them into structured signals your
-                                business can act on. No PDFs. No static alerts. Just a continuously updated intelligence
-                                layer aligned to your sector.</p>
-                        </div>
-                        <!-- H-connector → -->
-                        <div class="telemetry-h-conn tg-hconn1" aria-hidden="true"><span
-                                class="telemetry-conn-dot"></span></div>
-                        <!-- Node 02 — top right -->
-                        <div class="telemetry-node tg-n02 platform-animate">
-                            <span class="telemetry-node__id">[ SYS.NODE_02 ]</span>
-                            <h3 class="telemetry-node__title">BUSINESS CONTEXT ENGINE</h3>
-                            <p class="telemetry-node__body">Every regulation does not apply to every company. We align
-                                global policy shifts with your products, markets, and operating footprint. You clearly
-                                see what matters, what does not, and where exposure is building.</p>
-                        </div>
-                        <!-- V-connector ↓ (right column) -->
-                        <div class="telemetry-v-conn tg-vconn" aria-hidden="true"><span
-                                class="telemetry-conn-dot"></span></div>
-                        <!-- Node 03 — bottom right -->
-                        <div class="telemetry-node tg-n03 platform-animate">
-                            <span class="telemetry-node__id">[ SYS.NODE_03 ]</span>
-                            <h3 class="telemetry-node__title">STRATEGIC RESPONSE MODELLING</h3>
-                            <p class="telemetry-node__body">When conditions change, you need clarity and speed. We
-                                evaluate impact scenarios and outline practical response pathways, whether that involves
-                                compliance alignment, market repositioning, or incentive utilisation.</p>
-                        </div>
-                        <!-- H-connector ← -->
-                        <div class="telemetry-h-conn telemetry-h-conn--rev tg-hconn2" aria-hidden="true"><span
-                                class="telemetry-conn-dot"></span></div>
-                        <!-- Node 04 — bottom left -->
-                        <div class="telemetry-node tg-n04 platform-animate">
-                            <span class="telemetry-node__id">[ SYS.NODE_04 ]</span>
-                            <h3 class="telemetry-node__title">EMBEDDED AI ADVISORY</h3>
-                            <p class="telemetry-node__body">Regulatory intelligence should not sit outside your
-                                operations. Our platform functions as a continuous advisory layer, delivering alerts,
-                                structured briefs, and decision support directly within your workflow.</p>
+                <!-- I · TradeWatch -->
+                <a href="tradewatch.html" class="kl-triptych__card"
+                   aria-label="TradeWatch — shipment-evidence intelligence">
+                    <div class="kl-triptych__img-wrap">
+                        <span class="kl-triptych__numeral" aria-hidden="true">I</span>
+                        <picture>
+                            <source type="image/webp" srcset="added-assets/Thumbnails/TW_-_TN.webp">
+                            <img class="kl-triptych__img"
+                                 src="added-assets/Thumbnails/TW_-_TN.jpg"
+                                 alt="Historical maritime trade scene — a winding river with tall ships approaching a port city"
+                                 loading="lazy"
+                                 decoding="async"
+                                 width="800"
+                                 height="1000">
+                        </picture>
+                        <div class="kl-triptych__overlay" aria-hidden="true">
+                            <p class="kl-triptych__overlay-desc">Evidence-ready shipment packets for customs, trade insurance, and LC workflows.</p>
+                            <span class="kl-triptych__overlay-cta">Explore →</span>
                         </div>
                     </div>
-                </div> <!-- end .platform-split__left -->
-                <!-- RIGHT: Sector Watch Video -->
-                <div class="platform-split__right">
-                    <div class="sector-video-wrapper">
-                        <video class="sector-video" autoplay loop muted playsinline disablepictureinpicture preload="none">
-                            <source src="added-assets/sector-watch-web-video-KL-HEVC.mp4" type="video/mp4; codecs=hvc1">
-                            <source src="added-assets/sector-watch-web-video-KL.webm" type="video/webm">
-                        </video>
+                    <div class="kl-triptych__label">
+                        <span class="kl-triptych__name">TradeWatch</span>
+                        <span class="kl-triptych__status">Active MVP</span>
+                        <p class="kl-triptych__desc-mobile">Evidence-ready shipment packets for customs, trade insurance, and LC workflows.</p>
+                        <span class="kl-triptych__name-rule" aria-hidden="true"></span>
                     </div>
-                </div>
+                </a>
+
+                <!-- II · India AI Tracker -->
+                <a href="tracker.html" class="kl-triptych__card"
+                   aria-label="India AI Tracker — live regulatory intelligence across India">
+                    <div class="kl-triptych__img-wrap">
+                        <span class="kl-triptych__numeral" aria-hidden="true">II</span>
+                        <picture>
+                            <source type="image/webp" srcset="added-assets/Thumbnails/IAT_-_TN.webp">
+                            <img class="kl-triptych__img"
+                                 src="added-assets/Thumbnails/IAT_-_TN.jpg"
+                                 alt="Victorian archival library with researchers consulting tall shelves of records"
+                                 loading="lazy"
+                                 decoding="async"
+                                 width="800"
+                                 height="1000">
+                        </picture>
+                        <div class="kl-triptych__overlay" aria-hidden="true">
+                            <p class="kl-triptych__overlay-desc">A live intelligence tool tracking AI policy and regulatory developments across India.</p>
+                            <span class="kl-triptych__overlay-cta">View Tracker →</span>
+                        </div>
+                    </div>
+                    <div class="kl-triptych__label">
+                        <span class="kl-triptych__name">India AI Tracker</span>
+                        <span class="kl-triptych__status">Public Research Asset</span>
+                        <p class="kl-triptych__desc-mobile">A live intelligence tool tracking AI policy and regulatory developments across India.</p>
+                        <span class="kl-triptych__name-rule" aria-hidden="true"></span>
+                    </div>
+                </a>
+
+                <!-- III · SectorWatch -->
+                <a href="sector-watch.html" class="kl-triptych__card"
+                   aria-label="SectorWatch — sector intelligence platform">
+                    <div class="kl-triptych__img-wrap">
+                        <span class="kl-triptych__numeral" aria-hidden="true">III</span>
+                        <picture>
+                            <source type="image/webp" srcset="added-assets/Thumbnails/SW_-_TN.webp">
+                            <img class="kl-triptych__img"
+                                 src="added-assets/Thumbnails/SW_-_TN.jpg"
+                                 alt="Antique cartographic map with hand-coloured territorial regions"
+                                 loading="lazy"
+                                 decoding="async"
+                                 width="800"
+                                 height="1000">
+                        </picture>
+                        <div class="kl-triptych__overlay" aria-hidden="true">
+                            <p class="kl-triptych__overlay-desc">Kanan's long-term trade intelligence platform for supply-chain, regulatory, and market-risk exposure.</p>
+                            <span class="kl-triptych__overlay-cta">Learn More →</span>
+                        </div>
+                    </div>
+                    <div class="kl-triptych__label">
+                        <span class="kl-triptych__name">SectorWatch</span>
+                        <span class="kl-triptych__status">Platform Roadmap</span>
+                        <p class="kl-triptych__desc-mobile">Kanan's long-term trade intelligence platform for supply-chain, regulatory, and market-risk exposure.</p>
+                        <span class="kl-triptych__name-rule" aria-hidden="true"></span>
+                    </div>
+                </a>
+
             </div>
         </section>
 
-        <!-- MANIFESTO: Full-viewport scroll-reveal statement -->
-        <section class="manifesto-section" id="manifestoSection">
-            <div id="scrollRevealContainer" class="manifesto-mount"></div>
+        <!-- ════════════════════════════════════════════════
+             D½. SECTORS — Built for the lanes you actually trade
+             Reducto-style bento: 6 tiles, warm peach/cream, pilot-facing.
+        ════════════════════════════════════════════════ -->
+        <section class="kl-sectors" id="klSectors" aria-label="Sectors and trade lanes TradeWatch starts in">
+            <div class="kl-sectors__inner">
+
+                <div class="kl-sectors__header">
+                    <div class="kl-sectors__title-block">
+                        <span class="kl-sectors__eyebrow">The Lanes</span>
+                        <h2 class="kl-sectors__title">We start narrow. <em>Deliberately.</em></h2>
+                    </div>
+                    <p class="kl-sectors__sub">
+                        TradeWatch ships first to the trade lanes where the cost of being wrong is highest and the evidence trail is longest.
+                    </p>
+                </div>
+
+                <div class="kl-sectors__grid">
+
+                    <article class="kl-sectors__tile">
+                        <span class="kl-sectors__tile-num">01</span>
+                        <div class="kl-sectors__tile-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 20h3l2-7h11l3 5h5v5h-3"/>
+                                <circle cx="9" cy="23" r="2.4"/>
+                                <circle cx="22" cy="23" r="2.4"/>
+                                <path d="M19 9l-1 4M20 9l3.5 5" stroke-dasharray="1.5 1.8"/>
+                            </svg>
+                        </div>
+                        <h3 class="kl-sectors__tile-name">EV Exporters</h3>
+                        <p class="kl-sectors__tile-desc">Electric vehicles moving between India, the EU, and the US — inbound or outbound — where battery provenance, lithium chain-of-custody, and dual-use controls collide.</p>
+                    </article>
+
+                    <article class="kl-sectors__tile">
+                        <span class="kl-sectors__tile-num">02</span>
+                        <div class="kl-sectors__tile-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="13" cy="13" r="7"/>
+                                <circle cx="19" cy="13" r="7"/>
+                                <circle cx="16" cy="19" r="7"/>
+                            </svg>
+                        </div>
+                        <h3 class="kl-sectors__tile-name">Complex Issues</h3>
+                        <p class="kl-sectors__tile-desc">Where legal, regulatory, and customs questions tangle, our depth makes the hard call defensible — like a contestable HS classification that would otherwise become a Section 149 amendment six months later.</p>
+                    </article>
+
+                    <article class="kl-sectors__tile">
+                        <span class="kl-sectors__tile-num">03</span>
+                        <div class="kl-sectors__tile-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="6" width="22" height="20" rx="1"/>
+                                <line x1="9" y1="12" x2="23" y2="12"/>
+                                <line x1="9" y1="16" x2="20" y2="16"/>
+                                <line x1="9" y1="20" x2="17" y2="20"/>
+                                <path d="M20 22l3 3 4-5" stroke="var(--kl-red, #db4a2b)" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="kl-sectors__tile-name">L/C Pre-Presentation</h3>
+                        <p class="kl-sectors__tile-desc">Before your banker presents, every document is checked against the credit against the rule pack. Six weeks from kickoff to first live packet.</p>
+                    </article>
+
+                    <article class="kl-sectors__tile">
+                        <span class="kl-sectors__tile-num">04</span>
+                        <div class="kl-sectors__tile-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 22c2-1 3-1 5 0s3 1 5 0 3-1 5 0 3 1 5 0 3-1 6 0"/>
+                                <path d="M6 14h6l1-5h6l1 5h6" />
+                                <line x1="14" y1="9" x2="14" y2="14" opacity="0.5"/>
+                                <line x1="18" y1="9" x2="18" y2="14" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="kl-sectors__tile-name">Marine Cargo</h3>
+                        <p class="kl-sectors__tile-desc">Underwriting-grade evidence: compliance status, loss history, customs clearance probability — packaged for the broker.</p>
+                    </article>
+
+                    <article class="kl-sectors__tile">
+                        <span class="kl-sectors__tile-num">05</span>
+                        <div class="kl-sectors__tile-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="6" y="4" width="18" height="24" rx="1"/>
+                                <line x1="10" y1="10" x2="20" y2="10"/>
+                                <line x1="10" y1="14" x2="20" y2="14"/>
+                                <line x1="10" y1="18" x2="17" y2="18"/>
+                                <circle cx="20" cy="22" r="3" stroke="var(--kl-red, #db4a2b)" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="kl-sectors__tile-name">Shipping Bill Readiness</h3>
+                        <p class="kl-sectors__tile-desc">Pre-filing reconciliation between what you're declaring, what you're shipping, and what India permits.</p>
+                    </article>
+
+                    <article class="kl-sectors__tile">
+                        <span class="kl-sectors__tile-num">06</span>
+                        <div class="kl-sectors__tile-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 4l10 5v6c0 7-5 11-10 13C11 26 6 22 6 15V9z"/>
+                                <path d="M12 16l3 3 6-7" stroke="var(--kl-red, #db4a2b)" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="kl-sectors__tile-name">e-BRC / RoDTEP Closing</h3>
+                        <p class="kl-sectors__tile-desc">Closing-loop evidence so your incentives don't get clawed back at audit.</p>
+                    </article>
+
+                </div>
+
+                <div class="kl-sectors__close">
+                    <p class="kl-sectors__close-line">
+                        Your sector isn't here yet?
+                        <a class="kl-sectors__close-link" href="#klWaitlist">It's on the map.</a>
+                    </p>
+                </div>
+
+            </div>
         </section>
 
-        <!-- Waitlist Orange Strip CTA -->
-        <section class="waitlist-hero-section" id="waitlistHeroSection">
-            <div class="waitlist-hero-container">
-                <div class="waitlist-hero-text">
-                    <h3 class="waitlist-hero-title" id="waitlistHeroTitle">Request Platform Access</h3>
-                    <p class="waitlist-hero-subtitle" id="waitlistHeroSubtitle">Join the waitlist for early access to
-                        Kanan Labs' intelligence platform.</p>
+        <!-- ════════════════════════════════════════════════
+             E. MANIFESTO — word-reveal scroll statement
+        ════════════════════════════════════════════════ -->
+        <section class="kl-manifesto" aria-label="Kanan Labs manifesto">
+            <div class="kl-manifesto__stage">
+                <h2 class="kl-manifesto__heading" id="klManifestoReveal">
+                    <span class="kl-word">Trade</span>
+                    <span class="kl-word">has</span>
+                    <span class="kl-word">become</span>
+                    <span class="kl-word">fragmented</span>
+                    <span class="kl-word">and</span>
+                    <span class="kl-word">evidence&#8209;intensive.</span>
+                    <span class="kl-word">The</span>
+                    <span class="kl-word">next</span>
+                    <span class="kl-word">era</span>
+                    <span class="kl-word">will</span>
+                    <span class="kl-word">be</span>
+                    <span class="kl-word">defined</span>
+                    <span class="kl-word">by</span>
+                    <span class="kl-word">a</span>
+                    <span class="kl-word">company&#8217;s</span>
+                    <span class="kl-word">ability</span>
+                    <span class="kl-word">to</span>
+                    <span class="kl-word">maintain</span>
+                    <span class="kl-word">a</span>
+                    <span class="kl-word">defensible,</span>
+                    <span class="kl-word">continuously</span>
+                    <span class="kl-word">updated</span>
+                    <span class="kl-word">evidence</span>
+                    <span class="kl-word">position</span>
+                    <span class="kl-word">across</span>
+                    <span class="kl-word">customs,</span>
+                    <span class="kl-word">insurance,</span>
+                    <span class="kl-word">finance,</span>
+                    <span class="kl-word">regulation,</span>
+                    <span class="kl-word">and</span>
+                    <span class="kl-word">supply&#8209;chain</span>
+                    <span class="kl-word">risk.</span>
+                    <br>
+                    <span class="kl-word kl-word--accent">Kanan</span>
+                    <span class="kl-word kl-word--accent">is</span>
+                    <span class="kl-word kl-word--accent">building</span>
+                    <span class="kl-word kl-word--accent">the</span>
+                    <span class="kl-word kl-word--accent">intelligence</span>
+                    <span class="kl-word kl-word--accent">layer</span>
+                    <span class="kl-word kl-word--accent">for</span>
+                    <span class="kl-word kl-word--accent">that</span>
+                    <span class="kl-word kl-word--accent">problem.</span>
+                </h2>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════════════════
+             G. PLATFORM ACCESS BANNER — orange transition
+        ════════════════════════════════════════════════ -->
+        <section class="kl-waitlist" id="klWaitlist">
+            <div class="kl-waitlist__inner">
+                <div class="kl-waitlist__text">
+                    <h3 class="kl-waitlist__title">Request Platform Access</h3>
+                    <p class="kl-waitlist__sub">Join the waitlist for early access to Kanan Labs' intelligence platform.</p>
                 </div>
-                <form class="waitlist-hero-form" id="platformWaitlistForm">
-                    <input type="text" name="name" placeholder="Full Name" required />
-                    <input type="text" name="company" placeholder="Company / Organisation" required />
-                    <input type="email" name="email" placeholder="Work Email" required />
+                <form class="kl-waitlist__form" id="platformWaitlistForm">
+                    <input type="text" name="name" placeholder="Full Name" required autocomplete="name">
+                    <input type="text" name="company" placeholder="Company / Organisation" required>
+                    <input type="email" name="email" placeholder="Work Email" required autocomplete="email">
+                    <!-- Honeypot: visually hidden, real humans never see it; bots fill all fields -->
+                    <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;">
                     <button type="submit">Join Waitlist</button>
                 </form>
             </div>
-            <div style="max-width: 960px; margin: 0 auto;">
-                <p class="waitlist-success-message" id="platformWaitlistSuccess">Thank you — we'll be in touch shortly
-                    with platform access details.</p>
+            <div class="kl-waitlist__inner" style="padding-top:0; padding-bottom:0;">
+                <p class="kl-waitlist__success" id="platformWaitlistSuccess">Thank you — we'll be in touch shortly.</p>
             </div>
         </section>
 
-        <!-- Section 3: Strategic Advisory Layer -->
-        <section class="advisory-section" id="advisorySection">
-            <canvas class="advisory-section__grid" id="advisory-grid"></canvas>
-            <div class="advisory-container">
-                <!-- Content rendered dynamically by advisory-section.js -->
-            </div>
-        </section>
-
-        <!-- Transition zone: Advisory → Identity -->
+        <!-- ════════════════════════════════════════════════
+             F. IDENTITY — Founder / Why Kanan exists
+        ════════════════════════════════════════════════ -->
         <div class="identity-transition" aria-hidden="true"></div>
+        <section class="kl-founder" id="founderNote" aria-labelledby="founderHeadline">
+            <div class="kl-founder__inner">
 
-        <!-- Section 4: Identity -->
-        <section class="identity-section" id="identitySection">
-            <div class="identity-container">
-                <!-- Content rendered dynamically by identity-section.js -->
+                <!-- HEADER: eyebrow + headline + rule -->
+                <div class="kl-founder__header">
+                    <span class="kl-founder__eyebrow">Founder Note</span>
+                    <h2 class="kl-founder__headline" id="founderHeadline">
+                        Kanan Labs is being built for a world where trade decisions
+                        must be <em>evidenced</em>, not assumed.
+                    </h2>
+                    <hr class="kl-founder__rule" aria-hidden="true">
+                </div>
+
+                <!-- TWO-COLUMN BODY: left rail + navy doctrine card -->
+                <div class="kl-founder__columns">
+
+                    <!-- LEFT RAIL: CTAs top, photo + signature bottom -->
+                    <aside class="kl-founder__rail">
+                        <div class="kl-founder__cta-block">
+                            <span class="kl-founder__cta-eyebrow">Get Involved</span>
+                            <a href="#klWaitlist" class="kl-founder__cta-primary">
+                                Join Pilot for TradeWatch
+                            </a>
+                            <a href="mailto:sreenath@kananlabs.com?subject=Connect%20with%20Founder"
+                               class="kl-founder__cta-secondary">
+                                Connect with Founder
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+
+                        <hr class="kl-founder__rail-divider" aria-hidden="true">
+
+                        <div class="kl-founder__attribution">
+                            <figure class="kl-founder__portrait">
+                                <img src="added-assets/SG-TRANSPARENT.png"
+                                     alt="Sreenath Govindarajan, Founder of Kanan Labs"
+                                     loading="lazy">
+                            </figure>
+                            <div class="kl-founder__signature">
+                                <p class="kl-founder__sig-name">Sreenath Govindarajan</p>
+                                <p class="kl-founder__sig-role">Founder, Kanan Labs</p>
+                                <p class="kl-founder__sig-disciplines">
+                                    Cross-border law &middot; AI governance &middot;
+                                    Regulatory strategy &middot; Trade intelligence
+                                </p>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- RIGHT: NAVY DOCTRINE CONTAINER -->
+                    <article class="kl-founder__doctrine-card">
+                        <canvas id="founder-grid" class="kl-founder__doctrine-grid" aria-hidden="true"></canvas>
+
+                        <div class="kl-founder__doctrine-inner">
+                            <span class="kl-founder__doctrine-eyebrow">The Operating Doctrine</span>
+
+                            <div class="kl-founder__note">
+                                <p>
+                                    I founded Kanan Labs from a simple conviction: cross-border trade
+                                    is no longer governed only by access, price, and logistics. It is
+                                    increasingly governed by whether a firm can prove its position
+                                    across regulators, brokers, banks, insurers, and supply-chain
+                                    counterparties.
+                                </p>
+                                <p>
+                                    My training across multiple legal systems shaped how I understand
+                                    this problem. Rules do not operate in isolation. They move through
+                                    institutions, documents, incentives, and evidentiary burdens.
+                                    Kanan is being built to turn that complexity into structured
+                                    intelligence that firms can actually use.
+                                </p>
+                            </div>
+
+                            <ol class="kl-founder__doctrine" aria-label="Operating doctrine">
+                                <li class="kl-founder__tenet">
+                                    <span class="kl-founder__numeral" aria-hidden="true">I</span>
+                                    <h3 class="kl-founder__tenet-title">Evidence before automation</h3>
+                                    <p class="kl-founder__tenet-line">
+                                        We do not treat trade documentation as form generation.
+                                        We treat it as an evidence system.
+                                    </p>
+                                </li>
+                                <li class="kl-founder__tenet">
+                                    <span class="kl-founder__numeral" aria-hidden="true">II</span>
+                                    <h3 class="kl-founder__tenet-title">Reasoning before output</h3>
+                                    <p class="kl-founder__tenet-line">
+                                        Every packet should preserve the source, the rule, the
+                                        reasoning path, and the reviewer decision.
+                                    </p>
+                                </li>
+                                <li class="kl-founder__tenet">
+                                    <span class="kl-founder__numeral" aria-hidden="true">III</span>
+                                    <h3 class="kl-founder__tenet-title">Infrastructure before interface</h3>
+                                    <p class="kl-founder__tenet-line">
+                                        TradeWatch is the first deployment. The larger undertaking
+                                        is an intelligence layer for regulated trade.
+                                    </p>
+                                </li>
+                            </ol>
+                        </div>
+                    </article>
+
+                </div>
             </div>
         </section>
 
+        <!-- ════════════════════════════════════════════════
+             Z. FOOTER
+        ════════════════════════════════════════════════ -->
         <footer class="kl-footer">
             <div class="kl-footer__inner">
-
                 <div class="kl-footer__content">
 
                     <!-- LEFT: Brand zone -->
                     <div class="kl-footer__brand">
-
                         <img src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png" alt="Kanan Labs"
-                            class="kl-footer__logo" draggable="false">
+                             class="kl-footer__logo" draggable="false">
+                        <p class="kl-footer__tagline">Trade Intelligence Infrastructure</p>
 
-                        <p class="kl-footer__tagline">India's AI Governance Intelligence</p>
-
-                        <!-- Newsletter mini-form -->
                         <div>
                             <p class="kl-footer__nl-label">Weekly Brief</p>
                             <form class="kl-footer__nl-form" id="footerNewsletterForm">
                                 <input type="email" class="kl-footer__nl-input" placeholder="Your email address"
-                                    autocomplete="email" required>
+                                       autocomplete="email" required>
                                 <button type="submit" class="kl-footer__nl-submit">Subscribe</button>
                             </form>
                         </div>
 
-                        <!-- Schedule Consultation -->
-                        <button class="kl-footer__consult" type="button"
-                            onclick="if(window.contactPanel) window.contactPanel.open()">
-                            Schedule Consultation →
-                        </button>
-
+                        <a href="tradewatch.html" class="kl-footer__consult">
+                            Explore TradeWatch →
+                        </a>
                     </div>
 
                     <!-- RIGHT: Sitemap grid -->
                     <div class="kl-footer__sitemap">
 
-                        <!-- Col 1: Advisory -->
                         <div class="kl-footer__col">
-                            <h4 class="kl-footer__col-heading">Advisory</h4>
+                            <h4 class="kl-footer__col-heading">Platform</h4>
                             <ul class="kl-footer__col-links">
-                                <li><a href="#" data-engagement="Regulatory &amp; Product Advisory">Regulatory
-                                        Trajectory</a></li>
-                                <li><a href="#" data-engagement="Incentive &amp; Scheme Structuring">Incentive
-                                        Structuring</a></li>
-                                <li><a href="#" data-engagement="Governance Assessment">Governance Readiness</a></li>
-                                <li><a href="#" data-engagement="Cross-Border Readiness">Cross-Border Advisory</a></li>
+                                <li><a href="tradewatch.html">TradeWatch</a></li>
+                                <li><a href="tracker.html">India AI Tracker</a></li>
+                                <li><a href="sector-watch.html">SectorWatch</a></li>
+                                <li><a href="publications.html">Publications</a></li>
                             </ul>
                         </div>
 
-                        <!-- Col 2: Company -->
                         <div class="kl-footer__col">
                             <h4 class="kl-footer__col-heading">Company</h4>
                             <ul class="kl-footer__col-links">
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="sector-watch.html">Sector Watch</a></li>
-                                <li><a href="publications.html">Publications</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="team.html">Team</a></li>
                                 <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
                             </ul>
                         </div>
 
-                        <!-- Col 3: Follow -->
                         <div class="kl-footer__col">
                             <h4 class="kl-footer__col-heading">Follow</h4>
                             <ul class="kl-footer__col-links">
-                                <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank"
-                                        rel="noopener">LinkedIn</a></li>
+                                <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank" rel="noopener">LinkedIn</a></li>
                                 <li><a href="#" target="_blank" rel="noopener">Twitter</a></li>
                                 <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
                             </ul>
                         </div>
 
-                        <!-- Col 4: Legal -->
                         <div class="kl-footer__col">
                             <h4 class="kl-footer__col-heading">Legal</h4>
                             <ul class="kl-footer__col-links">
@@ -390,30 +1726,207 @@
                     </div>
                 </div>
 
-                <!-- BOTTOM: Watermark logo -->
                 <div class="kl-footer__watermark">
                     <img src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png" alt=""
-                        class="kl-footer__watermark-img" aria-hidden="true" draggable="false">
+                         class="kl-footer__watermark-img" aria-hidden="true" draggable="false">
                 </div>
-
             </div>
         </footer>
+
     </div>
 
-    <script src="js/infrastructure-grid.js"></script>
-    <script src="js/magic-bento.js"></script>
-    <script src="js/shiny-text.js"></script>
-    <script src="js/brevo-subscribe.js"></script>
-    <script src="js/strategic-insights.js"></script>
-    <script src="js/platform-section.js"></script>
+    <!-- GSAP + ScrollTrigger — deferred, execute in order; inline animation scripts use window 'load' or DOMContentLoaded -->
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <!-- Manifesto word-reveal: GSAP timeline drives animation directly (no CSS transitions) -->
+    <script defer>
+    window.addEventListener('load', function () {
+        var heading = document.getElementById('klManifestoReveal');
+        if (!heading) return;
+        var words = Array.prototype.slice.call(heading.querySelectorAll('.kl-word'));
+        var accentWords = Array.prototype.slice.call(heading.querySelectorAll('.kl-word--accent'));
+        if (!words.length) return;
 
-    <script src="dist/scroll-reveal-bundle.js" defer></script>
-    <script src="js/advisory-section.js"></script>
-    <script src="js/contact-panel.js"></script>
-    <script src="js/ripple-grid.js"></script>
-    <script src="js/identity-section.js"></script>
-    <script src="js/staggered-menu.js"></script>
-    <script src="js/app-final.js?v=20"></script>
+        /* Reduced motion: reveal all immediately */
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            words.forEach(function (w) { w.style.opacity='1'; w.style.filter='none'; w.style.transform='none'; });
+            accentWords.forEach(function (w) { w.style.color='#db4a2b'; });
+            return;
+        }
+
+        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+            words.forEach(function (w) { w.style.opacity='1'; w.style.filter='none'; w.style.transform='none'; });
+            accentWords.forEach(function (w) { w.style.color='#db4a2b'; });
+            return;
+        }
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        /* GSAP sets initial state as inline styles — owns the properties, no CSS transition fight */
+        gsap.set(words, { opacity: 0.12, filter: 'blur(4px)', rotation: 2, transformOrigin: '0% 80%' });
+        /* Orange colour present at all scroll positions so accent words reveal in correct colour */
+        gsap.set(accentWords, { color: '#db4a2b' });
+
+        /* Single timeline: GSAP animates opacity/filter/rotation directly */
+        var tl = gsap.timeline();
+        tl.to(words, {
+            opacity: 1,
+            filter: 'blur(0px)',
+            rotation: 0,
+            ease: 'none',
+            stagger: { each: 0.04, from: 'start' }
+        });
+
+        /* ScrollTrigger drives the timeline playhead — works on every scroll pass, forward and back */
+        ScrollTrigger.create({
+            trigger: heading,
+            start: 'top bottom',
+            end: 'top 45%',
+            scrub: 1,
+            animation: tl,
+            invalidateOnRefresh: true
+        });
+    });
+    </script>
+    <script defer>
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                if (window.ScrollTrigger) window.ScrollTrigger.refresh();
+            }, 300);
+        });
+    </script>
+
+    <!-- Word reel: 14-word linear buffer — no circular math, no collisions -->
+    <script defer>
+        window.addEventListener('load', function () {
+            if (typeof gsap === 'undefined') return;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            var list = document.getElementById('klScopeList');
+            if (!list) return;
+
+            // Defer SLOT measurement to after first paint so Cormorant Garamond is rendered
+            requestAnimationFrame(function () { requestAnimationFrame(function () {
+
+            var origWords = Array.from(list.querySelectorAll('.kl-scope__word'));
+            if (origWords.length < 2) return;
+
+            var N = origWords.length; // 7
+
+            // Append N clones — gives us a staging buffer below the visible zone
+            origWords.forEach(function(w) {
+                var clone = w.cloneNode(true);
+                clone.setAttribute('aria-hidden', 'true');
+                list.appendChild(clone);
+            });
+
+            var words     = Array.from(list.querySelectorAll('.kl-scope__word')); // 14
+            var SLOT      = origWords[0].offsetHeight;
+            var SCROLL_DUR = 0.75;
+            var HOLD       = 0.75;
+
+            // Opacity by slot distance — no mask, GSAP controls visibility
+            function slotOpacity(slot) {
+                var abs = Math.abs(slot);
+                if (abs === 0) return 1;
+                if (abs === 1) return 0.3;
+                if (abs === 2) return 0.1;
+                return 0;
+            }
+
+            // word i starts at slot (i - (N-1)) → range -(N-1) to +N = -6 to +7
+            words.forEach(function(w, i) {
+                w._slot = i - (N - 1);
+                gsap.set(w, { yPercent: -50, y: w._slot * SLOT, opacity: slotOpacity(w._slot) });
+            });
+
+            var EXIT_THRESHOLD = -N;
+            var REENTRY_SLOT   =  N;
+
+            function advance() {
+                words.forEach(function(w) {
+                    var ns = w._slot - 1;
+                    if (ns <= EXIT_THRESHOLD) {
+                        w._slot = REENTRY_SLOT;
+                        gsap.set(w, { y: REENTRY_SLOT * SLOT, opacity: 0, overwrite: true });
+                    } else {
+                        w._slot = ns;
+                        gsap.to(w, {
+                            y: ns * SLOT,
+                            opacity: slotOpacity(ns),
+                            duration: SCROLL_DUR,
+                            ease: 'power2.inOut',
+                            overwrite: true
+                        });
+                    }
+                });
+            }
+
+            setInterval(advance, (SCROLL_DUR + HOLD) * 1000);
+
+            }); }); // double-rAF font guard
+        });
+    </script>
+
+    <!-- Platform waitlist form → /api/early-access -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('platformWaitlistForm');
+            const success = document.getElementById('platformWaitlistSuccess');
+            if (!form || !success) return;
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const btn = form.querySelector('button[type="submit"]');
+                const data = new FormData(form);
+                const payload = {
+                    name: (data.get('name') || '').toString().trim(),
+                    company: (data.get('company') || '').toString().trim(),
+                    email: (data.get('email') || '').toString().trim(),
+                    company_website: (data.get('company_website') || '').toString()
+                };
+
+                if (!payload.name || !payload.email) return;
+
+                const originalLabel = btn.textContent;
+                btn.disabled = true;
+                btn.textContent = 'Submitting…';
+                success.classList.remove('visible');
+                success.style.color = '';
+                success.textContent = "Thank you — we'll be in touch shortly.";
+
+                try {
+                    const res = await fetch('/api/early-access', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    if (!res.ok) {
+                        const err = await res.json().catch(() => ({}));
+                        throw new Error(err.message || 'Request failed');
+                    }
+                    form.style.display = 'none';
+                    success.classList.add('visible');
+                } catch (err) {
+                    success.style.color = '#ff8a8a';
+                    success.textContent = err.message || 'Something went wrong. Please try again.';
+                    success.classList.add('visible');
+                    btn.disabled = false;
+                    btn.textContent = originalLabel;
+                }
+            });
+        });
+    </script>
+
+    <!-- Scripts (deferred — non-render-blocking) -->
+    <script src="js/infrastructure-grid.js" defer></script>
+    <script src="js/founder-grid.js" defer></script>
+    <script src="js/brevo-subscribe.js" defer></script>
+    <script src="js/staggered-menu.js" defer></script>
+    <script src="js/tw-demo-clone.js" defer></script>
+    <script src="js/triptych.js" defer></script>
+    <script src="js/drona-tabs.js" defer></script>
+    <script src="js/evidence-workflow.js" defer></script>
 </body>
 
 </html>

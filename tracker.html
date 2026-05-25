@@ -46,18 +46,16 @@
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="e4NN5-5uDwKoApKLmA1I8ZDmL1Dy0BGhlP-IpKbEbSo" />
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/vendor/leaflet/leaflet.css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Six+Caps&display=swap"
         rel="stylesheet">
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <link rel="stylesheet" href="css/styles-v2.css?v=21">
     <link rel="stylesheet" href="css/staggered-menu.css?v=2">
     <link rel="stylesheet" href="css/strategic-insights.css?v=5">
     <link rel="stylesheet" href="css/shiny-text.css">
 
     <link rel="stylesheet" href="css/contact-panel.css?v=1">
-    <link rel="stylesheet" href="css/identity-section.css?v=7">
     <link rel="stylesheet" href="css/footer.css?v=3">
 </head>
 
@@ -191,16 +189,6 @@
             </div>
         </section>
 
-        <!-- Transition zone: Insights → Identity -->
-        <div class="identity-transition" aria-hidden="true"></div>
-
-        <!-- Section 3: Identity (Founder) -->
-        <section class="identity-section" id="identitySection">
-            <div class="identity-container">
-                <!-- Content rendered dynamically by identity-section.js -->
-            </div>
-        </section>
-
         <footer class="kl-footer">
             <div class="kl-footer__inner">
 
@@ -299,10 +287,9 @@
 
     <script src="js/contact-panel.js"></script>
     <script src="js/ripple-grid.js"></script>
-    <script src="js/identity-section.js"></script>
     <script src="js/staggered-menu.js"></script>
     <!-- Leaflet moved from <head> to avoid render-blocking; app-final.js depends on it -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/vendor/leaflet/leaflet.js"></script>
     <script src="js/app-final.js?v=20"></script>
 </body>
 

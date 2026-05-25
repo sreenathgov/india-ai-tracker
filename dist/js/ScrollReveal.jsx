@@ -40,6 +40,11 @@ const ScrollReveal = ({
         ? scrollContainerRef.current
         : window;
 
+    // Force a position refresh after layout settles — fixes stale trigger
+    // positions when new sections pushed the manifesto element further down.
+    // Declared outside gsap.context so the cleanup return can clear it.
+    let refreshTimer = null;
+
     // gsap.context scopes all animations to this component — cleanup only
     // reverts these tweens, never touching CDN ScrollTriggers for other sections
     const ctx = gsap.context(() => {
@@ -54,7 +59,8 @@ const ScrollReveal = ({
             scroller,
             start: 'top bottom',
             end: rotationEnd,
-            scrub: 1
+            scrub: 1,
+            invalidateOnRefresh: true
           }
         }
       );
@@ -79,13 +85,22 @@ const ScrollReveal = ({
             scroller,
             start: 'top bottom-=20%',
             end: wordAnimationEnd,
-            scrub: 1
+            scrub: 1,
+            invalidateOnRefresh: true
           }
         }
       );
+
+      refreshTimer = setTimeout(() => {
+        if (window.ScrollTrigger) window.ScrollTrigger.refresh();
+      }, 400);
+
     }, el);
 
-    return () => ctx.revert();
+    return () => {
+      if (refreshTimer) clearTimeout(refreshTimer);
+      ctx.revert();
+    };
   }, [scrollContainerRef, enableBlur, baseRotation, baseOpacity, rotationEnd, wordAnimationEnd, blurStrength]);
 
   return (

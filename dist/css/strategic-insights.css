@@ -447,7 +447,7 @@ html {
     .bento-stat-card {
         grid-column: span 1;
         padding: 1.1rem 0.75rem;
-        min-height: auto;
+        min-height: 130px;
     }
 
     .bento-insight-card {
@@ -475,8 +475,10 @@ html {
     }
 
     .bento-stat-card .stat-value {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         margin-bottom: 0.4rem;
+        line-height: 1.2;
+        padding-top: 0.25rem;
     }
 
     .bento-stat-card .stat-title {

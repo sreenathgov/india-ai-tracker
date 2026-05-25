@@ -29,10 +29,10 @@
 
 .manifesto-section .scroll-reveal-text {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(1.6rem, 3vw, 3rem);
+  font-size: clamp(1.25rem, 2.1vw, 2.2rem);
   font-weight: 500;
-  line-height: 1.45;
-  letter-spacing: -0.01em;
+  line-height: 1.5;
+  letter-spacing: -0.005em;
   color: #f4ebd0;
   text-align: center;
 }

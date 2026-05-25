@@ -1,9 +1,134 @@
 {
   "state": "JH",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 11,
+        "title": "Ranchi Flyovers Approved: Rs 820 Crore Boost for Traffic Congestion Relief &amp; Mobility",
+        "url": "https://timesofindia.indiatimes.com/city/ranchi/ranchi-flyovers-approved-rs-820-crore-boost-for-traffic-congestion-relief-mobility/articleshow/130587054.cms",
+        "summary": "Jharkhand's cabinet has approved Rs 820 crore for two new flyovers in Argora and Chiroundi to alleviate traffic congestion. The state will also establish a State School Standards Authority and an Innovation and Incubation Centre Foundation in Palamu. An MoU with Google for AI innovation has been approved, further boosting the state's development initiatives.",
+        "date_published": "2026-04-29",
+        "source_name": "Times of India - Ranchi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "JH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [],
     "Major AI Developments": [
+      {
+        "id": 8,
+        "title": "Apna Mart lays off 10% of workforce, shifts base from Bengaluru to Gurugram",
+        "url": "https://entrackr.com/news/apna-mart-lays-off-10-of-workforce-shifts-base-from-bengaluru-to-gurugram-11805807",
+        "summary": "Apna Mart, a grocery delivery startup, has laid off around 10% of its workforce, impacting 35-40 employees, as part of a restructuring exercise linked to AI adoption. The company is relocating its base from Bengaluru to Gurugram, with product and technology teams already moved. The layoffs were due to AI-led automation making some roles redundant and relocation not being feasible for certain employees.",
+        "date_published": "2026-05-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "JH",
+          "KA",
+          "CG",
+          "WB",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Jharkhand Partners with Google LLC for AI-Powered Healthcare Modernization",
+        "url": "https://timesofindia.indiatimes.com/city/ranchi/jharkhand-partners-with-google-llc-for-ai-powered-healthcare-modernization/articleshow/130722889.cms",
+        "summary": "Jharkhand's health department has partnered with Google LLC to integrate artificial intelligence into its healthcare system. The initiative aims to modernize hospitals, medical colleges, and rural health centers, improving the quality and accessibility of medical services. This partnership seeks to provide high-quality and efficient healthcare to all citizens in Jharkhand.",
+        "date_published": "2026-05-03",
+        "source_name": "Times of India - Ranchi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "JH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "Governor Gangwar inaugurates IInvenTiv 2026 at IIT (ISM) Dhanbad; Aims to transform tech advances into real-world solutions",
+        "url": "https://timesofindia.indiatimes.com/city/ranchi/governor-gangwar-inaugurates-iinventiv-2026-at-iit-ism-dhanbad-aims-to-transform-tech-advances-into-real-world-solutions/articleshow/130069251.cms",
+        "summary": "Jharkhand Governor Santosh Kumar Gangwar inaugurated IInvenTiv 2026 at IIT (ISM) Dhanbad, aiming to transform technological advancements into practical solutions. The initiative focuses on innovations in AI, healthcare, and materials to create real-world applications. IInvenTiv 2026 is a pivotal effort to harness these innovations for tangible impact.",
+        "date_published": "2026-04-07",
+        "source_name": "Times of India - Ranchi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "JH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "JSFDA conclave focuses on modernizing teaching methods; Calls for integration of technology and AI in classrooms",
+        "url": "https://timesofindia.indiatimes.com/city/ranchi/jsfda-conclave-focuses-on-modernizing-teaching-methods-calls-for-integration-of-technology-and-ai-in-classrooms/articleshow/129705963.cms",
+        "summary": "Jharkhand's Faculty Development Academy held its inaugural conclave, emphasizing the need to modernize teaching methods by integrating technology and AI in classrooms. The event focused on equipping students to become nation-builders and promoting entrepreneurship using state resources. The conclave aimed to achieve the transformative goals of the National Education Policy 2020.",
+        "date_published": "2026-03-21",
+        "source_name": "Times of India - Ranchi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "JH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 14,
+        "title": "Jharkhand rural dept pioneers AI training programme; Aiming for improved efficiency and transparency in project execution",
+        "url": "https://timesofindia.indiatimes.com/city/ranchi/jharkhand-rural-dept-pioneers-ai-training-programme-aiming-for-improved-efficiency-and-transparency-in-project-execution/articleshow/129617611.cms",
+        "summary": "Jharkhand's rural development department is adopting artificial intelligence to improve efficiency and transparency in project execution. The department has launched an AI Support Cell and is providing extensive training programs for its employees. This initiative aims to enable employees to utilize AI tools for efficient document handling and data analysis.",
+        "date_published": "2026-03-17",
+        "source_name": "Times of India - Ranchi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "JH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 18,
         "title": "Campus Diary",

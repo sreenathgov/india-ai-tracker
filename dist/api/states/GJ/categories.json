@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 5,
+        "title": "Data governance framework being developed for AI systems to reduce bias, strengthen data security: Gujarat govt",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/data-governance-framework-being-developed-for-ai-systems-to-reduce-bias-strengthen-data-security-gujarat-govt/articleshow/129477521.cms",
+        "summary": "The Gujarat government is developing a data governance framework for AI systems to reduce bias and strengthen data security. This framework aims to ensure the responsible use of AI and protect sensitive information. The initiative is part of the government's efforts to promote trustworthy AI systems.",
+        "date_published": "2026-03-12",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 36,
         "title": "Centre’s ISM 2.0 to turbocharge Guj’s semicon industry",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/centres-ism-2-0-to-turbocharge-gujs-semicon-industry/articleshow/127847558.cms",
@@ -104,6 +124,536 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 3,
+        "title": "AI-era job market pushing Gujarat students towards humanities",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ai-era-job-market-pushing-gujarat-students-towards-humanities/articleshow/131284813.cms",
+        "summary": "Gujarat students are increasingly opting for humanities due to the impact of AI on the job market. The rise of AI is driving students away from traditional technical fields and towards more creative and social sciences. This shift reflects a broader trend of students adapting to an AI-driven economy by pursuing fields less likely to be automated.",
+        "date_published": "2026-05-24",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "No premature disclosure of AI-171 flight data, AAIB to Surat resident",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/no-premature-disclosure-of-ai-171-flight-data-aaib-to-surat-resident/articleshow/131267352.cms",
+        "summary": "The Aircraft Accident Investigation Bureau (AAIB) has informed a Surat resident that there will be no premature disclosure of flight data related to AI-171. The findings will instead be included in the final investigation report. The AAIB is investigating the incident and will release the results in due course.",
+        "date_published": "2026-05-23",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Mission admission: AI, data science courses surge across Gujarat campuses",
+        "url": "https://timesofindia.indiatimes.com/city/vadodara/mission-admission-ai-data-science-courses-surge-across-gujarat-campuses/articleshow/131160885.cms",
+        "summary": "Universities across Gujarat are introducing specialized courses in AI and data science, aligning with industry demands and emerging technologies. This surge in AI and data science programs is driven by the growing need for skilled professionals in these fields. Gujarat campuses are now offering a range of courses, from undergraduate to postgraduate levels, to cater to the increasing interest in AI and data science.",
+        "date_published": "2026-05-18",
+        "source_name": "Times of India - Vadodara",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "IIM Sambalpur, IIM Ahmedabad launch AI4Odisha initiative to empower MSMEs",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/iim-sambalpur-iim-ahmedabad-launch-ai4odisha-initiative-to-empower-msmes/articleshow/131160433.cms",
+        "summary": "IIM Sambalpur and IIM Ahmedabad have launched the AI4Odisha initiative to promote AI-led growth among MSMEs and local entrepreneurs. The program kicked off with a workshop attended by over 350 industry delegates, focusing on practical AI applications for business expansion. The initiative aims to empower MSMEs in the region through artificial intelligence.",
+        "date_published": "2026-05-18",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ",
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "AI urban observatory in Ahmedabad to predict heatwaves, floods 72 hours early",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ai-urban-observatory-in-ahmedabad-to-predict-heatwaves-floods-72-hours-early/articleshow/131101997.cms",
+        "summary": "An AI urban observatory is being set up in Ahmedabad to predict heatwaves and floods 72 hours in advance. The observatory will utilize an AI-based dashboard to provide street-level data, enabling quick response to emergencies. This initiative by the Ahmedabad Municipal Corporation aims to enhance the city's disaster management capabilities.",
+        "date_published": "2026-05-15",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Uber to set up its first India data centre with Adani Group",
+        "url": "https://entrackr.com/snippets/uber-to-set-up-its-first-india-data-centre-with-adani-group-11830654",
+        "summary": "Uber is setting up its first data centre in India in partnership with Adani Group, deepening its technology and infrastructure footprint in the country. The development was announced by Uber CEO Dara Khosrowshahi after meeting Gautam Adani in Ahmedabad. The facility will enable Uber to test and deploy technology at scale from India for its global operations.",
+        "date_published": "2026-05-13",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ",
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Air India AI 171 crash probe in final stage, report likely in a month: Aviation minister Rammohan Naidu",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/air-india-ai-171-crash-probe-in-final-stage-report-likely-in-a-month-aviation-minister-rammohan-naidu/articleshow/130969321.cms",
+        "summary": "The investigation into the Air India flight AI 171 crash, which occurred on June 12, 2025, and claimed 260 lives, is in its final stage. The Aircraft Accident Investigation Bureau's report is expected to be released within a month, according to Union Civil Aviation Minister Rammohan Naidu. The crash resulted in the loss of 241 lives on board and 19 on the ground.",
+        "date_published": "2026-05-09",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Soon, AI app to guide drivers to empty parking slots in Ahmedabad",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/soon-ai-app-to-guide-drivers-to-empty-parking-slots-in-ahmedabad/articleshow/130966275.cms",
+        "summary": "An AI-powered app is being developed to guide drivers to empty parking slots in Ahmedabad. The app will utilize real-time data from CCTVs installed at 135 locations to provide accurate parking information. This initiative aims to simplify the parking process and reduce congestion in the city.",
+        "date_published": "2026-05-09",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "JobsUPI raises pre-seed round from IIMA Ventures and others",
+        "url": "https://entrackr.com/snippets/jobsupi-raises-pre-seed-round-from-iima-ventures-and-others-11806024",
+        "summary": "JobsUPI, a multilingual employment platform, has raised $250K in a pre-seed funding round from IIMA Ventures and several angel investors. The funds will be used to enhance product capabilities, scale distribution, and expand into new geographies. JobsUPI aims to improve access to jobs across India with its Voice AI-powered platform, co-founded by Shrey Bansal and Shubham Periwal in 2025.",
+        "date_published": "2026-05-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "GCCI expo focuses on semiconductors, deep tech",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/gcci-expo-focuses-on-semiconductors-deep-tech/articleshow/130341714.cms",
+        "summary": "The GCCI expo highlighted semiconductors and deep tech, showcasing key areas of focus. The event likely brought together industry experts and innovators to discuss advancements and opportunities in these fields. Semiconductors and deep tech were the primary areas of emphasis at the expo.",
+        "date_published": "2026-04-18",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "71 students part of first BPGP-BA&amp;AI batch at IIM Ah",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/71-students-part-of-first-bpgp-baai-batch-at-iim-ah/articleshow/130316886.cms",
+        "summary": "The Indian Institute of Management Ahmedabad (IIM-A) has introduced its first batch of Business Analytics and Artificial Intelligence (BA&AI) under the BPGP program. A total of 71 students are part of this inaugural batch. The BPGP-BA&AI program aims to equip students with skills in business analytics and artificial intelligence.",
+        "date_published": "2026-04-17",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Gujarat police introduce AI tool to sharpen NDPS probes, boost conviction rates",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/gujarat-police-introduce-ai-tool-to-sharpen-ndps-probes-boost-conviction-rates/articleshow/130179349.cms",
+        "summary": "Gujarat police have introduced an AI tool to enhance investigations under the Narcotic Drugs and Psychotropic Substances (NDPS) Act. The tool aims to sharpen probes and boost conviction rates by analyzing evidence and providing insights. This initiative is expected to improve the effectiveness of NDPS cases in the state.",
+        "date_published": "2026-04-11",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Gujarat govt plans to deploy AI to detect ITC scams in GST",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/gujarat-govt-plans-to-deploy-ai-to-detect-itc-scams-in-gst/articleshow/130178935.cms",
+        "summary": "The Gujarat government plans to utilize artificial intelligence (AI) to detect Input Tax Credit (ITC) scams in the Goods and Services Tax (GST) system. This initiative aims to prevent tax evasion and improve the overall efficiency of the tax collection process. The AI system will help identify potential scams and anomalies in GST returns.",
+        "date_published": "2026-04-11",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "World Health Day: AI now powers diagnoses, surgeries at top hospitals in Ahmedabad",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/world-health-day-ai-now-powers-diagnoses-surgeries-at-top-hospitals-in-ahmedabad/articleshow/130069361.cms",
+        "summary": "Top hospitals in Ahmedabad are now utilizing AI to power diagnoses and surgeries. This integration of AI technology is enhancing the quality of healthcare services in the city. AI-powered systems are being used to support medical professionals in making accurate diagnoses and performing complex surgeries.",
+        "date_published": "2026-04-07",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Spacetech startup SatLeo Labs raises $2.2 Mn in seed round",
+        "url": "https://entrackr.com/snippets/spacetech-startup-satleo-labs-raises-22-mn-in-seed-round-11457321",
+        "summary": "Spacetech startup SatLeo Labs has raised $2.2 million in a seed funding round, led by Unicorn India Ventures, bringing its total funding to $5.5 million. The round also saw participation from other investors, including Merak Ventures and Java Capital. The funds will be used to advance its thermal satellite mission and scale its AI-powered platform for thermal intelligence applications.",
+        "date_published": "2026-04-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "BJP councillor files defamation case over ‘AI video’, AAP candidate booked",
+        "url": "https://timesofindia.indiatimes.com/city/surat/bjp-councillor-files-defamation-case-over-ai-video-aap-candidate-booked/articleshow/130045558.cms",
+        "summary": "A BJP councillor has filed a defamation case over a video created using artificial intelligence. The case was filed against an AAP candidate, who has been booked in connection with the matter. The video allegedly contained defamatory content, prompting the councillor to take legal action.",
+        "date_published": "2026-04-06",
+        "source_name": "Times of India - Rajkot",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Satark AI raises pre-seed round at $4 Mn valuation",
+        "url": "https://entrackr.com/snippets/satark-ai-raises-pre-seed-round-at-4-mn-valuation-11457711",
+        "summary": "Satark AI, a cybersecurity startup, has raised an undisclosed amount in a pre-seed funding round at a $4 million valuation cap from angel investors. The company had previously secured funding at a $3 million valuation cap in October last year. The new funds will be used to run pilots with enterprise-grade and growth-stage companies to validate the platform's impact on security operations.",
+        "date_published": "2026-04-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "HC comes out with policy for AI use",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/hc-comes-out-with-policy-for-ai-use/articleshow/130025798.cms",
+        "summary": "The High Court has introduced a policy for the use of Artificial Intelligence. This policy aims to regulate and guide the implementation of AI within the court's operations. The details of the policy can be found in a recent article on the Times of India website.",
+        "date_published": "2026-04-05",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "AI school inaugurated at IIM Ahmedabad",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ai-school-inaugurated-at-iim-ahmedabad/articleshow/129832367.cms",
+        "summary": "An AI school has been inaugurated at the Indian Institute of Management (IIM) Ahmedabad. The establishment of the AI school aims to promote research and education in the field of artificial intelligence. This initiative is expected to enhance the institute's capabilities in AI and related technologies.",
+        "date_published": "2026-03-27",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Art, science and tech converge at IIT-Gn curiosity conference",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/art-science-and-tech-converge-at-iit-gn-curiosity-conference/articleshow/129761018.cms",
+        "summary": "The Indian Institute of Technology Gandhinagar (IIT-Gn) hosted a curiosity conference where art, science, and technology converged. The event brought together various disciplines to foster innovation and exploration. The conference showcased the intersection of art, science, and tech, promoting a culture of curiosity and creativity.",
+        "date_published": "2026-03-24",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Magical Nest operator Raanro raises pre-seed round",
+        "url": "https://entrackr.com/snippets/magical-nest-operator-raanro-raises-pre-seed-round-11256761",
+        "summary": "Raanro Interior Technology, the parent company of Magical Nest, has raised Rs 4.12 crore in a pre-seed funding round at a pre-money valuation of Rs 60 crore. The round was participated by Stargazer Fund and several angel investors, including Kunal Shah and Ankit Nagori. The company will use the funds to develop an AI-powered platform for streamlining interior design workflows.",
+        "date_published": "2026-03-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB",
+          "MH",
+          "KL",
+          "KA",
+          "GJ",
+          "TN",
+          "DL",
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Ahmedabad police nab 7 in Rs 2.4 crore fake currency racket; AI tools and Chinese-sourced paper used to forge Rs 500 notes",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/rs-2-4cr-in-counterfeit-notes-seized-by-abad-crime-branch-7-arrested/articleshow/129686045.cms",
+        "summary": "Ahmedabad police have arrested 7 individuals involved in a Rs 2.4 crore fake currency racket, where AI tools and Chinese-sourced paper were used to forge Rs 500 notes. The counterfeit notes were seized by the crime branch, highlighting the use of advanced technology in the forgery. The operation has led to the dismantling of a significant fake currency network.",
+        "date_published": "2026-03-20",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "New hostel to come up at AI 171 crash site: Gujarat govt",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/new-hostel-to-come-up-at-ai-171-crash-site-gujarat-govt/articleshow/129664098.cms",
+        "summary": "The Gujarat government has announced plans to build a new hostel at the site of the Air India 171 crash. The project aims to commemorate the incident and provide accommodation facilities. The hostel's construction is a part of the government's efforts to develop the area.",
+        "date_published": "2026-03-19",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Lumikai leads $1.5 Mn seed round in NPrep",
+        "url": "https://entrackr.com/snippets/lumikai-leads-15-mn-seed-round-in-nprep-11193962",
+        "summary": "NPrep, an AI-powered skilling platform for nursing students and professionals, has raised $1.5 million in a seed funding round led by Lumikai. The round also saw participation from existing investor All In Capital and other investors, including Velo Partners and angel investors. This funding follows a previous pre-seed round led by All In Capital, with the amount undisclosed.",
+        "date_published": "2026-03-11",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ",
+          "RJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "‘Gandhi’s Dictionary’ to enter AI age with 2,200 new words",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/gandhis-dictionary-to-enter-ai-age-with-2200-new-words/articleshow/129285742.cms",
+        "summary": "Gandhi's Dictionary is being updated to enter the AI age with the addition of 2,200 new words. The dictionary, which originally contained words related to Mahatma Gandhi's life and teachings, will now include modern terms to reflect the changing times. The updated dictionary aims to make Gandhi's philosophy and ideas more accessible and relevant in the digital era.",
+        "date_published": "2026-03-09",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "'Injected anaesthetic drug': Two college friends die by suicide inside Gujarat temple washroom; used ChatGPT to find ways, say cops",
+        "url": "https://timesofindia.indiatimes.com/city/surat/two-college-girls-end-lives-inside-temples-washroom/articleshow/129229489.cms",
+        "summary": "Two 18- and 20-year-old college friends were found dead in a temple washroom in Surat, Gujarat, after allegedly injecting themselves with anesthetic drugs. Police found evidence of drug vials, syringes, and mobile phone data showing searches for suicide methods, including the use of ChatGPT. The girls had left for college but did not return home, leading to the discovery of their bodies.",
+        "date_published": "2026-03-08",
+        "source_name": "Times of India - Rajkot",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 8,
         "title": "AI effect? Helplines no longer ringingoff the hook with student distress calls",

@@ -5,6 +5,111 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "PGI combines AI and ultrasound for early gallbladder cancer detection",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/pgi-combines-ai-and-ultrasound-for-early-gallbladder-cancer-detection/articleshow/131267750.cms",
+        "summary": "The Postgraduate Institute of Medical Education and Research (PGI) is utilizing a combination of AI and ultrasound technology to detect gallbladder cancer at an early stage. This innovative approach aims to improve diagnosis and treatment outcomes for patients. The PGI's method has shown promise in identifying gallbladder cancer more accurately and efficiently.",
+        "date_published": "2026-05-23",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "PB",
+          "CH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "IIT-Ropar to deploy 100 AI weather stations across Punjab",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/iit-ropar-to-deploy-100-ai-weather-stations-across-punjab/articleshow/129761852.cms",
+        "summary": "IIT-Ropar is set to deploy 100 AI-powered weather stations across Punjab. The initiative aims to provide accurate and real-time weather forecasts, leveraging artificial intelligence technology. The deployment of these weather stations will enhance weather monitoring and prediction capabilities in the region.",
+        "date_published": "2026-03-24",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "PB",
+          "CH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "AI video linked to Golden Temple triggers row, SGPC orders probe",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/ai-video-linked-to-golden-temple-triggers-row-sgpc-orders-probe/articleshow/129641488.cms",
+        "summary": "An AI-generated video linked to the Golden Temple has sparked controversy, prompting the Shiromani Gurdwara Parbandhak Committee (SGPC) to order an investigation. The video's content has not been specified, but it has triggered a row, leading to the SGPC's probe. The SGPC is looking into the matter to determine the circumstances surrounding the creation and dissemination of the video.",
+        "date_published": "2026-03-18",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "CH",
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Punjab to integrate AI across depts; Mohali to be AI hub",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/punjab-to-integrate-ai-across-depts-mohali-to-be-ai-hub/articleshow/129580221.cms",
+        "summary": "Punjab plans to integrate artificial intelligence across its departments to enhance efficiency. The city of Mohali is set to be developed as a hub for AI, driving innovation and growth in the region. This initiative aims to leverage AI technology to improve governance and public services in Punjab.",
+        "date_published": "2026-03-15",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "PB",
+          "CH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "HC notice to Centre, others on plea for regulation of AI-generated content",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/hc-notice-to-centre-others-on-plea-for-regulation-of-ai-generated-content/articleshow/129112789.cms",
+        "summary": "The High Court has issued a notice to the Centre and other parties regarding a plea for regulation of AI-generated content. The notice is in response to a petition seeking guidelines to control and monitor AI-generated content. The court's decision is pending, with the Centre and other parties required to respond to the plea.",
+        "date_published": "2026-03-06",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "PB",
+          "CH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 43,
         "title": "BFUHS joins Consortium of Innovative Health Universities at India AI Impact Summit",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/bfuhs-joins-consortium-of-innovative-health-universities-at-india-ai-impact-summit/articleshow/128620417.cms",
@@ -67,12 +172,12 @@
     ],
     "AI Start-Up News": [
       {
-        "id": 5,
-        "title": "Bubble Me raises Rs 1.5 Cr in pre-seed round led by AJVC",
-        "url": "https://entrackr.com/snippets/bubble-me-raises-rs-15-cr-in-pre-seed-round-led-by-ajvc-11171125",
-        "summary": "Chandigarh-based wellness startup Bubble Me has raised Rs 1.5 crore in a pre-seed funding round led by AJVC. The funds will be used to enhance magnesium research, product testing, and formulation, as well as strengthen supply chain and quality control systems. Bubble Me is a magnesium-focused wellness brand targeting sleep, stress relief, and muscle recovery, founded by Akshina Jindal.",
-        "date_published": "2026-03-03",
-        "source_name": "Entrackr - AI & Startups",
+        "id": 4,
+        "title": "Rajpura lineman’s daughter uses AI to secure 51st rank in UPSC exam",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/rajpura-linemans-daughter-uses-ai-to-secure-51st-rank-in-upsc-exam/articleshow/129175421.cms",
+        "summary": "A lineman's daughter from Rajpura used AI to aid her studies and achieved the 51st rank in the UPSC exam. This notable achievement highlights the potential of AI in enhancing learning outcomes. The daughter's success is an inspiring example of how technology can help bridge the gap and facilitate academic excellence.",
+        "date_published": "2026-03-07",
+        "source_name": "Times of India - Chandigarh",
         "category": "AI Start-Up News",
         "state_codes": [
           "CH",

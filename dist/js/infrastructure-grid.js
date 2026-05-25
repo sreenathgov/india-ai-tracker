@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const config = {
     direction: 'up',                          // Slow vertical upward drift (infrastructural)
     speed: 0.12,                              // Very slow, systematic movement
-    borderColor: 'rgba(255, 255, 255, 0.08)', // Subtle white lines
+    borderColor: 'rgba(255, 255, 255, 0.025)', // Ghost white lines
     squareSize: 30,                           // Dense blueprint grid (40% reduction)
     enableFadeOnScroll: false,                // Grid persists at full opacity — no fade
     fadeStartScroll: 0,                       // Start fading immediately
