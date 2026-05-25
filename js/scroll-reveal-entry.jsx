@@ -10,9 +10,11 @@ import ScrollReveal from './ScrollReveal';
 import './ScrollReveal.css';
 
 const MANIFESTO =
-  'Regulatory complexity shapes markets, supply chains, and competitive outcomes. ' +
-  'Sector Watch converts policy change into clear operational guidance, ' +
-  'helping companies reposition strategically when markets evolve.';
+  'Trade has become fragmented and evidence-intensive. ' +
+  'The next era will be defined by a company\'s ability to maintain a defensible, ' +
+  'continuously updated evidence position across customs, insurance, finance, ' +
+  'regulation, and supply-chain risk. ' +
+  'Kanan is building the intelligence layer for that problem.';
 
 (function() {
   try {

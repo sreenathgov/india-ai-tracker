@@ -1,0 +1,277 @@
+/* ========================================================================
+   evidence-workflow.css
+   Act B — How an evidence packet is born
+   Five numbered line-art stages on cream. Horizontal flow on desktop,
+   vertical stack on mobile. Roman numerals rhyme with the Triptych.
+   ======================================================================== */
+
+/* ---------- Section ---------- */
+.kl-flow {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    background: #eeebe3;
+    color: #061f38;
+    padding: clamp(96px, 11vw, 156px) clamp(16px, 4vw, 40px);
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Subtle paper-grain — same family as identity-section, lighter alpha */
+.kl-flow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.07  0 0 0 0 0.16  0 0 0 0 0.30  0 0 0 0.045 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    background-size: 160px 160px;
+    mix-blend-mode: multiply;
+    opacity: 0.55;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.kl-flow__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+.kl-flow__header {
+    max-width: 880px;
+    margin: 0 auto clamp(60px, 7vw, 96px);
+    text-align: center;
+}
+
+.kl-flow__eyebrow {
+    display: inline-block;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: rgba(6, 31, 56, 0.42);
+    margin-bottom: 1.2rem;
+}
+
+.kl-flow__title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(1.75rem, 3.4vw, 2.6rem);
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    color: #061f38;
+    margin: 0;
+}
+
+/* ---------- Stage row ---------- */
+.kl-flow__stages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: clamp(16px, 2vw, 32px);
+    position: relative;
+    align-items: start;
+}
+
+/* Connecting hairline running through the icons */
+.kl-flow__stages::before {
+    content: '';
+    position: absolute;
+    top: 86px;                                /* aligns with icon vertical center */
+    left: 6%;
+    right: 6%;
+    height: 1px;
+    background: repeating-linear-gradient(
+        to right,
+        rgba(6, 31, 56, 0.28) 0 6px,
+        transparent 6px 12px
+    );
+    z-index: 0;
+}
+
+/* ---------- Single stage ---------- */
+.kl-flow__stage {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+
+    /* Entrance state */
+    opacity: 0;
+    transform: translateY(28px);
+}
+
+.kl-flow__numeral {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--kl-red, #db4a2b);
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.kl-flow__icon {
+    width: 64px;
+    height: 64px;
+    color: #061f38;
+    margin-bottom: 1.4rem;
+    background: #eeebe3;
+    padding: 6px;
+    box-sizing: content-box;
+    margin-left: -6px;
+}
+
+.kl-flow__icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.kl-flow__name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(1.2rem, 1.6vw, 1.5rem);
+    color: #061f38;
+    margin: 0 0 0.6rem;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.kl-flow__desc {
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: clamp(0.82rem, 1vw, 0.92rem);
+    line-height: 1.55;
+    color: rgba(6, 31, 56, 0.72);
+    max-width: 22ch;
+}
+
+/* ---------- Closing line ---------- */
+.kl-flow__close {
+    margin: clamp(56px, 6.5vw, 88px) auto 0;
+    text-align: center;
+    max-width: 720px;
+}
+
+.kl-flow__close-line {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 1.8vw, 1.45rem);
+    color: rgba(6, 31, 56, 0.82);
+    line-height: 1.5;
+    margin: 0;
+    letter-spacing: -0.005em;
+}
+
+.kl-flow__close-line::before,
+.kl-flow__close-line::after {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 1px;
+    background: rgba(6, 31, 56, 0.32);
+    vertical-align: middle;
+    margin: 0 0.9rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+    .kl-flow__stages {
+        grid-template-columns: repeat(2, 1fr);
+        gap: clamp(32px, 4vw, 44px) clamp(18px, 2.4vw, 28px);
+    }
+    .kl-flow__stages::before {
+        display: none;     /* dashed connector only makes sense in a single row */
+    }
+    .kl-flow__stage {
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 560px) {
+    /* Compact the section to fit all 5 stages in one viewport */
+    .kl-flow {
+        padding: 36px clamp(14px, 4vw, 20px) 32px;
+    }
+
+    .kl-flow__header {
+        margin-bottom: 18px;
+    }
+
+    .kl-flow__title {
+        font-size: 1.15rem;
+        line-height: 1.22;
+    }
+
+    .kl-flow__title br {
+        display: none; /* let text reflow naturally in narrow column */
+    }
+
+    /* 2-column grid: stages 1–4 in 2×2, stage 5 full-width */
+    .kl-flow__stages {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px 12px;
+    }
+
+    .kl-flow__stage {
+        min-height: 0;
+    }
+
+    /* Packet (last stage) spans both columns — shorter line-wraps + visual emphasis */
+    .kl-flow__stage:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .kl-flow__numeral {
+        margin-bottom: 0.45rem;
+    }
+
+    .kl-flow__icon {
+        width: 34px;
+        height: 34px;
+        margin-bottom: 0.65rem;
+    }
+
+    .kl-flow__name {
+        font-size: 1rem;
+        margin-bottom: 0.28rem;
+    }
+
+    .kl-flow__desc {
+        font-size: 0.76rem;
+        line-height: 1.45;
+        max-width: none;
+    }
+
+    .kl-flow__close {
+        margin-top: 20px;
+    }
+
+    .kl-flow__close-line {
+        font-size: 0.88rem;
+    }
+
+    .kl-flow__close-line::before,
+    .kl-flow__close-line::after {
+        width: 10px;
+        margin: 0 0.55rem;
+    }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .kl-flow__stage {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
