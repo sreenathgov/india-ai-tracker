@@ -9,6 +9,8 @@ const staticRoutes = [
   '/',
   '/about.html',
   '/sector-watch.html',
+  '/tradewatch.html',
+  '/tracker.html',
   '/publications.html'
 ];
 

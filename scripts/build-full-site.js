@@ -11,6 +11,8 @@ const FILES_TO_COPY = [
     'about.html',
     'team.html',
     'sector-watch.html',
+    'tradewatch.html',
+    'tracker.html',
     'publications.html',
     'privacy-policy.html',
     'disclaimers.html',
