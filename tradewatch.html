@@ -1300,243 +1300,185 @@
         }
 
         /* ══════════════════════════════════════════════════════════════
-           DRONA — Mobile/tablet vertical story spine
-           Replaces the legacy editorial beats + pillars-intro + quad meter
-           blocks below 900px. Four numbered stations anchored to a thin
-           vertical rail; active station's dot turns red on scroll-enter.
+           DRONA — Mobile accordion (semantic <details>)
+           Replaces the legacy editorial beats / pillars / quad blocks AND
+           the prior scroll-tracked story-spine below 900px. Four collapsed
+           items by default; CSS-only chevron rotation on open.
            ══════════════════════════════════════════════════════════════ */
-        .tw-drona-spine-mobile { display: none; }
+        .tw-drona-accordion { display: none; }
         @media (max-width: 899px) {
-            .tw-drona-spine-mobile {
+            .tw-drona-accordion {
                 display: block;
                 max-width: 640px;
-                margin: clamp(2rem, 6vh, 3.5rem) auto clamp(3rem, 8vh, 5rem);
+                margin: clamp(1.5rem, 4vh, 2.5rem) auto clamp(2.5rem, 6vh, 4rem);
                 padding: 0 clamp(1.25rem, 4vw, 1.75rem);
             }
 
-            .tw-spine-rail {
-                position: relative;
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-            .tw-spine-rail::before {
-                content: "";
-                position: absolute;
-                left: 22px;
-                top: 0.45em;
-                bottom: 0.45em;
-                width: 1px;
-                background: var(--tw-rule-strong);
-            }
-
-            .tw-spine-station {
-                position: relative;
-                padding-left: 56px;
-                padding-bottom: clamp(2.5rem, 6vw, 3.5rem);
-            }
-            .tw-spine-station:last-child { padding-bottom: 0; }
-
-            .tw-spine-num {
-                position: absolute;
-                left: 0;
-                top: -0.1em;
-                font-family: var(--tw-display);
-                font-style: italic;
-                font-weight: 500;
-                font-size: clamp(2rem, 8vw, 2.6rem);
-                line-height: 1;
-                color: var(--tw-ink-dim);
-                transition: color 0.35s ease;
-                z-index: 1;
-            }
-            .tw-spine-num::before {
-                content: "";
-                position: absolute;
-                left: 22px;
-                top: 0.55em;
-                width: 9px;
-                height: 9px;
-                margin-left: -4.5px;
-                border-radius: 50%;
-                background: var(--tw-cream);
-                border: 1.5px solid var(--tw-rule-strong);
-                box-sizing: border-box;
-                transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
-            }
-            .tw-spine-num::after {
-                content: "";
-                position: absolute;
-                left: 27px;
-                top: calc(0.55em + 4.5px);
-                width: 18px;
-                height: 1px;
-                background: var(--tw-rule);
-            }
-
-            .tw-spine-station.is-in .tw-spine-num {
-                color: var(--tw-navy);
-                font-weight: 600;
-            }
-            .tw-spine-station.is-in .tw-spine-num::before {
-                background: var(--tw-red);
-                border-color: var(--tw-red);
-                box-shadow: 0 0 0 4px rgba(219, 74, 43, 0.12);
-            }
-
-            .tw-spine-eyebrow {
-                font-family: var(--tw-mono);
-                font-size: 0.65rem;
-                font-weight: 700;
-                letter-spacing: 0.3em;
-                text-transform: uppercase;
-                color: var(--tw-red);
-                margin: 0.4em 0 0.85rem;
-            }
-            .tw-spine-head {
-                font-family: var(--tw-display);
-                font-style: italic;
-                font-weight: 500;
-                font-size: clamp(1.65rem, 6vw, 2.1rem);
-                line-height: 1.18;
-                letter-spacing: -0.005em;
-                color: var(--tw-navy);
-                margin: 0 0 1.1rem;
-            }
-
-            /* Station 01 — Source chips */
-            .tw-spine-chips {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                flex-wrap: wrap;
-                gap: 0.4rem 0.5rem;
-            }
-            .tw-spine-chips li {
-                font-family: var(--tw-mono);
-                font-size: 0.72rem;
-                line-height: 1;
-                color: var(--tw-ink);
-                padding: 0.45rem 0.7rem;
-                border: 1px solid var(--tw-rule);
-                border-radius: 999px;
-                background: transparent;
-                white-space: nowrap;
-            }
-
-            /* Station 02 — Reads / Reasons / Records rows */
-            .tw-spine-rows {
-                margin: 0;
-                padding: 0;
-            }
-            .tw-spine-row {
-                padding: 0.85rem 0;
+            .tw-acc-item {
                 border-top: 1px solid var(--tw-rule);
             }
-            .tw-spine-row:first-child {
-                border-top: 0;
-                padding-top: 0;
+            .tw-acc-item:last-child {
+                border-bottom: 1px solid var(--tw-rule);
             }
-            .tw-spine-row dt {
+
+            .tw-acc-summary {
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                align-items: center;
+                column-gap: 0.9rem;
+                padding: 1rem 0.25rem;
+                cursor: pointer;
+                list-style: none;
+                outline: none;
+            }
+            .tw-acc-summary::-webkit-details-marker { display: none; }
+            .tw-acc-summary::marker { content: ''; }
+            .tw-acc-summary:focus-visible {
+                outline: 2px solid var(--tw-red);
+                outline-offset: 2px;
+                border-radius: 2px;
+            }
+
+            .tw-acc-index {
                 font-family: var(--tw-mono);
-                font-size: 0.7rem;
+                font-size: 0.72rem;
                 font-weight: 700;
                 letter-spacing: 0.18em;
                 text-transform: uppercase;
-                color: var(--tw-red);
-                margin-bottom: 0.35rem;
-            }
-            .tw-spine-row dd {
-                font-family: var(--tw-mono);
-                font-size: 0.85rem;
-                line-height: 1.65;
-                color: var(--tw-ink);
-                margin: 0;
+                color: var(--tw-ink-dim);
+                line-height: 1;
+                align-self: center;
             }
 
-            /* Station 03 — Packet cards */
-            .tw-spine-packets {
-                display: flex;
-                flex-direction: column;
-                gap: 0.7rem;
-            }
-            .tw-spine-packet {
-                padding: 0.9rem 1.05rem;
-                border-left: 2px solid var(--tw-red);
-                background: rgba(255, 255, 255, 0.45);
-                border-radius: 0 4px 4px 0;
-            }
-            .tw-spine-packet-name {
+            .tw-acc-title {
                 font-family: var(--tw-display);
                 font-style: italic;
                 font-weight: 500;
-                font-size: 1.05rem;
-                line-height: 1.25;
+                font-size: clamp(1rem, 4.2vw, 1.15rem);
+                line-height: 1.32;
+                letter-spacing: -0.005em;
                 color: var(--tw-navy);
-                margin: 0 0 0.25rem;
-            }
-            .tw-spine-packet-for {
-                font-family: var(--tw-mono);
-                font-size: 0.75rem;
-                color: var(--tw-ink-dim);
-                margin: 0;
             }
 
-            /* Station 04 — Traits coda */
-            .tw-spine-traits {
+            .tw-acc-chevron {
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                border-right: 1.5px solid var(--tw-ink-dim);
+                border-bottom: 1.5px solid var(--tw-ink-dim);
+                transform: rotate(45deg);
+                transform-origin: center;
+                margin-right: 0.25rem;
+                margin-top: -3px;
+                transition: transform 0.25s ease, border-color 0.25s ease;
+            }
+            details[open] > .tw-acc-summary .tw-acc-chevron {
+                transform: rotate(-135deg);
+                margin-top: 3px;
+                border-color: var(--tw-red);
+            }
+            details[open] > .tw-acc-summary .tw-acc-index {
+                color: var(--tw-navy);
+            }
+
+            .tw-acc-panel {
+                padding: 0 0.25rem 1.25rem 2.4rem;
+            }
+
+            /* Item 01 — sources list */
+            .tw-acc-sources {
                 list-style: none;
-                margin: 0;
                 padding: 0;
+                margin: 0;
             }
-            .tw-spine-traits li {
-                display: block;
-                padding: 0.95rem 0;
-                border-top: 1px solid var(--tw-rule);
-            }
-            .tw-spine-traits li:first-child {
-                border-top: 0;
-                padding-top: 0;
-            }
-            .tw-spine-trait-name {
-                display: block;
+            .tw-acc-sources li {
                 font-family: var(--tw-mono);
-                font-size: 0.72rem;
+                font-size: 0.82rem;
+                line-height: 1.45;
+                color: var(--tw-ink);
+                padding: 0.4rem 0;
+                border-bottom: 1px dashed var(--tw-rule);
+            }
+            .tw-acc-sources li:last-child {
+                border-bottom: 0;
+            }
+
+            /* Item 02 — Reads / Reasons rows */
+            .tw-acc-rows {
+                display: grid;
+                gap: 0.9rem;
+                margin: 0;
+            }
+            .tw-acc-row dt {
+                font-family: var(--tw-mono);
+                font-size: 0.68rem;
                 font-weight: 700;
                 letter-spacing: 0.2em;
                 text-transform: uppercase;
                 color: var(--tw-red);
-                margin-bottom: 0.35rem;
+                margin: 0 0 0.25rem;
             }
-            .tw-spine-trait-body {
-                display: block;
+            .tw-acc-row dd {
                 font-family: var(--tw-mono);
                 font-size: 0.85rem;
                 line-height: 1.6;
                 color: var(--tw-ink);
+                margin: 0;
             }
 
-            /* Caption — Cormorant italic pull-quote, closes each station */
-            .tw-spine-caption {
+            /* Item 03 — body paragraph */
+            .tw-acc-body {
                 font-family: var(--tw-display);
                 font-style: italic;
                 font-weight: 400;
-                font-size: 0.95rem;
+                font-size: 0.98rem;
+                line-height: 1.55;
+                color: var(--tw-ink);
+                margin: 0;
+            }
+
+            /* Item 04 — packet cards */
+            .tw-acc-packets {
+                display: grid;
+                gap: 0.6rem;
+            }
+            .tw-acc-packet {
+                padding: 0.75rem 0.9rem;
+                border-left: 2px solid var(--tw-red);
+                background: rgba(255, 255, 255, 0.4);
+                border-radius: 0 4px 4px 0;
+            }
+            .tw-acc-packet-name {
+                font-family: var(--tw-display);
+                font-style: italic;
+                font-weight: 500;
+                font-size: 1rem;
+                line-height: 1.25;
+                color: var(--tw-navy);
+                margin: 0 0 0.2rem;
+            }
+            .tw-acc-packet-for {
+                font-family: var(--tw-mono);
+                font-size: 0.72rem;
+                color: var(--tw-ink-dim);
+                margin: 0;
+            }
+
+            /* Shared closing caption (every panel) */
+            .tw-acc-foot {
+                font-family: var(--tw-display);
+                font-style: italic;
+                font-weight: 400;
+                font-size: 0.85rem;
                 line-height: 1.5;
                 color: var(--tw-ink-dim);
-                margin: 1.25rem 0 0;
-                padding-top: 0.9rem;
-                border-top: 1px dashed var(--tw-rule);
+                margin: 0.9rem 0 0;
             }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .tw-spine-num,
-            .tw-spine-num::before {
+            .tw-acc-chevron {
                 transition: none !important;
-            }
-            .tw-spine-station.is-in .tw-spine-num::before {
-                box-shadow: none;
             }
         }
 
@@ -1712,6 +1654,13 @@
                 grid-row: 2;
             }
             .tw-drona-spine-sub br { display: none; }
+        }
+
+        /* Hide K/R/M/P credential block on mobile — covered by accordion item 03 */
+        @media (max-width: 899px) {
+            .tw-drona-spine {
+                display: none;
+            }
         }
 
         /* ---------- Beat 5: trust portfolio ---------- */
@@ -6696,91 +6645,91 @@
             </div>
             </div><!-- /.tw-drona-panel -->
 
-            <!-- MOBILE: vertical story spine (hidden on desktop via .tw-drona-mobile-only) -->
-            <div class="tw-drona-spine-mobile tw-drona-mobile-only" data-spine>
+            <!-- MOBILE: accordion (hidden on desktop via .tw-drona-mobile-only) -->
+            <div class="tw-drona-accordion tw-drona-mobile-only">
 
-                <ol class="tw-spine-rail" aria-label="How Drona works">
-
-                    <li class="tw-spine-station" data-station="01">
-                        <span class="tw-spine-num" aria-hidden="true">01</span>
-                        <p class="tw-spine-eyebrow">Input</p>
-                        <h3 class="tw-spine-head">What we read.</h3>
-                        <ul class="tw-spine-chips" aria-label="Source feeds">
+                <details class="tw-acc-item">
+                    <summary class="tw-acc-summary">
+                        <span class="tw-acc-index" aria-hidden="true">01</span>
+                        <span class="tw-acc-title">The sources we actually read.</span>
+                        <span class="tw-acc-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-acc-panel">
+                        <ul class="tw-acc-sources">
                             <li>Customs notifications</li>
                             <li>Quality control orders</li>
                             <li>Foreign regulations</li>
                             <li>Sanctions lists</li>
-                            <li>Customs rulings</li>
-                            <li>Tribunal decisions</li>
+                            <li>Customs rulings &amp; tribunal decisions</li>
                             <li>Industry standards</li>
                             <li>Banking circulars</li>
                         </ul>
-                        <p class="tw-spine-caption">Every source kept, dated, and traceable.</p>
-                    </li>
+                        <p class="tw-acc-foot">Every source kept, dated, and traceable.</p>
+                    </div>
+                </details>
 
-                    <li class="tw-spine-station" data-station="02">
-                        <span class="tw-spine-num" aria-hidden="true">02</span>
-                        <p class="tw-spine-eyebrow">Process</p>
-                        <h3 class="tw-spine-head">What we do with it.</h3>
-                        <dl class="tw-spine-rows">
-                            <div class="tw-spine-row">
+                <details class="tw-acc-item">
+                    <summary class="tw-acc-summary">
+                        <span class="tw-acc-index" aria-hidden="true">02</span>
+                        <span class="tw-acc-title">How we reason through each obligation.</span>
+                        <span class="tw-acc-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-acc-panel">
+                        <dl class="tw-acc-rows">
+                            <div class="tw-acc-row">
                                 <dt>Reads</dt>
-                                <dd>Pulls every relevant fact. Classifies it. Marks ambiguity.</dd>
+                                <dd>Pulls every relevant fact. Classifies it. Marks the ambiguity.</dd>
                             </div>
-                            <div class="tw-spine-row">
+                            <div class="tw-acc-row">
                                 <dt>Reasons</dt>
                                 <dd>Tests each obligation against the regulation, your shipment, and your own policy framework.</dd>
                             </div>
-                            <div class="tw-spine-row">
-                                <dt>Records</dt>
-                                <dd>Locks the evidence, the reasoning chain, and the reviewer's sign-off. The answer can always be defended.</dd>
-                            </div>
                         </dl>
-                        <p class="tw-spine-caption">No black box. No chatbot guessing. The answer always has a paper trail.</p>
-                    </li>
+                        <p class="tw-acc-foot">No black box. No chatbot guessing.</p>
+                    </div>
+                </details>
 
-                    <li class="tw-spine-station" data-station="03">
-                        <span class="tw-spine-num" aria-hidden="true">03</span>
-                        <p class="tw-spine-eyebrow">Output</p>
-                        <h3 class="tw-spine-head">What comes out.</h3>
-                        <div class="tw-spine-packets">
-                            <article class="tw-spine-packet">
-                                <p class="tw-spine-packet-name">Shipping Bill Readiness Packet</p>
-                                <p class="tw-spine-packet-for">For your customs broker.</p>
+                <details class="tw-acc-item">
+                    <summary class="tw-acc-summary">
+                        <span class="tw-acc-index" aria-hidden="true">03</span>
+                        <span class="tw-acc-title">Where we lock the evidence.</span>
+                        <span class="tw-acc-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-acc-panel">
+                        <p class="tw-acc-body">
+                            Every shipment record carries its own evidence file &mdash;
+                            the source documents, the reasoning chain, the reviewer's
+                            sign-off. The answer can always be defended.
+                        </p>
+                        <p class="tw-acc-foot">A paper trail, not a prompt history.</p>
+                    </div>
+                </details>
+
+                <details class="tw-acc-item">
+                    <summary class="tw-acc-summary">
+                        <span class="tw-acc-index" aria-hidden="true">04</span>
+                        <span class="tw-acc-title">What you actually receive.</span>
+                        <span class="tw-acc-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-acc-panel">
+                        <div class="tw-acc-packets">
+                            <article class="tw-acc-packet">
+                                <p class="tw-acc-packet-name">Shipping Bill Readiness Packet</p>
+                                <p class="tw-acc-packet-for">For your customs broker.</p>
                             </article>
-                            <article class="tw-spine-packet">
-                                <p class="tw-spine-packet-name">Marine Cargo Insurance Packet</p>
-                                <p class="tw-spine-packet-for">For your insurer.</p>
+                            <article class="tw-acc-packet">
+                                <p class="tw-acc-packet-name">Marine Cargo Insurance Packet</p>
+                                <p class="tw-acc-packet-for">For your insurer.</p>
+                            </article>
+                            <article class="tw-acc-packet">
+                                <p class="tw-acc-packet-name">Bank LC Packet</p>
+                                <p class="tw-acc-packet-for">For your trade banker.</p>
                             </article>
                         </div>
-                        <p class="tw-spine-caption">Both projected from one shipment record.</p>
-                    </li>
+                        <p class="tw-acc-foot">All projected from one shipment record.</p>
+                    </div>
+                </details>
 
-                    <li class="tw-spine-station tw-spine-station--coda" data-station="04">
-                        <span class="tw-spine-num" aria-hidden="true">04</span>
-                        <p class="tw-spine-eyebrow">What makes it different</p>
-                        <h3 class="tw-spine-head">Auditable.<br>Authoritative.<br>Explainable.</h3>
-                        <ul class="tw-spine-traits">
-                            <li>
-                                <span class="tw-spine-trait-name">Knowledge</span>
-                                <span class="tw-spine-trait-body">Compiled from primary sources. Dated, attributed, traceable.</span>
-                            </li>
-                            <li>
-                                <span class="tw-spine-trait-name">Reasoning</span>
-                                <span class="tw-spine-trait-body">Deterministic over the knowledge base. Not guessed.</span>
-                            </li>
-                            <li>
-                                <span class="tw-spine-trait-name">Memory</span>
-                                <span class="tw-spine-trait-body">Every shipment makes the next one easier to defend.</span>
-                            </li>
-                            <li>
-                                <span class="tw-spine-trait-name">Packet</span>
-                                <span class="tw-spine-trait-body">A reviewed packet today. A defensible record over time.</span>
-                            </li>
-                        </ul>
-                    </li>
-
-                </ol>
             </div>
 
             <!-- Moat quote: Cormorant italic scroll-reveal -->
@@ -8312,23 +8261,6 @@
         });
     }
 
-    /* ---------- Drona mobile spine — scroll-tracked active station ---------- */
-
-    function initDronaSpine() {
-        const stations = document.querySelectorAll('.tw-drona-spine-mobile .tw-spine-station');
-        if (!stations.length) return;
-        if (!('IntersectionObserver' in window)) {
-            stations.forEach(s => s.classList.add('is-in'));
-            return;
-        }
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) e.target.classList.add('is-in');
-            });
-        }, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
-        stations.forEach(s => io.observe(s));
-    }
-
     /* ---------- Boot ---------- */
 
     function boot() {
@@ -8342,7 +8274,6 @@
         initSwipeCarousel('twStrata',    'twStrataDots', '.tw-stratum', 879);
         initAct4Film();
         initDrona();
-        initDronaSpine();
         initAct5();
         initAct7();
 

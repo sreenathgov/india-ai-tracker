@@ -30,8 +30,9 @@
     <link rel="stylesheet" href="css/staggered-menu.css?v=2">
     <link rel="stylesheet" href="css/footer 2.css?v=3">
 
-    <!-- Performance: preload hero SVG immediately alongside HTML parsing -->
-    <link rel="preload" as="image" type="image/svg+xml" href="added-assets/sectorwatch-web-image2.svg">
+    <!-- Performance: preload original hero SVG (rendered source) + AVIF LQIP for fast paint -->
+    <link rel="preload" as="image" href="added-assets/sectorwatch-web-image2.svg" fetchpriority="high">
+    <link rel="preload" as="image" type="image/avif" href="added-assets/tw-hero-2400.avif">
     <!-- Performance: preload primary display font weights -->
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/CormorantGaramond-Regular.woff2">
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/CormorantGaramond-Medium.woff2">
@@ -170,6 +171,16 @@
             position: absolute;
             inset: 0;
             overflow: hidden;
+            /* LQIP: paint AVIF/JPEG raster as instant background while the
+               byte-perfect SVG decodes on top. Kills the empty-navy flash on
+               cold loads without altering the final rendered visual. */
+            background-image: image-set(
+                url("added-assets/tw-hero-2400.avif") type("image/avif"),
+                url("added-assets/tw-hero-2400.jpg") type("image/jpeg")
+            );
+            background-size: cover;
+            background-position: center 30%;
+            background-repeat: no-repeat;
         }
 
         .tw-globe-svg {
@@ -182,8 +193,10 @@
             transform: scale(1.08);
             transform-origin: 50% 60%;
             will-change: transform;
-            opacity: 0.95;
+            opacity: 0;
+            transition: opacity 0.55s ease;
         }
+        .tw-globe-svg.is-ready { opacity: 0.95; }
 
         .tw-particle-layer {
             position: absolute;
@@ -950,6 +963,9 @@
         .tw-drona-funnel-label.is-in { opacity: 1; }
         .tw-drona-funnel-label + .tw-drona-funnel-label { border-top: 1px solid var(--tw-rule); }
 
+        /* iPad-landscape Drona overrides moved to after all .tw-drona-* base rules below
+           so they win the source-order tie. See "@media (min-width: 1101px) ... DRONA" near coda. */
+
         /* Dedicated rail track */
         .tw-drona-rail {
             position: absolute;
@@ -1178,12 +1194,15 @@
            Mobile (≤1023px) shows the editorial beats + quad grid. */
 
         /* Desktop-only elements: visible by default, hidden on mobile */
+        /* Threshold lowered from 1024 → 900 so Windows laptops with DPI scaling
+           (1366×768 @ 150% = 911 CSS px; 1920×1080 @ 200% = 960 CSS px) still
+           render the funnel instead of falling through to the mobile bento. */
         .tw-drona-desktop-only { display: block; }
-        @media (max-width: 1023px) { .tw-drona-desktop-only { display: none !important; } }
+        @media (max-width: 899px) { .tw-drona-desktop-only { display: none !important; } }
 
         /* Mobile-only elements: hidden on desktop */
         .tw-drona-mobile-only { display: block; }
-        @media (min-width: 1024px) { .tw-drona-mobile-only { display: none !important; } }
+        @media (min-width: 900px) { .tw-drona-mobile-only { display: none !important; } }
 
         /* ---------- Beat 4: moat ---------- */
         .tw-drona-vs-heading {
@@ -1263,9 +1282,204 @@
         }
         .tw-drona-credential-body p:last-child { margin-bottom: 0; }
 
+        /* Stack credential 3-col grid below 1024 (covers the new 900–1023 zone
+           opened up by the lowered desktop gate) */
+        @media (max-width: 1023px) {
+            .tw-drona-credential-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem 0;
+            }
+            .tw-drona-credential-divider {
+                display: none;
+            }
+        }
+
         /* Hide moat-quote on desktop (navy block replaces it) */
-        @media (min-width: 1024px) {
+        @media (min-width: 900px) {
             .tw-drona-moat-quote { display: none !important; }
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           DRONA — Mobile accordion (semantic <details>)
+           Replaces the legacy editorial beats / pillars / quad blocks AND
+           the prior scroll-tracked story-spine below 900px. Four collapsed
+           items by default; CSS-only chevron rotation on open.
+           ══════════════════════════════════════════════════════════════ */
+        .tw-drona-accordion { display: none; }
+        @media (max-width: 899px) {
+            .tw-drona-accordion {
+                display: block;
+                max-width: 640px;
+                margin: clamp(1.5rem, 4vh, 2.5rem) auto clamp(2.5rem, 6vh, 4rem);
+                padding: 0 clamp(1.25rem, 4vw, 1.75rem);
+            }
+
+            .tw-acc-item {
+                border-top: 1px solid var(--tw-rule);
+            }
+            .tw-acc-item:last-child {
+                border-bottom: 1px solid var(--tw-rule);
+            }
+
+            .tw-acc-summary {
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                align-items: center;
+                column-gap: 0.9rem;
+                padding: 1rem 0.25rem;
+                cursor: pointer;
+                list-style: none;
+                outline: none;
+            }
+            .tw-acc-summary::-webkit-details-marker { display: none; }
+            .tw-acc-summary::marker { content: ''; }
+            .tw-acc-summary:focus-visible {
+                outline: 2px solid var(--tw-red);
+                outline-offset: 2px;
+                border-radius: 2px;
+            }
+
+            .tw-acc-index {
+                font-family: var(--tw-mono);
+                font-size: 0.72rem;
+                font-weight: 700;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: var(--tw-ink-dim);
+                line-height: 1;
+                align-self: center;
+            }
+
+            .tw-acc-title {
+                font-family: var(--tw-display);
+                font-style: italic;
+                font-weight: 500;
+                font-size: clamp(1rem, 4.2vw, 1.15rem);
+                line-height: 1.32;
+                letter-spacing: -0.005em;
+                color: var(--tw-navy);
+            }
+
+            .tw-acc-chevron {
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                border-right: 1.5px solid var(--tw-ink-dim);
+                border-bottom: 1.5px solid var(--tw-ink-dim);
+                transform: rotate(45deg);
+                transform-origin: center;
+                margin-right: 0.25rem;
+                margin-top: -3px;
+                transition: transform 0.25s ease, border-color 0.25s ease;
+            }
+            details[open] > .tw-acc-summary .tw-acc-chevron {
+                transform: rotate(-135deg);
+                margin-top: 3px;
+                border-color: var(--tw-red);
+            }
+            details[open] > .tw-acc-summary .tw-acc-index {
+                color: var(--tw-navy);
+            }
+
+            .tw-acc-panel {
+                padding: 0 0.25rem 1.25rem 2.4rem;
+            }
+
+            /* Item 01 — sources list */
+            .tw-acc-sources {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .tw-acc-sources li {
+                font-family: var(--tw-mono);
+                font-size: 0.82rem;
+                line-height: 1.45;
+                color: var(--tw-ink);
+                padding: 0.4rem 0;
+                border-bottom: 1px dashed var(--tw-rule);
+            }
+            .tw-acc-sources li:last-child {
+                border-bottom: 0;
+            }
+
+            /* Item 02 — Reads / Reasons rows */
+            .tw-acc-rows {
+                display: grid;
+                gap: 0.9rem;
+                margin: 0;
+            }
+            .tw-acc-row dt {
+                font-family: var(--tw-mono);
+                font-size: 0.68rem;
+                font-weight: 700;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: var(--tw-red);
+                margin: 0 0 0.25rem;
+            }
+            .tw-acc-row dd {
+                font-family: var(--tw-mono);
+                font-size: 0.85rem;
+                line-height: 1.6;
+                color: var(--tw-ink);
+                margin: 0;
+            }
+
+            /* Item 03 — body paragraph */
+            .tw-acc-body {
+                font-family: var(--tw-display);
+                font-style: italic;
+                font-weight: 400;
+                font-size: 0.98rem;
+                line-height: 1.55;
+                color: var(--tw-ink);
+                margin: 0;
+            }
+
+            /* Item 04 — packet cards */
+            .tw-acc-packets {
+                display: grid;
+                gap: 0.6rem;
+            }
+            .tw-acc-packet {
+                padding: 0.75rem 0.9rem;
+                border-left: 2px solid var(--tw-red);
+                background: rgba(255, 255, 255, 0.4);
+                border-radius: 0 4px 4px 0;
+            }
+            .tw-acc-packet-name {
+                font-family: var(--tw-display);
+                font-style: italic;
+                font-weight: 500;
+                font-size: 1rem;
+                line-height: 1.25;
+                color: var(--tw-navy);
+                margin: 0 0 0.2rem;
+            }
+            .tw-acc-packet-for {
+                font-family: var(--tw-mono);
+                font-size: 0.72rem;
+                color: var(--tw-ink-dim);
+                margin: 0;
+            }
+
+            /* Shared closing caption (every panel) */
+            .tw-acc-foot {
+                font-family: var(--tw-display);
+                font-style: italic;
+                font-weight: 400;
+                font-size: 0.85rem;
+                line-height: 1.5;
+                color: var(--tw-ink-dim);
+                margin: 0.9rem 0 0;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .tw-acc-chevron {
+                transition: none !important;
+            }
         }
 
         .tw-drona-vs {
@@ -1440,6 +1654,13 @@
                 grid-row: 2;
             }
             .tw-drona-spine-sub br { display: none; }
+        }
+
+        /* Hide K/R/M/P credential block on mobile — covered by accordion item 03 */
+        @media (max-width: 899px) {
+            .tw-drona-spine {
+                display: none;
+            }
         }
 
         /* ---------- Beat 5: trust portfolio ---------- */
@@ -1987,6 +2208,55 @@
         .tw-drona-coda.is-in { opacity: 1; transform: translateY(0); }
 
         /* ============================================================
+           DRONA — iPad 11" landscape + short laptops
+           Fits the funnel panel + headline in one viewport. The original
+           vertical layout (3 stacked tier labels next to a 360px SVG
+           funnel) is >900px tall here. We flip the funnel to a single
+           column with labels in a horizontal 3-col grid, and hide the
+           SVG funnel + vertical rail (which only make sense alongside
+           vertically stacked labels). Credential/spine/portfolio blocks
+           below the panel scroll naturally afterwards.
+           Placed AFTER all .tw-drona-* base rules so it wins source-order
+           ties against same-specificity later declarations.
+           ============================================================ */
+        @media (min-width: 1101px) and (max-height: 880px) {
+            .tw-drona              { padding: clamp(1.75rem, 3.5vh, 3rem) clamp(1.5rem, 4vw, 4rem); }
+            .tw-drona-headline     { font-size: clamp(1.5rem, 2.6vw, 2rem); margin-bottom: 0.5rem; line-height: 1.15; }
+            .tw-drona-subline      { font-size: 0.95rem; line-height: 1.4; margin-bottom: clamp(0.6rem, 1.25vh, 1rem); }
+            .tw-drona-hinge        { margin: clamp(0.5rem, 1vh, 0.85rem) auto clamp(0.4rem, 0.8vh, 0.75rem); }
+            .tw-drona-panel        { padding: 0.85rem 1rem; margin: 0.5rem auto 0; }
+
+            .tw-drona-funnel        { grid-template-columns: 1fr; gap: 0.5rem; margin-bottom: 0.5rem; }
+            .tw-drona-funnel-visual { display: none; }
+            .tw-drona-funnel-labels {
+                padding-left: 0;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.75rem;
+            }
+            .tw-drona-funnel-label  {
+                padding: 0.5rem 0.75rem;
+                flex: unset;
+                justify-content: flex-start;
+                opacity: 1; /* always-on; the scroll-driven reveal ties to the hidden rail/SVG */
+            }
+            .tw-drona-funnel-label + .tw-drona-funnel-label {
+                border-top: none;
+                border-left: 1px solid var(--tw-rule);
+            }
+            .tw-drona-rail { display: none; }
+
+            .tw-drona-tier-num      { font-size: 0.7rem; margin-bottom: 0.3rem; }
+            .tw-drona-tier-title    { font-size: 0.95rem; margin-bottom: 0.4rem; line-height: 1.2; }
+            .tw-drona-source        { font-size: 0.72rem; padding: 0.15rem 0; line-height: 1.3; }
+            .tw-drona-sources       { gap: 0.15rem; margin-top: 0.3rem; }
+            .tw-drona-stage         { padding: 0.3rem 0; }
+            .tw-drona-stage-key     { font-size: 0.7rem; }
+            .tw-drona-stage-body    { font-size: 0.72rem; line-height: 1.3; }
+            .tw-drona-layer-caption { font-size: 0.7rem; line-height: 1.3; margin-top: 0.35rem; }
+        }
+
+        /* ============================================================
            ACT IV — Product Film (scroll-scrubbed)
            ============================================================ */
 
@@ -2263,6 +2533,14 @@
                Use a fixed viewport-relative height so the height:100% chain
                in .tw-stage-inner / .tw-stage-body doesn't collapse. */
             .tw-stage { height: clamp(560px, 88vh, 760px); }
+        }
+        /* iPad 11" landscape + short laptops (1180-1300 wide × <=880 tall):
+           desktop film/pin layout stays, but the stage and scene content tighten
+           so the bottom Reviewer row stays inside the frame. */
+        @media (min-width: 1101px) and (max-height: 880px) {
+            .tw-stage      { height: min(94dvh, 780px); }
+            .tw-stage-body { padding: clamp(1rem, 1.6vw, 1.6rem); }
+            .tw-scene      { inset: clamp(1rem, 1.6vw, 1.6rem); gap: clamp(0.65rem, 1vw, 1rem); }
         }
         @media (max-width: 1023px) {
             /* Mobile tap-nav: film track no longer drives scroll, stage is in normal flow */
@@ -4049,7 +4327,7 @@
                 word-break: break-word;
                 overflow-wrap: anywhere;
             }
-            .tw-inbox-list { gap: 0.4rem; }
+            .tw-inbox-list { gap: 0.4rem; flex: none; }
             .tw-inbox-row {
                 grid-template-columns: 18px 1fr auto auto;
                 gap: 0.45rem 0.55rem;
@@ -5222,27 +5500,6 @@
             display: none;
         }
 
-        .tw-strata-foot {
-            margin-top: clamp(3rem, 6vh, 5rem);
-            display: flex;
-            justify-content: center;
-            text-align: center;
-        }
-        .tw-strata-foot-text {
-            font-family: var(--tw-display);
-            font-style: italic;
-            font-size: clamp(1.1rem, 2vw, 1.55rem);
-            color: var(--tw-ink);
-            max-width: 42rem;
-            line-height: 1.5;
-        }
-        .tw-strata-foot-text em {
-            color: var(--tw-red);
-            font-weight: 700;
-            display: inline-block;
-            transform: skewX(-9deg);
-        }
-
         /* ============================================================
            ACT VI — Founder
            ============================================================ */
@@ -5575,7 +5832,12 @@
          ============================================================ -->
     <section class="tw-act0" aria-label="Introduction">
         <div class="tw-globe-stage" aria-hidden="true">
-            <img class="tw-globe-svg" src="added-assets/sectorwatch-web-image2.svg" alt="" width="1920" height="1080" decoding="async">
+            <img class="tw-globe-svg"
+                 src="added-assets/sectorwatch-web-image2.svg"
+                 alt=""
+                 width="1920" height="1080"
+                 decoding="async"
+                 fetchpriority="high">
             <canvas class="tw-particle-layer" id="twParticleLayer"></canvas>
             <div class="tw-globe-grad-top"></div>
             <div class="tw-globe-grad-bottom"></div>
@@ -6293,10 +6555,6 @@
                 <button class="tw-frag-dot" data-idx="1" aria-label="Next — Evidence Layer"></button>
                 <button class="tw-frag-dot" data-idx="2" aria-label="Later — SectorWatch"></button>
             </div>
-
-            <div class="tw-strata-foot">
-                <p class="tw-strata-foot-text">The same <em>Drona</em> backbone: structured evidence, source provenance, deterministic rule logic, and human review where judgment matters.</p>
-            </div>
         </div>
     </section>
 
@@ -6312,7 +6570,7 @@
             <p class="tw-drona-subline tw-drona-mobile-only">Most trade tools sit idle until you log in. We codified what a senior trade consultant actually does, and put it to work continuously.</p>
 
             <!-- DESKTOP: Funnel panel (hidden on mobile via .tw-drona-desktop-only) -->
-            <p class="tw-drona-hinge tw-drona-desktop-only">Here's the engine that makes that possible</p>
+            <p class="tw-drona-hinge tw-drona-desktop-only">Drona is the neurosymbolic engine that makes that possible</p>
 
             <div class="tw-drona-panel tw-drona-desktop-only">
             <div class="tw-drona-funnel" id="twDronaFunnel">
@@ -6387,65 +6645,90 @@
             </div>
             </div><!-- /.tw-drona-panel -->
 
-            <!-- MOBILE: editorial typographic layout (hidden on desktop via .tw-drona-mobile-only) -->
-            <div class="tw-drona-beats-editorial tw-drona-mobile-only">
+            <!-- MOBILE: accordion (hidden on desktop via .tw-drona-mobile-only) -->
+            <div class="tw-drona-accordion tw-drona-mobile-only">
 
-                <div class="tw-drona-beat">
-                    <p class="tw-drona-beat-label">01 · Input</p>
-                    <h3 class="tw-drona-beat-heading" id="twDronaBeat1">
-                        <span class="tw-word">What</span>
-                        <span class="tw-word">we</span>
-                        <span class="tw-word">read.</span>
-                    </h3>
-                    <p class="tw-drona-beat-para">Customs notifications and circulars, quality control orders, foreign regulations and sanctions lists, customs rulings and tribunal decisions, industry standards, and insurance and banking circulars.</p>
-                    <p class="tw-drona-beat-caption">Every source kept, dated, and traceable.</p>
-                </div>
-
-                <div class="tw-drona-beat">
-                    <p class="tw-drona-beat-label">02 · Process</p>
-                    <h3 class="tw-drona-beat-heading" id="twDronaBeat2">
-                        <span class="tw-word">What</span>
-                        <span class="tw-word">we</span>
-                        <span class="tw-word">do</span>
-                        <span class="tw-word">with</span>
-                        <span class="tw-word">it.</span>
-                    </h3>
-                    <div class="tw-drona-beat-kv">
-                        <div class="tw-drona-beat-kv-row">
-                            <span class="tw-drona-beat-key">Reads</span>
-                            <span class="tw-drona-beat-val">Pulls every relevant fact. Classifies it. Marks ambiguity.</span>
-                        </div>
-                        <div class="tw-drona-beat-kv-row">
-                            <span class="tw-drona-beat-key">Reasons</span>
-                            <span class="tw-drona-beat-val">Tests each obligation against the regulation, your shipment, and your own policy framework.</span>
-                        </div>
-                        <div class="tw-drona-beat-kv-row">
-                            <span class="tw-drona-beat-key">Records</span>
-                            <span class="tw-drona-beat-val">Locks the evidence, the reasoning chain, and the reviewer's sign-off. The answer can always be defended.</span>
-                        </div>
+                <details class="tw-acc-item">
+                    <summary class="tw-acc-summary">
+                        <span class="tw-acc-index" aria-hidden="true">01</span>
+                        <span class="tw-acc-title">The sources we actually read.</span>
+                        <span class="tw-acc-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-acc-panel">
+                        <ul class="tw-acc-sources">
+                            <li>Customs notifications</li>
+                            <li>Quality control orders</li>
+                            <li>Foreign regulations</li>
+                            <li>Sanctions lists</li>
+                            <li>Customs rulings &amp; tribunal decisions</li>
+                            <li>Industry standards</li>
+                            <li>Banking circulars</li>
+                        </ul>
+                        <p class="tw-acc-foot">Every source kept, dated, and traceable.</p>
                     </div>
-                    <p class="tw-drona-beat-caption">The work is shown. Every answer points to a source.</p>
-                </div>
+                </details>
 
-                <div class="tw-drona-beat">
-                    <p class="tw-drona-beat-label">03 · Output</p>
-                    <h3 class="tw-drona-beat-heading" id="twDronaBeat3">
-                        <span class="tw-word">What</span>
-                        <span class="tw-word">comes</span>
-                        <span class="tw-word">out.</span>
-                    </h3>
-                    <ul class="tw-drona-beat-list tw-drona-beat-list--output">
-                        <li>
-                            <span class="tw-drona-packet-name">Shipping Bill Readiness Packet</span>
-                            <span class="tw-drona-packet-for">For your customs broker.</span>
-                        </li>
-                        <li>
-                            <span class="tw-drona-packet-name">Marine Cargo Insurance Packet</span>
-                            <span class="tw-drona-packet-for">For your insurer.</span>
-                        </li>
-                    </ul>
-                    <p class="tw-drona-beat-caption">Both projected from one shipment record.</p>
-                </div>
+                <details class="tw-acc-item">
+                    <summary class="tw-acc-summary">
+                        <span class="tw-acc-index" aria-hidden="true">02</span>
+                        <span class="tw-acc-title">How we reason through each obligation.</span>
+                        <span class="tw-acc-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-acc-panel">
+                        <dl class="tw-acc-rows">
+                            <div class="tw-acc-row">
+                                <dt>Reads</dt>
+                                <dd>Pulls every relevant fact. Classifies it. Marks the ambiguity.</dd>
+                            </div>
+                            <div class="tw-acc-row">
+                                <dt>Reasons</dt>
+                                <dd>Tests each obligation against the regulation, your shipment, and your own policy framework.</dd>
+                            </div>
+                        </dl>
+                        <p class="tw-acc-foot">No black box. No chatbot guessing.</p>
+                    </div>
+                </details>
+
+                <details class="tw-acc-item">
+                    <summary class="tw-acc-summary">
+                        <span class="tw-acc-index" aria-hidden="true">03</span>
+                        <span class="tw-acc-title">Where we lock the evidence.</span>
+                        <span class="tw-acc-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-acc-panel">
+                        <p class="tw-acc-body">
+                            Every shipment record carries its own evidence file &mdash;
+                            the source documents, the reasoning chain, the reviewer's
+                            sign-off. The answer can always be defended.
+                        </p>
+                        <p class="tw-acc-foot">A paper trail, not a prompt history.</p>
+                    </div>
+                </details>
+
+                <details class="tw-acc-item">
+                    <summary class="tw-acc-summary">
+                        <span class="tw-acc-index" aria-hidden="true">04</span>
+                        <span class="tw-acc-title">What you actually receive.</span>
+                        <span class="tw-acc-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-acc-panel">
+                        <div class="tw-acc-packets">
+                            <article class="tw-acc-packet">
+                                <p class="tw-acc-packet-name">Shipping Bill Readiness Packet</p>
+                                <p class="tw-acc-packet-for">For your customs broker.</p>
+                            </article>
+                            <article class="tw-acc-packet">
+                                <p class="tw-acc-packet-name">Marine Cargo Insurance Packet</p>
+                                <p class="tw-acc-packet-for">For your insurer.</p>
+                            </article>
+                            <article class="tw-acc-packet">
+                                <p class="tw-acc-packet-name">Bank LC Packet</p>
+                                <p class="tw-acc-packet-for">For your trade banker.</p>
+                            </article>
+                        </div>
+                        <p class="tw-acc-foot">All projected from one shipment record.</p>
+                    </div>
+                </details>
 
             </div>
 
@@ -6477,85 +6760,6 @@
 
                     </div>
                 </div>
-            </div>
-
-            <!-- MOBILE: Legora-voice intro for the pillars -->
-            <div class="tw-drona-pillars-intro tw-drona-mobile-only">
-                <p class="tw-drona-pillars-lede">Most trade software is a form. TradeWatch does the work for you, and shows every step.</p>
-                <p class="tw-drona-pillars-stamp">Auditable. Authoritative. Explainable.</p>
-            </div>
-
-            <!-- MOBILE: progressive meter pillars (hidden on desktop via .tw-drona-mobile-only) -->
-            <div class="tw-drona-quad tw-drona-mobile-only">
-
-                <!-- Card 1: Knowledge — 1 filled, 3 empty -->
-                <div class="tw-drona-quad-card">
-                    <div class="tw-drona-meter">
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/1%20-%20Brain.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--empty"></div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--empty"></div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--empty"></div>
-                    </div>
-                    <h4 class="tw-drona-quad-title">Knowledge</h4>
-                    <p class="tw-drona-quad-body">Compiled from primary sources. Dated, attributed, traceable.</p>
-                </div>
-
-                <!-- Card 2: Reasoning — 2 filled, 2 empty -->
-                <div class="tw-drona-quad-card">
-                    <div class="tw-drona-meter">
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/1%20-%20Brain.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/2%20-%20Reasoning.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--empty"></div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--empty"></div>
-                    </div>
-                    <h4 class="tw-drona-quad-title">Reasoning</h4>
-                    <p class="tw-drona-quad-body">Reasoning over a knowledge base that does not drift.</p>
-                </div>
-
-                <!-- Card 3: Memory — 3 filled, 1 empty -->
-                <div class="tw-drona-quad-card">
-                    <div class="tw-drona-meter">
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/1%20-%20Brain.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/2%20-%20Reasoning.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/3%20-%20Memory.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--empty"></div>
-                    </div>
-                    <h4 class="tw-drona-quad-title">Memory</h4>
-                    <p class="tw-drona-quad-body">Every shipment makes the next one easier to defend.</p>
-                </div>
-
-                <!-- Card 4: What you get — all 4 filled -->
-                <div class="tw-drona-quad-card">
-                    <div class="tw-drona-meter">
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/1%20-%20Brain.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/2%20-%20Reasoning.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/3%20-%20Memory.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                        <div class="tw-drona-meter-box tw-drona-meter-box--filled">
-                            <img src="added-assets/Section%20TW%20-%20Drona/4%20-%20What%20you%20get.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
-                        </div>
-                    </div>
-                    <h4 class="tw-drona-quad-title">What you get</h4>
-                    <p class="tw-drona-quad-body">A reviewed packet today. A defensible record over time.</p>
-                </div>
-
             </div>
 
             <!-- Spine: 4-trait infographic flowing into desk cards -->
@@ -6878,6 +7082,16 @@
                 document.getElementById('twSetter')?.classList.add('is-in');
             });
         });
+
+        // Fade in SVG over LQIP once decoded (runs on all devices)
+        const globeImg = document.querySelector('.tw-globe-svg');
+        if (globeImg) {
+            if (globeImg.complete && globeImg.naturalWidth) {
+                globeImg.classList.add('is-ready');
+            } else {
+                globeImg.addEventListener('load', () => globeImg.classList.add('is-ready'));
+            }
+        }
 
         // Subtle parallax on globe + setter (mouse) — desktop only
         if (PREFERS_REDUCED || window.matchMedia('(pointer: coarse)').matches) return;
@@ -7944,14 +8158,39 @@
                 startProgress();
             });
 
-            // Prime first scene and begin auto-advance
+            // Prime first scene visually, but defer auto-advance until the
+            // user scrolls the stage into view. Without this gate, scenes
+            // cycle while still off-screen and the user lands mid-film.
             setScene(0);
             updateNavState(0);
-            startProgress();
+
+            const filmRoot = document.querySelector('.tw-act4') || stageEl;
+            let filmStarted = false;
+            const startFilm = () => {
+                if (filmStarted) return;
+                filmStarted = true;
+                startProgress();
+            };
+            if (filmRoot && 'IntersectionObserver' in window) {
+                const filmIO = new IntersectionObserver((entries) => {
+                    for (const e of entries) {
+                        if (e.isIntersecting && e.intersectionRatio >= 0.25) {
+                            startFilm();
+                            filmIO.disconnect();
+                            break;
+                        }
+                    }
+                }, { threshold: 0.25, rootMargin: '0px 0px -10% 0px' });
+                filmIO.observe(filmRoot);
+            } else {
+                startFilm();
+            }
             return;
         }
 
-        // Desktop: pin and scrub through scenes
+        // Desktop: pin and scrub through scenes. immediateRender:false keeps
+        // onUpdate from firing during ScrollTrigger setup, so scene 0 stays
+        // primed until the user actually scrolls into the section.
         ScrollTrigger.create({
             trigger: track,
             start: 'top top',
@@ -7959,13 +8198,14 @@
             pin: pin,
             pinSpacing: true,
             scrub: 0.4,
+            immediateRender: false,
             onUpdate: (self) => {
                 const idx = Math.floor(self.progress * scenes.length * 0.9999);
                 setScene(idx);
             }
         });
 
-        // Prime first scene
+        // Prime first scene (desktop)
         setScene(0);
     }
 
