@@ -126,7 +126,28 @@
         "posted_to_x_at": null
       }
     ],
-    "AI Start-Up News": []
+    "AI Start-Up News": [
+      {
+        "id": 20,
+        "title": "Rajasthan agriculture department, Wadhwani AI sign MoU for AI-based farming solutions",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/rajasthan-agriculture-department-wadhwani-ai-sign-mou-for-ai-based-farming-solutions/131312030",
+        "summary": "The Rajasthan agriculture department has partnered with Wadhwani AI through a Memorandum of Understanding (MoU) to implement AI-based farming solutions. The partnership will provide AI tools for various applications, including pest detection, farmer advisory, and digital field monitoring. These solutions will be provided at no cost to the state government.",
+        "date_published": "2026-05-25",
+        "source_name": "ET Government - Technology",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "RJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ]
   },
   "today_updates": []
 }

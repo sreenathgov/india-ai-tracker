@@ -266,6 +266,47 @@
     ],
     "Major AI Developments": [
       {
+        "id": 16,
+        "title": "slice reports profitability in first full year as bank; revenue jumps 2.3X in FY26",
+        "url": "https://entrackr.com/news/slice-reports-profitability-in-first-full-year-as-bank-revenue-jumps-23x-in-fy26-11875458",
+        "summary": "Slice, India's digital and AI-native bank, has reported profitability in its first full fiscal year as a bank, with a 132% year-on-year growth in revenue. The company's total revenue increased to Rs 1,403 crore in FY26 from Rs 604 crore in FY25. Slice's total income for the quarter ended March 2026 was Rs 399.7 crore, marking a significant turnaround in its financial performance.",
+        "date_published": "2026-05-26",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 17,
+        "title": "Flexprice raises $1.5 Mn seed round led by Shastra VC",
+        "url": "https://entrackr.com/snippets/flexprice-raises-15-mn-seed-round-led-by-shastra-vc-11874628",
+        "summary": "Flexprice, a usage-based billing startup, has raised $1.5 million in a seed funding round led by Shastra VC. The fresh capital will be used to expand into the US and Europe and develop new products, including metering and financial reporting tools. Founded in 2024, Flexprice provides open-source billing infrastructure for AI-native and API-first companies.",
+        "date_published": "2026-05-26",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "GCCs offer 9.8% salary hikes, premium pay for AI skills: Report",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/gccs-offer-9-8-salary-hikes-premium-pay-for-ai-skills-report/articleshow/131233912.cms",
@@ -2822,6 +2863,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

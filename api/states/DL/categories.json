@@ -345,6 +345,27 @@
     ],
     "Major AI Developments": [
       {
+        "id": 17,
+        "title": "Flexprice raises $1.5 Mn seed round led by Shastra VC",
+        "url": "https://entrackr.com/snippets/flexprice-raises-15-mn-seed-round-led-by-shastra-vc-11874628",
+        "summary": "Flexprice, a usage-based billing startup, has raised $1.5 million in a seed funding round led by Shastra VC. The fresh capital will be used to expand into the US and Europe and develop new products, including metering and financial reporting tools. Founded in 2024, Flexprice provides open-source billing infrastructure for AI-native and API-first companies.",
+        "date_published": "2026-05-26",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Can the Indian Copyright Act Accommodate Fully Autonomous AI Generated Output?",
         "url": "https://spicyip.com/2026/05/can-the-indian-copyright-act-accommodate-fully-autonomous-ai-generated-output.html",
@@ -2891,5 +2912,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
