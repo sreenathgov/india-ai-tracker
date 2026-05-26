@@ -877,8 +877,7 @@ document.addEventListener('DOMContentLoaded', function () {
       { label: 'India AI Tracker', ariaLabel: 'View the India AI Tracker', link: 'tracker.html' },
       { label: 'SectorWatch', ariaLabel: 'View SectorWatch platform', link: 'sector-watch.html' },
       { label: 'Publications', ariaLabel: 'View publications', link: 'publications.html' },
-      { label: 'About', ariaLabel: 'Learn about Kanan Labs', link: 'about.html' },
-      { label: 'Team', ariaLabel: 'Meet the founder', link: 'team.html' }
+      { label: 'About', ariaLabel: 'Learn about Kanan Labs', link: 'about.html' }
     ],
     socialItems: [
       { label: 'LinkedIn', link: 'https://www.linkedin.com/in/sreenathgovindarajan' },

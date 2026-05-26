@@ -18,17 +18,19 @@
     <meta name="description" content="Track latest AI policies, startups, and infrastructure developments in Uttar Pradesh. Real-time intelligence by Kanan Labs.">
     <meta name="keywords" content="Kanan Labs, TradeWatch, trade intelligence, trade infrastructure, customs compliance, marine cargo insurance, regulatory intelligence, India trade">
 
+    <link rel="canonical" href="https://kananlabs.in/states/uttar-pradesh/" />
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kanan Labs">
     <meta property="og:url" content="https://kananlabs.in/states/uttar-pradesh/">
     <meta property="og:title" content="Uttar Pradesh AI Tracker | Kanan Labs">
     <meta property="og:description" content="Track latest AI policies, startups, and infrastructure developments in Uttar Pradesh. Real-time intelligence by Kanan Labs.">
-    <meta property="og:image" content="https://kananlabs.in/assets/images/KANAN-LABS-WEBSITELOGO.png">
+    <meta property="og:image" content="https://kananlabs.in/og/kanan-labs-og.png">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://kananlabs.in/">
-    <meta property="twitter:title" content="Kanan Labs — Trade Intelligence Infrastructure">
-    <meta property="twitter:description" content="AI-native trade intelligence. TradeWatch is our shipment-evidence layer for customs and marine cargo insurance.">
-    <meta property="twitter:image" content="https://kananlabs.in/assets/images/KANAN-LABS-WEBSITELOGO.png">
+    <meta property="twitter:title" content="Kanan Labs">
+    <meta property="twitter:description" content="Regulatory intelligence infrastructure for businesses operating across law, trade, policy, and geopolitical risk.">
+    <meta property="twitter:image" content="https://kananlabs.in/og/kanan-labs-og.png">
 
     <link rel="icon" type="image/png" href="assets/images/KANAN-LABS-WEBSITELOGO.png">
     <meta name="google-site-verification" content="e4NN5-5uDwKoApKLmA1I8ZDmL1Dy0BGhlP-IpKbEbSo" />
@@ -39,10 +41,34 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
-    <!-- Performance: preload hero poster (paints instantly while video loads) -->
-    <link rel="preload" as="image" href="added-assets/kanan-hero-poster.jpg" fetchpriority="high">
-    <!-- Performance: preload hero video (1080p WebM for modern browsers) -->
-    <link rel="preload" as="video" href="added-assets/kanan-hero-1080p.webm" type="video/webm" fetchpriority="high">
+    <!-- Performance: preload hero poster (AVIF primary, ~45KB — paints in <200ms) -->
+    <link rel="preload" as="image" href="added-assets/kanan-hero-poster.avif" type="image/avif" fetchpriority="high">
+    <!-- Performance: viewport-aware hero video preload (AV1/HEVC desktop, H.264 mobile) -->
+    <script>
+    (function () {
+        var isMobile = window.matchMedia('(max-width: 768px)').matches;
+        var canAV1 = document.createElement('video')
+            .canPlayType('video/mp4; codecs="av01.0.05M.08"') !== '';
+        var href, type;
+        if (isMobile) {
+            href = 'added-assets/kanan-hero-720p.h264.mp4';
+            type = 'video/mp4';
+        } else if (canAV1) {
+            href = 'added-assets/kanan-hero-1080p.av1.mp4';
+            type = 'video/mp4; codecs="av01.0.05M.08"';
+        } else {
+            href = 'added-assets/kanan-hero-1080p.hevc.mp4';
+            type = 'video/mp4; codecs=hvc1';
+        }
+        var link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'video';
+        link.href = href;
+        link.type = type;
+        link.setAttribute('fetchpriority', 'high');
+        document.head.appendChild(link);
+    })();
+    </script>
     <!-- Performance: preload Cormorant display font weights -->
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/CormorantGaramond-Regular.woff2">
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/CormorantGaramond-Medium.woff2">
@@ -674,7 +700,6 @@
             }
         }
     </style>
-    <link rel="canonical" href="https://kananlabs.in/states/uttar-pradesh/" />
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"GovernmentService","name":"Uttar Pradesh AI Ecosystem Tracker","areaServed":{"@type":"State","name":"Uttar Pradesh"},"provider":{"@type":"Organization","name":"Kanan Labs","url":"https://kananlabs.in"}}</script>
 </head>
 
@@ -692,27 +717,31 @@
         ════════════════════════════════════════════════ -->
         <header class="kl-hero">
 
-            <!-- Hero video. Sources injected by inline script below based on viewport,
-                 so each device class gets a single appropriate file. The non-standard
-                 `media` attribute on <source> is honored only by Safari; Chrome/Firefox
-                 ignore it and would lock onto the desktop WebM on mobile networks. -->
+            <!-- Hero video. Sources injected by inline script below based on viewport +
+                 codec support. Ladder: AV1 (smallest, sharpest — Chrome/Firefox/Edge) →
+                 HEVC (Safari) → H.264 (universal fallback). Mobile gets a single 720p
+                 H.264 to keep first-frame paint under 1s on 4G. -->
             <video class="kl-hero__video" id="klHeroVideo"
                    autoplay loop muted playsinline disablepictureinpicture
                    preload="auto"
-                   poster="added-assets/kanan-hero-poster.jpg"></video>
+                   poster="added-assets/kanan-hero-poster.avif"></video>
             <script>
             (function () {
                 var v = document.getElementById('klHeroVideo');
                 if (!v) return;
                 var isMobile = window.matchMedia('(max-width: 768px)').matches;
+                // HEVC ahead of AV1: Apple Silicon + iPhone 7+ hardware-decode
+                // HEVC; AV1 is software-decoded on most of that fleet and is
+                // a major source of first-play stutter. Chrome/Firefox/Edge
+                // skip HEVC and grab AV1 next.
                 var sources = isMobile
                     ? [
-                        { src: 'added-assets/kanan-hero-720p-h264.mp4', type: 'video/mp4' },
-                        { src: 'added-assets/kanan-hero-720p.mp4',      type: 'video/mp4; codecs=hvc1' }
+                        { src: 'added-assets/kanan-hero-720p.h264.mp4', type: 'video/mp4' }
                       ]
                     : [
-                        { src: 'added-assets/kanan-hero-1080p.webm', type: 'video/webm' },
-                        { src: 'added-assets/kanan-hero-1080p.mp4',  type: 'video/mp4; codecs=hvc1' }
+                        { src: 'added-assets/kanan-hero-1080p.hevc.mp4', type: 'video/mp4; codecs=hvc1' },
+                        { src: 'added-assets/kanan-hero-1080p.av1.mp4',  type: 'video/mp4; codecs="av01.0.05M.08"' },
+                        { src: 'added-assets/kanan-hero-1080p.h264.mp4', type: 'video/mp4' }
                       ];
                 sources.forEach(function (s) {
                     var el = document.createElement('source');
@@ -721,8 +750,27 @@
                     v.appendChild(el);
                 });
                 v.load();
-                var p = v.play();
-                if (p && typeof p.catch === 'function') p.catch(function () { /* autoplay gated */ });
+
+                // Defer playback until the browser has buffered enough frames
+                // to play through without stalling. Calling .play() before
+                // canplay causes a 1–3 s stutter on cold loads.
+                var played = false;
+                function startPlayback() {
+                    if (played) return;
+                    played = true;
+                    var p = v.play();
+                    if (p && typeof p.catch === 'function') {
+                        p.catch(function () { /* autoplay gated by browser */ });
+                    }
+                }
+                if (v.readyState >= 3 /* HAVE_FUTURE_DATA */) {
+                    startPlayback();
+                } else {
+                    v.addEventListener('canplay', startPlayback, { once: true });
+                    // Safety net for browsers that load enough but never fire
+                    // canplay for short autoplay loops.
+                    setTimeout(startPlayback, 1500);
+                }
             })();
             </script>
 
@@ -1701,7 +1749,6 @@
                             <h4 class="kl-footer__col-heading">Company</h4>
                             <ul class="kl-footer__col-links">
                                 <li><a href="about.html">About</a></li>
-                                <li><a href="team.html">Team</a></li>
                                 <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
                             </ul>
                         </div>

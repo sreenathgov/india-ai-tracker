@@ -5,11 +5,10 @@ const { execSync } = require('child_process');
 // Configuration
 const PROJECT_ROOT = path.resolve(__dirname, '../');
 const DIST_DIR = path.join(PROJECT_ROOT, 'dist');
-const ASSETS_TO_COPY = ['js', 'css', 'data', 'assets', 'added-assets', 'api', 'KANANLABS-LOGO-SET', 'dossiers'];
+const ASSETS_TO_COPY = ['js', 'css', 'data', 'assets', 'added-assets', 'api', 'KANANLABS-LOGO-SET', 'dossiers', 'og'];
 const FILES_TO_COPY = [
     'index.html',
     'about.html',
-    'team.html',
     'sector-watch.html',
     'tradewatch.html',
     'tracker.html',
@@ -39,6 +38,16 @@ function buildSite() {
         execSync('npm run build:scroll-reveal', { stdio: 'inherit', cwd: PROJECT_ROOT });
     } catch (e) {
         console.error('❌ Scroll Reveal Vite build failed.');
+        process.exit(1);
+    }
+
+    // 1c. Run Vite Build — About hero FluidGlass island
+    // This creates dist/about-hero-bundle.js (emptyOutDir: false preserves previous outputs)
+    try {
+        console.log('📦 Running Vite build for About hero FluidGlass island...');
+        execSync('npm run build:about', { stdio: 'inherit', cwd: PROJECT_ROOT });
+    } catch (e) {
+        console.error('❌ About hero Vite build failed.');
         process.exit(1);
     }
 
@@ -75,7 +84,7 @@ function buildSite() {
 
     // 5. Mirror Vite bundles into dist/dist/ so that dist/index.html can resolve
     //    <script src="dist/...bundle.js"> correctly when Vercel serves from dist/
-    const BUNDLE_NAMES = ['text-pressure-bundle.js', 'scroll-reveal-bundle.js'];
+    const BUNDLE_NAMES = ['text-pressure-bundle.js', 'scroll-reveal-bundle.js', 'about-hero-bundle.js'];
     const distDistDir = path.join(DIST_DIR, 'dist');
     if (!fs.existsSync(distDistDir)) {
         fs.mkdirSync(distDistDir, { recursive: true });

@@ -19,26 +19,27 @@
 
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kananlabs.in/tracker.html">
-    <meta property="og:title" content="India AI Tracker | Kanan Labs">
+    <meta property="og:site_name" content="Kanan Labs">
+    <meta property="og:url" content="https://kananlabs.in/india-ai-tracker">
+    <meta property="og:title" content="India AI Tracker by Kanan Labs">
     <meta property="og:description"
-        content="Track AI developments, policies, and startup news across all Indian states and union territories. A public AI governance intelligence tool by Kanan Labs.">
-    <meta property="og:image" content="https://kananlabs.in/assets/images/KANAN-LABS-WEBSITELOGO.png">
+        content="A public intelligence tracker monitoring AI policy and governance developments across India's states, union territories, and national institutions.">
+    <meta property="og:image" content="https://kananlabs.in/og/india-ai-tracker-og.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://kananlabs.in/tracker.html">
-    <meta property="twitter:title" content="India AI Tracker | Kanan Labs">
+    <meta property="twitter:url" content="https://kananlabs.in/india-ai-tracker">
+    <meta property="twitter:title" content="India AI Tracker by Kanan Labs">
     <meta property="twitter:description"
-        content="Track AI developments, policies, and startup news across all Indian states and union territories.">
-    <meta property="twitter:image" content="https://kananlabs.in/assets/images/KANAN-LABS-WEBSITELOGO.png">
+        content="A public intelligence tracker monitoring AI policy and governance developments across India's states, union territories, and national institutions.">
+    <meta property="twitter:image" content="https://kananlabs.in/og/india-ai-tracker-og.png">
 
     <!-- Additional Meta Tags -->
     <meta name="description"
         content="Track AI developments, policies, and startup news across all Indian states and union territories. A public AI governance intelligence tool by Kanan Labs.">
     <meta name="keywords"
         content="AI India, artificial intelligence India, AI policy India, AI startups India, AI tracker, governance intelligence">
-    <link rel="canonical" href="https://kananlabs.in/tracker.html">
+    <link rel="canonical" href="https://kananlabs.in/india-ai-tracker">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/KANAN-LABS-WEBSITELOGO.png">
@@ -46,18 +47,16 @@
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="e4NN5-5uDwKoApKLmA1I8ZDmL1Dy0BGhlP-IpKbEbSo" />
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/vendor/leaflet/leaflet.css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Six+Caps&display=swap"
         rel="stylesheet">
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <link rel="stylesheet" href="css/styles-v2.css?v=21">
     <link rel="stylesheet" href="css/staggered-menu.css?v=2">
     <link rel="stylesheet" href="css/strategic-insights.css?v=5">
     <link rel="stylesheet" href="css/shiny-text.css">
 
     <link rel="stylesheet" href="css/contact-panel.css?v=1">
-    <link rel="stylesheet" href="css/identity-section.css?v=7">
     <link rel="stylesheet" href="css/footer.css?v=3">
 </head>
 
@@ -191,16 +190,6 @@
             </div>
         </section>
 
-        <!-- Transition zone: Insights → Identity -->
-        <div class="identity-transition" aria-hidden="true"></div>
-
-        <!-- Section 3: Identity (Founder) -->
-        <section class="identity-section" id="identitySection">
-            <div class="identity-container">
-                <!-- Content rendered dynamically by identity-section.js -->
-            </div>
-        </section>
-
         <footer class="kl-footer">
             <div class="kl-footer__inner">
 
@@ -250,7 +239,6 @@
                             <h4 class="kl-footer__col-heading">Company</h4>
                             <ul class="kl-footer__col-links">
                                 <li><a href="about.html">About</a></li>
-                                <li><a href="team.html">Team</a></li>
                                 <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
                             </ul>
                         </div>
@@ -299,10 +287,9 @@
 
     <script src="js/contact-panel.js"></script>
     <script src="js/ripple-grid.js"></script>
-    <script src="js/identity-section.js"></script>
     <script src="js/staggered-menu.js"></script>
     <!-- Leaflet moved from <head> to avoid render-blocking; app-final.js depends on it -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/vendor/leaflet/leaflet.js"></script>
     <script src="js/app-final.js?v=20"></script>
 </body>
 

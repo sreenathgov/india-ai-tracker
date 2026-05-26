@@ -68,3 +68,26 @@ added-assets/Thumbnails/TW - TN.JPG
 temp/
 backend/reports/*.json
 backend/test_*.py
+
+# node_modules — was previously tracked; stop tracking to reduce diff churn
+node_modules/
+
+# Codex tool config (user-specific)
+.codex/
+
+# macOS iCloud Finder duplicates
+*\ 2.html
+*\ 2.css
+*\ 2.js
+*\ 2.jsx
+*\ 2.svg
+*\ 2.png
+*\ 2.jpg
+*\ 2.jpeg
+*\ 2.webp
+*\ 2.mp4
+*\ 2.webm
+*\ 2.txt
+*\ 2.md
+*\ 2.glb
+*\ 2.hdr
