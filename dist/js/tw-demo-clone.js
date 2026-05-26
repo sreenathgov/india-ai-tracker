@@ -2,7 +2,8 @@
  * Autoplay cycler for the TradeWatch demo stage on the landing page.
  * Crossfades through scenes 1–4 every SCENE_MS ms; triggers within-scene
  * reveals by adding .is-activated / .is-tagged / .is-in once a scene
- * becomes active. Respects prefers-reduced-motion.
+ * becomes active. Respects prefers-reduced-motion. Demo only starts once
+ * the stage enters the viewport (IntersectionObserver gate).
  */
 (function () {
     'use strict';
@@ -21,8 +22,9 @@
         'Bundle arrives',
         'Reviewer signs · packets delivered'
     ];
-    const SCENE_MS  = 5500;
-    const REVEAL_MS = 450;
+    // Pacing scaled 0.7× from the original 5500 / 450 for ~30% faster cycle.
+    const SCENE_MS  = 3850;
+    const REVEAL_MS = 315;
 
     const reduced = window.matchMedia &&
                     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -43,14 +45,14 @@
 
         const inboxRows = scene.querySelectorAll('.tw-inbox-row');
         inboxRows.forEach((row, i) => {
-            setTimeout(() => row.classList.add('is-tagged'), 200 + i * 160);
+            setTimeout(() => row.classList.add('is-tagged'), 140 + i * 112);
         });
 
         const inboxStat = scene.querySelector('.tw-inbox-stat');
-        if (inboxStat) setTimeout(() => inboxStat.classList.add('is-in'), 1100);
+        if (inboxStat) setTimeout(() => inboxStat.classList.add('is-in'), 770);
 
         const pkgStat = scene.querySelector('.tw-pkg-compile-stat');
-        if (pkgStat) setTimeout(() => pkgStat.classList.add('is-in'), 150);
+        if (pkgStat) setTimeout(() => pkgStat.classList.add('is-in'), 105);
     }
 
     function show(i) {
@@ -65,11 +67,37 @@
         setTimeout(() => activateInner(scenes[i]), REVEAL_MS);
     }
 
-    show(0);
-    if (reduced) return;
+    let started = false;
+    let sceneTimer = null;
+    let currentIdx = 0;
 
-    setInterval(() => {
-        const next = (scenes.findIndex(s => s.classList.contains('is-active')) + 1) % scenes.length;
-        show(next);
-    }, SCENE_MS);
+    function startLoop() {
+        if (started) return;
+        started = true;
+        show(0);
+        currentIdx = 0;
+        if (reduced) return;
+        sceneTimer = setInterval(() => {
+            currentIdx = (currentIdx + 1) % scenes.length;
+            show(currentIdx);
+        }, SCENE_MS);
+    }
+
+    if (!('IntersectionObserver' in window)) {
+        // Older browser — fall back to immediate start (matches old behaviour).
+        startLoop();
+        return;
+    }
+
+    const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+            if (e.isIntersecting && e.intersectionRatio >= 0.25) {
+                startLoop();
+                io.disconnect();
+                break;
+            }
+        }
+    }, { threshold: 0.25, rootMargin: '0px 0px -10% 0px' });
+
+    io.observe(stage);
 })();

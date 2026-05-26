@@ -9,6 +9,7 @@
   "scripts": {
     "build:text-pressure": "vite build",
     "build:scroll-reveal": "vite build --config vite.config.scroll-reveal.js",
+    "build:about": "vite build --config vite.config.about.js",
     "dev:text-pressure": "vite build --watch",
     "build": "node scripts/build-full-site.js && node scripts/generate-static-pages.js && node scripts/generate-sitemap.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,10 +27,14 @@
   },
   "homepage": "https://github.com/sreenathgov/india-ai-tracker#readme",
   "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
     "framer-motion": "^12.34.4",
     "gsap": "^3.14.2",
+    "maath": "^0.10.8",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "three": "^0.184.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.4",

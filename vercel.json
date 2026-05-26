@@ -1,6 +1,13 @@
 {
   "version": 2,
   "public": true,
+  "rewrites": [
+    { "source": "/tradewatch", "destination": "/tradewatch.html" },
+    { "source": "/india-ai-tracker", "destination": "/tracker.html" },
+    { "source": "/sectorwatch", "destination": "/sector-watch.html" },
+    { "source": "/team", "destination": "/about.html" },
+    { "source": "/team.html", "destination": "/about.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
