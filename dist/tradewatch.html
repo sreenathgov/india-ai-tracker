@@ -30,12 +30,11 @@
     <link rel="stylesheet" href="css/staggered-menu.css?v=2">
     <link rel="stylesheet" href="css/footer 2.css?v=3">
 
-    <!-- Performance: responsive SVG preload — 1.5 MB on tablet/phone, 15 MB on desktop -->
-    <link rel="preload" as="image" href="added-assets/sectorwatch-web-real.svg"
-          media="(max-width: 1024px)" fetchpriority="high">
-    <link rel="preload" as="image" href="added-assets/sectorwatch-web-image2.svg"
-          media="(min-width: 1025px)" fetchpriority="high">
-    <link rel="preload" as="image" type="image/avif" href="added-assets/tw-hero-2400.avif">
+    <!-- Hero globe: responsive raster preload (same artwork, sharp + fast on every device) -->
+    <link rel="preload" as="image" type="image/avif"
+          href="added-assets/tw-hero-1920.avif"
+          imagesrcset="added-assets/tw-hero-1280.avif 1280w, added-assets/tw-hero-1920.avif 1920w, added-assets/tw-hero-2560.avif 2560w, added-assets/tw-hero-3200.avif 3200w, added-assets/tw-hero-3840.avif 3840w"
+          imagesizes="(orientation: portrait) 3840px, 100vw" fetchpriority="high">
     <!-- Performance: preload primary display font weights -->
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/CormorantGaramond-Regular.woff2">
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/CormorantGaramond-Medium.woff2">
@@ -175,8 +174,8 @@
             inset: 0;
             overflow: hidden;
             /* LQIP: paint AVIF/JPEG raster as instant background while the
-               byte-perfect SVG decodes on top. Kills the empty-navy flash on
-               cold loads without altering the final rendered visual. */
+               full-resolution responsive raster decodes on top. Kills the
+               empty-navy flash on cold loads; same artwork, no visual change. */
             background-image: image-set(
                 url("added-assets/tw-hero-2400.avif") type("image/avif"),
                 url("added-assets/tw-hero-2400.jpg") type("image/jpeg")
@@ -5848,13 +5847,16 @@
     <section class="tw-act0" aria-label="Introduction">
         <div class="tw-globe-stage" aria-hidden="true">
             <picture>
-                <source media="(max-width: 1024px)"
-                        srcset="added-assets/sectorwatch-web-real.svg"
-                        type="image/svg+xml">
+                <source type="image/avif"
+                        srcset="added-assets/tw-hero-1280.avif 1280w, added-assets/tw-hero-1920.avif 1920w, added-assets/tw-hero-2560.avif 2560w, added-assets/tw-hero-3200.avif 3200w, added-assets/tw-hero-3840.avif 3840w"
+                        sizes="(orientation: portrait) 3840px, 100vw">
+                <source type="image/webp"
+                        srcset="added-assets/tw-hero-1280.webp 1280w, added-assets/tw-hero-1920.webp 1920w, added-assets/tw-hero-2560.webp 2560w, added-assets/tw-hero-3200.webp 3200w, added-assets/tw-hero-3840.webp 3840w"
+                        sizes="(orientation: portrait) 3840px, 100vw">
                 <img class="tw-globe-svg"
-                     src="added-assets/sectorwatch-web-image2.svg"
+                     src="added-assets/tw-hero-2400.jpg"
                      alt=""
-                     width="1920" height="1080"
+                     width="2400" height="1350"
                      decoding="async"
                      fetchpriority="high">
             </picture>
@@ -7103,7 +7105,7 @@
             });
         });
 
-        // Fade in SVG over LQIP once decoded (runs on all devices)
+        // Fade in hero raster over LQIP once decoded (runs on all devices)
         const globeImg = document.querySelector('.tw-globe-svg');
         if (globeImg) {
             if (globeImg.complete && globeImg.naturalWidth) {
