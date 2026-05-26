@@ -196,6 +196,10 @@
     .kl-flow__stage {
         min-height: 200px;
     }
+    /* Packet (V) alone in row 3 — span both columns to remove the empty right gap */
+    .kl-flow__stage:last-child {
+        grid-column: 1 / -1;
+    }
 }
 
 @media (max-width: 560px) {

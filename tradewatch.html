@@ -30,8 +30,11 @@
     <link rel="stylesheet" href="css/staggered-menu.css?v=2">
     <link rel="stylesheet" href="css/footer 2.css?v=3">
 
-    <!-- Performance: preload original hero SVG (rendered source) + AVIF LQIP for fast paint -->
-    <link rel="preload" as="image" href="added-assets/sectorwatch-web-image2.svg" fetchpriority="high">
+    <!-- Performance: responsive SVG preload — 1.5 MB on tablet/phone, 15 MB on desktop -->
+    <link rel="preload" as="image" href="added-assets/sectorwatch-web-real.svg"
+          media="(max-width: 1024px)" fetchpriority="high">
+    <link rel="preload" as="image" href="added-assets/sectorwatch-web-image2.svg"
+          media="(min-width: 1025px)" fetchpriority="high">
     <link rel="preload" as="image" type="image/avif" href="added-assets/tw-hero-2400.avif">
     <!-- Performance: preload primary display font weights -->
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/CormorantGaramond-Regular.woff2">
@@ -2504,6 +2507,7 @@
             letter-spacing: 0.28em;
             text-transform: uppercase;
             color: var(--tw-ink-mid);
+            white-space: nowrap;
         }
         .tw-stage-chrome-scene {
             font-family: var(--tw-display);
@@ -2512,6 +2516,7 @@
             font-size: 1.05rem;
             color: var(--tw-navy);
             letter-spacing: 0.005em;
+            white-space: nowrap;
         }
         .tw-stage-chrome-count {
             font-family: var(--tw-mono);
@@ -2551,8 +2556,13 @@
         @media (max-width: 700px) {
             .tw-stage { width: 96vw; border-radius: 18px;
                         height: clamp(560px, 88dvh, 740px); }
-            .tw-stage-chrome { padding: 0.7rem 1rem; flex-wrap: wrap; gap: 0.5rem; }
-            .tw-stage-chrome-scene { font-size: 0.95rem; }
+            .tw-stage-chrome { padding: 0.7rem 1rem; flex-wrap: wrap; gap: 0.5rem; align-items: flex-start; }
+            .tw-stage-chrome-left { flex-wrap: wrap; row-gap: 0.18rem; }
+            .tw-stage-chrome-scene {
+                flex-basis: 100%;
+                font-size: clamp(0.8rem, 3.4vw, 0.95rem);
+                line-height: 1.2;
+            }
         }
         /* Landscape phone — width drives height; Nax strip compressed */
         @media (max-width: 1023px) and (max-height: 500px) {
@@ -4329,7 +4339,7 @@
             }
             .tw-inbox-list { gap: 0.4rem; flex: none; }
             .tw-inbox-row {
-                grid-template-columns: 18px 1fr auto auto;
+                grid-template-columns: 18px minmax(0, 1fr) auto minmax(0, auto);
                 gap: 0.45rem 0.55rem;
                 padding: 0.5rem 0.65rem;
                 border-radius: 7px;
@@ -4343,7 +4353,12 @@
                 min-width: 0;
             }
             .tw-inbox-row-time { font-size: 0.56rem; }
-            .tw-inbox-tag { font-size: 0.5rem; padding: 0.22rem 0.42rem; letter-spacing: 0.1em; }
+            .tw-inbox-tag {
+                max-width: 100%;
+                min-width: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
             .tw-inbox-stat { font-size: 0.54rem; padding: 0.25rem 0.55rem; }
 
             /* ── Step 3: Scene 4 extraction — release fixed-ratio height ──
@@ -4882,7 +4897,7 @@
         }
         .tw-inbox-tag {
             font-family: var(--tw-mono);
-            font-size: 0.54rem;
+            font-size: clamp(0.36rem, 1.6vw, 0.54rem);
             font-weight: 700;
             letter-spacing: 0.18em;
             text-transform: uppercase;
@@ -5832,12 +5847,17 @@
          ============================================================ -->
     <section class="tw-act0" aria-label="Introduction">
         <div class="tw-globe-stage" aria-hidden="true">
-            <img class="tw-globe-svg"
-                 src="added-assets/sectorwatch-web-image2.svg"
-                 alt=""
-                 width="1920" height="1080"
-                 decoding="async"
-                 fetchpriority="high">
+            <picture>
+                <source media="(max-width: 1024px)"
+                        srcset="added-assets/sectorwatch-web-real.svg"
+                        type="image/svg+xml">
+                <img class="tw-globe-svg"
+                     src="added-assets/sectorwatch-web-image2.svg"
+                     alt=""
+                     width="1920" height="1080"
+                     decoding="async"
+                     fetchpriority="high">
+            </picture>
             <canvas class="tw-particle-layer" id="twParticleLayer"></canvas>
             <div class="tw-globe-grad-top"></div>
             <div class="tw-globe-grad-bottom"></div>

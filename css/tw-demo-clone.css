@@ -162,6 +162,7 @@
     letter-spacing: 0.28em;
     text-transform: uppercase;
     color: var(--tw-ink-mid);
+    white-space: nowrap;
 }
 .kl-twdemo .tw-stage-chrome-scene {
     font-family: var(--tw-display);
@@ -170,6 +171,7 @@
     font-size: 1.05rem;
     color: var(--tw-navy);
     letter-spacing: 0.005em;
+    white-space: nowrap;
 }
 
 /* ---------- Scene meter (pagination dots, non-interactive) ---------- */
@@ -1177,17 +1179,44 @@
 }
 
 @media (max-width: 600px) {
+    /* Railing: stack dot+eyebrow on line 1, scene title on line 2, no wrapping */
+    .kl-twdemo .tw-stage-chrome { align-items: flex-start; }
+    .kl-twdemo .tw-stage-chrome-left { flex-wrap: wrap; row-gap: 0.18rem; }
+    .kl-twdemo .tw-stage-chrome-scene {
+        flex-basis: 100%;
+        font-size: clamp(0.8rem, 3.4vw, 0.95rem);
+        line-height: 1.2;
+    }
+    /* Inbox sub-header: restore separation between title and meta */
+    .kl-twdemo .tw-inbox-head { gap: 0.6rem; flex-wrap: wrap; row-gap: 0.2rem; }
+    .kl-twdemo .tw-inbox-head-title {
+        font-size: clamp(0.84rem, 3.4vw, 1.0rem);
+        min-width: 0;
+    }
+    .kl-twdemo .tw-inbox-head-meta {
+        font-size: 0.5rem;
+        letter-spacing: 0.12em;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    /* Doc-type chip: shrink to fit one line; ellipsis is a last-resort safety */
     .kl-twdemo .tw-inbox-tag {
-        font-size: 0.42rem;
-        letter-spacing: 0.08em;
-        padding: 0.18rem 0.34rem;
+        font-size: clamp(0.36rem, 1.7vw, 0.44rem);
+        letter-spacing: 0.06em;
+        padding: 0.18rem 0.32rem;
         max-width: 100%;
+        min-width: 0;
         overflow: hidden;
         text-overflow: ellipsis;
     }
     .kl-twdemo .tw-inbox-row {
-        grid-template-columns: 18px 1fr auto minmax(0, auto);
+        grid-template-columns: 18px minmax(0, 1fr) auto minmax(0, auto);
         column-gap: 0.4rem;
+    }
+    .kl-twdemo .tw-inbox-row-name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
 

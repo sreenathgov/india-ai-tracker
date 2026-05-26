@@ -229,10 +229,36 @@
     .kl-triptych { padding-top: 4rem; }
 }
 
-@media (max-width: 860px) {
+/* Tablet portrait — iPad Air/Pro 11" and similar (768–1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .kl-triptych__row {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .kl-triptych__img-wrap {
+        aspect-ratio: 4 / 3;
+    }
+
+    .kl-triptych__desc-mobile { display: block; }
+    .kl-triptych__overlay     { display: none; }
+
+    /* Card III alone in row 2 — centre it to match one column's width */
+    .kl-triptych__card:nth-child(3) {
+        grid-column: 1 / -1;
+        max-width: calc(50% - clamp(12px, 1.6vw, 26px));
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Phone — single column */
+@media (max-width: 767px) {
     .kl-triptych__row {
         grid-template-columns: 1fr;
-        max-width: 440px;
+        max-width: 480px;
+        margin: 0 auto;
     }
 
     .kl-triptych__img-wrap {
