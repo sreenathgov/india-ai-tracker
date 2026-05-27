@@ -114,6 +114,12 @@
 
             --tw-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
             --tw-mono: 'Telegraf', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+            /* Uniform section vertical rhythm (Drona → end region) */
+            --tw-section-y: clamp(4.5rem, 9vh, 8rem);
+            /* Uniform breathing room between major stacked sub-blocks.
+               Floor kept high so short laptops don't collapse to a cramped minimum. */
+            --tw-block-gap: clamp(3rem, 5vh, 5rem);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -587,14 +593,14 @@
             will-change: transform, opacity;
             backface-visibility: hidden;
             -webkit-backface-visibility: hidden;
-            transform-origin: center bottom;
+            transform-origin: center center;
         }
         .tw-frag.is-in { opacity: 1; transform: translateY(0); }
 
         .tw-frag:hover {
             border-color: rgba(10, 47, 82, 0.30);
             background: rgba(255, 255, 255, 0.90);
-            transform: translateY(-22px) scale(1.12) !important;
+            transform: translateY(-12px) scale(1.04) !important;
             box-shadow: 0 24px 60px rgba(10,47,82,0.14), 0 0 0 1px rgba(10,47,82,0.12);
             z-index: 10;
             opacity: 1 !important;
@@ -828,7 +834,7 @@
         .tw-drona {
             position: relative;
             background: var(--tw-cream);
-            padding: clamp(6rem, 12vh, 10rem) clamp(1.5rem, 4vw, 4rem);
+            padding: var(--tw-section-y) clamp(1.5rem, 4vw, 4rem);
             overflow: hidden;
             border-top: 1px solid var(--tw-rule);
         }
@@ -871,6 +877,8 @@
             letter-spacing: -0.02em;
             color: var(--tw-navy);
             margin-bottom: clamp(1rem, 2vh, 1.75rem);
+            /* Optically align italic-serif ink left edge to the mono eyebrow/subline margin */
+            margin-left: 0.04em;
         }
         .tw-drona-subline {
             font-family: var(--tw-mono);
@@ -878,7 +886,7 @@
             line-height: 1.65;
             color: var(--tw-ink-dim);
             max-width: 42rem;
-            margin-bottom: clamp(2rem, 4vh, 3rem);
+            margin-bottom: clamp(2.25rem, 4.5vh, 3.25rem);
         }
 
         /* ============================================================
@@ -892,7 +900,7 @@
             border: 1px solid rgba(10, 47, 82, 0.10);
             border-radius: 8px;
             padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 3vw, 3rem) clamp(1rem, 2vw, 1.75rem);
-            margin: clamp(2rem, 4vh, 3rem) auto;
+            margin: var(--tw-block-gap) auto;
             max-width: 1180px;
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
@@ -1225,8 +1233,8 @@
 
         /* Two-column layout — no box, no background, sits on cream */
         .tw-drona-credential {
-            margin-top: clamp(3rem, 6vh, 5rem);
-            margin-bottom: clamp(4rem, 8vh, 6rem);
+            margin-top: var(--tw-block-gap);
+            margin-bottom: var(--tw-block-gap);
         }
         .tw-drona-credential-inner {
             max-width: 1180px;
@@ -1272,6 +1280,8 @@
             line-height: 1.18;
             color: var(--tw-navy);
             letter-spacing: -0.01em;
+            /* Optically align italic ink to the eyebrow margin (same as .tw-drona-headline) */
+            margin-left: 0.04em;
         }
         /* Right: body copy in muted navy (matches rest of page body) */
         .tw-drona-credential-body { padding-top: 0.5rem; }
@@ -1569,7 +1579,7 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 0;
             max-width: 980px;
-            margin: 0 auto clamp(3rem, 6vh, 5rem);
+            margin: 0 auto var(--tw-block-gap);
             padding-top: 1.5rem;
         }
         .tw-drona-spine-track {
@@ -2183,7 +2193,7 @@
             line-height: 1.38;
             color: var(--tw-navy);
             max-width: 44rem;
-            margin: clamp(3rem, 7vh, 5rem) auto clamp(3rem, 7vh, 5rem);
+            margin: var(--tw-block-gap) auto;
             letter-spacing: -0.005em;
             opacity: 0;
             transform: translateY(16px);
@@ -2211,51 +2221,35 @@
 
         /* ============================================================
            DRONA — iPad 11" landscape + short laptops
-           Fits the funnel panel + headline in one viewport. The original
-           vertical layout (3 stacked tier labels next to a 360px SVG
-           funnel) is >900px tall here. We flip the funnel to a single
-           column with labels in a horizontal 3-col grid, and hide the
-           SVG funnel + vertical rail (which only make sense alongside
-           vertically stacked labels). Credential/spine/portfolio blocks
-           below the panel scroll naturally afterwards.
+           Keep the full funnel diagram (SVG funnel + vertical rail + the
+           two-column text/visual layout) on short-height laptops — the
+           3-column flat fallback looked broken. Instead we compact the
+           whole panel: trim section padding, headline, subline, the SVG
+           funnel height, and label/stage spacing so the funnel reads
+           cleanly and the section scrolls naturally afterwards.
            Placed AFTER all .tw-drona-* base rules so it wins source-order
            ties against same-specificity later declarations.
            ============================================================ */
         @media (min-width: 1101px) and (max-height: 880px) {
-            .tw-drona              { padding: clamp(1.75rem, 3.5vh, 3rem) clamp(1.5rem, 4vw, 4rem); }
-            .tw-drona-headline     { font-size: clamp(1.5rem, 2.6vw, 2rem); margin-bottom: 0.5rem; line-height: 1.15; }
-            .tw-drona-subline      { font-size: 0.95rem; line-height: 1.4; margin-bottom: clamp(0.6rem, 1.25vh, 1rem); }
-            .tw-drona-hinge        { margin: clamp(0.5rem, 1vh, 0.85rem) auto clamp(0.4rem, 0.8vh, 0.75rem); }
-            .tw-drona-panel        { padding: 0.85rem 1rem; margin: 0.5rem auto 0; }
+            .tw-drona              { padding: clamp(2.5rem, 5vh, 4rem) clamp(1.5rem, 4vw, 4rem); }
+            .tw-drona-headline     { font-size: clamp(1.7rem, 3vw, 2.4rem); margin-bottom: 0.6rem; line-height: 1.12; }
+            .tw-drona-subline      { font-size: 0.95rem; line-height: 1.5; margin-bottom: clamp(1rem, 2vh, 1.5rem); }
+            .tw-drona-hinge        { margin: clamp(1rem, 2vh, 1.75rem) auto clamp(0.85rem, 1.75vh, 1.5rem); }
+            .tw-drona-panel        { padding: clamp(1.25rem, 2.5vw, 2rem) clamp(1.25rem, 2.5vw, 2rem) clamp(1rem, 2vw, 1.5rem); margin: clamp(1rem, 2vh, 1.75rem) auto 0; }
 
-            .tw-drona-funnel        { grid-template-columns: 1fr; gap: 0.5rem; margin-bottom: 0.5rem; }
-            .tw-drona-funnel-visual { display: none; }
-            .tw-drona-funnel-labels {
-                padding-left: 0;
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 0.75rem;
-            }
-            .tw-drona-funnel-label  {
-                padding: 0.5rem 0.75rem;
-                flex: unset;
-                justify-content: flex-start;
-                opacity: 1; /* always-on; the scroll-driven reveal ties to the hidden rail/SVG */
-            }
-            .tw-drona-funnel-label + .tw-drona-funnel-label {
-                border-top: none;
-                border-left: 1px solid var(--tw-rule);
-            }
-            .tw-drona-rail { display: none; }
+            /* Keep the two-column funnel; just narrow the visual + shorten the SVG */
+            .tw-drona-funnel        { grid-template-columns: minmax(0, 1fr) 300px; gap: 1rem; margin-bottom: 1rem; }
+            .tw-drona-funnel-svg    { min-height: 320px; }
+            .tw-drona-funnel-label  { padding: 1rem 0; }
 
-            .tw-drona-tier-num      { font-size: 0.7rem; margin-bottom: 0.3rem; }
-            .tw-drona-tier-title    { font-size: 0.95rem; margin-bottom: 0.4rem; line-height: 1.2; }
-            .tw-drona-source        { font-size: 0.72rem; padding: 0.15rem 0; line-height: 1.3; }
-            .tw-drona-sources       { gap: 0.15rem; margin-top: 0.3rem; }
-            .tw-drona-stage         { padding: 0.3rem 0; }
+            .tw-drona-tier-num      { font-size: 0.62rem; margin-bottom: 0.35rem; }
+            .tw-drona-tier-title    { font-size: 1.15rem; margin-bottom: 0.7rem; line-height: 1.2; }
+            .tw-drona-source        { font-size: 0.7rem; padding: 0.35rem 0.6rem; }
+            .tw-drona-sources       { gap: 0.35rem; }
+            .tw-drona-stage         { padding: 0.5rem 0; }
             .tw-drona-stage-key     { font-size: 0.7rem; }
-            .tw-drona-stage-body    { font-size: 0.72rem; line-height: 1.3; }
-            .tw-drona-layer-caption { font-size: 0.7rem; line-height: 1.3; margin-top: 0.35rem; }
+            .tw-drona-stage-body    { font-size: 0.74rem; line-height: 1.45; }
+            .tw-drona-layer-caption { font-size: 0.72rem; line-height: 1.45; margin-top: 0.7rem; }
         }
 
         /* ============================================================
@@ -2366,7 +2360,7 @@
 
         .tw-film-track {
             position: relative;
-            height: 700vh; /* scroll distance for the film — 7 scenes × 100vh */
+            height: 360vh; /* scroll distance for the film — 7 scenes × ~50vh; idle autoplay carries the rest */
         }
 
         .tw-film-pin {
@@ -2375,8 +2369,10 @@
             height: 100vh;
             height: 100dvh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: clamp(0.7rem, 1.8vh, 1.25rem);
             overflow: hidden;
         }
 
@@ -2474,6 +2470,59 @@
                 white-space: nowrap;
             }
         }
+        /* Desktop scroll affordance — sits just below the demo stage, signals the
+           film is scroll-driven and finite. A gentle "breathing" pulse nudges the
+           viewer to keep scrolling. Hidden on the mobile tap-nav path. */
+        .tw-stage-scrollhint {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.5rem 1.05rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.55);
+            border: 1px solid rgba(10, 47, 82, 0.14);
+            box-shadow: 0 2px 14px rgba(10, 47, 82, 0.08);
+            font-family: var(--tw-mono);
+            font-size: 0.66rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(10, 47, 82, 0.78);
+            pointer-events: none;
+            z-index: 20;
+            white-space: nowrap;
+            backdrop-filter: blur(6px);
+            animation: tw-scrollhint-breathe 2.6s ease-in-out infinite;
+            transition: color 0.5s ease, border-color 0.5s ease, background 0.5s ease;
+        }
+        .tw-stage-scrollhint-chevron {
+            font-size: 0.82rem;
+            line-height: 0.7;
+            animation: tw-scrollhint-bob 1.8s ease-in-out infinite;
+        }
+        /* On the final scene the cue becomes an explicit exit instruction */
+        .tw-stage-scrollhint.is-exit {
+            color: var(--tw-red);
+            border-color: rgba(219, 74, 43, 0.34);
+            background: rgba(219, 74, 43, 0.07);
+        }
+        @keyframes tw-scrollhint-breathe {
+            0%, 100% { transform: scale(1);    opacity: 0.82; }
+            50%      { transform: scale(1.045); opacity: 1; }
+        }
+        @keyframes tw-scrollhint-bob {
+            0%, 100% { transform: translateY(-1px); }
+            50%      { transform: translateY(2px); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .tw-stage-scrollhint,
+            .tw-stage-scrollhint-chevron { animation: none; }
+        }
+        /* Mobile/tablet uses the tap-nav + progress bar instead */
+        @media (max-width: 1023px) {
+            .tw-stage-scrollhint { display: none; }
+        }
+
         .tw-stage-chrome-left {
             display: flex;
             align-items: baseline;
@@ -2531,20 +2580,47 @@
             display: block;
             min-height: 0;
             height: 100%;
+            transition: opacity 0.24s ease;
         }
+        /* Loop reset — content fades out while the film scrolls back to scene 1 */
+        .tw-stage-inner.is-wrapping { opacity: 0; }
         @media (max-width: 1100px) {
             /* Mobile narrative mode total height = chrome (~70) + canvas (~360-460) + Nax strip (~110-140).
                Use a fixed viewport-relative height so the height:100% chain
                in .tw-stage-inner / .tw-stage-body doesn't collapse. */
             .tw-stage { height: clamp(560px, 88vh, 760px); }
         }
+        /* 13"–14" laptops that are tall enough to miss max-height:880 still get a
+           narrower stage so the demo isn't imposing. External monitors (≥1537px)
+           keep the original large sizing. */
+        @media (min-width: 1101px) and (max-width: 1536px) {
+            .tw-stage { width: min(90vw, 1200px); }
+        }
         /* iPad 11" landscape + short laptops (1180-1300 wide × <=880 tall):
            desktop film/pin layout stays, but the stage and scene content tighten
            so the bottom Reviewer row stays inside the frame. */
         @media (min-width: 1101px) and (max-height: 880px) {
-            .tw-stage      { height: min(94dvh, 780px); }
-            .tw-stage-body { padding: clamp(1rem, 1.6vw, 1.6rem); }
-            .tw-scene      { inset: clamp(1rem, 1.6vw, 1.6rem); gap: clamp(0.65rem, 1vw, 1rem); }
+            /* Stage SIZE only — base .tw-stage is defined earlier so this wins.
+               The scene-content compaction lives in the consolidated block near
+               the end of this stylesheet (after the base scene rules), because
+               placing overrides before the base definitions loses the cascade. */
+            .tw-stage { width: min(90vw, 1180px); height: min(86dvh, 720px); }
+        }
+        /* ── Laptop (≤880px tall): compact the standalone narrative
+           sections so they sit comfortably in a 13" viewport ── */
+        @media (min-width: 1101px) and (max-height: 880px) {
+            /* Act II · fragment cards (Customs / Insurance / Bank) */
+            .tw-frag        { padding: 1.5rem 1.5rem 1.4rem; }
+            .tw-frag-tag    { margin-bottom: 1rem; }
+            .tw-frag-title  { font-size: 1.4rem; }
+            .tw-frag-sub    { margin-bottom: 1.15rem; }
+            .tw-doc         { padding: 1rem 1.1rem; font-size: 0.82rem; }
+            .tw-doc-row     { min-height: 2.3em; padding: 0.4rem 0; }
+
+            /* Drona credential statement (Auditable · Authoritative · Explainable) */
+            .tw-drona-credential          { margin-top: clamp(2rem, 4vh, 3.5rem); margin-bottom: clamp(2.5rem, 5vh, 4rem); }
+            .tw-drona-credential-headline { font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
+            .tw-drona-credential-body p   { font-size: 0.86rem; line-height: 1.6; }
         }
         @media (max-width: 1023px) {
             /* Mobile tap-nav: film track no longer drives scroll, stage is in normal flow */
@@ -4488,11 +4564,20 @@
             letter-spacing: 0.12em;
             text-transform: uppercase;
             background: rgba(255, 255, 255, 0.18);
-            transition: background 0.45s ease;
+            overflow: hidden;
+            transition: background 0.45s ease, height 0.45s ease, padding 0.45s ease, opacity 0.45s ease;
         }
         .tw-canvas-tab strong { color: var(--tw-navy); font-weight: 700; }
         .tw-canvas-tab-sep { opacity: 0.35; margin: 0 0.1rem; }
-        .tw-app-shell.is-fullbleed .tw-canvas-tab { opacity: 0; }
+        /* Fullbleed scenes (1, 2, 7) hide the breadcrumb — collapse its height too
+           so it doesn't reserve dead space above the scene content. */
+        .tw-app-shell.is-fullbleed .tw-canvas-tab {
+            opacity: 0;
+            height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            border-bottom-color: transparent;
+        }
         .tw-canvas-body {
             position: relative;
             flex: 1;
@@ -5307,7 +5392,7 @@
             position: relative;
             background: var(--tw-cream);
             border-top: 1px solid var(--tw-rule);
-            padding: clamp(6rem, 12vh, 9rem) clamp(1.5rem, 4vw, 4rem) clamp(7rem, 14vh, 11rem);
+            padding: var(--tw-section-y) clamp(1.5rem, 4vw, 4rem);
             overflow: hidden;
         }
 
@@ -5652,7 +5737,7 @@
         .tw-act7 {
             position: relative;
             background: var(--tw-navy);
-            padding: clamp(5rem, 10vh, 8rem) clamp(1.5rem, 4vw, 4rem) clamp(5rem, 10vh, 7rem);
+            padding: var(--tw-section-y) clamp(1.5rem, 4vw, 4rem);
             border-top: none;
         }
         .tw-act7-inner { max-width: 1280px; margin: 0 auto; }
@@ -5834,6 +5919,68 @@
                 transition: none !important;
             }
             .tw-reveal-heading .tw-word { opacity: 1 !important; filter: none !important; transform: none !important; }
+        }
+
+        /* ════════════════════════════════════════════════════════════════
+           SCENE CONTENT FIT — consolidated, placed AFTER all base scene
+           rules so it wins the cascade (equal-specificity single-class
+           selectors resolve by source order). The stage is height-capped at
+           min(82vh, 880px), i.e. ALWAYS ≤880px on any window taller than
+           ~1073px (including 27" monitors), so the heaviest scenes (6, then
+           4 and 7) must be sized to fit 880px on ALL desktop widths — not
+           only short laptops. Two tiers:
+             · min-width:1024px            → moderate, fits the 880px cap
+             · +max-height:880px (laptops) → stronger, layered on top
+           Mobile (max-width:1023px) keeps its own scrollable-canvas path. */
+        @media (min-width: 1024px) {
+            /* Scene 1 — anchor the brief to the top of the stage instead of
+               letting flex:1 distribute it down the canvas. */
+            .tw-brief { flex: none; justify-content: flex-start; }
+
+            /* Scene 6 — two packet cards + sign-off row. Recover the ~60–80px
+               it overflows the capped stage; the seal is the tallest element
+               in the sign-off row, so shrinking it lowers that row directly. */
+            .tw-pkg         { gap: clamp(0.8rem, 1.2vw, 1.1rem); }
+            .tw-pkg-card    { padding: clamp(1rem, 1.5vw, 1.25rem); }
+            .tw-pkg-title   { font-size: clamp(1.15rem, 1.45vw, 1.32rem); margin: 0.35rem 0 0.4rem; }
+            .tw-pkg-route   { padding-bottom: 0.55rem; margin-bottom: 0.6rem; }
+            .tw-pkg-summary { margin-bottom: 0.6rem; }
+            .tw-pkg-list    { line-height: 1.55; }
+            .tw-pkg-signoff { padding: clamp(0.9rem, 1.4vw, 1.1rem); }
+            .tw-pkg-seal    { width: 66px; height: 66px; font-size: 0.66rem; }
+
+            /* Scene 4 — extraction doc + field table. */
+            .tw-extract          { gap: 0.6rem; }
+            .tw-extract-doc      { padding: 0.75rem 0.9rem; }
+            .tw-extract-table    { padding: 0.6rem 0.8rem 0.7rem; }
+            .tw-extract-row      { padding: 0.4rem 0.55rem; }
+            .tw-extract-row-field { font-size: 0.86rem; }
+
+            /* Scene 7 — reviewer dossier + closing line. */
+            .tw-defense-dossier       { padding: clamp(1rem, 1.5vw, 1.25rem); }
+            .tw-defense-dossier-meta  { line-height: 1.6; }
+            .tw-defense-dossier-title { font-size: clamp(1.1rem, 1.45vw, 1.28rem); margin: 0.4rem 0 0.55rem; }
+            .tw-defense-closing       { font-size: clamp(1.4rem, 2.4vw, 2.05rem); padding-top: clamp(0.8rem, 1.4vw, 1.2rem); }
+        }
+        /* Laptop tier — short viewports already get a smaller stage (660–720px),
+           so tighten content further. Layered after the desktop tier above. */
+        @media (min-width: 1101px) and (max-height: 880px) {
+            .tw-stage-body { padding: clamp(1rem, 2vw, 1.6rem); }
+            .tw-scene      { inset: clamp(1rem, 2vw, 1.6rem); gap: clamp(0.7rem, 1.2vw, 1rem); }
+
+            .tw-pkg         { gap: clamp(0.7rem, 1vw, 0.95rem); }
+            .tw-pkg-card    { padding: 0.9rem 1rem; }
+            .tw-pkg-list    { line-height: 1.45; }
+            .tw-pkg-seal    { width: 60px; height: 60px; font-size: 0.62rem; }
+
+            .tw-extract          { gap: 0.5rem; }
+            .tw-extract-doc      { padding: 0.65rem 0.8rem; }
+            .tw-extract-table    { padding: 0.5rem 0.7rem 0.6rem; }
+            .tw-extract-row      { padding: 0.32rem 0.55rem; }
+
+            .tw-defense-dossier       { padding: 0.9rem 1rem; }
+            .tw-defense-dossier-meta  { line-height: 1.5; }
+            .tw-defense-closing       { font-size: clamp(1.3rem, 2.2vw, 1.9rem); }
         }
     </style>
 </head>
@@ -6502,6 +6649,12 @@
 
                 </div><!-- /.tw-stage-inner -->
             </div><!-- /.tw-stage -->
+
+            <!-- Desktop scroll affordance: sits below the demo so it never clips and reads as a clear nudge to scroll -->
+            <div class="tw-stage-scrollhint" id="twStageScrollhint" aria-hidden="true">
+                <span class="tw-stage-scrollhint-label">Scroll to play</span>
+                <span class="tw-stage-scrollhint-chevron">&#8964;</span>
+            </div>
         </div><!-- /.tw-film-pin -->
         </div><!-- /.tw-film-track -->
     </section>
@@ -7659,6 +7812,9 @@
         const pkgCompileStat = document.getElementById('twPkgCompileStat');
         const inboxStat     = document.getElementById('twInboxStat');
         const extractDoc    = document.getElementById('twExtractDoc');
+        const scrollHint    = document.getElementById('twStageScrollhint');
+        const scrollHintLabel = scrollHint ? scrollHint.querySelector('.tw-stage-scrollhint-label') : null;
+        const stageInner    = document.querySelector('.tw-stage-inner');
 
         const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -8027,6 +8183,54 @@
             }
         }
 
+        // ── Idle autoplay + loop (desktop) ───────────────────────────
+        // Scroll still drives the scenes. Once a scene's choreography finishes
+        // and the user has been idle 2.5s, we advance by *scrolling* to the next
+        // scene's offset so ScrollTrigger and the displayed scene never desync.
+        // Looping wraps back to scene 0. Gated on the pin being active so we
+        // never yank the user back after they've scrolled out.
+        let filmST = null;
+        let autoAdvanceTimer = null;
+        const AUTO_ADVANCE_DELAY = 2500;
+
+        function cancelAutoAdvance() {
+            if (autoAdvanceTimer) { clearTimeout(autoAdvanceTimer); autoAdvanceTimer = null; }
+        }
+
+        function sceneScrollTarget(idx) {
+            const trackTop   = track.getBoundingClientRect().top + window.scrollY;
+            const scrollable = track.offsetHeight - window.innerHeight;
+            if (scrollable <= 0) return trackTop;
+            // Aim mid-band so floor(progress * scenes.length) lands on idx.
+            const progress = (idx + 0.5) / scenes.length;
+            return trackTop + progress * scrollable;
+        }
+
+        function scheduleAutoAdvance(forIdx) {
+            cancelAutoAdvance();
+            autoAdvanceTimer = setTimeout(() => {
+                autoAdvanceTimer = null;
+                if (!filmST || !filmST.isActive) return; // only while pinned/in view
+                if (lastIdx !== forIdx) return;          // scene changed meanwhile
+                const wrap = forIdx >= scenes.length - 1;
+                if (wrap && !reducedMotion && stageInner) {
+                    // Loop reset: cross-fade the content so the instant scroll-back
+                    // (and the scrub's brief reverse interpolation) isn't visible.
+                    stageInner.classList.add('is-wrapping');
+                    setTimeout(() => {
+                        window.scrollTo({ top: Math.round(sceneScrollTarget(0)), behavior: 'auto' });
+                        setTimeout(() => stageInner.classList.remove('is-wrapping'), 480);
+                    }, 240);
+                    return;
+                }
+                const nextIdx = wrap ? 0 : forIdx + 1;
+                window.scrollTo({
+                    top: Math.round(sceneScrollTarget(nextIdx)),
+                    behavior: (reducedMotion || wrap) ? 'auto' : 'smooth'
+                });
+            }, AUTO_ADVANCE_DELAY);
+        }
+
         function setScene(i) {
             const idx = Math.max(0, Math.min(scenes.length - 1, i));
             if (idx === lastIdx) return;
@@ -8037,6 +8241,15 @@
                 d.classList.toggle('is-active', k === idx);
                 d.classList.toggle('is-done', k < idx);
             });
+
+            // Desktop scroll affordance — last scene swaps to an explicit exit cue
+            if (scrollHint) {
+                const isLast = idx === scenes.length - 1;
+                scrollHint.classList.toggle('is-exit', isLast);
+                if (scrollHintLabel) {
+                    scrollHintLabel.textContent = isLast ? 'Keep scrolling to continue' : 'Scroll to play';
+                }
+            }
 
             // Bump tokens to cancel previous timelines
             cursorToken++;
@@ -8079,9 +8292,15 @@
             if (appShell) appShell.classList.toggle('is-fullbleed', !!c.fullBleed);
 
             // Three concurrent sub-systems:
-            runAutonomousCanvas(c.autonomous, myCanvas);
-            runChatScript(c, myChat);
-            runCursorTimeline(c.cursor || [], myCursor, c.cursorDelay);
+            cancelAutoAdvance();
+            Promise.all([
+                runAutonomousCanvas(c.autonomous, myCanvas),
+                runChatScript(c, myChat),
+                runCursorTimeline(c.cursor || [], myCursor, c.cursorDelay)
+            ]).then(() => {
+                if (chatToken !== myChat) return; // a newer scene superseded this one
+                scheduleAutoAdvance(idx);
+            });
 
             lastIdx = idx;
         }
@@ -8213,7 +8432,7 @@
         // Desktop: pin and scrub through scenes. immediateRender:false keeps
         // onUpdate from firing during ScrollTrigger setup, so scene 0 stays
         // primed until the user actually scrolls into the section.
-        ScrollTrigger.create({
+        filmST = ScrollTrigger.create({
             trigger: track,
             start: 'top top',
             end: 'bottom bottom',
@@ -8224,7 +8443,36 @@
             onUpdate: (self) => {
                 const idx = Math.floor(self.progress * scenes.length * 0.9999);
                 setScene(idx);
+            },
+            onToggle: (self) => {
+                if (!self.isActive) {
+                    // Scrolled out of the pinned range — drop any pending advance
+                    // so we never scroll the user back into the demo.
+                    cancelAutoAdvance();
+                } else if (lastIdx === 0) {
+                    // Landed on the primed first scene; kick off its idle advance.
+                    scheduleAutoAdvance(0);
+                }
             }
+        });
+
+        // Genuine user scrolling cancels the pending idle advance so our
+        // programmatic auto-scroll never fights the user (e.g. when they
+        // scroll down to exit the final scene). window.scrollTo() does not
+        // emit wheel/touch events, so the loop's own advances are unaffected.
+        // Once the user settles (700ms after the last input), the idle
+        // countdown restarts for the current scene so autoplay still resumes.
+        let userIdleTimer = null;
+        ['wheel', 'touchmove'].forEach((evt) => {
+            window.addEventListener(evt, () => {
+                if (!filmST || !filmST.isActive) return;
+                cancelAutoAdvance();
+                if (userIdleTimer) clearTimeout(userIdleTimer);
+                userIdleTimer = setTimeout(() => {
+                    userIdleTimer = null;
+                    if (filmST && filmST.isActive) scheduleAutoAdvance(lastIdx);
+                }, 700);
+            }, { passive: true });
         });
 
         // Prime first scene (desktop)
