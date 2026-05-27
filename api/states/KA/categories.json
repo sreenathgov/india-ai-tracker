@@ -307,6 +307,46 @@
         "posted_to_x_at": null
       },
       {
+        "id": 3,
+        "title": "Karnataka eyes AI-enabled governance, not just innovation: Chief Secretary Shalini Rajneesh",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/karnataka-eyes-ai-enabled-governance-not-just-innovation-chief-secretary-shalini-rajneesh/131329811",
+        "summary": "Karnataka aims to integrate AI into public administration to create an AI-enabled governance model, focusing on inclusive and meaningful adoption. The state's efforts align with national goals, prioritizing trusted and governance-oriented AI innovation. The goal is to augment human capability, build public trust, and ensure AI benefits are accessible to all citizens.",
+        "date_published": "2026-05-26",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Meet the speakers headlining DevSparks Bengaluru 2026, India's premier developer summit",
+        "url": "https://yourstory.com/2026/05/speakers-devsparks-bengaluru-2026-indias-premier-developer-summit",
+        "summary": "YourStory's DevSparks Bengaluru 2026, a premier developer summit, will take place on May 30. The event will bring together tech leaders, AI experts, and engineering voices to discuss the future of development in the age of AI. Key speakers will headline the summit, sharing their insights and expertise with attendees.",
+        "date_published": "2026-05-26",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "GCCs offer 9.8% salary hikes, premium pay for AI skills: Report",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/gccs-offer-9-8-salary-hikes-premium-pay-for-ai-skills-report/articleshow/131233912.cms",
@@ -2862,7 +2902,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

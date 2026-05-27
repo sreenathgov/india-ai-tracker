@@ -125,6 +125,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "Gujarat and Meta announce two-year partnership for AI and digital governance",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/gujarat-and-meta/131340968",
+        "summary": "Gujarat and Meta have announced a two-year partnership to enhance public services and digital governance through AI and technology. The initiative will utilize AI, WhatsApp chatbots, and wearables to improve accessibility and economic skills across the state. This partnership aims to leverage technology to drive digital transformation in Gujarat.",
+        "date_published": "2026-05-27",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "Computer courses drive 800% seat surge in engineering",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/computer-courses-drive-800-seat-surge-in-engineering/articleshow/131336663.cms",
+        "summary": "Computer courses have driven an 800% surge in engineering seats, largely due to the growing demand for artificial intelligence and machine learning (AI-ML) professionals. This growth is seen as a stable career option by both students and the industry. The push for AI-ML has fueled state computer engineering growth, making it a highly sought-after field.",
+        "date_published": "2026-05-27",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "AI-era job market pushing Gujarat students towards humanities",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ai-era-job-market-pushing-gujarat-students-towards-humanities/articleshow/131284813.cms",
@@ -1031,5 +1071,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

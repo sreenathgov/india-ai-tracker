@@ -366,6 +366,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 7,
+        "title": "Shipsy crosses $25M in ARR as demand for AI solutions for logistics grows",
+        "url": "https://yourstory.com/2026/05/logistics-focused-ai-startup-shipsy-crosses-25-million-arr",
+        "summary": "Shipsy, a Gurugram-based startup, has reached $25M in annual recurring revenue (ARR) due to increasing demand for its AI logistics solutions. The growth is driven by rising labour costs and driver shortages in regions such as Europe, the UK, and Australia. This milestone highlights the expanding need for intelligent logistics solutions in the industry.",
+        "date_published": "2026-05-26",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Can the Indian Copyright Act Accommodate Fully Autonomous AI Generated Output?",
         "url": "https://spicyip.com/2026/05/can-the-indian-copyright-act-accommodate-fully-autonomous-ai-generated-output.html",
@@ -2912,7 +2932,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
