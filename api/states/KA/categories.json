@@ -266,6 +266,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "C2i Semiconductors extends Series A round to $16.7 Mn with backing from TDK Ventures",
+        "url": "https://entrackr.com/snippets/c2i-semiconductors-extends-series-a-round-to-167-mn-with-backing-from-tdk-ventures-11882827",
+        "summary": "C2i Semiconductors has extended its Series A funding round to $16.7 million with participation from TDK Ventures. The Bengaluru-based startup had initially raised $15 million in the first tranche of its Series A round led by Peak XV Partners. The fresh capital will be used to expand operations.",
+        "date_published": "2026-05-28",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Anthropic appoints Sangeeta Bavi to lead startups in India",
+        "url": "https://entrackr.com/snippets/anthropic-appoints-sangeeta-bavi-to-lead-startups-in-india-11882093",
+        "summary": "Anthropic, an AI safety and research company, has appointed Sangeeta Bavi as Head of Digital Natives, Startups and Growth for India. Bavi will lead efforts to drive adoption of Anthropic's Claude among Indian startups and mid-market companies. She brings a strong connection to the founder community, having worked with and learned from them throughout her career.",
+        "date_published": "2026-05-28",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Mphasis invests Rs 260 cr in building AI platforms",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/mphasis-invests-rs-260-cr-in-building-ai-platforms/articleshow/131358033.cms",
+        "summary": "Mphasis has invested Rs 260 crore in building AI platforms. The investment is part of the company's efforts to enhance its artificial intelligence capabilities. This move is expected to strengthen Mphasis' position in the tech industry.",
+        "date_published": "2026-05-28",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 16,
         "title": "slice reports profitability in first full year as bank; revenue jumps 2.3X in FY26",
         "url": "https://entrackr.com/news/slice-reports-profitability-in-first-full-year-as-bank-revenue-jumps-23x-in-fy26-11875458",
@@ -2902,5 +2962,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

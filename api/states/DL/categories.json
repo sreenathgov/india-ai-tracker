@@ -345,6 +345,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Former Reliance, Flipkart and Cashify executives’ home services startup Eazzy raises angel funding",
+        "url": "https://entrackr.com/snippets/former-reliance-flipkart-and-cashify-executives-home-services-startup-eazzy-raises-angel-funding-11882872",
+        "summary": "Home services startup Eazzy has raised over $440K in an angel funding round from industry founders and corporate leaders. The fresh capital will be used to strengthen its technology platform, expand operations, and build AI-powered service solutions. Eazzy, founded by former executives of Reliance, Flipkart, and Cashify, currently offers repair and maintenance services in Gurugram and plans to expand into new categories.",
+        "date_published": "2026-05-28",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 17,
         "title": "Flexprice raises $1.5 Mn seed round led by Shastra VC",
         "url": "https://entrackr.com/snippets/flexprice-raises-15-mn-seed-round-led-by-shastra-vc-11874628",
@@ -2664,6 +2684,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 6,
+        "title": "KollegeApply crosses 600 institutions; posts Rs 15 Cr revenue in FY26",
+        "url": "https://entrackr.com/snippets/kollegeapply-crosses-600-institutions-posts-rs-15-cr-revenue-in-fy26-11879998",
+        "summary": "KollegeApply, a startup simplifying student admissions, has onboarded over 600 institutions in the last fiscal year. The company generated Rs 15 crore in revenue and posted profits in its first fiscal year ending March 2026. KollegeApply's platform uses AI to simplify college discovery, applications, and enrollment for students, colleges, and universities.",
+        "date_published": "2026-05-27",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "TiE Delhi-NCR concludes India Innovation Day 2026",
         "url": "https://entrackr.com/snippets/tie-delhi-ncr-concludes-india-innovation-day-2026-11840917",
@@ -2932,5 +2972,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
