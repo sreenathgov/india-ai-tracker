@@ -9,13 +9,13 @@ const ASSETS_TO_COPY = ['js', 'css', 'data', 'assets', 'added-assets', 'api', 'K
 const FILES_TO_COPY = [
     'index.html',
     'about.html',
-    'team.html',
     'sector-watch.html',
     'tradewatch.html',
     'tracker.html',
     'publications.html',
     'privacy-policy.html',
     'disclaimers.html',
+    '404.html',
     'tracker.db'
 ];
 
@@ -59,6 +59,13 @@ function buildSite() {
             console.warn(`⚠️ Warning: ${file} not found.`);
         }
     });
+
+    // 3b. Copy public/robots.txt → dist/robots.txt (deterministic; previously a stale manual copy).
+    const robotsSrc = path.join(PROJECT_ROOT, 'public', 'robots.txt');
+    if (fs.existsSync(robotsSrc)) {
+        fs.copyFileSync(robotsSrc, path.join(DIST_DIR, 'robots.txt'));
+        console.log('✓ Copied public/robots.txt → dist/robots.txt');
+    }
 
     // 4. Copy Directories (recursive)
     // Files to exclude from copying into dist/ (serverless functions must stay at project root)

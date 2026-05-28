@@ -15,30 +15,31 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>India AI Tracker | Kanan Labs</title>
+    <title>India AI Tracker — Policy & Regulatory Intelligence | Kanan Labs</title>
+
+    <meta name="description" content="A public tracker of India's AI policies, regulations, and state-level developments — curated regulatory intelligence by Kanan Labs.">
+    <link rel="canonical" href="https://kananlabs.in/tracker.html">
+    <meta name="robots" content="index,follow,max-image-preview:large">
 
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kanan Labs">
     <meta property="og:url" content="https://kananlabs.in/tracker.html">
-    <meta property="og:title" content="India AI Tracker | Kanan Labs">
-    <meta property="og:description"
-        content="Track AI developments, policies, and startup news across all Indian states and union territories. A public AI governance intelligence tool by Kanan Labs.">
-    <meta property="og:image" content="https://kananlabs.in/assets/images/KANAN-LABS-WEBSITELOGO.png">
+    <meta property="og:title" content="India AI Tracker — Policy & Regulatory Intelligence | Kanan Labs">
+    <meta property="og:description" content="A public tracker of India's AI policies, regulations, and state-level developments — curated regulatory intelligence by Kanan Labs.">
+    <meta property="og:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/03-INDIA-AI-TRACKER.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="India AI Tracker by Kanan Labs">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://kananlabs.in/tracker.html">
-    <meta property="twitter:title" content="India AI Tracker | Kanan Labs">
-    <meta property="twitter:description"
-        content="Track AI developments, policies, and startup news across all Indian states and union territories.">
-    <meta property="twitter:image" content="https://kananlabs.in/assets/images/KANAN-LABS-WEBSITELOGO.png">
-
-    <!-- Additional Meta Tags -->
-    <meta name="description"
-        content="Track AI developments, policies, and startup news across all Indian states and union territories. A public AI governance intelligence tool by Kanan Labs.">
-    <meta name="keywords"
-        content="AI India, artificial intelligence India, AI policy India, AI startups India, AI tracker, governance intelligence">
-    <link rel="canonical" href="https://kananlabs.in/tracker.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://kananlabs.in/tracker.html">
+    <meta name="twitter:title" content="India AI Tracker — Policy & Regulatory Intelligence | Kanan Labs">
+    <meta name="twitter:description" content="A public tracker of India's AI policies, regulations, and state-level developments by Kanan Labs.">
+    <meta name="twitter:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/03-INDIA-AI-TRACKER.png">
+    <meta name="twitter:image:alt" content="India AI Tracker by Kanan Labs">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/KANAN-LABS-WEBSITELOGO.png">
@@ -46,18 +47,43 @@
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="e4NN5-5uDwKoApKLmA1I8ZDmL1Dy0BGhlP-IpKbEbSo" />
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Structured data: WebApplication + BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://kananlabs.in/tracker.html#webapp",
+          "name": "India AI Tracker",
+          "url": "https://kananlabs.in/tracker.html",
+          "applicationCategory": "GovernmentApplication",
+          "operatingSystem": "Web",
+          "description": "A public tracker of India's AI policies, regulations, and state-level developments. Curated regulatory intelligence by Kanan Labs.",
+          "isAccessibleForFree": true,
+          "publisher": { "@id": "https://kananlabs.in/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kananlabs.in/" },
+            { "@type": "ListItem", "position": 2, "name": "India AI Tracker", "item": "https://kananlabs.in/tracker.html" }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="css/vendor/leaflet/leaflet.css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Six+Caps&display=swap"
         rel="stylesheet">
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <link rel="stylesheet" href="css/styles-v2.css?v=21">
     <link rel="stylesheet" href="css/staggered-menu.css?v=2">
     <link rel="stylesheet" href="css/strategic-insights.css?v=5">
     <link rel="stylesheet" href="css/shiny-text.css">
 
     <link rel="stylesheet" href="css/contact-panel.css?v=1">
-    <link rel="stylesheet" href="css/identity-section.css?v=7">
     <link rel="stylesheet" href="css/footer.css?v=3">
 </head>
 
@@ -191,16 +217,6 @@
             </div>
         </section>
 
-        <!-- Transition zone: Insights → Identity -->
-        <div class="identity-transition" aria-hidden="true"></div>
-
-        <!-- Section 3: Identity (Founder) -->
-        <section class="identity-section" id="identitySection">
-            <div class="identity-container">
-                <!-- Content rendered dynamically by identity-section.js -->
-            </div>
-        </section>
-
         <footer class="kl-footer">
             <div class="kl-footer__inner">
 
@@ -210,7 +226,7 @@
                     <div class="kl-footer__brand">
 
                         <img src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png" alt="Kanan Labs"
-                            class="kl-footer__logo" draggable="false">
+                            class="kl-footer__logo" width="500" height="500" loading="lazy" decoding="async" draggable="false">
 
                         <p class="kl-footer__tagline">Trade Intelligence Infrastructure</p>
 
@@ -250,7 +266,6 @@
                             <h4 class="kl-footer__col-heading">Company</h4>
                             <ul class="kl-footer__col-links">
                                 <li><a href="about.html">About</a></li>
-                                <li><a href="team.html">Team</a></li>
                                 <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
                             </ul>
                         </div>
@@ -261,8 +276,8 @@
                             <ul class="kl-footer__col-links">
                                 <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank"
                                         rel="noopener">LinkedIn</a></li>
-                                <li><a href="#" target="_blank" rel="noopener">Twitter</a></li>
-                                <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+                                <li><a href="https://x.com/indiaAItracker" target="_blank" rel="noopener">Twitter</a></li>
+                                <li><a href="https://github.com/sreenathgov" target="_blank" rel="noopener">GitHub</a></li>
                             </ul>
                         </div>
 
@@ -281,7 +296,7 @@
                 <!-- BOTTOM: Watermark logo -->
                 <div class="kl-footer__watermark">
                     <img src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png" alt=""
-                        class="kl-footer__watermark-img" aria-hidden="true" draggable="false">
+                        class="kl-footer__watermark-img" width="1584" height="396" loading="lazy" decoding="async" aria-hidden="true" draggable="false">
                 </div>
 
             </div>
@@ -299,10 +314,9 @@
 
     <script src="js/contact-panel.js"></script>
     <script src="js/ripple-grid.js"></script>
-    <script src="js/identity-section.js"></script>
     <script src="js/staggered-menu.js"></script>
     <!-- Leaflet moved from <head> to avoid render-blocking; app-final.js depends on it -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/vendor/leaflet/leaflet.js"></script>
     <script src="js/app-final.js?v=20"></script>
 </body>
 

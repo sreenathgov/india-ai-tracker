@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 19,
+        "title": "Snabbit confirms exploring physical AI proposal with Human Archive, denies home rollout",
+        "url": "https://entrackr.com/in-depth/snabbit-confirms-exploring-physical-ai-proposal-with-human-archive-denies-home-rollout-11870375",
+        "summary": "Snabbit, a home services startup, was approached by Human Archive to explore a physical AI proposal, but ultimately decided not to move forward. Human Archive is a startup that builds datasets for embodied intelligence and robotics systems. Snabbit has denied plans for a home rollout of physical AI, distinguishing itself from another startup, Pronto, which is experimenting with Physical AI-linked data collection.",
+        "date_published": "2026-05-25",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Centre forms high-level inter-ministerial body to steer AI governance strategy",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/centre-forms-high-level-inter-ministerial-body-to-steer-ai-governance-strategy/130322122",
@@ -993,6 +1013,446 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 2,
+        "title": "AI to turbocharge patent creation at India tech hubs, executives say",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-to-turbocharge-patent-creation-at-india-tech-hubs-executives-say/131341043",
+        "summary": "Global companies expect AI to accelerate new product and intellectual property creation at Indian tech hubs, driving complex innovation. India's skilled workforce and cost advantages are attracting investment, despite regulatory hurdles slowing local patent filings. This is poised to position India's tech centers for high-value work and increased innovation.",
+        "date_published": "2026-05-27",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "GCC growth lifts Awfis earnings; A Rs 2,000 Cr AI & deeptech fund",
+        "url": "https://yourstory.com/2026/05/gcc-growth-lifts-awfis-earnings",
+        "summary": "Awfis' profit after tax increased 66% year-on-year to Rs 71 crore, with operating EBITDA rising 37% to Rs 550 crore. The company's margins expanded to 36.8%, driven by growth in the GCC region. Awfis also announced plans for a Rs 2,000 Cr AI and deeptech fund.",
+        "date_published": "2026-05-27",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Samsung Brings 2026 Vision AI TV Lineup in India",
+        "url": "https://cellit.in/samsung-brings-2026-vision-ai-tv-lineup-in-india/",
+        "summary": "Samsung has launched its 2026 Vision AI TV lineup in India, expanding its presence in the country's television market. The new lineup is expected to feature advanced AI-powered technologies and innovative display capabilities. The launch aims to provide Indian consumers with cutting-edge viewing experiences and enhanced smart TV features.",
+        "date_published": "2026-05-27",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "From Farm to Algorithm: How AI is reshaping India&#039;s FMCG industry",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/from-farm-to-algorithm-how-ai-is-reshaping-indias-fmcg-industry/131322670",
+        "summary": "India's FMCG sector is undergoing a significant transformation driven by Artificial Intelligence, which is revolutionizing consumer demand understanding, product quality, and customer connections. AI is expected to boost growth and efficiency across the industry, with companies investing in the technology to gain a competitive edge. This shift is driven by the need to meet evolving consumer needs and stay ahead in the market.",
+        "date_published": "2026-05-26",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Experts flag data spills as house-help platforms bring physical AI home",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/experts-flag-data-spills-as-house-help-platforms-bring-physical-ai-home/131322063",
+        "summary": "India's emerging physical AI ecosystem has raised safety concerns, particularly with on-demand service platforms Pronto and Snabbit conducting data-gathering pilots. The Ministry of Electronics and Information Technology (MeitY) has taken notice of these developments, including Pronto's in-home recording pilots. Regulators are now on edge due to potential data spills and safety risks associated with physical AI in homes.",
+        "date_published": "2026-05-26",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 18,
+        "title": "Neocambrian AI launches India-focused robotics data factory for Physical AI models",
+        "url": "https://entrackr.com/news/neocambrian-ai-launches-india-focused-robotics-data-factory-for-physical-ai-models-11874142",
+        "summary": "Neocambrian AI has launched a robotics data factory focused on India, aiming to build large-scale human action datasets for robotics and embodied AI systems. Founded by entrepreneur Abhinav Kukreja, the startup enters a growing space of home services and robotics-focused data collection. Neocambrian AI's launch marks a new player in the Physical AI-linked human activity datasets market.",
+        "date_published": "2026-05-26",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 21,
+        "title": "Acer India Unveils New Aspire 5 AI Laptop Powered by Intel Core...",
+        "url": "https://cellit.in/acer-india-unveils-new-aspire-5-ai-laptop-powered-by-intel-core-ultra-processors/",
+        "summary": "Acer India has launched the new Aspire 5 AI laptop, which is powered by Intel Core. The laptop is designed to provide enhanced performance and efficiency, leveraging the capabilities of artificial intelligence. The Aspire 5 AI laptop aims to deliver a superior computing experience with its advanced features and Intel Core processing.",
+        "date_published": "2026-05-26",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 22,
+        "title": "OPPO India expands its Find X9 Series with Next-Generation Imaging and AI...",
+        "url": "https://cellit.in/oppo-india-expands-its-find-x9-series-with-next-generation-imaging-and-ai-experiences/",
+        "summary": "OPPO India has expanded its Find X9 Series, incorporating next-generation imaging and AI capabilities. The new series aims to provide enhanced camera and artificial intelligence features. This expansion is part of OPPO's efforts to improve its smartphone offerings in the Indian market.",
+        "date_published": "2026-05-26",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 25,
+        "title": "AIIMS Deoghar Celebrates 8th Foundation Day: Expansion Plans for Eastern India Healthcare",
+        "url": "https://timesofindia.indiatimes.com/city/ranchi/aiims-deoghar-celebrates-8th-foundation-day-expansion-plans-for-eastern-india-healthcare/articleshow/131311522.cms",
+        "summary": "AIIMS Deoghar celebrated its 8th foundation day with plans to expand its advanced medical facilities and become a leading healthcare institution in eastern and northeastern India. The institute will appoint reputed professionals to support its growth across its 300-acre campus. Union minister Annpurna Devi noted the positive impact of the Ayushman Bharat scheme and the growing role of AI in healthcare during the celebration.",
+        "date_published": "2026-05-26",
+        "source_name": "Times of India - Ranchi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Venture Catalysts ++ Demo Day spotlights 12 startups targeting $46M raise",
+        "url": "https://yourstory.com/2026/05/venture-catalysts--demo-day-spotlights-12-startups-targeting-46m-raise",
+        "summary": "Venture Catalysts++ is hosting its Demo Day 7, featuring 12 startups across various sectors including deeptech, AI, and sustainability. The event has already secured early commitments of nearly $20 million, with the startups targeting a total raise of $46 million. The startups showcased are from diverse fields such as climate, defense, aerospace, and sustainability.",
+        "date_published": "2026-05-26",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Mint Explainer | Why Pronto's physical AI training pilot is drawing scrutiny",
+        "url": "https://www.livemint.com/ai/prontos-physical-ai-training-pilot-drawing-scrutiny-privacy-rules-snabbit-urban-company-startups-11779680224682.html",
+        "summary": "Pronto's physical AI training pilot is under scrutiny for its potential impact on India's privacy rules. The pilot involves training AI in physical environments, such as warehouses and assembly lines, where human intervention is required. This phenomenon raises concerns about data collection and privacy in industries where human workers are involved.",
+        "date_published": "2026-05-25",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "HCLTech expands partnership with Pegasystems to boost AI-led legacy modernisation - What’s triggering large IT services firms to shift strategies?",
+        "url": "https://www.etnownews.com/technology/hcltech-expands-partnership-with-pegasystems-to-boost-ai-led-legacy-modernisation-whats-triggering-large-it-services-firms-to-shift-strategies-article-154394857",
+        "summary": "HCLTech has expanded its partnership with Pegasystems to enhance AI-led legacy modernisation. The collaboration combines HCLTech AI Force with Pega Blueprint to help enterprises replace outdated systems more efficiently. This partnership aims to reduce disruption and accelerate the modernisation process for businesses.",
+        "date_published": "2026-05-25",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "AI transformation succeeds when enterprises simplify systems and align people: Mahindra, Airbus and Tata Motors leaders",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-transformation-succeeds-when-enterprises-simplify-systems-and-align-people-mahindra-airbus-and-tata-motors-leaders/131304770",
+        "summary": "Technology leaders from Mahindra Group, Airbus, and Tata Motors emphasized that AI transformation is successful when enterprises simplify their systems and align their people. They stated that AI readiness depends on several key factors, including organizational alignment and innovation culture. These leaders shared their insights at the ETCIO Annual Conclave 2026.",
+        "date_published": "2026-05-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "How AI-led CX can deliver revenue and trust",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/how-ai-led-cx-can-deliver-revenue-and-trust/131305103",
+        "summary": "At the ETCIO Annual Conclave 2026, industry leaders discussed the importance of AI-led customer experience in driving revenue and trust. They emphasized the need for a balance between automation, empathy, and business impact in AI-driven CX. Leaders from various companies, including HDFC Bank and Salesforce, participated in the discussion.",
+        "date_published": "2026-05-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "AI must be treated as a multi-year operating model shift: Ratan Kumar, Central Bank of India",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-must-be-treated-as-a-multi-year-operating-model-shift-ratan-kumar-central-bank-of-india/131304867",
+        "summary": "Ratan Kumar of the Central Bank of India emphasized the need to treat AI as a long-term operating model shift. Banks should move beyond isolated AI pilots and integrate governance, accountability, and orchestration into their workflows. This approach will enable banks to scale AI in a responsible and sustainable manner.",
+        "date_published": "2026-05-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "India CIOs say AI value will come from process readiness, not adoption speed",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-cios-say-ai-value-will-come-from-process-readiness-not-adoption-speed/131304669",
+        "summary": "India's CIOs believe that the value of AI will come from process readiness rather than the speed of adoption. At the ETCIO Annual Conclave 2026, CIOs from major companies discussed the increasing scrutiny of AI investments by boards. They noted that boards are now asking tougher questions about AI's return on investment, security, governance, and measurable business impact.",
+        "date_published": "2026-05-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "Why AI-ready digital cores must be built with purpose, governance and context",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/why-ai-ready-digital-cores-must-be-built-with-purpose-governance-and-context/131301485",
+        "summary": "Leaders from top companies discussed the importance of building AI-ready digital cores with purpose, governance, and context at the ETCIO Annual Conclave 2026. They emphasized that cloud strategy must align with business resilience, data quality, AI readiness, and scalable enterprise advantage. Key companies represented included Bajaj Allianz, Kotak Life Insurance, and ICICI Bank, among others.",
+        "date_published": "2026-05-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "Agentic AI will scale only when enterprises redesign processes, say tech leaders",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/agentic-ai-will-scale-only-when-enterprises-redesign-processes-say-tech-leaders/131301289",
+        "summary": "Tech leaders at the ETCIO Annual Conclave 2026 stated that enterprises must redesign their processes to scale Agentic AI. This involves fixing workflows, defining measurable outcomes, and building governance for autonomous systems. Leaders from companies like Axis Max Life Insurance and Adani Group emphasized the need to move beyond AI pilots to achieve this.",
+        "date_published": "2026-05-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "Governance is BFSI’s competitive advantage in scaling AI, say Indian banking leaders",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/governance-is-bfsis-competitive-advantage-in-scaling-ai-say-indian-banking-leaders/131301259",
+        "summary": "Indian banking leaders stated that governance is a key competitive advantage for the BFSI sector in scaling AI. They emphasized that AI adoption must be based on explainability, auditability, data quality, and customer trust. This comes as banks transition from pilot projects to large-scale AI deployments.",
+        "date_published": "2026-05-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 23,
+        "title": "BWSSB to host India’s first National AI and Digital Water Summit",
+        "url": "https://www.thehindu.com/news/cities/bangalore/bwssb-to-host-indias-first-national-ai-and-digital-water-summit/article71021327.ece",
+        "summary": "The Bangalore Water Supply and Sewerage Board (BWSSB) is set to host India's first National AI and Digital Water Summit. This event will likely focus on the application of artificial intelligence and digital technologies in the water sector. The summit aims to bring together experts and stakeholders to discuss innovative solutions for water management.",
+        "date_published": "2026-05-25",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 14,
+        "title": "Newgen outlines AI-era vision for NewgenONE platform in India",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/newgen-outlines-ai-era-vision-for-newgenone-platform-in-india/131254992",
+        "summary": "Newgen Software has outlined its AI-era vision for the NewgenONE platform, which integrates workflows, content, and AI agents into a single governed execution layer. The platform prioritizes auditability, explainability, and human oversight to facilitate adaptive and intelligent operations. It aims to help enterprises, particularly in financial services, streamline processes such as onboarding, trade finance, and mortgage processing.",
+        "date_published": "2026-05-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "As OpenAI and Anthropic soar, where do India’s AI startups stand?",
+        "url": "https://www.livemint.com/ai/openai-anthropic-ipo-india-ai-startups-global-race-11779362722464.html",
+        "summary": "India's AI startups are struggling to develop foundational models, relying on US technology, while global players like OpenAI and Anthropic pursue massive IPOs. This has resulted in limited advancements in India's AI sector. The country's AI landscape remains stagnant compared to global counterparts.",
+        "date_published": "2026-05-22",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 1,
         "title": "Don’t fear AI, but don’t trust it blindly: CJI Surya Kant",
@@ -7220,6 +7680,86 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 15,
+        "title": "Fundamentum co-founder Ashish Kumar launches F2A with Rs 3,000 Cr corpus",
+        "url": "https://entrackr.com/snippets/fundamentum-co-founder-ashish-kumar-launches-f2a-with-rs-3000-cr-corpus-11875618",
+        "summary": "Ashish Kumar, co-founder of Fundamentum Partnership, has launched F2A, a frontier-tech investment platform with a target corpus of Rs 2,000 crore for its Fundamentum III - AI and DeepTech fund. The platform will also manage up to Rs 1,000 crore in co-investments, totaling Rs 3,000 crore. F2A will invest in startups working in consumer, enterprise, and physical AI, with Nandan Nilekani as an anchor investor.",
+        "date_published": "2026-05-26",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "HMD Vibe2 5G: How this smartphone is quietly building India’s case for AI sovereignty in partnership with Sarvam AI; check price and features",
+        "url": "https://www.etnownews.com/technology/hmd-vibe2-5g-how-this-smartphone-is-quietly-building-indias-case-for-ai-sovereignty-in-partnership-with-sarvam-ai-check-price-and-features-article-154401591",
+        "summary": "HMD Smartphones has partnered with Sarvam AI to launch the HMD Vibe2 5G, offering India-first AI experiences. The smartphone features on-device intelligence, privacy, multilingual innovation, and smarter connectivity. The collaboration aims to promote AI sovereignty in India through this new device.",
+        "date_published": "2026-05-26",
+        "source_name": "ET Now Technology",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Fundamentum co-founder Ashish Kumar unveils Rs 2,000 Cr AI & deeptech fund",
+        "url": "https://yourstory.com/2026/05/fundamentum-co-founder-ashish-kumar-rs-2000-crore-ai-deeptech-fund",
+        "summary": "Ashish Kumar, co-founder of Fundamentum, has launched a Rs 2,000 Cr AI and deeptech fund with Nandan Nilekani as the anchor investor. The fund will focus on investing in startups across various segments, including consumer, enterprise, and physical AI. It aims to support innovative companies in the AI and deeptech space.",
+        "date_published": "2026-05-26",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "India’s AI boom is shrinking sales cycles for B2B startups as deployments pick up",
+        "url": "https://www.livemint.com/ai/india-b2b-ai-startups-see-shorter-enterprise-sales-cycles-11779334716089.html",
+        "summary": "India's B2B AI startups are seeing shorter sales cycles due to rapid adoption of AI technology. Companies are quickly moving from proof of concept to full deployment, driving faster deal closures. Startups like Gnani and Gupshup are among those benefiting from this trend.",
+        "date_published": "2026-05-22",
+        "source_name": "LiveMint AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Funding and acquisitions in Indian startup this week [Apr 13 - Apr 18]",
         "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startup-this-week-apr-13-apr-18-11739056",
@@ -8809,5 +9349,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

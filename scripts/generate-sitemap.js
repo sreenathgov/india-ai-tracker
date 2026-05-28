@@ -3,16 +3,32 @@ const path = require('path');
 
 // Base URL for the production site
 const BASE_URL = 'https://kananlabs.in';
+const PROJECT_ROOT = path.resolve(__dirname, '..');
 
-// Static routes in your project
+// Static routes with per-route SEO metadata.
+// `file` is resolved against PROJECT_ROOT for real `lastmod` derivation.
+// `priority` and `changefreq` are differentiated per page type — Google largely
+// ignores them, but a coherent sitemap is a positive signal.
 const staticRoutes = [
-  '/',
-  '/about.html',
-  '/sector-watch.html',
-  '/tradewatch.html',
-  '/tracker.html',
-  '/publications.html'
+  { path: '/',                   file: 'index.html',         priority: '1.0', changefreq: 'weekly'  },
+  { path: '/tradewatch.html',    file: 'tradewatch.html',    priority: '0.9', changefreq: 'weekly'  },
+  { path: '/tracker.html',       file: 'tracker.html',       priority: '0.9', changefreq: 'daily'   },
+  { path: '/sector-watch.html',  file: 'sector-watch.html',  priority: '0.7', changefreq: 'monthly' },
+  { path: '/about.html',         file: 'about.html',         priority: '0.7', changefreq: 'monthly' },
+  { path: '/publications.html',  file: 'publications.html',  priority: '0.5', changefreq: 'monthly' },
+  { path: '/privacy-policy.html',file: 'privacy-policy.html',priority: '0.3', changefreq: 'yearly'  },
+  { path: '/disclaimers.html',   file: 'disclaimers.html',   priority: '0.3', changefreq: 'yearly'  }
 ];
+
+function fileLastmod(relFile, fallback) {
+  try {
+    const abs = path.join(PROJECT_ROOT, relFile);
+    const stat = fs.statSync(abs);
+    return stat.mtime.toISOString().split('T')[0];
+  } catch (_) {
+    return fallback;
+  }
+}
 
 // State mapping from js/app-final.js (duplicated here to avoid module import issues in simple script)
 const STATE_CODE_MAP = {
@@ -81,25 +97,26 @@ function generateSitemap() {
 
   const currentDate = new Date().toISOString().split('T')[0];
 
-  // 1. Add Static Routes
+  // 1. Add Static Routes (real lastmod from source HTML mtime, differentiated priority/changefreq)
   staticRoutes.forEach(route => {
-    const url = route === '/' ? BASE_URL : `${BASE_URL}${route}`;
+    const url = route.path === '/' ? `${BASE_URL}/` : `${BASE_URL}${route.path}`;
+    const lastmod = fileLastmod(route.file, currentDate);
     xml += `
   <url>
     <loc>${url}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${route.changefreq}</changefreq>
+    <priority>${route.priority}</priority>
   </url>`;
   });
 
-  // 2. Add All-India View (Clean URL)
+  // 2. Add All-India View (Clean URL) — derives from index.html template via generate-static-pages.js
   xml += `
   <url>
     <loc>${BASE_URL}/all-india/</loc>
-    <lastmod>${currentDate}</lastmod>
+    <lastmod>${fileLastmod('index.html', currentDate)}</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>`;
 
   // 3. Add Dynamic State Routes (Clean URLs)
@@ -110,9 +127,9 @@ function generateSitemap() {
     xml += `
   <url>
     <loc>${url}</loc>
-    <lastmod>${currentDate}</lastmod>
+    <lastmod>${fileLastmod('index.html', currentDate)}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>`;
   });
 

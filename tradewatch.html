@@ -12,18 +12,59 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TradeWatch | Kanan Labs</title>
+    <title>TradeWatch — Shipment Evidence Packets | Kanan Labs</title>
 
-    <meta name="description" content="TradeWatch is Kanan Labs' shipment-evidence intelligence layer. Reviewed, source-attributed evidence packets for customs and marine cargo insurance handoff. Powered by Drona — a neuro-symbolic trade knowledge graph.">
-    <meta name="keywords" content="TradeWatch, Kanan Labs, trade compliance, shipment evidence, customs broker, marine cargo insurance, Drona, trade intelligence">
+    <meta name="description" content="TradeWatch assembles reviewed, source-attributed shipment evidence packets to support customs broker handoff, marine cargo insurance, and LC workflows. In pilot — join the PoC cohort.">
+    <link rel="canonical" href="https://kananlabs.in/tradewatch.html">
+    <meta name="robots" content="index,follow,max-image-preview:large">
 
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kanan Labs">
     <meta property="og:url" content="https://kananlabs.in/tradewatch.html">
-    <meta property="og:title" content="TradeWatch | Trade intelligence infrastructure for a contested world">
-    <meta property="og:description" content="Kanan Labs' AI-native shipment evidence layer. Reviewed packets for customs and marine cargo insurance handoff.">
-    <meta property="og:image" content="https://kananlabs.in/assets/images/KANAN-LABS-WEBSITELOGO.png">
+    <meta property="og:title" content="TradeWatch — Shipment Evidence Packets | Kanan Labs">
+    <meta property="og:description" content="Reviewed, source-attributed shipment evidence packets to support customs broker handoff, marine cargo insurance, and LC workflows. In pilot.">
+    <meta property="og:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/02-TRADEWATCH.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="TradeWatch by Kanan Labs">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://kananlabs.in/tradewatch.html">
+    <meta name="twitter:title" content="TradeWatch — Shipment Evidence Packets | Kanan Labs">
+    <meta name="twitter:description" content="Reviewed, source-attributed shipment evidence packets supporting customs handoff, marine cargo insurance, and LC workflows. In pilot.">
+    <meta name="twitter:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/02-TRADEWATCH.png">
+    <meta name="twitter:image:alt" content="TradeWatch by Kanan Labs">
 
     <link rel="icon" type="image/png" href="assets/images/KANAN-LABS-WEBSITELOGO.png">
+
+    <!-- Structured data: SoftwareApplication (PoC stage) + BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://kananlabs.in/tradewatch.html#software",
+          "name": "TradeWatch",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "url": "https://kananlabs.in/tradewatch.html",
+          "description": "TradeWatch assembles reviewed, source-attributed shipment evidence packets to support customs broker handoff, marine cargo insurance, and LC workflow readiness. Currently in proof-of-concept / pilot stage. TradeWatch does not file with government portals, bind insurance, or replace licensed customs brokers, insurers, or legal advisers.",
+          "releaseNotes": "Proof-of-concept / pilot. Accepting pilot exporter cohort interest.",
+          "creator": { "@id": "https://kananlabs.in/#organization" },
+          "publisher": { "@id": "https://kananlabs.in/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kananlabs.in/" },
+            { "@type": "ListItem", "position": 2, "name": "TradeWatch", "item": "https://kananlabs.in/tradewatch.html" }
+          ]
+        }
+      ]
+    }
+    </script>
 
     <!-- Shared design tokens & fonts -->
     <link rel="stylesheet" href="css/styles-v2.css?v=21">
@@ -5982,6 +6023,163 @@
             .tw-defense-dossier-meta  { line-height: 1.5; }
             .tw-defense-closing       { font-size: clamp(1.3rem, 2.2vw, 1.9rem); }
         }
+
+        /* ══════════════════════════════════════════════════════════════
+           FAQ — Frequently asked questions (light theme, sits before CTA)
+           ══════════════════════════════════════════════════════════════ */
+        .tw-faq {
+            padding: var(--tw-section-y) clamp(1.5rem, 4vw, 4rem);
+            background: transparent;
+        }
+
+        .tw-faq-inner {
+            max-width: clamp(56rem, 80vw, 72rem);
+            margin: 0 auto;
+        }
+
+        .tw-faq-head {
+            margin: 0 auto clamp(2.5rem, 5vh, 4rem);
+            text-align: center;
+        }
+
+        .tw-faq-eyebrow {
+            font-family: var(--tw-mono);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--tw-red);
+            margin: 0 0 0.9rem;
+            line-height: 1;
+        }
+
+        .tw-faq-headline {
+            font-family: var(--tw-display);
+            font-weight: 500;
+            font-size: clamp(1.85rem, 3.8vw, 2.8rem);
+            line-height: 1.18;
+            letter-spacing: -0.012em;
+            color: var(--tw-navy);
+            margin: 0;
+        }
+
+        .tw-faq-list {
+            border-top: 1px solid var(--tw-rule);
+        }
+
+        .tw-faq-item {
+            border-bottom: 1px solid var(--tw-rule);
+        }
+
+        .tw-faq-summary {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            column-gap: 1.5rem;
+            padding: 1.5rem 0.25rem;
+            cursor: pointer;
+            list-style: none;
+            outline: none;
+        }
+        .tw-faq-summary::-webkit-details-marker { display: none; }
+        .tw-faq-summary::marker { content: ''; }
+        .tw-faq-summary:focus-visible {
+            outline: 2px solid var(--tw-red);
+            outline-offset: 4px;
+            border-radius: 2px;
+        }
+        .tw-faq-summary:hover .tw-faq-chevron {
+            border-color: var(--tw-navy);
+        }
+
+        .tw-faq-index {
+            font-family: var(--tw-mono);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--tw-ink-dim);
+            line-height: 1;
+            align-self: center;
+            min-width: 1.75rem;
+        }
+
+        .tw-faq-q {
+            font-family: var(--tw-display);
+            font-style: italic;
+            font-weight: 500;
+            font-size: clamp(1.1rem, 1.9vw, 1.4rem);
+            line-height: 1.32;
+            letter-spacing: -0.008em;
+            color: var(--tw-navy);
+            transition: color 0.2s ease;
+        }
+
+        .tw-faq-chevron {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-right: 1.5px solid var(--tw-ink-dim);
+            border-bottom: 1.5px solid var(--tw-ink-dim);
+            transform: rotate(45deg);
+            transform-origin: center;
+            margin-right: 0.25rem;
+            align-self: center;
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+        details[open] > .tw-faq-summary .tw-faq-chevron {
+            transform: rotate(-135deg);
+            border-color: var(--tw-red);
+        }
+        details[open] > .tw-faq-summary .tw-faq-index {
+            color: var(--tw-red);
+        }
+
+        .tw-faq-panel {
+            padding: 0 0.25rem 1.75rem calc(1.75rem + 1.5rem);
+            max-width: 56rem;
+        }
+        .tw-faq-panel p,
+        .tw-faq-panel ol,
+        .tw-faq-panel ul {
+            font-family: var(--tw-mono);
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: var(--tw-ink-body);
+            margin: 0 0 0.85rem;
+        }
+        .tw-faq-panel p:last-child,
+        .tw-faq-panel ol:last-child,
+        .tw-faq-panel ul:last-child { margin-bottom: 0; }
+        .tw-faq-panel ol,
+        .tw-faq-panel ul { padding-left: 1.25rem; }
+        .tw-faq-panel li { margin: 0.25rem 0; }
+
+        @media (max-width: 640px) {
+            .tw-faq-summary {
+                column-gap: 0.9rem;
+                padding: 1.15rem 0.15rem;
+            }
+            .tw-faq-q {
+                font-size: clamp(1rem, 4.2vw, 1.15rem);
+            }
+            .tw-faq-panel {
+                padding-left: calc(1.75rem + 0.9rem);
+                padding-bottom: 1.4rem;
+            }
+            .tw-faq-panel p,
+            .tw-faq-panel ol,
+            .tw-faq-panel ul {
+                font-size: 0.88rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .tw-faq-chevron,
+            .tw-faq-q {
+                transition: none !important;
+            }
+        }
     </style>
 </head>
 
@@ -6988,6 +7186,150 @@
         </div>
     </section>
 
+    <!-- ============================================================
+         FAQ — Frequently asked questions
+         ============================================================ -->
+    <section class="tw-faq" aria-labelledby="twFaqHeading">
+        <div class="tw-faq-inner">
+            <div class="tw-faq-head">
+                <p class="tw-faq-eyebrow">Frequently asked</p>
+                <h3 class="tw-faq-headline" id="twFaqHeading">Questions about TradeWatch.</h3>
+            </div>
+
+            <div class="tw-faq-list">
+
+                <details class="tw-faq-item">
+                    <summary class="tw-faq-summary">
+                        <span class="tw-faq-index" aria-hidden="true">01</span>
+                        <span class="tw-faq-q">What is TradeWatch?</span>
+                        <span class="tw-faq-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-faq-panel">
+                        <p>TradeWatch is Kanan Labs' agentic trade documentation and regulatory intelligence system for cross-border manufacturers.</p>
+                        <p>It is being built to automate end-to-end trade documentation workflows across export documentation, evidence readiness, intermediary handoff, and shipment-level intelligence. The first focus is cross-border manufacturers in advanced manufacturing and EV supply chains.</p>
+                        <p>TradeWatch is powered by DRONA, Kanan's proprietary regulatory intelligence engine.</p>
+                    </div>
+                </details>
+
+                <details class="tw-faq-item">
+                    <summary class="tw-faq-summary">
+                        <span class="tw-faq-index" aria-hidden="true">02</span>
+                        <span class="tw-faq-q">Who is TradeWatch built for?</span>
+                        <span class="tw-faq-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-faq-panel">
+                        <p>TradeWatch is built for manufacturers and exporters operating across regulated cross-border value chains.</p>
+                        <p>The initial focus is on EV and advanced manufacturing exporters, where shipment documentation often touches multiple domains at once: customs, marine cargo insurance, trade finance, product classification, regulatory evidence, and destination-market requirements.</p>
+                    </div>
+                </details>
+
+                <details class="tw-faq-item">
+                    <summary class="tw-faq-summary">
+                        <span class="tw-faq-index" aria-hidden="true">03</span>
+                        <span class="tw-faq-q">What workflows will TradeWatch support?</span>
+                        <span class="tw-faq-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-faq-panel">
+                        <p>TradeWatch is being built to support three core trade documentation workflows:</p>
+                        <ol>
+                            <li>Shipping Bill readiness for CHA handoff.</li>
+                            <li>Marine cargo insurance broker packet preparation.</li>
+                            <li>Letter of Credit readiness and document consistency checks.</li>
+                        </ol>
+                        <p>Alongside these workflows, TradeWatch will provide a shipment intelligence dashboard that helps teams understand document gaps, evidence risks, readiness status, and unresolved exceptions before submission.</p>
+                    </div>
+                </details>
+
+                <details class="tw-faq-item">
+                    <summary class="tw-faq-summary">
+                        <span class="tw-faq-index" aria-hidden="true">04</span>
+                        <span class="tw-faq-q">What does &ldquo;end-to-end trade documentation automation&rdquo; mean?</span>
+                        <span class="tw-faq-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-faq-panel">
+                        <p>It means TradeWatch is designed to automate the work around trade documentation: extracting shipment data, checking consistency across documents, identifying missing evidence, preparing recipient-specific packets, surfacing exceptions, and supporting handoff to the right intermediary.</p>
+                        <p>It does not mean TradeWatch replaces licensed actors. CHAs, brokers, banks, and authorised representatives remain responsible for actions that require statutory authority, regulated judgement, or official submission rights.</p>
+                    </div>
+                </details>
+
+                <details class="tw-faq-item">
+                    <summary class="tw-faq-summary">
+                        <span class="tw-faq-index" aria-hidden="true">05</span>
+                        <span class="tw-faq-q">How does the TradeWatch workflow work?</span>
+                        <span class="tw-faq-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-faq-panel">
+                        <p>Customers share a shipment document bundle through the most suitable intake method for their size and operating model. For some customers, that may begin with email or assisted upload. For larger customers, it may evolve into structured folders, integrations, or workflow-based intake.</p>
+                        <p>TradeWatch then reads the shipment bundle, extracts key fields, reconciles documents against each other, checks readiness against the relevant workflow, flags issues, and prepares structured outputs for review and handoff.</p>
+                    </div>
+                </details>
+
+                <details class="tw-faq-item">
+                    <summary class="tw-faq-summary">
+                        <span class="tw-faq-index" aria-hidden="true">06</span>
+                        <span class="tw-faq-q">What is the TradeWatch intelligence dashboard?</span>
+                        <span class="tw-faq-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-faq-panel">
+                        <p>The intelligence dashboard is the operational view of a shipment's documentation posture.</p>
+                        <p>It is designed to show what is ready, what is blocked, what is unclear, what evidence is missing, and which downstream workflow is affected. Over time, this also creates a structured view of recurring documentation patterns across shipments, corridors, products, and counterparties.</p>
+                    </div>
+                </details>
+
+                <details class="tw-faq-item">
+                    <summary class="tw-faq-summary">
+                        <span class="tw-faq-index" aria-hidden="true">07</span>
+                        <span class="tw-faq-q">How is TradeWatch different from a document automation tool?</span>
+                        <span class="tw-faq-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-faq-panel">
+                        <p>Most document automation tools help teams fill templates or organise files.</p>
+                        <p>TradeWatch is different because it applies regulatory and trade-document intelligence to the shipment itself. It is designed to understand which documents matter, which fields must align, what evidence is missing, why an exception matters, and which intermediary needs which packet.</p>
+                        <p>The goal is not only to produce documents. The goal is to make the shipment's evidence position clearer before the packet reaches a CHA, broker, or bank.</p>
+                    </div>
+                </details>
+
+                <details class="tw-faq-item">
+                    <summary class="tw-faq-summary">
+                        <span class="tw-faq-index" aria-hidden="true">08</span>
+                        <span class="tw-faq-q">Does TradeWatch replace CHAs, insurance brokers, banks, or legal advisers?</span>
+                        <span class="tw-faq-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-faq-panel">
+                        <p>No.</p>
+                        <p>TradeWatch operates upstream of licensed and authorised intermediaries. It prepares, checks, organises, and explains the documentation position before handoff.</p>
+                        <p>It does not file Shipping Bills, bind insurance, recommend insurers, issue legal opinions, submit documents to government systems, or replace regulated professional judgement.</p>
+                    </div>
+                </details>
+
+                <details class="tw-faq-item">
+                    <summary class="tw-faq-summary">
+                        <span class="tw-faq-index" aria-hidden="true">09</span>
+                        <span class="tw-faq-q">When will TradeWatch be available?</span>
+                        <span class="tw-faq-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-faq-panel">
+                        <p>TradeWatch is scheduled for MVP release in early December.</p>
+                        <p>Selected pilot customers can begin onboarding from July through a waitlist and pilot evaluation process. Pilot selection will depend on shipment profile, documentation complexity, operational fit, and the ability to test TradeWatch against real-world trade documentation workflows.</p>
+                    </div>
+                </details>
+
+                <details class="tw-faq-item">
+                    <summary class="tw-faq-summary">
+                        <span class="tw-faq-index" aria-hidden="true">10</span>
+                        <span class="tw-faq-q">How can a company join the pilot?</span>
+                        <span class="tw-faq-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-faq-panel">
+                        <p>Companies can request early access and share basic information about their export profile, shipment workflows, documentation pain points, and current intermediary structure.</p>
+                        <p>Kanan Labs will evaluate pilot suitability and contact selected companies with next steps. Pilot terms are available on request.</p>
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Underbanner — visual transition from cream to brand navy -->
     <div class="tw-underbanner" aria-hidden="true">
         <img src="added-assets/TW%20-%20Page%20underbanner%20PNG.png" alt="" draggable="false" loading="lazy">
@@ -7062,7 +7404,7 @@
         <div class="kl-footer__inner">
             <div class="kl-footer__content">
                 <div class="kl-footer__brand">
-                    <img src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png" alt="Kanan Labs" class="kl-footer__logo" draggable="false">
+                    <img src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png" alt="Kanan Labs" class="kl-footer__logo" width="500" height="500" loading="lazy" decoding="async" draggable="false">
                     <p class="kl-footer__tagline">Trade Intelligence Infrastructure</p>
                     <div>
                         <p class="kl-footer__nl-label">Weekly Brief</p>
@@ -7087,7 +7429,6 @@
                         <h4 class="kl-footer__col-heading">Company</h4>
                         <ul class="kl-footer__col-links">
                             <li><a href="about.html">About</a></li>
-                            <li><a href="team.html">Team</a></li>
                             <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
                         </ul>
                     </div>
@@ -7109,7 +7450,7 @@
                 </div>
             </div>
             <div class="kl-footer__watermark">
-                <img src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png" alt="" class="kl-footer__watermark-img" aria-hidden="true" draggable="false">
+                <img src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png" alt="" class="kl-footer__watermark-img" width="1584" height="396" loading="lazy" decoding="async" aria-hidden="true" draggable="false">
             </div>
         </div>
     </footer>

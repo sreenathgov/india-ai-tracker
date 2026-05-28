@@ -16,22 +16,68 @@
     <title>Pondicherry AI Tracker | Kanan Labs</title>
 
     <meta name="description" content="Track latest AI policies, startups, and infrastructure developments in Pondicherry. Real-time intelligence by Kanan Labs.">
-    <meta name="keywords" content="Kanan Labs, TradeWatch, trade intelligence, trade infrastructure, customs compliance, marine cargo insurance, regulatory intelligence, India trade">
+    <link rel="canonical" href="https://kananlabs.in/states/pondicherry/" />
+    <meta name="robots" content="index,follow,max-image-preview:large">
 
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kanan Labs">
     <meta property="og:url" content="https://kananlabs.in/states/pondicherry/">
     <meta property="og:title" content="Pondicherry AI Tracker | Kanan Labs">
     <meta property="og:description" content="Track latest AI policies, startups, and infrastructure developments in Pondicherry. Real-time intelligence by Kanan Labs.">
-    <meta property="og:image" content="https://kananlabs.in/assets/images/KANAN-LABS-WEBSITELOGO.png">
+    <meta property="og:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Kanan Labs — Trade Intelligence Infrastructure">
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://kananlabs.in/">
-    <meta property="twitter:title" content="Kanan Labs — Trade Intelligence Infrastructure">
-    <meta property="twitter:description" content="AI-native trade intelligence. TradeWatch is our shipment-evidence layer for customs and marine cargo insurance.">
-    <meta property="twitter:image" content="https://kananlabs.in/assets/images/KANAN-LABS-WEBSITELOGO.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://kananlabs.in/">
+    <meta name="twitter:title" content="Kanan Labs — AI-Native Trade Intelligence Infrastructure">
+    <meta name="twitter:description" content="AI-native trade intelligence infrastructure. TradeWatch — reviewed shipment-evidence packets for customs and marine cargo insurance.">
+    <meta name="twitter:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
+    <meta name="twitter:image:alt" content="Kanan Labs — Trade Intelligence Infrastructure">
 
     <link rel="icon" type="image/png" href="assets/images/KANAN-LABS-WEBSITELOGO.png">
     <meta name="google-site-verification" content="e4NN5-5uDwKoApKLmA1I8ZDmL1Dy0BGhlP-IpKbEbSo" />
+
+    <!-- Structured data: Organization + WebSite (sitewide anchor) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://kananlabs.in/#organization",
+          "name": "Kanan Labs",
+          "url": "https://kananlabs.in/",
+          "logo": "https://kananlabs.in/assets/images/KANAN-LABS-WEBSITELOGO.png",
+          "description": "AI-native trade intelligence and trade infrastructure company. Builders of TradeWatch and the India AI Tracker.",
+          "email": "sreenath@kananlabs.in",
+          "sameAs": [
+            "https://www.linkedin.com/in/sreenathgovindarajan"
+          ],
+          "founder": {
+            "@type": "Person",
+            "name": "Sreenath Govindarajan",
+            "url": "https://www.linkedin.com/in/sreenathgovindarajan"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "sreenath@kananlabs.in"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://kananlabs.in/#website",
+          "url": "https://kananlabs.in/",
+          "name": "Kanan Labs",
+          "publisher": { "@id": "https://kananlabs.in/#organization" },
+          "inLanguage": "en"
+        }
+      ]
+    }
+    </script>
 
     <!-- Resource hints — parallelize third-party fetches -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,10 +85,34 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
-    <!-- Performance: preload hero poster (paints instantly while video loads) -->
-    <link rel="preload" as="image" href="added-assets/kanan-hero-poster.jpg" fetchpriority="high">
-    <!-- Performance: preload hero video (1080p WebM for modern browsers) -->
-    <link rel="preload" as="video" href="added-assets/kanan-hero-1080p.webm" type="video/webm" fetchpriority="high">
+    <!-- Performance: preload hero poster (AVIF primary, ~45KB — paints in <200ms) -->
+    <link rel="preload" as="image" href="added-assets/kanan-hero-poster.avif" type="image/avif" fetchpriority="high">
+    <!-- Performance: viewport-aware hero video preload (AV1/HEVC desktop, H.264 mobile) -->
+    <script>
+    (function () {
+        var isMobile = window.matchMedia('(max-width: 768px)').matches;
+        var canAV1 = document.createElement('video')
+            .canPlayType('video/mp4; codecs="av01.0.05M.08"') !== '';
+        var href, type;
+        if (isMobile) {
+            href = 'added-assets/kanan-hero-720p.h264.mp4';
+            type = 'video/mp4';
+        } else if (canAV1) {
+            href = 'added-assets/kanan-hero-1080p.av1.mp4';
+            type = 'video/mp4; codecs="av01.0.05M.08"';
+        } else {
+            href = 'added-assets/kanan-hero-1080p.hevc.mp4';
+            type = 'video/mp4; codecs=hvc1';
+        }
+        var link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'video';
+        link.href = href;
+        link.type = type;
+        link.setAttribute('fetchpriority', 'high');
+        document.head.appendChild(link);
+    })();
+    </script>
     <!-- Performance: preload Cormorant display font weights -->
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/CormorantGaramond-Regular.woff2">
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/CormorantGaramond-Medium.woff2">
@@ -57,7 +127,7 @@
     <link rel="stylesheet" href="css/identity-section.css?v=11">
     <!-- manifesto-section.css removed — replaced by inline kl-manifesto styles -->
     <link rel="stylesheet" href="css/footer.css?v=3">
-    <link rel="stylesheet" href="css/tw-demo-clone.css?v=1">
+    <link rel="stylesheet" href="css/tw-demo-clone.css?v=4">
     <link rel="stylesheet" href="css/triptych.css?v=1">
     <link rel="stylesheet" href="css/drona-brain.css?v=1">
     <link rel="stylesheet" href="css/evidence-workflow.css?v=1">
@@ -674,7 +744,6 @@
             }
         }
     </style>
-    <link rel="canonical" href="https://kananlabs.in/states/pondicherry/" />
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"GovernmentService","name":"Pondicherry AI Ecosystem Tracker","areaServed":{"@type":"State","name":"Pondicherry"},"provider":{"@type":"Organization","name":"Kanan Labs","url":"https://kananlabs.in"}}</script>
 </head>
 
@@ -692,27 +761,31 @@
         ════════════════════════════════════════════════ -->
         <header class="kl-hero">
 
-            <!-- Hero video. Sources injected by inline script below based on viewport,
-                 so each device class gets a single appropriate file. The non-standard
-                 `media` attribute on <source> is honored only by Safari; Chrome/Firefox
-                 ignore it and would lock onto the desktop WebM on mobile networks. -->
+            <!-- Hero video. Sources injected by inline script below based on viewport +
+                 codec support. Ladder: AV1 (smallest, sharpest — Chrome/Firefox/Edge) →
+                 HEVC (Safari) → H.264 (universal fallback). Mobile gets a single 720p
+                 H.264 to keep first-frame paint under 1s on 4G. -->
             <video class="kl-hero__video" id="klHeroVideo"
                    autoplay loop muted playsinline disablepictureinpicture
                    preload="auto"
-                   poster="added-assets/kanan-hero-poster.jpg"></video>
+                   poster="added-assets/kanan-hero-poster.avif"></video>
             <script>
             (function () {
                 var v = document.getElementById('klHeroVideo');
                 if (!v) return;
                 var isMobile = window.matchMedia('(max-width: 768px)').matches;
+                // HEVC ahead of AV1: Apple Silicon + iPhone 7+ hardware-decode
+                // HEVC; AV1 is software-decoded on most of that fleet and is
+                // a major source of first-play stutter. Chrome/Firefox/Edge
+                // skip HEVC and grab AV1 next.
                 var sources = isMobile
                     ? [
-                        { src: 'added-assets/kanan-hero-720p-h264.mp4', type: 'video/mp4' },
-                        { src: 'added-assets/kanan-hero-720p.mp4',      type: 'video/mp4; codecs=hvc1' }
+                        { src: 'added-assets/kanan-hero-720p.h264.mp4', type: 'video/mp4' }
                       ]
                     : [
-                        { src: 'added-assets/kanan-hero-1080p.webm', type: 'video/webm' },
-                        { src: 'added-assets/kanan-hero-1080p.mp4',  type: 'video/mp4; codecs=hvc1' }
+                        { src: 'added-assets/kanan-hero-1080p.hevc.mp4', type: 'video/mp4; codecs=hvc1' },
+                        { src: 'added-assets/kanan-hero-1080p.av1.mp4',  type: 'video/mp4; codecs="av01.0.05M.08"' },
+                        { src: 'added-assets/kanan-hero-1080p.h264.mp4', type: 'video/mp4' }
                       ];
                 sources.forEach(function (s) {
                     var el = document.createElement('source');
@@ -721,8 +794,27 @@
                     v.appendChild(el);
                 });
                 v.load();
-                var p = v.play();
-                if (p && typeof p.catch === 'function') p.catch(function () { /* autoplay gated */ });
+
+                // Defer playback until the browser has buffered enough frames
+                // to play through without stalling. Calling .play() before
+                // canplay causes a 1–3 s stutter on cold loads.
+                var played = false;
+                function startPlayback() {
+                    if (played) return;
+                    played = true;
+                    var p = v.play();
+                    if (p && typeof p.catch === 'function') {
+                        p.catch(function () { /* autoplay gated by browser */ });
+                    }
+                }
+                if (v.readyState >= 3 /* HAVE_FUTURE_DATA */) {
+                    startPlayback();
+                } else {
+                    v.addEventListener('canplay', startPlayback, { once: true });
+                    // Safety net for browsers that load enough but never fire
+                    // canplay for short autoplay loops.
+                    setTimeout(startPlayback, 1500);
+                }
             })();
             </script>
 
@@ -1587,7 +1679,10 @@
                             <figure class="kl-founder__portrait">
                                 <img src="added-assets/SG-TRANSPARENT.png"
                                      alt="Sreenath Govindarajan, Founder of Kanan Labs"
-                                     loading="lazy">
+                                     width="1080"
+                                     height="1350"
+                                     loading="lazy"
+                                     decoding="async">
                             </figure>
                             <div class="kl-founder__signature">
                                 <p class="kl-founder__sig-name">Sreenath Govindarajan</p>
@@ -1667,7 +1762,7 @@
                     <!-- LEFT: Brand zone -->
                     <div class="kl-footer__brand">
                         <img src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png" alt="Kanan Labs"
-                             class="kl-footer__logo" draggable="false">
+                             class="kl-footer__logo" width="500" height="500" loading="lazy" decoding="async" draggable="false">
                         <p class="kl-footer__tagline">Trade Intelligence Infrastructure</p>
 
                         <div>
@@ -1701,7 +1796,6 @@
                             <h4 class="kl-footer__col-heading">Company</h4>
                             <ul class="kl-footer__col-links">
                                 <li><a href="about.html">About</a></li>
-                                <li><a href="team.html">Team</a></li>
                                 <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
                             </ul>
                         </div>
@@ -1710,8 +1804,8 @@
                             <h4 class="kl-footer__col-heading">Follow</h4>
                             <ul class="kl-footer__col-links">
                                 <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank" rel="noopener">LinkedIn</a></li>
-                                <li><a href="#" target="_blank" rel="noopener">Twitter</a></li>
-                                <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+                                <li><a href="https://x.com/indiaAItracker" target="_blank" rel="noopener">Twitter</a></li>
+                                <li><a href="https://github.com/sreenathgov" target="_blank" rel="noopener">GitHub</a></li>
                             </ul>
                         </div>
 
@@ -1728,7 +1822,7 @@
 
                 <div class="kl-footer__watermark">
                     <img src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png" alt=""
-                         class="kl-footer__watermark-img" aria-hidden="true" draggable="false">
+                         class="kl-footer__watermark-img" width="1584" height="396" loading="lazy" decoding="async" aria-hidden="true" draggable="false">
                 </div>
             </div>
         </footer>
