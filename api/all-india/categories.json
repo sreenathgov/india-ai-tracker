@@ -1014,6 +1014,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Reliance bets big on AI to drive next phase of growth for entertainment business",
+        "url": "https://yourstory.com/2026/05/reliance-bets-big-on-ai-next-phase-growth-entertainment-business",
+        "summary": "Reliance Industries (RIL) is investing heavily in artificial intelligence (AI) to drive growth in its entertainment business. AI is expected to transform content creation, consumer experience, and audience engagement, going beyond just improving business efficiency. RIL believes AI will define the next era of entertainment, making it a core capability for the company.",
+        "date_published": "2026-05-29",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "India well-positioned to become global leader in multilingual, multimodal AI solutions",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-well-positioned-to-become-global-leader-in-multilingual-multimodal-ai-solutions/131362448",
@@ -1060,6 +1080,46 @@
         "summary": "India's CDMO sector has seen a 178% increase in demand for AI-linked skills over two years, driven by the adoption of AI-enabled hiring. The shift towards automation and advanced analytics is expected to widen the talent gap in the pharmaceutical manufacturing industry. Demand for AI skills is rapidly rising as the sector transforms with new technologies.",
         "date_published": "2026-05-28",
         "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Tata Elxsi unveils AnaTel: AI platform built for medical software and compliance - Check key features",
+        "url": "https://www.etnownews.com/technology/tata-elxsi-unveils-anatel-ai-platform-built-for-medical-software-and-compliance-check-key-features-article-154419281",
+        "summary": "Tata Elxsi has launched AnaTel, an AI platform designed for medical software and compliance. The platform is a dedicated software as a medical device development platform, targeting healthcare and medical technology companies. AnaTel aims to support the development of medical devices with built-in AI capabilities and compliance features.",
+        "date_published": "2026-05-28",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "AI skill demand surges 178 pc across India&#039;s CDMO sector",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-skill-demand-surges-178-pc-across-indias-cdmo-sector/131365702",
+        "summary": "India's CDMO sector has seen a significant shift in hiring towards AI-enabled capabilities, with a 178% increase in AI-linked skill demand over the past two years. This surge indicates a rapid realignment of hiring in the sector, driven by the growing importance of AI. The increase reflects the sector's efforts to adapt to emerging technologies and trends.",
+        "date_published": "2026-05-28",
+        "source_name": "ET CIO - AI",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -7760,6 +7820,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "Meet the 100 Desi DeepTechs shaping India’s frontier tech future",
+        "url": "https://yourstory.com/2026/05/startup-policy-forum-100-desi-deeptechs-india",
+        "summary": "The Startup Policy Forum has unveiled the #100DesiDeepTechs cohort, showcasing India's top founders in emerging technologies. The cohort features innovators across key sectors including semiconductors, AI, robotics, biotech, and space tech. This initiative highlights India's growing presence in frontier technologies, driven by its talented founders and innovators.",
+        "date_published": "2026-05-29",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 15,
         "title": "Fundamentum co-founder Ashish Kumar launches F2A with Rs 3,000 Cr corpus",
         "url": "https://entrackr.com/snippets/fundamentum-co-founder-ashish-kumar-launches-f2a-with-rs-3000-cr-corpus-11875618",
@@ -9430,6 +9510,7 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }
