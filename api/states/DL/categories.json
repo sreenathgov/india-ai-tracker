@@ -366,6 +366,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 6,
+        "title": "Gurgaon homebuyer gets Rs 27 lakh payout. How real estate body used used Google AI for valuation",
+        "url": "https://indianexpress.com/article/cities/delhi/gurgaon-homebuyer-gets-rs-27-lakh-payout-how-real-estate-body-used-used-google-ai-for-valuation-10714005/",
+        "summary": "A Gurgaon homebuyer received a payout of Rs 27 lakh with the help of a real estate body. The real estate body utilized Google AI for valuation in this case. The use of Google AI facilitated the valuation process, leading to the significant payout for the homebuyer.",
+        "date_published": "2026-05-29",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Former Reliance, Flipkart and Cashify executives’ home services startup Eazzy raises angel funding",
         "url": "https://entrackr.com/snippets/former-reliance-flipkart-and-cashify-executives-home-services-startup-eazzy-raises-angel-funding-11882872",
@@ -2993,7 +3013,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

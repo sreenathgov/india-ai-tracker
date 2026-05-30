@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 5,
+        "title": "Funding and acquisitions in Indian startups this week [May 25 - May 30]",
+        "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-may-25-may-30-11889073",
+        "summary": "15 Indian startups raised around $75.35 million in funding this week, with 3 growth-stage deals and 9 early-stage deals. This amount is lower than the $128.36 million secured by 14 startups in the previous week. The funding rounds included a mix of disclosed and undisclosed deals, with 2 startups keeping their funding amounts private.",
+        "date_published": "2026-05-30",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 19,
         "title": "Snabbit confirms exploring physical AI proposal with Human Archive, denies home rollout",
         "url": "https://entrackr.com/in-depth/snabbit-confirms-exploring-physical-ai-proposal-with-human-archive-denies-home-rollout-11870375",
@@ -1014,10 +1034,90 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Codex weekly active users in India surge 27x so far in 2026: OpenAI",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/codex-weekly-active-users-in-india-surge-27x-so-far-in-2026-openai/131390019",
+        "summary": "OpenAI's AI coding and productivity tool Codex has seen a 27-fold increase in weekly active users in India since the start of 2026. This surge is driven by developers, founders, and professionals adopting AI tools to build and execute tasks more efficiently. The rapid growth indicates accelerating adoption of AI-powered productivity tools in India.",
+        "date_published": "2026-05-30",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India Inc deepens AI adoption to stay ahead of legal curve",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-inc-deepens-ai-adoption-to-stay-ahead-of-legal-curve/131398403",
+        "summary": "Major Indian corporations are integrating artificial intelligence into their legal departments to enhance efficiency and stay ahead of the legal curve. This adoption is improving contract assessments, compliance monitoring, and automating routine tasks, thereby reducing legal expenditures. Companies like Aditya Birla Group and Adani Group are leading this trend, leveraging AI to optimise their legal operations.",
+        "date_published": "2026-05-30",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Anthropic hits $965B valuation; AI complexity plagues Indian companies",
+        "url": "https://yourstory.com/2026/05/anthropic-hits-965b-valuation",
+        "summary": "Anthropic has reached a valuation of $965 billion following its Series H funding. The funding round was led by prominent investors including Altimeter Capital, Dragoneer, Greenoaks, and Sequoia Capital. This significant valuation underscores Anthropic's growing presence in the AI industry.",
+        "date_published": "2026-05-30",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Reliance bets big on AI to drive next phase of growth for entertainment business",
         "url": "https://yourstory.com/2026/05/reliance-bets-big-on-ai-next-phase-growth-entertainment-business",
         "summary": "Reliance Industries (RIL) is investing heavily in artificial intelligence (AI) to drive growth in its entertainment business. AI is expected to transform content creation, consumer experience, and audience engagement, going beyond just improving business efficiency. RIL believes AI will define the next era of entertainment, making it a core capability for the company.",
+        "date_published": "2026-05-29",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "India’s mid-market firms lead in AI adoption but face rising complexity costs: Freshworks Report",
+        "url": "https://yourstory.com/2026/05/indias-mid-market-firms-lead-ai-adoption-face-rising-complexity-costs-freshworks-report",
+        "summary": "India's mid-market firms are at the forefront of AI adoption, but they are struggling with rising complexity costs. A report by Freshworks found that these firms are losing a significant amount of money due to inefficient AI spending. Indian AI firms are estimated to be wasting around Rs 33,000 crore annually on AI.",
         "date_published": "2026-05-29",
         "source_name": "YourStory",
         "category": "Major AI Developments",
@@ -9510,7 +9610,7 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
-    "Major AI Developments"
+    "Major AI Developments",
+    "Policies and Initiatives"
   ]
 }
