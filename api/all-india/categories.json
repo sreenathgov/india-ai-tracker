@@ -1094,6 +1094,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 1,
+        "title": "Cyient snaps up TAO Digital to boost AI-native engineering capabilities",
+        "url": "https://www.etnownews.com/technology/cyient-to-pick-up-100-stake-in-tao-digital-to-boost-its-ai-native-engineering-capabilities-article-154431607",
+        "summary": "Cyient, a global ER&D company, is acquiring TAO Digital to enhance its AI-native engineering capabilities. TAO Digital, founded in 2022, provides solutions for complex business and technology challenges in sectors such as automotive, hi-tech, and healthtech. The acquisition expands Cyient's presence across the US, Canada, India, Taiwan, and Europe.",
+        "date_published": "2026-05-30",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Reliance bets big on AI to drive next phase of growth for entertainment business",
         "url": "https://yourstory.com/2026/05/reliance-bets-big-on-ai-next-phase-growth-entertainment-business",
@@ -9609,8 +9629,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments",
-    "Policies and Initiatives"
-  ]
+  "today_updates": []
 }
