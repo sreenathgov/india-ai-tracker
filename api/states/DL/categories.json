@@ -345,6 +345,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Healthcare startup MediElaj raises pre-seed round",
+        "url": "https://entrackr.com/snippets/healthcare-startup-medelaj-raises-angel-round-11896174",
+        "summary": "MediElaj, a healthcare startup, has raised approximately $100K in a pre-seed round from friends and family. The founders have also invested nearly $500K in bootstrapping the company's technology platform and operational capabilities. The funds will be used for product development, kiosk prototyping, and preparation for pilot deployments to drive scalable growth.",
+        "date_published": "2026-06-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "'Rejected my friend request': Delhi man creates 10 fake accounts, uploads 100 obscene AI-generated photos of Ahmedabad woman",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/delhi-man-posts-100-obscene-ai-created-photos-of-ahmedabad-woman/articleshow/131377083.cms",
@@ -3013,5 +3033,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

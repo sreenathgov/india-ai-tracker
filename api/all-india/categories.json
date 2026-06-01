@@ -1035,6 +1035,46 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "Titan Capital launches “Future Indicorns,” a request for the AI startups India actually needs",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/titan-capitals-future-indicorns-shaping-indias-ai-unicorn-landscape/131437846",
+        "summary": "Titan Capital has launched \"Future Indicorns,\" a program to support Indian AI startups addressing the country's unique challenges. The initiative highlights ten key themes, including AI for SMBs, GovTech, and manufacturing. Founders can apply until June 2026 to participate and build the next generation of AI leaders.",
+        "date_published": "2026-06-01",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "‘Nexbax AI Index’ to redefine AI adoption in India",
+        "url": "https://www.thehindu.com/news/national/karnataka/nexbax-ai-index-to-redefine-ai-adoption-in-india/article71038142.ece",
+        "summary": "The Nexbax AI Index aims to redefine AI adoption in India by introducing new metrics that better suit the country's unique needs. Current global AI development metrics are deemed useless for India's large and diverse user base. The index seeks to provide a more relevant framework for AI adoption in India and the Global South.",
+        "date_published": "2026-06-01",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Codex weekly active users in India surge 27x so far in 2026: OpenAI",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/codex-weekly-active-users-in-india-surge-27x-so-far-in-2026-openai/131390019",
         "summary": "OpenAI's AI coding and productivity tool Codex has seen a 27-fold increase in weekly active users in India since the start of 2026. This surge is driven by developers, founders, and professionals adopting AI tools to build and execute tasks more efficiently. The rapid growth indicates accelerating adoption of AI-powered productivity tools in India.",
@@ -9629,5 +9669,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
