@@ -1,6 +1,34 @@
 {
   "version": 2,
   "public": true,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/all-india/index.html", "destination": "/all-india/", "permanent": true },
+
+    { "source": "/states/nct-of-delhi", "destination": "/states/delhi/", "permanent": true },
+    { "source": "/states/nct-of-delhi/", "destination": "/states/delhi/", "permanent": true },
+    { "source": "/states/nct-of-delhi/index.html", "destination": "/states/delhi/", "permanent": true },
+    { "source": "/states/telengana", "destination": "/states/telangana/", "permanent": true },
+    { "source": "/states/telengana/", "destination": "/states/telangana/", "permanent": true },
+    { "source": "/states/telengana/index.html", "destination": "/states/telangana/", "permanent": true },
+    { "source": "/states/orissa", "destination": "/states/odisha/", "permanent": true },
+    { "source": "/states/orissa/", "destination": "/states/odisha/", "permanent": true },
+    { "source": "/states/orissa/index.html", "destination": "/states/odisha/", "permanent": true },
+    { "source": "/states/chattisgarh", "destination": "/states/chhattisgarh/", "permanent": true },
+    { "source": "/states/chattisgarh/", "destination": "/states/chhattisgarh/", "permanent": true },
+    { "source": "/states/chattisgarh/index.html", "destination": "/states/chhattisgarh/", "permanent": true },
+    { "source": "/states/uttaranchal", "destination": "/states/uttarakhand/", "permanent": true },
+    { "source": "/states/uttaranchal/", "destination": "/states/uttarakhand/", "permanent": true },
+    { "source": "/states/uttaranchal/index.html", "destination": "/states/uttarakhand/", "permanent": true },
+    { "source": "/states/pondicherry", "destination": "/states/puducherry/", "permanent": true },
+    { "source": "/states/pondicherry/", "destination": "/states/puducherry/", "permanent": true },
+    { "source": "/states/pondicherry/index.html", "destination": "/states/puducherry/", "permanent": true },
+    { "source": "/states/andaman-and-nicobar", "destination": "/states/andaman-and-nicobar-islands/", "permanent": true },
+    { "source": "/states/andaman-and-nicobar/", "destination": "/states/andaman-and-nicobar-islands/", "permanent": true },
+    { "source": "/states/andaman-and-nicobar/index.html", "destination": "/states/andaman-and-nicobar-islands/", "permanent": true },
+
+    { "source": "/states/:slug/index.html", "destination": "/states/:slug/", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",

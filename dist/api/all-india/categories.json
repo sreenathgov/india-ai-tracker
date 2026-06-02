@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 5,
+        "title": "Funding and acquisitions in Indian startups this week [May 25 - May 30]",
+        "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-may-25-may-30-11889073",
+        "summary": "15 Indian startups raised around $75.35 million in funding this week, with 3 growth-stage deals and 9 early-stage deals. This amount is lower than the $128.36 million secured by 14 startups in the previous week. The funding rounds included a mix of disclosed and undisclosed deals, with 2 startups keeping their funding amounts private.",
+        "date_published": "2026-05-30",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 19,
         "title": "Snabbit confirms exploring physical AI proposal with Human Archive, denies home rollout",
         "url": "https://entrackr.com/in-depth/snabbit-confirms-exploring-physical-ai-proposal-with-human-archive-denies-home-rollout-11870375",
@@ -1014,6 +1034,266 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Titan Capital launches “Future Indicorns,” a request for the AI startups India actually needs",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/titan-capitals-future-indicorns-shaping-indias-ai-unicorn-landscape/131437846",
+        "summary": "Titan Capital has launched \"Future Indicorns,\" a program to support Indian AI startups addressing the country's unique challenges. The initiative highlights ten key themes, including AI for SMBs, GovTech, and manufacturing. Founders can apply until June 2026 to participate and build the next generation of AI leaders.",
+        "date_published": "2026-06-01",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "‘Nexbax AI Index’ to redefine AI adoption in India",
+        "url": "https://www.thehindu.com/news/national/karnataka/nexbax-ai-index-to-redefine-ai-adoption-in-india/article71038142.ece",
+        "summary": "The Nexbax AI Index aims to redefine AI adoption in India by introducing new metrics that better suit the country's unique needs. Current global AI development metrics are deemed useless for India's large and diverse user base. The index seeks to provide a more relevant framework for AI adoption in India and the Global South.",
+        "date_published": "2026-06-01",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Codex weekly active users in India surge 27x so far in 2026: OpenAI",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/codex-weekly-active-users-in-india-surge-27x-so-far-in-2026-openai/131390019",
+        "summary": "OpenAI's AI coding and productivity tool Codex has seen a 27-fold increase in weekly active users in India since the start of 2026. This surge is driven by developers, founders, and professionals adopting AI tools to build and execute tasks more efficiently. The rapid growth indicates accelerating adoption of AI-powered productivity tools in India.",
+        "date_published": "2026-05-30",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India Inc deepens AI adoption to stay ahead of legal curve",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-inc-deepens-ai-adoption-to-stay-ahead-of-legal-curve/131398403",
+        "summary": "Major Indian corporations are integrating artificial intelligence into their legal departments to enhance efficiency and stay ahead of the legal curve. This adoption is improving contract assessments, compliance monitoring, and automating routine tasks, thereby reducing legal expenditures. Companies like Aditya Birla Group and Adani Group are leading this trend, leveraging AI to optimise their legal operations.",
+        "date_published": "2026-05-30",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Anthropic hits $965B valuation; AI complexity plagues Indian companies",
+        "url": "https://yourstory.com/2026/05/anthropic-hits-965b-valuation",
+        "summary": "Anthropic has reached a valuation of $965 billion following its Series H funding. The funding round was led by prominent investors including Altimeter Capital, Dragoneer, Greenoaks, and Sequoia Capital. This significant valuation underscores Anthropic's growing presence in the AI industry.",
+        "date_published": "2026-05-30",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Cyient snaps up TAO Digital to boost AI-native engineering capabilities",
+        "url": "https://www.etnownews.com/technology/cyient-to-pick-up-100-stake-in-tao-digital-to-boost-its-ai-native-engineering-capabilities-article-154431607",
+        "summary": "Cyient, a global ER&D company, is acquiring TAO Digital to enhance its AI-native engineering capabilities. TAO Digital, founded in 2022, provides solutions for complex business and technology challenges in sectors such as automotive, hi-tech, and healthtech. The acquisition expands Cyient's presence across the US, Canada, India, Taiwan, and Europe.",
+        "date_published": "2026-05-30",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Reliance bets big on AI to drive next phase of growth for entertainment business",
+        "url": "https://yourstory.com/2026/05/reliance-bets-big-on-ai-next-phase-growth-entertainment-business",
+        "summary": "Reliance Industries (RIL) is investing heavily in artificial intelligence (AI) to drive growth in its entertainment business. AI is expected to transform content creation, consumer experience, and audience engagement, going beyond just improving business efficiency. RIL believes AI will define the next era of entertainment, making it a core capability for the company.",
+        "date_published": "2026-05-29",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "India’s mid-market firms lead in AI adoption but face rising complexity costs: Freshworks Report",
+        "url": "https://yourstory.com/2026/05/indias-mid-market-firms-lead-ai-adoption-face-rising-complexity-costs-freshworks-report",
+        "summary": "India's mid-market firms are at the forefront of AI adoption, but they are struggling with rising complexity costs. A report by Freshworks found that these firms are losing a significant amount of money due to inefficient AI spending. Indian AI firms are estimated to be wasting around Rs 33,000 crore annually on AI.",
+        "date_published": "2026-05-29",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "India well-positioned to become global leader in multilingual, multimodal AI solutions",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-well-positioned-to-become-global-leader-in-multilingual-multimodal-ai-solutions/131362448",
+        "summary": "India is poised to become a global leader in Artificial Intelligence innovation, particularly in multilingual and multimodal AI solutions. According to Sashikumar Sreedharan, Managing Director of Google Cloud India, the country has the potential to develop AI solutions with worldwide relevance. This positions India for a significant role in the global AI landscape.",
+        "date_published": "2026-05-28",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "AlmaBetter Partners with NASSCOM to skill 2 Lakh professionals in AI",
+        "url": "https://cellit.in/almabetter-partners-with-nasscom-to-skill-2-lakh-professionals-in-ai/",
+        "summary": "AlmaBetter has partnered with NASSCOM to upskill 2 lakh professionals in artificial intelligence. This collaboration aims to enhance the AI skills of a large workforce in the industry. The partnership is expected to have a significant impact on the development of AI talent in the country.",
+        "date_published": "2026-05-28",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "AI skill demand in India’s CDMO sector jumps 178%: Report",
+        "url": "https://telanganatoday.com/ai-skill-demand-in-indias-cdmo-sector-jumps-178-report",
+        "summary": "India's CDMO sector has seen a 178% increase in demand for AI-linked skills over two years, driven by the adoption of AI-enabled hiring. The shift towards automation and advanced analytics is expected to widen the talent gap in the pharmaceutical manufacturing industry. Demand for AI skills is rapidly rising as the sector transforms with new technologies.",
+        "date_published": "2026-05-28",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Tata Elxsi unveils AnaTel: AI platform built for medical software and compliance - Check key features",
+        "url": "https://www.etnownews.com/technology/tata-elxsi-unveils-anatel-ai-platform-built-for-medical-software-and-compliance-check-key-features-article-154419281",
+        "summary": "Tata Elxsi has launched AnaTel, an AI platform designed for medical software and compliance. The platform is a dedicated software as a medical device development platform, targeting healthcare and medical technology companies. AnaTel aims to support the development of medical devices with built-in AI capabilities and compliance features.",
+        "date_published": "2026-05-28",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "AI skill demand surges 178 pc across India&#039;s CDMO sector",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-skill-demand-surges-178-pc-across-indias-cdmo-sector/131365702",
+        "summary": "India's CDMO sector has seen a significant shift in hiring towards AI-enabled capabilities, with a 178% increase in AI-linked skill demand over the past two years. This surge indicates a rapid realignment of hiring in the sector, driven by the growing importance of AI. The increase reflects the sector's efforts to adapt to emerging technologies and trends.",
+        "date_published": "2026-05-28",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "AI to turbocharge patent creation at India tech hubs, executives say",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-to-turbocharge-patent-creation-at-india-tech-hubs-executives-say/131341043",
@@ -1060,6 +1340,26 @@
         "summary": "Samsung has launched its 2026 Vision AI TV lineup in India, expanding its presence in the country's television market. The new lineup is expected to feature advanced AI-powered technologies and innovative display capabilities. The launch aims to provide Indian consumers with cutting-edge viewing experiences and enhanced smart TV features.",
         "date_published": "2026-05-27",
         "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "PhysicsWallah FY26 revenue rises 35% to Rs 3,900 Cr as AI, offline profitability stay in focus",
+        "url": "https://yourstory.com/2026/05/physicswallah-fy26-revenue-rises-rs-3900-cr-ai-offline-profitability-focus",
+        "summary": "PhysicsWallah's revenue increased by 35% to Rs 3,900 Cr in FY26, driven by growth in paid users and offline expansion. The company also improved profitability and operating cash flow, aided by AI-led efficiencies. Offline expansion and AI integration remain key focus areas for PhysicsWallah.",
+        "date_published": "2026-05-27",
+        "source_name": "YourStory",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -7679,6 +7979,26 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 4,
+        "title": "Meet the 100 Desi DeepTechs shaping India’s frontier tech future",
+        "url": "https://yourstory.com/2026/05/startup-policy-forum-100-desi-deeptechs-india",
+        "summary": "The Startup Policy Forum has unveiled the #100DesiDeepTechs cohort, showcasing India's top founders in emerging technologies. The cohort features innovators across key sectors including semiconductors, AI, robotics, biotech, and space tech. This initiative highlights India's growing presence in frontier technologies, driven by its talented founders and innovators.",
+        "date_published": "2026-05-29",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 15,
         "title": "Fundamentum co-founder Ashish Kumar launches F2A with Rs 3,000 Cr corpus",

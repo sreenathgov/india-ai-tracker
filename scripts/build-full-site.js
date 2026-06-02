@@ -15,8 +15,7 @@ const FILES_TO_COPY = [
     'publications.html',
     'privacy-policy.html',
     'disclaimers.html',
-    '404.html',
-    'tracker.db'
+    '404.html'
 ];
 
 function buildSite() {
