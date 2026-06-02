@@ -129,6 +129,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "As robotics boom, startups race to capture real-world AI training data",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/as-robotics-boom-startups-race-to-capture-real-world-ai-training-data/articleshow/131448538.cms",
+        "summary": "Startups are racing to capture real-world AI training data as the robotics industry experiences a boom. This data is crucial for training AI models to perform tasks in real-world environments. The demand for high-quality training data has sparked competition among startups to collect and provide this data to companies developing robotics and AI technologies.",
+        "date_published": "2026-06-02",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Netrasemi eyes commercial production of its AI chips by 2027",
         "url": "https://timesofindia.indiatimes.com/city/chennai/netrasemi-eyes-commercial-production-of-its-ai-chips-by-2027/articleshow/131376550.cms",
@@ -925,5 +945,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -266,6 +266,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Schools reopen in Karnataka; AI attendance system debuts in pre-university colleges",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/schools-reopen-in-karnataka-ai-attendance-system-debuts-in-pre-university-colleges/articleshow/131449019.cms",
+        "summary": "Schools have reopened in Karnataka, marking a new academic year. An AI-powered attendance system has been introduced in pre-university colleges, aiming to streamline attendance tracking. This new system is part of the state's efforts to integrate technology into its education sector.",
+        "date_published": "2026-06-02",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "TCS partners Mistral AI to build enterprise-grade custom AI models",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/tcs-partners-mistral-ai-to-build-enterprise-grade-custom-ai-models/articleshow/131376172.cms",
@@ -2982,5 +3002,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
