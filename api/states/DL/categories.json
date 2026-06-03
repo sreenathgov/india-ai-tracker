@@ -3,6 +3,27 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 9,
+        "title": "Haryana CM launches AI sandbox in Gurugram to accelerate Antyodaya-centric governance",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/haryana-rolls-out-ai-sandbox-in-gurugram-for-citizen-centric-governance/131461902",
+        "summary": "Haryana's Chief Minister has launched an AI sandbox in Gurugram to accelerate governance focused on Antyodaya, a vision for a Developed India. The initiative will allow government departments to present challenges for innovators to develop and test solutions, driving public welfare and governance through technology. The World Bank will provide assistance in skill development as part of this effort.",
+        "date_published": "2026-06-02",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL",
+          "HR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Delhi govt signs pact with IIT Kanpur for AI-operated air pollution monitoring system",
         "url": "https://www.tribuneindia.com/news/delhi/delhi-govt-signs-pact-with-iit-kanpur-for-ai-operated-air-pollution-monitoring-system",
@@ -344,6 +365,27 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 13,
+        "title": "Disabled flyer claims AI deplaned her over fit-to-fly certificate",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/disabled-flyer-claims-ai-deplaned-her-over-fit-to-fly-certificate/articleshow/131470619.cms",
+        "summary": "A disabled flyer was deplaned from a connecting Delhi-Bhuj flight by Air India due to a fit-to-fly certificate issue. The passenger claimed that Air India did not request the certificate for her initial Frankfurt-Delhi journey. The incident occurred when she was about to board her connecting flight from Delhi to Bhuj.",
+        "date_published": "2026-06-03",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 2,
         "title": "Healthcare startup MediElaj raises pre-seed round",
@@ -3033,5 +3075,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

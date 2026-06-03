@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 15,
+        "title": "AI model may warn Hyderabad before air turns foul",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/ai-model-may-warn-hyderabad-before-air-turns-foul/articleshow/131470199.cms",
+        "summary": "Researchers have developed an AI model that can potentially warn Hyderabad of impending poor air quality using data from regulatory-grade monitoring stations. The model was trained on five years of continuous data from January 2020 to December 2024, obtained from the Central Pollution Control Board. This AI-powered system aims to provide early warnings to help mitigate the effects of air pollution in the city.",
+        "date_published": "2026-06-03",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Drones to monitor traffic, track suspects and power aerial surveillance in Hyderabad’s Malkajgiri",
         "url": "https://www.thehindu.com/news/cities/Hyderabad/drones-to-monitor-traffic-track-suspects-and-power-aerial-surveillance-in-hyderabads-malkajgiri/article71027618.ece",
@@ -1555,5 +1575,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

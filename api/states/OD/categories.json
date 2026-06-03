@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 10,
+        "title": "Odisha govt to launch AI smart surveillance in registration offices",
+        "url": "https://cellit.in/odisha-govt-to-launch-ai-smart-surveillance-in-registration-offices/",
+        "summary": "The Odisha government is set to launch an AI-powered smart surveillance system in registration offices. This initiative aims to enhance security and monitoring capabilities in these offices. The system will utilize artificial intelligence to improve overall efficiency and effectiveness.",
+        "date_published": "2026-06-03",
+        "source_name": "CellIt Magazine",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Vikra Ocean Tech raises $1 Mn from Finvolve and India Accelerator",
         "url": "https://entrackr.com/snippets/vikra-ocean-tech-raises-1-mn-from-finvolve-and-india-accelerator-11779394",
@@ -268,5 +288,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

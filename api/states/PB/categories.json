@@ -1,7 +1,28 @@
 {
   "state": "PB",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 7,
+        "title": "ONDC to raise Rs 430 Cr from SBI, Zoho, Uber,  Paytm, Amul and others",
+        "url": "https://entrackr.com/news/ondc-to-raise-rs-430-cr-from-sbi-zoho-uber-paytm-amul-and-others-11901708",
+        "summary": "The Open Network for Digital Commerce (ONDC) is raising Rs 430 crore from strategic investors, including Zoho, Uber, Paytm, and SBI, to fuel its next phase of growth under the ONDC 2.0 strategy. ONDC has already received Rs 220 crore, with Zoho contributing the largest amount of Rs 70 crore, followed by Uber and Paytm with Rs 60 crore each. The investments are part of ONDC's plan to expand its digital commerce network.",
+        "date_published": "2026-06-02",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [],
     "Major AI Developments": [
       {

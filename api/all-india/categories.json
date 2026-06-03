@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 4,
+        "title": "Indian startup leaders, UK minister discuss future of AI collaboration",
+        "url": "https://yourstory.com/2026/06/indian-startup-leaders-uk-minister-discuss-future-of-ai-cooperation",
+        "summary": "Indian startup founders met with UK Minister for AI and Online Safety, Kanishka Narayan, to discuss future AI collaboration. The meeting took place during the Cambridge India Business Dialogue as part of the Startup Policy Forum's UK Startup Safari delegation. This gathering aimed to foster cooperation between Indian startups and the UK in the field of artificial intelligence.",
+        "date_published": "2026-06-02",
+        "source_name": "YourStory",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Funding and acquisitions in Indian startups this week [May 25 - May 30]",
         "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-may-25-may-30-11889073",
@@ -1034,12 +1054,132 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "AI can speed up grievance resolution in BFSI, but trust still needs a human touch",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-can-speed-up-grievance-resolution-in-bfsi-but-trust-still-needs-a-human-touch/131474954",
+        "summary": "India's financial sector is undergoing a significant transformation with AI enhancing customer complaint resolution by speeding up processes and identifying root causes. AI systems are making grievance redressal faster, smarter, and more accessible, leading to better outcomes. However, human intervention is still necessary to establish trust in the resolution process.",
+        "date_published": "2026-06-03",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "AI rewrites advertising model as India emerges as global AdTech hub",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-rewrites-advertising-model-as-india-emerges-as-global-adtech-hub/131460745",
+        "summary": "India is emerging as a global hub for AdTech, driven by AI's impact on advertising. The country's large pool of tech talent and growing digital ad market position it to develop AI-powered advertising solutions. This shift is expected to lead to more automated and data-driven campaigns, with Indian firms creating global products.",
+        "date_published": "2026-06-03",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "VC funding dries in May; Fertility treatment with compassion",
+        "url": "https://yourstory.com/2026/06/vc-funding-dries-in-may-fertility-treatment-with-compassion",
+        "summary": "Investors are shifting their focus towards artificial intelligence (AI) startups. However, India has a limited number of credible companies in the AI segment, making it less attractive for investment. This shift in investor interest is occurring at a time when overall VC funding is drying up.",
+        "date_published": "2026-06-03",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Gifting platform Zuvees raises Rs 15 Cr in ongoing Series A from IvyCap Ventures",
+        "url": "https://entrackr.com/snippets/gifting-platform-zuvees-raises-rs-15-cr-in-ongoing-series-a-from-ivycap-ventures-11902699",
+        "summary": "Gifting platform Zuvees has raised Rs 15 crore from IvyCap Ventures as part of its ongoing Series A round, bringing its total funding to Rs 30 crore. The company plans to use the fresh capital to expand its operations, enhance its AI-powered personalization engine, and strengthen its supply chain infrastructure. This investment will also help Zuvees deepen its customer intelligence and CRM capabilities.",
+        "date_published": "2026-06-03",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "TCS, Infosys, Wipro cross 3 lakh Microsoft’s Copilot users in major AI...",
+        "url": "https://cellit.in/tcs-infosys-wipro-cross-3-lakh-microsofts-copilot-users-in-major-ai-push/",
+        "summary": "TCS, Infosys, and Wipro have surpassed 300,000 users of Microsoft's Copilot, an AI-powered tool. This milestone marks a significant adoption of AI technology among these major IT companies. The widespread use of Copilot highlights the growing importance of AI in the industry.",
+        "date_published": "2026-06-03",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "India-US tech partnership in semiconductors, AI enters industrial phase",
         "url": "https://cellit.in/india-us-tech-partnership-in-semiconductors-ai-enters-industrial-phase/",
         "summary": "The India-US tech partnership has advanced to the industrial phase, focusing on semiconductors and artificial intelligence. This collaboration aims to strengthen the two countries' technological capabilities and promote innovation in these key areas. The partnership is expected to drive growth and development in the tech sector.",
         "date_published": "2026-06-02",
         "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "India gets its first AI music company, but there&#039;s a catch",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-gets-its-first-ai-music-company-but-theres-a-catch/131460498",
+        "summary": "PaRa Music, India's first AI-powered music company, has launched to promote Indian music globally using a combination of AI and human creativity. The company aims to build a large music library, improve music discovery and monetization, and partner with governments for cultural initiatives. PaRa Music seeks to create Indian music intellectual property for global audiences, increasing its reach and accessibility.",
+        "date_published": "2026-06-02",
+        "source_name": "ET CIO - AI",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"

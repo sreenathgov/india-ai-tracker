@@ -125,6 +125,47 @@
     ],
     "Major AI Developments": [
       {
+        "id": 13,
+        "title": "Disabled flyer claims AI deplaned her over fit-to-fly certificate",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/disabled-flyer-claims-ai-deplaned-her-over-fit-to-fly-certificate/articleshow/131470619.cms",
+        "summary": "A disabled flyer was deplaned from a connecting Delhi-Bhuj flight by Air India due to a fit-to-fly certificate issue. The passenger claimed that Air India did not request the certificate for her initial Frankfurt-Delhi journey. The incident occurred when she was about to board her connecting flight from Delhi to Bhuj.",
+        "date_published": "2026-06-03",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 14,
+        "title": "Prayer meet for AI 171 victims held in London",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/prayer-meet-for-ai-171-victims-held-in-london/articleshow/131470404.cms",
+        "summary": "A prayer meeting was held in London for the victims of AI 171. The event was organized to pay tribute and offer condolences to those affected by the incident. Further details about the meeting and the incident were not specified in the available information.",
+        "date_published": "2026-06-03",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "'Rejected my friend request': Delhi man creates 10 fake accounts, uploads 100 obscene AI-generated photos of Ahmedabad woman",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/delhi-man-posts-100-obscene-ai-created-photos-of-ahmedabad-woman/articleshow/131377083.cms",
@@ -1092,5 +1133,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -286,6 +286,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 12,
+        "title": "‘Mysuru inspired my journey into history’",
+        "url": "https://starofmysore.com/mysuru-inspired-my-journey-into-history/",
+        "summary": "Dr. Vikram Sampath, a renowned historian and researcher, has shared his unique journey from the corporate world to becoming a celebrated author of Indian history. His path was inspired by Mysuru and involved transitioning from tech files to exploring hidden archives. Sampath's work now also involves the use of AI-driven translations to chronicle India's past.",
+        "date_published": "2026-06-02",
+        "source_name": "Star of Mysore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "TCS partners Mistral AI to build enterprise-grade custom AI models",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/tcs-partners-mistral-ai-to-build-enterprise-grade-custom-ai-models/articleshow/131376172.cms",
@@ -2274,6 +2294,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 8,
+        "title": "BEENEXT leads Rs 30 Cr pre-seed round in edtech startup ProLearn",
+        "url": "https://entrackr.com/snippets/beenext-leads-rs-30-cr-pre-seed-round-in-edtech-startup-prolearn-11901039",
+        "summary": "Edtech startup ProLearn has raised Rs 30 crore ($3.2 million) in a pre-seed funding round led by BEENEXT, with participation from other investors. The funds will be used to accelerate product development, enhance AI infrastructure, and expand curriculum-aligned content. ProLearn is an AI-native edtech startup that offers personalized learning solutions for K-12 students and competitive exam aspirants.",
+        "date_published": "2026-06-02",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Your cleaner may be recording you: Bengaluru startup’s head-mounted cameras trigger AI privacy storm",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/someones-watching-how-your-cleaner-became-an-ai-data-collector/articleshow/131296646.cms",
@@ -3002,7 +3042,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
