@@ -183,6 +183,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "‘Dead’ Woman Walking, AI To Find Woh Kaun Thi?",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/dead-woman-walking-ai-to-find-woh-kaun-thi/articleshow/131491907.cms",
+        "summary": "A woman in Nagpur was found walking despite being declared dead, and AI technology will be used to investigate the incident. The unusual case has raised questions about the woman's identity and the circumstances surrounding her supposed death. Authorities are now working to uncover the truth behind the mysterious event.",
+        "date_published": "2026-06-04",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "AI NEXT 2026",
         "url": "https://cio.economictimes.indiatimes.com/ai-next?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
@@ -1626,5 +1646,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

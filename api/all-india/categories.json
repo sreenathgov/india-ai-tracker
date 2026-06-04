@@ -1054,6 +1054,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Kuku files confidential DRHP for Rs 3,500 Cr IPO, eyes Rs 15,000 Cr valuation",
+        "url": "https://entrackr.com/news/kuku-fm-files-confidential-drhp-for-rs-3500-cr-ipo-report-11999676",
+        "summary": "Kuku Technologies has filed a confidential draft red herring prospectus (DRHP) with SEBI for an initial public offering (IPO) to raise Rs 2,500-3,500 crore. The company is targeting a valuation of up to Rs 15,000 crore at the time of listing, expected later this fiscal year. The IPO will include a combination of fresh issue and offer-for-sale (OFS) to raise funds for the company.",
+        "date_published": "2026-06-04",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "AI can speed up grievance resolution in BFSI, but trust still needs a human touch",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-can-speed-up-grievance-resolution-in-bfsi-but-trust-still-needs-a-human-touch/131474954",
@@ -8160,6 +8180,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "Sony Innovation Fund leads $7 Mn round in fintech startup WeRize",
+        "url": "https://entrackr.com/news/sony-innovation-fund-leads-7-mn-round-in-fintech-startup-werize-11999594",
+        "summary": "WeRize, a social distribution fintech AI platform, has raised $7 million in a pre-Series C round led by Sony Innovation Fund, with participation from 3one4 Capital. This brings the total equity capital raised by WeRize to over $28 million since its inception. The funding round follows the company's previous raise in June 2022 and a reported debt raise of around $6.9 million in March this year.",
+        "date_published": "2026-06-04",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Meet the 100 Desi DeepTechs shaping India’s frontier tech future",
         "url": "https://yourstory.com/2026/05/startup-policy-forum-100-desi-deeptechs-india",
@@ -9850,6 +9890,7 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

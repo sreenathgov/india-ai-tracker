@@ -2787,6 +2787,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 1,
+        "title": "AI video generation startup TrueFan AI raises $10M Series A funding",
+        "url": "https://yourstory.com/2026/06/ai-video-generation-startup-truefan-ai-raises-series-a-funding",
+        "summary": "TrueFan AI, a startup that generates AI video content for enterprises, has raised $10M in Series A funding. The company plans to use the funds for international expansion and enhancing its AI infrastructure. The funding will also support enterprise deployment of its technology.",
+        "date_published": "2026-06-04",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "KollegeApply crosses 600 institutions; posts Rs 15 Cr revenue in FY26",
         "url": "https://entrackr.com/snippets/kollegeapply-crosses-600-institutions-posts-rs-15-cr-revenue-in-fy26-11879998",
@@ -3076,6 +3096,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }
