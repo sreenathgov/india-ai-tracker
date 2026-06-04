@@ -2,6 +2,27 @@
 // For local testing: run `python3 -m http.server 8000` from project root
 const API_BASE_URL = '/api';
 
+// --- XSS defense: escape-on-output for untrusted article data --------------
+// Article titles/summaries/URLs originate from scraped content processed by
+// LLMs and could contain markup. This is the authoritative defense for the
+// innerHTML sinks below; the backend sanitizer is a second layer.
+const HTML_ESCAPE_MAP = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+
+function escapeHtml(value) {
+    if (value === null || value === undefined) return '';
+    return String(value).replace(/[&<>"']/g, ch => HTML_ESCAPE_MAP[ch]);
+}
+
+// Allow only http(s) URLs into href attributes; neutralise javascript:, data:,
+// etc. Returns '#' for anything unsafe so the link is inert.
+function safeUrl(value) {
+    if (value === null || value === undefined) return '#';
+    const url = String(value).trim();
+    if (/^https?:\/\//i.test(url)) return escapeHtml(url);
+    return '#';
+}
+// ---------------------------------------------------------------------------
+
 let JURISDICTIONS = [];
 let STATE_CODE_MAP = {};
 let JURISDICTION_BY_NAME = {};
@@ -203,17 +224,17 @@ function renderFeed(updates) {
             const itemsHtml = pageItems.map(update => {
                 const stateCode = STATE_CODE_MAP[update.state] || '';
                 const relativeTime = getRelativeTime(update.date_published);
-                return `<a href="${update.url}" target="_blank" rel="noopener"
+                return `<a href="${safeUrl(update.url)}" target="_blank" rel="noopener"
                            class="feed-item"
-                           data-state="${stateCode}"
-                           data-state-name="${update.state}">
-                            <div class="feed-item-title">${update.title}</div>
+                           data-state="${escapeHtml(stateCode)}"
+                           data-state-name="${escapeHtml(update.state)}">
+                            <div class="feed-item-title">${escapeHtml(update.title)}</div>
                             <div class="feed-item-meta">
-                                <span class="feed-item-state">${update.state}</span>
+                                <span class="feed-item-state">${escapeHtml(update.state)}</span>
                                 <span class="separator">·</span>
-                                <span class="feed-item-time">${relativeTime}</span>
+                                <span class="feed-item-time">${escapeHtml(relativeTime)}</span>
                                 <span class="separator">·</span>
-                                <span class="feed-item-category">${update.category}</span>
+                                <span class="feed-item-category">${escapeHtml(update.category)}</span>
                             </div>
                         </a>`;
             }).join('');
@@ -240,17 +261,17 @@ function renderFeed(updates) {
             const stateCode = STATE_CODE_MAP[update.state] || '';
             const relativeTime = getRelativeTime(update.date_published);
             html += `
-                <a href="${update.url}" target="_blank" rel="noopener"
+                <a href="${safeUrl(update.url)}" target="_blank" rel="noopener"
                    class="feed-item"
-                   data-state="${stateCode}"
-                   data-state-name="${update.state}">
-                    <div class="feed-item-title">${update.title}</div>
+                   data-state="${escapeHtml(stateCode)}"
+                   data-state-name="${escapeHtml(update.state)}">
+                    <div class="feed-item-title">${escapeHtml(update.title)}</div>
                     <div class="feed-item-meta">
-                        <span class="feed-item-state">${update.state}</span>
+                        <span class="feed-item-state">${escapeHtml(update.state)}</span>
                         <span class="separator">·</span>
-                        <span class="feed-item-time">${relativeTime}</span>
+                        <span class="feed-item-time">${escapeHtml(relativeTime)}</span>
                         <span class="separator">·</span>
-                        <span class="feed-item-category">${update.category}</span>
+                        <span class="feed-item-category">${escapeHtml(update.category)}</span>
                     </div>
                 </a>
             `;
@@ -903,9 +924,9 @@ function expandCategory(categoryName) {
 
         html += `
             <div class="update-item">
-                <a href="${update.url}" target="_blank" class="update-title">${update.title}</a>
-                <p class="update-summary">${update.summary || 'No summary available.'}</p>
-                <div class="update-date">${date}</div>
+                <a href="${safeUrl(update.url)}" target="_blank" class="update-title">${escapeHtml(update.title)}</a>
+                <p class="update-summary">${escapeHtml(update.summary || 'No summary available.')}</p>
+                <div class="update-date">${escapeHtml(date)}</div>
             </div>
         `;
     });
