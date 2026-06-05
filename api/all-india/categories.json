@@ -1054,12 +1054,52 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Panthera Growth Partners leads $30 Mn Series B round in Innefu Labs",
+        "url": "https://entrackr.com/news/panthera-growth-partners-leads-30-mn-series-b-round-in-innefu-labs-12003658",
+        "summary": "Innefu Labs, an AI company focused on national security, has raised $30 million in a Series B funding round led by Panthera Growth Partners. The investment will be used to accelerate the company's expansion into international markets and fund research and development. The funding positions Innefu for a potential initial public offering (IPO) and follows its initial successes in the Middle East.",
+        "date_published": "2026-06-05",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Kuku files confidential DRHP for Rs 3,500 Cr IPO, eyes Rs 15,000 Cr valuation",
         "url": "https://entrackr.com/news/kuku-fm-files-confidential-drhp-for-rs-3500-cr-ipo-report-11999676",
         "summary": "Kuku Technologies has filed a confidential draft red herring prospectus (DRHP) with SEBI for an initial public offering (IPO) to raise Rs 2,500-3,500 crore. The company is targeting a valuation of up to Rs 15,000 crore at the time of listing, expected later this fiscal year. The IPO will include a combination of fresh issue and offer-for-sale (OFS) to raise funds for the company.",
         "date_published": "2026-06-04",
         "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Mint Explainer: what do the Supreme Court’s draft AI rules mean for India's justice system?",
+        "url": "https://www.livemint.com/ai/supreme-court-ai-guidelines-what-the-new-rules-mean-for-indian-judiciary-11780555625633.html",
+        "summary": "The Supreme Court of India is drafting rules to regulate the use of AI in the country's justice system. The move aims to distinguish between human judgment and machine assistance, amid concerns over fake citations and AI hallucinations in courtrooms. This development seeks to establish a clear boundary between human decision-making and AI-generated information in Indian courts.",
+        "date_published": "2026-06-04",
+        "source_name": "LiveMint AI News",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -8181,6 +8221,26 @@
     "AI Start-Up News": [
       {
         "id": 3,
+        "title": "Kae Capital’s Sunitha Viswanathan on what’s driving consumer bets in India",
+        "url": "https://yourstory.com/2026/06/kae-capital-sunitha-viswanathan-on-whats-driving-consumer-bets-in-india",
+        "summary": "Sunitha Viswanathan, Partner at Kae Capital, believes fashion commerce is ripe for disruption and the beauty and personal care sector will see more sub-verticals emerge. She also expects consumer AI to drive innovations, particularly with products tailored for Indian users. These areas are likely to attract significant investment and growth in India.",
+        "date_published": "2026-06-05",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "Sony Innovation Fund leads $7 Mn round in fintech startup WeRize",
         "url": "https://entrackr.com/news/sony-innovation-fund-leads-7-mn-round-in-fintech-startup-werize-11999594",
         "summary": "WeRize, a social distribution fintech AI platform, has raised $7 million in a pre-Series C round led by Sony Innovation Fund, with participation from 3one4 Capital. This brings the total equity capital raised by WeRize to over $28 million since its inception. The funding round follows the company's previous raise in June 2022 and a reported debt raise of around $6.9 million in March this year.",
@@ -9890,7 +9950,7 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }

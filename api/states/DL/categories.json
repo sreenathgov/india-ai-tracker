@@ -366,6 +366,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Video generation startup TrueFan AI raises $10 Mn in Series A round",
+        "url": "https://entrackr.com/news/video-generation-startup-truefan-ai-raises-10-mn-in-series-a-round-11999795",
+        "summary": "TrueFan AI, a video generation startup, has raised $10 million in a Series A funding round led by Baring Private Equity Partners India and Z3 Partners, valuing the company at $40 million. The funding round also saw participation from existing investors IAN Alpha Fund and 3Lines Venture Capital. The new capital will be used to support international expansion and develop real-time AI video agents.",
+        "date_published": "2026-06-04",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 13,
         "title": "Disabled flyer claims AI deplaned her over fit-to-fly certificate",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/disabled-flyer-claims-ai-deplaned-her-over-fit-to-fly-certificate/articleshow/131470619.cms",
@@ -3095,7 +3115,5 @@
       }
     ]
   },
-  "today_updates": [
-    "AI Start-Up News"
-  ]
+  "today_updates": []
 }
