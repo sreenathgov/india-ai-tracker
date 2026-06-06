@@ -366,6 +366,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Exclusive: Lumiq set to raise Rs 50 Cr in Series B round from Bajaj Finserv and Info Edge",
+        "url": "https://entrackr.com/exclusive/exclusive-lumiq-set-to-raise-rs-50-cr-in-series-b-round-from-bajaj-finserv-and-info-edge-12006748",
+        "summary": "Lumiq, a Noida-based data analytics and AI platform, is set to raise Rs 50 crore in a Series B funding round led by Bajaj Finserv Ventures, with participation from existing investor Info Edge. This funding round marks the company's first in nearly four years, following its $5.5 million Series A raise in 2022. The investment is valued at around $5.2 million.",
+        "date_published": "2026-06-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "He was a shooting coach in Delhi. Then AI exposed his 25-year double life",
+        "url": "https://indianexpress.com/article/cities/lucknow/he-was-a-shooting-coach-in-delhi-then-ai-exposed-his-25-year-double-life-10726687/",
+        "summary": "A shooting coach in Delhi was found to be leading a double life, which was exposed by AI after 25 years. The AI technology uncovered the coach's hidden life, revealing a shocking truth. The discovery has brought to light the coach's secret life, spanning over two and a half decades.",
+        "date_published": "2026-06-06",
+        "source_name": "Indian Express - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Gurgaon deploys IIT-backed AI sewer sensors in posh colonies to stop monsoon waterlogging",
+        "url": "https://indianexpress.com/article/cities/delhi/gurgaon-gurugram-ai-sewer-sensors-monsoon-waterlogging-prevention-10726957/",
+        "summary": "Gurgaon has deployed AI-powered sewer sensors, backed by IIT, in affluent colonies to prevent waterlogging during the monsoon season. The sensors utilize artificial intelligence to monitor and manage sewer systems, helping to mitigate flooding. This initiative aims to provide a more effective solution to the city's recurring waterlogging issues.",
+        "date_published": "2026-06-06",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Video generation startup TrueFan AI raises $10 Mn in Series A round",
         "url": "https://entrackr.com/news/video-generation-startup-truefan-ai-raises-10-mn-in-series-a-round-11999795",
@@ -3115,5 +3175,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
