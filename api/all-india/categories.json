@@ -4,6 +4,26 @@
     "Policies and Initiatives": [
       {
         "id": 4,
+        "title": "India, Nepal partner to advance multilingual AI and digital public infrastructure",
+        "url": "https://telanganatoday.com/india-nepal-partner-to-advance-multilingual-ai-and-digital-public-infrastructure",
+        "summary": "India's Digital India BHASHINI Division and Kathmandu University have partnered to develop multilingual AI resources and digital public infrastructure. The collaboration aims to preserve linguistic heritage and improve digital inclusion. The partnership will also strengthen technological cooperation between India and Nepal.",
+        "date_published": "2026-06-07",
+        "source_name": "Telangana Today - Tech",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
         "title": "Indian startup leaders, UK minister discuss future of AI collaboration",
         "url": "https://yourstory.com/2026/06/indian-startup-leaders-uk-minister-discuss-future-of-ai-cooperation",
         "summary": "Indian startup founders met with UK Minister for AI and Online Safety, Kanishka Narayan, to discuss future AI collaboration. The meeting took place during the Cambridge India Business Dialogue as part of the Startup Policy Forum's UK Startup Safari delegation. This gathering aimed to foster cooperation between Indian startups and the UK in the field of artificial intelligence.",
@@ -1053,6 +1073,26 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 1,
+        "title": "Anthropic Mythos AI expands to India: Which entities gained access? What we know",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/anthropic-mythos-ai-expands-to-india-which-entities-gained-access-and-what-it-means-for-the-countrys-ai-landscape-11780789991601.html",
+        "summary": "Anthropic's Mythos AI model has been made available to select Indian entities as part of the Project Glasswing expansion. A single-digit number of organisations have been granted access to the model, which can be used to detect software vulnerabilities. These entities will utilise Mythos AI to enhance their cybersecurity capabilities.",
+        "date_published": "2026-06-07",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 6,
         "title": "Nokian Tyres advances IT transformation with AI‑led modernization in collaboration with TCS",
@@ -8340,6 +8380,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 2,
+        "title": "How Vobiz.ai Is Building The Backbone Of India’s Voice AI Boom",
+        "url": "https://inc42.com/startups/how-vobiz-ai-is-building-the-backbone-of-indias-voice-ai-boom/",
+        "summary": "Vobiz.ai is contributing to India's growing voice AI industry by building its backbone. The company is playing a key role in the development of AI voice agents, which are currently gaining popularity. India's voice AI boom is driven by increasing adoption and innovation in the field, with Vobiz.ai at the forefront.",
+        "date_published": "2026-06-06",
+        "source_name": "Inc42 Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Kae Capital’s Sunitha Viswanathan on what’s driving consumer bets in India",
         "url": "https://yourstory.com/2026/06/kae-capital-sunitha-viswanathan-on-whats-driving-consumer-bets-in-india",
@@ -10090,7 +10150,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Policies and Initiatives",
+    "Major AI Developments"
   ]
 }

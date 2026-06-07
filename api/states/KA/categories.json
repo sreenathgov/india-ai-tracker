@@ -266,6 +266,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Karnataka Bank holds TPP conference, outlines FY27 strategy",
+        "url": "https://timesofindia.indiatimes.com/city/mangaluru/karnataka-bank-holds-tpp-conference-outlines-fy27-strategy/articleshow/131554941.cms",
+        "summary": "Karnataka Bank held a TPP conference where CEO Raghavendra S Bhat outlined the bank's strategy for FY27. The key focus areas include ethical selling, technology adoption, and a push for insurance products. The bank aims to achieve its 'Insurance for all by 2047' goal through these initiatives.",
+        "date_published": "2026-06-07",
+        "source_name": "Times of India - Mysuru",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Schools reopen in Karnataka; AI attendance system debuts in pre-university colleges",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/schools-reopen-in-karnataka-ai-attendance-system-debuts-in-pre-university-colleges/articleshow/131449019.cms",
@@ -3062,5 +3082,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

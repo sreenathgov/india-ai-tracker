@@ -26,6 +26,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Kerala High Court wins e-governance award",
+        "url": "https://www.thehindu.com/news/national/kerala/kerala-high-court-conferred-e-governance-award/article71069493.ece",
+        "summary": "The Kerala High Court's Department of Computerization and Management Services (DCMS) has received a Gold Award for innovation in using AI and new age technologies to provide citizen-centric services. The award was given among 104 entries in the category of \"Innovation by Use of AI and Other New Age Technologies for Providing Citizen-centric Services\". This recognition highlights the court's efforts in leveraging technology to enhance e-governance.",
+        "date_published": "2026-06-07",
+        "source_name": "The Hindu - Kerala",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Thikkodiyan, Uroob, and K. Raghavan back on AIR, thanks to AI",
         "url": "https://www.thehindu.com/news/national/kerala/thikkodiyan-uroob-and-k-raghavan-back-on-air-thanks-to-ai/article70987330.ece",
@@ -215,5 +235,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

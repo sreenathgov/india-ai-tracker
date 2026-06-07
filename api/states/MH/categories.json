@@ -183,6 +183,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Had Centre used AI for NEET, it would not have faced any issues: Sharad Pawar",
+        "url": "https://timesofindia.indiatimes.com/city/pune/had-centre-used-ai-for-neet-it-would-not-have-faced-any-issues-sharad-pawar/articleshow/131558640.cms",
+        "summary": "Sharad Pawar stated that the Centre would not have faced issues with the NEET exam if it had utilized Artificial Intelligence. He suggested that AI could have helped mitigate problems associated with the exam. The comment implies that AI could have improved the efficiency and accuracy of the NEET examination process.",
+        "date_published": "2026-06-07",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "‘Dead’ Woman Walking, AI To Find Woh Kaun Thi?",
         "url": "https://timesofindia.indiatimes.com/city/nagpur/dead-woman-walking-ai-to-find-woh-kaun-thi/articleshow/131491907.cms",
@@ -1646,5 +1666,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
