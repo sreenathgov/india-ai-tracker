@@ -5,6 +5,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Punjabi University, PGIMER develop AI tool for rare skin disease diagnosis",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/punjabi-university-pgimer-develop-ai-tool-for-rare-skin-disease-diagnosis/articleshow/131572701.cms",
+        "summary": "Punjabi University and PGIMER have developed an AI tool for diagnosing rare skin diseases. The tool utilizes artificial intelligence to aid in the diagnosis of these conditions. This collaborative effort aims to improve diagnosis accuracy for rare skin diseases.",
+        "date_published": "2026-06-08",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "CH",
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "PGI combines AI and ultrasound for early gallbladder cancer detection",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/pgi-combines-ai-and-ultrasound-for-early-gallbladder-cancer-detection/articleshow/131267750.cms",
@@ -194,5 +215,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

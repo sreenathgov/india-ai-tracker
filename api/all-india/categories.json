@@ -1075,6 +1075,46 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "AI agents now drive more web traffic than humans — is India any different?",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-agents-now-drive-more-web-traffic-than-humans-is-india-any-different/131577531",
+        "summary": "AI bots now generate more internet traffic than humans worldwide, driven by a recent shift. This change is attributed to the increasing presence of AI agents online. In contrast, India bucks this trend, with human-generated traffic still dominating online activity.",
+        "date_published": "2026-06-08",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "How Matrix Geo Solutions navigated India's geospatial evolution",
+        "url": "https://yourstory.com/2026/06/matrix-geo-solutions-navigated-indias-geospatial-evolution",
+        "summary": "Matrix Geo Solutions has grown from a niche firm to a publicly listed industry player by adapting to shifts in drone mapping, LIDAR, and AI-powered geospatial intelligence. The company's early adoption of these technologies has enabled its expansion in India's evolving geospatial landscape. This strategic adaptation has driven its transformation into a major industry player.",
+        "date_published": "2026-06-08",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Anthropic Mythos AI expands to India: Which entities gained access? What we know",
         "url": "https://www.livemint.com/ai/artificial-intelligence/anthropic-mythos-ai-expands-to-india-which-entities-gained-access-and-what-it-means-for-the-countrys-ai-landscape-11780789991601.html",
         "summary": "Anthropic's Mythos AI model has been made available to select Indian entities as part of the Project Glasswing expansion. A single-digit number of organisations have been granted access to the model, which can be used to detect software vulnerabilities. These entities will utilise Mythos AI to enhance their cybersecurity capabilities.",
@@ -10150,7 +10190,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives",
     "Major AI Developments"
   ]
 }
