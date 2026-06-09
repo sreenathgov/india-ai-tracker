@@ -367,6 +367,66 @@
     "Major AI Developments": [
       {
         "id": 4,
+        "title": "No AI Express flights from Noida, Hindon airports for now",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/no-ai-express-flights-from-noida-hindon-airports-for-now/articleshow/131595249.cms",
+        "summary": "Air India Express flights will not be operating from Noida and Hindon airports at this time. The decision affects travel plans for those who were expecting to use these airports for Air India Express flights. No specific reason or timeline for resuming flights from these airports has been provided.",
+        "date_published": "2026-06-09",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Fake recruiter used AI images to blackmail teenaged girl, arrested",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/fake-recruiter-used-ai-images-to-blackmail-teenaged-girl-arrested/articleshow/131594921.cms",
+        "summary": "A fake recruiter used AI-generated images to blackmail a teenage girl, and has since been arrested. The individual utilized the AI images as a means to manipulate and extort the victim. The arrest was made following an investigation into the blackmailing incident.",
+        "date_published": "2026-06-09",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Delhi man nabbed for AI-aided extortion of job seekers",
+        "url": "https://www.tribuneindia.com/news/delhi/delhi-man-nabbed-for-ai-aided-extortion-of-job-seekers",
+        "summary": "Delhi Police have arrested a 30-year-old man, Sourav, for allegedly using AI-based tools to extort young women by morphing their videos. The accused would obtain the videos by pretending to offer them jobs and then use the manipulated content for extortion. Sourav, a resident of Bhalaswa Dairy, worked at a private finance company.",
+        "date_published": "2026-06-08",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
         "title": "Exclusive: Lumiq set to raise Rs 50 Cr in Series B round from Bajaj Finserv and Info Edge",
         "url": "https://entrackr.com/exclusive/exclusive-lumiq-set-to-raise-rs-50-cr-in-series-b-round-from-bajaj-finserv-and-info-edge-12006748",
         "summary": "Lumiq, a Noida-based data analytics and AI platform, is set to raise Rs 50 crore in a Series B funding round led by Bajaj Finserv Ventures, with participation from existing investor Info Edge. This funding round marks the company's first in nearly four years, following its $5.5 million Series A raise in 2022. The investment is valued at around $5.2 million.",
@@ -3175,5 +3235,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

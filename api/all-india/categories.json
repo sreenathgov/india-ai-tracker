@@ -1115,6 +1115,26 @@
       },
       {
         "id": 1,
+        "title": "India can win in AI deployment despite lagging in advanced chips",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-can-win-in-ai-deployment-despite-lagging-in-advanced-chips/131582453",
+        "summary": "India can succeed in AI deployment, focusing on applying the technology rather than competing in advanced chip development. The country's opportunity lies in utilizing AI, rather than immediately developing cutting-edge models. This approach allows India to leverage AI despite lagging in advanced chip production.",
+        "date_published": "2026-06-08",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Anthropic Mythos AI expands to India: Which entities gained access? What we know",
         "url": "https://www.livemint.com/ai/artificial-intelligence/anthropic-mythos-ai-expands-to-india-which-entities-gained-access-and-what-it-means-for-the-countrys-ai-landscape-11780789991601.html",
         "summary": "Anthropic's Mythos AI model has been made available to select Indian entities as part of the Project Glasswing expansion. A single-digit number of organisations have been granted access to the model, which can be used to detect software vulnerabilities. These entities will utilise Mythos AI to enhance their cybersecurity capabilities.",
@@ -10189,7 +10209,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

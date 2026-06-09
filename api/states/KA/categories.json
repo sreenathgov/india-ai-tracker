@@ -2315,6 +2315,26 @@
     "AI Start-Up News": [
       {
         "id": 2,
+        "title": "Peak XV leads Rs 72 Cr round in quick commerce platform BazaarNow",
+        "url": "https://entrackr.com/snippets/peak-xv-leads-rs-72-cr-round-in-quick-commerce-platform-bazaarnow-12016925",
+        "summary": "BazaarNow, a quick commerce platform, has raised Rs 72 crore ($7.8 million) in a funding round led by Peak XV Partners, with participation from other investors. The company has now raised a total of Rs 80 crore to date, including its pre-seed round. The funding round also saw participation from angel investors, including notable figures such as Vidit Aatrey and Karthik Gurumurthy.",
+        "date_published": "2026-06-09",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "The Bengaluru startup using AI to bring precision to brain and mental health care",
         "url": "https://yourstory.com/2026/06/bengaluru-startup-ai-precision-brain-mental-health-care",
         "summary": "Bengaluru-based BrainSightAI is using AI to improve brain and mental health care by combining neuroimaging, personalized brain mapping, and clinical decision-support tools. This technology helps doctors better diagnose and treat neurological and mental health conditions. BrainSightAI will be showcased by the Ministry of Education at Bharat Innovat.",
@@ -3082,5 +3102,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }
