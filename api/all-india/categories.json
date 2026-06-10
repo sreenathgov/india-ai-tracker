@@ -1074,6 +1074,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "AI world vastly different from IT Act era, believe new law is needed: Union Min Vaishnaw",
+        "url": "https://yourstory.com/2026/06/ai-world-different-it-act-new-law-needed-union-min-vaishnaw",
+        "summary": "India is considering a new law specifically for artificial intelligence, as the current IT Act is seen as outdated for the AI era. This move is driven by concerns over deepfakes, synthetic content, and online harms. Union Minister Vaishnaw believes a new law is necessary to address the unique challenges posed by AI.",
+        "date_published": "2026-06-10",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Wealth advisory startup HyperNorm AI raises $2.2 Mn in seed funding",
+        "url": "https://entrackr.com/snippets/wealth-advisory-startup-hypernorm-ai-raises-22-mn-in-seed-funding-12020942",
+        "summary": "HyperNorm AI, an AI-powered wealth management startup, has raised $2.2 million in seed funding co-led by Capital 2B and SenseAI Ventures. The funding round also saw participation from other investors, including Boundless Ventures and angel investors. The fresh capital will be used to accelerate product development and expand the company's presence in the US and international markets.",
+        "date_published": "2026-06-10",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "TCS to match AI agents with human workforce in 3 years: N...",
+        "url": "https://cellit.in/tcs-to-match-ai-agents-with-human-workforce-in-3-years-n-chandrasekaran/",
+        "summary": "TCS plans to match AI agents with its human workforce within the next 3 years. The company aims to integrate AI technology with its existing workforce to enhance productivity and efficiency. This initiative is expected to transform the way TCS operates and delivers services to its clients.",
+        "date_published": "2026-06-10",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "AI agents now drive more web traffic than humans — is India any different?",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-agents-now-drive-more-web-traffic-than-humans-is-india-any-different/131577531",
@@ -10209,5 +10269,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

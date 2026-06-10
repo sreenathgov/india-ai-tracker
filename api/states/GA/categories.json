@@ -262,7 +262,32 @@
         "posted_to_x_at": null
       }
     ],
-    "AI Start-Up News": []
+    "AI Start-Up News": [
+      {
+        "id": 3,
+        "title": "Bucketlistt raises pre-seed funding to scale experience tourism platform",
+        "url": "https://entrackr.com/snippets/bucketlistt-raises-pre-seed-funding-to-scale-experience-tourism-platform-12020971",
+        "summary": "Bucketlistt, a curated experiences marketplace, has raised Rs 1.07 crore in pre-seed funding at a valuation of Rs 10.07 crore from angel investors. The startup, founded in 2025, offers a platform for adventure, cultural, and spiritual experiences across India. Bucketlistt also operates OkGhumo, an ERP and CRM platform for experience operators to manage their businesses.",
+        "date_published": "2026-06-10",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "RJ",
+          "GA",
+          "UK"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

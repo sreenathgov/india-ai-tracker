@@ -129,6 +129,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "TOI correction: Viral bus ticket story fake, AI-generated image sparked misinformation",
+        "url": "https://timesofindia.indiatimes.com/city/coimbatore/toi-correction-viral-bus-ticket-story-fake-ai-generated-image-sparked-misinformation/articleshow/131592606.cms",
+        "summary": "A viral story about a bus ticket has been debunked as fake, sparked by an AI-generated image that spread misinformation. The image was mistakenly believed to be real, leading to the spread of false information. The correction confirms that the story and image were entirely fabricated.",
+        "date_published": "2026-06-10",
+        "source_name": "Times of India - Tamil Nadu (Alt)",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "As robotics boom, startups race to capture real-world AI training data",
         "url": "https://timesofindia.indiatimes.com/city/chennai/as-robotics-boom-startups-race-to-capture-real-world-ai-training-data/articleshow/131448538.cms",
@@ -945,5 +965,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

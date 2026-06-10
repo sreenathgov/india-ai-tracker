@@ -26,6 +26,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "Technology pact brings AI weather intel to Punjab farms.",
+        "url": "https://timesofindia.indiatimes.com/city/ludhiana/technology-pact-brings-ai-weather-intel-to-punjab-farms-/articleshow/131620007.cms",
+        "summary": "A technology pact has been formed to provide Punjab farms with AI-powered weather intelligence. This partnership aims to leverage artificial intelligence to enhance weather forecasting and support agricultural decision-making in the region. The initiative is expected to benefit local farmers by providing them with more accurate and reliable weather information.",
+        "date_published": "2026-06-10",
+        "source_name": "Times of India - Punjab",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Punjabi University, PGIMER develop AI tool for rare skin disease diagnosis",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/punjabi-university-pgimer-develop-ai-tool-for-rare-skin-disease-diagnosis/articleshow/131572701.cms",
@@ -442,5 +462,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

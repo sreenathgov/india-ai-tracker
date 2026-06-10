@@ -25,6 +25,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "State mandates face recognition for rural employment schemes",
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/state-mandates-face-recognition-for-rural-employment-schemes/articleshow/131619872.cms",
+        "summary": "A state government has mandated the use of face recognition technology for rural employment schemes. This move aims to enhance the authenticity and transparency of the schemes, although the specific state and details of implementation are not provided. The introduction of face recognition is intended to improve the overall management of rural employment programs.",
+        "date_published": "2026-06-10",
+        "source_name": "Times of India - Kolkata",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 18,
         "title": "Indo-German AI innovation lab launches at IIEST Shibpur for MSME growth",
         "url": "https://timesofindia.indiatimes.com/city/kolkata/indo-german-ai-innovation-lab-launches-at-iiest-shibpur-for-msme-growth/articleshow/131056243.cms",
@@ -465,5 +485,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

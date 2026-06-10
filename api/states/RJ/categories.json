@@ -5,6 +5,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Celebal Technologies raises Rs 50 Cr from BlackSoil Capital",
+        "url": "https://entrackr.com/snippets/celebal-technologies-raises-rs-50-cr-from-blacksoil-capital-12017982",
+        "summary": "Celebal Technologies, a Jaipur-based enterprise data and AI solutions provider, has raised Rs 50 crore ($5.2 million) in debt funding from BlackSoil Capital. The funding provides a liquidity buffer and financial flexibility as the company scales its global operations. The investment is part of Celebal's strategy to maintain a well-capitalized balance sheet and prepare for potential external uncertainties.",
+        "date_published": "2026-06-09",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "RJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "How AI and smart grids will power Rajasthan’s next renewable energy phase",
         "url": "https://government.economictimes.indiatimes.com/news/policy/harnessing-ai-and-smart-grids-rajasthans-renewable-energy-revolution/131132926",
@@ -128,6 +148,28 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "Bucketlistt raises pre-seed funding to scale experience tourism platform",
+        "url": "https://entrackr.com/snippets/bucketlistt-raises-pre-seed-funding-to-scale-experience-tourism-platform-12020971",
+        "summary": "Bucketlistt, a curated experiences marketplace, has raised Rs 1.07 crore in pre-seed funding at a valuation of Rs 10.07 crore from angel investors. The startup, founded in 2025, offers a platform for adventure, cultural, and spiritual experiences across India. Bucketlistt also operates OkGhumo, an ERP and CRM platform for experience operators to manage their businesses.",
+        "date_published": "2026-06-10",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "RJ",
+          "GA",
+          "UK"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 20,
         "title": "Rajasthan agriculture department, Wadhwani AI sign MoU for AI-based farming solutions",
         "url": "https://government.economictimes.indiatimes.com/news/technology/rajasthan-agriculture-department-wadhwani-ai-sign-mou-for-ai-based-farming-solutions/131312030",
@@ -149,5 +191,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

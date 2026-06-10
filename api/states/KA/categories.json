@@ -266,6 +266,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "The interface that refuses to meet you halfway: Plivo on why voice AI is a different problem entirely",
+        "url": "https://yourstory.com/2026/06/plivo-voice-ai-different-problem-entirely",
+        "summary": "Voice AI requires adaptation to humans, unlike other digital interfaces where humans adapt to the technology. This fundamental shift changes the approach to developing voice AI, making it a distinct problem. Plivo's Ayush Anand discussed this unique challenge at DevSparks Bengaluru 2026.",
+        "date_published": "2026-06-09",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Karnataka Bank holds TPP conference, outlines FY27 strategy",
         "url": "https://timesofindia.indiatimes.com/city/mangaluru/karnataka-bank-holds-tpp-conference-outlines-fy27-strategy/articleshow/131554941.cms",
@@ -3102,7 +3122,5 @@
       }
     ]
   },
-  "today_updates": [
-    "AI Start-Up News"
-  ]
+  "today_updates": []
 }
