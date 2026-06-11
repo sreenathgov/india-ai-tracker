@@ -1074,6 +1074,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Zoho’s made-in-India server; Exponent Energy secures Rs 200 Cr",
+        "url": "https://yourstory.com/2026/06/zohos-made-in-india-server-exponent-energy",
+        "summary": "Zoho has developed the Nathu La server, designed to optimize performance for various applications including virtualisation, High Performance Computing, AI inference, and storage. The server is based on Intel Xeon 6 Processors and is made in India. Additionally, Exponent Energy has secured Rs 200 Cr in funding.",
+        "date_published": "2026-06-11",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "AI, innovation and geopolitics: Defining India&#039;s place in the new world order",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/indias-strategic-leap-in-ai-shaping-the-future-of-global-innovation/131646856",
+        "summary": "India must focus on strategic partnerships, digital sovereignty, and deep-tech innovation to strengthen its position in the emerging technology order. Experts argue that AI governance is also crucial for the country to establish itself in the new world order. This will help India reshape its global power and innovation amidst the rising influence of AI.",
+        "date_published": "2026-06-11",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "TCS partners with Anthropic, to enable 50,000 employees to use Claude AI",
+        "url": "https://telanganatoday.com/tcs-partners-with-anthropic-to-enable-50000-employees-to-use-claude-ai",
+        "summary": "TCS has partnered with Anthropic to accelerate enterprise AI adoption, enabling 50,000 employees to use Claude AI. The collaboration will also establish a dedicated business unit to develop industry-specific solutions. The partnership aims to support regulated sectors worldwide with AI technology.",
+        "date_published": "2026-06-11",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "AI world vastly different from IT Act era, believe new law is needed: Union Min Vaishnaw",
         "url": "https://yourstory.com/2026/06/ai-world-different-it-act-new-law-needed-union-min-vaishnaw",
@@ -8481,6 +8541,46 @@
     "AI Start-Up News": [
       {
         "id": 3,
+        "title": "Oncology startup 4baseCare closes Rs 128 Cr Series B round",
+        "url": "https://yourstory.com/2026/06/oncology-startup-4basecare-closes-series-b-at-rs-128-crore",
+        "summary": "Oncology startup 4baseCare has closed a Rs 128 Cr Series B funding round. The proceeds will be used to accelerate global expansion and strengthen its genomics laboratory network. The funding will also scale its AI-powered precision oncology platform, OncoTwin.",
+        "date_published": "2026-06-11",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Nine Indian startups join WEF's Tech Pioneers cohort",
+        "url": "https://yourstory.com/2026/06/nine-indian-startups-join-wefs-tech-pioneers-cohort",
+        "summary": "Nine Indian startups have been selected to join the World Economic Forum's (WEF) Tech Pioneers cohort, a group of 100 early-stage startups from 23 countries. These startups are focused on developing AI infrastructure and breakthrough technologies with transformative potential. They have the potential to impact industries and societies globally.",
+        "date_published": "2026-06-10",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "Funding and acquisitions in Indian startups this week [June 1 - June 6]",
         "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-june-1-june-6-12007025",
         "summary": "Indian startups raised around $165.3 million in funding this week, with 17 startups securing investments across 5 growth-stage and 13 early-stage deals. This amount surpasses the $75.35 million raised by 15 startups in the previous week. Growth-stage startups accounted for the majority of the funding, raising a total of $134.2 million across five deals.",
@@ -10270,6 +10370,7 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

@@ -46,6 +46,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "AI-assisted eye screening begins at GGH in Guntur",
+        "url": "https://www.thehindu.com/news/national/andhra-pradesh/ai-assisted-eye-screening-begins-at-ggh-in-guntur/article71085827.ece",
+        "summary": "An AI-assisted eye screening pilot project has begun at Guntur's GGH, aiming to screen around 9,000 people for diabetic retinopathy over three months. The project will be extended to Kurnool and Visakhapatnam this month as part of its expansion. The initiative uses AI technology to detect diabetic retinopathy, a common complication of diabetes.",
+        "date_published": "2026-06-10",
+        "source_name": "The Hindu - Andhra Pradesh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Uber to set up its first India data centre with Adani Group",
         "url": "https://entrackr.com/snippets/uber-to-set-up-its-first-india-data-centre-with-adani-group-11830654",

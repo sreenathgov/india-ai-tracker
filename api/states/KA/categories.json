@@ -267,6 +267,26 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "One prompt, one platform: How Intuit is rethinking the financial journey with agentic AI",
+        "url": "https://yourstory.com/2026/06/intuit-rethinking-financial-journey-agentic-ai",
+        "summary": "Intuit is utilizing agentic AI to streamline financial workflows into a single, seamless experience. At DevSparks Bengaluru 2026, Aavishkar Bharara demonstrated this concept using a relatable story. The goal is to collapse fragmented financial processes into one anticipatory experience.",
+        "date_published": "2026-06-10",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "The interface that refuses to meet you halfway: Plivo on why voice AI is a different problem entirely",
         "url": "https://yourstory.com/2026/06/plivo-voice-ai-different-problem-entirely",
         "summary": "Voice AI requires adaptation to humans, unlike other digital interfaces where humans adapt to the technology. This fundamental shift changes the approach to developing voice AI, making it a distinct problem. Plivo's Ayush Anand discussed this unique challenge at DevSparks Bengaluru 2026.",
@@ -2334,6 +2354,27 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 6,
+        "title": "Sports-tech startup Dartle raises $100K in seed funding led by IPV",
+        "url": "https://entrackr.com/snippets/sports-tech-startup-dartle-raises-100k-in-seed-funding-led-by-ipv-12026482",
+        "summary": "Kerala-based sports-tech startup Dartle has raised $100,000 in seed funding led by Inflection Point Ventures. The funds will be used to expand its market presence, particularly in the US, and enhance its AI integrations. Dartle operates a B2B SaaS platform for youth sports and football academies, currently serving 14 academies across India and the Middle East.",
+        "date_published": "2026-06-11",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA",
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Peak XV leads Rs 72 Cr round in quick commerce platform BazaarNow",
         "url": "https://entrackr.com/snippets/peak-xv-leads-rs-72-cr-round-in-quick-commerce-platform-bazaarnow-12016925",
@@ -3122,5 +3163,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

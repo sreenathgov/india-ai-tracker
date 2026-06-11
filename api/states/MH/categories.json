@@ -183,6 +183,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "NMC To Scientifically Assess Health of 5,000 Trees Using Ai-lidar Technology",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/nmc-to-scientifically-assess-health-of-5000-trees-using-ai-lidar-technology/articleshow/131644125.cms",
+        "summary": "The Nagpur Municipal Corporation (NMC) will use AI-lidar technology to scientifically assess the health of 5,000 trees. This initiative aims to utilize advanced technology for tree health evaluation. The project will leverage AI and lidar technology for a detailed analysis of the trees' condition.",
+        "date_published": "2026-06-11",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "Nagpur deploys AI, light detection tech to scan 5,000 trees in urban forestry pilot",
+        "url": "https://indianexpress.com/article/cities/mumbai/nagpur-ai-lidar-smart-tree-assessment-project-5000-trees-10733419/",
+        "summary": "Nagpur has launched an urban forestry pilot using AI and light detection technology to scan 5,000 trees. The initiative aims to utilize advanced technologies for tree mapping and analysis. This project is part of the city's efforts to enhance its urban forestry management.",
+        "date_published": "2026-06-10",
+        "source_name": "Indian Express - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Edtech firm Klassroom gets in-principle approval for IPO",
         "url": "https://entrackr.com/news/edtech-firm-klassroom-gets-in-principle-approval-for-ipo-12013974",
@@ -1422,6 +1462,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "Former Icertis executives' startup Rivvun AI raises $7.55 Mn in seed funding",
+        "url": "https://entrackr.com/snippets/former-icertis-executives-startup-rivvun-ai-raises-755-mn-in-seed-funding-12026947",
+        "summary": "Rivvun AI, a startup founded by former Icertis executives, has raised $7.55 million in seed funding co-led by Sitara Capital and 3one4 Capital. The funds will be used to enhance AI capabilities, expand the workforce, and scale customer acquisition efforts. Rivvun AI's software helps enterprises identify revenue and procurement leakages, such as missed commercial obligations and supplier rebate losses.",
+        "date_published": "2026-06-11",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Figtree Pharmacy raises seed funding from AJVC Fund",
         "url": "https://entrackr.com/snippets/figtree-pharmacy-raises-seed-funding-from-ajvc-fund-11812221",
@@ -1686,5 +1746,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News",
+    "Major AI Developments"
+  ]
 }

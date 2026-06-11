@@ -214,6 +214,27 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 6,
+        "title": "Sports-tech startup Dartle raises $100K in seed funding led by IPV",
+        "url": "https://entrackr.com/snippets/sports-tech-startup-dartle-raises-100k-in-seed-funding-led-by-ipv-12026482",
+        "summary": "Kerala-based sports-tech startup Dartle has raised $100,000 in seed funding led by Inflection Point Ventures. The funds will be used to expand its market presence, particularly in the US, and enhance its AI integrations. Dartle operates a B2B SaaS platform for youth sports and football academies, currently serving 14 academies across India and the Middle East.",
+        "date_published": "2026-06-11",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA",
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "IAN Alpha Fund leads Rs 22 Cr round in deep-tech startup RoshAi",
         "url": "https://entrackr.com/snippets/ian-alpha-fund-leads-rs-22-cr-round-in-deep-tech-startup-roshai-11701674",
@@ -235,5 +256,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

@@ -47,6 +47,26 @@
     "Major AI Developments": [
       {
         "id": 16,
+        "title": "17% dip in accidents, govt credits AI &amp; data analytics",
+        "url": "https://timesofindia.indiatimes.com/city/goa/17-dip-in-accidents-govt-credits-ai-data-analytics/articleshow/131642628.cms",
+        "summary": "The government has reported a 17% decrease in accidents, attributing the decline to the effective use of AI and data analytics. This integration of technology has helped in identifying and mitigating potential accident causes, leading to improved safety outcomes. The government's credit of AI and data analytics highlights their significant role in reducing accidents.",
+        "date_published": "2026-06-11",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 16,
         "title": "Goa turns to AI to convert piles of govt paperwork to digital records",
         "url": "https://timesofindia.indiatimes.com/city/goa/goa-turns-to-ai-to-convert-piles-of-govt-paperwork-to-digital-records/articleshow/131048393.cms",
         "summary": "The Indian state of Goa is utilizing AI technology to digitize large amounts of government paperwork. This initiative aims to convert physical records into digital formats, increasing efficiency and accessibility. The project is part of Goa's efforts to modernize its administrative processes and reduce paper waste.",
@@ -288,6 +308,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }
