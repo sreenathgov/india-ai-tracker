@@ -183,6 +183,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "Agentic AI forum",
+        "url": "https://cio.economictimes.indiatimes.com/agentic-ai-forum-mumbai?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "An Agentic AI forum is being held in Mumbai, bringing together experts and enthusiasts to discuss AI-related topics. The event aims to facilitate knowledge sharing and collaboration in the field of artificial intelligence. Details about the forum's agenda and speakers are not specified.",
+        "date_published": "2026-07-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "NMC To Scientifically Assess Health of 5,000 Trees Using Ai-lidar Technology",
         "url": "https://timesofindia.indiatimes.com/city/nagpur/nmc-to-scientifically-assess-health-of-5000-trees-using-ai-lidar-technology/articleshow/131644125.cms",
@@ -1746,8 +1766,5 @@
       }
     ]
   },
-  "today_updates": [
-    "AI Start-Up News",
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

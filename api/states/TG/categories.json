@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Equal AI raises $30 Mn Series B round led by Prosus and Tomales Bay Capital",
+        "url": "https://entrackr.com/news/equal-ai-raises-30-mn-series-b-round-led-by-prosus-and-tomales-bay-capital-12029860",
+        "summary": "Equal AI, a consumer AI startup, has raised $30 million in a Series B funding round co-led by Prosus Ventures and Tomales Bay Capital. The same investors had also led the company's $10 million Series A round in November 2024. The funding round saw participation from several notable investors, including Valiant Fund, Think Investments, and individual investors such as PhonePe founder Sameer Nigam.",
+        "date_published": "2026-06-12",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "AI, data security solutions firm Theom opens office in Hyderabad",
         "url": "https://www.thehindu.com/news/cities/Hyderabad/ai-data-security-solutions-firm-theom-opens-office-in-hyderabad/article71085719.ece",
@@ -1595,5 +1615,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

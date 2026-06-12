@@ -205,6 +205,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 13,
+        "title": "IIT-K, BSNL MoU to advance indigenous telecom, AI &amp;  digital infra technologies",
+        "url": "https://timesofindia.indiatimes.com/city/kanpur/iit-k-bsnl-mou-to-advance-indigenous-telecom-ai-digital-infra-technologies/articleshow/131668513.cms",
+        "summary": "IIT-K and BSNL have signed a Memorandum of Understanding (MoU) to advance indigenous technologies in telecom, AI, and digital infrastructure. The partnership aims to promote the development of homegrown technologies in these fields. This collaboration is expected to boost India's self-reliance in the telecom and AI sectors.",
+        "date_published": "2026-06-12",
+        "source_name": "Times of India - Andhra Pradesh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 14,
+        "title": "IIM Lucknow launches BSc in AI and business  analytics, Tech-MBA option after year 3",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/iim-lucknow-launches-bsc-in-ai-and-business-analytics-tech-mba-option-after-year-3/articleshow/131668628.cms",
+        "summary": "IIM Lucknow has introduced a new BSc program in AI and business analytics. The program offers a unique option to pursue a Tech-MBA after completing three years. This provides students with a flexible pathway to combine technical and management education.",
+        "date_published": "2026-06-12",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "LU enriches anthropology course with study of forensic, AI, therapy",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/lu-enriches-anthropology-course-with-study-of-forensic-ai-therapy/articleshow/131491896.cms",
@@ -901,5 +941,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

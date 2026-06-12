@@ -1074,6 +1074,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "AI agents can decide when to strike deals using UPI mandate",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-agents-can-decide-when-to-strike-deals-using-upi-mandate/131673126",
+        "summary": "Pine Labs has introduced agent-to-agent payments in India, enabling AI agents to make autonomous payments using UPI mandates set by users. This innovation allows AI agents to handle transactions based on predefined conditions, eliminating the need for human intervention. Partnerships with Gullak and Vijay Sales demonstrate the potential for automated purchases using this technology.",
+        "date_published": "2026-06-12",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Zoho’s made-in-India server; Exponent Energy secures Rs 200 Cr",
         "url": "https://yourstory.com/2026/06/zohos-made-in-india-server-exponent-energy",
@@ -1120,6 +1140,26 @@
         "summary": "TCS has partnered with Anthropic to accelerate enterprise AI adoption, enabling 50,000 employees to use Claude AI. The collaboration will also establish a dedicated business unit to develop industry-specific solutions. The partnership aims to support regulated sectors worldwide with AI technology.",
         "date_published": "2026-06-11",
         "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Mint Explainer: Is AI coming for the world's back-office?",
+        "url": "https://www.livemint.com/ai/opendoor-india-exit-ai-impact-on-gcc-jobs-and-outsourcing-11781157926817.html",
+        "summary": "Opendoor is winding down its 250-person India operation in favor of smaller, AI-native US teams. This decision has raised questions about the future of offshore operational work. The move suggests that AI may be increasingly replacing traditional back-office roles, potentially impacting the industry globally.",
+        "date_published": "2026-06-11",
+        "source_name": "LiveMint AI News",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -10370,7 +10410,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

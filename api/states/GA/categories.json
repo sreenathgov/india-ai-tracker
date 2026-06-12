@@ -284,6 +284,27 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 7,
+        "title": "Rekise Marine raises $9.7 Mn seed round led by Accel and NKSquared",
+        "url": "https://entrackr.com/news/rekise-marine-raises-97-mn-seed-round-led-by-accel-and-nksquared-12029316",
+        "summary": "Rekise Marine, a marine robotics startup, has raised $9.7 million in a seed funding round co-led by Accel and NKSquared. The funding round also saw participation from existing investors and new ones, including Industrial47 and several family offices. The proceeds will be used to develop the company's autonomous underwater vehicle, Jalkapi, and expand its engineering team.",
+        "date_published": "2026-06-12",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "GA",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Bucketlistt raises pre-seed funding to scale experience tourism platform",
         "url": "https://entrackr.com/snippets/bucketlistt-raises-pre-seed-funding-to-scale-experience-tourism-platform-12020971",
@@ -308,6 +329,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }
