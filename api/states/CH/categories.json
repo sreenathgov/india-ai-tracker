@@ -5,6 +5,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 16,
+        "title": "City plans hub for AI innovation, governance",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/city-plans-hub-for-ai-innovation-governance/articleshow/131693469.cms",
+        "summary": "The city of Chandigarh is planning to establish a hub for AI innovation and governance at the Chandigarh IT Park. This facility aims to promote artificial intelligence development and regulation in the region. The hub will serve as a central location for AI-related activities, fostering growth and innovation in the field.",
+        "date_published": "2026-06-13",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "CH",
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Punjabi University, PGIMER develop AI tool for rare skin disease diagnosis",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/punjabi-university-pgimer-develop-ai-tool-for-rare-skin-disease-diagnosis/articleshow/131572701.cms",
@@ -215,5 +236,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

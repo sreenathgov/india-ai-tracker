@@ -26,6 +26,48 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 16,
+        "title": "City plans hub for AI innovation, governance",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/city-plans-hub-for-ai-innovation-governance/articleshow/131693469.cms",
+        "summary": "The city of Chandigarh is planning to establish a hub for AI innovation and governance at the Chandigarh IT Park. This facility aims to promote artificial intelligence development and regulation in the region. The hub will serve as a central location for AI-related activities, fostering growth and innovation in the field.",
+        "date_published": "2026-06-13",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "CH",
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 15,
+        "title": "Financial help pours in as Ludhiana daily wager’s daughter makes AI course cut at IIT-Guwahati",
+        "url": "https://www.tribuneindia.com/news/top-headlines/financial-help-pours-in-as-ludhiana-daily-wagers-daughter-makes-ai-course-cut-at-iit-guwahati",
+        "summary": "Harpreet Kaur, daughter of a daily wage labourer, has secured admission to an AI course at IIT-Guwahati. Despite her academic achievement, she struggled to arrange the admission fee due to her family's financial weakness. Financial help has now poured in to support her education.",
+        "date_published": "2026-06-12",
+        "source_name": "Tribune - Punjab",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AS",
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Technology pact brings AI weather intel to Punjab farms.",
         "url": "https://timesofindia.indiatimes.com/city/ludhiana/technology-pact-brings-ai-weather-intel-to-punjab-farms-/articleshow/131620007.cms",
@@ -462,5 +504,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

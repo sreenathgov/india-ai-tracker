@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 7,
+        "title": "Funding and acquisitions in Indian startups this week [June 8  - June 13]",
+        "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-june-8-june-13-12033344",
+        "summary": "Indian startups raised around $253.34 million in funding this week, with 6 growth-stage deals, 16 early-stage deals, and 5 undisclosed deals. This amount surpasses the $165.3 million secured by 17 startups in the previous week. A total of 27 Indian startups received funding between June 8 and June 13.",
+        "date_published": "2026-06-13",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "India, Nepal partner to advance multilingual AI and digital public infrastructure",
         "url": "https://telanganatoday.com/india-nepal-partner-to-advance-multilingual-ai-and-digital-public-infrastructure",
@@ -1075,9 +1095,109 @@
     "Major AI Developments": [
       {
         "id": 2,
+        "title": "It’s a race to capture real-world AI training data",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/its-a-race-to-capture-real-world-ai-training-data/131678481",
+        "summary": "Indian startups are capturing real-world video data through wearable cameras to train AI for robots, enabling them to navigate complex environments. Companies are partnering with various businesses to collect this data, positioning India in the global AI value chain. This development raises concerns about privacy and compensation for the data collected.",
+        "date_published": "2026-06-13",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "How are Indians investing? Angel One CEO on SIPs, ETFs, AI and wealth creation",
+        "url": "https://yourstory.com/2026/06/indians-investing-angel-one-ceo-sips-etfs-ai-wealth-creation",
+        "summary": "Angel One CEO Ambarish Kenghe discusses India's investment landscape, including Systematic Investment Plans (SIPs) and Exchange-Traded Funds (ETFs), in a podcast interview. He shares insights on the country's evolving relationship with money and wealth creation opportunities. The conversation also touches on the role of artificial intelligence (AI) in investing.",
+        "date_published": "2026-06-13",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "AI agents can decide when to strike deals using UPI mandate",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-agents-can-decide-when-to-strike-deals-using-upi-mandate/131673126",
         "summary": "Pine Labs has introduced agent-to-agent payments in India, enabling AI agents to make autonomous payments using UPI mandates set by users. This innovation allows AI agents to handle transactions based on predefined conditions, eliminating the need for human intervention. Partnerships with Gullak and Vijay Sales demonstrate the potential for automated purchases using this technology.",
+        "date_published": "2026-06-12",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Mint Explainer: Why AI data centres are the new goldmine for Indian law firms",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/data-centres-india-ai-data-centres-indian-law-firms-11781255136774.html",
+        "summary": "Global tech giants are driving a massive AI infrastructure expansion, creating a surge in demand for legal advisory services. Indian law firms are capitalizing on this trend, securing long-term work in areas such as land, technology, and power. This shift is turning AI data centres into a lucrative opportunity for law firms in India.",
+        "date_published": "2026-06-12",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "AI will create more jobs than it displaces, says Microsoft India chief",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-will-create-more-jobs-than-it-displaces-says-microsoft-india-chief/131677248",
+        "summary": "Microsoft India's chief believes AI will create more jobs than it displaces. Rapid technological change is reducing the shelf life of skills, making continuous learning necessary. This shift emphasizes the importance of ongoing education and skill development in the workforce.",
+        "date_published": "2026-06-12",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Agentic AI returns in India projected to grow fivefold to US$14.4 million: SAP study",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/agentic-ai-returns-in-india-projected-to-grow-fivefold-to-us14-4-million-sap-study/131681103",
+        "summary": "Indian enterprises are rapidly advancing AI implementation, with AI currently supporting a third of business tasks and expected to rise substantially. Agentic AI returns in India are projected to grow fivefold to US$14.4 million, according to a SAP study. Indian organizations rank second globally in strategic AI investment, planning significant investments to drive more agile and innovative businesses.",
         "date_published": "2026-06-12",
         "source_name": "ET CIO - AI",
         "category": "Major AI Developments",
@@ -8580,6 +8700,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 8,
+        "title": "Aum Ventures launches $80 Mn India Innovation Fund II",
+        "url": "https://entrackr.com/snippets/aum-ventures-launches-80-mn-india-innovation-fund-ii-12030916",
+        "summary": "Aum Ventures has launched its second fund, India Innovation Fund II, with a target corpus of approximately $80 million. The fund will focus on backing Indian founders building IP-driven and innovation-led companies with global potential. It will primarily invest in pre-seed and seed-stage startups with initial investments ranging from $750,000 to $2 million.",
+        "date_published": "2026-06-12",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Oncology startup 4baseCare closes Rs 128 Cr Series B round",
         "url": "https://yourstory.com/2026/06/oncology-startup-4basecare-closes-series-b-at-rs-128-crore",
@@ -10410,6 +10550,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "Policies and Initiatives"
   ]
 }

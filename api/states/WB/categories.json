@@ -25,6 +25,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 14,
+        "title": "TCS opens India’s first Oracle AI data lab in Kolkata",
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/tcs-opens-indias-first-oracle-ai-data-lab-in-kolkata/articleshow/131693365.cms",
+        "summary": "TCS has opened India's first Oracle AI data lab in Kolkata. The lab is a significant development in the field of artificial intelligence, marking a new milestone in India's tech landscape. This initiative is expected to drive innovation and advancement in AI technology.",
+        "date_published": "2026-06-13",
+        "source_name": "Times of India - Kolkata",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "State mandates face recognition for rural employment schemes",
         "url": "https://timesofindia.indiatimes.com/city/kolkata/state-mandates-face-recognition-for-rural-employment-schemes/articleshow/131619872.cms",
@@ -485,5 +505,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

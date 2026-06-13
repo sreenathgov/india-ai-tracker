@@ -266,6 +266,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "Agentic AI Forum Bengaluru",
+        "url": "https://cio.economictimes.indiatimes.com/agentic-ai-forum-bengaluru?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "An AI forum is being held in Bengaluru, titled the Agentic AI Forum. The event's location is specified as Bengaluru, but details about its content or schedule are not provided. The forum appears to be focused on Agentic AI, although specific topics or speakers are not mentioned.",
+        "date_published": "2026-07-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Beyond AI buzzwords: What employers are really looking for in 2026",
+        "url": "https://yourstory.com/2026/06/beyond-ai-buzzwords-what-employers-are-really-looking-for-in-2026-toast-zoho-corp",
+        "summary": "Employers are prioritizing skills like judgment, adaptability, and real-world problem-solving over proficiency in specific AI tools. Leaders from Toast and Zoho Corp emphasized this shift in focus at DevSparks Bengaluru 2026. These skills are now considered more valuable than technical expertise alone in the job market.",
+        "date_published": "2026-06-13",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "AI boom pushes Cognizant out of Nasdaq-100 after two-decade run",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-boom-pushes-cognizant-out-of-nasdaq-100-after-two-decade-run/articleshow/131691282.cms",
+        "summary": "Cognizant has been removed from the Nasdaq-100 index after a two-decade run, a change attributed to the recent AI boom. The company's removal is a result of the index's periodic rebalancing, which favors stocks that have gained significant value in recent times. This shift reflects the growing influence of AI-related stocks in the market.",
+        "date_published": "2026-06-13",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Why developers need to stop coding in silence and start building in public",
         "url": "https://yourstory.com/2026/06/devsparks-bengaluru-2026-arsh-goyal-engineering-creator-advice-developers",
@@ -332,6 +392,26 @@
         "summary": "Artificial intelligence is being used in local markets in Bengaluru, creating an unsettling sight. The integration of AI in these markets is a notable development, highlighting the increasing presence of technology in everyday life. Bengaluru's local markets are now leveraging AI, marking a significant shift in the way business is conducted.",
         "date_published": "2026-06-12",
         "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Karnataka to establish 50 AI labs in government colleges in tier-2 and 3 cities",
+        "url": "https://www.thehindu.com/news/cities/bangalore/karnataka-to-establish-50-ai-labs-in-government-colleges-in-tier-2-and-3-cities/article71093777.ece",
+        "summary": "The Karnataka government plans to establish 50 AI labs in government colleges, targeting tier-2 and 3 cities. In the first phase, 23 educational institutions have been selected for the establishment of these labs. The initiative aims to promote AI education and development in smaller cities.",
+        "date_published": "2026-06-12",
+        "source_name": "The Hindu - Bangalore",
         "category": "Major AI Developments",
         "state_codes": [
           "KA"
@@ -3286,7 +3366,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }
