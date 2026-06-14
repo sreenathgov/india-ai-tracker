@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 4,
+        "title": "Vaishnaw expects more companies to start production of memory chips in India",
+        "url": "https://telanganatoday.com/vaishnaw-expects-more-companies-to-start-production-of-memory-chips-in-india",
+        "summary": "India is expected to see increased investments in memory chip manufacturing due to growing demand for AI and data centre storage. Union Minister Ashwini Vaishnaw anticipates more companies will start producing memory chips in the country. The India Semiconductor Mission aims to boost domestic semiconductor capacity through new fabs, design, and equipment manufacturing.",
+        "date_published": "2026-06-14",
+        "source_name": "Telangana Today - Tech",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Funding and acquisitions in Indian startups this week [June 8  - June 13]",
         "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-june-8-june-13-12033344",
@@ -1095,6 +1115,26 @@
     "Major AI Developments": [
       {
         "id": 2,
+        "title": "Why Jayant Chaudhary sees AI as India's open door, not its threat",
+        "url": "https://yourstory.com/2026/06/jayant-chaudhary-ai-india-skilling-opportunity-skill-india-assistant",
+        "summary": "Jayant Chaudhary views AI as an opportunity for India, rather than a threat. India recently hosted a global AI summit, focusing on the possibilities AI presents. The summit highlighted the potential benefits and prospects of AI for the country.",
+        "date_published": "2026-06-14",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "It’s a race to capture real-world AI training data",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/its-a-race-to-capture-real-world-ai-training-data/131678481",
         "summary": "Indian startups are capturing real-world video data through wearable cameras to train AI for robots, enabling them to navigate complex environments. Companies are partnering with various businesses to collect this data, positioning India in the global AI value chain. This development raises concerns about privacy and compensation for the data collected.",
@@ -1120,6 +1160,26 @@
         "summary": "Angel One CEO Ambarish Kenghe discusses India's investment landscape, including Systematic Investment Plans (SIPs) and Exchange-Traded Funds (ETFs), in a podcast interview. He shares insights on the country's evolving relationship with money and wealth creation opportunities. The conversation also touches on the role of artificial intelligence (AI) in investing.",
         "date_published": "2026-06-13",
         "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "BMC slaps Rs 9.25 cr in penalties after AI model flags irregularities in desilting drive",
+        "url": "https://indianexpress.com/article/cities/mumbai/bmc-rs-9-25-crore-penalties-ai-flags-desilting-irregularities-mumbai-10738174/",
+        "summary": "The Brihanmumbai Municipal Corporation (BMC) has imposed penalties of Rs 9.25 crore after an AI model detected irregularities in a desilting drive. The AI model was used to identify discrepancies in the desilting process, leading to the imposition of fines. The penalties are a result of the AI-driven audit that uncovered irregularities in the project.",
+        "date_published": "2026-06-13",
+        "source_name": "Indian Express - Mumbai",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -10550,7 +10610,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "Policies and Initiatives"
+    "Policies and Initiatives",
+    "Major AI Developments"
   ]
 }

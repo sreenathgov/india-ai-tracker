@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 1,
+        "title": "Gujarat govt to unveil New Industrial Policy 2026 on June 15",
+        "url": "https://government.economictimes.indiatimes.com/news/policy/gujarat-govt-to-unveil-new-industrial-policy-2026-on-june-15/131716365",
+        "summary": "The Gujarat government will unveil its New Industrial Policy 2026 on June 15, aiming to enhance ease of doing business and promote advanced manufacturing. The policy's focus areas include improving the business environment and supporting cutting-edge industries. Chief Minister Patel also inaugurated Hexaware Technologies' new Delivery Centre in GIFT City, which is expected to create 1,000 skilled jobs in AI and cloud computing.",
+        "date_published": "2026-06-14",
+        "source_name": "ET Government - Policy",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Data governance framework being developed for AI systems to reduce bias, strengthen data security: Gujarat govt",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/data-governance-framework-being-developed-for-ai-systems-to-reduce-bias-strengthen-data-security-gujarat-govt/articleshow/129477521.cms",
@@ -124,6 +144,26 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 8,
+        "title": "Seat ejection, mud embankment may have saved lone survivor of AI 171 crash",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/seat-ejection-mud-embankment-may-have-saved-lone-survivor-of-ai-171-crash/articleshow/131714549.cms",
+        "summary": "Air India Flight 171 crashed on June 12, 2025, killing 241 people, but one passenger, Viswashkumar Ramesh, miraculously survived. His survival is attributed to a combination of factors, including the position of his seat and a protective mud embankment. The unique circumstances of the crash and his seating arrangement likely contributed to him being the lone survivor of the devastating incident.",
+        "date_published": "2026-06-14",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 12,
         "title": "Healthcare, education projects worth ₹547cr planned at AI 171 crash site",
@@ -1314,6 +1354,7 @@
     ]
   },
   "today_updates": [
+    "Policies and Initiatives",
     "Major AI Developments"
   ]
 }

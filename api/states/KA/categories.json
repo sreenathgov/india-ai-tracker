@@ -286,6 +286,46 @@
         "posted_to_x_at": null
       },
       {
+        "id": 3,
+        "title": "How Zoho Labs pivoted to inference engineering",
+        "url": "https://yourstory.com/2026/06/devsparks-2026-zoho-labs-inference-engineering-open-weight-models-ramprakash-ramamoorthy",
+        "summary": "Zoho Labs shifted its focus to inference engineering due to the emergence of open-weight models. This change was driven by a reevaluation of the role of an in-house AI lab, as explained by Ramprakash Ramamoorthy, Director of AI Research at Zoho Corp. The pivot was discussed at DevSparks 2026 in Bengaluru, highlighting the lab's adaptation to new developments in AI.",
+        "date_published": "2026-06-14",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Claude models access issue: BJP MP warns against dependence on foreign AI",
+        "url": "https://telanganatoday.com/claude-models-access-issue-bjp-mp-warns-against-dependence-on-foreign-ai",
+        "summary": "BJP MP Tejasvi Surya has warned against India's dependence on foreign AI, citing the US government's suspension of foreign nationals' access to advanced AI models. This suspension highlights the need for India to develop its own sovereign AI capabilities. The move underscores the urgency for India to reduce its reliance on foreign AI technology.",
+        "date_published": "2026-06-14",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Beyond AI buzzwords: What employers are really looking for in 2026",
         "url": "https://yourstory.com/2026/06/beyond-ai-buzzwords-what-employers-are-really-looking-for-in-2026-toast-zoho-corp",
