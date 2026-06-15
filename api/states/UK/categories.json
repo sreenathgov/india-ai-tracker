@@ -6,6 +6,27 @@
     "Major AI Developments": [
       {
         "id": 11,
+        "title": "Souvik Ghosh joins Forbes 30 under 30",
+        "url": "https://www.iiit.ac.in/souvik-ghosh-joins-forbes-30-under-30/",
+        "summary": "Souvik Ghosh has been named to the Forbes 30 under 30 list. IIIT Hyderabad is launching various initiatives, including a 3-month certificate course on Engineering Agentic AI Systems and an AI-powered cybersecurity initiative with Athenian Tech. The institution is also collaborating with ITDA Uttarakhand to promote innovation, research, and digital capacity.",
+        "date_published": "2026-06-15",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UK",
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
         "title": "IIIT-H launches 3-month certificate course on Engineering Agentic AI Systems",
         "url": "https://www.iiit.ac.in/iiit-h-launches-3-month-certificate-course-on-engineering-agentic-ai-systems/",
         "summary": "IIIT-H has launched a 3-month certificate course on Engineering Agentic AI Systems. The course is part of the institution's efforts to advance innovation and research in AI. This initiative aims to equip students with the skills to design and develop intelligent systems.",
@@ -71,5 +92,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
