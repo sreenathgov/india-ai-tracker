@@ -204,6 +204,26 @@
       },
       {
         "id": 11,
+        "title": "Driving Business Value from Cloud & AI Investments",
+        "url": "https://cio.economictimes.indiatimes.com/business-value-cloud?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "A recent event in Mumbai focused on driving business value from investments in cloud and artificial intelligence (AI) technologies. The event aimed to explore ways to maximize returns on these investments and leverage them for business growth. Key discussions centered on the strategic integration of cloud and AI to drive business success.",
+        "date_published": "2026-07-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
         "title": "NMC To Scientifically Assess Health of 5,000 Trees Using Ai-lidar Technology",
         "url": "https://timesofindia.indiatimes.com/city/nagpur/nmc-to-scientifically-assess-health-of-5000-trees-using-ai-lidar-technology/articleshow/131644125.cms",
         "summary": "The Nagpur Municipal Corporation (NMC) will use AI-lidar technology to scientifically assess the health of 5,000 trees. This initiative aims to utilize advanced technology for tree health evaluation. The project will leverage AI and lidar technology for a detailed analysis of the trees' condition.",
@@ -1482,6 +1502,27 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 9,
+        "title": "Used two-wheeler platform Speedioo raises seed funding led by Atomic Capital",
+        "url": "https://entrackr.com/snippets/used-two-wheeler-platform-speedioo-raises-seed-funding-led-by-atomic-capital-12043624",
+        "summary": "Speedioo, a Pune-based used two-wheeler startup, has raised Rs 10 crore in seed funding led by Atomic Capital. The funds will be used to build its AI-native technology stack, expand distribution, and strengthen partnerships. Founded by former CredR and Rentomojo executives, Speedioo aims to improve transparency and customer experience in the used two-wheeler market through AI integration.",
+        "date_published": "2026-06-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Former Icertis executives' startup Rivvun AI raises $7.55 Mn in seed funding",
         "url": "https://entrackr.com/snippets/former-icertis-executives-startup-rivvun-ai-raises-755-mn-in-seed-funding-12026947",
@@ -1766,5 +1807,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

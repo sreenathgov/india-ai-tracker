@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 2,
+        "title": "India looking to scale up local AI infrastructure; NITI to review",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-looking-to-scale-up-local-ai-infrastructure-niti-to-review/131741629",
+        "summary": "NITI Aayog is working to identify gaps in India's AI ecosystem and recommend measures to strengthen its independent AI development and deployment capabilities. This effort aims to scale up local AI infrastructure, potentially expanding the existing India AI Mission. The review by NITI Aayog is a step towards bolstering India's AI capabilities.",
+        "date_published": "2026-06-16",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Vaishnaw expects more companies to start production of memory chips in India",
         "url": "https://telanganatoday.com/vaishnaw-expects-more-companies-to-start-production-of-memory-chips-in-india",
@@ -1114,6 +1134,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "India’s next AI leadership moment won’t be driven by GenAI alone",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-evolution-beyond-generative-ai-to-operational-intelligence/131737621",
+        "summary": "India has established itself as a leader in operational AI, with companies deploying AI at scale in complex environments. This expertise has been built over years, focusing on applied AI for real-time decision-making and critical infrastructure intelligence. India's AI leadership is driven by its experience in operational AI, rather than just Generative AI.",
+        "date_published": "2026-06-16",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "How Hunar Is Using AI To Fix The Broken Economics Of Frontline Hiring",
+        "url": "https://inc42.com/startups/why-hunar-ai-thinks-indias-frontline-workforce-needs-ai-agents/",
+        "summary": "Hunar is utilizing AI to address the economic issues surrounding frontline hiring. The company is part of a growing trend in India's AI landscape, which is shifting towards software agents, automation stacks, and enterprise copilots. Hunar's AI solution aims to improve the frontline hiring process, although specific details of its approach are not provided.",
+        "date_published": "2026-06-16",
+        "source_name": "Inc42 Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Indian AI startups confront new risks after Anthropic pulls Fable 5",
         "url": "https://www.livemint.com/ai/artificial-intelligence/indian-ai-startups-confront-new-risks-after-anthropic-pulls-fable-5-11781414145265.html",
@@ -1260,6 +1320,66 @@
         "summary": "Experts are advocating for a human-centric and India-specific artificial intelligence framework. This framework would prioritize human needs and values, tailored to India's unique cultural and societal context. The goal is to develop AI that benefits Indian society while addressing its distinct challenges.",
         "date_published": "2026-06-15",
         "source_name": "Times of India - Varanasi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Is India’s AI moment here? Not yet",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/is-indias-ai-moment-here-not-yet/131743137",
+        "summary": "India is lagging behind in the AI sector, with local companies not being part of the top 10 constituents of the MSCI Emerging Markets Index for the first time since 2000. In contrast, US AI startups like Anthropic and OpenAI are nearing public listings worth several billion dollars. India's slow progress in AI is evident, especially when compared to countries like Taiwan, where TSMC's advanced chips dominate the benchmark index.",
+        "date_published": "2026-06-15",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "Space partnerships and security take centre stage as global space economy expands",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/global-space-partnerships-highlighted-at-india-space-congress-2026/131751431",
+        "summary": "The India Space Congress 2026 has begun, bringing together over 700 delegates from 25 countries to discuss the future of the space economy. Key topics include international partnerships, AI, satellite connectivity, and space security. The congress aims to drive the expansion of the global space economy through resilient infrastructure and collaboration.",
+        "date_published": "2026-06-15",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "Statistical system may get AI overhaul, data to be treated as asset: MoSPI secretary",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/statistical-system-may-get-ai-overhaul-data-to-be-treated-as-asset-mospi-secretary/131735885",
+        "summary": "India plans to revamp its statistical system by integrating AI and creating a national business register. The overhaul aims to treat data as an economic asset, providing better economic insights. This initiative is part of the government's efforts to improve its statistical capabilities.",
+        "date_published": "2026-06-15",
+        "source_name": "ET Government - Technology",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -8940,6 +9060,66 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 1,
+        "title": "Sarvam: When US slams the door, India begins to find its own opening",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/sarvam-ai-indias-sovereign-unicorn-amidst-global-ai-constraints/131766260",
+        "summary": "Sarvam AI has reached a $1.5 billion valuation after raising $234 million, marking a significant step in India's pursuit of AI sovereignty. This development comes after the US restricted access to advanced AI models from Anthropic, underscoring the risks of relying on foreign-controlled technologies. The funding highlights India's efforts to develop its own AI capabilities amidst global restrictions.",
+        "date_published": "2026-06-16",
+        "source_name": "ET CIO - AI",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "YourNest Venture Capital raises Rs 400 Cr for Continuum Fund",
+        "url": "https://yourstory.com/2026/06/yournest-venture-capital-raises-rs-400-crore-for-continuum-fund",
+        "summary": "YourNest Venture Capital has raised Rs 400 Cr for its Continuum Fund, although details about the fund's focus are not specified in the given text. The provided information instead mentions Newgen Software's integration of AI capabilities into its products. Newgen Software aims to deliver real outcomes to enterprises through this AI integration.",
+        "date_published": "2026-06-16",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Sarvam AI turns unicorn; Razorpay confidentially files IPO papers",
+        "url": "https://yourstory.com/2026/06/sarvam-ai-turns-unicorn-razorpay-files-drhp",
+        "summary": "Sarvam AI has raised $234 million in a funding round led by HCLTech to build advanced AI models and expand infrastructure. This investment has turned Sarvam AI into a unicorn, supporting its goal of strengthening India's sovereign AI ecosystem. The funding will help the company achieve its plans for growth and development.",
+        "date_published": "2026-06-16",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Aum Ventures launches $80 Mn India Innovation Fund II",
         "url": "https://entrackr.com/snippets/aum-ventures-launches-80-mn-india-innovation-fund-ii-12030916",
@@ -10790,6 +10970,8 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "Policies and Initiatives",
+    "AI Start-Up News"
   ]
 }

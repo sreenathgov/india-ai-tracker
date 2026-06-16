@@ -46,6 +46,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 14,
+        "title": "Andhra govt, Google to form joint Task Force for collaboration in AI,...",
+        "url": "https://cellit.in/andhra-govt-google-to-form-joint-task-force-for-collaboration-in-ai-cloud-computing/",
+        "summary": "The Andhra government is partnering with Google to form a joint Task Force for collaboration in artificial intelligence. This partnership aims to leverage AI technology for various applications, although specific details are not provided. The joint Task Force will facilitate cooperation and innovation between the two entities.",
+        "date_published": "2026-06-16",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "AI-assisted eye screening begins at GGH in Guntur",
         "url": "https://www.thehindu.com/news/national/andhra-pradesh/ai-assisted-eye-screening-begins-at-ggh-in-guntur/article71085827.ece",
@@ -496,5 +516,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

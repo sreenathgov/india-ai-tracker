@@ -26,6 +26,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 16,
+        "title": "Jeddah-bound AI Express flight from Kerala’s Kannur turns back due to engine fault",
+        "url": "https://www.thehindu.com/news/national/kerala/jeddah-bound-ai-express-flight-from-keralas-kannur-turns-back-due-to-engine-fault/article71107870.ece",
+        "summary": "An AI Express flight from Kerala's Kannur to Jeddah turned back due to an engine fault. The aircraft, carrying over 180 passengers, took off at 7:40 am but returned after about two hours when pilots noticed an engine warning light. The flight safely returned to Kannur airport, according to airport sources.",
+        "date_published": "2026-06-16",
+        "source_name": "The Hindu - Kerala",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Kerala High Court wins e-governance award",
         "url": "https://www.thehindu.com/news/national/kerala/kerala-high-court-conferred-e-governance-award/article71069493.ece",
@@ -256,5 +276,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

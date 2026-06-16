@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 10,
+        "title": "Sarvam turns unicorn after $234 Mn round led by HCLTech",
+        "url": "https://entrackr.com/news/sarvam-turns-unicorn-after-234-mn-round-led-by-hcltech-12041322",
+        "summary": "AI startup Sarvam has raised $234 million in a Series B round led by HCLTech, valuing the company at $1.5 billion and making it one of India's newest unicorns. HCLTech committed $150 million for a 10.46% stake, with participation from other investors including Bessemer Venture Partners. The funding will be used to advance research on next-generation AI models focused on areas like agentic AI, coding, and cybersecurity.",
+        "date_published": "2026-06-15",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Karnataka Cabinet approves AI Centre of Excellence at Electronics City in Bengaluru",
         "url": "https://www.thehindu.com/news/national/karnataka/karnataka-cabinet-approves-ai-centre-of-excellence-at-electronics-city-in-bengaluru/article70872478.ece",
@@ -272,6 +292,46 @@
         "summary": "An AI forum is being held in Bengaluru, titled the Agentic AI Forum. The event's location is specified as Bengaluru, but details about its content or schedule are not provided. The forum appears to be focused on Agentic AI, although specific topics or speakers are not mentioned.",
         "date_published": "2026-07-01",
         "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "ContraVault AI raises $3.1 Mn in pre-Series A round led by Chiratae Ventures",
+        "url": "https://entrackr.com/snippets/contravault-ai-raises-31-mn-in-pre-series-a-round-led-by-chiratae-ventures-12043985",
+        "summary": "ContraVault AI, a Bengaluru-based procurement intelligence startup, has raised $3.1 million in a pre-Series A funding round led by Chiratae Ventures. The fresh capital will be used to accelerate product development, enhance AI capabilities, and support international expansion, particularly in the US. The funding round also saw participation from existing investor Titan Capital Winners Fund.",
+        "date_published": "2026-06-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 15,
+        "title": "AI, startups and talent will power Bengaluru’s next decade, say expats",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-startups-and-talent-will-power-bengalurus-next-decade-say-expats/articleshow/131753043.cms",
+        "summary": "Bengaluru's next decade is expected to be driven by AI, startups, and talent, according to expats. The city's growth will likely be powered by these key factors, shaping its future. Expats believe that Bengaluru is well-positioned to leverage these strengths and continue to thrive.",
+        "date_published": "2026-06-16",
+        "source_name": "Times of India - Bangalore",
         "category": "Major AI Developments",
         "state_codes": [
           "KA"
@@ -2615,6 +2675,27 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 9,
+        "title": "Used two-wheeler platform Speedioo raises seed funding led by Atomic Capital",
+        "url": "https://entrackr.com/snippets/used-two-wheeler-platform-speedioo-raises-seed-funding-led-by-atomic-capital-12043624",
+        "summary": "Speedioo, a Pune-based used two-wheeler startup, has raised Rs 10 crore in seed funding led by Atomic Capital. The funds will be used to build its AI-native technology stack, expand distribution, and strengthen partnerships. Founded by former CredR and Rentomojo executives, Speedioo aims to improve transparency and customer experience in the used two-wheeler market through AI integration.",
+        "date_published": "2026-06-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Rekise Marine raises $9.7 Mn seed round led by Accel and NKSquared",
         "url": "https://entrackr.com/news/rekise-marine-raises-97-mn-seed-round-led-by-accel-and-nksquared-12029316",
@@ -3446,6 +3527,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }
