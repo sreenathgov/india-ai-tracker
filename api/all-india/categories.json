@@ -1134,6 +1134,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Influencer marketing startup INFLUISH raises pre-seed funding at Rs 25 Cr valuation",
+        "url": "https://entrackr.com/snippets/influencer-marketing-startup-influish-raises-pre-seed-funding-at-rs-25-cr-valuation-12046273",
+        "summary": "INFLUISH, a creator platform, has raised pre-seed funding at a valuation of Rs 25 crore from angel investors. The funds will be used to accelerate product development, enhance Meta API-powered capabilities, and expand creator workflow tools and monetisation offerings. The startup aims to address the fragmented tools and workflows currently used by creators in India's growing creator economy.",
+        "date_published": "2026-06-17",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "India’s next AI leadership moment won’t be driven by GenAI alone",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-evolution-beyond-generative-ai-to-operational-intelligence/131737621",
@@ -10970,8 +10990,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "Policies and Initiatives",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

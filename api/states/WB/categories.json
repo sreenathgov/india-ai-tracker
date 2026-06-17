@@ -25,6 +25,46 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "IIT Kharagpur to use AI to monitor signs of academic stress in students",
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/iit-kgp-to-use-ai-to-track-mental-health-red-flags/articleshow/131788918.cms",
+        "summary": "IIT Kharagpur is introducing an AI-driven system to identify early signs of academic stress in students, such as declining CGPA and uncleared papers. The system aims to enable early intervention through enhanced faculty mentorship and academic recovery options. This proactive approach prioritizes student well-being by moving from crisis response to preventive measures.",
+        "date_published": "2026-06-17",
+        "source_name": "Times of India - Kolkata",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Watch: Jahangir 'Pushpa' Khan's wife leads Falta crowd to police station demanding his release; chaos prevails",
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/watch-jahangir-pushpa-khans-wife-leads-falta-crowd-to-police-station-demanding-his-release-chaos-prevails/articleshow/131784185.cms",
+        "summary": "Jahangir 'Pushpa' Khan's arrest sparked protests in Falta, with around 400 supporters blocking roads and marching to the police station to demand his release. The protesters cited alleged mistreatment and an AI-generated image as reasons for their demands. Police used mild force to disperse the crowd, causing some protesters to flee into nearby ponds.",
+        "date_published": "2026-06-17",
+        "source_name": "Times of India - Kolkata",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 14,
         "title": "TCS opens India’s first Oracle AI data lab in Kolkata",
         "url": "https://timesofindia.indiatimes.com/city/kolkata/tcs-opens-indias-first-oracle-ai-data-lab-in-kolkata/articleshow/131693365.cms",
@@ -505,5 +545,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

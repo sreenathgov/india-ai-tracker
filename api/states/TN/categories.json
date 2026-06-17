@@ -129,6 +129,27 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Madras Sappers Museum opens to the public in Bengaluru",
+        "url": "https://www.thehindu.com/life-and-style/madras-sappers-museum-opens-to-the-public-in-bengaluru/article71108016.ece",
+        "summary": "The Madras Sappers Museum in Bengaluru, established in 1979, has opened to the public, showcasing the history of the Madras Engineer Group. The museum features AI-restored archives, rare military artefacts, and stories from World War II and beyond. It provides a unique glimpse into the group's history through its extensive collection of military memorabilia and restored archives.",
+        "date_published": "2026-06-17",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "TOI correction: Viral bus ticket story fake, AI-generated image sparked misinformation",
         "url": "https://timesofindia.indiatimes.com/city/coimbatore/toi-correction-viral-bus-ticket-story-fake-ai-generated-image-sparked-misinformation/articleshow/131592606.cms",
@@ -965,5 +986,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

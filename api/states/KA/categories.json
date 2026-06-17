@@ -306,6 +306,27 @@
         "posted_to_x_at": null
       },
       {
+        "id": 3,
+        "title": "Madras Sappers Museum opens to the public in Bengaluru",
+        "url": "https://www.thehindu.com/life-and-style/madras-sappers-museum-opens-to-the-public-in-bengaluru/article71108016.ece",
+        "summary": "The Madras Sappers Museum in Bengaluru, established in 1979, has opened to the public, showcasing the history of the Madras Engineer Group. The museum features AI-restored archives, rare military artefacts, and stories from World War II and beyond. It provides a unique glimpse into the group's history through its extensive collection of military memorabilia and restored archives.",
+        "date_published": "2026-06-17",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "ContraVault AI raises $3.1 Mn in pre-Series A round led by Chiratae Ventures",
         "url": "https://entrackr.com/snippets/contravault-ai-raises-31-mn-in-pre-series-a-round-led-by-chiratae-ventures-12043985",
@@ -2675,6 +2696,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "Bengaluru ranked second-best AI-native cluster in Asia, top 15th startup ecosystem globally",
+        "url": "https://www.thehindu.com/news/cities/bangalore/bengaluru-ranked-second-best-ai-native-cluster-in-asia-top-15th-startup-ecosystem-globally/article71112163.ece",
+        "summary": "Bengaluru has been ranked the second-best AI-native cluster in Asia and 15th in the global startup ecosystem. The city scored high in performance and R&D with a score of 9 out of 10. Bengaluru received scores of 8 in AI-native cluster and 7 in funding and market-reach.",
+        "date_published": "2026-06-17",
+        "source_name": "The Hindu - Bangalore",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Used two-wheeler platform Speedioo raises seed funding led by Atomic Capital",
         "url": "https://entrackr.com/snippets/used-two-wheeler-platform-speedioo-raises-seed-funding-led-by-atomic-capital-12043624",
@@ -3527,7 +3568,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "AI Start-Up News",
+    "Major AI Developments"
   ]
 }
