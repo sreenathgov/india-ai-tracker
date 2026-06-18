@@ -3,6 +3,27 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 10,
+        "title": "BoldCap-backed Pramaana Labs raises $27 Mn led by Khosla Ventures",
+        "url": "https://entrackr.com/news/boldcap-backed-pramaana-labs-raises-27-mn-led-by-khosla-ventures-12048869",
+        "summary": "Pramaana Labs, an AI verification and accountability platform, has raised $27 million in a seed funding round led by Khosla Ventures. The round also saw participation from notable investors such as Accel, Boldcap, and Premji Invest. The funds will be used to train models, hire AI researchers, and expand its network of domain experts across regulated industries.",
+        "date_published": "2026-06-17",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Haryana CM launches AI sandbox in Gurugram to accelerate Antyodaya-centric governance",
         "url": "https://government.economictimes.indiatimes.com/news/technology/haryana-rolls-out-ai-sandbox-in-gurugram-for-citizen-centric-governance/131461902",
@@ -2947,6 +2968,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 9,
+        "title": "Pet healthcare startup Vetic raises $40 Mn led by Bessemer",
+        "url": "https://entrackr.com/news/pet-healthcare-startup-vetic-raises-40-mn-led-by-bessemer-12049404",
+        "summary": "Pet healthcare startup Vetic has raised $40 million in a funding round led by Bessemer Venture Partners, with participation from existing investors. Bessemer had also backed the company's earlier funding rounds, and had been reported to lead a new funding round for Vetic as early as May 2025. The fresh funding will be used to expand Vetic's operations.",
+        "date_published": "2026-06-18",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "IIT Delhi alumnus co-founded Coram AI raises $35 million in Series B",
         "url": "https://yourstory.com/2026/06/iit-delhi-alumnus-co-founded-coram-ai-raises-35-million-in-series-b",
@@ -3275,5 +3316,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

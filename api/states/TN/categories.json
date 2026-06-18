@@ -3,6 +3,27 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 10,
+        "title": "BoldCap-backed Pramaana Labs raises $27 Mn led by Khosla Ventures",
+        "url": "https://entrackr.com/news/boldcap-backed-pramaana-labs-raises-27-mn-led-by-khosla-ventures-12048869",
+        "summary": "Pramaana Labs, an AI verification and accountability platform, has raised $27 million in a seed funding round led by Khosla Ventures. The round also saw participation from notable investors such as Accel, Boldcap, and Premji Invest. The funds will be used to train models, hire AI researchers, and expand its network of domain experts across regulated industries.",
+        "date_published": "2026-06-17",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Dharmendra Pradhan opens IIT Madras tech summit in Delhi",
         "url": "https://yourstory.com/2026/05/dharmendra-pradhan-iit-madras-tech-summit-delhi",
@@ -986,7 +1007,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

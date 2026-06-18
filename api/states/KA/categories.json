@@ -306,6 +306,46 @@
         "posted_to_x_at": null
       },
       {
+        "id": 11,
+        "title": "When AI Meets Production",
+        "url": "https://cio.economictimes.indiatimes.com/when-ai-meets-production?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "An event titled \"When AI Meets Production\" took place in Bengaluru, exploring the intersection of artificial intelligence and production. The event likely discussed how AI can be integrated into production processes to improve efficiency and innovation. Details about the event's discussions and outcomes are not specified.",
+        "date_published": "2026-06-18",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "Kannada actor Doddanna files cyber complaint over AI-generated fake death post",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/kannada-actor-doddanna-files-a-plaint-after-ai-made-post-declares-him-dead/articleshow/131808104.cms",
+        "summary": "Kannada actor Doddanna has filed a cyber complaint after a fake post, generated using AI technology, falsely declared him dead on Facebook. The false news spread quickly, causing concern among his fans and prompting a flurry of inquiries about his well-being. Doddanna took action to address the hoax, seeking to clear up the misinformation.",
+        "date_published": "2026-06-18",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Madras Sappers Museum opens to the public in Bengaluru",
         "url": "https://www.thehindu.com/life-and-style/madras-sappers-museum-opens-to-the-public-in-bengaluru/article71108016.ece",
@@ -2696,6 +2736,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 6,
+        "title": "Bengaluru ranks second in Asia for AI Innovation",
+        "url": "https://yourstory.com/2026/06/bengaluru-ranks-second-in-asia-for-ai-innovation",
+        "summary": "Bengaluru has ranked second in Asia for AI-native startups, solidifying its position as a global startup and AI hub. The city has also entered the global top 10 for performance and R&D, according to the Global Startup Ecosystem Report 2026. Bengaluru's ranking reflects its growing strength in the AI innovation sector.",
+        "date_published": "2026-06-18",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Bengaluru ranked second-best AI-native cluster in Asia, top 15th startup ecosystem globally",
         "url": "https://www.thehindu.com/news/cities/bangalore/bengaluru-ranked-second-best-ai-native-cluster-in-asia-top-15th-startup-ecosystem-globally/article71112163.ece",
@@ -3568,7 +3628,7 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }

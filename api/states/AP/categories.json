@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 14,
+        "title": "Andhra govt to launch Amaravati Quantum & AI Innovation Center",
+        "url": "https://telanganatoday.com/andhra-govt-to-launch-amaravati-quantum-ai-innovation-center",
+        "summary": "The Andhra Pradesh government is launching the Amaravati Quantum & AI Innovation Center in partnership with IBM. The center aims to create a large-scale quantum innovation ecosystem, connecting industry, academia, and technology experts. The initiative will focus on developing practical quantum computing solutions through collaboration and innovation.",
+        "date_published": "2026-06-18",
+        "source_name": "Telangana Today - Tech",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "A.P. Cabinet clears AI data projects in Visakhapatnam, Anakapalli districts",
         "url": "https://www.thehindu.com/news/national/andhra-pradesh/ap-cabinet-clears-ai-data-projects-in-visakhapatnam-anakapalli-districts/article70847660.ece",
@@ -516,5 +536,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

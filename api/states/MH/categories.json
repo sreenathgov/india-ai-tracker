@@ -223,6 +223,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 8,
+        "title": "Music tech startup Tringbox raises Rs 5 Cr in seed round",
+        "url": "https://entrackr.com/snippets/music-tech-startup-tringbox-raises-rs-5-cr-in-seed-round-12050073",
+        "summary": "Mumbai-based music-tech startup Tringbox has raised Rs 5 crore in a seed funding round led by Nikhil Gandhi through GIPL, with participation from other investors. The startup, founded by former Paytm executive Amandeep Singh Chawla, is building an AI-powered in-store music intelligence platform for commercial spaces. The funds will be used to further develop the platform, although specific details on allocation were not provided.",
+        "date_published": "2026-06-18",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "NMC To Scientifically Assess Health of 5,000 Trees Using Ai-lidar Technology",
         "url": "https://timesofindia.indiatimes.com/city/nagpur/nmc-to-scientifically-assess-health-of-5000-trees-using-ai-lidar-technology/articleshow/131644125.cms",
@@ -1807,5 +1827,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
