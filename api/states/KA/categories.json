@@ -347,6 +347,26 @@
       },
       {
         "id": 3,
+        "title": "From chatbots to autonomous agents: How Hostinger built AI into its core business",
+        "url": "https://yourstory.com/2026/05/chatbots-autonomous-agents-hostinger-built-ai-core-business",
+        "summary": "Hostinger has integrated AI into its core business, evolving from initial chatbot experiments to a more advanced system. The company's AI Tech Lead, Mantas Lukauskas, discussed this journey at DevSparks 2026 Bengaluru. Hostinger's current system, Kodee, is an autonomous agent that handles most customer interactions.",
+        "date_published": "2026-06-18",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "Madras Sappers Museum opens to the public in Bengaluru",
         "url": "https://www.thehindu.com/life-and-style/madras-sappers-museum-opens-to-the-public-in-bengaluru/article71108016.ece",
         "summary": "The Madras Sappers Museum in Bengaluru, established in 1979, has opened to the public, showcasing the history of the Madras Engineer Group. The museum features AI-restored archives, rare military artefacts, and stories from World War II and beyond. It provides a unique glimpse into the group's history through its extensive collection of military memorabilia and restored archives.",
@@ -2737,6 +2757,26 @@
     "AI Start-Up News": [
       {
         "id": 6,
+        "title": "Exclusive: EMO Energy's valuation jumps 4.3X to Rs 860 Cr in pre-Series B round",
+        "url": "https://entrackr.com/exclusive/exclusive-emo-energys-valuation-jumps-43x-to-rs-860-cr-in-pre-series-b-round-12052859",
+        "summary": "EMO Energy, a Bengaluru-based energy-tech startup, has raised Rs 59 crore ($6.2 million) in a pre-Series B funding round led by Raghav Capital. The company's valuation has jumped 4.3 times to Rs 860 crore as a result of this funding round. EMO Energy had previously secured $6.2 million in a Series A round led by Subhkam Ventures in January last year.",
+        "date_published": "2026-06-19",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
         "title": "Bengaluru ranks second in Asia for AI Innovation",
         "url": "https://yourstory.com/2026/06/bengaluru-ranks-second-in-asia-for-ai-innovation",
         "summary": "Bengaluru has ranked second in Asia for AI-native startups, solidifying its position as a global startup and AI hub. The city has also entered the global top 10 for performance and R&D, according to the Global Startup Ecosystem Report 2026. Bengaluru's ranking reflects its growing strength in the AI innovation sector.",
@@ -3628,7 +3668,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
     "AI Start-Up News"
   ]
 }

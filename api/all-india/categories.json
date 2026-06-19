@@ -1135,6 +1135,66 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "Language, culture central to OpenAI's “mission critical” India team expansion for voice assistant",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/openai-india-team-artificial-general-intelligence-personlised-voice-ai-assistant-chatgpt-anthropic-google-11781766302966.html",
+        "summary": "OpenAI is expanding its engineering team in India to develop a context-aware, personalized voice AI assistant. The India team is considered \"mission critical\" to this effort, which is part of OpenAI's push towards artificial general intelligence. The team will focus on incorporating language and cultural nuances into the voice assistant.",
+        "date_published": "2026-06-19",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India’s enterprise AI moment: From systematic adoption to agentic scale",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-enterprise-ai-moment-from-systematic-adoption-to-agentic-scale/131741365",
+        "summary": "India's businesses are rapidly adopting AI, with 59% already using the technology and 99% planning to increase investments. The acceleration is driven by growing confidence in AI's return on investment and its impact on critical functions. Hybrid AI models are emerging as a key factor in enterprise adoption, offering a balance of flexibility and control for seamless integration.",
+        "date_published": "2026-06-19",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Nasscom calls for practical implementation of AI governance",
+        "url": "https://cellit.in/nasscom-calls-for-practical-implementation-of-ai-governance/",
+        "summary": "Nasscom is advocating for the practical implementation of AI governance. The organization is pushing for a more concrete approach to regulating artificial intelligence. This move aims to ensure responsible development and use of AI technologies.",
+        "date_published": "2026-06-19",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "What is the real test of Artificial Intelligence: Powerful machines or empowering people? PM Modi weighs in at G7 summit",
         "url": "https://www.livemint.com/ai/artificial-intelligence/what-is-the-real-test-of-artificial-intelligence-ai-powerful-machines-or-empowering-people-pm-modi-g7-summit-speech-11781754479647.html",
         "summary": "PM Modi discussed the potential of Artificial Intelligence at the G7 summit, emphasizing its role in empowering society. He advocated for a people-centric approach to AI development, prioritizing inclusivity. Modi's comments highlighted the importance of using AI to benefit people, rather than just creating powerful machines.",
@@ -9199,6 +9259,46 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 5,
+        "title": "Student mobility platform Crizac acquires 37.41% stake in ForeignAdmits",
+        "url": "https://entrackr.com/snippets/student-mobility-platform-crizac-acquires-3741-stake-in-foreignadmits-12053445",
+        "summary": "Student mobility platform Crizac has acquired a 37.41% stake in ForeignAdmits with an investment of approximately Rs 1.25 crore. The investment was made through Compulsorily Convertible Debentures and Compulsorily Convertible Preference Shares. This acquisition aims to enhance Crizac's capabilities in supporting students and counselling partners throughout the study abroad process.",
+        "date_published": "2026-06-19",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "HealthQuad announces first close of Fund III with Rs 550 Cr commitments",
+        "url": "https://entrackr.com/news/healthquad-announces-first-close-of-fund-iii-with-rs-550-cr-commitments-12052808",
+        "summary": "HealthQuad has announced the first close of its third fund, HealthQuad Fund III, with commitments of Rs 550 crore, exceeding one-third of its target corpus of Rs 1,700 crore. The commitments came from both existing and new limited partners, including local and global fund of funds, institutions, and family offices. The fund has already made its first investment in Lifesigns, an AI-powered remote patient monitoring platform.",
+        "date_published": "2026-06-19",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 12,
         "title": "India showcasing startup strength, digital growth and AI leadership at Viva Tech...",
