@@ -87,6 +87,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Telangana's AI helpline cuts wait time to zero; leading to quicker fraud action and money recovery",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/telanganas-ai-helpline-cuts-wait-time-to-zero-leading-to-quicker-fraud-action-and-money-recovery/articleshow/131870964.cms",
+        "summary": "Telangana's cybercrime helpline has implemented an AI voice assistant, reducing wait times to zero and enabling faster reporting of fraud. The AI system quickly gathers crucial details, allowing for swift action to freeze stolen funds. This innovation has already helped recover hundreds of crores for victims, demonstrating its effectiveness in combating cyber threats.",
+        "date_published": "2026-06-20",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "TGCSB's IntraGPT gives Telangana cops instant access to years of case records",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/tgcsbs-intragpt-gives-telangana-cops-instant-access-to-years-of-case-records/articleshow/131870888.cms",
+        "summary": "Telangana police have launched IntraGPT, an offline AI platform that allows officers to quickly search years of case records using simple language. The secure system operates within the police network, safeguarding sensitive data and reducing manual effort in investigations. This in-house AI deployment aims to enhance investigations without compromising judgment or privacy, particularly for new recruits.",
+        "date_published": "2026-06-20",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Souvik Ghosh joins Forbes 30 under 30",
         "url": "https://www.iiit.ac.in/souvik-ghosh-joins-forbes-30-under-30/",
@@ -1656,5 +1696,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

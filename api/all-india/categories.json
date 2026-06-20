@@ -1135,6 +1135,26 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "The India Story: Graph Technology can power the country’s data-driven growth",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/the-india-story-graph-technology-can-power-the-countrys-data-driven-growth/131741530",
+        "summary": "India's development of AI goals and digital economy relies on connected data for smarter decisions and sustainable growth. Graph technology is poised to play a key role in powering this data-driven growth. Connected data will serve as the foundation for India's digital transformation and economic development.",
+        "date_published": "2026-06-20",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Language, culture central to OpenAI's “mission critical” India team expansion for voice assistant",
         "url": "https://www.livemint.com/ai/artificial-intelligence/openai-india-team-artificial-general-intelligence-personlised-voice-ai-assistant-chatgpt-anthropic-google-11781766302966.html",
         "summary": "OpenAI is expanding its engineering team in India to develop a context-aware, personalized voice AI assistant. The India team is considered \"mission critical\" to this effort, which is part of OpenAI's push towards artificial general intelligence. The team will focus on incorporating language and cultural nuances into the voice assistant.",
@@ -1180,6 +1200,26 @@
         "summary": "Nasscom is advocating for the practical implementation of AI governance. The organization is pushing for a more concrete approach to regulating artificial intelligence. This move aims to ensure responsible development and use of AI technologies.",
         "date_published": "2026-06-19",
         "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Jio Platforms files DRHP for fresh issue only IPO",
+        "url": "https://entrackr.com/news/jio-platforms-files-drhp-for-fresh-issue-only-ipo-12055178",
+        "summary": "Jio Platforms has filed its Draft Red Herring Prospectus (DRHP) with SEBI, paving the way for one of India's largest IPOs. The issue will be a 100% fresh offer of up to 27 crore equity shares, with a reported fundraising target of Rs 30,000-40,000 crore. The majority of the proceeds, around Rs 27,500 crore, will be used to repay debt at Reliance Jio Infocomm.",
+        "date_published": "2026-06-19",
+        "source_name": "Entrackr - AI & Startups",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -9260,6 +9300,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "Funding and acquisitions in Indian startups this week [June 15  - June 20]",
+        "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-june-15-june-20-12056007",
+        "summary": "Indian startups raised nearly $432 million across 21 disclosed deals this week, with 7 growth-stage and 14 early-stage rounds. The week also saw the emergence of a new unicorn, 10 key leadership hires, and the launch of 4 new funds. Additionally, there was one acquisition and the shutdown of a startup.",
+        "date_published": "2026-06-20",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Student mobility platform Crizac acquires 37.41% stake in ForeignAdmits",
         "url": "https://entrackr.com/snippets/student-mobility-platform-crizac-acquires-3741-stake-in-foreignadmits-12053445",
@@ -9286,6 +9346,26 @@
         "summary": "HealthQuad has announced the first close of its third fund, HealthQuad Fund III, with commitments of Rs 550 crore, exceeding one-third of its target corpus of Rs 1,700 crore. The commitments came from both existing and new limited partners, including local and global fund of funds, institutions, and family offices. The fund has already made its first investment in Lifesigns, an AI-powered remote patient monitoring platform.",
         "date_published": "2026-06-19",
         "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "[Weekly funding roundup June 13-19] Sarvam AI's massive funding round boosts VC inflow",
+        "url": "https://yourstory.com/2026/06/weekly-funding-roundup-june-13-19-sarvam-ai-deal-provides-the-momentum-to-vc-inflow",
+        "summary": "The total funding for the week of June 13-19 was $393 million across 18 deals, surpassing the previous week's $246 million. Sarvam AI's funding round accounted for nearly 60% of the total funding raised during this period. This significant investment boosted the overall VC inflow for the week.",
+        "date_published": "2026-06-19",
+        "source_name": "YourStory",
         "category": "AI Start-Up News",
         "state_codes": [
           "IN"
