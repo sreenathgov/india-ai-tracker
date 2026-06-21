@@ -1154,6 +1154,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 2,
+        "title": "India’s data centre pipeline stands at 8.33 GW:  Knight Frank India",
+        "url": "https://yourstory.com/2026/06/indias-data-centre-pipeline-knight-frank-india",
+        "summary": "India's data centre pipeline has reached 8.33 GW, according to Knight Frank India. The growth is driven by increasing adoption of AI, cloud computing, and digital transformation initiatives. India is becoming a key destination for hyperscale digital infrastructure investments due to these factors and data localisation requirements.",
+        "date_published": "2026-06-20",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Language, culture central to OpenAI's “mission critical” India team expansion for voice assistant",
         "url": "https://www.livemint.com/ai/artificial-intelligence/openai-india-team-artificial-general-intelligence-personlised-voice-ai-assistant-chatgpt-anthropic-google-11781766302966.html",
@@ -9300,6 +9320,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 1,
+        "title": "Women entrepreneurs reimagining rural livelihoods;\nHow Sarvam AI’s funding boosted VC inflow",
+        "url": "https://yourstory.com/2026/06/women-entrepreneurs-rural-livelihoods-sarvam-ai-funding-vc-inflow",
+        "summary": "Women entrepreneurs are transforming rural livelihoods and communities through innovative businesses. Total funding for the week of June 13-19 reached $393 million across 18 deals. Sarvam AI received nearly 60% of the total funding, significantly boosting VC inflow.",
+        "date_published": "2026-06-21",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Funding and acquisitions in Indian startups this week [June 15  - June 20]",
         "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-june-15-june-20-12056007",
@@ -11310,7 +11350,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
     "AI Start-Up News"
   ]
 }

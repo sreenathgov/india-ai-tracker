@@ -266,6 +266,26 @@
     "AI Start-Up News": [
       {
         "id": 3,
+        "title": "Odisha startup launches AI-backed platform to tackle land related disputes",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/odisha-startup-launches-ai-backed-platform-to-tackle-land-related-disputes/articleshow/131879437.cms",
+        "summary": "An Odisha startup has launched an AI-backed platform aimed at resolving land-related disputes. The platform utilizes artificial intelligence to tackle issues related to land ownership and other property disputes. This innovative solution seeks to provide an efficient and effective way to address long-standing land-related conflicts in the region.",
+        "date_published": "2026-06-21",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "Aquapulse raises Rs 25 Cr in Series A led by NABVENTURES",
         "url": "https://entrackr.com/snippets/aquapulse-raises-rs-25-cr-in-series-a-led-by-nabventures-11446411",
         "summary": "Aquapulse, an aquaculture tech startup, has raised Rs 25 crore in a Series A round led by NABVENTURES. The funds will be used to expand its farmer network, set up a processing facility, and enhance its technology stack, including AI-led systems. Founded in 2022, Aquapulse aims to improve efficiency in the seafood value chain through its operations in aquaculture, infrastructure, and technology.",
@@ -288,5 +308,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }
