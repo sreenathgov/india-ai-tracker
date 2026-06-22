@@ -1135,6 +1135,46 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "How India’s banks and insurers are using AI to rewire risk, revenue, and customer relationships",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/how-indias-banks-and-insurers-are-using-ai-to-rewire-risk-revenue-and-customer-relationships/131902956",
+        "summary": "The India AI in BFSI market was valued at $902 million in 2025 and is projected to reach $4.38 billion by 2031. This growth represents a compound annual growth rate of nearly 30 per cent. The rapid expansion is driven by Indian banks and insurers adopting AI to transform risk management, revenue streams, and customer interactions.",
+        "date_published": "2026-06-22",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "How Shipway Is Using AI To Drive Post-Purchase Efficiency For India’s D2C Brands",
+        "url": "https://inc42.com/startups/how-shipway-is-using-ai-to-drive-post-purchase-efficiency-for-indias-d2c-brands/",
+        "summary": "Shipway is utilizing AI to enhance post-purchase efficiency for India's direct-to-consumer (D2C) brands. India's D2C economy is expected to exceed $310 billion by 2030, driven by brands that have largely mastered pre-purchase aspects. Shipway's AI-driven approach aims to optimize the post-purchase experience for these brands.",
+        "date_published": "2026-06-22",
+        "source_name": "Inc42 Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "The India Story: Graph Technology can power the country’s data-driven growth",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/the-india-story-graph-technology-can-power-the-countrys-data-driven-growth/131741530",
         "summary": "India's development of AI goals and digital economy relies on connected data for smarter decisions and sustainable growth. Graph technology is poised to play a key role in powering this data-driven growth. Connected data will serve as the foundation for India's digital transformation and economic development.",
@@ -9320,6 +9360,46 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "Fintech platform jUMPP gets NPCI approval, launches UPI services",
+        "url": "https://entrackr.com/snippets/fintech-platform-jumpp-gets-npci-approval-launches-upi-services-12061573",
+        "summary": "Fintech platform jUMPP has received approval from the National Payments Corporation of India (NPCI) to offer UPI services as a Third Party Application Provider (TPAP). This approval allows jUMPP to enable peer-to-peer transfers and merchant payments on its platform. The company, which already offers investment products like digital gold and mutual funds, recently also secured approval to distribute insurance products.",
+        "date_published": "2026-06-22",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "SEBI approves GARUDA framework to speed up AIF scheme launches",
+        "url": "https://entrackr.com/news/sebi-approves-garuda-framework-to-speed-up-aif-scheme-launches-12061510",
+        "summary": "The Securities and Exchange Board of India (SEBI) has approved the GARUDA framework to speed up the launch of Alternative Investment Fund (AIF) schemes and reduce compliance requirements. The framework introduces a new classification system for AIF schemes, dividing them into categories such as Large Value Funds, Accredited Investor-only schemes, Angel Funds, and Regular Schemes. This aims to streamline the process and reduce regulatory hurdles for certain funds.",
+        "date_published": "2026-06-22",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Women entrepreneurs reimagining rural livelihoods;\nHow Sarvam AI’s funding boosted VC inflow",
         "url": "https://yourstory.com/2026/06/women-entrepreneurs-rural-livelihoods-sarvam-ai-funding-vc-inflow",
@@ -11350,6 +11430,7 @@
     ]
   },
   "today_updates": [
+    "Major AI Developments",
     "AI Start-Up News"
   ]
 }

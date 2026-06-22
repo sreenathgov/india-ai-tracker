@@ -387,6 +387,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "Hydroponic weed worth Rs 4.83 crore seized at Delhi airport; passenger arrested",
+        "url": "https://www.tribuneindia.com/news/delhi/hydroponic-weed-worth-rs-4-83-crore-seized-at-delhi-airport-passenger-arrested",
+        "summary": "Customs officials at Delhi's IGI Airport seized hydroponic weed worth approximately Rs 4.83 crore from a passenger arriving from Bangkok. The passenger, an Indian national, was arrested under the NDPS Act after being intercepted on June 21. The seizure was made from the passenger who had arrived on Air India flight AI 2335.",
+        "date_published": "2026-06-22",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "IIM-Jammu signs MoU with DICCI",
         "url": "https://www.tribuneindia.com/news/j-k/iim-jammu-signs-mou-with-dicci",
@@ -3337,5 +3357,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

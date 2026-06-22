@@ -145,6 +145,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "Amid global AI-led job cuts, Gujarat engineering grads bag record offers",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/amid-global-ai-led-job-cuts-gujarat-engineering-grads-bag-record-offers/articleshow/131896440.cms",
+        "summary": "Gujarat engineering graduates have received record job offers despite global AI-led job cuts, with campuses seeing a 15-25% increase in pay. A total of 470 companies participated in recruitment at one varsity alone, highlighting the strong demand for engineering talent in the region. This surge in job offers has resulted in a significant pay jump for the graduates.",
+        "date_published": "2026-06-22",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Seat ejection, mud embankment may have saved lone survivor of AI 171 crash",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/seat-ejection-mud-embankment-may-have-saved-lone-survivor-of-ai-171-crash/articleshow/131714549.cms",
@@ -1353,5 +1373,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -205,6 +205,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "Digital governance in Uttar Pradesh: How technology &amp; AI are reshaping transformation across the state",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/digital-governance-in-uttar-pradesh/articleshow/131905504.cms",
+        "summary": "Uttar Pradesh is leveraging technology and AI to transform its governance, bringing about significant changes across the state. The integration of digital tools and artificial intelligence is aimed at improving efficiency and effectiveness in various sectors. This initiative is part of the state's efforts to modernize and streamline its governance systems.",
+        "date_published": "2026-06-22",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 13,
         "title": "IIT-K, BSNL MoU to advance indigenous telecom, AI &amp;  digital infra technologies",
         "url": "https://timesofindia.indiatimes.com/city/kanpur/iit-k-bsnl-mou-to-advance-indigenous-telecom-ai-digital-infra-technologies/articleshow/131668513.cms",
@@ -941,5 +961,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "Hyderabad firm Blue Cloud Softech explores AI opportunities with SpaceX",
+        "url": "https://www.thehindu.com/business/Industry/hyderabad-firm-blue-cloud-softech-explores-ai-opportunities-with-spacex/article71131757.ece",
+        "summary": "Blue Cloud Softech, a Hyderabad-based firm, is exploring AI opportunities with SpaceX, capitalizing on the growing demand for AI applications and digital technology. This collaboration aims to leverage AI capabilities to drive innovation and growth. The partnership highlights the increasing importance of AI in the tech industry, with companies like Blue Cloud Softech at the forefront of this trend.",
+        "date_published": "2026-06-22",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Telangana's AI helpline cuts wait time to zero; leading to quicker fraud action and money recovery",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/telanganas-ai-helpline-cuts-wait-time-to-zero-leading-to-quicker-fraud-action-and-money-recovery/articleshow/131870964.cms",
@@ -1696,5 +1716,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
