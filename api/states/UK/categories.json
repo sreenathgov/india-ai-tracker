@@ -5,6 +5,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "IIIT Hyderabad Study Indicates How Public Procurement Is Shaping AI Governance In India",
+        "url": "https://www.iiit.ac.in/iiit-hyderabad-study-indicates-how-public-procurement-is-shaping-ai-governance-in-india/",
+        "summary": "A study by IIIT Hyderabad explores the impact of public procurement on AI governance in India. The research indicates that public procurement is playing a significant role in shaping AI governance in the country. IIIT Hyderabad is also involved in various other AI-related initiatives, including launching certificate courses and collaborating with other organizations to promote innovation and research.",
+        "date_published": "2026-06-23",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UK",
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Souvik Ghosh joins Forbes 30 under 30",
         "url": "https://www.iiit.ac.in/souvik-ghosh-joins-forbes-30-under-30/",
@@ -92,5 +113,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 9,
+        "title": "Info Edge’s AI and deeptech portfolio crosses Rs 1,800 Cr in value",
+        "url": "https://entrackr.com/news/info-edges-ai-and-deeptech-portfolio-crosses-rs-1800-cr-in-value-12062684",
+        "summary": "Info Edge, the parent company of Naukri.com, has invested over Rs 1,000 crore in 54 AI and deeptech startups since 2020. The company's investment vehicles have deployed Rs 614 crore in 28 AI startups and Rs 455 crore in 30 deeptech firms. Info Edge's AI and deeptech portfolio is now valued at over Rs 1,800 crore.",
+        "date_published": "2026-06-22",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "India looking to scale up local AI infrastructure; NITI to review",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-looking-to-scale-up-local-ai-infrastructure-niti-to-review/131741629",
@@ -1135,6 +1155,86 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "How AI and Agentic platforms could transform public service delivery in India",
+        "url": "https://www.livemint.com/ai/how-ai-and-agentic-platforms-could-transform-public-service-delivery-in-india-11782189160709.html",
+        "summary": "AI and digital platforms are revolutionizing public services in India, improving efficiency in areas like solar installations and subsidy delivery. Agentic AI is expected to play a transformative role in facilitating faster citizen services. This technology aims to address structural inefficiencies in government processes, enhancing overall public service delivery in the country.",
+        "date_published": "2026-06-23",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Enterprise AI adoption drives surge in Agentic AI, cloud, and cybersecurity training",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/enterprise-ai-adoption-drives-surge-in-agentic-ai-cloud-and-cybersecurity-training/131906933",
+        "summary": "Indian businesses are rapidly upskilling their workforce for AI integration, with Agentic AI training seeing a 100% surge. This shift indicates a move from experimentation to production-ready AI, with significant growth also seen in cloud, cybersecurity, and leadership development. Certification-led learning is being prioritized to ensure validated skills for tangible business outcomes.",
+        "date_published": "2026-06-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Apple’s latest AI tools fuel fresh innovation plans among Indian app makers",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/apples-ai-tools-spark-innovation-among-indian-app-developers/131906692",
+        "summary": "Apple's latest AI tools are driving innovation among Indian app makers, who plan to utilize the technology to enhance their apps. The tools include Apple Intelligence, an upgraded Siri, and Xcode, which will help streamline the development process. Indian developers aim to leverage these tools to create more advanced and user-friendly applications.",
+        "date_published": "2026-06-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "India’s AI challenge is no longer adoption, it is proficiency",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-challenge-is-no-longer-adoption-it-is-proficiency/131905783",
+        "summary": "Indian workplaces are quickly adopting AI for routine tasks, but struggling to leverage it for more profound changes in workflows and decision-making. The focus is now on measuring AI's actual impact on business outcomes, rather than just tracking adoption and training. Leaders are being urged to monitor behavioural signals to ensure genuine integration and lasting improvement.",
+        "date_published": "2026-06-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "How India’s banks and insurers are using AI to rewire risk, revenue, and customer relationships",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/how-indias-banks-and-insurers-are-using-ai-to-rewire-risk-revenue-and-customer-relationships/131902956",
         "summary": "The India AI in BFSI market was valued at $902 million in 2025 and is projected to reach $4.38 billion by 2031. This growth represents a compound annual growth rate of nearly 30 per cent. The rapid expansion is driven by Indian banks and insurers adopting AI to transform risk management, revenue streams, and customer interactions.",
@@ -1160,6 +1260,26 @@
         "summary": "Shipway is utilizing AI to enhance post-purchase efficiency for India's direct-to-consumer (D2C) brands. India's D2C economy is expected to exceed $310 billion by 2030, driven by brands that have largely mastered pre-purchase aspects. Shipway's AI-driven approach aims to optimize the post-purchase experience for these brands.",
         "date_published": "2026-06-22",
         "source_name": "Inc42 Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Info Edge reveals its AI and deeptech bets, and stays honest about the early scorecard",
+        "url": "https://yourstory.com/2026/06/info-edge-ai-deeptech-startup-investments-1003-crore",
+        "summary": "Info Edge has invested Rs 1,003 crore in artificial intelligence and deeptech initiatives. The company has disclosed this investment for the first time, providing a formal number on its bets in these areas. This move marks a significant step in Info Edge's efforts to leverage AI and deeptech.",
+        "date_published": "2026-06-22",
+        "source_name": "YourStory",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -11430,7 +11550,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

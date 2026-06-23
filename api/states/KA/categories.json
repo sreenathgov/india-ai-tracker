@@ -306,6 +306,46 @@
         "posted_to_x_at": null
       },
       {
+        "id": 8,
+        "title": "Cyber resilience startup Mitigata raises $15 Mn in Series B round led by Bessemer",
+        "url": "https://entrackr.com/news/cyber-resilience-startup-mitigata-raises-15-mn-in-series-b-round-led-by-bessemer-12064009",
+        "summary": "Mitigata, a Bengaluru-based cyber resilience startup, has raised $15 million in a Series B funding round led by Bessemer Venture Partners. Existing investors Nexus Venture Partners, Titan Capital, and WEH Ventures also participated in the round. The funds will be used to expand the company's international presence, enhance its AI-driven cybersecurity offerings, and scale its Security Operations Centre capabilities.",
+        "date_published": "2026-06-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Scaling Enterprise IT with Agentic AI - Engineering an Autonomous Service Desk",
+        "url": "https://yourstory.com/2026/06/scaling-enterprise-it-agentic-ai-engineering-an-autonomous-service-desk-",
+        "summary": "Atlassian's Nitish Jha discussed Rovo Service, an AI agent embedded in Jira Service Management, at DevSparks Bengaluru 2026. Rovo Service is designed to plan, execute, and resolve tickets autonomously, enhancing enterprise IT capabilities. This AI-powered solution aims to create an autonomous service desk, streamlining IT operations.",
+        "date_published": "2026-06-22",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Karnataka readies green data centre policy, eyes 1 GW expansion with sustainability incentives",
         "url": "https://government.economictimes.indiatimes.com/news/technology/bengaluru-breaks-into-global-top-10-startup-ecosystems-as-ai-strengths-accelerate-report/131889603",
@@ -3707,5 +3747,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

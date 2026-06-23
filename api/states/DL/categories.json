@@ -3009,6 +3009,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 7,
+        "title": "Unnati Agri secures Rs 17 Cr in growth capital from Recur Club",
+        "url": "https://entrackr.com/snippets/unnati-agri-secures-rs-17-cr-in-growth-capital-from-recur-club-12065066",
+        "summary": "Unnati Agri has secured Rs 17 crore in debt funding from Recur Club, an AI-native debt platform. The Noida-based agri-input platform has previously raised over $13.24 million in equity from investors, including NABVENTURES. The new funding will be used to enhance working capital, inventory procurement, and distribution capabilities.",
+        "date_published": "2026-06-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Pet healthcare startup Vetic raises $40 Mn led by Bessemer",
         "url": "https://entrackr.com/news/pet-healthcare-startup-vetic-raises-40-mn-led-by-bessemer-12049404",
@@ -3358,6 +3378,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }
