@@ -2836,6 +2836,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "How This Bengaluru Startup Is Tackling Enterprise Finance’s Costly Blindspot",
+        "url": "https://inc42.com/startups/how-this-bengaluru-startup-is-tackling-enterprise-finances-costly-blindspot/",
+        "summary": "A Bengaluru startup is addressing a costly blindspot in enterprise finance by automating financial reconciliation, a critical function that remains largely manual despite advances in AI. Financial reconciliation is a crucial process that involves verifying the accuracy of financial transactions and accounts. The startup aims to tackle this inefficiency and reduce costs for corporations.",
+        "date_published": "2026-06-24",
+        "source_name": "Inc42 Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Exclusive: EMO Energy's valuation jumps 4.3X to Rs 860 Cr in pre-Series B round",
         "url": "https://entrackr.com/exclusive/exclusive-emo-energys-valuation-jumps-43x-to-rs-860-cr-in-pre-series-b-round-12052859",
@@ -3748,6 +3768,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }

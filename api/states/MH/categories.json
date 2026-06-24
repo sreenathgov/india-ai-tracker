@@ -223,6 +223,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 5,
+        "title": "IoT smart lock startup Ikin Global raises $2 Mn in Pre-Series A2 round",
+        "url": "https://entrackr.com/snippets/iot-smart-lock-startup-ikin-global-raises-2-mn-in-pre-series-a2-round-12067511",
+        "summary": "Ikin Global, an IoT smart lock startup, has raised $2 million in a Pre-Series A2 funding round led by Unicorn India Ventures, Callapina Capital, and AWE Funds. The funds will be used to expand across the US, Europe, and West Asia, as well as for product development and team growth. Ikin Global develops IoT-enabled smart locks for supply chain and logistics companies, offering features like real-time tamper detection and geo-fencing.",
+        "date_published": "2026-06-24",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "State-Google partnership to train over 4L teachers in AI",
         "url": "https://timesofindia.indiatimes.com/city/pune/state-google-partnership-to-train-over-4l-teachers-in-ai/articleshow/131918978.cms",
@@ -1603,6 +1623,26 @@
     "AI Start-Up News": [
       {
         "id": 4,
+        "title": "Clinic and salon chain Bodycraft raises Rs 120 Cr led by Singularity AMC",
+        "url": "https://entrackr.com/news/clinic-and-salon-chain-bodycraft-raises-rs-120-cr-in-series-a-led-by-singularity-amc-12067573",
+        "summary": "Bodycraft, a beauty and wellness platform, has raised Rs 120 crore in a funding round led by Singularity AMC. This is the company's first major funding round in nearly nine years, following a Rs 18 crore raise in 2017. The fresh capital will be used to expand its presence in India, invest in technology, and enhance customer experience.",
+        "date_published": "2026-06-24",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
         "title": "Rusk Media bags Rs 100 Cr funding to expand content play",
         "url": "https://yourstory.com/2026/06/rusk-media-bags-100-crore-funding-to-expand-content-play",
         "summary": "Rusk Media has secured Rs 100 Cr in funding to expand its content offerings. The company plans to use the funds to grow its Alright! TV platform, build AI-powered production tools, and expand its content franchises. This investment will also help Rusk Media pursue international audiences and further establish its presence in the market.",
@@ -1928,6 +1968,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }

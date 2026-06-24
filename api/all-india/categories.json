@@ -1154,6 +1154,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "India can build sovereign AI, but can it build an AI-ready workforce?",
+        "url": "https://yourstory.com/2026/06/india-can-build-sovereign-ai-but-can-it-build-an-ai-ready-workforce",
+        "summary": "India is investing billions of dollars in AI infrastructure and computing capabilities, but faces a challenge in preparing a workforce for an AI-driven economy. The country has the potential to build sovereign AI, but developing an AI-ready workforce is a more daunting task. This requires significant efforts to upskill and reskill professionals to adapt to the changing job market.",
+        "date_published": "2026-06-24",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "MoEngage acquires Peak XV and Z47-backed Aampe",
+        "url": "https://entrackr.com/news/moengage-acquires-peak-xv-and-z47-backed-aampe-12067396",
+        "summary": "MoEngage has acquired San Francisco-based AI startup Aampe for an undisclosed amount, six months after raising an additional $180 million in its Series F round. The total Series F raise for MoEngage now stands at $280 million, which includes the initial $100 million secured in November 2025. MoEngage also acquired Peak XV, although details of this acquisition are not specified.",
+        "date_published": "2026-06-24",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "How AI and Agentic platforms could transform public service delivery in India",
         "url": "https://www.livemint.com/ai/how-ai-and-agentic-platforms-could-transform-public-service-delivery-in-india-11782189160709.html",
@@ -1220,6 +1260,46 @@
         "summary": "Indian workplaces are quickly adopting AI for routine tasks, but struggling to leverage it for more profound changes in workflows and decision-making. The focus is now on measuring AI's actual impact on business outcomes, rather than just tracking adoption and training. Leaders are being urged to monitor behavioural signals to ensure genuine integration and lasting improvement.",
         "date_published": "2026-06-23",
         "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "The Existence Project: Inside a tribal district’s race to teach AI a language with no script",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/nandurbar-teaching-ai-unwritten-language-bhili-11782207315861.html",
+        "summary": "The people of Nandurbar, a tribal district, are working to teach AI the Bhili language, which has no script, in an effort to preserve their culture. This undertaking is crucial as India aims to reach millions through voice technology, making Nandurbar's experience a significant test case. The success of this project will have implications for other languages and communities seeking to integrate with AI.",
+        "date_published": "2026-06-23",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Sherlocks AI raises Rs 7.5 Cr in pre-seed round led by SenseAI Ventures",
+        "url": "https://entrackr.com/snippets/sherlocks-ai-raises-rs-75-cr-in-pre-seed-round-led-by-senseai-ventures-12065333",
+        "summary": "Sherlocks AI, an AI-native incident management startup, has raised Rs 7.5 crore in a pre-seed funding round led by SenseAI Ventures. The fresh capital will be used to strengthen its product and expand go-to-market efforts in North America. The company, founded in 2025, develops software that uses AI agents to help enterprises manage production incidents across cloud-native and microservices-based systems.",
+        "date_published": "2026-06-23",
+        "source_name": "Entrackr - AI & Startups",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -9479,6 +9559,26 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 7,
+        "title": "B2B procurement tech platform BharatTender raises pre-seed round",
+        "url": "https://entrackr.com/snippets/b2b-procurement-tech-platform-bharattender-raises-pre-seed-round-12065634",
+        "summary": "BharatTender, a B2B procurement tech platform, has raised Rs 1.25 crore in a pre-seed funding round from an angel investor. The funds will be used to accelerate product development, customer acquisition, and the rollout of AI-powered procurement capabilities. BharatTender is a B2B procurement marketplace that helps businesses source products and services through verified vendors and competitive bidding.",
+        "date_published": "2026-06-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 3,
         "title": "Fintech platform jUMPP gets NPCI approval, launches UPI services",
