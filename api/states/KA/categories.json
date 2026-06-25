@@ -306,6 +306,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 15,
+        "title": "AI will make IT services more important, not less: Anand Mahindra",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-will-make-it-services-more-important-not-less-anand-mahindra/articleshow/131974276.cms",
+        "summary": "Anand Mahindra believes that AI will increase the importance of IT services rather than reducing it. He thinks AI will augment the industry, making IT services more crucial. Mahindra's statement highlights the potential of AI to enhance the IT sector.",
+        "date_published": "2026-06-25",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Cyber resilience startup Mitigata raises $15 Mn in Series B round led by Bessemer",
         "url": "https://entrackr.com/news/cyber-resilience-startup-mitigata-raises-15-mn-in-series-b-round-led-by-bessemer-12064009",
@@ -2836,6 +2856,66 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "AI services to agentic AI: Nekko is building its next growth engine for business process transformation",
+        "url": "https://yourstory.com/2026/06/ai-services-to-agentic-ai-nekko-is-building-its-next-growth-engine",
+        "summary": "Nekko, a Bengaluru-based startup, is shifting its focus from AI services to developing proprietary products. The company is building computer vision systems and agentic AI solutions to drive business process transformation. This strategic move aims to create a new growth engine for the company.",
+        "date_published": "2026-06-25",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Lightspeed leads $7 Mn Series A round in SuperLiving",
+        "url": "https://entrackr.com/snippets/lightspeed-leads-7-mn-series-a-round-in-superliving-12098012",
+        "summary": "SuperLiving, a wellness and preventive healthcare platform, has raised $7 million in a Series A funding round led by Lightspeed, with participation from existing investors Kae Capital and All In Capital. This funding round follows a previous $2 million raise five months ago, and a Rs 2 crore investment from All In Capital in September 2025. The new funds will be used to enhance AI capabilities and expand vernacular content offerings.",
+        "date_published": "2026-06-25",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 14,
+        "title": "MoEngage acquires AI startup Aampe to boost personalised marketing",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/moengage-acquires-ai-startup-aampe-to-boost-personalised-marketing/articleshow/131974907.cms",
+        "summary": "MoEngage has acquired AI startup Aampe to enhance its personalised marketing capabilities. The acquisition aims to leverage Aampe's AI technology to provide more targeted and effective marketing solutions. This move is expected to boost MoEngage's ability to deliver tailored customer experiences.",
+        "date_published": "2026-06-25",
+        "source_name": "Times of India - Bangalore",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "How This Bengaluru Startup Is Tackling Enterprise Finance’s Costly Blindspot",
         "url": "https://inc42.com/startups/how-this-bengaluru-startup-is-tackling-enterprise-finances-costly-blindspot/",
@@ -3768,6 +3848,7 @@
     ]
   },
   "today_updates": [
+    "Major AI Developments",
     "AI Start-Up News"
   ]
 }

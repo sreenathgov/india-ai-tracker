@@ -25,6 +25,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 19,
+        "title": "81-year-old loses 17.8L to AI fraud",
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/81-year-old-loses-17-8l-to-ai-fraud/articleshow/131976200.cms",
+        "summary": "An 81-year-old individual lost 17.8 lakh to a fraud scheme involving artificial intelligence. The incident highlights the growing concern of AI-based scams targeting vulnerable individuals. The exact nature of the fraud and the perpetrators are not specified in the report.",
+        "date_published": "2026-06-25",
+        "source_name": "Times of India - Kolkata",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "IIT Kharagpur to use AI to monitor signs of academic stress in students",
         "url": "https://timesofindia.indiatimes.com/city/kolkata/iit-kgp-to-use-ai-to-track-mental-health-red-flags/articleshow/131788918.cms",
@@ -545,5 +565,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

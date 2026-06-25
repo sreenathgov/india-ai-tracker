@@ -5,6 +5,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 13,
+        "title": "IIITH’s TechForward roundtable defines Agentic AI as an ecosystem rather than just a chatbot or model",
+        "url": "https://www.iiit.ac.in/iiiths-techforward-roundtable-defines-agentic-ai-as-an-ecosystem-rather-than-just-a-chatbot-or-model/",
+        "summary": "IIITH's TechForward roundtable has defined Agentic AI as a comprehensive ecosystem, rather than just a chatbot or model. This definition emphasizes the broader scope and potential of Agentic AI, moving beyond traditional notions of AI as a single entity. The discussion is part of IIITH's efforts to shape AI governance and innovation in India.",
+        "date_published": "2026-06-25",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG",
+          "UK"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "IIIT Hyderabad Study Indicates How Public Procurement Is Shaping AI Governance In India",
         "url": "https://www.iiit.ac.in/iiit-hyderabad-study-indicates-how-public-procurement-is-shaping-ai-governance-in-india/",
@@ -113,5 +134,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

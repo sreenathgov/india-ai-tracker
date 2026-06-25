@@ -87,6 +87,47 @@
     ],
     "Major AI Developments": [
       {
+        "id": 13,
+        "title": "IIITH’s TechForward roundtable defines Agentic AI as an ecosystem rather than just a chatbot or model",
+        "url": "https://www.iiit.ac.in/iiiths-techforward-roundtable-defines-agentic-ai-as-an-ecosystem-rather-than-just-a-chatbot-or-model/",
+        "summary": "IIITH's TechForward roundtable has defined Agentic AI as a comprehensive ecosystem, rather than just a chatbot or model. This definition emphasizes the broader scope and potential of Agentic AI, moving beyond traditional notions of AI as a single entity. The discussion is part of IIITH's efforts to shape AI governance and innovation in India.",
+        "date_published": "2026-06-25",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG",
+          "UK"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 16,
+        "title": "Only 0.28% of nearly 16 lakh daily emergency calls in Telangana are genuine; Police to deploy AI tools in emergency response system",
+        "url": "https://www.thehindu.com/news/national/telangana/only-028-of-nearly-16-lakh-daily-emergency-calls-in-telangana-are-genuine-police-to-deploy-ai-tools-in-emergency-response-system/article71142213.ece",
+        "summary": "In Telangana, only 0.28% of nearly 160,000 daily emergency calls are genuine. The majority of calls are related to domestic disputes and community issues. The police plan to deploy AI tools to improve their emergency response system.",
+        "date_published": "2026-06-25",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "IIIT Hyderabad Study Indicates How Public Procurement Is Shaping AI Governance In India",
         "url": "https://www.iiit.ac.in/iiit-hyderabad-study-indicates-how-public-procurement-is-shaping-ai-governance-in-india/",
@@ -1757,5 +1798,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
