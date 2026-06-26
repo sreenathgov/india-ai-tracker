@@ -223,6 +223,46 @@
         "posted_to_x_at": null
       },
       {
+        "id": 1,
+        "title": "India must build foundational AI models or risk becoming a mere consumer: BharatGen",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/bharatgen-india-ai-mission-sovereign-ai-india-11782380654091.html",
+        "summary": "India's IIT Bombay-led consortium has developed its first AI model from scratch with a ₹1,058-crore government grant. Experts warn that the country must build foundational AI models to avoid becoming a mere consumer of the technology. A severe deep tech talent deficit could hinder broader industry progress in India's AI development.",
+        "date_published": "2026-06-26",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 14,
+        "title": "Ahead of Ganeshotsav, BMC approves AI crowd monitoring at key Mumbai tourist sites",
+        "url": "https://indianexpress.com/article/cities/mumbai/ai-crowd-monitoring-qr-digital-street-museums-mumbai-10756806/",
+        "summary": "The Brihanmumbai Municipal Corporation (BMC) has approved the use of AI-powered crowd monitoring at key tourist sites in Mumbai. This initiative is being implemented ahead of the upcoming Ganeshotsav festival to enhance crowd management and safety. The AI system will help monitor and analyze crowd density in real-time at popular locations.",
+        "date_published": "2026-06-25",
+        "source_name": "Indian Express - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "IoT smart lock startup Ikin Global raises $2 Mn in Pre-Series A2 round",
         "url": "https://entrackr.com/snippets/iot-smart-lock-startup-ikin-global-raises-2-mn-in-pre-series-a2-round-12067511",
@@ -1967,5 +2007,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

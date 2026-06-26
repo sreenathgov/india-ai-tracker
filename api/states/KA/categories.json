@@ -326,6 +326,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 6,
+        "title": "From code to captaincy: AWS’ agentic AI playbook",
+        "url": "https://yourstory.com/2026/06/code-captaincy-aws-agentic-ai-playbook",
+        "summary": "AWS' Praful Bagai discussed the importance of moving beyond prompts in AI development at DevSparks Bengaluru 2026. He used a cricket analogy to emphasize the need for developers to orchestrate intelligent systems. This approach is part of AWS' agentic AI playbook, which aims to enhance AI capabilities.",
+        "date_published": "2026-06-25",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Cyber resilience startup Mitigata raises $15 Mn in Series B round led by Bessemer",
         "url": "https://entrackr.com/news/cyber-resilience-startup-mitigata-raises-15-mn-in-series-b-round-led-by-bessemer-12064009",
@@ -3847,8 +3867,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
-  ]
+  "today_updates": []
 }
