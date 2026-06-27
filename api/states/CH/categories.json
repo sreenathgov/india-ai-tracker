@@ -5,6 +5,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "Pargat targets AAP over ‘AI videos’ against jathedars",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/pargat-targets-aap-over-ai-videos-against-jathedars/articleshow/132024142.cms",
+        "summary": "Pargat has accused the Aam Aadmi Party (AAP) of creating AI videos targeting jathedars. The AI videos are allegedly being used to defame the jathedars, sparking controversy. Pargat's accusation suggests a deepening political rift between him and the AAP.",
+        "date_published": "2026-06-27",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "CH",
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 20,
         "title": "AAP accuses Cong of using AI-generated deepfake to target CM Mann",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/aap-accuses-cong-of-using-ai-generated-deepfake-to-target-cm-mann/articleshow/131976197.cms",
@@ -257,5 +278,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

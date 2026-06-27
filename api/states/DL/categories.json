@@ -3050,6 +3050,26 @@
     "AI Start-Up News": [
       {
         "id": 7,
+        "title": "ICAI launches AI Innovation Summit 2026, signs MoU with Sarvam AI, unveils advanced AI Course",
+        "url": "https://www.tribuneindia.com/news/delhi/icai-launches-ai-innovation-summit-2026-signs-mou-with-sarvam-ai-unveils-advanced-ai-course",
+        "summary": "The Institute of Chartered Accountants of India (ICAI) launched its AI Innovation Summit 2026, a two-day event in New Delhi that brought together over 4,000 delegates to discuss AI's role in finance and governance. The summit, themed \"Transforming Accounting, Audit, Tax, and Governance,\" aims to explore the growing impact of artificial intelligence in these fields. ICAI also signed a Memorandum of Understanding (MoU) with Sarvam AI and unveiled an advanced AI course during the event.",
+        "date_published": "2026-06-27",
+        "source_name": "Tribune - Delhi",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
         "title": "Unnati Agri secures Rs 17 Cr in growth capital from Recur Club",
         "url": "https://entrackr.com/snippets/unnati-agri-secures-rs-17-cr-in-growth-capital-from-recur-club-12065066",
         "summary": "Unnati Agri has secured Rs 17 crore in debt funding from Recur Club, an AI-native debt platform. The Noida-based agri-input platform has previously raised over $13.24 million in equity from investors, including NABVENTURES. The new funding will be used to enhance working capital, inventory procurement, and distribution capabilities.",
@@ -3417,5 +3437,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

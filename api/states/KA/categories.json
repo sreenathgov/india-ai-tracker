@@ -306,6 +306,46 @@
         "posted_to_x_at": null
       },
       {
+        "id": 2,
+        "title": "OpenAI’s Jalapeño AI chip; Nekko’s next growth engine",
+        "url": "https://yourstory.com/2026/06/openai-jalapeo-ai-chip-nekko-next-growth-engine",
+        "summary": "OpenAI has announced its first custom-built chip, called Jalapeño, marking a significant expansion beyond its model development. Bengaluru-based Nekko is emerging as an AI and machine learning services company focused on business process transformation. Nekko is expected to be a key growth engine, potentially leveraging advancements like OpenAI's Jalapeño chip.",
+        "date_published": "2026-06-27",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "AI enters boardroom, directors are its newest apprentices",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-enters-boardroom-directors-are-its-newest-apprentices/articleshow/132023372.cms",
+        "summary": "Artificial intelligence is increasingly being introduced into corporate boardrooms, with directors learning from and working alongside AI systems. This integration aims to enhance decision-making and strategic planning processes. AI's entry into the boardroom marks a significant shift in the role of directors, who are now apprenticing with AI to stay ahead.",
+        "date_published": "2026-06-27",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 15,
         "title": "AI will make IT services more important, not less: Anand Mahindra",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-will-make-it-services-more-important-not-less-anand-mahindra/articleshow/131974276.cms",
@@ -3867,5 +3907,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 6,
+        "title": "MeitY, UP to set up three AI Centres of Excellence under IndiaAI Mission",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/meity-up-to-set-up-three-ai-centres-of-excellence-under-indiaai-mission/articleshow/132024413.cms",
+        "summary": "The Ministry of Electronics and Information Technology (MeitY) and the state of Uttar Pradesh (UP) are collaborating to establish three AI Centres of Excellence. These centres will be set up under the IndiaAI Mission, aiming to promote artificial intelligence development in the country. The initiative is expected to drive AI innovation and growth in India.",
+        "date_published": "2026-06-27",
+        "source_name": "Times of India - Lucknow",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Info Edge’s AI and deeptech portfolio crosses Rs 1,800 Cr in value",
         "url": "https://entrackr.com/news/info-edges-ai-and-deeptech-portfolio-crosses-rs-1800-cr-in-value-12062684",
@@ -1220,6 +1240,46 @@
         "summary": "OnePlus has launched the Nord Buds 4 in India, featuring up to 52dB Active Noise Cancellation and 54-hour battery life. The earbuds also come with Bluetooth 6.1, AI-powered features, Spatial Audio, and IP55 durability. The Nord Buds 4 are priced at Rs 3,299, with a limited-period launch price of Rs 3,099.",
         "date_published": "2026-06-26",
         "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Living on borrowed AI won’t end well for India, warn experts",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/living-on-borrowed-ai-wont-end-well-for-india-warn-experts/132016900",
+        "summary": "India's reliance on foreign-controlled AI models is under scrutiny after the US government suspended access to Anthropic's model. Experts warn that this highlights a significant vulnerability in India's AI capabilities. This vulnerability could hinder India's ambition to become a major AI power.",
+        "date_published": "2026-06-26",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "US won&#039;t abruptly deny AI access to India: Govt",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/us-assures-india-of-continued-access-to-critical-ai-technologies/132012596",
+        "summary": "The US has assured India that it won't abruptly deny access to advanced AI models, with discussions focusing on a reliable supply for integration into public services and digital infrastructure. The two nations acknowledged the need for international collaboration and diversified supply chains to foster a robust AI ecosystem. India is expected to play a larger role globally in the development of AI.",
+        "date_published": "2026-06-26",
+        "source_name": "ET Government - Technology",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -12050,7 +12110,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Policies and Initiatives"
   ]
 }
