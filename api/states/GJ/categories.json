@@ -145,6 +145,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "AI, semiconductors to dominate as VGRC rolls in",
+        "url": "https://timesofindia.indiatimes.com/city/vadodara/ai-semiconductors-to-dominate-as-vgrc-rolls-in/articleshow/132041390.cms",
+        "summary": "A two-day conference, VGRC, is set to highlight emerging sectors, with a focus on AI and semiconductors. The event aims to spotlight these dominant technologies and their potential impact. Micro, Small, and Medium Enterprises (MSMEs) will also be a key area of discussion during the conference.",
+        "date_published": "2026-06-28",
+        "source_name": "Times of India - Vadodara",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Amid global AI-led job cuts, Gujarat engineering grads bag record offers",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/amid-global-ai-led-job-cuts-gujarat-engineering-grads-bag-record-offers/articleshow/131896440.cms",
@@ -1373,5 +1393,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

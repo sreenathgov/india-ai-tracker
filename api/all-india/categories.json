@@ -1174,6 +1174,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Mark Zuckerberg’s new trouble! Why has Google limited Meta’s access to its Gemini models?",
+        "url": "https://www.etnownews.com/technology/mark-zuckerbergs-new-trouble-why-has-google-limited-metas-access-to-its-gemini-models-article-154783920",
+        "summary": "Google has limited Meta's access to its Gemini models, prompting Meta to encourage staff to use AI tokens more efficiently. Meta is investing Rs 8,550 crore in Indian fintech firm CRED and appointing its founder Kunal Shah as the new global head of WhatsApp. This development marks a new challenge for Mark Zuckerberg's company amidst its AI endeavors.",
+        "date_published": "2026-06-28",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India, US deepen collaboration in semiconductors, AI and quantum technologies",
+        "url": "https://telanganatoday.com/india-us-deepen-collaboration-in-semiconductors-ai-and-quantum-technologies",
+        "summary": "India and the US are deepening their collaboration in key areas such as semiconductors, artificial intelligence, and quantum technologies. The partnership is shifting from policy discussions to concrete projects, with a focus on building resilient supply chains and technology ecosystems. This cooperation aims to strengthen the technological ties between the two countries.",
+        "date_published": "2026-06-28",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Over 78% of firms expect AI agents to handle customer support within 18 months",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/over-78-of-firms-expect-ai-agents-to-handle-customer-support-within-18-months/132008733",
@@ -12110,6 +12150,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives"
+    "Major AI Developments"
   ]
 }

@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 6,
+        "title": "Pilot project introduces AI learning in govt schools",
+        "url": "https://www.tribuneindia.com/news/punjab/pilot-project-introduces-ai-learning-in-govt-schools",
+        "summary": "The Punjab state School Education Department is introducing AI, robotics, Internet of Things (IoT), and cyber safety education in 425 government schools as a pilot project. This initiative aims to equip government school students with advanced technological skills. The project is part of Mission RAFTAAR, a program focused on promoting robotics and AI learning.",
+        "date_published": "2026-06-27",
+        "source_name": "Tribune - Punjab",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "ONDC to raise Rs 430 Cr from SBI, Zoho, Uber,  Paytm, Amul and others",
         "url": "https://entrackr.com/news/ondc-to-raise-rs-430-cr-from-sbi-zoho-uber-paytm-amul-and-others-11901708",
@@ -546,7 +566,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

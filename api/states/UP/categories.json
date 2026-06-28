@@ -205,6 +205,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "AI revolution is bringing creativity to our doorstep",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/ai-revolution-is-bringing-creativity-to-our-doorstep/articleshow/132046894.cms",
+        "summary": "Generative AI is revolutionizing creativity and productivity, enabling individuals to achieve previously impossible feats, such as generating music demos and building complex software. This technology has the potential to transform work, rather than eliminate it, but will require upskilling and adaptation for future success. Responsible development and ethical guidelines are crucial as AI becomes increasingly integrated into our lives.",
+        "date_published": "2026-06-28",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Digital governance in Uttar Pradesh: How technology &amp; AI are reshaping transformation across the state",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/digital-governance-in-uttar-pradesh/articleshow/131905504.cms",
@@ -961,5 +981,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
