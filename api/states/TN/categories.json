@@ -150,6 +150,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Huge potential to use AI effectively in public healthcare; need to create digital database of patients: Soumya Swaminathan",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/huge-potential-to-use-ai-effectively-in-public-healthcare-need-to-create-digital-database-of-patients-soumya-swaminathan/articleshow/132057373.cms",
+        "summary": "Soumya Swaminathan highlights the huge potential of using AI in public healthcare. To effectively utilize AI, she emphasizes the need to create a digital database of patients. This initiative aims to improve public healthcare services by leveraging AI technology.",
+        "date_published": "2026-06-29",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Madras Sappers Museum opens to the public in Bengaluru",
         "url": "https://www.thehindu.com/life-and-style/madras-sappers-museum-opens-to-the-public-in-bengaluru/article71108016.ece",
@@ -1007,5 +1027,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

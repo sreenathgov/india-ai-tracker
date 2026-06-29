@@ -387,6 +387,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Drones, AI, auto-alerts: Delhi’s firefighting plan for next 25 years",
+        "url": "https://indianexpress.com/article/cities/delhi/delhi-firefighting-plan-emergencies-10762050/",
+        "summary": "Delhi has unveiled a 25-year firefighting plan that incorporates advanced technologies such as drones and artificial intelligence. The plan also includes auto-alert systems to enhance the city's fire response capabilities. The use of these technologies aims to improve the efficiency and effectiveness of Delhi's firefighting services.",
+        "date_published": "2026-06-29",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Delhi: PM Narendra Modi lauds Central Sanskrit University’s BTech AI programme in ‘Mann ki Baat’",
+        "url": "https://www.tribuneindia.com/news/india/pm-modi-lauds-central-sanskrit-universitys-b-tech-ai-programme-in-mann-ki-baat",
+        "summary": "Central Sanskrit University has launched a B.Tech programme in Artificial Intelligence and Data Science, combining modern technology with traditional Indian knowledge systems. The programme aims to prepare students in emerging technologies while promoting Sanskrit and digitising ancient texts. PM Narendra Modi praised the initiative in his 'Mann ki Baat' address, highlighting its innovative approach.",
+        "date_published": "2026-06-29",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Amazon to invest $13B in India's AI and cloud infrastructure by 2030",
         "url": "https://yourstory.com/2026/06/amazon-invest-13b-india-ai-cloud-infrastructure-by-2030",
@@ -3437,5 +3477,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

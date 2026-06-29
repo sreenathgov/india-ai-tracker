@@ -307,6 +307,26 @@
       },
       {
         "id": 2,
+        "title": "Boundless Ventures leads pre-seed round in Lytmus AI",
+        "url": "https://entrackr.com/snippets/boundless-ventures-leads-pre-seed-round-in-lytmus-ai-12116594",
+        "summary": "Lytmus AI, a Bengaluru-based startup, has raised Rs 5 crore in a pre-seed funding round led by Boundless Ventures. The funds will be used to enhance AI capabilities, accelerate product development, and expand student acquisition, with a focus on the NEET segment. Lytmus AI develops AI mentors for competitive exam preparation, combining persistent memory and contextual understanding with subject expertise.",
+        "date_published": "2026-06-29",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "OpenAI’s Jalapeño AI chip; Nekko’s next growth engine",
         "url": "https://yourstory.com/2026/06/openai-jalapeo-ai-chip-nekko-next-growth-engine",
         "summary": "OpenAI has announced its first custom-built chip, called Jalapeño, marking a significant expansion beyond its model development. Bengaluru-based Nekko is emerging as an AI and machine learning services company focused on business process transformation. Nekko is expected to be a key growth engine, potentially leveraging advancements like OpenAI's Jalapeño chip.",
@@ -3907,5 +3927,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
