@@ -387,6 +387,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Delhi's PUCC 3.0: AI to track vehicle location at testing centres",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/delhis-pucc-3-0-ai-to-track-vehicle-location-at-testing-centres/articleshow/132083469.cms",
+        "summary": "Delhi is introducing PUCC 3.0, an AI-powered system to track vehicle location at testing centres and ensure accurate emission testing. The system will use live testing with correctly placed probes and upload data directly to a central database to prevent fake certificates. This aims to enhance transparency and eliminate manual data entry by automating the validation of emission parameters.",
+        "date_published": "2026-06-30",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Drones, AI, auto-alerts: Delhi’s firefighting plan for next 25 years",
         "url": "https://indianexpress.com/article/cities/delhi/delhi-firefighting-plan-emergencies-10762050/",
@@ -411,6 +431,26 @@
         "title": "Delhi: PM Narendra Modi lauds Central Sanskrit University’s BTech AI programme in ‘Mann ki Baat’",
         "url": "https://www.tribuneindia.com/news/india/pm-modi-lauds-central-sanskrit-universitys-b-tech-ai-programme-in-mann-ki-baat",
         "summary": "Central Sanskrit University has launched a B.Tech programme in Artificial Intelligence and Data Science, combining modern technology with traditional Indian knowledge systems. The programme aims to prepare students in emerging technologies while promoting Sanskrit and digitising ancient texts. PM Narendra Modi praised the initiative in his 'Mann ki Baat' address, highlighting its innovative approach.",
+        "date_published": "2026-06-29",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Delhi Govt partners with four institutions for AI, robotics training in CM SHRI schools",
+        "url": "https://www.tribuneindia.com/news/delhi/delhi-govt-partners-with-four-institutions-for-ai-robotics-training-in-cm-shri-schools",
+        "summary": "The Delhi government has partnered with four institutions to provide AI and robotics training in CM SHRI schools. The partnership, which includes a three-year Memorandum of Understanding, aims to integrate advanced technology education into government schools. The institutions will provide mentorship, laboratory access, and curriculum support to students as part of the initiative.",
         "date_published": "2026-06-29",
         "source_name": "Tribune - Delhi",
         "category": "Major AI Developments",
