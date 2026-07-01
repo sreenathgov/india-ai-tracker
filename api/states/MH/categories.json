@@ -1702,6 +1702,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "Data Science Wizards raises $5 Mn in pre-Series A round",
+        "url": "https://entrackr.com/snippets/data-science-wizards-raises-5-mn-in-pre-series-a-round-12122203",
+        "summary": "Data Science Wizards, a Mumbai-based enterprise tech company, has raised $5 million in a pre-Series A funding round from angel investors. The company had previously secured $1.4 million in seed funding in October 2024, valuing it at $16.4 million. The new funding will be used to drive product innovation, expand operations, and strengthen its teams.",
+        "date_published": "2026-07-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Clinic and salon chain Bodycraft raises Rs 120 Cr led by Singularity AMC",
         "url": "https://entrackr.com/news/clinic-and-salon-chain-bodycraft-raises-rs-120-cr-in-series-a-led-by-singularity-amc-12067573",
@@ -2047,5 +2067,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments",
+    "AI Start-Up News"
+  ]
 }

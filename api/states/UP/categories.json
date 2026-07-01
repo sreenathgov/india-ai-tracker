@@ -206,6 +206,26 @@
     "Major AI Developments": [
       {
         "id": 4,
+        "title": "Doctor in your pocket: AI, anxiety, and human touch in medicine",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/doctor-in-your-pocket-ai-anxiety-and-human-touch-in-medicine/articleshow/132101182.cms",
+        "summary": "An article discusses the role of AI in medicine, highlighting its potential to provide personalized healthcare through devices that can be carried in one's pocket. The integration of AI in medicine also raises concerns about anxiety and the importance of human touch in patient care. AI is transforming the medical field, but it must be balanced with human empathy and understanding.",
+        "date_published": "2026-07-01",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
         "title": "AI revolution is bringing creativity to our doorstep",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/ai-revolution-is-bringing-creativity-to-our-doorstep/articleshow/132046894.cms",
         "summary": "Generative AI is revolutionizing creativity and productivity, enabling individuals to achieve previously impossible feats, such as generating music demos and building complex software. This technology has the potential to transform work, rather than eliminate it, but will require upskilling and adaptation for future success. Responsible development and ethical guidelines are crucial as AI becomes increasingly integrated into our lives.",
@@ -981,5 +1001,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

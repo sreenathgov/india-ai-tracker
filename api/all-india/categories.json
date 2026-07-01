@@ -10080,6 +10080,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 1,
+        "title": "Indian startups raise $7.4 Bn in H1 2026 as CRED-Meta deal lifts funding",
+        "url": "https://entrackr.com/report/indian-startups-raise-74-bn-in-h1-2026-as-cred-meta-deal-lifts-funding-12123065",
+        "summary": "Indian startups raised $7.4 billion in the first half of 2026, driven by investments in AI startups such as Neysa and Sarvam AI. A significant boost came from CRED's $900 million funding from Meta, followed by founder Kunal Shah's appointment as Global CEO of WhatsApp. This funding makes H1 2026 the second-highest funded first half after the 2021 and 2022 boom.",
+        "date_published": "2026-07-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Healthcare startup MyKare.ai raises $3.2 Mn",
         "url": "https://entrackr.com/snippets/healthcare-startup-mykareai-raises-32-mn-12117898",
@@ -12229,5 +12249,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

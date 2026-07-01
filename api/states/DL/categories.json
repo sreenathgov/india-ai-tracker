@@ -407,6 +407,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 5,
+        "title": "Gurgaon tenants scramble for homes amid sealing drive. AI platform, local networks lend a hand",
+        "url": "https://indianexpress.com/article/cities/delhi/dlf-sealing-drive-displaced-tenants-ai-rental-platform-10764631/",
+        "summary": "Tenants in Gurgaon are struggling to find new homes due to a sealing drive. An AI platform and local networks are providing assistance to those affected. The sealing drive has led to a surge in demand for alternative housing options, with many relying on technology and community support to find new places to live.",
+        "date_published": "2026-06-30",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Drones, AI, auto-alerts: Delhi’s firefighting plan for next 25 years",
         "url": "https://indianexpress.com/article/cities/delhi/delhi-firefighting-plan-emergencies-10762050/",
@@ -3517,7 +3537,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

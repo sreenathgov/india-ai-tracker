@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Airtel planning to make Hyderabad its second headquarters, chairman Sunil Mittal tells Telangana CM Revanth Reddy",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/airtel-planning-to-make-hyderabad-its-second-headquarters-chairman-sunil-mittal-tells-telangana-cm-revanth-reddy/articleshow/132099732.cms",
+        "summary": "Airtel is planning to establish Hyderabad as its second headquarters, as announced by chairman Sunil Mittal to Telangana Chief Minister Revanth Reddy. The Telangana government is also exploring the setup of a data centre and an AI campus in the state. This development aims to strengthen the region's technological infrastructure and foster growth.",
+        "date_published": "2026-07-01",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "IIIT-H marks the release of Roots & Wings, the authorized biography of Governing Council Chairman Dr. Ashok Jhunjhunwala",
         "url": "https://www.iiit.ac.in/roots-and-wings/",
@@ -1818,5 +1838,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
