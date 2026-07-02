@@ -387,6 +387,47 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "Three face FIR for morphing two sisters’ photos with AI, sharing them online",
+        "url": "https://timesofindia.indiatimes.com/city/noida/three-face-fir-for-morphing-two-sisters-photos-with-ai-sharing-them-online/articleshow/132123169.cms",
+        "summary": "Three individuals are facing an FIR for using AI to morph photos of two sisters and sharing the manipulated images online. The accused, traced to Punjab, are being pursued by police teams. The incident highlights the misuse of AI technology for malicious purposes, such as creating and disseminating fake content.",
+        "date_published": "2026-07-02",
+        "source_name": "Times of India - Noida",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "PB",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "IIT-Delhi showcases tactical aerostat for aerial surveillance",
+        "url": "https://www.tribuneindia.com/news/delhi/iit-delhi-showcases-tactical-aerostat-for-aerial-surveillance",
+        "summary": "IIT-Delhi has demonstrated an indigenous AI-enabled aerostat surveillance system for aerial monitoring. The system was developed in collaboration with deep-tech startups and industry partners under a DRDO-supported project. The technology aims to make aerial surveillance smarter, cost-effective, and more efficient.",
+        "date_published": "2026-07-01",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Delhi's PUCC 3.0: AI to track vehicle location at testing centres",
         "url": "https://timesofindia.indiatimes.com/city/delhi/delhis-pucc-3-0-ai-to-track-vehicle-location-at-testing-centres/articleshow/132083469.cms",
@@ -3149,6 +3190,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "Property management platform Crib App acquires CirclePe",
+        "url": "https://entrackr.com/snippets/property-management-platform-crib-app-acquire-circlepe-12124438",
+        "summary": "Crib App, an AI-powered property management platform, has acquired CirclePe, a rent financing startup that allows tenants to rent without paying a security deposit. The acquisition integrates financing into the rental lifecycle, enabling tenants to avoid upfront deposits and operators to receive rent and deposit-related financing upfront. This move is expected to improve working capital for operators and simplify the rental process for tenants.",
+        "date_published": "2026-07-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "ICAI launches AI Innovation Summit 2026, signs MoU with Sarvam AI, unveils advanced AI Course",
         "url": "https://www.tribuneindia.com/news/delhi/icai-launches-ai-innovation-summit-2026-signs-mou-with-sarvam-ai-unveils-advanced-ai-course",
@@ -3537,5 +3598,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

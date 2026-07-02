@@ -46,6 +46,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "Three face FIR for morphing two sisters’ photos with AI, sharing them online",
+        "url": "https://timesofindia.indiatimes.com/city/noida/three-face-fir-for-morphing-two-sisters-photos-with-ai-sharing-them-online/articleshow/132123169.cms",
+        "summary": "Three individuals are facing an FIR for using AI to morph photos of two sisters and sharing the manipulated images online. The accused, traced to Punjab, are being pursued by police teams. The incident highlights the misuse of AI technology for malicious purposes, such as creating and disseminating fake content.",
+        "date_published": "2026-07-02",
+        "source_name": "Times of India - Noida",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "PB",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Pargat targets AAP over ‘AI videos’ against jathedars",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/pargat-targets-aap-over-ai-videos-against-jathedars/articleshow/132024142.cms",
@@ -566,5 +587,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

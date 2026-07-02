@@ -1175,6 +1175,26 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "Future-ready teaching: How AI is transforming education in India",
+        "url": "https://yourstory.com/2026/06/future-ready-teaching-ai-transforming-education-india",
+        "summary": "Educators, non-profit leaders, and technologists gathered at a Microsoft Elevate webinar to discuss AI's potential in transforming education in India. The discussion focused on how AI can make learning more personal, inclusive, and human. AI is expected to play a key role in shaping the future of education in India.",
+        "date_published": "2026-07-02",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "AI data infrastructure startup Clairva raises $500K led by Venture Catalysts",
         "url": "https://entrackr.com/snippets/ai-data-infrastructure-startup-clairva-raises-500k-led-by-venture-catalysts-ai-data-infrastructure-startup-clairva-has-raised-500k-in-a-pre-seed-funding-round-led-by-venture-catalysts-through-its-angel-network-the-company-will-use-the-fresh-capita-12116873",
         "summary": "AI data infrastructure startup Clairva has raised $500K in a pre-seed funding round led by Venture Catalysts. The company plans to use the funds to strengthen its data supply network, expand partnerships, and enhance data capabilities. Clairva was founded in 2025 and builds licensed datasets for AI foundation models.",
@@ -10080,6 +10100,46 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "Sparrow Capital announces Rs 475 Cr third fund",
+        "url": "https://entrackr.com/snippets/sparrow-capital-announces-rs-475-cr-third-fund-12125524",
+        "summary": "Sparrow Capital has announced the final close of its third fund at Rs 475 crore, aiming to back 25-30 startups over the next three years. The firm has already made five investments, with initial cheque sizes ranging from $1 million to $2 million. Around 60% of the fund's corpus comes from global endowments, foundations, and other institutional investors, with the rest from Indian family offices, HNIs, and startup founders.",
+        "date_published": "2026-07-02",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Panasonic redefines enterprise-startup collaboration, backing India-built AI startups to power the next...",
+        "url": "https://cellit.in/panasonic-redefines-enterprise-startup-collaboration-backing-india-built-ai-startups-to-power-the-next-chapter-of-connected-living/",
+        "summary": "Panasonic is redefining enterprise-startup collaboration by backing AI startups built in India. This initiative aims to power the next generation of innovations, leveraging the country's growing AI ecosystem. Panasonic's move is expected to foster growth and development of Indian AI startups.",
+        "date_published": "2026-07-02",
+        "source_name": "CellIt Magazine",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Indian startups raise $7.4 Bn in H1 2026 as CRED-Meta deal lifts funding",
         "url": "https://entrackr.com/report/indian-startups-raise-74-bn-in-h1-2026-as-cred-meta-deal-lifts-funding-12123065",
@@ -12250,6 +12310,7 @@
     ]
   },
   "today_updates": [
+    "Major AI Developments",
     "AI Start-Up News"
   ]
 }

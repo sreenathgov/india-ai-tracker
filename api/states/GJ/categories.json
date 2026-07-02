@@ -145,6 +145,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "Warning before rain: AMC’s new plan to tackle urban flooding",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/warning-before-rain-amcs-new-plan-to-tackle-urban-flooding/articleshow/132123190.cms",
+        "summary": "The Ahmedabad Municipal Corporation (AMC) has launched a Rs 5.7-crore AI-driven platform to forecast waterlogging at 109 hotspots in the city. The platform aims to provide early warnings before rain to help tackle urban flooding. It will use artificial intelligence to predict waterlogging and enable proactive measures to mitigate its impact.",
+        "date_published": "2026-07-02",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "IIT-Gn ties up with French mobility giant for use of AI in transportation",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/iit-gn-ties-up-with-french-mobility-giant-for-use-of-ai-in-transportation/articleshow/132051463.cms",
@@ -1413,5 +1433,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
