@@ -408,6 +408,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 13,
+        "title": "AI to fake clean-ups, GPS to skip work: Two Gurgaon civic officials fired from jobs",
+        "url": "https://indianexpress.com/article/cities/delhi/gurgaon-mcg-officials-terminated-ai-fake-photos-garbage-cleanup-gps-spoofing-attendance-10767943/",
+        "summary": "Two civic officials in Gurgaon have been fired from their jobs for allegedly using AI to fake cleanliness drives and GPS to mark their attendance while skipping work. The officials were found to be misusing technology to deceive their superiors and evade their responsibilities. This incident highlights the potential misuse of technology in the workplace.",
+        "date_published": "2026-07-02",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "IIT-Delhi showcases tactical aerostat for aerial surveillance",
         "url": "https://www.tribuneindia.com/news/delhi/iit-delhi-showcases-tactical-aerostat-for-aerial-surveillance",
@@ -3598,7 +3618,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

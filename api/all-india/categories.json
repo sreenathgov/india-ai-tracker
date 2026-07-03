@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 1,
+        "title": "IAMAI launches AI Council of India to drive synergy across India&#039;s AI ecosystem",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/iamai-launches-ai-council-of-india-to-drive-synergy-across-indias-ai-ecosystem/132153543",
+        "summary": "The AI Council of India (AICI) has been launched to unite India's AI sector and drive synergy among government, industry, academia, and startups. The council aims to advance AI research, strengthen infrastructure, and promote applied AI solutions. AICI plans to host a national AI summit and establish university clubs to nurture future talent and accelerate India's AI leadership.",
+        "date_published": "2026-07-03",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "MeitY, UP to set up three AI Centres of Excellence under IndiaAI Mission",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/meity-up-to-set-up-three-ai-centres-of-excellence-under-indiaai-mission/articleshow/132024413.cms",
@@ -1174,12 +1194,92 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "India’s AI ambitions get boost from nearly $80 billion Big Tech investments",
+        "url": "https://cellit.in/indias-ai-ambitions-get-boost-from-nearly-80-billion-big-tech-investments/",
+        "summary": "India's AI ambitions have received a significant boost from nearly $80 billion in investments from Big Tech companies. This substantial investment is expected to drive growth and development in India's AI sector. The influx of funds will likely propel India's position as a major player in the global AI landscape.",
+        "date_published": "2026-07-03",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Future-ready teaching: How AI is transforming education in India",
         "url": "https://yourstory.com/2026/06/future-ready-teaching-ai-transforming-education-india",
         "summary": "Educators, non-profit leaders, and technologists gathered at a Microsoft Elevate webinar to discuss AI's potential in transforming education in India. The discussion focused on how AI can make learning more personal, inclusive, and human. AI is expected to play a key role in shaping the future of education in India.",
         "date_published": "2026-07-02",
         "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Black-box Medicine and Indian Patent Law: Why India’s Disclosure Framework Struggles with Black-box AI",
+        "url": "https://spicyip.com/2026/07/black-box-medicine-and-indian-patent-law-why-indias-disclosure-framework-struggles-with-black-box-ai.html",
+        "summary": "India's patent law faces challenges in protecting AI inventions, particularly \"black-box\" medical AI, whose inner workings are not fully explainable. The country's disclosure framework struggles to accommodate the complexities of modern machine learning. Existing patent laws may need to be re-examined to ensure compatibility with the rise of black-box AI in healthcare.",
+        "date_published": "2026-07-02",
+        "source_name": "SpicyIP",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Flipkart appoints Vinay Vaidya as SVP for supply chain technology",
+        "url": "https://entrackr.com/snippets/flipkart-appoints-vinay-vaidya-as-svp-for-supply-chain-technology-12127130",
+        "summary": "Flipkart has appointed Vinay Vaidya as Senior Vice President of Technology for Supply Chain, where he will lead technology development and oversee logistics and AI-powered initiatives. Vaidya joins from Tata Digital, where he was Chief Technology Officer, and previously spent 18 years at Amazon. He will be responsible for technology and platform development across various areas, including fulfillment services and marketplace operations.",
+        "date_published": "2026-07-02",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "India should not chase costly LLM race; instead, it should focus on practical AI models: Mohandas Pai",
+        "url": "https://www.thehindu.com/news/national/karnataka/india-should-not-chase-costly-llm-race-instead-it-should-focus-on-practical-ai-models-mohandas-pai/article71175175.ece",
+        "summary": "Mohandas Pai advised India to focus on practical AI models rather than competing in the costly Large Language Model (LLM) race. He made this statement while attending the launch of ToneTag's voice-first merchant banking platform eKosha. Pai emphasized the importance of prioritizing practical applications of AI over expensive LLM development.",
+        "date_published": "2026-07-02",
+        "source_name": "The Hindu - Bangalore",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -10101,6 +10201,26 @@
     "AI Start-Up News": [
       {
         "id": 3,
+        "title": "IHH Healthcare, Fortis announce winners of inaugural healthcare startup accelerator",
+        "url": "https://entrackr.com/snippets/ihh-healthcare-fortis-announce-winners-of-inaugural-healthcare-startup-accelerator-12129800",
+        "summary": "IHH Healthcare and its subsidiary Fortis Healthcare have announced the winners of their inaugural healthcare startup accelerator, IHH Catalyst | Fortis India Edition. The accelerator program supported 10 healthcare startups with a 12-week program including mentorship, clinical validation, and real-world testing within the Fortis ecosystem. The winners were selected from among these 10 startups after presenting their solutions to a jury of healthcare leaders and industry experts.",
+        "date_published": "2026-07-03",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "Sparrow Capital announces Rs 475 Cr third fund",
         "url": "https://entrackr.com/snippets/sparrow-capital-announces-rs-475-cr-third-fund-12125524",
         "summary": "Sparrow Capital has announced the final close of its third fund at Rs 475 crore, aiming to back 25-30 startups over the next three years. The firm has already made five investments, with initial cheque sizes ranging from $1 million to $2 million. Around 60% of the fund's corpus comes from global endowments, foundations, and other institutional investors, with the rest from Indian family offices, HNIs, and startup founders.",
@@ -10126,6 +10246,26 @@
         "summary": "Panasonic is redefining enterprise-startup collaboration by backing AI startups built in India. This initiative aims to power the next generation of innovations, leveraging the country's growing AI ecosystem. Panasonic's move is expected to foster growth and development of Indian AI startups.",
         "date_published": "2026-07-02",
         "source_name": "CellIt Magazine",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "BCT Ventures launches AI native consumer brands platform, raises Rs 42 Cr from 3one4 Capital",
+        "url": "https://entrackr.com/snippets/bct-ventures-launches-ai-native-consumer-brands-platform-raises-rs-42-cr-from-3one4-capital-12126973",
+        "summary": "BCT Ventures, an AI native consumer brands platform, has launched and raised Rs 42 crore in seed funding led by 3one4 Capital. The company will initially focus on the nutrition and wellness segment, utilizing its proprietary AI engines for insights, product development, and marketing. BCT Ventures plans to build consumer brands around protocol-led products and expand to other categories over time.",
+        "date_published": "2026-07-02",
+        "source_name": "Entrackr - AI & Startups",
         "category": "AI Start-Up News",
         "state_codes": [
           "IN"
@@ -12310,7 +12450,8 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments",
-    "AI Start-Up News"
+    "Policies and Initiatives"
   ]
 }

@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 14,
+        "title": "Bengal BJP Govt’s Maiden Budget Announces GCC Policy, Rs 5,000-Crore Investment Framework and AI Data Centre Incentives",
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/bengal-bjp-govts-maiden-budget-announces-gcc-policy-rs-5000-crore-investment-framework-and-ai-data-centre-incentives/articleshow/131913662.cms",
+        "summary": "The Bengal BJP government's first budget introduces a GCC policy, a Rs 5,000-crore investment framework, and incentives for AI data centres. The budget aims to attract significant investments and promote the development of AI and data centre infrastructure in the region. The new policy and investment framework are expected to boost the state's economy and technological growth.",
+        "date_published": "2026-07-03",
+        "source_name": "Times of India - Kolkata",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Believe it or not: This AI minister is expecting... 83 AI kids",
         "url": "https://timesofindia.indiatimes.com/city/kolkata/believe-it-or-not-this-ai-minister-is-expecting-83-ai-kids/articleshow/127900830.cms",
@@ -565,5 +585,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "Telangana working with consultants on AI integration in governance: official",
+        "url": "https://www.thehindu.com/news/cities/Hyderabad/telangana-working-with-consultants-on-ai-integration-in-governance-official/article71174830.ece",
+        "summary": "The Indian state of Telangana is collaborating with consultants to integrate Artificial Intelligence (AI) into its governance. This initiative aims to leverage AI technology to improve various aspects of governance in the state. The project is currently in development with the help of external consultants.",
+        "date_published": "2026-07-03",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "IIIT Hyderabad and BuildIQ Technologies Join Hands to Advance Smart Infrastructure and Sustainable Innovation",
         "url": "https://www.iiit.ac.in/iiit-hyderabad-and-buildiq-technologies-join-hands-to-advance-smart-infrastructure-and-sustainable-innovation/",
@@ -1674,6 +1694,26 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 10,
+        "title": "CDFD-incubated Acubiosys harnesses AI for psoriasis, diabetic inflammation drugs",
+        "url": "https://telanganatoday.com/cdfd-incubated-acubiosys-harnesses-ai-for-psoriasis-diabetic-inflammation-drugs",
+        "summary": "Hyderabad-based start-up Acubiosys has launched AI-driven medicines for psoriasis and diabetic inflammation. The medicines utilize nanotechnology and are plant-based, developed with incubation support from the Centre for DNA Fingerprinting and Diagnostics (CDFD). Acubiosys' innovative approach combines AI with nanotechnology to create new treatments for these conditions.",
+        "date_published": "2026-07-02",
+        "source_name": "Telangana Today - Tech",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 5,
         "title": "Fintech startup Kalpi raises seed round from Rainmatter Capital",
