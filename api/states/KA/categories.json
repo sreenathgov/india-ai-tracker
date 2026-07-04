@@ -327,6 +327,26 @@
       },
       {
         "id": 2,
+        "title": "Inside a Bengaluru classroom, Samsung Solve for Tomorrow 2026 finds India's next generation reimagining AI",
+        "url": "https://www.livemint.com/ai/inside-a-bengaluru-classroom-samsung-solve-for-tomorrow-2026-finds-indias-next-generation-reimagining-ai-11783069110610.html",
+        "summary": "Young innovators at Christ University in Bengaluru discussed potential AI solutions to various issues, including potholes and court backlogs, during The Alt View session. The event was hosted by Mint in collaboration with Samsung Solve for Tomorrow 2026. This initiative aims to foster innovation and reimagine AI applications among India's next generation.",
+        "date_published": "2026-07-03",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "He bought a ₹3.5 lakh bank server. Now he makes ₹27 lakh a month with AI",
         "url": "https://yourstory.com/2026/07/bangalore-coder-cheap-server-ai-income",
         "summary": "Raj, a 27-year-old coder, purchased a ₹3.5 lakh bank server and now earns ₹27 lakh per month using AI. He works from a one-bedroom flat in Bangalore, where he writes code and utilizes the server for his AI-related endeavors. His unusual investment has yielded a significant monthly income, over 7 times the cost of the server.",
@@ -4067,7 +4087,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
