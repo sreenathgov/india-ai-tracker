@@ -1214,6 +1214,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Youth will power AI with Made-in-India chips: Modi",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/youth-will-power-ai-with-made-in-india-chips-modi/articleshow/132187035.cms",
+        "summary": "Indian Prime Minister Modi stated that the country's youth will drive the development of artificial intelligence using Made-in-India chips. This initiative aims to promote domestic chip production and leverage it to power AI advancements. Modi's statement highlights India's push to become a key player in the global AI and chip manufacturing landscape.",
+        "date_published": "2026-07-05",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Mint Explainer | Why open-weight AI is gaining ground over proprietary models",
         "url": "https://www.livemint.com/ai/ai-models-open-weight-ai-proprietary-models-ai-startups-india-11783071580692.html",
@@ -12570,7 +12590,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives",
     "Major AI Developments"
   ]
 }

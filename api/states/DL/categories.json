@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 4,
+        "title": "Govt to unveil draft AI policy in Delhi",
+        "url": "https://timesofindia.indiatimes.com/city/ranchi/govt-to-unveil-draft-ai-policy-in-delhi/articleshow/132184082.cms",
+        "summary": "The government is set to unveil a draft AI policy in Delhi, marking a significant step towards regulating and promoting artificial intelligence in the country. The policy aims to provide a framework for the development and use of AI technologies. Further details of the policy are expected to be revealed during the unveiling event.",
+        "date_published": "2026-07-05",
+        "source_name": "Times of India - Ranchi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "BoldCap-backed Pramaana Labs raises $27 Mn led by Khosla Ventures",
         "url": "https://entrackr.com/news/boldcap-backed-pramaana-labs-raises-27-mn-led-by-khosla-ventures-12048869",
@@ -3618,5 +3638,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

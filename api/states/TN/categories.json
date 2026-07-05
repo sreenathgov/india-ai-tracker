@@ -150,6 +150,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "IIT Madras Pravartak aims to train 10 lakh students in AI in the next three years",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/iit-madras-pravartak-aims-to-train-10-lakh-students-in-ai-in-the-next-three-years/articleshow/132186282.cms",
+        "summary": "IIT Madras Pravartak has set a goal to train 10 lakh students in artificial intelligence (AI) over the next three years. This initiative aims to enhance AI skills among a large number of students in a short span of time. The program is part of IIT Madras' efforts to promote AI education and development.",
+        "date_published": "2026-07-05",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Huge potential to use AI effectively in public healthcare; need to create digital database of patients: Soumya Swaminathan",
         "url": "https://timesofindia.indiatimes.com/city/chennai/huge-potential-to-use-ai-effectively-in-public-healthcare-need-to-create-digital-database-of-patients-soumya-swaminathan/articleshow/132057373.cms",
@@ -1027,5 +1047,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
