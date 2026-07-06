@@ -1695,6 +1695,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 7,
+        "title": "ekincare acquires claims adjudication SaaS platform Superclaims",
+        "url": "https://entrackr.com/snippets/ekincare-acquires-claims-adjudication-saas-platform-superclaims-12138315",
+        "summary": "Digital health platform ekincare has acquired Superclaims, an AI-powered claims adjudication SaaS platform. The Superclaims leadership team will continue in their roles and report to ekincare's senior leadership, with the brand operating independently. The acquisition aims to unlock new growth opportunities by expanding ekincare's platform and distribution network.",
+        "date_published": "2026-07-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "CDFD-incubated Acubiosys harnesses AI for psoriasis, diabetic inflammation drugs",
         "url": "https://telanganatoday.com/cdfd-incubated-acubiosys-harnesses-ai-for-psoriasis-diabetic-inflammation-drugs",
@@ -1898,5 +1918,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

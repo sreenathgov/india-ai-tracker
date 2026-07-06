@@ -287,6 +287,26 @@
     "Major AI Developments": [
       {
         "id": 8,
+        "title": "IIIT-B convocation: 316 graduate as institute highlights AI, global digital impact",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/iiit-b-convocation-316-graduate-as-institute-highlights-ai-global-digital-impact/articleshow/132200281.cms",
+        "summary": "IIIT-B held its convocation, where 316 students graduated, with a focus on the institute's advancements in AI and its global digital impact. The event highlighted the significance of AI in today's world and its potential to shape the future. The graduating class of 316 students marks a notable milestone for the institute.",
+        "date_published": "2026-07-06",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
         "title": "'I wish this was AI-generated': Angry parents after Bengaluru tech campus creche horror",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/share-live-feed-need-24/7-vigil-angry-parents-after-bengaluru-tech-campus-creche-horror/articleshow/132150485.cms",
         "summary": "Shocking allegations of toddler abuse at a Bengaluru daycare on Capgemini's campus have sparked outrage among working parents, who are now demanding livestreamed activities and constant surveillance. The incident highlights a lack of oversight, leaving children at risk and eroding parental trust in childcare support systems. Companies are being urged to implement stringent safety measures and robust governance for workplace childcare facilities.",
@@ -4087,5 +4107,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

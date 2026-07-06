@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 2,
+        "title": "UP Cabinet clears new Startup Policy with ₹1,000-crore fund",
+        "url": "https://government.economictimes.indiatimes.com/news/policy/uttar-pradesh-launches-1000-crore-startup-fund-to-boost-innovation-and-growth/132212706",
+        "summary": "The UP Cabinet has approved a new Startup Policy, which includes a ₹1,000-crore fund. The state government also cleared the Uttar Pradesh Data Centre Policy 2026, replacing the 2021 policy. The new data centre policy focuses on AI-ready digital infrastructure and large-scale investments.",
+        "date_published": "2026-07-06",
+        "source_name": "ET Government - Policy",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Delhi govt signs pact with IIT Kanpur for AI-operated air pollution monitoring system",
         "url": "https://www.tribuneindia.com/news/delhi/delhi-govt-signs-pact-with-iit-kanpur-for-ai-operated-air-pollution-monitoring-system",
@@ -1001,5 +1021,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }
