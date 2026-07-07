@@ -107,6 +107,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "AI , Gaya backup centre planned for Dial-112",
+        "url": "https://timesofindia.indiatimes.com/city/patna/ai-gaya-backup-centre-planned-for-dial-112/articleshow/132223388.cms",
+        "summary": "A backup centre for the Dial-112 emergency service is being planned in Gaya, with AI integration. The centre aims to provide efficient emergency response services. The implementation of AI in the backup centre is expected to enhance the effectiveness of the Dial-112 service.",
+        "date_published": "2026-07-07",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Engineering student, brother kill man after AI research in Siwan",
         "url": "https://timesofindia.indiatimes.com/city/patna/engineering-student-brother-kill-man-after-ai-research-in-siwan/articleshow/131881856.cms",
@@ -446,5 +466,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

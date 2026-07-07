@@ -1215,6 +1215,66 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "AI now core to biz, but boardrooms keep an eye on fat bills",
+        "url": "https://www.livemint.com/ai/ai-investments-india-inc-roi-boards-enterprise-adoption-11783332194699.html",
+        "summary": "Indian firms are increasing AI investments across various sectors, with boards seeking accountability on returns and risks. Experts predict that AI will bring incremental efficiencies rather than instant breakthroughs. Global tech giants are seeing surging demand for AI solutions in India, a key market for enterprise adoption.",
+        "date_published": "2026-07-07",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "How AI can power India's digitally-empowered farming ecosystem",
+        "url": "https://yourstory.com/2026/07/ai-support-indias-vision-digitally-empowered-farming-ecosystem",
+        "summary": "India's digital agriculture ecosystem is growing, with a key opportunity to utilize AI-powered intelligence. This can improve farm traceability, optimize procurement, and create more resilient agribusiness supply chains. AI can play a crucial role in empowering India's farming ecosystem through these advancements.",
+        "date_published": "2026-07-07",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Koo co-founder Mayank Bidawatka shuts down second startup PicSee, to return capital to investors",
+        "url": "https://entrackr.com/news/koo-co-founder-mayank-bidawatka-shuts-down-second-startup-picsee-to-return-capital-to-investors-12141125",
+        "summary": "Koo co-founder Mayank Bidawatka is shutting down his startup PicSee, an AI-powered photo-sharing app, less than a year after its launch. The decision was made after the company failed to find a strong opportunity to continue building, and instead of pursuing another pivot, the remaining capital will be returned to investors. Bidawatka chose to wind up operations to avoid spending funds on uncertain experiments.",
+        "date_published": "2026-07-07",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Decades into their careers, India's executives are back in class for AI",
         "url": "https://www.livemint.com/ai/decades-into-their-careers-india-executives-are-back-in-class-for-ai-iim-isb-11783061473582.html",
         "summary": "Senior executives in India are returning to school to learn about AI, driven by curiosity and a sense of urgency. They are seeking to become AI-fluent, a skill they no longer want to delegate to others. This trend reflects the growing importance of AI knowledge in the business world.",
@@ -10440,6 +10500,46 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "How AI is reshaping India’s logistics startup ecosystem",
+        "url": "https://yourstory.com/2026/07/how-ai-is-reshaping-indias-logistics-startup-ecosystem",
+        "summary": "AI is transforming India's logistics startup ecosystem by automating decision-making processes. This involves replacing human judgment with automated systems that can improve supply chain operations on their own. AI in logistics extends beyond physical robots to optimize overall supply chain efficiency.",
+        "date_published": "2026-07-07",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Info Edge takes full control of Coding Ninjas after acquiring remaining 45.36% stake",
+        "url": "https://entrackr.com/news/info-edge-takes-full-control-of-coding-ninjas-after-acquiring-remaining-45-stake-for-rs-399-cr-12140095",
+        "summary": "Info Edge has acquired the remaining 45.36% stake in Coding Ninjas for approximately Rs 39.91 crore, making it a wholly owned subsidiary. The company will purchase 74,741 equity shares at Rs 5,340.23 per share, with the transaction expected to close within 45 days. The acquisition was approved by the board on July 6, with 25% of the consideration to be paid at the closing of the share purchase agreement.",
+        "date_published": "2026-07-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "IHH Healthcare, Fortis announce winners of inaugural healthcare startup accelerator",
         "url": "https://entrackr.com/snippets/ihh-healthcare-fortis-announce-winners-of-inaugural-healthcare-startup-accelerator-12129800",
@@ -12690,6 +12790,7 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

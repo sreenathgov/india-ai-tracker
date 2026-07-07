@@ -306,6 +306,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 6,
+        "title": "‘Reading has its own therapeutic value’",
+        "url": "https://starofmysore.com/reading-has-its-own-therapeutic-value/",
+        "summary": "Dr. C.N. Manjunath, Bengaluru South MP, emphasized the importance of reading, stating it has therapeutic value and remains indispensable despite technological advances. He made these remarks while releasing two books, 'Dashakada Sambhramakke Barahada Bagina' and 'Bapuji Avara Nenapu', at the Mysuru Literature Festival. Mysuru has gained global recognition, with Dr. Manjunath describing books as guiding lights of knowledge and symbols of civilization.",
+        "date_published": "2026-07-06",
+        "source_name": "Star of Mysore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "'I wish this was AI-generated': Angry parents after Bengaluru tech campus creche horror",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/share-live-feed-need-24/7-vigil-angry-parents-after-bengaluru-tech-campus-creche-horror/articleshow/132150485.cms",
@@ -4107,7 +4127,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

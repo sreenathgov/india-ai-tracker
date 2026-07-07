@@ -407,6 +407,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "Delhi HC shields Ravi Kishan’s personality rights, orders removal of AI-generted content",
+        "url": "https://timesofindia.indiatimes.com/city/varanasi/delhi-hc-shields-ravi-kishans-personality-rights-orders-removal-of-ai-generted-content/articleshow/132225034.cms",
+        "summary": "The Delhi High Court has protected actor Ravi Kishan's personality rights by ordering the removal of AI-generated content. This decision aims to prevent unauthorized use of Kishan's likeness and image. The court's ruling sets a precedent for personality rights in the context of AI-generated content.",
+        "date_published": "2026-07-07",
+        "source_name": "Times of India - Varanasi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Three face FIR for morphing two sisters’ photos with AI, sharing them online",
         "url": "https://timesofindia.indiatimes.com/city/noida/three-face-fir-for-morphing-two-sisters-photos-with-ai-sharing-them-online/articleshow/132123169.cms",
@@ -3638,5 +3658,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
