@@ -66,6 +66,13 @@ function buildSite() {
         console.log('✓ Copied public/robots.txt → dist/robots.txt');
     }
 
+    // 3c. Copy public/.well-known/ → dist/.well-known/ (security.txt and other RFC-standard files).
+    const wellKnownSrc = path.join(PROJECT_ROOT, 'public', '.well-known');
+    if (fs.existsSync(wellKnownSrc)) {
+        copyRecursiveSync(wellKnownSrc, path.join(DIST_DIR, '.well-known'), new Set(), '.well-known');
+        console.log('✓ Copied public/.well-known → dist/.well-known');
+    }
+
     // 4. Copy Directories (recursive)
     // Files to exclude from copying into dist/ (serverless functions must stay at project root)
     const EXCLUDE_FROM_DIST = new Set(['api/subscribe.js']);
