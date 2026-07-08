@@ -63,11 +63,9 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
-    <!-- Preload hero background (responsive WebP, served via <picture>) -->
-    <link rel="preload" as="image" type="image/webp"
-          href="added-assets/sectorwatchNEWBG-bg-1920.webp"
-          imagesrcset="added-assets/sectorwatchNEWBG-bg-1920.webp 1920w, added-assets/sectorwatchNEWBG-bg-2880.webp 2880w"
-          imagesizes="100vw"
+    <!-- Preload hero background -->
+    <link rel="preload" as="image" type="image/png"
+          href="added-assets/kananlabs.in%20SW%20Wallpaper.png"
           fetchpriority="high">
 
     <link
@@ -124,9 +122,7 @@
             display: flex;
             flex-direction: column;
             overflow: hidden;
-            /* LQIP: blurred 24px-wide WebP shown instantly while the full hero loads */
-            background:
-                #0a2f52 url('data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAACwBACdASoYAA0APtFUo0uoJKMhsAgBABoJZgCdMoAlrxffQ96IR4Xfrc5abd5AAP71ldLAA2pP5T1OfchFPcXPNh5cI0wKkgihO21V6t3h+SYZifsN1Z1/xoV365g9aeLq9TA7I0T+s+ofSkhIwPqKC9b+7yFUZJFG/5khnPyoJleta45b0OcAtzqgFp71ZRvIF2oPZcSExgt7IKustO5k/bEhc13DQ/Mw5gdxGLb+m2IBs7JB7FyQu862Ha9lmACSAAAA') center 20% / cover no-repeat;
+            background: #0a2f52;
         }
 
         .sw-hero__picture {
@@ -142,18 +138,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center 20%;
-            display: block;
-            pointer-events: none;
-        }
-
-        .sw-hero__svg-overlay {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center 20%;
+            object-position: center center;
             display: block;
             pointer-events: none;
         }
@@ -163,11 +148,11 @@
             inset: 0;
             background: linear-gradient(
                 to bottom,
-                rgba(10, 47, 82, 0.18) 0%,
-                transparent 28%,
-                transparent 42%,
-                rgba(10, 47, 82, 0.52) 68%,
-                rgba(10, 47, 82, 0.88) 85%,
+                rgba(10, 47, 82, 0.25) 0%,
+                rgba(10, 47, 82, 0.05) 25%,
+                transparent 40%,
+                rgba(10, 47, 82, 0.55) 68%,
+                rgba(10, 47, 82, 0.90) 85%,
                 #0a2f52 100%
             );
             pointer-events: none;
@@ -275,17 +260,16 @@
         .kl-manifesto {
             position: relative;
             width: 100%;
-            min-height: 100vh;
             background: transparent;
             z-index: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: clamp(4rem, 8vh, 7rem) clamp(1.5rem, 4vw, 4rem);
+            padding: clamp(3rem, 5vh, 5rem) clamp(1.5rem, 4vw, 4rem);
             box-sizing: border-box;
         }
         .kl-manifesto__stage {
-            max-width: min(1360px, 92vw);
+            max-width: min(1440px, 95vw);
             width: 100%;
             text-align: center;
         }
@@ -293,11 +277,13 @@
             font-family: 'Cormorant Garamond', Georgia, serif;
             font-style: italic;
             font-weight: 700;
-            font-size: clamp(1.3rem, 2.2vw, 2.4rem);
-            line-height: 1.42;
+            font-size: clamp(0.9rem, 1.6vw, 1.65rem);
+            line-height: 1.55;
             letter-spacing: -0.008em;
             color: #f4ebd0;
             margin: 0;
+            max-height: 7.75em;
+            overflow: hidden;
         }
         .kl-manifesto__heading .kl-word {
             display: inline-block;
@@ -590,13 +576,8 @@
     <header class="sw-hero">
 
         <picture class="sw-hero__picture">
-            <source type="image/webp"
-                    srcset="added-assets/sectorwatchNEWBG-bg-1920.webp 1920w, added-assets/sectorwatchNEWBG-bg-2880.webp 2880w"
-                    sizes="100vw">
             <img
-                src="added-assets/sectorwatchNEWBG-bg-1920.jpg"
-                srcset="added-assets/sectorwatchNEWBG-bg-1920.jpg 1920w, added-assets/sectorwatchNEWBG-bg-2880.jpg 2880w"
-                sizes="100vw"
+                src="added-assets/kananlabs.in%20SW%20Wallpaper.png"
                 alt=""
                 class="sw-hero__svg"
                 aria-hidden="true"
@@ -604,19 +585,9 @@
                 fetchpriority="high"
                 decoding="async"
                 width="1920"
-                height="1053"
+                height="1080"
             >
         </picture>
-
-        <img
-            src="added-assets/sectorwatchNEWBG-overlay.svg"
-            alt=""
-            class="sw-hero__svg-overlay"
-            aria-hidden="true"
-            draggable="false"
-            loading="eager"
-            decoding="async"
-        >
 
         <div class="sw-hero__overlay" aria-hidden="true"></div>
 
@@ -632,77 +603,6 @@
         </div>
 
     </header>
-
-    <!-- ════════════════════════
-         B. MANIFESTO — category framing (navy, GSAP word-reveal)
-    ════════════════════════ -->
-    <section class="kl-manifesto" id="vision" aria-label="Sector Watch &mdash; category framing">
-        <div class="kl-manifesto__stage">
-            <h2 class="kl-manifesto__heading" id="klManifestoReveal">
-                <span class="kl-word">Regulation</span>
-                <span class="kl-word">has</span>
-                <span class="kl-word">become</span>
-                <span class="kl-word">a</span>
-                <span class="kl-word">structural</span>
-                <span class="kl-word">variable</span>
-                <span class="kl-word">in</span>
-                <span class="kl-word">global</span>
-                <span class="kl-word">trade</span>
-                <span class="kl-word">&mdash;</span>
-                <span class="kl-word">not</span>
-                <span class="kl-word">a</span>
-                <span class="kl-word">background</span>
-                <span class="kl-word">condition,</span>
-                <span class="kl-word">but</span>
-                <span class="kl-word">a</span>
-                <span class="kl-word">moving</span>
-                <span class="kl-word">surface</span>
-                <span class="kl-word">that</span>
-                <span class="kl-word">reshapes</span>
-                <span class="kl-word">what</span>
-                <span class="kl-word">firms</span>
-                <span class="kl-word">can</span>
-                <span class="kl-word">sell,</span>
-                <span class="kl-word">where,</span>
-                <span class="kl-word">and</span>
-                <span class="kl-word">on</span>
-                <span class="kl-word">what</span>
-                <span class="kl-word">terms.</span>
-                <span class="kl-word">Most</span>
-                <span class="kl-word">firms</span>
-                <span class="kl-word">still</span>
-                <span class="kl-word">encounter</span>
-                <span class="kl-word">it</span>
-                <span class="kl-word">through</span>
-                <span class="kl-word">episodic</span>
-                <span class="kl-word">advisory</span>
-                <span class="kl-word">work:</span>
-                <span class="kl-word">late,</span>
-                <span class="kl-word">generalised,</span>
-                <span class="kl-word">disconnected</span>
-                <span class="kl-word">from</span>
-                <span class="kl-word">the</span>
-                <span class="kl-word">specific</span>
-                <span class="kl-word">decision</span>
-                <span class="kl-word">in</span>
-                <span class="kl-word">front</span>
-                <span class="kl-word">of</span>
-                <span class="kl-word">them.</span>
-                <br>
-                <span class="kl-word kl-word--accent">Sector</span>
-                <span class="kl-word kl-word--accent">Watch</span>
-                <span class="kl-word kl-word--accent">moves</span>
-                <span class="kl-word kl-word--accent">firms</span>
-                <span class="kl-word kl-word--accent">from</span>
-                <span class="kl-word kl-word--accent">episodic</span>
-                <span class="kl-word kl-word--accent">intelligence</span>
-                <span class="kl-word kl-word--accent">toward</span>
-                <span class="kl-word kl-word--accent">persistent</span>
-                <span class="kl-word kl-word--accent">regulatory</span>
-                <span class="kl-word kl-word--accent">advantage.</span>
-            </h2>
-        </div>
-    </section>
 
     <!-- ════════════════════════
          D. WHAT IT DOES — restored, navy
@@ -951,6 +851,76 @@
                 <p class="kl-flow__close-line">The architecture is bounded today. It is built to extend.</p>
             </div>
 
+        </div>
+    </section>
+
+    <!-- ════════════════════════
+         B. MANIFESTO — category framing (navy, GSAP word-reveal)
+    ════════════════════════ -->
+    <section class="kl-manifesto" id="vision" aria-label="Sector Watch &mdash; category framing">
+        <div class="kl-manifesto__stage">
+            <h2 class="kl-manifesto__heading" id="klManifestoReveal">
+                <span class="kl-word">Regulation</span>
+                <span class="kl-word">has</span>
+                <span class="kl-word">become</span>
+                <span class="kl-word">a</span>
+                <span class="kl-word">structural</span>
+                <span class="kl-word">variable</span>
+                <span class="kl-word">in</span>
+                <span class="kl-word">global</span>
+                <span class="kl-word">trade</span>
+                <span class="kl-word">&mdash;</span>
+                <span class="kl-word">not</span>
+                <span class="kl-word">a</span>
+                <span class="kl-word">background</span>
+                <span class="kl-word">condition,</span>
+                <span class="kl-word">but</span>
+                <span class="kl-word">a</span>
+                <span class="kl-word">moving</span>
+                <span class="kl-word">surface</span>
+                <span class="kl-word">that</span>
+                <span class="kl-word">reshapes</span>
+                <span class="kl-word">what</span>
+                <span class="kl-word">firms</span>
+                <span class="kl-word">can</span>
+                <span class="kl-word">sell,</span>
+                <span class="kl-word">where,</span>
+                <span class="kl-word">and</span>
+                <span class="kl-word">on</span>
+                <span class="kl-word">what</span>
+                <span class="kl-word">terms.</span>
+                <span class="kl-word">Most</span>
+                <span class="kl-word">firms</span>
+                <span class="kl-word">still</span>
+                <span class="kl-word">encounter</span>
+                <span class="kl-word">it</span>
+                <span class="kl-word">through</span>
+                <span class="kl-word">episodic</span>
+                <span class="kl-word">advisory</span>
+                <span class="kl-word">work:</span>
+                <span class="kl-word">late,</span>
+                <span class="kl-word">generalised,</span>
+                <span class="kl-word">disconnected</span>
+                <span class="kl-word">from</span>
+                <span class="kl-word">the</span>
+                <span class="kl-word">specific</span>
+                <span class="kl-word">decision</span>
+                <span class="kl-word">in</span>
+                <span class="kl-word">front</span>
+                <span class="kl-word">of</span>
+                <span class="kl-word">them.</span>
+                <span class="kl-word kl-word--accent">Sector</span>
+                <span class="kl-word kl-word--accent">Watch</span>
+                <span class="kl-word kl-word--accent">moves</span>
+                <span class="kl-word kl-word--accent">firms</span>
+                <span class="kl-word kl-word--accent">from</span>
+                <span class="kl-word kl-word--accent">episodic</span>
+                <span class="kl-word kl-word--accent">intelligence</span>
+                <span class="kl-word kl-word--accent">toward</span>
+                <span class="kl-word kl-word--accent">persistent</span>
+                <span class="kl-word kl-word--accent">regulatory</span>
+                <span class="kl-word kl-word--accent">advantage.</span>
+            </h2>
         </div>
     </section>
 
