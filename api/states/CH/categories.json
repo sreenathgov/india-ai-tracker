@@ -257,6 +257,29 @@
     "AI Start-Up News": [
       {
         "id": 4,
+        "title": "Doodhvale Farms raises $1 Mn from Atomic Capital",
+        "url": "https://entrackr.com/snippets/doodhvale-farms-raises-1-mn-from-atomic-capital-12144492",
+        "summary": "Doodhvale Farms, a direct-to-consumer dairy brand, has raised $1 million in a follow-on funding round from Atomic Capital Fund I. This investment follows a $3 million Series A funding round in November 2024, co-led by Atomic Capital and Singularity Early Opportunities Fund. The new capital will be used for market expansion and increasing distribution in existing markets.",
+        "date_published": "2026-07-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "PB",
+          "CH",
+          "DL",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
         "title": "Rajpura lineman’s daughter uses AI to secure 51st rank in UPSC exam",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/rajpura-linemans-daughter-uses-ai-to-secure-51st-rank-in-upsc-exam/articleshow/129175421.cms",
         "summary": "A lineman's daughter from Rajpura used AI to aid her studies and achieved the 51st rank in the UPSC exam. This notable achievement highlights the potential of AI in enhancing learning outcomes. The daughter's success is an inspiring example of how technology can help bridge the gap and facilitate academic excellence.",
@@ -278,5 +301,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

@@ -150,6 +150,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "India Must  Enact AI Regulation Act to Ensure Fairness and Accountability",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/india-must-enact-ai-regulation-act-to-ensure-fairness-and-accountability/articleshow/132245360.cms",
+        "summary": "India is being urged to enact an AI Regulation Act to ensure fairness and accountability in the use of artificial intelligence. This move is seen as necessary to address concerns around AI's potential impact on society. The proposed act aims to establish guidelines and standards for the development and deployment of AI systems in India.",
+        "date_published": "2026-07-08",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "IIT Madras Pravartak aims to train 10 lakh students in AI in the next three years",
         "url": "https://timesofindia.indiatimes.com/city/chennai/iit-madras-pravartak-aims-to-train-10-lakh-students-in-ai-in-the-next-three-years/articleshow/132186282.cms",
@@ -1047,5 +1067,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

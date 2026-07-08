@@ -183,6 +183,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "Police to deploy bandobast for palkhi procession, use AI tools, GPS &amp; drones to monitor crowds",
+        "url": "https://timesofindia.indiatimes.com/city/pune/police-to-deploy-bandobast-for-palkhi-procession-use-ai-tools-gps-drones-to-monitor-crowds/articleshow/132248636.cms",
+        "summary": "Police will deploy bandobast for an upcoming palkhi procession, utilizing AI tools, GPS, and drones to monitor crowds. The use of technology aims to enhance security and crowd management during the event. Additionally, a bomb squad will be on route to provide extra security measures.",
+        "date_published": "2026-07-08",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "AI reconstructs face of sexual predator",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/ai-reconstructs-face-of-sexual-predator/articleshow/132248212.cms",
+        "summary": "AI technology has been used to reconstruct the face of a sexual predator. The reconstruction was achieved through advanced algorithms and data analysis, potentially aiding in the identification and capture of the individual. This innovative application of AI may assist law enforcement in solving crimes and bringing perpetrators to justice.",
+        "date_published": "2026-07-08",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Agentic AI forum",
         "url": "https://cio.economictimes.indiatimes.com/agentic-ai-forum-mumbai?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
@@ -2067,5 +2107,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

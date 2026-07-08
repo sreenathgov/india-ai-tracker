@@ -3209,7 +3209,7 @@
       },
       {
         "id": 45,
-        "title": "AI and unstructured data: A roadmap for India's digital transformation with elastic CEO",
+        "title": "AI and unstructured  A roadmap for India's digital transformation with elastic CEO",
         "url": "https://cio.economictimes.indiatimes.com/tag/delhi",
         "summary": "Elastic CEO discusses India's digital transformation roadmap, focusing on AI and unstructured data. The conversation highlights the importance of leveraging AI to extract insights from unstructured data, driving business growth and innovation. India's digital transformation is expected to be fueled by effective management and utilization of this data.",
         "date_published": "2026-01-20",
@@ -3249,6 +3249,29 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 4,
+        "title": "Doodhvale Farms raises $1 Mn from Atomic Capital",
+        "url": "https://entrackr.com/snippets/doodhvale-farms-raises-1-mn-from-atomic-capital-12144492",
+        "summary": "Doodhvale Farms, a direct-to-consumer dairy brand, has raised $1 million in a follow-on funding round from Atomic Capital Fund I. This investment follows a $3 million Series A funding round in November 2024, co-led by Atomic Capital and Singularity Early Opportunities Fund. The new capital will be used for market expansion and increasing distribution in existing markets.",
+        "date_published": "2026-07-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "PB",
+          "CH",
+          "DL",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 4,
         "title": "Property management platform Crib App acquires CirclePe",
@@ -3659,6 +3682,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }

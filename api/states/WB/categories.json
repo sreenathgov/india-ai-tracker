@@ -45,6 +45,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 14,
+        "title": "AI debuts in exam evaluation in Kolkata schools, boosts admin work",
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/ai-debuts-in-exam-evaluation-in-kolkata-schools-boosts-admin-work/articleshow/132248584.cms",
+        "summary": "AI technology has been introduced in Kolkata schools to evaluate exams, aiming to streamline administrative tasks. This debut is expected to boost efficiency in admin work, although specific details on the implementation are not provided. The use of AI in exam evaluation marks a significant development in the education sector in Kolkata.",
+        "date_published": "2026-07-08",
+        "source_name": "Times of India - Kolkata",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 19,
         "title": "81-year-old loses 17.8L to AI fraud",
         "url": "https://timesofindia.indiatimes.com/city/kolkata/81-year-old-loses-17-8l-to-ai-fraud/articleshow/131976200.cms",
@@ -585,5 +605,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
