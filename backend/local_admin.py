@@ -16,14 +16,32 @@ import sys
 # Add backend directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from flask import Flask, render_template, request, redirect, url_for, jsonify, flash, send_file
+from flask import Flask, render_template, request, redirect, url_for, jsonify, flash, send_file, abort
 from admin.services.data_manager import DataManager
 from admin.services.git_manager import GitManager
+from admin.request_guard import check_request
 from datetime import datetime
 
 # Initialize Flask app
 app = Flask(__name__, template_folder='admin/templates')
 app.secret_key = os.urandom(24)  # For flash messages only
+
+
+@app.before_request
+def _guard_request():
+    """Block DNS-rebinding and cross-site CSRF before any route runs.
+
+    This tool has no login and can git-push to production, so a malicious page
+    the developer visits must not be able to drive it. See admin/request_guard.py.
+    """
+    allowed, reason = check_request(
+        request.method,
+        request.host,
+        request.headers.get('Origin'),
+        request.headers.get('Sec-Fetch-Site'),
+    )
+    if not allowed:
+        abort(403, description=reason)
 
 # Configuration
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -632,15 +650,17 @@ if __name__ == '__main__':
     print("India AI Tracker - Local Admin Tool")
     print("="*60)
     print(f"\nAdmin panel at: http://localhost:5002")
-    print(f"🔓 No login required - localhost only")
+    print(f"🔒 Localhost only — Host-allowlist + cross-site request guard active")
     print(f"\nRepo root: {REPO_ROOT}")
     print(f"Articles loaded: {load_result['total_articles']}")
     print(f"Sources loaded: {load_result['sources']}")
     print("\nPress Ctrl+C to stop\n")
 
-    # Run on localhost only (not accessible from other machines)
+    # Run on localhost only (not accessible from other machines).
+    # debug=False: the Werkzeug interactive debugger is a remote-code-execution
+    # surface and must never be enabled on a tool that can git-push to production.
     app.run(
         host='127.0.0.1',
         port=5002,
-        debug=True
+        debug=False
     )

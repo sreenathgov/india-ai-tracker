@@ -28,6 +28,7 @@ from app import app, db, Update
 from ai.rule_filter import RuleBasedFilter
 from ai.layer2_processor import Layer2Processor
 from ai.layer3_processor import Layer3Processor
+from ai.cost_guard import enforce_layer2_cap
 
 
 class IntegratedPipeline:
@@ -55,6 +56,11 @@ class IntegratedPipeline:
         if layer3_top_n is None:
             layer3_top_n = int(os.getenv('LAYER3_TOP_N', '4'))
 
+        # Layer-2 cost circuit breaker: hard ceiling on articles sent to the
+        # paid Groq step per run. Generous for normal daily volume; bounds the
+        # blast radius of a runaway scrape. Set LAYER2_MAX_ARTICLES=0 to disable.
+        self.layer2_max_articles = int(os.getenv('LAYER2_MAX_ARTICLES', '500'))
+
         # Initialize layers
         self.layer1 = RuleBasedFilter()
         self.layer2 = Layer2Processor(
@@ -69,7 +75,7 @@ class IntegratedPipeline:
         self.stats = {
             'started_at': datetime.now().isoformat(),
             'layer1': {'total': 0, 'passed': 0, 'rejected': 0, 'borderline': 0},
-            'layer2': {'total': 0, 'relevant': 0, 'irrelevant': 0, 'provider_used': {}},
+            'layer2': {'total': 0, 'relevant': 0, 'irrelevant': 0, 'provider_used': {}, 'cost_capped_dropped': 0},
             'layer3': {'total_scored': 0, 'premium_selected': 0, 'premium_processed': 0},
             'database': {'updated': 0, 'errors': 0},
             'finished_at': None,
@@ -228,6 +234,19 @@ class IntegratedPipeline:
         # Add Layer 1 results for context
         for i, article in enumerate(layer2_articles):
             article['layer1_results'] = passed[i]['filter_result']
+
+        # COST CIRCUIT BREAKER: bound the paid Groq step. Articles are already
+        # priority-ordered, so we keep the most valuable N and drop the rest
+        # with a loud warning (never silently truncate).
+        layer2_articles, dropped = enforce_layer2_cap(
+            layer2_articles, self.layer2_max_articles
+        )
+        if dropped:
+            self.stats['layer2']['cost_capped_dropped'] = dropped
+            print(f"🛑 COST CAP: {dropped} article(s) dropped before Layer 2 "
+                  f"(LAYER2_MAX_ARTICLES={self.layer2_max_articles}). "
+                  f"Processing top {len(layer2_articles)} by priority. "
+                  f"A large drop may indicate a runaway scrape — investigate.")
 
         layer2_results = self.layer2.process_articles(
             layer2_articles,

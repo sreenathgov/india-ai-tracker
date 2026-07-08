@@ -15,8 +15,7 @@ const FILES_TO_COPY = [
     'publications.html',
     'privacy-policy.html',
     'disclaimers.html',
-    '404.html',
-    'tracker.db'
+    '404.html'
 ];
 
 function buildSite() {
@@ -65,6 +64,13 @@ function buildSite() {
     if (fs.existsSync(robotsSrc)) {
         fs.copyFileSync(robotsSrc, path.join(DIST_DIR, 'robots.txt'));
         console.log('✓ Copied public/robots.txt → dist/robots.txt');
+    }
+
+    // 3c. Copy public/.well-known/ → dist/.well-known/ (security.txt and other RFC-standard files).
+    const wellKnownSrc = path.join(PROJECT_ROOT, 'public', '.well-known');
+    if (fs.existsSync(wellKnownSrc)) {
+        copyRecursiveSync(wellKnownSrc, path.join(DIST_DIR, '.well-known'), new Set(), '.well-known');
+        console.log('✓ Copied public/.well-known → dist/.well-known');
     }
 
     // 4. Copy Directories (recursive)

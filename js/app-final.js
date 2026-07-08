@@ -2,57 +2,81 @@
 // For local testing: run `python3 -m http.server 8000` from project root
 const API_BASE_URL = '/api';
 
-// Complete mapping for all 28 states + 8 union territories
-const STATE_CODE_MAP = {
-    // Major States
-    'Tamil Nadu': 'TN',
-    'Maharashtra': 'MH',
-    'Karnataka': 'KA',
-    'Delhi': 'DL',
-    'NCT of Delhi': 'DL',
-    'Telangana': 'TG',
-    'Telengana': 'TG',
-    'Andhra Pradesh': 'AP',
-    'West Bengal': 'WB',
-    'Gujarat': 'GJ',
-    'Rajasthan': 'RJ',
-    'Uttar Pradesh': 'UP',
-    'Kerala': 'KL',
-    'Punjab': 'PB',
-    'Haryana': 'HR',
-    'Madhya Pradesh': 'MP',
-    'Bihar': 'BR',
-    'Odisha': 'OD',
-    'Orissa': 'OD',
-    'Assam': 'AS',
-    'Jharkhand': 'JH',
-    'Chhattisgarh': 'CG',
-    'Chattisgarh': 'CG',
-    'Uttarakhand': 'UK',
-    'Uttaranchal': 'UK',
-    'Goa': 'GA',
-    'Himachal Pradesh': 'HP',
-    'Jammu and Kashmir': 'JK',
-    'Jammu & Kashmir': 'JK',
-    // Northeast States
-    'Manipur': 'MN',
-    'Meghalaya': 'ML',
-    'Mizoram': 'MZ',
-    'Nagaland': 'NL',
-    'Tripura': 'TR',
-    'Arunachal Pradesh': 'AR',
-    'Sikkim': 'SK',
-    // Union Territories
-    'Puducherry': 'PY',
-    'Pondicherry': 'PY',
-    'Ladakh': 'LA',
-    'Andaman and Nicobar Islands': 'AN',
-    'Andaman & Nicobar Islands': 'AN',
-    'Andaman and Nicobar': 'AN',
-    'Chandigarh': 'CH',
-    'Dadra and Nagar Haveli and Daman and Diu': 'DD',
-    'Lakshadweep': 'LD',
-};
+// --- XSS defense: escape-on-output for untrusted article data --------------
+// Article titles/summaries/URLs originate from scraped content processed by
+// LLMs and could contain markup. This is the authoritative defense for the
+// innerHTML sinks below; the backend sanitizer is a second layer.
+const HTML_ESCAPE_MAP = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+
+function escapeHtml(value) {
+    if (value === null || value === undefined) return '';
+    return String(value).replace(/[&<>"']/g, ch => HTML_ESCAPE_MAP[ch]);
+}
+
+// Allow only http(s) URLs into href attributes; neutralise javascript:, data:,
+// etc. Returns '#' for anything unsafe so the link is inert.
+function safeUrl(value) {
+    if (value === null || value === undefined) return '#';
+    const url = String(value).trim();
+    if (/^https?:\/\//i.test(url)) return escapeHtml(url);
+    return '#';
+}
+// ---------------------------------------------------------------------------
+
+let JURISDICTIONS = [];
+let STATE_CODE_MAP = {};
+let JURISDICTION_BY_NAME = {};
+let JURISDICTION_BY_SLUG = {};
+
+function toJurisdictionSlug(value) {
+    return String(value || '')
+        .trim()
+        .toLowerCase()
+        .replace(/&/g, 'and')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-');
+}
+
+function normalizeJurisdictionName(value) {
+    return String(value || '').trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+function indexJurisdictions(records) {
+    JURISDICTIONS = records;
+    STATE_CODE_MAP = {};
+    JURISDICTION_BY_NAME = {};
+    JURISDICTION_BY_SLUG = {};
+
+    records.forEach(record => {
+        const names = [record.name, ...(record.aliases || [])];
+        names.forEach(name => {
+            STATE_CODE_MAP[name] = record.code;
+            JURISDICTION_BY_NAME[normalizeJurisdictionName(name)] = record;
+            JURISDICTION_BY_SLUG[toJurisdictionSlug(name)] = record;
+        });
+        JURISDICTION_BY_SLUG[record.slug] = record;
+    });
+}
+
+async function loadJurisdictionRegistry() {
+    try {
+        const response = await fetch('/data/jurisdictions.json');
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const records = await response.json();
+        indexJurisdictions(records);
+    } catch (error) {
+        console.error('Could not load jurisdiction registry:', error);
+        indexJurisdictions([]);
+    }
+}
+
+function resolveJurisdiction(value) {
+    return JURISDICTION_BY_NAME[normalizeJurisdictionName(value)] || null;
+}
+
+function resolveJurisdictionSlug(slug) {
+    return JURISDICTION_BY_SLUG[toJurisdictionSlug(slug)] || null;
+}
 
 const CATEGORY_CONFIG = {
     'Policies and Initiatives': { icon: '📋', shortName: 'Policies' },
@@ -109,6 +133,7 @@ const AUTO_SCROLL_PAUSE_DELAY = 2000; // ms before resuming after hover
 
 let map, geojsonLayer, currentPanel = null;
 let recentUpdatesCache = {};
+let recentUpdatesLoaded = false;
 let currentViewMode = 'state'; // 'state' or 'allIndia'
 let currentCategoriesData = null; // Store fetched categories for expansion
 let currentTodayUpdates = []; // Store list of categories with today's updates
@@ -199,17 +224,17 @@ function renderFeed(updates) {
             const itemsHtml = pageItems.map(update => {
                 const stateCode = STATE_CODE_MAP[update.state] || '';
                 const relativeTime = getRelativeTime(update.date_published);
-                return `<a href="${update.url}" target="_blank" rel="noopener"
+                return `<a href="${safeUrl(update.url)}" target="_blank" rel="noopener"
                            class="feed-item"
-                           data-state="${stateCode}"
-                           data-state-name="${update.state}">
-                            <div class="feed-item-title">${update.title}</div>
+                           data-state="${escapeHtml(stateCode)}"
+                           data-state-name="${escapeHtml(update.state)}">
+                            <div class="feed-item-title">${escapeHtml(update.title)}</div>
                             <div class="feed-item-meta">
-                                <span class="feed-item-state">${update.state}</span>
+                                <span class="feed-item-state">${escapeHtml(update.state)}</span>
                                 <span class="separator">·</span>
-                                <span class="feed-item-time">${relativeTime}</span>
+                                <span class="feed-item-time">${escapeHtml(relativeTime)}</span>
                                 <span class="separator">·</span>
-                                <span class="feed-item-category">${update.category}</span>
+                                <span class="feed-item-category">${escapeHtml(update.category)}</span>
                             </div>
                         </a>`;
             }).join('');
@@ -236,17 +261,17 @@ function renderFeed(updates) {
             const stateCode = STATE_CODE_MAP[update.state] || '';
             const relativeTime = getRelativeTime(update.date_published);
             html += `
-                <a href="${update.url}" target="_blank" rel="noopener"
+                <a href="${safeUrl(update.url)}" target="_blank" rel="noopener"
                    class="feed-item"
-                   data-state="${stateCode}"
-                   data-state-name="${update.state}">
-                    <div class="feed-item-title">${update.title}</div>
+                   data-state="${escapeHtml(stateCode)}"
+                   data-state-name="${escapeHtml(update.state)}">
+                    <div class="feed-item-title">${escapeHtml(update.title)}</div>
                     <div class="feed-item-meta">
-                        <span class="feed-item-state">${update.state}</span>
+                        <span class="feed-item-state">${escapeHtml(update.state)}</span>
                         <span class="separator">·</span>
-                        <span class="feed-item-time">${relativeTime}</span>
+                        <span class="feed-item-time">${escapeHtml(relativeTime)}</span>
                         <span class="separator">·</span>
-                        <span class="feed-item-category">${update.category}</span>
+                        <span class="feed-item-category">${escapeHtml(update.category)}</span>
                     </div>
                 </a>
             `;
@@ -592,6 +617,8 @@ async function fetchRecentUpdates() {
     } catch (error) {
         console.warn('Could not fetch recent updates:', error);
         recentUpdatesCache = {};
+    } finally {
+        recentUpdatesLoaded = true;
     }
 }
 
@@ -614,11 +641,13 @@ function loadGeoJSON() {
                     const name = feature.properties.ST_NM || feature.properties.name || feature.properties.NAME;
                     if (!name) return;
 
-                    const stateCode = STATE_CODE_MAP[name];
+                    const jurisdiction = resolveJurisdiction(name);
+                    const displayName = jurisdiction ? jurisdiction.name : name;
+                    const stateCode = jurisdiction ? jurisdiction.code : null;
                     const recentCount = stateCode ? (recentUpdatesCache[stateCode] || 0) : 0;
 
                     // Build tooltip content
-                    const tooltipContent = buildTooltipContent(name, recentCount);
+                    const tooltipContent = buildTooltipContent(displayName, recentCount);
 
                     layer.on({
                         mouseover: (e) => {
@@ -632,7 +661,7 @@ function loadGeoJSON() {
                         click: () => {
                             // Store the clicked layer for centering after resize
                             selectedLayer = layer;
-                            openStatePanel(name);
+                            openStatePanel(displayName);
                         }
                     });
 
@@ -677,10 +706,13 @@ async function fetchStateData(stateCode) {
 }
 
 async function openStatePanel(stateName) {
-    const stateCode = STATE_CODE_MAP[stateName];
+    const jurisdiction = resolveJurisdiction(stateName);
+    const displayName = jurisdiction ? jurisdiction.name : stateName;
+    const stateCode = jurisdiction ? jurisdiction.code : null;
+
     if (!stateCode) {
         console.warn(`State "${stateName}" not found in STATE_CODE_MAP.`);
-        showPanel(stateName, `
+        showPanel(displayName, `
             <div class="no-updates">
                 <dotlottie-player
                     src="added-assets/Box empty.lottie"
@@ -700,18 +732,18 @@ async function openStatePanel(stateName) {
     currentPage = 1;
     currentExpandedCategory = null;
 
-    showPanel(stateName, '<div class="loading">Loading...</div>');
+    showPanel(displayName, '<div class="loading">Loading...</div>');
 
     const data = await fetchStateData(stateCode);
     if (!data) {
-        showPanel(stateName, '<div style="text-align:center;padding:40px;color:#B45309;">Failed to load. Check if backend is running on port 5001.</div>');
+        showPanel(displayName, '<div style="text-align:center;padding:40px;color:#B45309;">Failed to load. Check if backend is running on port 5001.</div>');
         return;
     }
 
     currentCategoriesData = data.categories;
     currentTodayUpdates = data.todayUpdates;
     const cardsHtml = buildCategoryCards(data.categories, data.todayUpdates, stateCode);
-    showPanel(stateName, cardsHtml);
+    showPanel(displayName, cardsHtml);
 
     // Initialize Magic Bento effects after DOM update
     setTimeout(() => {
@@ -892,9 +924,9 @@ function expandCategory(categoryName) {
 
         html += `
             <div class="update-item">
-                <a href="${update.url}" target="_blank" class="update-title">${update.title}</a>
-                <p class="update-summary">${update.summary || 'No summary available.'}</p>
-                <div class="update-date">${date}</div>
+                <a href="${safeUrl(update.url)}" target="_blank" class="update-title">${escapeHtml(update.title)}</a>
+                <p class="update-summary">${escapeHtml(update.summary || 'No summary available.')}</p>
+                <div class="update-date">${escapeHtml(date)}</div>
             </div>
         `;
     });
@@ -1412,7 +1444,8 @@ function setMobileViewportHeight() {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    await loadJurisdictionRegistry();
     initMap();
     fetchLastUpdated();
     initInfoTooltip();
@@ -1460,19 +1493,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (viewParam === 'allIndia' || path.includes('/all-india')) {
         targetView = 'allIndia';
     } else if (stateParam) {
-        targetState = decodeURIComponent(stateParam);
+        const jurisdiction = resolveJurisdiction(decodeURIComponent(stateParam));
+        targetState = jurisdiction ? jurisdiction.name : decodeURIComponent(stateParam);
     } else if (path.includes('/states/')) {
         // format: /states/tamil-nadu/
         const match = path.match(/\/states\/([^/]+)/);
         if (match && match[1]) {
-            const slug = match[1];
-            // Find state name from slug (reverse lookup)
-            // Slug is usually lowercase with hyphens: tamil-nadu -> Tamil Nadu
-            // We need a helper to iterate STATE_CODE_MAP keys and compare slugs
-            const stateName = Object.keys(STATE_CODE_MAP).find(key =>
-                key.toLowerCase().replace(/\s+/g, '-') === slug.toLowerCase()
-            );
-            if (stateName) targetState = stateName;
+            const jurisdiction = resolveJurisdictionSlug(match[1]);
+            if (jurisdiction) targetState = jurisdiction.name;
         }
     }
 
@@ -1483,7 +1511,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Wait for map and data to be ready
         const checkReady = setInterval(() => {
-            if (geojsonLayer && Object.keys(recentUpdatesCache).length > 0) {
+            if (geojsonLayer && recentUpdatesLoaded) {
                 clearInterval(checkReady);
                 openStatePanel(targetState);
             }

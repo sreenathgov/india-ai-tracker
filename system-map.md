@@ -185,7 +185,7 @@ RSS Feeds / Web Sources
 4. **`generate_static_api.py` ↔ JSON schema** — defines the shape of all `/api/*.json` files that frontend consumes
 5. **Frontend JS ↔ `/api/` JSON schema** — `app-final.js` (and variants) expect specific JSON structure from `categories.json`
 6. **`.env` ↔ multiple modules** — API keys referenced across `gemini_api.py`, `providers/`, `app.py`, `post_to_x.py`
-7. **State code mapping** — duplicated between `js/app-final.js` (frontend) and `backend/ai/geo_attributor.py` (backend); no shared source
+7. **Jurisdiction mapping** — frontend/build routes now share `data/jurisdictions.json`; backend geo attribution still has separate jurisdiction logic
 8. **`app.py` (33 KB)** — large monolith serving as API server, likely a coupling bottleneck (not inspected internally)
 9. **GitHub Actions ↔ `generate_static_api.py`** — workflow depends on script exit codes and count verification
 

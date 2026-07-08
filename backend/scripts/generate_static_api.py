@@ -26,6 +26,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 from app import app, db, Update
 from utils.canonical_key import get_canonical_key
+from utils.sanitize import sanitize_article
 
 def generate_static_api():
     """Generate all static JSON API files."""
@@ -403,9 +404,13 @@ def merge_articles_into_json(filepath, new_articles, scope_name):
     }
 
     for article in canonical_index.values():
-        category = article.get('category', 'Major AI Developments')
+        # Defense-in-depth: strip dangerous HTML from title/summary and enforce
+        # an http(s)-only URL allowlist before the article reaches the canonical
+        # JSON. Runs on every write, so historical articles are cleaned too.
+        clean_article = sanitize_article(article)
+        category = clean_article.get('category', 'Major AI Developments')
         if category in merged_categories:
-            merged_categories[category].append(article)
+            merged_categories[category].append(clean_article)
 
     # 5. Sort each category by date_published (newest first)
     for category in merged_categories:
