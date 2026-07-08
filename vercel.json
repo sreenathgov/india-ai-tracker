@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "public": true,
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/all-india/index.html", "destination": "/all-india/", "permanent": true },
