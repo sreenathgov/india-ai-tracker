@@ -223,6 +223,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 13,
+        "title": "How AI helped reconstruct a dead woman’s decomposed face, and a killer’s, to crack Nagpur rape-murder case",
+        "url": "https://indianexpress.com/article/cities/mumbai/nagpur-rape-murder-ai-facial-reconstruction-marvel-police-investigation-10777799/",
+        "summary": "AI technology was used to reconstruct the face of a decomposed female victim and her killer in a Nagpur rape-murder case. The AI reconstruction helped crack the case by providing crucial visual evidence. This innovative use of AI aided investigators in solving the crime and bringing the perpetrator to justice.",
+        "date_published": "2026-07-08",
+        "source_name": "Indian Express - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Agentic AI forum",
         "url": "https://cio.economictimes.indiatimes.com/agentic-ai-forum-mumbai?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
@@ -1742,6 +1762,28 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 7,
+        "title": "Piper Serica leads seed round in deep tech startup eNLife Research",
+        "url": "https://entrackr.com/snippets/piper-serica-leads-seed-round-in-deep-tech-startup-enlife-research-12146237",
+        "summary": "Deep tech startup eNLife Research has raised Rs 6 crore in a seed funding round led by Piper Serica VC Fund. The funds will be used to develop its blood-based biomarker platform, expand its R&D team, and advance its diagnostic assay. eNLife Research aims to create affordable, AI-powered diagnostic platforms to detect neurodegenerative diseases like Alzheimer's.",
+        "date_published": "2026-07-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "TG",
+          "MH",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Data Science Wizards raises $5 Mn in pre-Series A round",
         "url": "https://entrackr.com/snippets/data-science-wizards-raises-5-mn-in-pre-series-a-round-12122203",
@@ -2107,7 +2149,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

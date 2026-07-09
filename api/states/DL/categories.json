@@ -407,6 +407,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "Caret Capital leads $2.4 Mn seed round in Milo Drive",
+        "url": "https://entrackr.com/snippets/caret-capital-leads-24-mn-seed-round-in-milo-drive-12145426",
+        "summary": "Milo Drive, an EV mobility platform, has raised $2.4 million in a seed funding round led by Caret Capital, with participation from several other investors. The funds will be used to support EV adoption and create formal employment opportunities for India's driver workforce. Milo Drive aims to build a technology-led EV mobility platform for India's ride-hailing and urban transportation ecosystem.",
+        "date_published": "2026-07-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Delhi HC shields Ravi Kishan’s personality rights, orders removal of AI-generted content",
         "url": "https://timesofindia.indiatimes.com/city/varanasi/delhi-hc-shields-ravi-kishans-personality-rights-orders-removal-of-ai-generted-content/articleshow/132225034.cms",
@@ -3681,7 +3701,5 @@
       }
     ]
   },
-  "today_updates": [
-    "AI Start-Up News"
-  ]
+  "today_updates": []
 }
