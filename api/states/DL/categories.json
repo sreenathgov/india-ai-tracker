@@ -3,6 +3,27 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 13,
+        "title": "Jharkhand bets big on AI, signs MoUs worth Rs 87,000 crore at Delhi meet",
+        "url": "https://timesofindia.indiatimes.com/city/ranchi/jharkhand-bets-big-on-ai-signs-mous-worth-rs-87000-cr-during-investors-meet-in-delhi/articleshow/132290827.cms",
+        "summary": "Jharkhand has signed MoUs worth Rs 87,000 crore to promote AI development, aiming to create over one lakh AI-enabled jobs through 1,000 startups. The state plans to integrate advanced technologies to become India's leading public governance-led AI state. Jharkhand has proposed the Jharkhand Artificial Intelligence Policy 2026-2031 to foster innovation and attract global companies.",
+        "date_published": "2026-07-10",
+        "source_name": "Times of India - Ranchi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL",
+          "JH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Govt to unveil draft AI policy in Delhi",
         "url": "https://timesofindia.indiatimes.com/city/ranchi/govt-to-unveil-draft-ai-policy-in-delhi/articleshow/132184082.cms",
@@ -3270,6 +3291,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "Centre grants administrative approval for two AI centres of excellence in Delhi",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/centre-grants-administrative-approval-for-two-ai-centres-of-excellence-in-delhi/132280482",
+        "summary": "The Ministry of Electronics and Information Technology has granted administrative approval for two AI Centres of Excellence in Delhi. The centres will be established at Netaji Subhash University of Technology and Guru Gobind Singh Indraprastha University. The initiative aims to boost innovation, skilling, and startup growth in the region.",
+        "date_published": "2026-07-09",
+        "source_name": "ET CIO - AI",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Doodhvale Farms raises $1 Mn from Atomic Capital",
         "url": "https://entrackr.com/snippets/doodhvale-farms-raises-1-mn-from-atomic-capital-12144492",
@@ -3282,6 +3323,26 @@
           "CH",
           "DL",
           "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Elevate Education raises Rs 170 Cr in Series D round from WestBridge Capital",
+        "url": "https://entrackr.com/news/elevate-education-raises-rs-170-cr-in-series-d-round-from-westbridge-capital-12145392",
+        "summary": "Elevate Education, formerly known as Sunstone, has raised Rs 170 crore ($17.7 million) in Series D funding from WestBridge Capital. This investment follows a $35 million Series C funding round led by WestBridge Capital in August 2022. The funds will be used to enhance the company's technology and AI capabilities, as well as expand its partner institution network.",
+        "date_published": "2026-07-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
         ],
         "is_approved": true,
         "is_deleted": false,
@@ -3701,5 +3762,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

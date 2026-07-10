@@ -4,6 +4,47 @@
     "Policies and Initiatives": [
       {
         "id": 11,
+        "title": "AI must remain a tool, not become the decision-maker in governance: Ex-Cabinet Secy Prabhat Kumar",
+        "url": "https://www.tribuneindia.com/news/delhi/ai-must-remain-a-tool-not-become-the-decision-maker-in-governance-ex-cabinet-secy-prabhat-kumar",
+        "summary": "Former Cabinet Secretary Prabhat Kumar warned that AI should remain a tool and not become the decision-maker in governance. He cautioned against blindly surrendering decision-making to algorithms, stating that the greatest risk is humans' willingness to outsource judgment to machines. Kumar emphasized that AI has the potential to transform governance, but human judgment and oversight are essential.",
+        "date_published": "2026-07-10",
+        "source_name": "Tribune - Delhi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "JH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "Jharkhand bets big on AI, signs MoUs worth Rs 87,000 crore at Delhi meet",
+        "url": "https://timesofindia.indiatimes.com/city/ranchi/jharkhand-bets-big-on-ai-signs-mous-worth-rs-87000-cr-during-investors-meet-in-delhi/articleshow/132290827.cms",
+        "summary": "Jharkhand has signed MoUs worth Rs 87,000 crore to promote AI development, aiming to create over one lakh AI-enabled jobs through 1,000 startups. The state plans to integrate advanced technologies to become India's leading public governance-led AI state. Jharkhand has proposed the Jharkhand Artificial Intelligence Policy 2026-2031 to foster innovation and attract global companies.",
+        "date_published": "2026-07-10",
+        "source_name": "Times of India - Ranchi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL",
+          "JH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
         "title": "Ranchi Flyovers Approved: Rs 820 Crore Boost for Traffic Congestion Relief &amp; Mobility",
         "url": "https://timesofindia.indiatimes.com/city/ranchi/ranchi-flyovers-approved-rs-820-crore-boost-for-traffic-congestion-relief-mobility/articleshow/130587054.cms",
         "summary": "Jharkhand's cabinet has approved Rs 820 crore for two new flyovers in Argora and Chiroundi to alleviate traffic congestion. The state will also establish a State School Standards Authority and an Innovation and Incubation Centre Foundation in Palamu. An MoU with Google for AI innovation has been approved, further boosting the state's development initiatives.",
@@ -191,5 +232,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

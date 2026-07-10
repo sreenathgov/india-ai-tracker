@@ -145,6 +145,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "Ecosystem, AI to shape next phase of India’s GCC growth: GIFT City...",
+        "url": "https://cellit.in/ecosystem-ai-to-shape-next-phase-of-indias-gcc-growth-gift-city-ceo/",
+        "summary": "GIFT City anticipates that ecosystem development and artificial intelligence (AI) will drive the next phase of India's growth in the Gulf Cooperation Council (GCC) region. The city is expected to play a significant role in this growth, leveraging its strategic location and infrastructure. AI and ecosystem development will be key factors in shaping India's future economic expansion in the GCC.",
+        "date_published": "2026-07-10",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 12,
         "title": "Working with AI: Institutes focus on hands-on activities, viva-based evaluation",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/working-with-ai-institutes-focus-on-hands-on-activities-viva-based-evaluation/articleshow/132146004.cms",
@@ -1453,5 +1473,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

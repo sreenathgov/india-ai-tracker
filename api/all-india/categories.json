@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 2,
+        "title": "Responsible AI emerges as a strategic imperative for Indian businesses amid evolving global regulations",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/responsible-ai-emerges-as-a-strategic-imperative-for-indian-businesses-amid-evolving-global-regulations/132280493",
+        "summary": "India's Ministry of Electronics and Information Technology is leading a push for responsible AI governance, shifting from unregulated deployment to accountable adoption. This comes as global regulations tighten, making transparency, fairness, and explainability crucial for businesses to avoid compliance gaps and reputational damage. Indian businesses must now prioritize responsible AI to remain competitive and compliant.",
+        "date_published": "2026-07-09",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Funding and acquisitions in Indian startups this week [June 29 - July 04]",
         "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-june-29-july-04-12132613",
@@ -1300,6 +1320,66 @@
         "summary": "AI intervention has the potential to transform India's agriculture economy. Agri-startups are expected to play a crucial role in the future of India's agricultural sector. The integration of AI in agriculture can bring significant improvements and innovations to the industry.",
         "date_published": "2026-07-09",
         "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "CEA Nageswaran: India's GCCs must invest in skill, innovation to stay ahead in AI era",
+        "url": "https://www.livemint.com/ai/cea-nageswaran-gccs-skill-innovation-talent-ai-era-11783594563269.html",
+        "summary": "India is home to over 2,100 Global Capability Centers (GCCs), contributing nearly 2% of the country's GDP. To maintain their competitive edge in the AI era, these GCCs must invest in skill development, innovation, and talent acquisition. Continuous investment in these areas is crucial for sustaining India's lead in the GCC sector.",
+        "date_published": "2026-07-09",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Skilling vital in India's goal of becoming AI solutions capital: IT Secretary",
+        "url": "https://yourstory.com/2026/07/skilling-vital-india-goal-ai-solutions-capital-it-secretary",
+        "summary": "India aims to become the capital of AI solutions, with skilling being a crucial factor in achieving this goal. Artificial intelligence is expected to automate lower-order functions, allowing humans to focus on higher-value roles. This transition will enable India to move beyond routine work and capitalize on the opportunities presented by AI.",
+        "date_published": "2026-07-09",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Government, Nasscom working on AI curriculum for undergraduate programmes",
+        "url": "https://yourstory.com/2026/07/govt-nasscom-ai-curriculum-undergraduate-programmes",
+        "summary": "The government and Nasscom are collaborating to develop an AI curriculum for undergraduate programmes. This initiative aims to address the growing need for reskilling and upskilling opportunities in AI. The curriculum will help provide students with the necessary skills to adapt to the increasing use of AI in various industries.",
+        "date_published": "2026-07-09",
+        "source_name": "YourStory",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -10700,6 +10780,46 @@
         "posted_to_x_at": null
       },
       {
+        "id": 6,
+        "title": "Fundamentum launches third Series B fund with target corpus of Rs 2,200 Cr",
+        "url": "https://entrackr.com/news/fundamentum-launches-third-series-b-fund-with-target-corpus-of-rs-2200-cr-12149211",
+        "summary": "The Fundamentum Partnership has launched its third Series B fund, Fundamentum Fund III, with a target corpus of Rs 2,200 crore, including a Rs 400 crore greenshoe option. Cofounder Nandan Nilekani has made his largest investment in any venture capital firm as the fund's anchor limited partner. The new fund continues the firm's strategy of investing in early growth stage startups in India that have achieved product market fit.",
+        "date_published": "2026-07-09",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Mukesh Bansal’s Nurix AI acquires enterprise conversational AI company Verloop.io",
+        "url": "https://entrackr.com/snippets/mukesh-bansals-nurix-ai-acquires-enterprise-conversational-ai-company-verloopio-12148976",
+        "summary": "Nurix AI, an enterprise AI company, has acquired Verloop.io, a conversational AI company, to expand its conversational AI capabilities. The acquisition builds on Nurix's voice AI platform, NuPlay, and adds Verloop.io's chat automation expertise, targeting businesses in India and the Middle East. This move aims to help enterprises deploy production-grade AI agents across voice and chat platforms.",
+        "date_published": "2026-07-09",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Dream Sports CTO Amit Sharma exits after 10 years to launch AI startup",
         "url": "https://entrackr.com/snippets/dream-sports-cto-amit-sharma-exits-after-10-years-to-launch-ai-startup-12144279",
@@ -13029,8 +13149,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
-  ]
+  "today_updates": []
 }

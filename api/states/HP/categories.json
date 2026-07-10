@@ -1,7 +1,28 @@
 {
   "state": "HP",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 14,
+        "title": "Hamirpur&#8217;s Dhaaneta college launches AI, data science degrees",
+        "url": "https://www.tribuneindia.com/news/himachal/hamirpurs-dhaaneta-college-launches-ai-data-science-degrees",
+        "summary": "Government Degree College in Dhaaneta, Hamirpur, has introduced B.Sc. degree programs in Artificial Intelligence (AI) and Data Science, becoming the first government college in Himachal Pradesh to do so. The new courses aim to equip students with skills needed for future technological advancements. The launch is part of the college's efforts to prepare students for emerging technologies.",
+        "date_published": "2026-07-09",
+        "source_name": "Tribune - Himachal",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "HP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [],
     "Major AI Developments": [
       {
