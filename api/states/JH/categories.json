@@ -44,6 +44,27 @@
         "posted_to_x_at": null
       },
       {
+        "id": 7,
+        "title": "Jharkhand bets big on AI, signs MoUs worth ₹87,000 crore at Delhi meet",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/jharkhand-unveils-massive-rs-87000-crore-ai-investment-initiative-to-create-1-lakh-jobs/132309295",
+        "summary": "Jharkhand aims to become India's leading public governance-led AI state by integrating advanced technologies. The state has proposed the Jharkhand Artificial Intelligence Policy 2026-2031 to foster innovation and responsible AI adoption. Jharkhand has signed MoUs worth ₹87,000 crore to attract global companies and drive growth in the region.",
+        "date_published": "2026-07-10",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "JH",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Ranchi Flyovers Approved: Rs 820 Crore Boost for Traffic Congestion Relief &amp; Mobility",
         "url": "https://timesofindia.indiatimes.com/city/ranchi/ranchi-flyovers-approved-rs-820-crore-boost-for-traffic-congestion-relief-mobility/articleshow/130587054.cms",
@@ -232,7 +253,5 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": [
-    "Policies and Initiatives"
-  ]
+  "today_updates": []
 }

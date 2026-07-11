@@ -183,6 +183,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "Tradition to tech: Wari leans on AI, this year",
+        "url": "https://timesofindia.indiatimes.com/city/pune/tradition-to-tech-wari-leans-on-ai-this-year/articleshow/132319986.cms",
+        "summary": "The Wari pilgrimage is incorporating artificial intelligence this year, marking a shift from traditional methods to technology. This move aims to enhance the overall experience and management of the event. The use of AI will bring a modern twist to the centuries-old tradition.",
+        "date_published": "2026-07-11",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Police to deploy bandobast for palkhi procession, use AI tools, GPS &amp; drones to monitor crowds",
         "url": "https://timesofindia.indiatimes.com/city/pune/police-to-deploy-bandobast-for-palkhi-procession-use-ai-tools-gps-drones-to-monitor-crowds/articleshow/132248636.cms",
@@ -2149,5 +2169,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
