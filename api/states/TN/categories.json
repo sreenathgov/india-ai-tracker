@@ -150,6 +150,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "IITM Develops AI, VR Tool to Detect Early Learning Gaps in Children",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/iitm-develops-ai-vr-tool-to-detect-early-learning-gaps-in-children/articleshow/132337066.cms",
+        "summary": "IITM has developed an AI and VR tool designed to identify early learning gaps in children. The innovative technology utilizes artificial intelligence and virtual reality to detect potential learning difficulties. This tool aims to provide early intervention and support for children with learning gaps.",
+        "date_published": "2026-07-12",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "India Must  Enact AI Regulation Act to Ensure Fairness and Accountability",
         "url": "https://timesofindia.indiatimes.com/city/chennai/india-must-enact-ai-regulation-act-to-ensure-fairness-and-accountability/articleshow/132245360.cms",
@@ -1067,5 +1087,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

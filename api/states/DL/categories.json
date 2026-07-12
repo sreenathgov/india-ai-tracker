@@ -449,6 +449,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "IIT-Delhi, NatWest partner up to launch fintech programme",
+        "url": "https://www.tribuneindia.com/news/delhi/iit-delhi-natwest-partner-up-to-launch-fintech-programme",
+        "summary": "IIT-Delhi's Foundation for Innovation and Technology Transfer has partnered with NatWest Group to launch the NatWest FinTech Frontier Program. The program aims to accelerate innovation in the banking sector by developing cutting-edge solutions in areas like artificial intelligence. The initiative will bring together researchers, startups, and industry experts to achieve this goal.",
+        "date_published": "2026-07-12",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Caret Capital leads $2.4 Mn seed round in Milo Drive",
         "url": "https://entrackr.com/snippets/caret-capital-leads-24-mn-seed-round-in-milo-drive-12145426",
@@ -3783,5 +3803,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
