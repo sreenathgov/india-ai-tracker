@@ -145,6 +145,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "Ahmedabad plane crash: AI-171 victims' families seek simulator tests, timeline for final report",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ahmedabad-plane-crash-ai-171-victims-families-seek-simulator-tests-timeline-for-final-report/articleshow/132346761.cms",
+        "summary": "Families of the AI-171 crash victims are seeking updates on the investigation, including simulator tests and a timeline for the final report's release. They are also requesting that an experienced Boeing 787 pilot be added to the probe and that their legal rights be protected. The families are demanding a fair investigation and truth about the crash.",
+        "date_published": "2026-07-13",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Ecosystem, AI to shape next phase of India’s GCC growth: GIFT City...",
         "url": "https://cellit.in/ecosystem-ai-to-shape-next-phase-of-indias-gcc-growth-gift-city-ceo/",
@@ -1473,5 +1493,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

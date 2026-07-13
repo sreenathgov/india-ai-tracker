@@ -26,6 +26,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "Deep knowledge, judgment key in AI age: ANRF CEO at IIT-G",
+        "url": "https://timesofindia.indiatimes.com/city/guwahati/deep-knowledge-judgment-key-in-ai-age-anrf-ceo-at-iit-g/articleshow/132350165.cms",
+        "summary": "The CEO of ANRF emphasized the importance of deep knowledge and judgment in the age of artificial intelligence. This statement was made during an event at the Indian Institute of Technology Guwahati (IIT-G). The CEO highlighted that these skills are crucial for success in an AI-driven world.",
+        "date_published": "2026-07-13",
+        "source_name": "Times of India - Guwahati",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AS"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 15,
         "title": "Financial help pours in as Ludhiana daily wager’s daughter makes AI course cut at IIT-Guwahati",
         "url": "https://www.tribuneindia.com/news/top-headlines/financial-help-pours-in-as-ludhiana-daily-wagers-daughter-makes-ai-course-cut-at-iit-guwahati",
@@ -208,5 +228,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
