@@ -286,6 +286,67 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "IISc director to students: Treat AI as a tool, avoid overly depending on it",
+        "url": "https://timesofindia.indiatimes.com/city/coimbatore/iisc-director-to-students-treat-ai-as-a-tool-avoid-overly-depending-on-it/articleshow/132371485.cms",
+        "summary": "IISc director Govindan Rangarajan advised students to use AI as a tool, but avoid over-reliance on it. He cautioned that excessive dependence on AI can lead to negative consequences, such as substituting human companionship with AI companions. Rangarajan emphasized the importance of maintaining a balance between technology use and human interaction.",
+        "date_published": "2026-07-14",
+        "source_name": "Times of India - Tamil Nadu (Alt)",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "AI won’t sharply reduce campus hiring: LTM CEO",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-wont-sharply-reduce-campus-hiring-ltm-ceo/articleshow/132373288.cms",
+        "summary": "LTM CEO states that AI will not significantly decrease campus hiring, contradicting concerns about job displacement. The CEO's statement aims to alleviate fears about the impact of artificial intelligence on employment opportunities for new graduates. AI is not expected to sharply reduce campus hiring, according to the LTM CEO's assessment.",
+        "date_published": "2026-07-14",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Watch: Women thrash officials with brooms, chase them away as Bidadi Township survey faces fierce resistance",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/watch-women-thrash-officials-with-brooms-chase-them-away-as-bidadi-township-survey-faces-fierce-resistance/articleshow/132372319.cms",
+        "summary": "Women protesters in Ramanagara district used brooms to confront government officials and police who were surveying land for a proposed AI-powered integrated township project. The locals, including farmers, strongly opposed the land acquisition and blocked village roads, forcing the survey team to withdraw after facing resistance and some injuries. The incident highlights the fierce opposition to the project, with some officials even criticizing the state government's handling of the situation.",
+        "date_published": "2026-07-14",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Alchemic raises Rs 2.5 Cr pre-seed round led by AJVC",
         "url": "https://entrackr.com/snippets/alchemic-raises-rs-25-cr-pre-seed-round-led-by-ajvc-12142326",
@@ -4169,5 +4230,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

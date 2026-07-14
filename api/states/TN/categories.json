@@ -150,6 +150,27 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "IISc director to students: Treat AI as a tool, avoid overly depending on it",
+        "url": "https://timesofindia.indiatimes.com/city/coimbatore/iisc-director-to-students-treat-ai-as-a-tool-avoid-overly-depending-on-it/articleshow/132371485.cms",
+        "summary": "IISc director Govindan Rangarajan advised students to use AI as a tool, but avoid over-reliance on it. He cautioned that excessive dependence on AI can lead to negative consequences, such as substituting human companionship with AI companions. Rangarajan emphasized the importance of maintaining a balance between technology use and human interaction.",
+        "date_published": "2026-07-14",
+        "source_name": "Times of India - Tamil Nadu (Alt)",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "IITM Develops AI, VR Tool to Detect Early Learning Gaps in Children",
         "url": "https://timesofindia.indiatimes.com/city/chennai/iitm-develops-ai-vr-tool-to-detect-early-learning-gaps-in-children/articleshow/132337066.cms",
@@ -1087,5 +1108,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

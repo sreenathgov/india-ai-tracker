@@ -449,6 +449,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Scripbox promotes Mohankumar Swaminathan to Chief Product Officer",
+        "url": "https://entrackr.com/snippets/scripbox-promotes-mohankumar-swaminathan-to-chief-product-officer-12162133",
+        "summary": "Scripbox has promoted Mohankumar Swaminathan to Chief Product Officer, where he will lead the company's product strategy and innovation efforts. Swaminathan will focus on strengthening Scripbox's digital wealth management platform and customer experience. He has been with Scripbox since 2016, holding various leadership positions before his latest promotion.",
+        "date_published": "2026-07-14",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "IIT-Delhi, NatWest partner up to launch fintech programme",
         "url": "https://www.tribuneindia.com/news/delhi/iit-delhi-natwest-partner-up-to-launch-fintech-programme",
@@ -3803,5 +3823,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

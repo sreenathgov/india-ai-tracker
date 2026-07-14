@@ -66,6 +66,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "CBSE expands AI curriculum, but Centre rejects Chandigarh’s Rs 95L plan for govt schools",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/cbse-expands-ai-curriculum-but-centre-rejects-chandigarhs-rs-95l-plan-for-govt-schools/articleshow/132375754.cms",
+        "summary": "The Central Board of Secondary Education (CBSE) has expanded its artificial intelligence (AI) curriculum. Meanwhile, the Centre has rejected Chandigarh's proposal to implement an AI plan worth Rs 95 lakh in government schools. The rejected plan was intended to enhance AI education in government schools.",
+        "date_published": "2026-07-14",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "CH",
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Three face FIR for morphing two sisters’ photos with AI, sharing them online",
         "url": "https://timesofindia.indiatimes.com/city/noida/three-face-fir-for-morphing-two-sisters-photos-with-ai-sharing-them-online/articleshow/132123169.cms",
@@ -630,5 +651,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

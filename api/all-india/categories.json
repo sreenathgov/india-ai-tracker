@@ -1234,6 +1234,86 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Claude AI India: Anthropic introduces rupee pricing; Pro Plan at Rs 1,999 - Check full pricing and features",
+        "url": "https://www.etnownews.com/technology/claude-ai-india-anthropic-introduces-rupee-pricing-pro-plan-at-rs-1999-check-full-pricing-and-features-article-155092883",
+        "summary": "Anthropic has introduced rupee-based pricing for Claude AI subscriptions in India as part of its global expansion strategy. The Pro plan is available for Rs 1,999 per month, marking a significant step in the company's efforts to tap into the Indian market. This move highlights India's growing importance in Anthropic's global plans.",
+        "date_published": "2026-07-14",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Can India become the global hub for trusted AI?",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/can-india-become-the-global-hub-for-trusted-ai/132365454",
+        "summary": "India is poised to become a global hub for trusted AI due to its digital public infrastructure ecosystem and data protection laws. The country's Digital Personal Data Protection Act establishes individual data ownership and consent, enabling trust at scale for enterprises. This framework supports responsible AI development and deployment, offering a credible path forward.",
+        "date_published": "2026-07-14",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Elevation Capital closes $500 Mn India fund to back AI startups",
+        "url": "https://entrackr.com/news/elevation-capital-closes-500-mn-india-fund-to-back-ai-startups-12161695",
+        "summary": "Elevation Capital has closed its ninth India-focused fund at $500 million, targeting early-stage AI startups. The fund will primarily invest in seed and Series A startups building AI-led products and applications, focusing on the application layer of artificial intelligence. The venture capital firm aims to back companies solving business and consumer problems using AI technologies.",
+        "date_published": "2026-07-14",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "AI, identity and real-time payments reshape cyber threat landscape: Report",
+        "url": "https://telanganatoday.com/ai-identity-and-real-time-payments-reshape-cyber-threat-landscape-report",
+        "summary": "The Digital Threat Report 2025-26 highlights a new cyber threat environment for India's banking and financial services sector. Traditional security models are no longer sufficient due to interconnected platforms, AI-driven decision-making, and real-time payments. This shift is radically changing the cyber threat landscape, requiring new security approaches.",
+        "date_published": "2026-07-14",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "TCS plays big on artificial intelligence: Hiring 9,000 AI engineers, billion-dollar training spend and hunt for acquisitions",
         "url": "https://www.etnownews.com/technology/tcs-plays-big-on-artificial-intelligence-hiring-9000-ai-engineers-billion-dollar-training-spend-and-hunt-for-acquisitions-article-155084652",
