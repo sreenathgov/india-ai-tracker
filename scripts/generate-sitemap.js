@@ -74,6 +74,25 @@ function generateSitemap() {
   </url>`;
   });
 
+  // 4. Add Publications (from the manifest written by generate-publications.js)
+  let publicationCount = 0;
+  try {
+    const manifestPath = path.join(PROJECT_ROOT, 'content', 'publications', 'index.json');
+    const publications = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
+    publications.forEach(pub => {
+      xml += `
+  <url>
+    <loc>${pub.url}</loc>
+    <lastmod>${pub.updated || pub.date}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`;
+      publicationCount++;
+    });
+  } catch (_) {
+    // No manifest yet — publications simply aren't listed
+  }
+
   xml += `
 </urlset>`;
 
@@ -90,6 +109,7 @@ function generateSitemap() {
   console.log(`✅ Sitemap generated at: ${outputPath}`);
   console.log(`   - Static routes: ${staticRoutes.length}`);
   console.log(`   - Dynamic jurisdiction routes: ${canonicalJurisdictions.length}`);
+  console.log(`   - Publication routes: ${publicationCount}`);
 }
 
 generateSitemap();

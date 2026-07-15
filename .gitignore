@@ -29,7 +29,10 @@ instance/
 *.swp
 *.swo
 *~
-.claude/
+# Claude Code: keep local session state ignored, but version the skills
+# (a dir must not be excluded outright for negations inside it to work)
+.claude/*
+!.claude/skills/
 
 # OS
 .DS_Store

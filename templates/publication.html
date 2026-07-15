@@ -2,17 +2,51 @@
 <html lang="en" class="publications-html">
 
 <head>
+    <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publication | India AI Tracker</title>
+    <title>{{TITLE_TAG}}</title>
+
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <link rel="canonical" href="{{CANONICAL_URL}}">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Kanan Labs">
+    <meta property="og:url" content="{{CANONICAL_URL}}">
+    <meta property="og:title" content="{{OG_TITLE}}">
+    <meta property="og:description" content="{{META_DESCRIPTION}}">
+    <meta property="og:image" content="{{OG_IMAGE}}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{OG_IMAGE_ALT}}">
+    <meta property="article:published_time" content="{{DATE_PUBLISHED}}">
+    <meta property="article:modified_time" content="{{DATE_MODIFIED}}">
+    <meta property="article:author" content="{{AUTHOR}}">
+    <meta property="article:section" content="{{CATEGORY}}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{CANONICAL_URL}}">
+    <meta name="twitter:title" content="{{OG_TITLE}}">
+    <meta name="twitter:description" content="{{META_DESCRIPTION}}">
+    <meta name="twitter:image" content="{{OG_IMAGE}}">
+    <meta name="twitter:image:alt" content="{{OG_IMAGE_ALT}}">
+
+    <link rel="icon" type="image/png" href="/assets/images/KANAN-LABS-WEBSITELOGO.png">
+
+    <script type="application/ld+json">
+{{JSON_LD}}
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles-v2.css?v=17">
-    <link rel="stylesheet" href="css/publications.css?v=21">
-    <link rel="stylesheet" href="css/staggered-menu.css">
+    <link rel="stylesheet" href="/css/styles-v2.css?v=17">
+    <link rel="stylesheet" href="/css/publications.css?v={{CSS_VERSION}}">
+    <link rel="stylesheet" href="/css/staggered-menu.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
 
-<body class="publications-page">
+<body class="publications-page" data-prerendered>
     <div class="page-wrapper">
         <!-- Staggered menu will be injected here by staggered-menu.js -->
 
@@ -22,16 +56,16 @@
             <!-- Fixed left sidebar: title, contents, reading guide -->
             <aside class="toc-sidebar" id="tocSidebar">
                 <div class="sidebar-header">
-                    <div class="publication-title" id="publicationTitle">Loading...</div>
+                    <div class="publication-title" id="publicationTitle">{{TITLE}}</div>
                     <div class="publication-meta">
-                        <span class="publication-author" id="publicationAuthor"></span>
-                        <span class="publication-date" id="publicationDate"></span>
+                        <span class="publication-author" id="publicationAuthor">{{AUTHOR}}</span>
+                        <span class="publication-date" id="publicationDate">{{DATE_DISPLAY}}</span>
                     </div>
                 </div>
 
                 <nav class="toc-nav">
                     <ul class="toc-list" id="tocList">
-                        <!-- Dynamically populated -->
+{{TOC_ITEMS}}
                     </ul>
                 </nav>
 
@@ -74,13 +108,11 @@
                 </details>
             </aside>
 
-            <!-- Central Reading Column -->
+            <!-- Central Reading Column (fully pre-rendered: masthead + chapter cards
+                 with each section's complete Layer-2/3 content embedded, hidden) -->
             <article class="reading-column" id="readingColumn">
                 <div class="reading-content" id="readingContent">
-                    <!-- Overview content rendered here -->
-                    <div class="loading-state">
-                        <p>Loading publication...</p>
-                    </div>
+{{ARTICLE_CONTENT}}
                 </div>
             </article>
 
@@ -110,9 +142,7 @@
                         <span class="panel-layer-tag">Analysis</span>
                         <h2 class="panel-title" id="analysisPanelTitle">Section Title</h2>
                     </div>
-                    <div class="panel-content" id="analysisPanelContent">
-                        <!-- Analysis layer content -->
-                    </div>
+                    <div class="panel-content" id="analysisPanelContent"></div>
                 </div>
             </aside>
 
@@ -131,9 +161,7 @@
                         <span class="panel-layer-tag">In Depth</span>
                         <h2 class="panel-title" id="indepthPanelTitle">Subsection Title</h2>
                     </div>
-                    <div class="panel-content" id="indepthPanelContent">
-                        <!-- In-depth layer content -->
-                    </div>
+                    <div class="panel-content" id="indepthPanelContent"></div>
                 </div>
             </aside>
         </main>
@@ -143,17 +171,16 @@
             <p class="footer-byline">A public AI governance intelligence tool by Sreenath Govindarajan, Founder of Kanan
                 Labs</p>
             <p class="footer-links">
-                <a href="about.html">About</a>
+                <a href="/about.html">About</a>
                 <span class="separator">·</span>
                 <a href="mailto:sreenath@kananlabs.in">Contact</a>
             </p>
         </footer>
     </div>
 
-    <!-- Marked.js for Markdown parsing -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="js/staggered-menu.js"></script>
-    <script src="js/publications.js?v=17"></script>
+    <!-- No marked.js: this page is pre-rendered; publications.js hydrates from the DOM -->
+    <script src="/js/staggered-menu.js"></script>
+    <script src="/js/publications.js?v={{JS_VERSION}}"></script>
 </body>
 
 </html>

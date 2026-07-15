@@ -1,8 +1,12 @@
 ---
 title: "The State of AI Governance in India"
+slug: "sample-publication"
+description: "India's AI governance remains fragmented: state initiatives outpace national frameworks, and sectoral rules for healthcare and finance are still emerging."
+abstract: "A comprehensive analysis of India's evolving AI regulatory landscape, examining state-level initiatives, national policy frameworks, and the path forward for responsible AI development."
 author: "Sreenath Govindarajan"
 date: "2026-02-03"
-abstract: "A comprehensive analysis of India's evolving AI regulatory landscape, examining state-level initiatives, national policy frameworks, and the path forward for responsible AI development."
+category: "AI Governance"
+tags: [ai governance, india, regulation, dpdp]
 ---
 
 # Introduction
