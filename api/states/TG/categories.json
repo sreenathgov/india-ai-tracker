@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "BandhuCare – AI companion for cancer patients",
+        "url": "https://www.iiit.ac.in/bandhucare-2/",
+        "summary": "Researchers have developed BandhuCare, an AI companion designed to support cancer patients. The AI system aims to provide companionship and assistance to those undergoing cancer treatment. BandhuCare is a result of innovation from IIIT Hyderabad, which has been involved in various technological advancements and collaborations.",
+        "date_published": "2026-07-15",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Telangana to train 80,000 minority students in AI and digital safety free of cost",
         "url": "https://www.thehindu.com/news/national/telangana/telangana-to-train-80000-minority-students-in-ai-and-digital-safety-free-of-cost/article71216779.ece",

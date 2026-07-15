@@ -3,6 +3,46 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 7,
+        "title": "Krishna Byre Gowda’s plan for Bengaluru; Google’s AI push in India",
+        "url": "https://yourstory.com/2026/07/krishna-byre-gowdas-plan-for-bengaluru-google-ai-push-india",
+        "summary": "Karnataka Minister Krishna Byre Gowda has shared his vision for Bengaluru's development in a recent conversation. Google has announced a comprehensive AI strategy for India, marking a significant push in the country. The minister's plan and Google's AI initiative aim to drive growth and innovation in Bengaluru and India.",
+        "date_published": "2026-07-15",
+        "source_name": "YourStory",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "Karnataka CM DK Shivakumar unveils AI push with first AI University, green data centres",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/ktaka-unveils-ai-push-with-first-ai-university-green-data-centres/articleshow/132403882.cms",
+        "summary": "Karnataka's chief minister has unveiled a roadmap for AI development, including the establishment of India's first government-backed AI University. The state also plans to create an AI Innovation Hub and green data centers to foster research and develop future AI talent. The initiative aims to make Karnataka an AI-native state across all sectors.",
+        "date_published": "2026-07-15",
+        "source_name": "Times of India - Bangalore",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Sarvam turns unicorn after $234 Mn round led by HCLTech",
         "url": "https://entrackr.com/news/sarvam-turns-unicorn-after-234-mn-round-led-by-hcltech-12041322",
@@ -286,6 +326,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 14,
+        "title": "Google rolls out sovereign AI stack for India’s regulated sectors",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/google-rolls-out-sovereign-ai-stack-for-indias-regulated-sectors/articleshow/132398161.cms",
+        "summary": "Google has launched a sovereign AI stack for India's regulated sectors, aiming to support the country's data localization requirements. The move is expected to help Indian organizations in regulated industries, such as finance and healthcare, to leverage AI while ensuring data security and compliance. This development is part of Google's efforts to expand its AI offerings in the Indian market.",
+        "date_published": "2026-07-15",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "IISc director to students: Treat AI as a tool, avoid overly depending on it",
         "url": "https://timesofindia.indiatimes.com/city/coimbatore/iisc-director-to-students-treat-ai-as-a-tool-avoid-overly-depending-on-it/articleshow/132371485.cms",
@@ -333,6 +393,26 @@
         "summary": "Women protesters in Ramanagara district used brooms to confront government officials and police who were surveying land for a proposed AI-powered integrated township project. The locals, including farmers, strongly opposed the land acquisition and blocked village roads, forcing the survey team to withdraw after facing resistance and some injuries. The incident highlights the fierce opposition to the project, with some officials even criticizing the state government's handling of the situation.",
         "date_published": "2026-07-14",
         "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Karnataka CM announces first govt-driven AI University",
+        "url": "https://yourstory.com/2026/07/karnataka-cm-announces-first-govt-driven-ai-university",
+        "summary": "Karnataka CM DK Shivakumar has announced the establishment of the state's first government-driven AI university. The university aims to build world-class AI talent, advance research, and foster collaboration among academia, industry, and government. This initiative is expected to play a pivotal role in the development of AI in the region.",
+        "date_published": "2026-07-14",
+        "source_name": "YourStory",
         "category": "Major AI Developments",
         "state_codes": [
           "KA"
@@ -4231,6 +4311,7 @@
     ]
   },
   "today_updates": [
+    "Policies and Initiatives",
     "Major AI Developments"
   ]
 }

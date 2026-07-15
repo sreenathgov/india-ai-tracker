@@ -105,6 +105,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 15,
+        "title": "Law student arrested after fatal drunk driving crash in Odisha",
+        "url": "https://www.thehindu.com/news/national/odisha/law-student-arrested-after-fatal-drunk-driving-crash-in-odisha/article71221699.ece",
+        "summary": "A law student was arrested in Odisha after being involved in a fatal drunk driving crash. A breath-analyser test revealed the student had 127 mg of alcohol per 100 ml of blood, exceeding the legal limit of 30 mg. The student's blood alcohol level was more than four times the permissible limit.",
+        "date_published": "2026-07-15",
+        "source_name": "The Hindu - Odisha",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Odisha man arrested for sharing AI-generated obscene video targeting CM Mohan Charan Majhi",
         "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/odisha-man-arrested-for-sharing-ai-generated-obscene-video-targeting-cm-mohan-charan-majhi/articleshow/132197049.cms",
@@ -348,5 +368,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
