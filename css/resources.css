@@ -20,7 +20,7 @@ body.resources-page {
     height: auto !important;
     overflow: auto !important;
     min-height: 100vh;
-    background: var(--brand-cream);
+    background: #F5F3EE;
     color: var(--brand-navy);
 }
 
