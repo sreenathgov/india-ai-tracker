@@ -150,6 +150,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 16,
+        "title": "Zoho steps up ed-tech play with AI features",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/zoho-steps-up-ed-tech-play-with-ai-features/articleshow/132421169.cms",
+        "summary": "Zoho is expanding its presence in the education technology sector by introducing AI features. The company aims to enhance its ed-tech offerings with the integration of artificial intelligence. This move is part of Zoho's efforts to strengthen its position in the ed-tech market.",
+        "date_published": "2026-07-16",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "IISc director to students: Treat AI as a tool, avoid overly depending on it",
         "url": "https://timesofindia.indiatimes.com/city/coimbatore/iisc-director-to-students-treat-ai-as-a-tool-avoid-overly-depending-on-it/articleshow/132371485.cms",
@@ -1108,5 +1128,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -87,6 +87,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 15,
+        "title": "IIIT Hyderabad Hosts SERI 2026",
+        "url": "https://www.iiit.ac.in/iiit-hyderabad-hosts-seri-2026/",
+        "summary": "IIIT Hyderabad is hosting various events and collaborations, including SERI 2026 and a partnership with BuildIQ Technologies to advance smart infrastructure. The institution also celebrated its 25th convocation, graduating 526 students, and participated in the prestigious CVPR conference. Additionally, IIIT Hyderabad has been involved in other initiatives, such as the TechForward Research Seminar Series and the release of an authorized biography.",
+        "date_published": "2026-07-16",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 20,
+        "title": "AI leaf scanner to spot crop diseases before they spread",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/ai-leaf-scanner-to-spot-crop-diseases-before-they-spread/articleshow/132422543.cms",
+        "summary": "Researchers have developed an AI-powered leaf scanner that can detect crop diseases before they spread, allowing for early intervention. The technology uses artificial intelligence to analyze leaf images and identify potential diseases. The researchers have been granted a patent for their innovative farm solution.",
+        "date_published": "2026-07-16",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 21,
+        "title": "Revanth Reddy urges Amazon to scale up its presence in Telangana",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/amazon-breaks-ground-on-bharat-future-city-hyperscale-data-centre/articleshow/132422180.cms",
+        "summary": "Telangana's chief minister has urged Amazon to invest Rs 1 lakh crore by 2034, as the company breaks ground on a new hyperscale data centre in Bharat Future City. This expansion will boost the state's flagship project and support India's digital and AI ambitions. The government aims for Telangana to become a $1 trillion economy by 2034 with investments like Amazon's.",
+        "date_published": "2026-07-16",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 12,
         "title": "BandhuCare – AI companion for cancer patients",
         "url": "https://www.iiit.ac.in/bandhucare-2/",
@@ -96,6 +156,27 @@
         "category": "Major AI Developments",
         "state_codes": [
           "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 17,
+        "title": "GCCS are building AI talent internally by reskilling: Report",
+        "url": "https://www.thehindu.com/news/cities/bangalore/gccs-are-building-ai-talent-internally-by-reskilling-report/article71225670.ece",
+        "summary": "GCCs are developing AI talent internally through reskilling, according to a report. Bengaluru remains the largest GCC tech hub in terms of hiring share, but Hyderabad is growing faster. Hyderabad's growth is driven by demand for cloud, data engineering, and fintech infrastructure, indicating a shift beyond Bengaluru.",
+        "date_published": "2026-07-15",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG",
+          "KA"
         ],
         "is_approved": true,
         "is_deleted": false,

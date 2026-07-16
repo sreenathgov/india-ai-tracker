@@ -43,6 +43,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 2,
+        "title": "Karnataka to roll out data centre policy to power AI ecosystem; plans public AI University",
+        "url": "https://government.economictimes.indiatimes.com/news/policy/karnataka-unveils-ambitious-data-centre-policy-and-ai-university-to-fuel-economic-growth/132415388",
+        "summary": "Karnataka is set to introduce a data centre policy to support its AI ecosystem. The state also plans to establish India's first public sector-led AI University as part of its broader AI roadmap. A world-class AI Hub will be developed to drive research, innovation, and startup-led AI development.",
+        "date_published": "2026-07-15",
+        "source_name": "ET Government - Policy",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Sarvam turns unicorn after $234 Mn round led by HCLTech",
         "url": "https://entrackr.com/news/sarvam-turns-unicorn-after-234-mn-round-led-by-hcltech-12041322",
@@ -326,6 +346,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "Physical AI startup SwitchOn raises $8 Mn in pre-Series B round led by IvyCap",
+        "url": "https://entrackr.com/news/physical-ai-startup-switchon-raises-8-mn-in-pre-series-b-round-led-by-ivycap-12168741",
+        "summary": "SwitchOn, a Bengaluru-based Physical AI startup, has raised $8 million in a pre-Series B funding round led by IvyCap Ventures, with participation from SIG Tattva and Trifecta Capital. This marks the company's third major funding round, following its seed and Series A rounds. The fresh capital will be used to expand internationally and scale operations across manufacturing sectors.",
+        "date_published": "2026-07-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 18,
+        "title": "AI changing economics of software engineering: Wipro’s Premji",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-changing-economics-of-software-engineering-wipros-premji/articleshow/132423127.cms",
+        "summary": "Wipro's Premji stated that AI is transforming the economics of software engineering. This change is expected to have a significant impact on the industry, altering the way software is developed and maintained. AI is likely to increase efficiency and reduce costs in software engineering, according to Premji.",
+        "date_published": "2026-07-16",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 14,
         "title": "Google rolls out sovereign AI stack for India’s regulated sectors",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/google-rolls-out-sovereign-ai-stack-for-indias-regulated-sectors/articleshow/132398161.cms",
@@ -334,6 +394,47 @@
         "source_name": "Times of India - Bangalore",
         "category": "Major AI Developments",
         "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "TCS launches Nvidia-powered autonomous engineering lab to accelerate AI-led mobility",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/tcs-launches-nvidia-powered-autonomous-engineering-lab-to-accelerate-ai-led-mobility/132411490",
+        "summary": "Tata Consultancy Services has launched an Nvidia-powered autonomous engineering lab in Bengaluru to accelerate AI-led mobility solutions. The lab will enable enterprises to move from pilot projects to production-scale deployments of AI solutions. It aims to facilitate rapid prototyping and validation of industrial AI use cases, creating intelligent and autonomous enterprises.",
+        "date_published": "2026-07-15",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 17,
+        "title": "GCCS are building AI talent internally by reskilling: Report",
+        "url": "https://www.thehindu.com/news/cities/bangalore/gccs-are-building-ai-talent-internally-by-reskilling-report/article71225670.ece",
+        "summary": "GCCs are developing AI talent internally through reskilling, according to a report. Bengaluru remains the largest GCC tech hub in terms of hiring share, but Hyderabad is growing faster. Hyderabad's growth is driven by demand for cloud, data engineering, and fintech infrastructure, indicating a shift beyond Bengaluru.",
+        "date_published": "2026-07-15",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG",
           "KA"
         ],
         "is_approved": true,
@@ -3297,6 +3398,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 13,
+        "title": "BluVenture leads Rs 100 Cr Series A round in E3 Electric.Ai",
+        "url": "https://entrackr.com/news/bluventure-leads-rs-100-cr-series-a-round-in-e3-electricai-12164631",
+        "summary": "E3 Electric.Ai, a deep-tech electric mobility startup, has raised Rs 100 crore ($10.5 million) in a Series A funding round led by BluVenture Holdings. The funding will be used to accelerate product innovation and expand the company's market presence across India. The investment comes ahead of the commercial launch of E3 Electric.Ai's E3 TRION electric scooter.",
+        "date_published": "2026-07-15",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Piper Serica leads seed round in deep tech startup eNLife Research",
         "url": "https://entrackr.com/snippets/piper-serica-leads-seed-round-in-deep-tech-startup-enlife-research-12146237",
@@ -4311,7 +4432,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives",
     "Major AI Developments"
   ]
 }

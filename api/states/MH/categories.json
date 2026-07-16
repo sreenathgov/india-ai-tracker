@@ -183,6 +183,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 19,
+        "title": "Maha clears ₹2cr for AI centres in agri universities",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/maha-clears-2cr-for-ai-centres-in-agri-universities/articleshow/132424359.cms",
+        "summary": "The Maharashtra government has cleared ₹2 crore for the establishment of AI centres in agricultural universities. The funding aims to promote the use of artificial intelligence in agriculture, with PDKV Akola being one of the beneficiary institutions. This initiative is expected to enhance agricultural productivity and efficiency through the adoption of AI technology.",
+        "date_published": "2026-07-16",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Tradition to tech: Wari leans on AI, this year",
         "url": "https://timesofindia.indiatimes.com/city/pune/tradition-to-tech-wari-leans-on-ai-this-year/articleshow/132319986.cms",
@@ -1782,6 +1802,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 10,
+        "title": "Quick Clean raises $14 Mn in Series B round led by Stakeboat Capital",
+        "url": "https://entrackr.com/snippets/quick-clean-raises-14-mn-in-series-b-round-led-by-stakeboat-capital-12168892",
+        "summary": "Quick Clean, an on-premise laundry infrastructure company, has raised $14 million in a Series B funding round led by Stakeboat Capital, with participation from existing investors Alkemi Growth Capital and Blue Ashva Capital. The funding will be used to expand across India, invest in AI-led laundry operations, and support international expansion plans. Quick Clean aims to leverage the fresh capital to enhance its automation and predictive maintenance technologies.",
+        "date_published": "2026-07-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Piper Serica leads seed round in deep tech startup eNLife Research",
         "url": "https://entrackr.com/snippets/piper-serica-leads-seed-round-in-deep-tech-startup-enlife-research-12146237",
@@ -2169,5 +2209,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments",
+    "AI Start-Up News"
+  ]
 }
