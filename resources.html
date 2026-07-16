@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Analytics load only after cookie consent (DPDP/GDPR) -->
+    <script src="js/consent.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources — Insights, Whitepapers & News | Kanan Labs</title>
+
+    <meta name="description" content="Insights, whitepapers, and news from Kanan Labs on trade evidence, customs readiness, marine cargo claims, and India's regulatory landscape.">
+    <link rel="canonical" href="https://kananlabs.in/resources.html">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kanan Labs">
+    <meta property="og:url" content="https://kananlabs.in/resources.html">
+    <meta property="og:title" content="Resources — Insights, Whitepapers & News | Kanan Labs">
+    <meta property="og:description" content="Insights, whitepapers, and news from Kanan Labs on trade evidence, customs readiness, marine cargo claims, and India's regulatory landscape.">
+    <meta property="og:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Kanan Labs Resources">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Resources — Insights, Whitepapers & News | Kanan Labs">
+    <meta name="twitter:description" content="Insights, whitepapers, and news from Kanan Labs on trade evidence, customs readiness, and India's regulatory landscape.">
+    <meta name="twitter:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
+
+    <link rel="icon" type="image/png" href="assets/images/KANAN-LABS-WEBSITELOGO.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://kananlabs.in/resources.html#collection",
+          "url": "https://kananlabs.in/resources.html",
+          "name": "Resources — Kanan Labs",
+          "description": "Insights, whitepapers, and news from Kanan Labs.",
+          "isPartOf": { "@id": "https://kananlabs.in/#website" },
+          "publisher": { "@id": "https://kananlabs.in/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kananlabs.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://kananlabs.in/resources.html" }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles-v2.css?v=21">
+    <link rel="stylesheet" href="css/staggered-menu.css">
+    <link rel="stylesheet" href="css/footer.css?v=3">
+    <link rel="stylesheet" href="css/contact-panel.css?v=1">
+    <link rel="stylesheet" href="css/resources.css?v=1">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>
+
+<body class="resources-page">
+    <!-- Staggered menu injected by staggered-menu.js -->
+
+    <!-- Orange infrastructure grid on cream -->
+    <canvas id="infrastructure-grid" data-border-color="rgba(219, 74, 43, 0.07)" aria-hidden="true"></canvas>
+
+    <main class="rc-main">
+
+        <div class="rc-masthead">
+            <h1 class="rc-masthead__title">Resources</h1>
+            <p class="rc-masthead__subline">Operational insights, substantive whitepapers, and news from the team
+                building the evidence layer for Indian trade.</p>
+        </div>
+
+        <nav class="rc-tabs" aria-label="Resource categories">
+            <button class="rc-tab is-active" type="button" data-bucket="all" aria-pressed="true">All</button>
+            <button class="rc-tab" type="button" data-bucket="insight" aria-pressed="false">Insights</button>
+            <button class="rc-tab" type="button" data-bucket="whitepaper" aria-pressed="false">Whitepapers</button>
+            <button class="rc-tab" type="button" data-bucket="news" aria-pressed="false">News &amp; Press</button>
+        </nav>
+
+        <p class="rc-status" id="resourcesStatus" role="status" hidden></p>
+
+        <section class="rc-featured" id="resourcesFeatured" aria-label="Featured publication"></section>
+
+        <section class="rc-grid" id="resourcesGrid" aria-label="Publications"></section>
+
+    </main>
+
+    <script type="application/json" id="resources-data">
+    {
+      "items": []
+    }
+    </script>
+
+    <footer class="kl-footer">
+        <div class="kl-footer__inner">
+            <div class="kl-footer__content">
+                <div class="kl-footer__brand">
+                    <img src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png" alt="Kanan Labs"
+                        class="kl-footer__logo" width="500" height="500" loading="lazy" decoding="async" draggable="false">
+                    <p class="kl-footer__tagline">India's AI Governance Intelligence</p>
+                    <div>
+                        <p class="kl-footer__nl-label">Weekly Brief</p>
+                        <form class="kl-footer__nl-form" id="footerNewsletterForm">
+                            <input type="email" class="kl-footer__nl-input" placeholder="Your email address"
+                                autocomplete="email" required>
+                            <button type="submit" class="kl-footer__nl-submit">Subscribe</button>
+                        </form>
+                    </div>
+                    <button class="kl-footer__consult" type="button"
+                        onclick="if(window.contactPanel) window.contactPanel.open()">
+                        Schedule Consultation →
+                    </button>
+                </div>
+                <div class="kl-footer__sitemap">
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Advisory</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="index.html#advisory">Regulatory Trajectory</a></li>
+                            <li><a href="index.html#advisory">Incentive Structuring</a></li>
+                            <li><a href="index.html#advisory">Governance Readiness</a></li>
+                            <li><a href="index.html#advisory">Cross-Border Advisory</a></li>
+                        </ul>
+                    </div>
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Company</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="sector-watch.html">Sector Watch</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Follow</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank"
+                                    rel="noopener">LinkedIn</a></li>
+                            <li><a href="https://x.com/indiaAItracker" target="_blank" rel="noopener">Twitter</a></li>
+                            <li><a href="https://github.com/sreenathgov" target="_blank" rel="noopener">GitHub</a></li>
+                        </ul>
+                    </div>
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Legal</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="disclaimers.html">Disclaimers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="kl-footer__watermark">
+                <img src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png" alt=""
+                    class="kl-footer__watermark-img" width="1584" height="396" loading="lazy" decoding="async"
+                    aria-hidden="true" draggable="false">
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/infrastructure-grid.js"></script>
+    <script src="js/resources.js"></script>
+    <script src="js/contact-panel.js"></script>
+    <script src="js/staggered-menu.js"></script>
+</body>
+
+</html>
