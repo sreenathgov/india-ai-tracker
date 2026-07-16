@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="css/staggered-menu.css">
     <link rel="stylesheet" href="css/footer.css?v=3">
     <link rel="stylesheet" href="css/contact-panel.css?v=1">
-    <link rel="stylesheet" href="css/resources.css?v=5">
+    <link rel="stylesheet" href="css/resources.css?v=6">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
 
@@ -77,10 +77,34 @@
         </div>
 
         <nav class="rc-tabs" aria-label="Resource categories">
-            <button class="rc-tab is-active" type="button" data-bucket="all" aria-pressed="true">All</button>
-            <button class="rc-tab" type="button" data-bucket="insight" aria-pressed="false">Insights</button>
-            <button class="rc-tab" type="button" data-bucket="whitepaper" aria-pressed="false">Whitepapers</button>
-            <button class="rc-tab" type="button" data-bucket="news" aria-pressed="false">News &amp; Press</button>
+            <button class="rc-tab is-active" type="button" data-bucket="all" aria-pressed="true">
+                <span class="rc-tab__hover-circle" aria-hidden="true"></span>
+                <span class="rc-tab__label-stack">
+                    <span class="rc-tab__label">All</span>
+                    <span class="rc-tab__label-hover" aria-hidden="true">All</span>
+                </span>
+            </button>
+            <button class="rc-tab" type="button" data-bucket="insight" aria-pressed="false">
+                <span class="rc-tab__hover-circle" aria-hidden="true"></span>
+                <span class="rc-tab__label-stack">
+                    <span class="rc-tab__label">Insights</span>
+                    <span class="rc-tab__label-hover" aria-hidden="true">Insights</span>
+                </span>
+            </button>
+            <button class="rc-tab" type="button" data-bucket="whitepaper" aria-pressed="false">
+                <span class="rc-tab__hover-circle" aria-hidden="true"></span>
+                <span class="rc-tab__label-stack">
+                    <span class="rc-tab__label">Whitepapers</span>
+                    <span class="rc-tab__label-hover" aria-hidden="true">Whitepapers</span>
+                </span>
+            </button>
+            <button class="rc-tab" type="button" data-bucket="news" aria-pressed="false">
+                <span class="rc-tab__hover-circle" aria-hidden="true"></span>
+                <span class="rc-tab__label-stack">
+                    <span class="rc-tab__label">News &amp; Press</span>
+                    <span class="rc-tab__label-hover" aria-hidden="true">News &amp; Press</span>
+                </span>
+            </button>
         </nav>
 
         <p class="rc-status" id="resourcesStatus" role="status" hidden></p>
@@ -253,6 +277,7 @@
 
     <script src="js/infrastructure-grid.js"></script>
     <script src="js/resources.js"></script>
+    <script src="js/rc-pill-tabs.js"></script>
     <script src="js/contact-panel.js"></script>
     <script src="js/staggered-menu.js"></script>
 </body>
