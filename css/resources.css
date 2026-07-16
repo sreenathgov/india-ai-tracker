@@ -148,7 +148,7 @@ body.resources-page #infrastructure-grid {
 .rc-featured__card {
     display: grid;
     grid-template-columns: 55% 1fr;
-    background: #FBF5E4;
+    background: #F5F3EE;
     border: 1px solid rgba(10, 47, 82, 0.18);
     border-radius: 16px;
     overflow: hidden;
@@ -227,7 +227,7 @@ body.resources-page #infrastructure-grid {
 .rc-card {
     display: flex;
     flex-direction: column;
-    background: #FBF5E4;
+    background: #F5F3EE;
     border: 1px solid rgba(10, 47, 82, 0.18);
     border-radius: 16px;
     overflow: hidden;
