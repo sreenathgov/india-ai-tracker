@@ -420,3 +420,38 @@
   pointer-events: none;
   background: transparent;
 }
+
+/* --- Sub-links beneath a parent menu item (e.g. Resources) --- */
+
+.sm-panel-subList {
+  list-style: none;
+  margin: 0.375rem 0 0.75rem;
+  padding: 0 0 0 0.25rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.sm-panel-subItem {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: rgba(244, 235, 208, 0.65);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.sm-panel-subItem:hover {
+  color: #db4a2b;
+}
+
+.sm-panel-subItem:focus-visible {
+  outline: 2px solid #db4a2b;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .sm-panel-subList {
+    gap: 1rem;
+  }
+}
