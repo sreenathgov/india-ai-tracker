@@ -3,6 +3,14 @@
    Class prefix: rc-
    ============================================================ */
 
+@font-face {
+    font-family: 'Telegraf';
+    src: url('../assets/fonts/Telegraf-UltraBold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
 html {
     height: auto !important;
     overflow: auto !important;
@@ -42,10 +50,11 @@ body.resources-page #infrastructure-grid {
 }
 
 .rc-masthead__title {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 600;
-    font-size: clamp(3rem, 7vw, 4.75rem);
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.75rem, 6vw, 4.25rem);
     line-height: 1.05;
+    letter-spacing: -0.01em;
     color: var(--brand-navy);
     margin: 0 0 1rem;
 }
@@ -120,7 +129,7 @@ body.resources-page #infrastructure-grid {
     grid-template-columns: 55% 1fr;
     background: #FBF5E4;
     border: 1px solid rgba(10, 47, 82, 0.18);
-    border-radius: 3px;
+    border-radius: 16px;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
@@ -199,7 +208,7 @@ body.resources-page #infrastructure-grid {
     flex-direction: column;
     background: #FBF5E4;
     border: 1px solid rgba(10, 47, 82, 0.18);
-    border-radius: 3px;
+    border-radius: 16px;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
@@ -278,7 +287,7 @@ body.resources-page #infrastructure-grid {
     text-transform: uppercase;
     color: #db4a2b;
     border: 1px solid rgba(219, 74, 43, 0.55);
-    border-radius: 2px;
+    border-radius: 6px;
     padding: 0.25rem 0.5rem;
     background: transparent;
     white-space: nowrap;
