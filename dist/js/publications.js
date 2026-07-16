@@ -58,13 +58,58 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Setup interactions
+    initSmoothScroll();
     setupPanelCloseButtons();
     setupKeyboardNavigation();
     setupScrollTracking();
+    setupTocProximity();
+    setupSubscribe();
 
     // Restore state from URL if applicable
     restoreFromURL();
 });
+
+// ============================================
+// SMOOTH SCROLL (Lenis) — buttery inertial wheel scroll, progressive enhancement
+// ============================================
+
+// Lenis runs in document mode (scrolls the real <html>), so the fixed sidebar,
+// panels, layer indicator and subscribe block keep working, and the
+// IntersectionObserver chapter-tracker stays accurate. Nested scrollers (the
+// sidebar and each panel body) opt out via [data-lenis-prevent] in the markup.
+let lenis = null;
+
+function initSmoothScroll() {
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || typeof window.Lenis !== 'function') return; // native scroll remains
+
+    lenis = new window.Lenis({
+        duration: 1.1,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        touchMultiplier: 1.5
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    window.__lenis = lenis;
+}
+
+// Route programmatic scrolls through Lenis when active, else native smooth scroll.
+function smoothScrollTo(target, options = {}) {
+    if (lenis) {
+        lenis.scrollTo(target, options);
+    } else if (typeof target === 'number') {
+        window.scrollTo({ top: target, behavior: 'smooth' });
+    } else if (target && target.scrollIntoView) {
+        target.scrollIntoView({ behavior: 'smooth', block: options.block || 'start' });
+    }
+}
 
 // ============================================
 // HYDRATION (pre-rendered static pages)
@@ -186,14 +231,15 @@ function parseFrontmatter(text) {
     const frontmatterText = match[1];
     const content = match[2];
 
-    // Simple YAML parsing for key: value pairs
+    // Simple YAML parsing for flat key: value pairs
     const metadata = {};
     frontmatterText.split('\n').forEach(line => {
         const colonIndex = line.indexOf(':');
-        if (colonIndex > 0) {
+        // Only treat top-level (unindented) keys as flat fields; nested blocks
+        // like takeaways are handled separately by extractTakeaways().
+        if (colonIndex > 0 && !/^\s/.test(line)) {
             const key = line.substring(0, colonIndex).trim();
             let value = line.substring(colonIndex + 1).trim();
-            // Remove surrounding quotes if present
             if ((value.startsWith('"') && value.endsWith('"')) ||
                 (value.startsWith("'") && value.endsWith("'"))) {
                 value = value.slice(1, -1);
@@ -202,7 +248,58 @@ function parseFrontmatter(text) {
         }
     });
 
+    // Nested "takeaways: { summary, points[] }" block (draft-preview best effort;
+    // the static generator parses this with full js-yaml).
+    const takeaways = extractTakeaways(frontmatterText);
+    if (takeaways) metadata.takeaways = takeaways;
+
     return { metadata, content };
+}
+
+// Line-scan the "takeaways:" mapping for summary (inline or folded) + points list.
+function extractTakeaways(frontmatterText) {
+    const stripQuotes = (v) => (
+        (v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))
+            ? v.slice(1, -1)
+            : v
+    );
+    const lines = frontmatterText.split('\n');
+    let i = lines.findIndex(l => /^takeaways:\s*$/.test(l));
+    if (i === -1) return null;
+
+    const summaryParts = [];
+    const points = [];
+    let mode = null; // 'summaryFold' | 'points'
+
+    for (i = i + 1; i < lines.length; i++) {
+        const line = lines[i];
+        if (line.trim() === '') continue;
+        if (/^\S/.test(line)) break; // dedented to a new top-level key → block ends
+
+        const summaryInline = line.match(/^\s{2}summary:\s*(.*)$/);
+        const pointsKey = /^\s{2}points:\s*$/.test(line);
+        const listItem = line.match(/^\s{2,}-\s+(.*)$/);
+
+        if (summaryInline) {
+            const v = summaryInline[1].trim();
+            if (v === '' || /^[>|]-?$/.test(v)) {
+                mode = 'summaryFold';
+            } else {
+                summaryParts.push(stripQuotes(v));
+                mode = null;
+            }
+        } else if (pointsKey) {
+            mode = 'points';
+        } else if (listItem && mode === 'points') {
+            points.push(stripQuotes(listItem[1].trim()));
+        } else if (mode === 'summaryFold') {
+            summaryParts.push(line.trim());
+        }
+    }
+
+    const summary = summaryParts.join(' ').trim();
+    if (!summary && points.length === 0) return null;
+    return { summary, points };
 }
 
 // ============================================
@@ -301,6 +398,9 @@ function parseMarkdownStructure(markdown, metadata) {
         date: metadata.date || '',
         abstract: metadata.abstract || '',
         category: metadata.category || '',
+        takeaways: (metadata.takeaways && typeof metadata.takeaways === 'object')
+            ? metadata.takeaways
+            : null,
         chapters
     };
 }
@@ -361,8 +461,9 @@ function renderTableOfContents() {
 
         html += `
             <li class="toc-item" data-chapter="${index}">
+                <span class="toc-marker" aria-hidden="true"></span>
                 <div class="toc-item-row">
-                    <span class="toc-num">${index + 1}</span>
+                    <span class="toc-num">${String(index + 1).padStart(2, '0')}</span>
                     <a href="#${chapter.id}"
                        class="toc-link"
                        data-chapter="${index}"
@@ -417,8 +518,66 @@ function buildMastheadHtml() {
     `;
 }
 
+// Escape text then promote **phrase** to a navy UltraBold highlight span.
+function renderInlineEmphasis(text) {
+    const esc = String(text)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    return esc.replace(/\*\*([^*]+)\*\*/g, '<span class="hl">$1</span>');
+}
+
+function buildTakeawaysHtml() {
+    const block = publicationData.takeaways || {};
+    const items = (Array.isArray(block.points) ? block.points : [])
+        .map(t => String(t).trim())
+        .filter(Boolean);
+    if (!items.length) return '';
+
+    const summaryText = (block.summary || '').trim();
+    const summary = summaryText
+        ? `<p class="pub-takeaways-summary">${renderInlineEmphasis(summaryText)}</p>
+            <hr class="pub-takeaways-rule">`
+        : '';
+
+    return `
+        <aside class="pub-takeaways" aria-label="Key takeaways">
+            <div class="pub-takeaways-kicker">The short version</div>
+            <h2 class="pub-takeaways-title">Key takeaways</h2>
+            ${summary}
+            <ul class="pub-takeaways-list">
+                ${items.map(t => `<li>${renderInlineEmphasis(t)}</li>`).join('')}
+            </ul>
+        </aside>
+    `;
+}
+
+// Inline "Weekly Brief" block at the end of the article — the laptop/mobile
+// home for the CTA (the fixed right-gutter block only appears ≥1900px). Same
+// copy, field, LinkedIn link and Brevo wiring as .pub-sub.
+function buildInlineSignupHtml() {
+    return `
+        <aside class="pub-signup-inline" aria-label="Subscribe to the Weekly Brief">
+            <div class="pub-sub-kicker">Weekly Brief</div>
+            <h2 class="pub-signup-inline-title">Get our insights delivered to your inbox.</h2>
+            <form class="pub-sub-form" novalidate>
+                <input type="email" class="pub-sub-input" name="email" placeholder="Your email address"
+                       autocomplete="email" required aria-label="Email address">
+                <button type="submit" class="pub-sub-btn">Subscribe</button>
+            </form>
+            <p class="pub-sub-note">Governance analysis, no spam &mdash; unsubscribe anytime.</p>
+            <p class="pub-sub-success">Thanks &mdash; you're on the list.</p>
+            <a class="pub-sub-linkedin" href="https://www.linkedin.com/company/kanan-labs/"
+               target="_blank" rel="noopener">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                <span>Follow on LinkedIn</span>
+            </a>
+        </aside>
+    `;
+}
+
 function renderOverviewContent() {
-    let html = buildMastheadHtml();
+    let html = buildMastheadHtml() + buildTakeawaysHtml();
 
     publicationData.chapters.forEach((chapter, chapterIndex) => {
         const chapterNumber = chapterIndex + 1;
@@ -460,6 +619,8 @@ function renderOverviewContent() {
 
         html += '</section>';
     });
+
+    html += buildInlineSignupHtml();
 
     readingContent.innerHTML = html;
 }
@@ -514,9 +675,11 @@ function openAnalysisPanel(chapterIndex, sectionIndex) {
         const docTarget = window.scrollY + cardTop - window.innerHeight / 2;
         const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
         const clamped = Math.min(Math.max(0, docTarget), maxScroll);
-        window.scrollTo({ top: clamped, behavior: 'smooth' });
-
+        // finalCardTop is target-based (absolute card top − target scroll), so the
+        // spot lands correctly whether Lenis animates or the scroll clamps.
         const finalCardTop = window.scrollY + cardTop - clamped;
+        smoothScrollTo(clamped);
+
         const spot = analysisPanel.querySelector('.spot');
         if (spot) spot.style.top = `${Math.round(finalCardTop)}px`;
     }
@@ -676,7 +839,7 @@ function updateLayerIndicator(layer) {
 function scrollToChapter(chapterId) {
     const element = document.getElementById(chapterId);
     if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        smoothScrollTo(element, { block: 'start', offset: 0 });
     }
 }
 
@@ -685,6 +848,48 @@ function setupPanelCloseButtons() {
     document.getElementById('closeIndepthBtn').addEventListener('click', closeIndepthPanel);
     // Progressive click-outside close is handled by the per-layer backdrops
     // (each backdrop closes only its own layer) — see addBackdrop().
+}
+
+// "Weekly Brief" signup. Binds BOTH the right-gutter block (.pub-sub, wide
+// screens) and the inline end-of-article fallback (.pub-signup-inline, laptops/
+// mobile). Both post to the shared Brevo endpoint via window.brevoSubscribe
+// (js/brevo-subscribe.js), matching the site footer form.
+function setupSubscribe() {
+    document.querySelectorAll('.pub-sub-form').forEach(bindSubscribeForm);
+}
+
+function bindSubscribeForm(form) {
+    const wrap = form.closest('.pub-sub, .pub-signup-inline');
+    const input = form.querySelector('.pub-sub-input');
+    const btn = form.querySelector('.pub-sub-btn');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = input ? input.value.trim() : '';
+        if (!email) return;
+
+        if (btn) { btn.disabled = true; btn.textContent = 'Subscribing…'; }
+        if (input) input.disabled = true;
+
+        const subscribe = typeof window.brevoSubscribe === 'function'
+            ? window.brevoSubscribe(email)
+            : Promise.reject(new Error('brevoSubscribe not loaded'));
+
+        subscribe
+            .then(() => {
+                if (wrap) wrap.classList.add('is-success');
+            })
+            .catch((err) => {
+                console.error('Weekly Brief subscription failed:', err);
+                if (btn) { btn.disabled = false; btn.textContent = 'Subscribe'; }
+                if (input) input.disabled = false;
+                const note = wrap && wrap.querySelector('.pub-sub-note');
+                if (note) {
+                    note.style.color = '#c23e22';
+                    note.textContent = 'Something went wrong. Please try again.';
+                }
+            });
+    });
 }
 
 function setupKeyboardNavigation() {
@@ -738,6 +943,79 @@ function updateTocHighlight(activeChapterId) {
         // Active chapter: bold link + its H2 sub-items revealed (CSS-driven)
         item.classList.toggle('active', isActive);
     });
+    // Ease the newly-active item's --effect to 1 (and the rest back down)
+    if (tocProximityKick) tocProximityKick();
+}
+
+// ============================================
+// TOC PROXIMITY (LineSidebar port)
+// Vanilla adaptation of reactbits.dev/components/line-sidebar: a single rAF
+// loop eases each chapter's --effect toward its target with frame-rate
+// independent exponential smoothing; CSS derives color/shift/marker from it.
+// ============================================
+
+const TOC_PROXIMITY_RADIUS = 90;   // px from the cursor at which items react
+const TOC_SMOOTHING = 100;         // ms time-constant of the ease
+const tocFalloffSmooth = (p) => p * p * (3 - 2 * p);
+
+let tocProximityKick = null;
+
+function setupTocProximity() {
+    if (!tocList) return;
+    // Static .active styling (CSS --effect: 1) covers reduced-motion users
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const targets = [];
+    const current = [];
+    let raf = null;
+    let last = 0;
+
+    const tocItems = () =>
+        Array.from(tocList.querySelectorAll(':scope > .toc-item'));
+
+    function frame(now) {
+        const dt = Math.min((now - last) / 1000, 0.05);
+        last = now;
+        const k = 1 - Math.exp(-dt / (TOC_SMOOTHING / 1000));
+
+        let moving = false;
+        tocItems().forEach((el, i) => {
+            const target = Math.max(targets[i] || 0, el.classList.contains('active') ? 1 : 0);
+            const cur = current[i] || 0;
+            const next = cur + (target - cur) * k;
+            const settled = Math.abs(target - next) < 0.0015;
+            const value = settled ? target : next;
+            current[i] = value;
+            el.style.setProperty('--effect', value.toFixed(4));
+            if (!settled) moving = true;
+        });
+
+        raf = moving ? requestAnimationFrame(frame) : null;
+    }
+
+    function startLoop() {
+        if (raf != null) return;
+        last = performance.now();
+        raf = requestAnimationFrame(frame);
+    }
+
+    tocList.addEventListener('pointermove', (e) => {
+        tocItems().forEach((el, i) => {
+            const row = el.querySelector('.toc-item-row') || el;
+            const rect = row.getBoundingClientRect();
+            const distance = Math.abs(e.clientY - (rect.top + rect.height / 2));
+            targets[i] = tocFalloffSmooth(Math.max(0, 1 - distance / TOC_PROXIMITY_RADIUS));
+        });
+        startLoop();
+    });
+
+    tocList.addEventListener('pointerleave', () => {
+        targets.fill(0);
+        startLoop();
+    });
+
+    tocProximityKick = startLoop;
+    startLoop();
 }
 
 // ============================================

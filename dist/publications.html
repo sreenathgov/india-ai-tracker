@@ -2,21 +2,22 @@
 <html lang="en">
 
 <head>
+    <base href="/">
     <!-- Analytics load only after cookie consent (DPDP/GDPR) -->
-    <script src="js/consent.js" defer></script>
+    <script src="/js/consent.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications — Research & Dossiers | Kanan Labs</title>
+    <title>Publications | Kanan Labs</title>
 
-    <meta name="description" content="Research, dossiers, and analysis from Kanan Labs on trade intelligence, regulatory developments, and India's AI policy landscape.">
+    <meta name="description" content="Kanan Labs publications: sourced operational notes and regulatory change-watches on IGST refunds, customs readiness, marine cargo evidence and India-linked trade.">
     <link rel="canonical" href="https://kananlabs.in/publications.html">
     <meta name="robots" content="index,follow,max-image-preview:large">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Kanan Labs">
     <meta property="og:url" content="https://kananlabs.in/publications.html">
-    <meta property="og:title" content="Publications — Research & Dossiers | Kanan Labs">
-    <meta property="og:description" content="Research, dossiers, and analysis from Kanan Labs on trade intelligence, regulatory developments, and India's AI policy landscape.">
+    <meta property="og:title" content="Publications | Kanan Labs">
+    <meta property="og:description" content="Kanan Labs publications: sourced operational notes and regulatory change-watches on IGST refunds, customs readiness, marine cargo evidence and India-linked trade.">
     <meta property="og:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
@@ -25,244 +26,125 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://kananlabs.in/publications.html">
-    <meta name="twitter:title" content="Publications — Research & Dossiers | Kanan Labs">
-    <meta name="twitter:description" content="Research, dossiers, and analysis from Kanan Labs on trade intelligence, regulatory developments, and India's AI policy landscape.">
+    <meta name="twitter:title" content="Publications | Kanan Labs">
+    <meta name="twitter:description" content="Kanan Labs publications: sourced operational notes and regulatory change-watches on IGST refunds, customs readiness, marine cargo evidence and India-linked trade.">
     <meta name="twitter:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
     <meta name="twitter:image:alt" content="Kanan Labs Publications">
 
-    <link rel="icon" type="image/png" href="assets/images/KANAN-LABS-WEBSITELOGO.png">
+    <link rel="icon" type="image/png" href="/assets/images/KANAN-LABS-WEBSITELOGO.png">
 
-    <!-- Structured data: CollectionPage + BreadcrumbList -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "CollectionPage",
+      "@id": "https://kananlabs.in/publications.html#collection",
+      "url": "https://kananlabs.in/publications.html",
+      "name": "Publications — Kanan Labs",
+      "description": "Kanan Labs publications: sourced operational notes and regulatory change-watches on IGST refunds, customs readiness, marine cargo evidence and India-linked trade.",
+      "isPartOf": {
+        "@id": "https://kananlabs.in/#website"
+      },
+      "publisher": {
+        "@id": "https://kananlabs.in/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "CollectionPage",
-          "@id": "https://kananlabs.in/publications.html#collection",
-          "url": "https://kananlabs.in/publications.html",
-          "name": "Publications — Kanan Labs",
-          "description": "Research, dossiers, and analysis from Kanan Labs.",
-          "isPartOf": { "@id": "https://kananlabs.in/#website" },
-          "publisher": { "@id": "https://kananlabs.in/#organization" }
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kananlabs.in/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kananlabs.in/" },
-            { "@type": "ListItem", "position": 2, "name": "Publications", "item": "https://kananlabs.in/publications.html" }
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Publications",
+          "item": "https://kananlabs.in/publications.html"
         }
       ]
     }
+  ]
+}
     </script>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/styles-v2.css?v=21">
-    <link rel="stylesheet" href="css/staggered-menu.css">
-    <link rel="stylesheet" href="css/footer.css?v=3">
-    <link rel="stylesheet" href="css/contact-panel.css?v=1">
-    <link rel="stylesheet" href="css/back-button.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles-v2.css?v=21">
+    <link rel="stylesheet" href="/css/staggered-menu.css">
+    <link rel="stylesheet" href="/css/publications-catalog.css?v=1">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-    <style>
-        html {
-            height: auto !important;
-            overflow: auto !important;
-        }
-
-        body.publications-coming-soon {
-            height: auto !important;
-            overflow: auto !important;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background: var(--brand-navy);
-        }
-
-        .coming-soon-main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        .coming-soon-animation {
-            width: 220px;
-            height: 220px;
-            margin-bottom: 1.5rem;
-        }
-
-        .coming-soon-label {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--brand-cream);
-            opacity: 0.45;
-            margin-bottom: 0.75rem;
-        }
-
-        .coming-soon-title {
-            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-            font-size: 2.25rem;
-            font-weight: 600;
-            color: var(--brand-cream);
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .coming-soon-description {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9375rem;
-            color: var(--brand-cream);
-            opacity: 0.6;
-            line-height: 1.7;
-            max-width: 480px;
-            margin: 0 auto 2.5rem;
-        }
-
-        .coming-soon-back {
-            display: inline-block;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--brand-navy);
-            background: var(--brand-cream);
-            padding: 0.75rem 1.75rem;
-            border-radius: 6px;
-            text-decoration: none;
-            transition: opacity 0.15s ease;
-        }
-
-        .coming-soon-back:hover {
-            opacity: 0.88;
-        }
-    </style>
 </head>
 
-<body class="publications-coming-soon">
+<body class="pub-catalog-page">
     <!-- Staggered menu will be injected here by staggered-menu.js -->
 
-    <div style="height: 80px;"></div>
+    <main class="pub-catalog" data-nav-light>
+        <header class="pub-catalog-header">
+            <div class="pub-catalog-kicker">Kanan Labs</div>
+            <h1 class="pub-catalog-title">Publications</h1>
+            <p class="pub-catalog-lede">Operational notes, change-watches and concept pieces on India-linked trade: IGST and customs readiness, marine cargo evidence, EV and lithium export, export realization, and the architecture behind TradeWatch.</p>
+        </header>
 
-    <main class="coming-soon-main">
-        <dotlottie-player class="coming-soon-animation" src="added-assets/coming soon.lottie" background="transparent"
-            speed="1" loop autoplay>
-        </dotlottie-player>
 
-        <div class="kl-page-title-row" style="justify-content: center;">
-            <a href="index.html" class="kl-back-btn" aria-label="Back to home">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                    <path d="M7.5 2L3.5 6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </a>
-            <p class="coming-soon-label" style="margin-bottom: 0;">Publications</p>
-        </div>
-        <h1 class="coming-soon-title">Coming Soon</h1>
-        <p class="coming-soon-description">
-            In-depth reports and analysis on AI governance, policy developments, and regulatory trends across India are
-            on their way.
+
+        <section class="pub-catalog-grid" id="pubCatalogGrid" aria-label="Publications">
+            <div class="pub-catalog-empty">First publications are in production — the Weekly Brief will announce them.</div>
+        </section>
+
+        <p class="pub-catalog-nomatch" id="pubCatalogNoMatch" hidden>
+            No publications match this filter yet.
         </p>
-        <a href="tracker.html" class="coming-soon-back">View India AI Tracker</a>
     </main>
 
-    <footer class="kl-footer">
-        <div class="kl-footer__inner">
-
-            <div class="kl-footer__content">
-
-                <!-- LEFT: Brand zone -->
-                <div class="kl-footer__brand">
-
-                    <img src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png" alt="Kanan Labs"
-                        class="kl-footer__logo" width="500" height="500" loading="lazy" decoding="async" draggable="false">
-
-                    <p class="kl-footer__tagline">India's AI Governance Intelligence</p>
-
-                    <!-- Newsletter mini-form -->
-                    <div>
-                        <p class="kl-footer__nl-label">Weekly Brief</p>
-                        <form class="kl-footer__nl-form" id="footerNewsletterForm">
-                            <input type="email" class="kl-footer__nl-input" placeholder="Your email address"
-                                autocomplete="email" required>
-                            <button type="submit" class="kl-footer__nl-submit">Subscribe</button>
-                        </form>
-                    </div>
-
-                    <!-- Schedule Consultation -->
-                    <button class="kl-footer__consult" type="button"
-                        onclick="if(window.contactPanel) window.contactPanel.open()">
-                        Schedule Consultation →
-                    </button>
-
-                </div>
-
-                <!-- RIGHT: Sitemap grid -->
-                <div class="kl-footer__sitemap">
-
-                    <!-- Col 1: Advisory -->
-                    <div class="kl-footer__col">
-                        <h4 class="kl-footer__col-heading">Advisory</h4>
-                        <ul class="kl-footer__col-links">
-                            <li><a href="index.html#advisory">Regulatory Trajectory</a></li>
-                            <li><a href="index.html#advisory">Incentive Structuring</a></li>
-                            <li><a href="index.html#advisory">Governance Readiness</a></li>
-                            <li><a href="index.html#advisory">Cross-Border Advisory</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Col 2: Company -->
-                    <div class="kl-footer__col">
-                        <h4 class="kl-footer__col-heading">Company</h4>
-                        <ul class="kl-footer__col-links">
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="sector-watch.html">Sector Watch</a></li>
-                            <li><a href="publications.html">Publications</a></li>
-                            <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Col 3: Follow -->
-                    <div class="kl-footer__col">
-                        <h4 class="kl-footer__col-heading">Follow</h4>
-                        <ul class="kl-footer__col-links">
-                            <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank"
-                                    rel="noopener">LinkedIn</a></li>
-                            <li><a href="https://x.com/indiaAItracker" target="_blank" rel="noopener">Twitter</a></li>
-                            <li><a href="https://github.com/sreenathgov" target="_blank" rel="noopener">GitHub</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Col 4: Legal -->
-                    <div class="kl-footer__col">
-                        <h4 class="kl-footer__col-heading">Legal</h4>
-                        <ul class="kl-footer__col-links">
-                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                            <li><a href="disclaimers.html">Disclaimers</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- BOTTOM: Watermark logo -->
-            <div class="kl-footer__watermark">
-                <img src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png" alt=""
-                    class="kl-footer__watermark-img" width="1584" height="396" loading="lazy" decoding="async" aria-hidden="true" draggable="false">
-            </div>
-
-        </div>
+    <footer class="site-footer publications-footer">
+        <p class="footer-byline">A public AI governance intelligence tool by Sreenath Govindarajan, Founder of Kanan
+            Labs</p>
+        <p class="footer-links">
+            <a href="/about.html">About</a>
+            <span class="separator">·</span>
+            <a href="mailto:sreenath@kananlabs.in">Contact</a>
+        </p>
     </footer>
-    <script src="js/contact-panel.js"></script>
-    <script src="js/staggered-menu.js"></script>
+
+    <script src="/js/staggered-menu.js"></script>
+    <script>
+        // Static catalog filter: cards are pre-rendered; this only toggles
+        // visibility by data-cluster / data-type. No fetch, no manifest.
+        (function () {
+            var state = { cluster: 'all', type: 'all' };
+            var grid = document.getElementById('pubCatalogGrid');
+            var noMatch = document.getElementById('pubCatalogNoMatch');
+            if (!grid) return;
+
+            function apply() {
+                var visible = 0;
+                grid.querySelectorAll('.pub-card').forEach(function (card) {
+                    var show = (state.cluster === 'all' || card.dataset.cluster === state.cluster)
+                        && (state.type === 'all' || card.dataset.type === state.type);
+                    card.hidden = !show;
+                    if (show) visible += 1;
+                });
+                if (noMatch) noMatch.hidden = visible !== 0;
+            }
+
+            document.querySelectorAll('.pub-filter-btn').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var group = btn.dataset.filterGroup; // 'cluster' | 'type'
+                    state[group] = btn.dataset.filterValue;
+                    document.querySelectorAll('.pub-filter-btn[data-filter-group="' + group + '"]')
+                        .forEach(function (b) {
+                            var active = b === btn;
+                            b.classList.toggle('is-active', active);
+                            b.setAttribute('aria-pressed', active ? 'true' : 'false');
+                        });
+                    apply();
+                });
+            });
+        })();
+    </script>
 </body>
 
 </html>

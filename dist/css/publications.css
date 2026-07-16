@@ -145,13 +145,26 @@ body.publications-page .page-wrapper {
     border-bottom: 1px solid var(--pub-border-subtle);
 }
 
+/* LineSidebar-style contents (adapted from reactbits.dev/components/line-sidebar,
+   ported to vanilla JS). Each .toc-item carries --effect (0..1), eased by a rAF
+   lerp in publications.js from cursor proximity — color, shift, marker scale and
+   index opacity all read the same value so they move in lockstep. The active
+   chapter (IntersectionObserver) pins --effect to 1. Brand mapping: accent =
+   Kanan orange, text = charcoal, markers = navy hairlines on the cream rail. */
 .toc-list {
+    --toc-accent: var(--kanan-orange);
+    --toc-text: #3a3d42;
+    --toc-marker: rgba(10, 47, 82, 0.30);
+    --toc-marker-length: 1.5rem;
+    --toc-marker-gap: 0.75rem;
+    --toc-max-shift: 10px;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 calc(var(--toc-marker-length) + var(--toc-marker-gap));
 }
 
 .toc-item {
+    position: relative;
     margin-bottom: 1.05rem;
 }
 
@@ -159,44 +172,73 @@ body.publications-page .page-wrapper {
     display: flex;
     align-items: baseline;
     gap: 0.8rem;
+    transform: translateX(calc(var(--effect, 0) * var(--toc-max-shift)));
+}
+
+/* Horizontal marker line, left of the row — scales and warms toward orange
+   with proximity. Positioned on the li so it does not shift with the label. */
+.toc-item .toc-marker {
+    position: absolute;
+    top: 0.63rem;
+    left: calc(-1 * (var(--toc-marker-length) + var(--toc-marker-gap)));
+    height: 1px;
+    width: var(--toc-marker-length);
+    background-color: color-mix(in srgb,
+        var(--toc-accent) calc(var(--effect, 0) * 100%),
+        var(--toc-marker));
+    transform-origin: left center;
+    transform: scaleX(calc(0.7 + var(--effect, 0) * 0.5));
+}
+
+/* Short static tick centered in the gap between two chapters; grows slightly
+   with proximity (the component's scaleTick behaviour). */
+.toc-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + 0.525rem);
+    left: calc(-1 * (var(--toc-marker-length) + var(--toc-marker-gap)));
+    height: 1px;
+    width: calc(var(--toc-marker-length) * 0.5);
+    background-color: var(--toc-marker);
+    opacity: 0.5;
+    transform-origin: left center;
+    transform: translateY(-50%) scaleX(calc(0.7 + var(--effect, 0) * 0.6));
 }
 
 .toc-num {
     font-family: 'Telegraf', 'Inter', sans-serif;
     font-size: 0.72rem;
     color: var(--kanan-orange);
-    min-width: 0.9rem;
+    min-width: 1.1rem;
     flex-shrink: 0;
+    opacity: calc(0.55 + var(--effect, 0) * 0.45);
 }
 
 .toc-link {
     font-family: 'Inter', sans-serif;
     font-size: 0.875rem;
-    color: #3a3d42;
+    color: color-mix(in srgb,
+        var(--toc-accent) calc(var(--effect, 0) * 100%),
+        var(--toc-text));
     text-decoration: none;
     line-height: 1.45;
-    transition: color 0.15s ease;
 }
 
-.toc-link:hover {
-    color: var(--kanan-blue);
+/* Static fallback (reduced motion / JS engine absent): active still reads */
+.toc-item.active {
+    --effect: 1;
 }
 
 .toc-item.active .toc-link {
-    color: var(--kanan-blue);
     font-weight: 600;
 }
 
-/* H2 sub-items — revealed for the active chapter only */
+/* H2 sub-items — always open; the proximity effect stays on the chapter rows */
 .toc-sub {
     list-style: none;
-    display: none;
+    display: block;
     margin: 0.55rem 0 0 1.7rem;
     padding: 0;
-}
-
-.toc-item.active .toc-sub {
-    display: block;
 }
 
 .toc-sub li {
@@ -328,7 +370,7 @@ body.publications-page .page-wrapper {
 .masthead-title {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 3.2rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--kanan-blue);
     line-height: 1.08;
     letter-spacing: -0.02em;
@@ -356,13 +398,116 @@ body.publications-page .page-wrapper {
     max-width: 46rem;
 }
 
-/* White section card per chapter */
+/* --- Key Takeaways: executive-summary callout below the masthead --- */
+
+/* Scoped alias: real Telegraf UltraBold, used ONLY for takeaway highlights so
+   it never affects the weight-600 kickers/labels elsewhere in the reader. */
+@font-face {
+    font-family: 'Telegraf UB';
+    src: url('../assets/fonts/Telegraf-UltraBold.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+.pub-takeaways {
+    position: relative;
+    margin: 2.8rem 2rem 1rem 5.5rem;
+    padding: 2.4rem 3.3rem 2.6rem;
+    max-width: 68rem;
+    background: var(--pub-card);
+    border: 1px solid var(--pub-border-subtle);
+    border-top: 3px solid var(--kanan-orange);
+    /* Apple-style soft elevation — lifts the box off the cream ground, matching
+       the raised subsection tiles. */
+    box-shadow:
+        0 1px 2px rgba(10, 47, 82, 0.05),
+        0 14px 40px -18px rgba(10, 47, 82, 0.18);
+}
+
+.pub-takeaways-kicker {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--kanan-orange);
+    margin-bottom: 0.6rem;
+}
+
+.pub-takeaways-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: var(--kanan-blue);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.1rem;
+}
+
+.pub-takeaways-summary {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 1.02rem;
+    line-height: 1.62;
+    color: var(--reading-text);
+    margin: 0 0 1.5rem;
+}
+
+.pub-takeaways-summary strong,
+.pub-takeaways-summary .hl,
+.pub-takeaways-list strong,
+.pub-takeaways-list .hl {
+    font-family: 'Telegraf UB', 'Telegraf', 'Inter', sans-serif;
+    font-weight: 400;
+    color: var(--kanan-blue);
+}
+
+.pub-takeaways-rule {
+    height: 1px;
+    background: var(--pub-border-subtle);
+    border: 0;
+    margin: 0 0 1.5rem;
+}
+
+.pub-takeaways-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.05rem;
+}
+
+.pub-takeaways-list li {
+    position: relative;
+    padding-left: 1.9rem;
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--reading-text);
+}
+
+.pub-takeaways-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.15em;
+    width: 1.02rem;
+    height: 1.02rem;
+    background-color: var(--kanan-orange);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 6L9 17l-5-5' fill='none' stroke='%23000' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 6L9 17l-5-5' fill='none' stroke='%23000' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* Chapter section: transparent so it reads as the cream "ground". The white,
+   shadowed subsection tiles inside are the only raised surfaces — that contrast
+   is what signals they're the interactive elements. */
 .chapter-card {
     position: relative;
     margin: 4.5rem 2rem 4.5rem 5.5rem;
     padding: 3.3rem 3.3rem 2.6rem;
     max-width: 68rem;
-    background: var(--pub-card);
+    background: transparent;
 }
 
 .chapter-card:first-child {
@@ -382,7 +527,7 @@ body.publications-page .page-wrapper {
 .chapter-title {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 2.7rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--kanan-blue);
     line-height: 1.12;
     letter-spacing: -0.02em;
@@ -390,7 +535,8 @@ body.publications-page .page-wrapper {
 }
 
 .chapter-content {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-weight: 400;
     font-size: 1.2rem;
     line-height: 1.75;
     color: var(--reading-text);
@@ -411,10 +557,16 @@ body.publications-page .page-wrapper {
     min-height: 12rem;
     margin: 3rem 0 4.5rem;
     padding: 2.3rem 2.6rem 0 2.8rem;
-    border: 1px solid var(--pub-border-subtle);
+    background: var(--pub-card);
+    border: 1px solid var(--pub-border);
+    /* Apple-style resting elevation: tight contact shadow + soft ambient lift,
+       so the tile reads as a raised, clickable object even before hover. */
+    box-shadow:
+        0 1px 2px rgba(10, 47, 82, 0.05),
+        0 10px 30px -14px rgba(10, 47, 82, 0.16);
     cursor: pointer;
     transition:
-        background 0.2s ease-out,
+        transform 0.25s ease-out,
         box-shadow 0.25s ease-out,
         border-color 0.2s ease-out;
 }
@@ -424,15 +576,20 @@ body.publications-page .page-wrapper {
 }
 
 .subsection-card:hover {
-    background: #fdfcfa;
+    transform: translateY(-3px);
     border-color: var(--pub-border);
-    box-shadow: 0 16px 32px -20px rgba(10, 47, 82, 0.22);
+    box-shadow:
+        0 4px 10px rgba(10, 47, 82, 0.06),
+        0 22px 48px -18px rgba(10, 47, 82, 0.26);
 }
 
-/* Active card: stays lit above the dim backdrop, connector dot + line drawn */
+/* Active card: lit above the dim backdrop; it has "lifted into" the panel, so
+   drop the resting elevation and sit flat on the dim ground. */
 .subsection-card.active {
     background: var(--pub-dim);
     border-color: transparent;
+    box-shadow: none;
+    transform: none;
     z-index: 96;
     pointer-events: none;
 }
@@ -483,14 +640,15 @@ body.publications-page .page-wrapper {
 .subsection-title {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 1.9rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--kanan-blue);
     line-height: 1.25;
     margin: 0.2rem 0 0.7rem;
 }
 
 .subsection-teaser {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-weight: 400;
     font-size: 1.15rem;
     line-height: 1.7;
     color: var(--reading-text);
@@ -519,23 +677,29 @@ body.publications-page .page-wrapper {
     display: flex;
     align-items: center;
     margin: auto -2.6rem 0 -2.8rem;
-    padding: 0.9rem 1.5rem;
-    background: #f9efe9;   /* terracotta whisper — barely-there brand-orange tint */
-    border-top: 1px solid rgba(219, 74, 43, 0.12);
+    padding: 0.95rem 1.6rem;
+    /* Rest: a legible terracotta CTA bar (not the old near-invisible whisper),
+       with orange label — a persistent, unmistakable "click to open" affordance. */
+    background: #f6e6dc;
+    border-top: 1px solid rgba(219, 74, 43, 0.22);
     font-family: 'Telegraf', 'Inter', sans-serif;
     font-size: 0.78rem;
-    letter-spacing: 0.05em;
-    color: var(--kanan-blue);
-    transition: background 0.2s ease-out;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--kanan-orange);
+    transition: background 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out;
 }
 
+/* Hover: the bar fills solid orange and inverts to white — reads as a button. */
 .subsection-card:hover .more-strip {
-    background: #f6e8df;
+    background: var(--kanan-orange);
+    border-top-color: var(--kanan-orange);
+    color: #fff;
 }
 
 .more-strip .more-icon {
     margin-left: 0.9em;
-    color: var(--kanan-orange);
+    color: inherit;
     transition: transform 0.3s ease-out;
 }
 
@@ -597,6 +761,301 @@ body.publications-page .page-wrapper {
     height: 2rem;
     width: 1.45rem;
     margin-left: 0.4em;
+}
+
+/* ============================================
+   RIGHT-GUTTER SUBSCRIBE — "Weekly Brief"
+   Fixed in the right negative space. z-index sits
+   BELOW the backdrops (95) and panels (100/110) so
+   Layer 2/3 slide over and fully cover it. Revealed
+   only where the gutter is wide enough (see media
+   query at the foot of this block); the site footer
+   carries the same signup on narrower screens.
+   ============================================ */
+
+.pub-sub {
+    position: fixed;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    width: 14rem;
+    z-index: 30;
+    display: none;
+    padding-left: 1.4rem;
+    border-left: 2px solid var(--kanan-orange);
+}
+
+.pub-sub-kicker {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--kanan-orange);
+    margin-bottom: 0.7rem;
+}
+
+.pub-sub-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--kanan-blue);
+    margin: 0 0 1.1rem;
+}
+
+.pub-sub-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.pub-sub-input {
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    color: var(--reading-text);
+    background: var(--pub-card);
+    border: 1px solid var(--pub-border);
+    border-radius: 3px;
+    padding: 0.6rem 0.7rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pub-sub-input::placeholder {
+    color: var(--pub-gray);
+}
+
+.pub-sub-input:focus {
+    outline: none;
+    border-color: var(--kanan-orange);
+    box-shadow: 0 0 0 3px rgba(219, 74, 43, 0.12);
+}
+
+.pub-sub-btn {
+    width: 100%;
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--kanan-orange);
+    border: none;
+    border-radius: 3px;
+    padding: 0.62rem 0.7rem;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.pub-sub-btn:hover {
+    background: #c23e22;
+}
+
+.pub-sub-btn:active {
+    transform: translateY(1px);
+}
+
+.pub-sub-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.pub-sub-note {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.66rem;
+    line-height: 1.45;
+    color: var(--pub-gray);
+    margin: 0.75rem 0 0;
+}
+
+.pub-sub-success {
+    display: none;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: var(--kanan-blue);
+}
+
+.pub-sub.is-success .pub-sub-form,
+.pub-sub.is-success .pub-sub-note {
+    display: none;
+}
+
+.pub-sub.is-success .pub-sub-success {
+    display: block;
+}
+
+.pub-sub-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.2rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--pub-border-subtle);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: var(--reading-text-light);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.pub-sub-linkedin svg {
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+
+.pub-sub-linkedin:hover {
+    color: var(--kanan-blue);
+}
+
+.pub-sub-linkedin:hover svg {
+    opacity: 1;
+}
+
+/* Reveal only where the right gutter clears the 68rem reading column
+   with a comfortable gap. Below this, the block stays hidden and the site
+   footer's signup covers the reader. */
+@media (min-width: 1900px) {
+    .pub-sub {
+        display: block;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pub-sub-input,
+    .pub-sub-btn,
+    .pub-sub-linkedin,
+    .pub-sub-linkedin svg {
+        transition: none;
+    }
+}
+
+/* ============================================
+   INLINE "WEEKLY BRIEF" SIGNUP
+   End-of-article fallback — the complement of the
+   fixed .pub-sub gutter block: shown by default,
+   hidden >=1900px where the gutter block takes over.
+   ============================================ */
+
+.pub-signup-inline {
+    margin: 4.5rem 2rem 1rem 5.5rem;
+    max-width: 68rem;
+    padding: 2.4rem 3rem 2.6rem;
+    background: var(--pub-card);
+    border: 1px solid var(--pub-border-subtle);
+    border-top: 3px solid var(--kanan-orange);
+    box-shadow:
+        0 1px 2px rgba(10, 47, 82, 0.05),
+        0 14px 40px -18px rgba(10, 47, 82, 0.18);
+}
+
+.pub-signup-inline-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.85rem;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--kanan-blue);
+    margin: 0.4rem 0 1.3rem;
+}
+
+/* Horizontal form inside the roomy inline card (email grows, button hugs) */
+.pub-signup-inline .pub-sub-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    max-width: 34rem;
+}
+
+.pub-signup-inline .pub-sub-input {
+    flex: 1;
+    min-width: 12rem;
+    width: auto;
+    font-size: 0.9rem;
+    padding: 0.7rem 0.85rem;
+}
+
+.pub-signup-inline .pub-sub-btn {
+    width: auto;
+    white-space: nowrap;
+    padding: 0.7rem 1.4rem;
+}
+
+.pub-signup-inline .pub-sub-note {
+    font-size: 0.72rem;
+}
+
+.pub-signup-inline.is-success .pub-sub-form,
+.pub-signup-inline.is-success .pub-sub-note {
+    display: none;
+}
+
+.pub-signup-inline.is-success .pub-sub-success {
+    display: block;
+}
+
+@media (min-width: 1900px) {
+    .pub-signup-inline {
+        display: none;   /* the fixed gutter block takes over */
+    }
+}
+
+@media (max-width: 1200px) {
+    .pub-signup-inline {
+        margin-left: 3.5rem;
+        padding: 2.2rem 2.4rem 2.4rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .pub-signup-inline {
+        margin: 3.5rem auto 0;
+        max-width: 46rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .pub-signup-inline .pub-sub-form {
+        flex-direction: column;
+        max-width: none;
+    }
+    .pub-signup-inline .pub-sub-btn {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   LENIS SMOOTH SCROLL
+   Classes are added to <html> by js/publications.js
+   once Lenis attaches. Nested scrollers (sidebar,
+   panel bodies) opt out via [data-lenis-prevent].
+   ============================================ */
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+/* Reduced motion: Lenis never initialises (JS-gated); also drop the native
+   smooth-scroll so anchor jumps are instant for these users. */
+@media (prefers-reduced-motion: reduce) {
+    html.publications-html {
+        scroll-behavior: auto;
+    }
 }
 
 /* ============================================
@@ -792,7 +1251,7 @@ body.publications-page .page-wrapper {
 .reading-panel .panel-title {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 2.3rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--kanan-blue);
     margin: 0;
     line-height: 1.15;
@@ -805,7 +1264,8 @@ body.publications-page .page-wrapper {
     background: transparent;
     padding: 0;
     transform: none;
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-weight: 400;
     font-size: 1.1875rem;
     line-height: 1.75;
     color: var(--reading-text);
@@ -934,6 +1394,11 @@ body.publications-page .page-wrapper {
         margin-left: 3.5rem;
         padding: 2.6rem 2.6rem 2.2rem;
     }
+
+    .pub-takeaways {
+        margin-left: 3.5rem;
+        padding: 2.2rem 2.6rem 2.4rem;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -960,6 +1425,12 @@ body.publications-page .page-wrapper {
     .chapter-card {
         margin: 3.5rem auto;
         padding: 2.4rem 2.2rem 2rem;
+        max-width: 46rem;
+    }
+
+    .pub-takeaways {
+        margin: 2.5rem auto 0;
+        padding: 2.1rem 2.2rem 2.2rem;
         max-width: 46rem;
     }
 
@@ -1049,6 +1520,14 @@ body.publications-page .page-wrapper {
     .chapter-card {
         margin: 2.5rem auto;
         padding: 1.8rem 1.4rem 1.6rem;
+    }
+
+    .pub-takeaways {
+        padding: 1.8rem 1.4rem 1.8rem;
+    }
+
+    .pub-takeaways-title {
+        font-size: 1.6rem;
     }
 
     .subsection-card {
