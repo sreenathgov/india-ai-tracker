@@ -178,13 +178,50 @@
     showStatus(gridItems.length || featuredItem ? '' : 'Nothing published here yet — check back soon.');
   }
 
-  // ---------- init (tabs wired in Task 4) ----------
+  // ---------- tabs + hash ----------
+
+  const HASH_TO_BUCKET = Object.freeze({
+    '#insights': 'insight',
+    '#whitepapers': 'whitepaper',
+    '#news': 'news'
+  });
+  const BUCKET_TO_HASH = Object.freeze({
+    insight: '#insights',
+    whitepaper: '#whitepapers',
+    news: '#news'
+  });
+
+  function bucketFromHash() {
+    return HASH_TO_BUCKET[window.location.hash] || 'all';
+  }
+
+  function setActiveTab(bucket) {
+    els.tabs.forEach(tab => {
+      const active = tab.dataset.bucket === bucket;
+      tab.classList.toggle('is-active', active);
+      tab.setAttribute('aria-pressed', String(active));
+    });
+  }
+
+  function activate(items, bucket, updateHash) {
+    setActiveTab(bucket);
+    renderCatalog(items, bucket);
+    if (updateHash) {
+      const hash = BUCKET_TO_HASH[bucket] || '';
+      history.replaceState(null, '', hash || window.location.pathname);
+    }
+  }
+
+  // ---------- init ----------
 
   const items = readItems();
   if (items === null) {
     showStatus('Our publications are being prepared. Please check back shortly.');
   } else {
-    window.__resourcesRender = (bucket) => renderCatalog(items, bucket);
-    window.__resourcesRender('all');
+    els.tabs.forEach(tab => {
+      tab.addEventListener('click', () => activate(items, tab.dataset.bucket, true));
+    });
+    window.addEventListener('hashchange', () => activate(items, bucketFromHash(), false));
+    activate(items, bucketFromHash(), false);
   }
 })();
