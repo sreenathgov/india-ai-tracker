@@ -1235,6 +1235,26 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "AI to fuel India&#039;s tech services growth; public cloud spending to reach USD 17.5 bn in 2026",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-to-fuel-indias-tech-services-growth-public-cloud-spending-to-reach-usd-17-5-bn-in-2026/132453058",
+        "summary": "India's tech services sector is expected to experience strong growth driven by AI, with public cloud spending projected to reach $17.5 billion by 2026. This represents a 28.1% year-on-year increase, according to Equirus Securities. The surge in public cloud spending is a key indicator of the sector's AI-led growth.",
+        "date_published": "2026-07-17",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Google I/O Connect India 2026: India to get its first AI university, announced at this flagship event; all you need to know",
         "url": "https://www.etnownews.com/technology/google-i-o-connect-india-2026-india-to-get-its-first-ai-university-announced-at-this-flagship-event-all-you-need-to-know-article-155108796",
         "summary": "Karnataka Chief Minister D.K. Shivakumar announced the state's plan to establish India's first AI university at the Google I/O Connect India 2026 event. The initiative aims to build a robust AI ecosystem in the region. The announcement marks a significant step towards promoting AI education and innovation in India.",
@@ -11319,6 +11339,46 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 2,
+        "title": "Quick Clean raises $14M in Series B round led by Stakeboat Capital",
+        "url": "https://yourstory.com/2026/07/quick-clean-14-million-series-b-stakeboat-capital",
+        "summary": "Quick Clean has raised $14M in a Series B funding round led by Stakeboat Capital. The company plans to use the funds to expand its laundry network across India and invest in AI-driven operations. The investment will also support Quick Clean's international expansion plans.",
+        "date_published": "2026-07-16",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Aurum PropTech to acquire Housing.com parent in Rs 458 Cr share-swap deal",
+        "url": "https://entrackr.com/news/aurum-proptech-to-acquire-housingcom-parent-in-rs-458-cr-share-swap-deal-12170911",
+        "summary": "Aurum PropTech has approved a Rs 458 crore share-swap deal to acquire Locon Solutions Pvt Ltd, the parent company of Housing.com, from REA India. The acquisition includes 100% of Locon's equity shares and will be completed through a preferential allotment of 1.98 crore equity shares to REA India at Rs 231.42 per share. The deal is valued at Rs 458 crore and will expand Aurum PropTech's presence in the real estate sector.",
+        "date_published": "2026-07-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 1,
         "title": "Sarvam, BharatGen offer AI cheaper than DeepSeek. Can they sustain it?",

@@ -26,6 +26,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "In AI era, IT sector employees facing an uncertain future",
+        "url": "https://www.thehindu.com/news/national/kerala/in-ai-era-it-sector-employees-facing-an-uncertain-future/article71224517.ece",
+        "summary": "The IT sector is facing uncertainty due to the AI era, with over 1,000 employees recently laid off from two firms in Kerala. This has sparked concern among employees and stakeholders about the future of the industry. The layoffs have prompted an examination of the challenges affecting the sector.",
+        "date_published": "2026-07-17",
+        "source_name": "The Hindu - Kerala",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 16,
         "title": "Jeddah-bound AI Express flight from Kerala’s Kannur turns back due to engine fault",
         "url": "https://www.thehindu.com/news/national/kerala/jeddah-bound-ai-express-flight-from-keralas-kannur-turns-back-due-to-engine-fault/article71107870.ece",
@@ -276,5 +296,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

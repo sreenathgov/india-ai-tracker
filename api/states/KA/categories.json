@@ -386,6 +386,46 @@
         "posted_to_x_at": null
       },
       {
+        "id": 7,
+        "title": "Elevation Capital leads $11.3 Mn Series A round in Reo.Dev",
+        "url": "https://entrackr.com/snippets/elevation-capital-leads-113-mn-series-a-round-in-reodev-12169973",
+        "summary": "Reo.Dev, an AI native GTM platform, has raised $11.3 million in a Series A funding round led by Elevation Capital, bringing its total funding to $15.3 million. The round saw participation from existing investors Heavybit, India Quotient, and Foster Ventures, as well as new investor Uncorrelated Ventures. This funding follows Reo.Dev's previous seed funding round of $4 million in October last year.",
+        "date_published": "2026-07-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Karnataka’s Bidadi Township project and the land acquisition dispute | Explained",
+        "url": "https://www.thehindu.com/news/cities/bangalore/explained-karnatakas-bidadi-township-project-and-the-land-acquisition-dispute/article71229506.ece",
+        "summary": "The Bidadi AI Township project in Karnataka aims to reduce urban congestion, but has sparked protests from local farmers and reignited political tensions. The project has become contentious due to a land acquisition dispute, with farmers opposing the takeover of their land. The dispute has led to widespread demonstrations and heightened political tensions in the region.",
+        "date_published": "2026-07-16",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 14,
         "title": "Google rolls out sovereign AI stack for India’s regulated sectors",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/google-rolls-out-sovereign-ai-stack-for-indias-regulated-sectors/articleshow/132398161.cms",
@@ -4431,7 +4471,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

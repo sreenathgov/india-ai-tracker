@@ -145,6 +145,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "Ahmedabad: Centre of excellence to use AI to identify traffic offenders",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ahmedabad-centre-of-excellence-to-use-ai-to-identify-traffic-offenders/articleshow/132447307.cms",
+        "summary": "A centre of excellence in Ahmedabad will utilize artificial intelligence to identify traffic offenders. The AI technology will help in detecting and recognizing traffic violations, enhancing road safety and enforcement. This initiative aims to leverage AI for efficient traffic management and regulation.",
+        "date_published": "2026-07-17",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "KuhlTherm raises $1.1 Mn in seed round led by Arkam Ventures",
+        "url": "https://entrackr.com/snippets/kuhltherm-raises-11-mn-in-seed-round-led-by-arkam-ventures-12170492",
+        "summary": "KuhlTherm, a precision liquid cooling technology company, has raised $1.1 million in a seed funding round led by Arkam Ventures. The funds will be used to accelerate product development, expand its teams, and build strategic partnerships. KuhlTherm was co-founded in 2025 and develops advanced precision liquid cooling solutions for high-performance computing infrastructure.",
+        "date_published": "2026-07-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Fintech SaaS startup Hisabkitab raises seed round at Rs 20 Cr valuation",
         "url": "https://entrackr.com/snippets/fintech-saas-startup-hisabkitab-raises-seed-round-at-rs-20-cr-valuation-12163499",
@@ -1533,5 +1573,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

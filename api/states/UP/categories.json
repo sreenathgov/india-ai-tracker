@@ -225,6 +225,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "Lucknow Police first in UP to deploy AI tech in interceptor vehicles, slaps 16k e-challans in trial run",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/lucknow-police-first-in-up-to-deploy-ai-tech-in-interceptor-vehicles-slaps-16k-e-challans-in-trial-run/articleshow/132447887.cms",
+        "summary": "The Lucknow Police has become the first in Uttar Pradesh to deploy AI technology in interceptor vehicles, issuing 16,000 e-challans during a trial run. This initiative aims to enhance traffic enforcement and management using artificial intelligence. The AI-powered system enables automated detection and penalty issuance for traffic violations.",
+        "date_published": "2026-07-17",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 13,
         "title": "​Badshahnagar gets Indian Railways’ first AI sign language info system",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/badshahnagar-gets-indian-railways-first-ai-sign-language-info-system/articleshow/132247883.cms",
@@ -1064,5 +1084,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
