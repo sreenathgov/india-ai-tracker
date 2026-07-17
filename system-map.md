@@ -27,7 +27,7 @@ The system map documents subsystems and data flows for all Kananlabs.in products
 |---|---|---|
 | `index.html` / `index-new.html` | Main tracker — interactive Leaflet.js map | India AI Tracker |
 | `about.html` | Institutional info / disclosures | India AI Tracker |
-| `publications.html` | Long-form research articles (progressive disclosure UI) | Publications |
+| `resources.html` | Resources catalog (Insights / Whitepapers / News). Template only — the build injects the manifest and writes `dist/resources.html`. Articles render to `dist/publications/<slug>/`. | Publications |
 | `admin.html` | Admin panel (dark theme, embedded CSS) | India AI Tracker |
 | `scroll-test.html` | Diagnostic page | India AI Tracker |
 | `js/app-final.js` | Production JS — uses relative `/api` paths | India AI Tracker |

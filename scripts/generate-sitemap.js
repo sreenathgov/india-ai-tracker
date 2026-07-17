@@ -16,9 +16,14 @@ const staticRoutes = [
   { path: '/tracker.html',       file: 'tracker.html',       priority: '0.9', changefreq: 'daily'   },
   { path: '/sector-watch.html',  file: 'sector-watch.html',  priority: '0.7', changefreq: 'monthly' },
   { path: '/about.html',         file: 'about.html',         priority: '0.7', changefreq: 'monthly' },
-  { path: '/publications.html',  file: 'publications.html',  priority: '0.5', changefreq: 'monthly' },
+  { path: '/resources.html',     file: 'resources.html',     priority: '0.8', changefreq: 'weekly'  },
   { path: '/privacy-policy.html',file: 'privacy-policy.html',priority: '0.3', changefreq: 'yearly'  },
-  { path: '/disclaimers.html',   file: 'disclaimers.html',   priority: '0.3', changefreq: 'yearly'  }
+  { path: '/disclaimers.html',   file: 'disclaimers.html',   priority: '0.3', changefreq: 'yearly'  },
+  // PDFs are indexable documents in their own right. This one is listed on the
+  // Resources catalog but had no sitemap entry, leaving it discoverable only by
+  // a crawler that follows the catalog link.
+  { path: '/dossiers/kl-handbook-india-ai-regulations.pdf',
+    file: 'dossiers/kl-handbook-india-ai-regulations.pdf',   priority: '0.6', changefreq: 'yearly'  }
 ];
 
 function fileLastmod(relFile, fallback) {
@@ -74,6 +79,46 @@ function generateSitemap() {
   </url>`;
   });
 
+  // 4. Add Publications + cluster hub pages (from the manifest written by
+  //    generate-publications.js)
+  let publicationCount = 0;
+  let hubCount = 0;
+  try {
+    const manifestPath = path.join(PROJECT_ROOT, 'content', 'publications', 'index.json');
+    const publications = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
+    publications.forEach(pub => {
+      xml += `
+  <url>
+    <loc>${pub.url}</loc>
+    <lastmod>${pub.updated || pub.date}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`;
+      publicationCount++;
+    });
+
+    // One hub per cluster with ≥1 article; lastmod = newest article in it
+    const clusters = new Map();
+    publications.forEach(pub => {
+      if (!pub.cluster) return;
+      const lastmod = pub.updated || pub.date;
+      const prev = clusters.get(pub.cluster);
+      if (!prev || lastmod > prev) clusters.set(pub.cluster, lastmod);
+    });
+    clusters.forEach((lastmod, cluster) => {
+      xml += `
+  <url>
+    <loc>${BASE_URL}/publications/cluster/${cluster}/</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>`;
+      hubCount++;
+    });
+  } catch (_) {
+    // No manifest yet — publications simply aren't listed
+  }
+
   xml += `
 </urlset>`;
 
@@ -90,6 +135,8 @@ function generateSitemap() {
   console.log(`✅ Sitemap generated at: ${outputPath}`);
   console.log(`   - Static routes: ${staticRoutes.length}`);
   console.log(`   - Dynamic jurisdiction routes: ${canonicalJurisdictions.length}`);
+  console.log(`   - Publication routes: ${publicationCount}`);
+  console.log(`   - Cluster hub routes: ${hubCount}`);
 }
 
 generateSitemap();

@@ -12,7 +12,9 @@ const FILES_TO_COPY = [
     'sector-watch.html',
     'tradewatch.html',
     'tracker.html',
-    'publications.html',
+    // resources.html is NOT copied here: generate-publications.js renders it
+    // from the manifest into dist/. Copying the source template would ship a
+    // page with an empty card grid.
     'privacy-policy.html',
     'disclaimers.html',
     '404.html'

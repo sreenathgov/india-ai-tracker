@@ -10,7 +10,8 @@
     "build:text-pressure": "vite build",
     "build:scroll-reveal": "vite build --config vite.config.scroll-reveal.js",
     "dev:text-pressure": "vite build --watch",
-    "build": "node scripts/build-full-site.js && node scripts/generate-static-pages.js && node scripts/generate-sitemap.js",
+    "build": "node scripts/build-full-site.js && node scripts/generate-static-pages.js && node scripts/generate-publications.js && node scripts/generate-sitemap.js",
+    "build:publications": "node scripts/generate-publications.js && node scripts/generate-sitemap.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -33,6 +34,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.4",
+    "js-yaml": "^5.2.1",
+    "marked": "^18.0.6",
     "vite": "^7.3.1"
   }
 }

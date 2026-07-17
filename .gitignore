@@ -14,7 +14,11 @@ venv/
 env/
 ENV/
 *.egg-info/
-dist/assets/
+
+# Build output — Vercel runs `npm run build` on every deploy (verified via
+# deployment logs 2026-07-16); committing dist/ was redundant and let stale
+# files leak into production output.
+dist/
 
 # Database
 *.db
@@ -29,7 +33,10 @@ instance/
 *.swp
 *.swo
 *~
-.claude/
+# Claude Code: keep local session state ignored, but version the skills
+# (a dir must not be excluded outright for negations inside it to work)
+.claude/*
+!.claude/skills/
 
 # OS
 .DS_Store

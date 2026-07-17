@@ -71,12 +71,40 @@ class StaggeredMenu {
   }
 
   init() {
+    this.detectInitialTheme();
     this.createMarkup();
     this.cacheRefs();
     this.setupInitialState();
     this.attachEventListeners();
     this.initThemeSwitching();
     this.initScrollHide();
+  }
+
+  // Light-nav pages (e.g. resources.html via [data-nav-light]) must paint the
+  // navy logo + navy menu from the very first frame. Without this, the header
+  // initialises with the cream dark-theme assets and only fades to navy after
+  // the first scroll/theme check — a flash of an invisible nav on a light page.
+  _getLightSections() {
+    return [
+      ...document.querySelectorAll('.advisory-section'),
+      ...document.querySelectorAll('.identity-section'),
+      ...document.querySelectorAll('[data-nav-light]')
+    ].filter(Boolean);
+  }
+
+  detectInitialTheme() {
+    const lightSections = this._getLightSections();
+    if (!lightSections.length) return;
+
+    const headerMid = window.scrollY + 30;
+    const topIsLight = lightSections.some(s => {
+      return headerMid >= s.offsetTop && headerMid < (s.offsetTop + s.offsetHeight);
+    });
+
+    if (topIsLight) {
+      this.theme.isLight = true;
+      this.theme.currentMenuColor = this.theme.lightMenuColor;
+    }
   }
 
   createMarkup() {
@@ -113,7 +141,9 @@ class StaggeredMenu {
     if (!logoImg) return;
 
     const isMobile = window.innerWidth <= 1024;
-    if (isMobile) {
+    if (this.theme.isLight) {
+      logoImg.src = isMobile ? this.theme.mobileLightLogoUrl : this.theme.lightLogoUrl;
+    } else if (isMobile) {
       logoImg.src = this.options.mobileLogoUrl;
     } else {
       logoImg.src = this.options.logoUrl;
@@ -262,6 +292,30 @@ class StaggeredMenu {
 
         link.appendChild(label);
         li.appendChild(link);
+
+        // Optional smaller sub-links beneath a parent item
+        if (Array.isArray(item.subItems) && item.subItems.length) {
+          const subList = document.createElement('ul');
+          subList.className = 'sm-panel-subList';
+          subList.setAttribute('role', 'list');
+
+          item.subItems.forEach(sub => {
+            const subLi = document.createElement('li');
+            const subLink = document.createElement('a');
+            subLink.className = 'sm-panel-subItem';
+            subLink.href = sub.link;
+            subLink.textContent = sub.label;
+            subLink.addEventListener('click', () => {
+              // Same-page hash links don't trigger navigation; close the overlay
+              this.closeMenu();
+            });
+            subLi.appendChild(subLink);
+            subList.appendChild(subLi);
+          });
+
+          li.appendChild(subList);
+        }
+
         menuList.appendChild(li);
       });
     }
@@ -337,7 +391,10 @@ class StaggeredMenu {
     gsap.set(textInner, { yPercent: 0 });
 
     if (toggleBtn) {
-      gsap.set(toggleBtn, { color: this.options.menuButtonColor });
+      const initialColor = this.theme.isLight
+        ? this.theme.lightMenuColor
+        : this.options.menuButtonColor;
+      gsap.set(toggleBtn, { color: initialColor });
     }
   }
 
@@ -391,6 +448,7 @@ class StaggeredMenu {
     const numberEls = Array.from(panel.querySelectorAll('.sm-panel-list[data-numbering] .sm-panel-item'));
     const socialTitle = panel.querySelector('.sm-socials-title');
     const socialLinks = Array.from(panel.querySelectorAll('.sm-socials-link'));
+    const subItemEls = Array.from(panel.querySelectorAll('.sm-panel-subItem'));
 
     const layerStates = preLayers.map(el => ({
       el,
@@ -410,6 +468,9 @@ class StaggeredMenu {
     }
     if (socialLinks.length) {
       gsap.set(socialLinks, { y: 25, opacity: 0 });
+    }
+    if (subItemEls.length) {
+      gsap.set(subItemEls, { y: 20, opacity: 0 });
     }
 
     const tl = gsap.timeline({ paused: true });
@@ -466,6 +527,22 @@ class StaggeredMenu {
           itemsStart + 0.1
         );
       }
+    }
+
+    // Animate sub-links (arrive just after their parent items)
+    if (subItemEls.length) {
+      const subStart = panelInsertTime + panelDuration * 0.35;
+      tl.to(
+        subItemEls,
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: 'power3.out',
+          stagger: { each: 0.06, from: 'start' }
+        },
+        subStart
+      );
     }
 
     // Animate socials
@@ -790,11 +867,7 @@ class StaggeredMenu {
   }
 
   initThemeSwitching() {
-    const lightSections = [
-      ...document.querySelectorAll('.advisory-section'),
-      ...document.querySelectorAll('.identity-section'),
-      ...document.querySelectorAll('[data-nav-light]')   // generic opt-in for any page
-    ].filter(Boolean);
+    const lightSections = this._getLightSections();
 
     if (!lightSections.length) return;
 
@@ -876,7 +949,7 @@ document.addEventListener('DOMContentLoaded', function () {
       { label: 'TradeWatch', ariaLabel: 'View TradeWatch product', link: 'tradewatch.html' },
       { label: 'India AI Tracker', ariaLabel: 'View the India AI Tracker', link: 'tracker.html' },
       { label: 'SectorWatch', ariaLabel: 'View SectorWatch platform', link: 'sector-watch.html' },
-      { label: 'Publications', ariaLabel: 'View publications', link: 'publications.html' },
+      { label: 'Resources', ariaLabel: 'Browse resources', link: 'resources.html' },
       { label: 'About', ariaLabel: 'Learn about Kanan Labs', link: 'about.html' },
       { label: 'Team', ariaLabel: 'Meet the founder', link: 'team.html' }
     ],

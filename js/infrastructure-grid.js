@@ -166,14 +166,21 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
+  // Optional per-page overrides via data attributes; defaults preserve the
+  // original homepage configuration exactly.
+  const data = canvas.dataset;
+  const parsedSpeed = parseFloat(data.speed);
+  const parsedSquareSize = parseInt(data.squareSize, 10);
+  const validDirections = ['up', 'down', 'left', 'right', 'diagonal'];
+
   const config = {
-    direction: 'up',                          // Slow vertical upward drift (infrastructural)
-    speed: 0.12,                              // Very slow, systematic movement
-    borderColor: 'rgba(255, 255, 255, 0.025)', // Ghost white lines
-    squareSize: 30,                           // Dense blueprint grid (40% reduction)
-    enableFadeOnScroll: false,                // Grid persists at full opacity — no fade
-    fadeStartScroll: 0,                       // Start fading immediately
-    fadeCompleteScroll: 300                   // Fully transparent at 300px
+    direction: validDirections.includes(data.direction) ? data.direction : 'up',
+    speed: Number.isFinite(parsedSpeed) ? parsedSpeed : 0.12,
+    borderColor: data.borderColor || 'rgba(255, 255, 255, 0.025)',
+    squareSize: Number.isFinite(parsedSquareSize) && parsedSquareSize > 0 ? parsedSquareSize : 30,
+    enableFadeOnScroll: false,
+    fadeStartScroll: 0,
+    fadeCompleteScroll: 300
   };
 
   const grid = new InfrastructureGrid(canvas, config);

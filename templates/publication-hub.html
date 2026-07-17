@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/">
+    <!-- Analytics load only after cookie consent (DPDP/GDPR) -->
+    <script src="/js/consent.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{HUB_NAME}} | Kanan Labs</title>
+
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <link rel="canonical" href="{{CANONICAL_URL}}">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kanan Labs">
+    <meta property="og:url" content="{{CANONICAL_URL}}">
+    <meta property="og:title" content="{{HUB_NAME}} | Kanan Labs">
+    <meta property="og:description" content="{{META_DESCRIPTION}}">
+    <meta property="og:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{HUB_NAME}} — Kanan Labs">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{CANONICAL_URL}}">
+    <meta name="twitter:title" content="{{HUB_NAME}} | Kanan Labs">
+    <meta name="twitter:description" content="{{META_DESCRIPTION}}">
+    <meta name="twitter:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
+    <meta name="twitter:image:alt" content="{{HUB_NAME}} — Kanan Labs">
+
+    <link rel="icon" type="image/png" href="/assets/images/KANAN-LABS-WEBSITELOGO.png">
+
+    <script type="application/ld+json">
+{{JSON_LD}}
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles-v2.css?v=21">
+    <link rel="stylesheet" href="/css/staggered-menu.css">
+    <link rel="stylesheet" href="/css/publications-catalog.css?v={{CATALOG_CSS_VERSION}}">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>
+
+<body class="pub-catalog-page">
+    <!-- Staggered menu will be injected here by staggered-menu.js -->
+
+    <main class="pub-catalog" data-nav-light>
+        <header class="pub-catalog-header">
+            <nav class="pub-hub-breadcrumb" aria-label="Breadcrumb">
+                <a href="/publications.html">Publications</a>
+                <span class="byline-sep">·</span>
+                <span>{{HUB_NAME}}</span>
+            </nav>
+            <div class="pub-catalog-kicker">Cluster</div>
+            <h1 class="pub-catalog-title">{{HUB_NAME}}</h1>
+            <p class="pub-catalog-lede">{{HUB_DESCRIPTION}}</p>
+            <p class="pub-hub-personas">For: {{HUB_PERSONAS}}</p>
+        </header>
+
+        <section class="pub-catalog-grid" aria-label="Publications in this cluster">
+{{CARDS}}
+        </section>
+    </main>
+
+    <footer class="site-footer publications-footer">
+        <p class="footer-byline">A public AI governance intelligence tool by Sreenath Govindarajan, Founder of Kanan
+            Labs</p>
+        <p class="footer-links">
+            <a href="/about.html">About</a>
+            <span class="separator">·</span>
+            <a href="mailto:sreenath@kananlabs.in">Contact</a>
+        </p>
+    </footer>
+
+    <script src="/js/staggered-menu.js"></script>
+</body>
+
+</html>
