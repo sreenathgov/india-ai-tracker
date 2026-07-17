@@ -65,7 +65,7 @@ npm run build:publications   # generator + sitemap (fast path, use this)
 | Output | Path |
 |---|---|
 | Article page | `dist/publications/<slug>/index.html` |
-| Catalog (all cards + filters) | `dist/publications.html` |
+| Catalog (all cards + tab filters) | `dist/resources.html` — generated from the manifest + `data/resources-extra.json`. Never hand-edit `resources.html` at the repo root: it is the template, its data block is injected at build time. |
 | Cluster hub | `dist/publications/cluster/<cluster>/index.html` |
 | Manifest | `content/publications/index.json` **and** `dist/publications/index.json` |
 | Sitemap | `dist/sitemap.xml` (article + hub URLs) |
@@ -101,7 +101,7 @@ a malformed article cannot merge.
 
 `generatePublications()` validates every article in the repo, and if **any**
 file has a blocking error, it exits before writing the catalog
-(`dist/publications.html`), the cluster hubs, `llms.txt`, or either manifest
+(`dist/resources.html`), the cluster hubs, `llms.txt`, or either manifest
 (`content/publications/index.json` and `dist/publications/index.json`).
 Individual `dist/publications/<slug>/index.html` pages for the
 already-passing articles still get written (that happens per-file before the

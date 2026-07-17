@@ -13,7 +13,7 @@
  * Also maintains:
  *   - content/publications/index.json  (catalog manifest, build-side)
  *   - dist/publications/index.json     (catalog manifest, deployed)
- *   - dist/publications.html           (static catalog page)
+ *   - dist/resources.html              (static catalog page — see publications/resources-catalog.js)
  *   - dist/publications/cluster/<c>/   (hub pages, one per cluster with articles)
  *   - dist/llms.txt                    (answer-engine index, grouped by cluster)
  *
@@ -29,7 +29,8 @@ const { marked } = require('marked');
 const yaml = require('js-yaml');
 const { validatePublication } = require('./publications/validate');
 const { TYPES, CLUSTERS, AUTHORITIES, BOUNDARY_STATEMENTS } = require('./publications/contract');
-const { writeCatalog, writeHubs, renderLlmsTxt } = require('./publications/catalog');
+const { writeHubs, renderLlmsTxt } = require('./publications/catalog');
+const { writeResourcesCatalog } = require('./publications/resources-catalog');
 
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 // PUB_CONTENT_DIR / PUB_DIST_DIR: test-harness overrides so fixture runs never
@@ -46,9 +47,13 @@ const DIST_MANIFEST_PATH = path.join(DIST_DIR, 'publications', 'index.json');
 const BASE_URL = 'https://kananlabs.in';
 const DEFAULT_OG_IMAGE = `${BASE_URL}/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png`;
 const WPM = 220;
-// Keep in sync with the cache-busted asset versions used by the preview shell
-const CSS_VERSION = '29';
-const JS_VERSION = '23';
+// Keep in sync with the cache-busted asset versions used by the preview shell.
+// Bump BOTH whenever css/publications.css or js/publications.js changes — an
+// unbumped version serves the old asset from cache against new markup.
+const CSS_VERSION = '30';
+const JS_VERSION = '24';
+const ARTICLE_CSS = path.join(PROJECT_ROOT, 'css', 'publications.css');
+const ARTICLE_JS = path.join(PROJECT_ROOT, 'js', 'publications.js');
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -472,7 +477,7 @@ function buildJsonLd(meta, url, wordCount, readingMinutes) {
             '@type': 'BreadcrumbList',
             itemListElement: [
                 { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE_URL}/` },
-                { '@type': 'ListItem', position: 2, name: 'Publications', item: `${BASE_URL}/publications.html` },
+                { '@type': 'ListItem', position: 2, name: 'Resources', item: `${BASE_URL}/resources.html` },
                 { '@type': 'ListItem', position: 3, name: meta.title, item: url }
             ]
         }
@@ -647,12 +652,26 @@ function generatePublications() {
     fs.mkdirSync(path.dirname(DIST_MANIFEST_PATH), { recursive: true });
     fs.writeFileSync(DIST_MANIFEST_PATH, JSON.stringify(manifest, null, 2) + '\n');
 
-    writeCatalog(manifest, DIST_DIR);
     writeHubs(manifest, DIST_DIR);
     fs.writeFileSync(path.join(DIST_DIR, 'llms.txt'), renderLlmsTxt(manifest));
 
+    // The fast path (npm run build:publications) skips build-full-site's blanket
+    // css/ + js/ copy. Without this, an author previewing their article gets the
+    // pages they just generated styled by whatever stylesheet dist/ happened to
+    // be holding — which is how a stale stylesheet silently shipped once before.
+    fs.mkdirSync(path.join(DIST_DIR, 'css'), { recursive: true });
+    fs.copyFileSync(ARTICLE_CSS, path.join(DIST_DIR, 'css', 'publications.css'));
+    fs.mkdirSync(path.join(DIST_DIR, 'js'), { recursive: true });
+    fs.copyFileSync(ARTICLE_JS, path.join(DIST_DIR, 'js', 'publications.js'));
+
+    // Last: the catalog validates every href against the built tree, so the
+    // article pages and hubs it links to have to exist on disk by now.
+    const { items } = writeResourcesCatalog(manifest, DIST_DIR);
+    const counts = items.reduce((acc, i) => ({ ...acc, [i.bucket]: (acc[i.bucket] || 0) + 1 }), {});
+
     console.log(`✅ Manifest: content/publications/index.json + dist/publications/index.json (${manifest.length} publications)`);
-    console.log('✅ Catalog: dist/publications.html');
+    console.log(`✅ Catalog: dist/resources.html (${items.length} items — `
+        + `${counts.insight || 0} insight, ${counts.whitepaper || 0} whitepaper, ${counts.news || 0} news)`);
     console.log('✅ llms.txt written to dist/');
 }
 

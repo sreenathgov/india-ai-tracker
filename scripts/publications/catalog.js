@@ -1,12 +1,12 @@
 /**
  * catalog.js — derived publication surfaces, all generated from the manifest:
  *
- *   - dist/publications.html            static catalog (cards + cluster/type filters)
  *   - dist/publications/cluster/<c>/    one hub page per cluster with ≥1 article
  *   - llms.txt content                  answer-engine map, grouped by cluster
  *
+ * The catalog page itself lives in ./resources-catalog.js → dist/resources.html.
  * Nothing here is maintained by hand; adding an article is adding one file.
- * Templates: templates/publication-catalog.html, templates/publication-hub.html.
+ * Template: templates/publication-hub.html.
  */
 
 const fs = require('fs');
@@ -15,18 +15,11 @@ const { CLUSTERS, TYPES } = require('./contract');
 
 const PROJECT_ROOT = path.resolve(__dirname, '..', '..');
 const DIST_DIR = path.join(PROJECT_ROOT, 'dist');
-const CATALOG_TEMPLATE = path.join(PROJECT_ROOT, 'templates', 'publication-catalog.html');
 const HUB_TEMPLATE = path.join(PROJECT_ROOT, 'templates', 'publication-hub.html');
 const CATALOG_CSS = path.join(PROJECT_ROOT, 'css', 'publications-catalog.css');
 const BASE_URL = 'https://kananlabs.in';
 const CATALOG_CSS_VERSION = '2';
 const SUMMARY_TRUNCATE_AT = 200;
-
-const CATALOG_LEDE = 'Operational notes, change-watches and concept pieces on India-linked trade: '
-    + 'IGST and customs readiness, marine cargo evidence, EV and lithium export, export realization, '
-    + 'and the architecture behind TradeWatch.';
-const CATALOG_META_DESCRIPTION = 'Kanan Labs publications: sourced operational notes and regulatory '
-    + 'change-watches on IGST refunds, customs readiness, marine cargo evidence and India-linked trade.';
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -107,94 +100,6 @@ function renderCard(entry, { linkCluster = true } = {}) {
 }
 
 // ---------------------------------------------------------------------------
-// Catalog page → dist/publications.html
-// ---------------------------------------------------------------------------
-
-function renderFilters(manifest) {
-    if (!manifest.length) return '';
-
-    const button = (group, value, label, active) =>
-        `<button class="pub-filter-btn${active ? ' is-active' : ''}" data-filter-group="${group}" data-filter-value="${escapeHtmlAttribute(value)}" aria-pressed="${active ? 'true' : 'false'}">${escapeHtmlText(label)}</button>`;
-
-    const clusterButtons = [
-        button('cluster', 'all', 'All', true),
-        ...activeClusters(manifest).map(c => button('cluster', c, CLUSTERS[c].hub, false))
-    ].join('\n                ');
-
-    const typeButtons = [
-        button('type', 'all', 'All', true),
-        ...Object.keys(TYPES)
-            .filter(t => manifest.some(e => e.type === t))
-            .map(t => button('type', t, TYPES[t].label, false))
-    ].join('\n                ');
-
-    return `        <div class="pub-catalog-filters" aria-label="Filter publications">
-            <div class="pub-filter-row">
-                <span class="pub-filter-label">Cluster</span>
-                ${clusterButtons}
-            </div>
-            <div class="pub-filter-row">
-                <span class="pub-filter-label">Type</span>
-                ${typeButtons}
-            </div>
-        </div>`;
-}
-
-function catalogJsonLd(manifest) {
-    return JSON.stringify({
-        '@context': 'https://schema.org',
-        '@graph': [
-            {
-                '@type': 'CollectionPage',
-                '@id': `${BASE_URL}/publications.html#collection`,
-                url: `${BASE_URL}/publications.html`,
-                name: 'Publications — Kanan Labs',
-                description: CATALOG_META_DESCRIPTION,
-                isPartOf: { '@id': `${BASE_URL}/#website` },
-                publisher: { '@id': `${BASE_URL}/#organization` },
-                ...(manifest.length ? {
-                    mainEntity: {
-                        '@type': 'ItemList',
-                        itemListElement: manifest.map((e, i) => ({
-                            '@type': 'ListItem', position: i + 1, name: e.title, url: e.url
-                        }))
-                    }
-                } : {})
-            },
-            {
-                '@type': 'BreadcrumbList',
-                itemListElement: [
-                    { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE_URL}/` },
-                    { '@type': 'ListItem', position: 2, name: 'Publications', item: `${BASE_URL}/publications.html` }
-                ]
-            }
-        ]
-    }, null, 2);
-}
-
-function writeCatalog(manifest, distDir = DIST_DIR) {
-    const template = fs.readFileSync(CATALOG_TEMPLATE, 'utf-8');
-    const cards = manifest.length
-        ? manifest.map(e => renderCard(e)).join('\n')
-        : '            <div class="pub-catalog-empty">First publications are in production — the Weekly Brief will announce them.</div>';
-
-    const html = fillTemplate(template, {
-        META_DESCRIPTION: escapeHtmlAttribute(CATALOG_META_DESCRIPTION),
-        PAGE_LEDE: escapeHtmlText(CATALOG_LEDE),
-        JSON_LD: catalogJsonLd(manifest),
-        FILTERS: renderFilters(manifest),
-        CARDS: cards,
-        CATALOG_CSS_VERSION
-    });
-
-    fs.writeFileSync(path.join(distDir, 'publications.html'), html);
-    // The fast path (npm run build:publications) skips build-full-site's css/
-    // copy, so ship the catalog stylesheet ourselves.
-    fs.mkdirSync(path.join(distDir, 'css'), { recursive: true });
-    fs.copyFileSync(CATALOG_CSS, path.join(distDir, 'css', 'publications-catalog.css'));
-}
-
-// ---------------------------------------------------------------------------
 // Hub pages → dist/publications/cluster/<cluster>/index.html
 // ---------------------------------------------------------------------------
 
@@ -222,7 +127,7 @@ function hubJsonLd(cluster, entries) {
                 '@type': 'BreadcrumbList',
                 itemListElement: [
                     { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE_URL}/` },
-                    { '@type': 'ListItem', position: 2, name: 'Publications', item: `${BASE_URL}/publications.html` },
+                    { '@type': 'ListItem', position: 2, name: 'Resources', item: `${BASE_URL}/resources.html` },
                     { '@type': 'ListItem', position: 3, name: def.hub, item: hubUrl(cluster) }
                 ]
             }
@@ -253,6 +158,11 @@ function writeHubs(manifest, distDir = DIST_DIR) {
         fs.writeFileSync(path.join(outDir, 'index.html'), html);
         console.log(`✅ Hub: publications/cluster/${cluster}/ (${entries.length} article${entries.length === 1 ? '' : 's'})`);
     });
+
+    // The fast path (npm run build:publications) skips build-full-site's css/
+    // copy, so ship the hub stylesheet ourselves.
+    fs.mkdirSync(path.join(distDir, 'css'), { recursive: true });
+    fs.copyFileSync(CATALOG_CSS, path.join(distDir, 'css', 'publications-catalog.css'));
 
     return clusters.map(hubUrl);
 }
@@ -286,7 +196,7 @@ function renderLlmsTxt(manifest) {
     if (!manifest.length) {
         lines.push('## Publications');
         lines.push('');
-        lines.push(`- Catalog: ${BASE_URL}/publications.html (first publications in production)`);
+        lines.push(`- Catalog: ${BASE_URL}/resources.html (first publications in production)`);
         lines.push('');
     }
 
@@ -298,4 +208,4 @@ function renderLlmsTxt(manifest) {
     return lines.join('\n');
 }
 
-module.exports = { writeCatalog, writeHubs, renderLlmsTxt };
+module.exports = { writeHubs, renderLlmsTxt };

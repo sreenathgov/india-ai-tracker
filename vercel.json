@@ -27,7 +27,11 @@
     { "source": "/states/andaman-and-nicobar/index.html", "destination": "/states/andaman-and-nicobar-islands/", "permanent": true },
 
     { "source": "/states/:slug/index.html", "destination": "/states/:slug/", "permanent": true },
-    { "source": "/publications/:slug/index.html", "destination": "/publications/:slug/", "permanent": true }
+    { "source": "/publications/:slug/index.html", "destination": "/publications/:slug/", "permanent": true },
+
+    { "source": "/publications.html", "destination": "/resources.html", "permanent": true },
+    { "source": "/publications", "destination": "/resources.html", "permanent": true },
+    { "source": "/publications/", "destination": "/resources.html", "permanent": true }
   ],
   "headers": [
     {

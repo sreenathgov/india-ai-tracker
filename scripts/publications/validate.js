@@ -575,4 +575,101 @@ function validatePublication(filename, raw, metadata, knownSlugs, options = {}) 
     return { errors, warnings };
 }
 
-module.exports = { validatePublication, isValidIsoDate };
+// ---------------------------------------------------------------------------
+// Resources catalog items (js/resources.js contract)
+// ---------------------------------------------------------------------------
+
+const RESOURCE_BUCKETS = ['insight', 'whitepaper', 'news'];
+
+// Internal hrefs are resolved against the built tree, not the source tree: a
+// link is only good if the thing it points at actually ships. A directory href
+// ('publications/<slug>/') must contain an index.html — a bare directory would
+// serve a listing, not a page.
+function resolvesInDist(href, distDir) {
+    const clean = String(href).split(/[?#]/)[0];
+    const target = path.join(distDir, clean);
+    if (!fs.existsSync(target)) return false;
+    if (fs.statSync(target).isDirectory()) return fs.existsSync(path.join(target, 'index.html'));
+    return true;
+}
+
+/**
+ * validateResourceItems — blocking checks for the merged Resources catalog.
+ *
+ * This exists because a catalog whose build goes green while its links point at
+ * slugs that were never written is worse than a catalog that fails loudly: the
+ * failure ships silently to production. A dead internal link is an error here,
+ * never a warning.
+ *
+ * @param {Array<object>} items    merged manifest + curated entries
+ * @param {string} distDir         built tree to resolve internal hrefs against
+ * @returns {{errors: string[], warnings: string[]}}
+ */
+function validateResourceItems(items, distDir) {
+    const errors = [];
+    const warnings = [];
+
+    if (!Array.isArray(items)) {
+        return { errors: ['resource items must be an array'], warnings };
+    }
+
+    const seenHrefs = new Map();
+
+    items.forEach((item, i) => {
+        const where = `item #${i + 1}${item && item.title ? ` (${item.title})` : ''}`;
+
+        if (!item || typeof item !== 'object') {
+            errors.push(`${where}: not an object`);
+            return;
+        }
+        if (!isNonEmptyString(item.title)) errors.push(`${where}: title is required`);
+        if (!RESOURCE_BUCKETS.includes(item.bucket)) {
+            errors.push(`${where}: bucket must be one of ${RESOURCE_BUCKETS.join(' | ')} (got ${JSON.stringify(item.bucket)})`);
+        }
+        if (item.date !== undefined && item.date !== null && !isValidIsoDate(item.date)) {
+            errors.push(`${where}: date must be YYYY-MM-DD (got ${JSON.stringify(item.date)})`);
+        }
+
+        if (!isNonEmptyString(item.href)) {
+            errors.push(`${where}: href is required`);
+            return;
+        }
+
+        const href = item.href.trim();
+        const external = /^https?:\/\//i.test(href);
+
+        if (external) {
+            if (!/^https:\/\//i.test(href)) {
+                errors.push(`${where}: external href must be https:// (got ${href})`);
+            }
+        } else if (/^\//.test(href)) {
+            errors.push(`${where}: internal href must be root-relative without a leading slash (got ${href})`);
+        } else if (!resolvesInDist(href, distDir)) {
+            errors.push(`${where}: href "${href}" does not resolve in the built tree — the destination does not exist. `
+                + `Write the destination first, or remove the entry.`);
+        }
+
+        // An image that 404s degrades to the fallback mark at runtime, so this
+        // is advisory rather than blocking.
+        if (isNonEmptyString(item.image) && !/^https?:\/\//i.test(item.image)
+            && !resolvesInDist(item.image, distDir)) {
+            warnings.push(`${where}: image "${item.image}" not found in the built tree — the card will fall back to the logo mark.`);
+        }
+
+        if (seenHrefs.has(href)) {
+            warnings.push(`${where}: href "${href}" is already used by ${seenHrefs.get(href)} — two cards will point at the same destination.`);
+        } else {
+            seenHrefs.set(href, where);
+        }
+    });
+
+    const featured = items.filter(i => i && i.featured === true);
+    if (featured.length > 1) {
+        errors.push(`only one item may set featured: true — found ${featured.length}: `
+            + featured.map(i => JSON.stringify(i.title)).join(', '));
+    }
+
+    return { errors, warnings };
+}
+
+module.exports = { validatePublication, validateResourceItems, isValidIsoDate };

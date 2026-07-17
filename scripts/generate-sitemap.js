@@ -16,7 +16,7 @@ const staticRoutes = [
   { path: '/tracker.html',       file: 'tracker.html',       priority: '0.9', changefreq: 'daily'   },
   { path: '/sector-watch.html',  file: 'sector-watch.html',  priority: '0.7', changefreq: 'monthly' },
   { path: '/about.html',         file: 'about.html',         priority: '0.7', changefreq: 'monthly' },
-  { path: '/publications.html',  file: 'publications.html',  priority: '0.5', changefreq: 'monthly' },
+  { path: '/resources.html',     file: 'resources.html',     priority: '0.8', changefreq: 'weekly'  },
   { path: '/privacy-policy.html',file: 'privacy-policy.html',priority: '0.3', changefreq: 'yearly'  },
   { path: '/disclaimers.html',   file: 'disclaimers.html',   priority: '0.3', changefreq: 'yearly'  }
 ];
