@@ -30,6 +30,7 @@ const yaml = require('js-yaml');
 const { validatePublication } = require('./publications/validate');
 const { TYPES, CLUSTERS, AUTHORITIES, BOUNDARY_STATEMENTS } = require('./publications/contract');
 const { writeHubs, renderLlmsTxt } = require('./publications/catalog');
+const { siteEntityNodes } = require('./publications/entities');
 const { writeResourcesCatalog } = require('./publications/resources-catalog');
 
 const PROJECT_ROOT = path.resolve(__dirname, '..');
@@ -50,7 +51,7 @@ const WPM = 220;
 // Keep in sync with the cache-busted asset versions used by the preview shell.
 // Bump BOTH whenever css/publications.css or js/publications.js changes — an
 // unbumped version serves the old asset from cache against new markup.
-const CSS_VERSION = '30';
+const CSS_VERSION = '31';
 const JS_VERSION = '24';
 const ARTICLE_CSS = path.join(PROJECT_ROOT, 'css', 'publications.css');
 const ARTICLE_JS = path.join(PROJECT_ROOT, 'js', 'publications.js');
@@ -129,6 +130,17 @@ function parseFrontmatter(raw) {
     return { metadata: yaml.load(match[1]), content: match[2] };
 }
 
+// A markdown table's min-content width is set by its longest cell, so a 4-column
+// table cannot compress to a phone viewport. html.publications-html sets
+// overflow-x:hidden (it clips the off-screen nav), which means an over-wide table
+// is silently CLIPPED rather than scrolled — the reader loses the right-hand
+// columns with no indication they exist. AUTHORING.md §"raw HTML" bans authors
+// from adding the wrapper themselves, so the generator must add it here.
+function wrapTables(html) {
+    return html.replace(/<table>/g, '<div class="table-scroll"><table>')
+        .replace(/<\/table>/g, '</table></div>');
+}
+
 function parseStructure(markdown) {
     const chapters = [];
     let currentH1 = null;
@@ -139,7 +151,7 @@ function parseStructure(markdown) {
 
     const flush = () => {
         const text = buffer.join('\n').trim();
-        const html = text ? marked.parse(text) : '';
+        const html = text ? wrapTables(marked.parse(text)) : '';
         if (currentH3) {
             currentH3.content += html;
         } else if (currentH2) {
@@ -494,6 +506,8 @@ function buildJsonLd(meta, url, wordCount, readingMinutes) {
             }))
         });
     }
+
+    graph.push(...siteEntityNodes());
 
     return { '@context': 'https://schema.org', '@graph': graph };
 }

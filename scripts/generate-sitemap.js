@@ -18,7 +18,12 @@ const staticRoutes = [
   { path: '/about.html',         file: 'about.html',         priority: '0.7', changefreq: 'monthly' },
   { path: '/resources.html',     file: 'resources.html',     priority: '0.8', changefreq: 'weekly'  },
   { path: '/privacy-policy.html',file: 'privacy-policy.html',priority: '0.3', changefreq: 'yearly'  },
-  { path: '/disclaimers.html',   file: 'disclaimers.html',   priority: '0.3', changefreq: 'yearly'  }
+  { path: '/disclaimers.html',   file: 'disclaimers.html',   priority: '0.3', changefreq: 'yearly'  },
+  // PDFs are indexable documents in their own right. This one is listed on the
+  // Resources catalog but had no sitemap entry, leaving it discoverable only by
+  // a crawler that follows the catalog link.
+  { path: '/dossiers/kl-handbook-india-ai-regulations.pdf',
+    file: 'dossiers/kl-handbook-india-ai-regulations.pdf',   priority: '0.6', changefreq: 'yearly'  }
 ];
 
 function fileLastmod(relFile, fallback) {

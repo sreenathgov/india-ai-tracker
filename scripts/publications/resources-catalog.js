@@ -20,6 +20,7 @@
 const fs = require('fs');
 const path = require('path');
 const { validateResourceItems } = require('./validate');
+const { siteEntityNodes } = require('./entities');
 
 const PROJECT_ROOT = path.resolve(__dirname, '..', '..');
 const PAGE_TEMPLATE = path.join(PROJECT_ROOT, 'resources.html');
@@ -189,20 +190,28 @@ function renderFeatured(item) {
 // JSON-LD
 // ---------------------------------------------------------------------------
 
+// The Organization/WebSite nodes ride along in this graph because the page
+// template's own CollectionPage block references them as publisher/isPartOf,
+// and an @id reference only resolves against nodes defined on the same page.
 function itemListJsonLd(items) {
     const absolute = href => (isExternal(href) ? href : `${BASE_URL}/${String(href).replace(/^\/+/, '')}`);
     return JSON.stringify({
         '@context': 'https://schema.org',
-        '@type': 'ItemList',
-        '@id': `${BASE_URL}/resources.html#catalog`,
-        name: 'Kanan Labs Resources',
-        numberOfItems: items.length,
-        itemListElement: items.map((item, i) => ({
-            '@type': 'ListItem',
-            position: i + 1,
-            url: absolute(item.href),
-            name: item.title
-        }))
+        '@graph': [
+            {
+                '@type': 'ItemList',
+                '@id': `${BASE_URL}/resources.html#catalog`,
+                name: 'Kanan Labs Resources',
+                numberOfItems: items.length,
+                itemListElement: items.map((item, i) => ({
+                    '@type': 'ListItem',
+                    position: i + 1,
+                    url: absolute(item.href),
+                    name: item.title
+                }))
+            },
+            ...siteEntityNodes()
+        ]
     }, null, 4);
 }
 
@@ -253,9 +262,16 @@ function writeResourcesCatalog(manifest, distDir) {
     warnings.forEach(w => console.warn(`   ⚠ Resources: ${w}`));
 
     const featured = items.find(i => i.featured === true);
-    // Mirrors renderCatalog(items, 'all') in js/resources.js: the featured item
-    // is lifted out of the grid, and only the first page is drawn.
-    const gridItems = items.filter(i => i !== featured).slice(0, PAGE_SIZE);
+    // Every non-featured item is prerendered, NOT just the first page. This
+    // deliberately diverges from renderCatalog(items, 'all') in js/resources.js,
+    // which draws PAGE_SIZE at a time: pagination there is JS-only, with no
+    // per-page URL for a crawler to follow, so anything past page 1 would have
+    // no anchor in the served HTML and would receive no internal links from the
+    // catalog — while the ItemList below still claimed it. Serving every card
+    // keeps the markup and the structured data telling the same story, and gives
+    // the no-JS baseline the full catalog (unfiltered, which is the correct
+    // degradation). js/resources.js re-renders page 1 over this on init.
+    const gridItems = items.filter(i => i !== featured);
 
     let html = fs.readFileSync(PAGE_TEMPLATE, 'utf-8');
     html = replaceById(html, 'resources-data', JSON.stringify({ items }, null, 2), 'catalog data');

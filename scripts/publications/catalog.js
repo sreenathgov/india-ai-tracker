@@ -12,6 +12,7 @@
 const fs = require('fs');
 const path = require('path');
 const { CLUSTERS, TYPES } = require('./contract');
+const { siteEntityNodes } = require('./entities');
 
 const PROJECT_ROOT = path.resolve(__dirname, '..', '..');
 const DIST_DIR = path.join(PROJECT_ROOT, 'dist');
@@ -130,7 +131,8 @@ function hubJsonLd(cluster, entries) {
                     { '@type': 'ListItem', position: 2, name: 'Resources', item: `${BASE_URL}/resources.html` },
                     { '@type': 'ListItem', position: 3, name: def.hub, item: hubUrl(cluster) }
                 ]
-            }
+            },
+            ...siteEntityNodes()
         ]
     }, null, 2);
 }
@@ -177,6 +179,7 @@ function renderLlmsTxt(manifest) {
         '',
         '> India-focused trade and AI-governance intelligence: sourced publications, cluster hubs and live trackers.',
         '> Site: https://kananlabs.in',
+        `> Full catalog of every publication, whitepaper and press item: ${BASE_URL}/resources.html`,
         ''
     ];
 
@@ -196,7 +199,7 @@ function renderLlmsTxt(manifest) {
     if (!manifest.length) {
         lines.push('## Publications');
         lines.push('');
-        lines.push(`- Catalog: ${BASE_URL}/resources.html (first publications in production)`);
+        lines.push('- No publications in production yet.');
         lines.push('');
     }
 

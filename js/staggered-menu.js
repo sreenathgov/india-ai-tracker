@@ -949,14 +949,7 @@ document.addEventListener('DOMContentLoaded', function () {
       { label: 'TradeWatch', ariaLabel: 'View TradeWatch product', link: 'tradewatch.html' },
       { label: 'India AI Tracker', ariaLabel: 'View the India AI Tracker', link: 'tracker.html' },
       { label: 'SectorWatch', ariaLabel: 'View SectorWatch platform', link: 'sector-watch.html' },
-      {
-        label: 'Resources', ariaLabel: 'Browse resources', link: 'resources.html',
-        subItems: [
-          { label: 'Insights', link: 'resources.html#insights' },
-          { label: 'Whitepapers', link: 'resources.html#whitepapers' },
-          { label: 'News & Press', link: 'resources.html#news' }
-        ]
-      },
+      { label: 'Resources', ariaLabel: 'Browse resources', link: 'resources.html' },
       { label: 'About', ariaLabel: 'Learn about Kanan Labs', link: 'about.html' },
       { label: 'Team', ariaLabel: 'Meet the founder', link: 'team.html' }
     ],

@@ -161,7 +161,10 @@
                 <div class="panel-scroll" data-lenis-prevent>
                     <div class="panel-header">
                         <span class="panel-layer-tag">Analysis</span>
-                        <h2 class="panel-title" id="analysisPanelTitle">Section Title</h2>
+                        <!-- Filled by js/publications.js on open. Ships empty: the panel is
+                             not aria-hidden, so placeholder text would be announced as a real
+                             heading by screen readers and indexed as page content. -->
+                        <h2 class="panel-title" id="analysisPanelTitle"></h2>
                     </div>
                     <div class="panel-content" id="analysisPanelContent"></div>
                 </div>
@@ -180,7 +183,7 @@
                 <div class="panel-scroll" data-lenis-prevent>
                     <div class="panel-header">
                         <span class="panel-layer-tag">In Depth</span>
-                        <h2 class="panel-title" id="indepthPanelTitle">Subsection Title</h2>
+                        <h2 class="panel-title" id="indepthPanelTitle"></h2>
                     </div>
                     <div class="panel-content" id="indepthPanelContent"></div>
                 </div>

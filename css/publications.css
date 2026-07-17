@@ -679,6 +679,87 @@ body.publications-page .page-wrapper {
     font-style: italic;
 }
 
+/* --- Article body: figures, tables, code ---
+   html.publications-html sets overflow-x:hidden, so anything wider than the
+   column is clipped and unreachable rather than scrollable. Everything below
+   either fits the column or scrolls inside its own box. */
+
+.chapter-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin: 2rem auto;
+}
+
+.chapter-content figure {
+    margin: 2.5rem 0;
+}
+
+.chapter-content figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--reading-text-light);
+    text-align: center;
+}
+
+/* A table's min-content width is its longest cell — it cannot compress to a
+   phone. The generator wraps every table in .table-scroll so the overflow
+   becomes a scroll the reader can reach, instead of a silent clip. */
+.table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 2rem 0;
+}
+
+.chapter-content table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.chapter-content th,
+.chapter-content td {
+    padding: 0.7rem 0.9rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(10, 47, 82, 0.14);
+}
+
+.chapter-content th {
+    font-weight: 600;
+    color: var(--kanan-blue);
+    border-bottom-width: 2px;
+    white-space: nowrap;
+}
+
+.chapter-content code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.9em;
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    background: rgba(10, 47, 82, 0.06);
+    overflow-wrap: break-word;
+}
+
+.chapter-content pre {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 2rem 0;
+    padding: 1.1rem 1.25rem;
+    border-radius: 8px;
+    background: rgba(10, 47, 82, 0.05);
+    line-height: 1.55;
+}
+
+.chapter-content pre code {
+    padding: 0;
+    background: none;
+    white-space: pre;
+}
+
 /* --- Bordered subsection card (one per H2) --- */
 
 /* Aligned flush with the chapter heading/body (no overhang) */
