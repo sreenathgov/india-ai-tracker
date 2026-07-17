@@ -14,13 +14,19 @@
 
   const VALID_BUCKETS = Object.freeze(['insight', 'whitepaper', 'news']);
   const FALLBACK_TILE_SRC = 'KANANLABS-LOGO-SET/ORANGE of KANAN-LABS-WEBSITELOGO.png';
+  const PAGE_SIZE = 9;
 
   const els = {
     featured: document.getElementById('resourcesFeatured'),
     grid: document.getElementById('resourcesGrid'),
+    pagination: document.getElementById('resourcesPagination'),
     status: document.getElementById('resourcesStatus'),
     tabs: Array.from(document.querySelectorAll('.rc-tab'))
   };
+
+  // Pagination state for the currently active filter.
+  let pageItems = [];
+  let currentPage = 1;
 
   // ---------- data ----------
 
@@ -167,15 +173,98 @@
     if (!els.featured || !els.grid) return;
 
     const featuredItem = bucket === 'all' ? items.find(i => i.featured === true) : undefined;
-    const gridItems = items
+    pageItems = items
       .filter(i => bucket === 'all' ? i !== featuredItem : i.bucket === bucket)
       .slice()
       .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
+    currentPage = 1;
 
     els.featured.replaceChildren(...(featuredItem ? [buildFeatured(featuredItem)] : []));
-    els.grid.replaceChildren(...gridItems.map(buildCard));
+    renderGridPage(false);
 
-    showStatus(gridItems.length || featuredItem ? '' : 'Nothing published here yet — check back soon.');
+    showStatus(pageItems.length || featuredItem ? '' : 'Nothing published here yet — check back soon.');
+  }
+
+  // ---------- pagination ----------
+
+  function totalPages() {
+    return Math.max(1, Math.ceil(pageItems.length / PAGE_SIZE));
+  }
+
+  function renderGridPage(scrollToGrid) {
+    const pages = totalPages();
+    if (currentPage > pages) currentPage = pages;
+
+    const start = (currentPage - 1) * PAGE_SIZE;
+    const slice = pageItems.slice(start, start + PAGE_SIZE);
+    els.grid.replaceChildren(...slice.map(buildCard));
+
+    renderPagination(pages);
+
+    if (scrollToGrid && els.grid) {
+      els.grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function goToPage(n) {
+    const clamped = Math.min(Math.max(1, n), totalPages());
+    if (clamped === currentPage) return;
+    currentPage = clamped;
+    renderGridPage(true);
+  }
+
+  // Windowed page list: first, last, and current ±1, with '…' for gaps.
+  function pageList(current, total) {
+    const out = [];
+    for (let p = 1; p <= total; p++) {
+      if (p === 1 || p === total || (p >= current - 1 && p <= current + 1)) {
+        out.push(p);
+      } else if (out[out.length - 1] !== '…') {
+        out.push('…');
+      }
+    }
+    return out;
+  }
+
+  function buildPageButton(n) {
+    const isCurrent = n === currentPage;
+    const btn = el('button', 'rc-page' + (isCurrent ? ' is-current' : ''), String(n));
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Page ' + n);
+    if (isCurrent) btn.setAttribute('aria-current', 'page');
+    btn.addEventListener('click', () => goToPage(n));
+    return btn;
+  }
+
+  function buildPageArrow(dir, enabled) {
+    const btn = el('button', 'rc-page rc-page--arrow', dir === 'prev' ? '←' : '→');
+    btn.type = 'button';
+    btn.setAttribute('aria-label', dir === 'prev' ? 'Previous page' : 'Next page');
+    btn.disabled = !enabled;
+    btn.addEventListener('click', () => goToPage(currentPage + (dir === 'prev' ? -1 : 1)));
+    return btn;
+  }
+
+  function renderPagination(pages) {
+    if (!els.pagination) return;
+
+    // Hidden only when the active filter has nothing to show. A single page
+    // still renders the pager (arrows disabled) so it's a visible, permanent
+    // part of the catalog that scales as more publications are added.
+    if (pageItems.length === 0) {
+      els.pagination.replaceChildren();
+      els.pagination.hidden = true;
+      return;
+    }
+
+    const nodes = [buildPageArrow('prev', currentPage > 1)];
+    pageList(currentPage, pages).forEach(entry => {
+      nodes.push(entry === '…' ? el('span', 'rc-page-ellipsis', '…') : buildPageButton(entry));
+    });
+    nodes.push(buildPageArrow('next', currentPage < pages));
+
+    els.pagination.replaceChildren(...nodes);
+    els.pagination.hidden = false;
   }
 
   // ---------- tabs + hash ----------

@@ -1,22 +1,23 @@
 {
   "lastUpdated": "2026-02-14",
   "hero": {
-    "heading": "STRATEGIC AI POLICY",
+    "heading": "EXPORT EVIDENCE INFRASTRUCTURE",
+    "showHeading": false,
     "bodyParagraphs": [
       {
-        "text": "India's AI regulatory ecosystem is rapidly developing across data governance, compute infrastructure alongside various schemes and incentives.",
+        "text": "Every export shipment generates a fragmented set of documents that must agree with each other — and with the rules of customs, insurance, and banking.",
         "bold": false
       },
       {
-        "text": "Strategic exposure is increasing in parallel.",
+        "text": "That mismatch is what blocks refunds and voids claims.",
         "bold": true
       },
       {
-        "text": "Kanan Labs embeds regulatory foresight directly into product development and market strategy. We help organisations reduce redesign risk and position confidently for what comes next.",
+        "text": "Kanan Labs builds TradeWatch: validated, source-attributed evidence that gets your Shipping Bill and marine cargo documentation right before they cost you. We help exporters, their CHAs, and their brokers reduce compliance and claims risk — not paper over it.",
         "bold": false
       },
       {
-        "text": "Schedule a consultation to assess your AI governance needs.",
+        "text": "Schedule a consultation to see how TradeWatch checks your export readiness.",
         "bold": true
       }
     ]
@@ -32,16 +33,16 @@
     },
     {
       "id": "doc-2",
-      "title": "National & State AI Incentive Architecture",
-      "descriptor": "Operational pathways for subsidy access and infrastructure alignment.",
+      "title": "IGST Refund & Shipping Bill Readiness Handbook",
+      "descriptor": "The SB005 invoice-mismatch pattern, e-SANCHIT gaps, and what permanently blocks a refund post-EGM.",
       "meta": "WORK IN PROGRESS, AVAILABLE SOON",
       "pdfUrl": "",
       "colorTheme": "navy"
     },
     {
       "id": "doc-3",
-      "title": "Sample Enterprise AI Governance Framework",
-      "descriptor": "Internal deployment mapping model for AI systems across product lifecycle.",
+      "title": "Marine Cargo Claim Readiness Handbook",
+      "descriptor": "Open Cover declarations, Certificate of Insurance checks, and what makes a claim admissible.",
       "meta": "WORK IN PROGRESS, AVAILABLE SOON",
       "pdfUrl": "",
       "colorTheme": "cream"

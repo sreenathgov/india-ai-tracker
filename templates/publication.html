@@ -24,7 +24,7 @@
     <meta property="article:published_time" content="{{DATE_PUBLISHED}}">
     <meta property="article:modified_time" content="{{DATE_MODIFIED}}">
     <meta property="article:author" content="{{AUTHOR}}">
-    <meta property="article:section" content="{{CATEGORY}}">
+    <meta property="article:section" content="{{CLUSTER_LABEL}}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="{{CANONICAL_URL}}">
@@ -39,7 +39,7 @@
 {{JSON_LD}}
     </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles-v2.css?v=17">
     <link rel="stylesheet" href="/css/publications.css?v={{CSS_VERSION}}">
     <link rel="stylesheet" href="/css/staggered-menu.css">
@@ -54,7 +54,7 @@
         <main class="reading-container" data-nav-light>
 
             <!-- Fixed left sidebar: title, contents, reading guide -->
-            <aside class="toc-sidebar" id="tocSidebar">
+            <aside class="toc-sidebar" id="tocSidebar" data-lenis-prevent>
                 <div class="sidebar-header">
                     <div class="publication-title" id="publicationTitle">{{TITLE}}</div>
                     <div class="publication-meta">
@@ -125,6 +125,27 @@
                 </div>
             </div>
 
+            <!-- Right-gutter subscribe ("Weekly Brief"). z-index sits below the
+                 backdrops/panels so Layer 2/3 slide over and hide it. -->
+            <aside class="pub-sub" id="pubSub" aria-label="Subscribe to the Weekly Brief">
+                <div class="pub-sub-kicker">Weekly Brief</div>
+                <h2 class="pub-sub-title">Get our insights delivered to your inbox.</h2>
+                <form class="pub-sub-form" id="pubSubForm" novalidate>
+                    <input type="email" class="pub-sub-input" name="email" placeholder="Your email address"
+                           autocomplete="email" required aria-label="Email address">
+                    <button type="submit" class="pub-sub-btn" id="pubSubBtn">Subscribe</button>
+                </form>
+                <p class="pub-sub-note">Governance analysis, no spam — unsubscribe anytime.</p>
+                <p class="pub-sub-success" id="pubSubSuccess">Thanks — you're on the list.</p>
+                <a class="pub-sub-linkedin" href="https://www.linkedin.com/company/kanan-labs/"
+                   target="_blank" rel="noopener">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+                    </svg>
+                    <span>Follow on LinkedIn</span>
+                </a>
+            </aside>
+
             <!-- Per-layer dim backdrops are inserted here by publications.js -->
 
             <!-- Analysis Panel (Layer 2, slides from right) -->
@@ -137,7 +158,7 @@
                         <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                 </button>
-                <div class="panel-scroll">
+                <div class="panel-scroll" data-lenis-prevent>
                     <div class="panel-header">
                         <span class="panel-layer-tag">Analysis</span>
                         <h2 class="panel-title" id="analysisPanelTitle">Section Title</h2>
@@ -156,7 +177,7 @@
                         <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                 </button>
-                <div class="panel-scroll">
+                <div class="panel-scroll" data-lenis-prevent>
                     <div class="panel-header">
                         <span class="panel-layer-tag">In Depth</span>
                         <h2 class="panel-title" id="indepthPanelTitle">Subsection Title</h2>
@@ -179,7 +200,9 @@
     </div>
 
     <!-- No marked.js: this page is pre-rendered; publications.js hydrates from the DOM -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
     <script src="/js/staggered-menu.js"></script>
+    <script src="/js/brevo-subscribe.js"></script>
     <script src="/js/publications.js?v={{JS_VERSION}}"></script>
 </body>
 

@@ -145,13 +145,26 @@ body.publications-page .page-wrapper {
     border-bottom: 1px solid var(--pub-border-subtle);
 }
 
+/* LineSidebar-style contents (adapted from reactbits.dev/components/line-sidebar,
+   ported to vanilla JS). Each .toc-item carries --effect (0..1), eased by a rAF
+   lerp in publications.js from cursor proximity — color, shift, marker scale and
+   index opacity all read the same value so they move in lockstep. The active
+   chapter (IntersectionObserver) pins --effect to 1. Brand mapping: accent =
+   Kanan orange, text = charcoal, markers = navy hairlines on the cream rail. */
 .toc-list {
+    --toc-accent: var(--kanan-orange);
+    --toc-text: #3a3d42;
+    --toc-marker: rgba(10, 47, 82, 0.30);
+    --toc-marker-length: 1.5rem;
+    --toc-marker-gap: 0.75rem;
+    --toc-max-shift: 10px;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 calc(var(--toc-marker-length) + var(--toc-marker-gap));
 }
 
 .toc-item {
+    position: relative;
     margin-bottom: 1.05rem;
 }
 
@@ -159,44 +172,73 @@ body.publications-page .page-wrapper {
     display: flex;
     align-items: baseline;
     gap: 0.8rem;
+    transform: translateX(calc(var(--effect, 0) * var(--toc-max-shift)));
+}
+
+/* Horizontal marker line, left of the row — scales and warms toward orange
+   with proximity. Positioned on the li so it does not shift with the label. */
+.toc-item .toc-marker {
+    position: absolute;
+    top: 0.63rem;
+    left: calc(-1 * (var(--toc-marker-length) + var(--toc-marker-gap)));
+    height: 1px;
+    width: var(--toc-marker-length);
+    background-color: color-mix(in srgb,
+        var(--toc-accent) calc(var(--effect, 0) * 100%),
+        var(--toc-marker));
+    transform-origin: left center;
+    transform: scaleX(calc(0.7 + var(--effect, 0) * 0.5));
+}
+
+/* Short static tick centered in the gap between two chapters; grows slightly
+   with proximity (the component's scaleTick behaviour). */
+.toc-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + 0.525rem);
+    left: calc(-1 * (var(--toc-marker-length) + var(--toc-marker-gap)));
+    height: 1px;
+    width: calc(var(--toc-marker-length) * 0.5);
+    background-color: var(--toc-marker);
+    opacity: 0.5;
+    transform-origin: left center;
+    transform: translateY(-50%) scaleX(calc(0.7 + var(--effect, 0) * 0.6));
 }
 
 .toc-num {
     font-family: 'Telegraf', 'Inter', sans-serif;
     font-size: 0.72rem;
     color: var(--kanan-orange);
-    min-width: 0.9rem;
+    min-width: 1.1rem;
     flex-shrink: 0;
+    opacity: calc(0.55 + var(--effect, 0) * 0.45);
 }
 
 .toc-link {
     font-family: 'Inter', sans-serif;
     font-size: 0.875rem;
-    color: #3a3d42;
+    color: color-mix(in srgb,
+        var(--toc-accent) calc(var(--effect, 0) * 100%),
+        var(--toc-text));
     text-decoration: none;
     line-height: 1.45;
-    transition: color 0.15s ease;
 }
 
-.toc-link:hover {
-    color: var(--kanan-blue);
+/* Static fallback (reduced motion / JS engine absent): active still reads */
+.toc-item.active {
+    --effect: 1;
 }
 
 .toc-item.active .toc-link {
-    color: var(--kanan-blue);
     font-weight: 600;
 }
 
-/* H2 sub-items — revealed for the active chapter only */
+/* H2 sub-items — always open; the proximity effect stays on the chapter rows */
 .toc-sub {
     list-style: none;
-    display: none;
+    display: block;
     margin: 0.55rem 0 0 1.7rem;
     padding: 0;
-}
-
-.toc-item.active .toc-sub {
-    display: block;
 }
 
 .toc-sub li {
@@ -328,7 +370,7 @@ body.publications-page .page-wrapper {
 .masthead-title {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 3.2rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--kanan-blue);
     line-height: 1.08;
     letter-spacing: -0.02em;
@@ -356,13 +398,238 @@ body.publications-page .page-wrapper {
     max-width: 46rem;
 }
 
-/* White section card per chapter */
+/* --- Key Takeaways (AUTHORING.md §4; approved design tokens) ---
+   Container/label/summary/divider/bullets are the founder-approved reference:
+   #B45309 amber accents, Inter text, 12px radius, ✓ bullet checks. */
+
+.pub-takeaways {
+    position: relative;
+    margin: 2.8rem 2rem 1rem 5.5rem;
+    padding: 2rem 2.25rem;
+    max-width: 68rem;
+    background: #FFFFFF;
+    border: 1px solid #F1F3F5;
+    border-top: 3px solid #B45309;
+    border-radius: 12px;
+}
+
+.pub-takeaways-kicker {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #B45309;
+    margin-bottom: 14px;
+}
+
+.pub-takeaways-summary {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #1C1C1E;
+    margin: 0 0 20px;
+}
+
+.pub-takeaways-summary strong,
+.pub-takeaways-summary .hl {
+    font-weight: 500;
+}
+
+.pub-takeaways-rule {
+    height: 1px;
+    background: #F1F3F5;
+    border: 0;
+    margin: 0 0 18px;
+}
+
+.pub-takeaways-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pub-takeaways-list li {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.pub-takeaways-list li:last-child {
+    margin-bottom: 0;
+}
+
+.pub-takeaway-check {
+    color: #B45309;
+    font-size: 16px;
+    line-height: 1.35;
+    flex-shrink: 0;
+}
+
+.pub-takeaway-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #4A4A4C;
+}
+
+.pub-takeaway-text strong,
+.pub-takeaway-text .hl {
+    font-weight: 500;
+    color: #1C1C1E;
+}
+
+@media (max-width: 640px) {
+    .pub-takeaways {
+        padding: 1.5rem;
+    }
+}
+
+/* --- Masthead trust signal: visible Last reviewed date --- */
+
+.masthead-reviewed {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    color: var(--kanan-blue);
+    margin: -0.9rem 0 1.6rem;
+}
+
+.masthead-reviewed time {
+    font-weight: 600;
+}
+
+.masthead-kicker .masthead-cluster {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(219, 74, 43, 0.35);
+}
+
+.masthead-kicker .masthead-cluster:hover {
+    border-bottom-color: currentColor;
+}
+
+/* --- Article foot apparatus: FAQ, Sources, Boundary --- */
+
+.pub-faq,
+.pub-sources,
+.pub-boundary {
+    margin: 2.5rem 2rem 1rem 5.5rem;
+    padding: 2rem 2.25rem;
+    max-width: 68rem;
+    background: var(--pub-card);
+    border: 1px solid var(--pub-border-subtle);
+    border-radius: 12px;
+}
+
+.pub-foot-kicker {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--kanan-blue);
+    margin-bottom: 1.2rem;
+}
+
+.pub-sources-list {
+    list-style: decimal;
+    margin: 0;
+    padding: 0 0 0 1.4rem;
+}
+
+.pub-source {
+    display: list-item;
+    color: var(--reading-text);
+    margin-bottom: 1.1rem;
+}
+
+.pub-source:last-child {
+    margin-bottom: 0;
+}
+
+.pub-source-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 500;
+    line-height: 1.45;
+    color: var(--reading-text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--pub-border);
+}
+
+.pub-source-title:hover {
+    border-bottom-color: var(--reading-text);
+}
+
+.pub-source-meta {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.74rem;
+    letter-spacing: 0.03em;
+    color: var(--reading-text-light);
+    margin-top: 0.3rem;
+}
+
+.pub-boundary {
+    border-left: 3px solid var(--kanan-blue);
+}
+
+.pub-boundary-statement {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--reading-text);
+    margin: 0 0 0.8rem;
+}
+
+.pub-boundary-statement:last-child {
+    margin-bottom: 0;
+}
+
+.pub-faq-item {
+    margin-bottom: 1.4rem;
+}
+
+.pub-faq-item:last-child {
+    margin-bottom: 0;
+}
+
+.pub-faq-q {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--kanan-blue);
+    margin: 0 0 0.45rem;
+}
+
+.pub-faq-a {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--reading-text);
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+
+    .pub-faq,
+    .pub-sources,
+    .pub-boundary {
+        padding: 1.5rem;
+    }
+}
+
+/* Chapter section: transparent so it reads as the cream "ground". The white,
+   shadowed subsection tiles inside are the only raised surfaces — that contrast
+   is what signals they're the interactive elements. */
 .chapter-card {
     position: relative;
     margin: 4.5rem 2rem 4.5rem 5.5rem;
     padding: 3.3rem 3.3rem 2.6rem;
     max-width: 68rem;
-    background: var(--pub-card);
+    background: transparent;
 }
 
 .chapter-card:first-child {
@@ -382,7 +649,7 @@ body.publications-page .page-wrapper {
 .chapter-title {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 2.7rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--kanan-blue);
     line-height: 1.12;
     letter-spacing: -0.02em;
@@ -390,15 +657,26 @@ body.publications-page .page-wrapper {
 }
 
 .chapter-content {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     font-size: 1.2rem;
-    line-height: 1.75;
+    line-height: 1.65;
     color: var(--reading-text);
-    letter-spacing: 0.01em;
 }
 
 .chapter-content p {
     margin-bottom: 1.4rem;
+}
+
+.chapter-content strong,
+.subsection-teaser strong {
+    font-weight: 600;
+    color: var(--kanan-blue);
+}
+
+.chapter-content em,
+.subsection-teaser em {
+    font-style: italic;
 }
 
 /* --- Bordered subsection card (one per H2) --- */
@@ -411,10 +689,16 @@ body.publications-page .page-wrapper {
     min-height: 12rem;
     margin: 3rem 0 4.5rem;
     padding: 2.3rem 2.6rem 0 2.8rem;
-    border: 1px solid var(--pub-border-subtle);
+    background: var(--pub-card);
+    border: 1px solid var(--pub-border);
+    /* Apple-style resting elevation: tight contact shadow + soft ambient lift,
+       so the tile reads as a raised, clickable object even before hover. */
+    box-shadow:
+        0 1px 2px rgba(10, 47, 82, 0.05),
+        0 10px 30px -14px rgba(10, 47, 82, 0.16);
     cursor: pointer;
     transition:
-        background 0.2s ease-out,
+        transform 0.25s ease-out,
         box-shadow 0.25s ease-out,
         border-color 0.2s ease-out;
 }
@@ -424,15 +708,20 @@ body.publications-page .page-wrapper {
 }
 
 .subsection-card:hover {
-    background: #fdfcfa;
+    transform: translateY(-3px);
     border-color: var(--pub-border);
-    box-shadow: 0 16px 32px -20px rgba(10, 47, 82, 0.22);
+    box-shadow:
+        0 4px 10px rgba(10, 47, 82, 0.06),
+        0 22px 48px -18px rgba(10, 47, 82, 0.26);
 }
 
-/* Active card: stays lit above the dim backdrop, connector dot + line drawn */
+/* Active card: lit above the dim backdrop; it has "lifted into" the panel, so
+   drop the resting elevation and sit flat on the dim ground. */
 .subsection-card.active {
     background: var(--pub-dim);
     border-color: transparent;
+    box-shadow: none;
+    transform: none;
     z-index: 96;
     pointer-events: none;
 }
@@ -483,16 +772,18 @@ body.publications-page .page-wrapper {
 .subsection-title {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 1.9rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--kanan-blue);
     line-height: 1.25;
     margin: 0.2rem 0 0.7rem;
 }
 
 .subsection-teaser {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    flex-grow: 1;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     font-size: 1.15rem;
-    line-height: 1.7;
+    line-height: 1.65;
     color: var(--reading-text);
 }
 
@@ -513,29 +804,74 @@ body.publications-page .page-wrapper {
     margin-bottom: 0.3rem;
 }
 
+/* Note rows are real <button>s that deep-open Layer 3 (L2+L3 stacked) */
+.note-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.4rem 0;
+    appearance: none;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid var(--pub-border-subtle);
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.72rem;
+    line-height: 1.6;
+    text-align: left;
+    color: var(--kanan-blue);
+    cursor: pointer;
+    touch-action: manipulation;
+    transition: color 0.2s ease;
+}
+
+.note-item::after {
+    content: '\2192';
+    margin-left: 0.9em;
+    color: var(--kanan-orange);
+    transition: transform 0.3s ease-out;
+}
+
+.note-item:hover,
+.note-item:active {
+    color: var(--kanan-orange);
+}
+
+.note-item:hover::after {
+    transform: translateX(0.35em);
+}
+
 /* --- "Get the details" strip --- */
 
 .more-strip {
     display: flex;
     align-items: center;
-    margin: auto -2.6rem 0 -2.8rem;
-    padding: 0.9rem 1.5rem;
-    background: #f9efe9;   /* terracotta whisper — barely-there brand-orange tint */
-    border-top: 1px solid rgba(219, 74, 43, 0.12);
+    margin: 1.75rem -2.6rem 0 -2.8rem;
+    padding: 1.15rem 1.8rem;
+    line-height: 1.4;
+    /* Rest: a legible terracotta CTA bar (not the old near-invisible whisper),
+       with orange label — a persistent, unmistakable "click to open" affordance. */
+    background: #f6e6dc;
+    border-top: 1px solid rgba(219, 74, 43, 0.22);
     font-family: 'Telegraf', 'Inter', sans-serif;
     font-size: 0.78rem;
-    letter-spacing: 0.05em;
-    color: var(--kanan-blue);
-    transition: background 0.2s ease-out;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--kanan-orange);
+    transition: background 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out;
 }
 
+/* Hover: the bar fills solid orange and inverts to white — reads as a button. */
 .subsection-card:hover .more-strip {
-    background: #f6e8df;
+    background: var(--kanan-orange);
+    border-top-color: var(--kanan-orange);
+    color: #fff;
 }
 
 .more-strip .more-icon {
     margin-left: 0.9em;
-    color: var(--kanan-orange);
+    color: inherit;
     transition: transform 0.3s ease-out;
 }
 
@@ -600,6 +936,320 @@ body.publications-page .page-wrapper {
 }
 
 /* ============================================
+   RIGHT-GUTTER SUBSCRIBE — "Weekly Brief"
+   Fixed in the right negative space. z-index sits
+   BELOW the backdrops (95) and panels (100/110) so
+   Layer 2/3 slide over and fully cover it. Revealed
+   only where the gutter is wide enough (see media
+   query at the foot of this block); the site footer
+   carries the same signup on narrower screens.
+   ============================================ */
+
+.pub-sub {
+    position: fixed;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    width: 14rem;
+    z-index: 30;
+    display: none;
+    padding-left: 1.4rem;
+    border-left: 2px solid var(--kanan-orange);
+}
+
+.pub-sub-kicker {
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--kanan-orange);
+    margin-bottom: 0.7rem;
+}
+
+.pub-sub-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--kanan-blue);
+    margin: 0 0 1.1rem;
+}
+
+.pub-sub-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.pub-sub-input {
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    color: var(--reading-text);
+    background: var(--pub-card);
+    border: 1px solid var(--pub-border);
+    border-radius: 3px;
+    padding: 0.6rem 0.7rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pub-sub-input::placeholder {
+    color: var(--pub-gray);
+}
+
+.pub-sub-input:focus {
+    outline: none;
+    border-color: var(--kanan-orange);
+    box-shadow: 0 0 0 3px rgba(219, 74, 43, 0.12);
+}
+
+.pub-sub-btn {
+    width: 100%;
+    font-family: 'Telegraf', 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--kanan-orange);
+    border: none;
+    border-radius: 3px;
+    padding: 0.62rem 0.7rem;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.pub-sub-btn:hover {
+    background: #c23e22;
+}
+
+.pub-sub-btn:active {
+    transform: translateY(1px);
+}
+
+.pub-sub-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.pub-sub-note {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.66rem;
+    line-height: 1.45;
+    color: var(--pub-gray);
+    margin: 0.75rem 0 0;
+}
+
+.pub-sub-success {
+    display: none;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: var(--kanan-blue);
+}
+
+.pub-sub.is-success .pub-sub-form,
+.pub-sub.is-success .pub-sub-note {
+    display: none;
+}
+
+.pub-sub.is-success .pub-sub-success {
+    display: block;
+}
+
+.pub-sub-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.2rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--pub-border-subtle);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: var(--reading-text-light);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.pub-sub-linkedin svg {
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+
+.pub-sub-linkedin:hover {
+    color: var(--kanan-blue);
+}
+
+.pub-sub-linkedin:hover svg {
+    opacity: 1;
+}
+
+/* Reveal only where the right gutter clears the 68rem reading column
+   with a comfortable gap. Below this, the block stays hidden and the site
+   footer's signup covers the reader. */
+@media (min-width: 1900px) {
+    .pub-sub {
+        display: block;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pub-sub-input,
+    .pub-sub-btn,
+    .pub-sub-linkedin,
+    .pub-sub-linkedin svg {
+        transition: none;
+    }
+}
+
+/* ============================================
+   INLINE "WEEKLY BRIEF" SIGNUP
+   End-of-article fallback — the complement of the
+   fixed .pub-sub gutter block: shown by default,
+   hidden >=1900px where the gutter block takes over.
+   ============================================ */
+
+.pub-signup-inline {
+    margin: 4.5rem 2rem 1rem 5.5rem;
+    max-width: 68rem;
+    padding: 2.4rem 3rem 2.6rem;
+    background: var(--pub-card);
+    border: 1px solid var(--pub-border-subtle);
+    border-top: 3px solid var(--kanan-orange);
+    box-shadow:
+        0 1px 2px rgba(10, 47, 82, 0.05),
+        0 14px 40px -18px rgba(10, 47, 82, 0.18);
+}
+
+.pub-signup-inline-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.85rem;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--kanan-blue);
+    margin: 0.4rem 0 1.3rem;
+}
+
+/* Horizontal form inside the roomy inline card (email grows, button hugs) */
+.pub-signup-inline .pub-sub-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    max-width: 34rem;
+}
+
+.pub-signup-inline .pub-sub-input {
+    flex: 1;
+    min-width: 12rem;
+    width: auto;
+    font-size: 0.9rem;
+    padding: 0.7rem 0.85rem;
+}
+
+.pub-signup-inline .pub-sub-btn {
+    width: auto;
+    white-space: nowrap;
+    padding: 0.7rem 1.4rem;
+}
+
+.pub-signup-inline .pub-sub-note {
+    font-size: 0.72rem;
+}
+
+.pub-signup-inline.is-success .pub-sub-form,
+.pub-signup-inline.is-success .pub-sub-note {
+    display: none;
+}
+
+.pub-signup-inline.is-success .pub-sub-success {
+    display: block;
+}
+
+@media (min-width: 1900px) {
+    .pub-signup-inline {
+        display: none;   /* the fixed gutter block takes over */
+    }
+}
+
+@media (max-width: 1200px) {
+    .pub-signup-inline {
+        margin-left: 3.5rem;
+        padding: 2.2rem 2.4rem 2.4rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .pub-signup-inline {
+        margin: 3.5rem auto 0;
+        max-width: 46rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .pub-signup-inline .pub-sub-form {
+        flex-direction: column;
+        max-width: none;
+    }
+    .pub-signup-inline .pub-sub-btn {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   LENIS SMOOTH SCROLL
+   Classes are added to <html> by js/publications.js
+   once Lenis attaches. Nested scrollers (sidebar,
+   panel bodies) opt out via [data-lenis-prevent].
+   ============================================ */
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+/* Scroll lock while a reading panel is open (applied by lockScroll() in
+   publications.js at all widths). Also hides the staggered-menu header and
+   disables its invisible top-edge ghost zone so the panel-close button and
+   top content aren't covered by nav layers (menu z 1000-1003 > panels 100/110).
+   visibility beats GSAP's inline y/opacity; the ghost zone's pointer-events
+   are set inline by JS, hence !important. */
+html.pub-locked,
+html.pub-locked body {
+    overflow: hidden;
+}
+
+html.pub-locked .staggered-menu-header {
+    visibility: hidden !important;
+}
+
+html.pub-locked .sm-ghost-zone {
+    pointer-events: none !important;
+}
+
+/* Reduced motion: Lenis never initialises (JS-gated); also drop the native
+   smooth-scroll so anchor jumps are instant for these users. */
+@media (prefers-reduced-motion: reduce) {
+    html.publications-html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ============================================
    PER-LAYER DIM BACKDROPS
    (created by JS; click = close that layer)
    ============================================ */
@@ -612,6 +1262,7 @@ body.publications-page .page-wrapper {
     opacity: 0;
     transition: opacity 0.3s ease-out;
     z-index: 95;
+    touch-action: none;
 }
 
 .layer-backdrop.on {
@@ -631,9 +1282,10 @@ body.publications-page .page-wrapper {
     position: fixed;
     top: 0;
     right: 0;
-    bottom: 0;
     height: 100vh;
+    height: 100dvh;   /* iOS: track the dynamic toolbar viewport */
     background: var(--pub-card);
+    touch-action: pan-y;   /* vertical pan native; horizontal cancelable for swipe-to-close */
     border-left: 1px solid var(--kanan-blue);
     box-shadow:
         0 30px 60px -12px rgba(6, 17, 59, 0.25),
@@ -744,6 +1396,8 @@ body.publications-page .page-wrapper {
 .panel-scroll {
     height: 100%;
     overflow-y: auto;
+    overscroll-behavior: contain;   /* no scroll chaining to the page, Lenis or not */
+    -webkit-overflow-scrolling: touch;
     padding: 5.5rem 4rem 4.5rem 4.5rem;
 }
 
@@ -792,7 +1446,7 @@ body.publications-page .page-wrapper {
 .reading-panel .panel-title {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 2.3rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--kanan-blue);
     margin: 0;
     line-height: 1.15;
@@ -805,11 +1459,11 @@ body.publications-page .page-wrapper {
     background: transparent;
     padding: 0;
     transform: none;
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     font-size: 1.1875rem;
-    line-height: 1.75;
+    line-height: 1.65;
     color: var(--reading-text);
-    letter-spacing: 0.01em;
 }
 
 .reading-panel .panel-content p {
@@ -818,6 +1472,15 @@ body.publications-page .page-wrapper {
 
 .reading-panel .panel-content p:last-child {
     margin-bottom: 0;
+}
+
+.reading-panel .panel-content strong {
+    font-weight: 600;
+    color: var(--kanan-blue);
+}
+
+.reading-panel .panel-content em {
+    font-style: italic;
 }
 
 /* --- "More about" boxes (H3 triggers inside Analysis panel) --- */
@@ -837,22 +1500,29 @@ body.publications-page .page-wrapper {
     border-bottom: 1px solid var(--kanan-blue);
 }
 
+/* Rendered as a real <button> (reliable tap target); reset button chrome */
 .subsection-link {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    min-height: 3rem;
     margin-top: 0.65rem;
     padding: 0.9rem 1.2rem;
+    appearance: none;
     border: 1px solid rgba(10, 47, 82, 0.18);
     background: #faf8f3;
     font-family: 'Telegraf', 'Inter', sans-serif;
     font-size: 0.85rem;
+    text-align: left;
     color: var(--kanan-blue);
     cursor: pointer;
+    touch-action: manipulation;
     transition: border-color 0.2s ease, background 0.2s ease;
 }
 
-.subsection-link:hover {
+.subsection-link:hover,
+.subsection-link:active {
     border-color: var(--kanan-orange);
     background: #ffffff;
 }
@@ -864,6 +1534,80 @@ body.publications-page .page-wrapper {
 
 .subsection-link:hover .subsection-link-arrow {
     transform: translateX(0.35em);
+}
+
+/* ============================================
+   MOBILE TOP BAR — Contents + How to read
+   (built by setupMobileBar() in publications.js;
+   replaces the hidden sidebar at ≤1024px)
+   ============================================ */
+
+.pub-mobile-bar {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .pub-mobile-bar {
+        display: block;
+        max-width: 46rem;
+        margin: 0 auto 0.5rem;
+        padding: 0 1.4rem;
+    }
+
+    .pub-dropdown {
+        background: var(--pub-sidebar);
+        border: 1px solid var(--pub-border-subtle);
+        margin-bottom: 0.6rem;
+    }
+
+    .pub-dropdown summary {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.95rem 1.15rem;
+        cursor: pointer;
+        font-family: 'Telegraf', 'Inter', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--kanan-blue);
+    }
+
+    .pub-dropdown summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .pub-dropdown summary::after {
+        content: '+';
+        color: var(--kanan-orange);
+        font-size: 1rem;
+        line-height: 1;
+    }
+
+    .pub-dropdown[open] summary::after {
+        content: '\2212';
+    }
+
+    .pub-dropdown-body {
+        padding: 0.4rem 1.15rem 1.2rem;
+        border-top: 1px solid var(--pub-border-subtle);
+    }
+
+    /* Flatten the cloned TOC: no LineSidebar geometry in the dropdown */
+    .pub-mobile-bar .toc-list {
+        padding-left: 0;
+    }
+
+    .pub-mobile-bar .toc-marker,
+    .pub-mobile-bar .toc-item::after {
+        display: none;
+    }
+
+    .pub-mobile-bar .toc-item-row {
+        transform: none;
+    }
 }
 
 /* ============================================
@@ -934,6 +1678,13 @@ body.publications-page .page-wrapper {
         margin-left: 3.5rem;
         padding: 2.6rem 2.6rem 2.2rem;
     }
+
+    .pub-takeaways,
+    .pub-faq,
+    .pub-sources,
+    .pub-boundary {
+        margin-left: 3.5rem;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -963,25 +1714,81 @@ body.publications-page .page-wrapper {
         max-width: 46rem;
     }
 
+    .pub-takeaways {
+        margin: 2.5rem auto 0;
+        max-width: 46rem;
+    }
+
+    .pub-faq,
+    .pub-sources,
+    .pub-boundary {
+        margin: 2.5rem auto 0;
+        max-width: 46rem;
+    }
+
     .subsection-card {
         margin: 2.5rem 0 3.5rem;
         padding: 2rem 1.8rem 0 2rem;
     }
 
     .more-strip {
-        margin: auto -1.8rem 0 -2rem;
+        margin: 1.5rem -1.8rem 0 -2rem;
     }
 
-    .analysis-panel {
-        width: 85vw;
-    }
+    /* --- Popup mode: panels are near-full-screen self-contained popups.
+       A 12vw dimmed gutter stays visible on the left as the "closeable"
+       affordance; L3 stacks fully over L2 (no pushed band). --- */
 
+    .analysis-panel,
     .indepth-panel {
-        width: 70vw;
+        width: 88vw;
+        max-width: none;
+        border-left: 1px solid var(--pub-border);
     }
 
     .analysis-panel.pushed {
-        right: 6vw;
+        right: 0;
+    }
+
+    .reading-panel .spot {
+        display: none;
+    }
+
+    .layer-indicator {
+        display: none;
+    }
+
+    /* Left-edge grabber pill: swipe-right-to-close affordance */
+    .reading-panel.open::after {
+        content: '';
+        position: absolute;
+        left: 0.45rem;
+        top: 50%;
+        width: 3px;
+        height: 2.6rem;
+        border-radius: 2px;
+        background: var(--pub-border);
+        transform: translateY(-50%);
+    }
+
+    /* Close button: 44px chip, clear of content, always reachable */
+    .panel-close {
+        top: max(0.9rem, env(safe-area-inset-top));
+        left: 0.9rem;
+        width: 2.75rem;
+        height: 2.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid var(--pub-border);
+        border-radius: 50%;
+        color: var(--kanan-blue);
+    }
+
+    .panel-scroll {
+        padding: 4.5rem 1.8rem 3rem 2rem;
     }
 }
 
@@ -998,38 +1805,8 @@ body.publications-page .page-wrapper {
         font-size: 1.5rem;
     }
 
-    .analysis-panel,
-    .indepth-panel {
-        width: 100%;
-        max-width: none;
-        border-left: none;
-    }
-
-    .analysis-panel.pushed {
-        right: 0;
-    }
-
-    .reading-panel .spot {
-        display: none;
-    }
-
     .panel-scroll {
         padding: 4.5rem 1.6rem 3rem;
-    }
-
-    .layer-indicator {
-        top: 4.2rem;
-        right: 1rem;
-        font-size: 0.6rem;
-    }
-
-    .layer-boxes {
-        height: 1.6rem;
-        width: 1.2rem;
-    }
-
-    .lbox {
-        width: 1.2rem;
     }
 }
 
@@ -1051,12 +1828,13 @@ body.publications-page .page-wrapper {
         padding: 1.8rem 1.4rem 1.6rem;
     }
 
+
     .subsection-card {
         padding: 1.6rem 1.3rem 0 1.5rem;
     }
 
     .more-strip {
-        margin: auto -1.3rem 0 -1.5rem;
+        margin: 1.5rem -1.3rem 0 -1.5rem;
     }
 
     .chapter-title {

@@ -1,0 +1,52 @@
+# Publications contract enforcement (AUTHORING.md v2).
+#
+# Runs the publications generator — which validates every article against
+# content/publications/AUTHORING.md §9 and exits 1 on any violation — on every
+# PR and push that touches content, the generator, or the templates. A
+# malformed article cannot merge. Errors are printed for every file at once,
+# grouped, with frontmatter line numbers.
+
+name: Publications
+
+on:
+  pull_request:
+    paths:
+      - 'content/**'
+      - 'scripts/**'
+      - 'templates/**'
+      - 'css/publications*.css'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/publications.yml'
+  push:
+    paths:
+      - 'content/**'
+      - 'scripts/**'
+      - 'templates/**'
+      - 'css/publications*.css'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/publications.yml'
+
+jobs:
+  validate-and-build:
+    name: Validate contract & build publication pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Validates every article (fails the job on any AUTHORING.md §9
+      # violation) and builds pages + catalog + hubs + manifest + llms.txt.
+      - name: Validate publications against AUTHORING.md
+        run: node scripts/generate-publications.js
+
+      - name: Regenerate sitemap
+        run: node scripts/generate-sitemap.js

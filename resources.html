@@ -53,12 +53,13 @@
     }
     </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-v2.css?v=21">
     <link rel="stylesheet" href="css/staggered-menu.css">
     <link rel="stylesheet" href="css/footer.css?v=3">
     <link rel="stylesheet" href="css/contact-panel.css?v=1">
-    <link rel="stylesheet" href="css/resources.css?v=6">
+    <link rel="stylesheet" href="css/advisory-section.css?v=1">
+    <link rel="stylesheet" href="css/resources.css?v=13">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
 
@@ -75,6 +76,10 @@
             <p class="rc-masthead__subline">Operational insights, substantive whitepapers, and news from the team
                 building the evidence layer for Indian trade.</p>
         </div>
+
+        <section class="rc-gallery" id="resourcesGallery" tabindex="0" role="region"
+            aria-label="Recently published. Drag sideways or use the left and right arrow keys to browse; press Enter to open the centered publication.">
+        </section>
 
         <nav class="rc-tabs" aria-label="Resource categories">
             <button class="rc-tab is-active" type="button" data-bucket="all" aria-pressed="true">
@@ -113,19 +118,44 @@
 
         <section class="rc-grid" id="resourcesGrid" aria-label="Publications"></section>
 
+        <nav class="rc-pagination" id="resourcesPagination" aria-label="Publication pages" hidden></nav>
+
     </main>
+
+    <!-- Newsletter act-break: thin orange subscribe strip (ported from the original waitlist band) -->
+    <section class="rc-brief" aria-label="Subscribe to our insights">
+        <div class="rc-brief__inner">
+            <div class="rc-brief__text">
+                <h2 class="rc-brief__title">Get our insights delivered directly to your inbox</h2>
+            </div>
+            <form class="rc-brief__form" id="resourcesBriefForm" novalidate>
+                <input type="email" class="rc-brief__input" name="email" placeholder="Your work email"
+                    autocomplete="email" required aria-label="Email address">
+                <button type="submit" class="rc-brief__btn">Subscribe</button>
+            </form>
+            <p class="rc-brief__status" id="resourcesBriefStatus" role="status" aria-live="polite" hidden></p>
+        </div>
+    </section>
+
+    <!-- Strategic advisory relic: CardSwap stack of dossiers (rendered by advisory-section.js) -->
+    <section class="advisory-section" id="advisorySection">
+        <canvas class="advisory-section__grid" id="advisory-grid"></canvas>
+        <div class="advisory-container">
+            <!-- Content rendered dynamically by advisory-section.js -->
+        </div>
+    </section>
 
     <script type="application/json" id="resources-data">
     {
       "items": [
         {
-          "slug": "sb005-invoice-mismatch",
+          "slug": "sb005-igst-refund-blocked",
           "bucket": "insight",
-          "title": "The SB005 Trap: Why One Formatting Character Freezes an IGST Refund",
-          "description": "SB005 fires when the invoice number on the Shipping Bill diverges from GSTR-1 Table 6A by a single character. The fix is a Concordance Table under Public Notice 10/2018.",
-          "date": "2026-07-10",
-          "image": "added-assets/tw-hero-1280.avif",
-          "href": "publications/sb005-invoice-mismatch/",
+          "title": "SB005: Why Your IGST Refund Blocks After EGM and How to Clear It",
+          "description": "SB005 blocks an IGST refund when the Shipping Bill invoice number diverges from GSTR-1 Table 6A. The fix is a Concordance Table filed with the customs officer.",
+          "date": "2026-07-16",
+          "image": "added-assets/sb005-igst-refund-blocked-cover.png",
+          "href": "publications/sb005-igst-refund-blocked/",
           "featured": true,
           "meta": {}
         },
@@ -276,10 +306,52 @@
     </footer>
 
     <script src="js/infrastructure-grid.js"></script>
-    <script src="js/resources.js"></script>
+    <script src="js/resources.js?v=4"></script>
     <script src="js/rc-pill-tabs.js"></script>
+    <script src="js/rc-gallery.js"></script>
     <script src="js/contact-panel.js"></script>
-    <script src="js/staggered-menu.js"></script>
+    <script src="js/advisory-section.js?v=3"></script>
+    <script src="js/staggered-menu.js?v=2"></script>
+
+    <!-- Weekly Brief signup → shared Brevo endpoint -->
+    <script src="js/brevo-subscribe.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('resourcesBriefForm');
+            const status = document.getElementById('resourcesBriefStatus');
+            if (!form || !status) return;
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const input = form.querySelector('input[type="email"]');
+                const btn = form.querySelector('button[type="submit"]');
+                const email = (input.value || '').trim();
+                if (!email) return;
+
+                const originalLabel = btn.textContent;
+                btn.disabled = true;
+                btn.textContent = 'Subscribing…';
+                status.hidden = true;
+
+                const finish = function (message, ok) {
+                    status.textContent = message;
+                    status.hidden = false;
+                    status.style.opacity = ok ? '1' : '0.9';
+                    if (ok) form.reset();
+                    btn.disabled = false;
+                    btn.textContent = originalLabel;
+                };
+
+                const request = (typeof window.brevoSubscribe === 'function')
+                    ? window.brevoSubscribe(email)
+                    : Promise.reject(new Error('Subscription is unavailable right now.'));
+
+                request
+                    .then(function () { finish("Thank you — you're on the list.", true); })
+                    .catch(function () { finish('Something went wrong. Please try again.', false); });
+            });
+        });
+    </script>
 </body>
 
 </html>

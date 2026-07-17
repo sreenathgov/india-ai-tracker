@@ -22,6 +22,11 @@ let analysisPanel, analysisPanelTitle, analysisPanelContent;
 let indepthPanel, indepthPanelTitle, indepthPanelContent;
 let layerName, layerBoxes, tocList, tocSidebar, layerIndicatorEl;
 
+// ≤1024px = popup mode: sidebar hidden, panels are near-full-screen popups,
+// no connector-spot geometry (must match the publications.css breakpoint).
+const mobileLayout = window.matchMedia('(max-width: 1024px)');
+const isMobileLayout = () => mobileLayout.matches;
+
 // ============================================
 // INITIALIZATION
 // ============================================
@@ -58,13 +63,62 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Setup interactions
+    initSmoothScroll();
     setupPanelCloseButtons();
     setupKeyboardNavigation();
     setupScrollTracking();
+    setupTocProximity();
+    setupSubscribe();
+    setupLayerTriggers();
+    setupMobileBar();
+    attachSwipeToClose(analysisPanel, () => closeAnalysisPanel());
+    attachSwipeToClose(indepthPanel, () => closeIndepthPanel());
 
     // Restore state from URL if applicable
     restoreFromURL();
 });
+
+// ============================================
+// SMOOTH SCROLL (Lenis) — buttery inertial wheel scroll, progressive enhancement
+// ============================================
+
+// Lenis runs in document mode (scrolls the real <html>), so the fixed sidebar,
+// panels, layer indicator and subscribe block keep working, and the
+// IntersectionObserver chapter-tracker stays accurate. Nested scrollers (the
+// sidebar and each panel body) opt out via [data-lenis-prevent] in the markup.
+let lenis = null;
+
+function initSmoothScroll() {
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || typeof window.Lenis !== 'function') return; // native scroll remains
+
+    lenis = new window.Lenis({
+        duration: 1.1,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        touchMultiplier: 1.5
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    window.__lenis = lenis;
+}
+
+// Route programmatic scrolls through Lenis when active, else native smooth scroll.
+function smoothScrollTo(target, options = {}) {
+    if (lenis) {
+        lenis.scrollTo(target, options);
+    } else if (typeof target === 'number') {
+        window.scrollTo({ top: target, behavior: 'smooth' });
+    } else if (target && target.scrollIntoView) {
+        target.scrollIntoView({ behavior: 'smooth', block: options.block || 'start' });
+    }
+}
 
 // ============================================
 // HYDRATION (pre-rendered static pages)
@@ -125,8 +179,6 @@ function hydrateFromDOM() {
         title: mastheadTitle ? mastheadTitle.textContent.trim() : document.title,
         author: document.getElementById('publicationAuthor').textContent.trim(),
         date: document.getElementById('publicationDate').textContent.trim(),
-        abstract: '',
-        category: '',
         chapters
     };
 }
@@ -186,14 +238,15 @@ function parseFrontmatter(text) {
     const frontmatterText = match[1];
     const content = match[2];
 
-    // Simple YAML parsing for key: value pairs
+    // Simple YAML parsing for flat key: value pairs
     const metadata = {};
     frontmatterText.split('\n').forEach(line => {
         const colonIndex = line.indexOf(':');
-        if (colonIndex > 0) {
+        // Only treat top-level (unindented) keys as flat fields; nested blocks
+        // like takeaways are handled separately by extractTakeaways().
+        if (colonIndex > 0 && !/^\s/.test(line)) {
             const key = line.substring(0, colonIndex).trim();
             let value = line.substring(colonIndex + 1).trim();
-            // Remove surrounding quotes if present
             if ((value.startsWith('"') && value.endsWith('"')) ||
                 (value.startsWith("'") && value.endsWith("'"))) {
                 value = value.slice(1, -1);
@@ -202,7 +255,58 @@ function parseFrontmatter(text) {
         }
     });
 
+    // Nested "takeaways: { summary, points[] }" block (draft-preview best effort;
+    // the static generator parses this with full js-yaml).
+    const takeaways = extractTakeaways(frontmatterText);
+    if (takeaways) metadata.takeaways = takeaways;
+
     return { metadata, content };
+}
+
+// Line-scan the "takeaways:" mapping for summary (inline or folded) + points list.
+function extractTakeaways(frontmatterText) {
+    const stripQuotes = (v) => (
+        (v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))
+            ? v.slice(1, -1)
+            : v
+    );
+    const lines = frontmatterText.split('\n');
+    let i = lines.findIndex(l => /^takeaways:\s*$/.test(l));
+    if (i === -1) return null;
+
+    const summaryParts = [];
+    const points = [];
+    let mode = null; // 'summaryFold' | 'points'
+
+    for (i = i + 1; i < lines.length; i++) {
+        const line = lines[i];
+        if (line.trim() === '') continue;
+        if (/^\S/.test(line)) break; // dedented to a new top-level key → block ends
+
+        const summaryInline = line.match(/^\s{2}summary:\s*(.*)$/);
+        const pointsKey = /^\s{2}points:\s*$/.test(line);
+        const listItem = line.match(/^\s{2,}-\s+(.*)$/);
+
+        if (summaryInline) {
+            const v = summaryInline[1].trim();
+            if (v === '' || /^[>|]-?$/.test(v)) {
+                mode = 'summaryFold';
+            } else {
+                summaryParts.push(stripQuotes(v));
+                mode = null;
+            }
+        } else if (pointsKey) {
+            mode = 'points';
+        } else if (listItem && mode === 'points') {
+            points.push(stripQuotes(listItem[1].trim()));
+        } else if (mode === 'summaryFold') {
+            summaryParts.push(line.trim());
+        }
+    }
+
+    const summary = summaryParts.join(' ').trim();
+    if (!summary && points.length === 0) return null;
+    return { summary, points };
 }
 
 // ============================================
@@ -299,8 +403,13 @@ function parseMarkdownStructure(markdown, metadata) {
         title: metadata.title || 'Untitled',
         author: metadata.author || '',
         date: metadata.date || '',
-        abstract: metadata.abstract || '',
-        category: metadata.category || '',
+        description: metadata.description || '',
+        type: metadata.type || '',
+        cluster: metadata.cluster || '',
+        reviewed: metadata.reviewed || '',
+        takeaways: (metadata.takeaways && typeof metadata.takeaways === 'object')
+            ? metadata.takeaways
+            : null,
         chapters
     };
 }
@@ -361,8 +470,9 @@ function renderTableOfContents() {
 
         html += `
             <li class="toc-item" data-chapter="${index}">
+                <span class="toc-marker" aria-hidden="true"></span>
                 <div class="toc-item-row">
-                    <span class="toc-num">${index + 1}</span>
+                    <span class="toc-num">${String(index + 1).padStart(2, '0')}</span>
                     <a href="#${chapter.id}"
                        class="toc-link"
                        data-chapter="${index}"
@@ -400,6 +510,33 @@ function estimateReadingMinutes() {
     return Math.max(1, Math.round(words / 220));
 }
 
+// Human labels for the §2 enums (draft-preview only; the static generator
+// reads scripts/publications/contract.js)
+const TYPE_LABELS = {
+    'operational-note': 'Operational Note',
+    'change-watch': 'Change Watch',
+    'concept-piece': 'Concept Piece',
+    'founder-brief': 'Founder Brief',
+    'definition': 'Definition'
+};
+const CLUSTER_LABELS = {
+    'igst-customs': 'IGST & Customs Readiness',
+    'marine-evidence': 'Marine Cargo Evidence',
+    'ev-lithium': 'EV & Lithium Export',
+    'export-realization': 'Export Realization',
+    'trade-architecture': 'Trade Intelligence Architecture'
+};
+
+function formatFullDate(dateStr) {
+    if (!dateStr) return '';
+    try {
+        const date = new Date(`${dateStr}T00:00:00Z`);
+        return date.toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+    } catch {
+        return dateStr;
+    }
+}
+
 function buildMastheadHtml() {
     const sep = '<span class="byline-sep">&middot;</span>';
     const bylineParts = [];
@@ -407,18 +544,85 @@ function buildMastheadHtml() {
     if (publicationData.date) bylineParts.push(formatDate(publicationData.date));
     bylineParts.push(`${estimateReadingMinutes()} min read`);
 
+    const kickerParts = [];
+    if (publicationData.type) kickerParts.push(`<span class="masthead-type">${TYPE_LABELS[publicationData.type] || publicationData.type}</span>`);
+    if (publicationData.cluster) kickerParts.push(`<span class="masthead-cluster">${CLUSTER_LABELS[publicationData.cluster] || publicationData.cluster}</span>`);
+
     return `
         <header class="publication-masthead">
-            ${publicationData.category ? `<div class="masthead-kicker">${publicationData.category}</div>` : ''}
+            ${kickerParts.length ? `<div class="masthead-kicker">${kickerParts.join(sep)}</div>` : ''}
             <h1 class="masthead-title">${publicationData.title}</h1>
             <div class="masthead-byline">${bylineParts.join(sep)}</div>
-            ${publicationData.abstract ? `<p class="masthead-lede">${publicationData.abstract}</p>` : ''}
+            ${publicationData.reviewed ? `<div class="masthead-reviewed">Last reviewed: <time datetime="${publicationData.reviewed}">${formatFullDate(publicationData.reviewed)}</time></div>` : ''}
+            ${publicationData.description ? `<p class="masthead-lede">${publicationData.description}</p>` : ''}
         </header>
     `;
 }
 
+// Escape first (frontmatter is untrusted), then let marked render inline
+// emphasis/links. parseInline, not parse — parse() wraps in <p> and breaks
+// the flex bullet layout. Falls back to a **bold**-only transform.
+function renderInlineEmphasis(text) {
+    const esc = String(text)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    if (typeof marked !== 'undefined' && typeof marked.parseInline === 'function') {
+        return marked.parseInline(esc);
+    }
+    return esc.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+}
+
+function buildTakeawaysHtml() {
+    const block = publicationData.takeaways || {};
+    const items = (Array.isArray(block.points) ? block.points : [])
+        .map(t => String(t).trim())
+        .filter(Boolean);
+    if (!items.length) return '';
+
+    const summaryText = (block.summary || '').trim();
+    const summary = summaryText
+        ? `<p class="pub-takeaways-summary">${renderInlineEmphasis(summaryText)}</p>
+            <hr class="pub-takeaways-rule">`
+        : '';
+
+    return `
+        <aside class="pub-takeaways" aria-label="Key takeaways">
+            <div class="pub-takeaways-kicker">Key takeaways</div>
+            ${summary}
+            <ul class="pub-takeaways-list">
+                ${items.map(t => `<li><span class="pub-takeaway-check" aria-hidden="true">&#10003;</span><span class="pub-takeaway-text">${renderInlineEmphasis(t)}</span></li>`).join('')}
+            </ul>
+        </aside>
+    `;
+}
+
+// Inline "Weekly Brief" block at the end of the article — the laptop/mobile
+// home for the CTA (the fixed right-gutter block only appears ≥1900px). Same
+// copy, field, LinkedIn link and Brevo wiring as .pub-sub.
+function buildInlineSignupHtml() {
+    return `
+        <aside class="pub-signup-inline" aria-label="Subscribe to the Weekly Brief">
+            <div class="pub-sub-kicker">Weekly Brief</div>
+            <h2 class="pub-signup-inline-title">Get our insights delivered to your inbox.</h2>
+            <form class="pub-sub-form" novalidate>
+                <input type="email" class="pub-sub-input" name="email" placeholder="Your email address"
+                       autocomplete="email" required aria-label="Email address">
+                <button type="submit" class="pub-sub-btn">Subscribe</button>
+            </form>
+            <p class="pub-sub-note">Governance analysis, no spam &mdash; unsubscribe anytime.</p>
+            <p class="pub-sub-success">Thanks &mdash; you're on the list.</p>
+            <a class="pub-sub-linkedin" href="https://www.linkedin.com/company/kanan-labs/"
+               target="_blank" rel="noopener">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                <span>Follow on LinkedIn</span>
+            </a>
+        </aside>
+    `;
+}
+
 function renderOverviewContent() {
-    let html = buildMastheadHtml();
+    let html = buildMastheadHtml() + buildTakeawaysHtml();
 
     publicationData.chapters.forEach((chapter, chapterIndex) => {
         const chapterNumber = chapterIndex + 1;
@@ -436,8 +640,8 @@ function renderOverviewContent() {
                 notesHtml = `
                     <div class="subsection-notes">
                         <div class="notes-label">See more about</div>
-                        ${section.subsections.map(sub =>
-                            `<div class="note-item">&#9776;&nbsp; Note: ${sub.title}</div>`
+                        ${section.subsections.map((sub, subIndex) =>
+                            `<button type="button" class="note-item" data-chapter="${chapterIndex}" data-section="${sectionIndex}" data-sub="${subIndex}"><span>&#9776;&nbsp; Note: ${sub.title}</span></button>`
                         ).join('')}
                     </div>
                 `;
@@ -461,6 +665,8 @@ function renderOverviewContent() {
         html += '</section>';
     });
 
+    html += buildInlineSignupHtml();
+
     readingContent.innerHTML = html;
 }
 
@@ -481,18 +687,19 @@ function openAnalysisPanel(chapterIndex, sectionIndex) {
 
     let panelHtml = section.content;
 
-    // Add subsection links if they exist
+    // Add subsection links if they exist. Real <button>s (reliable iOS tap
+    // targets) activated via the delegated listener in setupLayerTriggers().
     if (section.subsections.length > 0) {
         panelHtml += '<div class="subsection-links">';
         section.subsections.forEach((sub, subIndex) => {
             panelHtml += `
-                <a class="subsection-link"
-                   onclick="openIndepthPanel(${chapterIndex}, ${sectionIndex}, ${subIndex})"
-                   role="button"
-                   tabindex="0">
+                <button type="button" class="subsection-link"
+                        data-chapter="${chapterIndex}"
+                        data-section="${sectionIndex}"
+                        data-sub="${subIndex}">
                     <span class="subsection-link-text">${sub.title}</span>
                     <span class="subsection-link-arrow">&rarr;</span>
-                </a>
+                </button>
             `;
         });
         panelHtml += '</div>';
@@ -505,21 +712,32 @@ function openAnalysisPanel(chapterIndex, sectionIndex) {
     const card = document.getElementById(`card-${chapterIndex}-${sectionIndex}`);
     if (card) {
         card.classList.add('active');
-        // Align the card's corner dot with the panel spot on one horizontal line.
-        // Preferred: scroll the page so the card's top edge lands at 50vh (the
-        // spot's default). Near the document's top/bottom the scroll clamps and
-        // can't get there — in that case pin the spot to the card's settled
-        // position instead, so the dots stay parallel for every card.
-        const cardTop = card.getBoundingClientRect().top;
-        const docTarget = window.scrollY + cardTop - window.innerHeight / 2;
-        const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-        const clamped = Math.min(Math.max(0, docTarget), maxScroll);
-        window.scrollTo({ top: clamped, behavior: 'smooth' });
+        // Desktop only: the connector-spot geometry (and the page scroll that
+        // aligns it) doesn't exist in popup mode — scrolling there just jolts
+        // the page behind the popup.
+        if (!isMobileLayout()) {
+            // Align the card's corner dot with the panel spot on one horizontal line.
+            // Preferred: scroll the page so the card's top edge lands at 50vh (the
+            // spot's default). Near the document's top/bottom the scroll clamps and
+            // can't get there — in that case pin the spot to the card's settled
+            // position instead, so the dots stay parallel for every card.
+            const cardTop = card.getBoundingClientRect().top;
+            const docTarget = window.scrollY + cardTop - window.innerHeight / 2;
+            const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+            const clamped = Math.min(Math.max(0, docTarget), maxScroll);
+            // finalCardTop is target-based (absolute card top − target scroll), so the
+            // spot lands correctly whether Lenis animates or the scroll clamps.
+            const finalCardTop = window.scrollY + cardTop - clamped;
+            // force: Lenis honours programmatic scrolls even while stopped (locked)
+            smoothScrollTo(clamped, { force: true });
 
-        const finalCardTop = window.scrollY + cardTop - clamped;
-        const spot = analysisPanel.querySelector('.spot');
-        if (spot) spot.style.top = `${Math.round(finalCardTop)}px`;
+            const spot = analysisPanel.querySelector('.spot');
+            if (spot) spot.style.top = `${Math.round(finalCardTop)}px`;
+        }
     }
+
+    // Panels are modal: the page behind must not scroll until this layer closes
+    lockScroll();
 
     // Per-layer dim backdrop — clicking it closes this layer (progressive)
     addBackdrop('analysis', closeAnalysisPanel);
@@ -544,6 +762,7 @@ function closeAnalysisPanel() {
     currentLayer = 'overview';
 
     removeBackdrop('analysis');
+    unlockScroll();
     clearActiveCards();
 
     requestAnimationFrame(() => {
@@ -637,6 +856,116 @@ function clearActiveCards() {
 }
 
 // ============================================
+// SCROLL LOCK — panels are modal popups
+// ============================================
+
+// The Analysis layer owns the lock (In-Depth always stacks on top of it, so
+// no counter is needed). lenis.stop() kills wheel/inertial input through the
+// Lenis pipeline; html.pub-locked maps to overflow:hidden in publications.css
+// (covers the no-Lenis / reduced-motion path); the touchmove guard is the iOS
+// rubber-band and scroll-chaining killer — only the panels' own scrollers
+// (.panel-scroll) may consume touch scrolls while locked.
+
+function onLockedTouchMove(e) {
+    if (!e.target.closest('.panel-scroll')) e.preventDefault();
+}
+
+function lockScroll() {
+    const root = document.documentElement;
+    if (root.classList.contains('pub-locked')) return;
+    if (lenis) lenis.stop();
+    root.classList.add('pub-locked');
+    document.addEventListener('touchmove', onLockedTouchMove, { passive: false });
+}
+
+function unlockScroll() {
+    const root = document.documentElement;
+    if (!root.classList.contains('pub-locked')) return;
+    root.classList.remove('pub-locked');
+    document.removeEventListener('touchmove', onLockedTouchMove);
+    if (lenis) lenis.start();
+}
+
+// ============================================
+// SWIPE-RIGHT-TO-CLOSE (popup mode, ≤1024px)
+// ============================================
+
+const SWIPE_AXIS_THRESHOLD = 12;   // px of travel before the gesture's axis is decided
+const SWIPE_CLOSE_DISTANCE = 90;   // px rightward = commit the close
+const SWIPE_CLOSE_VELOCITY = 0.5;  // px/ms — a quick flick commits regardless of distance
+
+// The panel follows the finger once a rightward-horizontal drag is detected;
+// a vertical or leftward start hands the touch back to the panel's own
+// scroller untouched (axis is locked per-touch, so mid-scroll wiggles never
+// dismiss). Requires touch-action: pan-y on .reading-panel so the horizontal
+// preventDefault is honoured on iOS.
+function attachSwipeToClose(panel, closeFn) {
+    let x0 = 0, y0 = 0, t0 = 0, dx = 0, axis = null, active = false;
+    const backdropOf = () => document.querySelector(
+        panel === indepthPanel ? '.backdrop-indepth' : '.backdrop-analysis');
+
+    panel.addEventListener('touchstart', (e) => {
+        if (!isMobileLayout() || !panel.classList.contains('open') || e.touches.length !== 1) return;
+        x0 = e.touches[0].clientX;
+        y0 = e.touches[0].clientY;
+        t0 = performance.now();
+        dx = 0;
+        axis = null;
+        active = true;
+    }, { passive: true });
+
+    panel.addEventListener('touchmove', (e) => {
+        if (!active) return;
+        const mx = e.touches[0].clientX - x0;
+        const my = e.touches[0].clientY - y0;
+        if (axis === null) {
+            if (Math.max(Math.abs(mx), Math.abs(my)) < SWIPE_AXIS_THRESHOLD) return;
+            axis = (Math.abs(mx) > Math.abs(my) && mx > 0) ? 'x' : 'y';
+            if (axis === 'x') panel.style.transition = 'none';
+        }
+        if (axis !== 'x') return;
+        e.preventDefault();
+        dx = Math.max(0, mx);
+        panel.style.transform = `translateX(${dx}px)`;
+        const bd = backdropOf();
+        if (bd) bd.style.opacity = (0.7 * (1 - dx / panel.offsetWidth)).toFixed(3);
+    }, { passive: false });
+
+    const settle = (commit) => {
+        if (!active) return;
+        active = false;
+        if (axis !== 'x') return;
+        const bd = backdropOf();
+        if (commit) {
+            panel.style.transition = 'transform 260ms cubic-bezier(0.22, 1, 0.36, 1)';
+            panel.style.transform = 'translateX(110%)';
+            setTimeout(() => {
+                closeFn();
+                // Clear inline styles only after the .open removal has settled,
+                // so the panel doesn't flash back to its open position
+                setTimeout(() => {
+                    panel.style.transition = '';
+                    panel.style.transform = '';
+                    if (bd) bd.style.opacity = '';
+                }, 60);
+            }, 270);
+        } else {
+            panel.style.transition = 'transform 320ms cubic-bezier(0.34, 1.56, 0.64, 1)';
+            panel.style.transform = '';
+            if (bd) bd.style.opacity = '';
+            setTimeout(() => { panel.style.transition = ''; }, 340);
+        }
+    };
+
+    panel.addEventListener('touchend', () => {
+        const velocity = dx / Math.max(1, performance.now() - t0);
+        settle(dx > SWIPE_CLOSE_DISTANCE || velocity > SWIPE_CLOSE_VELOCITY);
+    }, { passive: true });
+
+    panel.addEventListener('touchcancel', () => settle(false), { passive: true });
+}
+
+// ============================================
 // LAYER INDICATOR
 // ============================================
 
@@ -676,7 +1005,7 @@ function updateLayerIndicator(layer) {
 function scrollToChapter(chapterId) {
     const element = document.getElementById(chapterId);
     if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        smoothScrollTo(element, { block: 'start', offset: 0 });
     }
 }
 
@@ -685,6 +1014,110 @@ function setupPanelCloseButtons() {
     document.getElementById('closeIndepthBtn').addEventListener('click', closeIndepthPanel);
     // Progressive click-outside close is handled by the per-layer backdrops
     // (each backdrop closes only its own layer) — see addBackdrop().
+}
+
+// Delegated Layer-3 triggers: survive every innerHTML rewrite of the panel
+// body, and make the article's "Note:" rows direct L2+L3 entry points.
+function setupLayerTriggers() {
+    analysisPanelContent.addEventListener('click', (e) => {
+        const btn = e.target.closest('.subsection-link');
+        if (!btn) return;
+        openIndepthPanel(+btn.dataset.chapter, +btn.dataset.section, +btn.dataset.sub);
+    });
+
+    // Capture phase: intercept before the parent .subsection-card's inline
+    // onclick (bubble phase at the card) can fire and open L2 alone.
+    readingContent.addEventListener('click', (e) => {
+        const note = e.target.closest('.note-item');
+        if (!note) return;
+        e.stopPropagation();
+        const { chapter, section, sub } = note.dataset;
+        openAnalysisPanel(+chapter, +section);
+        // Stack L3 once L2 is in place — same sequence restoreFromURL uses
+        setTimeout(() => openIndepthPanel(+chapter, +section, +sub), TRANSITION_DURATION + 50);
+    }, true);
+}
+
+// Mobile/tablet (≤1024px) replacement for the hidden sidebar: "Contents" and
+// "How to read" as collapsed dropdowns at the top of the reading column.
+// Built by cloning the sidebar's markup — the TOC's inline onclick attributes
+// survive the clone and hit the window.* globals. Hidden >1024px via CSS.
+function setupMobileBar() {
+    if (!readingColumn || !tocList) return;
+
+    const bar = document.createElement('div');
+    bar.className = 'pub-mobile-bar';
+    bar.innerHTML = `
+        <details class="pub-dropdown pub-dropdown-toc">
+            <summary>Contents</summary>
+            <nav class="pub-dropdown-body"><ul class="toc-list"></ul></nav>
+        </details>
+        <details class="pub-dropdown pub-dropdown-guide">
+            <summary>How to read</summary>
+            <div class="pub-dropdown-body pub-guide-body"></div>
+        </details>`;
+
+    bar.querySelector('.toc-list').innerHTML = tocList.innerHTML;
+
+    const guide = document.getElementById('readingGuide');
+    if (guide) {
+        const clone = guide.cloneNode(true);
+        const summary = clone.querySelector('summary');
+        if (summary) summary.remove();
+        bar.querySelector('.pub-guide-body').innerHTML = clone.innerHTML;
+    }
+
+    // Tapping a TOC link: collapse the dropdowns (the link's own inline
+    // onclick handles the scroll / panel open)
+    bar.addEventListener('click', (e) => {
+        if (e.target.closest('a')) {
+            bar.querySelectorAll('details[open]').forEach(d => d.removeAttribute('open'));
+        }
+    });
+
+    readingColumn.insertBefore(bar, readingColumn.firstElementChild);
+}
+
+// "Weekly Brief" signup. Binds BOTH the right-gutter block (.pub-sub, wide
+// screens) and the inline end-of-article fallback (.pub-signup-inline, laptops/
+// mobile). Both post to the shared Brevo endpoint via window.brevoSubscribe
+// (js/brevo-subscribe.js), matching the site footer form.
+function setupSubscribe() {
+    document.querySelectorAll('.pub-sub-form').forEach(bindSubscribeForm);
+}
+
+function bindSubscribeForm(form) {
+    const wrap = form.closest('.pub-sub, .pub-signup-inline');
+    const input = form.querySelector('.pub-sub-input');
+    const btn = form.querySelector('.pub-sub-btn');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = input ? input.value.trim() : '';
+        if (!email) return;
+
+        if (btn) { btn.disabled = true; btn.textContent = 'Subscribing…'; }
+        if (input) input.disabled = true;
+
+        const subscribe = typeof window.brevoSubscribe === 'function'
+            ? window.brevoSubscribe(email)
+            : Promise.reject(new Error('brevoSubscribe not loaded'));
+
+        subscribe
+            .then(() => {
+                if (wrap) wrap.classList.add('is-success');
+            })
+            .catch((err) => {
+                console.error('Weekly Brief subscription failed:', err);
+                if (btn) { btn.disabled = false; btn.textContent = 'Subscribe'; }
+                if (input) input.disabled = false;
+                const note = wrap && wrap.querySelector('.pub-sub-note');
+                if (note) {
+                    note.style.color = '#c23e22';
+                    note.textContent = 'Something went wrong. Please try again.';
+                }
+            });
+    });
 }
 
 function setupKeyboardNavigation() {
@@ -738,6 +1171,79 @@ function updateTocHighlight(activeChapterId) {
         // Active chapter: bold link + its H2 sub-items revealed (CSS-driven)
         item.classList.toggle('active', isActive);
     });
+    // Ease the newly-active item's --effect to 1 (and the rest back down)
+    if (tocProximityKick) tocProximityKick();
+}
+
+// ============================================
+// TOC PROXIMITY (LineSidebar port)
+// Vanilla adaptation of reactbits.dev/components/line-sidebar: a single rAF
+// loop eases each chapter's --effect toward its target with frame-rate
+// independent exponential smoothing; CSS derives color/shift/marker from it.
+// ============================================
+
+const TOC_PROXIMITY_RADIUS = 90;   // px from the cursor at which items react
+const TOC_SMOOTHING = 100;         // ms time-constant of the ease
+const tocFalloffSmooth = (p) => p * p * (3 - 2 * p);
+
+let tocProximityKick = null;
+
+function setupTocProximity() {
+    if (!tocList) return;
+    // Static .active styling (CSS --effect: 1) covers reduced-motion users
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const targets = [];
+    const current = [];
+    let raf = null;
+    let last = 0;
+
+    const tocItems = () =>
+        Array.from(tocList.querySelectorAll(':scope > .toc-item'));
+
+    function frame(now) {
+        const dt = Math.min((now - last) / 1000, 0.05);
+        last = now;
+        const k = 1 - Math.exp(-dt / (TOC_SMOOTHING / 1000));
+
+        let moving = false;
+        tocItems().forEach((el, i) => {
+            const target = Math.max(targets[i] || 0, el.classList.contains('active') ? 1 : 0);
+            const cur = current[i] || 0;
+            const next = cur + (target - cur) * k;
+            const settled = Math.abs(target - next) < 0.0015;
+            const value = settled ? target : next;
+            current[i] = value;
+            el.style.setProperty('--effect', value.toFixed(4));
+            if (!settled) moving = true;
+        });
+
+        raf = moving ? requestAnimationFrame(frame) : null;
+    }
+
+    function startLoop() {
+        if (raf != null) return;
+        last = performance.now();
+        raf = requestAnimationFrame(frame);
+    }
+
+    tocList.addEventListener('pointermove', (e) => {
+        tocItems().forEach((el, i) => {
+            const row = el.querySelector('.toc-item-row') || el;
+            const rect = row.getBoundingClientRect();
+            const distance = Math.abs(e.clientY - (rect.top + rect.height / 2));
+            targets[i] = tocFalloffSmooth(Math.max(0, 1 - distance / TOC_PROXIMITY_RADIUS));
+        });
+        startLoop();
+    });
+
+    tocList.addEventListener('pointerleave', () => {
+        targets.fill(0);
+        startLoop();
+    });
+
+    tocProximityKick = startLoop;
+    startLoop();
 }
 
 // ============================================

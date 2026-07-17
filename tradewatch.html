@@ -2568,30 +2568,6 @@
             align-items: center;
             gap: 0.7rem;
         }
-        .tw-stage-chrome-dot {
-            width: 9px; height: 9px;
-            border-radius: 50%;
-            background: var(--tw-red);
-            box-shadow: 0 0 0 3px rgba(219, 74, 43, 0.22),
-                        0 0 12px rgba(219, 74, 43, 0.55);
-            animation: tw-stage-pulse 2.4s ease-in-out infinite;
-            /* Optically nudge dot to sit on the baseline of the eyebrow text */
-            position: relative;
-            top: -1px;
-            flex-shrink: 0;
-        }
-        @keyframes tw-stage-pulse {
-            0%, 100% { box-shadow: 0 0 0 3px rgba(219,74,43,0.22), 0 0 12px rgba(219,74,43,0.55); }
-            50%      { box-shadow: 0 0 0 6px rgba(219,74,43,0.08), 0 0 18px rgba(219,74,43,0.30); }
-        }
-        .tw-stage-chrome-eyebrow {
-            font-family: var(--tw-mono);
-            font-size: 0.58rem;
-            letter-spacing: 0.28em;
-            text-transform: uppercase;
-            color: var(--tw-ink-mid);
-            white-space: nowrap;
-        }
         .tw-stage-chrome-scene {
             font-family: var(--tw-display);
             font-style: italic;
@@ -5401,7 +5377,6 @@
         .tw-brief-chip.is-hover { /* see brief-chip rules above */ }
 
         @media (prefers-reduced-motion: reduce) {
-            .tw-stage-chrome-dot,
             .tw-brief-alert,
             .tw-erp-flow,
             .tw-defense-skip,
@@ -6356,8 +6331,6 @@
 
                     <div class="tw-stage-chrome">
                         <div class="tw-stage-chrome-left">
-                            <span class="tw-stage-chrome-dot" aria-hidden="true"></span>
-                            <span class="tw-stage-chrome-eyebrow">Now showing</span>
                             <span class="tw-stage-chrome-scene" id="twChromeScene">Morning Brief</span>
                         </div>
                         <div class="tw-stage-chrome-right">

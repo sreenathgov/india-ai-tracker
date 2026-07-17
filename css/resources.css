@@ -14,11 +14,15 @@
 html {
     height: auto !important;
     overflow: auto !important;
+    /* The full-bleed gallery is 100vw wide, which overhangs the vertical
+       scrollbar's gutter on some platforms — clip that sliver. */
+    overflow-x: hidden !important;
 }
 
 body.resources-page {
     height: auto !important;
     overflow: auto !important;
+    overflow-x: hidden !important;
     min-height: 100vh;
     background: #F5F3EE;
     color: var(--brand-navy);
@@ -50,11 +54,11 @@ body.resources-page #infrastructure-grid {
 }
 
 .rc-masthead__title {
-    font-family: 'Telegraf', 'Inter', sans-serif;
-    font-weight: 800;
-    font-size: clamp(2.75rem, 6vw, 4.25rem);
-    line-height: 1.05;
-    letter-spacing: -0.01em;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(3rem, 6.5vw, 4.75rem);
+    line-height: 1.02;
+    letter-spacing: -0.005em;
     color: var(--brand-navy);
     margin: 0 0 1rem;
 }
@@ -69,17 +73,45 @@ body.resources-page #infrastructure-grid {
     margin: 0;
 }
 
+/* --- Recent publications ribbon (WebGL circular gallery) --- */
+
+.rc-gallery {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    height: clamp(300px, 36vw, 520px);
+    margin-bottom: 2.5rem;
+    overflow: hidden;
+    cursor: grab;
+    touch-action: pan-y;
+}
+
+.rc-gallery:active {
+    cursor: grabbing;
+}
+
+.rc-gallery:focus-visible {
+    outline: 2px solid #db4a2b;
+    outline-offset: -2px;
+}
+
+.rc-gallery canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 /* --- Tabs: navy pill rail, GSAP hover-circle-fill chips --- */
 
 .rc-tabs {
     display: inline-flex;
     align-items: center;
     gap: 3px;
-    background: var(--brand-navy);
-    border-radius: 999px;
+    background: transparent;
+    border: 1px solid rgba(10, 47, 82, 0.18);
+    border-radius: 21px;
     padding: 3px;
     margin-bottom: 3rem;
-    box-shadow: 0 1px 2px rgba(10, 47, 82, 0.08), 0 10px 26px rgba(10, 47, 82, 0.16);
     flex-wrap: wrap;
 }
 
@@ -92,8 +124,8 @@ body.resources-page #infrastructure-grid {
     justify-content: center;
     height: 42px;
     padding: 0 1.125rem;
-    border-radius: 999px;
-    background: #F5F3EE;
+    border-radius: 18px;
+    background: transparent;
     color: var(--brand-navy);
     font-family: 'Inter', sans-serif;
     font-size: 0.9375rem;
@@ -145,6 +177,14 @@ body.resources-page #infrastructure-grid {
     outline-offset: 3px;
 }
 
+/* Cormorant defaults to old-style figures; lining numerals keep codes
+   like "SB005" reading correctly in titles. */
+.rc-masthead__title,
+.rc-featured__title,
+.rc-card__title {
+    font-variant-numeric: lining-nums;
+}
+
 /* --- Status / empty state --- */
 
 .rc-status {
@@ -164,28 +204,21 @@ body.resources-page #infrastructure-grid {
 .rc-featured__card {
     display: grid;
     grid-template-columns: 55% 1fr;
-    background: #F5F3EE;
-    border: 1px solid rgba(10, 47, 82, 0.18);
-    border-radius: 16px;
-    overflow: hidden;
+    gap: 2.5rem;
+    background: transparent;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.rc-featured__card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 14px 34px rgba(10, 47, 82, 0.12);
 }
 
 .rc-featured__media {
     position: relative;
     overflow: hidden;
+    border-radius: 18px;
     min-height: 320px;
 }
 
 .rc-featured__body {
-    padding: 2.25rem 2.5rem;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -198,7 +231,7 @@ body.resources-page #infrastructure-grid {
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #db4a2b;
+    color: rgba(10, 47, 82, 0.6);
 }
 
 .rc-featured__title {
@@ -232,41 +265,38 @@ body.resources-page #infrastructure-grid {
 
 /* --- Card grid --- */
 
+/* minmax(0, 1fr): cards no longer clip their content (no overflow:hidden),
+   so plain 1fr would let long nowrap meta text unbalance the columns. */
 .rc-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3.25rem 2.25rem;
 }
 
-/* --- Standard card --- */
+/* --- Standard card ---
+   Quiet editorial style: no box, no border — image block with the site
+   radius, then a title-first text stack flush with the image edge. */
 
 .rc-card {
     display: flex;
     flex-direction: column;
-    background: #F5F3EE;
-    border: 1px solid rgba(10, 47, 82, 0.18);
-    border-radius: 16px;
-    overflow: hidden;
+    background: transparent;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.rc-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(10, 47, 82, 0.12);
 }
 
 .rc-card:focus-visible,
 .rc-featured__card:focus-visible {
     outline: 2px solid #db4a2b;
     outline-offset: 3px;
+    border-radius: 18px;
 }
 
 .rc-card__media {
     position: relative;
     aspect-ratio: 16 / 9;
     overflow: hidden;
+    border-radius: 18px;
 }
 
 .rc-card__media img,
@@ -303,9 +333,15 @@ body.resources-page #infrastructure-grid {
 .rc-card__body {
     display: flex;
     flex-direction: column;
-    gap: 0.625rem;
-    padding: 1.25rem 1.375rem 1.5rem;
+    gap: 0.75rem;
+    padding: 1.25rem 0.125rem 0;
     flex: 1;
+}
+
+/* Title reads first; the category pill and date follow beneath it,
+   like an institutional research index. */
+.rc-card__title {
+    order: -1;
 }
 
 .rc-card__meta {
@@ -322,8 +358,8 @@ body.resources-page #infrastructure-grid {
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #db4a2b;
-    border: 1px solid rgba(219, 74, 43, 0.55);
+    color: var(--brand-navy);
+    border: 1px solid rgba(10, 47, 82, 0.45);
     border-radius: 6px;
     padding: 0.25rem 0.5rem;
     background: transparent;
@@ -347,8 +383,8 @@ body.resources-page #infrastructure-grid {
 .rc-card__title {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-weight: 600;
-    font-size: 1.375rem;
-    line-height: 1.2;
+    font-size: 1.5625rem;
+    line-height: 1.18;
     color: var(--brand-navy);
     margin: 0;
     display: -webkit-box;
@@ -374,11 +410,184 @@ body.resources-page #infrastructure-grid {
     overflow: hidden;
 }
 
+/* --- Pagination: navy/cream editorial pager, hidden when a single page --- */
+
+.rc-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 3.5rem;
+    flex-wrap: wrap;
+}
+
+.rc-page {
+    appearance: none;
+    border: 1px solid rgba(10, 47, 82, 0.18);
+    background: transparent;
+    color: var(--brand-navy);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 0.5rem;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.18s ease, color 0.18s ease,
+        border-color 0.18s ease, transform 0.18s ease;
+}
+
+.rc-page:hover:not(:disabled):not(.is-current) {
+    background: rgba(10, 47, 82, 0.06);
+    border-color: rgba(10, 47, 82, 0.32);
+    transform: translateY(-1px);
+}
+
+.rc-page.is-current {
+    background: var(--brand-navy);
+    border-color: var(--brand-navy);
+    color: #F5F3EE;
+    font-weight: 600;
+    cursor: default;
+}
+
+.rc-page--arrow {
+    font-size: 1.05rem;
+    line-height: 1;
+}
+
+.rc-page:disabled {
+    opacity: 0.32;
+    cursor: not-allowed;
+}
+
+.rc-page:focus-visible {
+    outline: 2px solid #db4a2b;
+    outline-offset: 2px;
+}
+
+.rc-page-ellipsis {
+    color: rgba(10, 47, 82, 0.4);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    padding: 0 0.25rem;
+    user-select: none;
+}
+
+/* --- Newsletter act-break: thin orange "Weekly Brief" strip ---
+   Full-bleed band that sits between the catalog and the advisory relic,
+   porting the site's original orange waitlist strip. */
+
+.rc-brief {
+    position: relative;
+    z-index: 1;
+    background: #db4a2b;
+    padding: 2.75rem 0;
+}
+
+.rc-brief__inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.rc-brief__text {
+    flex: 1 1 300px;
+}
+
+.rc-brief__title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.375rem, 2.4vw, 1.75rem);
+    line-height: 1.2;
+    color: #F4EBD0;
+    margin: 0;
+    max-width: 24ch;
+}
+
+.rc-brief__form {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    flex: 1 1 340px;
+    flex-wrap: wrap;
+}
+
+.rc-brief__input {
+    flex: 1;
+    min-width: 180px;
+    background: transparent;
+    border: 1px solid rgba(244, 235, 208, 0.4);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    color: #F4EBD0;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.rc-brief__input::placeholder {
+    color: rgba(244, 235, 208, 0.55);
+}
+
+.rc-brief__input:focus {
+    border-color: rgba(244, 235, 208, 0.85);
+}
+
+.rc-brief__btn {
+    background: #F4EBD0;
+    color: #db4a2b;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.6rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease, transform 0.18s ease;
+}
+
+.rc-brief__btn:hover {
+    background: #ffffff;
+    transform: translateY(-1px);
+}
+
+.rc-brief__btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+    transform: none;
+}
+
+.rc-brief__btn:focus-visible {
+    outline: 2px solid #F4EBD0;
+    outline-offset: 3px;
+}
+
+.rc-brief__status {
+    flex-basis: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #F4EBD0;
+    margin: 0.25rem 0 0;
+}
+
 /* --- Responsive --- */
 
 @media (max-width: 980px) {
     .rc-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .rc-featured__card {
@@ -402,6 +611,33 @@ body.resources-page #infrastructure-grid {
 
     .rc-tabs {
         gap: 0.5rem;
-        border-radius: 24px;
+    }
+
+    .rc-gallery {
+        height: clamp(240px, 64vw, 320px);
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .rc-brief__inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+        padding: 0 1.25rem;
+    }
+
+    .rc-brief__form {
+        width: 100%;
+    }
+
+    .rc-brief__input {
+        width: 100%;
+        min-width: 0;
+        flex: none;
+    }
+
+    .rc-brief__btn {
+        width: 100%;
     }
 }

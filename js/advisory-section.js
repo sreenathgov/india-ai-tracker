@@ -298,7 +298,7 @@ class CardSwap {
    ============================================ */
 
 // Toggle: set to true to re-enable the entire advisory section
-const SHOW_ADVISORY_SECTION = false;
+const SHOW_ADVISORY_SECTION = true;
 // Toggle: set to true to re-enable the Services Offered sub-section (only applies when SHOW_ADVISORY_SECTION is true)
 const SHOW_SERVICES = false;
 
@@ -341,7 +341,7 @@ class AdvisorySection {
   }
 
   async loadData() {
-    const response = await fetch('data/advisory_services.json');
+    const response = await fetch('data/advisory_services.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return response.json();
   }
@@ -434,11 +434,14 @@ class AdvisorySection {
     const cardsCol = document.createElement('div');
     cardsCol.className = 'advisory-hero__cards advisory-animate';
 
-    // Add heading to right column
-    const heading = document.createElement('h2');
-    heading.className = 'advisory-hero__heading';
-    heading.textContent = hero.heading;
-    cardsCol.appendChild(heading);
+    // Add heading to right column (data-driven: set showHeading: false in
+    // advisory_services.json to hide it without losing the copy)
+    if (hero.heading && hero.showHeading !== false) {
+      const heading = document.createElement('h2');
+      heading.className = 'advisory-hero__heading';
+      heading.textContent = hero.heading;
+      cardsCol.appendChild(heading);
+    }
 
     // Create CardSwap container (cards rendered by initCardSwap)
     const swapContainer = document.createElement('div');

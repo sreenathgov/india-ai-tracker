@@ -71,12 +71,40 @@ class StaggeredMenu {
   }
 
   init() {
+    this.detectInitialTheme();
     this.createMarkup();
     this.cacheRefs();
     this.setupInitialState();
     this.attachEventListeners();
     this.initThemeSwitching();
     this.initScrollHide();
+  }
+
+  // Light-nav pages (e.g. resources.html via [data-nav-light]) must paint the
+  // navy logo + navy menu from the very first frame. Without this, the header
+  // initialises with the cream dark-theme assets and only fades to navy after
+  // the first scroll/theme check — a flash of an invisible nav on a light page.
+  _getLightSections() {
+    return [
+      ...document.querySelectorAll('.advisory-section'),
+      ...document.querySelectorAll('.identity-section'),
+      ...document.querySelectorAll('[data-nav-light]')
+    ].filter(Boolean);
+  }
+
+  detectInitialTheme() {
+    const lightSections = this._getLightSections();
+    if (!lightSections.length) return;
+
+    const headerMid = window.scrollY + 30;
+    const topIsLight = lightSections.some(s => {
+      return headerMid >= s.offsetTop && headerMid < (s.offsetTop + s.offsetHeight);
+    });
+
+    if (topIsLight) {
+      this.theme.isLight = true;
+      this.theme.currentMenuColor = this.theme.lightMenuColor;
+    }
   }
 
   createMarkup() {
@@ -113,7 +141,9 @@ class StaggeredMenu {
     if (!logoImg) return;
 
     const isMobile = window.innerWidth <= 1024;
-    if (isMobile) {
+    if (this.theme.isLight) {
+      logoImg.src = isMobile ? this.theme.mobileLightLogoUrl : this.theme.lightLogoUrl;
+    } else if (isMobile) {
       logoImg.src = this.options.mobileLogoUrl;
     } else {
       logoImg.src = this.options.logoUrl;
@@ -361,7 +391,10 @@ class StaggeredMenu {
     gsap.set(textInner, { yPercent: 0 });
 
     if (toggleBtn) {
-      gsap.set(toggleBtn, { color: this.options.menuButtonColor });
+      const initialColor = this.theme.isLight
+        ? this.theme.lightMenuColor
+        : this.options.menuButtonColor;
+      gsap.set(toggleBtn, { color: initialColor });
     }
   }
 
@@ -834,11 +867,7 @@ class StaggeredMenu {
   }
 
   initThemeSwitching() {
-    const lightSections = [
-      ...document.querySelectorAll('.advisory-section'),
-      ...document.querySelectorAll('.identity-section'),
-      ...document.querySelectorAll('[data-nav-light]')   // generic opt-in for any page
-    ].filter(Boolean);
+    const lightSections = this._getLightSections();
 
     if (!lightSections.length) return;
 

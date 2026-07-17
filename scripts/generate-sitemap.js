@@ -74,8 +74,10 @@ function generateSitemap() {
   </url>`;
   });
 
-  // 4. Add Publications (from the manifest written by generate-publications.js)
+  // 4. Add Publications + cluster hub pages (from the manifest written by
+  //    generate-publications.js)
   let publicationCount = 0;
+  let hubCount = 0;
   try {
     const manifestPath = path.join(PROJECT_ROOT, 'content', 'publications', 'index.json');
     const publications = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
@@ -88,6 +90,25 @@ function generateSitemap() {
     <priority>0.8</priority>
   </url>`;
       publicationCount++;
+    });
+
+    // One hub per cluster with ≥1 article; lastmod = newest article in it
+    const clusters = new Map();
+    publications.forEach(pub => {
+      if (!pub.cluster) return;
+      const lastmod = pub.updated || pub.date;
+      const prev = clusters.get(pub.cluster);
+      if (!prev || lastmod > prev) clusters.set(pub.cluster, lastmod);
+    });
+    clusters.forEach((lastmod, cluster) => {
+      xml += `
+  <url>
+    <loc>${BASE_URL}/publications/cluster/${cluster}/</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>`;
+      hubCount++;
     });
   } catch (_) {
     // No manifest yet — publications simply aren't listed
@@ -110,6 +131,7 @@ function generateSitemap() {
   console.log(`   - Static routes: ${staticRoutes.length}`);
   console.log(`   - Dynamic jurisdiction routes: ${canonicalJurisdictions.length}`);
   console.log(`   - Publication routes: ${publicationCount}`);
+  console.log(`   - Cluster hub routes: ${hubCount}`);
 }
 
 generateSitemap();
