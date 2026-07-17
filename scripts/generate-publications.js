@@ -86,6 +86,23 @@ function countWords(text) {
     return text.split(/\s+/).filter(Boolean).length;
 }
 
+// Read a PNG's real pixel dimensions from its IHDR chunk — width/height are
+// the big-endian uint32s at bytes 16-23 of any valid PNG. No new dependency.
+// Returns null (caller falls back to the sitewide default) for non-PNG/unreadable files.
+function readPngDimensions(absPath) {
+    try {
+        const fd = fs.openSync(absPath, 'r');
+        const buf = Buffer.alloc(24);
+        fs.readSync(fd, buf, 0, 24, 0);
+        fs.closeSync(fd);
+        const isPng = buf.readUInt32BE(0) === 0x89504e47 && buf.readUInt32BE(4) === 0x0d0a1a0a;
+        if (!isPng) return null;
+        return { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) };
+    } catch {
+        return null;
+    }
+}
+
 function formatDisplayDate(isoDate) {
     const d = new Date(`${isoDate}T00:00:00Z`);
     return d.toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
@@ -174,7 +191,7 @@ function discoverArticleFiles() {
             const articleDir = path.join(typeDir, slug);
             const mdPath = path.join(articleDir, `${slug}.md`);
             if (fs.statSync(articleDir).isDirectory() && fs.existsSync(mdPath)) {
-                results.push({ absPath: mdPath, relLabel: `${type}/${slug}/${slug}.md`, articleDir });
+                results.push({ absPath: mdPath, relLabel: `${type}/${slug}/${slug}.md`, articleDir, folderType: type });
             }
         }
     }
@@ -492,6 +509,8 @@ function renderPage(template, meta, chapters) {
         META_DESCRIPTION: escapeHtmlAttribute(meta.description),
         CANONICAL_URL: url,
         OG_IMAGE: escapeHtmlAttribute(meta.ogImage),
+        OG_IMAGE_WIDTH: String(meta.ogImageWidth),
+        OG_IMAGE_HEIGHT: String(meta.ogImageHeight),
         OG_IMAGE_ALT: escapeHtmlAttribute(meta.title),
         DATE_PUBLISHED: meta.date,
         DATE_MODIFIED: meta.updated || meta.date,
@@ -544,12 +563,13 @@ function generatePublications() {
     const errorsByFile = new Map();
     const warningsByFile = new Map();
 
-    files.forEach(({ absPath, relLabel, articleDir }) => {
+    files.forEach(({ absPath, relLabel, articleDir, folderType }) => {
         const raw = fs.readFileSync(absPath, 'utf-8');
         const { metadata, content } = parseFrontmatter(raw);
         const { errors, warnings } = validatePublication(relLabel, raw, metadata, knownSlugs, {
             projectRoot: PROJECT_ROOT,
-            articleDir
+            articleDir,
+            folderType
         });
 
         if (warnings.length) warningsByFile.set(relLabel, warnings);
@@ -559,6 +579,9 @@ function generatePublications() {
         }
 
         knownSlugs.add(metadata.slug);
+        const pngDims = metadata.image
+            ? readPngDimensions(path.join(articleDir, String(metadata.image).replace(/^\//, '')))
+            : null;
         const meta = {
             ...metadata,
             tags: metadata.tags || [],
@@ -566,7 +589,9 @@ function generatePublications() {
             clusterLabel: CLUSTERS[metadata.cluster].hub,
             ogImage: metadata.image
                 ? `${BASE_URL}/publications/${metadata.slug}/${String(metadata.image).replace(/^\//, '')}`
-                : DEFAULT_OG_IMAGE
+                : DEFAULT_OG_IMAGE,
+            ogImageWidth: pngDims ? pngDims.width : 1200,
+            ogImageHeight: pngDims ? pngDims.height : 630
         };
 
         const structure = parseStructure(content);
@@ -597,6 +622,7 @@ function generatePublications() {
             entities: meta.entities || [],
             summary: meta.takeaways.summary,
             tags: meta.tags,
+            image: meta.image || null,
             readingMinutes,
             wordCount,
             url

@@ -164,6 +164,19 @@
     transform: translateY(-2px);
 }
 
+.pub-card-cover {
+    margin: -1.6rem -1.7rem 1.1rem;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+
+.pub-card-cover img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
 .pub-card-badges {
     display: flex;
     flex-wrap: wrap;

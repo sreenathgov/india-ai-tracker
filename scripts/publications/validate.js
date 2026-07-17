@@ -154,6 +154,41 @@ function scanBodyStructure(bodyLines, bodyStartLine, err) {
     if (!sawH1) err(null, 'No "#" chapter headings found — the article has no Overview structure (§5).');
 }
 
+// Body images (§5 rule 6) — markdown ![alt](path) only; figures must carry
+// alt text and resolve to a file inside the article's own assets/ folder.
+function scanBodyImages(bodyLines, bodyStartLine, articleDir, err) {
+    let inFence = false;
+    const imgRe = /!\[([^\]]*)\]\(([^)]+)\)/g;
+    bodyLines.forEach((line, i) => {
+        if (/^\s*(```|~~~)/.test(line)) { inFence = !inFence; return; }
+        if (inFence) return;
+        const fileLine = bodyStartLine + i;
+        let m;
+        imgRe.lastIndex = 0;
+        while ((m = imgRe.exec(line)) !== null) {
+            const [, alt, target] = m;
+            const src = target.trim().split(/\s+/)[0]; // drop optional "title"
+            if (!isNonEmptyString(alt)) {
+                err(fileLine, `Image "${src}" is missing alt text — figures require alt text (§5 rule 6).`);
+            }
+            if (/^https?:\/\//i.test(src)) {
+                err(fileLine, `Image "${src}" is an external URL — figures must live in the article's own assets/ folder (§5 rule 6).`);
+                continue;
+            }
+            if (!articleDir) continue;
+            const articleDirResolved = path.resolve(articleDir);
+            const resolved = path.resolve(articleDirResolved, src.replace(/^\//, ''));
+            if (resolved !== articleDirResolved && !resolved.startsWith(articleDirResolved + path.sep)) {
+                err(fileLine, `Image path "${src}" resolves outside the article folder (§5 rule 6).`);
+                continue;
+            }
+            if (!fs.existsSync(resolved)) {
+                err(fileLine, `Image "${src}" not found in the article folder (§5 rule 6).`);
+            }
+        }
+    });
+}
+
 // Raw HTML in the body (§9) — autolinks (<https://…>, <mailto:…>) are markdown
 function scanRawHtml(bodyLines, bodyStartLine, err) {
     let inFence = false;
@@ -321,6 +356,8 @@ function validatePublication(filename, raw, metadata, knownSlugs, options = {}) 
         err(keyLine('type'), 'Missing required frontmatter field: "type".');
     } else if (!TYPES[type]) {
         err(keyLine('type'), `type "${type}" is not one of §2.1: ${Object.keys(TYPES).join(' · ')}.`);
+    } else if (options.folderType && type !== options.folderType) {
+        err(keyLine('type'), `type "${type}" does not match its folder — this article lives under content/publications/${options.folderType}/, so type must be "${options.folderType}" (§1).`);
     }
     if (!isNonEmptyString(metadata.cluster)) {
         err(keyLine('cluster'), 'Missing required frontmatter field: "cluster".');
@@ -491,6 +528,7 @@ function validatePublication(filename, raw, metadata, knownSlugs, options = {}) 
     // --- body structure (§5) -----------------------------------------------------------
     scanBodyStructure(bodyLines, bodyStartLine, err);
     scanRawHtml(bodyLines, bodyStartLine, err);
+    scanBodyImages(bodyLines, bodyStartLine, options.articleDir, err);
 
     // --- lexicon, entity register, first person (§8.1, §7.6) -----------------------------
     let inFence = false;

@@ -90,8 +90,12 @@ function renderCard(entry, { linkCluster = true } = {}) {
     const clusterBadge = linkCluster
         ? `<a class="pub-badge pub-badge-cluster" href="/publications/cluster/${entry.cluster}/">${escapeHtmlText(clusterLabel)}</a>`
         : `<span class="pub-badge pub-badge-cluster">${escapeHtmlText(clusterLabel)}</span>`;
+    const cover = entry.image
+        ? `<div class="pub-card-cover"><img src="/publications/${entry.slug}/${escapeHtmlAttribute(String(entry.image).replace(/^\//, ''))}" alt="${escapeHtmlAttribute(entry.title)}" loading="lazy"></div>`
+        : '';
 
     return `            <article class="pub-card" data-cluster="${escapeHtmlAttribute(entry.cluster)}" data-type="${escapeHtmlAttribute(entry.type)}">
+                ${cover}
                 <div class="pub-card-badges">
                     <span class="pub-badge pub-badge-type">${escapeHtmlText(typeLabel)}</span>
                     ${clusterBadge}

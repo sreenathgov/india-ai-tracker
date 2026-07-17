@@ -48,6 +48,101 @@
       },
       "publisher": {
         "@id": "https://kananlabs.in/#organization"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Subrogation Time-Bars: CGSA 2025's One Year, MTGA 1993's Nine Months",
+            "url": "https://kananlabs.in/publications/subrogation-time-bars-cogsa-mtga/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Open Cover vs Certificate of Insurance: Reconciling CIF+10%",
+            "url": "https://kananlabs.in/publications/open-cover-coi-cif-plus-10/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Marine Cargo Claim Denial in India: A Taxonomy of Evidence Gaps",
+            "url": "https://kananlabs.in/publications/marine-cargo-claim-denial-taxonomy/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "LC First Presentations: Why Seven in Ten Fail on Documents",
+            "url": "https://kananlabs.in/publications/lc-first-presentation-discrepancies/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "HS Classification Drift Across the Invoice, Shipping Bill and COO",
+            "url": "https://kananlabs.in/publications/hs-classification-drift/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "EU Battery Regulation 2023/1542: The HS 8507.60 Compliance Calendar",
+            "url": "https://kananlabs.in/publications/eu-battery-regulation-hs850760/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "e-SANCHIT: The Upload Failures That Stall Assessment and LEO",
+            "url": "https://kananlabs.in/publications/e-sanchit-document-gaps/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "What One Documentation Failure Costs: Demurrage, Fees, Blocked Refunds",
+            "url": "https://kananlabs.in/publications/export-documentation-failure-cost-anatomy/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "name": "US Tariffs on Indian Exports 2026: From 50% to 10%, and the July Cliff",
+            "url": "https://kananlabs.in/publications/us-tariffs-indian-exports-2026/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "name": "CBAM's Definitive Regime: What EU Buyers Now Ask Indian Suppliers",
+            "url": "https://kananlabs.in/publications/cbam-definitive-indian-auto-components/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "name": "SB005: Why Your IGST Refund Blocks After EGM and How to Clear It",
+            "url": "https://kananlabs.in/publications/sb005-igst-refund-blocked/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "name": "Reconciling Invoice, Packing List, B/L and Shipping Bill Before LEO",
+            "url": "https://kananlabs.in/publications/pre-leo-document-reconciliation/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 13,
+            "name": "Invoice Number Formatting: How Tally and ICEGATE Disagree",
+            "url": "https://kananlabs.in/publications/invoice-number-format-tally-icegate/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 14,
+            "name": "SB001–SB006: The ICEGATE Shipping Bill Error Codes, Explained",
+            "url": "https://kananlabs.in/publications/icegate-sb-error-codes/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 15,
+            "name": "RoDTEP 2026: The February Cut, the March Restoration, the Fine Print",
+            "url": "https://kananlabs.in/publications/rodtep-2026-rate-volatility/"
+          }
+        ]
       }
     },
     {
@@ -74,7 +169,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles-v2.css?v=21">
     <link rel="stylesheet" href="/css/staggered-menu.css">
-    <link rel="stylesheet" href="/css/publications-catalog.css?v=1">
+    <link rel="stylesheet" href="/css/publications-catalog.css?v=2">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
 
@@ -88,10 +183,175 @@
             <p class="pub-catalog-lede">Operational notes, change-watches and concept pieces on India-linked trade: IGST and customs readiness, marine cargo evidence, EV and lithium export, export realization, and the architecture behind TradeWatch.</p>
         </header>
 
-
+        <div class="pub-catalog-filters" aria-label="Filter publications">
+            <div class="pub-filter-row">
+                <span class="pub-filter-label">Cluster</span>
+                <button class="pub-filter-btn is-active" data-filter-group="cluster" data-filter-value="all" aria-pressed="true">All</button>
+                <button class="pub-filter-btn" data-filter-group="cluster" data-filter-value="igst-customs" aria-pressed="false">IGST &amp; Customs Readiness</button>
+                <button class="pub-filter-btn" data-filter-group="cluster" data-filter-value="marine-evidence" aria-pressed="false">Marine Cargo Evidence</button>
+                <button class="pub-filter-btn" data-filter-group="cluster" data-filter-value="ev-lithium" aria-pressed="false">EV &amp; Lithium Export</button>
+                <button class="pub-filter-btn" data-filter-group="cluster" data-filter-value="export-realization" aria-pressed="false">Export Realization</button>
+            </div>
+            <div class="pub-filter-row">
+                <span class="pub-filter-label">Type</span>
+                <button class="pub-filter-btn is-active" data-filter-group="type" data-filter-value="all" aria-pressed="true">All</button>
+                <button class="pub-filter-btn" data-filter-group="type" data-filter-value="operational-note" aria-pressed="false">Operational Note</button>
+                <button class="pub-filter-btn" data-filter-group="type" data-filter-value="change-watch" aria-pressed="false">Change Watch</button>
+                <button class="pub-filter-btn" data-filter-group="type" data-filter-value="concept-piece" aria-pressed="false">Concept Piece</button>
+            </div>
+        </div>
 
         <section class="pub-catalog-grid" id="pubCatalogGrid" aria-label="Publications">
-            <div class="pub-catalog-empty">First publications are in production — the Weekly Brief will announce them.</div>
+            <article class="pub-card" data-cluster="marine-evidence" data-type="operational-note">
+                <div class="pub-card-cover"><img src="/publications/subrogation-time-bars-cogsa-mtga/assets/cover.png" alt="Subrogation Time-Bars: CGSA 2025's One Year, MTGA 1993's Nine Months" loading="lazy"></div>
+                <div class="pub-card-badges">
+                    <span class="pub-badge pub-badge-type">Operational Note</span>
+                    <a class="pub-badge pub-badge-cluster" href="/publications/cluster/marine-evidence/">Marine Cargo Evidence</a>
+                </div>
+                <h2 class="pub-card-title"><a href="/publications/subrogation-time-bars-cogsa-mtga/">Subrogation Time-Bars: CGSA 2025's One Year, MTGA 1993's Nine Months</a></h2>
+                <p class="pub-card-summary">India's cargo-claim clocks extinguish rights rather than merely bar remedies: suit against a sea carrier within one year of delivery under the Carriage of Goods by Sea Act 2025, and against a…</p>
+                <div class="pub-card-meta">July 17, 2026<span class="byline-sep">&middot;</span>5 min read</div>
+            </article>
+            <article class="pub-card" data-cluster="marine-evidence" data-type="operational-note">
+                <div class="pub-card-cover"><img src="/publications/open-cover-coi-cif-plus-10/assets/cover.png" alt="Open Cover vs Certificate of Insurance: Reconciling CIF+10%" loading="lazy"></div>
+                <div class="pub-card-badges">
+                    <span class="pub-badge pub-badge-type">Operational Note</span>
+                    <a class="pub-badge pub-badge-cluster" href="/publications/cluster/marine-evidence/">Marine Cargo Evidence</a>
+                </div>
+                <h2 class="pub-card-title"><a href="/publications/open-cover-coi-cif-plus-10/">Open Cover vs Certificate of Insurance: Reconciling CIF+10%</a></h2>
+                <p class="pub-card-summary">An open cover insures only what is declared into it, and a Certificate of Insurance is only as good as its declared value. UCP 600 Article 28(f)(ii) sets the floor at 110% of CIF; Section 81 of the…</p>
+                <div class="pub-card-meta">July 17, 2026<span class="byline-sep">&middot;</span>5 min read</div>
+            </article>
+            <article class="pub-card" data-cluster="marine-evidence" data-type="operational-note">
+                <div class="pub-card-cover"><img src="/publications/marine-cargo-claim-denial-taxonomy/assets/cover.png" alt="Marine Cargo Claim Denial in India: A Taxonomy of Evidence Gaps" loading="lazy"></div>
+                <div class="pub-card-badges">
+                    <span class="pub-badge pub-badge-type">Operational Note</span>
+                    <a class="pub-badge pub-badge-cluster" href="/publications/cluster/marine-evidence/">Marine Cargo Evidence</a>
+                </div>
+                <h2 class="pub-card-title"><a href="/publications/marine-cargo-claim-denial-taxonomy/">Marine Cargo Claim Denial in India: A Taxonomy of Evidence Gaps</a></h2>
+                <p class="pub-card-summary">Marine cargo claim denials in India cluster into four evidence families, not exotic perils: premium timing under Section 64VB of the Insurance Act 1938, policy exclusions such as ICC clause 4.3 on…</p>
+                <div class="pub-card-meta">July 17, 2026<span class="byline-sep">&middot;</span>5 min read</div>
+            </article>
+            <article class="pub-card" data-cluster="export-realization" data-type="operational-note">
+                <div class="pub-card-cover"><img src="/publications/lc-first-presentation-discrepancies/assets/cover.png" alt="LC First Presentations: Why Seven in Ten Fail on Documents" loading="lazy"></div>
+                <div class="pub-card-badges">
+                    <span class="pub-badge pub-badge-type">Operational Note</span>
+                    <a class="pub-badge pub-badge-cluster" href="/publications/cluster/export-realization/">Export Realization</a>
+                </div>
+                <h2 class="pub-card-title"><a href="/publications/lc-first-presentation-discrepancies/">LC First Presentations: Why Seven in Ten Fail on Documents</a></h2>
+                <p class="pub-card-summary">The ICC's own introduction to UCP 600 records that roughly 70% of letter-of-credit presentations were rejected on first presentation. The examination rules are mechanical: banks get five banking…</p>
+                <div class="pub-card-meta">July 17, 2026<span class="byline-sep">&middot;</span>4 min read</div>
+            </article>
+            <article class="pub-card" data-cluster="igst-customs" data-type="operational-note">
+                <div class="pub-card-cover"><img src="/publications/hs-classification-drift/assets/cover.png" alt="HS Classification Drift Across the Invoice, Shipping Bill and COO" loading="lazy"></div>
+                <div class="pub-card-badges">
+                    <span class="pub-badge pub-badge-type">Operational Note</span>
+                    <a class="pub-badge pub-badge-cluster" href="/publications/cluster/igst-customs/">IGST &amp; Customs Readiness</a>
+                </div>
+                <h2 class="pub-card-title"><a href="/publications/hs-classification-drift/">HS Classification Drift Across the Invoice, Shipping Bill and COO</a></h2>
+                <p class="pub-card-summary">The same goods routinely carry different HS codes on the commercial invoice, the Shipping Bill and the Certificate of Origin, because each document is produced from a different master. The Shipping…</p>
+                <div class="pub-card-meta">July 17, 2026<span class="byline-sep">&middot;</span>5 min read</div>
+            </article>
+            <article class="pub-card" data-cluster="ev-lithium" data-type="operational-note">
+                <div class="pub-card-cover"><img src="/publications/eu-battery-regulation-hs850760/assets/cover.png" alt="EU Battery Regulation 2023/1542: The HS 8507.60 Compliance Calendar" loading="lazy"></div>
+                <div class="pub-card-badges">
+                    <span class="pub-badge pub-badge-type">Operational Note</span>
+                    <a class="pub-badge pub-badge-cluster" href="/publications/cluster/ev-lithium/">EV &amp; Lithium Export</a>
+                </div>
+                <h2 class="pub-card-title"><a href="/publications/eu-battery-regulation-hs850760/">EU Battery Regulation 2023/1542: The HS 8507.60 Compliance Calendar</a></h2>
+                <p class="pub-card-summary">The EU Battery Regulation binds Indian HS 8507.60 exporters through their importers today — CE marking, declaration of conformity, technical documentation per Article 41 — while its headline…</p>
+                <div class="pub-card-meta">July 17, 2026<span class="byline-sep">&middot;</span>4 min read</div>
+            </article>
+            <article class="pub-card" data-cluster="igst-customs" data-type="operational-note">
+                <div class="pub-card-cover"><img src="/publications/e-sanchit-document-gaps/assets/cover.png" alt="e-SANCHIT: The Upload Failures That Stall Assessment and LEO" loading="lazy"></div>
+                <div class="pub-card-badges">
+                    <span class="pub-badge pub-badge-type">Operational Note</span>
+                    <a class="pub-badge pub-badge-cluster" href="/publications/cluster/igst-customs/">IGST &amp; Customs Readiness</a>
+                </div>
+                <h2 class="pub-card-title"><a href="/publications/e-sanchit-document-gaps/">e-SANCHIT: The Upload Failures That Stall Assessment and LEO</a></h2>
+                <p class="pub-card-summary">e-SANCHIT is the only channel for supporting documents on ICEGATE, and it enforces a precise technical specification: PDF/A (ISO 19005-2), at least 200 dpi, 75 KB per A4 page within a 1 MB file,…</p>
+                <div class="pub-card-meta">July 17, 2026<span class="byline-sep">&middot;</span>5 min read</div>
+            </article>
+            <article class="pub-card" data-cluster="igst-customs" data-type="concept-piece">
+                <div class="pub-card-cover"><img src="/publications/export-documentation-failure-cost-anatomy/assets/cover.png" alt="What One Documentation Failure Costs: Demurrage, Fees, Blocked Refunds" loading="lazy"></div>
+                <div class="pub-card-badges">
+                    <span class="pub-badge pub-badge-type">Concept Piece</span>
+                    <a class="pub-badge pub-badge-cluster" href="/publications/cluster/igst-customs/">IGST &amp; Customs Readiness</a>
+                </div>
+                <h2 class="pub-card-title"><a href="/publications/export-documentation-failure-cost-anatomy/">What One Documentation Failure Costs: Demurrage, Fees, Blocked Refunds</a></h2>
+                <p class="pub-card-summary">A single documentation failure bills an exporter through four independent meters: container charges that escalate by slab at the terminal, bank discrepancy fees per presentation, fixed rectification…</p>
+                <div class="pub-card-meta">July 17, 2026<span class="byline-sep">&middot;</span>4 min read</div>
+            </article>
+            <article class="pub-card" data-cluster="ev-lithium" data-type="change-watch">
+                <div class="pub-card-cover"><img src="/publications/us-tariffs-indian-exports-2026/assets/cover.png" alt="US Tariffs on Indian Exports 2026: From 50% to 10%, and the July Cliff" loading="lazy"></div>
+                <div class="pub-card-badges">
+                    <span class="pub-badge pub-badge-type">Change Watch</span>
+                    <a class="pub-badge pub-badge-cluster" href="/publications/cluster/ev-lithium/">EV &amp; Lithium Export</a>
+                </div>
+                <h2 class="pub-card-title"><a href="/publications/us-tariffs-indian-exports-2026/">US Tariffs on Indian Exports 2026: From 50% to 10%, and the July Cliff</a></h2>
+                <p class="pub-card-summary">Between August 2025 and July 2026, the US tariff on Indian-origin goods moved from a stacked 50% to a 10% surcharge, through a trade framework, an Executive Order, and a Supreme Court ruling that…</p>
+                <div class="pub-card-meta">July 17, 2026<span class="byline-sep">&middot;</span>4 min read</div>
+            </article>
+            <article class="pub-card" data-cluster="ev-lithium" data-type="change-watch">
+                <div class="pub-card-cover"><img src="/publications/cbam-definitive-indian-auto-components/assets/cover.png" alt="CBAM's Definitive Regime: What EU Buyers Now Ask Indian Suppliers" loading="lazy"></div>
+                <div class="pub-card-badges">
+                    <span class="pub-badge pub-badge-type">Change Watch</span>
+                    <a class="pub-badge pub-badge-cluster" href="/publications/cluster/ev-lithium/">EV &amp; Lithium Export</a>
+                </div>
+                <h2 class="pub-card-title"><a href="/publications/cbam-definitive-indian-auto-components/">CBAM's Definitive Regime: What EU Buyers Now Ask Indian Suppliers</a></h2>
+                <p class="pub-card-summary">CBAM's definitive regime took effect on 1 January 2026. EU importers of covered iron, steel and aluminium goods above the new 50-tonne annual threshold must be authorised CBAM declarants, and their…</p>
+                <div class="pub-card-meta">July 17, 2026<span class="byline-sep">&middot;</span>3 min read</div>
+            </article>
+            <article class="pub-card" data-cluster="igst-customs" data-type="operational-note">
+                <div class="pub-card-cover"><img src="/publications/sb005-igst-refund-blocked/assets/sb005-igst-refund-blocked-cover.png" alt="SB005: Why Your IGST Refund Blocks After EGM and How to Clear It" loading="lazy"></div>
+                <div class="pub-card-badges">
+                    <span class="pub-badge pub-badge-type">Operational Note</span>
+                    <a class="pub-badge pub-badge-cluster" href="/publications/cluster/igst-customs/">IGST &amp; Customs Readiness</a>
+                </div>
+                <h2 class="pub-card-title"><a href="/publications/sb005-igst-refund-blocked/">SB005: Why Your IGST Refund Blocks After EGM and How to Clear It</a></h2>
+                <p class="pub-card-summary">An SB005 error blocks an IGST refund when the Shipping Bill invoice number diverges from the one filed in GSTR-1 Table 6A. The refund stalls silently after EGM; no rejection is issued. The fix is a…</p>
+                <div class="pub-card-meta">July 16, 2026<span class="byline-sep">&middot;</span>8 min read</div>
+            </article>
+            <article class="pub-card" data-cluster="igst-customs" data-type="operational-note">
+                <div class="pub-card-cover"><img src="/publications/pre-leo-document-reconciliation/assets/cover.png" alt="Reconciling Invoice, Packing List, B/L and Shipping Bill Before LEO" loading="lazy"></div>
+                <div class="pub-card-badges">
+                    <span class="pub-badge pub-badge-type">Operational Note</span>
+                    <a class="pub-badge pub-badge-cluster" href="/publications/cluster/igst-customs/">IGST &amp; Customs Readiness</a>
+                </div>
+                <h2 class="pub-card-title"><a href="/publications/pre-leo-document-reconciliation/">Reconciling Invoice, Packing List, B/L and Shipping Bill Before LEO</a></h2>
+                <p class="pub-card-summary">Four documents describe one shipment — Commercial Invoice, Packing List, Bill of Lading and Shipping Bill — and customs, GST and manifest systems check them against each other after export, once…</p>
+                <div class="pub-card-meta">July 16, 2026<span class="byline-sep">&middot;</span>9 min read</div>
+            </article>
+            <article class="pub-card" data-cluster="igst-customs" data-type="operational-note">
+                <div class="pub-card-cover"><img src="/publications/invoice-number-format-tally-icegate/assets/cover.png" alt="Invoice Number Formatting: How Tally and ICEGATE Disagree" loading="lazy"></div>
+                <div class="pub-card-badges">
+                    <span class="pub-badge pub-badge-type">Operational Note</span>
+                    <a class="pub-badge pub-badge-cluster" href="/publications/cluster/igst-customs/">IGST &amp; Customs Readiness</a>
+                </div>
+                <h2 class="pub-card-title"><a href="/publications/invoice-number-format-tally-icegate/">Invoice Number Formatting: How Tally and ICEGATE Disagree</a></h2>
+                <p class="pub-card-summary">Rule 46(b) of the CGST Rules limits a tax invoice number to sixteen characters from letters, numerals, hyphen and slash. Accounting-software formats and the Shipping Bill entry routinely diverge — a…</p>
+                <div class="pub-card-meta">July 16, 2026<span class="byline-sep">&middot;</span>6 min read</div>
+            </article>
+            <article class="pub-card" data-cluster="igst-customs" data-type="operational-note">
+                <div class="pub-card-cover"><img src="/publications/icegate-sb-error-codes/assets/cover.png" alt="SB001–SB006: The ICEGATE Shipping Bill Error Codes, Explained" loading="lazy"></div>
+                <div class="pub-card-badges">
+                    <span class="pub-badge pub-badge-type">Operational Note</span>
+                    <a class="pub-badge pub-badge-cluster" href="/publications/cluster/igst-customs/">IGST &amp; Customs Readiness</a>
+                </div>
+                <h2 class="pub-card-title"><a href="/publications/icegate-sb-error-codes/">SB001–SB006: The ICEGATE Shipping Bill Error Codes, Explained</a></h2>
+                <p class="pub-card-summary">ICES validates every IGST export refund at invoice level against GSTR-1 data and returns one of seven codes, SB000 through SB006. Each error code names a specific mismatch — Shipping Bill details,…</p>
+                <div class="pub-card-meta">July 16, 2026<span class="byline-sep">&middot;</span>8 min read</div>
+            </article>
+            <article class="pub-card" data-cluster="igst-customs" data-type="change-watch">
+                <div class="pub-card-cover"><img src="/publications/rodtep-2026-rate-volatility/assets/cover.png" alt="RoDTEP 2026: The February Cut, the March Restoration, the Fine Print" loading="lazy"></div>
+                <div class="pub-card-badges">
+                    <span class="pub-badge pub-badge-type">Change Watch</span>
+                    <a class="pub-badge pub-badge-cluster" href="/publications/cluster/igst-customs/">IGST &amp; Customs Readiness</a>
+                </div>
+                <h2 class="pub-card-title"><a href="/publications/rodtep-2026-rate-volatility/">RoDTEP 2026: The February Cut, the March Restoration, the Fine Print</a></h2>
+                <p class="pub-card-summary">DGFT Notification 60/2025-26 cut all RoDTEP rates and value caps by 50% with effect from 23 February 2026. Notification 66/2025-26 restored the 22 February rates from 23 March 2026 — and its…</p>
+                <div class="pub-card-meta">July 16, 2026<span class="byline-sep">&middot;</span>4 min read</div>
+            </article>
         </section>
 
         <p class="pub-catalog-nomatch" id="pubCatalogNoMatch" hidden>
