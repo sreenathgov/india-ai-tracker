@@ -9,6 +9,16 @@
 
 const TRANSITION_DURATION = 450;
 
+// One-time "center the clicked card" scroll in alignSpotToCard(): kept
+// shorter than Lenis's default 1.1s duration (see initSmoothScroll), and
+// capped by a matching safety timeout, so the .spot connector dot's
+// position is always finalized before (a) the pop-in reveal at +0.7s
+// (css/publications.css: .reading-panel.open .spot) and (b) the L2->L3
+// spot mirror read at TRANSITION_DURATION + 50ms (setupLayerTriggers,
+// restoreFromURL).
+const SPOT_ALIGN_DURATION_S = TRANSITION_DURATION / 1000; // Lenis scrollTo duration override, seconds
+const SPOT_ALIGN_TIMEOUT_MS = TRANSITION_DURATION;        // hard cap if no completion signal fires
+
 // State management
 let publicationData = null;
 let currentChapter = null;
@@ -674,6 +684,69 @@ function renderOverviewContent() {
 // PANEL MANAGEMENT
 // ============================================
 
+// Scroll the page so the clicked card's top edge lands at the panel spot's
+// default (50vh), wait for that scroll to genuinely settle, then pin the
+// spot to the card's REAL on-screen position — robust against late web-font
+// swaps, image reflow, and the near-document-edge case where the scroll
+// clamps and the card can't be perfectly centered (a fixed prediction can't
+// account for any of that; a fresh post-settle measurement always can).
+function alignSpotToCard(card, chapterIndex, sectionIndex) {
+    const cardTop = card.getBoundingClientRect().top;
+    const docTarget = window.scrollY + cardTop - window.innerHeight / 2;
+    const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    const clamped = Math.min(Math.max(0, docTarget), maxScroll);
+
+    // A different card can be clicked, or the panel closed, before this
+    // settles. Two independent checks against existing module state:
+    //  - isCurrentRequest: only THIS card's alignment may paint the spot.
+    //  - isPanelOpen: only lock scroll if the panel wasn't already closed
+    //    (closeAnalysisPanel() already ran unlockScroll() in that case —
+    //    locking afterward would freeze the page with nothing left to
+    //    ever unlock it).
+    const isCurrentRequest = () => currentChapter === chapterIndex && currentSection === sectionIndex;
+    const isPanelOpen = () => currentLayer !== 'overview';
+
+    let settled = false;
+    const finish = () => {
+        if (settled) return;
+        settled = true;
+        clearTimeout(safetyTimer);
+        window.removeEventListener('scrollend', finish);
+
+        if (isCurrentRequest()) {
+            const spot = analysisPanel.querySelector('.spot');
+            if (spot) {
+                // Snap instantly: .spot's CSS transition (0.6s ease-out,
+                // unscoped — applies to `top` too) would otherwise glide
+                // visibly into place right as the pop-in reveals the dot.
+                spot.style.transition = 'none';
+                spot.style.top = `${Math.round(card.getBoundingClientRect().top)}px`;
+                void spot.offsetHeight; // flush so transition:none applies to this write
+                spot.style.transition = '';
+            }
+        }
+        // Panels are modal: the page behind must not scroll until this layer closes
+        if (isPanelOpen()) lockScroll();
+    };
+
+    // Safety net: guarantees finish() runs even if Lenis's onComplete or the
+    // scrollend event never fires (e.g. an interrupted scroll, or a browser
+    // that doesn't support scrollend).
+    const safetyTimer = setTimeout(finish, SPOT_ALIGN_TIMEOUT_MS);
+
+    if (lenis) {
+        // force: Lenis honours programmatic scrolls even while stopped (locked).
+        // duration: short override — see comment above SPOT_ALIGN_DURATION_S.
+        smoothScrollTo(clamped, { force: true, duration: SPOT_ALIGN_DURATION_S, onComplete: finish });
+    } else {
+        // No Lenis (failed to load) or prefers-reduced-motion: native smooth
+        // scroll has no completion callback; scrollend is the modern signal,
+        // the safety timer above covers browsers/cases where it doesn't fire.
+        window.addEventListener('scrollend', finish, { once: true });
+        smoothScrollTo(clamped, { force: true });
+    }
+}
+
 function openAnalysisPanel(chapterIndex, sectionIndex) {
     const chapter = publicationData.chapters[chapterIndex];
     const section = chapter.sections[sectionIndex];
@@ -710,34 +783,17 @@ function openAnalysisPanel(chapterIndex, sectionIndex) {
     // Highlight the trigger card (connector dot + drawn line, stays above the dim)
     clearActiveCards();
     const card = document.getElementById(`card-${chapterIndex}-${sectionIndex}`);
-    if (card) {
-        card.classList.add('active');
-        // Desktop only: the connector-spot geometry (and the page scroll that
-        // aligns it) doesn't exist in popup mode — scrolling there just jolts
-        // the page behind the popup.
-        if (!isMobileLayout()) {
-            // Align the card's corner dot with the panel spot on one horizontal line.
-            // Preferred: scroll the page so the card's top edge lands at 50vh (the
-            // spot's default). Near the document's top/bottom the scroll clamps and
-            // can't get there — in that case pin the spot to the card's settled
-            // position instead, so the dots stay parallel for every card.
-            const cardTop = card.getBoundingClientRect().top;
-            const docTarget = window.scrollY + cardTop - window.innerHeight / 2;
-            const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-            const clamped = Math.min(Math.max(0, docTarget), maxScroll);
-            // finalCardTop is target-based (absolute card top − target scroll), so the
-            // spot lands correctly whether Lenis animates or the scroll clamps.
-            const finalCardTop = window.scrollY + cardTop - clamped;
-            // force: Lenis honours programmatic scrolls even while stopped (locked)
-            smoothScrollTo(clamped, { force: true });
+    if (card) card.classList.add('active');
 
-            const spot = analysisPanel.querySelector('.spot');
-            if (spot) spot.style.top = `${Math.round(finalCardTop)}px`;
-        }
+    // Desktop + a real card: align the connector spot via alignSpotToCard(),
+    // which also owns locking scroll once that alignment settles. Mobile
+    // popup mode has no connector-spot geometry, and a missing card has
+    // nothing to align to — lock immediately in both cases.
+    if (card && !isMobileLayout()) {
+        alignSpotToCard(card, chapterIndex, sectionIndex);
+    } else {
+        lockScroll();
     }
-
-    // Panels are modal: the page behind must not scroll until this layer closes
-    lockScroll();
 
     // Per-layer dim backdrop — clicking it closes this layer (progressive)
     addBackdrop('analysis', closeAnalysisPanel);

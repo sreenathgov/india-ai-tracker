@@ -52,7 +52,7 @@ const WPM = 220;
 // Bump BOTH whenever css/publications.css or js/publications.js changes — an
 // unbumped version serves the old asset from cache against new markup.
 const CSS_VERSION = '31';
-const JS_VERSION = '24';
+const JS_VERSION = '25';
 const ARTICLE_CSS = path.join(PROJECT_ROOT, 'css', 'publications.css');
 const ARTICLE_JS = path.join(PROJECT_ROOT, 'js', 'publications.js');
 
