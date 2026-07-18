@@ -1255,6 +1255,26 @@
       },
       {
         "id": 1,
+        "title": "How AI Is becoming the operating system of mobility infrastructure powered by real-time infrastructure intelligence",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/how-ai-is-becoming-the-operating-system-of-mobility-infrastructure-powered-by-real-time-infrastructure-intelligence/132458436",
+        "summary": "India's mobility infrastructure has rapidly expanded, and the next step is the integration of an intelligence layer powered by real-time data. This intelligence layer, driven by AI, is expected to become the operating system of mobility infrastructure. When fully implemented, it will likely feel like a seamless and natural part of the system, rather than a new technology.",
+        "date_published": "2026-07-17",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Google I/O Connect India 2026: India to get its first AI university, announced at this flagship event; all you need to know",
         "url": "https://www.etnownews.com/technology/google-i-o-connect-india-2026-india-to-get-its-first-ai-university-announced-at-this-flagship-event-all-you-need-to-know-article-155108796",
         "summary": "Karnataka Chief Minister D.K. Shivakumar announced the state's plan to establish India's first AI university at the Google I/O Connect India 2026 event. The initiative aims to build a robust AI ecosystem in the region. The announcement marks a significant step towards promoting AI education and innovation in India.",
@@ -13909,7 +13929,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 4,
+        "title": "UP plans 75-acre robotics, AI hub in Noida as CM unveils deep-tech roadmap",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/uttar-pradesh-unveils-ambitious-75-acre-robotics-and-ai-hub-in-noida/132455337",
+        "summary": "The Uttar Pradesh government plans to establish a 75-acre robotics and AI hub in Noida. The project aims to attract global manufacturers, component suppliers, and research institutions. This initiative is part of the state's deep-tech roadmap unveiled by the Chief Minister.",
+        "date_published": "2026-07-17",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 13,
         "title": "Jharkhand bets big on AI, signs MoUs worth Rs 87,000 crore at Delhi meet",
         "url": "https://timesofindia.indiatimes.com/city/ranchi/jharkhand-bets-big-on-ai-signs-mous-worth-rs-87000-cr-during-investors-meet-in-delhi/articleshow/132290827.cms",
@@ -3371,6 +3391,26 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 3,
+        "title": "Armory first built a counter-drone system in six months, and now it has a Rs 100 crore defence order",
+        "url": "https://yourstory.com/2026/07/armory-rs-100-crore-defence-order",
+        "summary": "Gurugram-based startup Armory has developed an AI-powered counter-drone system called SURGE that detects, tracks, and neutralises rogue drones. The system was built in just six months, showcasing the company's rapid development capabilities. Armory has now secured a Rs 100 crore defence order from the Ministry of Defence, making it one of the youngest Indian defence firms to win a nine-figure contract.",
+        "date_published": "2026-07-17",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 3,
         "title": "Groyyo raises Rs 90 Cr in first close of Series B round led by Cornerstone Ventures",

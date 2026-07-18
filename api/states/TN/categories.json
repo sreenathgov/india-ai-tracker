@@ -150,6 +150,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "SEBI’s AI flags front-running patterns in PMS; consultation paper soon",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/sebis-ai-flags-front-running-patterns-in-pms-consultation-paper-soon/articleshow/132465811.cms",
+        "summary": "SEBI's AI system has detected front-running patterns in Portfolio Management Services (PMS). A consultation paper will be released soon to address these findings. The move aims to strengthen regulatory oversight and prevent fraudulent activities in the financial sector.",
+        "date_published": "2026-07-18",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Schools lean on AI platforms to deliver progress reports, updates",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/schools-lean-on-ai-platforms-to-deliver-progress-reports-updates/articleshow/132468321.cms",
+        "summary": "Schools are increasingly using AI platforms to deliver progress reports and updates to parents and students. This shift aims to improve communication and provide more frequent and detailed updates on student performance. AI-powered platforms enable schools to automate the process, making it more efficient and convenient for all parties involved.",
+        "date_published": "2026-07-18",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 16,
         "title": "Zoho steps up ed-tech play with AI features",
         "url": "https://timesofindia.indiatimes.com/city/chennai/zoho-steps-up-ed-tech-play-with-ai-features/articleshow/132421169.cms",
@@ -1128,5 +1168,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

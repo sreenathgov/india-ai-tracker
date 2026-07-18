@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "Green Skills & Applied AI CoE in Hyderabad to be operational by Aug",
+        "url": "https://www.thehindu.com/news/national/telangana/green-skills-applied-ai-coe-in-hyderabad-to-be-operational-by-aug/article71234584.ece",
+        "summary": "A Center of Excellence (CoE) for Green Skills and Applied AI is set to become operational in Hyderabad by August. The CoE aims to promote the development of green skills and applied AI technologies. The launch is expected to enhance innovation and expertise in these areas in the region.",
+        "date_published": "2026-07-17",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 15,
         "title": "IIIT Hyderabad Hosts SERI 2026",
         "url": "https://www.iiit.ac.in/iiit-hyderabad-hosts-seri-2026/",
@@ -1975,6 +1995,26 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 7,
+        "title": "Hyderabad startup Superclaims uses AI to speed up health insurance claims",
+        "url": "https://telanganatoday.com/hyderabad-startup-superclaims-uses-ai-to-speed-up-health-insurance-claims",
+        "summary": "Hyderabad-based startup Superclaims has developed an AI-powered platform to speed up health insurance claims, reducing adjudication time from days to minutes. The platform processes over 100,000 claims monthly, improving accuracy and cutting operational costs. It also helps insurers detect fraudulent claims, making the claims process more efficient.",
+        "date_published": "2026-07-17",
+        "source_name": "Telangana Today - Tech",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 7,
         "title": "Piper Serica leads seed round in deep tech startup eNLife Research",
