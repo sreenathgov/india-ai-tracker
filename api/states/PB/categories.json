@@ -66,6 +66,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "CBI flags use of AI to create vigilance-style plaints in bribery case",
+        "url": "https://www.tribuneindia.com/news/punjab/cbi-flags-use-of-ai-to-create-vigilance-style-plaints-in-bribery-case",
+        "summary": "The CBI has filed a charge sheet in a Rs 20 lakh bribery case involving the Punjab Vigilance Bureau, revealing the use of AI chatbot ChatGPT to create fake complaints. The accused, including Om Parkash Singh Rana, used ChatGPT to generate vigilance-style complaints against officers. The CBI arrested Rana and three others in May in connection with the case.",
+        "date_published": "2026-07-19",
+        "source_name": "Tribune - Punjab",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 16,
         "title": "World Youth Skills Day: As AI reshapes jobs, Chandigarh’s skill institutes race to bridge training gap",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/world-youth-skills-day-as-ai-reshapes-jobs-chandigarhs-skill-institutes-race-to-bridge-training-gap/articleshow/132400451.cms",
@@ -672,5 +692,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

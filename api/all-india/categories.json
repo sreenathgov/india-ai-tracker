@@ -4,6 +4,26 @@
     "Policies and Initiatives": [
       {
         "id": 2,
+        "title": "Funding and acquisitions in Indian startups this week [July 06 - July 11]",
+        "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-july-06-july-11-12176124",
+        "summary": "19 Indian startups raised nearly $271 million in funding this week, with 6 growth-stage and 13 early-stage deals. This amount surpasses the $70.4 million raised by 18 startups in the previous week. The week also saw three acquisitions, leadership changes, and other notable developments in the Indian startup ecosystem.",
+        "date_published": "2026-07-18",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "Responsible AI emerges as a strategic imperative for Indian businesses amid evolving global regulations",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/responsible-ai-emerges-as-a-strategic-imperative-for-indian-businesses-amid-evolving-global-regulations/132280493",
         "summary": "India's Ministry of Electronics and Information Technology is leading a push for responsible AI governance, shifting from unregulated deployment to accountable adoption. This comes as global regulations tighten, making transparency, fairness, and explainability crucial for businesses to avoid compliance gaps and reputational damage. Indian businesses must now prioritize responsible AI to remain competitive and compliant.",
@@ -11360,6 +11380,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 1,
+        "title": "Liftoff for Skyroot’s Vikram-1; Building AI voice infra for Indian languages",
+        "url": "https://yourstory.com/2026/07/liftoff-for-skyroot-vikram-1-shunya-labs",
+        "summary": "Vikram-1 is a four-stage launch vehicle capable of carrying payloads of up to 350 kg to low Earth orbit (LEO). It is designed to operate in the region of space where many Earth observation, communication, and scientific satellites are located. The launch vehicle is part of Skyroot's initiatives, which also include building AI voice infrastructure for Indian languages.",
+        "date_published": "2026-07-19",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Quick Clean raises $14M in Series B round led by Stakeboat Capital",
         "url": "https://yourstory.com/2026/07/quick-clean-14-million-series-b-stakeboat-capital",
@@ -13929,5 +13969,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }
