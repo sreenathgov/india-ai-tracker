@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 5,
+        "title": "Karnataka Cabinet approves ₹12-crore AI Centre of Excellence at IIIT Raichur",
+        "url": "https://www.thehindu.com/news/national/karnataka/karnataka-cabinet-approves-12-crore-ai-centre-of-excellence-at-iiit-raichur/article71241858.ece",
+        "summary": "The Karnataka Cabinet has approved a ₹12-crore Centre of Excellence in Artificial Intelligence at the Indian Institute of Information Technology, Raichur. The centre will be established with a five-year outlay, as announced by Minister Priyank Kharge. This initiative aims to promote AI development and innovation in the region.",
+        "date_published": "2026-07-19",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Krishna Byre Gowda’s plan for Bengaluru; Google’s AI push in India",
         "url": "https://yourstory.com/2026/07/krishna-byre-gowdas-plan-for-bengaluru-google-ai-push-india",
@@ -345,6 +365,26 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 4,
+        "title": "Instant medicine delivery startup Plazza raises $15 Mn led by Accel, Elevation and Nexus",
+        "url": "https://entrackr.com/news/instant-medicine-delivery-startup-plazza-raises-15-mn-led-by-accel-elevation-and-nexus-12180237",
+        "summary": "Plazza, a pharmacy-focused quick commerce startup, has raised $15 million in a Series A funding round led by Accel, Elevation Capital, and Nexus Venture Partners. The funding will be used to enhance the company's technology platform, improve its AI-driven inventory and assortment intelligence, and expand its pharmacy network. Existing investors All In Capital and Better Capital also participated in the round.",
+        "date_published": "2026-07-20",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 11,
         "title": "Physical AI startup SwitchOn raises $8 Mn in pre-Series B round led by IvyCap",
@@ -4491,5 +4531,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

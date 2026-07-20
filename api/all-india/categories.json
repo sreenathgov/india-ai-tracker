@@ -1255,6 +1255,26 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "AI meter is running. India's IT clients are rethinking their models",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/ai-token-costs-rise-enterprise-artificial-intelligence-spending-indiit-services-firms-11784467885496.html",
+        "summary": "India's IT clients are rethinking their AI models as enterprise AI consumption increases. They are shifting routine work to smaller AI models and reserving larger ones for complex tasks. This shift aims to optimize AI usage and efficiency.",
+        "date_published": "2026-07-20",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "AI to fuel India&#039;s tech services growth; public cloud spending to reach USD 17.5 bn in 2026",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-to-fuel-indias-tech-services-growth-public-cloud-spending-to-reach-usd-17-5-bn-in-2026/132453058",
         "summary": "India's tech services sector is expected to experience strong growth driven by AI, with public cloud spending projected to reach $17.5 billion by 2026. This represents a 28.1% year-on-year increase, according to Equirus Securities. The surge in public cloud spending is a key indicator of the sector's AI-led growth.",
@@ -11380,6 +11400,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "Making India ‘food wise’; AI lifts VC inflow in startup ecosystem",
+        "url": "https://yourstory.com/2026/07/making-india-food-wise-venture-funding",
+        "summary": "Foodwize, an AI-driven startup, is promoting sustainable food practices in India through its B2B segment, Foodwize Ignite. The company aims to help chefs, hospitality professionals, and businesses adopt environmentally friendly food habits. This initiative has attracted significant venture capital investment in the Indian startup ecosystem.",
+        "date_published": "2026-07-20",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Liftoff for Skyroot’s Vikram-1; Building AI voice infra for Indian languages",
         "url": "https://yourstory.com/2026/07/liftoff-for-skyroot-vikram-1-shunya-labs",
@@ -13970,6 +14010,7 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "AI Start-Up News",
+    "Major AI Developments"
   ]
 }

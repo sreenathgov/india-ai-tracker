@@ -145,6 +145,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Steptrade Capital achieves first close of Fund II with Rs 100 Cr commitments",
+        "url": "https://entrackr.com/snippets/steptrade-capital-achieves-first-close-of-fund-ii-with-rs-100-cr-commitments-12180452",
+        "summary": "Steptrade Capital has achieved the first close of its Chanakya Opportunities Fund II, securing over Rs 100 crore in investor commitments within three months of its launch. The fund, launched in February 2026, aims to raise a total corpus of Rs 500 crore to invest in pre-IPO and growth-stage companies. It will focus on advanced manufacturing, energy transition, and emerging technologies sectors.",
+        "date_published": "2026-07-20",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Ahmedabad: Centre of excellence to use AI to identify traffic offenders",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ahmedabad-centre-of-excellence-to-use-ai-to-identify-traffic-offenders/articleshow/132447307.cms",
@@ -1573,5 +1593,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
