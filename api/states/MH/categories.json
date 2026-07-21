@@ -183,6 +183,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "District Planning Committee Nod To Rs1,503cr Plan, Rs241cr AI Thrust For Agri",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/district-planning-committee-nod-to-rs1503cr-plan-rs241cr-ai-thrust-for-agri/articleshow/132523848.cms",
+        "summary": "The District Planning Committee has approved a Rs 1,503cr plan, which includes a Rs 241cr allocation for artificial intelligence (AI) in the agriculture sector. The AI thrust aims to boost agriculture in the region, while the overall plan also addresses other key areas. Additionally, an encroachment task force has been announced to tackle issues such as encroachment and the menace of MD (mephedrone).",
+        "date_published": "2026-07-21",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 19,
         "title": "Maha clears ₹2cr for AI centres in agri universities",
         "url": "https://timesofindia.indiatimes.com/city/nagpur/maha-clears-2cr-for-ai-centres-in-agri-universities/articleshow/132424359.cms",
@@ -1802,6 +1822,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "Wealthtech platform Veriqus raises Rs 387 Cr in funding round led by Norwest",
+        "url": "https://entrackr.com/news/wealthtech-platform-veriqus-raises-rs-387-cr-in-funding-round-led-by-norwest-12182570",
+        "summary": "Wealthtech firm Veriqus Group has raised Rs 387 crore ($40 million) in a funding round led by Norwest Venture Partners. The company plans to use the funds to expand its network, strengthen its AI-enabled wealth management platform, and increase its presence in Tier II cities in India. Veriqus provides technology and wealth management solutions for financial advisors and wealth creators through its platform.",
+        "date_published": "2026-07-20",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Quick Clean raises $14 Mn in Series B round led by Stakeboat Capital",
         "url": "https://entrackr.com/snippets/quick-clean-raises-14-mn-in-series-b-round-led-by-stakeboat-capital-12168892",
@@ -2209,5 +2249,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

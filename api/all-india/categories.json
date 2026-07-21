@@ -11400,6 +11400,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 1,
+        "title": "Traveltech startup 30 Sundays raises Rs 61 Cr led by Bessemer Venture Partners",
+        "url": "https://yourstory.com/2026/07/traveltech-startup-30-sundays-rs-61-crore-bessemer-venture-partners",
+        "summary": "Traveltech startup 30 Sundays has raised Rs 61 Cr in funding led by Bessemer Venture Partners. The startup will use the funds to enhance its product offerings, strengthen its technology and AI capabilities, and expand its team. It also plans to invest in brand building and marketing to accelerate expansion into new geographies and customer segments.",
+        "date_published": "2026-07-21",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Making India ‘food wise’; AI lifts VC inflow in startup ecosystem",
         "url": "https://yourstory.com/2026/07/making-india-food-wise-venture-funding",
@@ -14010,7 +14030,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }
