@@ -1255,6 +1255,46 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "Now, it’s AI cost control, and a move beyond LLMs",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/now-its-ai-cost-control-and-a-move-beyond-llms/132550600",
+        "summary": "Companies are shifting their focus to controlling AI costs and securing sensitive data, while also facing challenges with GPU access and hardware utilization. The industry is exploring AI applications beyond large language models, driven by the need for more efficient and cost-effective solutions. India's technical talent is well-positioned to support future growth in AI infrastructure.",
+        "date_published": "2026-07-22",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "The geopolitics of AI: Why WAICO matters",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/the-geopolitics-of-ai-why-waico-matters/132529894",
+        "summary": "China's formation of the World Artificial Intelligence Cooperation Organization (WAICO) marks a significant shift in the global AI landscape, potentially leading to new alignments among nations. Developing countries may favor China's affordable open-source AI frameworks over Western alternatives, intensifying the race for AI supremacy. This development poses a challenge for India, which must balance its economic goals with the need for strategic self-reliance.",
+        "date_published": "2026-07-21",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "AI meter is running. India's IT clients are rethinking their models",
         "url": "https://www.livemint.com/ai/artificial-intelligence/ai-token-costs-rise-enterprise-artificial-intelligence-spending-indiit-services-firms-11784467885496.html",
         "summary": "India's IT clients are rethinking their AI models as enterprise AI consumption increases. They are shifting routine work to smaller AI models and reserving larger ones for complex tasks. This shift aims to optimize AI usage and efficiency.",
@@ -14030,6 +14070,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

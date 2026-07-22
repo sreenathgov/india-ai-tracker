@@ -150,6 +150,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "AI prompt engineering, data science to be taught in Classes VI-XII",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/ai-prompt-engineering-data-science-to-be-taught-in-classes-vi-xii/articleshow/132544990.cms",
+        "summary": "AI prompt engineering and data science will be introduced in the curriculum for classes VI-XII. This move aims to equip students with skills in emerging technologies from an early age. The new subjects will be taught as part of the revised curriculum.",
+        "date_published": "2026-07-22",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Learning made fun: Teachers use LLMs to create educational games",
         "url": "https://timesofindia.indiatimes.com/city/chennai/learning-made-fun-teachers-use-llms-to-create-educational-games/articleshow/132483003.cms",
@@ -1188,5 +1208,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

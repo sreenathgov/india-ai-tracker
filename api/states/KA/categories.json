@@ -386,6 +386,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 3,
+        "title": "Inside Myntra's AI playbook: Faster seller onboarding, smarter shopping, leaner operations",
+        "url": "https://yourstory.com/2026/07/myntra-ai-seller-onboarding-shopping-tools",
+        "summary": "Myntra has implemented AI tools to streamline its operations, including catalogue tools, fit visualizers, and the Maya chatbot. These tools have reduced seller onboarding time to just 1-2 days. The company showcased its AI innovations at its Bengaluru mynnovAIte event.",
+        "date_published": "2026-07-21",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Instant medicine delivery startup Plazza raises $15 Mn led by Accel, Elevation and Nexus",
         "url": "https://entrackr.com/news/instant-medicine-delivery-startup-plazza-raises-15-mn-led-by-accel-elevation-and-nexus-12180237",
@@ -3498,6 +3518,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "NeuralZome builds no-code AI that lets anyone train a robot without writing code",
+        "url": "https://yourstory.com/2026/07/neuralzome-no-code-ai-robot-training",
+        "summary": "NeuralZome, a Bengaluru-based startup, has developed no-code AI that enables users to train robots without writing code. The company creates teachable AI agents for off-road robots, offering them as a service. NeuralZome has raised $2.4 million in a seed round led by 8X Ventures.",
+        "date_published": "2026-07-21",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "H2LooP is building AI coding tools for the software hidden inside hardware",
         "url": "https://yourstory.com/2026/07/h2loop-ai-embedded-software-coding",
@@ -4551,7 +4591,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
