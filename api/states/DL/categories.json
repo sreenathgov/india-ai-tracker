@@ -3,6 +3,27 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 8,
+        "title": "Punjab becomes first state to introduce AI as mainstream subject from classes 1-12: Harjot Singh Bains",
+        "url": "https://www.tribuneindia.com/news/punjab/punjab-becomes-first-state-to-introduce-ai-as-mainstream-subject-from-classes-1-12-bains",
+        "summary": "Punjab has introduced Artificial Intelligence (AI) as a mainstream subject for classes 1-12, becoming the first state in India to do so. The Punjab School Education Board will implement the curriculum in phases under the 'Sarbat.AI' project. This initiative aims to incorporate AI education into the state's school system, starting from the primary level.",
+        "date_published": "2026-07-22",
+        "source_name": "Tribune - Punjab",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "PB",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "UP plans 75-acre robotics, AI hub in Noida as CM unveils deep-tech roadmap",
         "url": "https://government.economictimes.indiatimes.com/news/technology/uttar-pradesh-unveils-ambitious-75-acre-robotics-and-ai-hub-in-noida/132455337",
@@ -468,6 +489,26 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 5,
+        "title": "BusinessNext raises $40 Mn from ServiceNow Ventures at $700 Mn valuation",
+        "url": "https://entrackr.com/news/businessnext-raises-40-mn-from-servicenow-ventures-at-700-mn-valuation-12189549",
+        "summary": "BusinessNext, a banking software startup, has raised $40 million in a Series B funding round from ServiceNow Ventures, valuing the company at $700 million. This valuation is nearly four times its last reported valuation of $181 million in 2021. ServiceNow has acquired around a 5% stake in BusinessNext as part of the transaction.",
+        "date_published": "2026-07-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 5,
         "title": "Shunya Labs wants voice infrastructure to work the way Indians speak",
@@ -3923,5 +3964,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

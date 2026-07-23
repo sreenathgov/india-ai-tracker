@@ -3519,6 +3519,46 @@
     "AI Start-Up News": [
       {
         "id": 4,
+        "title": "AI insurtech startup NeuralKart raises seed funding led by Inflection Point Ventures",
+        "url": "https://entrackr.com/snippets/ai-insurtech-startup-neuralkart-raises-seed-funding-led-by-inflection-point-ventures-12189954",
+        "summary": "NeuralKart, a Bengaluru-based AI insurtech startup, has raised Rs 2.35 crore in seed funding led by Inflection Point Ventures. The funds will be used for product development, customer acquisition, and expansion. Founded in 2024, NeuralKart develops AI platforms for insurance operations and industrial safety, including its InsureMind platform that automates insurance processes.",
+        "date_published": "2026-07-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Dognosis is training dogs and AI to detect cancer from a breath sample",
+        "url": "https://yourstory.com/2026/07/dognosis-ai-dogs-cancer-detection",
+        "summary": "Dognosis, a Bengaluru startup, is developing a cancer detection method using dogs' sense of smell and AI. The approach combines brain-computer interfaces and AI to detect cancer from a breath sample. The goal is to create a cheap and non-invasive cancer screening method through this innovative technology.",
+        "date_published": "2026-07-22",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
         "title": "NeuralZome builds no-code AI that lets anyone train a robot without writing code",
         "url": "https://yourstory.com/2026/07/neuralzome-no-code-ai-robot-training",
         "summary": "NeuralZome, a Bengaluru-based startup, has developed no-code AI that enables users to train robots without writing code. The company creates teachable AI agents for off-road robots, offering them as a service. NeuralZome has raised $2.4 million in a seed round led by 8X Ventures.",
@@ -4591,5 +4631,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

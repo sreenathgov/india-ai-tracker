@@ -1255,11 +1255,51 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "26% of surveyed manufacturers plan to increase Physical AI investment: TCS study",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/26-of-surveyed-manufacturers-plan-to-increase-physical-ai-investment-tcs-study/132573987",
+        "summary": "A recent TCS study found that 26% of surveyed manufacturers plan to increase their investment in Physical AI. None of the surveyed organizations intend to reduce their Physical AI investments, indicating a commitment to long-term transformation. This suggests that manufacturers are prioritizing sustained growth over short-term gains through Physical AI adoption.",
+        "date_published": "2026-07-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Now, it’s AI cost control, and a move beyond LLMs",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/now-its-ai-cost-control-and-a-move-beyond-llms/132550600",
         "summary": "Companies are shifting their focus to controlling AI costs and securing sensitive data, while also facing challenges with GPU access and hardware utilization. The industry is exploring AI applications beyond large language models, driven by the need for more efficient and cost-effective solutions. India's technical talent is well-positioned to support future growth in AI infrastructure.",
         "date_published": "2026-07-22",
         "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Soket AI Wants To Turn The Language Gap In AI Into India’s Edge",
+        "url": "https://inc42.com/startups/soket-ai-wants-to-turn-the-language-gap-in-ai-into-indias-edge/",
+        "summary": "Soket AI aims to leverage the language gap in AI to India's advantage. The company is working to improve AI models for Indian languages, which currently lag behind English in terms of capabilities. By doing so, Soket AI hopes to turn this gap into an opportunity for India to take the lead in AI development.",
+        "date_published": "2026-07-22",
+        "source_name": "Inc42 Startups",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"

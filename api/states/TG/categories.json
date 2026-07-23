@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Expert Comments",
+        "url": "https://www.iiit.ac.in/expert-comments/",
+        "summary": "IIIT Hyderabad is developing various AI-powered systems, including a dashcam system to boost traffic enforcement in Telangana. The institution is also working on other AI projects, such as an AI companion for cancer patients called BandhuCare. IIIT Hyderabad is collaborating with other organizations to advance smart infrastructure, sustainable innovation, and research in AI and related fields.",
+        "date_published": "2026-07-23",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Green Skills & Applied AI CoE in Hyderabad to be operational by Aug",
         "url": "https://www.thehindu.com/news/national/telangana/green-skills-applied-ai-coe-in-hyderabad-to-be-operational-by-aug/article71234584.ece",
@@ -2261,5 +2281,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
