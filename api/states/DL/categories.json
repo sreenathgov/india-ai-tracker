@@ -3433,6 +3433,27 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 10,
+        "title": "PedalStart leads pre-seed round in extracurricular learning platform UpKraft",
+        "url": "https://entrackr.com/snippets/pedalstart-leads-pre-seed-round-in-extracurricular-learning-platform-upkraft-12190685",
+        "summary": "UpKraft, an extracurricular learning platform, has raised Rs 1.6 crore in a pre-seed funding round led by PedalStart. The funds will be used to accelerate AI product development, expand its presence, and strengthen its technology platform and operations. The platform, co-founded in July 2025, aims to build teams across various functions, including product, technology, and sales.",
+        "date_published": "2026-07-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Armory first built a counter-drone system in six months, and now it has a Rs 100 crore defence order",
         "url": "https://yourstory.com/2026/07/armory-rs-100-crore-defence-order",
@@ -3964,7 +3985,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

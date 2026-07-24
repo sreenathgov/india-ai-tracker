@@ -107,6 +107,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 14,
+        "title": "The UK Cabinet just got an AI Minister born in Bihar’s Muzaffarpur",
+        "url": "https://indianexpress.com/article/cities/patna/united-kingdom-cabinet-ai-minister-kanishka-narayan-bihar-muzaffarpur-10801449/",
+        "summary": "The UK Cabinet has appointed a new AI Minister who was born in Muzaffarpur, Bihar. This individual's appointment marks a significant development in the UK's approach to artificial intelligence. The new minister's background and birthplace in India have been noted, highlighting the global connections in the field of AI.",
+        "date_published": "2026-07-24",
+        "source_name": "Indian Express - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "AI , Gaya backup centre planned for Dial-112",
         "url": "https://timesofindia.indiatimes.com/city/patna/ai-gaya-backup-centre-planned-for-dial-112/articleshow/132223388.cms",
@@ -466,5 +486,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -3,6 +3,46 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 7,
+        "title": "Pronto widens AI camera rollout in homes with ‘Verified’ offering",
+        "url": "https://entrackr.com/news/pronto-widens-ai-camera-rollout-in-homes-with-verified-offering-12192910",
+        "summary": "Pronto is expanding its use of wearable cameras in customers' homes through its \"Pronto Verified\" service, which records service sessions and uses anonymized footage for AI training. The service is opt-in, allowing customers to choose whether to participate. Pronto Verified is an expansion of the company's Physical AI initiative, which was first piloted in May to collect real-world data for AI models.",
+        "date_published": "2026-07-24",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Healthtech startup CARPL.ai raises $10 Mn Series A led by IFC",
+        "url": "https://entrackr.com/snippets/healthtech-startup-carplai-raises-10-mn-series-a-led-by-ifc-12191147",
+        "summary": "Healthtech startup CARPL.ai has raised $10 million in a Series A funding round led by the International Finance Corporation (IFC), with participation from existing investors. This brings the company's total funding to $16 million, following a $6 million raise in 2023. The new capital will be used to enhance the company's technology, accelerate product development, and expand its global sales and delivery teams.",
+        "date_published": "2026-07-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Funding and acquisitions in Indian startups this week [July 06 - July 11]",
         "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-july-06-july-11-12176124",
@@ -1255,9 +1295,129 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "Why voice, not keyboards, may define AI&#039;s next chapter",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/why-voice-not-keyboards-may-define-ais-next-chapter/132595734",
+        "summary": "The artificial intelligence race is shifting focus from model size to user interaction, with voice interfaces expected to replace keyboards for many digital tasks. India's linguistic diversity presents an opportunity for multilingual conversational AI innovation, which can benefit industries like retail, banking, and healthcare. Voice AI's success will ultimately depend on trust and natural human-like interactions.",
+        "date_published": "2026-07-24",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Infosys names new CEO; Helping small farmers earn more",
+        "url": "https://yourstory.com/2026/07/infosys-q1-net-profit-rises-helping-small-farmers-earn-more",
+        "summary": "Infosys has reported a 14% revenue growth in Q1, driven in part by strong AI momentum. The company has trimmed its FY27 guidance due to macro uncertainty. Infosys also announced a new CEO, although details about the appointment were not specified.",
+        "date_published": "2026-07-24",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "IIT (ISM) scientist wins prestigious Oxford AI fellowship",
+        "url": "https://timesofindia.indiatimes.com/city/ranchi/iit-ism-scientist-wins-prestigious-oxford-ai-fellowship/articleshow/132586081.cms",
+        "summary": "A scientist from IIT (ISM) has been awarded a prestigious AI fellowship at Oxford. This fellowship is a notable recognition of the scientist's work in the field of artificial intelligence. The achievement highlights the institution's growing reputation for producing talented researchers in AI.",
+        "date_published": "2026-07-24",
+        "source_name": "Times of India - Ranchi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "26% of surveyed manufacturers plan to increase Physical AI investment: TCS study",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/26-of-surveyed-manufacturers-plan-to-increase-physical-ai-investment-tcs-study/132573987",
         "summary": "A recent TCS study found that 26% of surveyed manufacturers plan to increase their investment in Physical AI. None of the surveyed organizations intend to reduce their Physical AI investments, indicating a commitment to long-term transformation. This suggests that manufacturers are prioritizing sustained growth over short-term gains through Physical AI adoption.",
+        "date_published": "2026-07-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Utho Cloud to deploy 10,000 GPUs over two years to expand AI infrastructure in India",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/utho-cloud-to-deploy-10000-gpus-over-two-years-to-expand-ai-infrastructure-in-india/132580833",
+        "summary": "Utho Cloud plans to deploy 10,000 GPUs over two years to expand AI infrastructure in India. The deployment will feature Nvidia H200, H100, and Blackwell GPUs, offering sovereign AI infrastructure. This move promises to provide up to 60% lower pricing than hyperscalers.",
+        "date_published": "2026-07-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "75% of India&#039;s AI infrastructure relies on global supply chain: Red Hat&#039;s Navtez Bal",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/75-of-indias-ai-infrastructure-relies-on-global-supply-chain-red-hats-navtez-bal/132580530",
+        "summary": "75% of India's AI infrastructure relies on a global supply chain, according to Navtez Bal of Red Hat. The company views the India market as a key opportunity, particularly in sovereign AI and virtualisation. Red Hat aims to drive innovation in India through its core portfolio, focusing on these areas.",
+        "date_published": "2026-07-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "85% of Indian finance leaders under pressure to prove AI ROI as governance lags: Survey",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/85-of-indian-finance-leaders-under-pressure-to-prove-ai-roi-as-governance-lags-survey/132574066",
+        "summary": "A survey found that 85% of Indian finance leaders face pressure to demonstrate the return on investment (ROI) of artificial intelligence (AI) initiatives. This pressure exists despite organisations prioritising rapid AI deployment over governance. Indian finance leaders are struggling to balance swift implementation with proving the value of AI investments.",
         "date_published": "2026-07-23",
         "source_name": "ET CIO - AI",
         "category": "Major AI Developments",
@@ -14110,6 +14270,7 @@
     ]
   },
   "today_updates": [
+    "Policies and Initiatives",
     "Major AI Developments"
   ]
 }

@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 11,
+        "title": "Mysuru set to be second IT & AI city",
+        "url": "https://starofmysore.com/mysuru-set-to-be-second-it-ai-city/",
+        "summary": "Mysuru is set to become the second IT and AI city in Karnataka, with the state government identifying 50-acre land to create world-class infrastructure. The Karnataka Digital Economy Mission and the Department of Electronics, Information Technology, Biotechnology and Science & Technology are driving this initiative. The Mysuru BIG TECH Show-2026, titled 'Beyond Bengaluru', was recently inaugurated at the Infosys campus to promote this development.",
+        "date_published": "2026-07-23",
+        "source_name": "Star of Mysore",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Karnataka Cabinet approves ₹12-crore AI Centre of Excellence at IIIT Raichur",
         "url": "https://www.thehindu.com/news/national/karnataka/karnataka-cabinet-approves-12-crore-ai-centre-of-excellence-at-iiit-raichur/article71241858.ece",
@@ -3538,6 +3558,27 @@
         "posted_to_x_at": null
       },
       {
+        "id": 10,
+        "title": "PedalStart leads pre-seed round in extracurricular learning platform UpKraft",
+        "url": "https://entrackr.com/snippets/pedalstart-leads-pre-seed-round-in-extracurricular-learning-platform-upkraft-12190685",
+        "summary": "UpKraft, an extracurricular learning platform, has raised Rs 1.6 crore in a pre-seed funding round led by PedalStart. The funds will be used to accelerate AI product development, expand its presence, and strengthen its technology platform and operations. The platform, co-founded in July 2025, aims to build teams across various functions, including product, technology, and sales.",
+        "date_published": "2026-07-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Dognosis is training dogs and AI to detect cancer from a breath sample",
         "url": "https://yourstory.com/2026/07/dognosis-ai-dogs-cancer-detection",
@@ -4631,7 +4672,5 @@
       }
     ]
   },
-  "today_updates": [
-    "AI Start-Up News"
-  ]
+  "today_updates": []
 }
