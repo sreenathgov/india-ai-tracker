@@ -1295,6 +1295,46 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "AI-led underwriting is the missing link in India’s MSME credit story",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-led-underwriting-is-the-missing-link-in-indias-msme-credit-story/132619490",
+        "summary": "India's MSME credit gap is estimated to be Rs 25-30 lakh crore, with only 36 million of the 87 million registered MSMEs having taken a formal loan. This highlights a significant credit gap in the sector, underscoring the need for innovative solutions. AI-led underwriting is being explored as a potential solution to address this gap.",
+        "date_published": "2026-07-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "How to run B2B GTM when your buyer asks ChatGPT first",
+        "url": "https://yourstory.com/2026/07/how-to-run-b2b-gtm-when-your-buyer-asks-chatgpt-first-",
+        "summary": "Alon Waks, CMO at SpotDraft, shares insights on effective B2B go-to-market strategies, particularly when buyers consult AI tools like ChatGPT first. He discusses what works for Indian founders entering the US market and the impact of AI on B2B buying. Waks' expertise is featured in an episode of the Prime Venture Partners podcast.",
+        "date_published": "2026-07-25",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Why voice, not keyboards, may define AI&#039;s next chapter",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/why-voice-not-keyboards-may-define-ais-next-chapter/132595734",
         "summary": "The artificial intelligence race is shifting focus from model size to user interaction, with voice interfaces expected to replace keyboards for many digital tasks. India's linguistic diversity presents an opportunity for multilingual conversational AI innovation, which can benefit industries like retail, banking, and healthcare. Voice AI's success will ultimately depend on trust and natural human-like interactions.",
@@ -1418,6 +1458,26 @@
         "title": "85% of Indian finance leaders under pressure to prove AI ROI as governance lags: Survey",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/85-of-indian-finance-leaders-under-pressure-to-prove-ai-roi-as-governance-lags-survey/132574066",
         "summary": "A survey found that 85% of Indian finance leaders face pressure to demonstrate the return on investment (ROI) of artificial intelligence (AI) initiatives. This pressure exists despite organisations prioritising rapid AI deployment over governance. Indian finance leaders are struggling to balance swift implementation with proving the value of AI investments.",
+        "date_published": "2026-07-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "75% of India&#039;s AI infrastructure relies on global supply chain: Red Hat&#039;s Navtez Bal",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/75-of-indias-ai-infrastructure-relies-on-global-supply-chain-red-hats-navtez-bal/132574062",
+        "summary": "Seventy-five percent of India's AI infrastructure relies on a global supply chain, according to Navtez Bal of Red Hat. The company views the Indian market as a key opportunity, particularly in sovereign AI and virtualization. Red Hat aims to drive innovation in India through its core portfolio, focusing on these areas.",
         "date_published": "2026-07-23",
         "source_name": "ET CIO - AI",
         "category": "Major AI Developments",
@@ -14270,7 +14330,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives",
     "Major AI Developments"
   ]
 }

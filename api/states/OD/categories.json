@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 12,
+        "title": "Odisha signs MoU with HCLTech for AI Data Centre",
+        "url": "https://www.thehindu.com/news/national/odisha/odisha-signs-mou-with-hcltech-for-ai-data-centre/article71262871.ece",
+        "summary": "Odisha has signed a Memorandum of Understanding (MoU) with HCLTech to establish an AI Data Centre. The project aims to provide secure, scalable, and inclusive digital infrastructure for various stakeholders. This infrastructure will cater to the needs of government, research institutions, startups, and enterprises.",
+        "date_published": "2026-07-25",
+        "source_name": "The Hindu - Odisha",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Odisha govt to launch AI smart surveillance in registration offices",
         "url": "https://cellit.in/odisha-govt-to-launch-ai-smart-surveillance-in-registration-offices/",
@@ -104,6 +124,26 @@
     ],
     "Events": [],
     "Major AI Developments": [
+      {
+        "id": 11,
+        "title": "HCLTech to set up Rs 15,000cr global delivery hub, AI data centre in Odisha",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/hcltech-to-set-up-rs-15000cr-global-delivery-hub-ai-data-centre-in-odisha/articleshow/132605927.cms",
+        "summary": "HCLTech is establishing a global delivery hub and an AI data centre in Odisha with an investment of Rs 15,000 crore. The hub is expected to drive technological advancements and economic growth in the region. This significant investment underscores HCLTech's commitment to expanding its presence in India and leveraging AI capabilities.",
+        "date_published": "2026-07-25",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 15,
         "title": "Law student arrested after fatal drunk driving crash in Odisha",
@@ -368,5 +408,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives",
+    "Major AI Developments"
+  ]
 }

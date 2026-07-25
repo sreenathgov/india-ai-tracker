@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 7,
+        "title": "Karnataka to roll out policy to expand tech investments beyond Bengaluru in 100 days: CM Shivakumar",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/karnataka-to-roll-out-policy-to-expand-tech-investments-beyond-bengaluru-in-100-days-cm-shivakumar/132609397",
+        "summary": "Karnataka's Chief Minister Shivakumar plans to roll out a policy to expand tech investments beyond Bengaluru within 100 days. The state also aims to establish an AI University with industry participation and introduce a Sustainable Data Centre Policy. Additionally, a Robotics & Innovation Zone is planned to drive technology-led growth in the state.",
+        "date_published": "2026-07-24",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Mysuru set to be second IT & AI city",
         "url": "https://starofmysore.com/mysuru-set-to-be-second-it-ai-city/",
@@ -385,6 +405,26 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 4,
+        "title": "Bengaluru Tech Summit 2026 to be held from Nov 17-19",
+        "url": "https://yourstory.com/2026/07/bengaluru-tech-summit-2026-held-from-nov-17-19",
+        "summary": "The Bengaluru Tech Summit 2026 will take place from November 17-19, gathering a large number of tech industry professionals. The event is expected to attract over 25,000 delegates, 1,000 tech startups, and 60,000 business visitors from 75 countries. It will also feature more than 1,800 exhibitors from India and abroad.",
+        "date_published": "2026-07-24",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 3,
         "title": "Karnataka schools introduce AI as vocational subject in classes 9-10, instead of third language",

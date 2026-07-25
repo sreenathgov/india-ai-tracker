@@ -183,6 +183,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "AI rewrites fertility playbook, from embryo selection to sperm screening",
+        "url": "https://timesofindia.indiatimes.com/city/pune/ai-rewrites-fertility-playbook-from-embryo-selection-to-sperm-screening/articleshow/132613670.cms",
+        "summary": "Artificial intelligence is revolutionizing the field of fertility by improving embryo selection and sperm screening. AI technology can help identify the healthiest embryos and sperm, increasing the chances of successful pregnancies. This innovative approach is redefining the fertility treatment landscape, offering new hope to individuals and couples struggling with infertility.",
+        "date_published": "2026-07-25",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Earth Fund leads $3 Mn Series A round in Wiffy",
         "url": "https://entrackr.com/snippets/earth-fund-leads-3-mn-series-a-round-in-wiffy-12191137",
@@ -2309,5 +2329,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

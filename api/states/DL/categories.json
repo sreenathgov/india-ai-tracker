@@ -491,6 +491,66 @@
     "Major AI Developments": [
       {
         "id": 5,
+        "title": "Big win for OpenAI; A tail of promise",
+        "url": "https://yourstory.com/2026/07/big-win-openai-ani-case-tail-of-promise",
+        "summary": "The Delhi High Court ruled in favor of OpenAI, stating that ANI failed to prove ChatGPT had memorized or reproduced its copyrighted content. This decision marks a significant win for OpenAI, the developer of ChatGPT. The ruling suggests that ChatGPT's use of copyrighted material does not constitute infringement.",
+        "date_published": "2026-07-25",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Training ChatGPT on Copyrighted Works Prima Facie Protected Under Indian Copyright Act: Delhi High Court Refuses Interim Injunction Against OpenAI",
+        "url": "https://spicyip.com/2026/07/training-chatgpt-on-copyrighted-works-prima-facie-protected-under-indian-copyright-act-delhi-high-court-refuses-interim-injunction-against-openai.html",
+        "summary": "The Delhi High Court has refused an interim injunction against OpenAI, allowing ChatGPT to continue operating. The court ruled that training ChatGPT on copyrighted works is prima facie protected under the Indian Copyright Act. This decision was made by Justice Amit Bansal of the Delhi High Court in a highly anticipated case.",
+        "date_published": "2026-07-24",
+        "source_name": "SpicyIP",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Delhi HC to decide: Can OpenAI use copyrighted material to train ChatGPT?",
+        "url": "https://indianexpress.com/article/cities/delhi/delhi-high-court-openai-chatgpt-copyright-case-verdict-10801568/",
+        "summary": "The Delhi High Court will decide on the use of copyrighted material by OpenAI to train its ChatGPT model. The case revolves around the question of whether OpenAI can utilize copyrighted content without permission to improve its AI chatbot. A decision is pending from the Delhi HC on this matter.",
+        "date_published": "2026-07-24",
+        "source_name": "Indian Express - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
         "title": "BusinessNext raises $40 Mn from ServiceNow Ventures at $700 Mn valuation",
         "url": "https://entrackr.com/news/businessnext-raises-40-mn-from-servicenow-ventures-at-700-mn-valuation-12189549",
         "summary": "BusinessNext, a banking software startup, has raised $40 million in a Series B funding round from ServiceNow Ventures, valuing the company at $700 million. This valuation is nearly four times its last reported valuation of $181 million in 2021. ServiceNow has acquired around a 5% stake in BusinessNext as part of the transaction.",
@@ -3985,5 +4045,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
