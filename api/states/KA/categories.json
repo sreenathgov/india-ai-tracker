@@ -406,6 +406,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Special Intensive Revision: AI used to detect 6.41 lakh anomalies in Bengaluru",
+        "url": "https://www.thehindu.com/news/cities/bangalore/special-intensive-revision-ai-used-to-detect-641-lakh-anomalies-in-bengaluru/article71267053.ece",
+        "summary": "The Greater Bengaluru Authority has detected 6.41 lakh anomalies within its jurisdiction using AI. This discovery was made during the enumeration phase, marking the first time such information has been disclosed. The anomalies are referred to as \"logical discrepancies\" and were identified with the help of artificial intelligence.",
+        "date_published": "2026-07-26",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Nano summit in Bengaluru to focus on AI, deep-tech innovation",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/nano-summit-in-bengaluru-to-focus-on-ai-deep-tech-innovation/articleshow/132630843.cms",
+        "summary": "A nano summit will be held in Bengaluru from August 3-5, focusing on AI and deep-tech innovation. The event aims to bring together experts and innovators to discuss the latest advancements in these fields. Key discussions will center around the intersection of AI and deep-tech, driving innovation and growth in the industry.",
+        "date_published": "2026-07-26",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Karnataka logs 72% student attendance via facial recognition app",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/karnataka-logs-72-student-attendance-via-facial-recognition-app/articleshow/132630336.cms",
+        "summary": "Karnataka has implemented a facial recognition app to track student attendance, resulting in a 72% attendance rate. The app uses facial recognition technology to mark students present, aiming to improve attendance and reduce proxy attendance. The initiative has shown promising results, with a significant increase in student attendance recorded across the state.",
+        "date_published": "2026-07-26",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Bengaluru Tech Summit 2026 to be held from Nov 17-19",
         "url": "https://yourstory.com/2026/07/bengaluru-tech-summit-2026-held-from-nov-17-19",
@@ -3578,6 +3638,30 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 1,
+        "title": "Funding and acquisitions in Indian startups this week [July 20 - July 25]",
+        "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-july-20-july-25-12196344",
+        "summary": "16 Indian startups raised nearly $164 million in funding this week, with 4 growth-stage and 12 early-stage deals. This is a decrease from the previous week, which saw 19 startups secure about $271 million. The week also saw other notable events, including one departure, two fund launches, and one ESOP.",
+        "date_published": "2026-07-25",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "UP",
+          "DL",
+          "TG",
+          "KA",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "AI insurtech startup NeuralKart raises seed funding led by Inflection Point Ventures",
         "url": "https://entrackr.com/snippets/ai-insurtech-startup-neuralkart-raises-seed-funding-led-by-inflection-point-ventures-12189954",
@@ -4712,5 +4796,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
