@@ -1295,6 +1295,26 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "Why a 'Clean' Property File Isn't Enough: How Cubictree's AI Protects Lenders from Hidden Fraud",
+        "url": "https://yourstory.com/2026/07/why-clean-property-file-isnt-enough-how-cubictrees-ai-protects-lenders-from-hidden-fraud",
+        "summary": "Cubictree's AI technology is being used to protect lenders from hidden fraud in India's lending system. The country's lending system is vulnerable due to fragmented records and inadequate manual checks. Cubictree's AI Property Compliant Report aims to address this issue by providing a more comprehensive and reliable verification process.",
+        "date_published": "2026-07-27",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "AI-led underwriting is the missing link in India’s MSME credit story",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-led-underwriting-is-the-missing-link-in-indias-msme-credit-story/132619490",
         "summary": "India's MSME credit gap is estimated to be Rs 25-30 lakh crore, with only 36 million of the 87 million registered MSMEs having taken a formal loan. This highlights a significant credit gap in the sector, underscoring the need for innovative solutions. AI-led underwriting is being explored as a potential solution to address this gap.",
@@ -11700,6 +11720,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "Cactus Partners targets Rs 1,600 Cr Fund II, plans 13-15 investments: Report",
+        "url": "https://entrackr.com/snippets/cactus-partners-targets-rs-1600-cr-fund-ii-plans-13-15-investments-report-12200812",
+        "summary": "Cactus Partners, an early-stage venture capital firm, is targeting a corpus of Rs 1,600 crore for its second fund, planning to invest in 13-15 startups. The firm intends to write initial cheques of Rs 60-100 crore, primarily backing companies raising $10-20 million. It aims to lead funding rounds with investments of $6-10 million, syndicating the remaining capital with other investors.",
+        "date_published": "2026-07-27",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Traveltech startup 30 Sundays raises Rs 61 Cr led by Bessemer Venture Partners",
         "url": "https://yourstory.com/2026/07/traveltech-startup-30-sundays-rs-61-crore-bessemer-venture-partners",
@@ -14329,5 +14369,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News",
+    "Major AI Developments"
+  ]
 }

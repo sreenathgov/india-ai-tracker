@@ -46,6 +46,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "NCPOR turns to AI to unlock the secrets hidden in the ocean floor",
+        "url": "https://timesofindia.indiatimes.com/city/goa/ncpor-turns-to-ai-to-unlock-the-secrets-hidden-in-the-ocean-floor/articleshow/132647452.cms",
+        "summary": "The National Centre for Polar and Ocean Research (NCPOR) is utilizing artificial intelligence (AI) to uncover secrets hidden on the ocean floor. This initiative aims to unlock new knowledge and discoveries about the ocean. NCPOR's use of AI technology is expected to enhance its research capabilities and provide new insights into the ocean's depths.",
+        "date_published": "2026-07-27",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 16,
         "title": "17% dip in accidents, govt credits AI &amp; data analytics",
         "url": "https://timesofindia.indiatimes.com/city/goa/17-dip-in-accidents-govt-credits-ai-data-analytics/articleshow/131642628.cms",
@@ -328,5 +348,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
