@@ -491,6 +491,26 @@
     "Major AI Developments": [
       {
         "id": 5,
+        "title": "Delhi Police seek removal of AI-generated posts linked to Jantar Mantar protest",
+        "url": "https://www.tribuneindia.com/news/delhi/police-seek-removal-of-ai-generated-posts-linked-to-jantar-mantar-protest",
+        "summary": "The Delhi Police has asked social media platforms to remove hundreds of posts related to the Jantar Mantar protest, citing AI-generated abusive content and misinformation. The posts allegedly target Prime Minister Narendra Modi and the Central Government. The request is part of an ongoing investigation into the matter.",
+        "date_published": "2026-07-27",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
         "title": "Big win for OpenAI; A tail of promise",
         "url": "https://yourstory.com/2026/07/big-win-openai-ani-case-tail-of-promise",
         "summary": "The Delhi High Court ruled in favor of OpenAI, stating that ANI failed to prove ChatGPT had memorized or reproduced its copyrighted content. This decision marks a significant win for OpenAI, the developer of ChatGPT. The ruling suggests that ChatGPT's use of copyrighted material does not constitute infringement.",
@@ -3492,6 +3512,26 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 3,
+        "title": "This startup helps brands get discovered across AI search platforms",
+        "url": "https://yourstory.com/2026/07/this-startup-helps-brands-get-discovered-across-ai-search-platforms",
+        "summary": "DareAISearch, a Gurugram-based startup, is developing tools to help brands maintain visibility across AI search platforms. The startup aims to support brands in staying discoverable on platforms like ChatGPT, Gemini, and Perplexity. This comes as AI increasingly influences how people find products and services online.",
+        "date_published": "2026-07-27",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 1,
         "title": "Funding and acquisitions in Indian startups this week [July 20 - July 25]",

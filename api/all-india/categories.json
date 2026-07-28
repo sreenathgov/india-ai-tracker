@@ -1315,6 +1315,46 @@
       },
       {
         "id": 1,
+        "title": "India is where AI gets figured out",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-is-where-ai-gets-figured-out/132653907",
+        "summary": "India's diverse linguistic, cultural, and digital landscape is becoming a key testing ground for artificial intelligence. The country's complex market is expected to play a crucial role in developing AI that can understand context, intent, and human behavior. India's unique environment is poised to drive global AI innovation as the technology shifts from showcasing capabilities to solving real-world problems.",
+        "date_published": "2026-07-27",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Amazon&#039;s Machine learning Summer School turns five, over 12,000 students trained in AI/ML skills across India",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/amazons-free-ai-training-program-faces-scrutiny-over-its-true-impact-and-accessibility/132656260",
+        "summary": "Amazon India's Machine Learning Summer School has trained over 12,000 students in AI/ML skills since its inception. The free virtual program has seen significant growth in registrations since 2021, bridging academic learning with industry-ready skills. Alumni of the program have gone on to secure roles at Amazon and other leading technology firms.",
+        "date_published": "2026-07-27",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "AI-led underwriting is the missing link in India’s MSME credit story",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-led-underwriting-is-the-missing-link-in-indias-msme-credit-story/132619490",
         "summary": "India's MSME credit gap is estimated to be Rs 25-30 lakh crore, with only 36 million of the 87 million registered MSMEs having taken a formal loan. This highlights a significant credit gap in the sector, underscoring the need for innovative solutions. AI-led underwriting is being explored as a potential solution to address this gap.",
@@ -14369,8 +14409,5 @@
       }
     ]
   },
-  "today_updates": [
-    "AI Start-Up News",
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
