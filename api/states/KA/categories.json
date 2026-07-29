@@ -406,6 +406,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "Revspot raises $4.8 Mn in Series A round co-led by Inflexor and Info Edge Ventures",
+        "url": "https://entrackr.com/snippets/revspot-raises-48-mn-in-series-a-round-co-led-by-inflexor-info-edge-ventures-12208007",
+        "summary": "Revspot, a Bengaluru-based AI startup, has raised $4.8 million in a Series A funding round co-led by Inflexor Ventures and Info Edge Ventures. The round also saw participation from other investors, including Pentathlon Ventures and Silicon Road Ventures. The fresh capital will be used to strengthen its product and engineering teams and expand its AI-powered platform.",
+        "date_published": "2026-07-29",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Building materials quick commerce startup Fixxly raises $5.5 Mn in seed round",
+        "url": "https://entrackr.com/snippets/building-materials-quick-commerce-startup-fixxly-raises-55-mn-in-seed-round-12207612",
+        "summary": "Fixxly, a Bengaluru-based building materials quick commerce startup, has raised $5.5 million in a seed funding round from Accel, Fireside Ventures, and Lightspeed India Partners. The fresh capital will be used to strengthen its technology platform and scale operations ahead of its commercial launch on September 1. Fixxly plans to begin operations in Bengaluru before expanding to other cities with its AI-powered quick commerce platform for building materials.",
+        "date_published": "2026-07-29",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "Use AI as a force to do what no one could do before: Sikka",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/use-ai-as-a-force-to-do-what-no-one-could-do-before-sikka/articleshow/132691623.cms",
+        "summary": "Former Infosys CEO Vishal Sikka emphasizes the potential of AI to achieve unprecedented feats. He encourages using AI as a force to accomplish tasks that were previously impossible for humans. Sikka's statement highlights the transformative power of artificial intelligence.",
+        "date_published": "2026-07-29",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Special Intensive Revision: AI used to detect 6.41 lakh anomalies in Bengaluru",
         "url": "https://www.thehindu.com/news/cities/bangalore/special-intensive-revision-ai-used-to-detect-641-lakh-anomalies-in-bengaluru/article71267053.ece",
@@ -4796,5 +4856,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

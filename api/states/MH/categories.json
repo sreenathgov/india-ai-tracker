@@ -203,6 +203,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 11,
+        "title": "High Court permits Gadkari to sue Meta, X &amp; others over deepfakes, AI content",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/high-court-permits-gadkari-to-sue-meta-x-others-over-deepfakes-ai-content/132677826",
+        "summary": "The High Court has allowed Indian minister Nitin Gadkari to sue Meta, X, and others over AI-generated deepfakes and content that falsely portray him as benefiting from fuel programs. The court established jurisdiction due to the content's accessibility in Maharashtra. Gadkari is seeking permanent injunctions to stop the circulation of such false content.",
+        "date_published": "2026-07-28",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "‘Future wars will target data; AI can’t replace human judgment’",
         "url": "https://timesofindia.indiatimes.com/city/nagpur/future-wars-will-target-data-ai-cant-replace-human-judgment/articleshow/132647603.cms",
@@ -2393,7 +2413,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

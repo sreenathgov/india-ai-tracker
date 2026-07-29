@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 2,
+        "title": "JanAI shares roadmap to prepare India’s higher education system for an AI-driven economy",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/janai-shares-roadmap-to-prepare-indias-higher-education-system-for-an-ai-driven-economy/132702630",
+        "summary": "JanAI has shared a draft report with NITI Aayog to prepare India's higher education system for an AI-driven economy. The report identifies gaps in assessment, faculty preparedness, and industry alignment, and recommends curriculum reforms and national AI capability frameworks. The initiative aims to strengthen human capabilities alongside technology adoption to ensure future readiness.",
+        "date_published": "2026-07-29",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Pronto widens AI camera rollout in homes with ‘Verified’ offering",
         "url": "https://entrackr.com/news/pronto-widens-ai-camera-rollout-in-homes-with-verified-offering-12192910",
@@ -1293,6 +1313,126 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 1,
+        "title": "OnePlus N6X: India sale begins August 4; 120Hz display, AI photo tools confirmed - Check other specs",
+        "url": "https://www.etnownews.com/technology/oneplus-n6x-india-sale-begins-august-4-120hz-display-ai-photo-tools-confirmed-check-other-specs-article-155204446",
+        "summary": "OnePlus has confirmed the N6X will go on sale in India on August 4. The device features a 120Hz display and AI-powered photo editing tools. The sale date and key specs have been officially revealed by the company.",
+        "date_published": "2026-07-29",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "India scores high on semiconductor sector but modest in tech sovereignty: Forrester",
+        "url": "https://yourstory.com/2026/07/india-scores-high-semiconductor-sector-modest-tech-sovereignty-forrester",
+        "summary": "India is expected to significantly improve its semiconductor sovereignty by 2030, but its overall tech independence remains modest. Forrester reports that achieving broader technology independence will require investments in areas like AI, cloud, and data centres. Continued investments in these sectors, as well as talent and strategic partnerships, are necessary for India's tech growth.",
+        "date_published": "2026-07-29",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Instamart gets a new CEO; Antler India bets on AI, climate tech",
+        "url": "https://yourstory.com/2026/07/instamart-gets-a-new-ceo-antler-startups-ai-climatetech-deeptech",
+        "summary": "Quick commerce is experiencing growth, with market leaders like Blinkit, Instamart, and Zepto expanding their networks. Amazon and Flipkart are also increasing their quick-commerce services. Instamart has appointed a new CEO amidst this expansion.",
+        "date_published": "2026-07-29",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "BharatGen CEO On Why Models Alone Can’t Help India Gain In The AI Race",
+        "url": "https://inc42.com/startups/bharatgen-ceo-on-why-models-alone-cant-help-india-gain-in-the-ai-race/",
+        "summary": "BharatGen's CEO believes that models alone are insufficient for India to gain an advantage in the AI race. The country's homegrown foundation model initiatives are competing for talent, compute, and enterprise mindshare. To succeed, India needs a more comprehensive approach to AI development beyond just models.",
+        "date_published": "2026-07-29",
+        "source_name": "Inc42 Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "India&#039;s AI boom is rewarding engineers more than coders",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-boom-is-rewarding-engineers-more-than-coders/132678394",
+        "summary": "India's AI and manufacturing push is driving stronger salary growth for engineers, technical support professionals, and infrastructure roles compared to software developers. The country's next wage boom is expected to be tied to building and running AI infrastructure, backed by government investments in semiconductors, electronics, and EVs. This shift is reshaping India's job market, with non-coding roles seeing greater rewards.",
+        "date_published": "2026-07-28",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Circular economy company Recykal invests Rs 10 Cr in Walbha Industries",
+        "url": "https://entrackr.com/snippets/circular-economy-company-recykal-invests-rs-10-cr-in-walbha-industries-12205320",
+        "summary": "Recykal, a circular economy company, has invested Rs 10 crore in Walbha Industries, a biomass briquette and pellet manufacturer. This strategic investment marks Recykal's entry into the bioenergy value chain, expanding its focus beyond waste management. The partnership aims to connect Walbha's biomass production with Recykal's network of over 620 brands and manufacturers, creating a demand channel for biomass fuel.",
+        "date_published": "2026-07-28",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 1,
         "title": "Why a 'Clean' Property File Isn't Enough: How Cubictree's AI Protects Lenders from Hidden Fraud",
@@ -11760,6 +11900,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 6,
+        "title": "AI firm Krutrim lays off nearly half of its workforce",
+        "url": "https://yourstory.com/2026/07/krutrim-lays-off-nearly-half-workforce",
+        "summary": "Krutrim, an AI firm, has laid off nearly half of its workforce in its second round of layoffs this year. The latest cuts have affected employees in the product and engineering teams. This follows an earlier round of layoffs that impacted the sales, go-to-market, and business operations teams.",
+        "date_published": "2026-07-28",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Cactus Partners targets Rs 1,600 Cr Fund II, plans 13-15 investments: Report",
         "url": "https://entrackr.com/snippets/cactus-partners-targets-rs-1600-cr-fund-ii-plans-13-15-investments-report-12200812",
@@ -14409,5 +14569,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives",
+    "Major AI Developments"
+  ]
 }
