@@ -5,6 +5,28 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "Kanwar Yatra: Delhi-Haridwar highway shuts from August 4, traffic curbs across western UP",
+        "url": "https://timesofindia.indiatimes.com/city/noida/kanwar-yatra-delhi-haridwar-highway-shuts-from-august-4-traffic-curbs-across-western-up/articleshow/132730397.cms",
+        "summary": "Western Uttar Pradesh will implement traffic restrictions from August 4 for the annual Kanwar Yatra, affecting the Delhi-Haridwar highway. Authorities have made arrangements for medical facilities, surveillance, and security, including AI-enabled cameras. Commuters can expect longer travel times and higher fares due to diversions and traffic curbs across the region.",
+        "date_published": "2026-07-30",
+        "source_name": "Times of India - Noida",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "UK",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 13,
         "title": "IIITH’s TechForward roundtable defines Agentic AI as an ecosystem rather than just a chatbot or model",
         "url": "https://www.iiit.ac.in/iiiths-techforward-roundtable-defines-agentic-ai-as-an-ecosystem-rather-than-just-a-chatbot-or-model/",
@@ -134,5 +156,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

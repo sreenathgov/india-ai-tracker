@@ -23,6 +23,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 1,
+        "title": "Paytm founder Vijay Shekhar Sharma calls AI a once-in-a-generation opportunity for India",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/paytm-founder-vijay-shekhar-sharma-calls-ai-a-once-in-a-generation-opportunity-for-india/132704484",
+        "summary": "Paytm founder Vijay Shekhar Sharma views artificial intelligence as a significant opportunity for India to create new jobs and drive economic growth. He believes government initiatives like the IndiaAI Mission can help the country achieve global leadership in AI. Sharma emphasizes the need for focus and ambition to capitalize on this opportunity and drive technological progress.",
+        "date_published": "2026-07-29",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Pronto widens AI camera rollout in homes with ‘Verified’ offering",
         "url": "https://entrackr.com/news/pronto-widens-ai-camera-rollout-in-homes-with-verified-offering-12192910",
@@ -1314,6 +1334,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "GenAI to reshape workforce, GCCs to cushion job impact",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/genai-to-reshape-workforce-gccs-to-cushion-job-impact/132725981",
+        "summary": "GenAI is expected to transform India's labor market over the next decade by automating tasks and augmenting jobs with AI. Global capability centers will help cushion the employment impact of this shift. As a result, workers will be able to focus on more complex and higher-value tasks.",
+        "date_published": "2026-07-30",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "OnePlus N6X: India sale begins August 4; 120Hz display, AI photo tools confirmed - Check other specs",
         "url": "https://www.etnownews.com/technology/oneplus-n6x-india-sale-begins-august-4-120hz-display-ai-photo-tools-confirmed-check-other-specs-article-155204446",
@@ -1380,6 +1420,46 @@
         "summary": "BharatGen's CEO believes that models alone are insufficient for India to gain an advantage in the AI race. The country's homegrown foundation model initiatives are competing for talent, compute, and enterprise mindshare. To succeed, India needs a more comprehensive approach to AI development beyond just models.",
         "date_published": "2026-07-29",
         "source_name": "Inc42 Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Gen-AI to boost India&#039;s labour productivity by 0.4 percentage points annually over next decade: Goldman Sachs",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/gen-ai-to-boost-indias-labour-productivity-by-0-4-percentage-points-annually-over-next-decade-goldman-sachs/132702664",
+        "summary": "Gen-AI is expected to drive labour productivity growth in India, boosting it by 0.4 percentage points annually over the next decade. This growth will be driven by the increasing adoption of Generative Artificial Intelligence technologies. The impact of Gen-AI on jobs is anticipated to be uneven across different sectors in India.",
+        "date_published": "2026-07-29",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "India may need USD 350-435 billion investment in AI, data centre infrastructure by 2030",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/india-may-need-usd-350-435-billion-investment-in-ai-data-centre-infrastructure-by-2030/132706184",
+        "summary": "India may need $350-435 billion in investments by 2030 to develop artificial intelligence and data centre infrastructure. This investment is required to support the country's growing digital economy, according to a report by OmniScience Insights Labs. The significant investment will help India build the necessary infrastructure for its expanding digital sector.",
+        "date_published": "2026-07-29",
+        "source_name": "ET CIO - Next Gen Tech",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -11901,6 +11981,26 @@
     "AI Start-Up News": [
       {
         "id": 6,
+        "title": "Indian Physical AI attracts $155 Mn in 2026 as robotics, real-world data gain traction",
+        "url": "https://entrackr.com/report/indian-physical-ai-attracts-155-mn-in-2026-as-robotics-real-world-data-gain-traction-12210766",
+        "summary": "Indian Physical AI has attracted $155 million in funding in 2026, driven by growing interest in robotics and real-world data. Pronto, a home services startup, is expanding its Physical AI experiment involving wearable cameras in customers' homes to collect real-world data for training AI and robotics systems. This move highlights the potential of Physical AI, despite larger players like Snabbit and Urban Company opting out of similar initiatives.",
+        "date_published": "2026-07-30",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
         "title": "AI firm Krutrim lays off nearly half of its workforce",
         "url": "https://yourstory.com/2026/07/krutrim-lays-off-nearly-half-workforce",
         "summary": "Krutrim, an AI firm, has laid off nearly half of its workforce in its second round of layoffs this year. The latest cuts have affected employees in the product and engineering teams. This follows an earlier round of layoffs that impacted the sales, go-to-market, and business operations teams.",
@@ -14570,7 +14670,7 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives",
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

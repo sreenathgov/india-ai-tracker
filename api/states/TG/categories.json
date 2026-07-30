@@ -87,6 +87,86 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "Bigger Not Always Better: IIIT-H Researchers Show That Compact Models May Be More Effective For Brain Studies",
+        "url": "https://www.iiit.ac.in/icml/",
+        "summary": "Researchers at IIIT-H have found that compact models may be more effective for brain studies, challenging the notion that bigger models are always better. This discovery suggests that smaller, more efficient models can be just as effective as larger ones in certain applications. The study's findings have significant implications for the field of brain research and AI model development.",
+        "date_published": "2026-07-30",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Admissions open for 6-month AI/ML training program by iHub-Data at IIIT Hyderabad",
+        "url": "https://www.iiit.ac.in/admissions-ai-ml/",
+        "summary": "Admissions are now open for a 6-month training program in AI and ML at IIIT Hyderabad, offered by iHub-Data. The program aims to provide training in artificial intelligence and machine learning. It is being conducted at the International Institute of Information Technology in Hyderabad.",
+        "date_published": "2026-07-30",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "Police summon Meta over AI fake investment scam ads",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/police-summon-meta-over-ai-fake-investment-scam-ads/articleshow/132719914.cms",
+        "summary": "Police have summoned Meta to provide information on the safeguards in place to prevent AI-driven fake investment scam ads on their platform. The move comes after several complaints were filed regarding scam ads using AI technology to deceive investors. Meta is required to provide details on the measures they have taken to protect users from such scams.",
+        "date_published": "2026-07-30",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 14,
+        "title": "From AI ban to meetings under trees, Hyd-based foundation embraces green therapy",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/from-ai-ban-to-meetings-under-trees-hyd-based-foundation-embraces-green-therapy/articleshow/132719865.cms",
+        "summary": "A Hyderabad-based foundation has implemented an AI ban and adopted green therapy practices, including holding meetings under trees. This approach aims to promote a healthier and more environmentally conscious work environment. The foundation's unique methods are part of a broader effort to reduce reliance on technology and increase connection with nature.",
+        "date_published": "2026-07-30",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Expert Comments",
         "url": "https://www.iiit.ac.in/expert-comments/",
@@ -2305,5 +2385,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

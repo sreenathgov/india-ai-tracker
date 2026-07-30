@@ -491,6 +491,48 @@
     "Major AI Developments": [
       {
         "id": 5,
+        "title": "ANI v. OpenAI: User Rights, Fair Dealing, and the Future of AI in Indian Copyright Law (Part II)",
+        "url": "https://spicyip.com/2026/07/ani-v-openai-user-rights-fair-dealing-and-the-future-of-ai-in-indian-copyright-law-part-ii.html",
+        "summary": "The Delhi High Court is examining issues related to fair dealing and user rights in Indian copyright law in the case of ANI v. OpenAI. The court is considering whether ChatGPT memorized or substantially reproduced ANI's works and whether it has territorial jurisdiction over the case. The court has observed that ChatGPT did not memorize or substantially reproduce ANI's works, addressing one of the key issues in the case.",
+        "date_published": "2026-07-30",
+        "source_name": "SpicyIP",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "Kanwar Yatra: Delhi-Haridwar highway shuts from August 4, traffic curbs across western UP",
+        "url": "https://timesofindia.indiatimes.com/city/noida/kanwar-yatra-delhi-haridwar-highway-shuts-from-august-4-traffic-curbs-across-western-up/articleshow/132730397.cms",
+        "summary": "Western Uttar Pradesh will implement traffic restrictions from August 4 for the annual Kanwar Yatra, affecting the Delhi-Haridwar highway. Authorities have made arrangements for medical facilities, surveillance, and security, including AI-enabled cameras. Commuters can expect longer travel times and higher fares due to diversions and traffic curbs across the region.",
+        "date_published": "2026-07-30",
+        "source_name": "Times of India - Noida",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "UK",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
         "title": "Delhi Police seek removal of AI-generated posts linked to Jantar Mantar protest",
         "url": "https://www.tribuneindia.com/news/delhi/police-seek-removal-of-ai-generated-posts-linked-to-jantar-mantar-protest",
         "summary": "The Delhi Police has asked social media platforms to remove hundreds of posts related to the Jantar Mantar protest, citing AI-generated abusive content and misinformation. The posts allegedly target Prime Minister Narendra Modi and the Central Government. The request is part of an ongoing investigation into the matter.",
@@ -4109,5 +4151,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

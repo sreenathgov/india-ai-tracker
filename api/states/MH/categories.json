@@ -183,6 +183,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "AI and geo-tagging to monitor development projects in Maharashtra’s local bodies",
+        "url": "https://cellit.in/ai-and-geo-tagging-to-monitor-development-projects-in-maharashtras-local-bodies/",
+        "summary": "Maharashtra is utilizing AI and geo-tagging to monitor development projects in local bodies. This technology will enable real-time tracking and evaluation of project progress. The initiative aims to enhance transparency and efficiency in local governance.",
+        "date_published": "2026-07-30",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Maha only state with its own AI to curb tiger attacks: CM",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/maha-only-state-with-its-own-ai-to-curb-tiger-attacks-cm/articleshow/132721406.cms",
+        "summary": "Maharashtra is the only state with its own artificial intelligence system to prevent tiger attacks, according to the Chief Minister. This AI system is a unique initiative aimed at mitigating human-tiger conflicts. The state's use of AI technology sets it apart from other regions in addressing this issue.",
+        "date_published": "2026-07-30",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "NCW chairperson urges women to use AI for economic growth",
         "url": "https://timesofindia.indiatimes.com/city/pune/ncw-chairperson-urges-women-to-use-ai-for-economic-growth/articleshow/132669911.cms",
@@ -2413,5 +2453,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
