@@ -26,6 +26,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "SKUAST-K flags off 1st batch of BTech Artificial Intelligence students to IIT Mandi",
+        "url": "https://www.greaterkashmir.com/business/skuast-k-flags-off-1st-batch-of-btech-artificial-intelligence-students-to-iit-mandi-12214035",
+        "summary": "SKUAST-K has launched its first batch of BTech Artificial Intelligence students, sending them to IIT Mandi. This marks a significant milestone in the institution's efforts to promote AI education. The collaboration between SKUAST-K and IIT Mandi aims to provide students with quality education and training in AI.",
+        "date_published": "2026-07-31",
+        "source_name": "Greater Kashmir - Business",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "HP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "New AI workstation to strengthen HPU’s commitment to excellence in research",
         "url": "https://www.tribuneindia.com/news/himachal/new-ai-workstation-to-strengthen-hpus-commitment-to-excellence-in-research",
@@ -245,5 +265,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

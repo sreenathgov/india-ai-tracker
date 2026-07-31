@@ -1334,12 +1334,52 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Swiggy cuts Q1 FY27 losses by 34%; Shalini Neelankavil on leading in the AI era",
+        "url": "https://yourstory.com/2026/07/swiggy-cuts-q1-fy27-losses-by-34",
+        "summary": "Swiggy reduced its Q1 FY27 losses by 34%. The company's quick commerce business, Instamart, achieved 53% year-over-year revenue growth, reaching Rs 1,232 in the first quarter. Instamart also hit a major breakeven milestone in May 2026.",
+        "date_published": "2026-07-31",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "GenAI to reshape workforce, GCCs to cushion job impact",
         "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/genai-to-reshape-workforce-gccs-to-cushion-job-impact/132725981",
         "summary": "GenAI is expected to transform India's labor market over the next decade by automating tasks and augmenting jobs with AI. Global capability centers will help cushion the employment impact of this shift. As a result, workers will be able to focus on more complex and higher-value tasks.",
         "date_published": "2026-07-30",
         "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "ANI v. OpenAI: User Rights, Fair Dealing, and the Future of AI in Indian Copyright Law (Part I)",
+        "url": "https://spicyip.com/2026/07/ani-v-openai-user-rights-fair-dealing-and-the-future-of-ai-in-indian-copyright-law-part-i.html",
+        "summary": "The Indian court has ruled in favor of OpenAI in the ANI v. OpenAI case, determining that OpenAI's use of ANI's copyrighted works is prima facie non-infringing. This judgment, pronounced on July 24, 2026, marks a significant day in Indian IP history, emphasizing public interest and user rights. The ruling is an interim order, highlighting the court's efforts to balance copyright protection with fair use and public interest.",
+        "date_published": "2026-07-30",
+        "source_name": "SpicyIP",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -14670,7 +14710,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

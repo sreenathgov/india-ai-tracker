@@ -150,6 +150,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Tamil Nadu govt to build AI city; announcement likely in budget",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-govt-to-build-ai-city-announcement-likely-in-budget/articleshow/132746058.cms",
+        "summary": "The Tamil Nadu government plans to build an AI city, with an official announcement expected in the upcoming budget. The project aims to establish a hub for artificial intelligence in the state, although details about the city's location and features have not been disclosed. The announcement is anticipated to be made in the state's budget, outlining the government's vision and plans for the AI city.",
+        "date_published": "2026-07-31",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Why India Needs National Agricultural Intelligence Network",
         "url": "https://timesofindia.indiatimes.com/city/chennai/why-india-needs-national-agricultural-intelligence-network/articleshow/132644923.cms",
@@ -1248,5 +1268,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
