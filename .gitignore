@@ -98,3 +98,6 @@ node_modules/
 *\ 2.md
 *\ 2.glb
 *\ 2.hdr
+
+# Remotion film workspace — local render output only (shipped renders live in added-assets/)
+film/out/

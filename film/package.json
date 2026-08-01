@@ -1,0 +1,23 @@
+{
+  "name": "tw-film",
+  "private": true,
+  "description": "TradeWatch demo film — isolated Remotion workspace (Build Bible v1)",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio",
+    "render:proof": "remotion render ProofOfMotion out/proof-of-motion.mp4",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "@remotion/google-fonts": "^4.0.0",
+    "@remotion/motion-blur": "^4.0.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.8.0"
+  }
+}
