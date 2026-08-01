@@ -46,6 +46,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 8,
+        "title": "Himachal: IIIT-Una launches AI certificate course",
+        "url": "https://www.tribuneindia.com/news/himachal/himachal-iiit-una-launches-ai-certificate-course",
+        "summary": "The Indian Institute of Information Technology (IIIT) in Una has launched a six-month certification program in Artificial Intelligence (AI) and Machine Learning. The program, approved by the All India Council for Technical Education, is part of the Quality Improvement Programme for Postgraduate Faculty. IIIT Director Manish Gaur announced the launch, citing the growing importance of Artificial Intelligence.",
+        "date_published": "2026-07-31",
+        "source_name": "Tribune - Himachal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "HP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "New AI workstation to strengthen HPU’s commitment to excellence in research",
         "url": "https://www.tribuneindia.com/news/himachal/new-ai-workstation-to-strengthen-hpus-commitment-to-excellence-in-research",
@@ -265,7 +285,5 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "First Amgen Scholars Program in India launches at IIIT Hyderabad",
+        "url": "https://www.iiit.ac.in/first-amgen-scholars-program-in-india-launches-at-iiit-hyderabad-2/",
+        "summary": "The Amgen Scholars Program has launched its first program in India at IIIT Hyderabad. This launch is part of various initiatives at IIIT Hyderabad, which also includes a 6-month AI/ML training program and research in AI-powered systems. The institution has also been involved in other projects, such as an AI-powered dashcam system for traffic enforcement and an AI companion for cancer patients.",
+        "date_published": "2026-08-01",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Bigger Not Always Better: IIIT-H Researchers Show That Compact Models May Be More Effective For Brain Studies",
         "url": "https://www.iiit.ac.in/icml/",
@@ -2385,5 +2405,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

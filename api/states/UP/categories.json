@@ -225,6 +225,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "IIT Kanpur launches online AI course for professionals",
+        "url": "https://timesofindia.indiatimes.com/city/kanpur/iit-kanpur-launches-online-ai-course-for-professionals/articleshow/132775644.cms",
+        "summary": "IIT Kanpur has launched an online AI course designed for working professionals, aiming to enhance their skills in artificial intelligence. The course will cover topics such as machine learning, deep learning, and natural language processing, providing participants with hands-on experience. The online course is intended to help professionals upskill and reskill in the field of AI, making them more competitive in the job market.",
+        "date_published": "2026-08-01",
+        "source_name": "Times of India - Andhra Pradesh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "IIT Kanpur launches online certificate course on Advanced Data Science and Machine Learning for Business Analytics",
+        "url": "https://www.tribuneindia.com/news/uttar-pradesh/iit-kanpur-launches-online-certificate-course-on-advanced-data-science-and-machine-learning-for-business-analytics",
+        "summary": "IIT Kanpur has launched a six-month online certificate course on Advanced Data Science and Machine Learning for Business Analytics. The course aims to equip working professionals with industry-relevant skills in AI, ML, and business analytics. It will enable participants to leverage data-driven technologies to make informed business decisions.",
+        "date_published": "2026-07-31",
+        "source_name": "Tribune - Uttar Pradesh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Kanwar Yatra: Delhi-Haridwar highway shuts from August 4, traffic curbs across western UP",
         "url": "https://timesofindia.indiatimes.com/city/noida/kanwar-yatra-delhi-haridwar-highway-shuts-from-august-4-traffic-curbs-across-western-up/articleshow/132730397.cms",
@@ -1190,5 +1230,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

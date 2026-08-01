@@ -490,6 +490,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "NDMC opens Delhi’s first experiential  learning facility at Sarojini School",
+        "url": "https://www.tribuneindia.com/news/delhi/ndmc-opens-delhis-first-experiential-learning-facility-at-sarojini-school",
+        "summary": "The New Delhi Municipal Council (NDMC) has inaugurated Viksit Bharat Anubhavshala, a technology-enabled experiential learning lab at Navyug School in Sarojini Nagar. The lab offers Artificial Intelligence (AI), Augmented Reality (AR), and Virtual Reality (VR)-based learning for students of Classes VI to X. This facility is Delhi's first experiential learning center, providing innovative learning experiences for students.",
+        "date_published": "2026-08-01",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "ANI v. OpenAI: User Rights, Fair Dealing, and the Future of AI in Indian Copyright Law (Part II)",
         "url": "https://spicyip.com/2026/07/ani-v-openai-user-rights-fair-dealing-and-the-future-of-ai-in-indian-copyright-law-part-ii.html",
@@ -4151,5 +4171,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

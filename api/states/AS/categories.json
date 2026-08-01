@@ -26,6 +26,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "Assam commissions first govt-owned GPU cluster to power AI services",
+        "url": "https://timesofindia.indiatimes.com/city/guwahati/assam-commissions-first-govt-owned-gpu-cluster-to-power-ai-services/articleshow/132772376.cms",
+        "summary": "Assam has commissioned its first government-owned GPU cluster, a significant step in enhancing the state's AI capabilities. The GPU cluster is expected to power various AI services, driving innovation and development in the region. This initiative marks a major milestone in Assam's efforts to leverage AI technology for public benefit.",
+        "date_published": "2026-08-01",
+        "source_name": "Times of India - Guwahati",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AS"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Deep knowledge, judgment key in AI age: ANRF CEO at IIT-G",
         "url": "https://timesofindia.indiatimes.com/city/guwahati/deep-knowledge-judgment-key-in-ai-age-anrf-ceo-at-iit-g/articleshow/132350165.cms",
@@ -228,5 +248,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
