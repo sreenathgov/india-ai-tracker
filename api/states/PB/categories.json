@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 5,
+        "title": "Punjab: AI push sparks confusion among teachers",
+        "url": "https://www.tribuneindia.com/news/punjab/ai-push-sparks-confusion-among-teachers",
+        "summary": "Punjab's plan to introduce artificial intelligence (AI) in government schools has sparked confusion among teachers. The state's Education Minister, Harjot Singh Bains, announced that AI will be taught from Classes I to XII in all government schools. Over 12,000 computer faculty will be involved in the initiative, which has raised questions about its difference from the Centre's \"Mission Raftaar\" project.",
+        "date_published": "2026-08-02",
+        "source_name": "Tribune - Punjab",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Punjab becomes first state to introduce AI as mainstream subject from classes 1-12: Harjot Singh Bains",
         "url": "https://www.tribuneindia.com/news/punjab/punjab-becomes-first-state-to-introduce-ai-as-mainstream-subject-from-classes-1-12-bains",
@@ -753,5 +773,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

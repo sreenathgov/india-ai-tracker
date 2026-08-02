@@ -1374,6 +1374,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 1,
+        "title": "Applications open for VibeCode30: Searching for India’s most promising AI-native builders",
+        "url": "https://yourstory.com/2026/07/applications-open-for-vibecode30-searching-for-indias-most-promising-ai-native-builders",
+        "summary": "YourStory is launching VibeCode30 to recognize 30 promising AI-native builders in India. The initiative will unveil its first edition at TechSparks 2026, focusing on individuals and teams using AI-first tools to build innovative products. VibeCode30 aims to identify and showcase India's most talented AI-native builders.",
+        "date_published": "2026-08-01",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Swiggy cuts Q1 FY27 losses by 34%; Shalini Neelankavil on leading in the AI era",
         "url": "https://yourstory.com/2026/07/swiggy-cuts-q1-fy27-losses-by-34",
@@ -12060,6 +12080,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "Startup eyes AI search boom; VC slowdown tests startups",
+        "url": "https://yourstory.com/2026/08/startup-eyes-ai-search-boom-vc-slowdown-tests-startups",
+        "summary": "DareAISearch is assisting brands in increasing their visibility on AI platforms as AI-powered discovery transforms online search. The growth of AI search is occurring amidst a slowdown in venture capital funding, with Indian startup funding reaching its second lowest weekly level this year. This slowdown is testing the resilience of startups, including those in the AI sector.",
+        "date_published": "2026-08-02",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Indian Physical AI attracts $155 Mn in 2026 as robotics, real-world data gain traction",
         "url": "https://entrackr.com/report/indian-physical-ai-attracts-155-mn-in-2026-as-robotics-real-world-data-gain-traction-12210766",
@@ -14750,6 +14790,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }

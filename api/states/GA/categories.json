@@ -46,6 +46,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "AI traffic cameras begin issuing challans at 26 locations across Goa",
+        "url": "https://timesofindia.indiatimes.com/city/goa/ai-traffic-cameras-begin-issuing-challans-at-26-locations-across-goa/articleshow/132796313.cms",
+        "summary": "AI traffic cameras have started issuing challans at 26 locations across Goa. The cameras use artificial intelligence to detect traffic violations and automatically generate fines. This initiative aims to improve road safety and enforce traffic rules in the state.",
+        "date_published": "2026-08-02",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "NCPOR turns to AI to unlock the secrets hidden in the ocean floor",
         "url": "https://timesofindia.indiatimes.com/city/goa/ncpor-turns-to-ai-to-unlock-the-secrets-hidden-in-the-ocean-floor/articleshow/132647452.cms",
@@ -348,5 +368,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
