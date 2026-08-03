@@ -183,6 +183,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "Next AI Breakthrough Can Emerge From Nagpur, Says Fadnavis",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/next-ai-breakthrough-can-emerge-from-nagpur-says-fadnavis/articleshow/132813413.cms",
+        "summary": "Former Maharashtra chief minister Devendra Fadnavis believes Nagpur has the potential to be the hub for the next AI breakthrough. He expressed this sentiment during the launch of an AI Centre of Competency at Rashtrasant Tukadoji Maharaj Nagpur University (RBU). The new centre aims to foster innovation and development in the field of artificial intelligence.",
+        "date_published": "2026-08-03",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "AI and geo-tagging to monitor development projects in Maharashtra’s local bodies",
         "url": "https://cellit.in/ai-and-geo-tagging-to-monitor-development-projects-in-maharashtras-local-bodies/",
@@ -2453,5 +2473,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

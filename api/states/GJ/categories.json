@@ -145,6 +145,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "Dark side of AI: Material to malign",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/dark-side-of-ai-material-to-malign/articleshow/132812996.cms",
+        "summary": "The number of cases received at the Digital Forensics Laboratory (DFS) in Gandhinagar has increased significantly, rising from 68 in 2023 to 115 in 2026. This surge is attributed to the dark side of AI, where the technology is being misused to create and disseminate harmful content. The growing misuse of AI for malicious purposes has led to a substantial increase in cases related to online harassment and defamation.",
+        "date_published": "2026-08-03",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Vadodara engineer played key AI role in Vikram-1 mission",
         "url": "https://timesofindia.indiatimes.com/city/vadodara/vadodara-engineer-played-key-ai-role-in-vikram-1-mission/articleshow/132523479.cms",
@@ -1613,5 +1633,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

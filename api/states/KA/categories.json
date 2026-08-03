@@ -3718,6 +3718,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "Exclusive: SuperManager AGI in acquisition talks with Fortune 100 firm",
+        "url": "https://entrackr.com/exclusive/exclusive-supermanager-agi-in-acquisition-talks-with-fortune-100-firm-12222583",
+        "summary": "SuperManager AGI, an enterprise AI startup, is in acquisition talks with a Fortune 100 firm, with the proposed transaction valued at around Rs 50 crore. The deal is currently under process, but the identity of the prospective acquirer and the status of a definitive agreement are unclear. SuperManager AGI was founded in 2025 by Nirmal Nambiar and Aditya Sharma.",
+        "date_published": "2026-08-03",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Sarvam plans a trillion-parameter AI model",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/sarvam-plans-a-trillion-parameter-ai-model/articleshow/132746286.cms",
@@ -4916,5 +4936,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

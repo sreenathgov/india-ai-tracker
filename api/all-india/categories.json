@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 3,
+        "title": "Imarticus Learning acquires Singapore-based BELLS Institute of Higher Learning",
+        "url": "https://entrackr.com/snippets/imarticus-learning-acquires-singapore-based-bells-institute-of-higher-learning-12223587",
+        "summary": "Imarticus Learning has acquired Singapore-based BELLS Institute of Higher Learning, combining two institutions focused on professional education and workforce development. The acquisition expands Imarticus Learning's reach, adding BELLS' network of over 150,000 alumni and seven training centres across Singapore. The combined organization now has over 1,100 employees and operates from more than 25 offices.",
+        "date_published": "2026-08-03",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "JanAI shares roadmap to prepare India’s higher education system for an AI-driven economy",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/janai-shares-roadmap-to-prepare-indias-higher-education-system-for-an-ai-driven-economy/132702630",
@@ -1333,6 +1353,46 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 2,
+        "title": "Warehouse automation to humanoids: Addverb bets on India, CEO says physical AI race has begun",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/warehouse-automation-to-humanoids-addverb-bets-on-india-ceo-says-physical-ai-race-has-begun/132818584",
+        "summary": "Addverb is focusing on collaborative robots, quadrupeds, and humanoids as the next frontier of robotics. The company's CEO believes a global race in physical AI has begun, with India having a strong opportunity to build competitive companies. Addverb is betting on India to be a key player in this emerging technology.",
+        "date_published": "2026-08-03",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Cognizant partners with OpenAI, brings global Codex hackathon to 10,000 employees in India",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/cognizant-partners-with-openai-brings-global-codex-hackathon-to-10-000-employees-in-india-11785664922074.html",
+        "summary": "Cognizant has partnered with OpenAI to launch a global Codex hackathon for its employees. The hackathon is open to 10,000 associates in six Indian cities, aiming to help them learn and develop applications using AI tools. This initiative is part of Cognizant's efforts to enhance its employees' skills in artificial intelligence.",
+        "date_published": "2026-08-02",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 1,
         "title": "AI application experts in high demand as companies pursue efficiency, customer focus",
@@ -12080,6 +12140,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "Exclusive: Sarvam AI board to approve $74 funding Mn from NVIDIA, Glade Brook, others",
+        "url": "https://entrackr.com/exclusive/exclusive-sarvam-ai-board-to-approve-74-funding-mn-from-nvidia-glade-brook-others-12223413",
+        "summary": "Sarvam AI is set to raise $74 million in an extension of its Series B round, led by NVIDIA Corporation, with participation from other investors. This funding comes after the company recently raised $234 million in a round led by HCL Technologies, which made it a unicorn. The new funding is expected to be approved by Sarvam AI's board, which has already passed a special resolution for the issuance of new shares.",
+        "date_published": "2026-08-03",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Startup eyes AI search boom; VC slowdown tests startups",
         "url": "https://yourstory.com/2026/08/startup-eyes-ai-search-boom-vc-slowdown-tests-startups",
@@ -14790,6 +14870,8 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "AI Start-Up News",
+    "Policies and Initiatives",
+    "Major AI Developments"
   ]
 }

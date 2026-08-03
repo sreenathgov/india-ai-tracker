@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "CIE at IIIT Hyderabad Selects Five Deep-Tech Startups for Avishkar Venture Studio Summer Cohort 2026",
+        "url": "https://www.iiit.ac.in/cie-at-iiit-hyderabad-selects-five-deep-tech-startups-for-avishkar-venture-studio-summer-cohort-2026/",
+        "summary": "CIE at IIIT Hyderabad has selected five deep-tech startups for the Avishkar Venture Studio Summer Cohort 2026. The institute is also launching various initiatives, including the first Amgen Scholars Program in India and a 6-month AI/ML training program. Additionally, IIIT Hyderabad is making advancements in AI research and applications, such as AI-powered dashcam systems for traffic enforcement.",
+        "date_published": "2026-08-03",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "First Amgen Scholars Program in India launches at IIIT Hyderabad",
         "url": "https://www.iiit.ac.in/first-amgen-scholars-program-in-india-launches-at-iiit-hyderabad-2/",
@@ -2405,5 +2425,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
