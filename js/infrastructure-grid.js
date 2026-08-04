@@ -81,9 +81,13 @@ class InfrastructureGrid {
   }
 
   startAnimation() {
-    if (!this.prefersReducedMotion()) {
-      this.animationId = requestAnimationFrame(() => this.updateAnimation());
+    if (this.prefersReducedMotion()) {
+      // Reduced motion should stop movement, not remove the visual grid.
+      this.drawGrid();
+      return;
     }
+
+    this.animationId = requestAnimationFrame(() => this.updateAnimation());
   }
 
   stopAnimation() {

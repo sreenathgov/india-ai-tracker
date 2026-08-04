@@ -2,6 +2,7 @@
  * Newsletter subscription utility.
  * POSTs to /api/subscribe (Vercel serverless function) which holds the Brevo API key server-side.
  * Set BREVO_API_KEY and BREVO_LIST_ID in your Vercel project environment variables.
+ * Kept as a local static asset so newsletter setup never delays page readiness.
  */
 
 window.brevoSubscribe = async function(email) {

@@ -76,62 +76,78 @@
     <!-- Resource hints — parallelize third-party fetches -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
-    <!-- Performance: preload hero poster (AVIF primary, ~45KB — paints in <200ms) -->
-    <link rel="preload" as="image" href="added-assets/kanan-hero-poster.avif" type="image/avif" fetchpriority="high">
-    <!-- Performance: viewport-aware hero video preload (AV1/HEVC desktop, H.264 mobile) -->
-    <script>
-    (function () {
-        var isMobile = window.matchMedia('(max-width: 768px)').matches;
-        var canAV1 = document.createElement('video')
-            .canPlayType('video/mp4; codecs="av01.0.05M.08"') !== '';
-        var href, type;
-        if (isMobile) {
-            href = 'added-assets/kanan-hero-720p.h264.mp4';
-            type = 'video/mp4';
-        } else if (canAV1) {
-            href = 'added-assets/kanan-hero-1080p.av1.mp4';
-            type = 'video/mp4; codecs="av01.0.05M.08"';
-        } else {
-            href = 'added-assets/kanan-hero-1080p.hevc.mp4';
-            type = 'video/mp4; codecs=hvc1';
-        }
-        var link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'video';
-        link.href = href;
-        link.type = type;
-        link.setAttribute('fetchpriority', 'high');
-        document.head.appendChild(link);
-    })();
-    </script>
+    <!-- The local JPEG poster is kept materialized for instant cold starts. -->
+    <link rel="preload" as="image" href="added-assets/kanan-hero-poster.jpg" type="image/jpeg" fetchpriority="high">
+    <!-- The poster is the only hero preload. The video streams after the
+         element is parsed so it cannot compete with render-blocking assets. -->
     <!-- Performance: preload Cormorant display font weights -->
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/CormorantGaramond-Regular.woff2">
     <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/CormorantGaramond-Medium.woff2">
 
-    <!-- Google Fonts fallback (Cormorant + Inter) -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <!-- Inter is a non-critical enhancement. Load it only after the page is
+         ready so an unavailable font service cannot hold localhost open. -->
+    <script>
+    window.addEventListener('load', function () {
+        if (location.hostname === '127.0.0.1' || location.hostname === 'localhost' || location.hostname === '::1') {
+            return;
+        }
+        var inter = document.createElement('link');
+        inter.rel = 'stylesheet';
+        inter.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
+        document.head.appendChild(inter);
+    }, { once: true });
+    </script>
 
     <link rel="stylesheet" href="css/styles-v2.css?v=21">
     <link rel="stylesheet" href="css/staggered-menu.css?v=2">
-    <link rel="stylesheet" href="css/identity-section.css?v=11">
+    <link rel="stylesheet" href="css/identity-section.css?v=15">
     <!-- manifesto-section.css removed — replaced by inline kl-manifesto styles -->
     <link rel="stylesheet" href="css/footer.css?v=3">
-    <link rel="stylesheet" href="css/tw-demo-clone.css?v=4">
+    <link rel="stylesheet" href="css/tw-demo-clone.css?v=7">
     <link rel="stylesheet" href="css/triptych.css?v=1">
-    <link rel="stylesheet" href="css/drona-brain.css?v=1">
-    <link rel="stylesheet" href="css/evidence-workflow.css?v=1">
-    <link rel="stylesheet" href="css/sectors-bento.css?v=1">
+    <link rel="stylesheet" href="css/drona-brain.css?v=3">
+    <link rel="stylesheet" href="css/drona-funnel.css?v=7">
+    <link rel="stylesheet" href="css/sectors-bento.css?v=6">
 
     <style>
         /* ══════════════════════════════════════════════════════════
            KANAN LABS — CORPORATE LANDING (Phase 2: Hero + Footer)
            Design tokens align with tradewatch.html / sector-watch.html
            ══════════════════════════════════════════════════════════ */
+
+        @font-face {
+            font-family: 'Cormorant Garamond';
+            src: url('assets/fonts/CormorantGaramond-Regular.woff2') format('woff2');
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Cormorant Garamond';
+            src: url('assets/fonts/CormorantGaramond-Medium.woff2') format('woff2');
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Cormorant Garamond';
+            src: url('assets/fonts/CormorantGaramond-SemiBold.woff2') format('woff2');
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Cormorant Garamond';
+            src: url('assets/fonts/CormorantGaramond-Bold.woff2') format('woff2');
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+        }
 
         :root {
             --kl-navy:        #0a2f52;
@@ -165,6 +181,7 @@
             position: relative;
             width: 100%;
             min-height: 100vh;
+            min-height: 100svh;
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -190,77 +207,87 @@
             inset: 0;
             background: linear-gradient(
                 to bottom,
-                rgba(10, 47, 82, 0.20) 0%,
-                rgba(10, 47, 82, 0.05) 28%,
-                rgba(10, 47, 82, 0.10) 48%,
-                rgba(10, 47, 82, 0.55) 72%,
-                rgba(10, 47, 82, 0.88) 88%,
+                rgba(6, 31, 56, 0.22) 0%,
+                rgba(6, 31, 56, 0.04) 30%,
+                rgba(6, 31, 56, 0.12) 50%,
+                rgba(6, 31, 56, 0.62) 72%,
+                rgba(6, 31, 56, 0.92) 90%,
                 var(--kl-navy) 100%
             );
             pointer-events: none;
             z-index: 1;
         }
 
-        /* Content block — anchored from bottom, grows upward */
+        /* Content block — centered low in the viewport, Legora-inspired */
         .kl-hero__content {
             position: absolute;
             z-index: 2;
-            bottom: 22vh;
-            left: 4.5%;
+            bottom: clamp(3.75rem, 8vh, 6.5rem);
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(70rem, calc(100% - 4rem));
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
+            align-items: center;
+            text-align: center;
         }
 
         .kl-hero__title {
             font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: clamp(3rem, 6.5vw, 6.25rem);
+            font-size: clamp(3.25rem, 5.5vw, 5.5rem);
             font-weight: 400;
             color: #ffffff;
-            line-height: 1.05;
-            letter-spacing: -0.01em;
-            margin: 0 0 1rem 0;
+            line-height: 0.98;
+            letter-spacing: -0.025em;
+            max-width: 100%;
+            margin: 0 0 1.1rem;
             text-shadow: 0 2px 20px rgba(0,0,0,0.25);
-            white-space: nowrap;
-            text-align: left;
+            text-wrap: balance;
+            text-align: center;
+        }
+
+        .kl-hero__title-line {
+            display: block;
         }
 
         .kl-hero__tagline {
             font-family: 'Inter', sans-serif;
-            font-size: clamp(0.875rem, 1vw, 1rem);
+            font-size: clamp(0.9rem, 1.05vw, 1.05rem);
             font-weight: 400;
-            color: rgba(255,255,255,0.78);
-            line-height: 1.65;
-            max-width: 85ch;
-            margin: 0 0 2rem 0;
+            color: rgba(255,255,255,0.84);
+            line-height: 1.5;
+            max-width: 47rem;
+            margin: 0 0 1.55rem;
             text-shadow: 0 1px 8px rgba(0,0,0,0.2);
-            text-align: left;
+            text-wrap: balance;
+            text-align: center;
         }
 
         .kl-hero__actions {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
+            gap: 0.45rem;
         }
 
         .kl-btn-primary {
             display: inline-flex;
             align-items: center;
-            gap: 0.6rem;
+            justify-content: center;
+            gap: 0.95rem;
             font-family: 'Inter', sans-serif;
-            font-size: 0.8125rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
             color: var(--kl-navy);
             background: var(--kl-cream);
-            padding: 1rem 2rem;
-            border-radius: 3px;
+            min-height: 48px;
+            padding: 0.375rem 0.375rem 0.375rem 1.35rem;
+            border-radius: 999px;
             text-decoration: none;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+            transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+                        box-shadow 220ms ease,
+                        background 220ms ease;
             white-space: nowrap;
             border: none;
             cursor: pointer;
@@ -268,31 +295,81 @@
 
         .kl-btn-primary:hover {
             background: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(238, 235, 227, 0.18);
+            transform: translateY(-1px);
+            box-shadow: 0 12px 30px rgba(6, 31, 56, 0.2);
+        }
+
+        .kl-btn-primary:focus-visible,
+        .kl-btn-secondary:focus-visible {
+            outline: 2px solid #ffffff;
+            outline-offset: 4px;
         }
 
         .kl-btn-primary__arrow {
-            transition: transform 0.2s ease;
-            display: inline-block;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            flex: 0 0 36px;
+            border-radius: 50%;
+            background: var(--kl-navy-deep);
+            transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+                        background 220ms ease;
+        }
+
+        .kl-btn-primary__arrow::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 17px;
+            width: 13px;
+            height: 1.5px;
+            border-radius: 999px;
+            background: var(--kl-cream);
+        }
+
+        .kl-btn-primary__arrow::after {
+            content: '';
+            position: absolute;
+            left: 17px;
+            top: 13.5px;
+            width: 6px;
+            height: 6px;
+            border-top: 1.5px solid var(--kl-cream);
+            border-right: 1.5px solid var(--kl-cream);
+            transform: rotate(45deg);
         }
 
         .kl-btn-primary:hover .kl-btn-primary__arrow {
-            transform: translateX(4px);
+            transform: translateX(2px);
+            background: var(--kl-navy);
         }
 
         .kl-btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
             font-family: 'Inter', sans-serif;
-            font-size: 0.8125rem;
-            color: var(--kl-cream);
-            opacity: 0.55;
-            text-decoration: none;
-            transition: opacity 0.2s ease;
-            letter-spacing: 0.04em;
+            font-size: 0.875rem;
+            font-weight: 450;
+            color: rgba(255,255,255,0.84);
+            text-decoration-line: underline;
+            text-decoration-thickness: 1px;
+            text-decoration-color: rgba(255,255,255,0.58);
+            text-underline-offset: 0.35em;
+            transition: color 180ms ease,
+                        text-decoration-color 180ms ease,
+                        text-decoration-thickness 180ms ease;
+            letter-spacing: 0.01em;
         }
 
         .kl-btn-secondary:hover {
-            opacity: 0.95;
+            color: #ffffff;
+            text-decoration-color: #ffffff;
+            text-decoration-thickness: 2px;
         }
 
         /* ──────────────────────────────────────────────
@@ -300,20 +377,35 @@
         ────────────────────────────────────────────── */
         @media (max-width: 768px) {
             .kl-hero__content {
-                left: 1.5rem;
-                bottom: 14vh;
-                max-width: calc(100vw - 3rem);
+                bottom: calc(max(2rem, env(safe-area-inset-bottom)) + 2.25rem);
+                width: calc(100% - 2rem);
             }
             .kl-hero__title {
-                font-size: clamp(2.25rem, 9vw, 3.5rem);
-                white-space: normal;
+                font-size: clamp(2.7rem, 11vw, 4.25rem);
+                line-height: 0.98;
+                max-width: 12ch;
+                margin-bottom: 0.9rem;
             }
-            .kl-hero__actions {
-                gap: 1.25rem;
+            .kl-hero__tagline {
+                max-width: 34ch;
+                margin-bottom: 1.25rem;
+                line-height: 1.45;
             }
             .kl-btn-primary {
-                padding: 0.9rem 1.5rem;
-                font-size: 0.75rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-height: 640px) {
+            .kl-hero__content {
+                bottom: calc(max(1rem, env(safe-area-inset-bottom)) + 1rem);
+            }
+            .kl-hero__title {
+                font-size: clamp(2.35rem, 8vw, 4.25rem);
+                margin-bottom: 0.7rem;
+            }
+            .kl-hero__tagline {
+                margin-bottom: 0.8rem;
             }
         }
 
@@ -328,6 +420,11 @@
                 background-image: url('added-assets/kanan-hero-poster.jpg');
                 background-size: cover;
                 background-position: center 35%;
+            }
+            .kl-btn-primary,
+            .kl-btn-primary__arrow,
+            .kl-btn-secondary {
+                transition: none;
             }
         }
 
@@ -446,25 +543,68 @@
         .kl-scope__cta-btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.55rem;
+            justify-content: center;
+            gap: 0.7rem;
+            min-height: 44px;
             font-family: 'Inter', sans-serif;
-            font-size: 0.75rem;
+            font-size: 0.8125rem;
             font-weight: 500;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
+            letter-spacing: 0.01em;
             color: rgba(244, 235, 208, 0.65);
             background: transparent;
-            padding: 0.75rem 1.5rem;
+            padding: 0.65rem 1.25rem 0.65rem 1.4rem;
             border: 1px solid rgba(244, 235, 208, 0.25);
-            border-radius: 3px;
+            border-radius: 999px;
             text-decoration: none;
-            transition: color 0.2s ease, border-color 0.2s ease;
+            transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
             white-space: nowrap;
         }
 
         .kl-scope__cta-btn:hover {
             color: #f4ebd0;
             border-color: rgba(244, 235, 208, 0.6);
+            background: rgba(244, 235, 208, 0.04);
+        }
+
+        .kl-scope__cta-btn:focus-visible {
+            outline: 2px solid #f4ebd0;
+            outline-offset: 4px;
+        }
+
+        .kl-scope__cta-arrow {
+            position: relative;
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            flex: 0 0 18px;
+            transition: transform 0.2s ease;
+        }
+
+        .kl-scope__cta-arrow::before {
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 8px;
+            width: 12px;
+            height: 1px;
+            border-radius: 999px;
+            background: currentColor;
+        }
+
+        .kl-scope__cta-arrow::after {
+            content: '';
+            position: absolute;
+            left: 9px;
+            top: 5px;
+            width: 6px;
+            height: 6px;
+            border-top: 1px solid currentColor;
+            border-right: 1px solid currentColor;
+            transform: rotate(45deg);
+        }
+
+        .kl-scope__cta-btn:hover .kl-scope__cta-arrow {
+            transform: translateX(2px);
         }
 
         @media (max-width: 900px) {
@@ -517,7 +657,40 @@
             }
         }
 
+        @media (max-width: 350px) {
+            .kl-scope {
+                padding: 3.25rem 0;
+            }
+            .kl-scope__inner {
+                padding: 0 1.25rem;
+            }
+            .kl-scope__word {
+                font-size: clamp(1.75rem, 9vw, 2rem);
+            }
+            .kl-scope__cta-btn {
+                padding-inline: 1.15rem 1rem;
+            }
+        }
+
+        @media (max-width: 900px) and (max-height: 650px) {
+            .kl-scope {
+                padding: 3rem 0;
+            }
+            .kl-scope__column {
+                height: 42vh;
+                min-height: 240px;
+                margin-top: 1rem;
+            }
+            .kl-scope__cta {
+                margin-top: 1rem;
+            }
+        }
+
         @media (prefers-reduced-motion: reduce) {
+            .kl-scope__cta-btn,
+            .kl-scope__cta-arrow {
+                transition: none;
+            }
             .kl-scope__column {
                 height: auto;
                 overflow: visible;
@@ -754,30 +927,22 @@
         ════════════════════════════════════════════════ -->
         <header class="kl-hero">
 
-            <!-- Hero video. Sources injected by inline script below based on viewport +
-                 codec support. Ladder: AV1 (smallest, sharpest — Chrome/Firefox/Edge) →
-                 HEVC (Safari) → H.264 (universal fallback). Mobile gets a single 720p
-                 H.264 to keep first-frame paint under 1s on 4G. -->
+            <!-- Hero video. H.264 is used across desktop browsers so local
+                 previews never pause to materialize an optional codec asset. -->
             <video class="kl-hero__video" id="klHeroVideo"
                    autoplay loop muted playsinline disablepictureinpicture
-                   preload="auto"
-                   poster="added-assets/kanan-hero-poster.avif"></video>
+                   preload="metadata"
+                   poster="added-assets/kanan-hero-poster.jpg"></video>
             <script>
             (function () {
                 var v = document.getElementById('klHeroVideo');
                 if (!v) return;
                 var isMobile = window.matchMedia('(max-width: 768px)').matches;
-                // HEVC ahead of AV1: Apple Silicon + iPhone 7+ hardware-decode
-                // HEVC; AV1 is software-decoded on most of that fleet and is
-                // a major source of first-play stutter. Chrome/Firefox/Edge
-                // skip HEVC and grab AV1 next.
                 var sources = isMobile
                     ? [
                         { src: 'added-assets/kanan-hero-720p.h264.mp4', type: 'video/mp4' }
                       ]
                     : [
-                        { src: 'added-assets/kanan-hero-1080p.hevc.mp4', type: 'video/mp4; codecs=hvc1' },
-                        { src: 'added-assets/kanan-hero-1080p.av1.mp4',  type: 'video/mp4; codecs="av01.0.05M.08"' },
                         { src: 'added-assets/kanan-hero-1080p.h264.mp4', type: 'video/mp4' }
                       ];
                 sources.forEach(function (s) {
@@ -816,14 +981,17 @@
 
             <!-- Hero text overlay + CTAs -->
             <div class="kl-hero__content">
-                <h1 class="kl-hero__title">Trade intelligence<br>for a contested world.</h1>
-                <p class="kl-hero__tagline">Tariffs, sanctions, technical trade-barriers, and other export controls have made the operating reality of every shipment increasingly complex. Kanan solves that for you,</p>
+                <h1 class="kl-hero__title">
+                    <span class="kl-hero__title-line">Agentic trade compliance</span>
+                    <span class="kl-hero__title-line">for a contested world.</span>
+                </h1>
+                <p class="kl-hero__tagline">Where businesses, logistics providers, and governments rearchitect global trade.</p>
                 <div class="kl-hero__actions">
                     <a href="tradewatch.html" class="kl-btn-primary">
-                        Explore TradeWatch
-                        <span class="kl-btn-primary__arrow" aria-hidden="true">→</span>
+                        <span>Explore TradeWatch</span>
+                        <span class="kl-btn-primary__arrow" aria-hidden="true"></span>
                     </a>
-                    <a href="tracker.html" class="kl-btn-secondary">View the India AI Tracker ↗</a>
+                    <a href="request-demo.html" class="kl-btn-secondary">Request a demo</a>
                 </div>
             </div>
 
@@ -834,12 +1002,17 @@
                   (Clone of tradewatch.html stage, scenes 1-3,
                    scroll-free, 5s crossfade loop)
         ════════════════════════════════════════════════ -->
+        <div class="kl-tradewatch-band">
         <section class="kl-twdemo" aria-label="TradeWatch product demo">
             <div class="kl-twdemo__inner">
-                <h2 class="kl-twdemo__title">
-                    TradeWatch prepares evidence-ready shipment packets<br>
-                    for customs, trade insurance and <em>LC workflows</em>.
-                </h2>
+                <div class="kl-twdemo__copy">
+                    <h2 class="kl-twdemo__title">Export with an AI agent you can audit.</h2>
+                    <p class="kl-twdemo__description">TradeWatch checks classification, duties, origin and shipment documents, then prepares each compliance action with evidence your team and partners can verify.</p>
+                    <a href="tradewatch.html" class="kl-twdemo__link">
+                        <span>Explore TradeWatch</span>
+                        <span class="kl-twdemo__link-arrow" aria-hidden="true"></span>
+                    </a>
+                </div>
 
                 <div class="tw-stage kl-twdemo__stage">
 
@@ -1139,20 +1312,22 @@
         <!-- ════════════════════════════════════════════════
              B. SCOPE PIN — Harvey-style vertical word cycle
         ════════════════════════════════════════════════ -->
-        <section class="kl-scope" id="klScope" aria-label="What Kanan Labs works on">
+        <section class="kl-scope" id="klScope" aria-label="What TradeWatch supports">
             <div class="kl-scope__inner">
                 <p class="kl-scope__label">
-                    One shipment bundle.<br>
-                    Multiple institutional handoffs.
+                    One shipment.<br>
+                    Every compliance task connected.
                 </p>
                 <div class="kl-scope__column" aria-hidden="true">
                     <div class="kl-scope__list" id="klScopeList">
+                        <div class="kl-scope__word">HS Classification</div>
+                        <div class="kl-scope__word">Tariff Assessment</div>
+                        <div class="kl-scope__word">FTA Eligibility</div>
+                        <div class="kl-scope__word">Origin Evidence</div>
                         <div class="kl-scope__word">Shipment Evidence</div>
-                        <div class="kl-scope__word">Customs Clearance</div>
-                        <div class="kl-scope__word">Trade Insurance</div>
-                        <div class="kl-scope__word">Letter of Credit</div>
-                        <div class="kl-scope__word">Supply Chain Risk</div>
-                        <div class="kl-scope__word">Regulatory Strategy</div>
+                        <div class="kl-scope__word">Customs Readiness</div>
+                        <div class="kl-scope__word">Insurance Readiness</div>
+                        <div class="kl-scope__word">Partner Coordination</div>
                     </div>
                 </div>
 
@@ -1160,26 +1335,30 @@
                 <div class="kl-scope__cta">
                     <a href="tradewatch.html" class="kl-scope__cta-btn">
                         Explore TradeWatch
-                        <span aria-hidden="true">→</span>
+                        <span class="kl-scope__cta-arrow" aria-hidden="true"></span>
                     </a>
                 </div>
 
                 <!-- Screen-reader list (static, off-screen) -->
-                <ul style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" aria-label="What Kanan Labs works on">
+                <ul style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" aria-label="What TradeWatch supports">
+                    <li>HS Classification</li>
+                    <li>Tariff Assessment</li>
+                    <li>FTA Eligibility</li>
+                    <li>Origin Evidence</li>
                     <li>Shipment Evidence</li>
-                    <li>Customs Clearance</li>
-                    <li>Trade Insurance</li>
-                    <li>Letter of Credit</li>
-                    <li>Supply Chain Risk</li>
-                    <li>Regulatory Strategy</li>
+                    <li>Customs Readiness</li>
+                    <li>Insurance Readiness</li>
+                    <li>Partner Coordination</li>
                 </ul>
             </div>
         </section>
+        </div>
 
         <!-- ════════════════════════════════════════════════
              B½. DRONA — The Regulatory Brain
              Failure-mode tabs (left) vs With/Without contrast (right).
         ════════════════════════════════════════════════ -->
+        <div class="kl-drona-band">
         <section class="kl-drona" id="klDrona" aria-label="Drona — the regulatory brain inside TradeWatch">
 
             <div class="kl-drona__inner">
@@ -1232,118 +1411,81 @@
 
                 </div>
 
-                <div class="kl-drona__close">
-                    <p class="kl-drona__close-line">Provenance as product. Every line points home.</p>
-                </div>
-
             </div>
         </section>
 
         <!-- ════════════════════════════════════════════════
-             B¾. EVIDENCE PACKET WORKFLOW — How a packet is born
-             Five numbered stages, line-art icons, scroll-stagger reveal.
+             B⅝. DRONA FUNNEL — Input, process, auditable output
         ════════════════════════════════════════════════ -->
-        <section class="kl-flow" id="klFlow" aria-label="How an evidence packet is born">
-            <div class="kl-flow__inner">
+        <section class="kl-df" id="klDronaFunnel" aria-labelledby="klDronaFunnelEyebrow">
+            <div class="kl-df__inner">
+                <p class="kl-df__eyebrow" id="klDronaFunnelEyebrow">Drona turns regulatory intelligence into shipment-ready action.</p>
 
-                <div class="kl-flow__header">
-                    <span class="kl-flow__eyebrow">The Flow</span>
-                    <h2 class="kl-flow__title">
-                        A shipment becomes a fact. A fact meets the rules.<br>
-                        The rules produce a packet.
-                    </h2>
+                <div class="kl-df__layout">
+                    <div class="kl-df__stages">
+                        <div class="kl-df__rail" aria-hidden="true">
+                            <span class="kl-df__rail-line"></span>
+                        </div>
+
+                        <article class="kl-df__stage" data-df-stage="1">
+                            <div class="kl-df__stage-copy">
+                                <span class="kl-df__station" data-station="1" aria-hidden="true"></span>
+                                <p class="kl-df__stage-num">01</p>
+                                <h3 class="kl-df__stage-title">Rules grounded.</h3>
+                                <p class="kl-df__stage-summary">Current rules and rulings stay linked to source.</p>
+                            </div>
+                        </article>
+
+                        <article class="kl-df__stage" data-df-stage="2">
+                            <div class="kl-df__stage-copy">
+                                <span class="kl-df__station" data-station="2" aria-hidden="true"></span>
+                                <p class="kl-df__stage-num">02</p>
+                                <h3 class="kl-df__stage-title">Evidence coordinated.</h3>
+                                <p class="kl-df__stage-summary">Drona proactively requests and follows up on missing evidence with suppliers, customs brokers and logistics providers.</p>
+                            </div>
+                        </article>
+
+                        <article class="kl-df__stage" data-df-stage="3">
+                            <div class="kl-df__stage-copy">
+                                <span class="kl-df__station" data-station="3" aria-hidden="true"></span>
+                                <p class="kl-df__stage-num">03</p>
+                                <h3 class="kl-df__stage-title">Packets ready.</h3>
+                                <p class="kl-df__stage-summary">Your team reviews customs and insurance packets with the evidence attached.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="kl-df__visual">
+                        <div class="kl-df__feeders" aria-hidden="true">
+                            <span>Customs</span>
+                            <span>Rulings</span>
+                            <span>Standards</span>
+                            <span>Circulars</span>
+                        </div>
+
+                        <svg class="kl-df__funnel" viewBox="0 0 300 480" preserveAspectRatio="none" aria-hidden="true">
+                            <defs>
+                                <clipPath id="klDfClip1"><rect class="kl-df__clip" data-clip="1" x="0" y="0" width="300" height="0"></rect></clipPath>
+                                <clipPath id="klDfClip2"><rect class="kl-df__clip" data-clip="2" x="0" y="152" width="300" height="0"></rect></clipPath>
+                                <clipPath id="klDfClip3"><rect class="kl-df__clip" data-clip="3" x="0" y="320" width="300" height="0"></rect></clipPath>
+                            </defs>
+                            <polygon class="kl-df__funnel-base" points="0,0 300,0 248,140 52,140"></polygon>
+                            <polygon class="kl-df__funnel-base" points="52,152 248,152 212,308 88,308"></polygon>
+                            <polygon class="kl-df__funnel-base" points="88,320 212,320 186,480 114,480"></polygon>
+                            <polygon class="kl-df__funnel-fill kl-df__funnel-fill--1" clip-path="url(#klDfClip1)" points="0,0 300,0 248,140 52,140"></polygon>
+                            <polygon class="kl-df__funnel-fill kl-df__funnel-fill--2" clip-path="url(#klDfClip2)" points="52,152 248,152 212,308 88,308"></polygon>
+                            <polygon class="kl-df__funnel-fill kl-df__funnel-fill--3" clip-path="url(#klDfClip3)" points="88,320 212,320 186,480 114,480"></polygon>
+                        </svg>
+
+                        <div class="kl-df__outputs">
+                            <span>Shipping Bill Readiness Packet</span>
+                            <span>Marine Cargo Insurance Packet</span>
+                        </div>
+                    </div>
                 </div>
-
-                <ol class="kl-flow__stages">
-
-                    <li class="kl-flow__stage" data-stage="1">
-                        <span class="kl-flow__numeral" aria-hidden="true">I</span>
-                        <div class="kl-flow__icon" aria-hidden="true">
-                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="14" y="10" width="28" height="38" rx="1"/>
-                                <rect x="20" y="16" width="32" height="38" rx="1" opacity="0.55"/>
-                                <line x1="26" y1="24" x2="42" y2="24" opacity="0.55"/>
-                                <line x1="26" y1="30" x2="46" y2="30" opacity="0.55"/>
-                                <line x1="26" y1="36" x2="40" y2="36" opacity="0.55"/>
-                                <line x1="26" y1="42" x2="46" y2="42" opacity="0.55"/>
-                            </svg>
-                        </div>
-                        <h3 class="kl-flow__name">Documents</h3>
-                        <p class="kl-flow__desc">Invoices, bills of lading, packing lists, certificates of origin. In any format your team already uses.</p>
-                    </li>
-
-                    <li class="kl-flow__stage" data-stage="2">
-                        <span class="kl-flow__numeral" aria-hidden="true">II</span>
-                        <div class="kl-flow__icon" aria-hidden="true">
-                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="10" y="14" width="44" height="36" rx="1"/>
-                                <rect x="16" y="20" width="14" height="6"  stroke-dasharray="2 2"/>
-                                <rect x="32" y="20" width="16" height="6"  stroke-dasharray="2 2"/>
-                                <rect x="16" y="30" width="10" height="6"  stroke-dasharray="2 2"/>
-                                <rect x="28" y="30" width="20" height="6"  stroke-dasharray="2 2"/>
-                                <rect x="16" y="40" width="32" height="4"  stroke-dasharray="2 2"/>
-                            </svg>
-                        </div>
-                        <h3 class="kl-flow__name">Reading</h3>
-                        <p class="kl-flow__desc">Drona parses each document into a structured shipment fact model — bounded, source-located, replayable.</p>
-                    </li>
-
-                    <li class="kl-flow__stage" data-stage="3">
-                        <span class="kl-flow__numeral" aria-hidden="true">III</span>
-                        <div class="kl-flow__icon" aria-hidden="true">
-                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="20" cy="22" r="5"/>
-                                <circle cx="44" cy="22" r="5"/>
-                                <circle cx="20" cy="44" r="5"/>
-                                <circle cx="44" cy="44" r="5"/>
-                                <line x1="25" y1="22" x2="39" y2="22" opacity="0.4"/>
-                                <line x1="20" y1="27" x2="20" y2="39" opacity="0.4"/>
-                                <line x1="44" y1="27" x2="44" y2="39" opacity="0.4"/>
-                                <line x1="25" y1="44" x2="39" y2="44" opacity="0.4"/>
-                            </svg>
-                        </div>
-                        <h3 class="kl-flow__name">States</h3>
-                        <p class="kl-flow__desc">Every obligation resolves to Open, Blocked, Conditional, or Unclear against the live rule pack for your jurisdiction.</p>
-                    </li>
-
-                    <li class="kl-flow__stage" data-stage="4">
-                        <span class="kl-flow__numeral" aria-hidden="true">IV</span>
-                        <div class="kl-flow__icon" aria-hidden="true">
-                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="32" cy="22" r="6"/>
-                                <path d="M16 50c2-8 9-12 16-12s14 4 16 12"/>
-                                <path d="M14 56l36 0" stroke-dasharray="2 2" opacity="0.5"/>
-                                <path d="M22 56c2-2 5-3 10-3s8 1 10 3" opacity="0.7"/>
-                            </svg>
-                        </div>
-                        <h3 class="kl-flow__name">Review</h3>
-                        <p class="kl-flow__desc">A human reviewer attests. The system records who, when, and on what evidence.</p>
-                    </li>
-
-                    <li class="kl-flow__stage" data-stage="5">
-                        <span class="kl-flow__numeral" aria-hidden="true">V</span>
-                        <div class="kl-flow__icon" aria-hidden="true">
-                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="14" y="12" width="32" height="40" rx="1"/>
-                                <line x1="20" y1="22" x2="40" y2="22" opacity="0.55"/>
-                                <line x1="20" y1="28" x2="40" y2="28" opacity="0.55"/>
-                                <line x1="20" y1="34" x2="36" y2="34" opacity="0.55"/>
-                                <circle cx="44" cy="46" r="8" stroke="currentColor"/>
-                                <path d="M40 46l3 3 6-6" stroke="currentColor"/>
-                            </svg>
-                        </div>
-                        <h3 class="kl-flow__name">Packet</h3>
-                        <p class="kl-flow__desc">Out: a hash-chained, source-stamped packet you can hand to a customs officer, an underwriter, or a banker — and defend three years from now.</p>
-                    </li>
-
-                </ol>
-
-                <div class="kl-flow__close">
-                    <p class="kl-flow__close-line">Your junior analyst. On shift forever.</p>
-                </div>
-
             </div>
         </section>
+        </div><!-- /.kl-drona-band -->
 
         <!-- ════════════════════════════════════════════════
              C–D. TRIPTYCH — Three Kanan Labs surfaces
@@ -1442,116 +1584,76 @@
         </section>
 
         <!-- ════════════════════════════════════════════════
-             D½. SECTORS — Built for the lanes you actually trade
-             Reducto-style bento: 6 tiles, warm peach/cream, pilot-facing.
+             D½. COMPANY ROADMAP — Foundation to SectorWatch
         ════════════════════════════════════════════════ -->
-        <section class="kl-sectors" id="klSectors" aria-label="Sectors and trade lanes TradeWatch starts in">
-            <div class="kl-sectors__inner">
-
-                <div class="kl-sectors__header">
-                    <div class="kl-sectors__title-block">
-                        <span class="kl-sectors__eyebrow">The Lanes</span>
-                        <h2 class="kl-sectors__title">We start narrow. <em>Deliberately.</em></h2>
+        <section class="kl-roadmap" id="klRoadmap" aria-labelledby="klRoadmapTitle">
+            <div class="kl-roadmap__inner">
+                <div class="kl-roadmap__layout">
+                    <div class="kl-roadmap__intro">
+                        <p class="kl-roadmap__eyebrow">Kanan Labs <span aria-hidden="true">·</span> Company Roadmap</p>
+                        <h2 class="kl-roadmap__title" id="klRoadmapTitle">
+                            <span>We began by modelling<br>the trade world.</span>
+                            <em>Now we are putting<br>that intelligence to work.</em>
+                        </h2>
+                        <div class="kl-roadmap__lead">
+                            <p>Kanan Labs is being built in deliberate stages: first the knowledge infrastructure, then its deployment inside live trade workflows, and ultimately a continuous intelligence layer across global value chains.</p>
+                            <p>TradeWatch is the first commercial expression of that infrastructure. SectorWatch is the horizon.</p>
+                        </div>
                     </div>
-                    <p class="kl-sectors__sub">
-                        TradeWatch ships first to the trade lanes where the cost of being wrong is highest and the evidence trail is longest.
-                    </p>
+
+                    <div class="kl-roadmap__chronology">
+                        <ol class="kl-roadmap__track" aria-label="Kanan Labs company roadmap">
+                            <li class="kl-roadmap__stage kl-roadmap__stage--foundation">
+                                <div class="kl-roadmap__meta">
+                                    <span class="kl-roadmap__number">01</span>
+                                    <span class="kl-roadmap__status">March 2026 <i aria-hidden="true">·</i> Foundation</span>
+                                </div>
+                                <h3 class="kl-roadmap__stage-title">DRONA begins modelling the trade world.</h3>
+                                <p class="kl-roadmap__description">
+                                    <span class="kl-roadmap__copy kl-roadmap__copy--full">Kanan Labs is founded around a structured, source-linked model of products, rules, jurisdictions, documents, parties and evidence. <span class="kl-roadmap__term">Accretive World Learning</span> expands that model with every verified cycle.</span>
+                                    <span class="kl-roadmap__copy kl-roadmap__copy--compact">A source-linked world model that expands through <span class="kl-roadmap__term">Accretive World Learning</span>.</span>
+                                </p>
+                            </li>
+
+                            <li class="kl-roadmap__stage kl-roadmap__stage--now" aria-current="step">
+                                <div class="kl-roadmap__meta">
+                                    <span class="kl-roadmap__number">02</span>
+                                    <span class="kl-roadmap__status">Design partners and pilots</span>
+                                </div>
+                                <h3 class="kl-roadmap__stage-title">TradeWatch enters live workflows.</h3>
+                                <p class="kl-roadmap__description">
+                                    <span class="kl-roadmap__copy kl-roadmap__copy--full">Inside defined products, corridors and shipment workflows, TradeWatch operates first in shadow mode&mdash;testing what applies and preparing evidence-backed actions for human review.</span>
+                                    <span class="kl-roadmap__copy kl-roadmap__copy--compact">Pilots test live shipments in shadow mode before human review.</span>
+                                    <a class="kl-roadmap__pilot-link" href="/request-demo.html"><span>Discuss a pilot</span></a>
+                                </p>
+                            </li>
+
+                            <li class="kl-roadmap__stage kl-roadmap__stage--network">
+                                <div class="kl-roadmap__meta">
+                                    <span class="kl-roadmap__number">03</span>
+                                    <span class="kl-roadmap__status">Expansion <i aria-hidden="true">·</i> Connected execution</span>
+                                </div>
+                                <h3 class="kl-roadmap__stage-title">Compliance becomes collaborative.</h3>
+                                <p class="kl-roadmap__description">
+                                    <span class="kl-roadmap__copy kl-roadmap__copy--full">With customer authorisation, TradeWatch coordinates evidence, decisions and approvals across suppliers, brokers, logistics providers, insurers and banks&mdash;preserving every exchange in one audit trail.</span>
+                                    <span class="kl-roadmap__copy kl-roadmap__copy--compact">TradeWatch coordinates evidence and approvals across trade partners in one audit trail.</span>
+                                </p>
+                            </li>
+
+                            <li class="kl-roadmap__stage kl-roadmap__stage--horizon">
+                                <div class="kl-roadmap__meta">
+                                    <span class="kl-roadmap__number">04</span>
+                                    <span class="kl-roadmap__status">Horizon <i aria-hidden="true">·</i> SectorWatch</span>
+                                </div>
+                                <h3 class="kl-roadmap__stage-title">From shipment readiness to continuous risk intelligence.</h3>
+                                <p class="kl-roadmap__description">
+                                    <span class="kl-roadmap__copy kl-roadmap__copy--full">The same infrastructure connects regulatory change, supplier exposure and geopolitical pressure across the value chain&mdash;turning the accumulated trade world model into continuous intelligence.</span>
+                                    <span class="kl-roadmap__copy kl-roadmap__copy--compact">SectorWatch turns the trade world model into continuous regulatory and geopolitical intelligence.</span>
+                                </p>
+                            </li>
+                        </ol>
+                    </div>
                 </div>
-
-                <div class="kl-sectors__grid">
-
-                    <article class="kl-sectors__tile">
-                        <span class="kl-sectors__tile-num">01</span>
-                        <div class="kl-sectors__tile-icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 20h3l2-7h11l3 5h5v5h-3"/>
-                                <circle cx="9" cy="23" r="2.4"/>
-                                <circle cx="22" cy="23" r="2.4"/>
-                                <path d="M19 9l-1 4M20 9l3.5 5" stroke-dasharray="1.5 1.8"/>
-                            </svg>
-                        </div>
-                        <h3 class="kl-sectors__tile-name">EV Exporters</h3>
-                        <p class="kl-sectors__tile-desc">Electric vehicles moving between India, the EU, and the US — inbound or outbound — where battery provenance, lithium chain-of-custody, and dual-use controls collide.</p>
-                    </article>
-
-                    <article class="kl-sectors__tile">
-                        <span class="kl-sectors__tile-num">02</span>
-                        <div class="kl-sectors__tile-icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="13" cy="13" r="7"/>
-                                <circle cx="19" cy="13" r="7"/>
-                                <circle cx="16" cy="19" r="7"/>
-                            </svg>
-                        </div>
-                        <h3 class="kl-sectors__tile-name">Complex Issues</h3>
-                        <p class="kl-sectors__tile-desc">Where legal, regulatory, and customs questions tangle, our depth makes the hard call defensible — like a contestable HS classification that would otherwise become a Section 149 amendment six months later.</p>
-                    </article>
-
-                    <article class="kl-sectors__tile">
-                        <span class="kl-sectors__tile-num">03</span>
-                        <div class="kl-sectors__tile-icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="5" y="6" width="22" height="20" rx="1"/>
-                                <line x1="9" y1="12" x2="23" y2="12"/>
-                                <line x1="9" y1="16" x2="20" y2="16"/>
-                                <line x1="9" y1="20" x2="17" y2="20"/>
-                                <path d="M20 22l3 3 4-5" stroke="var(--kl-red, #db4a2b)" stroke-width="1.5"/>
-                            </svg>
-                        </div>
-                        <h3 class="kl-sectors__tile-name">L/C Pre-Presentation</h3>
-                        <p class="kl-sectors__tile-desc">Before your banker presents, every document is checked against the credit against the rule pack. Six weeks from kickoff to first live packet.</p>
-                    </article>
-
-                    <article class="kl-sectors__tile">
-                        <span class="kl-sectors__tile-num">04</span>
-                        <div class="kl-sectors__tile-icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M3 22c2-1 3-1 5 0s3 1 5 0 3-1 5 0 3 1 5 0 3-1 6 0"/>
-                                <path d="M6 14h6l1-5h6l1 5h6" />
-                                <line x1="14" y1="9" x2="14" y2="14" opacity="0.5"/>
-                                <line x1="18" y1="9" x2="18" y2="14" opacity="0.5"/>
-                            </svg>
-                        </div>
-                        <h3 class="kl-sectors__tile-name">Marine Cargo</h3>
-                        <p class="kl-sectors__tile-desc">Underwriting-grade evidence: compliance status, loss history, customs clearance probability — packaged for the broker.</p>
-                    </article>
-
-                    <article class="kl-sectors__tile">
-                        <span class="kl-sectors__tile-num">05</span>
-                        <div class="kl-sectors__tile-icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="6" y="4" width="18" height="24" rx="1"/>
-                                <line x1="10" y1="10" x2="20" y2="10"/>
-                                <line x1="10" y1="14" x2="20" y2="14"/>
-                                <line x1="10" y1="18" x2="17" y2="18"/>
-                                <circle cx="20" cy="22" r="3" stroke="var(--kl-red, #db4a2b)" stroke-width="1.5"/>
-                            </svg>
-                        </div>
-                        <h3 class="kl-sectors__tile-name">Shipping Bill Readiness</h3>
-                        <p class="kl-sectors__tile-desc">Pre-filing reconciliation between what you're declaring, what you're shipping, and what India permits.</p>
-                    </article>
-
-                    <article class="kl-sectors__tile">
-                        <span class="kl-sectors__tile-num">06</span>
-                        <div class="kl-sectors__tile-icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 4l10 5v6c0 7-5 11-10 13C11 26 6 22 6 15V9z"/>
-                                <path d="M12 16l3 3 6-7" stroke="var(--kl-red, #db4a2b)" stroke-width="1.5"/>
-                            </svg>
-                        </div>
-                        <h3 class="kl-sectors__tile-name">e-BRC / RoDTEP Closing</h3>
-                        <p class="kl-sectors__tile-desc">Closing-loop evidence so your incentives don't get clawed back at audit.</p>
-                    </article>
-
-                </div>
-
-                <div class="kl-sectors__close">
-                    <p class="kl-sectors__close-line">
-                        Your sector isn't here yet?
-                        <a class="kl-sectors__close-link" href="#klWaitlist">It's on the map.</a>
-                    </p>
-                </div>
-
             </div>
         </section>
 
@@ -1634,18 +1736,8 @@
              F. IDENTITY — Founder / Why Kanan exists
         ════════════════════════════════════════════════ -->
         <div class="identity-transition" aria-hidden="true"></div>
-        <section class="kl-founder" id="founderNote" aria-labelledby="founderHeadline">
+        <section class="kl-founder" id="founderNote" aria-label="Founder note">
             <div class="kl-founder__inner">
-
-                <!-- HEADER: eyebrow + headline + rule -->
-                <div class="kl-founder__header">
-                    <span class="kl-founder__eyebrow">Founder Note</span>
-                    <h2 class="kl-founder__headline" id="founderHeadline">
-                        Kanan Labs is being built for a world where trade decisions
-                        must be <em>evidenced</em>, not assumed.
-                    </h2>
-                    <hr class="kl-founder__rule" aria-hidden="true">
-                </div>
 
                 <!-- TWO-COLUMN BODY: left rail + navy doctrine card -->
                 <div class="kl-founder__columns">
@@ -1654,8 +1746,8 @@
                     <aside class="kl-founder__rail">
                         <div class="kl-founder__cta-block">
                             <span class="kl-founder__cta-eyebrow">Get Involved</span>
-                            <a href="#klWaitlist" class="kl-founder__cta-primary">
-                                Join Pilot for TradeWatch
+                            <a href="request-demo.html" class="kl-founder__cta-primary">
+                                Request Demo
                             </a>
                             <a href="mailto:sreenath@kananlabs.com?subject=Connect%20with%20Founder"
                                class="kl-founder__cta-secondary">
@@ -1663,8 +1755,6 @@
                                 <span aria-hidden="true">&rarr;</span>
                             </a>
                         </div>
-
-                        <hr class="kl-founder__rail-divider" aria-hidden="true">
 
                         <div class="kl-founder__attribution">
                             <figure class="kl-founder__portrait">
@@ -1691,48 +1781,58 @@
                         <canvas id="founder-grid" class="kl-founder__doctrine-grid" aria-hidden="true"></canvas>
 
                         <div class="kl-founder__doctrine-inner">
-                            <span class="kl-founder__doctrine-eyebrow">The Operating Doctrine</span>
-
                             <div class="kl-founder__note">
                                 <p>
-                                    I founded Kanan Labs from a simple conviction: cross-border trade
-                                    is no longer governed only by access, price, and logistics. It is
-                                    increasingly governed by whether a firm can prove its position
-                                    across regulators, brokers, banks, insurers, and supply-chain
-                                    counterparties.
+                                    <strong>Businesses experience regulation in fragments.
+                                    Most AI systems reason about it in fragments too.</strong>
                                 </p>
                                 <p>
-                                    My training across multiple legal systems shaped how I understand
-                                    this problem. Rules do not operate in isolation. They move through
-                                    institutions, documents, incentives, and evidentiary burdens.
-                                    Kanan is being built to turn that complexity into structured
-                                    intelligence that firms can actually use.
+                                    I founded Kanan Labs after seeing the same structural failure from two
+                                    directions.
+                                </p>
+                                <p>
+                                    Frontier AI could retrieve extraordinary amounts of information, yet
+                                    struggled to connect products, supply chains, jurisdictions,
+                                    institutions, rules and evidence into one coherent model. Industry
+                                    faced the corresponding problem: businesses could not see the
+                                    regulations, incentives and emerging risks relevant to them as one
+                                    usable operating picture.
+                                </p>
+                                <p>
+                                    Kanan Labs was founded to close both gaps.
+                                </p>
+                                <p>
+                                    DRONA builds a structured model of the trade world through
+                                    <strong>Accretive World Learning</strong>. TradeWatch is its first
+                                    commercial expression&mdash;turning that intelligence into action inside
+                                    live cross-border workflows.
                                 </p>
                             </div>
 
                             <ol class="kl-founder__doctrine" aria-label="Operating doctrine">
                                 <li class="kl-founder__tenet">
                                     <span class="kl-founder__numeral" aria-hidden="true">I</span>
-                                    <h3 class="kl-founder__tenet-title">Evidence before automation</h3>
+                                    <h3 class="kl-founder__tenet-title">Model before answering</h3>
                                     <p class="kl-founder__tenet-line">
-                                        We do not treat trade documentation as form generation.
-                                        We treat it as an evidence system.
+                                        The system must understand how the world fits together before it
+                                        reasons about any part of it.
                                     </p>
                                 </li>
                                 <li class="kl-founder__tenet">
                                     <span class="kl-founder__numeral" aria-hidden="true">II</span>
-                                    <h3 class="kl-founder__tenet-title">Reasoning before output</h3>
+                                    <h3 class="kl-founder__tenet-title">Evidence before action</h3>
                                     <p class="kl-founder__tenet-line">
-                                        Every packet should preserve the source, the rule, the
-                                        reasoning path, and the reviewer decision.
+                                        Every material conclusion preserves its source, rule, reasoning path
+                                        and human review.
                                     </p>
                                 </li>
                                 <li class="kl-founder__tenet">
                                     <span class="kl-founder__numeral" aria-hidden="true">III</span>
-                                    <h3 class="kl-founder__tenet-title">Infrastructure before interface</h3>
+                                    <h3 class="kl-founder__tenet-title">A narrow entry, a larger horizon</h3>
                                     <p class="kl-founder__tenet-line">
-                                        TradeWatch is the first deployment. The larger undertaking
-                                        is an intelligence layer for regulated trade.
+                                        TradeWatch begins with shipment-level compliance. The larger
+                                        undertaking is continuous intelligence for regulated global value
+                                        chains.
                                     </p>
                                 </li>
                             </ol>
@@ -1820,9 +1920,9 @@
 
     </div>
 
-    <!-- GSAP + ScrollTrigger — deferred, execute in order; inline animation scripts use window 'load' or DOMContentLoaded -->
-    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <!-- Local GSAP + ScrollTrigger keep the preview independent of CDN latency. -->
+    <script defer src="assets/vendor/gsap/gsap.min.js"></script>
+    <script defer src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
     <!-- Manifesto word-reveal: GSAP timeline drives animation directly (no CSS transitions) -->
     <script defer>
     window.addEventListener('load', function () {
@@ -1881,7 +1981,7 @@
         });
     </script>
 
-    <!-- Word reel: 14-word linear buffer — no circular math, no collisions -->
+    <!-- Word reel: doubled linear buffer — no circular math, no collisions -->
     <script defer>
         window.addEventListener('load', function () {
             if (typeof gsap === 'undefined') return;
@@ -1896,7 +1996,7 @@
             var origWords = Array.from(list.querySelectorAll('.kl-scope__word'));
             if (origWords.length < 2) return;
 
-            var N = origWords.length; // 7
+            var N = origWords.length;
 
             // Append N clones — gives us a staging buffer below the visible zone
             origWords.forEach(function(w) {
@@ -1905,7 +2005,7 @@
                 list.appendChild(clone);
             });
 
-            var words     = Array.from(list.querySelectorAll('.kl-scope__word')); // 14
+            var words     = Array.from(list.querySelectorAll('.kl-scope__word'));
             var SLOT      = origWords[0].offsetHeight;
             var SCROLL_DUR = 0.75;
             var HOLD       = 0.75;
@@ -2004,14 +2104,14 @@
     </script>
 
     <!-- Scripts (deferred — non-render-blocking) -->
-    <script src="js/infrastructure-grid.js" defer></script>
+    <script src="js/infrastructure-grid.js?v=2" defer></script>
     <script src="js/founder-grid.js" defer></script>
     <script src="js/brevo-subscribe.js" defer></script>
     <script src="js/staggered-menu.js?v=4" defer></script>
-    <script src="js/tw-demo-clone.js" defer></script>
+    <script src="js/tw-demo-clone.js?v=3" defer></script>
     <script src="js/triptych.js" defer></script>
     <script src="js/drona-tabs.js" defer></script>
-    <script src="js/evidence-workflow.js" defer></script>
+    <script src="js/drona-funnel.js?v=2" defer></script>
 </body>
 
 </html>

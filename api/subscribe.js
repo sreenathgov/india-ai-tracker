@@ -4,11 +4,13 @@
  * 2. Immediately sends welcome email via transactional API (template ID 1)
  *
  * Environment variables (set in Vercel dashboard):
- *   BREVO_API_KEY  — your Brevo API key
- *   BREVO_LIST_ID  — Brevo list ID (default: 2)
+ *   BREVO_API_KEY     — your Brevo API key
+ *   BREVO_LIST_ID     — Brevo list ID (default: 2)
+ *   MAKE_WEBHOOK_URL  — optional; if set, fans the submission out to a Make scenario
  */
 
 const { applyCors, rateLimit, checkHoneypot } = require('./_lib/security');
+const { notifyMake } = require('./_lib/notify');
 
 module.exports = async function handler(req, res) {
   if (!applyCors(req, res)) {
@@ -81,6 +83,8 @@ module.exports = async function handler(req, res) {
       // Log but don't fail — contact was added successfully
       console.error('Brevo send email error:', emailRes.status, err);
     }
+
+    await notifyMake('subscribe', { email, submittedAt: new Date().toISOString() });
 
     return res.status(200).json({ success: true });
 

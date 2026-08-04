@@ -1,5 +1,6 @@
 # Only ignore these - everything else should be deployed
 backend/
+archive/
 .git/
 .github/
 node_modules/

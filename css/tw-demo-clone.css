@@ -43,13 +43,48 @@
     --tw-mono:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* ---------- Continuous TradeWatch band on landing page ----------
+   The demo and the capability reel share one transparent field so the fixed
+   infrastructure grid remains continuous across their boundary. Grain is
+   applied once to the band instead of restarting inside each section. */
+.kl-tradewatch-band {
+    position: relative;
+    z-index: 1;
+    isolation: isolate;
+    background: transparent;
+}
+
+.kl-tradewatch-band::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.96  0 0 0 0 0.92  0 0 0 0 0.82  0 0 0 0.04 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    background-size: 160px 160px;
+    mix-blend-mode: overlay;
+    opacity: 0.55;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.kl-tradewatch-band > .kl-twdemo,
+.kl-tradewatch-band > .kl-scope {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+.kl-tradewatch-band > .kl-twdemo::before,
+.kl-tradewatch-band > .kl-scope::before {
+    content: none;
+}
+
 /* ---------- Section wrapper on landing page ---------- */
 .kl-twdemo {
     position: relative;
     width: 100%;
     box-sizing: border-box;
-    background: transparent;   /* lets the fixed grid canvas show through */
-    padding: clamp(40px, 4vw, 80px) clamp(16px, 3vw, 40px) clamp(28px, 3vw, 48px);
+    background: transparent;
+    padding: clamp(104px, 9vw, 148px) clamp(24px, 5vw, 80px) clamp(84px, 7vw, 116px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,61 +109,133 @@
     position: relative;
     z-index: 2;
     width: 100%;
-    max-width: 1357px;   /* 1180 × 1.15 */
+    max-width: 1360px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: minmax(310px, 0.78fr) minmax(0, 1.22fr);
     align-items: center;
-    gap: clamp(16px, 2.2vw, 30px);
+    gap: clamp(52px, 6.5vw, 104px);
 }
 
-.kl-twdemo__eyebrow {
-    margin: 0;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 0.6875rem;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--kl-red, #db4a2b);
-    text-align: center;
+.kl-twdemo__copy {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .kl-twdemo__title {
     margin: 0;
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-weight: 400;
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
-    line-height: 1.22;
-    color: #ffffff;
-    text-align: center;
-    max-width: none;
-    letter-spacing: -0.005em;
-    white-space: normal;
+    font-size: clamp(3rem, 4.35vw, 4.25rem);
+    line-height: 0.98;
+    color: var(--tw-cream);
+    text-align: left;
+    max-width: 8.8em;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
 }
 
-.kl-twdemo__title em {
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.92);
+.kl-twdemo__description {
+    margin: clamp(22px, 2vw, 30px) 0 0;
+    max-width: 31rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: clamp(0.98rem, 1.15vw, 1.08rem);
+    font-weight: 400;
+    line-height: 1.65;
+    color: rgba(238, 235, 227, 0.76);
+}
+
+.kl-twdemo__link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.72rem;
+    min-height: 44px;
+    margin-top: clamp(24px, 2.4vw, 34px);
+    color: var(--tw-cream);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.84rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}
+
+.kl-twdemo__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 1.9rem;
+    bottom: 7px;
+    height: 1px;
+    background: currentColor;
+    transform-origin: left;
+    transition: transform 240ms ease;
+}
+
+.kl-twdemo__link-arrow {
+    position: relative;
+    width: 19px;
+    height: 12px;
+    flex: 0 0 19px;
+    transition: transform 240ms ease;
+}
+
+.kl-twdemo__link-arrow::before,
+.kl-twdemo__link-arrow::after {
+    content: '';
+    position: absolute;
+    right: 0;
+}
+
+.kl-twdemo__link-arrow::before {
+    top: 5px;
+    width: 19px;
+    height: 1px;
+    background: currentColor;
+}
+
+.kl-twdemo__link-arrow::after {
+    top: 2px;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid currentColor;
+    border-right: 1px solid currentColor;
+    transform: rotate(45deg);
+}
+
+.kl-twdemo__link:hover::after {
+    transform: scaleX(0.72);
+}
+
+.kl-twdemo__link:hover .kl-twdemo__link-arrow {
+    transform: translateX(4px);
+}
+
+.kl-twdemo__link:focus-visible {
+    outline: 2px solid var(--tw-cream);
+    outline-offset: 5px;
 }
 
 /* ---------- Stage frame (fixed-size, no scroll pin) ---------- */
 .kl-twdemo__stage {
     position: relative;
     width: 100%;
-    max-width: 1210px;   /* ~11% smaller than the original 1357px cap */
+    max-width: 820px;
     aspect-ratio: 16 / 10;
     background: var(--tw-cream);
     backdrop-filter: blur(var(--tw-glass-blur)) saturate(1.4);
     -webkit-backdrop-filter: blur(var(--tw-glass-blur)) saturate(1.4);
-    border: 1px solid var(--tw-glass-border);
-    border-radius: 22px;
+    border: 1px solid rgba(238, 235, 227, 0.42);
+    border-radius: 0;
     box-shadow:
-        0 40px 90px -28px rgba(0, 0, 0, 0.65),
+        0 30px 70px -34px rgba(0, 0, 0, 0.72),
         0 0 0 1px rgba(238, 235, 227, 0.10);
     overflow: hidden;
     display: grid;
     grid-template-rows: auto 1fr;
-    margin: 0 auto;      /* belt-and-braces horizontal centring */
+    margin: 0 0 0 auto;
 }
 
 /* ---------- Chrome bar ---------- */
@@ -1126,17 +1233,10 @@
 }
 
 /* ---------- Dynamic fit (desktop) ----------
-   The stage keeps its 16/10 ratio, but its height is also capped to a slice
-   of the viewport so the whole reel (eyebrow + title + stage) fits in one
-   screen on short displays like 13" laptops. Width is the smaller of: the
-   1210px cap, the available width, or the width that keeps the stage ≤82svh
-   tall (82svh × 16/10). Because the stage is height-capped, the heaviest
-   scenes (Morning Brief's three rows, the packet pair + sign-off) are also
-   tightened here so they fit the canvas instead of clipping at the bottom.
-   Scoped to ≥901px so the mobile scrollable-canvas path below is untouched. */
+   The editorial split deliberately keeps the product window compact. */
 @media (min-width: 901px) {
     .kl-twdemo__stage {
-        width: min(100%, 1210px, calc(82svh * 16 / 10));
+        width: min(100%, 820px);
     }
 
     /* Scene 1 · Morning Brief — three shipment rows + actions must clear the
@@ -1157,54 +1257,112 @@
     .kl-twdemo .tw-pkg-seal    { width: 58px; height: 58px; font-size: 0.62rem; }
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 900px) {
-    /* Drop aspect-ratio; use viewport-relative height so content isn't clipped */
+/* The smaller editorial frame presents one decisive proof point per scene.
+   This keeps the interface legible instead of scaling the entire dashboard
+   down to decorative, unreadable detail. */
+@media (min-width: 1101px) {
+    .kl-twdemo .tw-app-shell { grid-template-columns: 1fr; }
+    .kl-twdemo .tw-rail { display: none; }
+    .kl-twdemo .tw-canvas { height: 100%; }
+    .kl-twdemo .tw-canvas-body { padding: 1rem; }
+    .kl-twdemo .tw-canvas-body .tw-scene { inset: 1rem; gap: 0.75rem; }
+
+    .kl-twdemo .tw-brief-actions,
+    .kl-twdemo .tw-brief-row + .tw-brief-row,
+    .kl-twdemo .tw-brief-note { display: none; }
+    .kl-twdemo .tw-brief { gap: 0.75rem; }
+    .kl-twdemo .tw-brief-head { margin-bottom: 0; }
+    .kl-twdemo .tw-brief-date { font-size: 1.8rem; }
+    .kl-twdemo .tw-brief-row { padding: 0.85rem 1rem; }
+
+    .kl-twdemo .tw-inbox { gap: 0.55rem; }
+    .kl-twdemo .tw-inbox-row:nth-child(n + 4) { display: none; }
+    .kl-twdemo .tw-inbox-row { padding-block: 0.45rem; }
+
+    .kl-twdemo .tw-pkg { gap: 0.65rem; }
+    .kl-twdemo .tw-pkg-pair { grid-template-columns: 1fr; }
+    .kl-twdemo .tw-pkg-card + .tw-pkg-card,
+    .kl-twdemo .tw-pkg-list,
+    .kl-twdemo .tw-pkg-signoff,
+    .kl-twdemo .tw-pkg-envelopes { display: none; }
+    .kl-twdemo .tw-pkg-card { padding: 0.85rem 1rem; }
+    .kl-twdemo .tw-pkg-title { margin-block: 0.3rem; }
+    .kl-twdemo .tw-pkg-route { padding-bottom: 0.45rem; margin-bottom: 0.5rem; }
+    .kl-twdemo .tw-pkg-summary { margin-bottom: 0; }
+}
+
+/* ---------- Compact product window ---------- */
+@media (max-width: 1100px) {
+    .kl-twdemo {
+        padding-inline: clamp(24px, 4vw, 44px);
+    }
+    .kl-twdemo__inner {
+        grid-template-columns: minmax(260px, 0.74fr) minmax(0, 1.26fr);
+        gap: clamp(32px, 4vw, 48px);
+    }
+    .kl-twdemo__title {
+        font-size: clamp(2.55rem, 4.7vw, 3.25rem);
+    }
     .kl-twdemo__stage {
-        aspect-ratio: unset;
-        height: clamp(580px, 72dvh, 760px);
+        aspect-ratio: 16 / 10;
+        height: auto;
         max-height: none;
     }
-    /* Propagate height through the flex chain (same fix as tradewatch.html) */
     .kl-twdemo .tw-canvas { height: 100%; }
-    /* Scrollable canvas body — overflow content accessible rather than clipped */
     .kl-twdemo .tw-canvas-body {
-        overflow-y: auto;
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
+        overflow: hidden;
+        padding: clamp(0.7rem, 1.5vw, 1rem);
     }
-    .kl-twdemo .tw-canvas-body::-webkit-scrollbar { display: none; }
-    /* Scene: release hard bottom clip, height driven by content */
     .kl-twdemo .tw-canvas-body .tw-scene {
-        bottom: auto;
-        min-height: calc(100% - 2.2rem);
+        inset: clamp(0.7rem, 1.5vw, 1rem);
+        min-height: 0;
+        gap: 0.6rem;
     }
     .kl-twdemo .tw-app-shell { grid-template-columns: 1fr; }
     .kl-twdemo .tw-rail { display: none; }
+    .kl-twdemo .tw-canvas-tab { padding: 0.5rem 0.75rem; font-size: 0.5rem; }
+    .kl-twdemo .tw-stage-chrome { padding: 0.55rem 0.8rem; }
+    .kl-twdemo .tw-stage-chrome-scene { font-size: 0.88rem; }
+    .kl-twdemo .tw-scene-cap { font-size: 0.52rem; line-height: 1.25; padding-top: 0.2rem; }
     .kl-twdemo .tw-brief-row { grid-template-columns: 1fr auto; gap: 0.5rem 0.75rem; padding: 0.85rem 1rem; align-items: start; }
     .kl-twdemo .tw-brief-ship { grid-column: 1; }
     .kl-twdemo .tw-brief-status { grid-column: 2; align-self: start; }
     .kl-twdemo .tw-brief-note { grid-column: 1 / -1; font-size: 0.95rem; line-height: 1.42; }
+    .kl-twdemo .tw-brief-actions { display: none; }
+    .kl-twdemo .tw-brief-date { font-size: clamp(1.25rem, 2.8vw, 1.7rem); }
+    .kl-twdemo .tw-brief-date-sub { margin-top: 0.3rem; font-size: 0.48rem; }
+    .kl-twdemo .tw-brief-alert { padding: 0.42rem 0.7rem; font-size: 0.5rem; }
     .kl-twdemo .tw-erp-svg { display: none !important; }
     .kl-twdemo .tw-erp-chips {
         display: flex !important;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 0.55rem;
+        gap: 0.45rem;
         width: 100%;
         padding: 0 0.5rem;
     }
+    .kl-twdemo .tw-erp-chip:nth-child(n + 4) { display: none !important; }
     .kl-twdemo .tw-erp-chip[data-system] {
         position: static !important;
         top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
         transform: none !important;
         opacity: 1 !important;
     }
-    .kl-twdemo .tw-erp { flex-direction: column; gap: 1.2rem; min-height: 0; }
-    .kl-twdemo .tw-erp-medallion { width: clamp(96px, 26vw, 140px); height: clamp(96px, 26vw, 140px); }
+    .kl-twdemo .tw-erp { flex-direction: column; gap: 0.7rem; min-height: 0; }
+    .kl-twdemo .tw-erp-medallion { width: clamp(72px, 12vw, 104px); height: clamp(72px, 12vw, 104px); }
+    .kl-twdemo .tw-erp-medallion-mark { font-size: clamp(1.75rem, 3.5vw, 2.4rem); }
+    .kl-twdemo .tw-erp-chip { padding: 0.35rem 0.65rem 0.35rem 0.35rem; font-size: 0.58rem; }
+    .kl-twdemo .tw-erp-chip-logo { width: 22px; height: 22px; }
+    .kl-twdemo .tw-inbox { gap: 0.45rem; }
+    .kl-twdemo .tw-inbox-dropzone { display: none; }
+    .kl-twdemo .tw-inbox-row:nth-child(n + 4) { display: none; }
+    .kl-twdemo .tw-inbox-list { gap: 0.28rem; }
+    .kl-twdemo .tw-inbox-row { padding: 0.38rem 0.55rem; }
+    .kl-twdemo .tw-inbox-stat { font-size: 0.5rem; margin-top: 0.1rem; }
     .kl-twdemo .tw-pkg-pair { grid-template-columns: 1fr; }
+    .kl-twdemo .tw-pkg-card + .tw-pkg-card { display: none; }
+    .kl-twdemo .tw-pkg-card { padding: 0.7rem; }
     .kl-twdemo .tw-pkg-list { display: none; }
     .kl-twdemo .tw-pkg-hash { display: none; }
     /* Show only first brief-row; hide remaining 2 and the long note (same
@@ -1222,13 +1380,91 @@
         max-width: 100%;
     }
     .kl-twdemo .tw-pkg-compile-stat::before { display: none; }
-    .kl-twdemo__title { font-size: 1rem; line-height: 1.3; }
     .kl-twdemo .tw-pkg-signoff { display: none; }
     .kl-twdemo .tw-pkg-envelopes { display: none; }
-    .kl-twdemo { padding-bottom: 4rem; }
+}
+
+/* ---------- Stacked editorial layout ---------- */
+@media (max-width: 840px) {
+    .kl-twdemo {
+        padding: clamp(88px, 13vw, 116px) clamp(22px, 6vw, 44px) clamp(72px, 10vw, 92px);
+    }
+    .kl-twdemo__inner {
+        grid-template-columns: 1fr;
+        gap: clamp(36px, 7vw, 52px);
+    }
+    .kl-twdemo__copy {
+        max-width: 38rem;
+    }
+    .kl-twdemo__title {
+        max-width: 9.2em;
+        font-size: clamp(2.75rem, 8.2vw, 4rem);
+    }
+    .kl-twdemo__description {
+        max-width: 36rem;
+    }
+    .kl-twdemo__stage {
+        width: 100%;
+        max-width: 720px;
+        margin: 0;
+    }
 }
 
 @media (max-width: 600px) {
+    .kl-twdemo {
+        padding: 80px 18px 72px;
+    }
+    .kl-twdemo__inner { gap: 34px; }
+    .kl-twdemo__title {
+        font-size: clamp(2.55rem, 12vw, 3.35rem);
+        line-height: 0.98;
+    }
+    .kl-twdemo__description {
+        margin-top: 20px;
+        font-size: 0.94rem;
+        line-height: 1.58;
+    }
+    .kl-twdemo__link { margin-top: 20px; }
+    .kl-twdemo .tw-stage-chrome { padding: 0.42rem 0.55rem; }
+    .kl-twdemo .tw-scene-meter-dots { gap: 0.28rem; }
+    .kl-twdemo .tw-scene-meter-dot { width: 5px; height: 5px; }
+    .kl-twdemo .tw-scene-meter-dot.is-active { width: 18px; }
+    .kl-twdemo .tw-canvas-tab { display: none; }
+    .kl-twdemo .tw-canvas-body,
+    .kl-twdemo .tw-canvas-body .tw-scene { padding: 0; }
+    .kl-twdemo .tw-canvas-body .tw-scene { inset: 0.55rem; }
+    .kl-twdemo .tw-scene-cap { display: none; }
+    .kl-twdemo .tw-brief-head { margin: 0; gap: 0.4rem; }
+    .kl-twdemo .tw-brief-date { font-size: 1.05rem; }
+    .kl-twdemo .tw-brief-date-sub { display: none; }
+    .kl-twdemo .tw-brief-alert { font-size: 0.38rem; letter-spacing: 0.08em; padding: 0.3rem 0.45rem; }
+    .kl-twdemo .tw-brief-row { padding: 0.48rem 0.55rem; gap: 0.3rem; }
+    .kl-twdemo .tw-brief-ship-id { font-size: 0.55rem; }
+    .kl-twdemo .tw-brief-ship-route { font-size: 0.44rem; }
+    .kl-twdemo .tw-brief-status { font-size: 0.4rem; padding: 0.3rem 0.45rem; }
+    .kl-twdemo .tw-erp { gap: 0.45rem; }
+    .kl-twdemo .tw-erp-medallion { width: 60px; height: 60px; }
+    .kl-twdemo .tw-erp-medallion-mark { font-size: 1.55rem; }
+    .kl-twdemo .tw-erp-medallion-label { font-size: 0.38rem; }
+    .kl-twdemo .tw-erp-chip { font-size: 0.44rem; padding: 0.25rem 0.45rem 0.25rem 0.25rem; gap: 0.3rem; }
+    .kl-twdemo .tw-erp-chip-logo { width: 17px; height: 17px; }
+    .kl-twdemo .tw-erp-chip-logo img { width: 11px; height: 11px; }
+    .kl-twdemo .tw-inbox-head { display: none; }
+    .kl-twdemo .tw-inbox-row { grid-template-columns: 14px minmax(0, 1fr) auto; padding: 0.28rem 0.4rem; gap: 0.35rem; }
+    .kl-twdemo .tw-inbox-row-icon { width: 14px; height: 14px; }
+    .kl-twdemo .tw-inbox-row-name { font-size: 0.48rem; }
+    .kl-twdemo .tw-inbox-row-time { display: none; }
+    .kl-twdemo .tw-inbox-tag { font-size: 0.34rem; padding: 0.16rem 0.26rem; }
+    .kl-twdemo .tw-inbox-stat { font-size: 0.38rem; letter-spacing: 0.06em; }
+    .kl-twdemo .tw-pkg { gap: 0.35rem; }
+    .kl-twdemo .tw-pkg-compile-stat { font-size: 0.38rem; padding: 0.24rem 0.4rem; }
+    .kl-twdemo .tw-pkg-card { padding: 0.48rem; }
+    .kl-twdemo .tw-pkg-tag { font-size: 0.38rem; }
+    .kl-twdemo .tw-pkg-title { font-size: 0.75rem; margin: 0.15rem 0 0.2rem; }
+    .kl-twdemo .tw-pkg-route { display: none; }
+    .kl-twdemo .tw-pkg-summary { margin: 0; gap: 0.2rem; }
+    .kl-twdemo .tw-pkg-summary-cell { font-size: 0.32rem; padding: 0.28rem 0.1rem; }
+    .kl-twdemo .tw-pkg-summary-cell strong { font-size: 0.72rem; }
     /* Railing: stack dot+eyebrow on line 1, scene title on line 2, no wrapping */
     .kl-twdemo .tw-stage-chrome { align-items: flex-start; }
     .kl-twdemo .tw-stage-chrome-left { flex-wrap: wrap; row-gap: 0.18rem; }
@@ -1236,32 +1472,6 @@
         flex-basis: 100%;
         font-size: clamp(0.8rem, 3.4vw, 0.95rem);
         line-height: 1.2;
-    }
-    /* Inbox sub-header: restore separation between title and meta */
-    .kl-twdemo .tw-inbox-head { gap: 0.6rem; flex-wrap: wrap; row-gap: 0.2rem; }
-    .kl-twdemo .tw-inbox-head-title {
-        font-size: clamp(0.84rem, 3.4vw, 1.0rem);
-        min-width: 0;
-    }
-    .kl-twdemo .tw-inbox-head-meta {
-        font-size: 0.5rem;
-        letter-spacing: 0.12em;
-        white-space: nowrap;
-        flex-shrink: 0;
-    }
-    /* Doc-type chip: shrink to fit one line; ellipsis is a last-resort safety */
-    .kl-twdemo .tw-inbox-tag {
-        font-size: clamp(0.36rem, 1.7vw, 0.44rem);
-        letter-spacing: 0.06em;
-        padding: 0.18rem 0.32rem;
-        max-width: 100%;
-        min-width: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .kl-twdemo .tw-inbox-row {
-        grid-template-columns: 18px minmax(0, 1fr) auto minmax(0, auto);
-        column-gap: 0.4rem;
     }
     .kl-twdemo .tw-inbox-row-name {
         overflow: hidden;

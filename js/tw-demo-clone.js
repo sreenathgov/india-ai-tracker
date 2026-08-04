@@ -22,9 +22,9 @@
         'Bundle arrives',
         'Reviewer signs · packets delivered'
     ];
-    // Pacing scaled 0.7× from the original 5500 / 450 for ~30% faster cycle.
-    const SCENE_MS  = 3850;
-    const REVEAL_MS = 315;
+    // Brisk editorial pacing: enough time to read one proof point per scene.
+    const SCENE_MS  = 2900;
+    const REVEAL_MS = 240;
 
     const reduced = window.matchMedia &&
                     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -70,34 +70,54 @@
     let started = false;
     let sceneTimer = null;
     let currentIdx = 0;
+    let isVisible = false;
 
-    function startLoop() {
-        if (started) return;
-        started = true;
-        show(0);
-        currentIdx = 0;
-        if (reduced) return;
+    function pauseLoop() {
+        if (!sceneTimer) return;
+        clearInterval(sceneTimer);
+        sceneTimer = null;
+    }
+
+    function resumeLoop() {
+        if (reduced || sceneTimer || document.hidden || !isVisible) return;
         sceneTimer = setInterval(() => {
             currentIdx = (currentIdx + 1) % scenes.length;
             show(currentIdx);
         }, SCENE_MS);
     }
 
+    function enterViewport() {
+        isVisible = true;
+        if (!started) {
+            started = true;
+            currentIdx = 0;
+            show(0);
+        }
+        resumeLoop();
+    }
+
+    function leaveViewport() {
+        isVisible = false;
+        pauseLoop();
+    }
+
     if (!('IntersectionObserver' in window)) {
-        // Older browser — fall back to immediate start (matches old behaviour).
-        startLoop();
+        // Older browser — fall back to immediate start.
+        enterViewport();
         return;
     }
 
     const io = new IntersectionObserver((entries) => {
         for (const e of entries) {
-            if (e.isIntersecting && e.intersectionRatio >= 0.25) {
-                startLoop();
-                io.disconnect();
-                break;
-            }
+            if (e.isIntersecting && e.intersectionRatio >= 0.15) enterViewport();
+            else leaveViewport();
         }
-    }, { threshold: 0.25, rootMargin: '0px 0px -10% 0px' });
+    }, { threshold: [0, 0.15], rootMargin: '0px 0px -6% 0px' });
 
     io.observe(stage);
+
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) pauseLoop();
+        else resumeLoop();
+    });
 })();
