@@ -216,18 +216,125 @@ export const EXPECTED_RULE_STATES = [
 //     fixture facts; sourced from the locked shot list, never invented) ───────
 
 export const DISPLAY = {
+  /** Product wordmark. */
+  product: "TradeWatch",
+  /** Short party/lane forms used in the workspace chrome line (Bible §5 Beat 0). */
+  exporterShort: "Voltcore Energy Cells",
+  buyerShort: "EuroVolt Mobility GmbH",
+  laneShort: "Nhava Sheva → Hamburg",
   /** Reviewer of record (Bible §2; as built in the product demo). */
   reviewerOfRecord: "Kavya Reddy",
   /** Short reviewer form used in the Beat 2 override chip (Bible §5). */
   reviewerShort: "K. Reddy",
   /** Approver in the Beat 4b human beat (Bible §5). */
   approver: "A. Sreenath",
+  /** Workspace clock — the four on-screen times (Bible §5). */
+  timeArrive: "09:31",
+  timeOverride: "09:44",
+  timeApprove: "09:47",
+  timeSeal: "10:14 IST",
   /** Seal hash display string, scrambles then settles (Bible §5 Beat 6). */
   sealHash: "8a7f29c4…b4f6a8",
   /** SB005 chip copy (Bible §5 Beat 2; code + label match the fixture verdict). */
   sb005Chip: "ICEGATE SB005 · Invalid Invoice Number · BLOCKED",
   /** UN 38.3 rule card (Bible §5 Beat 3). */
   ruleCardL2R03: "L2-R03 · Li-ion UN 3480 · IMDG Section IA · Wh-threshold trigger",
+  /** Cell model in the Beat 4a request (Bible §5). */
+  cellModel: "NMC-5000-37",
+} as const;
+
+// ─── on-screen copy, by beat (verbatim from the locked shot list, Bible §5;
+//     lines marked "derived" are minimally assembled from §5's own wording) ───
+
+export const COPY = {
+  /** Beat 0 workspace chrome line. */
+  chrome: `${DISPLAY.product} · ${SHIPMENT.displayId} · ${DISPLAY.exporterShort} → ${DISPLAY.buyerShort} · ${DISPLAY.laneShort}`,
+  captions: {
+    beat0: `${DISPLAY.timeArrive} · Seven documents arrive.`,
+    beat1: "Classified deterministically. Every field linked to page, line and bounding box.",
+    beat3: "It does not guess. It asks.",
+    beat4: "One request. Source-linked. Rule closed.",
+  },
+  statSuffix: {
+    /** Beat 1 stat line tail. */
+    intake: "source-linked",
+    /** Beat 5 stat line tail segments. */
+    resolved: ["1 override recorded", "0 unclear"],
+  },
+  /** Beat 1 — the UN 38.3 card never classifies; it lands slate. */
+  unverifiedCount: "0 verified",
+  beat2: {
+    paneTally: "Commercial Invoice · Tally · p1",
+    paneIcegate: "Shipping Bill draft · ICEGATE · p1",
+    consequence:
+      "The Shipping Bill cannot be amended after EGM. The IGST refund is forfeited.",
+    reviewerChip: `Reviewer: ${DISPLAY.reviewerShort} · re-key error at ICEGATE entry · ${DISPLAY.timeOverride}`,
+  },
+  beat3: {
+    missingInput: "Test summary registered · no verified Wh observation",
+  },
+  beat4: {
+    /** The four request-line labels, verbatim from the §5 Beat 4a table. */
+    requestLabels: {
+      to: "To",
+      requested: "Requested",
+      requiredFor: "Required for",
+      scope: "Scope",
+    },
+    request: {
+      to: `${CELL_SUPPLIER.name} · ${CELL_SUPPLIER.city}`,
+      requested: `UN 38.3 Test Summary — cell ${DISPLAY.cellModel}`,
+      requiredFor: "IMDG Section IA verification · marine cargo cover",
+      scope: `Linked to ${SHIPMENT.displayId} only`,
+    },
+    approveButton: "Approve and send",
+    approvedChip: `Approved · ${DISPLAY.approver} · ${DISPLAY.timeApprove}`,
+    /** Supplier responder steps — derived from §5 Beat 4c's own verbs. */
+    responderSteps: [
+      `Locating cell record · ${DISPLAY.cellModel}`,
+      `Attaching ${UN38_3.returnedFilename}`,
+      "Returning to requester",
+    ],
+    /** Beat 4d extracted-field rows (values from the fixture payload). */
+    extractedFields: [
+      {
+        label: "Watt-hours per cell",
+        value: `${UN38_3.wattHoursPerCell} ${UN38_3.wattHoursUnit}`,
+        provenance: "p2 · bbox",
+      },
+      {
+        label: "Test report reference",
+        value: UN38_3.testReportReference,
+        provenance: "p1 · bbox",
+      },
+    ],
+  },
+  beat5: {
+    aggregate: "PASS",
+    defensibility: "Defensibility floor: full",
+    overrideLog: "Override log: 1",
+  },
+  beat6: {
+    sealButton: "Sign and seal",
+    sealLine: `${DISPLAY.reviewerOfRecord} · ${DISPLAY.timeSeal} · 25 Feb 2026 · SHA-256 sealed · no further edits possible`,
+  },
+  beat7: {
+    packets: [
+      {
+        title: "Packet 01 · Shipping Bill Readiness",
+        endpoint: "your licensed Customs House Agent",
+        microLine: "Prepared for filing by your CHA. TradeWatch does not file.",
+      },
+      {
+        title: "Packet 02 · Marine Cargo Insurance",
+        endpoint: "your IRDAI-registered broker",
+        microLine:
+          "Prepared for your registered broker. TradeWatch does not place cover.",
+      },
+    ],
+    endCardTitle: DISPLAY.product,
+    endCardSub: "Trade intelligence infrastructure for a contested world.",
+  },
 } as const;
 
 // ─── the six extracted documents (machine-emitted from expected_outcomes.json;

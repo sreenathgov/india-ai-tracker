@@ -156,12 +156,12 @@
 .kl-founder__doctrine-card {
     position: relative;
     overflow: hidden;
-    background: var(--kl-red, #db4a2b);
+    background: var(--kl-navy, #0a2f52);
     border-radius: 4px;
-    padding: clamp(2rem, 3.5vw, 3rem);
+    padding: clamp(1.75rem, 3vw, 2.5rem);
     box-shadow:
-        0 30px 80px -28px rgba(180, 50, 20, 0.60),
-        0  8px 22px -10px rgba(180, 50, 20, 0.35);
+        0 30px 80px -28px rgba(3, 28, 52, 0.52),
+        0  8px 22px -10px rgba(3, 28, 52, 0.32);
 }
 
 .kl-founder__doctrine-grid {
@@ -171,7 +171,7 @@
     height: 100%;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.55;
+    opacity: 0.24;
 }
 
 .kl-founder__doctrine-inner {
@@ -179,7 +179,7 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: clamp(1.5rem, 2.4vw, 2rem);
+    gap: clamp(1.1rem, 1.8vw, 1.5rem);
 }
 
 .kl-founder__doctrine-eyebrow {
@@ -189,15 +189,15 @@
     font-weight: 600;
     letter-spacing: 0.32em;
     text-transform: uppercase;
-    color: #f4ebd0;
+    color: var(--kl-cream, #eeebe3);
 }
 
 .kl-founder__note p {
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.75rem 0;
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--kl-cream, #eeebe3);
 }
 
 .kl-founder__note p:last-child { margin-bottom: 0; }
@@ -214,14 +214,14 @@
 .kl-founder__tenet {
     display: flex;
     flex-direction: column;
-    gap: 0.45rem;
-    padding: 1.25rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.20);
+    gap: 0.35rem;
+    padding: 0.9rem 0;
+    border-top: 0;
 }
 
 .kl-founder__tenet:first-child {
     border-top: none;
-    padding-top: 0.5rem;
+    padding-top: 0.25rem;
 }
 
 .kl-founder__tenet:last-child {
@@ -230,11 +230,11 @@
 
 .kl-founder__numeral {
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.625rem;
     font-weight: 600;
     letter-spacing: 0.24em;
     text-transform: uppercase;
-    color: #f4ebd0;
+    color: var(--kl-cream, #eeebe3);
     line-height: 1;
 }
 
@@ -243,18 +243,18 @@
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-weight: 500;
     font-style: italic;
-    font-size: clamp(1.15rem, 1.45vw, 1.4rem);
-    line-height: 1.25;
+    font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+    line-height: 1.2;
     letter-spacing: -0.005em;
-    color: rgba(255, 255, 255, 0.98);
+    color: var(--kl-cream, #eeebe3);
 }
 
 .kl-founder__tenet-line {
     margin: 0;
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: 0.9375rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.80);
+    font-size: 0.825rem;
+    line-height: 1.48;
+    color: var(--kl-cream, #eeebe3);
 }
 
 /* ---------- CTAs (left rail) ---------- */

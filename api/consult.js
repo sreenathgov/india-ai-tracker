@@ -4,10 +4,12 @@
  * 2. Immediately sends acknowledgement email via transactional API (template #3)
  *
  * Environment variables (set in Vercel dashboard):
- *   BREVO_API_KEY  — your Brevo API key
+ *   BREVO_API_KEY     — your Brevo API key
+ *   MAKE_WEBHOOK_URL  — optional; if set, fans the submission out to a Make scenario
  */
 
 const { applyCors, rateLimit, checkHoneypot } = require('./_lib/security');
+const { notifyMake } = require('./_lib/notify');
 
 module.exports = async function handler(req, res) {
   if (!applyCors(req, res)) {
@@ -114,6 +116,19 @@ module.exports = async function handler(req, res) {
       // Log but don't fail — contact was stored successfully
       console.error('Brevo send email error:', emailRes.status, err);
     }
+
+    await notifyMake('consult', {
+      engagementType,
+      contactName: contactName.trim(),
+      email,
+      companyName: companyName || '',
+      website: website || '',
+      sector: sector || '',
+      stage: stage || '',
+      role: role || '',
+      strategicContext: strategicContext || '',
+      submittedAt: timestamp
+    });
 
     return res.status(200).json({ success: true });
 

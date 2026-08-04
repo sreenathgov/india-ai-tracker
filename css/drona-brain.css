@@ -1,21 +1,21 @@
 /* ========================================================================
    drona-brain.css
-   Act A — The Regulatory Brain (Revision Round 1 — "Specimen on Navy")
+   Act A — The Regulatory Brain (Revision Round 2 — "Specimen on Paper")
 
-   Concept: cream paper = structured truth (the brand's answer); navy void
-   = the unresolved black-box. Each failure-mode tab is a bento card; the
-   active one flips from navy-glass to cream paper, visually becoming the
-   "With Drona" answer. A red hairline traces from the active chip across
-   to the cream paper card — provenance, drawn.
+   Concept: the roadmap paper is the shared field. Unresolved outputs remain
+   faint and outlined; the active mode and the "With Drona" answer resolve
+   into decisive navy surfaces. A red hairline traces the active relationship.
    ======================================================================== */
 
 /* ---------- Section-scoped palette ---------- */
 .kl-drona {
-    --kl-navy:     #0a2f52;          /* main blue — matches body, no step-down */
-    --kl-navy-2:   #224d78;          /* subtler blue — hover/active layered surfaces */
-    --kl-cream:    #f4ebd0;          /* secondary white — text on navy */
-    --kl-cream-2:  #f7f5ee;          /* subtler white — With Drona paper card */
-    --kl-orange:   #db4a2b;          /* accent — active rule, indices, trace ink */
+    --kl-ink:      #102a3e;
+    --kl-navy:     #0a2f52;
+    --kl-navy-2:   #224d78;
+    --kl-paper:    #eeebe3;
+    --kl-cream:    #f4ebd0;
+    --kl-orange:   #db4a2b;
+    --kl-red-deep: #bd3b21;
 }
 
 /* ---------- Section ---------- */
@@ -24,23 +24,15 @@
     width: 100%;
     box-sizing: border-box;
     background: transparent;
-    color: var(--kl-cream);
+    color: var(--kl-ink);
     padding: clamp(96px, 11vw, 156px) clamp(16px, 4vw, 40px);
     overflow: hidden;
     z-index: 1;
 }
 
-/* Faint paper-grain on navy — adds atmospheric tooth */
+/* The shared .kl-drona-band owns the continuous paper grain. */
 .kl-drona::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.96  0 0 0 0 0.92  0 0 0 0 0.82  0 0 0 0.04 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-    background-size: 160px 160px;
-    mix-blend-mode: overlay;
-    opacity: 0.55;
-    pointer-events: none;
-    z-index: 1;
+    content: none;
 }
 
 .kl-drona__inner {
@@ -64,7 +56,7 @@
     font-weight: 600;
     letter-spacing: 0.32em;
     text-transform: uppercase;
-    color: rgba(244, 235, 208, 0.42);
+    color: rgba(16, 42, 62, 0.52);
     margin-bottom: 1.2rem;
 }
 
@@ -75,7 +67,7 @@
     font-size: clamp(1.85rem, 3.8vw, 2.9rem);
     line-height: 1.12;
     letter-spacing: -0.01em;
-    color: var(--kl-cream);
+    color: var(--kl-ink);
     margin: 0;
 }
 
@@ -113,7 +105,7 @@
     padding: clamp(1rem, 1.6vw, 1.25rem) clamp(1.1rem, 1.8vw, 1.4rem);
     min-height: 88px;
     cursor: pointer;
-    color: rgba(244, 235, 208, 0.72);
+    color: rgba(16, 42, 62, 0.76);
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-style: italic;
     font-size: clamp(1rem, 1.18vw, 1.12rem);
@@ -121,8 +113,8 @@
     letter-spacing: -0.005em;
 
     /* Bento card surface */
-    background: rgba(34, 77, 120, 0.18);
-    border: 1px solid rgba(244, 235, 208, 0.12);
+    background: rgba(16, 42, 62, 0.025);
+    border: 1px solid rgba(16, 42, 62, 0.16);
     border-left: 2px solid transparent;
     transition:
         background 320ms ease,
@@ -132,11 +124,11 @@
         transform 320ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Hover — bring the navy-2 layer forward */
+/* Hover — lift the ink wash without turning the chip into a dark card. */
 .kl-drona__tab:hover {
-    background: rgba(34, 77, 120, 0.55);
-    border-color: rgba(244, 235, 208, 0.22);
-    color: var(--kl-cream);
+    background: rgba(16, 42, 62, 0.075);
+    border-color: rgba(16, 42, 62, 0.30);
+    color: var(--kl-ink);
     transform: translateX(2px);
 }
 
@@ -146,14 +138,14 @@
     outline-offset: 3px;
 }
 
-/* Active — solid navy-2 card with orange left rule + cream type */
+/* Active — solid ink card with orange left rule + cream type. */
 .kl-drona__tab[aria-selected="true"] {
-    background: var(--kl-navy-2);
-    border-color: rgba(244, 235, 208, 0.28);
+    background: var(--kl-ink);
+    border-color: rgba(16, 42, 62, 0.88);
     border-left-color: var(--kl-orange);
     color: var(--kl-cream);
     box-shadow:
-        0 14px 36px -16px rgba(0, 0, 0, 0.55),
+        0 14px 36px -18px rgba(16, 42, 62, 0.46),
         inset 0 0 0 1px rgba(244, 235, 208, 0.06);
 }
 
@@ -164,18 +156,18 @@
     font-size: 0.62rem;
     font-weight: 600;
     letter-spacing: 0.28em;
-    color: rgba(244, 235, 208, 0.38);
+    color: var(--kl-red-deep);
     align-self: start;
     margin-top: 0.18em;
     transition: color 320ms ease;
 }
 
 .kl-drona__tab:hover .kl-drona__tab-index {
-    color: rgba(244, 235, 208, 0.7);
+    color: var(--kl-red-deep);
 }
 
 .kl-drona__tab[aria-selected="true"] .kl-drona__tab-index {
-    color: var(--kl-orange);
+    color: var(--kl-cream);
 }
 
 /* Desktop-only trace ink: red hairline from active chip's right edge */
@@ -229,32 +221,24 @@
     transition: opacity 320ms ease, transform 320ms ease;
 }
 
-/* Without Drona — dashed outline ghost on a whisper of navy-2 */
+/* Without Drona — dashed outline ghost on a whisper of ink. */
 .kl-drona__panel[data-state="without"] {
-    background: rgba(34, 77, 120, 0.18);
-    border: 1px dashed rgba(244, 235, 208, 0.32);
-    color: rgba(244, 235, 208, 0.62);
+    background: rgba(16, 42, 62, 0.025);
+    border: 1px dashed rgba(16, 42, 62, 0.30);
+    color: rgba(16, 42, 62, 0.72);
 }
 
-/* With Drona — cream paper card. The only warm surface in the section. */
+/* With Drona — the decisive navy answer on the paper field. */
 .kl-drona__panel[data-state="with"] {
-    background: var(--kl-cream-2);
-    border: 1px solid rgba(10, 47, 82, 0.12);
-    color: var(--kl-navy);
-    box-shadow: 0 22px 50px -20px rgba(0, 0, 0, 0.45);
+    background: var(--kl-ink);
+    border: 1px solid rgba(16, 42, 62, 0.92);
+    color: var(--kl-cream);
+    box-shadow: 0 22px 50px -24px rgba(16, 42, 62, 0.58);
 }
 
-/* Paper grain inside the With Drona card */
+/* The shared band already supplies the material texture. */
 .kl-drona__panel[data-state="with"]::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.42  0 0 0 0 0.28  0 0 0 0 0.14  0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-    background-size: 160px 160px;
-    mix-blend-mode: multiply;
-    opacity: 0.55;
-    pointer-events: none;
-    z-index: 0;
+    content: none;
 }
 
 /* Top rule for With Drona — the "answer line" in orange */
@@ -282,11 +266,11 @@
 }
 
 .kl-drona__panel[data-state="without"] .kl-drona__panel-label {
-    color: rgba(244, 235, 208, 0.42);
+    color: var(--kl-red-deep);
 }
 
 .kl-drona__panel[data-state="with"] .kl-drona__panel-label {
-    color: var(--kl-orange);
+    color: rgba(244, 235, 208, 0.78);
 }
 
 .kl-drona__panel-body {
@@ -301,7 +285,7 @@
 }
 
 .kl-drona__panel[data-state="with"] .kl-drona__panel-body {
-    color: var(--kl-navy);
+    color: var(--kl-cream);
 }
 
 .kl-drona__panel-body em {
@@ -310,14 +294,14 @@
 }
 
 .kl-drona__panel[data-state="without"] .kl-drona__panel-body em {
-    color: var(--kl-cream);
+    color: var(--kl-ink);
     background: linear-gradient(180deg, transparent 62%, rgba(219, 74, 43, 0.22) 62%);
     padding: 0 0.12em;
 }
 
 .kl-drona__panel[data-state="with"] .kl-drona__panel-body em {
-    color: var(--kl-navy);
-    background: linear-gradient(180deg, transparent 62%, rgba(219, 74, 43, 0.28) 62%);
+    color: var(--kl-cream);
+    background: linear-gradient(180deg, transparent 62%, rgba(219, 74, 43, 0.36) 62%);
     padding: 0 0.12em;
 }
 
@@ -333,38 +317,9 @@
     transition: opacity 220ms ease, transform 220ms ease;
 }
 
-/* ---------- Closing line ---------- */
-.kl-drona__close {
-    margin: clamp(48px, 6vw, 72px) auto 0;
-    text-align: center;
-    max-width: 720px;
-}
-
-.kl-drona__close-line {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-style: italic;
-    font-size: clamp(1.1rem, 1.8vw, 1.45rem);
-    color: rgba(244, 235, 208, 0.82);
-    line-height: 1.5;
-    margin: 0;
-    letter-spacing: -0.005em;
-}
-
-.kl-drona__close-line::before,
-.kl-drona__close-line::after {
-    content: '';
-    display: inline-block;
-    width: 18px;
-    height: 1px;
-    background: rgba(244, 235, 208, 0.32);
-    vertical-align: middle;
-    margin: 0 0.9rem;
-}
-
 /* ---------- Entrance state (JS sets is-in) ---------- */
 .kl-drona__header,
-.kl-drona__stage,
-.kl-drona__close {
+.kl-drona__stage {
     opacity: 0;
     transform: translateY(28px);
     transition: opacity 800ms ease, transform 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -372,7 +327,6 @@
 
 .kl-drona.is-in .kl-drona__header { transition-delay: 0ms;   opacity: 1; transform: none; }
 .kl-drona.is-in .kl-drona__stage  { transition-delay: 150ms; opacity: 1; transform: none; }
-.kl-drona.is-in .kl-drona__close  { transition-delay: 320ms; opacity: 1; transform: none; }
 
 /* ========================================================================
    RESPONSIVE — Tablet portrait & mobile
@@ -414,8 +368,8 @@
         display: block;
         width: 7px;
         height: 7px;
-        border-right: 1.5px solid rgba(244, 235, 208, 0.38);
-        border-bottom: 1.5px solid rgba(244, 235, 208, 0.38);
+        border-right: 1.5px solid rgba(16, 42, 62, 0.52);
+        border-bottom: 1.5px solid rgba(16, 42, 62, 0.52);
         transform: rotate(45deg) translate(-1px, -2px);
         transition: border-color 320ms ease;
     }
@@ -425,7 +379,7 @@
     }
 
     .kl-drona__tab[aria-selected="true"] .kl-drona__chevron::before {
-        border-color: var(--kl-orange);
+        border-color: var(--kl-cream);
     }
 
     /* Panels collapsed by default; revealed when section carries has-active-tab */
@@ -453,18 +407,17 @@
         margin: clamp(6px, 1.4vw, 10px) 0 clamp(10px, 1.8vw, 14px);
     }
 
-    /* Active chip becomes a cream paper card on small screens too —
-       it visually links to the With Drona panel below it. */
+    /* Active chip keeps the same decisive navy treatment on small screens. */
     .kl-drona__tab[aria-selected="true"] {
-        background: var(--kl-cream-2);
-        border-color: rgba(10, 47, 82, 0.14);
+        background: var(--kl-ink);
+        border-color: rgba(16, 42, 62, 0.88);
         border-left-color: var(--kl-orange);
-        color: var(--kl-navy);
-        box-shadow: 0 14px 30px -16px rgba(0, 0, 0, 0.45);
+        color: var(--kl-cream);
+        box-shadow: 0 14px 30px -18px rgba(16, 42, 62, 0.46);
     }
 
     .kl-drona__tab[aria-selected="true"] .kl-drona__tab-index {
-        color: var(--kl-orange);
+        color: var(--kl-cream);
     }
 }
 
@@ -500,14 +453,6 @@
         line-height: 1.5;
     }
 
-    .kl-drona__close-line {
-        font-size: 1rem;
-    }
-    .kl-drona__close-line::before,
-    .kl-drona__close-line::after {
-        width: 12px;
-        margin: 0 0.6rem;
-    }
 }
 
 /* Chevron hidden on desktop */
@@ -529,7 +474,6 @@
 
     .kl-drona__header,
     .kl-drona__stage,
-    .kl-drona__close,
     .kl-drona__panel,
     .kl-drona__panel-body,
     .kl-drona__panel-label,
@@ -539,8 +483,7 @@
     }
 
     .kl-drona__header,
-    .kl-drona__stage,
-    .kl-drona__close {
+    .kl-drona__stage {
         opacity: 1 !important;
     }
 }

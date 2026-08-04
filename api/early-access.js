@@ -5,9 +5,11 @@
  * Environment variables (set in Vercel dashboard):
  *   BREVO_API_KEY              — your Brevo API key
  *   BREVO_EARLY_ACCESS_LIST_ID — Brevo list ID (default: 7)
+ *   MAKE_WEBHOOK_URL           — optional; if set, fans the submission out to a Make scenario
  */
 
 const { applyCors, rateLimit, checkHoneypot } = require('./_lib/security');
+const { notifyMake } = require('./_lib/notify');
 
 module.exports = async function handler(req, res) {
   // CORS allowlist (kananlabs.in + *.vercel.app + local dev)
@@ -82,6 +84,13 @@ module.exports = async function handler(req, res) {
       console.error('Brevo early-access error:', contactRes.status, err);
       return res.status(502).json({ message: 'Failed to submit. Please try again.' });
     }
+
+    await notifyMake('early-access', {
+      contactName: name.trim(),
+      email,
+      companyName: company || '',
+      submittedAt: new Date().toISOString()
+    });
 
     return res.status(200).json({ success: true });
 

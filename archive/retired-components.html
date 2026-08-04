@@ -1,0 +1,4153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <title>Retired Components Archive — Kanan Labs</title>
+    <link rel="stylesheet" href="../css/evidence-workflow.css?v=1">
+    <style>
+        @font-face {
+            font-family: 'Cormorant Garamond';
+            src: url('../assets/fonts/CormorantGaramond-Regular.woff2') format('woff2');
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Cormorant Garamond';
+            src: url('../assets/fonts/CormorantGaramond-Medium.woff2') format('woff2');
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Telegraf';
+            src: url('../assets/fonts/Telegraf-Regular.woff2') format('woff2');
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        :root {
+            --tw-navy: #0a2f52;
+            --tw-cream: #eeebe3;
+            --tw-ink: rgba(10, 47, 82, 0.90);
+            --tw-ink-dim: rgba(10, 47, 82, 0.52);
+            --tw-rule: rgba(10, 47, 82, 0.12);
+            --tw-red: #db4a2b;
+            --tw-red-dim: rgba(219, 74, 43, 0.65);
+            --tw-display: 'Cormorant Garamond', Georgia, serif;
+            --tw-mono: 'Telegraf', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            background: var(--tw-cream);
+            color: var(--tw-ink);
+            font-family: var(--tw-mono);
+            line-height: 1.55;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        button { font-family: inherit; cursor: pointer; }
+
+        .archive-record {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 2rem clamp(1.5rem, 4vw, 4rem);
+            border-bottom: 1px solid var(--tw-rule);
+        }
+        .archive-record__eyebrow {
+            margin-bottom: 0.75rem;
+            color: var(--tw-red);
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+        .archive-record h1 {
+            margin-bottom: 1rem;
+            color: var(--tw-navy);
+            font-family: var(--tw-display);
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 500;
+            line-height: 1;
+        }
+        .archive-record dl {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            gap: 0.35rem 1rem;
+            max-width: 52rem;
+            font-size: 0.8rem;
+        }
+        .archive-record dt { color: var(--tw-ink-dim); }
+        .archive-record dd { color: var(--tw-navy); }
+
+        /* Original component CSS from tradewatch.html, retired 2026-07-31. */
+        .tw-act2 {
+            position: relative;
+            background: var(--tw-cream);
+            padding: clamp(3.5rem, 12vh, 10rem) clamp(1.5rem, 4vw, 4rem) clamp(4rem, 15vh, 12rem);
+            overflow: visible;
+        }
+
+        .tw-act2-inner {
+            max-width: 1320px;
+            margin: 0 auto;
+        }
+
+        .tw-act2-header {
+            max-width: clamp(60rem, 88vw, 88rem);
+            width: 100%;
+            margin: 0 auto clamp(5rem, 10vh, 8rem);
+            padding: 0 clamp(1rem, 2vw, 2rem);
+            background: none;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            text-align: center;
+        }
+
+        .tw-act2-headline {
+            font-family: var(--tw-display);
+            font-weight: 500;
+            font-size: clamp(1.2rem, 2.5vw, 2.4rem);
+            line-height: 1.22;
+            color: var(--tw-navy);
+            letter-spacing: -0.01em;
+            text-align: center;
+        }
+        .tw-act2-headline em { font-style: italic; color: var(--tw-ink); }
+        .tw-act2-headline .tw-emph {
+            font-weight: 700;
+            display: inline-block;
+            transform: skewX(-9deg);
+            color: var(--tw-red);
+        }
+
+        .tw-fragments {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: clamp(1rem, 2vw, 2.25rem);
+            perspective: 1400px;
+            overflow: visible;
+        }
+
+        .tw-fragments:has(.tw-frag:hover) .tw-frag:not(:hover) {
+            opacity: 0.55;
+            filter: brightness(0.8);
+        }
+
+        @media (max-width: 879px) {
+            .tw-fragments {
+                display: flex !important;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                gap: 0.875rem;
+                padding: 0.25rem 1.25rem 1.25rem;
+                margin: 0 -1.25rem;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+                perspective: none;
+            }
+            .tw-fragments::-webkit-scrollbar { display: none; }
+            .tw-frag {
+                flex: 0 0 calc(100vw - 4rem);
+                min-width: calc(100vw - 4rem);
+                scroll-snap-align: center;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+
+        .tw-frag {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0.65);
+            border: 1px solid var(--tw-rule);
+            border-radius: 6px;
+            padding: 2.25rem 2rem 2rem;
+            transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+                        border-color 0.4s ease,
+                        background 0.4s ease,
+                        box-shadow 0.4s ease,
+                        opacity 0.4s ease,
+                        filter 0.4s ease;
+            opacity: 0;
+            transform: translateY(50px);
+            will-change: transform, opacity;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            transform-origin: center center;
+        }
+        .tw-frag.is-in { opacity: 1; transform: translateY(0); }
+
+        .tw-frag:hover {
+            border-color: rgba(10, 47, 82, 0.30);
+            background: rgba(255, 255, 255, 0.90);
+            transform: translateY(-12px) scale(1.04) !important;
+            box-shadow: 0 24px 60px rgba(10,47,82,0.14), 0 0 0 1px rgba(10,47,82,0.12);
+            z-index: 10;
+            opacity: 1 !important;
+            filter: brightness(1) !important;
+        }
+
+        @media (hover: none) {
+            .tw-frag:hover {
+                transform: none !important;
+                box-shadow: none !important;
+                border-color: var(--tw-rule) !important;
+                background: rgba(255, 255, 255, 0.65) !important;
+                z-index: auto !important;
+                opacity: 1 !important;
+                filter: none !important;
+            }
+            .tw-fragments:has(.tw-frag:hover) .tw-frag:not(:hover) {
+                opacity: 1 !important;
+                filter: none !important;
+            }
+        }
+
+        .tw-frag-dots {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 0.55rem;
+            margin-top: 1.25rem;
+        }
+        .tw-frag-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: rgba(10, 47, 82, 0.22);
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            transition: background 0.25s ease, transform 0.25s ease, width 0.25s ease;
+            position: relative;
+        }
+        .tw-frag-dot::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
+        }
+        .tw-frag-dot.is-active {
+            background: var(--tw-red);
+            transform: scale(1.25);
+        }
+        @media (max-width: 879px) {
+            .tw-frag-dots { display: flex; }
+        }
+
+        .tw-frag-tag {
+            font-family: var(--tw-mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--tw-red);
+            margin-bottom: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 700;
+        }
+        .tw-frag-tag::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background: var(--tw-red);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .tw-frag-title {
+            font-family: var(--tw-display);
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.65rem;
+            color: var(--tw-navy);
+            margin-bottom: 0.45rem;
+        }
+
+        .tw-frag-sub {
+            font-family: var(--tw-mono);
+            font-size: 0.8rem;
+            letter-spacing: 0.06em;
+            color: var(--tw-ink-dim);
+            margin-bottom: 1.8rem;
+        }
+
+        .tw-doc {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: #eef2f7;
+            border: 1px solid rgba(10, 47, 82, 0.12);
+            border-radius: 4px;
+            padding: 1.3rem 1.4rem;
+            font-family: var(--tw-mono);
+            font-size: 0.9rem;
+            line-height: 1.55;
+            box-shadow: inset 0 1px 3px rgba(10,47,82,0.06);
+        }
+
+        .tw-doc-header {
+            padding-bottom: 0.85rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px dashed rgba(10, 47, 82, 0.22);
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(10, 47, 82, 0.7);
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .tw-doc-row {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+            gap: 0.7rem;
+            padding: 0.55rem 0;
+            min-height: 2.7em;
+            align-items: center;
+            border-bottom: 1px dotted rgba(10, 47, 82, 0.12);
+        }
+        .tw-doc-row:last-child { border-bottom: none; }
+
+        .tw-doc-key {
+            color: rgba(10, 47, 82, 0.78);
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .tw-doc-val {
+            color: #0a2f52;
+            font-weight: 700;
+        }
+
+        .tw-frag-scope {
+            margin-top: 1.1rem;
+            padding: 0.55rem 0 0;
+            font-family: var(--tw-mono);
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
+            color: var(--tw-ink-dim);
+            font-style: italic;
+            text-align: center;
+            opacity: 0.78;
+        }
+        .tw-frag-scope::before {
+            content: '— ';
+            color: var(--tw-red-dim);
+            font-style: normal;
+            margin-right: 0.15rem;
+        }
+
+        .tw-frag-note {
+            margin-top: 1rem;
+            font-family: var(--tw-display);
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--tw-navy);
+            opacity: 0.92;
+            line-height: 1.5;
+            padding-top: 1rem;
+            border-top: 1px solid var(--tw-rule);
+        }
+
+        .tw-act2-killer {
+            margin-top: clamp(5rem, 10vh, 8rem);
+            text-align: center;
+            position: relative;
+        }
+
+        .tw-act2-killer-line {
+            font-family: var(--tw-display);
+            font-style: italic;
+            font-weight: 500;
+            font-size: clamp(1.25rem, 3vw, 2.6rem);
+            line-height: 1.22;
+            color: var(--tw-navy);
+            max-width: 60rem;
+            margin: 0 auto;
+            letter-spacing: -0.01em;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+        }
+        .tw-act2-killer-line.is-in { opacity: 1; transform: translateY(0); }
+        .tw-act2-killer-line .tw-accent {
+            color: var(--tw-red);
+            font-style: italic;
+        }
+
+        .tw-act2-killer-sub {
+            margin-top: 1.1rem;
+            font-family: var(--tw-display);
+            font-style: italic;
+            font-weight: 500;
+            font-size: clamp(1.25rem, 3.2vw, 2.75rem);
+            line-height: 1.22;
+            color: var(--tw-red);
+            letter-spacing: -0.01em;
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 1.2s ease-out 0.3s, transform 1.2s ease-out 0.3s;
+        }
+        .tw-act2-killer-sub.is-in { opacity: 1; transform: translateY(0); }
+
+        .tw-act2-killer-rule {
+            width: 56px;
+            height: 1px;
+            background: var(--tw-red);
+            margin: 2.5rem auto 0;
+            opacity: 0;
+            transition: opacity 1s ease-out 0.6s, width 1s ease-out 0.6s;
+        }
+        .tw-act2-killer-rule.is-in { opacity: 1; width: 120px; }
+
+        @media (min-width: 1101px) and (max-height: 880px) {
+            .tw-frag { padding: 1.5rem 1.5rem 1.4rem; }
+            .tw-frag-tag { margin-bottom: 1rem; }
+            .tw-frag-title { font-size: 1.4rem; }
+            .tw-frag-sub { margin-bottom: 1.15rem; }
+            .tw-doc { padding: 1rem 1.1rem; font-size: 0.82rem; }
+            .tw-doc-row { min-height: 2.3em; padding: 0.4rem 0; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .tw-frag,
+            .tw-act2-killer-line,
+            .tw-act2-killer-sub,
+            .tw-act2-killer-rule {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .archive-record dl { grid-template-columns: 1fr; }
+            .archive-record dd { margin-bottom: 0.5rem; }
+        }
+
+        /* Archived TradeWatch roadmap, Drona engine and original differentiation. */
+        :root {
+            --tw-section-y: clamp(4.5rem, 9vh, 8rem);
+            --tw-block-gap: clamp(3rem, 5vh, 5rem);
+            --tw-amber: #f0b93a;
+            --tw-silver: #d8e0ec;
+            --tw-silver-dim: rgba(216, 224, 236, 0.30);
+            --tw-silver-bright: rgba(216, 224, 236, 0.55);
+            --tw-gold: rgba(255, 165, 80, 0.62);
+        }
+        .archive-component-record {
+            max-width: 1320px;
+            margin: 4rem auto 0;
+            padding: 2rem clamp(1.5rem, 4vw, 4rem);
+            border-top: 1px solid var(--tw-rule);
+            border-bottom: 1px solid var(--tw-rule);
+        }
+        .archive-component-record__eyebrow {
+            margin-bottom: 0.75rem;
+            color: var(--tw-red);
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+        .archive-component-record h2 {
+            margin-bottom: 1rem;
+            color: var(--tw-navy);
+            font-family: var(--tw-display);
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 500;
+            line-height: 1;
+        }
+        .archive-component-record dl {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            gap: 0.35rem 1rem;
+            max-width: 64rem;
+            font-size: 0.8rem;
+        }
+        .archive-component-record dt { color: var(--tw-ink-dim); }
+        .archive-component-record dd { color: var(--tw-navy); }
+        @media (max-width: 640px) {
+            .archive-component-record dl { grid-template-columns: 1fr; }
+            .archive-component-record dd { margin-bottom: 0.5rem; }
+        }
+
+        .archive-faq-copy {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: clamp(3rem, 7vw, 6rem) clamp(1.5rem, 4vw, 4rem);
+        }
+        .archive-faq-copy h3 {
+            margin-bottom: 2rem;
+            color: var(--tw-navy);
+            font-family: var(--tw-display);
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 500;
+        }
+        .archive-faq-copy details { border-top: 1px solid var(--tw-rule); }
+        .archive-faq-copy details:last-child { border-bottom: 1px solid var(--tw-rule); }
+        .archive-faq-copy summary {
+            display: grid;
+            grid-template-columns: 3rem 1fr;
+            gap: 1rem;
+            padding: 1.25rem 0;
+            color: var(--tw-navy);
+            cursor: pointer;
+            list-style: none;
+        }
+        .archive-faq-copy summary::-webkit-details-marker { display: none; }
+        .archive-faq-copy .archive-faq-index {
+            color: var(--tw-ink-dim);
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+        }
+        .archive-faq-copy .archive-faq-question {
+            font-family: var(--tw-display);
+            font-size: clamp(1.25rem, 2vw, 1.65rem);
+        }
+        .archive-faq-copy .archive-faq-answer {
+            max-width: 52rem;
+            padding: 0 0 1.5rem 4rem;
+            color: var(--tw-ink-dim);
+            font-size: 0.88rem;
+        }
+        .archive-faq-copy .archive-faq-answer p + p,
+        .archive-faq-copy .archive-faq-answer ol + p { margin-top: 0.75rem; }
+        .archive-faq-copy .archive-faq-answer ol { padding-left: 1.2rem; }
+
+        .tw-frag-dots {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 0.55rem;
+            margin-top: 1.25rem;
+        }
+        .tw-frag-dot {
+            position: relative;
+            width: 7px;
+            height: 7px;
+            padding: 0;
+            border: none;
+            border-radius: 50%;
+            background: rgba(10, 47, 82, 0.22);
+            cursor: pointer;
+            transition: background 0.25s ease, transform 0.25s ease, width 0.25s ease;
+        }
+        .tw-frag-dot::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
+        }
+        .tw-frag-dot.is-active {
+            background: var(--tw-red);
+            transform: scale(1.25);
+        }
+        @media (max-width: 879px) {
+            .tw-frag-dots { display: flex; }
+        }
+
+        /* ============================================================
+           DRONA — Engine inside TradeWatch (sits before Founder)
+           ============================================================ */
+
+        .tw-drona {
+            position: relative;
+            background: var(--tw-cream);
+            padding: var(--tw-section-y) clamp(1.5rem, 4vw, 4rem);
+            overflow: hidden;
+            border-top: 1px solid var(--tw-rule);
+        }
+
+        .tw-drona::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(10, 47, 82, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(10, 47, 82, 0.06) 1px, transparent 1px);
+            background-size: 56px 56px;
+            mask-image: radial-gradient(ellipse at 50% 30%, black 30%, transparent 80%);
+            pointer-events: none;
+        }
+
+        .tw-drona-inner {
+            position: relative;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        /* DRONA — section intro typography (eyebrow / headline / subline) */
+        .tw-drona-eyebrow {
+            font-family: var(--tw-mono);
+            font-size: 0.72rem;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--tw-red);
+            margin-bottom: 1rem;
+        }
+        /* Cormorant Garamond on both desktop and mobile — user approved */
+        .tw-drona-headline {
+            font-family: var(--tw-display);
+            font-weight: 500;
+            font-style: italic;
+            font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            color: var(--tw-navy);
+            margin-bottom: clamp(1rem, 2vh, 1.75rem);
+            /* Optically align italic-serif ink left edge to the mono eyebrow/subline margin */
+            margin-left: 0.04em;
+        }
+        .tw-drona-subline {
+            font-family: var(--tw-mono);
+            font-size: 0.92rem;
+            line-height: 1.65;
+            color: var(--tw-ink-dim);
+            max-width: 42rem;
+            margin-bottom: clamp(2.25rem, 4.5vh, 3.25rem);
+        }
+
+        /* ============================================================
+           DRONA — Funnel panel CSS (desktop only; restored)
+           ============================================================ */
+
+        /* Panel — contained card that wraps the funnel diagram */
+        .tw-drona-panel {
+            position: relative;
+            background: rgba(255, 255, 255, 0.55);
+            border: 1px solid rgba(10, 47, 82, 0.10);
+            border-radius: 8px;
+            padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 3vw, 3rem) clamp(1rem, 2vw, 1.75rem);
+            margin: var(--tw-block-gap) auto;
+            max-width: 1180px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.80), 0 12px 40px rgba(10,47,82,0.08);
+        }
+        .tw-drona-panel::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 65% 45%, rgba(10,47,82,0.03) 0%, transparent 60%);
+            border-radius: 8px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .tw-drona-panel > * { position: relative; z-index: 1; }
+
+        /* Hinge — centred divider with flanking rules */
+        .tw-drona-hinge {
+            margin: clamp(3rem, 6vh, 4.5rem) auto clamp(2rem, 4vh, 3rem);
+            text-align: center;
+            font-family: var(--tw-mono);
+            font-size: 0.72rem;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: var(--tw-red);
+            font-weight: 600;
+        }
+        .tw-drona-hinge::before,
+        .tw-drona-hinge::after {
+            content: '';
+            display: inline-block;
+            width: 28px; height: 1px;
+            background: var(--tw-red);
+            opacity: 0.55;
+            vertical-align: middle;
+            margin: 0 0.85rem;
+        }
+
+        /* Funnel — two-column grid: text labels left, visual right */
+        .tw-drona-funnel {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 360px;
+            gap: 1rem;
+            max-width: 1080px;
+            margin: 0 auto 1.5rem;
+            align-items: stretch;
+        }
+        @media (max-width: 860px) {
+            .tw-drona-funnel { grid-template-columns: 1fr; align-items: start; }
+            .tw-drona-funnel-visual { order: -1; max-width: 360px; margin: 0 auto; width: 100%; }
+        }
+
+        /* LEFT: stacked label blocks + independent rail track */
+        .tw-drona-funnel-labels {
+            position: relative;
+            padding-left: 1.6rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .tw-drona-funnel-label {
+            position: relative;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1.6rem 0;
+            opacity: 0.4;
+            transition: opacity 0.55s ease;
+        }
+        .tw-drona-funnel-label.is-in { opacity: 1; }
+        .tw-drona-funnel-label + .tw-drona-funnel-label { border-top: 1px solid var(--tw-rule); }
+
+        /* iPad-landscape Drona overrides moved to after all .tw-drona-* base rules below
+           so they win the source-order tie. See "@media (min-width: 1101px) ... DRONA" near coda. */
+
+        /* Dedicated rail track */
+        .tw-drona-rail {
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 16px;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .tw-drona-rail-line {
+            position: absolute;
+            left: 50%; top: 0; bottom: 0;
+            width: 1.5px;
+            background: linear-gradient(180deg, rgba(10,47,82,0.22), rgba(10,47,82,0.12));
+            transform: translateX(-50%);
+        }
+        .tw-drona-rail-station {
+            position: absolute;
+            left: 50%; top: 0;
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: var(--tw-cream);
+            border: 1.5px solid rgba(10,47,82,0.30);
+            transform: translate(-50%, -50%);
+            transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+        .tw-drona-rail-station.is-active {
+            background: var(--tw-red);
+            border-color: var(--tw-red);
+            box-shadow: 0 0 10px rgba(219,74,43,0.7);
+        }
+
+        /* Label typography */
+        .tw-drona-tier-num {
+            font-family: var(--tw-mono);
+            font-size: 0.62rem;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--tw-red);
+            font-weight: 700;
+            margin-bottom: 0.45rem;
+        }
+        .tw-drona-tier-title {
+            font-family: var(--tw-display);
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.3rem;
+            color: var(--tw-navy);
+            margin-bottom: 1.1rem;
+            line-height: 1.2;
+        }
+        .tw-drona-layer-caption {
+            margin-top: 1rem;
+            font-family: var(--tw-mono);
+            font-size: 0.76rem;
+            line-height: 1.55;
+            color: var(--tw-ink-dim);
+            font-style: italic;
+        }
+
+        /* Source chips */
+        .tw-drona-sources {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+        .tw-drona-source {
+            display: inline-block;
+            flex: 0 0 auto;
+            padding: 0.45rem 0.7rem;
+            border: 1px solid var(--tw-rule);
+            border-radius: 3px;
+            font-family: var(--tw-mono);
+            font-size: 0.72rem;
+            line-height: 1.3;
+            color: rgba(10,47,82,0.68);
+            background: rgba(255,255,255,0.55);
+            white-space: nowrap;
+        }
+
+        /* Compile stages (READS / REASONS / RECORDS) */
+        .tw-drona-stage {
+            display: grid;
+            grid-template-columns: 5.5rem 1fr;
+            gap: 0.75rem;
+            padding: 0.7rem 0;
+            border-bottom: 1px dotted var(--tw-rule);
+            align-items: baseline;
+        }
+        .tw-drona-stage:last-of-type { border-bottom: none; }
+        .tw-drona-stage-key {
+            font-family: var(--tw-mono);
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--tw-navy);
+            font-weight: 700;
+        }
+        .tw-drona-stage-body {
+            font-family: var(--tw-mono);
+            font-size: 0.78rem;
+            line-height: 1.5;
+            color: rgba(10,47,82,0.68);
+            max-width: 26rem;
+        }
+
+        /* Output chips */
+        .tw-drona-output {
+            display: flex;
+            gap: 0.7rem;
+            flex-wrap: wrap;
+        }
+        .tw-drona-output-chip {
+            display: inline-block;
+            padding: 0.6rem 0.9rem;
+            border: 1px solid var(--tw-red);
+            border-radius: 3px;
+            background: rgba(219,74,43,0.08);
+            font-family: var(--tw-mono);
+            font-size: 0.74rem;
+            letter-spacing: 0.05em;
+            color: var(--tw-navy);
+            font-weight: 600;
+        }
+
+        /* RIGHT: feeders → funnel SVG → outputs */
+        .tw-drona-funnel-visual {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+
+        /* Source feeders — 4-equal-column grid above funnel mouth */
+        .tw-drona-funnel-feeders {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.3rem;
+            margin-bottom: 0.3rem;
+        }
+        .tw-drona-feeder {
+            font-family: var(--tw-mono);
+            font-size: 0.52rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            padding: 0.3rem 0.2rem;
+            border: 1px solid var(--tw-rule);
+            border-radius: 2px;
+            color: var(--tw-ink-dim);
+            background: rgba(255,255,255,0.55);
+            white-space: nowrap;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+
+        /* SVG funnel */
+        .tw-drona-funnel-svg {
+            flex: 1;
+            width: 100%;
+            min-height: 420px;
+            display: block;
+        }
+
+        /* Background polygons — dim outline */
+        .tw-funnel-poly {
+            fill: rgba(10, 47, 82, 0.06);
+            stroke: rgba(10, 47, 82, 0.18);
+            stroke-width: 1;
+            vector-effect: non-scaling-stroke;
+        }
+
+        /* Fill polygons — revealed by growing clipPath */
+        .tw-funnel-fill { stroke-width: 1; vector-effect: non-scaling-stroke; }
+        .tw-funnel-fill--1 { fill: rgba(10,47,82,0.16); stroke: rgba(10,47,82,0.35); }
+        .tw-funnel-fill--2 { fill: rgba(10,47,82,0.12); stroke: rgba(10,47,82,0.28); }
+        .tw-funnel-fill--3 { fill: rgba(219,74,43,0.18); stroke: rgba(219,74,43,0.55); }
+
+        /* Animated ball that rides inside the funnel SVG */
+        .tw-drona-funnel-ball {
+            position: absolute;
+            left: 50%; top: 0%;
+            width: 14px; height: 14px;
+            border-radius: 50%;
+            background: var(--tw-red);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            box-shadow: 0 0 10px rgba(219,74,43,0.9), 0 0 20px rgba(219,74,43,0.5);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* Rail ball — rides the left rail */
+        .tw-drona-rail-ball {
+            position: absolute;
+            left: 50%; top: 0;
+            width: 14px; height: 14px;
+            border-radius: 50%;
+            background: var(--tw-red);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            box-shadow: 0 0 12px rgba(219,74,43,0.9), 0 0 22px rgba(219,74,43,0.45);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* Output chips row below funnel */
+        .tw-drona-funnel-outputs {
+            display: flex;
+            justify-content: center;
+            gap: 0.7rem;
+            flex-wrap: wrap;
+            margin-top: 0.3rem;
+        }
+        .tw-drona-output-chip--out {
+            opacity: 0;
+            transform: translateY(12px);
+            box-shadow: 0 0 0 0 rgba(219,74,43,0.0);
+            transition: box-shadow 0.4s ease;
+        }
+        .tw-drona-output-chip--out.is-in { box-shadow: 0 6px 20px rgba(219,74,43,0.15); }
+
+        /* ── Breakpoint split: desktop vs mobile content ──────────────
+           Desktop (≥1024px) shows the original funnel + VS table.
+           Mobile (≤1023px) shows the editorial beats + quad grid. */
+
+        /* Desktop-only elements: visible by default, hidden on mobile */
+        /* Threshold lowered from 1024 → 900 so Windows laptops with DPI scaling
+           (1366×768 @ 150% = 911 CSS px; 1920×1080 @ 200% = 960 CSS px) still
+           render the funnel instead of falling through to the mobile bento. */
+        .tw-drona-desktop-only { display: block; }
+        @media (max-width: 899px) { .tw-drona-desktop-only { display: none !important; } }
+
+        /* Mobile-only elements: hidden on desktop */
+        .tw-drona-mobile-only { display: block; }
+        @media (min-width: 900px) { .tw-drona-mobile-only { display: none !important; } }
+
+        /* ---------- Beat 4: moat ---------- */
+        .tw-drona-vs-heading {
+            font-family: var(--tw-display);
+            font-style: italic;
+            font-weight: 500;
+            font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+            line-height: 1.2;
+            color: var(--tw-navy);
+            text-align: center;
+            max-width: 34rem;
+            margin: 0 auto 1rem;
+        }
+        /* ══════════════════════════════════════════════════════════════
+           DRONA — Two-column navy credential block (SectorWatch style)
+           Desktop only; mobile uses the pillars/meter layout instead.
+           ══════════════════════════════════════════════════════════════ */
+
+        /* Two-column layout — no box, no background, sits on cream */
+        .tw-drona-credential {
+            margin-top: var(--tw-block-gap);
+            margin-bottom: var(--tw-block-gap);
+        }
+        .tw-drona-credential-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+        /* 3-col: headline / 1px divider / body */
+        .tw-drona-credential-grid {
+            display: grid;
+            grid-template-columns: 1fr 1px 1.65fr;
+            gap: 0 5rem;
+            align-items: center;
+        }
+        /* Vertical fade divider — navy tint on cream background */
+        .tw-drona-credential-divider {
+            width: 1px;
+            align-self: stretch;
+            min-height: 200px;
+            background: linear-gradient(
+                to bottom,
+                transparent 0%,
+                rgba(10, 47, 82, 0.15) 20%,
+                rgba(10, 47, 82, 0.22) 50%,
+                rgba(10, 47, 82, 0.15) 80%,
+                transparent 100%
+            );
+        }
+        /* Eyebrow */
+        .tw-drona-credential-eyebrow {
+            font-family: var(--tw-mono);
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--tw-red);
+            margin-bottom: 1.25rem;
+        }
+        /* Left: large Cormorant italic in page navy */
+        .tw-drona-credential-headline {
+            font-family: var(--tw-display);
+            font-style: italic;
+            font-weight: 500;
+            font-size: clamp(2rem, 3.2vw, 2.9rem);
+            line-height: 1.18;
+            color: var(--tw-navy);
+            letter-spacing: -0.01em;
+            /* Optically align italic ink to the eyebrow margin (same as .tw-drona-headline) */
+            margin-left: 0.04em;
+        }
+        /* Right: body copy in muted navy (matches rest of page body) */
+        .tw-drona-credential-body { padding-top: 0.5rem; }
+        .tw-drona-credential-body p {
+            font-family: var(--tw-mono);
+            font-size: 0.92rem;
+            line-height: 1.75;
+            color: var(--tw-ink-dim);
+            margin-bottom: 1.25rem;
+        }
+        .tw-drona-credential-body p:last-child { margin-bottom: 0; }
+
+        /* Stack credential 3-col grid below 1024 (covers the new 900–1023 zone
+           opened up by the lowered desktop gate) */
+        @media (max-width: 1023px) {
+            .tw-drona-credential-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem 0;
+            }
+            .tw-drona-credential-divider {
+                display: none;
+            }
+        }
+
+        /* Hide moat-quote on desktop (navy block replaces it) */
+        @media (min-width: 900px) {
+            .tw-drona-moat-quote { display: none !important; }
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           DRONA — Mobile accordion (semantic <details>)
+           Replaces the legacy editorial beats / pillars / quad blocks AND
+           the prior scroll-tracked story-spine below 900px. Four collapsed
+           items by default; CSS-only chevron rotation on open.
+           ══════════════════════════════════════════════════════════════ */
+        .tw-drona-accordion { display: none; }
+        @media (max-width: 899px) {
+            .tw-drona-accordion {
+                display: block;
+                max-width: 640px;
+                margin: clamp(1.5rem, 4vh, 2.5rem) auto clamp(2.5rem, 6vh, 4rem);
+                padding: 0 clamp(1.25rem, 4vw, 1.75rem);
+            }
+
+            .tw-acc-item {
+                border-top: 1px solid var(--tw-rule);
+            }
+            .tw-acc-item:last-child {
+                border-bottom: 1px solid var(--tw-rule);
+            }
+
+            .tw-acc-summary {
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                align-items: center;
+                column-gap: 0.9rem;
+                padding: 1rem 0.25rem;
+                cursor: pointer;
+                list-style: none;
+                outline: none;
+            }
+            .tw-acc-summary::-webkit-details-marker { display: none; }
+            .tw-acc-summary::marker { content: ''; }
+            .tw-acc-summary:focus-visible {
+                outline: 2px solid var(--tw-red);
+                outline-offset: 2px;
+                border-radius: 2px;
+            }
+
+            .tw-acc-index {
+                font-family: var(--tw-mono);
+                font-size: 0.72rem;
+                font-weight: 700;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: var(--tw-ink-dim);
+                line-height: 1;
+                align-self: center;
+            }
+
+            .tw-acc-title {
+                font-family: var(--tw-display);
+                font-style: italic;
+                font-weight: 500;
+                font-size: clamp(1rem, 4.2vw, 1.15rem);
+                line-height: 1.32;
+                letter-spacing: -0.005em;
+                color: var(--tw-navy);
+            }
+
+            .tw-acc-chevron {
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                border-right: 1.5px solid var(--tw-ink-dim);
+                border-bottom: 1.5px solid var(--tw-ink-dim);
+                transform: rotate(45deg);
+                transform-origin: center;
+                margin-right: 0.25rem;
+                margin-top: -3px;
+                transition: transform 0.25s ease, border-color 0.25s ease;
+            }
+            details[open] > .tw-acc-summary .tw-acc-chevron {
+                transform: rotate(-135deg);
+                margin-top: 3px;
+                border-color: var(--tw-red);
+            }
+            details[open] > .tw-acc-summary .tw-acc-index {
+                color: var(--tw-navy);
+            }
+
+            .tw-acc-panel {
+                padding: 0 0.25rem 1.25rem 2.4rem;
+            }
+
+            /* Item 01 — sources list */
+            .tw-acc-sources {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .tw-acc-sources li {
+                font-family: var(--tw-mono);
+                font-size: 0.82rem;
+                line-height: 1.45;
+                color: var(--tw-ink);
+                padding: 0.4rem 0;
+                border-bottom: 1px dashed var(--tw-rule);
+            }
+            .tw-acc-sources li:last-child {
+                border-bottom: 0;
+            }
+
+            /* Item 02 — Reads / Reasons rows */
+            .tw-acc-rows {
+                display: grid;
+                gap: 0.9rem;
+                margin: 0;
+            }
+            .tw-acc-row dt {
+                font-family: var(--tw-mono);
+                font-size: 0.68rem;
+                font-weight: 700;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: var(--tw-red);
+                margin: 0 0 0.25rem;
+            }
+            .tw-acc-row dd {
+                font-family: var(--tw-mono);
+                font-size: 0.85rem;
+                line-height: 1.6;
+                color: var(--tw-ink);
+                margin: 0;
+            }
+
+            /* Item 03 — body paragraph */
+            .tw-acc-body {
+                font-family: var(--tw-display);
+                font-style: italic;
+                font-weight: 400;
+                font-size: 0.98rem;
+                line-height: 1.55;
+                color: var(--tw-ink);
+                margin: 0;
+            }
+
+            /* Item 04 — packet cards */
+            .tw-acc-packets {
+                display: grid;
+                gap: 0.6rem;
+            }
+            .tw-acc-packet {
+                padding: 0.75rem 0.9rem;
+                border-left: 2px solid var(--tw-red);
+                background: rgba(255, 255, 255, 0.4);
+                border-radius: 0 4px 4px 0;
+            }
+            .tw-acc-packet-name {
+                font-family: var(--tw-display);
+                font-style: italic;
+                font-weight: 500;
+                font-size: 1rem;
+                line-height: 1.25;
+                color: var(--tw-navy);
+                margin: 0 0 0.2rem;
+            }
+            .tw-acc-packet-for {
+                font-family: var(--tw-mono);
+                font-size: 0.72rem;
+                color: var(--tw-ink-dim);
+                margin: 0;
+            }
+
+            /* Shared closing caption (every panel) */
+            .tw-acc-foot {
+                font-family: var(--tw-display);
+                font-style: italic;
+                font-weight: 400;
+                font-size: 0.85rem;
+                line-height: 1.5;
+                color: var(--tw-ink-dim);
+                margin: 0.9rem 0 0;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .tw-acc-chevron {
+                transition: none !important;
+            }
+        }
+
+        .tw-drona-vs {
+            max-width: 1060px;
+            margin: 0 auto clamp(5rem, 10vh, 7rem);
+            border: 1px solid var(--tw-rule);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .tw-drona-vs-row {
+            display: grid;
+            grid-template-columns: 10rem 1fr 1fr;
+            border-bottom: 1px solid var(--tw-rule);
+            align-items: stretch;
+        }
+        .tw-drona-vs-row:last-child { border-bottom: none; }
+
+        .tw-drona-vs-row--header {
+            background: rgba(10, 47, 82, 0.06);
+        }
+
+        @media (max-width: 760px) {
+            .tw-drona-vs-row {
+                grid-template-columns: 1fr;
+            }
+            .tw-drona-vs-row--header { display: none; }
+        }
+
+        .tw-drona-vs-cell {
+            padding: 1rem 1.3rem;
+            font-family: var(--tw-mono);
+            font-size: 0.84rem;
+            line-height: 1.55;
+            border-right: 1px solid var(--tw-rule);
+        }
+        .tw-drona-vs-cell:last-child { border-right: none; }
+
+        .tw-drona-vs-cell--label {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--tw-ink-dim);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            background: rgba(10, 47, 82, 0.05);
+        }
+
+        .tw-drona-vs-cell--col-head {
+            font-size: 0.72rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            padding: 0.9rem 1.3rem;
+        }
+        .tw-drona-vs-cell--col-head.is-them {
+            color: var(--tw-ink-dim);
+        }
+        .tw-drona-vs-cell--col-head.is-us {
+            color: var(--tw-red);
+        }
+
+        .tw-drona-vs-cell--them {
+            color: var(--tw-ink-dim);
+            background: rgba(10, 47, 82, 0.03);
+        }
+
+        .tw-drona-vs-cell--us {
+            color: var(--tw-navy);
+            font-weight: 600;
+            background: rgba(219, 74, 43, 0.05);
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           DRONA — Spine: 4-trait infographic flowing into desk cards
+           Desktop: horizontal track with 4 dotted nodes
+           Mobile: collapses to a vertical stacked list, track hidden
+           ══════════════════════════════════════════════════════════════ */
+        .tw-drona-spine {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            max-width: 980px;
+            margin: 0 auto var(--tw-block-gap);
+            padding-top: 1.5rem;
+        }
+        .tw-drona-spine-track {
+            position: absolute;
+            top: calc(1.5rem + 6px);
+            left: 12.5%;
+            right: 12.5%;
+            height: 1px;
+            background: linear-gradient(
+                to right,
+                transparent 0%,
+                rgba(219, 74, 43, 0.55) 10%,
+                rgba(219, 74, 43, 0.55) 90%,
+                transparent 100%
+            );
+        }
+        .tw-drona-spine-node {
+            text-align: center;
+            position: relative;
+            padding: 0 0.5rem;
+        }
+        .tw-drona-spine-dot {
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--tw-red);
+            margin: 0 auto 1.1rem;
+            box-shadow: 0 0 0 5px var(--tw-cream);
+            position: relative;
+            z-index: 1;
+        }
+        .tw-drona-spine-title {
+            font-family: var(--tw-display);
+            font-style: italic;
+            font-weight: 500;
+            font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+            color: var(--tw-navy);
+            margin: 0 0 0.4rem;
+            line-height: 1.2;
+        }
+        .tw-drona-spine-sub {
+            font-family: var(--tw-mono);
+            font-size: 0.76rem;
+            line-height: 1.5;
+            color: var(--tw-ink-dim);
+            letter-spacing: 0.01em;
+            margin: 0;
+        }
+
+        @media (max-width: 1023px) {
+            .tw-drona-spine {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                max-width: 100%;
+                padding-top: 0;
+                margin-bottom: clamp(2rem, 4vh, 3rem);
+            }
+            .tw-drona-spine-track { display: none; }
+            .tw-drona-spine-node {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                align-items: baseline;
+                column-gap: 0.85rem;
+                row-gap: 0;
+                text-align: left;
+                padding: 0;
+            }
+            .tw-drona-spine-dot {
+                margin: 0;
+                box-shadow: none;
+                align-self: center;
+                grid-row: 1 / span 2;
+            }
+            .tw-drona-spine-title {
+                margin: 0;
+                font-size: 1rem;
+                grid-column: 2;
+                grid-row: 1;
+            }
+            .tw-drona-spine-sub {
+                font-size: 0.72rem;
+                grid-column: 2;
+                grid-row: 2;
+            }
+            .tw-drona-spine-sub br { display: none; }
+        }
+
+        /* Hide K/R/M/P credential block on mobile — covered by accordion item 03 */
+        @media (max-width: 899px) {
+            .tw-drona-spine {
+                display: none;
+            }
+        }
+
+        /* ---------- Beat 5: trust portfolio ---------- */
+        .tw-drona-portfolio-heading {
+            font-family: var(--tw-display);
+            font-style: italic;
+            font-weight: 500;
+            font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+            color: var(--tw-navy);
+            text-align: center;
+            margin-bottom: 0.85rem;
+            line-height: 1.15;
+        }
+        .tw-drona-portfolio-sub {
+            font-family: var(--tw-mono);
+            font-size: 0.92rem;
+            line-height: 1.65;
+            color: var(--tw-ink-dim);
+            text-align: center;
+            max-width: 44rem;
+            margin: 0 auto clamp(2.5rem, 5vh, 3.5rem);
+        }
+
+        .tw-drona-portfolio {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: clamp(1rem, 2vw, 2rem);
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+        @media (max-width: 880px) {
+            .tw-drona-portfolio { grid-template-columns: 1fr; gap: 1.4rem; }
+        }
+
+        .tw-drona-portfolio-card {
+            display: flex;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0.60);
+            border: 1px solid var(--tw-rule);
+            border-radius: 6px;
+            padding: 2rem 1.85rem 1.85rem;
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.35s ease, background 0.35s ease;
+        }
+        .tw-drona-portfolio-card.is-in { opacity: 1; transform: translateY(0); }
+        .tw-drona-portfolio-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(10, 47, 82, 0.22);
+            background: rgba(255, 255, 255, 0.88);
+        }
+
+        .tw-drona-portfolio-tag {
+            font-family: var(--tw-mono);
+            font-size: 0.72rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--tw-red);
+            margin-bottom: 1.1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+        }
+        .tw-drona-portfolio-tag::before {
+            content: '';
+            width: 6px; height: 6px;
+            background: var(--tw-red);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .tw-drona-portfolio-title {
+            font-family: var(--tw-display);
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.5rem;
+            line-height: 1.2;
+            color: var(--tw-navy);
+            margin-bottom: 0.9rem;
+        }
+
+        .tw-drona-portfolio-body {
+            font-family: var(--tw-mono);
+            font-size: 0.86rem;
+            line-height: 1.65;
+            color: rgba(10, 47, 82, 0.68);
+            flex: 1;
+            margin-bottom: 1.4rem;
+        }
+
+        .tw-drona-portfolio-use {
+            font-family: var(--tw-mono);
+            font-style: italic;
+            font-size: 0.78rem;
+            line-height: 1.5;
+            color: var(--tw-ink-dim);
+            padding-top: 1.1rem;
+            border-top: 1px solid var(--tw-rule);
+            letter-spacing: 0.04em;
+        }
+        .tw-drona-portfolio-use::before {
+            content: '→ ';
+            color: var(--tw-red);
+            font-style: normal;
+            margin-right: 0.1rem;
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           DRONA — Editorial beats (Input · Process · Output)
+           No cards. Pure typography on cream. Horizontal rules as rhythm.
+           Cormorant dominant; Telegraf only for labels and key column.
+           ══════════════════════════════════════════════════════════════ */
+
+        .tw-drona-beats-editorial {
+            margin-top: clamp(3rem, 7vh, 5rem);
+        }
+
+        .tw-drona-beat {
+            border-top: 1px solid var(--tw-rule-strong);
+            padding-top: clamp(1.75rem, 4.5vh, 3rem);
+            padding-bottom: clamp(2.25rem, 5.5vh, 4rem);
+        }
+
+        .tw-drona-beat-label {
+            font-family: var(--tw-mono);
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: var(--tw-red);
+            margin-bottom: 1.25rem;
+        }
+
+        /* The heading uses the existing .tw-word reveal mechanism — no new CSS needed */
+        .tw-drona-beat-heading {
+            font-family: var(--tw-display);
+            font-weight: 500;
+            font-style: italic;
+            font-size: clamp(2.6rem, 8vw, 4.5rem);
+            line-height: 1.0;
+            letter-spacing: -0.02em;
+            color: var(--tw-navy);
+            margin-bottom: clamp(1.5rem, 3.5vh, 2.5rem);
+        }
+
+        /* Source list — Beat 1 */
+        .tw-drona-beat-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-family: var(--tw-display);
+            font-style: italic;
+            font-size: clamp(0.92rem, 2.2vw, 1.06rem);
+            color: var(--tw-ink);
+            line-height: 1.75;
+        }
+        .tw-drona-beat-list li + li { margin-top: 0.1rem; }
+
+        /* Output packet names — Beat 3 */
+        .tw-drona-beat-list--output li {
+            font-style: normal;
+            font-weight: 600;
+            font-size: clamp(1rem, 2.5vw, 1.15rem);
+            color: var(--tw-navy);
+            line-height: 1.5;
+        }
+        .tw-drona-beat-list--output li + li { margin-top: 0.7rem; }
+
+        /* Italic caption with red left bar */
+        .tw-drona-beat-caption {
+            margin-top: clamp(1.1rem, 2.5vh, 1.75rem);
+            font-family: var(--tw-display);
+            font-style: italic;
+            font-size: 0.92rem;
+            line-height: 1.55;
+            color: var(--tw-ink-dim);
+            padding-left: 0.85rem;
+            border-left: 2px solid var(--tw-red);
+        }
+
+        /* Key-value rows — Beat 2 (Process) */
+        .tw-drona-beat-kv {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .tw-drona-beat-kv-row {
+            display: grid;
+            grid-template-columns: 5rem 1fr;
+            gap: 0 0.85rem;
+            align-items: baseline;
+            padding: 0.95rem 0;
+            border-bottom: 1px dotted var(--tw-rule);
+        }
+        .tw-drona-beat-kv-row:last-child { border-bottom: none; }
+
+        .tw-drona-beat-key {
+            font-family: var(--tw-mono);
+            font-size: 0.56rem;
+            font-weight: 700;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: var(--tw-navy);
+            padding-top: 0.18rem; /* optical baseline align with val */
+        }
+        .tw-drona-beat-val {
+            font-family: var(--tw-display);
+            font-size: clamp(0.9rem, 2vw, 1.02rem);
+            line-height: 1.6;
+            color: var(--tw-ink);
+        }
+
+        /* Paragraph format for source list — Telegraf, muted */
+        .tw-drona-beat-para {
+            font-family: var(--tw-mono);
+            font-size: clamp(0.76rem, 1.9vw, 0.88rem);
+            line-height: 1.7;
+            color: var(--tw-ink-dim);
+            letter-spacing: 0.01em;
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           DRONA mobile — compact one-viewport layout
+           All 3 beats fit within one screen. Font sizes match the rest
+           of the page body (0.92rem / var(--tw-mono) / line-height 1.65).
+           No HRs, no red bars, no italic captions.
+           ══════════════════════════════════════════════════════════════ */
+        @media (max-width: 1023px) {
+            /* ── Section-level: reduced vertical padding for one-viewport fit */
+            .tw-drona {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+
+            /* ── Headline + subline sizing on mobile ──────────────────── */
+            .tw-drona-headline {
+                font-size: clamp(1.45rem, 5vw, 1.85rem);
+                margin-bottom: 0.5rem;
+            }
+            .tw-drona-subline {
+                font-size: 0.82rem;
+                line-height: 1.55;
+                margin-bottom: 1rem;
+            }
+
+            /* ── Editorial container ──────────────────────────────────── */
+            .tw-drona-beats-editorial { margin-top: 1rem; }
+
+            /* ── Each beat → staggered glass card ────────────────────── */
+            .tw-drona-beat {
+                border-top: 0;
+                padding: 0.9rem 1.1rem;
+                width: 82%;
+                background: rgba(255, 255, 255, 0.62);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(10, 47, 82, 0.08);
+                border-radius: 10px;
+                box-shadow:
+                    inset 0 1px 0 rgba(255, 255, 255, 0.90),
+                    0 4px 20px rgba(10, 47, 82, 0.07);
+            }
+            .tw-drona-beat + .tw-drona-beat { margin-top: 0.75rem; }
+
+            /* Beats 1 + 3: right-staggered. Beat 2: left-anchored. */
+            .tw-drona-beats-editorial .tw-drona-beat:nth-child(1),
+            .tw-drona-beats-editorial .tw-drona-beat:nth-child(3) {
+                margin-left: auto;
+                margin-right: 0;
+            }
+            .tw-drona-beats-editorial .tw-drona-beat:nth-child(2) {
+                margin-left: 0;
+            }
+
+            /* ── Eyebrow (beat number label) ──────────────────────────── */
+            .tw-drona-beat-label {
+                font-size: 0.56rem;
+                letter-spacing: 0.28em;
+                margin-bottom: 0.4rem;
+            }
+
+            /* ── Beat heading — Cormorant italic ─────────────────────── */
+            .tw-drona-beat-heading {
+                font-size: clamp(1.2rem, 4vw, 1.45rem);
+                line-height: 1.08;
+                margin-bottom: 0.5rem;
+            }
+
+            /* ── Beat 01: paragraph body ─────────────────────────────── */
+            .tw-drona-beat-para {
+                font-family: var(--tw-mono);
+                font-size: 0.82rem;
+                line-height: 1.55;
+                color: var(--tw-ink-dim);
+                letter-spacing: 0;
+            }
+
+            /* ── Beat 02: KV rows stacked, label above body ─────────────*/
+            .tw-drona-beat-kv { gap: 0; }
+            .tw-drona-beat-kv-row {
+                display: block;
+                padding: 0;
+                border-bottom: 0;
+            }
+            .tw-drona-beat-kv-row + .tw-drona-beat-kv-row { margin-top: 0.6rem; }
+            .tw-drona-beat-key {
+                display: block;
+                font-size: 0.54rem;
+                letter-spacing: 0.26em;
+                color: var(--tw-red);
+                padding-top: 0;
+                margin-bottom: 0.22rem;
+            }
+            .tw-drona-beat-val {
+                font-size: 0.85rem;
+                line-height: 1.5;
+                color: var(--tw-ink-dim);
+            }
+
+            /* ── Beat 03: packet name + "for your …" subline ─────────── */
+            .tw-drona-beat-list--output { font-style: normal; }
+            .tw-drona-beat-list--output li {
+                display: block;
+                font-size: 0.92rem;
+                line-height: 1.4;
+            }
+            .tw-drona-beat-list--output li + li { margin-top: 0.55rem; }
+            .tw-drona-packet-name {
+                display: block;
+                font-family: var(--tw-display);
+                font-weight: 500;
+                font-size: 0.95rem;
+                color: var(--tw-navy);
+                line-height: 1.2;
+            }
+            .tw-drona-packet-for {
+                display: block;
+                font-family: var(--tw-mono);
+                font-weight: 400;
+                font-size: 0.72rem;
+                color: var(--tw-ink-dim);
+                margin-top: 0.15rem;
+                letter-spacing: 0.01em;
+            }
+
+            /* ── Captions: muted grey, no italic, no red bar ────────────*/
+            .tw-drona-beat-caption {
+                font-family: var(--tw-mono);
+                font-style: normal;
+                font-size: 0.72rem;
+                line-height: 1.5;
+                color: rgba(10, 47, 82, 0.45);
+                padding-left: 0;
+                border-left: 0;
+                margin-top: 0.55rem;
+                letter-spacing: 0.005em;
+            }
+
+            /* ── Hide redundant centred moat-quote on mobile ────────────*/
+            .tw-drona-moat-quote { display: none !important; }
+
+            /* ── Pillars intro (Legora lede + caps stamp) ───────────────*/
+            .tw-drona-pillars-intro {
+                margin-top: 3rem;
+                margin-bottom: 1.75rem;
+                text-align: left;
+            }
+            .tw-drona-pillars-lede {
+                font-family: var(--tw-display);
+                font-weight: 500;
+                font-style: italic;
+                font-size: clamp(1.35rem, 5vw, 1.65rem);
+                line-height: 1.15;
+                color: var(--tw-navy);
+                margin: 0 0 0.75rem;
+                letter-spacing: -0.01em;
+            }
+            .tw-drona-pillars-stamp {
+                font-family: var(--tw-mono);
+                font-size: 0.58rem;
+                font-weight: 700;
+                letter-spacing: 0.28em;
+                text-transform: uppercase;
+                color: var(--tw-red);
+                margin: 0;
+            }
+
+            /* ── Quad pillars: vertical editorial list, not 2×2 grid ────*/
+            .tw-drona-quad {
+                display: flex;
+                flex-direction: column;
+                gap: 1.75rem;
+                margin: 0 0 2.5rem;
+            }
+            .tw-drona-quad-card {
+                gap: 0;
+                display: flex;
+                flex-direction: column;
+            }
+
+            /* Progressive meter: horizontal row of 4 square boxes */
+            .tw-drona-meter {
+                display: flex;
+                flex-direction: row;
+                gap: 6px;
+                margin-bottom: 0.75rem;
+            }
+            .tw-drona-meter-box {
+                width: 32px;
+                height: 32px;
+                flex: 0 0 32px;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
+            /* Filled slot: subtle navy tint + solid border */
+            .tw-drona-meter-box--filled {
+                background: rgba(10, 47, 82, 0.07);
+                border: 1px solid rgba(10, 47, 82, 0.18);
+            }
+            /* Empty slot: no fill, dimmer outline */
+            .tw-drona-meter-box--empty {
+                background: transparent;
+                border: 1px solid rgba(10, 47, 82, 0.12);
+            }
+            /* Icon inside filled slot: 20px, navy-filtered */
+            .tw-drona-meter-box--filled img {
+                width: 20px;
+                height: 20px;
+                object-fit: contain;
+                filter: brightness(0) saturate(100%) invert(13%) sepia(57%)
+                        saturate(1862%) hue-rotate(195deg) brightness(94%) contrast(97%);
+                opacity: 0.9;
+            }
+
+            .tw-drona-quad-title {
+                font-family: var(--tw-display);
+                font-weight: 500;
+                font-size: 1.05rem;
+                color: var(--tw-navy);
+                line-height: 1.2;
+                letter-spacing: -0.005em;
+                margin-bottom: 0.3rem;
+            }
+            .tw-drona-quad-body {
+                font-family: var(--tw-mono);
+                font-size: 0.85rem;
+                line-height: 1.6;
+                color: rgba(10, 47, 82, 0.6);
+            }
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           DRONA — 2×2 feature quad grid
+           Replaces the VS comparison table. Each card: placeholder
+           image + title + one-line description. Fits in one viewport.
+           ══════════════════════════════════════════════════════════════ */
+        .tw-drona-quad {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(0.65rem, 1.5vw, 1rem);
+            margin: clamp(1.5rem, 3vh, 2.5rem) 0 clamp(2rem, 4vh, 3rem);
+        }
+
+        .tw-drona-quad-card {
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+
+        /* Square image container for the 4 Drona SVG graphics */
+        .tw-drona-quad-img {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1/1;
+            background: rgba(10, 47, 82, 0.05);
+            border-radius: 6px;
+            border: 1px solid rgba(10, 47, 82, 0.10);
+            overflow: hidden;
+        }
+        .tw-drona-quad-img img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .tw-drona-quad-title {
+            font-family: var(--tw-display);
+            font-weight: 500;
+            font-size: clamp(0.95rem, 2.2vw, 1.2rem);
+            color: var(--tw-navy);
+            line-height: 1.2;
+            letter-spacing: -0.005em;
+        }
+
+        .tw-drona-quad-body {
+            font-family: var(--tw-mono);
+            font-size: clamp(0.68rem, 1.6vw, 0.8rem);
+            line-height: 1.6;
+            color: var(--tw-ink-dim);
+        }
+
+        /* ── Moat quote — scroll-reveal single statement ── */
+        .tw-drona-moat-quote {
+            text-align: center;
+            font-family: var(--tw-display);
+            font-style: italic;
+            font-weight: 500;
+            font-size: clamp(1.25rem, 2.6vw, 1.9rem);
+            line-height: 1.38;
+            color: var(--tw-navy);
+            max-width: 44rem;
+            margin: var(--tw-block-gap) auto;
+            letter-spacing: -0.005em;
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 1.2s ease, transform 1.2s ease;
+        }
+        .tw-drona-moat-quote.is-in { opacity: 1; transform: translateY(0); }
+        .tw-drona-moat-quote em { color: var(--tw-red); font-style: italic; }
+
+        /* ---------- Beat 6: coda ---------- */
+        .tw-drona-coda {
+            margin: clamp(5rem, 10vh, 7rem) auto 0;
+            max-width: 44rem;
+            text-align: center;
+            font-family: var(--tw-display);
+            font-style: italic;
+            font-weight: 500;
+            font-size: clamp(1.4rem, 2.8vw, 2rem);
+            line-height: 1.35;
+            color: var(--tw-navy);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.2s ease, transform 1.2s ease;
+        }
+        .tw-drona-coda.is-in { opacity: 1; transform: translateY(0); }
+
+        /* ============================================================
+           DRONA — iPad 11" landscape + short laptops
+           Keep the full funnel diagram (SVG funnel + vertical rail + the
+           two-column text/visual layout) on short-height laptops — the
+           3-column flat fallback looked broken. Instead we compact the
+           whole panel: trim section padding, headline, subline, the SVG
+           funnel height, and label/stage spacing so the funnel reads
+           cleanly and the section scrolls naturally afterwards.
+           Placed AFTER all .tw-drona-* base rules so it wins source-order
+           ties against same-specificity later declarations.
+           ============================================================ */
+        @media (min-width: 1101px) and (max-height: 880px) {
+            .tw-drona              { padding: clamp(2.5rem, 5vh, 4rem) clamp(1.5rem, 4vw, 4rem); }
+            .tw-drona-headline     { font-size: clamp(1.7rem, 3vw, 2.4rem); margin-bottom: 0.6rem; line-height: 1.12; }
+            .tw-drona-subline      { font-size: 0.95rem; line-height: 1.5; margin-bottom: clamp(1rem, 2vh, 1.5rem); }
+            .tw-drona-hinge        { margin: clamp(1rem, 2vh, 1.75rem) auto clamp(0.85rem, 1.75vh, 1.5rem); }
+            .tw-drona-panel        { padding: clamp(1.25rem, 2.5vw, 2rem) clamp(1.25rem, 2.5vw, 2rem) clamp(1rem, 2vw, 1.5rem); margin: clamp(1rem, 2vh, 1.75rem) auto 0; }
+
+            /* Keep the two-column funnel; just narrow the visual + shorten the SVG */
+            .tw-drona-funnel        { grid-template-columns: minmax(0, 1fr) 300px; gap: 1rem; margin-bottom: 1rem; }
+            .tw-drona-funnel-svg    { min-height: 320px; }
+            .tw-drona-funnel-label  { padding: 1rem 0; }
+
+            .tw-drona-tier-num      { font-size: 0.62rem; margin-bottom: 0.35rem; }
+            .tw-drona-tier-title    { font-size: 1.15rem; margin-bottom: 0.7rem; line-height: 1.2; }
+            .tw-drona-source        { font-size: 0.7rem; padding: 0.35rem 0.6rem; }
+            .tw-drona-sources       { gap: 0.35rem; }
+            .tw-drona-stage         { padding: 0.5rem 0; }
+            .tw-drona-stage-key     { font-size: 0.7rem; }
+            .tw-drona-stage-body    { font-size: 0.74rem; line-height: 1.45; }
+            .tw-drona-layer-caption { font-size: 0.72rem; line-height: 1.45; margin-top: 0.7rem; }
+        }
+
+        /* ============================================================
+
+        .tw-act5 {
+            position: relative;
+            background: var(--tw-cream);
+            border-top: 1px solid var(--tw-rule);
+            padding: var(--tw-section-y) clamp(1.5rem, 4vw, 4rem);
+            overflow: hidden;
+        }
+
+        .tw-act5-inner {
+            max-width: 1380px;
+            margin: 0 auto;
+        }
+
+        .tw-act5-head {
+            margin-bottom: clamp(3rem, 6vh, 5rem);
+            max-width: 68rem;
+            background: transparent;
+        }
+        .tw-act5-head .tw-eyebrow { display: block; margin-bottom: 1rem; }
+        .tw-act5-title {
+            font-family: var(--tw-display);
+            font-weight: 500;
+            font-size: clamp(2rem, 4.2vw, 3.5rem);
+            line-height: 1.08;
+            color: var(--tw-navy);
+            letter-spacing: -0.01em;
+            margin-bottom: 1.25rem;
+        }
+        .tw-act5-title em { font-style: italic; }
+        .tw-act5-sub {
+            font-family: var(--tw-mono);
+            font-size: clamp(0.85rem, 1.1vw, 0.98rem);
+            line-height: 1.75;
+            color: var(--tw-ink-dim);
+            max-width: 56rem;
+        }
+
+        .tw-strata {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+        }
+
+        .tw-stratum {
+            position: relative;
+            display: grid;
+            grid-template-columns: 13rem 1fr 1fr;
+            gap: clamp(1rem, 2.5vw, 2.5rem);
+            padding: clamp(1.75rem, 3.5vh, 2.5rem) clamp(1.5rem, 3vw, 2.5rem);
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid rgba(10, 47, 82, 0.12);
+            border-radius: 4px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.9s ease, transform 0.9s ease,
+                        box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .tw-stratum.is-in { opacity: 1; transform: translateY(0); }
+        .tw-stratum:hover {
+            border-color: rgba(10, 47, 82, 0.22);
+            box-shadow: 0 6px 28px rgba(10, 47, 82, 0.07);
+        }
+
+        @media (max-width: 879px) {
+            /* Horizontal swipe carousel — same pattern as fragment cards */
+            .tw-strata {
+                display: flex !important;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                gap: 0.875rem;
+                padding: 0.25rem 1.25rem 1.25rem;
+                margin: 0 -1.25rem;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+            .tw-strata::-webkit-scrollbar { display: none; }
+            .tw-stratum {
+                flex: 0 0 calc(100vw - 4rem);
+                min-width: calc(100vw - 4rem);
+                scroll-snap-align: center;
+                /* All cards visible from the start — no scroll-in needed in carousel */
+                opacity: 1 !important;
+                transform: none !important;
+                /* Override multi-column layout — stack band/body/attrs vertically */
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Stratum band border direction flips when card stacks vertically on mobile */
+        @media (max-width: 879px) {
+            .tw-stratum-band {
+                border-right: none;
+                padding-right: 0;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid rgba(10, 47, 82, 0.10);
+            }
+        }
+
+        /* Stage badge — NOW / NEXT / LATER */
+        .tw-stratum-band {
+            position: relative;
+            padding-right: 1.25rem;
+            border-right: 1px solid rgba(10, 47, 82, 0.10);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tw-stratum-stage {
+            display: inline-block;
+            font-family: var(--tw-mono);
+            font-size: 0.58rem;
+            font-weight: 700;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.6rem;
+            border-radius: 2px;
+            margin-bottom: 0.9rem;
+            align-self: flex-start;
+        }
+        .tw-stratum--surface .tw-stratum-stage {
+            background: rgba(219, 74, 43, 0.10);
+            color: var(--tw-red);
+            border: 1px solid rgba(219, 74, 43, 0.28);
+        }
+        .tw-stratum--mid .tw-stratum-stage {
+            background: rgba(240, 185, 58, 0.12);
+            color: #a07a10;
+            border: 1px solid rgba(240, 185, 58, 0.35);
+        }
+        .tw-stratum--deep .tw-stratum-stage {
+            background: rgba(10, 47, 82, 0.07);
+            color: var(--tw-navy);
+            border: 1px solid rgba(10, 47, 82, 0.18);
+        }
+
+        .tw-stratum-name {
+            font-family: var(--tw-display);
+            font-weight: 500;
+            font-size: 1.75rem;
+            line-height: 1.1;
+            color: var(--tw-navy);
+            margin-bottom: 0.5rem;
+        }
+        .tw-stratum-tag {
+            font-family: var(--tw-mono);
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+        .tw-stratum--surface .tw-stratum-tag { color: var(--tw-red); }
+        .tw-stratum--mid .tw-stratum-tag { color: #a07a10; }
+        .tw-stratum--deep .tw-stratum-tag { color: rgba(10, 47, 82, 0.55); }
+
+        .tw-stratum-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .tw-stratum-headline {
+            font-family: var(--tw-display);
+            font-weight: 500;
+            font-size: 1.25rem;
+            line-height: 1.35;
+            color: var(--tw-navy);
+            margin-bottom: 0.85rem;
+            letter-spacing: -0.005em;
+        }
+        .tw-stratum-desc {
+            font-family: var(--tw-mono);
+            font-size: 0.8rem;
+            line-height: 1.72;
+            color: rgba(10, 47, 82, 0.72);
+        }
+
+        .tw-stratum-attrs {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            justify-content: center;
+        }
+        .tw-stratum-attr {
+            display: grid;
+            grid-template-columns: 5.5rem 1fr;
+            gap: 0.75rem;
+            font-family: var(--tw-mono);
+            font-size: 0.75rem;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid rgba(10, 47, 82, 0.08);
+            align-items: baseline;
+        }
+        .tw-stratum-attr:last-child { border-bottom: none; }
+        .tw-stratum-attr-key {
+            color: rgba(10, 47, 82, 0.48);
+            font-size: 0.58rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+        .tw-stratum-attr-val {
+            color: var(--tw-navy);
+            font-size: 0.76rem;
+            line-height: 1.5;
+        }
+
+        .tw-strata-spine {
+            display: none;
+        }
+
+        /* ============================================================
+
+        @media (min-width: 1101px) and (max-height: 880px) {
+            .archive-differentiation .tw-drona-credential { margin-top: clamp(2rem, 4vh, 3.5rem); margin-bottom: clamp(2.5rem, 5vh, 4rem); }
+            .archive-differentiation .tw-drona-credential-headline { font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
+            .archive-differentiation .tw-drona-credential-body p { font-size: 0.86rem; line-height: 1.6; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .tw-stratum,
+            .tw-drona-portfolio-card,
+            .tw-drona-moat-quote,
+            .tw-drona-coda {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="archive-record">
+        <p class="archive-record__eyebrow">Retired component archive · not for publication</p>
+        <h1>TradeWatch Fragmentation Section</h1>
+        <dl>
+            <dt>Component name</dt><dd>TradeWatch Fragmentation Section</dd>
+            <dt>Original page</dt><dd>tradewatch.html</dd>
+            <dt>Date retired</dt><dd>2026-07-31</dd>
+            <dt>Reason</dt><dd>Replaced by the six-capability TradeWatch grid.</dd>
+        </dl>
+    </header>
+
+    <!-- Future retired components should be appended to this document. -->
+    <main>
+        <section class="tw-act2" aria-label="The fragmentation" data-nav-light>
+            <div class="tw-act2-inner">
+                <header class="tw-act2-header">
+                    <h3 class="tw-act2-headline">
+                        Every shipment requires synchronized customs clearance, cargo insurance, and trade finance <span class="tw-emph">to mitigate regulatory and financial risks.</span>
+                    </h3>
+                </header>
+
+                <div class="tw-fragments" id="twFragments">
+                    <article class="tw-frag" data-frag="cha">
+                        <p class="tw-frag-tag">01 · Customs</p>
+                        <h4 class="tw-frag-title">The Customs Authority</h4>
+                        <p class="tw-frag-sub">Decides if your shipment can leave the country</p>
+                        <div class="tw-doc">
+                            <div class="tw-doc-header">What they check</div>
+                            <div class="tw-doc-row"><span class="tw-doc-key">Permission to export</span><span class="tw-doc-val">Active export licence</span></div>
+                            <div class="tw-doc-row"><span class="tw-doc-key">Product category</span><span class="tw-doc-val">Correctly classified</span></div>
+                            <div class="tw-doc-row"><span class="tw-doc-key">Declared value</span><span class="tw-doc-val">Matches your invoice</span></div>
+                            <div class="tw-doc-row"><span class="tw-doc-key">Supporting documents</span><span class="tw-doc-val">Invoice, packing list, transport docs</span></div>
+                        </div>
+                        <p class="tw-frag-scope">Does not see what Insurance or the Bank checks.</p>
+                        <p class="tw-frag-note">Get one detail wrong and your shipment can sit at the port for days, sometimes weeks — after the container is already there.</p>
+                    </article>
+
+                    <article class="tw-frag" data-frag="broker">
+                        <p class="tw-frag-tag">02 · Insurance</p>
+                        <h4 class="tw-frag-title">The Insurance Provider</h4>
+                        <p class="tw-frag-sub">Pays out if something happens in transit</p>
+                        <div class="tw-doc">
+                            <div class="tw-doc-header">What they check</div>
+                            <div class="tw-doc-row"><span class="tw-doc-key">Cover amount</span><span class="tw-doc-val">Big enough for the cargo</span></div>
+                            <div class="tw-doc-row"><span class="tw-doc-key">What's being shipped</span><span class="tw-doc-val">Declared correctly</span></div>
+                            <div class="tw-doc-row"><span class="tw-doc-key">Route and method</span><span class="tw-doc-val">Covered by the policy</span></div>
+                            <div class="tw-doc-row"><span class="tw-doc-key">The person insuring</span><span class="tw-doc-val">Actually owns the cargo</span></div>
+                        </div>
+                        <p class="tw-frag-scope">Does not see what Customs or the Bank checks.</p>
+                        <p class="tw-frag-note">If the policy says one thing and your shipment is another, the insurer denies the claim — when you need it most.</p>
+                    </article>
+
+                    <article class="tw-frag" data-frag="bank">
+                        <p class="tw-frag-tag">03 · Payment</p>
+                        <h4 class="tw-frag-title">The Trade Finance Bank</h4>
+                        <p class="tw-frag-sub">Releases your payment once documents are perfect</p>
+                        <div class="tw-doc">
+                            <div class="tw-doc-header">What they check</div>
+                            <div class="tw-doc-row"><span class="tw-doc-key">Who gets paid</span><span class="tw-doc-val">Matches the contract</span></div>
+                            <div class="tw-doc-row"><span class="tw-doc-key">Amount</span><span class="tw-doc-val">Matches every document</span></div>
+                            <div class="tw-doc-row"><span class="tw-doc-key">Documents present</span><span class="tw-doc-val">All required papers in</span></div>
+                            <div class="tw-doc-row"><span class="tw-doc-key">Every number agrees</span><span class="tw-doc-val">Across every document</span></div>
+                        </div>
+                        <p class="tw-frag-scope">Does not see what Customs or Insurance checks.</p>
+                        <p class="tw-frag-note">A USD 150 difference between your invoice and packing list is enough to delay payment by weeks.</p>
+                    </article>
+                </div>
+
+                <div class="tw-frag-dots" id="twFragDots" aria-hidden="true">
+                    <button class="tw-frag-dot is-active" data-idx="0" aria-label="Card 1"></button>
+                    <button class="tw-frag-dot" data-idx="1" aria-label="Card 2"></button>
+                    <button class="tw-frag-dot" data-idx="2" aria-label="Card 3"></button>
+                </div>
+
+                <div class="tw-act2-killer">
+                    <p class="tw-act2-killer-line" id="twKillerLine">A single shipment touches multiple decision surfaces.</p>
+                    <p class="tw-act2-killer-sub" id="twKillerSub">What exporters need is not another dashboard to manage.</p>
+                    <div class="tw-act2-killer-rule" id="twKillerRule"></div>
+                </div>
+            </div>
+        </section>
+
+        <header class="archive-component-record">
+            <p class="archive-component-record__eyebrow">Retired component archive · not for publication</p>
+            <h2>TradeWatch — Kanan Roadmap</h2>
+            <dl>
+                <dt>Component name</dt><dd>TradeWatch — Kanan Roadmap</dd>
+                <dt>Source page</dt><dd>tradewatch.html</dd>
+                <dt>Date retired</dt><dd>2026-07-31</dd>
+                <dt>Note</dt><dd>Candidate for relocation to the SectorWatch or company-vision page.</dd>
+            </dl>
+        </header>
+
+    <section class="tw-act5" aria-label="The roadmap" data-nav-light>
+        <div class="tw-act5-inner">
+            <div class="tw-act5-head">
+                <span class="tw-eyebrow">The Kanan Roadmap</span>
+                <h2 class="tw-act5-title">From shipment evidence<br>to persistent trade intelligence.</h2>
+                <p class="tw-act5-sub">TradeWatch starts with the documents that decide whether a shipment can move, be insured, or be defended later. The same evidence layer compounds into broader trade-risk intelligence over time.</p>
+            </div>
+
+            <div class="tw-strata" id="twStrata">
+
+                <article class="tw-stratum tw-stratum--surface">
+                    <div class="tw-stratum-band">
+                        <div class="tw-stratum-stage">Now</div>
+                        <h3 class="tw-stratum-name">TradeWatch</h3>
+                        <div class="tw-stratum-tag">PoC · EV-Component Exports</div>
+                    </div>
+                    <div class="tw-stratum-body">
+                        <h4 class="tw-stratum-headline">Reviewed evidence packets for customs and marine cargo insurance handoff.</h4>
+                        <p class="tw-stratum-desc">Exporters share the shipment bundle. TradeWatch reconciles the documents, checks the applicable evidence requirements, flags gaps, and prepares two reviewed packets before the CHA or insurance broker has to reject, query, or correct them.</p>
+                    </div>
+                    <div class="tw-stratum-attrs">
+                        <div class="tw-stratum-attr"><span class="tw-stratum-attr-key">Endpoints</span><span class="tw-stratum-attr-val">CHA handoff · Insurance broker handoff</span></div>
+                        <div class="tw-stratum-attr"><span class="tw-stratum-attr-key">Scope</span><span class="tw-stratum-attr-val">EV-component export shipments</span></div>
+                        <div class="tw-stratum-attr"><span class="tw-stratum-attr-key">Output</span><span class="tw-stratum-attr-val">Reviewed packet · discrepancy report · evidence trail</span></div>
+                    </div>
+                </article>
+
+                <article class="tw-stratum tw-stratum--mid">
+                    <div class="tw-stratum-band">
+                        <div class="tw-stratum-stage">Next</div>
+                        <h3 class="tw-stratum-name">Evidence Layer</h3>
+                        <div class="tw-stratum-tag">MVP Expansion · Multi-Surface</div>
+                    </div>
+                    <div class="tw-stratum-body">
+                        <h4 class="tw-stratum-headline">One shipment fact model projected into multiple institutional surfaces.</h4>
+                        <p class="tw-stratum-desc">The same document spine can support customs readiness, insurance placement, post-shipment evidence, and finance-document consistency checks where the rules are clear and reviewable.</p>
+                    </div>
+                    <div class="tw-stratum-attrs">
+                        <div class="tw-stratum-attr"><span class="tw-stratum-attr-key">Surfaces</span><span class="tw-stratum-attr-val">Customs · Insurance · Finance checks</span></div>
+                        <div class="tw-stratum-attr"><span class="tw-stratum-attr-key">Coverage</span><span class="tw-stratum-attr-val">Multi-component · multi-corridor</span></div>
+                        <div class="tw-stratum-attr"><span class="tw-stratum-attr-key">State</span><span class="tw-stratum-attr-val">Open · blocked · conditional · review required</span></div>
+                    </div>
+                </article>
+
+                <article class="tw-stratum tw-stratum--deep">
+                    <div class="tw-stratum-band">
+                        <div class="tw-stratum-stage">Later</div>
+                        <h3 class="tw-stratum-name">SectorWatch</h3>
+                        <div class="tw-stratum-tag">Strategic Horizon · SCRM</div>
+                    </div>
+                    <div class="tw-stratum-body">
+                        <h4 class="tw-stratum-headline">Persistent trade-risk intelligence across regulated value chains.</h4>
+                        <p class="tw-stratum-desc">As shipment records accumulate, Kanan can surface patterns across product classification, evidence quality, corridor exposure, insurance weakness, buyer concentration, and regulatory change.</p>
+                    </div>
+                    <div class="tw-stratum-attrs">
+                        <div class="tw-stratum-attr"><span class="tw-stratum-attr-key">Layer</span><span class="tw-stratum-attr-val">Intelligence platform</span></div>
+                        <div class="tw-stratum-attr"><span class="tw-stratum-attr-key">Buyers</span><span class="tw-stratum-attr-val">Exporters · manufacturers · institutions</span></div>
+                        <div class="tw-stratum-attr"><span class="tw-stratum-attr-key">Scope</span><span class="tw-stratum-attr-val">Sector-by-sector, jurisdiction-aware</span></div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Swipe carousel dot indicators for strata (mobile only) -->
+            <div class="tw-frag-dots" id="twStrataDots" aria-hidden="true">
+                <button class="tw-frag-dot is-active" data-idx="0" aria-label="Now — TradeWatch"></button>
+                <button class="tw-frag-dot" data-idx="1" aria-label="Next — Evidence Layer"></button>
+                <button class="tw-frag-dot" data-idx="2" aria-label="Later — SectorWatch"></button>
+            </div>
+        </div>
+    </section>
+
+        <header class="archive-component-record">
+            <p class="archive-component-record__eyebrow">Retired component archive · not for publication</p>
+            <h2>TradeWatch — Drona Engine and Funnel</h2>
+            <dl>
+                <dt>Component name</dt><dd>TradeWatch — Drona Engine and Funnel</dd>
+                <dt>Source page</dt><dd>tradewatch.html</dd>
+                <dt>Date retired</dt><dd>2026-07-31</dd>
+                <dt>Note</dt><dd>Candidate for relocation to the homepage or a future How Kanan Works page.</dd>
+            </dl>
+        </header>
+
+    <section class="tw-drona" id="twDrona" aria-label="Drona — the engine inside TradeWatch" data-nav-light>
+        <div class="tw-drona-inner">
+            <!-- Beat 1: open -->
+            <p class="tw-drona-eyebrow">Drona · the engine inside TradeWatch</p>
+            <h2 class="tw-drona-headline">Software waits to be asked.<br>TradeWatch is already watching your file.</h2>
+            <p class="tw-drona-subline tw-drona-desktop-only">Most trade tools sit idle until you log in. We've codified what a senior trade consultant actually does — read every notification, cross-check every document, test it against your own policy — and put it to work continuously.</p>
+            <p class="tw-drona-subline tw-drona-mobile-only">Most trade tools sit idle until you log in. We codified what a senior trade consultant actually does, and put it to work continuously.</p>
+
+            <!-- DESKTOP: Funnel panel (hidden on mobile via .tw-drona-desktop-only) -->
+            <p class="tw-drona-hinge tw-drona-desktop-only">Drona is the neurosymbolic engine that makes that possible</p>
+
+            <div class="tw-drona-panel tw-drona-desktop-only">
+            <div class="tw-drona-funnel" id="twDronaFunnel">
+
+                <!-- LEFT: text labels + dedicated rail track on the left edge -->
+                <div class="tw-drona-funnel-labels">
+                    <div class="tw-drona-rail" aria-hidden="true">
+                        <span class="tw-drona-rail-line"></span>
+                        <span class="tw-drona-rail-station" id="twRailStation1" data-station="1"></span>
+                        <span class="tw-drona-rail-station" id="twRailStation2" data-station="2"></span>
+                        <span class="tw-drona-rail-station" id="twRailStation3" data-station="3"></span>
+                        <span class="tw-drona-rail-ball" id="twRailBall"></span>
+                    </div>
+
+                    <div class="tw-drona-funnel-label tw-drona-funnel-label--1" id="twFunnelLabel1">
+                        <p class="tw-drona-tier-num">01 · Input</p>
+                        <h4 class="tw-drona-tier-title">What we read</h4>
+                        <div class="tw-drona-sources">
+                            <span class="tw-drona-source">Customs notifications &amp; circulars</span>
+                            <span class="tw-drona-source">Quality control orders</span>
+                            <span class="tw-drona-source">Foreign regulations &amp; sanctions lists</span>
+                            <span class="tw-drona-source">Customs rulings &amp; tribunal decisions</span>
+                            <span class="tw-drona-source">Industry standards</span>
+                            <span class="tw-drona-source">Insurance &amp; banking circulars</span>
+                        </div>
+                        <p class="tw-drona-layer-caption">Every source kept, dated, and traceable. Nothing summarised away.</p>
+                    </div>
+
+                    <div class="tw-drona-funnel-label tw-drona-funnel-label--2" id="twFunnelLabel2">
+                        <p class="tw-drona-tier-num">02 · Process</p>
+                        <h4 class="tw-drona-tier-title">What we do with it</h4>
+                        <div class="tw-drona-stage"><span class="tw-drona-stage-key">Reads</span><span class="tw-drona-stage-body">Pulls every relevant fact. Classifies it. Marks ambiguity.</span></div>
+                        <div class="tw-drona-stage"><span class="tw-drona-stage-key">Reasons</span><span class="tw-drona-stage-body">Tests each obligation against the regulation, your shipment, and your own policy framework.</span></div>
+                        <div class="tw-drona-stage"><span class="tw-drona-stage-key">Records</span><span class="tw-drona-stage-body">Locks the evidence, the reasoning chain, and the reviewer's sign-off. The answer can always be defended.</span></div>
+                        <p class="tw-drona-layer-caption">No black box. No chatbot guessing. The answer always has a paper trail.</p>
+                    </div>
+
+                    <div class="tw-drona-funnel-label tw-drona-funnel-label--3" id="twFunnelLabel3">
+                        <p class="tw-drona-tier-num">03 · Output</p>
+                        <h4 class="tw-drona-tier-title">What comes out</h4>
+                        <p class="tw-drona-layer-caption">One reviewed packet for your customs broker. One for your insurer. Both projected from the same shipment.</p>
+                    </div>
+                </div>
+
+                <!-- RIGHT: feeders → visual funnel → outputs -->
+                <div class="tw-drona-funnel-visual" id="twDronaVisual">
+                    <div class="tw-drona-funnel-feeders" aria-hidden="true">
+                        <span class="tw-drona-feeder">Customs</span>
+                        <span class="tw-drona-feeder">Rulings</span>
+                        <span class="tw-drona-feeder">Standards</span>
+                        <span class="tw-drona-feeder">Circulars</span>
+                    </div>
+                    <svg class="tw-drona-funnel-svg" id="twDronaFunnelSVG" viewBox="0 0 300 480" preserveAspectRatio="none" aria-hidden="true">
+                        <defs>
+                            <clipPath id="twClip1" clipPathUnits="userSpaceOnUse"><rect id="twClipRect1" x="0" y="0" width="300" height="0"/></clipPath>
+                            <clipPath id="twClip2" clipPathUnits="userSpaceOnUse"><rect id="twClipRect2" x="0" y="0" width="300" height="0"/></clipPath>
+                            <clipPath id="twClip3" clipPathUnits="userSpaceOnUse"><rect id="twClipRect3" x="0" y="0" width="300" height="0"/></clipPath>
+                        </defs>
+                        <polygon class="tw-funnel-poly tw-funnel-poly--1" id="twFunnelPoly1" points="0,0 300,0 248,140 52,140"/>
+                        <polygon class="tw-funnel-poly tw-funnel-poly--2" id="twFunnelPoly2" points="52,152 248,152 212,308 88,308"/>
+                        <polygon class="tw-funnel-poly tw-funnel-poly--3" id="twFunnelPoly3" points="88,320 212,320 186,480 114,480"/>
+                        <polygon class="tw-funnel-fill tw-funnel-fill--1" id="twFunnelFill1" clip-path="url(#twClip1)" points="0,0 300,0 248,140 52,140"/>
+                        <polygon class="tw-funnel-fill tw-funnel-fill--2" id="twFunnelFill2" clip-path="url(#twClip2)" points="52,152 248,152 212,308 88,308"/>
+                        <polygon class="tw-funnel-fill tw-funnel-fill--3" id="twFunnelFill3" clip-path="url(#twClip3)" points="88,320 212,320 186,480 114,480"/>
+                    </svg>
+                    <div class="tw-drona-funnel-outputs">
+                        <span class="tw-drona-output-chip tw-drona-output-chip--out">Shipping Bill Readiness Packet</span>
+                        <span class="tw-drona-output-chip tw-drona-output-chip--out">Marine Cargo Insurance Packet</span>
+                    </div>
+                </div>
+
+            </div>
+            </div><!-- /.tw-drona-panel -->
+
+            <!-- MOBILE: accordion (hidden on desktop via .tw-drona-mobile-only) -->
+            <div class="tw-drona-accordion tw-drona-mobile-only">
+
+                <details class="tw-acc-item">
+                    <summary class="tw-acc-summary">
+                        <span class="tw-acc-index" aria-hidden="true">01</span>
+                        <span class="tw-acc-title">The sources we actually read.</span>
+                        <span class="tw-acc-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-acc-panel">
+                        <ul class="tw-acc-sources">
+                            <li>Customs notifications</li>
+                            <li>Quality control orders</li>
+                            <li>Foreign regulations</li>
+                            <li>Sanctions lists</li>
+                            <li>Customs rulings &amp; tribunal decisions</li>
+                            <li>Industry standards</li>
+                            <li>Banking circulars</li>
+                        </ul>
+                        <p class="tw-acc-foot">Every source kept, dated, and traceable.</p>
+                    </div>
+                </details>
+
+                <details class="tw-acc-item">
+                    <summary class="tw-acc-summary">
+                        <span class="tw-acc-index" aria-hidden="true">02</span>
+                        <span class="tw-acc-title">How we reason through each obligation.</span>
+                        <span class="tw-acc-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-acc-panel">
+                        <dl class="tw-acc-rows">
+                            <div class="tw-acc-row">
+                                <dt>Reads</dt>
+                                <dd>Pulls every relevant fact. Classifies it. Marks the ambiguity.</dd>
+                            </div>
+                            <div class="tw-acc-row">
+                                <dt>Reasons</dt>
+                                <dd>Tests each obligation against the regulation, your shipment, and your own policy framework.</dd>
+                            </div>
+                        </dl>
+                        <p class="tw-acc-foot">No black box. No chatbot guessing.</p>
+                    </div>
+                </details>
+
+                <details class="tw-acc-item">
+                    <summary class="tw-acc-summary">
+                        <span class="tw-acc-index" aria-hidden="true">03</span>
+                        <span class="tw-acc-title">Where we lock the evidence.</span>
+                        <span class="tw-acc-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-acc-panel">
+                        <p class="tw-acc-body">
+                            Every shipment record carries its own evidence file &mdash;
+                            the source documents, the reasoning chain, the reviewer's
+                            sign-off. The answer can always be defended.
+                        </p>
+                        <p class="tw-acc-foot">A paper trail, not a prompt history.</p>
+                    </div>
+                </details>
+
+                <details class="tw-acc-item">
+                    <summary class="tw-acc-summary">
+                        <span class="tw-acc-index" aria-hidden="true">04</span>
+                        <span class="tw-acc-title">What you actually receive.</span>
+                        <span class="tw-acc-chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="tw-acc-panel">
+                        <div class="tw-acc-packets">
+                            <article class="tw-acc-packet">
+                                <p class="tw-acc-packet-name">Shipping Bill Readiness Packet</p>
+                                <p class="tw-acc-packet-for">For your customs broker.</p>
+                            </article>
+                            <article class="tw-acc-packet">
+                                <p class="tw-acc-packet-name">Marine Cargo Insurance Packet</p>
+                                <p class="tw-acc-packet-for">For your insurer.</p>
+                            </article>
+                            <article class="tw-acc-packet">
+                                <p class="tw-acc-packet-name">Bank LC Packet</p>
+                                <p class="tw-acc-packet-for">For your trade banker.</p>
+                            </article>
+                        </div>
+                        <p class="tw-acc-foot">All projected from one shipment record.</p>
+                    </div>
+                </details>
+
+            </div>
+
+            <!-- Moat quote: Cormorant italic scroll-reveal -->
+            <div class="tw-drona-moat-quote" id="twDronaMoat">
+                The work is shown. <em>Every answer points to a source.</em>
+            </div>
+        </div>
+    </section>
+
+        <header class="archive-component-record">
+            <p class="archive-component-record__eyebrow">Retired component archive · not for publication</p>
+            <h2>TradeWatch — Original Differentiation Spine</h2>
+            <dl>
+                <dt>Component name</dt><dd>TradeWatch — Original Differentiation Spine</dd>
+                <dt>Source page</dt><dd>tradewatch.html</dd>
+                <dt>Date retired</dt><dd>2026-07-31</dd>
+                <dt>Note</dt><dd>Superseded by the four operating-principles design.</dd>
+            </dl>
+        </header>
+
+        <section class="tw-drona archive-differentiation" aria-label="Original TradeWatch differentiation" data-nav-light>
+            <div class="tw-drona-inner">
+            <!-- DESKTOP: two-column navy credential block (SectorWatch style) -->
+            <div class="tw-drona-credential tw-drona-desktop-only">
+                <div class="tw-drona-credential-inner">
+                    <div class="tw-drona-credential-grid">
+
+                        <div class="tw-drona-credential-left">
+                            <p class="tw-drona-credential-eyebrow">What makes it different</p>
+                            <h3 class="tw-drona-credential-headline">
+                                Auditable.<br>Authoritative.<br>Explainable.
+                            </h3>
+                        </div>
+
+                        <div class="tw-drona-credential-divider" aria-hidden="true"></div>
+
+                        <div class="tw-drona-credential-body">
+                            <p>Most trade tools wait for you to ask. TradeWatch reads what regulators publish, tests each obligation against your shipments, and records every step with a citable chain of evidence.</p>
+                            <p>Knowledge is compiled continuously from primary sources. The reasoning is deterministic, not guessed. The output is a reviewed packet — defensible at the customs desk, the insurance desk, and the banker's desk.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spine: 4-trait infographic flowing into desk cards -->
+            <div class="tw-drona-spine" aria-label="TradeWatch traits">
+                <div class="tw-drona-spine-track" aria-hidden="true"></div>
+
+                <div class="tw-drona-spine-node">
+                    <span class="tw-drona-spine-dot" aria-hidden="true"></span>
+                    <p class="tw-drona-spine-title">Knowledge</p>
+                    <p class="tw-drona-spine-sub">compiled,<br>continuously</p>
+                </div>
+                <div class="tw-drona-spine-node">
+                    <span class="tw-drona-spine-dot" aria-hidden="true"></span>
+                    <p class="tw-drona-spine-title">Reasoning</p>
+                    <p class="tw-drona-spine-sub">deterministic<br>over sources</p>
+                </div>
+                <div class="tw-drona-spine-node">
+                    <span class="tw-drona-spine-dot" aria-hidden="true"></span>
+                    <p class="tw-drona-spine-title">Memory</p>
+                    <p class="tw-drona-spine-sub">compounds across<br>shipments</p>
+                </div>
+                <div class="tw-drona-spine-node">
+                    <span class="tw-drona-spine-dot" aria-hidden="true"></span>
+                    <p class="tw-drona-spine-title">Packet</p>
+                    <p class="tw-drona-spine-sub">defensible<br>at any desk</p>
+                </div>
+            </div>
+
+            <!-- Desk outcome cards (Customs · Insurance · Banking) -->
+            <div class="tw-drona-portfolio">
+                <article class="tw-drona-portfolio-card">
+                    <p class="tw-drona-portfolio-tag">01 · Customs</p>
+                    <h4 class="tw-drona-portfolio-title">At the customs desk</h4>
+                    <p class="tw-drona-portfolio-body">Cleaner filings. Lower risk-tier reviews. Fewer holds at port.</p>
+                    <p class="tw-drona-portfolio-use">Present at: risk-tier reviews and export audits.</p>
+                </article>
+                <article class="tw-drona-portfolio-card">
+                    <p class="tw-drona-portfolio-tag">02 · Insurance</p>
+                    <h4 class="tw-drona-portfolio-title">At the insurer's desk</h4>
+                    <p class="tw-drona-portfolio-body">Defensible claims. Premiums that reflect how you actually ship.</p>
+                    <p class="tw-drona-portfolio-use">Present at: premium renewals and claim reviews.</p>
+                </article>
+                <article class="tw-drona-portfolio-card">
+                    <p class="tw-drona-portfolio-tag">03 · Banking</p>
+                    <h4 class="tw-drona-portfolio-title">At the banker's desk</h4>
+                    <p class="tw-drona-portfolio-body">First-pass LC acceptance. Faster trade financing.</p>
+                    <p class="tw-drona-portfolio-use">Present at: LC negotiations and financing reviews.</p>
+                </article>
+            </div>
+            </div>
+        </section>
+
+        <header class="archive-component-record">
+            <p class="archive-component-record__eyebrow">Retired component archive · not for publication</p>
+            <h2>TradeWatch — Original FAQ Copy</h2>
+            <dl>
+                <dt>Component name</dt><dd>TradeWatch — Original FAQ Copy</dd>
+                <dt>Source page</dt><dd>tradewatch.html</dd>
+                <dt>Date retired</dt><dd>2026-07-31</dd>
+                <dt>Note</dt><dd>Superseded by the commercial, jurisdiction-aware TradeWatch FAQ. The visual accordion design remains active.</dd>
+            </dl>
+        </header>
+
+        <section class="archive-faq-copy" aria-label="Original TradeWatch FAQ copy">
+            <h3>Questions about TradeWatch.</h3>
+
+            <details>
+                <summary><span class="archive-faq-index">01</span><span class="archive-faq-question">What is TradeWatch?</span></summary>
+                <div class="archive-faq-answer">
+                    <p>TradeWatch is Kanan Labs' agentic trade documentation and regulatory intelligence system for cross-border manufacturers.</p>
+                    <p>It is being built to automate end-to-end trade documentation workflows across export documentation, evidence readiness, intermediary handoff, and shipment-level intelligence. The first focus is cross-border manufacturers in advanced manufacturing and EV supply chains.</p>
+                    <p>TradeWatch is powered by DRONA, Kanan's proprietary regulatory intelligence engine.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary><span class="archive-faq-index">02</span><span class="archive-faq-question">Who is TradeWatch built for?</span></summary>
+                <div class="archive-faq-answer">
+                    <p>TradeWatch is built for manufacturers and exporters operating across regulated cross-border value chains.</p>
+                    <p>The initial focus is on EV and advanced manufacturing exporters, where shipment documentation often touches multiple domains at once: customs, marine cargo insurance, trade finance, product classification, regulatory evidence, and destination-market requirements.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary><span class="archive-faq-index">03</span><span class="archive-faq-question">What workflows will TradeWatch support?</span></summary>
+                <div class="archive-faq-answer">
+                    <p>TradeWatch is being built to support three core trade documentation workflows:</p>
+                    <ol>
+                        <li>Shipping Bill readiness for CHA handoff.</li>
+                        <li>Marine cargo insurance broker packet preparation.</li>
+                        <li>Letter of Credit readiness and document consistency checks.</li>
+                    </ol>
+                    <p>Alongside these workflows, TradeWatch will provide a shipment intelligence dashboard that helps teams understand document gaps, evidence risks, readiness status, and unresolved exceptions before submission.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary><span class="archive-faq-index">04</span><span class="archive-faq-question">What does &ldquo;end-to-end trade documentation automation&rdquo; mean?</span></summary>
+                <div class="archive-faq-answer">
+                    <p>It means TradeWatch is designed to automate the work around trade documentation: extracting shipment data, checking consistency across documents, identifying missing evidence, preparing recipient-specific packets, surfacing exceptions, and supporting handoff to the right intermediary.</p>
+                    <p>It does not mean TradeWatch replaces licensed actors. CHAs, brokers, banks, and authorised representatives remain responsible for actions that require statutory authority, regulated judgement, or official submission rights.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary><span class="archive-faq-index">05</span><span class="archive-faq-question">How does the TradeWatch workflow work?</span></summary>
+                <div class="archive-faq-answer">
+                    <p>Customers share a shipment document bundle through the most suitable intake method for their size and operating model. For some customers, that may begin with email or assisted upload. For larger customers, it may evolve into structured folders, integrations, or workflow-based intake.</p>
+                    <p>TradeWatch then reads the shipment bundle, extracts key fields, reconciles documents against each other, checks readiness against the relevant workflow, flags issues, and prepares structured outputs for review and handoff.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary><span class="archive-faq-index">06</span><span class="archive-faq-question">What is the TradeWatch intelligence dashboard?</span></summary>
+                <div class="archive-faq-answer">
+                    <p>The intelligence dashboard is the operational view of a shipment's documentation posture.</p>
+                    <p>It is designed to show what is ready, what is blocked, what is unclear, what evidence is missing, and which downstream workflow is affected. Over time, this also creates a structured view of recurring documentation patterns across shipments, corridors, products, and counterparties.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary><span class="archive-faq-index">07</span><span class="archive-faq-question">How is TradeWatch different from a document automation tool?</span></summary>
+                <div class="archive-faq-answer">
+                    <p>Most document automation tools help teams fill templates or organise files.</p>
+                    <p>TradeWatch is different because it applies regulatory and trade-document intelligence to the shipment itself. It is designed to understand which documents matter, which fields must align, what evidence is missing, why an exception matters, and which intermediary needs which packet.</p>
+                    <p>The goal is not only to produce documents. The goal is to make the shipment's evidence position clearer before the packet reaches a CHA, broker, or bank.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary><span class="archive-faq-index">08</span><span class="archive-faq-question">Does TradeWatch replace CHAs, insurance brokers, banks, or legal advisers?</span></summary>
+                <div class="archive-faq-answer">
+                    <p>No.</p>
+                    <p>TradeWatch operates upstream of licensed and authorised intermediaries. It prepares, checks, organises, and explains the documentation position before handoff.</p>
+                    <p>It does not file Shipping Bills, bind insurance, recommend insurers, issue legal opinions, submit documents to government systems, or replace regulated professional judgement.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary><span class="archive-faq-index">09</span><span class="archive-faq-question">When will TradeWatch be available?</span></summary>
+                <div class="archive-faq-answer">
+                    <p>TradeWatch is scheduled for MVP release in early December.</p>
+                    <p>Selected pilot customers can begin onboarding from July through a waitlist and pilot evaluation process. Pilot selection will depend on shipment profile, documentation complexity, operational fit, and the ability to test TradeWatch against real-world trade documentation workflows.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary><span class="archive-faq-index">10</span><span class="archive-faq-question">How can a company join the pilot?</span></summary>
+                <div class="archive-faq-answer">
+                    <p>Companies can request early access and share basic information about their export profile, shipment workflows, documentation pain points, and current intermediary structure.</p>
+                    <p>Kanan Labs will evaluate pilot suitability and contact selected companies with next steps. Pilot terms are available on request.</p>
+                </div>
+            </details>
+        </section>
+
+        <header class="archive-record">
+            <p class="archive-record__eyebrow">Retired component archive · not for publication</p>
+            <h1>Homepage Evidence Packet Workflow</h1>
+            <dl>
+                <dt>Component name</dt><dd>The Flow — Evidence Packet Workflow</dd>
+                <dt>Original page</dt><dd>index.html</dd>
+                <dt>Date retired</dt><dd>2026-08-04</dd>
+                <dt>Reason</dt><dd>Removed from the homepage because it no longer served the company narrative.</dd>
+            </dl>
+        </header>
+
+        <section class="kl-flow" id="archivedKlFlow" aria-label="Archived evidence packet workflow">
+            <div class="kl-flow__inner">
+                <div class="kl-flow__header">
+                    <span class="kl-flow__eyebrow">The Flow</span>
+                    <h2 class="kl-flow__title">
+                        A shipment becomes a fact. A fact meets the rules.<br>
+                        The rules produce a packet.
+                    </h2>
+                </div>
+
+                <ol class="kl-flow__stages">
+                    <li class="kl-flow__stage" data-stage="1">
+                        <span class="kl-flow__numeral" aria-hidden="true">I</span>
+                        <div class="kl-flow__icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="14" y="10" width="28" height="38" rx="1"/>
+                                <rect x="20" y="16" width="32" height="38" rx="1" opacity="0.55"/>
+                                <line x1="26" y1="24" x2="42" y2="24" opacity="0.55"/>
+                                <line x1="26" y1="30" x2="46" y2="30" opacity="0.55"/>
+                                <line x1="26" y1="36" x2="40" y2="36" opacity="0.55"/>
+                                <line x1="26" y1="42" x2="46" y2="42" opacity="0.55"/>
+                            </svg>
+                        </div>
+                        <h3 class="kl-flow__name">Documents</h3>
+                        <p class="kl-flow__desc">Invoices, bills of lading, packing lists, certificates of origin. In any format your team already uses.</p>
+                    </li>
+
+                    <li class="kl-flow__stage" data-stage="2">
+                        <span class="kl-flow__numeral" aria-hidden="true">II</span>
+                        <div class="kl-flow__icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="10" y="14" width="44" height="36" rx="1"/>
+                                <rect x="16" y="20" width="14" height="6" stroke-dasharray="2 2"/>
+                                <rect x="32" y="20" width="16" height="6" stroke-dasharray="2 2"/>
+                                <rect x="16" y="30" width="10" height="6" stroke-dasharray="2 2"/>
+                                <rect x="28" y="30" width="20" height="6" stroke-dasharray="2 2"/>
+                                <rect x="16" y="40" width="32" height="4" stroke-dasharray="2 2"/>
+                            </svg>
+                        </div>
+                        <h3 class="kl-flow__name">Reading</h3>
+                        <p class="kl-flow__desc">Drona parses each document into a structured shipment fact model — bounded, source-located, replayable.</p>
+                    </li>
+
+                    <li class="kl-flow__stage" data-stage="3">
+                        <span class="kl-flow__numeral" aria-hidden="true">III</span>
+                        <div class="kl-flow__icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="20" cy="22" r="5"/>
+                                <circle cx="44" cy="22" r="5"/>
+                                <circle cx="20" cy="44" r="5"/>
+                                <circle cx="44" cy="44" r="5"/>
+                                <line x1="25" y1="22" x2="39" y2="22" opacity="0.4"/>
+                                <line x1="20" y1="27" x2="20" y2="39" opacity="0.4"/>
+                                <line x1="44" y1="27" x2="44" y2="39" opacity="0.4"/>
+                                <line x1="25" y1="44" x2="39" y2="44" opacity="0.4"/>
+                            </svg>
+                        </div>
+                        <h3 class="kl-flow__name">States</h3>
+                        <p class="kl-flow__desc">Every obligation resolves to Open, Blocked, Conditional, or Unclear against the live rule pack for your jurisdiction.</p>
+                    </li>
+
+                    <li class="kl-flow__stage" data-stage="4">
+                        <span class="kl-flow__numeral" aria-hidden="true">IV</span>
+                        <div class="kl-flow__icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="32" cy="22" r="6"/>
+                                <path d="M16 50c2-8 9-12 16-12s14 4 16 12"/>
+                                <path d="M14 56l36 0" stroke-dasharray="2 2" opacity="0.5"/>
+                                <path d="M22 56c2-2 5-3 10-3s8 1 10 3" opacity="0.7"/>
+                            </svg>
+                        </div>
+                        <h3 class="kl-flow__name">Review</h3>
+                        <p class="kl-flow__desc">A human reviewer attests. The system records who, when, and on what evidence.</p>
+                    </li>
+
+                    <li class="kl-flow__stage" data-stage="5">
+                        <span class="kl-flow__numeral" aria-hidden="true">V</span>
+                        <div class="kl-flow__icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="14" y="12" width="32" height="40" rx="1"/>
+                                <line x1="20" y1="22" x2="40" y2="22" opacity="0.55"/>
+                                <line x1="20" y1="28" x2="40" y2="28" opacity="0.55"/>
+                                <line x1="20" y1="34" x2="36" y2="34" opacity="0.55"/>
+                                <circle cx="44" cy="46" r="8" stroke="currentColor"/>
+                                <path d="M40 46l3 3 6-6" stroke="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="kl-flow__name">Packet</h3>
+                        <p class="kl-flow__desc">Out: a hash-chained, source-stamped packet you can hand to a customs officer, an underwriter, or a banker — and defend three years from now.</p>
+                    </li>
+                </ol>
+
+                <div class="kl-flow__close">
+                    <p class="kl-flow__close-line">Your junior analyst. On shift forever.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script src="../js/evidence-workflow.js" defer></script>
+    <script>
+    (function () {
+        'use strict';
+
+        function initSwipeCarousel(trackId, dotsId, itemSel, maxWidth) {
+            const track = document.getElementById(trackId);
+            const dotsEl = document.getElementById(dotsId);
+            if (!track || !dotsEl || !window.matchMedia('(max-width: ' + maxWidth + 'px)').matches) return;
+
+            const dots = Array.from(dotsEl.querySelectorAll('.tw-frag-dot'));
+            const cards = Array.from(track.querySelectorAll(itemSel));
+            if (!cards.length || !dots.length) return;
+
+            function currentIndex() {
+                const mid = track.scrollLeft + track.clientWidth / 2;
+                let best = 0;
+                let bestDist = Infinity;
+                cards.forEach((card, index) => {
+                    const distance = Math.abs((card.offsetLeft + card.offsetWidth / 2) - mid);
+                    if (distance < bestDist) {
+                        bestDist = distance;
+                        best = index;
+                    }
+                });
+                return best;
+            }
+
+            function setActiveDot(index) {
+                dots.forEach((dot, dotIndex) => dot.classList.toggle('is-active', dotIndex === index));
+            }
+
+            function scrollToCard(index) {
+                const card = cards[index];
+                if (!card) return;
+                const left = card.offsetLeft - (track.clientWidth - card.offsetWidth) / 2;
+                track.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
+            }
+
+            let scrollRaf;
+            track.addEventListener('scroll', () => {
+                cancelAnimationFrame(scrollRaf);
+                scrollRaf = requestAnimationFrame(() => setActiveDot(currentIndex()));
+            }, { passive: true });
+            dots.forEach((dot, index) => dot.addEventListener('click', () => scrollToCard(index)));
+            setActiveDot(0);
+        }
+
+        function initAct2() {
+            const frags = document.querySelectorAll('.tw-frag');
+            const killer = document.getElementById('twKillerLine');
+            const killerSub = document.getElementById('twKillerSub');
+            const killerRule = document.getElementById('twKillerRule');
+
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || typeof ScrollTrigger === 'undefined') {
+                frags.forEach(frag => frag.classList.add('is-in'));
+                killer?.classList.add('is-in');
+                killerSub?.classList.add('is-in');
+                killerRule?.classList.add('is-in');
+                return;
+            }
+
+            gsap.registerPlugin(ScrollTrigger);
+            frags.forEach((frag) => {
+                ScrollTrigger.create({
+                    trigger: frag,
+                    start: 'top 80%',
+                    onEnter: () => frag.classList.add('is-in'),
+                    onLeaveBack: () => frag.classList.remove('is-in')
+                });
+            });
+
+            if (killer) {
+                ScrollTrigger.create({
+                    trigger: killer,
+                    start: 'top 80%',
+                    onEnter: () => {
+                        killer.classList.add('is-in');
+                        killerSub?.classList.add('is-in');
+                        killerRule?.classList.add('is-in');
+                    },
+                    onLeaveBack: () => {
+                        killer.classList.remove('is-in');
+                        killerSub?.classList.remove('is-in');
+                        killerRule?.classList.remove('is-in');
+                    }
+                });
+            }
+        }
+
+        function boot() {
+            initAct2();
+            initSwipeCarousel('twFragments', 'twFragDots', '.tw-frag', 879);
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', boot);
+        } else {
+            boot();
+        }
+    })();
+    </script>
+
+    <script>
+    (function () {
+        'use strict';
+
+        function initArchivedSwipeCarousel() {
+            const track = document.getElementById('twStrata');
+            const dotsEl = document.getElementById('twStrataDots');
+            if (!track || !dotsEl || !window.matchMedia('(max-width: 879px)').matches) return;
+
+            const dots = Array.from(dotsEl.querySelectorAll('.tw-frag-dot'));
+            const cards = Array.from(track.querySelectorAll('.tw-stratum'));
+            if (!cards.length || !dots.length) return;
+
+            function currentIndex() {
+                const midpoint = track.scrollLeft + track.clientWidth / 2;
+                let best = 0;
+                let bestDistance = Infinity;
+                cards.forEach((card, index) => {
+                    const distance = Math.abs((card.offsetLeft + card.offsetWidth / 2) - midpoint);
+                    if (distance < bestDistance) {
+                        bestDistance = distance;
+                        best = index;
+                    }
+                });
+                return best;
+            }
+
+            function setActive(index) {
+                dots.forEach((dot, dotIndex) => dot.classList.toggle('is-active', dotIndex === index));
+            }
+
+            let scrollRaf;
+            track.addEventListener('scroll', () => {
+                cancelAnimationFrame(scrollRaf);
+                scrollRaf = requestAnimationFrame(() => setActive(currentIndex()));
+            }, { passive: true });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    const card = cards[index];
+                    if (!card) return;
+                    const left = card.offsetLeft - (track.clientWidth - card.offsetWidth) / 2;
+                    track.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
+                });
+            });
+            setActive(0);
+        }
+
+        function initArchivedRoadmap() {
+            const strata = document.querySelectorAll('.tw-stratum');
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || typeof ScrollTrigger === 'undefined') {
+                strata.forEach(item => item.classList.add('is-in'));
+                return;
+            }
+            strata.forEach(item => {
+                ScrollTrigger.create({
+                    trigger: item,
+                    start: 'top 80%',
+                    onEnter: () => item.classList.add('is-in'),
+                    onLeaveBack: () => item.classList.remove('is-in')
+                });
+            });
+        }
+
+    function initDrona() {
+        const section    = document.getElementById('twDrona');
+        if (!section) return;
+
+        const funnel     = document.getElementById('twDronaFunnel');
+        const labels     = section.querySelectorAll('.tw-drona-funnel-label');
+        const feeders    = section.querySelectorAll('.tw-drona-feeder');
+        const railBall   = document.getElementById('twRailBall');
+        const poly1      = document.getElementById('twFunnelPoly1');
+        const poly2      = document.getElementById('twFunnelPoly2');
+        const poly3      = document.getElementById('twFunnelPoly3');
+        const fill1      = document.getElementById('twFunnelFill1');
+        const fill2      = document.getElementById('twFunnelFill2');
+        const fill3      = document.getElementById('twFunnelFill3');
+        const clipRect1  = document.getElementById('twClipRect1');
+        const clipRect2  = document.getElementById('twClipRect2');
+        const clipRect3  = document.getElementById('twClipRect3');
+        const stations   = section.querySelectorAll('.tw-drona-rail-station');
+        const outChips   = section.querySelectorAll('.tw-drona-output-chip--out');
+        const cards      = section.querySelectorAll('.tw-drona-portfolio-card');
+        const moat       = document.getElementById('twDronaMoat');
+        const coda       = section.querySelector('.tw-drona-coda');
+
+        const hasGSAP = typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined';
+
+        // Fallback — no GSAP: reveal everything immediately in final state
+        if (!hasGSAP) {
+            feeders.forEach(f => { f.style.opacity='1'; f.style.transform='translateY(0)'; });
+            labels.forEach(l => l.classList.add('is-in','is-active'));
+            stations.forEach(s => s.classList.add('is-active'));
+            if (railBall) { railBall.style.top='100%'; railBall.style.opacity='1'; }
+            [clipRect1,clipRect2,clipRect3].forEach(r => r && r.setAttribute('height','480'));
+            outChips.forEach(c => { c.style.opacity='1'; c.style.transform='translateY(0)'; });
+            cards.forEach(c => c.classList.add('is-in'));
+            if (moat) moat.classList.add('is-in');
+            if (coda) coda.classList.add('is-in');
+            return;
+        }
+
+        let tierH = { h1: 0, h2: 0, h3: 0, y2s: 0, y3s: 0 };
+
+        function activateTier(tl, label, station, when) {
+            tl.add(() => {
+                if (label)   label.classList.add('is-active','is-in');
+                if (station) station.classList.add('is-active');
+            }, when);
+        }
+
+        function resetFunnel() {
+            labels.forEach(l => l.classList.remove('is-in','is-active'));
+            stations.forEach(s => s.classList.remove('is-active'));
+            outChips.forEach(c => c.classList.remove('is-in'));
+            gsap.set(feeders,  { opacity:0, y:-8 });
+            gsap.set(railBall, { top:'0%', opacity:0, scale:1 });
+            gsap.set(outChips, { opacity:0, y:12 });
+            if (clipRect1) clipRect1.setAttribute('height','0');
+            if (clipRect2) clipRect2.setAttribute('height','0');
+            if (clipRect3) clipRect3.setAttribute('height','0');
+        }
+
+        function syncPolygonPoints() {
+            const labelsArr = Array.from(labels);
+            const svgEl     = document.getElementById('twDronaFunnelSVG');
+            if (!svgEl || labelsArr.length < 3) return;
+            const svgRect = svgEl.getBoundingClientRect();
+            const svgH    = svgRect.height;
+            if (svgH < 1) return;
+            const vbH = 480, gap = 10;
+            const toVBY = screenY => Math.max(0, Math.min(vbH, ((screenY - svgRect.top) / svgH) * vbH));
+            const y1e = toVBY(labelsArr[0].getBoundingClientRect().bottom) - gap / 2;
+            const y2s = toVBY(labelsArr[0].getBoundingClientRect().bottom) + gap / 2;
+            const y2e = toVBY(labelsArr[1].getBoundingClientRect().bottom) - gap / 2;
+            const y3s = toVBY(labelsArr[1].getBoundingClientRect().bottom) + gap / 2;
+            const fmt = n => Math.max(0, n).toFixed(1);
+            const pts = [
+                `0,0 300,0 248,${fmt(y1e)} 52,${fmt(y1e)}`,
+                `52,${fmt(y2s)} 248,${fmt(y2s)} 212,${fmt(y2e)} 88,${fmt(y2e)}`,
+                `88,${fmt(y3s)} 212,${fmt(y3s)} 186,${vbH} 114,${vbH}`
+            ];
+            [poly1,poly2,poly3].forEach((p,i) => p && p.setAttribute('points', pts[i]));
+            [fill1,fill2,fill3].forEach((f,i) => f && f.setAttribute('points', pts[i]));
+            if (clipRect2) clipRect2.setAttribute('y', fmt(y2s));
+            if (clipRect3) clipRect3.setAttribute('y', fmt(y3s));
+            tierH = {
+                h1: Math.max(0, y1e),
+                h2: Math.max(0, y2e - y2s),
+                h3: Math.max(0, vbH - y3s),
+                y2s, y3s
+            };
+        }
+
+        function measureRailPositions() {
+            const labelsEl   = section.querySelector('.tw-drona-funnel-labels');
+            const labelsRect = labelsEl.getBoundingClientRect();
+            const labH       = labelsRect.height;
+            return Array.from(labels).map(l => {
+                const lRect  = l.getBoundingClientRect();
+                const offset = parseFloat(getComputedStyle(l).paddingTop) + 10;
+                return ((lRect.top - labelsRect.top + offset) / labH) * 100;
+            });
+        }
+
+        let tl = null;
+
+        function buildAndPlay() {
+            syncPolygonPoints();
+            const railPos = measureRailPositions();
+            stations.forEach((s, i) => { if (railPos[i] != null) s.style.top = railPos[i] + '%'; });
+            if (tl) tl.kill();
+            resetFunnel();
+            const { h1, h2, h3 } = tierH;
+            const totalH = h1 + h2 + h3;
+            const dur1 = totalH > 0 ? 1.6 * (h1 / totalH) * 3 : 1.6;
+            const dur2 = totalH > 0 ? 1.6 * (h2 / totalH) * 3 : 1.6;
+            const dur3 = totalH > 0 ? 1.6 * (h3 / totalH) * 3 : 1.2;
+            tl = gsap.timeline({ repeat: -1, repeatDelay: 3, onRepeat: resetFunnel, defaults: { ease: 'power1.inOut' } });
+            tl.to(feeders, { opacity:1, y:0, duration:0.7, stagger:0.18, ease:'power2.out' });
+            tl.to(railBall, { opacity:1, duration:0.4, ease:'power2.out' }, '+=0.3');
+            tl.to(clipRect1, { attr: { height: h1 }, duration: dur1 }, '+=0.2');
+            tl.to(railBall,  { top: railPos[0]+'%', duration: dur1 }, '<');
+            activateTier(tl, labels[0], stations[0], '<+=0.15');
+            tl.to(clipRect2, { attr: { height: h2 }, duration: dur2 }, '+=3.5');
+            tl.to(railBall,  { top: railPos[1]+'%', duration: dur2 }, '<');
+            activateTier(tl, labels[1], stations[1], '<+=0.15');
+            tl.to(clipRect3, { attr: { height: h3 }, duration: dur3 }, '+=3.5');
+            tl.to(railBall,  { top: railPos[2]+'%', duration: dur3 }, '<');
+            activateTier(tl, labels[2], stations[2], '<+=0.15');
+            tl.to(outChips, {
+                opacity:1, y:0, duration:0.65, stagger:0.2, ease:'power2.out',
+                onComplete: () => outChips.forEach(c => c.classList.add('is-in'))
+            }, '+=3.0');
+            tl.play();
+        }
+
+        // Only run the funnel animation on desktop (funnel is hidden on mobile)
+        if (funnel && !window.matchMedia('(max-width: 1023px)').matches) {
+            ScrollTrigger.create({
+                trigger: funnel, start: 'top 70%', once: true,
+                onEnter: buildAndPlay
+            });
+            window.addEventListener('resize', () => { if (tl) { tl.kill(); tl = null; } }, { passive: true, once: true });
+        }
+
+        // Portfolio cards (desktop)
+        if (cards.length) {
+            ScrollTrigger.create({
+                trigger: cards[0], start: 'top 85%', once: true,
+                onEnter: () => cards.forEach((c,i) => setTimeout(() => c.classList.add('is-in'), i*150))
+            });
+        }
+
+        // Moat quote
+        if (moat) {
+            ScrollTrigger.create({
+                trigger: moat, start: 'top 82%', once: true,
+                onEnter: () => moat.classList.add('is-in')
+            });
+        }
+
+        // Coda
+        if (coda) {
+            ScrollTrigger.create({
+                trigger: coda, start: 'top 88%', once: true,
+                onEnter: () => coda.classList.add('is-in')
+            });
+        }
+    }
+
+        function initArchivedDifferentiation() {
+            const cards = document.querySelectorAll('.archive-differentiation .tw-drona-portfolio-card');
+            if (!cards.length) return;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || typeof ScrollTrigger === 'undefined') {
+                cards.forEach(card => card.classList.add('is-in'));
+                return;
+            }
+            ScrollTrigger.create({
+                trigger: cards[0],
+                start: 'top 85%',
+                once: true,
+                onEnter: () => cards.forEach((card, index) => {
+                    setTimeout(() => card.classList.add('is-in'), index * 150);
+                })
+            });
+        }
+
+        function bootArchivedComponents() {
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                gsap.registerPlugin(ScrollTrigger);
+            }
+            initArchivedRoadmap();
+            initArchivedSwipeCarousel();
+            initDrona();
+            initArchivedDifferentiation();
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', bootArchivedComponents);
+        } else {
+            bootArchivedComponents();
+        }
+    })();
+    </script>
+
+    <style>
+        /* ============================================================
+           ENTERPRISE COLLABORATION — Permissioned supplier visibility
+           Static composition first; motion is layered on after approval.
+           ============================================================ */
+
+        .tw-collaboration {
+            position: relative;
+            overflow: hidden;
+            scroll-margin-top: 4.5rem;
+            padding: clamp(5rem, 10vh, 8.5rem) clamp(1.5rem, 4vw, 4rem) clamp(5.5rem, 11vh, 9rem);
+            color: var(--tw-cream);
+            background: var(--tw-navy);
+            border-top: 1px solid rgba(238, 235, 227, 0.12);
+            border-bottom: 1px solid rgba(238, 235, 227, 0.14);
+        }
+
+        .tw-collaboration::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(238, 235, 227, 0.045) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(238, 235, 227, 0.045) 1px, transparent 1px);
+            background-size: 56px 56px;
+            mask-image: radial-gradient(ellipse at 52% 54%, black 28%, transparent 84%);
+            -webkit-mask-image: radial-gradient(ellipse at 52% 54%, black 28%, transparent 84%);
+            pointer-events: none;
+        }
+
+        .tw-collaboration__inner {
+            position: relative;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .tw-collaboration__intro {
+            display: grid;
+            grid-template-columns: minmax(0, 0.92fr) minmax(20rem, 1.08fr);
+            gap: clamp(3rem, 8vw, 7.5rem);
+            align-items: end;
+            margin-bottom: clamp(3rem, 6vh, 4.75rem);
+        }
+
+        .tw-collaboration__eyebrow {
+            margin-bottom: 1.15rem;
+            color: var(--tw-red);
+            font-family: var(--tw-mono);
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+        }
+
+        .tw-collaboration__headline {
+            max-width: 35rem;
+            color: var(--tw-cream);
+            font-family: var(--tw-display);
+            font-size: clamp(2.8rem, 5vw, 4.65rem);
+            font-style: italic;
+            font-weight: 500;
+            letter-spacing: -0.025em;
+            line-height: 0.98;
+        }
+
+        .tw-collaboration__copy {
+            max-width: 39rem;
+            padding-bottom: 0.3rem;
+            color: rgba(238, 235, 227, 0.72);
+            font-family: var(--tw-mono);
+            font-size: clamp(0.86rem, 1.1vw, 0.96rem);
+            line-height: 1.78;
+        }
+
+        .tw-request-motion {
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(135deg, rgba(238, 235, 227, 0.055), transparent 38%),
+                rgba(6, 31, 56, 0.58);
+            border: 1px solid rgba(238, 235, 227, 0.22);
+            border-radius: 2px;
+            box-shadow:
+                0 34px 80px -46px rgba(0, 0, 0, 0.9),
+                inset 0 1px 0 rgba(238, 235, 227, 0.05);
+        }
+
+        .tw-request-motion::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 53% 52%, rgba(219, 74, 43, 0.075), transparent 38%);
+            pointer-events: none;
+        }
+
+        .tw-request-motion__bar {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            color: rgba(238, 235, 227, 0.46);
+            border-bottom: 1px solid rgba(238, 235, 227, 0.13);
+            font-family: var(--tw-mono);
+            font-size: 0.57rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            line-height: 1.3;
+            text-transform: uppercase;
+        }
+
+        .tw-request-motion__state {
+            color: var(--tw-red);
+            text-align: right;
+        }
+
+        .tw-request-motion__bar-status {
+            display: flex;
+            gap: 0.9rem;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .tw-request-replay {
+            display: inline-flex;
+            gap: 0.38rem;
+            align-items: center;
+            padding: 0;
+            color: rgba(238, 235, 227, 0.58);
+            background: transparent;
+            border: 0;
+            font-family: var(--tw-mono);
+            font-size: 0.55rem;
+            font-weight: 700;
+            letter-spacing: 0.17em;
+            line-height: 1.3;
+            text-transform: uppercase;
+            transition: color 180ms ease;
+        }
+
+        .tw-request-replay:hover { color: var(--tw-cream); }
+
+        .tw-request-replay[aria-disabled="true"] {
+            color: rgba(238, 235, 227, 0.28);
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .tw-request-replay:focus-visible {
+            outline: 1px solid var(--tw-red);
+            outline-offset: 4px;
+        }
+
+        .tw-request-replay[hidden] { display: none; }
+
+        .tw-request-replay__icon {
+            color: var(--tw-red);
+            font-size: 0.82rem;
+            line-height: 1;
+        }
+
+        .tw-request-motion__stage {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: minmax(9.5rem, 0.62fr) minmax(25rem, 1.85fr) minmax(10.5rem, 0.68fr);
+            gap: clamp(1.25rem, 3vw, 2.75rem);
+            align-items: center;
+            min-height: 440px;
+            padding: clamp(2rem, 4vw, 3.5rem);
+        }
+
+        .tw-request-ticket {
+            position: absolute;
+            z-index: 5;
+            top: 50%;
+            left: 50%;
+            display: none;
+            grid-template-columns: 42px minmax(0, 1fr) auto;
+            gap: 1rem;
+            align-items: center;
+            width: min(31rem, calc(100% - 4rem));
+            padding: 1.15rem 1.2rem 1.25rem 1.15rem;
+            color: var(--tw-navy);
+            background: var(--tw-cream);
+            border: 1px solid rgba(238, 235, 227, 0.92);
+            box-shadow: 0 28px 65px -32px rgba(0, 0, 0, 0.92);
+        }
+
+        .tw-request-ticket::before {
+            content: '';
+            position: absolute;
+            inset: 0 auto 0 0;
+            width: 3px;
+            background: var(--tw-red);
+        }
+
+        .tw-collaboration.is-motion-ready .tw-request-ticket { display: grid; }
+
+        .tw-request-ticket__mark {
+            position: relative;
+            display: grid;
+            width: 42px;
+            height: 42px;
+            place-items: center;
+            border: 1px solid rgba(10, 47, 82, 0.22);
+            border-radius: 50%;
+        }
+
+        .tw-request-ticket__mark::before,
+        .tw-request-ticket__mark::after {
+            content: '';
+            position: absolute;
+            background: var(--tw-red);
+        }
+
+        .tw-request-ticket__mark::before { width: 13px; height: 1px; }
+        .tw-request-ticket__mark::after { width: 1px; height: 13px; }
+
+        .tw-request-ticket__kicker {
+            margin-bottom: 0.22rem;
+            color: var(--tw-red);
+            font-family: var(--tw-mono);
+            font-size: 0.53rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            line-height: 1.35;
+            text-transform: uppercase;
+        }
+
+        .tw-request-ticket__title {
+            color: var(--tw-navy);
+            font-family: var(--tw-display);
+            font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+            font-style: italic;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            line-height: 1.05;
+        }
+
+        .tw-request-ticket__meta {
+            margin-top: 0.22rem;
+            color: rgba(10, 47, 82, 0.48);
+            font-family: var(--tw-mono);
+            font-size: 0.58rem;
+            line-height: 1.45;
+        }
+
+        .tw-request-ticket__state {
+            min-width: 4.75rem;
+            color: rgba(10, 47, 82, 0.48);
+            font-family: var(--tw-mono);
+            font-size: 0.52rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            line-height: 1.4;
+            text-align: right;
+            text-transform: uppercase;
+        }
+
+        .tw-request-ticket__progress {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            overflow: hidden;
+            background: rgba(10, 47, 82, 0.09);
+        }
+
+        .tw-request-ticket__progress span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: var(--tw-red);
+            transform: scaleX(0);
+            transform-origin: left center;
+        }
+
+        .tw-collaboration.is-running .tw-request-card,
+        .tw-collaboration.is-running .tw-request-sources,
+        .tw-collaboration.is-running .tw-request-gate,
+        .tw-collaboration.is-running .tw-collaboration__closing,
+        .tw-collaboration.is-running .tw-request-ticket {
+            will-change: transform, opacity;
+        }
+
+        .tw-request-sources,
+        .tw-request-gate {
+            min-width: 0;
+        }
+
+        .tw-request-kicker {
+            margin-bottom: 1rem;
+            color: rgba(238, 235, 227, 0.48);
+            font-family: var(--tw-mono);
+            font-size: 0.58rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
+        .tw-system-list {
+            display: grid;
+            gap: 0.55rem;
+        }
+
+        .tw-system-chip {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            width: 100%;
+            padding: 0.72rem 0.78rem;
+            color: rgba(238, 235, 227, 0.73);
+            background: rgba(238, 235, 227, 0.035);
+            border: 1px solid rgba(238, 235, 227, 0.12);
+            font-family: var(--tw-mono);
+            font-size: 0.67rem;
+            letter-spacing: 0.04em;
+        }
+
+        .tw-system-chip::before {
+            content: '';
+            flex: 0 0 auto;
+            width: 5px;
+            height: 5px;
+            background: var(--tw-red);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(219, 74, 43, 0.1);
+        }
+
+        .tw-request-sources__note {
+            margin-top: 1rem;
+            color: rgba(238, 235, 227, 0.39);
+            font-family: var(--tw-mono);
+            font-size: 0.61rem;
+            line-height: 1.6;
+        }
+
+        .tw-request-card {
+            position: relative;
+            overflow: hidden;
+            min-width: 0;
+            color: var(--tw-navy);
+            background: var(--tw-cream);
+            border: 1px solid rgba(238, 235, 227, 0.88);
+            box-shadow: 0 28px 65px -34px rgba(0, 0, 0, 0.9);
+        }
+
+        .tw-request-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 3px;
+            background: var(--tw-red);
+        }
+
+        .tw-request-card__head {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.15rem 1.4rem 1rem 1.55rem;
+            background: var(--tw-cream);
+            border-bottom: 1px solid rgba(10, 47, 82, 0.13);
+        }
+
+        .tw-request-card__label,
+        .tw-request-card__reference {
+            font-family: var(--tw-mono);
+            font-size: 0.56rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
+        .tw-request-card__label { color: var(--tw-red); }
+        .tw-request-card__reference { color: rgba(10, 47, 82, 0.4); text-align: right; }
+
+        .tw-request-card__body {
+            padding: 1.6rem 1.5rem 1.35rem 1.65rem;
+        }
+
+        .tw-request-card__title {
+            max-width: 28rem;
+            margin-bottom: 0.35rem;
+            color: var(--tw-navy);
+            font-family: var(--tw-display);
+            font-size: clamp(1.85rem, 3vw, 2.55rem);
+            font-style: italic;
+            font-weight: 500;
+            letter-spacing: -0.015em;
+            line-height: 1.02;
+        }
+
+        .tw-request-card__meta {
+            color: rgba(10, 47, 82, 0.54);
+            font-family: var(--tw-mono);
+            font-size: 0.67rem;
+            line-height: 1.5;
+        }
+
+        .tw-request-evidence {
+            margin-top: 1.5rem;
+            border-top: 1px solid rgba(10, 47, 82, 0.13);
+        }
+
+        .tw-request-evidence__row {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 1rem;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(10, 47, 82, 0.1);
+        }
+
+        .tw-request-evidence__name {
+            color: rgba(10, 47, 82, 0.82);
+            font-family: var(--tw-mono);
+            font-size: 0.69rem;
+            line-height: 1.4;
+        }
+
+        .tw-request-evidence__status {
+            position: relative;
+            padding-left: 0.75rem;
+            color: rgba(10, 47, 82, 0.48);
+            font-family: var(--tw-mono);
+            font-size: 0.57rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            line-height: 1.35;
+            text-align: right;
+            text-transform: uppercase;
+        }
+
+        .tw-request-evidence__status::before {
+            content: '';
+            position: absolute;
+            top: 0.42em;
+            left: 0;
+            width: 4px;
+            height: 4px;
+            background: var(--tw-red);
+            border-radius: 50%;
+        }
+
+        .tw-request-card__foot {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            align-items: center;
+            padding: 0.95rem 1.4rem 1rem 1.55rem;
+            background: rgba(10, 47, 82, 0.035);
+        }
+
+        .tw-request-card__permission,
+        .tw-request-card__approval {
+            font-family: var(--tw-mono);
+            font-size: 0.58rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            line-height: 1.45;
+            text-transform: uppercase;
+        }
+
+        .tw-request-card__permission { color: rgba(10, 47, 82, 0.55); }
+        .tw-request-card__approval { color: var(--tw-red); text-align: right; }
+
+        .tw-request-gate {
+            padding-left: clamp(1rem, 2vw, 1.75rem);
+            border-left: 1px solid rgba(238, 235, 227, 0.14);
+        }
+
+        .tw-request-gate__mark {
+            position: relative;
+            display: grid;
+            width: 44px;
+            height: 44px;
+            margin-bottom: 1.25rem;
+            place-items: center;
+            border: 1px solid rgba(238, 235, 227, 0.27);
+            border-radius: 50%;
+        }
+
+        .tw-request-gate__mark::before {
+            content: '';
+            width: 13px;
+            height: 7px;
+            border-bottom: 1.5px solid var(--tw-red);
+            border-left: 1.5px solid var(--tw-red);
+            transform: translateY(-2px) rotate(-45deg);
+        }
+
+        .tw-request-gate__title {
+            margin-bottom: 0.65rem;
+            color: var(--tw-cream);
+            font-family: var(--tw-display);
+            font-size: 1.4rem;
+            font-style: italic;
+            font-weight: 500;
+            line-height: 1.08;
+        }
+
+        .tw-request-gate__copy {
+            color: rgba(238, 235, 227, 0.52);
+            font-family: var(--tw-mono);
+            font-size: 0.67rem;
+            line-height: 1.65;
+        }
+
+        .tw-collaboration__closing {
+            display: flex;
+            gap: 0.9rem;
+            align-items: flex-start;
+            max-width: 48rem;
+            margin: 1.45rem auto 0;
+            color: rgba(238, 235, 227, 0.61);
+            font-family: var(--tw-mono);
+            font-size: 0.72rem;
+            line-height: 1.65;
+            text-align: center;
+        }
+
+        .tw-collaboration__closing::before {
+            content: '';
+            flex: 0 0 22px;
+            height: 1px;
+            margin-top: 0.78em;
+            background: var(--tw-red);
+        }
+
+        @media (max-width: 950px) {
+            .tw-collaboration__intro {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .tw-collaboration__copy { max-width: 46rem; }
+            .tw-request-motion__stage {
+                grid-template-columns: minmax(8.5rem, 0.52fr) minmax(23rem, 1.48fr);
+            }
+            .tw-request-gate {
+                grid-column: 1 / -1;
+                display: grid;
+                grid-template-columns: 44px minmax(0, 1fr);
+                gap: 1.15rem;
+                align-items: center;
+                padding: 1.25rem 0 0;
+                border-top: 1px solid rgba(238, 235, 227, 0.14);
+                border-left: 0;
+            }
+            .tw-request-gate__mark { margin-bottom: 0; }
+            .tw-request-gate__title { margin-bottom: 0.3rem; }
+        }
+
+        @media (max-width: 699px) {
+            .tw-collaboration {
+                padding: 4.75rem 1.1rem 5.5rem;
+            }
+            .tw-collaboration__headline {
+                font-size: clamp(2.6rem, 13vw, 3.7rem);
+            }
+            .tw-collaboration__copy {
+                font-size: 0.88rem;
+                line-height: 1.7;
+            }
+            .tw-request-motion__bar {
+                align-items: flex-start;
+                padding: 0.9rem 1rem;
+                font-size: 0.52rem;
+                letter-spacing: 0.16em;
+            }
+            .tw-request-motion__bar-status {
+                flex-direction: column;
+                gap: 0.35rem;
+                align-items: flex-end;
+            }
+            .tw-request-replay { font-size: 0.49rem; }
+            .tw-request-motion__stage {
+                grid-template-columns: 1fr;
+                gap: 1.4rem;
+                min-height: 0;
+                padding: 1.25rem;
+            }
+            .tw-request-ticket {
+                grid-template-columns: 36px minmax(0, 1fr);
+                gap: 0.8rem;
+                width: calc(100% - 2.5rem);
+                padding: 1rem 0.9rem 1.1rem 1rem;
+            }
+            .tw-request-ticket__mark {
+                width: 36px;
+                height: 36px;
+            }
+            .tw-request-ticket__state {
+                grid-column: 2;
+                min-width: 0;
+                text-align: left;
+            }
+            .tw-request-ticket__title { font-size: 1.4rem; }
+            .tw-request-sources { order: 1; }
+            .tw-request-card { order: 2; }
+            .tw-request-gate { order: 3; }
+            .tw-system-list {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 0.35rem;
+            }
+            .tw-system-chip {
+                justify-content: center;
+                gap: 0.4rem;
+                padding: 0.62rem 0.3rem;
+                font-size: 0.57rem;
+                text-align: center;
+            }
+            .tw-system-chip::before { width: 4px; height: 4px; box-shadow: none; }
+            .tw-request-sources__note { margin-top: 0.65rem; }
+            .tw-request-card__head,
+            .tw-request-card__foot {
+                padding-right: 1rem;
+                padding-left: 1.15rem;
+            }
+            .tw-request-card__body {
+                padding: 1.35rem 1rem 1.15rem 1.15rem;
+            }
+            .tw-request-card__title { font-size: clamp(1.75rem, 8.5vw, 2.25rem); }
+            .tw-request-evidence__row { gap: 0.65rem; }
+            .tw-request-evidence__name { font-size: 0.62rem; }
+            .tw-request-evidence__status { font-size: 0.49rem; letter-spacing: 0.06em; }
+            .tw-request-card__foot { align-items: flex-start; }
+            .tw-request-card__permission,
+            .tw-request-card__approval { font-size: 0.5rem; letter-spacing: 0.05em; }
+            .tw-request-gate {
+                grid-template-columns: 38px minmax(0, 1fr);
+                padding-top: 1.1rem;
+            }
+            .tw-request-gate__mark { width: 38px; height: 38px; }
+            .tw-collaboration__closing {
+                margin-top: 1.25rem;
+                font-size: 0.66rem;
+                text-align: left;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .tw-request-replay { display: none !important; }
+            .tw-request-ticket { display: none !important; }
+        }
+
+    </style>
+
+    <header class="archive-component-record">
+        <p class="archive-component-record__eyebrow">Retired component archive · not for publication</p>
+        <h2>TradeWatch — Original Enterprise Collaboration Animation</h2>
+        <dl>
+            <dt>Component name</dt><dd>TradeWatch — One Permissioned Request in Motion</dd>
+            <dt>Source page</dt><dd>tradewatch.html</dd>
+            <dt>Date retired</dt><dd>2026-07-31</dd>
+            <dt>Note</dt><dd>Superseded by the eight-scene origin-evidence collaboration film. Preserved with its original styling and animation logic.</dd>
+        </dl>
+    </header>
+
+    <!-- ============================================================
+         ENTERPRISE COLLABORATION — One permissioned request in motion
+         Phase 1: approved static composition and final-state frame.
+         ============================================================ -->
+    <section class="tw-collaboration" aria-labelledby="twCollaborationTitle">
+        <div class="tw-collaboration__inner">
+            <div class="tw-collaboration__intro">
+                <div>
+                    <p class="tw-collaboration__eyebrow">Enterprise collaboration</p>
+                    <h2 class="tw-collaboration__headline" id="twCollaborationTitle">Visibility begins where supplier work happens.</h2>
+                </div>
+                <p class="tw-collaboration__copy">TradeWatch works alongside the systems participating suppliers already use. Assigned compliance requests can be coordinated across suppliers, internal teams and trade partners—while every organisation controls what it shares and the client retains final approval.</p>
+            </div>
+
+            <div class="tw-request-motion" aria-label="A preferential-origin evidence request assembled from approved sources and made ready for client review">
+                <div class="tw-request-motion__bar">
+                    <span>One compliance request</span>
+                    <span class="tw-request-motion__bar-status">
+                        <span class="tw-request-motion__state" aria-live="polite" aria-atomic="true">Final state · Review ready</span>
+                        <button class="tw-request-replay" type="button" hidden aria-label="Replay the compliance request animation">
+                            <span class="tw-request-replay__icon" aria-hidden="true">↻</span>
+                            Replay
+                        </button>
+                    </span>
+                </div>
+
+                <div class="tw-request-motion__stage">
+                    <div class="tw-request-ticket" aria-hidden="true">
+                        <span class="tw-request-ticket__mark"></span>
+                        <div>
+                            <p class="tw-request-ticket__kicker">Compliance request assigned</p>
+                            <p class="tw-request-ticket__title">Confirm preferential origin</p>
+                            <p class="tw-request-ticket__meta">Drive Unit 4A · EU shipment</p>
+                        </div>
+                        <span class="tw-request-ticket__state">Assigned</span>
+                        <span class="tw-request-ticket__progress" aria-hidden="true"><span></span></span>
+                    </div>
+
+                    <aside class="tw-request-sources" aria-label="Approved source systems">
+                        <p class="tw-request-kicker">Approved context</p>
+                        <div class="tw-system-list">
+                            <span class="tw-system-chip">Excel</span>
+                            <span class="tw-system-chip">Tally</span>
+                            <span class="tw-system-chip">Zoho</span>
+                            <span class="tw-system-chip">SAP</span>
+                        </div>
+                        <p class="tw-request-sources__note">Access remains controlled by the participating organisation.</p>
+                    </aside>
+
+                    <article class="tw-request-card">
+                        <header class="tw-request-card__head">
+                            <span class="tw-request-card__label">Origin evidence</span>
+                            <span class="tw-request-card__reference">TW · Request 0147</span>
+                        </header>
+
+                        <div class="tw-request-card__body">
+                            <h3 class="tw-request-card__title">Origin evidence ready for review</h3>
+                            <p class="tw-request-card__meta">Drive Unit 4A · EU shipment</p>
+
+                            <div class="tw-request-evidence" aria-label="Evidence status">
+                                <div class="tw-request-evidence__row">
+                                    <span class="tw-request-evidence__name">Product composition</span>
+                                    <span class="tw-request-evidence__status">Source-linked</span>
+                                </div>
+                                <div class="tw-request-evidence__row">
+                                    <span class="tw-request-evidence__name">Supplier declaration</span>
+                                    <span class="tw-request-evidence__status">Permissioned</span>
+                                </div>
+                                <div class="tw-request-evidence__row">
+                                    <span class="tw-request-evidence__name">Classification record</span>
+                                    <span class="tw-request-evidence__status">Requirement-matched</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <footer class="tw-request-card__foot">
+                            <span class="tw-request-card__permission">Shared with supplier approval</span>
+                            <span class="tw-request-card__approval">Awaiting client approval</span>
+                        </footer>
+                    </article>
+
+                    <aside class="tw-request-gate" aria-label="Human review gate">
+                        <span class="tw-request-gate__mark" aria-hidden="true"></span>
+                        <div>
+                            <p class="tw-request-gate__title">Human review gate</p>
+                            <p class="tw-request-gate__copy">Material findings remain under client control before release.</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <p class="tw-collaboration__closing">Visibility is created as a by-product of useful compliance work—not as another supplier reporting exercise.</p>
+        </div>
+    </section>
+
+    <script>
+    (() => {
+    /* ---------- Enterprise collaboration — one request in motion ---------- */
+
+    function initArchivedCollaborationMotion() {
+        const section = document.querySelector('.tw-collaboration');
+        if (!section || window.matchMedia('(prefers-reduced-motion: reduce)').matches || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+        const frame = section.querySelector('.tw-request-motion');
+        const ticket = section.querySelector('.tw-request-ticket');
+        const ticketState = section.querySelector('.tw-request-ticket__state');
+        const ticketProgress = section.querySelector('.tw-request-ticket__progress span');
+        const card = section.querySelector('.tw-request-card');
+        const sources = section.querySelector('.tw-request-sources');
+        const sourceIntro = section.querySelectorAll('.tw-request-kicker, .tw-request-sources__note');
+        const chips = section.querySelectorAll('.tw-system-chip');
+        const gate = section.querySelector('.tw-request-gate');
+        const closing = section.querySelector('.tw-collaboration__closing');
+        const frameState = section.querySelector('.tw-request-motion__state');
+        const replay = section.querySelector('.tw-request-replay');
+
+        if (!frame || !ticket || !ticketProgress || !card || !sources || !gate || !closing || !frameState) return;
+
+        gsap.registerPlugin(ScrollTrigger);
+        section.classList.add('is-motion-ready');
+
+        let timeline;
+
+        function setInitialState(preserveReplay = false) {
+            if (replay) {
+                replay.hidden = !preserveReplay;
+                if (preserveReplay) replay.setAttribute('aria-disabled', 'true');
+                else replay.removeAttribute('aria-disabled');
+                replay.setAttribute(
+                    'aria-label',
+                    preserveReplay ? 'Compliance request animation playing' : 'Replay the compliance request animation'
+                );
+            }
+            frameState.textContent = 'Request assigned';
+            if (ticketState) ticketState.textContent = 'Assigned';
+
+            gsap.set(ticket, {
+                display: 'grid',
+                autoAlpha: 0,
+                xPercent: -50,
+                yPercent: -50,
+                y: 14,
+                scale: 0.985
+            });
+            gsap.set(ticketProgress, { scaleX: 0, transformOrigin: 'left center' });
+            gsap.set(card, { autoAlpha: 0, y: 18, scale: 0.975 });
+            gsap.set(sources, { autoAlpha: 1 });
+            gsap.set(sourceIntro, { autoAlpha: 0.3 });
+            gsap.set(chips, {
+                autoAlpha: 0.18,
+                x: -8,
+                backgroundColor: 'rgba(238, 235, 227, 0.02)',
+                borderColor: 'rgba(238, 235, 227, 0.08)',
+                boxShadow: 'none'
+            });
+            gsap.set(gate, { autoAlpha: 0, x: 12 });
+            gsap.set(closing, { autoAlpha: 0.32, y: 5 });
+        }
+
+        function buildTimeline() {
+            return gsap.timeline({
+                paused: true,
+                defaults: { ease: 'power2.out' },
+                onComplete: () => {
+                    section.classList.remove('is-running');
+                    if (!replay) return;
+                    const shouldReveal = replay.hidden;
+                    replay.hidden = false;
+                    replay.removeAttribute('aria-disabled');
+                    replay.setAttribute('aria-label', 'Replay the compliance request animation');
+                    if (shouldReveal) {
+                        gsap.fromTo(replay, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.35, clearProps: 'opacity,visibility' });
+                    }
+                }
+            })
+            .call(() => section.classList.add('is-running'))
+            .to(ticket, { autoAlpha: 1, y: 0, scale: 1, duration: 0.75 })
+            .to(ticketProgress, { scaleX: 0.18, duration: 0.9 }, '-=0.25')
+            .call(() => {
+                frameState.textContent = 'Coordinating approved evidence';
+                if (ticketState) ticketState.textContent = 'In progress';
+            })
+            .to(sourceIntro, { autoAlpha: 1, duration: 0.55 }, '-=0.15')
+            .to(chips, {
+                autoAlpha: 1,
+                x: 0,
+                backgroundColor: 'rgba(238, 235, 227, 0.045)',
+                borderColor: 'rgba(238, 235, 227, 0.16)',
+                boxShadow: '0 0 0 1px rgba(219, 74, 43, 0.035)',
+                duration: 0.52,
+                stagger: 0.3
+            }, '-=0.25')
+            .to(ticketProgress, { scaleX: 0.76, duration: 1.55, ease: 'power1.inOut' }, '-=1.3')
+            .to({}, { duration: 0.45 })
+            .to(ticketProgress, { scaleX: 1, duration: 0.7, ease: 'power1.inOut' })
+            .call(() => {
+                frameState.textContent = 'Evidence coordinated';
+                if (ticketState) ticketState.textContent = 'Complete';
+            })
+            .to({}, { duration: 0.5 })
+            .to(ticket, { autoAlpha: 0, y: -10, scale: 0.985, duration: 0.5, ease: 'power2.in' })
+            .call(() => { frameState.textContent = 'Final state · Review ready'; })
+            .to(card, { autoAlpha: 1, y: 0, scale: 1, duration: 0.9, ease: 'power3.out' }, '-=0.2')
+            .to(gate, { autoAlpha: 1, x: 0, duration: 0.68 }, '-=0.4')
+            .to(closing, { autoAlpha: 1, y: 0, duration: 0.55 }, '-=0.3');
+        }
+
+        setInitialState();
+        timeline = buildTimeline();
+
+        ScrollTrigger.create({
+            trigger: ticket,
+            start: 'top 86%',
+            once: true,
+            onEnter: () => timeline.play()
+        });
+
+        replay?.addEventListener('click', () => {
+            if (replay.getAttribute('aria-disabled') === 'true') return;
+            timeline.pause(0).kill();
+            setInitialState(true);
+            timeline = buildTimeline();
+            requestAnimationFrame(() => timeline.play());
+        });
+    }
+
+        function bootArchivedCollaboration() {
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                gsap.registerPlugin(ScrollTrigger);
+            }
+            initArchivedCollaborationMotion();
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', bootArchivedCollaboration);
+        } else {
+            bootArchivedCollaboration();
+        }
+    })();
+    </script>
+
+</body>
+</html>

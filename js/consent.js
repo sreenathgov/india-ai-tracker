@@ -37,6 +37,9 @@
   var gaLoaded = false;
 
   function loadGoogleAnalytics() {
+    if (location.hostname === '127.0.0.1' || location.hostname === 'localhost' || location.hostname === '::1') {
+      return;
+    }
     if (gaLoaded || !GA_MEASUREMENT_ID) return;
     gaLoaded = true;
 

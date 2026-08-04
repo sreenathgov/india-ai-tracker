@@ -1,7 +1,7 @@
 /* evidence-workflow.js
  * Staggered ScrollTrigger entrance for the 5 evidence-workflow stages.
  * Modelled on triptych.js (opacity + y-translate, 0.10s stagger).
- * Depends on GSAP + ScrollTrigger (already loaded by the page).
+ * Depends on the locally served GSAP + ScrollTrigger pair loaded by the page.
  */
 (function () {
     'use strict';
