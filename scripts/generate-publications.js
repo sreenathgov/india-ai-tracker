@@ -60,6 +60,26 @@ const ARTICLE_JS = path.join(PROJECT_ROOT, 'js', 'publications.js');
 // Helpers
 // ---------------------------------------------------------------------------
 
+// Portability note: some mounted/networked filesystems reject the unlink()
+// that fs.cpSync() performs when overwriting an existing destination file
+// (EPERM), even though in-place truncate-and-write succeeds. Recurse and
+// write file contents directly instead, so asset syncing works on those
+// mounts too. Behaviourally identical to fs.cpSync(..., {recursive:true})
+// for our use (regular files and directories only).
+function safeCopyDir(src, dest, filter) {
+    fs.mkdirSync(dest, { recursive: true });
+    for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+        const srcPath = path.join(src, entry.name);
+        if (filter && !filter(srcPath)) continue;
+        const destPath = path.join(dest, entry.name);
+        if (entry.isDirectory()) {
+            safeCopyDir(srcPath, destPath, filter);
+        } else if (entry.isFile()) {
+            fs.writeFileSync(destPath, fs.readFileSync(srcPath));
+        }
+    }
+}
+
 function escapeHtmlAttribute(value) {
     return String(value)
         .replace(/&/g, '&amp;')
@@ -622,10 +642,8 @@ function generatePublications() {
 
         const assetsSrc = path.join(articleDir, 'assets');
         if (fs.existsSync(assetsSrc)) {
-            fs.cpSync(assetsSrc, path.join(outDir, 'assets'), {
-                recursive: true,
-                filter: (src) => !src.endsWith('.DS_Store') && !src.endsWith('.gitkeep')
-            });
+            safeCopyDir(assetsSrc, path.join(outDir, 'assets'),
+                (src) => !src.endsWith('.DS_Store') && !src.endsWith('.gitkeep'));
         }
 
         manifest.push({
