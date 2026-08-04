@@ -145,6 +145,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "Gujarat: 37 institutes identified for Data & AI Labs under ‘IndiaAI Mission’",
+        "url": "https://cellit.in/gujarat-37-institutes-identified-for-data-ai-labs-under-indiaai-mission/",
+        "summary": "Gujarat has identified 37 institutes to establish Data & AI Labs as part of the 'IndiaAI Mission'. These labs aim to promote artificial intelligence and data science in the state. The initiative is expected to boost AI adoption and innovation in Gujarat.",
+        "date_published": "2026-08-04",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Dark side of AI: Material to malign",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/dark-side-of-ai-material-to-malign/articleshow/132812996.cms",
@@ -1611,6 +1631,31 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 9,
+        "title": "Tractor Junction gets RBI licence to launch NBFC arm Dhanrise Finance",
+        "url": "https://entrackr.com/snippets/tractor-junction-gets-rbi-licence-to-launch-nbfc-arm-dhanrise-finance-12225871",
+        "summary": "Tractor Junction has received an RBI licence to launch its NBFC arm, Dhanrise Finance Private Limited, which will provide financing for used tractors and rural vehicles. Dhanrise Finance will commence lending operations in October 2026, initially in Rajasthan and Madhya Pradesh, with plans to expand to other states. The company aims to address an estimated Rs 50,000 crore credit gap in the rural auto finance sector.",
+        "date_published": "2026-08-04",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "GJ",
+          "MH",
+          "MP",
+          "CG",
+          "UP",
+          "RJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 75,
         "title": "How this deeptech startup is driving seaweed cultivation along the western coast of India",
         "url": "https://yourstory.com/2026/01/how-this-deeptech-startup-is-driving-seaweed-cultivation-along-the-western-coast-of-india",
@@ -1634,6 +1679,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }

@@ -168,6 +168,31 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 9,
+        "title": "Tractor Junction gets RBI licence to launch NBFC arm Dhanrise Finance",
+        "url": "https://entrackr.com/snippets/tractor-junction-gets-rbi-licence-to-launch-nbfc-arm-dhanrise-finance-12225871",
+        "summary": "Tractor Junction has received an RBI licence to launch its NBFC arm, Dhanrise Finance Private Limited, which will provide financing for used tractors and rural vehicles. Dhanrise Finance will commence lending operations in October 2026, initially in Rajasthan and Madhya Pradesh, with plans to expand to other states. The company aims to address an estimated Rs 50,000 crore credit gap in the rural auto finance sector.",
+        "date_published": "2026-08-04",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "GJ",
+          "MH",
+          "MP",
+          "CG",
+          "UP",
+          "RJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Voice AI platform Edysor.ai raises pre-seed round",
         "url": "https://entrackr.com/snippets/voice-ai-platform-edysorai-raises-pre-seed-round-12146048",
@@ -231,5 +256,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

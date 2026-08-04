@@ -1354,12 +1354,152 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Anthropic taps Amazon Bedrock for Claude&#039;s local data processing",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/anthropic-enhances-ai-services-in-india-with-local-data-processing-via-amazon-bedrock/132847454",
+        "summary": "Anthropic will offer in-country inference for its Claude AI models in India, processing customer requests on local servers through Amazon Bedrock. This will keep data within the region, enhancing data residency for Indian organizations. The move addresses a key request from Indian businesses, enabling regulated sectors like banking and government to deploy advanced AI solutions.",
+        "date_published": "2026-08-04",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Superleap raises Rs 36 Cr in pre-Series A round led by Peak XV’s Surge",
+        "url": "https://entrackr.com/snippets/superleap-raises-rs-36-cr-in-pre-series-a-round-led-by-peak-xvs-surge-12226051",
+        "summary": "Superleap, an enterprise AI CRM startup, has raised Rs 36 crore ($3.7 million) in a pre-Series A funding round led by Peak XV's Surge. The funds will be used to expand its go-to-market operations, develop its AI-based CRM platform, and strengthen product capabilities. Founded in 2024, Superleap provides an AI-native CRM platform that automates sales tasks using revenue data, customer intelligence, and AI agents.",
+        "date_published": "2026-08-04",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Agentic AI startup Kily raises Rs 30 Cr in round led by Sorin Investments",
+        "url": "https://entrackr.com/snippets/agentic-ai-startup-kily-raises-rs-30-cr-in-round-led-by-sorin-investments-12225876",
+        "summary": "Kily, an agentic enterprise AI startup, has raised Rs 30 crore ($3.1 million) in a funding round led by Sorin Investments, with participation from Razorpay and Wyser Capital. The fresh capital will be used to strengthen its product capabilities and expand operations. Kily develops AI agents to help brands manage operations across e-commerce and quick commerce platforms, and was founded in 2025 by Sankalp Mehrotra, Anurag Singh, and Sharad Chitlangia.",
+        "date_published": "2026-08-04",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "Anthropic expands India presence, adds in-country inference for Claude",
+        "url": "https://cellit.in/anthropic-expands-india-presence-adds-in-country-inference-for-claude/",
+        "summary": "Anthropic is expanding its presence in India and introducing in-country inference capabilities for its AI model Claude. This move aims to improve the performance and accessibility of Claude in the Indian market. The expansion and addition of in-country inference will enhance the overall user experience for Claude users in India.",
+        "date_published": "2026-08-04",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Warehouse automation to humanoids: Addverb bets on India, CEO says physical AI race has begun",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/warehouse-automation-to-humanoids-addverb-bets-on-india-ceo-says-physical-ai-race-has-begun/132818584",
         "summary": "Addverb is focusing on collaborative robots, quadrupeds, and humanoids as the next frontier of robotics. The company's CEO believes a global race in physical AI has begun, with India having a strong opportunity to build competitive companies. Addverb is betting on India to be a key player in this emerging technology.",
         "date_published": "2026-08-03",
         "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "The sandbox trap: Getting AI to work is easy, but scaling it changes everything",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/how-indian-enterprises-scale-ai-11785752138085.html",
+        "summary": "Nearly half of Indian enterprises have live AI pilots, but only 15% are able to scale them. Scaling AI pilots is challenging due to operational friction, messy data, and unproven return on investment. Industry leaders are finding ways to overcome these obstacles and successfully implement AI on a larger scale.",
+        "date_published": "2026-08-03",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Claude on Indian servers: What changes as Anthropic brings local AI processing via AWS",
+        "url": "https://www.etnownews.com/technology/claude-on-indian-servers-what-changes-as-anthropic-brings-local-ai-processing-via-aws-article-155238452",
+        "summary": "Anthropic is bringing its Claude AI to Indian servers through a partnership with Amazon Web Services (AWS). The AI model will be available in the coming weeks via Amazon Bedrock, a platform for building generative AI applications. This move enables local AI processing, marking a significant development in Anthropic's expansion.",
+        "date_published": "2026-08-03",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Google picks 20 AI startups for 2026 Play Accelerator India cohort",
+        "url": "https://yourstory.com/2026/08/google-picks-20-ai-startups-for-2026-play-accelerator-india-cohort",
+        "summary": "Google has selected 20 AI-powered Indian startups for its 2026 Google Play Accelerator India program. The chosen startups will receive three months of equity-free mentorship, focusing on areas such as AI, security, and growth. This program aims to support the startups' global expansion efforts.",
+        "date_published": "2026-08-03",
+        "source_name": "YourStory",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -14870,8 +15010,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
-    "Policies and Initiatives",
     "Major AI Developments"
   ]
 }

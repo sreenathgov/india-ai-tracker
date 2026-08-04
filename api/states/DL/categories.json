@@ -490,6 +490,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 13,
+        "title": "3k cams, drones and AI to keep watch on kanwar routes",
+        "url": "https://timesofindia.indiatimes.com/city/noida/3k-cams-drones-and-ai-to-keep-watch-on-kanwar-routes/articleshow/132840262.cms",
+        "summary": "Over 3,000 cameras, drones, and AI technology will be used to monitor kanwar routes. The surveillance system aims to enhance safety and security for pilgrims. The integration of cameras, drones, and AI will provide real-time monitoring and help authorities respond quickly to any incidents.",
+        "date_published": "2026-08-04",
+        "source_name": "Times of India - Noida",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "NDMC opens Delhi’s first experiential  learning facility at Sarojini School",
         "url": "https://www.tribuneindia.com/news/delhi/ndmc-opens-delhis-first-experiential-learning-facility-at-sarojini-school",
@@ -4191,5 +4211,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

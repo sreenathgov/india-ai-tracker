@@ -406,6 +406,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "Former Swiggy, Zomato executives launch AI startup Profound with $1.5 Mn seed round",
+        "url": "https://entrackr.com/snippets/former-swiggy-zomato-executives-launch-ai-startup-profound-with-15-mn-seed-round-12225874",
+        "summary": "Bengaluru-based AI startup Profound has raised $1.5 million in a seed funding round to launch an AI-powered platform for professional networking and hiring. The startup was founded by Anuj Rathi and Prashant Parashar, former executives at Swiggy, Zomato, and other notable companies. The seed round saw participation from prominent angel investors, including Swiggy CEO Sriharsha Majety and former Zomato cofounder Pankaj Chaddah.",
+        "date_published": "2026-08-04",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Outcome-first AI: redesigning enterprise service delivery at scale",
+        "url": "https://yourstory.com/2026/07/outcome-first-ai-redesigning-enterprise-service-delivery-at-scale",
+        "summary": "EY GDS Partner Tanu Garg challenged the common assumption that enterprise AI's primary role is automation, instead emphasizing its potential to redesign service delivery. Garg suggested that AI should focus on transforming existing processes rather than just making them faster. This approach, known as \"outcome-first AI,\" aims to revolutionize enterprise service delivery at scale.",
+        "date_published": "2026-08-03",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "AI labs are proving why IT cos still matter: Infosys CEO Parekh",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-labs-are-proving-why-it-cos-still-matter-infosys-ceo-parekh/articleshow/132747297.cms",
@@ -4937,6 +4977,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }
