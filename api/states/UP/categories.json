@@ -3,6 +3,27 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 12,
+        "title": "UP cabinet clears deep-tech centres in Lucknow, Noida",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/up-cabinet-clears-deep-tech-centres-in-lucknow-noida/132898691",
+        "summary": "The UP cabinet has approved the establishment of deep-tech centres in Lucknow and Noida. The Noida hub, located on the IIT Kanpur Noida campus, will focus on areas such as quantum computing, semiconductor design, and biotechnology. The centre will cover a range of technologies, including AI, robotics, and defence technology, across a two-acre area.",
+        "date_published": "2026-08-05",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "UP Cabinet clears new Startup Policy with ₹1,000-crore fund",
         "url": "https://government.economictimes.indiatimes.com/news/policy/uttar-pradesh-launches-1000-crore-startup-fund-to-boost-innovation-and-growth/132212706",
@@ -224,6 +245,46 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 11,
+        "title": "Flipkart commits deeper investments in Uttar Pradesh&#039;s AI and digital commerce ecosystem",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/flipkart-commits-deeper-investments-in-uttar-pradeshs-ai-and-digital-commerce-ecosystem/132901682",
+        "summary": "Flipkart is investing in Uttar Pradesh's AI and digital commerce ecosystem, aiming to expand technology-led commerce initiatives. The company will work with the state to onboard more Micro, Small, and Medium Enterprises (MSMEs) and One District, One Product (ODOP) sellers. This partnership seeks to deepen the state's digital commerce capabilities.",
+        "date_published": "2026-08-05",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 16,
+        "title": "Flipkart CEO lauds UP’s growth, backs AI vision",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/flipkart-ceo-lauds-ups-growth-backs-ai-vision/articleshow/132871611.cms",
+        "summary": "Flipkart's CEO has praised the growth of Uttar Pradesh and expressed support for the state's artificial intelligence vision. The CEO's endorsement is seen as a significant boost to the state's efforts to promote AI adoption and development. Uttar Pradesh is aiming to leverage AI to drive economic growth and improve various sectors.",
+        "date_published": "2026-08-05",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 4,
         "title": "IIT Kanpur launches online AI course for professionals",
@@ -1256,6 +1317,7 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Policies and Initiatives",
+    "Major AI Developments"
   ]
 }

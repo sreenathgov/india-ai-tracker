@@ -3,6 +3,30 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 4,
+        "title": "Personal assistance startup Hulp secures $2.6 Mn seed funding",
+        "url": "https://entrackr.com/snippets/personal-assistance-startup-hulp-secures-26-mn-seed-funding-12230169",
+        "summary": "Hulp, a personal assistance and concierge platform, has raised $2.6 million in seed funding co-led by Sparrow Capital and BITKRAFT Ventures. The funding will be used to expand AI workflows, strengthen the senior leadership team, and enhance technology and product capabilities. Founded in April this year, Hulp aims to utilize the funds to drive growth and development.",
+        "date_published": "2026-08-05",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "MH",
+          "KA",
+          "TN",
+          "TG",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Karnataka to roll out policy to expand tech investments beyond Bengaluru in 100 days: CM Shivakumar",
         "url": "https://government.economictimes.indiatimes.com/news/technology/karnataka-to-roll-out-policy-to-expand-tech-investments-beyond-bengaluru-in-100-days-cm-shivakumar/132609397",
@@ -410,6 +434,26 @@
         "title": "Former Swiggy, Zomato executives launch AI startup Profound with $1.5 Mn seed round",
         "url": "https://entrackr.com/snippets/former-swiggy-zomato-executives-launch-ai-startup-profound-with-15-mn-seed-round-12225874",
         "summary": "Bengaluru-based AI startup Profound has raised $1.5 million in a seed funding round to launch an AI-powered platform for professional networking and hiring. The startup was founded by Anuj Rathi and Prashant Parashar, former executives at Swiggy, Zomato, and other notable companies. The seed round saw participation from prominent angel investors, including Swiggy CEO Sriharsha Majety and former Zomato cofounder Pankaj Chaddah.",
+        "date_published": "2026-08-04",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Zoppler Systems raises Rs 6.5 Cr led by Finvolve",
+        "url": "https://entrackr.com/snippets/zoppler-systems-raises-rs-65-cr-from-finvolve-and-india-accelerator-12227359",
+        "summary": "Zoppler Systems, a defence and dual use technology company, has raised Rs 6.5 crore in a funding round led by Finvolve. The funds will be used to accelerate product development, expand engineering capabilities, and scale deployments across defence and dual use sectors. Zoppler Systems develops indigenous RF sensing products and a decision and autonomy platform, and plans to strengthen field validation of its technologies with the new investment.",
         "date_published": "2026-08-04",
         "source_name": "Entrackr - AI & Startups",
         "category": "Major AI Developments",
@@ -3758,6 +3802,46 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 6,
+        "title": "Vaaree raises Rs 65 Cr in Series A led by Hero Enterprise and Cap Alpha Ventures",
+        "url": "https://entrackr.com/snippets/vaaree-raises-rs-65-cr-in-series-a-led-by-hero-enterprise-and-cap-alpha-ventures-12227333",
+        "summary": "Vaaree, a Bengaluru-based home décor and furnishings marketplace, has raised Rs 65 crore in a Series A funding round led by Hero Enterprise and Cap Alpha Ventures. The funds will be used to expand its fulfilment network, enable faster deliveries, and invest in its AI-powered product discovery and home styling technology. Vaaree operates a curated marketplace for home products and was founded in 2022 by Garima, Varun Vohra, and team.",
+        "date_published": "2026-08-04",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Exclusive: Gen AI startup Simplismart set to raise $9 Mn in Series B led by Dallas Venture Capital",
+        "url": "https://entrackr.com/exclusive/exclusive-gen-ai-startup-simplismart-set-to-raise-9-mn-in-series-b-led-by-dallas-venture-capital-12226753",
+        "summary": "Gen AI startup Simplismart is set to raise $9 million in a Series B funding round led by Dallas Venture Capital. The round also includes participation from existing investors Accel India and Shastra VC, as well as new investor Micromax Informatics. The funding will be raised through the issue of 12,100 CCPS at an issue price of Rs 37 lakh each.",
+        "date_published": "2026-08-04",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Exclusive: SuperManager AGI in acquisition talks with Fortune 100 firm",
         "url": "https://entrackr.com/exclusive/exclusive-supermanager-agi-in-acquisition-talks-with-fortune-100-firm-12222583",
@@ -4977,6 +5061,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Policies and Initiatives"
   ]
 }

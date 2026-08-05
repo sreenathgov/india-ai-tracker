@@ -3,6 +3,30 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 4,
+        "title": "Personal assistance startup Hulp secures $2.6 Mn seed funding",
+        "url": "https://entrackr.com/snippets/personal-assistance-startup-hulp-secures-26-mn-seed-funding-12230169",
+        "summary": "Hulp, a personal assistance and concierge platform, has raised $2.6 million in seed funding co-led by Sparrow Capital and BITKRAFT Ventures. The funding will be used to expand AI workflows, strengthen the senior leadership team, and enhance technology and product capabilities. Founded in April this year, Hulp aims to utilize the funds to drive growth and development.",
+        "date_published": "2026-08-05",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "MH",
+          "KA",
+          "TN",
+          "TG",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 16,
         "title": "AI in school curriculum; students in Telangana to get breakfast, milk",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/ai-in-school-curriculum-students-in-t-to-get-breakfast-milk/articleshow/128824984.cms",
@@ -2425,5 +2449,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

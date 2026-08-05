@@ -3,6 +3,30 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 4,
+        "title": "Personal assistance startup Hulp secures $2.6 Mn seed funding",
+        "url": "https://entrackr.com/snippets/personal-assistance-startup-hulp-secures-26-mn-seed-funding-12230169",
+        "summary": "Hulp, a personal assistance and concierge platform, has raised $2.6 million in seed funding co-led by Sparrow Capital and BITKRAFT Ventures. The funding will be used to expand AI workflows, strengthen the senior leadership team, and enhance technology and product capabilities. Founded in April this year, Hulp aims to utilize the funds to drive growth and development.",
+        "date_published": "2026-08-05",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "MH",
+          "KA",
+          "TN",
+          "TG",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "National AI policy for healthcare in the works",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/national-ai-policy-for-healthcare-in-the-works/130346486",
@@ -182,6 +206,66 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 15,
+        "title": "Retired IAF officer falls for AI-generated video, loses Rs1 crore in online forex scam",
+        "url": "https://timesofindia.indiatimes.com/city/pune/retired-iaf-officer-falls-for-ai-generated-video-loses-rs1-crore-in-online-forex-scam/articleshow/132871673.cms",
+        "summary": "A retired Indian Air Force officer lost Rs1 crore in an online forex scam after falling for an AI-generated video. The scam involved the officer being deceived into investing in a fake online forex trading platform. The incident highlights the growing threat of AI-generated content being used in cyber scams.",
+        "date_published": "2026-08-05",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Agrograde builds machines that sort onions and potatoes by quality, not just size",
+        "url": "https://yourstory.com/2026/08/agrograde-onion-potato-sorting",
+        "summary": "Agrograde, a Pune-based company, has developed AI-powered optical grading equipment for sorting onions and potatoes by quality. The machines are designed to work with Indian crop varieties, addressing the limitations of imported sorters. This technology enables packhouses to sort produce based on quality, not just size.",
+        "date_published": "2026-08-04",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Legal tech startup NYAI raises $1.5 Mn in seed round",
+        "url": "https://entrackr.com/snippets/legal-tech-startup-nyai-raises-15-mn-in-seed-round-12227113",
+        "summary": "NYAI, an AI native legal infrastructure platform, has raised $1.5 million in a seed funding round from Indian family offices and strategic angel investors. The funds will be used for technology development, expanding its compliance ecosystem, and strengthening its presence among enterprises and law firms. The company was founded in March 2025 by Chinmay Bhosale and Vikrant Labde.",
+        "date_published": "2026-08-04",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 8,
         "title": "Next AI Breakthrough Can Emerge From Nagpur, Says Fadnavis",
@@ -2047,6 +2131,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 9,
+        "title": "GetVantage secures Rs 63 Cr in Series A1 round",
+        "url": "https://entrackr.com/snippets/getvantage-secures-rs-63-cr-in-series-a1-round-12226948",
+        "summary": "GetVantage, a B2B fintech platform for MSMEs, has secured Rs 63 crore in a Series A1 round, taking its total committed funding capacity to over Rs 700 crore. The round was co-led by Rajeev Ahuja and SanRaj Group, with participation from other investors. This funding will support the company's growth, including its Rise Up Fund for women entrepreneurs.",
+        "date_published": "2026-08-04",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Funding and acquisitions in Indian startups this week [July 20 - July 25]",
         "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-july-20-july-25-12196344",
@@ -2519,6 +2623,7 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Policies and Initiatives",
+    "Major AI Developments"
   ]
 }

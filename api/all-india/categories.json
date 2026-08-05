@@ -1354,6 +1354,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Who pays when an AI agent goes rogue? Indian law has no clear answer",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/indian-ai-startups-autonomous-ai-agents-legal-liability-cybersecurity-openai-anthropic-claude-chatgpt-11785824858468.html",
+        "summary": "Recent disclosures by OpenAI and Anthropic have exposed a legal gap in Indian law regarding autonomous AI. There is currently no clear answer to who would be liable in the event of an AI agent causing harm. Indian law lacks specific provisions to address the accountability of rogue AI agents.",
+        "date_published": "2026-08-05",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Anthropic taps Amazon Bedrock for Claude&#039;s local data processing",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/anthropic-enhances-ai-services-in-india-with-local-data-processing-via-amazon-bedrock/132847454",
@@ -1435,6 +1455,46 @@
       },
       {
         "id": 2,
+        "title": "69% of Indian enterprses plan to increase AI investments: Survey",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/69-of-indian-enterprses-plan-to-increase-ai-investments-survey/132859519",
+        "summary": "A survey has found that 69% of Indian enterprises plan to increase their investments in artificial intelligence. Indian businesses are shifting from experimental to widespread use of AI across their operations, driven by the benefits of AI adoption. However, challenges related to enterprise data readiness remain a significant obstacle to further expansion of AI initiatives.",
+        "date_published": "2026-08-04",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "Noise launches subscription-free REP Band, enters India’s screenless wearable segment",
+        "url": "https://telanganatoday.com/noise-launches-subscription-free-rep-band-enters-indias-screenless-wearable-segment",
+        "summary": "Noise has launched the REP Band, a screenless wearable device offering subscription-free health monitoring and AI-powered wellness insights. The device is priced at Rs 9,999 as a special introductory offer and is tailored for Indian users. It provides continuous biometric tracking, entering Noise into India's screenless wearable segment.",
+        "date_published": "2026-08-04",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "Warehouse automation to humanoids: Addverb bets on India, CEO says physical AI race has begun",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/warehouse-automation-to-humanoids-addverb-bets-on-india-ceo-says-physical-ai-race-has-begun/132818584",
         "summary": "Addverb is focusing on collaborative robots, quadrupeds, and humanoids as the next frontier of robotics. The company's CEO believes a global race in physical AI has begun, with India having a strong opportunity to build competitive companies. Addverb is betting on India to be a key player in this emerging technology.",
@@ -1500,6 +1560,26 @@
         "summary": "Google has selected 20 AI-powered Indian startups for its 2026 Google Play Accelerator India program. The chosen startups will receive three months of equity-free mentorship, focusing on areas such as AI, security, and growth. This program aims to support the startups' global expansion efforts.",
         "date_published": "2026-08-03",
         "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 14,
+        "title": "Google selects 20 AI startups for 2026 Play Accelerator India programme",
+        "url": "https://telanganatoday.com/google-selects-20-ai-startups-for-2026-play-accelerator-india-programme",
+        "summary": "Google has selected 20 AI-powered Indian startups for the 2026 Play Accelerator India programme, a three-month equity-free initiative. The programme will provide mentorship on key areas such as AI integration, app quality, and growth. This will help the startups build scalable products for global markets.",
+        "date_published": "2026-08-03",
+        "source_name": "Telangana Today - Tech",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -12279,6 +12359,26 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 7,
+        "title": "Razorpay hires four senior engineering leaders for AI roles",
+        "url": "https://entrackr.com/snippets/razorpay-hires-four-senior-engineering-leaders-for-ai-roles-12227319",
+        "summary": "Razorpay has hired four senior engineering leaders from top companies, including Divyam.ai, Microsoft, Salesforce, and CRED, to expand its artificial intelligence capabilities. The new hires include Sudhir Reddy, Abhishek Agarwal, Bhavya Shivaprakash, and Anuj Mathur, who will lead AI and data architecture, among other roles. These appointments aim to strengthen Razorpay's engineering leadership in AI, cloud infrastructure, and data engineering.",
+        "date_published": "2026-08-04",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 4,
         "title": "Exclusive: Sarvam AI board to approve $74 funding Mn from NVIDIA, Glade Brook, others",
