@@ -111,6 +111,28 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Aramco Ventures leads $9.5 Mn funding in climate tech startup Mitti Labs",
+        "url": "https://entrackr.com/snippets/aramco-ventures-leads-95-mn-funding-in-climate-tech-startup-mitti-labs-12234526",
+        "summary": "Aramco Ventures has led a $9.5 million funding round in climate tech startup Mitti Labs, with participation from existing and new investors. Mitti Labs had previously raised $3 million and plans to use the fresh funds to expand across India and enter new markets in the Philippines and Indonesia. The startup, co-founded in 2023, aims to further its climate-focused initiatives with the new investment.",
+        "date_published": "2026-08-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG",
+          "AP",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "CIE at IIIT Hyderabad Selects Five Deep-Tech Startups for Avishkar Venture Studio Summer Cohort 2026",
         "url": "https://www.iiit.ac.in/cie-at-iiit-hyderabad-selects-five-deep-tech-startups-for-avishkar-venture-studio-summer-cohort-2026/",
@@ -2450,6 +2472,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives"
+    "Major AI Developments"
   ]
 }

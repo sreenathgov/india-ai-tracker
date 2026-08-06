@@ -27,6 +27,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 10,
+        "title": "Karnataka government to soon release draft of policy on responsible AI",
+        "url": "https://www.thehindu.com/news/cities/bangalore/karnataka-government-to-soon-release-draft-of-policy-on-responsible-ai/article71309838.ece",
+        "summary": "The Karnataka government is set to release a draft policy on responsible AI, with the document reportedly ready for publication. The draft is expected to be made public by the end of the month. This policy aims to promote the development and use of artificial intelligence in a responsible and ethical manner.",
+        "date_published": "2026-08-05",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Karnataka to roll out policy to expand tech investments beyond Bengaluru in 100 days: CM Shivakumar",
         "url": "https://government.economictimes.indiatimes.com/news/technology/karnataka-to-roll-out-policy-to-expand-tech-investments-beyond-bengaluru-in-100-days-cm-shivakumar/132609397",
@@ -429,6 +449,88 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 6,
+        "title": "Aramco Ventures leads $9.5 Mn funding in climate tech startup Mitti Labs",
+        "url": "https://entrackr.com/snippets/aramco-ventures-leads-95-mn-funding-in-climate-tech-startup-mitti-labs-12234526",
+        "summary": "Aramco Ventures has led a $9.5 million funding round in climate tech startup Mitti Labs, with participation from existing and new investors. Mitti Labs had previously raised $3 million and plans to use the fresh funds to expand across India and enter new markets in the Philippines and Indonesia. The startup, co-founded in 2023, aims to further its climate-focused initiatives with the new investment.",
+        "date_published": "2026-08-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG",
+          "AP",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "Bengaluru India Nano 2026: AI breath test, nanotherapy offer new hope in fight against diabetes, cancer",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/bengaluru-india-nano-2026-ai-breath-test-nanotherapy-offer-new-hope-in-fight-against-diabetes-cancer/articleshow/132962282.cms",
+        "summary": "Researchers in Bengaluru, India, are developing an AI-powered breath test and nanotherapy to combat diabetes and cancer. The innovative technologies, showcased at India Nano 2026, offer new hope in the fight against these diseases. The AI breath test and nanotherapy aim to provide more effective and non-invasive diagnostic and treatment options.",
+        "date_published": "2026-08-06",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Peptris is using AI to find drug candidates to shorten the time it takes for laboratory validation",
+        "url": "https://yourstory.com/2026/08/peptris-ai-drug-discovery",
+        "summary": "Peptris, a Bengaluru-based company, is utilizing AI to identify potential drug candidates, aiming to reduce laboratory validation time. The company creates models that generate molecules and predict their behavior. Peptris has already licensed its lead candidate to a US developer, marking a significant milestone in its efforts.",
+        "date_published": "2026-08-05",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Lemnisca builds software to predict how fermentation behaves at factory scale",
+        "url": "https://yourstory.com/2026/08/lemnisca-fermentation-software",
+        "summary": "Lemnisca, a Bengaluru-based company, is developing AI software to model microbial fermentation. This software aims to predict how fermentation behaves at a factory scale, allowing manufacturers to identify potential issues before production. The goal is to enable seamless scaling of fermentation processes without discovering problems during production.",
+        "date_published": "2026-08-05",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 8,
         "title": "Former Swiggy, Zomato executives launch AI startup Profound with $1.5 Mn seed round",
@@ -3802,6 +3904,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "Exclusive: Get My Parking to raise Rs 40 Cr from IvyCap Ventures at flat valuation",
+        "url": "https://entrackr.com/exclusive/exclusive-get-my-parking-to-raise-rs-40-cr-from-ivycap-ventures-at-flat-valuation-12234597",
+        "summary": "Get My Parking, an AI-based parking management startup, is raising Rs 40 crore ($4.21 million) in an extended Series A round from existing investor IvyCap Ventures at a flat valuation. This funding comes over a year after the company raised $2.5 million in its Series A round in June 2025, also led by IvyCap Ventures. The investment will be made through the issue of 7,261 compulsorily convertible preference shares.",
+        "date_published": "2026-08-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Vaaree raises Rs 65 Cr in Series A led by Hero Enterprise and Cap Alpha Ventures",
         "url": "https://entrackr.com/snippets/vaaree-raises-rs-65-cr-in-series-a-led-by-hero-enterprise-and-cap-alpha-ventures-12227333",
@@ -5061,6 +5183,7 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }

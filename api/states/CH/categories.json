@@ -1,7 +1,29 @@
 {
   "state": "CH",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 14,
+        "title": "CM Saini meets top World Bank officials, discuss AI &amp; digital governance",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/cm-saini-meets-top-world-bank-officials-discuss-ai-digital-governance/articleshow/132961545.cms",
+        "summary": "CM Saini met with top World Bank officials to discuss the implementation of AI and digital governance. The meeting aimed to explore ways to leverage AI and digital technologies to improve governance and public services. Key discussions focused on harnessing AI for efficient and effective governance.",
+        "date_published": "2026-08-06",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "CH",
+          "PB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [],
     "Major AI Developments": [
       {
@@ -343,5 +365,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

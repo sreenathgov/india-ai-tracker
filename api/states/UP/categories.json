@@ -246,6 +246,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "LU scholar’s AI tool enables fast, cheap cancer test",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/lu-scholars-ai-tool-enables-fast-cheap-cancer-test/articleshow/132969237.cms",
+        "summary": "A scholar from Lucknow University has developed an AI tool that enables fast and affordable cancer testing. The tool uses artificial intelligence to facilitate quick and cheap cancer tests, making it a potentially groundbreaking development in cancer diagnosis. The innovation is expected to increase accessibility to cancer testing, particularly in resource-constrained settings.",
+        "date_published": "2026-08-06",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Flipkart commits deeper investments in Uttar Pradesh&#039;s AI and digital commerce ecosystem",
         "url": "https://government.economictimes.indiatimes.com/news/technology/flipkart-commits-deeper-investments-in-uttar-pradeshs-ai-and-digital-commerce-ecosystem/132901682",
@@ -1317,7 +1337,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives",
     "Major AI Developments"
   ]
 }
