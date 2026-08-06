@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/">
+    <!-- Analytics load only after cookie consent (DPDP/GDPR) -->
+    <script src="/js/consent.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE_TAG}}</title>
+
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <link rel="canonical" href="{{CANONICAL_URL}}">
+    <meta name="robots" content="{{ROBOTS}}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kanan Labs">
+    <meta property="og:url" content="{{CANONICAL_URL}}">
+    <meta property="og:title" content="{{OG_TITLE}}">
+    <meta property="og:description" content="{{META_DESCRIPTION}}">
+    <meta property="og:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Kanan Labs">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{CANONICAL_URL}}">
+    <meta name="twitter:title" content="{{OG_TITLE}}">
+    <meta name="twitter:description" content="{{META_DESCRIPTION}}">
+    <meta name="twitter:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
+    <meta name="twitter:image:alt" content="Kanan Labs">
+
+    <link rel="icon" type="image/png" href="/assets/images/KANAN-LABS-WEBSITELOGO.png">
+
+    <script type="application/ld+json">
+{{JSON_LD}}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles-v2.css?v=21">
+    <link rel="stylesheet" href="/css/staggered-menu.css">
+    <link rel="stylesheet" href="/css/footer.css?v=3">
+    <link rel="stylesheet" href="/css/careers.css?v=1">
+    <link rel="stylesheet" href="/css/careers-role.css?v=1">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>
+
+<body class="careers-page careers-role-page">
+
+    <!-- ════════════════════════════════════════════════
+         ROLE HEADER — navy band
+    ════════════════════════════════════════════════ -->
+    <header class="crd-head">
+        <div class="cr-shell">
+            <a class="crd-back" href="/careers.html">
+                <span class="crd-back__arrow" aria-hidden="true">&#8592;</span>
+                <span>All open roles</span>
+            </a>
+
+            <p class="crd-team">{{TEAM}}{{STATUS_BADGE}}</p>
+
+            <h1 class="crd-title">{{ROLE_TITLE}}</h1>
+
+            <ul class="crd-meta">
+                {{META_CHIPS}}
+            </ul>
+
+            <div class="crd-head__actions">
+                <a class="cr-btn cr-btn--primary" href="#apply">
+                    <span>Apply for this role</span>
+                    <span class="cr-btn__arrow" aria-hidden="true">&#8595;</span>
+                </a>
+                <p class="crd-head__timeline">{{TIMELINE_LINE}}</p>
+            </div>
+        </div>
+
+        <div class="cr-curve" aria-hidden="true">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0 0C480 92 960 92 1440 0L1440 120L0 120Z" />
+            </svg>
+        </div>
+    </header>
+
+    <!-- ════════════════════════════════════════════════
+         JOB DESCRIPTION
+    ════════════════════════════════════════════════ -->
+    <main class="crd-body" data-nav-light>
+        <div class="cr-shell crd-body__inner">
+
+            <article class="crd-jd">
+                <section class="crd-block" aria-labelledby="crd-about">
+                    <h2 class="crd-block__title" id="crd-about">About the role</h2>
+                    {{DESCRIPTION_HTML}}
+                </section>
+
+                <section class="crd-block" aria-labelledby="crd-do">
+                    <h2 class="crd-block__title" id="crd-do">What you&rsquo;ll do</h2>
+                    <ul class="crd-list">
+                        {{RESPONSIBILITIES_HTML}}
+                    </ul>
+                </section>
+
+                <section class="crd-block" aria-labelledby="crd-look">
+                    <h2 class="crd-block__title" id="crd-look">What we look for</h2>
+                    <ul class="crd-list">
+                        {{LOOKING_FOR_HTML}}
+                    </ul>
+                </section>
+
+                {{NICE_TO_HAVE_BLOCK}}
+            </article>
+
+            <aside class="crd-rail" aria-label="Role summary">
+                <dl class="crd-rail__list">
+                    {{RAIL_HTML}}
+                </dl>
+                <a class="cr-btn cr-btn--outline cr-btn--block" href="#apply">
+                    <span>Apply</span>
+                    <span class="cr-btn__arrow" aria-hidden="true">&#8595;</span>
+                </a>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- ════════════════════════════════════════════════
+         APPLICATION FORM
+    ════════════════════════════════════════════════ -->
+    <section class="crd-apply" id="apply" aria-labelledby="crd-apply-title">
+        <div class="cr-shell">
+            <div class="crd-apply__card">
+
+                <div class="crd-apply__heading" id="applyHeading">
+                    <p class="cr-kicker cr-kicker--light">Application</p>
+                    <h2 id="crd-apply-title">Apply &mdash; {{ROLE_TITLE}}</h2>
+                    <p>Twenty minutes. The written answers carry more weight than the CV, so give them the time.</p>
+                </div>
+
+                <form id="applyForm" class="crd-form" novalidate
+                      data-role-slug="{{ROLE_SLUG}}" data-role-title="{{ROLE_TITLE}}">
+
+                    <div class="crd-form__row">
+                        <div class="crd-field">
+                            <label for="ap-name">Full name</label>
+                            <input id="ap-name" name="fullName" type="text" autocomplete="name" maxlength="120" required>
+                            <p class="crd-field__error" id="ap-name-error"></p>
+                        </div>
+
+                        <div class="crd-field">
+                            <label for="ap-email">Email</label>
+                            <input id="ap-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="180" required>
+                            <p class="crd-field__error" id="ap-email-error"></p>
+                        </div>
+                    </div>
+
+                    <div class="crd-form__row">
+                        <div class="crd-field">
+                            <label for="ap-location">Where you&rsquo;re based <span>Optional</span></label>
+                            <input id="ap-location" name="location" type="text" autocomplete="address-level2" maxlength="120">
+                        </div>
+
+                        <div class="crd-field">
+                            <label for="ap-notice">Notice period <span>Optional</span></label>
+                            <input id="ap-notice" name="noticePeriod" type="text" maxlength="80" placeholder="e.g. 30 days">
+                        </div>
+                    </div>
+
+                    <div class="crd-form__row">
+                        <div class="crd-field">
+                            <label for="ap-linkedin">LinkedIn <span>Optional</span></label>
+                            <input id="ap-linkedin" name="linkedin" type="url" inputmode="url" maxlength="300" placeholder="https://">
+                            <p class="crd-field__error" id="ap-linkedin-error"></p>
+                        </div>
+
+                        <div class="crd-field">
+                            <label for="ap-portfolio">Portfolio, GitHub or writing <span>Optional</span></label>
+                            <input id="ap-portfolio" name="portfolio" type="url" inputmode="url" maxlength="300" placeholder="https://">
+                            <p class="crd-field__error" id="ap-portfolio-error"></p>
+                        </div>
+                    </div>
+
+                    <div class="crd-field">
+                        <label for="ap-cv-url">Link to your CV <span>Optional</span></label>
+                        <input id="ap-cv-url" name="cvUrl" type="url" inputmode="url" maxlength="300" placeholder="https://">
+                        <p class="crd-field__hint">A link is easier for us than an attachment &mdash; Drive, Dropbox, or your own site.</p>
+                        <p class="crd-field__error" id="ap-cv-url-error"></p>
+                    </div>
+
+                    <div class="crd-field">
+                        <label for="ap-cv-file">Or attach a PDF <span>Optional</span></label>
+                        <input id="ap-cv-file" name="cvFile" type="file" accept="application/pdf,.pdf">
+                        <p class="crd-field__hint">PDF only, up to 3&nbsp;MB.</p>
+                        <p class="crd-field__error" id="ap-cv-file-error"></p>
+                    </div>
+
+                    <div class="crd-questions">
+                        <p class="crd-questions__label">A few questions</p>
+                        {{QUESTIONS_HTML}}
+                    </div>
+
+                    <div class="crd-honeypot" aria-hidden="true">
+                        <label for="ap-website">Website</label>
+                        <input id="ap-website" name="company_website" type="text" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <p class="crd-form__error" id="applyError" role="alert"></p>
+
+                    <button class="crd-submit" type="submit">
+                        <span class="crd-submit__label">Send application</span>
+                        <span class="crd-submit__arrow" aria-hidden="true">&#8594;</span>
+                    </button>
+
+                    <p class="crd-form__privacy">
+                        We use what you send here only to assess this application. See our
+                        <a href="/privacy-policy.html">privacy policy</a>.
+                    </p>
+                </form>
+
+                <div class="crd-success" id="applySuccess" role="status" tabindex="-1" hidden>
+                    <p class="crd-success__kicker">Application received</p>
+                    <h2>Thank you.</h2>
+                    <p>A person will read this properly and reply within a week, either way.</p>
+                    <a href="/careers.html">Back to open roles</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         FOOTER
+    ════════════════════════════════════════════════ -->
+    <footer class="kl-footer">
+        <div class="kl-footer__inner">
+            <div class="kl-footer__content">
+
+                <div class="kl-footer__brand">
+                    <img src="/KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png" alt="Kanan Labs"
+                         class="kl-footer__logo" width="500" height="500" loading="lazy" decoding="async" draggable="false">
+                    <p class="kl-footer__tagline">Trade Intelligence Infrastructure</p>
+
+                    <div>
+                        <p class="kl-footer__nl-label">Weekly Brief</p>
+                        <form class="kl-footer__nl-form" id="footerNewsletterForm">
+                            <input type="email" class="kl-footer__nl-input" placeholder="Your email address"
+                                   autocomplete="email" required>
+                            <button type="submit" class="kl-footer__nl-submit">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <a href="/tradewatch.html" class="kl-footer__consult">
+                        Explore TradeWatch &rarr;
+                    </a>
+                </div>
+
+                <div class="kl-footer__sitemap">
+
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Platform</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="/tradewatch.html">TradeWatch</a></li>
+                            <li><a href="/tracker.html">India AI Tracker</a></li>
+                            <li><a href="/sector-watch.html">SectorWatch</a></li>
+                            <li><a href="/resources.html">Resources</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Company</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="/about.html">About</a></li>
+                            <li><a href="/careers.html">Careers</a></li>
+                            <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Follow</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a href="https://x.com/indiaAItracker" target="_blank" rel="noopener">Twitter</a></li>
+                            <li><a href="https://github.com/sreenathgov" target="_blank" rel="noopener">GitHub</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Legal</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="/disclaimers.html">Disclaimers</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="kl-footer__watermark">
+                <img src="/KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png" alt=""
+                     class="kl-footer__watermark-img" width="1584" height="396" loading="lazy" decoding="async" aria-hidden="true" draggable="false">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script defer src="/js/careers-apply.js?v=1"></script>
+    <!-- Staggered menu requires gsap (loaded with defer in head); defer guarantees order -->
+    <script defer src="/js/staggered-menu.js?v=5"></script>
+</body>
+
+</html>

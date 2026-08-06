@@ -1,0 +1,917 @@
+/* ============================================================
+   Careers — hero, tenets, role listing, process rail
+   Class prefix: cr-   (detail page uses crd-, see careers-role.css)
+   ============================================================ */
+
+:root {
+    --cr-navy: #0a2f52;
+    --cr-navy-deep: #061f38;
+    --cr-cream: #f4ebd0;
+    --cr-paper: #f5f3ee;
+    --cr-red: #db4a2b;
+    --cr-red-deep: #bd3b21;
+
+    --cr-ink: rgba(10, 47, 82, 0.92);
+    --cr-ink-body: rgba(10, 47, 82, 0.74);
+    --cr-ink-mid: rgba(10, 47, 82, 0.56);
+    --cr-ink-dim: rgba(10, 47, 82, 0.40);
+    --cr-rule: rgba(10, 47, 82, 0.13);
+    --cr-rule-strong: rgba(10, 47, 82, 0.22);
+
+    --cr-on-navy: rgba(244, 235, 208, 0.92);
+    --cr-on-navy-body: rgba(244, 235, 208, 0.66);
+    --cr-on-navy-dim: rgba(244, 235, 208, 0.42);
+    --cr-on-navy-rule: rgba(244, 235, 208, 0.18);
+
+    --cr-display: 'Cormorant Garamond', Georgia, serif;
+    --cr-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --cr-shell: 1180px;
+    --cr-gutter: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+/* styles-v2.css locks html/body for the single-screen homepage; the careers
+   surface is a long scrolling document and has to opt out, exactly as
+   resources.css does for the catalog. */
+html:has(body.careers-page) {
+    height: auto !important;
+    overflow: auto !important;
+    overflow-x: hidden !important;
+    scroll-behavior: smooth;
+}
+
+body.careers-page {
+    height: auto !important;
+    overflow: auto !important;
+    overflow-x: hidden !important;
+    min-height: 100vh;
+    margin: 0;
+    background: var(--cr-paper);
+    color: var(--cr-ink);
+    font-family: var(--cr-sans);
+    -webkit-font-smoothing: antialiased;
+}
+
+.careers-page *,
+.careers-page *::before,
+.careers-page *::after {
+    box-sizing: border-box;
+}
+
+.cr-shell {
+    width: 100%;
+    max-width: var(--cr-shell);
+    margin: 0 auto;
+    padding-inline: var(--cr-gutter);
+}
+
+/* ── Shared type ────────────────────────────────────────── */
+
+.cr-kicker {
+    font-family: var(--cr-sans);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cr-red);
+    margin: 0 0 0.9rem;
+}
+
+.cr-kicker--light {
+    color: rgba(219, 74, 43, 0.95);
+}
+
+.cr-section-title {
+    font-family: var(--cr-display);
+    font-weight: 500;
+    font-size: clamp(1.9rem, 3.6vw, 2.85rem);
+    line-height: 1.14;
+    letter-spacing: -0.01em;
+    color: var(--cr-navy);
+    margin: 0;
+}
+
+/* ── Buttons ────────────────────────────────────────────── */
+
+.cr-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.5rem;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    font-family: var(--cr-sans);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.22s ease, color 0.22s ease,
+                border-color 0.22s ease, transform 0.22s ease;
+}
+
+.cr-btn__arrow {
+    display: inline-block;
+    font-size: 0.9em;
+    transition: transform 0.22s ease;
+}
+
+.cr-btn--primary {
+    background: var(--cr-red);
+    color: #fff;
+    border-color: var(--cr-red);
+}
+
+.cr-btn--primary:hover {
+    background: var(--cr-red-deep);
+    border-color: var(--cr-red-deep);
+}
+
+.cr-btn--ghost {
+    background: transparent;
+    color: var(--cr-on-navy);
+    border-color: var(--cr-on-navy-rule);
+}
+
+.cr-btn--ghost:hover {
+    border-color: rgba(244, 235, 208, 0.5);
+    background: rgba(244, 235, 208, 0.06);
+}
+
+.cr-btn--outline {
+    background: transparent;
+    color: var(--cr-navy);
+    border-color: var(--cr-rule-strong);
+}
+
+.cr-btn--outline:hover {
+    background: var(--cr-navy);
+    border-color: var(--cr-navy);
+    color: var(--cr-cream);
+}
+
+.cr-btn--block {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.cr-btn:hover .cr-btn__arrow {
+    transform: translateX(3px);
+}
+
+.cr-btn--primary:hover .cr-btn__arrow {
+    transform: translateY(3px);
+}
+
+.cr-btn:focus-visible,
+.cr-filter:focus-visible,
+.cr-role__title a:focus-visible {
+    outline: 2px solid var(--cr-red);
+    outline-offset: 3px;
+}
+
+/* ── Meta chips + status badges ─────────────────────────── */
+
+.cr-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--cr-sans);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--cr-ink-mid);
+    white-space: nowrap;
+}
+
+.cr-tag__dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--cr-red);
+    flex: none;
+}
+
+.cr-badge {
+    display: inline-block;
+    margin-left: 0.7rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 2px;
+    font-family: var(--cr-sans);
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.cr-badge--closing-soon {
+    background: rgba(219, 74, 43, 0.12);
+    color: var(--cr-red-deep);
+    border: 1px solid rgba(219, 74, 43, 0.3);
+}
+
+.cr-badge--rolling {
+    background: rgba(10, 47, 82, 0.07);
+    color: var(--cr-ink-mid);
+    border: 1px solid var(--cr-rule);
+}
+
+.cr-badge--filled {
+    background: transparent;
+    color: var(--cr-ink-dim);
+    border: 1px solid var(--cr-rule);
+}
+
+/* ════════════════════════════════════════════════════════
+   HERO
+   ════════════════════════════════════════════════════════ */
+
+.cr-hero {
+    position: relative;
+    background: var(--cr-navy);
+    padding-top: clamp(7rem, 13vh, 10rem);
+    padding-bottom: clamp(6rem, 12vh, 9rem);
+    overflow: hidden;
+}
+
+/* A faint vertical light behind the lattice, so the figure sits in a
+   volume rather than on a flat field. */
+.cr-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 55% 45% at 72% 42%, rgba(244, 235, 208, 0.07), transparent 70%),
+        radial-gradient(ellipse 40% 60% at 20% 10%, rgba(219, 74, 43, 0.09), transparent 72%);
+    pointer-events: none;
+}
+
+.cr-hero__inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: var(--cr-shell);
+    margin: 0 auto;
+    padding-inline: var(--cr-gutter);
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    align-items: center;
+    gap: clamp(2rem, 5vw, 4.5rem);
+}
+
+.cr-hero__eyebrow {
+    font-family: var(--cr-sans);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(244, 235, 208, 0.5);
+    margin: 0 0 1.6rem;
+}
+
+.cr-hero__title {
+    font-family: var(--cr-display);
+    font-weight: 400;
+    /* Sized so the longest line ("Join us in building") still fits the copy
+       column at the shell width — see the <br> comment in careers.html. */
+    font-size: clamp(2.35rem, 4.2vw, 3.6rem);
+    line-height: 1.06;
+    letter-spacing: -0.015em;
+    color: var(--cr-cream);
+    margin: 0 0 1.8rem;
+}
+
+.cr-hero__title em {
+    font-style: italic;
+    font-weight: 500;
+    color: #fff;
+}
+
+.cr-hero__lede {
+    font-family: var(--cr-sans);
+    font-size: clamp(0.95rem, 1.2vw, 1.0625rem);
+    font-weight: 300;
+    line-height: 1.72;
+    color: var(--cr-on-navy-body);
+    max-width: 46ch;
+    margin: 0 0 1.1rem;
+}
+
+.cr-hero__lede--tight {
+    color: rgba(244, 235, 208, 0.82);
+    font-weight: 400;
+}
+
+.cr-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 2.4rem;
+}
+
+/* ── The lattice figure ─────────────────────────────────── */
+
+.cr-hero__figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+.cr-lattice {
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    overflow: visible;
+}
+
+.cr-plane__fill {
+    fill: rgba(244, 235, 208, 0.028);
+    stroke: none;
+}
+
+.cr-plane__grid {
+    fill: none;
+    stroke: rgba(244, 235, 208, 0.135);
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
+}
+
+.cr-plane__edge {
+    fill: none;
+    stroke: rgba(244, 235, 208, 0.32);
+    stroke-width: 1.25;
+    vector-effect: non-scaling-stroke;
+}
+
+.cr-thread {
+    fill: none;
+    stroke: rgba(244, 235, 208, 0.22);
+    stroke-width: 1;
+    stroke-dasharray: 3 7;
+    vector-effect: non-scaling-stroke;
+}
+
+.cr-route {
+    fill: none;
+    stroke: var(--cr-red);
+    stroke-width: 2;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+}
+
+.cr-route--faint {
+    stroke: rgba(219, 74, 43, 0.34);
+    stroke-width: 1.4;
+}
+
+.cr-node {
+    fill: var(--cr-navy);
+    stroke: rgba(244, 235, 208, 0.55);
+    stroke-width: 1.25;
+    vector-effect: non-scaling-stroke;
+}
+
+.cr-node--live {
+    fill: var(--cr-red);
+    stroke: rgba(219, 74, 43, 0.28);
+    stroke-width: 5;
+}
+
+.cr-stratum__label {
+    fill: rgba(244, 235, 208, 0.46);
+    font-family: var(--cr-sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.cr-callout__leader {
+    fill: none;
+    stroke: rgba(244, 235, 208, 0.3);
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
+}
+
+.cr-callout__box {
+    fill: rgba(244, 235, 208, 0.05);
+    stroke: rgba(244, 235, 208, 0.26);
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
+}
+
+.cr-callout__text {
+    fill: rgba(244, 235, 208, 0.84);
+    font-family: 'Inter', ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.005em;
+}
+
+/* ── Navy → paper handoff ───────────────────────────────── */
+
+.cr-curve {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    line-height: 0;
+    pointer-events: none;
+}
+
+.cr-curve svg {
+    display: block;
+    width: 100%;
+    height: clamp(48px, 6vw, 92px);
+}
+
+.cr-curve path {
+    fill: var(--cr-paper);
+}
+
+/* ════════════════════════════════════════════════════════
+   TENETS
+   ════════════════════════════════════════════════════════ */
+
+.cr-tenets {
+    background: var(--cr-paper);
+    padding-block: clamp(4.5rem, 9vh, 7rem);
+}
+
+.cr-tenets__grid {
+    list-style: none;
+    margin: 3.2rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--cr-rule);
+    border-block: 1px solid var(--cr-rule);
+}
+
+.cr-tenet {
+    position: relative;
+    background: var(--cr-paper);
+    padding: 2.2rem clamp(1.25rem, 2.2vw, 2rem) 2.4rem;
+}
+
+.cr-tenet__num {
+    display: block;
+    font-family: var(--cr-display);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    color: var(--cr-red);
+    margin-bottom: 1.1rem;
+}
+
+.cr-tenet__title {
+    font-family: var(--cr-display);
+    font-weight: 600;
+    font-size: 1.35rem;
+    line-height: 1.24;
+    color: var(--cr-navy);
+    margin: 0 0 0.85rem;
+}
+
+.cr-tenet__body {
+    font-family: var(--cr-sans);
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.72;
+    color: var(--cr-ink-body);
+    margin: 0;
+}
+
+/* ════════════════════════════════════════════════════════
+   OPEN ROLES
+   ════════════════════════════════════════════════════════ */
+
+.cr-roles {
+    background: var(--cr-paper);
+    padding-block: clamp(3rem, 6vh, 5rem) clamp(4.5rem, 9vh, 7rem);
+    scroll-margin-top: 90px;
+}
+
+.cr-roles__head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.cr-roles__count {
+    font-family: var(--cr-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cr-ink-dim);
+    margin: 0 0 0.4rem;
+    white-space: nowrap;
+}
+
+/* ── Filter pills ───────────────────────────────────────── */
+
+.cr-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 2.4rem 0 0;
+}
+
+.cr-filter {
+    appearance: none;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    padding: 0.55rem 1.05rem;
+    border: 1px solid var(--cr-rule-strong);
+    border-radius: 100px;
+    background: transparent;
+    color: var(--cr-ink-body);
+    font-family: var(--cr-sans);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.cr-filter:hover {
+    border-color: var(--cr-navy);
+    color: var(--cr-navy);
+}
+
+.cr-filter.is-active {
+    background: var(--cr-navy);
+    border-color: var(--cr-navy);
+    color: var(--cr-cream);
+}
+
+.cr-filter__count {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: var(--cr-ink-dim);
+    font-variant-numeric: tabular-nums;
+}
+
+.cr-filter.is-active .cr-filter__count {
+    color: rgba(244, 235, 208, 0.55);
+}
+
+/* ── Role rows ──────────────────────────────────────────── */
+
+.cr-grid {
+    margin-top: 2.6rem;
+    border-top: 1px solid var(--cr-rule);
+}
+
+.cr-role {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: clamp(1.25rem, 4vw, 3rem);
+    padding: clamp(1.6rem, 2.6vw, 2.2rem) clamp(0.5rem, 1.4vw, 1.25rem);
+    border-bottom: 1px solid var(--cr-rule);
+    transition: background-color 0.24s ease;
+}
+
+.cr-role[hidden] {
+    display: none;
+}
+
+.cr-role::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1px;
+    bottom: -1px;
+    width: 2px;
+    background: var(--cr-red);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cr-role:hover {
+    background: rgba(10, 47, 82, 0.025);
+}
+
+.cr-role:hover::before,
+.cr-role:focus-within::before {
+    transform: scaleY(1);
+}
+
+.cr-role__body {
+    min-width: 0;
+}
+
+.cr-role__title {
+    font-family: var(--cr-display);
+    font-weight: 600;
+    font-size: clamp(1.3rem, 2.1vw, 1.6rem);
+    line-height: 1.2;
+    color: var(--cr-navy);
+    margin: 0 0 0.6rem;
+}
+
+.cr-role__title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* The whole row is the click target; the visible "Apply" link is decorative
+   and removed from the tab order so keyboard users get one stop, not two. */
+.cr-role__title a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.cr-role:hover .cr-role__title a,
+.cr-role__title a:focus-visible {
+    color: var(--cr-red);
+}
+
+.cr-role__summary {
+    font-family: var(--cr-sans);
+    font-size: 0.9375rem;
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--cr-ink-body);
+    margin: 0 0 1rem;
+    max-width: 62ch;
+}
+
+.cr-role__meta {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.35rem;
+    margin: 0;
+    padding: 0;
+}
+
+.cr-role__aside {
+    flex: none;
+    padding-top: 0.35rem;
+}
+
+.cr-role__apply {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--cr-sans);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--cr-navy);
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--cr-rule-strong);
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.cr-role__apply-arrow {
+    display: inline-block;
+    transition: transform 0.24s ease;
+}
+
+.cr-role:hover .cr-role__apply {
+    color: var(--cr-red);
+    border-color: var(--cr-red);
+}
+
+.cr-role:hover .cr-role__apply-arrow {
+    transform: translate(2px, -2px);
+}
+
+.cr-grid__empty {
+    font-family: var(--cr-sans);
+    font-size: 0.9375rem;
+    color: var(--cr-ink-mid);
+    padding: 2.5rem 0;
+    margin: 0;
+}
+
+/* ════════════════════════════════════════════════════════
+   PROCESS
+   ════════════════════════════════════════════════════════ */
+
+.cr-process {
+    background: var(--cr-paper);
+    padding-block: clamp(4rem, 8vh, 6.5rem);
+    border-top: 1px solid var(--cr-rule);
+}
+
+.cr-stages {
+    list-style: none;
+    margin: 3rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(1.25rem, 2.6vw, 2.25rem);
+}
+
+.cr-stage {
+    position: relative;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--cr-rule-strong);
+}
+
+/* Dashed connector between stages, matching the flow rails elsewhere. */
+.cr-stage:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: calc(clamp(1.25rem, 2.6vw, 2.25rem) * -1);
+    width: clamp(1.25rem, 2.6vw, 2.25rem);
+    border-top: 1px dashed var(--cr-rule-strong);
+}
+
+.cr-stage__num {
+    display: block;
+    font-family: var(--cr-sans);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    color: var(--cr-red);
+    margin-bottom: 0.9rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.cr-stage__title {
+    font-family: var(--cr-display);
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.25;
+    color: var(--cr-navy);
+    margin: 0 0 0.7rem;
+}
+
+.cr-stage__body {
+    font-family: var(--cr-sans);
+    font-size: 0.84375rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--cr-ink-body);
+    margin: 0;
+}
+
+/* ════════════════════════════════════════════════════════
+   CLOSING
+   ════════════════════════════════════════════════════════ */
+
+.cr-closing {
+    background: var(--cr-paper);
+    padding-block: clamp(4rem, 8vh, 6.5rem);
+    border-top: 1px solid var(--cr-rule);
+}
+
+.cr-closing__inner {
+    max-width: 720px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.cr-closing__body {
+    font-family: var(--cr-sans);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--cr-ink-body);
+    margin: 1.2rem auto 2.2rem;
+    max-width: 58ch;
+}
+
+/* ════════════════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════════════════ */
+
+@media (max-width: 1100px) {
+    .cr-hero__inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 3rem;
+    }
+
+    .cr-hero__copy {
+        max-width: 640px;
+    }
+
+    .cr-hero__lede {
+        max-width: 60ch;
+    }
+
+    .cr-lattice {
+        max-width: 640px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cr-tenets__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cr-stages {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 2.4rem;
+    }
+
+    /* The connector only reads across a full row; drop it on the wrap. */
+    .cr-stage:nth-child(2n)::after {
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+    .cr-hero {
+        padding-top: clamp(6rem, 14vh, 8rem);
+    }
+
+    .cr-tenets__grid,
+    .cr-stages {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cr-stage::after {
+        display: none !important;
+    }
+
+    .cr-role {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .cr-role__aside {
+        padding-top: 0;
+    }
+
+    .cr-roles__head {
+        align-items: flex-start;
+    }
+
+    .cr-hero__actions .cr-btn {
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .cr-lattice {
+        max-width: 100%;
+    }
+
+    .cr-stratum__label {
+        font-size: 13px;
+    }
+
+    .cr-callout__text {
+        font-size: 15px;
+    }
+
+    .cr-role__meta {
+        gap: 0.4rem 0.9rem;
+    }
+}
+
+/* ════════════════════════════════════════════════════════
+   MOTION + CONTRAST PREFERENCES
+   ════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+    html:has(body.careers-page) {
+        scroll-behavior: auto;
+    }
+
+    .careers-page *,
+    .careers-page *::before,
+    .careers-page *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
+@media (forced-colors: active) {
+    .cr-filter.is-active {
+        forced-color-adjust: none;
+        background: Highlight;
+        color: HighlightText;
+    }
+
+    .cr-role {
+        border-bottom: 1px solid CanvasText;
+    }
+
+    .cr-tag__dot {
+        background: CanvasText;
+    }
+}

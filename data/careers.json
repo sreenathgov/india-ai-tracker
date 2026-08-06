@@ -1,0 +1,336 @@
+{
+  "_comment": "Source of truth for the careers surface. data/careers.json -> scripts/generate-careers.js -> dist/careers.html + dist/careers/<slug>/index.html. Validated at build time by scripts/careers/validate.js; malformed data fails the build. Roles reconciled to Core Team Definition v2 (2026-08-06): five seats, Bengaluru, teams Engineering / Knowledge / Trade Practice. Every role carries the same two introspective questions plus one role-specific question.",
+
+  "teams": ["Engineering", "Knowledge", "Trade Practice"],
+
+  "roles": [
+
+    {
+      "slug": "cofounder-cto",
+      "title": "Co-founder & CTO",
+      "team": "Engineering",
+      "location": "Bengaluru",
+      "workMode": "on-site",
+      "employmentType": "full-time",
+      "seniority": "founding",
+      "status": "open",
+      "datePosted": "2026-08-06",
+      "applyBy": null,
+      "timeline": "Four conversations over about six weeks, then a paid architecture review",
+      "summary": "Own DRONA — the compiler that turns regulation into signed, versioned, executable rule packs.",
+
+      "description": "Kanan Labs has a constitution, an enforced type system, a working signing chain over a sealed slice, and a green test suite. It does not yet have a running product. The distance between those two facts is this job.\n\nThat is an unusual starting position and we think it is a good one. The opinionated, easy-to-get-wrong decisions have been made and are enforced in CI. What remains is building, not re-architecting. You will spend the first eighteen months with your hands in the code rather than in a management calendar.\n\nThe hard problems are real and we will not pretend otherwise. Signing coverage is honest over one slice and not yet at scale. Determinism holds until it crosses a hosted vendor boundary. Privacy and data residency have no owner, and the first genuine exporter document that arrives turns that into a legal question rather than an engineering one. The knowledge substrate will not survive two orders of magnitude and everybody here knows it.\n\nA note on what this is not. It is not a management role for at least eighteen months — there is no team yet. It is not a research position; papers are welcome, shipping is the job. And it is not a rebuild. You will disagree with things here, we want that, and there is a written amendment mechanism for exactly that purpose — but if your first instinct on inheriting a system is to replace it, this will not suit either of us.",
+
+      "responsibilities": [
+        "The typed primitive families and the type system that enforces them — including the parts you will decide are wrong.",
+        "The compiler: product-agnostic primitives compiled into signed, versioned, product-aware rule packs that a downstream engine executes.",
+        "Determinism and replay. Byte-identical output from identical inputs, or a written reason why not.",
+        "The signing chain — Ed25519, canonicalisation, hash-chained append-only ledgers — and making the coverage honest rather than partial.",
+        "Privacy and data residency architecture. Currently unowned, and the highest-severity item on the list.",
+        "The knowledge substrate decision, and the retroactive recompilation that has to survive it."
+      ],
+
+      "lookingFor": [
+        "You have maintained a rule base, schema, taxonomy or standard across a real amendment cycle — and can tell us precisely what broke the first time.",
+        "Expert-level Python, and a genuine preference for typed contracts over flexible dictionaries.",
+        "You can explain without prompting why a 99%-accurate non-deterministic component is worse than a 90%-accurate deterministic one in a system whose output must survive an adjudication.",
+        "You have shipped inside a standards-bound regime — FHIR, SNOMED, XBRL, ISO 20022, ONDC or Beckn, PCI — where the specification sat upstream of your opinion and you were fine with that.",
+        "You can hold a boundary you disagree with while you argue properly to change it."
+      ],
+
+      "niceToHave": [
+        "Deontic logic, defeasible reasoning, or any serious exposure to knowledge representation for law.",
+        "LegalRuleML, Akoma Ntoso, Catala, OpenFisca, s(CASP), or the rules-as-code world generally.",
+        "Applied cryptography for evidence — canonicalisation, non-repudiation, replay defence.",
+        "Compiler or intermediate-representation design. Bitemporal data modelling.",
+        "Any familiarity at all with customs, trade or insurance regulation. Genuinely optional — the founder supplies this."
+      ],
+
+      "questions": [
+        {
+          "id": "changed_your_mind",
+          "prompt": "Describe something you were confidently wrong about in your work. What changed your mind, and how long did it take you to accept it?",
+          "hint": "The last part is the one we read closest. \"Immediately\" is rarely true.",
+          "maxLength": 1200,
+          "required": true
+        },
+        {
+          "id": "not_enough_information",
+          "prompt": "Tell us about a time you did not have enough information to decide. What did you actually do — not what you would do now?",
+          "hint": "We are building a system whose job is to say \"unclear\" rather than guess. We are asking whether you do the same.",
+          "maxLength": 1200,
+          "required": true
+        },
+        {
+          "id": "truth_that_expired",
+          "prompt": "Name a system you have worked on where something that was true last year is not true now. How did the system represent that change — and what broke when it did not?",
+          "hint": "Any domain. Prices, permissions, tax rates, schemas, medical codes, entitlements — anything with an effective date.",
+          "maxLength": 1400,
+          "required": true
+        }
+      ]
+    },
+
+    {
+      "slug": "founding-product-engineer",
+      "title": "Founding Product Engineer",
+      "team": "Engineering",
+      "location": "Bengaluru",
+      "workMode": "on-site",
+      "employmentType": "full-time",
+      "seniority": "founding",
+      "status": "open",
+      "datePosted": "2026-08-06",
+      "applyBy": null,
+      "timeline": "Two conversations, then a paid exercise — about three weeks end to end",
+      "summary": "Turn a compiler into a product. Intake, extraction, reconciliation, packets, and the screen a reviewer signs.",
+
+      "description": "There is a compiler that produces signed rule packs, and there is nothing yet that puts one in front of a human being who is about to send a container to Rotterdam. You build that.\n\nConcretely: today the front end renders from a synthetic fixture and makes zero calls to a backend, because there is no service surface for it to call. Your first substantial piece of work is the one that makes the rest of the product possible.\n\nAfter that it is document intake that has to cope with a scanned invoice photographed at an angle, extraction that carries its own provenance, reconciliation that can say exactly which of three documents disagrees, and a reviewer console that a customs broker will trust enough to put their name against.\n\nThis is not a role where you get a specification — you will often be the person who writes it. It is not front-end only and it is not back-end only. And it is not a job for someone who wants a large existing codebase to maintain.",
+
+      "responsibilities": [
+        "The API that does not exist yet — the thin service surface between the compiler and everything downstream.",
+        "Document intake and classification, with \"unknown\" as a first-class outcome rather than a fallback.",
+        "The extraction pipeline. Every field carries its source document, page, bounding box, extractor version and confidence tier — provenance here is structural, not a log line.",
+        "Cross-document reconciliation. Invoice, packing list and bill of lading have to agree, and when they do not the system must say precisely where.",
+        "The evaluator that returns one of four states and never silently defaults to \"fine\".",
+        "The packet engines, and the reviewer console the whole product will be judged on."
+      ],
+
+      "lookingFor": [
+        "You have built something end to end that another person then depended on. We will ask about that thing in detail.",
+        "Python and TypeScript — or clear evidence that you pick up a stack in a fortnight and are not precious about which one.",
+        "You are comfortable wrapping vendor document-AI rather than building OCR, and you understand why that is the right call here.",
+        "You accept a boundary: you consume the ontology, you do not redesign it. Arguing it should change is welcome — through the amendment mechanism, not through a pull request.",
+        "You write things down. This company runs on files."
+      ],
+
+      "niceToHave": [
+        "Document AI — Docling, Azure Document Intelligence, Surya, Marker, or anything in that family.",
+        "Next.js, TypeScript in strict mode, Tailwind, shadcn.",
+        "You have worked somewhere the output had to be defended — finance, healthcare, legal, logistics.",
+        "A public trail of things you have made. A good repository beats a good CV here, and we will read it."
+      ],
+
+      "questions": [
+        {
+          "id": "changed_your_mind",
+          "prompt": "Describe something you were confidently wrong about in your work. What changed your mind, and how long did it take you to accept it?",
+          "hint": "The last part is the one we read closest. \"Immediately\" is rarely true.",
+          "maxLength": 1200,
+          "required": true
+        },
+        {
+          "id": "not_enough_information",
+          "prompt": "Tell us about a time you did not have enough information to decide. What did you actually do — not what you would do now?",
+          "hint": "We are building a system whose job is to say \"unclear\" rather than guess. We are asking whether you do the same.",
+          "maxLength": 1200,
+          "required": true
+        },
+        {
+          "id": "built_against_nothing",
+          "prompt": "Describe a time you had to build against something that did not exist yet — an API, a schema, a decision nobody had made. What did you actually do?",
+          "hint": "We are interested in the workaround, and in what it cost you later.",
+          "maxLength": 1200,
+          "required": true
+        }
+      ]
+    },
+
+    {
+      "slug": "trade-practice-lead",
+      "title": "Trade Practice Lead",
+      "team": "Trade Practice",
+      "location": "Bengaluru — with regular time in the Chennai–Hosur corridor",
+      "workMode": "on-site",
+      "employmentType": "full-time",
+      "seniority": "senior",
+      "status": "open",
+      "datePosted": "2026-08-06",
+      "applyBy": null,
+      "timeline": "One conversation, then a short paid project — about four weeks, part-time",
+      "summary": "The person who knows what actually happens at the customs hall, and makes the software agree with it.",
+
+      "description": "We are building software that tells an exporter whether their shipping bill will survive contact with reality. That claim is worthless unless somebody here has personally watched it fail.\n\nYou are the reason our rules are right rather than merely well-formed. You are also the person a customer talks to when something has gone wrong, and the person a design partner believes.\n\nWe are direct about two things. The first is money: this role pays substantially more than the same work inside a broking firm, fully declared, with equity on top. We would rather say that plainly than play a negotiation game. The second is the corollary — this is not a role where you keep a side practice. We will ask about it directly, because the entire product is an argument about defensibility and we cannot make that argument with a divided book.\n\nThis is not a sales role and there is no quota. If you want a variable-heavy structure this will disappoint you. And it is not a job for someone who has supervised the work without ever having done it.",
+
+      "responsibilities": [
+        "Validating every encoded rule against operational reality — the person who says \"that condition is correct on paper and wrong at the air cargo complex\".",
+        "The delivery backbone. Reviewer workflow, packet acceptance, onboarding, and what happens when a customer writes in at 9pm.",
+        "Design-partner conversations. You will not carry a quota; you will carry credibility.",
+        "The specification for what a packet must contain before an exporter, a broker or an underwriter will accept it.",
+        "Being the internal authority on the operational sequence — what happens, in what order, and whose obligation each step is."
+      ],
+
+      "lookingFor": [
+        "You have filed, or directly supervised the filing of, real shipping bills. Not managed a team that did — done it.",
+        "You can explain why an IGST refund gets stuck, and whose obligation the missing step usually was.",
+        "Tamil. This is a hard requirement — the corridor runs Chennai, Ranipet, Hosur, Krishnagiri and Coimbatore, and English does not get you into the room at plant level.",
+        "A G-card at minimum. Having sat and passed the Regulation 6 examination is a genuine differentiator, whether or not you went on to hold a licence.",
+        "You have been on the digitisation side of this — you chose or rolled out software at a broking firm or forwarder, or you sat on the vendor side implementing it. You are not frightened of a schema.",
+        "You want your income fully on the books. We are explicit about this because the industry is not."
+      ],
+
+      "niceToHave": [
+        "AEO application experience. Having survived a customs on-site audit of your own internal controls is a strong signal.",
+        "Time at a logistics software vendor in implementation, functional consulting or customer success.",
+        "EV components, auto ancillaries, or anything that has made you fight over Chapter 85.",
+        "Marine cargo insurance exposure — broker-side or claims-side.",
+        "Experience with e-SANCHIT, ICEGATE EDI, or a CHA ERP such as Logi-Sys or Trezix."
+      ],
+
+      "questions": [
+        {
+          "id": "changed_your_mind",
+          "prompt": "Describe something you were confidently wrong about in your work. What changed your mind, and how long did it take you to accept it?",
+          "hint": "The last part is the one we read closest. \"Immediately\" is rarely true.",
+          "maxLength": 1200,
+          "required": true
+        },
+        {
+          "id": "not_enough_information",
+          "prompt": "Tell us about a time you did not have enough information to decide. What did you actually do — not what you would do now?",
+          "hint": "We are building a system whose job is to say \"unclear\" rather than guess. We are asking whether you do the same.",
+          "maxLength": 1200,
+          "required": true
+        },
+        {
+          "id": "refund_not_landed",
+          "prompt": "A client's IGST refund still has not landed six weeks after export. Walk us through how you would find out why — naming the systems involved and who owns each step.",
+          "hint": "Be specific. We are more interested in the sequence and the ownership than in the eventual fix.",
+          "maxLength": 1600,
+          "required": true
+        }
+      ]
+    },
+
+    {
+      "slug": "regulatory-knowledge-engineer",
+      "title": "Regulatory Knowledge Engineer",
+      "team": "Knowledge",
+      "location": "Bengaluru",
+      "workMode": "hybrid",
+      "employmentType": "full-time",
+      "seniority": "mid",
+      "status": "open",
+      "datePosted": "2026-08-06",
+      "applyBy": null,
+      "timeline": "A conversation, a three-hour take-home on real regulatory text, then a session where we argue with your answers",
+      "summary": "Turn primary regulation into rules a machine can execute and a tribunal can check.",
+
+      "description": "Somebody has to read the Customs Act, the Foreign Trade Policy, the IRDAI broker regulations and a stack of notifications, and turn what they say into something a computer can evaluate without lying about it. That is this job, and it is harder than it sounds.\n\nThe difficulty is not comprehension. It is discipline — citing the span rather than the document, refusing to smooth over a provision that genuinely cannot be resolved on the facts available, and keeping all of it correct through an amendment cycle. Most people who read law well cannot do this. We are looking for the ones who can.\n\nYou do not need to write code and we will not test you on it. You do need to be comfortable with structure: decision tables, if-then conditions, fields with types, and the idea that a rule without an evidence requirement is not finished.\n\nBackgrounds that work here are wider than the title suggests. Registered patent agents and law graduates from engineering or science backgrounds already draft and interpret at claim-level precision. Analysts from statutory compliance library firms have been decomposing acts into obligations with triggers, periodicity and evidence for years — under a different name. Tax technology and GST content people know exactly what breaks when a notification lands mid-year. XBRL taxonomy work, legal editorial with a house methodology, and trade compliance inside a manufacturer all transfer.\n\nThis is not a policy or advocacy role — you will not be writing about how AI ought to be regulated. It is not litigation, contract drafting or advisory work, and it will not keep your practice warm. And the prestige of your law school is not something we will weigh, because it does not predict the one aptitude we are testing for.",
+
+      "responsibilities": [
+        "Reading primary instruments — never a summary, never a commentary — and emitting typed rule objects with span-level citation.",
+        "Temporal correctness. Effective dates, supersession chains, and what the rule was on the date of a shipment rather than what it is today.",
+        "Evidence requirements. For each obligation: what document, issued by whom, bearing which field, would satisfy an auditor.",
+        "Saying \"unclear\" out loud. When a provision turns on a fact the system will never hold, that has to surface as a state rather than a footnote.",
+        "Keeping the rule base alive across amendments — the part that is invisible when it works and catastrophic when it does not."
+      ],
+
+      "lookingFor": [
+        "You work from primary text. If your instinct on an unfamiliar provision is to find a good summary of it, this is the wrong role.",
+        "You are comfortable with structure — decision tables, if-then conditions, schemas, typed fields.",
+        "You can recognise a provision that is genuinely undecidable on the available facts, and you say so instead of picking.",
+        "You will hold a position under pressure from a founder who disagrees with you. This matters far more than it sounds like it should.",
+        "You are precise in writing. Most of this job is written down."
+      ],
+
+      "niceToHave": [
+        "Registered patent agent, or a law degree taken after an engineering or science degree.",
+        "Time inside a statutory compliance library, a tax technology content team, or a legal publisher's editorial operation.",
+        "XBRL taxonomy work, or any regulatory reporting standard with versioning and effective dates.",
+        "Customs, DGFT, foreign trade policy, SCOMET or marine insurance regulation specifically.",
+        "Any exposure to rules-as-code, decision modelling, or formal knowledge representation."
+      ],
+
+      "questions": [
+        {
+          "id": "changed_your_mind",
+          "prompt": "Describe something you were confidently wrong about in your work. What changed your mind, and how long did it take you to accept it?",
+          "hint": "The last part is the one we read closest. \"Immediately\" is rarely true.",
+          "maxLength": 1200,
+          "required": true
+        },
+        {
+          "id": "not_enough_information",
+          "prompt": "Tell us about a time you did not have enough information to decide. What did you actually do — not what you would do now?",
+          "hint": "We are building a system whose job is to say \"unclear\" rather than guess. We are asking whether you do the same.",
+          "maxLength": 1200,
+          "required": true
+        },
+        {
+          "id": "rule_as_if_then",
+          "prompt": "Take any rule you know well — from any domain, legal or not. Write it as an if-then. Then tell us what you would need to know in order to evaluate it that the rule itself does not tell you.",
+          "hint": "The second half is the real question. Tax, safety standards, a sport, an insurance policy, a company travel policy — anything you know properly.",
+          "maxLength": 1800,
+          "required": true
+        }
+      ]
+    },
+
+    {
+      "slug": "regulatory-systems-engineer",
+      "title": "Regulatory Systems Engineer",
+      "team": "Knowledge",
+      "location": "Bengaluru",
+      "workMode": "hybrid",
+      "employmentType": "full-time",
+      "seniority": "senior",
+      "status": "open",
+      "datePosted": "2026-08-06",
+      "applyBy": null,
+      "timeline": "Two conversations, then a paid exercise on a problem we are currently stuck on",
+      "summary": "Build the machine that notices when the law changes.",
+
+      "description": "Indian trade regulation moves constantly. A RoDTEP rate is halved in February and restored in March. A notification supersedes another notification that amended a third. Nobody sends you an email about it.\n\nYou build the system that watches, diffs, extracts and routes — so that a change in a CBIC circular becomes a machine-readable delta with an owner and a deadline, rather than something a customer discovers at the port.\n\nThis is the asset that compounds. Products can pivot and the wedge can move; a versioned, diffed, obligation-extracted corpus of Indian trade regulation survives all of it and is worth more every month.\n\nOne thing we will say plainly because it comes up: we are not looking for sentiment analysis. Regulation carries obligation, not opinion, and a sentiment score over a CBIC circular is both noise and unauditable. The techniques that matter here are change detection, obligation extraction, applicability mapping, event extraction and temporal reasoning. If you want to argue with that, do — it would be a good conversation.\n\nThis is not a general machine-learning role and it is not a model-training role. And it is not a role where the extraction is done when the demo works.",
+
+      "responsibilities": [
+        "The versioned source register — DGFT notifications, CBIC circulars, tariff notifications, RoDTEP schedules, the Denied Entity List, and the long tail nobody indexes.",
+        "Structural diffing. Not \"this page changed\" but \"this clause changed, in this way, with effect from this date\".",
+        "Obligation extraction — turning prose into actor, modality, action, condition and deadline.",
+        "Applicability mapping. Joining an obligation to a specific customer's HS codes, ports, destinations and scheme participation, so an alert is about them rather than about everyone.",
+        "Event extraction over enforcement and trade news — typed events carrying entity, date, jurisdiction and citation.",
+        "Citation networks and temporal queries. \"What were the rules on the date of this shipment\" is a different question from \"what are the rules\", and only the second one is easy."
+      ],
+
+      "lookingFor": [
+        "You have built ingestion and extraction over documents that were never designed to be parsed, at a scale where you had to care about it.",
+        "Change detection, entity resolution or information extraction somewhere in your history — in production, not in a notebook.",
+        "You understand that provenance is the product. An extracted obligation without a citation and an effective date is worse than no obligation at all.",
+        "You are comfortable with the unglamorous half: source discovery, scrapers that break, PDFs that are images, and the tenth different date format.",
+        "Python, and enough infrastructure sense to run something that has to be right every day rather than once."
+      ],
+
+      "niceToHave": [
+        "Regulatory or legal text specifically — horizon scanning, compliance content, legal publishing, or a regtech product team.",
+        "Knowledge graphs, temporal or bitemporal data modelling.",
+        "Multilingual extraction.",
+        "You have worked somewhere the extraction had to be defended to an auditor."
+      ],
+
+      "questions": [
+        {
+          "id": "changed_your_mind",
+          "prompt": "Describe something you were confidently wrong about in your work. What changed your mind, and how long did it take you to accept it?",
+          "hint": "The last part is the one we read closest. \"Immediately\" is rarely true.",
+          "maxLength": 1200,
+          "required": true
+        },
+        {
+          "id": "not_enough_information",
+          "prompt": "Tell us about a time you did not have enough information to decide. What did you actually do — not what you would do now?",
+          "hint": "We are building a system whose job is to say \"unclear\" rather than guess. We are asking whether you do the same.",
+          "maxLength": 1200,
+          "required": true
+        },
+        {
+          "id": "silent_change",
+          "prompt": "Something you depended on changed and nobody told you. How did you find out, and what did you build afterwards?",
+          "hint": "An API, a schema, a data feed, a regulation, a supplier. We are interested in what you built — and whether it caught the next one.",
+          "maxLength": 1200,
+          "required": true
+        }
+      ]
+    }
+
+  ]
+}

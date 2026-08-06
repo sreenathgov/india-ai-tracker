@@ -1,0 +1,682 @@
+/* ============================================================
+   Careers — role detail page + application form
+   Class prefix: crd-   (requires careers.css for tokens and cr-*)
+   ============================================================ */
+
+/* ════════════════════════════════════════════════════════
+   HEADER BAND
+   ════════════════════════════════════════════════════════ */
+
+.crd-head {
+    position: relative;
+    background: var(--cr-navy);
+    padding-top: clamp(6.5rem, 12vh, 9rem);
+    padding-bottom: clamp(5rem, 10vh, 7.5rem);
+    overflow: hidden;
+}
+
+.crd-head::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 70% at 82% 6%, rgba(219, 74, 43, 0.11), transparent 68%);
+    pointer-events: none;
+}
+
+.crd-head .cr-shell {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+}
+
+.crd-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-family: var(--cr-sans);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--cr-on-navy-dim);
+    text-decoration: none;
+    margin-bottom: 2.4rem;
+    transition: color 0.2s ease;
+}
+
+.crd-back:hover {
+    color: var(--cr-cream);
+}
+
+.crd-back__arrow {
+    display: inline-block;
+    transition: transform 0.22s ease;
+}
+
+.crd-back:hover .crd-back__arrow {
+    transform: translateX(-3px);
+}
+
+.crd-team {
+    font-family: var(--cr-sans);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cr-red);
+    margin: 0 0 1rem;
+}
+
+/* The status badge inherits the listing's palette but sits on navy here. */
+.crd-team .cr-badge--closing-soon {
+    background: rgba(219, 74, 43, 0.18);
+    color: #f6b8a6;
+    border-color: rgba(219, 74, 43, 0.45);
+}
+
+.crd-team .cr-badge--rolling,
+.crd-team .cr-badge--filled {
+    background: rgba(244, 235, 208, 0.07);
+    color: var(--cr-on-navy-dim);
+    border-color: var(--cr-on-navy-rule);
+}
+
+.crd-title {
+    font-family: var(--cr-display);
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+    line-height: 1.08;
+    letter-spacing: -0.012em;
+    color: var(--cr-cream);
+    margin: 0 0 1.7rem;
+    max-width: 20ch;
+}
+
+.crd-meta {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.crd-meta .cr-tag {
+    color: var(--cr-on-navy-body);
+}
+
+.crd-head__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    margin-top: 2.4rem;
+}
+
+.crd-head__timeline {
+    font-family: var(--cr-sans);
+    font-size: 0.8125rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--cr-on-navy-dim);
+    margin: 0;
+    max-width: 44ch;
+}
+
+/* ════════════════════════════════════════════════════════
+   JOB DESCRIPTION
+   ════════════════════════════════════════════════════════ */
+
+.crd-body {
+    background: var(--cr-paper);
+    padding-block: clamp(3.5rem, 7vh, 5.5rem) clamp(4rem, 8vh, 6rem);
+}
+
+.crd-body__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+    align-items: start;
+    max-width: 1080px;
+}
+
+.crd-jd {
+    min-width: 0;
+}
+
+.crd-block + .crd-block {
+    margin-top: clamp(2.5rem, 4.5vh, 3.5rem);
+}
+
+.crd-block__title {
+    font-family: var(--cr-display);
+    font-weight: 600;
+    font-size: clamp(1.35rem, 2.3vw, 1.7rem);
+    line-height: 1.2;
+    color: var(--cr-navy);
+    margin: 0 0 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--cr-rule);
+}
+
+.crd-block p {
+    font-family: var(--cr-sans);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.78;
+    color: var(--cr-ink-body);
+    margin: 0 0 1.1rem;
+    max-width: 68ch;
+}
+
+.crd-block p:last-child {
+    margin-bottom: 0;
+}
+
+.crd-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 68ch;
+}
+
+.crd-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    font-family: var(--cr-sans);
+    font-size: 0.9375rem;
+    font-weight: 300;
+    line-height: 1.72;
+    color: var(--cr-ink-body);
+}
+
+.crd-list li + li {
+    margin-top: 0.85rem;
+}
+
+.crd-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.68em;
+    width: 6px;
+    height: 1px;
+    background: var(--cr-red);
+}
+
+/* ── Sticky summary rail ────────────────────────────────── */
+
+.crd-rail {
+    position: sticky;
+    top: 96px;
+    border: 1px solid var(--cr-rule);
+    background: rgba(255, 255, 255, 0.55);
+    padding: 1.6rem 1.5rem 1.5rem;
+}
+
+.crd-rail__list {
+    margin: 0 0 1.4rem;
+}
+
+.crd-rail__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.2rem;
+    padding-block: 0.7rem;
+}
+
+.crd-rail__row + .crd-rail__row {
+    border-top: 1px solid var(--cr-rule);
+}
+
+.crd-rail__row dt {
+    font-family: var(--cr-sans);
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cr-ink-dim);
+}
+
+.crd-rail__row dd {
+    margin: 0;
+    font-family: var(--cr-sans);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--cr-ink);
+}
+
+/* ════════════════════════════════════════════════════════
+   APPLICATION
+   ════════════════════════════════════════════════════════ */
+
+.crd-apply {
+    background: var(--cr-navy);
+    padding-block: clamp(4rem, 8vh, 6.5rem);
+    scroll-margin-top: 80px;
+}
+
+.crd-apply .cr-shell {
+    max-width: 860px;
+}
+
+.crd-apply__card {
+    background: rgba(244, 235, 208, 0.045);
+    border: 1px solid var(--cr-on-navy-rule);
+    border-radius: 3px;
+    padding: clamp(1.75rem, 4vw, 3rem);
+}
+
+.crd-apply__heading {
+    margin-bottom: 2.4rem;
+    padding-bottom: 1.8rem;
+    border-bottom: 1px solid var(--cr-on-navy-rule);
+}
+
+.crd-apply__heading h2 {
+    font-family: var(--cr-display);
+    font-weight: 500;
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    line-height: 1.15;
+    color: var(--cr-cream);
+    margin: 0 0 0.9rem;
+}
+
+.crd-apply__heading p {
+    font-family: var(--cr-sans);
+    font-size: 0.9375rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--cr-on-navy-body);
+    margin: 0;
+    max-width: 56ch;
+}
+
+/* ── Fields ─────────────────────────────────────────────── */
+
+.crd-form__row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.crd-field {
+    margin-bottom: 1.5rem;
+}
+
+.crd-form__row .crd-field {
+    margin-bottom: 0;
+}
+
+.crd-form__row + .crd-form__row,
+.crd-form__row + .crd-field {
+    margin-top: 1.5rem;
+}
+
+.crd-field label {
+    display: block;
+    font-family: var(--cr-sans);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--cr-on-navy);
+    margin-bottom: 0.55rem;
+    line-height: 1.5;
+}
+
+.crd-field label span {
+    font-weight: 400;
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cr-on-navy-dim);
+    margin-left: 0.4rem;
+}
+
+.crd-field input[type="text"],
+.crd-field input[type="email"],
+.crd-field input[type="url"],
+.crd-field textarea {
+    width: 100%;
+    padding: 0.8rem 0.95rem;
+    background: rgba(6, 31, 56, 0.55);
+    border: 1px solid var(--cr-on-navy-rule);
+    border-radius: 2px;
+    color: var(--cr-cream);
+    font-family: var(--cr-sans);
+    font-size: 0.9375rem;
+    font-weight: 300;
+    line-height: 1.6;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.crd-field textarea {
+    resize: vertical;
+    min-height: 7.5rem;
+}
+
+.crd-field input::placeholder,
+.crd-field textarea::placeholder {
+    color: rgba(244, 235, 208, 0.28);
+}
+
+.crd-field input:focus,
+.crd-field textarea:focus {
+    outline: none;
+    border-color: rgba(219, 74, 43, 0.7);
+    box-shadow: 0 0 0 3px rgba(219, 74, 43, 0.16);
+}
+
+.crd-field input[type="file"] {
+    width: 100%;
+    font-family: var(--cr-sans);
+    font-size: 0.8125rem;
+    color: var(--cr-on-navy-body);
+}
+
+.crd-field input[type="file"]::file-selector-button {
+    margin-right: 0.9rem;
+    padding: 0.55rem 1rem;
+    background: transparent;
+    border: 1px solid var(--cr-on-navy-rule);
+    border-radius: 2px;
+    color: var(--cr-on-navy);
+    font-family: var(--cr-sans);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.crd-field input[type="file"]::file-selector-button:hover {
+    border-color: rgba(244, 235, 208, 0.5);
+    background: rgba(244, 235, 208, 0.06);
+}
+
+.crd-field.has-error input,
+.crd-field.has-error textarea {
+    border-color: rgba(219, 74, 43, 0.85);
+}
+
+.crd-field__hint {
+    font-family: var(--cr-sans);
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--cr-on-navy-dim);
+    margin: 0.5rem 0 0;
+}
+
+.crd-field__error {
+    font-family: var(--cr-sans);
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #f0917a;
+    margin: 0.45rem 0 0;
+    min-height: 0;
+}
+
+.crd-field__error:empty {
+    display: none;
+}
+
+.crd-field__counter {
+    font-family: var(--cr-sans);
+    font-size: 0.6875rem;
+    font-weight: 400;
+    color: var(--cr-on-navy-dim);
+    text-align: right;
+    margin: 0.4rem 0 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.crd-field__counter.is-near-limit {
+    color: #f0917a;
+}
+
+/* ── Screening questions ────────────────────────────────── */
+
+.crd-questions {
+    margin-top: 2.2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--cr-on-navy-rule);
+}
+
+.crd-questions__label {
+    font-family: var(--cr-sans);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cr-red);
+    margin: 0 0 1.6rem;
+}
+
+.crd-field--question label {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.65;
+    max-width: 62ch;
+}
+
+/* ── Honeypot: off-screen but not display:none, or browsers
+   skip it and bots that read the DOM still see nothing odd. ── */
+
+.crd-honeypot {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ── Submit + status ────────────────────────────────────── */
+
+.crd-form__error {
+    font-family: var(--cr-sans);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #f0917a;
+    margin: 0 0 1.2rem;
+}
+
+.crd-form__error:empty {
+    display: none;
+}
+
+.crd-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.95rem 1.9rem;
+    background: var(--cr-red);
+    border: 1px solid var(--cr-red);
+    border-radius: 2px;
+    color: #fff;
+    font-family: var(--cr-sans);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.22s ease, opacity 0.22s ease;
+}
+
+.crd-submit:hover:not(:disabled) {
+    background: var(--cr-red-deep);
+    border-color: var(--cr-red-deep);
+}
+
+.crd-submit:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.crd-submit:focus-visible {
+    outline: 2px solid var(--cr-cream);
+    outline-offset: 3px;
+}
+
+.crd-submit__arrow {
+    transition: transform 0.22s ease;
+}
+
+.crd-submit:hover:not(:disabled) .crd-submit__arrow {
+    transform: translateX(3px);
+}
+
+.crd-form__privacy {
+    font-family: var(--cr-sans);
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--cr-on-navy-dim);
+    margin: 1.4rem 0 0;
+    max-width: 52ch;
+}
+
+.crd-form__privacy a {
+    color: var(--cr-on-navy-body);
+    text-underline-offset: 3px;
+}
+
+/* ── Success + closed states ────────────────────────────── */
+
+.crd-success,
+.crd-closed {
+    text-align: center;
+    padding-block: 1rem 0.5rem;
+}
+
+.crd-success:focus {
+    outline: none;
+}
+
+.crd-success__kicker,
+.crd-closed__kicker {
+    font-family: var(--cr-sans);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cr-red);
+    margin: 0 0 1rem;
+}
+
+.crd-success h2 {
+    font-family: var(--cr-display);
+    font-weight: 500;
+    font-size: clamp(1.7rem, 3.2vw, 2.3rem);
+    color: var(--cr-cream);
+    margin: 0 0 1rem;
+}
+
+.crd-success p,
+.crd-closed p {
+    font-family: var(--cr-sans);
+    font-size: 0.9375rem;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--cr-on-navy-body);
+    margin: 0 auto 1.6rem;
+    max-width: 46ch;
+}
+
+.crd-success a,
+.crd-closed a {
+    font-family: var(--cr-sans);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--cr-cream);
+    text-decoration: none;
+    border-bottom: 1px solid var(--cr-on-navy-rule);
+    padding-bottom: 2px;
+    transition: border-color 0.2s ease;
+}
+
+.crd-success a:hover,
+.crd-closed a:hover {
+    border-color: var(--cr-cream);
+}
+
+/* ════════════════════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+    .crd-body__inner {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* Sticky is meaningless once the rail is stacked above the JD. */
+    .crd-rail {
+        position: static;
+        order: -1;
+    }
+
+    .crd-rail__list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 1.5rem;
+    }
+
+    .crd-rail__row + .crd-rail__row {
+        border-top: none;
+    }
+
+    .crd-rail__row {
+        border-bottom: 1px solid var(--cr-rule);
+    }
+}
+
+@media (max-width: 720px) {
+    .crd-form__row {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .crd-form__row .crd-field + .crd-field {
+        margin-top: 1.5rem;
+    }
+
+    .crd-head__actions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .crd-head__actions .cr-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .crd-submit {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .crd-rail__list {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .crd-title {
+        max-width: none;
+    }
+}
+
+@media (forced-colors: active) {
+    .crd-apply__card,
+    .crd-rail {
+        border: 1px solid CanvasText;
+    }
+
+    .crd-field input,
+    .crd-field textarea {
+        border: 1px solid CanvasText;
+    }
+}

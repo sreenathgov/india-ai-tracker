@@ -19,6 +19,9 @@ const staticRoutes = [
   { path: '/resources.html',     file: 'resources.html',     priority: '0.8', changefreq: 'weekly'  },
   { path: '/privacy-policy.html',file: 'privacy-policy.html',priority: '0.3', changefreq: 'yearly'  },
   { path: '/disclaimers.html',   file: 'disclaimers.html',   priority: '0.3', changefreq: 'yearly'  },
+  // lastmod tracks data/careers.json rather than the careers.html template:
+  // the template is static scaffolding, the data is what actually changes.
+  { path: '/careers.html',       file: 'data/careers.json',  priority: '0.8', changefreq: 'weekly'  },
   // PDFs are indexable documents in their own right. This one is listed on the
   // Resources catalog but had no sitemap entry, leaving it discoverable only by
   // a crawler that follows the catalog link.
@@ -119,6 +122,30 @@ function generateSitemap() {
     // No manifest yet — publications simply aren't listed
   }
 
+  // 5. Add careers role pages (from data/careers.json — the same source
+  //    generate-careers.js reads, so the sitemap cannot drift from the pages).
+  //    'filled' roles are excluded: they render noindex and carry no JobPosting.
+  let careerCount = 0;
+  try {
+    const careersData = JSON.parse(
+      fs.readFileSync(path.join(PROJECT_ROOT, 'data', 'careers.json'), 'utf-8'));
+    const careersLastmod = fileLastmod('data/careers.json', currentDate);
+    (careersData.roles || [])
+      .filter(role => role.status !== 'filled')
+      .forEach(role => {
+        xml += `
+  <url>
+    <loc>${BASE_URL}/careers/${role.slug}/</loc>
+    <lastmod>${careersLastmod}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>`;
+        careerCount++;
+      });
+  } catch (_) {
+    // No careers data — role pages simply aren't listed
+  }
+
   xml += `
 </urlset>`;
 
@@ -137,6 +164,7 @@ function generateSitemap() {
   console.log(`   - Dynamic jurisdiction routes: ${canonicalJurisdictions.length}`);
   console.log(`   - Publication routes: ${publicationCount}`);
   console.log(`   - Cluster hub routes: ${hubCount}`);
+  console.log(`   - Careers role routes: ${careerCount}`);
 }
 
 generateSitemap();

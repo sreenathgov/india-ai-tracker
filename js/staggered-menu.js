@@ -951,7 +951,7 @@ document.addEventListener('DOMContentLoaded', function () {
       { label: 'SectorWatch', ariaLabel: 'View SectorWatch platform', link: 'sector-watch.html' },
       { label: 'Resources', ariaLabel: 'Browse resources', link: 'resources.html' },
       { label: 'About', ariaLabel: 'Learn about Kanan Labs', link: 'about.html' },
-      { label: 'Team', ariaLabel: 'Meet the founder', link: 'team.html' }
+      { label: 'Careers', ariaLabel: 'See open roles at Kanan Labs', link: 'careers.html' }
     ],
     socialItems: [
       { label: 'LinkedIn', link: 'https://www.linkedin.com/in/sreenathgovindarajan' },

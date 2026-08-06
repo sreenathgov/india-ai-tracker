@@ -10,8 +10,8 @@
     "build:text-pressure": "vite build",
     "build:scroll-reveal": "vite build --config vite.config.scroll-reveal.js",
     "dev:text-pressure": "vite build --watch",
-    "build": "node scripts/build-full-site.js && node scripts/generate-static-pages.js && node scripts/generate-publications.js && node scripts/generate-sitemap.js",
-    "build:publications": "node scripts/generate-publications.js && node scripts/generate-sitemap.js",
+    "build": "node scripts/build-full-site.js && node scripts/generate-static-pages.js && node scripts/generate-publications.js && node scripts/generate-careers.js && node scripts/generate-sitemap.js",
+    "build:publications": "node scripts/generate-publications.js && node scripts/generate-careers.js && node scripts/generate-sitemap.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
