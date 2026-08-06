@@ -1,7 +1,28 @@
 {
   "state": "KL",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 13,
+        "title": "ARISE hubs to come up in high schools in Kerala: Minister",
+        "url": "https://www.thehindu.com/news/national/kerala/arise-hubs-to-come-up-in-high-schools-in-kerala-minister/article71310568.ece",
+        "summary": "Kerala will establish ARISE hubs in high schools to promote AI and robotics in education. These hubs aim to expand the possibilities of AI and robotics in learning and experimentation. The initiative is part of the AI & Robotics Initiative for School Education.",
+        "date_published": "2026-08-05",
+        "source_name": "The Hindu - Kerala",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [
       {
         "id": 31,

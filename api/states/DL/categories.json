@@ -3,6 +3,51 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 4,
+        "title": "Personal assistance startup Hulp secures $2.6 Mn seed funding",
+        "url": "https://entrackr.com/snippets/personal-assistance-startup-hulp-secures-26-mn-seed-funding-12230169",
+        "summary": "Hulp, a personal assistance and concierge platform, has raised $2.6 million in seed funding co-led by Sparrow Capital and BITKRAFT Ventures. The funding will be used to expand AI workflows, strengthen the senior leadership team, and enhance technology and product capabilities. Founded in April this year, Hulp aims to utilize the funds to drive growth and development.",
+        "date_published": "2026-08-05",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "MH",
+          "KA",
+          "TN",
+          "TG",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "UP cabinet clears deep-tech centres in Lucknow, Noida",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/up-cabinet-clears-deep-tech-centres-in-lucknow-noida/132898691",
+        "summary": "The UP cabinet has approved the establishment of deep-tech centres in Lucknow and Noida. The Noida hub, located on the IIT Kanpur Noida campus, will focus on areas such as quantum computing, semiconductor design, and biotechnology. The centre will cover a range of technologies, including AI, robotics, and defence technology, across a two-acre area.",
+        "date_published": "2026-08-05",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Punjab becomes first state to introduce AI as mainstream subject from classes 1-12: Harjot Singh Bains",
         "url": "https://www.tribuneindia.com/news/punjab/punjab-becomes-first-state-to-introduce-ai-as-mainstream-subject-from-classes-1-12-bains",
@@ -4211,7 +4256,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
