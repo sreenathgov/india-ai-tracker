@@ -1354,10 +1354,70 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "India may see productivity gains from AI, says Nilekani",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-may-see-productivity-gains-from-ai-says-nilekani/133020441",
+        "summary": "Nandan Nilekani predicts India will become a leader in applied artificial intelligence, driving productivity and inclusivity for its citizens. This shift is expected to impact large corporations, potentially leading to a rise in solo ventures and smaller enterprises. India may emerge as the world's AI use case hub, fostering economic transformation and new opportunities.",
+        "date_published": "2026-08-07",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India’s healthcare AI race isn’t about bigger models. It’s about better diagnostics",
+        "url": "https://yourstory.com/2026/08/indias-healthcare-ai-race-isnt-about-bigger-models-its-about-better-diagnostics",
+        "summary": "India's healthcare AI focus is shifting towards improving diagnostics rather than developing larger models. AI is expected to have a significant impact on the future of medicine, but its most valuable contribution will be beyond replacing doctors or automating clinical decisions. The technology aims to enhance medical capabilities, rather than substitute human professionals.",
+        "date_published": "2026-08-07",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Freshworks turns profitable in Q2; Navigating the AI shift",
         "url": "https://yourstory.com/2026/08/freshworks-turns-profitable-in-q2",
         "summary": "Freshworks reported a revenue increase to $237.4 million in Q2, up from $204.7 million in the same period last year. The company has also achieved profitability, marking a significant milestone. This growth comes as Freshworks navigates the shift towards AI integration.",
+        "date_published": "2026-08-06",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Large firms to be net job losers, small businesses to drive employment: Nandan Nilekani",
+        "url": "https://yourstory.com/2026/08/large-firms-net-job-losers-small-businesses-drive-employment-nandan-nilekani",
+        "summary": "Nandan Nilekani predicts that large firms will experience net job losses, while small businesses will drive employment growth. He believes the future of the Indian economy relies on its numerous small businesses, which are more resilient to AI disruptions. Small businesses are expected to be the primary drivers of employment due to their adaptability.",
         "date_published": "2026-08-06",
         "source_name": "YourStory",
         "category": "Major AI Developments",
@@ -15170,7 +15230,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

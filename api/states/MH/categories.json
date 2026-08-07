@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 7,
+        "title": "Maharashtra clears ₹11.26 cr Sarvam AI deployment for govt departments",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/maharashtra-clears-11-26-cr-sarvam-ai-deployment-for-govt-departments/133022514",
+        "summary": "The Maharashtra government has approved the deployment of Sarvam AI for its departments at a cost of ₹11.26 crore. The agreement includes a discounted subscription rate of ₹1,200 per user per month for the first 12 months. This rate is half of the standard rate of ₹2,500 per user per month.",
+        "date_published": "2026-08-07",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Personal assistance startup Hulp secures $2.6 Mn seed funding",
         "url": "https://entrackr.com/snippets/personal-assistance-startup-hulp-secures-26-mn-seed-funding-12230169",
@@ -2106,6 +2126,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "Piper Serica announces Rs 300 Cr first close for Bharat Tech Fund",
+        "url": "https://entrackr.com/snippets/piper-serica-announces-rs-300-cr-first-close-for-bharat-tech-fund-12236351",
+        "summary": "Piper Serica, a Mumbai-based asset manager, has announced the first close of its Bharat Tech Fund at Rs 300 crore, 45 days after its launch. The fund, which focuses on Indian startups in sectors like semiconductors and spacetech, aims to back companies developing globally competitive technologies. Nearly 50% of the commitments came from existing investors in Piper Serica's Fund I.",
+        "date_published": "2026-08-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Tractor Junction gets RBI licence to launch NBFC arm Dhanrise Finance",
         "url": "https://entrackr.com/snippets/tractor-junction-gets-rbi-licence-to-launch-nbfc-arm-dhanrise-finance-12225871",
@@ -2622,5 +2662,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

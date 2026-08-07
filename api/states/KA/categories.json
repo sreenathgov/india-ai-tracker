@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 11,
+        "title": "Karnataka explores partnership with Anthropic for governance, skilling and deep-tech growth",
+        "url": "https://www.thehindu.com/news/national/karnataka/karnataka-explores-partnership-with-anthropic-for-governance-skilling-and-deep-tech-growth/article71312525.ece",
+        "summary": "Karnataka is exploring a partnership with Anthropic to leverage AI for governance, skilling, and deep-tech growth. The state's Chief Minister, D.K. Shivakumar, has sought Anthropic's expertise in using AI to reduce fraud in government systems. The partnership also aims to improve the security and confidentiality of examination question papers set by government agencies and educational institutions.",
+        "date_published": "2026-08-06",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Personal assistance startup Hulp secures $2.6 Mn seed funding",
         "url": "https://entrackr.com/snippets/personal-assistance-startup-hulp-secures-26-mn-seed-funding-12230169",
@@ -450,6 +470,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "Open-weight AI models widen startup choice: OpenAI’s Manara",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/open-weight-ai-models-widen-startup-choice-openais-manara/articleshow/133014226.cms",
+        "summary": "OpenAI's Manara states that open-weight AI models are expanding options for startups. This development allows startups to choose from a wider range of AI models, increasing their accessibility and potential applications. Open-weight AI models provide an alternative to traditional models, offering more flexibility and customization for businesses.",
+        "date_published": "2026-08-07",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "How can AI reduce fraud in govt systems: DKS asks Anthropic",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/how-can-ai-reduce-fraud-in-govt-systems-dks-asks-anthropic/articleshow/133014246.cms",
+        "summary": "DKS has inquired about the potential of AI in reducing fraud in government systems, posing the question to Anthropic. The inquiry aims to explore how AI can be utilized to prevent fraudulent activities within government systems. Anthropic is expected to provide insights on the application of AI in fraud reduction.",
+        "date_published": "2026-08-07",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Aramco Ventures leads $9.5 Mn funding in climate tech startup Mitti Labs",
         "url": "https://entrackr.com/snippets/aramco-ventures-leads-95-mn-funding-in-climate-tech-startup-mitti-labs-12234526",
@@ -478,6 +538,26 @@
         "summary": "Researchers in Bengaluru, India, are developing an AI-powered breath test and nanotherapy to combat diabetes and cancer. The innovative technologies, showcased at India Nano 2026, offer new hope in the fight against these diseases. The AI breath test and nanotherapy aim to provide more effective and non-invasive diagnostic and treatment options.",
         "date_published": "2026-08-06",
         "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Karnataka eyes Anthropic tie-up to expand AI across public service",
+        "url": "https://yourstory.com/2026/08/karnataka-anthropic-ai-governance-skilling-ai-university",
+        "summary": "Karnataka is considering a long-term partnership with Anthropic to enhance governance and expand AI adoption. The collaboration aims to launch AI skilling programs and establish an AI University. This initiative is part of Karnataka's effort to improve public services through artificial intelligence.",
+        "date_published": "2026-08-06",
+        "source_name": "YourStory",
         "category": "Major AI Developments",
         "state_codes": [
           "KA"
@@ -5183,7 +5263,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

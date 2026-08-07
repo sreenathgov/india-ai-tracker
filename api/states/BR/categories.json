@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 8,
+        "title": "Bihar CM launches AI training for legislators",
+        "url": "https://cellit.in/bihar-cm-launches-ai-training-for-legislators/",
+        "summary": "Bihar's Chief Minister has launched an AI training program for state legislators. The initiative aims to enhance their skills and knowledge in artificial intelligence. This move is expected to help the lawmakers make informed decisions on AI-related policies and projects.",
+        "date_published": "2026-08-07",
+        "source_name": "CellIt Magazine",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "It’s ‘encounter raj’ in state now, alleges Dipankar",
         "url": "https://timesofindia.indiatimes.com/city/patna/its-encounter-raj-in-state-now-alleges-dipankar/articleshow/131284596.cms",
@@ -506,5 +526,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }
