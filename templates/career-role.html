@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="/css/styles-v2.css?v=21">
     <link rel="stylesheet" href="/css/staggered-menu.css">
     <link rel="stylesheet" href="/css/footer.css?v=3">
-    <link rel="stylesheet" href="/css/careers.css?v=1">
+    <link rel="stylesheet" href="/css/careers.css?v=4">
     <link rel="stylesheet" href="/css/careers-role.css?v=1">
 
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -137,7 +137,7 @@
                 <div class="crd-apply__heading" id="applyHeading">
                     <p class="cr-kicker cr-kicker--light">Application</p>
                     <h2 id="crd-apply-title">Apply &mdash; {{ROLE_TITLE}}</h2>
-                    <p>Twenty minutes. The written answers carry more weight than the CV, so give them the time.</p>
+                    <p>This takes about twenty minutes. The written answers carry more weight than the CV, so please give them the time.</p>
                 </div>
 
                 <form id="applyForm" class="crd-form" novalidate
@@ -186,7 +186,7 @@
                     <div class="crd-field">
                         <label for="ap-cv-url">Link to your CV <span>Optional</span></label>
                         <input id="ap-cv-url" name="cvUrl" type="url" inputmode="url" maxlength="300" placeholder="https://">
-                        <p class="crd-field__hint">A link is easier for us than an attachment &mdash; Drive, Dropbox, or your own site.</p>
+                        <p class="crd-field__hint">A link is easier for us to handle than an attachment &mdash; Drive, Dropbox, or your own site.</p>
                         <p class="crd-field__error" id="ap-cv-url-error"></p>
                     </div>
 
@@ -198,7 +198,7 @@
                     </div>
 
                     <div class="crd-questions">
-                        <p class="crd-questions__label">A few questions</p>
+                        <p class="crd-questions__label">Written questions</p>
                         {{QUESTIONS_HTML}}
                     </div>
 
@@ -215,7 +215,7 @@
                     </button>
 
                     <p class="crd-form__privacy">
-                        We use what you send here only to assess this application. See our
+                        We use the information you provide here solely to assess this application. See our
                         <a href="/privacy-policy.html">privacy policy</a>.
                     </p>
                 </form>
@@ -223,7 +223,7 @@
                 <div class="crd-success" id="applySuccess" role="status" tabindex="-1" hidden>
                     <p class="crd-success__kicker">Application received</p>
                     <h2>Thank you.</h2>
-                    <p>A person will read this properly and reply within a week, either way.</p>
+                    <p>A member of the team will read your application and reply within a week, either way.</p>
                     <a href="/careers.html">Back to open roles</a>
                 </div>
 
@@ -306,7 +306,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script defer src="/js/careers-apply.js?v=1"></script>
+    <script defer src="/js/careers-apply.js?v=2"></script>
     <!-- Staggered menu requires gsap (loaded with defer in head); defer guarantees order -->
     <script defer src="/js/staggered-menu.js?v=5"></script>
 </body>

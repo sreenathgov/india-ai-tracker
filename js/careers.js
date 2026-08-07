@@ -101,6 +101,47 @@
     // -----------------------------------------------------------------------
 
     /**
+     * Lay a short travelling dash over each bright route, so the corridors read
+     * as carrying traffic rather than as static decoration.
+     *
+     * A clone rather than re-dashing the original, so the route stays fully
+     * drawn underneath the pulse. Implemented as a dash offset rather than with
+     * MotionPathPlugin — that is a separate GSAP file the page does not load,
+     * and this needs no new dependency.
+     *
+     * Called only from animateHero(), which returns early under
+     * prefers-reduced-motion, so these elements never enter the DOM there.
+     */
+    function pulseRoutes(gsap, svg) {
+        var DASH = 18;
+        var routes = svg.querySelectorAll('.cr-route:not(.cr-route--faint)');
+
+        Array.prototype.forEach.call(routes, function (route, i) {
+            var length = typeof route.getTotalLength === 'function'
+                ? route.getTotalLength()
+                : 0;
+            if (length <= DASH) return;
+
+            var pulse = route.cloneNode(false);
+            pulse.setAttribute('class', 'cr-route__pulse');
+            route.parentNode.insertBefore(pulse, route.nextSibling);
+
+            gsap.set(pulse, {
+                strokeDasharray: DASH + ' ' + (length - DASH),
+                strokeDashoffset: 0
+            });
+            gsap.to(pulse, {
+                strokeDashoffset: -length,
+                duration: 2.6,
+                repeat: -1,
+                ease: 'none',
+                // Start once the intro draw-on has settled.
+                delay: 1.6 + i * 0.6
+            });
+        });
+    }
+
+    /**
      * NOTE: nothing here animates a transform on `.cr-stratum`. Two of the
      * three strata carry a `transform="translate(...)"` attribute, and a CSS
      * transform on an SVG element replaces the attribute rather than composing
@@ -112,17 +153,14 @@
         if (reduced || !gsap || !svg) return;
 
         var strata = svg.querySelectorAll('.cr-stratum');
-        var labels = svg.querySelectorAll('.cr-stratum__label');
         var threads = svg.querySelectorAll('.cr-thread');
         var routes = svg.querySelectorAll('.cr-route');
         var nodes = svg.querySelectorAll('.cr-node');
         var liveNodes = svg.querySelectorAll('.cr-node--live');
-        var callouts = svg.querySelectorAll('.cr-callout');
 
         var tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
 
         tl.from(strata, { opacity: 0, duration: 0.85, stagger: 0.16 }, 0)
-            .from(labels, { opacity: 0, duration: 0.6, stagger: 0.14 }, 0.35)
             .from(threads, { opacity: 0, duration: 0.7, stagger: 0.09 }, 0.55);
 
         // Draw each route on. getTotalLength is the only reliable way to get a
@@ -147,8 +185,9 @@
             transformOrigin: 'center center',
             duration: 0.45,
             stagger: 0.045
-        }, 0.95)
-            .from(callouts, { opacity: 0, x: 20, duration: 0.7, stagger: 0.15 }, 1.35);
+        }, 0.95);
+
+        pulseRoutes(gsap, svg);
 
         // Radar ping on the live nodes, once the intro has settled.
         Array.prototype.forEach.call(liveNodes, function (node, i) {
@@ -174,7 +213,6 @@
         gsap.registerPlugin(window.ScrollTrigger);
 
         var groups = [
-            { selector: '.cr-tenet', stagger: 0.12 },
             { selector: '.cr-role', stagger: 0.08 },
             { selector: '.cr-stage', stagger: 0.1 }
         ];

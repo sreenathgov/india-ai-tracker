@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="css/staggered-menu.css">
     <link rel="stylesheet" href="css/footer.css?v=3">
     <link rel="stylesheet" href="css/contact-panel.css?v=1">
-    <link rel="stylesheet" href="css/careers.css?v=1">
+    <link rel="stylesheet" href="css/careers.css?v=4">
 
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -72,13 +72,6 @@
                 </h1>
 
                 <p class="cr-hero__lede">
-                    Every container that crosses a border is governed by a stack of rules no single
-                    person holds in their head &mdash; tariff lines, origin criteria, licensing
-                    conditions, each with a citation and an effective date. We are building the
-                    system that does hold them, reasons over them, and can always show its working.
-                </p>
-
-                <p class="cr-hero__lede cr-hero__lede--tight">
                     It is a small team, early, and the problems are unreasonably interesting.
                 </p>
 
@@ -87,21 +80,23 @@
                         <span>See open roles</span>
                         <span class="cr-btn__arrow" aria-hidden="true">&#8595;</span>
                     </a>
-                    <a class="cr-btn cr-btn--ghost" href="about.html">
-                        <span>What we&rsquo;re building</span>
-                        <span class="cr-btn__arrow" aria-hidden="true">&#8594;</span>
-                    </a>
                 </div>
             </div>
 
             <div class="cr-hero__figure">
-                <svg class="cr-lattice" viewBox="0 0 860 640" preserveAspectRatio="xMidYMid meet"
+                <!-- viewBox is cropped tight to the drawn geometry (x 152-568, y 30-570 in the
+                     original 860x640 frame, plus ~24px for the glow filter and the live-node
+                     halo). The old frame carried a third of its width purely to hold callout
+                     pills; with those gone an uncropped viewBox would shrink the lattice into
+                     an empty box. -->
+                <svg class="cr-lattice" viewBox="128 6 464 588" preserveAspectRatio="xMidYMid meet"
                      role="img" aria-labelledby="cr-lattice-title cr-lattice-desc">
                     <title id="cr-lattice-title">The three layers DRONA reasons across</title>
                     <desc id="cr-lattice-desc">An isometric diagram of three stacked planes. Shipments move on the lowest
                         plane, the rules that govern them sit in the middle, and the evidence produced sits above.
                         Trade routes trace across the planes and vertical threads connect the same consignment
-                        through all three layers.</desc>
+                        through all three layers. The planes are unlabelled; this description carries their
+                        meaning.</desc>
 
                     <defs>
                         <path id="cr-grid"
@@ -138,7 +133,6 @@
                             <circle class="cr-node cr-node--live" cx="0" cy="180" r="4.5" />
                             <circle class="cr-node" cx="130" cy="165" r="3.5" />
                         </g>
-                        <text class="cr-stratum__label" x="-230" y="278" text-anchor="end">Shipments</text>
 
                         <!-- ── Layer 2: rules ────────────────────────────────── -->
                         <g class="cr-stratum cr-stratum--2">
@@ -156,7 +150,6 @@
                             <circle class="cr-node" cx="156" cy="150" r="3.5" />
                             <circle class="cr-node" cx="182" cy="105" r="3.5" />
                         </g>
-                        <text class="cr-stratum__label" x="-230" y="128" text-anchor="end">Rules</text>
 
                         <!-- ── Layer 3: evidence (highest) ───────────────────── -->
                         <g class="cr-stratum cr-stratum--3" transform="translate(0,-150)">
@@ -167,24 +160,6 @@
                             <circle class="cr-node cr-node--live" cx="78" cy="75" r="4.5" />
                             <circle class="cr-node" cx="-104" cy="120" r="3.5" />
                             <circle class="cr-node" cx="52" cy="120" r="3.5" />
-                        </g>
-                        <text class="cr-stratum__label" x="-230" y="-22" text-anchor="end">Evidence</text>
-
-                        <!-- ── Callouts ──────────────────────────────────────── -->
-                        <g class="cr-callout" data-callout="1">
-                            <path class="cr-callout__leader" d="M78 -75L180 -95L250 -95" />
-                            <rect class="cr-callout__box" x="250" y="-112" width="196" height="34" rx="5" />
-                            <text class="cr-callout__text" x="266" y="-89">drona.classify_hs()</text>
-                        </g>
-                        <g class="cr-callout" data-callout="2">
-                            <path class="cr-callout__leader" d="M52 120L180 85L250 85" />
-                            <rect class="cr-callout__box" x="250" y="68" width="214" height="34" rx="5" />
-                            <text class="cr-callout__text" x="266" y="91">drona.resolve_origin()</text>
-                        </g>
-                        <g class="cr-callout" data-callout="3">
-                            <path class="cr-callout__leader" d="M0 330L180 267L250 267" />
-                            <rect class="cr-callout__box" x="250" y="250" width="190" height="34" rx="5" />
-                            <text class="cr-callout__text" x="266" y="273">drona.seal_packet()</text>
                         </g>
 
                     </g>
@@ -201,46 +176,6 @@
     </section>
 
     <!-- ════════════════════════════════════════════════
-         HOW WE WORK
-    ════════════════════════════════════════════════ -->
-    <section class="cr-tenets" data-nav-light aria-labelledby="cr-tenets-title">
-        <div class="cr-shell">
-            <p class="cr-kicker">How we work</p>
-            <h2 class="cr-section-title" id="cr-tenets-title">Three things that are not up for negotiation.</h2>
-
-            <ol class="cr-tenets__grid">
-                <li class="cr-tenet">
-                    <span class="cr-tenet__num" aria-hidden="true">I</span>
-                    <h3 class="cr-tenet__title">Every claim carries its citation.</h3>
-                    <p class="cr-tenet__body">
-                        Nothing the system asserts is allowed to float free of the instrument it came from.
-                        If an answer cannot name its source, its version and its effective date, it is not
-                        an answer &mdash; it is a guess wearing a confident font.
-                    </p>
-                </li>
-                <li class="cr-tenet">
-                    <span class="cr-tenet__num" aria-hidden="true">II</span>
-                    <h3 class="cr-tenet__title">Deterministic first, judgement second.</h3>
-                    <p class="cr-tenet__body">
-                        Where a rule decides the matter, a rule engine decides the matter. Language models
-                        are reserved for the places where a human expert would also have to exercise
-                        judgement &mdash; and where they are used, the boundary is visible.
-                    </p>
-                </li>
-                <li class="cr-tenet">
-                    <span class="cr-tenet__num" aria-hidden="true">III</span>
-                    <h3 class="cr-tenet__title">Direct challenge over quiet agreement.</h3>
-                    <p class="cr-tenet__body">
-                        Disagreement is the cheapest thing we buy. We would rather have the argument in a
-                        design review than discover the flaw in a customs hall. Bring the objection early
-                        and bring it plainly.
-                    </p>
-                </li>
-            </ol>
-        </div>
-    </section>
-
-    <!-- ════════════════════════════════════════════════
          OPEN ROLES
     ════════════════════════════════════════════════ -->
     <section class="cr-roles" id="open-roles" data-nav-light aria-labelledby="cr-roles-title">
@@ -248,7 +183,7 @@
             <div class="cr-roles__head">
                 <div>
                     <p class="cr-kicker">Open roles</p>
-                    <h2 class="cr-section-title" id="cr-roles-title">Where we need people right now.</h2>
+                    <h2 class="cr-section-title" id="cr-roles-title">The roles we are hiring for now.</h2>
                 </div>
                 <p class="cr-roles__count" id="careersCount"></p>
             </div>
@@ -268,40 +203,33 @@
     ════════════════════════════════════════════════ -->
     <section class="cr-process" data-nav-light aria-labelledby="cr-process-title">
         <div class="cr-shell">
-            <p class="cr-kicker">What applying looks like</p>
-            <h2 class="cr-section-title" id="cr-process-title">Short, specific, and no unanswered emails.</h2>
+            <p class="cr-kicker">How we hire</p>
+            <h2 class="cr-section-title" id="cr-process-title">A short process, and a reply either way.</h2>
 
             <ol class="cr-stages">
                 <li class="cr-stage">
                     <span class="cr-stage__num">01</span>
                     <h3 class="cr-stage__title">You apply</h3>
                     <p class="cr-stage__body">
-                        The form sits at the bottom of each role. Three written questions, your links,
-                        and a CV if you have one to hand. Half an hour, not an afternoon.
+                        The form sits at the foot of each role: three written questions, your links,
+                        and a CV if you have one available. It should take about half an hour.
                     </p>
                 </li>
                 <li class="cr-stage">
                     <span class="cr-stage__num">02</span>
-                    <h3 class="cr-stage__title">We read it properly</h3>
+                    <h3 class="cr-stage__title">We review it</h3>
                     <p class="cr-stage__body">
-                        Every application is read by a person, and you get a reply either way
-                        within a week. The written answers carry more weight than the CV.
+                        Every application is read by a person, and you will have a reply within a
+                        week either way. The written answers carry more weight than the CV.
                     </p>
                 </li>
                 <li class="cr-stage">
                     <span class="cr-stage__num">03</span>
                     <h3 class="cr-stage__title">Two conversations</h3>
                     <p class="cr-stage__body">
-                        One about the work you have already done, one about the work here.
-                        Both are technical. Neither is a puzzle interview.
-                    </p>
-                </li>
-                <li class="cr-stage">
-                    <span class="cr-stage__num">04</span>
-                    <h3 class="cr-stage__title">A real problem</h3>
-                    <p class="cr-stage__body">
-                        Where the role calls for it, a paid exercise on something we are actually
-                        stuck on. You keep the work and we tell you what we thought of it.
+                        One covering work you have already done, one covering the work here. Both
+                        are technical, and neither is a puzzle interview. Where the role calls for
+                        it, a paid exercise follows &mdash; real work, and you keep it.
                     </p>
                 </li>
             </ol>
@@ -313,11 +241,11 @@
     ════════════════════════════════════════════════ -->
     <section class="cr-closing" data-nav-light aria-labelledby="cr-closing-title">
         <div class="cr-shell cr-closing__inner">
-            <h2 class="cr-section-title" id="cr-closing-title">Nothing above fits?</h2>
+            <h2 class="cr-section-title" id="cr-closing-title">If none of these roles fit.</h2>
             <p class="cr-closing__body">
-                We would still like to hear from you, particularly if you have spent time inside
-                customs, freight, or trade policy and have opinions about why the software is bad.
-                Tell us what you would want to build here.
+                We would still be glad to hear from you, particularly if you have worked inside
+                customs, freight or trade policy and have a considered view of where the existing
+                software falls short. Tell us what you would want to build here.
             </p>
             <a class="cr-btn cr-btn--outline" href="mailto:sreenath@kananlabs.in?subject=General%20application%20%E2%80%94%20Kanan%20Labs">
                 <span>Write to us directly</span>
@@ -404,7 +332,7 @@
 
     <!-- Scripts -->
     <script src="js/contact-panel.js"></script>
-    <script defer src="js/careers.js?v=1"></script>
+    <script defer src="js/careers.js?v=3"></script>
     <!-- Staggered menu requires gsap (loaded with defer in head); defer guarantees order -->
     <script defer src="js/staggered-menu.js?v=5"></script>
 </body>

@@ -8,6 +8,9 @@
     --cr-navy-deep: #061f38;
     --cr-cream: #f4ebd0;
     --cr-paper: #f5f3ee;
+    /* Kanan White — the homepage primary button's surface (--kl-cream in
+       index.html). Cooler than --cr-cream, which is the on-navy text colour. */
+    --cr-kanan-white: #eeebe3;
     --cr-red: #db4a2b;
     --cr-red-deep: #bd3b21;
 
@@ -116,15 +119,49 @@ body.careers-page {
     transition: transform 0.22s ease;
 }
 
+/* Primary CTA — the homepage `kl-btn-primary` shape: a Kanan White pill with
+   the arrow carried in a filled navy badge rather than set inline. Both places
+   it appears (the careers hero, the role-page head) sit on the navy band, so
+   the light pill is the high-contrast reading. Padding is asymmetric because
+   the badge supplies its own inset on the right. */
 .cr-btn--primary {
-    background: var(--cr-red);
-    color: #fff;
-    border-color: var(--cr-red);
+    gap: 0.95rem;
+    min-height: 48px;
+    padding: 0.375rem 0.375rem 0.375rem 1.35rem;
+    border-radius: 999px;
+    background: var(--cr-kanan-white);
+    color: var(--cr-navy);
+    border-color: transparent;
+    font-size: 0.9375rem;
+    letter-spacing: -0.01em;
+    /* A pill that wraps to two lines reads as a broken shape rather than a
+       button; the label is short enough to hold one line at every width. */
+    white-space: nowrap;
+    transition: background-color 0.22s ease, box-shadow 0.22s ease,
+                transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .cr-btn--primary:hover {
-    background: var(--cr-red-deep);
-    border-color: var(--cr-red-deep);
+    background: #fff;
+    border-color: transparent;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 30px rgba(6, 31, 56, 0.2);
+}
+
+.cr-btn--primary .cr-btn__arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--cr-navy-deep);
+    color: var(--cr-kanan-white);
+    font-size: 0.95rem;
+    line-height: 1;
+    transition: background-color 0.22s ease,
+                transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .cr-btn--ghost {
@@ -159,8 +196,11 @@ body.careers-page {
     transform: translateX(3px);
 }
 
+/* The badge nudges along its own arrow's axis — down here, since both primary
+   CTAs anchor further down the same page rather than navigating away. */
 .cr-btn--primary:hover .cr-btn__arrow {
-    transform: translateY(3px);
+    transform: translateY(2px);
+    background: var(--cr-navy);
 }
 
 .cr-btn:focus-visible,
@@ -228,11 +268,20 @@ body.careers-page {
    HERO
    ════════════════════════════════════════════════════════ */
 
+/* Three-quarters of the viewport, not all of it — the navy → paper curve is the
+   page's best transition and should be visible without scrolling.
+   `.cr-hero__inner` is the only in-flow child (`.cr-curve` is absolutely
+   positioned), so min-height needs this flex context to centre against.
+   padding-bottom must stay clear of the curve's own clamp(48px, 6vw, 92px). */
 .cr-hero {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 75svh;
     background: var(--cr-navy);
     padding-top: clamp(7rem, 13vh, 10rem);
-    padding-bottom: clamp(6rem, 12vh, 9rem);
+    padding-bottom: clamp(6rem, 10vh, 8rem);
     overflow: hidden;
 }
 
@@ -256,7 +305,10 @@ body.careers-page {
     margin: 0 auto;
     padding-inline: var(--cr-gutter);
     display: grid;
-    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    /* The cropped lattice is portrait (464x588); a wide figure column would
+       letterbox it. The extra copy width also buys headroom against the h1
+       overflow documented in careers.html. */
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     align-items: center;
     gap: clamp(2rem, 5vw, 4.5rem);
 }
@@ -289,19 +341,16 @@ body.careers-page {
     color: #fff;
 }
 
+/* The sole subhead now — brighter and heavier than a body paragraph would be,
+   since it carries the whole copy column between the h1 and the button. */
 .cr-hero__lede {
     font-family: var(--cr-sans);
     font-size: clamp(0.95rem, 1.2vw, 1.0625rem);
-    font-weight: 300;
-    line-height: 1.72;
-    color: var(--cr-on-navy-body);
-    max-width: 46ch;
-    margin: 0 0 1.1rem;
-}
-
-.cr-hero__lede--tight {
-    color: rgba(244, 235, 208, 0.82);
     font-weight: 400;
+    line-height: 1.72;
+    color: rgba(244, 235, 208, 0.82);
+    max-width: 52ch;
+    margin: 0;
 }
 
 .cr-hero__actions {
@@ -320,10 +369,18 @@ body.careers-page {
     min-width: 0;
 }
 
+/* Height-driven, not width-driven: the content aspect is fixed, so sizing from
+   height is what keeps the figure inside the 75svh band instead of pushing the
+   band taller than it. The 14rem subtracts the hero's own padding (112 + 96 at
+   a 800px-tall viewport) with a little slack, so `min-height: 75svh` stays the
+   governing constraint and the band lands at exactly three-quarters.
+   The 280px floor guards a degenerate viewport, where an svh-derived height
+   would resolve to zero and the figure would disappear.
+   The stacked layout below 1100px reverts to width-driven. */
 .cr-lattice {
-    width: 100%;
-    max-width: 760px;
-    height: auto;
+    height: max(280px, min(calc(75svh - 14rem), 500px));
+    width: auto;
+    max-width: 100%;
     overflow: visible;
 }
 
@@ -367,6 +424,17 @@ body.careers-page {
     stroke-width: 1.4;
 }
 
+/* A short bright dash that travels the route, drawn as a clone laid over the
+   original so the corridor stays fully visible underneath. Created only by
+   js/careers.js, and only when motion is allowed. */
+.cr-route__pulse {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2.4;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+}
+
 .cr-node {
     fill: var(--cr-navy);
     stroke: rgba(244, 235, 208, 0.55);
@@ -378,37 +446,6 @@ body.careers-page {
     fill: var(--cr-red);
     stroke: rgba(219, 74, 43, 0.28);
     stroke-width: 5;
-}
-
-.cr-stratum__label {
-    fill: rgba(244, 235, 208, 0.46);
-    font-family: var(--cr-sans);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-}
-
-.cr-callout__leader {
-    fill: none;
-    stroke: rgba(244, 235, 208, 0.3);
-    stroke-width: 1;
-    vector-effect: non-scaling-stroke;
-}
-
-.cr-callout__box {
-    fill: rgba(244, 235, 208, 0.05);
-    stroke: rgba(244, 235, 208, 0.26);
-    stroke-width: 1;
-    vector-effect: non-scaling-stroke;
-}
-
-.cr-callout__text {
-    fill: rgba(244, 235, 208, 0.84);
-    font-family: 'Inter', ui-monospace, SFMono-Regular, Menlo, monospace;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 0.005em;
 }
 
 /* ── Navy → paper handoff ───────────────────────────────── */
@@ -433,66 +470,14 @@ body.careers-page {
 }
 
 /* ════════════════════════════════════════════════════════
-   TENETS
-   ════════════════════════════════════════════════════════ */
-
-.cr-tenets {
-    background: var(--cr-paper);
-    padding-block: clamp(4.5rem, 9vh, 7rem);
-}
-
-.cr-tenets__grid {
-    list-style: none;
-    margin: 3.2rem 0 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1px;
-    background: var(--cr-rule);
-    border-block: 1px solid var(--cr-rule);
-}
-
-.cr-tenet {
-    position: relative;
-    background: var(--cr-paper);
-    padding: 2.2rem clamp(1.25rem, 2.2vw, 2rem) 2.4rem;
-}
-
-.cr-tenet__num {
-    display: block;
-    font-family: var(--cr-display);
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    color: var(--cr-red);
-    margin-bottom: 1.1rem;
-}
-
-.cr-tenet__title {
-    font-family: var(--cr-display);
-    font-weight: 600;
-    font-size: 1.35rem;
-    line-height: 1.24;
-    color: var(--cr-navy);
-    margin: 0 0 0.85rem;
-}
-
-.cr-tenet__body {
-    font-family: var(--cr-sans);
-    font-size: 0.875rem;
-    font-weight: 300;
-    line-height: 1.72;
-    color: var(--cr-ink-body);
-    margin: 0;
-}
-
-/* ════════════════════════════════════════════════════════
    OPEN ROLES
    ════════════════════════════════════════════════════════ */
 
+/* First light section on the page now that the tenets band is gone, so it
+   carries the full top padding that band used to supply after the curve. */
 .cr-roles {
     background: var(--cr-paper);
-    padding-block: clamp(3rem, 6vh, 5rem) clamp(4.5rem, 9vh, 7rem);
+    padding-block: clamp(4.5rem, 9vh, 7rem);
     scroll-margin-top: 90px;
 }
 
@@ -716,7 +701,7 @@ body.careers-page {
     margin: 3rem 0 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: clamp(1.25rem, 2.6vw, 2.25rem);
 }
 
@@ -796,6 +781,12 @@ body.careers-page {
    ════════════════════════════════════════════════════════ */
 
 @media (max-width: 1100px) {
+    /* Stacked, so the band is naturally taller than three-quarters of the
+       viewport — let content drive the height rather than forcing a fraction. */
+    .cr-hero {
+        min-height: 0;
+    }
+
     .cr-hero__inner {
         grid-template-columns: minmax(0, 1fr);
         gap: 3rem;
@@ -809,35 +800,28 @@ body.careers-page {
         max-width: 60ch;
     }
 
+    /* Still height-driven once stacked. The cropped figure is portrait, so
+       sizing it by width here would make it ~710px tall and push the band to
+       nearly twice the viewport. */
     .cr-lattice {
-        max-width: 640px;
+        width: auto;
+        height: max(240px, min(42svh, 400px));
+        max-width: 100%;
     }
 }
 
-@media (max-width: 1024px) {
-    .cr-tenets__grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .cr-stages {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        row-gap: 2.4rem;
-    }
-
-    /* The connector only reads across a full row; drop it on the wrap. */
-    .cr-stage:nth-child(2n)::after {
-        display: none;
-    }
-}
+/* Three stages fit three columns comfortably down to the single-column
+   breakpoint below; a two-column step would only strand one card on its own
+   row. */
 
 @media (max-width: 720px) {
     .cr-hero {
         padding-top: clamp(6rem, 14vh, 8rem);
     }
 
-    .cr-tenets__grid,
     .cr-stages {
         grid-template-columns: minmax(0, 1fr);
+        row-gap: 2.4rem;
     }
 
     .cr-stage::after {
@@ -867,14 +851,6 @@ body.careers-page {
 @media (max-width: 480px) {
     .cr-lattice {
         max-width: 100%;
-    }
-
-    .cr-stratum__label {
-        font-size: 13px;
-    }
-
-    .cr-callout__text {
-        font-size: 15px;
     }
 
     .cr-role__meta {

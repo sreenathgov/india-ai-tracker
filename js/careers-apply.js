@@ -122,7 +122,7 @@
         if (submitError) submitError.textContent = '';
 
         if (!nameInput.value.trim()) {
-            showError(nameInput, 'Please tell us your name.');
+            showError(nameInput, 'Please enter your name.');
             firstInvalid = firstInvalid || nameInput;
         }
 
@@ -142,7 +142,7 @@
                 showError(cvFileInput, 'Please attach a PDF, or paste a link instead.');
                 firstInvalid = firstInvalid || cvFileInput;
             } else if (file.size > MAX_CV_BYTES) {
-                showError(cvFileInput, 'That file is over 3 MB. Compress it, or paste a link instead.');
+                showError(cvFileInput, 'That file exceeds 3 MB. Please compress it, or paste a link instead.');
                 firstInvalid = firstInvalid || cvFileInput;
             }
         }
@@ -152,7 +152,7 @@
             const max = Number(textarea.getAttribute('maxlength')) || 0;
 
             if (textarea.getAttribute('data-required') === 'true' && !answer) {
-                showError(textarea, 'This one matters to us — please give it a go.');
+                showError(textarea, 'This answer is required.');
                 firstInvalid = firstInvalid || textarea;
             } else if (max > 0 && answer.length > max) {
                 showError(textarea, `Please keep this under ${max} characters.`);
@@ -178,12 +178,12 @@
     function readFileAsBase64(file) {
         return new Promise((resolve, reject) => {
             const reader = new FileReader();
-            reader.onerror = () => reject(new Error('We could not read that file. Try a link instead.'));
+            reader.onerror = () => reject(new Error('We could not read that file. Please paste a link instead.'));
             reader.onload = () => {
                 const result = String(reader.result || '');
                 const comma = result.indexOf(',');
                 if (comma === -1) {
-                    reject(new Error('We could not read that file. Try a link instead.'));
+                    reject(new Error('We could not read that file. Please paste a link instead.'));
                     return;
                 }
                 resolve(result.slice(comma + 1));
@@ -241,7 +241,7 @@
 
             if (!response.ok) {
                 if (response.status === 429) {
-                    throw new Error('That is a lot of applications in a short window. '
+                    throw new Error('Too many applications have been submitted from here in a short window. '
                         + 'Please wait a few minutes and try again.');
                 }
                 if (response.status === 413) {
