@@ -1,6 +1,6 @@
 # Kanan Labs Publications — Authoring Contract
 
-**Version 2.1** · 2026-07-16 · Supersedes v2.0 (2026-07-15) and v1 (three-layer/`category` model).
+**Version 2.2** · 2026-08-07 · Supersedes v2.1 (2026-07-16), v2.0 (2026-07-15) and v1 (three-layer/`category` model).
 
 This document is the **single source of truth** for what a valid Kanan publication is.
 Everything else implements against it: `scripts/generate-publications.js` validates against it and
@@ -36,6 +36,12 @@ v2 changes the contract freely. **That freedom ends with the first real article.
 | **"No images inside articles" repealed** (§5) | Founder decision: figures, tables and infographics carry payload and are encouraged, with standards (§5.5–5.7). Raw HTML stays banned. |
 | **Nested article layout** (§1) | Each article lives in its own folder under its `type`, with a co-located `assets/` folder for cover art and figures. |
 | Emphasis conventions codified (§5.7) | Bold = extractable fact; italic = interpretive assessment. |
+
+### 0.2 What changed in v2.2 (2026-08-07, founder-ratified)
+
+| Change | Reason |
+|---|---|
+| **New cluster `ai-trade-compliance`** (§2.2) | AI's role in cross-border compliance is a distinct subject, not a format — per the §2.2 extension rule. Concentrates topical authority for the query class "what can AI do in trade compliance". Hub page ships with the cluster. |
 
 > **Build note (resolved 2026-07-17):** `scripts/generate-publications.js` walks the nested
 > `<type>/<slug>/` layout (`discoverArticleFiles()`) and copies each article's `assets/` into
@@ -84,6 +90,7 @@ never express that.
 | `ev-lithium` | EV & Lithium Export | EV founder · Export manager · OEM procurement |
 | `export-realization` | Export Realization | Finance |
 | `trade-architecture` | Trade Intelligence Architecture | Investor · Hire · Sophisticated buyer |
+| `ai-trade-compliance` | AI in Trade Compliance | Compliance lead · Trade operations · Technology buyer |
 
 **Extension rule:** a new subject is a new `cluster`. A new format is a new `type`. If you cannot
 tell which you are adding, you are adding neither — write it inside an existing pair. Extending

@@ -49,6 +49,11 @@ const CLUSTERS = {
         hub: 'Trade Intelligence Architecture',
         personas: 'Investor · Hire · Sophisticated buyer',
         description: 'How Kanan Labs builds trade intelligence: source-attributed data, validated-at-source pipelines, and the architecture behind TradeWatch.'
+    },
+    'ai-trade-compliance': {
+        hub: 'AI in Trade Compliance',
+        personas: 'Compliance lead · Trade operations · Technology buyer',
+        description: 'What artificial intelligence can and cannot decide in cross-border compliance: the legal limits on delegation, the evidence an AI-assisted determination must carry, and how to evaluate systems that claim to do this work.'
     }
 };
 
