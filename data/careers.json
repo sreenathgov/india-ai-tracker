@@ -1,13 +1,13 @@
 {
-  "_comment": "Source of truth for the careers surface. data/careers.json -> scripts/generate-careers.js -> dist/careers.html + dist/careers/<slug>/index.html. Validated at build time by scripts/careers/validate.js; malformed data fails the build. Roles reconciled to Core Team Definition v2 (2026-08-06): five seats, Bengaluru, teams Engineering / Knowledge / Trade Practice. Every role carries the same two introspective questions plus one role-specific question.",
+  "_comment": "Source of truth for the careers surface. data/careers.json -> scripts/generate-careers.js -> dist/careers.html + dist/careers/<slug>/index.html. Validated at build time; malformed data fails the build. TITLING RULE (v2, 2026-08-06): every public title uses a standardised core noun plus an optional comma qualifier. LinkedIn parses prefix/core/suffix and standardises on the core, so a qualifier after the comma costs no reach and buys self-selection. Never mint a new head noun — a novel title is silently mapped to whatever the model thinks it resembles, and has no neighbours in the recommender's embedding space. Niche vocabulary belongs in the body, never the title. Internal names for these seats live in kanan-ops/hiring/Hire_Archetypes_for_Sourcing_v1.md.",
 
-  "teams": ["Engineering", "Knowledge", "Trade Practice"],
+  "teams": ["Engineering", "Trade & Compliance"],
 
   "roles": [
 
     {
-      "slug": "cofounder-cto",
-      "title": "Co-founder & CTO",
+      "slug": "founding-cto",
+      "title": "Founding CTO",
       "team": "Engineering",
       "location": "Bengaluru",
       "workMode": "on-site",
@@ -17,33 +17,33 @@
       "datePosted": "2026-08-06",
       "applyBy": null,
       "timeline": "Four conversations over about six weeks, then a paid architecture review",
-      "summary": "Own DRONA — the compiler that turns regulation into signed, versioned, executable rule packs.",
+      "summary": "Own the engine that turns written regulation into software a customs officer, an underwriter and a court could all check.",
 
-      "description": "Kanan Labs has a constitution, an enforced type system, a working signing chain over a sealed slice, and a green test suite. It does not yet have a running product. The distance between those two facts is this job.\n\nThat is an unusual starting position and we think it is a good one. The opinionated, easy-to-get-wrong decisions have been made and are enforced in CI. What remains is building, not re-architecting. You will spend the first eighteen months with your hands in the code rather than in a management calendar.\n\nThe hard problems are real and we will not pretend otherwise. Signing coverage is honest over one slice and not yet at scale. Determinism holds until it crosses a hosted vendor boundary. Privacy and data residency have no owner, and the first genuine exporter document that arrives turns that into a legal question rather than an engineering one. The knowledge substrate will not survive two orders of magnitude and everybody here knows it.\n\nA note on what this is not. It is not a management role for at least eighteen months — there is no team yet. It is not a research position; papers are welcome, shipping is the job. And it is not a rebuild. You will disagree with things here, we want that, and there is a written amendment mechanism for exactly that purpose — but if your first instinct on inheriting a system is to replace it, this will not suit either of us.",
+      "description": "This is a co-founder role in substance: founder-level equity, founder-standard vesting, and shared risk. We are direct about that from the first conversation.\n\nKanan Labs builds the reasoning layer for cross-border trade. Every container that crosses a border is governed by a stack of rules no single person holds in their head — tariff lines, origin criteria, licensing conditions, each with a citation and an effective date, each changing without notice. We are building the system that holds them, reasons over them, and can always show its working.\n\nThe technical core is a compiler. It takes primary regulation, turns it into typed and versioned rules, signs them, and hands them to a product engine that produces evidence an exporter can put in front of an authority. Determinism matters more than cleverness here: an answer that cannot name its source, its version and its effective date is not an answer.\n\nWhat this job entails. There is a constitution, an enforced type system, a working signing chain over one sealed slice and a green test suite. There is not yet a running product. Closing that gap is the job. For the first eighteen months you will be building, not managing — there is no team yet, and the work in front of you is code. Later you will hire and lead one.\n\nYou do not need to know anything about customs. Nobody arrives knowing this domain; the founder is a trade lawyer and supplies it. What you cannot learn on the job is the instinct that a rule which was true last year may not be true today, and that a system which cannot say \"unclear\" will eventually say something false with confidence.",
 
       "responsibilities": [
-        "The typed primitive families and the type system that enforces them — including the parts you will decide are wrong.",
-        "The compiler: product-agnostic primitives compiled into signed, versioned, product-aware rule packs that a downstream engine executes.",
-        "Determinism and replay. Byte-identical output from identical inputs, or a written reason why not.",
-        "The signing chain — Ed25519, canonicalisation, hash-chained append-only ledgers — and making the coverage honest rather than partial.",
-        "Privacy and data residency architecture. Currently unowned, and the highest-severity item on the list.",
-        "The knowledge substrate decision, and the retroactive recompilation that has to survive it."
+        "Own the compiler end to end — typed primitives in, signed and versioned rule packs out.",
+        "Make determinism real. Identical inputs produce byte-identical output, or there is a written reason why not.",
+        "Build the signing and provenance chain so every output traces to the instrument it came from.",
+        "Own privacy and data residency architecture — currently unowned, and the highest-severity item on the list.",
+        "Choose and build the knowledge substrate, including how the system handles a rule that changes retroactively.",
+        "Set the engineering bar, then hire against it."
       ],
 
       "lookingFor": [
-        "You have maintained a rule base, schema, taxonomy or standard across a real amendment cycle — and can tell us precisely what broke the first time.",
-        "Expert-level Python, and a genuine preference for typed contracts over flexible dictionaries.",
-        "You can explain without prompting why a 99%-accurate non-deterministic component is worse than a 90%-accurate deterministic one in a system whose output must survive an adjudication.",
-        "You have shipped inside a standards-bound regime — FHIR, SNOMED, XBRL, ISO 20022, ONDC or Beckn, PCI — where the specification sat upstream of your opinion and you were fine with that.",
-        "You can hold a boundary you disagree with while you argue properly to change it."
+        "You have built and maintained production systems where being wrong was expensive.",
+        "Strong Python, and a preference for typed contracts over flexible dictionaries.",
+        "You have worked with versioned data or schemas that had to stay correct as the underlying rules changed.",
+        "You can explain why a fast non-deterministic answer can be worse than a slower deterministic one when the output has to be defended.",
+        "You are comfortable being the only engineer for a while."
       ],
 
       "niceToHave": [
-        "Deontic logic, defeasible reasoning, or any serious exposure to knowledge representation for law.",
-        "LegalRuleML, Akoma Ntoso, Catala, OpenFisca, s(CASP), or the rules-as-code world generally.",
-        "Applied cryptography for evidence — canonicalisation, non-repudiation, replay defence.",
-        "Compiler or intermediate-representation design. Bitemporal data modelling.",
-        "Any familiarity at all with customs, trade or insurance regulation. Genuinely optional — the founder supplies this."
+        "Experience inside a standards-bound domain — healthcare terminology, financial reporting, tax, payments, identity — where the specification sat upstream of your opinion.",
+        "Knowledge representation, ontologies, rules engines, or formal methods.",
+        "Applied cryptography for evidence: signatures, canonicalisation, tamper-evident logs.",
+        "Compiler or interpreter design. Bitemporal or versioned data modelling.",
+        "Any exposure at all to customs, trade, tax or insurance regulation."
       ],
 
       "questions": [
@@ -72,8 +72,8 @@
     },
 
     {
-      "slug": "founding-product-engineer",
-      "title": "Founding Product Engineer",
+      "slug": "founding-engineer-full-stack",
+      "title": "Founding Engineer (Full-Stack)",
       "team": "Engineering",
       "location": "Bengaluru",
       "workMode": "on-site",
@@ -83,32 +83,33 @@
       "datePosted": "2026-08-06",
       "applyBy": null,
       "timeline": "Two conversations, then a paid exercise — about three weeks end to end",
-      "summary": "Turn a compiler into a product. Intake, extraction, reconciliation, packets, and the screen a reviewer signs.",
+      "summary": "Build the product around the engine: document intake, extraction, reconciliation, and the screen a reviewer signs their name to.",
 
-      "description": "There is a compiler that produces signed rule packs, and there is nothing yet that puts one in front of a human being who is about to send a container to Rotterdam. You build that.\n\nConcretely: today the front end renders from a synthetic fixture and makes zero calls to a backend, because there is no service surface for it to call. Your first substantial piece of work is the one that makes the rest of the product possible.\n\nAfter that it is document intake that has to cope with a scanned invoice photographed at an angle, extraction that carries its own provenance, reconciliation that can say exactly which of three documents disagrees, and a reviewer console that a customs broker will trust enough to put their name against.\n\nThis is not a role where you get a specification — you will often be the person who writes it. It is not front-end only and it is not back-end only. And it is not a job for someone who wants a large existing codebase to maintain.",
+      "description": "Kanan Labs builds software that tells an exporter whether their shipping documents will survive contact with a customs authority — before the container sails, not after the refund is stuck.\n\nThere is an engine that produces signed, checkable rules. There is nothing yet that puts one in front of a human being about to send a container to Rotterdam. You build that.\n\nWhat this job entails. Concretely: the service layer that does not exist yet; document intake that copes with an invoice photographed at an angle; extraction where every field carries its source page and confidence rather than arriving as a bare string; reconciliation that can say exactly which of three documents disagrees and where; and the reviewer console the whole product is judged on. You will often be the person who writes the specification rather than the person who receives it.\n\nYou will not be alone in the sense that matters — the architecture is opinionated and already written down, and you consume it rather than redesign it. Arguing that it should change is welcome; there is a documented process for that.\n\nYou do not need customs experience and we do not expect it. What we do expect is that you have built something end to end that another person then depended on, and that you can talk about the parts of it that went wrong.",
 
       "responsibilities": [
-        "The API that does not exist yet — the thin service surface between the compiler and everything downstream.",
-        "Document intake and classification, with \"unknown\" as a first-class outcome rather than a fallback.",
-        "The extraction pipeline. Every field carries its source document, page, bounding box, extractor version and confidence tier — provenance here is structural, not a log line.",
-        "Cross-document reconciliation. Invoice, packing list and bill of lading have to agree, and when they do not the system must say precisely where.",
-        "The evaluator that returns one of four states and never silently defaults to \"fine\".",
-        "The packet engines, and the reviewer console the whole product will be judged on."
+        "Build the API layer between the rules engine and everything downstream.",
+        "Build document intake and classification, where \"we are not sure what this is\" is a real answer rather than a crash.",
+        "Build the extraction pipeline so every extracted field carries its source, its page and its confidence.",
+        "Build cross-document reconciliation — invoice, packing list and bill of lading must agree, and the system must say where they do not.",
+        "Build the packet engines and the reviewer console.",
+        "Ship weekly, in front of real users, from early on."
       ],
 
       "lookingFor": [
-        "You have built something end to end that another person then depended on. We will ask about that thing in detail.",
-        "Python and TypeScript — or clear evidence that you pick up a stack in a fortnight and are not precious about which one.",
-        "You are comfortable wrapping vendor document-AI rather than building OCR, and you understand why that is the right call here.",
-        "You accept a boundary: you consume the ontology, you do not redesign it. Arguing it should change is welcome — through the amendment mechanism, not through a pull request.",
-        "You write things down. This company runs on files."
+        "Roughly two to six years building software other people relied on. Internships and your own projects count.",
+        "Python and TypeScript — or clear evidence you pick up a stack in a fortnight.",
+        "You have worked across the stack: an API, a database and a screen, all yours.",
+        "You are comfortable integrating vendor APIs rather than rebuilding them.",
+        "You write clearly. This company runs on written documents."
       ],
 
       "niceToHave": [
-        "Document AI — Docling, Azure Document Intelligence, Surya, Marker, or anything in that family.",
+        "Document AI or OCR — Docling, Azure Document Intelligence, Surya, Marker, Unstructured, or similar.",
         "Next.js, TypeScript in strict mode, Tailwind, shadcn.",
-        "You have worked somewhere the output had to be defended — finance, healthcare, legal, logistics.",
-        "A public trail of things you have made. A good repository beats a good CV here, and we will read it."
+        "PostgreSQL beyond CRUD — migrations, constraints, query plans.",
+        "You have worked somewhere the output had to be defended: finance, healthcare, legal, logistics.",
+        "A public trail of things you have built. A good repository beats a good CV here and we will read it."
       ],
 
       "questions": [
@@ -137,9 +138,9 @@
     },
 
     {
-      "slug": "trade-practice-lead",
-      "title": "Trade Practice Lead",
-      "team": "Trade Practice",
+      "slug": "head-of-customs-trade-compliance",
+      "title": "Head of Customs & Trade Compliance",
+      "team": "Trade & Compliance",
       "location": "Bengaluru — with regular time in the Chennai–Hosur corridor",
       "workMode": "on-site",
       "employmentType": "full-time",
@@ -150,31 +151,30 @@
       "timeline": "One conversation, then a short paid project — about four weeks, part-time",
       "summary": "The person who knows what actually happens at the customs hall, and makes the software agree with it.",
 
-      "description": "We are building software that tells an exporter whether their shipping bill will survive contact with reality. That claim is worthless unless somebody here has personally watched it fail.\n\nYou are the reason our rules are right rather than merely well-formed. You are also the person a customer talks to when something has gone wrong, and the person a design partner believes.\n\nWe are direct about two things. The first is money: this role pays substantially more than the same work inside a broking firm, fully declared, with equity on top. We would rather say that plainly than play a negotiation game. The second is the corollary — this is not a role where you keep a side practice. We will ask about it directly, because the entire product is an argument about defensibility and we cannot make that argument with a divided book.\n\nThis is not a sales role and there is no quota. If you want a variable-heavy structure this will disappoint you. And it is not a job for someone who has supervised the work without ever having done it.",
+      "description": "Kanan Labs builds software that checks an exporter's shipping documents against the rules before the container sails. That claim is worth nothing unless somebody here has personally watched it fail at a port.\n\nThat is you. You are the reason our rules are right rather than merely well-formed, the person a customer talks to when a refund has not landed, and the person a prospective design partner believes within thirty seconds because you have obviously done the job.\n\nWhat this job entails. Three things. You check every rule the system encodes against what actually happens — the person who says \"that condition is correct on paper and wrong at the air cargo complex.\" You own delivery: reviewer workflow, what a packet must contain before a broker or an underwriter will accept it, onboarding, and the customer who writes in at 9pm. And you carry the conversations with exporters who might become our first design partners.\n\nTwo things we will say plainly rather than leave you to discover. First, this pays substantially more than the same work inside a broking firm, fully declared, with equity on top — we would rather state that than play a negotiation game. Second, and following from it, this is not a role where you keep a side practice. We will ask directly, because the entire product is an argument about defensibility and we cannot make that argument with a divided book.\n\nThis is not a sales role and there is no quota. It is also not a role for someone who has supervised the work without ever having done it.",
 
       "responsibilities": [
-        "Validating every encoded rule against operational reality — the person who says \"that condition is correct on paper and wrong at the air cargo complex\".",
-        "The delivery backbone. Reviewer workflow, packet acceptance, onboarding, and what happens when a customer writes in at 9pm.",
-        "Design-partner conversations. You will not carry a quota; you will carry credibility.",
-        "The specification for what a packet must contain before an exporter, a broker or an underwriter will accept it.",
-        "Being the internal authority on the operational sequence — what happens, in what order, and whose obligation each step is."
+        "Check encoded rules against operational reality, and be the internal authority when they disagree.",
+        "Own the delivery backbone — reviewer workflow, packet acceptance, onboarding, customer queries.",
+        "Define what a shipping-bill or marine-insurance packet must contain before a broker or underwriter will sign it.",
+        "Carry design-partner conversations with exporters, brokers and forwarders.",
+        "Sit with the engineers often enough that the product is shaped by the port, not by a diagram."
       ],
 
       "lookingFor": [
+        "Eight years or more in customs clearance, export documentation or freight forwarding.",
         "You have filed, or directly supervised the filing of, real shipping bills. Not managed a team that did — done it.",
         "You can explain why an IGST refund gets stuck, and whose obligation the missing step usually was.",
-        "Tamil. This is a hard requirement — the corridor runs Chennai, Ranipet, Hosur, Krishnagiri and Coimbatore, and English does not get you into the room at plant level.",
-        "A G-card at minimum. Having sat and passed the Regulation 6 examination is a genuine differentiator, whether or not you went on to hold a licence.",
-        "You have been on the digitisation side of this — you chose or rolled out software at a broking firm or forwarder, or you sat on the vendor side implementing it. You are not frightened of a schema.",
-        "You want your income fully on the books. We are explicit about this because the industry is not."
+        "Tamil. This is a hard requirement — the corridor runs Chennai, Ranipet, Hosur, Krishnagiri and Coimbatore.",
+        "You want your income fully on the books."
       ],
 
       "niceToHave": [
-        "AEO application experience. Having survived a customs on-site audit of your own internal controls is a strong signal.",
-        "Time at a logistics software vendor in implementation, functional consulting or customer success.",
-        "EV components, auto ancillaries, or anything that has made you fight over Chapter 85.",
-        "Marine cargo insurance exposure — broker-side or claims-side.",
-        "Experience with e-SANCHIT, ICEGATE EDI, or a CHA ERP such as Logi-Sys or Trezix."
+        "G-card, or having sat and passed the Customs Brokers Licensing Regulation 6 examination.",
+        "You have chosen or rolled out software at a broking firm or forwarder, or implemented it from the vendor side — Logi-Sys, Trezix, Kale, Automaxis, ODeX or similar.",
+        "AEO application experience. Surviving a customs audit of your own internal controls is a strong signal.",
+        "EV components, auto ancillaries, or anything that has made you argue about Chapter 85.",
+        "Marine cargo insurance exposure, broker-side or claims-side."
       ],
 
       "questions": [
@@ -203,9 +203,9 @@
     },
 
     {
-      "slug": "regulatory-knowledge-engineer",
-      "title": "Regulatory Knowledge Engineer",
-      "team": "Knowledge",
+      "slug": "trade-compliance-analyst",
+      "title": "Trade Compliance Analyst (Regulatory Content)",
+      "team": "Trade & Compliance",
       "location": "Bengaluru",
       "workMode": "hybrid",
       "employmentType": "full-time",
@@ -213,33 +213,33 @@
       "status": "open",
       "datePosted": "2026-08-06",
       "applyBy": null,
-      "timeline": "A conversation, a three-hour take-home on real regulatory text, then a session where we argue with your answers",
-      "summary": "Turn primary regulation into rules a machine can execute and a tribunal can check.",
+      "timeline": "A conversation, a three-hour exercise on real regulatory text, then a session where we argue with your answers",
+      "summary": "Read primary regulation and turn it into rules a machine can run and an auditor can check.",
 
-      "description": "Somebody has to read the Customs Act, the Foreign Trade Policy, the IRDAI broker regulations and a stack of notifications, and turn what they say into something a computer can evaluate without lying about it. That is this job, and it is harder than it sounds.\n\nThe difficulty is not comprehension. It is discipline — citing the span rather than the document, refusing to smooth over a provision that genuinely cannot be resolved on the facts available, and keeping all of it correct through an amendment cycle. Most people who read law well cannot do this. We are looking for the ones who can.\n\nYou do not need to write code and we will not test you on it. You do need to be comfortable with structure: decision tables, if-then conditions, fields with types, and the idea that a rule without an evidence requirement is not finished.\n\nBackgrounds that work here are wider than the title suggests. Registered patent agents and law graduates from engineering or science backgrounds already draft and interpret at claim-level precision. Analysts from statutory compliance library firms have been decomposing acts into obligations with triggers, periodicity and evidence for years — under a different name. Tax technology and GST content people know exactly what breaks when a notification lands mid-year. XBRL taxonomy work, legal editorial with a house methodology, and trade compliance inside a manufacturer all transfer.\n\nThis is not a policy or advocacy role — you will not be writing about how AI ought to be regulated. It is not litigation, contract drafting or advisory work, and it will not keep your practice warm. And the prestige of your law school is not something we will weigh, because it does not predict the one aptitude we are testing for.",
+      "description": "Somebody has to read the Customs Act, the Foreign Trade Policy, the IRDAI broker regulations and a stack of notifications, and turn what they say into something software can evaluate without lying about it. That is this job.\n\nIf you have worked in regulatory content, statutory compliance libraries, indirect tax content, patent drafting or trade compliance at a manufacturer, you have done a version of this already — reading a primary instrument and producing a structured obligation with a trigger, a date and an evidence requirement. We are asking you to do it with more precision than anyone has asked before, and to stop paraphrasing.\n\nWhat this job entails. You work from primary text, never a summary or a commentary. Each rule you produce carries the exact span it came from, the dates between which it applies, what evidence would satisfy it, and what it supersedes. When a provision genuinely cannot be resolved on the facts a system will ever hold, you say so and it becomes a state the software surfaces — not a footnote nobody reads. And you keep all of it correct through amendment cycles, which is the part that is invisible when it works.\n\nYou do not need to write code and we will not test you on it. You do need to be comfortable with structure: decision tables, if-then conditions, typed fields.\n\nWe are not filtering on the prestige of your degree, and we are not looking for policy writing. This is not a role about how trade ought to be regulated. It is a role about what the rule currently says, exactly, and what it would take to prove it.",
 
       "responsibilities": [
-        "Reading primary instruments — never a summary, never a commentary — and emitting typed rule objects with span-level citation.",
-        "Temporal correctness. Effective dates, supersession chains, and what the rule was on the date of a shipment rather than what it is today.",
-        "Evidence requirements. For each obligation: what document, issued by whom, bearing which field, would satisfy an auditor.",
-        "Saying \"unclear\" out loud. When a provision turns on a fact the system will never hold, that has to surface as a state rather than a footnote.",
-        "Keeping the rule base alive across amendments — the part that is invisible when it works and catastrophic when it does not."
+        "Read primary instruments and produce structured, executable rules with span-level citation.",
+        "Get the dates right — when a rule took effect, when it stopped, and what replaced it.",
+        "Define evidence requirements: which document, issued by whom, bearing which field, would satisfy an auditor.",
+        "Flag genuinely unresolvable provisions rather than picking an interpretation.",
+        "Keep the rule base correct as notifications amend it, and know what changed and why."
       ],
 
       "lookingFor": [
-        "You work from primary text. If your instinct on an unfamiliar provision is to find a good summary of it, this is the wrong role.",
-        "You are comfortable with structure — decision tables, if-then conditions, schemas, typed fields.",
-        "You can recognise a provision that is genuinely undecidable on the available facts, and you say so instead of picking.",
-        "You will hold a position under pressure from a founder who disagrees with you. This matters far more than it sounds like it should.",
-        "You are precise in writing. Most of this job is written down."
+        "Two to six years working with primary legal, regulatory, tax or standards text.",
+        "You work from the source. If your instinct on an unfamiliar provision is to find a good summary of it, this is the wrong role.",
+        "You are comfortable with structure — decision tables, conditions, schemas, typed fields.",
+        "You can recognise when a provision cannot be decided on the available facts, and say so.",
+        "You will hold a position under pressure from a founder who disagrees with you."
       ],
 
       "niceToHave": [
+        "Regulatory or trade content work — compliance libraries, tax content, legal publishing, XBRL taxonomies, or a regtech content team.",
         "Registered patent agent, or a law degree taken after an engineering or science degree.",
-        "Time inside a statutory compliance library, a tax technology content team, or a legal publisher's editorial operation.",
-        "XBRL taxonomy work, or any regulatory reporting standard with versioning and effective dates.",
-        "Customs, DGFT, foreign trade policy, SCOMET or marine insurance regulation specifically.",
-        "Any exposure to rules-as-code, decision modelling, or formal knowledge representation."
+        "Customs, DGFT, foreign trade policy, HSN classification, SCOMET or marine insurance regulation specifically.",
+        "Indirect tax or GST content, especially where you owned what happens when a notification lands mid-year.",
+        "Any exposure to rules-as-code, decision modelling or knowledge representation."
       ],
 
       "questions": [
@@ -268,9 +268,9 @@
     },
 
     {
-      "slug": "regulatory-systems-engineer",
-      "title": "Regulatory Systems Engineer",
-      "team": "Knowledge",
+      "slug": "senior-data-engineer-regulatory-data",
+      "title": "Senior Data Engineer, Regulatory Data",
+      "team": "Engineering",
       "location": "Bengaluru",
       "workMode": "hybrid",
       "employmentType": "full-time",
@@ -279,30 +279,31 @@
       "datePosted": "2026-08-06",
       "applyBy": null,
       "timeline": "Two conversations, then a paid exercise on a problem we are currently stuck on",
-      "summary": "Build the machine that notices when the law changes.",
+      "summary": "Build the pipelines that notice when the law changes, and turn that change into something the product can act on.",
 
-      "description": "Indian trade regulation moves constantly. A RoDTEP rate is halved in February and restored in March. A notification supersedes another notification that amended a third. Nobody sends you an email about it.\n\nYou build the system that watches, diffs, extracts and routes — so that a change in a CBIC circular becomes a machine-readable delta with an owner and a deadline, rather than something a customer discovers at the port.\n\nThis is the asset that compounds. Products can pivot and the wedge can move; a versioned, diffed, obligation-extracted corpus of Indian trade regulation survives all of it and is worth more every month.\n\nOne thing we will say plainly because it comes up: we are not looking for sentiment analysis. Regulation carries obligation, not opinion, and a sentiment score over a CBIC circular is both noise and unauditable. The techniques that matter here are change detection, obligation extraction, applicability mapping, event extraction and temporal reasoning. If you want to argue with that, do — it would be a good conversation.\n\nThis is not a general machine-learning role and it is not a model-training role. And it is not a role where the extraction is done when the demo works.",
+      "description": "Indian trade regulation moves constantly. A duty remission rate is halved in February and restored in March. A notification supersedes another notification that amended a third. Nobody sends you an email about it, and an exporter finds out at the port.\n\nYou build the system that watches, diffs, extracts and routes — so a change in a circular becomes a machine-readable delta with an owner and a deadline, hours after it is published.\n\nWhat this job entails. Ingestion across a long tail of government sources that were never designed to be parsed. Structural diffing that says \"this clause changed, in this way, with effect from this date\" rather than \"this page changed.\" Extracting obligations from prose into something typed. Mapping an obligation to the specific customers it actually affects, so an alert is about them rather than about everyone. And temporal queries, because \"what were the rules on the date of this shipment\" is a different and much harder question than \"what are the rules.\"\n\nThis is the asset that compounds. Products pivot; a versioned, diffed corpus of trade regulation survives all of it and is worth more every month.\n\nOne thing we will say plainly because it comes up: we are not looking for sentiment analysis. Regulation carries obligation, not opinion, and a sentiment score over a government circular is both noise and impossible to audit. The techniques that matter here are change detection, information extraction, entity resolution and temporal reasoning. If you want to argue with that, do — it would be a good conversation.\n\nYou do not need to know trade law. You do need to care that an extracted fact without a citation and a date is worse than no fact at all.",
 
       "responsibilities": [
-        "The versioned source register — DGFT notifications, CBIC circulars, tariff notifications, RoDTEP schedules, the Denied Entity List, and the long tail nobody indexes.",
-        "Structural diffing. Not \"this page changed\" but \"this clause changed, in this way, with effect from this date\".",
-        "Obligation extraction — turning prose into actor, modality, action, condition and deadline.",
-        "Applicability mapping. Joining an obligation to a specific customer's HS codes, ports, destinations and scheme participation, so an alert is about them rather than about everyone.",
-        "Event extraction over enforcement and trade news — typed events carrying entity, date, jurisdiction and citation.",
-        "Citation networks and temporal queries. \"What were the rules on the date of this shipment\" is a different question from \"what are the rules\", and only the second one is easy."
+        "Build and run ingestion across government sources — notifications, circulars, tariff schedules, restricted-party lists.",
+        "Build structural diffing that identifies what changed at clause level, and from when.",
+        "Extract obligations from prose into typed records that carry their citation.",
+        "Map obligations to the customers they affect, using their commodity codes, ports and destinations.",
+        "Build temporal query support so the system can answer as of a past date.",
+        "Own data quality, because everything downstream inherits it."
       ],
 
       "lookingFor": [
-        "You have built ingestion and extraction over documents that were never designed to be parsed, at a scale where you had to care about it.",
-        "Change detection, entity resolution or information extraction somewhere in your history — in production, not in a notebook.",
-        "You understand that provenance is the product. An extracted obligation without a citation and an effective date is worse than no obligation at all.",
-        "You are comfortable with the unglamorous half: source discovery, scrapers that break, PDFs that are images, and the tenth different date format.",
-        "Python, and enough infrastructure sense to run something that has to be right every day rather than once."
+        "Roughly three to seven years building data pipelines in production.",
+        "Strong Python and SQL, and comfort with the messy end: scrapers that break, PDFs that are images, ten different date formats.",
+        "You have done information extraction, change detection or entity resolution on real data, not in a notebook.",
+        "You treat provenance as a requirement rather than a nice-to-have.",
+        "You can run something that has to be right every day, not just once."
       ],
 
       "niceToHave": [
-        "Regulatory or legal text specifically — horizon scanning, compliance content, legal publishing, or a regtech product team.",
-        "Knowledge graphs, temporal or bitemporal data modelling.",
+        "Regulatory, legal or government text specifically — horizon scanning, compliance content, legal publishing, or a regtech product team.",
+        "Document AI and layout-aware extraction.",
+        "Temporal or bitemporal data modelling; knowledge graphs.",
         "Multilingual extraction.",
         "You have worked somewhere the extraction had to be defended to an auditor."
       ],

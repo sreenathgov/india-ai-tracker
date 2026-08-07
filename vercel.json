@@ -26,8 +26,28 @@
     { "source": "/states/andaman-and-nicobar/", "destination": "/states/andaman-and-nicobar-islands/", "permanent": true },
     { "source": "/states/andaman-and-nicobar/index.html", "destination": "/states/andaman-and-nicobar-islands/", "permanent": true },
 
+    { "source": "/careers/cofounder-cto", "destination": "/careers/founding-cto/", "permanent": true },
+    { "source": "/careers/cofounder-cto/", "destination": "/careers/founding-cto/", "permanent": true },
+    { "source": "/careers/cofounder-cto/index.html", "destination": "/careers/founding-cto/", "permanent": true },
+    { "source": "/careers/founding-product-engineer", "destination": "/careers/founding-engineer-full-stack/", "permanent": true },
+    { "source": "/careers/founding-product-engineer/", "destination": "/careers/founding-engineer-full-stack/", "permanent": true },
+    { "source": "/careers/founding-product-engineer/index.html", "destination": "/careers/founding-engineer-full-stack/", "permanent": true },
+    { "source": "/careers/trade-practice-lead", "destination": "/careers/head-of-customs-trade-compliance/", "permanent": true },
+    { "source": "/careers/trade-practice-lead/", "destination": "/careers/head-of-customs-trade-compliance/", "permanent": true },
+    { "source": "/careers/trade-practice-lead/index.html", "destination": "/careers/head-of-customs-trade-compliance/", "permanent": true },
+    { "source": "/careers/regulatory-knowledge-engineer", "destination": "/careers/trade-compliance-analyst/", "permanent": true },
+    { "source": "/careers/regulatory-knowledge-engineer/", "destination": "/careers/trade-compliance-analyst/", "permanent": true },
+    { "source": "/careers/regulatory-knowledge-engineer/index.html", "destination": "/careers/trade-compliance-analyst/", "permanent": true },
+    { "source": "/careers/regulatory-systems-engineer", "destination": "/careers/senior-data-engineer-regulatory-data/", "permanent": true },
+    { "source": "/careers/regulatory-systems-engineer/", "destination": "/careers/senior-data-engineer-regulatory-data/", "permanent": true },
+    { "source": "/careers/regulatory-systems-engineer/index.html", "destination": "/careers/senior-data-engineer-regulatory-data/", "permanent": true },
+
     { "source": "/states/:slug/index.html", "destination": "/states/:slug/", "permanent": true },
     { "source": "/publications/:slug/index.html", "destination": "/publications/:slug/", "permanent": true },
+    { "source": "/careers/:slug/index.html", "destination": "/careers/:slug/", "permanent": true },
+
+    { "source": "/careers", "destination": "/careers.html", "permanent": true },
+    { "source": "/careers/", "destination": "/careers.html", "permanent": true },
 
     { "source": "/publications.html", "destination": "/resources.html", "permanent": true },
     { "source": "/publications", "destination": "/resources.html", "permanent": true },
@@ -73,7 +93,13 @@
       ]
     },
     {
-      "source": "/api/((?!subscribe|consult|early-access).*)",
+      "source": "/api/apply",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/api/((?!subscribe|consult|early-access|apply).*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=300" }
       ]
