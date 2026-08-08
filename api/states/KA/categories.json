@@ -510,6 +510,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 5,
+        "title": "Karnataka, Anthropic discuss AI partnership for governance, skilling, &amp; deeptech",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/karnataka-anthropic-discuss-ai-partnership-for-governance-skilling-deeptech/133026809",
+        "summary": "Karnataka is exploring a long-term partnership with Anthropic to accelerate AI adoption across governance, education, and healthcare. The partnership aims to promote responsible AI deployment and skill development. It also seeks to provide wider access to AI platforms, driving growth in these sectors.",
+        "date_published": "2026-08-07",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Aramco Ventures leads $9.5 Mn funding in climate tech startup Mitti Labs",
         "url": "https://entrackr.com/snippets/aramco-ventures-leads-95-mn-funding-in-climate-tech-startup-mitti-labs-12234526",
@@ -3984,6 +4004,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "Mobility startup E3 Electric.AI launches intelligent e-scooter E3 TRION",
+        "url": "https://entrackr.com/news/mobility-startup-e3-electricai-launches-intelligent-e-scooter-e3-trion-12239034",
+        "summary": "E3 Electric.AI, a Bengaluru-based mobility startup, has launched the E3 TRION, an intelligent electric scooter that combines human-centric design with predictive intelligence. The AI-powered scooter features a modular architecture and smart systems that adapt and learn over time to enhance the riding experience. The E3 TRION aims to address key EV ownership concerns, including range anxiety and safety, with its high-efficiency powertrain and advanced technology.",
+        "date_published": "2026-08-07",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Exclusive: Get My Parking to raise Rs 40 Cr from IvyCap Ventures at flat valuation",
         "url": "https://entrackr.com/exclusive/exclusive-get-my-parking-to-raise-rs-40-cr-from-ivycap-ventures-at-flat-valuation-12234597",
@@ -5262,7 +5302,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

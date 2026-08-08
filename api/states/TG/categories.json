@@ -112,11 +112,51 @@
     "Major AI Developments": [
       {
         "id": 9,
+        "title": "Telangana set to enhance TG-iPASS with Artificial Intelligence",
+        "url": "https://www.thehindu.com/news/cities/Hyderabad/telangana-set-to-enhance-tg-ipass-with-artificial-intelligence/article71285188.ece",
+        "summary": "Telangana is planning to enhance its TG-iPASS system with Artificial Intelligence. The integration of AI is expected to improve the system's functionality, although specific details of the enhancements have not been disclosed. The move aims to leverage AI technology to boost the efficiency of TG-iPASS.",
+        "date_published": "2026-08-08",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
         "title": "Microsoft launches Hyderabad Cloud Region to boost India’s AI, cloud infra",
         "url": "https://cellit.in/microsoft-launches-hyderabad-cloud-region-to-boost-indias-ai-cloud-infra/",
         "summary": "Microsoft has launched a new Cloud Region in Hyderabad, aimed at enhancing India's artificial intelligence and cloud infrastructure capabilities. This launch is expected to provide a boost to the country's digital transformation efforts. The new cloud region will offer a range of cloud services, including AI and machine learning capabilities.",
         "date_published": "2026-08-07",
         "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Microsoft opens Hyderabad cloud region to boost India’s AI, cloud infra",
+        "url": "https://telanganatoday.com/microsoft-opens-hyderabad-cloud-region-to-boost-indias-ai-cloud-infra",
+        "summary": "Microsoft has launched its India South Central cloud region in Hyderabad, expanding to four regions across the country. The new facility features three Availability Zones, enhancing Microsoft's AI and cloud infrastructure. This move aims to meet the growing enterprise demand for cloud services in India.",
+        "date_published": "2026-08-07",
+        "source_name": "Telangana Today - Tech",
         "category": "Major AI Developments",
         "state_codes": [
           "TG"

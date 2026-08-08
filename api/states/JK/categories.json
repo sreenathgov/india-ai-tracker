@@ -1,7 +1,28 @@
 {
   "state": "JK",
   "categories": {
-    "Policies and Initiatives": [],
+    "Policies and Initiatives": [
+      {
+        "id": 11,
+        "title": "IIT Jammu&#8217;s AI centre, Project Phoenix to drive innovation, entrepreneurship in J&#038;K: CM",
+        "url": "https://www.tribuneindia.com/news/j-k/iit-jammus-ai-centre-project-phoenix-to-drive-innovation-entrepreneurship-in-jk-cm",
+        "summary": "The IIT Jammu's AI Centre of Excellence aims to develop technology-driven solutions to Jammu and Kashmir's challenges. Project Phoenix, launched alongside the AI centre, will promote entrepreneurship and self-employment among the region's youth. The initiatives are expected to drive innovation in the union territory.",
+        "date_published": "2026-08-07",
+        "source_name": "Tribune - J&K",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "JK"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ],
     "Events": [],
     "Major AI Developments": [
       {

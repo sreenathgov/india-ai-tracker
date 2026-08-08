@@ -227,6 +227,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "Pune’s IT hub image draws AI talent from tier-2 cities",
+        "url": "https://timesofindia.indiatimes.com/city/pune/punes-it-hub-image-draws-ai-talent-from-tier-2-cities/articleshow/133041440.cms",
+        "summary": "Pune's reputation as an IT hub is attracting artificial intelligence talent from tier-2 cities. The city's image as a tech center is drawing in professionals seeking opportunities in the AI field. This influx of talent is expected to further establish Pune as a major destination for AI innovation and development.",
+        "date_published": "2026-08-08",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 15,
         "title": "Retired IAF officer falls for AI-generated video, loses Rs1 crore in online forex scam",
         "url": "https://timesofindia.indiatimes.com/city/pune/retired-iaf-officer-falls-for-ai-generated-video-loses-rs1-crore-in-online-forex-scam/articleshow/132871673.cms",
@@ -2663,6 +2683,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives"
+    "Major AI Developments"
   ]
 }

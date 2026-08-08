@@ -145,6 +145,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "Gujarat notifies data centre policy to build 7.5 GW green AI capacity...",
+        "url": "https://cellit.in/gujarat-notifies-data-centre-policy-to-build-7-5-gw-green-ai-capacity-by-2029/",
+        "summary": "Gujarat has notified a data centre policy aimed at building 7.5 GW of green AI capacity. The policy focuses on developing data centres that utilize renewable energy sources, reducing the state's carbon footprint. This initiative is expected to promote sustainable growth in the AI sector.",
+        "date_published": "2026-08-08",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Gujarat: 37 institutes identified for Data & AI Labs under ‘IndiaAI Mission’",
         "url": "https://cellit.in/gujarat-37-institutes-identified-for-data-ai-labs-under-indiaai-mission/",
@@ -1678,5 +1698,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
