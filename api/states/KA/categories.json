@@ -470,6 +470,28 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "ISRO-NRSC study uses satellite data, AI to map soil health in Andhra farmland",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/isro-nrsc-study-uses-satellite-data-ai-to-map-soil-health-in-andhra-farmland/articleshow/133057306.cms",
+        "summary": "ISRO-NRSC conducted a study that utilized satellite data and AI to map soil health in Andhra farmland. The study aimed to assess and improve soil health using advanced technologies. Satellite data and AI were combined to create detailed maps of soil health, providing valuable insights for farmers and policymakers.",
+        "date_published": "2026-08-09",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AP",
+          "TG",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 12,
         "title": "Open-weight AI models widen startup choice: OpenAI’s Manara",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/open-weight-ai-models-widen-startup-choice-openais-manara/articleshow/133014226.cms",
@@ -5302,5 +5324,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
