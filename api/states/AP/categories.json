@@ -108,6 +108,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 4,
+        "title": "Chartered accountants urged to embrace AI, quantum technology to realise Viksit Bharat goals",
+        "url": "https://www.thehindu.com/news/national/andhra-pradesh/chartered-accountants-urged-to-embrace-ai-quantum-technology-to-realise-viksit-bharat-goals/article71325032.ece",
+        "summary": "Chartered accountants are being encouraged to adopt AI and quantum technology to help achieve the Viksit Bharat goals. The call to action emphasizes that future accountants cannot limit themselves to traditional practices, but must evolve to remain relevant. This shift is expected to support the country's development and growth objectives.",
+        "date_published": "2026-08-09",
+        "source_name": "The Hindu - Andhra Pradesh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Aramco Ventures leads $9.5 Mn funding in climate tech startup Mitti Labs",
         "url": "https://entrackr.com/snippets/aramco-ventures-leads-95-mn-funding-in-climate-tech-startup-mitti-labs-12234526",
@@ -600,7 +620,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

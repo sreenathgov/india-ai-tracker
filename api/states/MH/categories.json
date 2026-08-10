@@ -2146,6 +2146,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "Aum Ventures announces first close of Rs 750 Cr India Innovation Fund II",
+        "url": "https://entrackr.com/news/aum-ventures-announces-first-close-of-rs-750-cr-india-innovation-fund-ii-12246519",
+        "summary": "Aum Ventures has announced the first close of its India Innovation Fund II at Rs 225 crore, with a target corpus of Rs 750 crore to invest in early-stage startups. The fund will focus on IP-led technology companies from India for global markets. The first close attracted participation from both existing and new investors, including international limited partners from the US, Middle East, and other global markets.",
+        "date_published": "2026-08-10",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Piper Serica announces Rs 300 Cr first close for Bharat Tech Fund",
         "url": "https://entrackr.com/snippets/piper-serica-announces-rs-300-cr-first-close-for-bharat-tech-fund-12236351",
@@ -2682,5 +2702,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

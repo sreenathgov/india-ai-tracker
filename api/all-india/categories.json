@@ -1355,6 +1355,26 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "India to be key player in AI and biotechnology-led industrial revolution",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-to-be-key-player-in-ai-and-biotechnology-led-industrial-revolution/133071126",
+        "summary": "India is expected to play a key role in the next industrial revolution, driven by artificial intelligence and biotechnology. According to Union Minister of State Dr Jitendra Singh, the country is poised to become a major force in this revolution. India's growth in these areas will likely have a significant impact on its industrial development.",
+        "date_published": "2026-08-10",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Building AI won't save your job—2 in 3 Indian AI workers expect layoffs soon, says report",
         "url": "https://www.etnownews.com/technology/building-ai-wont-save-your-job2-in-3-indian-ai-workers-expect-layoffs-soon-says-report-article-155388709",
         "summary": "A survey of Indian AI and ML professionals found that 66% expect layoffs soon. This level of anxiety is nearly as high as that of roles AI was expected to replace. The findings suggest that working in AI may not be a guarantee against job loss, contrary to common assumptions.",

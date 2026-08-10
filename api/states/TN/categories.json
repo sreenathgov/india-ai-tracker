@@ -1245,6 +1245,27 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "IIT Madras startup Plenome wins AI hackathon; Deploys AI-based prescription generator at AIIMS New Delhi",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/iit-madras-startup-plenome-wins-ai-hackathon-deploys-ai-based-prescription-generator-at-aiims-new-delhi/articleshow/133074018.cms",
+        "summary": "IIT Madras startup Plenome has won an AI hackathon and deployed an AI-based prescription generator at AIIMS New Delhi. The startup's technology aims to improve healthcare outcomes through artificial intelligence. Plenome's AI-based prescription generator is now being used at one of India's premier medical institutions.",
+        "date_published": "2026-08-10",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Funding and acquisitions in Indian startup this week [Mar 23 - Mar 28]",
         "url": "https://entrackr.com/report/weekly-funding-report/funding-and-acquisitions-in-indian-startup-this-week-mar-23-mar-28-11429211",
@@ -1372,5 +1393,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

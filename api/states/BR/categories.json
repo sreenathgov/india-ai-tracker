@@ -127,6 +127,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "AI to assist, not replace teachers: Education minister",
+        "url": "https://timesofindia.indiatimes.com/city/patna/ai-to-assist-not-replace-teachers-education-minister/articleshow/133072666.cms",
+        "summary": "The Education Minister stated that AI will be used to assist teachers, not replace them. This approach aims to enhance the teaching process with technology, rather than relying solely on AI. The minister's statement emphasizes the importance of human teachers in education, with AI serving as a supportive tool.",
+        "date_published": "2026-08-10",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Born in Muzaffarpur, Kanishka is now Britain’s AI minister",
         "url": "https://timesofindia.indiatimes.com/city/patna/born-in-muzaffarpur-kanishka-is-now-britains-ai-minister/articleshow/132793003.cms",
@@ -526,5 +546,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

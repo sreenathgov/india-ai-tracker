@@ -145,6 +145,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "AI, surveillance tech to boost passenger safety, fight drug trafficking on Western Railway",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ai-surveillance-tech-to-boost-passenger-safety-fight-drug-trafficking-on-western-railway/articleshow/133074551.cms",
+        "summary": "Western Railway is set to utilize AI and surveillance technology to enhance passenger safety and combat drug trafficking. The implementation of this technology aims to improve security measures and reduce criminal activities on the railway. The move is expected to boost safety and security for passengers traveling on Western Railway.",
+        "date_published": "2026-08-10",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Gujarat notifies data centre policy to build 7.5 GW green AI capacity...",
         "url": "https://cellit.in/gujarat-notifies-data-centre-policy-to-build-7-5-gw-green-ai-capacity-by-2029/",
@@ -1698,5 +1718,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
