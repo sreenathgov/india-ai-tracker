@@ -112,6 +112,26 @@
     "Major AI Developments": [
       {
         "id": 5,
+        "title": "Team India sweeps Gold and multiple awards at International Linguistics Olympiad at Romania",
+        "url": "https://www.iiit.ac.in/international-linguistics-olympiad-2/",
+        "summary": "Team India won gold and multiple awards at the International Linguistics Olympiad in Romania. The achievement is associated with IIIT Hyderabad, which has also launched various initiatives such as the Avishkar Venture Studio Summer Cohort 2026 and the Amgen Scholars Program. Additionally, IIIT Hyderabad is offering admissions for a 6-month AI/ML training program and has developed an AI-powered dashcam system for traffic enforcement.",
+        "date_published": "2026-08-11",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
         "title": "ISRO-NRSC study uses satellite data, AI to map soil health in Andhra farmland",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/isro-nrsc-study-uses-satellite-data-ai-to-map-soil-health-in-andhra-farmland/articleshow/133057306.cms",
         "summary": "ISRO-NRSC conducted a study that utilized satellite data and AI to map soil health in Andhra farmland. The study aimed to assess and improve soil health using advanced technologies. Satellite data and AI were combined to create detailed maps of soil health, providing valuable insights for farmers and policymakers.",
@@ -2553,5 +2573,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
