@@ -535,6 +535,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "‘PIC sat on floor, tried to smoke, couldn’t walk properly’: What happened on Phuket-Delhi AI flight",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/pic-sat-on-cockpit-floor-tried-to-smoke-couldnt-walk-properly-what-happened-on-phuket-delhi-air-india-flight/articleshow/133172148.cms",
+        "summary": "An Air India pilot was reportedly under the influence of marijuana during a Phuket-Delhi flight, exhibiting unusual behavior and rendering him unfit for duty. The cabin crew alerted the airline, and the co-pilot took control after a troubling drop in altitude left several passengers and crew injured. Authorities are now investigating the incident and reviewing aviation safety protocols.",
+        "date_published": "2026-08-12",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 13,
         "title": "3k cams, drones and AI to keep watch on kanwar routes",
         "url": "https://timesofindia.indiatimes.com/city/noida/3k-cams-drones-and-ai-to-keep-watch-on-kanwar-routes/articleshow/132840262.cms",
@@ -3661,6 +3681,26 @@
     "AI Start-Up News": [
       {
         "id": 3,
+        "title": "How an IIT Delhi startup is putting AI inside drones, sensors and satellites",
+        "url": "https://yourstory.com/2026/08/iit-delhi-startup-ai-drones-satellites",
+        "summary": "IIT Delhi's startup Cyran AI Solutions is developing neuromorphic edge computing technology. This technology is being designed for use in drones, sensors, and satellites, targeting defence, geospatial, and industrial applications. The startup aims to integrate AI into these devices for enhanced functionality.",
+        "date_published": "2026-08-11",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "IIT Madras startup Plenome wins AI hackathon; Deploys AI-based prescription generator at AIIMS New Delhi",
         "url": "https://timesofindia.indiatimes.com/city/chennai/iit-madras-startup-plenome-wins-ai-hackathon-deploys-ai-based-prescription-generator-at-aiims-new-delhi/articleshow/133074018.cms",
         "summary": "IIT Madras startup Plenome has won an AI hackathon and deployed an AI-based prescription generator at AIIMS New Delhi. The startup's technology aims to improve healthcare outcomes through artificial intelligence. Plenome's AI-based prescription generator is now being used at one of India's premier medical institutions.",
@@ -4277,5 +4317,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

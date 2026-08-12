@@ -145,6 +145,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "Racket to make fake RC book with AI busted",
+        "url": "https://timesofindia.indiatimes.com/city/surat/racket-to-make-fake-rc-book-with-ai-busted/articleshow/133164402.cms",
+        "summary": "A racket using artificial intelligence to create fake registration certificates (RC books) has been busted. The group utilized AI technology to generate counterfeit documents, but details on the perpetrators and the extent of the operation are not provided. Authorities have reportedly taken action to dismantle the racket.",
+        "date_published": "2026-08-12",
+        "source_name": "Times of India - Rajkot",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "AI, surveillance tech to boost passenger safety, fight drug trafficking on Western Railway",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ai-surveillance-tech-to-boost-passenger-safety-fight-drug-trafficking-on-western-railway/articleshow/133074551.cms",
@@ -1718,5 +1738,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

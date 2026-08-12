@@ -46,6 +46,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 13,
+        "title": "State to add 29 AI cameras, entire state to be covered by Jan 2027",
+        "url": "https://timesofindia.indiatimes.com/city/goa/state-to-add-29-ai-cameras-entire-state-to-be-covered-by-jan-2027/articleshow/133163968.cms",
+        "summary": "The state will be adding 29 AI cameras to enhance coverage, with the goal of having the entire state covered by January 2027. This expansion aims to provide comprehensive surveillance across the state. The new cameras will utilize artificial intelligence to improve monitoring capabilities.",
+        "date_published": "2026-08-12",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "AI traffic cameras begin issuing challans at 26 locations across Goa",
         "url": "https://timesofindia.indiatimes.com/city/goa/ai-traffic-cameras-begin-issuing-challans-at-26-locations-across-goa/articleshow/132796313.cms",
@@ -368,5 +388,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
