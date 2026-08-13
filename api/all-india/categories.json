@@ -1395,6 +1395,26 @@
       },
       {
         "id": 1,
+        "title": "Taiwan&#039;s Foxconn reports 35% rise in Q2 profit on AI demand, beats forecasts",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/taiwans-foxconn-reports-35-rise-in-q2-profit-on-ai-demand-beats-forecasts/133173902",
+        "summary": "Foxconn reported a 35% rise in Q2 profit, driven by strong demand for artificial intelligence products, beating forecasts. The company expects continued growth due to sustained AI demand, driving expansion this year. Foxconn is also expanding its manufacturing presence in India and Mexico, with its shares rising ahead of the earnings announcement.",
+        "date_published": "2026-08-12",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "India advances to Global AI power status with innovative governance model",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-advances-to-global-ai-power-status-with-innovative-governance-model/133098008",
         "summary": "India is emerging as a major player in artificial intelligence through a combination of large-scale public investment and shared computing facilities. The country's innovative governance model aims to balance innovation with democratic safeguards. This approach is helping India advance to a global AI power status.",
@@ -12720,6 +12740,46 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "AI code testing platform Blacksmith raises $45 Mn in Series B led by Peak XV",
+        "url": "https://entrackr.com/news/ai-code-testing-platform-blacksmith-raises-45-mn-in-series-b-led-by-peak-xv-12255973",
+        "summary": "AI code testing platform Blacksmith has raised $45 million in Series B funding at a valuation of $550 million, led by Peak XV Partners. The funding round, which also included participation from Google Ventures and Y Combinator, brings the startup's total funding to $58.5 million. The proceeds will be used to expand Blacksmith's suite of coding tools to help developers work more efficiently.",
+        "date_published": "2026-08-13",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Mirae Asset Venture Investments closes MAVOF II at Rs 1,125 Cr",
+        "url": "https://entrackr.com/news/mirae-asset-venture-investments-closes-mavof-ii-at-rs-1125-cr-12255745",
+        "summary": "Mirae Asset Venture Investments India has closed its second venture opportunity fund, MAVOF II, at Rs 1,125 crore, with a target corpus of Rs 1,800 crore. The fund will invest in Indian startups across various sectors, including technology, AI, and consumer discretionary. MAVOF II is backed by the Rs 6,000 crore India-focused Unicorn Growth Fund.",
+        "date_published": "2026-08-13",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Funding and acquisitions in Indian startups this week [Aug 03 - Aug 08]",
         "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-aug-03-aug-08-12241402",
@@ -15510,6 +15570,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }

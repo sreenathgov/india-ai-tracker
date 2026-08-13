@@ -246,6 +246,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "‘AI needs proper training for use in space tech’",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/ai-needs-proper-training-for-use-in-space-tech/articleshow/133192852.cms",
+        "summary": "Artificial intelligence requires proper training to be effectively utilized in space technology. Experts emphasize the need for AI to be specifically trained for space-related applications to ensure its reliability and efficiency. Proper training is crucial for AI to perform accurately in the unique and challenging environment of space.",
+        "date_published": "2026-08-13",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "CSJMU’s AI course for mediamen",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/csjmus-ai-course-for-mediamen/articleshow/133192758.cms",
+        "summary": "Chhatrapati Shahu Ji Maharaj University (CSJMU) is offering an AI course specifically designed for media professionals. The course aims to equip mediamen with the skills and knowledge required to work with artificial intelligence. CSJMU's initiative is a unique attempt to bridge the gap between AI and the media industry.",
+        "date_published": "2026-08-13",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 12,
         "title": "LU scholar’s AI tool enables fast, cheap cancer test",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/lu-scholars-ai-tool-enables-fast-cheap-cancer-test/articleshow/132969237.cms",
@@ -1336,5 +1376,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
