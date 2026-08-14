@@ -470,6 +470,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "L&amp;T bags ‘mega’ AI infra order from Together AI",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/lt-bags-mega-ai-infra-order-from-together-ai/articleshow/133213414.cms",
+        "summary": "Larsen & Toubro (L&T) has secured a significant artificial intelligence (AI) infrastructure order from Together AI. The order is categorized as a 'mega' deal, indicating its substantial value and scope. The partnership aims to leverage L&T's expertise in building AI infrastructure for Together AI's operations.",
+        "date_published": "2026-08-14",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "MIT Bengaluru, IBM launch AI lab to accelerate, democratise new-age skills",
+        "url": "https://www.thehindu.com/news/national/karnataka/mit-bengaluru-ibm-launch-ai-lab-to-accelerate-democratise-new-age-skills/article71341986.ece",
+        "summary": "MIT Bengaluru and IBM have launched an AI lab to accelerate and democratize new-age skills in India. The lab will offer advanced AI computing resources, research infrastructure, and digital skilling opportunities. It will be available to students, researchers, and institutions across the country.",
+        "date_published": "2026-08-13",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Namma Metro sees highest ridership ever, Rs 40.7 crore for AI projects; food safety drive on: What's trending in Bengaluru today",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/namma-metro-sees-highest-ridership-ever-rs-40-7-crore-for-ai-projects-food-safety-drive-on-whats-trending-in-bengaluru-today/articleshow/133170098.cms",
@@ -4106,6 +4146,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "Kusho AI is building AI agents that test software before it breaks",
+        "url": "https://yourstory.com/2026/08/kusho-ai-software-testing-startup-bengaluru",
+        "summary": "Kusho AI, a Bengaluru startup, is developing AI agents that automatically test software to prevent errors. These agents can auto-generate, run, and fix software tests, reducing manual QA time for engineering teams. Founded in 2023, Kusho AI aims to streamline the software testing process with its innovative AI-powered solution.",
+        "date_published": "2026-08-13",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Wippi raises $1.2 Mn in seed round led by 12 Flags",
         "url": "https://entrackr.com/snippets/wippi-raises-12-mn-in-seed-round-led-by-12-flags-12252576",
@@ -5464,5 +5524,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

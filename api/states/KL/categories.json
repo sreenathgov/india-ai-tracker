@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 7,
+        "title": "Kerala minister calls for governance reforms to keep pace with AI growth",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/kerala-minister-calls-for-governance-reforms-to-keep-pace-with-ai-growth/133228875",
+        "summary": "Kerala minister P K Kunhalikutty is advocating for governance reforms to keep pace with the rapid growth of artificial intelligence (AI). He emphasizes the need for laws and governance systems to adapt to AI advances. A new C-DIT AI Lab will be established to develop public AI services, with a focus on the Malayalam language, under government control.",
+        "date_published": "2026-08-14",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 14,
         "title": "Kerala CM launches State’s first ‘Lab on Wheels’ mobile technology laboratory",
         "url": "https://www.thehindu.com/news/national/kerala/cm-launches-states-first-lab-on-wheels-mobile-technology-laboratory/article71314657.ece",
@@ -357,5 +377,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

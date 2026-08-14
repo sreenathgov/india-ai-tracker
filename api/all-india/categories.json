@@ -1355,6 +1355,46 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "From AI consumer to AI producer: Why India must build, not just use, the AI economy",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/from-ai-consumer-to-ai-producer-why-india-must-build-not-just-use-the-ai-economy/133152406",
+        "summary": "India has a large AI user base but lacks AI production, relying on consumption rather than creation. To change this, India needs to build AI platforms that cover the full model lifecycle, allowing the country to retain decision-making and economic value. By leveraging its strengths in talent and data, India can invest in domestic AI development and create a thriving AI software industry.",
+        "date_published": "2026-08-14",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "AI data-centre boom drives surge in demand for core engineers in India",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-data-centre-boom-drives-surge-in-demand-for-core-engineers-in-india/133212617",
+        "summary": "India's growing AI data-centre ecosystem is driving a surge in demand for core engineers, particularly mechanical, electrical, and cooling engineers. This increased demand is resulting in sharply rising salaries for these professionals. The AI data-centre boom is creating new job opportunities in India's engineering sector.",
+        "date_published": "2026-08-13",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Beyond algorithms: Why AI success is shaped by people, not platforms",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/beyond-algorithms-why-ai-success-is-shaped-by-people-not-platforms/133094861",
         "summary": "AI success is driven by people, not just technology, and empowering employees is crucial for effective AI transformation. Developing trust and awareness of AI's potential is essential for its successful integration in organizations. A human-centric approach, focusing on continuous learning and skill enhancement, is necessary for AI to deliver meaningful benefits.",
@@ -15570,6 +15610,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

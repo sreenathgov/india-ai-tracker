@@ -227,6 +227,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "Samsung opens Pune facility to boost AI data centre cooling tech",
+        "url": "https://timesofindia.indiatimes.com/city/pune/samsung-opens-pune-facility-to-boost-ai-data-centre-cooling-tech/articleshow/133222590.cms",
+        "summary": "Samsung has opened a new facility in Pune to enhance its AI data centre cooling technology. The move aims to boost the company's capabilities in developing innovative cooling solutions for data centres. This expansion is expected to support the growing demand for efficient data centre cooling systems.",
+        "date_published": "2026-08-14",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Samsung to manufacture AI data center HVAC products in India, expanding to Asia-Pacific",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/samsung-to-manufacture-ai-data-center-hvac-products-in-india-expanding-to-asia-pacific/133212581",
+        "summary": "Samsung Electronics is setting up a factory in Pune, India to manufacture HVAC products for AI data centers and other critical infrastructure. The facility, operated by FläktGroup, will export products across the Asia-Pacific region, producing air handling units and fan wall units. Annual production is expected to reach 6,500 HVAC units.",
+        "date_published": "2026-08-13",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "HighLeaf leads Rs 5 Cr pre-Series A round in FreightFox",
         "url": "https://entrackr.com/snippets/highleaf-leads-rs-5-cr-pre-series-a-round-in-freightfox-12249334",
@@ -2722,5 +2762,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
