@@ -246,6 +246,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "IIT Knp holds orientation for new AI, cyber courses",
+        "url": "https://timesofindia.indiatimes.com/city/kanpur/iit-knp-holds-orientation-for-new-ai-cyber-courses/articleshow/133247987.cms",
+        "summary": "IIT Kanpur held an orientation for new courses in artificial intelligence and cybersecurity. The event marked the introduction of these programs, aiming to equip students with skills in emerging technologies. The institute's effort is part of its initiative to stay updated with the latest advancements in the field.",
+        "date_published": "2026-08-15",
+        "source_name": "Times of India - Andhra Pradesh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "‘AI needs proper training for use in space tech’",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/ai-needs-proper-training-for-use-in-space-tech/articleshow/133192852.cms",
@@ -1376,5 +1396,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

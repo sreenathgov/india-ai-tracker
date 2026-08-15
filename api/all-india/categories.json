@@ -12780,6 +12780,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 1,
+        "title": "China&#039;s Z.ai a challenger to OpenAI, Anthropic",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/chinas-z-ai-a-challenger-to-openai-anthropic/133230183",
+        "summary": "China's Z.ai has introduced the GLM-5.2 model, a challenger to OpenAI and Anthropic, offering advanced coding and agent capabilities at a lower cost. The model provides affordable alternatives for various applications, with Indian users able to access it for conversations and coding assistance. This development shifts the focus of enterprise AI evaluation towards price-performance and practical benchmarking.",
+        "date_published": "2026-08-14",
+        "source_name": "ET CIO - AI",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "AI code testing platform Blacksmith raises $45 Mn in Series B led by Peak XV",
         "url": "https://entrackr.com/news/ai-code-testing-platform-blacksmith-raises-45-mn-in-series-b-led-by-peak-xv-12255973",
@@ -15609,7 +15629,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

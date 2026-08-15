@@ -4,6 +4,26 @@
     "Policies and Initiatives": [
       {
         "id": 4,
+        "title": "1 crore youth to learn AI, free coaching for exams: PM Modi's Independence Day promise",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/1-crore-youth-to-learn-ai-free-coaching-for-exams-pm-modis-independence-day-promise/articleshow/133255905.cms",
+        "summary": "PM Modi announced plans to provide free coaching for exams and teach one crore youth about artificial intelligence. The government will also undertake civil defence reforms with modernised training to address evolving security challenges. Additionally, a nationwide sports talent hunt will be launched to identify and nurture children aged 5 to 15 years.",
+        "date_published": "2026-08-15",
+        "source_name": "Times of India - Delhi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
         "title": "Personal assistance startup Hulp secures $2.6 Mn seed funding",
         "url": "https://entrackr.com/snippets/personal-assistance-startup-hulp-secures-26-mn-seed-funding-12230169",
         "summary": "Hulp, a personal assistance and concierge platform, has raised $2.6 million in seed funding co-led by Sparrow Capital and BITKRAFT Ventures. The funding will be used to expand AI workflows, strengthen the senior leadership team, and enhance technology and product capabilities. Founded in April this year, Hulp aims to utilize the funds to drive growth and development.",
@@ -4337,5 +4357,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }
