@@ -555,6 +555,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Beyond barricades: Technology that worked behind Red Fort security on Independence Day",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/beyond-barricades-technology-that-worked-behind-red-fort-security/articleshow/133265713.cms",
+        "summary": "India's 80th Independence Day celebrations at the Red Fort featured enhanced security measures, including the use of the Abhigyan app and facial recognition vans for identity verification. AI-driven CCTV cameras and under-vehicle surveillance systems provided comprehensive monitoring of the area. Anti-drone technology was also employed to prevent unauthorized flying objects and ensure a secure environment.",
+        "date_published": "2026-08-16",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 12,
         "title": "‘PIC sat on floor, tried to smoke, couldn’t walk properly’: What happened on Phuket-Delhi AI flight",
         "url": "https://timesofindia.indiatimes.com/city/delhi/pic-sat-on-cockpit-floor-tried-to-smoke-couldnt-walk-properly-what-happened-on-phuket-delhi-air-india-flight/articleshow/133172148.cms",
@@ -4358,6 +4378,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives"
+    "Major AI Developments"
   ]
 }

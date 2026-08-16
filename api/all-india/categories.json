@@ -1354,6 +1354,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "PM Modi’s AI bet: Train 1 crore youth in one year",
+        "url": "https://yourstory.com/2026/08/pm-modis-ai-bet-train-1-crore-youth-in-one-year",
+        "summary": "PM Modi aims to train 1 crore youth in AI within a year. Meanwhile, startups announced $146 million in funding across 15 deals this week, a decrease from $323 million the previous week. The funding decline may not impact the government's AI training initiative.",
+        "date_published": "2026-08-16",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Global innovation hub to AI skill training for 1 Cr youth: PM Modi outlines nation’s tech ambitions",
+        "url": "https://yourstory.com/2026/08/global-innovation-hub-to-ai-skill-training-for-1-cr-youth-pm-modi-outlines-nations-tech-ambitions",
+        "summary": "PM Modi announced plans to establish a global innovation hub for AI skill training, aiming to benefit 1 crore youth. He highlighted the nation's tech ambitions, citing rapid growth in areas like artificial intelligence, quantum computing, and space. The initiative is part of India's efforts to expand its technological capabilities and foster innovation.",
+        "date_published": "2026-08-15",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "From AI consumer to AI producer: Why India must build, not just use, the AI economy",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/from-ai-consumer-to-ai-producer-why-india-must-build-not-just-use-the-ai-economy/133152406",
@@ -12780,6 +12820,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "AI Startups To Watch: 5 Startups That Caught Our Eye In August",
+        "url": "https://inc42.com/startups/ai-startups-to-watch-5-startups-that-caught-our-eye-in-august/",
+        "summary": "India's AI industry is shifting focus from building equivalents of ChatGPT to developing infrastructure. Five AI startups have caught attention in August for their innovative approaches. These startups are leading the next phase of India's AI growth, moving beyond chatbot-like technologies to more complex infrastructure development.",
+        "date_published": "2026-08-15",
+        "source_name": "Inc42 Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "China&#039;s Z.ai a challenger to OpenAI, Anthropic",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/chinas-z-ai-a-challenger-to-openai-anthropic/133230183",
@@ -15629,5 +15689,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
