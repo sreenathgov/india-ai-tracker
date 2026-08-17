@@ -112,6 +112,26 @@
     "Major AI Developments": [
       {
         "id": 5,
+        "title": "Hyderabad researchers develop AI model to detect breast cancer from mammograms",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/hyderabad-researchers-develop-ai-model-to-detect-breast-cancer-from-mammograms/articleshow/133281412.cms",
+        "summary": "Hyderabad researchers have developed an AI model that can detect breast cancer from mammograms. The AI model uses machine learning algorithms to analyze mammogram images and identify potential breast cancer cases. This innovation has the potential to improve breast cancer diagnosis accuracy and speed.",
+        "date_published": "2026-08-17",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
         "title": "Team India sweeps Gold and multiple awards at International Linguistics Olympiad at Romania",
         "url": "https://www.iiit.ac.in/international-linguistics-olympiad-2/",
         "summary": "Team India won gold and multiple awards at the International Linguistics Olympiad in Romania. The achievement is associated with IIIT Hyderabad, which has also launched various initiatives such as the Avishkar Venture Studio Summer Cohort 2026 and the Amgen Scholars Program. Additionally, IIIT Hyderabad is offering admissions for a 6-month AI/ML training program and has developed an AI-powered dashcam system for traffic enforcement.",
@@ -2573,5 +2593,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

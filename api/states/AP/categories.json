@@ -86,6 +86,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Andhra Pradesh stands at the top in AI & BDA Skilling under...",
+        "url": "https://cellit.in/andhra-pradesh-stands-at-the-top-in-ai-bda-skilling-under-futureskills-prime-scheme-centre/",
+        "summary": "Andhra Pradesh has ranked first in AI and Business Data Analytics (BDA) skilling. The state has achieved this top position due to its efforts in upskilling and reskilling its workforce in emerging technologies. Andhra Pradesh's strong performance in AI and BDA skilling is a notable achievement in the country's digital transformation journey.",
+        "date_published": "2026-08-17",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "ISRO-NRSC study uses satellite data, AI to map soil health in Andhra farmland",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/isro-nrsc-study-uses-satellite-data-ai-to-map-soil-health-in-andhra-farmland/articleshow/133057306.cms",
@@ -620,5 +640,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
