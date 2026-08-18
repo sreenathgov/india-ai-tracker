@@ -145,6 +145,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "Rs 100cr AI push: Gujarat inks 10-year pact, targets students, startups and MSMEs",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/rs-100cr-ai-push-gujarat-inks-10-year-pact-targets-students-startups-and-msmes/articleshow/133305241.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspac...",
+        "date_published": "2026-08-18",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Racket to make fake RC book with AI busted",
         "url": "https://timesofindia.indiatimes.com/city/surat/racket-to-make-fake-rc-book-with-ai-busted/articleshow/133164402.cms",
@@ -1738,5 +1758,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

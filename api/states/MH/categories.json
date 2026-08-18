@@ -227,6 +227,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Norwest leads $12.5 Mn Series A round in AI lending-tech platform Rezolv",
+        "url": "https://entrackr.com/news/norwest-leads-125-mn-series-a-round-in-ai-lending-tech-platform-rezolv-12391129",
+        "summary": "Rezolv, an AI-native lending technology platform for...",
+        "date_published": "2026-08-18",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "‘Nobody writes about it’: Nitin Gadkari says Mumbai-Pune Expressway remains pothole-free after 27 years",
+        "url": "https://timesofindia.indiatimes.com/city/pune/nobody-writes-about-it-nitin-gadkari-says-mumbai-pune-expressway-remains-pothole-free-after-27-years/articleshow/133312131.cms",
+        "summary": "<img align=\"left\"...",
+        "date_published": "2026-08-18",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "'Trolled for damage on road I didn't build': Nitin Gadkari on Pune-Mumbai expressway connecting link",
+        "url": "https://timesofindia.indiatimes.com/city/pune/trolled-for-damages-on-state-built-connecting-eway-link-gadkari/articleshow/133305846.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"https://...",
+        "date_published": "2026-08-18",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Samsung opens Pune facility to boost AI data centre cooling tech",
         "url": "https://timesofindia.indiatimes.com/city/pune/samsung-opens-pune-facility-to-boost-ai-data-centre-cooling-tech/articleshow/133222590.cms",
@@ -2762,5 +2822,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
