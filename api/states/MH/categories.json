@@ -287,6 +287,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 1,
+        "title": "AI, digital ecosystem integration discussed at BRICS working group meeting in Pune",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/ai-digital-ecosystem-integration-discussed-at-brics-working-group-meeting-in-pune/133319612",
+        "summary": "Delegates from BRICS congregated in Pune to deliberate on the prospects of artificial intelligence and forthcoming communications strategies. This seventh assembly of the BRICS Working Group on ICT ad...",
+        "date_published": "2026-08-18",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Samsung opens Pune facility to boost AI data centre cooling tech",
         "url": "https://timesofindia.indiatimes.com/city/pune/samsung-opens-pune-facility-to-boost-ai-data-centre-cooling-tech/articleshow/133222590.cms",
@@ -2266,6 +2286,27 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "Butterfly Learnings raises Rs 65 Cr in Pre-Series B round led by Inflexor Ventures",
+        "url": "https://entrackr.com/snippets/butterfly-learnings-raises-rs-65-cr-in-pre-series-b-round-led-by-inflexor-ventures-12394562",
+        "summary": "Mumbai-based paediatric behavioural health platform Butterf...",
+        "date_published": "2026-08-19",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "GJ",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Aum Ventures announces first close of Rs 750 Cr India Innovation Fund II",
         "url": "https://entrackr.com/news/aum-ventures-announces-first-close-of-rs-750-cr-india-innovation-fund-ii-12246519",
@@ -2823,6 +2864,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }

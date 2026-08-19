@@ -1394,6 +1394,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 2,
+        "title": "India&#039;s first AI-powered payments foundation model launched by Razorpay to boost digital growth",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/indias-first-ai-powered-payments-foundation-model-launched-by-razorpay-to-boost-digital-growth/133313349",
+        "summary": "Razorpay, a leading fintech company, has introduced an advanced payments foundation model called Razorpay Vulcan, powered by AI. Utilizing cutting-edge technology from NVIDIA and AWS, this initiative...",
+        "date_published": "2026-08-18",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "How AI agents are transforming India's financial services sector",
         "url": "https://www.livemint.com/ai/how-ai-agents-are-transforming-indias-financial-services-sector-11786937014153.html",
@@ -15769,7 +15789,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

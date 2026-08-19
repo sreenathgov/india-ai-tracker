@@ -145,6 +145,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "World Photography Day: IIT-Gn develops AI tool to restore, enhance pictures",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/world-photography-day-iit-gn-develops-ai-tool-to-restore-enhance-pictures/articleshow/133330814.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10...",
+        "date_published": "2026-08-19",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Rs 100cr AI push: Gujarat inks 10-year pact, targets students, startups and MSMEs",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/rs-100cr-ai-push-gujarat-inks-10-year-pact-targets-students-startups-and-msmes/articleshow/133305241.cms",
@@ -1711,6 +1731,27 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "Butterfly Learnings raises Rs 65 Cr in Pre-Series B round led by Inflexor Ventures",
+        "url": "https://entrackr.com/snippets/butterfly-learnings-raises-rs-65-cr-in-pre-series-b-round-led-by-inflexor-ventures-12394562",
+        "summary": "Mumbai-based paediatric behavioural health platform Butterf...",
+        "date_published": "2026-08-19",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "GJ",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Tractor Junction gets RBI licence to launch NBFC arm Dhanrise Finance",
         "url": "https://entrackr.com/snippets/tractor-junction-gets-rbi-licence-to-launch-nbfc-arm-dhanrise-finance-12225871",
@@ -1759,6 +1800,7 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }
