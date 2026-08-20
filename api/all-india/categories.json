@@ -1354,6 +1354,86 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Exclusive: BGauss raises Rs 110 Cr in fresh round at Rs 1,000 Cr valuation",
+        "url": "https://entrackr.com/exclusive/exclusive-bgauss-raises-rs-110-cr-in-fresh-round-at-rs-1000-cr-valuation-12397665",
+        "summary": "Electric two-wheeler maker BGauss has raised Rs 110...",
+        "date_published": "2026-08-20",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Vertiv™ Xpress AI solutions roadshow strengthens AI infrastructure engagement across India with...",
+        "url": "https://cellit.in/vertiv-xpress-ai-solutions-roadshow-strengthens-ai-infrastructure-engagement-across-india-with-expanded-regional-outreach/",
+        "summary": "Vertiv™ Xpress AI solutions roadshow strengthens AI infrastructure engagement across India with...",
+        "date_published": "2026-08-20",
+        "source_name": "CellIt Magazine",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "India&#039;s AI ecosystem thrives: 85% developers use public cloud, ample compute choice reported",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-ecosystem-thrives-85-developers-use-public-cloud-ample-compute-choice-reported/133344241",
+        "summary": "In India, the landscape of AI development is largely shaped by public cloud infrastructure and the utilization of open-source tools. While compute providers deliver ample choices, the issue of afforda...",
+        "date_published": "2026-08-19",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Sebi to issue AI and machine learning guidelines for India&#039;s securities market",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/sebi-to-issue-ai-and-machine-learning-guidelines-for-indias-securities-market/133343896",
+        "summary": "Sebi will soon issue guidelines for responsible AI and machine learning use in India’s securities market, with mandatory safeguards including a “kill switch”, human oversight and data controls. Chairm...",
+        "date_published": "2026-08-19",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "upGrad crosses Rs 2,000 Cr gross revenue in FY26; EBITDA jumps 8X",
         "url": "https://entrackr.com/fintrackr/upgrad-crosses-rs-2000-cr-gross-revenue-in-fy26-ebitda-jumps-8x-12368377",
@@ -15789,5 +15869,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

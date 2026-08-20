@@ -335,6 +335,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 8,
+        "title": "Kochi-based startup launches 103 new Malayalam fonts",
+        "url": "https://www.thehindu.com/news/national/kerala/kochi-based-startup-launches-103-new-malayalam-fonts/article71360265.ece",
+        "summary": "Bigates.ai, a Kochi-based startup, has launched 103 new Malayalam fonts, whose names are based on their appearance. They are currently available online in FML format, which is suitable for creating po...",
+        "date_published": "2026-08-20",
+        "source_name": "The Hindu - Kerala",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Sports-tech startup Dartle raises $100K in seed funding led by IPV",
         "url": "https://entrackr.com/snippets/sports-tech-startup-dartle-raises-100k-in-seed-funding-led-by-ipv-12026482",
@@ -377,5 +397,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }
