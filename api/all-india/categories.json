@@ -1395,6 +1395,46 @@
       },
       {
         "id": 1,
+        "title": "Talent struggles and data obstacles cited as main barriers in fostering the growth of India&#039;s AI ecosystem",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/talent-struggles-and-data-obstacles-cited-as-main-barriers-in-fostering-the-growth-of-indias-ai-ecosystem/133372156",
+        "summary": "India&#039;s burgeoning AI landscape grapples with notable talent shortages and a pressing need for data standardization. These challenges are fundamental barriers hindering growth, overshadowing conc...",
+        "date_published": "2026-08-20",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Google offers free AI Plus plan to Indian college students",
+        "url": "https://telanganatoday.com/google-offers-free-ai-plus-plan-to-indian-college-students",
+        "summary": "Google has announced a one-year free AI Plus subscription for eligible college students in India, offering access to advanced AI tools, Gemini Omni, higher usage limits, 400 GB storage, and a dedicate...",
+        "date_published": "2026-08-20",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "India&#039;s AI ecosystem thrives: 85% developers use public cloud, ample compute choice reported",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-ecosystem-thrives-85-developers-use-public-cloud-ample-compute-choice-reported/133344241",
         "summary": "In India, the landscape of AI development is largely shaped by public cloud infrastructure and the utilization of open-source tools. While compute providers deliver ample choices, the issue of afforda...",
@@ -13001,6 +13041,46 @@
     "AI Start-Up News": [
       {
         "id": 3,
+        "title": "Fleetx.ai acquires TMS provider Pando.ai",
+        "url": "https://entrackr.com/snippets/fleetxai-acquires-tms-provider-pandoai-12399265",
+        "summary": "Fleetx.ai<span...",
+        "date_published": "2026-08-20",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "All In Capital leads pre-seed round in healthcare infrastructure startup Tross",
+        "url": "https://entrackr.com/snippets/all-in-capital-leads-pre-seed-round-in-healthcare-infrastructure-startup-tross-12398446",
+        "summary": "Healthcare infrastructure startup Tross has raised an...",
+        "date_published": "2026-08-20",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "AI Startups To Watch: 5 Startups That Caught Our Eye In August",
         "url": "https://inc42.com/startups/ai-startups-to-watch-5-startups-that-caught-our-eye-in-august/",
         "summary": "India's AI industry is shifting focus from building equivalents of ChatGPT to developing infrastructure. Five AI startups have caught attention in August for their innovative approaches. These startups are leading the next phase of India's AI growth, moving beyond chatbot-like technologies to more complex infrastructure development.",
@@ -15869,7 +15949,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

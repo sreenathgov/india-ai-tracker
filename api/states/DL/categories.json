@@ -3,6 +3,47 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 9,
+        "title": "Delhi CM Rekha Gupta opens skill, health centres in Moti Nagar",
+        "url": "https://www.tribuneindia.com/news/delhi/delhi-cm-rekha-gupta-opens-skill-health-centres-in-moti-nagar",
+        "summary": "Delhi Chief Minister Rekha Gupta on Thursday inaugurated a Jan Kaushal Kendra and a Swayam Swasthya Kendra in Moti Nagar, aimed at providing youth with AI-based skills and strengthening access to heal...",
+        "date_published": "2026-08-21",
+        "source_name": "Tribune - Delhi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Architecting future-readiness: How Uttar Pradesh and Sify are building an AI-ready state ecosystem",
+        "url": "https://government.economictimes.indiatimes.com/news/news/architecting-future-readiness-how-uttar-pradesh-and-sify-are-building-an-ai-ready-state-ecosystem/133339433",
+        "summary": "The inauguration of Sify’s AI Lab &amp; Experience Centre in Noida marks a pivotal milestone in Uttar Pradesh’s journey toward digital transformation. By bridging public policy with enterprise infrast...",
+        "date_published": "2026-08-20",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "ShepHertz Technologies launches agentic AI platform AgentAnywhere",
         "url": "https://entrackr.com/snippets/shephertz-technologies-launches-agentic-ai-platform-agentanywhere-12273165",
@@ -4458,5 +4499,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }
