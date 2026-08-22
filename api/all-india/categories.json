@@ -1354,6 +1354,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "India sets the pace in APAC for AI adoption and investment, showcasing enterprise readiness like no other",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-sets-the-pace-in-apac-for-ai-adoption-and-investment-showcasing-enterprise-readiness-like-no-other/133397164",
+        "summary": "Indian organizations significantly increased AI investment over the past year.  Most Indian companies now utilize AI assistants and chatbots for operations.  AI adoption has demonstrably improved prod...",
+        "date_published": "2026-08-22",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Indian CEOs encouraged to innovate by creating impactful AI products beyond simple chatbot experiments",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indian-ceos-encouraged-to-innovate-by-creating-impactful-ai-products-beyond-simple-chatbot-experiments/133396590",
+        "summary": "Indian CEOs must build real AI products and solutions, moving beyond simple chatbot experiments.  Companies are accelerating AI adoption and need to identify complex problems for dedicated task forces...",
+        "date_published": "2026-08-21",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Exclusive: BGauss raises Rs 110 Cr in fresh round at Rs 1,000 Cr valuation",
         "url": "https://entrackr.com/exclusive/exclusive-bgauss-raises-rs-110-cr-in-fresh-round-at-rs-1000-cr-valuation-12397665",
@@ -15949,5 +15989,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

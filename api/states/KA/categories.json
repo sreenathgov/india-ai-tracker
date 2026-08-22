@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 3,
+        "title": "Karnataka govt launches low cost AI computing device KEO",
+        "url": "https://yourstory.com/2026/08/karnataka-govt-launches-low-cost-ai-computing-device-keo",
+        "summary": "The government aims to democratise the access to artificial intelligence (AI) through the introduction of KEO.",
+        "date_published": "2026-08-21",
+        "source_name": "YourStory",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Karnataka explores partnership with Anthropic for governance, skilling and deep-tech growth",
         "url": "https://www.thehindu.com/news/national/karnataka/karnataka-explores-partnership-with-anthropic-for-governance-skilling-and-deep-tech-growth/article71312525.ece",
