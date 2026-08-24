@@ -125,6 +125,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "From wells to AI and scholarships, Kirttan Behera is giving back to Odisha",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/from-wells-to-ai-and-scholarships-kirttan-behera-is-giving-back-to-odisha/articleshow/133439391.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"...",
+        "date_published": "2026-08-24",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "HCLTech to set up Rs 15,000cr global delivery hub, AI data centre in Odisha",
         "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/hcltech-to-set-up-rs-15000cr-global-delivery-hub-ai-data-centre-in-odisha/articleshow/132605927.cms",
@@ -408,5 +428,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
