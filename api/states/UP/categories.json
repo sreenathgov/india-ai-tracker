@@ -268,6 +268,27 @@
     "Major AI Developments": [
       {
         "id": 3,
+        "title": "Man uses AI to create minor girl’s obscene photo in Delhi, extorts Rs 1.2L over 2.5 years; arrested",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/after-32-months-of-online-threats-extortion-girl-goes-to-cops-man-held/articleshow/133476574.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"...",
+        "date_published": "2026-08-25",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "IIT Knp holds orientation for new AI, cyber courses",
         "url": "https://timesofindia.indiatimes.com/city/kanpur/iit-knp-holds-orientation-for-new-ai-cyber-courses/articleshow/133247987.cms",
         "summary": "IIT Kanpur held an orientation for new courses in artificial intelligence and cybersecurity. The event marked the introduction of these programs, aiming to equip students with skills in emerging technologies. The institute's effort is part of its initiative to stay updated with the latest advancements in the field.",
@@ -1417,5 +1438,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -127,6 +127,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Bird strike hits AI flight carrying 164 passengers at Patna airport",
+        "url": "https://timesofindia.indiatimes.com/city/patna/bird-strike-hits-ai-flight-carrying-164-passengers-at-patna-airport/articleshow/133472110.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"htt...",
+        "date_published": "2026-08-25",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "AI to assist, not replace teachers: Education minister",
         "url": "https://timesofindia.indiatimes.com/city/patna/ai-to-assist-not-replace-teachers-education-minister/articleshow/133072666.cms",
@@ -546,5 +566,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

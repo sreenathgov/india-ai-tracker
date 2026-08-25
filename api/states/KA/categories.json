@@ -532,6 +532,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 2,
+        "title": "Healthify merges with US-based Berry Street",
+        "url": "https://entrackr.com/snippets/healthify-merges-with-us-based-berry-street-12428572",
+        "summary": "Bengaluru-based healthtech startup Healthify h...",
+        "date_published": "2026-08-24",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Razorpay launches AI payments model Vulcan with NVIDIA and AWS",
         "url": "https://entrackr.com/snippets/razorpay-launches-ai-payments-model-vulcan-with-nvidia-and-aws-12391617",
@@ -5666,7 +5686,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

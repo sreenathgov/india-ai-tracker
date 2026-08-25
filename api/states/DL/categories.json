@@ -616,6 +616,27 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Man uses AI to create minor girl’s obscene photo in Delhi, extorts Rs 1.2L over 2.5 years; arrested",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/after-32-months-of-online-threats-extortion-girl-goes-to-cops-man-held/articleshow/133476574.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"...",
+        "date_published": "2026-08-25",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "D2C Insider concludes AI summit Frontier to explore AI’s role in consumer businesses",
         "url": "https://entrackr.com/snippets/d2c-insider-concludes-ai-summit-frontier-to-explore-ais-role-in-consumer-businesses-12416644",
@@ -4519,5 +4540,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
