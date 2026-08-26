@@ -3,6 +3,27 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 5,
+        "title": "Airbound raises $37 Mn from Greenoaks, DoorDash, Lachy Groom and others",
+        "url": "https://entrackr.com/news/airbound-raises-37-mn-from-greenoaks-doordash-lachy-groom-and-others-12431939",
+        "summary": "Bengaluru-based aerospace startup Air...",
+        "date_published": "2026-08-25",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA",
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Karnataka govt launches low cost AI computing device KEO",
         "url": "https://yourstory.com/2026/08/karnataka-govt-launches-low-cost-ai-computing-device-keo",
@@ -489,6 +510,26 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 3,
+        "title": "Germany’s Infineon is acquiring Bengaluru’s C2i Semiconductors",
+        "url": "https://yourstory.com/2026/08/germanys-infineon-is-acquiring-bengaluru-based-c2i-semiconductors",
+        "summary": "Infineon’s acquisition of C2i strengthens its AI data-centre power-management capabilities, combining digital power expertise with semiconductor scale as rising AI workloads intensify electricity and...",
+        "date_published": "2026-08-25",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 1,
         "title": "Endiya Partners leads $2.5 Mn seed round in physical AI startup WATER",
@@ -4309,6 +4350,26 @@
     "AI Start-Up News": [
       {
         "id": 4,
+        "title": "Voice AI startup Ringg raises $10 Mn led by Peak XV",
+        "url": "https://entrackr.com/news/voice-ai-startup-ringg-raises-10-mn-led-by-peak-xv-12435121",
+        "summary": "Bengaluru-based AI startup Ringg AI has raised $10 million in a...",
+        "date_published": "2026-08-26",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
         "title": "Kusho AI is building AI agents that test software before it breaks",
         "url": "https://yourstory.com/2026/08/kusho-ai-software-testing-startup-bengaluru",
         "summary": "Kusho AI, a Bengaluru startup, is developing AI agents that automatically test software to prevent errors. These agents can auto-generate, run, and fix software tests, reducing manual QA time for engineering teams. Founded in 2023, Kusho AI aims to streamline the software testing process with its innovative AI-powered solution.",
@@ -5686,5 +5747,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

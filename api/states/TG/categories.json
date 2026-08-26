@@ -111,6 +111,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "AI boom sparks chip employees’ surge for a Trump Towers address in Hyderabad",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/ai-boom-sparks-chip-employees-surge-for-a-trump-towers-address-in-hyderabad/articleshow/133520322.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"...",
+        "date_published": "2026-08-26",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "AMI orders 9,000 NVIDIA Rubin GPUs for Hyderabad facility",
+        "url": "https://www.thehindu.com/business/Industry/ami-orders-9000-nvidia-rubin-gpus-for-hyderabad-facility/article71390110.ece",
+        "summary": "The facility is expected to be among Asia’s first frontier AI computing clusters using the Vera Rubin platform, the company said in a press release",
+        "date_published": "2026-08-25",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Endiya Partners leads $2.5 Mn seed round in physical AI startup WATER",
         "url": "https://entrackr.com/snippets/endiya-partners-leads-25-mn-seed-round-in-physical-ai-startup-water-12425820",
@@ -2674,5 +2714,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
