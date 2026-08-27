@@ -3843,6 +3843,46 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 9,
+        "title": "InstaAstro raises $12 Mn in Series A round",
+        "url": "https://entrackr.com/news/instaastro-raises-12-mn-in-series-a-round-12442163",
+        "summary": "Gurugram-based digital spiritual wellness platform In...",
+        "date_published": "2026-08-27",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Logistics platform TrucksUp raises $8.2 Mn in growth round",
+        "url": "https://entrackr.com/snippets/logistics-platform-trucksup-raises-82-mn-in-growth-round-12442109",
+        "summary": "Logistics platform TrucksUp has raised $8.2 million i...",
+        "date_published": "2026-08-27",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Exclusive: Krafton-backed Bobble AI enters insolvency process after failing to repay debt",
         "url": "https://entrackr.com/exclusive/exclusive-krafton-backed-bobble-ai-enters-insolvency-process-after-failing-to-repay-debt-12394222",
@@ -4540,5 +4580,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

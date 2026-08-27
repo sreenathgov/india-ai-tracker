@@ -511,6 +511,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "Karnataka explores voice AI pilots with ElevenLabs across skilling, health and citizen services",
+        "url": "https://yourstory.com/2026/08/karnataka-voice-ai-elevenlabs-skills",
+        "summary": "Karnataka is exploring voice AI pilots with ElevenLabs for skilling, healthcare, investor services, culture and citizen services.",
+        "date_published": "2026-08-27",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Germany’s Infineon is acquiring Bengaluru’s C2i Semiconductors",
         "url": "https://yourstory.com/2026/08/germanys-infineon-is-acquiring-bengaluru-based-c2i-semiconductors",
@@ -4349,10 +4369,50 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 11,
+        "title": "TILT launches Rs 250 Cr impact-focused venture fund",
+        "url": "https://entrackr.com/snippets/tilt-launches-rs-250-cr-impact-focused-venture-fund-12441983",
+        "summary": "Bengaluru-based TILT, the impact-first investment platform of Th...",
+        "date_published": "2026-08-27",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Voice AI startup Ringg raises $10 Mn led by Peak XV",
         "url": "https://entrackr.com/news/voice-ai-startup-ringg-raises-10-mn-led-by-peak-xv-12435121",
         "summary": "Bengaluru-based AI startup Ringg AI has raised $10 million in a...",
+        "date_published": "2026-08-26",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "Agentic AI startup Runable raises $21 Mn in Series A led by Susquehanna and Nexus",
+        "url": "https://entrackr.com/news/agentic-ai-startup-runable-raises-21-mn-in-series-a-led-by-susquehanna-and-nexus-12440974",
+        "summary": "Agentic AI startup Runable has raised $21 million i...",
         "date_published": "2026-08-26",
         "source_name": "Entrackr - AI & Startups",
         "category": "AI Start-Up News",
@@ -5748,6 +5808,7 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "AI Start-Up News",
+    "Major AI Developments"
   ]
 }
