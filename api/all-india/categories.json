@@ -13300,6 +13300,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "From Sarvam AI co-founder to IBM CEO, meet the 10 Indians and people of Indian origin on TIME100 AI 2026",
+        "url": "https://yourstory.com/2026/08/10-indians-and-indian-origin-names-on-time100-ai-2026",
+        "summary": "TIME published the fourth edition of its TIME100 AI list on August 27, naming 100 people it considers the most influential in artificial intelligence across four categories: Leaders, Innovators, Shape...",
+        "date_published": "2026-08-28",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Fleetx.ai acquires TMS provider Pando.ai",
         "url": "https://entrackr.com/snippets/fleetxai-acquires-tms-provider-pandoai-12399265",
@@ -16210,6 +16230,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }

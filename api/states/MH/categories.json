@@ -247,6 +247,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 2,
+        "title": "Shivaami launches India's 1st Google Gemini Enterprise Experience Centre in this city — How it aims to drive AI adoption",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/shivaami-launches-indias-1st-google-gemini-enterprise-experience-centre-in-this-city-how-it-aims-to-drive-ai-adoption-11787851651259.html",
+        "summary": "Shivaami has launched India’s first Google Gemini Enterprise Experience Centre in Mumbai, offering businesses hands-on access to Gemini, agentic AI, cloud, data analytics and cybersecurity solutions t...",
+        "date_published": "2026-08-27",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Norwest leads $12.5 Mn Series A round in AI lending-tech platform Rezolv",
         "url": "https://entrackr.com/news/norwest-leads-125-mn-series-a-round-in-ai-lending-tech-platform-rezolv-12391129",
@@ -2903,7 +2923,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
