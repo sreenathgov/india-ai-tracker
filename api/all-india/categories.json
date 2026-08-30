@@ -1375,6 +1375,26 @@
       },
       {
         "id": 1,
+        "title": "Honor's Robot Phone: Smartphone with camera that moves and tracks you; check price and India launch date",
+        "url": "https://www.etnownews.com/technology/honors-robot-phone-smartphone-with-camera-that-moves-and-tracks-you-check-price-and-india-launch-date-article-156011632",
+        "summary": "Honor's Robot Phone features a motorised gimbal camera with AI tracking, ARRI imaging tech and flagship hardware, launched in China with India debut expected later.",
+        "date_published": "2026-08-30",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "AI&#039;s impact on Indian office leasing decisions: 57% see no immediate effect",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ais-impact-on-indian-office-leasing-decisions-57-see-no-immediate-effect/133561085",
         "summary": "Most Indian office occupiers are implementing artificial intelligence in early stages.  AI adoption is widespread, yet it has little immediate impact on leasing.  Occupiers prioritize high-quality wor...",
@@ -16229,5 +16249,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
