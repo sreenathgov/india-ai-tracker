@@ -616,6 +616,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "InsuranceDekho and RenewBuy officially announce merger",
+        "url": "https://entrackr.com/news/insurancedekho-and-renewbuy-officially-announce-merger-12478725",
+        "summary": "Gurugram-based insurtech startups Insurance...",
+        "date_published": "2026-09-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Man uses AI to create minor girl’s obscene photo in Delhi, extorts Rs 1.2L over 2.5 years; arrested",
         "url": "https://timesofindia.indiatimes.com/city/delhi/after-32-months-of-online-threats-extortion-girl-goes-to-cops-man-held/articleshow/133476574.cms",
@@ -4602,5 +4622,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

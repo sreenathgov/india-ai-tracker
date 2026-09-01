@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 1,
+        "title": "India&#039;s AI agents to make small digital payments via UPI without approval",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-agents-to-make-small-digital-payments-via-upi-without-approval/133674112",
+        "summary": "India is set to launch a groundbreaking framework for AI agents that will facilitate small digital transactions. This promising initiative aims to elevate UPI to a forefront position in agentic paymen...",
+        "date_published": "2026-09-01",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Imarticus Learning acquires Singapore-based BELLS Institute of Higher Learning",
         "url": "https://entrackr.com/snippets/imarticus-learning-acquires-singapore-based-bells-institute-of-higher-learning-12223587",
@@ -1360,6 +1380,46 @@
         "summary": "Building India’s sovereign AI ecosystem",
         "date_published": "2026-09-01",
         "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Indian IT companies poised for strong growth from FY27 as AI deployment accelerates",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indian-it-companies-poised-for-strong-growth-from-fy27-as-ai-deployment-accelerates/133648312",
+        "summary": "Indian IT companies are gearing up for significant growth beginning in FY27, fueled by an increase in AI-related expenditures. The emphasis will be on integrating AI and demonstrating its economic ben...",
+        "date_published": "2026-09-01",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Measuring the business value of agentic AI in Indian enterprises",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/measuring-the-business-value-of-agentic-ai-in-indian-enterprises/133504310",
+        "summary": "Indian enterprises are moving agentic AI from experimentation to production for measurable business value.  Organizations now focus on demonstrating tangible returns and operational improvements from...",
+        "date_published": "2026-09-01",
+        "source_name": "ET CIO - AI",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -13340,6 +13400,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 6,
+        "title": "EquityList launches AI-native cap table and compliance platform",
+        "url": "https://entrackr.com/snippets/equitylist-launches-ai-native-cap-table-and-compliance-platform-12478460",
+        "summary": "Equity and shareholder management platform Equit...",
+        "date_published": "2026-09-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "From Sarvam AI co-founder to IBM CEO, meet the 10 Indians and people of Indian origin on TIME100 AI 2026",
         "url": "https://yourstory.com/2026/08/10-indians-and-indian-origin-names-on-time100-ai-2026",
@@ -16270,6 +16350,8 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Policies and Initiatives",
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }
