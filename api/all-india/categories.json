@@ -1374,6 +1374,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "How the Unacademy-upGrad deal unfolded; Why AI could push India’s ER&D revenue past $100B",
+        "url": "https://yourstory.com/2026/09/unacademy-upgrad-deal-ai-could-push-india-erd-revenue",
+        "summary": "The Unacademy-upGrad deal began with an audacious pitch, recalls Ronnie Screwvala. Meanwhile, a Nasccom study says the engineering research and development (ER&amp;D) services revenue from India is pr...",
+        "date_published": "2026-09-02",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Meta launches ‘Muse Voice Transcribe’ with native support for five Indian languages",
+        "url": "https://telanganatoday.com/meta-launches-muse-voice-transcribe-with-native-support-for-five-indian-languages",
+        "summary": "Meta has launched Muse Voice Transcribe, its first real-time audio-perception model, supporting five major Indian languages and over 70 languages globally. The model offers streaming transcription, sp...",
+        "date_published": "2026-09-02",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Prompter or creator? India's copyright office rejects AI DABUS as author in artwork case",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/prompter-or-creator-indias-copyright-office-rejects-ai-dabus-as-author-in-artwork-case/articleshow/133699120.cms",
+        "summary": "Says AI System Is Not A Natural Person Under Law — Extension Of Authorship To AI Is Matter For Parliament To Decide: Registrar",
+        "date_published": "2026-09-02",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Building India’s sovereign AI ecosystem",
         "url": "https://cio.economictimes.indiatimes.com/building-india-sovereign-ai-ecosystem?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
@@ -1420,6 +1480,26 @@
         "summary": "Indian enterprises are moving agentic AI from experimentation to production for measurable business value.  Organizations now focus on demonstrating tangible returns and operational improvements from...",
         "date_published": "2026-09-01",
         "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "UPI set for AI payment push: India plans framework for agentic payments without approval for every transaction",
+        "url": "https://www.etnownews.com/technology/upi-set-for-ai-payment-push-india-plans-framework-for-agentic-payments-without-approval-for-every-transaction-article-156025554",
+        "summary": "As AI continues to change the world, India is set to introduce a system under which artificial intelligence agents would be able to make small digital payments through the Unified Payments Interface w...",
+        "date_published": "2026-09-01",
+        "source_name": "ET Now Technology",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -16350,8 +16430,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives",
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }
