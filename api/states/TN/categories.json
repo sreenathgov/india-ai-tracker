@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 6,
+        "title": "CB-CID probes AI deepfake video impersonating Tamil Nadu CM Vijay",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/cb-cid-probes-ai-deepfake-video-impersonating-cm-vijay/articleshow/133718749.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"https://timeso...",
+        "date_published": "2026-09-03",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Deep-tech startup Quarkitech raises pre-seed funding",
         "url": "https://entrackr.com/snippets/deep-tech-startup-quarkitech-raises-pre-seed-funding-12254263",
@@ -1454,6 +1474,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Policies and Initiatives"
   ]
 }

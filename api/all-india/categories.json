@@ -1374,6 +1374,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Coforge launches AI Launchpad to help enterprises build and run AI stacks in-house",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/coforge-launches-ai-launchpad-to-help-enterprises-build-and-run-ai-stacks-in-house/133723417",
+        "summary": "Coforge has launched a new enterprise AI offering called AI Launchpad. This platform allows organizations to build and operate their own AI stacks. It provides greater control over data, costs, and AI...",
+        "date_published": "2026-09-03",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "How the Unacademy-upGrad deal unfolded; Why AI could push India’s ER&D revenue past $100B",
         "url": "https://yourstory.com/2026/09/unacademy-upgrad-deal-ai-could-push-india-erd-revenue",
@@ -1420,6 +1440,26 @@
         "summary": "Says AI System Is Not A Natural Person Under Law — Extension Of Authorship To AI Is Matter For Parliament To Decide: Registrar",
         "date_published": "2026-09-02",
         "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "India’s BHASHINI, Kathmandu University explore partnership in language AI",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/indias-bhashini-kathmandu-university-explore-partnership-in-language-ai/133711496",
+        "summary": "The interaction centred on strengthening existing language models while developing new ones for underrepresented languages.",
+        "date_published": "2026-09-02",
+        "source_name": "ET Government - Technology",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -13479,6 +13519,26 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 4,
+        "title": "Adobe picks up AI marketing startup Rilo in second India acquisition",
+        "url": "https://entrackr.com/snippets/adobe-picks-up-ai-marketing-startup-rilo-in-second-india-acquisition-12484822",
+        "summary": "Adobe has picked up India based marketing intelligence startup R...",
+        "date_published": "2026-09-02",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 6,
         "title": "EquityList launches AI-native cap table and compliance platform",

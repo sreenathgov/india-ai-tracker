@@ -127,6 +127,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "AI tools to translate Bihar’s ancient manuscripts: Minister",
+        "url": "https://timesofindia.indiatimes.com/city/patna/ai-tools-to-translate-bihars-ancient-manuscripts-minister/articleshow/133716662.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"https://times...",
+        "date_published": "2026-09-03",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "From Patna’s Settlements to Cancer Care and AI: The Story of Gautam Gauri",
         "url": "https://yourstory.com/2026/08/story-gautam-gauri",
@@ -586,5 +606,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
