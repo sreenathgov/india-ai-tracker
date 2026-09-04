@@ -1374,12 +1374,152 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Commerce that listens, learns, and speaks: Inside Flipkart&#039;s AI-First playbook",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/commerce-that-listens-learns-and-speaks-inside-flipkarts-ai-first-playbook/133749441",
+        "summary": "Flipkart&#039;s CPTO Balaji Thiagarajan reflects on how voice, memory, and reinforcement learning are turning the search bar into a conversation and why AI still isn&#039;t allowed to act without aski...",
+        "date_published": "2026-09-04",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Indian banks move AI into production, but scaling remains a challenge",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indian-banks-move-ai-into-production-but-scaling-remains-a-challenge/133749655",
+        "summary": "Indian banks are now deploying artificial intelligence in production across various functions. Scaling these AI deployments faces significant hurdles related to security and data usability. Retail len...",
+        "date_published": "2026-09-04",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Indian-origin Anil Chakravarthy to take over as Adobe CEO",
+        "url": "https://yourstory.com/2026/09/indian-origin-anil-chakravarthy-to-take-over-as-adobe-ceo",
+        "summary": "Adobe has named Indian-origin executive Anil Chakravarthy as CEO, succeeding Shantanu Narayen as the software giant enters a new AI-driven phase of growth.",
+        "date_published": "2026-09-04",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Coforge launches AI Launchpad to help enterprises build and run AI stacks in-house",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/coforge-launches-ai-launchpad-to-help-enterprises-build-and-run-ai-stacks-in-house/133723417",
         "summary": "Coforge has launched a new enterprise AI offering called AI Launchpad. This platform allows organizations to build and operate their own AI stacks. It provides greater control over data, costs, and AI...",
         "date_published": "2026-09-03",
         "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "India leads in AI adoption, but workers say ‘AI output is a starting point, not the final answer’",
+        "url": "https://www.livemint.com/ai/india-leads-in-ai-adoption-but-workers-say-ai-output-is-a-starting-point-not-the-final-answer-11788435466783.html",
+        "summary": "&amp;nbsp;A Microsoft report shows India’s lead in AI adoption, with 32% of users as Frontier Professionals managing multi-step workflows while maintaining responsibility for outcomes.",
+        "date_published": "2026-09-03",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "‘Really anxious and very excited’: Nvidia CEO Jensen Huang on India’s AI rise",
+        "url": "https://www.etnownews.com/technology/nvidia-ceo-jensen-huang-excited-and-anxious-about-india-ai-rise-article-156038038",
+        "summary": "Nvidia CEO Jansen Huang sees India has one of the world's leading IT industries and is enthralled to witness India taking advantage of the technology and build local AI economy.",
+        "date_published": "2026-09-03",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Tech Mahindra, AWS launch agentic AI CoE for enterprise transformation",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/tech-mahindra-aws-launch-agentic-ai-coe-for-enterprise-transformation/133732961",
+        "summary": "The CoE integrates Tech Mahindra BPS&#039; extensive process expertise with AWS&#039; cloud and Agentic AI capabilities, facilitating enterprises&#039; transition from AI experimentation to tangible b...",
+        "date_published": "2026-09-03",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Indian employees are taking the lead in defining the future of work: Microsoft study",
+        "url": "https://yourstory.com/2026/09/indian-employees-are-taking-the-lead-in-defining-the-future-of-work-microsoft-study",
+        "summary": "The Microsoft 2026 Work Trend Index reveals that India leads global AI adoption through frontier professionals who combine agent automation with strong human judgement. Despite rapid adoption of highl...",
+        "date_published": "2026-09-03",
+        "source_name": "YourStory",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"

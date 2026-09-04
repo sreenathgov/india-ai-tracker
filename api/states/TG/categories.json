@@ -111,6 +111,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "The Hyderabad that was, and the city it is now",
+        "url": "https://www.thehindu.com/news/cities/Hyderabad/the-hyderabad-that-was-and-the-city-it-is-now/article71424311.ece",
+        "summary": "Once a city of leisurely chai, neighbourhood cinema halls, street-corner conversations and the twin cities, Hyderabad has changed almost beyond recognition. Over five decades, tech, infrastructure, mi...",
+        "date_published": "2026-09-04",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "AI boom sparks chip employees’ surge for a Trump Towers address in Hyderabad",
         "url": "https://timesofindia.indiatimes.com/city/hyderabad/ai-boom-sparks-chip-employees-surge-for-a-trump-towers-address-in-hyderabad/articleshow/133520322.cms",
@@ -2714,5 +2734,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
