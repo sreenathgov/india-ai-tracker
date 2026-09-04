@@ -549,6 +549,78 @@ body.careers-page {
     color: rgba(244, 235, 208, 0.55);
 }
 
+/* ── Service notice ─────────────────────────────────────── */
+
+/* Both careers.html (above the grid) and career-role.html (above the JD) use
+   this; lives in careers.css, not careers-role.css, so one rule covers both. */
+.cr-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    padding: 1.15rem 1.35rem;
+    background: rgba(219, 74, 43, 0.07);
+    border: 1px solid rgba(219, 74, 43, 0.3);
+    border-left: 3px solid var(--cr-red);
+    border-radius: 2px;
+}
+
+.cr-notice--roles {
+    margin: 2.3rem 0 0;
+}
+
+.cr-notice--role-page {
+    margin: 0 0 2.6rem;
+}
+
+.cr-notice__icon {
+    flex: none;
+    display: flex;
+    width: 1.375rem;
+    height: 1.375rem;
+    margin-top: 0.15rem;
+    color: var(--cr-red-deep);
+}
+
+.cr-notice__icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.cr-notice__body {
+    min-width: 0;
+}
+
+.cr-notice__title {
+    font-family: var(--cr-sans);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--cr-navy);
+    margin: 0 0 0.3rem;
+}
+
+.cr-notice__text {
+    font-family: var(--cr-sans);
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.62;
+    color: var(--cr-ink-body);
+    margin: 0;
+    max-width: 62ch;
+}
+
+.cr-notice__text a {
+    color: var(--cr-red-deep);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.cr-notice__text a:hover,
+.cr-notice__text a:focus-visible {
+    color: var(--cr-red);
+}
+
 /* ── Role rows ──────────────────────────────────────────── */
 
 .cr-grid {
@@ -889,5 +961,10 @@ body.careers-page {
 
     .cr-tag__dot {
         background: CanvasText;
+    }
+
+    .cr-notice {
+        border: 1px solid CanvasText;
+        border-left-width: 3px;
     }
 }

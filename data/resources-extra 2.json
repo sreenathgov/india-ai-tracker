@@ -1,0 +1,31 @@
+{
+  "_comment": [
+    "Curated Resources entries that the publications manifest cannot describe:",
+    "the Whitepapers and News & Press buckets. Insights are generated from",
+    "content/publications/index.json and must NOT be listed here.",
+    "",
+    "Item shape (see js/resources.js): title, href, bucket are required.",
+    "bucket is one of: whitepaper | news.  Optional: description, date, image,",
+    "featured, meta.pages (whitepaper), meta.source (news).",
+    "",
+    "Every internal href is checked against the built dist/ tree at build time by",
+    "validateResourceItems() in scripts/publications/validate.js — a dead link",
+    "fails the build. Do not add an entry whose destination does not exist yet,",
+    "and do not state a page count you have not read off the actual file."
+  ],
+  "items": [
+    {
+      "slug": "kl-handbook-india-ai-regulations",
+      "bucket": "whitepaper",
+      "title": "Handbook on India's AI Regulations",
+      "description": "A consolidated reference on India's AI regulatory landscape — statutes, advisories, sectoral guidance, and the compliance posture they demand from operating companies.",
+      "date": "2026-05-30",
+      "image": "added-assets/kanan-hero-poster.jpg",
+      "href": "dossiers/kl-handbook-india-ai-regulations.pdf",
+      "featured": false,
+      "meta": {
+        "pages": 5
+      }
+    }
+  ]
+}

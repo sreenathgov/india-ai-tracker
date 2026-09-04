@@ -13,7 +13,7 @@
    OUTER WRAPPER
    ============================================ */
 .kl-footer {
-    background: #0a2f52;
+    background: #3a0000;
     position: relative;
     z-index: 2;
     width: 100%;
@@ -51,7 +51,7 @@
 
 .kl-footer__logo {
     width: auto;
-    height: 52px;
+    height: 40px;
     object-fit: contain;
     object-position: left center;
     display: block;
@@ -208,7 +208,7 @@
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    margin-bottom: -4px;
+    padding: 48px 0 40px;
 }
 
 .kl-footer__watermark-img {
@@ -290,10 +290,14 @@
     }
 
     .kl-footer__logo {
-        height: 44px;
+        height: 32px;
     }
 
     .kl-footer__tagline {
         font-size: 0.9375rem;
+    }
+
+    .kl-footer__watermark {
+        padding: 32px 0 24px;
     }
 }

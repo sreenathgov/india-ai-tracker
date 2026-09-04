@@ -148,6 +148,7 @@ function writeRolePage(template, role) {
 
         ROLE_SLUG: escapeHtml(role.slug),
         ROLE_TITLE: escapeHtml(role.title),
+        ROLE_TITLE_MAILTO: encodeURIComponent(role.title),
         TEAM: escapeHtml(role.team),
         STATUS_BADGE: renderStatusBadge(role.status),
         META_CHIPS: metaChips(role).map(renderChip).join('\n                '),

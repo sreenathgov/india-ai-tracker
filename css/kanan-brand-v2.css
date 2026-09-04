@@ -1,0 +1,14 @@
+/* Kanan Labs rebrand palette — shared by the rebrand homepage and site chrome. */
+:root {
+    --kanan-color-primary: #4c2c2c;
+    --kanan-color-primary-deep: #301b1b;
+    --kanan-color-accent: #8f5555;
+    --kanan-color-cream: #f4ebd0;
+    --kanan-color-paper: #eeebe3;
+
+    --kanan-primary-rgb: 76 44 44;
+    --kanan-primary-deep-rgb: 48 27 27;
+    --kanan-accent-rgb: 143 85 85;
+    --kanan-cream-rgb: 244 235 208;
+    --kanan-paper-rgb: 238 235 227;
+}

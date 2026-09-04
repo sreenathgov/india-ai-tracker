@@ -110,7 +110,6 @@
     <link rel="stylesheet" href="css/drona-brain.css?v=3">
     <link rel="stylesheet" href="css/drona-funnel.css?v=7">
     <link rel="stylesheet" href="css/sectors-bento.css?v=6">
-
     <style>
         /* ══════════════════════════════════════════════════════════
            KANAN LABS — CORPORATE LANDING (Phase 2: Hero + Footer)
@@ -150,12 +149,12 @@
         }
 
         :root {
-            --kl-navy:        #0a2f52;
-            --kl-navy-deep:   #061f38;
+            --kl-navy:        var(--kanan-color-primary, #4c2c2c);
+            --kl-navy-deep:   var(--kanan-color-primary-deep, #301b1b);
             --kl-cream:       #eeebe3;   /* Kanan White */
             --kl-cream-soft:  rgba(238, 235, 227, 0.68);
             --kl-cream-faint: rgba(238, 235, 227, 0.45);
-            --kl-red:         #db4a2b;
+            --kl-red:         var(--kanan-color-accent, #8f5555);
         }
 
         html {
@@ -207,11 +206,11 @@
             inset: 0;
             background: linear-gradient(
                 to bottom,
-                rgba(6, 31, 56, 0.22) 0%,
-                rgba(6, 31, 56, 0.04) 30%,
-                rgba(6, 31, 56, 0.12) 50%,
-                rgba(6, 31, 56, 0.62) 72%,
-                rgba(6, 31, 56, 0.92) 90%,
+                rgba(48, 27, 27, 0.22) 0%,
+                rgba(48, 27, 27, 0.04) 30%,
+                rgba(48, 27, 27, 0.12) 50%,
+                rgba(48, 27, 27, 0.62) 72%,
+                rgba(48, 27, 27, 0.92) 90%,
                 var(--kl-navy) 100%
             );
             pointer-events: none;
@@ -296,7 +295,7 @@
         .kl-btn-primary:hover {
             background: #ffffff;
             transform: translateY(-1px);
-            box-shadow: 0 12px 30px rgba(6, 31, 56, 0.2);
+            box-shadow: 0 12px 30px rgba(48, 27, 27, 0.2);
         }
 
         .kl-btn-primary:focus-visible,
@@ -911,6 +910,8 @@
             }
         }
     </style>
+    <!-- Loaded last so the isolated rebrand palette wins over component and embedded styles. -->
+    <link rel="stylesheet" href="css/kanan-rebrand.css?v=2">
 </head>
 
 <body class="kl-page">
@@ -996,163 +997,6 @@
             </div>
 
         </header>
-
-        <!-- ════════════════════════════════════════════════
-             REVAMP NOTICE — remove this entire block to restore
-             (from "BEGIN REVAMP NOTICE" to "END REVAMP NOTICE")
-        ════════════════════════════════════════════════ -->
-        <!-- BEGIN REVAMP NOTICE -->
-        <style>
-            /* Scoped to #kl-revamp-notice only */
-            #kl-revamp-notice {
-                position: relative;
-                z-index: 10;
-                width: 100%;
-                background: #0a2f52;
-                border-top: 1px solid rgba(219, 74, 43, 0.35);
-                border-bottom: 1px solid rgba(10, 47, 82, 0.4);
-                overflow: hidden;
-            }
-
-            #kl-revamp-notice::before {
-                content: '';
-                position: absolute;
-                inset: 0;
-                background-image:
-                    linear-gradient(rgba(238, 235, 227, 0.025) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(238, 235, 227, 0.025) 1px, transparent 1px);
-                background-size: 48px 48px;
-                pointer-events: none;
-            }
-
-            .kl-revamp-notice__inner {
-                position: relative;
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: clamp(1.75rem, 4vh, 2.75rem) clamp(1.5rem, 5vw, 4rem);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 1.5rem;
-            }
-
-            .kl-revamp-notice__dot {
-                flex-shrink: 0;
-                width: 8px;
-                height: 8px;
-                border-radius: 50%;
-                background: #db4a2b;
-                box-shadow: 0 0 0 0 rgba(219, 74, 43, 0.6);
-                animation: kl-revamp-pulse 2.5s ease-in-out infinite;
-            }
-
-            @keyframes kl-revamp-pulse {
-                0%   { box-shadow: 0 0 0 0 rgba(219, 74, 43, 0.6); }
-                60%  { box-shadow: 0 0 0 8px rgba(219, 74, 43, 0); }
-                100% { box-shadow: 0 0 0 0 rgba(219, 74, 43, 0); }
-            }
-
-            .kl-revamp-notice__body {
-                text-align: center;
-            }
-
-            .kl-revamp-notice__eyebrow {
-                display: block;
-                font-family: 'Telegraf', 'Inter', sans-serif;
-                font-size: 0.6rem;
-                font-weight: 800;
-                letter-spacing: 0.28em;
-                text-transform: uppercase;
-                color: #db4a2b;
-                margin-bottom: 0.6rem;
-            }
-
-            .kl-revamp-notice__text {
-                font-family: 'Cormorant Garamond', Georgia, serif;
-                font-style: italic;
-                font-weight: 400;
-                font-size: clamp(1.05rem, 2vw, 1.4rem);
-                line-height: 1.45;
-                color: rgba(238, 235, 227, 0.88);
-            }
-
-            .kl-revamp-notice__close {
-                flex-shrink: 0;
-                background: none;
-                border: 1px solid rgba(238, 235, 227, 0.18);
-                border-radius: 50%;
-                width: 28px;
-                height: 28px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-                color: rgba(238, 235, 227, 0.4);
-                font-size: 0.9rem;
-                line-height: 1;
-                transition: color 0.2s, border-color 0.2s;
-                align-self: flex-start;
-                margin-top: 0.1rem;
-            }
-
-            .kl-revamp-notice__close:hover {
-                color: rgba(238, 235, 227, 0.85);
-                border-color: rgba(238, 235, 227, 0.45);
-            }
-
-            #kl-revamp-notice.is-hidden {
-                display: none;
-            }
-
-            @media (max-width: 600px) {
-                .kl-revamp-notice__inner {
-                    gap: 1rem;
-                }
-                .kl-revamp-notice__dot {
-                    display: none;
-                }
-            }
-
-            @media (prefers-reduced-motion: reduce) {
-                .kl-revamp-notice__dot {
-                    animation: none;
-                }
-            }
-        </style>
-
-        <div id="kl-revamp-notice" role="banner" aria-label="Site update notice">
-            <div class="kl-revamp-notice__inner">
-                <span class="kl-revamp-notice__dot" aria-hidden="true"></span>
-                <div class="kl-revamp-notice__body">
-                    <span class="kl-revamp-notice__eyebrow">Update in progress</span>
-                    <p class="kl-revamp-notice__text">
-                        A lot of exciting changes happening!&nbsp;&nbsp;Please visit back in a couple of days.
-                    </p>
-                </div>
-                <button
-                    class="kl-revamp-notice__close"
-                    id="kl-revamp-notice-close"
-                    aria-label="Dismiss update notice"
-                    title="Dismiss"
-                >✕</button>
-            </div>
-        </div>
-        <script>
-        (function () {
-            var notice = document.getElementById('kl-revamp-notice');
-            var btn    = document.getElementById('kl-revamp-notice-close');
-            if (!notice || !btn) return;
-            // Hide for this session if dismissed before
-            if (sessionStorage.getItem('kl-revamp-dismissed') === '1') {
-                notice.classList.add('is-hidden');
-            }
-            btn.addEventListener('click', function () {
-                notice.classList.add('is-hidden');
-                try { sessionStorage.setItem('kl-revamp-dismissed', '1'); } catch(e) {}
-            });
-        })();
-        </script>
-        <!-- END REVAMP NOTICE -->
 
         <!-- ════════════════════════════════════════════════
              A2. TRADEWATCH DEMO — ambient autoplay
@@ -1515,7 +1359,7 @@
              B½. DRONA — The Regulatory Brain
              Failure-mode tabs (left) vs With/Without contrast (right).
         ════════════════════════════════════════════════ -->
-        <div class="kl-drona-band">
+        <div class="kl-drona-band" data-nav-light>
         <section class="kl-drona" id="klDrona" aria-label="Drona — the regulatory brain inside TradeWatch">
 
             <div class="kl-drona__inner">
@@ -1743,7 +1587,7 @@
         <!-- ════════════════════════════════════════════════
              D½. COMPANY ROADMAP — Foundation to SectorWatch
         ════════════════════════════════════════════════ -->
-        <section class="kl-roadmap" id="klRoadmap" aria-labelledby="klRoadmapTitle">
+        <section class="kl-roadmap" id="klRoadmap" aria-labelledby="klRoadmapTitle" data-nav-light>
             <div class="kl-roadmap__inner">
                 <div class="kl-roadmap__layout">
                     <div class="kl-roadmap__intro">
@@ -1893,7 +1737,7 @@
              F. IDENTITY — Founder / Why Kanan exists
         ════════════════════════════════════════════════ -->
         <div class="identity-transition" aria-hidden="true"></div>
-        <section class="kl-founder" id="founderNote" aria-label="Founder note">
+        <section class="kl-founder" id="founderNote" aria-label="Founder note" data-nav-light>
             <div class="kl-founder__inner">
 
                 <!-- TWO-COLUMN BODY: left rail + navy doctrine card -->
@@ -2084,18 +1928,20 @@
         if (!heading) return;
         var words = Array.prototype.slice.call(heading.querySelectorAll('.kl-word'));
         var accentWords = Array.prototype.slice.call(heading.querySelectorAll('.kl-word--accent'));
+        var accentColor = getComputedStyle(document.documentElement)
+            .getPropertyValue('--kanan-color-accent').trim() || '#8f5555';
         if (!words.length) return;
 
         /* Reduced motion: reveal all immediately */
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             words.forEach(function (w) { w.style.opacity='1'; w.style.filter='none'; w.style.transform='none'; });
-            accentWords.forEach(function (w) { w.style.color='#db4a2b'; });
+            accentWords.forEach(function (w) { w.style.color=accentColor; });
             return;
         }
 
         if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
             words.forEach(function (w) { w.style.opacity='1'; w.style.filter='none'; w.style.transform='none'; });
-            accentWords.forEach(function (w) { w.style.color='#db4a2b'; });
+            accentWords.forEach(function (w) { w.style.color=accentColor; });
             return;
         }
 
@@ -2103,8 +1949,8 @@
 
         /* GSAP sets initial state as inline styles — owns the properties, no CSS transition fight */
         gsap.set(words, { opacity: 0.12, filter: 'blur(4px)', rotation: 2, transformOrigin: '0% 80%' });
-        /* Orange colour present at all scroll positions so accent words reveal in correct colour */
-        gsap.set(accentWords, { color: '#db4a2b' });
+        /* Accent colour is present at all scroll positions so the words reveal consistently. */
+        gsap.set(accentWords, { color: accentColor });
 
         /* Single timeline: GSAP animates opacity/filter/rotation directly */
         var tl = gsap.timeline();

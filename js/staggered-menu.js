@@ -12,9 +12,9 @@ class StaggeredMenu {
       socialItems: [],
       displaySocials: true,
       displayItemNumbering: true,
-      logoUrl: 'KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-WHITEBG.png',
-      mobileLogoUrl: 'KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-WHITEBG.png',
-      mobileOpenLogoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-KANANLABS-LETTERLOGO.png',
+      logoUrl: '/assets/logos/kanan-kl-hor-white.png',
+      mobileLogoUrl: '/assets/logos/kanan-kl-hor-white.png',
+      mobileOpenLogoUrl: '/assets/logos/kanan-kl-hor-white.png',
       menuButtonColor: '#0a2f52',
       openMenuButtonColor: '#fff',
       accentColor: '#db4a2b',
@@ -54,10 +54,10 @@ class StaggeredMenu {
 
     this.theme = {
       isLight: false,
-      darkLogoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png',
-      lightLogoUrl: 'KANANLABS-LOGO-SET/BLUE of KANAN-LABS-WEBSITELOGO.png',
-      mobileDarkLogoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-KANANLABS-LETTERLOGO.png',
-      mobileLightLogoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-DARK-KANANLABS-LETTERLOGO.png',
+      darkLogoUrl: '/assets/logos/kanan-kl-hor-white.png',
+      lightLogoUrl: '/assets/logos/kanan-kl-hor-red.png',
+      mobileDarkLogoUrl: '/assets/logos/kanan-kl-hor-white.png',
+      mobileLightLogoUrl: '/assets/logos/kanan-kl-hor-red.png',
       darkMenuColor: '#f4ebd0',
       lightMenuColor: '#0a2f52',
       currentMenuColor: '#f4ebd0'
@@ -111,6 +111,7 @@ class StaggeredMenu {
     const wrapper = document.createElement('div');
     wrapper.className = `staggered-menu-wrapper${this.options.isFixed ? ' fixed-wrapper' : ''}`;
     wrapper.setAttribute('data-position', this.options.position);
+    wrapper.setAttribute('data-theme', this.theme.isLight ? 'light' : 'dark');
     if (this.options.accentColor) {
       wrapper.style.setProperty('--sm-accent', this.options.accentColor);
     }
@@ -190,7 +191,7 @@ class StaggeredMenu {
     logoImg.alt = 'Logo';
     logoImg.className = 'sm-logo-img';
     logoImg.draggable = false;
-    logoImg.width = 110;
+    logoImg.width = 85;
     logoImg.height = 24;
 
     logoDiv.appendChild(logoImg);
@@ -456,7 +457,7 @@ class StaggeredMenu {
     }));
     const panelStart = Number(gsap.getProperty(panel, 'xPercent'));
 
-    // Set initial states — start items at orange so they flash → cream during entrance
+    // Start items in the accent red so they flash to cream during entrance.
     if (itemEls.length) {
       gsap.set(itemEls, { yPercent: 140, rotate: 10, color: '#db4a2b' });
     }
@@ -507,7 +508,7 @@ class StaggeredMenu {
         {
           yPercent: 0,
           rotate: 0,
-          color: '#f4ebd0',   // settle to brand cream as each item arrives
+          color: '#f4ebd0',
           duration: 1,
           ease: 'power4.out',
           stagger: { each: 0.1, from: 'start' }
@@ -826,6 +827,7 @@ class StaggeredMenu {
     if (this.theme.isLight) return;
     this.theme.isLight = true;
     this.theme.currentMenuColor = this.theme.lightMenuColor;
+    if (this.refs.wrapper) this.refs.wrapper.setAttribute('data-theme', 'light');
     if (this.state.open) return; // defer visual until menu closes
     this._applyTheme(this.theme.lightMenuColor, this.theme.lightLogoUrl);
   }
@@ -834,6 +836,7 @@ class StaggeredMenu {
     if (!this.theme.isLight) return;
     this.theme.isLight = false;
     this.theme.currentMenuColor = this.theme.darkMenuColor;
+    if (this.refs.wrapper) this.refs.wrapper.setAttribute('data-theme', 'dark');
     if (this.state.open) return;
     this._applyTheme(this.theme.darkMenuColor, this.theme.darkLogoUrl);
   }
@@ -964,8 +967,8 @@ document.addEventListener('DOMContentLoaded', function () {
     openMenuButtonColor: '#db4a2b',
     accentColor: '#db4a2b',
     changeMenuColorOnOpen: true,
-    logoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png',
-    mobileLogoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-KANANLABS-LETTERLOGO.png',
-    mobileOpenLogoUrl: 'KANANLABS-LOGO-SET/TRANSPARENT-KANANLABS-LETTERLOGO.png'
+    logoUrl: '/assets/logos/kanan-kl-hor-white.png',
+    mobileLogoUrl: '/assets/logos/kanan-kl-hor-white.png',
+    mobileOpenLogoUrl: '/assets/logos/kanan-kl-hor-white.png'
   });
 });

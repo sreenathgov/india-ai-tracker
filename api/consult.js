@@ -4,8 +4,12 @@
  * 2. Immediately sends acknowledgement email via transactional API (template #3)
  *
  * Environment variables (set in Vercel dashboard):
- *   BREVO_API_KEY     — your Brevo API key
- *   MAKE_WEBHOOK_URL  — optional; if set, fans the submission out to a Make scenario
+ *   BREVO_API_KEY          — your Brevo API key
+ *   BREVO_DEMO_TEMPLATE_ID — optional; Raya's TradeWatch demo acknowledgement
+ *                            template, used only when engagementType is
+ *                            "TradeWatch demo". Falls back to template #3
+ *                            (the generic acknowledgement) when unset.
+ *   MAKE_WEBHOOK_URL       — optional; if set, fans the submission out to a Make scenario
  */
 
 const { applyCors, rateLimit, checkHoneypot } = require('./_lib/security');
@@ -101,13 +105,20 @@ module.exports = async function handler(req, res) {
       return res.status(502).json({ message: 'Failed to submit request. Please try again.' });
     }
 
-    // Step 2: Send acknowledgement email immediately via transactional API
+    // Step 2: Send acknowledgement email immediately via transactional API.
+    // TradeWatch demo requests get Raya's dedicated template when configured;
+    // everything else keeps the generic acknowledgement (#3).
+    const demoTemplateId = parseInt(process.env.BREVO_DEMO_TEMPLATE_ID || '', 10);
+    const templateId = (engagementType === 'TradeWatch demo' && Number.isInteger(demoTemplateId))
+      ? demoTemplateId
+      : 3;
+
     const emailRes = await fetch('https://api.brevo.com/v3/smtp/email', {
       method: 'POST',
       headers,
       body: JSON.stringify({
         to: [{ email, name: contactName.trim() }],
-        templateId: 3
+        templateId
       })
     });
 
