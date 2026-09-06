@@ -1,18 +1,22 @@
 {
   "name": "india-ai-tracker",
   "version": "1.0.0",
+  "engines": {"node": "24.x"},
   "description": "",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "build:supplier-locales": "node scripts/build-supplier-locales.js",
+    "build:research-stats": "node scripts/generate-research-stats.js",
     "build:text-pressure": "vite build",
     "build:scroll-reveal": "vite build --config vite.config.scroll-reveal.js",
     "dev:text-pressure": "vite build --watch",
-    "build": "node scripts/build-full-site.js && node scripts/generate-static-pages.js && node scripts/generate-publications.js && node scripts/generate-careers.js && node scripts/generate-sitemap.js",
+    "build": "npm run build:supplier-locales && npm run build:research-stats && node scripts/build-full-site.js && node scripts/generate-static-pages.js && node scripts/generate-publications.js && node scripts/generate-careers.js && node scripts/generate-sitemap.js && node scripts/release/finalize.js && node scripts/release/verify.js",
     "build:publications": "node scripts/generate-publications.js && node scripts/generate-careers.js && node scripts/generate-sitemap.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test test/*.test.js",
+    "preview": "npm run build && vite preview --host 127.0.0.1 --port 4180 --strictPort"
   },
   "repository": {
     "type": "git",
@@ -35,6 +39,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.4",
     "js-yaml": "^5.2.1",
+    "jsdom": "^29.1.1",
     "marked": "^18.0.6",
     "vite": "^7.3.1"
   }

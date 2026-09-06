@@ -45,7 +45,8 @@
     line-height: 1.5;
     letter-spacing: 0.02em;
     margin: 0;
-    max-width: 600px;
+    /* Use the full section width for the desktop byline; wrap on small screens. */
+    max-width: 100%;
 }
 
 

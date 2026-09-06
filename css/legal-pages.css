@@ -1,0 +1,454 @@
+/* ============================================================================
+   KANAN LABS — LEGAL PAGES
+   privacy-policy · terms-of-use · supplier-programme-terms · disclaimers · 404
+
+   Structure: a wine masthead band under the fixed staggered-menu header, then
+   a paper reading surface holding a sticky contents rail beside the clauses.
+
+   Palette comes from css/kanan-brand-v2.css. These pages do not link that file
+   (they are deliberately lean), so the values are mirrored into the local
+   token block below. Keep the two in sync.
+   ========================================================================== */
+
+@font-face {
+    font-family: Telegraf;
+    src: url('../assets/fonts/Telegraf-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Telegraf;
+    src: url('../assets/fonts/Telegraf-UltraBold.otf') format('opentype');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url('../added-assets/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+:root {
+    --lg-wine: #762c36;
+    --lg-wine-deep: #3a0000;
+    --lg-oxblood: #4c2c2c;
+    --lg-rose: #8f5555;
+
+    --lg-paper: #eeebe3;
+    --lg-paper-warm: #f6f2ea;
+
+    --lg-ink: #4c2c2c;
+    --lg-ink-body: #756965;
+    --lg-ink-dim: rgba(76, 44, 44, 0.55);
+    --lg-rule: rgba(76, 44, 44, 0.16);
+    --lg-rule-soft: rgba(76, 44, 44, 0.08);
+
+    --lg-on-wine: #f8f5ed;
+    --lg-on-wine-muted: rgba(248, 245, 237, 0.72);
+    --lg-on-wine-dim: rgba(248, 245, 237, 0.46);
+    --lg-on-wine-rule: rgba(248, 245, 237, 0.22);
+    --lg-on-wine-accent: #f0c9c5;
+
+    --lg-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    --lg-heading: Telegraf, Inter, Arial, sans-serif;
+    --lg-body: Inter, system-ui, -apple-system, sans-serif;
+
+    --lg-shell: 1180px;
+    --lg-gutter: clamp(1.25rem, 4vw, 3.5rem);
+    --lg-ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--lg-ink);
+    background: var(--lg-paper);
+    font-family: var(--lg-body);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Skip link — the fixed menu header is the first tab stop otherwise. */
+.legal-skip {
+    position: absolute;
+    left: -9999px;
+    z-index: 100;
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: var(--lg-on-wine);
+    background: var(--lg-oxblood);
+}
+
+.legal-skip:focus {
+    left: 1rem;
+    top: 1rem;
+}
+
+/* ============================================================================
+   MASTHEAD — wine band
+   ========================================================================== */
+
+.legal-masthead {
+    position: relative;
+    overflow: hidden;
+    color: var(--lg-on-wine);
+    background: var(--lg-wine);
+}
+
+/* A slow oxblood wash from the top-left keeps the flat band from reading dead
+   behind the fixed header. */
+.legal-masthead::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(110% 130% at 8% -10%, rgba(76, 44, 44, 0.55), transparent 62%),
+        linear-gradient(180deg, rgba(58, 0, 0, 0.28), transparent 45%);
+    pointer-events: none;
+}
+
+.legal-masthead__inner {
+    position: relative;
+    max-width: var(--lg-shell);
+    margin: 0 auto;
+    padding: clamp(7rem, 13vw, 11rem) var(--lg-gutter) clamp(3rem, 6vw, 4.5rem);
+}
+
+.legal-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin: 0 0 clamp(1.75rem, 4vw, 2.75rem);
+    font-family: var(--lg-heading);
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--lg-on-wine-accent);
+}
+
+.legal-eyebrow::before {
+    content: '';
+    flex: 0 0 auto;
+    width: 24px;
+    height: 1px;
+    background: currentColor;
+}
+
+.legal-masthead h1 {
+    max-width: 14ch;
+    margin: 0;
+    font-family: var(--lg-display);
+    font-size: clamp(3.25rem, 9vw, 6.75rem);
+    font-weight: 400;
+    line-height: 0.92;
+    letter-spacing: -0.045em;
+    text-wrap: balance;
+    color: var(--lg-on-wine);
+}
+
+.legal-masthead__lede {
+    max-width: 46ch;
+    margin: clamp(1.5rem, 3vw, 2rem) 0 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--lg-on-wine-muted);
+}
+
+.legal-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+    margin: clamp(2.5rem, 5vw, 3.5rem) 0 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--lg-on-wine-rule);
+    font-family: var(--lg-heading);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    /* Tracked uppercase micro-text wraps to two lines under ~430px; the
+       inherited body leading collides there, so set it explicitly. */
+    line-height: 1.9;
+    text-transform: uppercase;
+    color: var(--lg-on-wine-dim);
+}
+
+/* ============================================================================
+   READING SURFACE — paper
+   ========================================================================== */
+
+.legal-main {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 760px);
+    gap: clamp(3rem, 8vw, 7rem);
+    max-width: var(--lg-shell);
+    margin: 0 auto;
+    padding: clamp(3.5rem, 8vw, 6rem) var(--lg-gutter) clamp(5rem, 10vw, 8rem);
+}
+
+/* Single-column variant for pages with no contents rail (404). */
+.legal-main--solo {
+    grid-template-columns: minmax(0, 760px);
+    justify-content: start;
+}
+
+/* ---- Sticky contents rail ------------------------------------------------ */
+
+.legal-aside {
+    align-self: start;
+    position: sticky;
+    top: 92px;
+}
+
+.legal-aside > p {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin: 0 0 1.35rem;
+    font-family: var(--lg-heading);
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--lg-wine);
+}
+
+.legal-aside > p::before {
+    content: '';
+    flex: 0 0 auto;
+    width: 20px;
+    height: 1px;
+    background: currentColor;
+}
+
+.legal-aside nav {
+    display: grid;
+    border-left: 1px solid var(--lg-rule);
+}
+
+.legal-aside nav a {
+    position: relative;
+    padding: 0.5rem 0 0.5rem 1rem;
+    font-size: 0.76rem;
+    line-height: 1.4;
+    color: var(--lg-ink-body);
+    text-decoration: none;
+    transition: color 0.25s var(--lg-ease);
+}
+
+/* Hairline that thickens into wine on hover, riding the rail. */
+.legal-aside nav a::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 0.4rem;
+    bottom: 0.4rem;
+    width: 2px;
+    background: var(--lg-wine);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s var(--lg-ease);
+}
+
+.legal-aside nav a:hover,
+.legal-aside nav a:focus-visible {
+    color: var(--lg-wine);
+}
+
+.legal-aside nav a:hover::before,
+.legal-aside nav a:focus-visible::before {
+    transform: scaleY(1);
+}
+
+/* ---- Clauses ------------------------------------------------------------- */
+
+.legal-content {
+    counter-reset: legal-clause;
+}
+
+.legal-section {
+    scroll-margin-top: 92px;
+    margin: 0 0 clamp(2.75rem, 5vw, 3.75rem);
+    padding-bottom: clamp(2.75rem, 5vw, 3.75rem);
+    border-bottom: 1px solid var(--lg-rule-soft);
+}
+
+.legal-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.legal-section h2 {
+    counter-increment: legal-clause;
+    margin: 0 0 1.1rem;
+    font-family: var(--lg-heading);
+    font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    color: var(--lg-ink);
+}
+
+/* Zero-padded clause number above the heading, in wine. */
+.legal-section h2::before {
+    content: counter(legal-clause, decimal-leading-zero);
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    color: var(--lg-wine);
+}
+
+.legal-section p,
+.legal-section li {
+    margin: 0 0 1.15rem;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--lg-ink-body);
+}
+
+.legal-section p:last-child,
+.legal-section li:last-child {
+    margin-bottom: 0;
+}
+
+.legal-section ul,
+.legal-section ol {
+    margin: 0 0 1.15rem;
+    padding-left: 1.15rem;
+}
+
+.legal-section li::marker {
+    color: var(--lg-wine);
+}
+
+.legal-section a {
+    color: var(--lg-wine);
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    text-decoration-thickness: 1px;
+    transition: color 0.25s var(--lg-ease);
+}
+
+.legal-section a:hover {
+    color: var(--lg-rose);
+}
+
+.legal-section strong {
+    font-weight: 600;
+    color: var(--lg-ink);
+}
+
+/* ---- Lede callout --------------------------------------------------------
+   The unnumbered opening statement. Sits on warm paper behind a wine rule and
+   is excluded from the clause counter. */
+.legal-callout {
+    margin-bottom: clamp(3rem, 5vw, 4rem);
+    padding: clamp(1.5rem, 3vw, 2rem) clamp(1.5rem, 3vw, 2.25rem);
+    border: 1px solid var(--lg-rule-soft);
+    border-left: 3px solid var(--lg-wine);
+    border-radius: 2px;
+    background: var(--lg-paper-warm);
+}
+
+.legal-callout p {
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: var(--lg-ink);
+}
+
+/* ============================================================================
+   404 — shares this surface, adds a link row
+   ========================================================================== */
+
+.kl-404-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+}
+
+.kl-404-links a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.7rem 1.35rem;
+    border: 1px solid var(--lg-rule);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--lg-ink);
+    text-decoration: none;
+    background: var(--lg-paper-warm);
+    transition: color 0.25s var(--lg-ease), background 0.25s var(--lg-ease),
+                border-color 0.25s var(--lg-ease), transform 0.25s var(--lg-ease);
+}
+
+.kl-404-links a:hover {
+    transform: translateY(-2px);
+    border-color: var(--lg-oxblood);
+    color: #fff;
+    background: var(--lg-oxblood);
+}
+
+/* ============================================================================
+   Focus + motion
+   ========================================================================== */
+
+:focus-visible {
+    outline: 3px solid rgba(118, 44, 54, 0.36);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 900px) {
+    .legal-main {
+        grid-template-columns: 1fr;
+        gap: clamp(2.5rem, 6vw, 3.5rem);
+    }
+
+    .legal-aside {
+        position: static;
+        padding-bottom: 2.25rem;
+        border-bottom: 1px solid var(--lg-rule);
+    }
+
+    .legal-aside nav {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0 1.5rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .legal-masthead__inner {
+        padding-top: 6rem;
+    }
+
+    .legal-masthead h1 {
+        max-width: none;
+        font-size: clamp(2.5rem, 12vw, 3.4rem);
+    }
+
+    .legal-aside nav {
+        grid-template-columns: 1fr;
+    }
+}

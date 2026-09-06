@@ -9,8 +9,9 @@
  *   MAKE_WEBHOOK_URL  — optional; if set, fans the submission out to a Make scenario
  */
 
-const { applyCors, rateLimit, checkHoneypot } = require('./_lib/security');
+const { applyCors, rateLimit, checkHoneypot, validateRequest } = require('./_lib/security');
 const { notifyMake } = require('./_lib/notify');
+const {providerFetch} = require('./_lib/provider-fetch');
 
 module.exports = async function handler(req, res) {
   if (!applyCors(req, res)) {
@@ -25,6 +26,8 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
+  if (!validateRequest(req, res, 16384)) return;
+
   if (!rateLimit(req)) {
     return res.status(429).json({ message: 'Too many requests. Please try again later.' });
   }
@@ -35,7 +38,7 @@ module.exports = async function handler(req, res) {
 
   const { email } = req.body || {};
 
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (typeof email !== 'string' || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return res.status(400).json({ message: 'Invalid email address' });
   }
 
@@ -55,7 +58,7 @@ module.exports = async function handler(req, res) {
 
   try {
     // Step 1: Add contact to list
-    const contactRes = await fetch('https://api.brevo.com/v3/contacts', {
+    const contactRes = await providerFetch('https://api.brevo.com/v3/contacts', {
       method: 'POST',
       headers,
       body: JSON.stringify({ email, listIds: [listId], updateEnabled: true })
@@ -64,12 +67,13 @@ module.exports = async function handler(req, res) {
     // 201 = created, 204 = updated — both fine. Anything else is an error.
     if (!contactRes.ok && contactRes.status !== 204) {
       const err = await contactRes.json().catch(() => ({}));
-      console.error('Brevo add contact error:', contactRes.status, err);
+      console.error('Brevo add contact error:', err.code || 'provider-error');
       return res.status(502).json({ message: 'Failed to subscribe. Please try again.' });
     }
 
     // Step 2: Send welcome email immediately via transactional API
-    const emailRes = await fetch('https://api.brevo.com/v3/smtp/email', {
+    try {
+    const emailRes = await providerFetch('https://api.brevo.com/v3/smtp/email', {
       method: 'POST',
       headers,
       body: JSON.stringify({
@@ -81,15 +85,17 @@ module.exports = async function handler(req, res) {
     if (!emailRes.ok) {
       const err = await emailRes.json().catch(() => ({}));
       // Log but don't fail — contact was added successfully
-      console.error('Brevo send email error:', emailRes.status, err);
+      console.error('Brevo send email error:', err.code || 'provider-error');
     }
+
+    } catch (_) { console.error('Newsletter acknowledgement unavailable; contact saved'); }
 
     await notifyMake('subscribe', { email, submittedAt: new Date().toISOString() });
 
     return res.status(200).json({ success: true });
 
   } catch (err) {
-    console.error('Subscribe handler error:', err);
+    console.error('Subscribe handler error:', err.name || 'provider-error');
     return res.status(500).json({ message: 'Server error. Please try again.' });
   }
 };

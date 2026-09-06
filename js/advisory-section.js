@@ -26,6 +26,7 @@ class CardSwap {
     this.pauseOnHover = options.pauseOnHover !== false;
     this.skewAmount = options.skewAmount || 6;
     this.easing = options.easing || 'elastic';
+    this.dropDistance = options.dropDistance ?? 250;
 
     // State
     this.order = [];
@@ -121,51 +122,11 @@ class CardSwap {
       });
     }
 
-    // Click to swap (download links handle themselves via direct listeners)
+    // Click to swap; published download links keep their native behavior.
     this.container.addEventListener('click', (e) => {
       if (e.target.closest('.card-swap-card__download')) return;
       this.swap();
     });
-  }
-
-  static showComingSoonToast() {
-    const existing = document.getElementById('card-swap-toast');
-    if (existing) existing.remove();
-
-    const toast = document.createElement('div');
-    toast.id = 'card-swap-toast';
-    toast.textContent = 'Coming soon — please check back in a few days.';
-    toast.style.cssText = [
-      'position:fixed',
-      'bottom:32px',
-      'left:50%',
-      'transform:translateX(-50%) translateY(20px)',
-      'background:#0a2f52',
-      'color:#fff',
-      'padding:12px 28px',
-      'border-radius:8px',
-      'font-size:13px',
-      'letter-spacing:0.06em',
-      'text-transform:uppercase',
-      'z-index:9999',
-      'opacity:0',
-      'transition:opacity 0.3s ease,transform 0.3s ease',
-      'pointer-events:none',
-      'white-space:nowrap',
-      'box-shadow:0 4px 20px rgba(0,0,0,0.25)'
-    ].join(';');
-    document.body.appendChild(toast);
-
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      toast.style.opacity = '1';
-      toast.style.transform = 'translateX(-50%) translateY(0)';
-    }));
-
-    setTimeout(() => {
-      toast.style.opacity = '0';
-      toast.style.transform = 'translateX(-50%) translateY(20px)';
-      setTimeout(() => toast.remove(), 300);
-    }, 3000);
   }
 
   buildCards() {
@@ -189,20 +150,11 @@ class CardSwap {
         </div>
         <div class="card-swap-card__footer">
           <span class="card-swap-card__meta">${this.escapeHTML(card.meta)}</span>
-          <a href="${card.pdfUrl ? this.escapeHTML(card.pdfUrl) : 'javascript:void(0)'}" ${card.pdfUrl ? `download="${card.pdfUrl.split('/').pop()}"` : ''} rel="noopener" class="card-swap-card__download" onclick="event.stopPropagation()">
+          ${card.pdfUrl ? `<a href="${this.escapeHTML(card.pdfUrl)}" download="${this.escapeHTML(card.pdfUrl.split('/').pop())}" rel="noopener" class="card-swap-card__download">
             ${downloadIcon} Download PDF
-          </a>
+          </a>` : ''}
         </div>
       `;
-
-      // Coming-soon cards: intercept download click directly
-      if (!card.pdfUrl) {
-        el.querySelector('.card-swap-card__download').addEventListener('click', (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          CardSwap.showComingSoonToast();
-        });
-      }
 
       this.container.appendChild(el);
       this.cardEls.push(el);
@@ -234,7 +186,7 @@ class CardSwap {
 
     // 1. Drop the front card down and out (further below the downward stack)
     tl.to(elFront, {
-      y: '+=250',
+      y: '+=' + this.dropDistance,
       duration: this.config.durDrop,
       ease: this.config.ease
     });
@@ -407,27 +359,20 @@ class AdvisorySection {
         pEl.className = p.bold ? 'advisory-hero__body advisory-hero__body--bold' : 'advisory-hero__body';
         pEl.textContent = p.text || '';
 
-        // Make "Schedule a consultation" text clickable to open contact panel
-        if (p.bold && p.text && p.text.toLowerCase().includes('schedule')) {
-          pEl.setAttribute('role', 'button');
-          pEl.setAttribute('tabindex', '0');
-          pEl.style.cursor = 'pointer';
-          pEl.style.textDecoration = 'underline';
-          pEl.style.textDecorationColor = 'rgba(10, 47, 82, 0.3)';
-          pEl.style.textUnderlineOffset = '3px';
-          pEl.addEventListener('click', () => {
-            if (window.contactPanel) window.contactPanel.open();
-          });
-          pEl.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault();
-              if (window.contactPanel) window.contactPanel.open();
-            }
-          });
-        }
-
         textCol.appendChild(pEl);
       });
+    }
+
+    // An explicit link keeps programme navigation independent of paragraph wording.
+    if (hero.cta?.href && hero.cta?.text) {
+      const paragraph = document.createElement('p');
+      paragraph.className = 'advisory-hero__body advisory-hero__body--bold';
+      const link = document.createElement('a');
+      link.className = 'advisory-hero__link';
+      link.href = hero.cta.href;
+      link.textContent = hero.cta.text;
+      paragraph.appendChild(link);
+      textCol.appendChild(paragraph);
     }
 
     // RIGHT column — heading + CardSwap container
@@ -462,10 +407,14 @@ class AdvisorySection {
     if (!swapEl || !cardStackData || cardStackData.length === 0) return;
     if (typeof gsap === 'undefined') return;
 
-    // Responsive sizing based on container width
-    const containerWidth = swapEl.parentElement.offsetWidth;
-    const cardW = Math.min(480, containerWidth - 80);
-    const cardH = Math.round(cardW * 0.7);
+    const editorial = document.body.classList.contains('resources-page');
+    const dimensions = () => {
+      const width = Math.max(200, Math.min(480, swapEl.parentElement.offsetWidth - 80));
+      // The narrow cards need enough height for their titles and download links.
+      const height = Math.max(editorial ? 300 : 0, Math.round(width * 0.7));
+      return { width, height };
+    };
+    const { width: cardW, height: cardH } = dimensions();
 
     this.cardSwap = new CardSwap(swapEl, cardStackData, {
       width: cardW,
@@ -474,9 +423,34 @@ class AdvisorySection {
       verticalDistance: Math.round(cardH * 0.17),
       delay: 5000,
       pauseOnHover: true,
+      dropDistance: editorial ? 100 : 250,
       skewAmount: 6,
       easing: 'elastic'
     });
+
+    // A resized Resources column must not retain the desktop-sized card stack.
+    // Reposition the existing cards so their links and event handlers survive.
+    if (editorial && typeof ResizeObserver !== 'undefined') {
+      this.cardResizeObserver = new ResizeObserver(() => {
+        const { width, height } = dimensions();
+        const stack = this.cardSwap;
+        if (width === stack.width && height === stack.height) return;
+        if (stack.timeline) { stack.timeline.progress(1); stack.timeline.kill(); }
+        stack.width = width;
+        stack.height = height;
+        stack.cardDistance = Math.round(width * .11);
+        stack.verticalDistance = Math.round(height * .17);
+        swapEl.style.width = width + 'px';
+        swapEl.style.height = height + 'px';
+        stack.order.forEach((index, slot) => {
+          const card = stack.cardEls[index];
+          card.style.width = width + 'px';
+          card.style.height = height + 'px';
+          stack.placeNow(card, stack.makeSlot(slot));
+        });
+      });
+      this.cardResizeObserver.observe(swapEl.parentElement);
+    }
   }
 
   /**

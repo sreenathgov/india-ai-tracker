@@ -17,7 +17,12 @@ const staticRoutes = [
   { path: '/sector-watch.html',  file: 'sector-watch.html',  priority: '0.7', changefreq: 'monthly' },
   { path: '/about.html',         file: 'about.html',         priority: '0.7', changefreq: 'monthly' },
   { path: '/resources.html',     file: 'resources.html',     priority: '0.8', changefreq: 'weekly'  },
+  { path: '/drona.html', file: 'drona.html', priority: '0.6', changefreq: 'monthly' },
+  { path: '/drona-aos.html', file: 'drona-aos.html', priority: '0.6', changefreq: 'monthly' },
+  { path: '/request-demo.html', file: 'request-demo.html', priority: '0.6', changefreq: 'monthly' },
   { path: '/privacy-policy.html',file: 'privacy-policy.html',priority: '0.3', changefreq: 'yearly'  },
+  { path: '/terms-of-use.html',  file: 'terms-of-use.html',  priority: '0.3', changefreq: 'yearly'  },
+  { path: '/supplier-programme-terms.html', file: 'supplier-programme-terms.html', priority: '0.3', changefreq: 'yearly' },
   { path: '/disclaimers.html',   file: 'disclaimers.html',   priority: '0.3', changefreq: 'yearly'  },
   // lastmod tracks data/careers.json rather than the careers.html template:
   // the template is static scaffolding, the data is what actually changes.
@@ -49,7 +54,7 @@ function generateSitemap() {
 
   // 1. Add Static Routes (real lastmod from source HTML mtime, differentiated priority/changefreq)
   staticRoutes.forEach(route => {
-    const url = route.path === '/' ? `${BASE_URL}/` : `${BASE_URL}${route.path}`;
+    const url = route.url || (route.path === '/' ? `${BASE_URL}/` : `${BASE_URL}${route.path}`);
     const lastmod = fileLastmod(route.file, currentDate);
     xml += `
   <url>

@@ -8,6 +8,7 @@
     const submitLabel = form.querySelector('.demo-submit-label');
     const submitError = document.getElementById('demoSubmitError');
     const success = document.getElementById('demoSuccess');
+    let submitting = false;
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     const fields = {
@@ -77,12 +78,13 @@
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
-        if (!validate()) return;
+        if (submitting || !validate()) return;
+        submitting = true;
 
         setBusy(true);
 
         const payload = {
-            engagementType: 'TradeWatch demo',
+            engagementType: 'Drona demo',
             contactName: fields.contactName.input.value.trim(),
             email: fields.email.input.value.trim(),
             companyName: fields.companyName.input.value.trim(),
@@ -100,7 +102,7 @@
 
             const result = await response.json().catch(() => ({}));
 
-            if (!response.ok) {
+            if (!response.ok || result.success !== true) {
                 if (response.status === 429) {
                     throw new Error('Too many requests have been sent. Please wait a few minutes and try again.');
                 }
@@ -115,6 +117,7 @@
             submitError.textContent = error.message || 'We could not send your request. Please try again.';
             submitError.focus?.();
         } finally {
+            submitting = false;
             setBusy(false);
         }
     });

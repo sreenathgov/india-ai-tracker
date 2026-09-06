@@ -1,80 +1,150 @@
 {
-  "lastUpdated": "2026-03-29",
+  "lastUpdated": "2026-09-05",
   "cards": [
     {
       "id": "stat-1",
       "type": "stat",
-      "title": "Steady Startup Capital",
-      "value": "$286M",
+      "title": "Capital Tracked",
+      "value": "$2.7B",
       "suffix": "",
-      "description": "30 Indian startups secured substantial funding this week, indicating a consistent flow of investments into the ecosystem."
+      "description": "Across 142 disclosed rounds, de-duplicated by deal."
     },
     {
       "id": "stat-2",
       "type": "stat",
-      "title": "Sovereign GPUs Onboarded",
-      "value": "38,231",
+      "title": "Signals Filed",
+      "value": "2,027",
       "suffix": "",
-      "description": "The IndiaAI Mission achieved a major compute milestone by onboarding thousands of GPUs and approving 190 strategic projects."
+      "description": "Each one classified, geo-attributed and adjudicated before it enters the record."
     },
     {
       "id": "stat-3",
       "type": "stat",
-      "title": "Enterprise ROI Proven",
-      "value": "$11M",
+      "title": "Policy Moves Logged",
+      "value": "165",
       "suffix": "",
-      "description": "Zomato demonstrated the tangible financial impact of applied AI by massively slashing its customer support costs."
+      "description": "Central and state action, held apart from the announcement noise around it."
     },
     {
       "id": "stat-4",
       "type": "stat",
-      "title": "Due Diligence Tightens",
-      "value": "$3B",
+      "title": "States & UTs Mapped",
+      "value": "29",
       "suffix": "",
-      "description": "Uttar Pradesh scrapped a massive AI investment MoU over a startup's lack of financial credibility, signalling stricter governmental scrutiny."
+      "description": "Every jurisdiction kept as its own record, not folded into a national feed."
     },
     {
       "id": "insight-1",
       "type": "insight",
-      "title": "The Vernacular Voice Boom",
-      "description": "The push for inclusive digital commerce is accelerating as major platforms shift toward voice-first generative AI. Razorpay has partnered with sovereign model Sarvam AI to enable multilingual conversational commerce, while Meesho launched the Gen AI assistant \"Vaani\". These developments highlight a strategic pivot to capture Tier-2 markets through natural voice interactions rather than traditional typed searches.",
+      "title": "Four States, Most of the Story",
+      "description": "Karnataka, Delhi, Maharashtra and Telangana carry 60% of every state-level signal. Fourteen states register fewer than fifteen. The map is four deep markets and a long, thin tail.",
       "metadata": {
-        "region": "Consumer AI"
-      }
+        "region": "Geography"
+      },
+      "checks": [
+        {
+          "figure": "topStateShare",
+          "expected": 0.6,
+          "tolerance": 0.02
+        },
+        {
+          "figure": "thinStateCount",
+          "expected": 14
+        }
+      ]
     },
     {
       "id": "insight-2",
       "type": "insight",
-      "title": "Friction in the Machine",
-      "description": "Rapid AI integration is facing growing pushback from judicial, political, and law enforcement leadership. The Chief Justice of India firmly asserted that AI must remain an assistive tool rather than a replacement for human judgment. Concurrently, leaders are proposing \"AI taxes\" to offset job displacement, while police forces are actively registering cases against social platforms over defamatory, AI-generated election deepfakes.",
+      "title": "Capital Runs Barbell",
+      "description": "One round — Neysa's $1.2B — is 47% of all capital tracked. The median deal is $5.5M. India funds a great many small companies and very few large ones.",
       "metadata": {
-        "region": "Governance"
-      }
+        "region": "Capital"
+      },
+      "checks": [
+        {
+          "figure": "largestRoundShare",
+          "expected": 0.47,
+          "tolerance": 0.02
+        },
+        {
+          "figure": "medianRoundUsd",
+          "expected": 5500000,
+          "tolerance": 500000
+        }
+      ]
     },
     {
       "id": "insight-3",
       "type": "insight",
-      "title": "The Agentic Enterprise",
-      "description": "Enterprise AI in India is rapidly shifting from experimental prototypes to autonomous, outcome-driven deployments. Driven by rising regulatory complexity, AI spending in the Indian financial sector is projected to double by 2026. This operational shift is validated by immense cost savings across industries, proving that production-ready AI models can now deliver massive, measurable enterprise returns on investment.",
+      "title": "Policy Moves in Waves",
+      "description": "44% of every policy move logged landed in the two months around the AI Impact Summit. By May it had fallen to eight. Attention here is event-driven, not continuous.",
       "metadata": {
-        "region": "Enterprise Adoption"
-      }
+        "region": "Governance"
+      },
+      "checks": [
+        {
+          "figure": "policyTopTwoMonthsShare",
+          "expected": 0.44,
+          "tolerance": 0.02
+        },
+        {
+          "figure": "policyQuietMonthCount",
+          "expected": 8
+        }
+      ]
     },
     {
       "id": "insight-4",
       "type": "insight",
-      "title": "Computing the Foundation",
-      "description": "India is aggressively securing its base compute capacity, spearheaded by the IndiaAI Mission heavily onboarding domestic GPUs. However, this rapid scale-up is exposing physical and financial constraints. Commercial real estate is grappling with an \"AI resilience gap\" to support intense connectivity demands, and state governments are rigorously tightening due diligence to prevent unviable multi-billion dollar infrastructure commitments.",
+      "title": "Three Outlets, Two-Fifths",
+      "description": "Three publications carry 40% of India's AI coverage. The state-level story lives in the other 74 — which is why we read all of them.",
       "metadata": {
-        "region": "Infrastructure"
-      }
+        "region": "Sources"
+      },
+      "checks": [
+        {
+          "figure": "topSourceShare",
+          "expected": 0.4,
+          "tolerance": 0.02
+        },
+        {
+          "figure": "sourceCount",
+          "expected": 77
+        }
+      ]
     }
   ],
-  "newsletter": {
-    "title": "Subscribe to the Kanan Labs Weekly Brief",
-    "subtitle": "Stay updated on the shifting landscape of India's AI revolution.",
-    "ctaText": "Subscribe",
-    "ctaPlaceholder": "Enter your email",
-    "successMessage": "Thank you, looking forward to keeping you updated on India's AI revolution!"
+  "heading": "NINE MONTHS OF SIGNAL",
+  "subheading": "Every AI signal out of India — 2,027 of them — read, filed and cross-checked since January 2026.",
+  "computed": {
+    "totalSignals": 2027,
+    "monthsActive": 9,
+    "firstMonth": "2026-01",
+    "lastMonth": "2026-09",
+    "latestSignalDate": "2026-09-05",
+    "policyCount": 165,
+    "policyTopTwoMonthsShare": 0.42424242424242425,
+    "policyQuietMonthCount": 2,
+    "sourceCount": 77,
+    "topSourceShare": 0.4070054267390232,
+    "topSources": [
+      "Entrackr - AI & Startups",
+      "YourStory",
+      "ET CIO - AI"
+    ],
+    "jurisdictionCount": 29,
+    "topStateShare": 0.5989583333333334,
+    "topStates": [
+      "KA",
+      "DL",
+      "MH",
+      "TG"
+    ],
+    "thinStateCount": 14,
+    "roundCount": 142,
+    "capitalUsd": 2737884090.909091,
+    "medianRoundUsd": 5590909.090909091,
+    "largestRoundShare": 0.4382946684940012
   }
 }

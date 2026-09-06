@@ -72,8 +72,8 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles-v2.css?v=21">
-    <link rel="stylesheet" href="css/staggered-menu.css?v=4">
-    <link rel="stylesheet" href="css/footer.css?v=4">
+    <link rel="stylesheet" href="css/staggered-menu.css?v=8">
+    <link rel="stylesheet" href="css/footer.css?v=5">
     <link rel="stylesheet" href="css/contact-panel.css?v=1">
     <link rel="stylesheet" href="css/back-button.css">
 
@@ -929,7 +929,7 @@
          (No identity-transition strip needed — kl-flow above is already cream,
          so it flows naturally into the founder section's ivory.)
     ════════════════════════ -->
-    <section class="kl-founder" id="founderNote" aria-labelledby="founderHeadline">
+    <section class="kl-founder" id="founderNote" aria-labelledby="founderHeadline" data-nav-light>
         <div class="kl-founder__inner">
 
             <div class="kl-founder__header">
@@ -1061,13 +1061,9 @@
                         class="kl-footer__logo" width="922" height="262" loading="lazy" decoding="async" draggable="false">
                     <p class="kl-footer__tagline">Proactive Supply Chain Resilience</p>
 
-                    <div>
-                        <p class="kl-footer__nl-label">Weekly Brief</p>
-                        <form class="kl-footer__nl-form" id="footerNewsletterForm">
-                            <input type="email" class="kl-footer__nl-input" placeholder="Your email address"
-                                autocomplete="email" required>
-                            <button type="submit" class="kl-footer__nl-submit">Subscribe</button>
-                        </form>
+                    <div class="kl-footer__links">
+                        <a href="https://apply.kananlabs.in/" class="kl-footer__consult">Supplier Programme &#8594;</a>
+                        <a href="request-demo.html" class="kl-footer__consult">Request a Demo &#8594;</a>
                     </div>
                 </div>
 
@@ -1121,7 +1117,7 @@
 
     <!-- ─── Scripts ─── -->
     <script src="js/contact-panel.js" defer></script>
-    <script src="js/staggered-menu.js?v=7" defer></script>
+    <script src="js/staggered-menu.js?v=12" defer></script>
 
     <!-- Component scripts: shiny-text, evidence-workflow stagger reveal, founder doctrine canvas -->
     <script src="js/evidence-workflow.js" defer></script>

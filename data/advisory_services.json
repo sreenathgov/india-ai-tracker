@@ -1,26 +1,26 @@
 {
-  "lastUpdated": "2026-02-14",
+  "lastUpdated": "2026-09-06",
   "hero": {
-    "heading": "EXPORT EVIDENCE INFRASTRUCTURE",
+    "heading": "THE KANAN SUPPLIER PROGRAMME",
     "showHeading": false,
     "bodyParagraphs": [
       {
-        "text": "Every export shipment generates a fragmented set of documents that must agree with each other — and with the rules of customs, insurance, and banking.",
-        "bold": false
-      },
-      {
-        "text": "That mismatch is what blocks refunds and voids claims.",
+        "text": "A stronger working-capital case starts with a clearer production story.",
         "bold": true
       },
       {
-        "text": "Kanan Labs builds TradeWatch: validated, source-attributed evidence that gets your Shipping Bill and marine cargo documentation right before they cost you. We help exporters, their CHAs, and their brokers reduce compliance and claims risk — not paper over it.",
+        "text": "The Kanan Supplier Programme helps Indian manufacturers organise the evidence behind their orders, materials and production plans, review external risks, and prepare for questions from their chosen bank or NBFC.",
         "bold": false
       },
       {
-        "text": "Schedule a consultation to see how TradeWatch checks your export readiness.",
-        "bold": true
+        "text": "Selected suppliers receive hands-on support at no charge. You control the application; the lender makes the decision.",
+        "bold": false
       }
-    ]
+    ],
+    "cta": {
+      "text": "Explore the Kanan Supplier Programme →",
+      "href": "supplier-programme.html?utm_source=kanan_resources&utm_medium=owned&utm_campaign=supplier_programme&utm_content=advisory_cta"
+    }
   },
   "cardStack": [
     {
@@ -33,17 +33,17 @@
     },
     {
       "id": "doc-2",
-      "title": "IGST Refund & Shipping Bill Readiness Handbook",
-      "descriptor": "The SB005 invoice-mismatch pattern, e-SANCHIT gaps, and what permanently blocks a refund post-EGM.",
-      "meta": "WORK IN PROGRESS, AVAILABLE SOON",
+      "title": "India’s Manufacturing Risk Outlook",
+      "descriptor": "How sourcing, tariffs, freight, energy and policy shifts can affect production and delivery.",
+      "meta": "Work in progress, available soon.",
       "pdfUrl": "",
       "colorTheme": "navy"
     },
     {
       "id": "doc-3",
-      "title": "Marine Cargo Claim Readiness Handbook",
-      "descriptor": "Open Cover declarations, Certificate of Insurance checks, and what makes a claim admissible.",
-      "meta": "WORK IN PROGRESS, AVAILABLE SOON",
+      "title": "Why Lenders Say No: A Readiness Handbook",
+      "descriptor": "Common reasons for rejection, evidence gaps to address, and practical steps to strengthen your working-capital application.",
+      "meta": "Work in progress, available soon.",
       "pdfUrl": "",
       "colorTheme": "cream"
     }

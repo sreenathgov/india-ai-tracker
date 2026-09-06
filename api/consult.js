@@ -12,8 +12,9 @@
  *   MAKE_WEBHOOK_URL       — optional; if set, fans the submission out to a Make scenario
  */
 
-const { applyCors, rateLimit, checkHoneypot } = require('./_lib/security');
+const { applyCors, rateLimit, checkHoneypot, validateRequest } = require('./_lib/security');
 const { notifyMake } = require('./_lib/notify');
+const {providerFetch} = require('./_lib/provider-fetch');
 
 module.exports = async function handler(req, res) {
   if (!applyCors(req, res)) {
@@ -27,6 +28,8 @@ module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
   }
+
+  if (!validateRequest(req, res, 16384)) return;
 
   if (!rateLimit(req)) {
     return res.status(429).json({ message: 'Too many requests. Please try again later.' });
@@ -49,11 +52,14 @@ module.exports = async function handler(req, res) {
     submittedAt
   } = req.body || {};
 
+  for (const field of ['engagementType','companyName','website','sector','stage','strategicContext','role']) {
+    if (req.body[field] != null && (typeof req.body[field] !== 'string' || req.body[field].length > 2000)) return res.status(400).json({message:'Invalid field',field});
+  }
   // Validate required fields
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (typeof email !== 'string' || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return res.status(400).json({ message: 'Invalid email address' });
   }
-  if (!contactName || !contactName.trim()) {
+  if (typeof contactName !== 'string' || contactName.length > 160 || !contactName.trim()) {
     return res.status(400).json({ message: 'Contact name is required' });
   }
   if (!engagementType) {
@@ -72,11 +78,11 @@ module.exports = async function handler(req, res) {
     'Accept': 'application/json'
   };
 
-  const timestamp = submittedAt || new Date().toISOString();
+  const timestamp = new Date().toISOString();
 
   try {
     // Step 1: Add contact to Brevo list #6 "Consultations" with all attributes
-    const contactRes = await fetch('https://api.brevo.com/v3/contacts', {
+    const contactRes = await providerFetch('https://api.brevo.com/v3/contacts', {
       method: 'POST',
       headers,
       body: JSON.stringify({
@@ -101,7 +107,7 @@ module.exports = async function handler(req, res) {
     // 201 = created, 204 = updated — both fine
     if (!contactRes.ok && contactRes.status !== 204) {
       const err = await contactRes.json().catch(() => ({}));
-      console.error('Brevo add contact error:', contactRes.status, err);
+      console.error('Brevo add contact error:', err.code || 'provider-error');
       return res.status(502).json({ message: 'Failed to submit request. Please try again.' });
     }
 
@@ -113,19 +119,24 @@ module.exports = async function handler(req, res) {
       ? demoTemplateId
       : 3;
 
-    const emailRes = await fetch('https://api.brevo.com/v3/smtp/email', {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({
-        to: [{ email, name: contactName.trim() }],
-        templateId
-      })
-    });
+    // A saved request remains successful if the acknowledgement provider fails.
+    try {
+      const emailRes = await providerFetch('https://api.brevo.com/v3/smtp/email', {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({
+          to: [{ email, name: contactName.trim() }],
+          templateId
+        })
+      });
 
-    if (!emailRes.ok) {
-      const err = await emailRes.json().catch(() => ({}));
-      // Log but don't fail — contact was stored successfully
-      console.error('Brevo send email error:', emailRes.status, err);
+      if (!emailRes.ok) {
+        const err = await emailRes.json().catch(() => ({}));
+        // Log but don't fail — contact was stored successfully
+        console.error('Brevo send email error:', err.code || 'provider-error');
+      }
+    } catch (error) {
+      console.error('Brevo acknowledgement unavailable:', error.message);
     }
 
     await notifyMake('consult', {
@@ -144,7 +155,7 @@ module.exports = async function handler(req, res) {
     return res.status(200).json({ success: true });
 
   } catch (err) {
-    console.error('Consult handler error:', err);
+    console.error('Consult handler error:', err.name || 'provider-error');
     return res.status(500).json({ message: 'Server error. Please try again.' });
   }
 };

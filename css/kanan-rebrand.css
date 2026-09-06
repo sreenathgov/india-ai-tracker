@@ -1,4 +1,4 @@
-@import url('./kanan-brand-v2.css');
+@import url('./kanan-brand-v2.css?v=2');
 
 /* Kanan Labs rebrand workspace — intentionally isolated to the copied homepage. */
 :root {
@@ -118,18 +118,7 @@ body.kl-page,
 .kl-twdemo .tw-pkg-seal::before { border-color: rgb(var(--kanan-accent-rgb) / 0.45); }
 .kl-twdemo .tw-pkg-hash { background: rgb(var(--kanan-primary-rgb) / 0.04); }
 
-/* Product triptych */
-.kl-triptych__img-wrap::after {
-    background: linear-gradient(160deg, rgb(var(--kanan-primary-deep-rgb) / 0.36) 0%, transparent 28%, transparent 68%, rgb(var(--kanan-primary-deep-rgb) / 0.20) 100%);
-}
-
-.kl-triptych__overlay {
-    background: linear-gradient(to bottom, rgb(var(--kanan-primary-deep-rgb) / 0.55) 0%, rgb(var(--kanan-primary-deep-rgb) / 0.85) 55%, rgb(var(--kanan-primary-deep-rgb) / 0.95) 100%);
-}
-
-.kl-triptych__name-rule,
-.kl-triptych__overlay-cta { color: var(--kanan-color-accent); }
-.kl-triptych__name-rule { background: var(--kanan-color-accent); }
+/* Product triptych uses the wine palette defined in triptych.css. */
 
 /* Drona comparison */
 .kl-drona {
@@ -153,7 +142,8 @@ body.kl-page,
     box-shadow: 0 14px 36px -18px rgb(var(--kanan-primary-rgb) / 0.46), inset 0 0 0 1px rgb(var(--kanan-cream-rgb) / 0.06);
 }
 .kl-drona__panel[data-state="without"] { background: rgb(var(--kanan-primary-rgb) / 0.025); border-color: rgb(var(--kanan-primary-rgb) / 0.30); color: rgb(var(--kanan-primary-rgb) / 0.72); }
-.kl-drona__panel[data-state="with"] { border-color: rgb(var(--kanan-primary-rgb) / 0.92); box-shadow: 0 22px 50px -24px rgb(var(--kanan-primary-rgb) / 0.58); }
+.kl-drona__panel[data-state="with"] { background: var(--kanan-color-primary); border-color: rgb(var(--kanan-primary-rgb) / 0.92); box-shadow: 0 22px 50px -24px rgb(var(--kanan-primary-rgb) / 0.58); }
+.kl-drona__panel[data-state="with"]::after { background: var(--kanan-color-accent); }
 .kl-drona__panel[data-state="without"] .kl-drona__panel-body em { background: linear-gradient(180deg, transparent 62%, rgb(var(--kanan-accent-rgb) / 0.22) 62%); }
 .kl-drona__panel[data-state="with"] .kl-drona__panel-body em { background: linear-gradient(180deg, transparent 62%, rgb(var(--kanan-accent-rgb) / 0.36) 62%); }
 .kl-drona__chevron::before { border-color: rgb(var(--kanan-primary-rgb) / 0.52); }
@@ -194,7 +184,7 @@ body.kl-page,
     --kl-roadmap-ink: var(--kanan-color-primary);
     --kl-roadmap-paper: var(--kanan-color-paper);
     --kl-roadmap-red: var(--kanan-color-accent);
-    --kl-roadmap-red-deep: var(--kanan-color-primary);
+    --kl-roadmap-red-deep: var(--kanan-color-wine);
     --kl-roadmap-rule: rgb(var(--kanan-primary-rgb) / 0.18);
 }
 .kl-roadmap__eyebrow { color: rgb(var(--kanan-primary-rgb) / 0.48); }

@@ -19,8 +19,9 @@
  *   MAKE_WEBHOOK_URL           — optional; fans the submission out to Make
  */
 
-const { applyCors, rateLimit, checkHoneypot } = require('./_lib/security');
+const { applyCors, rateLimit, checkHoneypot, validateRequest } = require('./_lib/security');
 const { notifyMake } = require('./_lib/notify');
+const {providerFetch} = require('./_lib/provider-fetch');
 const {
     validateApplication,
     answersSummary,
@@ -30,7 +31,7 @@ const {
 const BREVO_CONTACTS_URL = 'https://api.brevo.com/v3/contacts';
 const BREVO_EMAIL_URL = 'https://api.brevo.com/v3/smtp/email';
 
-const DEFAULT_SENDER = { name: 'Kanan Labs', email: 'careers@kananlabs.in' };
+const DEFAULT_SENDER = { name: 'Kanan', email: 'careers@kananlabs.in' };
 
 function splitName(fullName) {
     const parts = fullName.split(/\s+/).filter(Boolean);
@@ -43,7 +44,7 @@ function splitName(fullName) {
 async function storeContact(headers, listId, { fields, role, answers, timestamp }) {
     const { first, last } = splitName(fields.fullName);
 
-    const response = await fetch(BREVO_CONTACTS_URL, {
+    const response = await providerFetch(BREVO_CONTACTS_URL, {
         method: 'POST',
         headers,
         body: JSON.stringify({
@@ -104,7 +105,7 @@ async function notifyFounder(headers, { role, fields, answers, cv, timestamp }) 
         payload.attachment = [{ name: cv.name, content: cv.content }];
     }
 
-    const response = await fetch(BREVO_EMAIL_URL, {
+    const response = await providerFetch(BREVO_EMAIL_URL, {
         method: 'POST',
         headers,
         body: JSON.stringify(payload)
@@ -112,7 +113,7 @@ async function notifyFounder(headers, { role, fields, answers, cv, timestamp }) 
 
     if (!response.ok) {
         const err = await response.json().catch(() => ({}));
-        console.error('Brevo founder notification error:', response.status, err);
+        console.error('Brevo founder notification error:', err.code || 'provider-error');
     }
 }
 
@@ -123,7 +124,7 @@ async function acknowledgeCandidate(headers, { fields, role }) {
         return;
     }
 
-    const response = await fetch(BREVO_EMAIL_URL, {
+    const response = await providerFetch(BREVO_EMAIL_URL, {
         method: 'POST',
         headers,
         body: JSON.stringify({
@@ -135,7 +136,7 @@ async function acknowledgeCandidate(headers, { fields, role }) {
 
     if (!response.ok) {
         const err = await response.json().catch(() => ({}));
-        console.error('Brevo acknowledgement error:', response.status, err);
+        console.error('Brevo acknowledgement error:', err.code || 'provider-error');
     }
 }
 
@@ -151,6 +152,8 @@ module.exports = async function handler(req, res) {
     if (req.method !== 'POST') {
         return res.status(405).json({ message: 'Method not allowed' });
     }
+
+    if (!validateRequest(req, res, 4500000)) return;
 
     if (!rateLimit(req)) {
         return res.status(429).json({ message: 'Too many requests. Please try again later.' });
@@ -193,10 +196,10 @@ module.exports = async function handler(req, res) {
         await storeContact(headers, listId, context);
     } catch (err) {
         if (err.brevoStatus) {
-            console.error('Brevo add contact error:', err.brevoStatus, err.brevoBody);
+            console.error('Brevo add contact error:', err.brevoStatus);
             return res.status(502).json({ message: 'We could not send your application. Please try again.' });
         }
-        console.error('Apply handler error (contact step):', err);
+        console.error('Apply handler error (contact step):', err.name || 'provider-error');
         return res.status(500).json({ message: 'Server error. Please try again.' });
     }
 
@@ -220,7 +223,7 @@ module.exports = async function handler(req, res) {
             submittedAt: timestamp
         });
     } catch (err) {
-        console.error('Apply handler post-store error:', err);
+        console.error('Apply handler post-store error:', err.name || 'provider-error');
     }
 
     return res.status(200).json({ success: true });

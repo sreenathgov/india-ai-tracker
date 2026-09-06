@@ -1,0 +1,347 @@
+/* India AI Tracker: a neutral research surface within Kanan's red identity.
+   Keep these roles local: shared site styles and the map's blue data fill retain
+   their existing defaults. This stylesheet is intentionally loaded last. */
+html.tracker-theme {
+    color-scheme: light;
+    --tracker-canvas: #f5f5f3;
+    --tracker-surface: #ffffff;
+    --tracker-surface-muted: #f0f0ee;
+    --tracker-border: #dddcda;
+    --tracker-text: #29292b;
+    --tracker-muted: #636367;
+    --tracker-ink: var(--kanan-color-primary);
+    --tracker-accent: var(--kanan-color-wine);
+    --tracker-accent-soft: #f3eaea;
+    --tracker-on-accent: #fcfbfa;
+    --tracker-shadow: 0 6px 22px rgb(32 30 32 / 0.06), 0 1px 3px rgb(32 30 32 / 0.04);
+    background: var(--tracker-canvas);
+}
+
+.tracker-page {
+    --text-primary: var(--tracker-text);
+    --text-secondary: #4e4e52;
+    --text-tertiary: var(--tracker-muted);
+    --bg-primary: var(--tracker-surface);
+    --bg-secondary: var(--tracker-canvas);
+    --bg-tertiary: var(--tracker-surface-muted);
+    --bg-page: var(--tracker-canvas);
+    --bg-page-bottom: var(--tracker-canvas);
+    --accent-primary: var(--tracker-accent);
+    --accent-primary-light: var(--tracker-accent-soft);
+    --accent-amber: var(--tracker-accent);
+    --accent-amber-light: var(--tracker-accent-soft);
+    --frame-border: var(--tracker-border);
+    --frame-shadow: rgb(32 30 32 / 0.07);
+    --tracker-map-selection: var(--tracker-accent);
+    --shiny-text-color: var(--tracker-ink);
+    --shiny-text-highlight: var(--kanan-color-accent);
+    background: var(--tracker-canvas);
+    color: var(--tracker-text);
+}
+
+.tracker-page ::selection {
+    background: var(--tracker-accent-soft);
+    color: var(--tracker-ink);
+}
+
+.tracker-page :is(a, button, input):focus-visible {
+    outline: 2px solid var(--tracker-accent);
+    outline-offset: 3px;
+}
+
+/* The grid stays visible in the gutters. Reading surfaces are opaque. */
+.tracker-page :is(.map-frame, .feed-panel, .side-panel, .all-india-panel) {
+    background: var(--tracker-surface);
+    border-color: var(--tracker-border);
+    box-shadow: var(--tracker-shadow);
+}
+
+.tracker-page :is(.product-hero h1, .feed-header h2, .panel-header h2,
+    .all-india-header h2, .expanded-header h3) {
+    color: var(--tracker-ink);
+}
+
+.tracker-page :is(.feed-header, .panel-header, .all-india-header) {
+    background: var(--tracker-surface);
+    border-bottom: 1px solid var(--tracker-border);
+    color: var(--tracker-text);
+}
+
+.tracker-page :is(.system-status, .feed-subtitle, .all-india-subtitle,
+    .feed-item-meta, .feed-item-state, .feed-item-category, .feed-empty p,
+    .shiny-text-subtitle) {
+    color: var(--tracker-muted);
+    opacity: 1;
+}
+
+.tracker-page :is(.system-status, .feed-item-meta, .update-date) {
+    font-size: 0.75rem;
+}
+
+.tracker-page :is(.feed-subtitle, .all-india-subtitle, .shiny-text-subtitle) {
+    font-size: 0.875rem;
+}
+
+.tracker-page :is(.view-toggle, .all-india-panel-toggle) {
+    background: #e8e7e5;
+    box-shadow: inset 0 0 0 1px var(--tracker-border);
+}
+
+/* Explicit state selectors also override the legacy mobile toggle palette. */
+.tracker-page :is(.view-toggle, .all-india-panel-toggle) .toggle-option,
+.tracker-page .view-toggle.all-india-active .toggle-option:first-child,
+.tracker-page .view-toggle:not(.all-india-active) .toggle-option:last-child {
+    color: var(--tracker-muted);
+    font-size: 0.75rem;
+}
+
+.tracker-page :is(.view-toggle, .all-india-panel-toggle) .toggle-option:hover {
+    color: var(--tracker-ink);
+}
+
+.tracker-page :is(.view-toggle, .all-india-panel-toggle) .toggle-option.active,
+.tracker-page .view-toggle.all-india-active .toggle-option:last-child,
+.tracker-page .view-toggle:not(.all-india-active) .toggle-option:first-child {
+    color: var(--tracker-on-accent);
+}
+
+.tracker-page :is(.view-toggle, .all-india-panel-toggle) .toggle-indicator {
+    background: var(--tracker-accent);
+}
+
+.tracker-page :is(.panel-content, .all-india-content) {
+    background: var(--tracker-canvas);
+}
+
+.tracker-page .feed-item {
+    background: var(--tracker-canvas);
+    border: 1px solid transparent;
+    border-left: 3px solid transparent;
+}
+
+.tracker-page .feed-item:hover {
+    background: var(--tracker-accent-soft);
+    border-left-color: var(--tracker-accent);
+}
+
+.tracker-page .feed-item::before { background: var(--kanan-color-accent); }
+.tracker-page .feed-item-title { color: var(--tracker-ink); }
+.tracker-page .close-btn { color: var(--tracker-ink); }
+.tracker-page .close-btn:hover { background: var(--tracker-accent-soft); }
+
+.tracker-page :is(.feed-content, .panel-content, .all-india-content) {
+    scrollbar-color: #aaa6a6 transparent;
+}
+.tracker-page :is(.feed-content, .panel-content, .all-india-content)::-webkit-scrollbar-thumb {
+    background: #aaa6a6;
+}
+.tracker-page :is(.feed-content, .panel-content, .all-india-content)::-webkit-scrollbar-thumb:hover {
+    background: var(--tracker-muted);
+}
+
+/* Category cards and expanded records share one selection language. */
+.tracker-page :is(.magic-bento-card, .startup-policy-card) {
+    background: var(--tracker-surface);
+    border-color: var(--tracker-border);
+    box-shadow: 0 1px 3px rgb(32 30 32 / 0.03);
+}
+.tracker-page .magic-bento-card::before {
+    background: linear-gradient(135deg, rgb(var(--kanan-wine-rgb) / 0.035), transparent 60%);
+}
+.tracker-page .magic-bento-card:hover {
+    background: var(--tracker-surface);
+    border-color: var(--kanan-color-accent);
+    box-shadow: var(--tracker-shadow);
+}
+.tracker-page .magic-bento-card.active {
+    background: var(--tracker-accent-soft);
+    border-color: var(--tracker-accent);
+}
+.tracker-page .magic-bento-card.empty { opacity: 1; }
+.tracker-page .magic-bento-card.empty:hover {
+    border-color: var(--tracker-border);
+    box-shadow: none;
+}
+.tracker-page .magic-bento-card__title { color: var(--tracker-ink); }
+.tracker-page .magic-bento-card__badge {
+    background: var(--tracker-surface-muted);
+    color: var(--tracker-muted);
+    font-size: 0.75rem;
+}
+.tracker-page #allIndiaPanelContent .magic-bento-card__badge { font-size: 0.75rem; }
+.tracker-page .magic-bento-card.active .magic-bento-card__badge {
+    background: var(--tracker-accent);
+    color: var(--tracker-on-accent);
+}
+.tracker-page .startup-policy-btn {
+    background: var(--tracker-accent-soft);
+    border-color: var(--tracker-border);
+    color: var(--tracker-accent);
+}
+.tracker-page .startup-policy-btn:hover {
+    background: var(--tracker-accent);
+    border-color: var(--tracker-accent);
+    color: var(--tracker-on-accent);
+}
+.tracker-page .startup-policy-card:has(.startup-policy-btn:hover) { border-color: var(--kanan-color-accent); }
+.tracker-page .update-item { border-left-color: var(--kanan-color-accent); }
+.tracker-page .update-item:hover { box-shadow: var(--tracker-shadow); }
+.tracker-page .update-title { color: var(--tracker-accent); }
+.tracker-page .update-title:hover { color: var(--tracker-ink); }
+.tracker-page .pagination-btn {
+    border-color: var(--tracker-accent);
+    color: var(--tracker-accent);
+    -webkit-tap-highlight-color: rgb(var(--kanan-wine-rgb) / 0.1);
+}
+.tracker-page .pagination-btn:hover:not(:disabled) {
+    background: var(--tracker-accent);
+    color: var(--tracker-on-accent);
+    box-shadow: var(--tracker-shadow);
+}
+.tracker-page .pagination-btn:disabled {
+    border-color: var(--tracker-border);
+    color: var(--tracker-muted);
+}
+.tracker-page .leaflet-tooltip.state-tooltip {
+    border-color: var(--tracker-accent);
+    box-shadow: var(--tracker-shadow);
+}
+.tracker-page .map-info-trigger:hover { box-shadow: var(--tracker-shadow); }
+
+/* Analysis: red figures, dark ink, and quiet white cards over the grid. */
+.tracker-page :is(.bento-stat-card, .bento-insight-card) {
+    background: var(--tracker-surface);
+    box-shadow: var(--tracker-shadow);
+}
+.tracker-page .bento-insight-card { border-left-color: var(--kanan-color-accent); }
+.tracker-page :is(.bento-stat-card, .bento-insight-card):hover {
+    background: var(--tracker-surface);
+    box-shadow: 0 12px 30px rgb(32 30 32 / 0.09), 0 2px 5px rgb(32 30 32 / 0.04);
+    border-color: var(--kanan-color-accent);
+}
+.tracker-page .bento-stat-card { aspect-ratio: auto; }
+.tracker-page .bento-stat-card .stat-value { color: var(--tracker-accent); }
+.tracker-page :is(.bento-stat-card .stat-title, .bento-insight-card .insight-title) {
+    color: var(--tracker-ink);
+}
+.tracker-page :is(.bento-stat-card .stat-description, .bento-stat-card .stat-suffix,
+    .bento-insight-card .insight-meta) {
+    color: var(--tracker-muted);
+}
+.tracker-page :is(.bento-stat-card .stat-title, .bento-stat-card .stat-description,
+    .bento-insight-card .insight-meta) {
+    font-size: 0.75rem;
+}
+.tracker-page .bento-insight-card .insight-body {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+/* The company introduction stays useful even when the research script fails. */
+.tracker-page .research-bridge {
+    position: relative;
+    z-index: 1;
+    padding: 48px 32px;
+    background: var(--tracker-accent);
+    color: var(--tracker-on-accent);
+}
+.tracker-page .research-bridge__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 64px;
+}
+.tracker-page .research-bridge__copy { max-width: 720px; }
+.tracker-page .research-bridge__eyebrow {
+    margin: 0 0 12px;
+    color: #e9dada;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+.tracker-page .research-bridge__title {
+    margin: 0 0 12px;
+    color: var(--tracker-on-accent);
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.75rem, 2.6vw, 2.25rem);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+}
+.tracker-page .research-bridge__body {
+    margin: 0;
+    max-width: 680px;
+    color: #e9dada;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+}
+.tracker-page .research-bridge__link {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    min-height: 48px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgb(252 251 250 / 0.5);
+    color: var(--tracker-on-accent);
+    font-size: 0.9375rem;
+    text-decoration: none;
+    transition: border-color 180ms ease;
+}
+.tracker-page .research-bridge__link:hover { border-color: var(--tracker-on-accent); }
+.tracker-page .research-bridge__link svg { transition: transform 180ms ease; }
+.tracker-page .research-bridge__link:hover svg { transform: translateX(4px); }
+@media (max-width: 900px) {
+    .tracker-page .research-bridge__inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+@media (max-width: 600px) {
+    .tracker-page .research-bridge { padding: 36px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .tracker-page .research-bridge__link,
+    .tracker-page .research-bridge__link svg { transition: none; }
+}
+.tracker-page .kl-footer { background: var(--kanan-color-wine-deep); }
+.tracker-page :is(.research-bridge, .kl-footer, .staggered-menu-panel) :is(a, button, input):focus-visible,
+.tracker-page .staggered-menu-wrapper[data-open] .sm-toggle:focus-visible {
+    outline-color: var(--tracker-on-accent);
+}
+
+/* Shared consent UI inherits the tracker palette without changing behaviour. */
+.tracker-page .cookie-consent {
+    background: var(--tracker-surface);
+    color: var(--tracker-text);
+    border-top: 1px solid var(--tracker-border);
+    box-shadow: 0 -3px 18px rgb(32 30 32 / 0.08);
+}
+.tracker-page .cookie-consent__text a { color: var(--tracker-accent); }
+.tracker-page .cookie-consent__btn--accept {
+    background: var(--tracker-accent);
+    color: var(--tracker-on-accent);
+}
+.tracker-page .cookie-consent__btn--decline {
+    color: var(--tracker-ink);
+    border-color: var(--tracker-border);
+}
+
+@media (max-width: 768px) {
+    .tracker-page .all-india-panel.visible { background: var(--tracker-canvas); }
+    .tracker-page .bento-insight-card .insight-title { font-size: 1.125rem; }
+    .tracker-page .bento-insight-card .insight-body {
+        display: block;
+        -webkit-line-clamp: unset;
+        overflow: visible;
+    }
+    .tracker-page :is(.bento-stat-card, .bento-insight-card) {
+        aspect-ratio: auto;
+        min-height: 0;
+    }
+}

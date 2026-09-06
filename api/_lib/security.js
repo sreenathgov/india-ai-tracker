@@ -1,7 +1,7 @@
 /**
  * Shared security helpers for serverless form endpoints.
  *
- * - applyCors(req, res):   Origin allowlist (kananlabs.in + *.vercel.app).
+ * - applyCors(req, res):   Exact production and this project's deployment origins.
  *                          Returns true if request should proceed; false if blocked.
  * - rateLimit(req):        In-memory per-IP token bucket. Lives per warm Vercel instance.
  *                          Returns true if allowed, false if over the limit.
@@ -11,24 +11,30 @@
 const ALLOWED_ORIGINS = [
   'https://kananlabs.in',
   'https://www.kananlabs.in',
+  'https://apply.kananlabs.in',
   // local dev
   'http://localhost:3000',
   'http://localhost:8000',
   'http://localhost:5000',
   'http://127.0.0.1:3000',
-  'http://127.0.0.1:8000'
+  'http://127.0.0.1:8000',
+  'http://127.0.0.1:4173'
 ];
-
-const VERCEL_PREVIEW_RE = /^https:\/\/[a-z0-9-]+\.vercel\.app$/i;
 
 function isAllowedOrigin(origin) {
   if (!origin) return false;
-  if (ALLOWED_ORIGINS.indexOf(origin) !== -1) return true;
-  if (VERCEL_PREVIEW_RE.test(origin)) return true;
-  return false;
+  if (ALLOWED_ORIGINS.slice(0, 3).includes(origin)) return true;
+  if (!process.env.VERCEL_ENV && /^http:\/\/(?:localhost|127\.0\.0\.1|\[::1\]):\d{2,5}$/.test(origin)) return true;
+  // A stranger can create *.vercel.app sites. Trust only platform-provided
+  // identifiers for this deployment, never an arbitrary Host request header.
+  return ['VERCEL_URL', 'VERCEL_BRANCH_URL', 'VERCEL_PROJECT_PRODUCTION_URL']
+    .some(key => process.env[key] && origin === 'https://' + process.env[key]);
 }
 
 function applyCors(req, res) {
+  res.setHeader('Cache-Control', 'no-store');
+  res.setHeader('Vary', 'Origin');
+  res.setHeader('X-Content-Type-Options', 'nosniff');
   const origin = req.headers.origin;
 
   if (isAllowedOrigin(origin)) {
@@ -51,7 +57,8 @@ function applyCors(req, res) {
 
 // In-memory rate limiter — persists for the lifetime of a warm Vercel instance.
 // 5 requests per 10 minutes per IP. Defense against casual scripted abuse;
-// cold-start churn limits effectiveness against distributed attacks (acceptable for v1).
+// cold-start churn limits effectiveness against distributed attacks. Deployment
+// must also enable persistent edge rate limiting; this is only a second layer.
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 const RATE_LIMIT_MAX = 5;
 const RATE_LIMIT_BUCKET_CAP = 5000;
@@ -69,6 +76,10 @@ function getClientIp(req) {
 function rateLimit(req) {
   const ip = getClientIp(req);
   const now = Date.now();
+  if (!buckets.has(ip) && buckets.size >= RATE_LIMIT_BUCKET_CAP) {
+    for (const [key, stamps] of buckets) if (now - stamps.at(-1) >= RATE_LIMIT_WINDOW_MS) buckets.delete(key);
+    if (buckets.size >= RATE_LIMIT_BUCKET_CAP) return false;
+  }
   const bucket = buckets.get(ip) || [];
   const fresh = bucket.filter((ts) => now - ts < RATE_LIMIT_WINDOW_MS);
 
@@ -103,9 +114,24 @@ function checkHoneypot(body) {
   return typeof v === 'string' && v.trim().length > 0;
 }
 
+function validateRequest(req, res, maxBytes = 16384) {
+  if (!req.body || typeof req.body !== 'object' || Array.isArray(req.body)) {
+    res.status(400).json({message:'A JSON object is required'}); return false;
+  }
+  if (req.headers['content-type'] && !/^application\/json(?:\s*;|$)/i.test(req.headers['content-type'])) {
+    res.status(415).json({message:'Use application/json'}); return false;
+  }
+  if (Buffer.byteLength(JSON.stringify(req.body), 'utf8') > maxBytes) {
+    res.status(413).json({message:'Submission is too large'}); return false;
+  }
+  return true;
+}
+
 module.exports = {
   applyCors,
   rateLimit,
   checkHoneypot,
   HONEYPOT_FIELD,
+  isAllowedOrigin,
+  validateRequest,
 };

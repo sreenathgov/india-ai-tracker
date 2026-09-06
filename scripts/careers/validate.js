@@ -22,8 +22,8 @@ const {
 } = require('./schema');
 
 const REQUIRED_STRINGS = [
-    'slug', 'title', 'team', 'location', 'workMode', 'employmentType',
-    'seniority', 'status', 'datePosted', 'timeline', 'summary', 'description'
+    'slug', 'title', 'team', 'workMode', 'employmentType',
+    'seniority', 'status', 'datePosted', 'summary', 'description'
 ];
 
 const REQUIRED_ARRAYS = ['responsibilities', 'lookingFor'];
@@ -113,6 +113,15 @@ function validateRole(errors, role, index, teams, slugsSeen) {
         }
     });
 
+    ['city', 'region', 'country'].forEach(field => {
+        if (!isNonEmptyString(role.location?.[field])) {
+            errors.push(`${label}: location.${field} is missing or empty`);
+        }
+    });
+    if (role.location?.country && !/^[A-Z]{2}$/.test(role.location.country)) {
+        errors.push(`${label}: location.country must be a two-letter country code`);
+    }
+
     if (isNonEmptyString(role.slug)) {
         if (!SLUG_RE.test(role.slug)) {
             errors.push(`${label}: slug must be lower-case kebab-case ([a-z0-9] separated by single hyphens)`);
@@ -166,6 +175,9 @@ function validateCareers(data) {
 
     if (!data || typeof data !== 'object') {
         return ['data/careers.json did not parse to an object'];
+    }
+    if (!isNonEmptyString(data.companyDescription)) {
+        errors.push('companyDescription is missing or empty');
     }
     if (!Array.isArray(data.teams) || !data.teams.length) {
         errors.push('teams[] is missing or empty — every role must belong to a declared team');

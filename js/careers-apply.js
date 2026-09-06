@@ -38,6 +38,8 @@
     const honeypotInput = el('ap-website');
 
     const questionInputs = Array.from(form.querySelectorAll('[data-question-id]'));
+    const descriptions = new Map(Array.from(form.querySelectorAll('input, textarea'))
+        .map(input => [input, input.getAttribute('aria-describedby') || '']));
 
     // -----------------------------------------------------------------------
     // Field errors
@@ -50,7 +52,8 @@
     function clearError(input) {
         const node = errorNodeFor(input);
         input.removeAttribute('aria-invalid');
-        input.removeAttribute('aria-describedby');
+        if (descriptions.get(input)) input.setAttribute('aria-describedby', descriptions.get(input));
+        else input.removeAttribute('aria-describedby');
         if (input.closest('.crd-field')) input.closest('.crd-field').classList.remove('has-error');
         if (node) node.textContent = '';
     }
@@ -61,7 +64,7 @@
         if (input.closest('.crd-field')) input.closest('.crd-field').classList.add('has-error');
         if (node) {
             node.textContent = message;
-            input.setAttribute('aria-describedby', node.id);
+            input.setAttribute('aria-describedby', [descriptions.get(input), node.id].filter(Boolean).join(' '));
         }
     }
 
@@ -72,6 +75,14 @@
     validatable.forEach((input) => {
         input.addEventListener('input', () => clearError(input));
         input.addEventListener('change', () => clearError(input));
+    });
+    // Either CV field satisfies the group; choosing one clears a previous
+    // missing-CV error on the other without dropping its help text.
+    [cvFileInput, cvUrlInput].filter(Boolean).forEach(input => {
+        input.addEventListener('change', () => {
+            clearError(cvFileInput);
+            clearError(cvUrlInput);
+        });
     });
 
     // -----------------------------------------------------------------------
@@ -136,10 +147,17 @@
         });
 
         const file = cvFileInput && cvFileInput.files && cvFileInput.files[0];
+        if (!file && !cvUrlInput.value.trim()) {
+            showError(cvFileInput, 'Please upload your CV as a PDF or provide a link to it.');
+            firstInvalid = firstInvalid || cvFileInput;
+        }
         if (file) {
-            const isPdf = file.type === 'application/pdf' || /\.pdf$/i.test(file.name);
+            const isPdf = /\.pdf$/i.test(file.name);
             if (!isPdf) {
                 showError(cvFileInput, 'Please attach a PDF, or paste a link instead.');
+                firstInvalid = firstInvalid || cvFileInput;
+            } else if (!file.size) {
+                showError(cvFileInput, 'That file is empty. Choose another PDF or provide a link.');
                 firstInvalid = firstInvalid || cvFileInput;
             } else if (file.size > MAX_CV_BYTES) {
                 showError(cvFileInput, 'That file exceeds 3 MB. Please compress it, or paste a link instead.');
@@ -224,6 +242,7 @@
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
+        if (submitButton.disabled) return;
         if (!validate()) return;
 
         setBusy(true);

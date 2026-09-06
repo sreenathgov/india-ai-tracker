@@ -114,7 +114,7 @@ GEMINI_API_KEY=AIzaSyD...your_key_here
 
 **Current Key (in your .env):**
 ```
-GEMINI_API_KEY=AIzaSyDG-kN6DPIYKYBdf9d0wnjNxEA0XDF7gKc
+GEMINI_API_KEY=YOUR_REVOKED_KEY_REPLACE_IN_ENV_ONLY
 ```
 
 ---

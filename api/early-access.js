@@ -8,8 +8,9 @@
  *   MAKE_WEBHOOK_URL           — optional; if set, fans the submission out to a Make scenario
  */
 
-const { applyCors, rateLimit, checkHoneypot } = require('./_lib/security');
+const { applyCors, rateLimit, checkHoneypot, validateRequest } = require('./_lib/security');
 const { notifyMake } = require('./_lib/notify');
+const {providerFetch} = require('./_lib/provider-fetch');
 
 module.exports = async function handler(req, res) {
   // CORS allowlist (kananlabs.in + *.vercel.app + local dev)
@@ -27,6 +28,7 @@ module.exports = async function handler(req, res) {
   }
 
   // Rate limit: 5 requests / 10 min / IP (per warm instance)
+  if (!validateRequest(req, res, 16384)) return;
   if (!rateLimit(req)) {
     return res.status(429).json({ message: 'Too many requests. Please try again later.' });
   }
@@ -38,10 +40,10 @@ module.exports = async function handler(req, res) {
 
   const { name, company, email } = req.body || {};
 
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (typeof email !== 'string' || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return res.status(400).json({ message: 'Invalid email address' });
   }
-  if (!name || name.trim().length < 1) {
+  if (typeof name !== 'string' || name.length > 160 || name.trim().length < 1) {
     return res.status(400).json({ message: 'Name is required' });
   }
 
@@ -59,7 +61,7 @@ module.exports = async function handler(req, res) {
   const lastName = nameParts.slice(1).join(' ') || '';
 
   try {
-    const contactRes = await fetch('https://api.brevo.com/v3/contacts', {
+    const contactRes = await providerFetch('https://api.brevo.com/v3/contacts', {
       method: 'POST',
       headers: {
         'api-key': apiKey,
@@ -81,7 +83,7 @@ module.exports = async function handler(req, res) {
     // 201 = created, 204 = already exists (updated) — both fine
     if (!contactRes.ok && contactRes.status !== 204) {
       const err = await contactRes.json().catch(() => ({}));
-      console.error('Brevo early-access error:', contactRes.status, err);
+      console.error('Brevo early-access error:', err.code || 'provider-error');
       return res.status(502).json({ message: 'Failed to submit. Please try again.' });
     }
 
@@ -95,7 +97,7 @@ module.exports = async function handler(req, res) {
     return res.status(200).json({ success: true });
 
   } catch (err) {
-    console.error('Early-access handler error:', err);
+    console.error('Early-access handler error:', err.name || 'provider-error');
     return res.status(500).json({ message: 'Server error. Please try again.' });
   }
 };

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="tracker-theme" data-tracker-layout="compact">
 
 <head>
     <!-- Analytics load only after cookie consent (DPDP/GDPR) -->
     <script src="js/consent.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f5f3">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -72,27 +73,32 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Six+Caps&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/kanan-brand-v2.css">
     <link rel="stylesheet" href="css/styles-v2.css?v=21">
-    <link rel="stylesheet" href="css/staggered-menu.css?v=4">
+    <link rel="stylesheet" href="css/staggered-menu.css?v=8">
     <link rel="stylesheet" href="css/strategic-insights.css?v=5">
-    <link rel="stylesheet" href="css/shiny-text.css">
+    <link rel="stylesheet" href="css/shiny-text.css?v=2">
 
     <link rel="stylesheet" href="css/contact-panel.css?v=1">
-    <link rel="stylesheet" href="css/footer.css?v=4">
+    <link rel="stylesheet" href="css/footer.css?v=5">
+    <link rel="stylesheet" href="css/tracker-theme.css?v=2">
+    <link rel="stylesheet" href="css/tracker-layout.css?v=1">
 </head>
 
-<body>
+<body class="tracker-page">
 
     <!-- Infrastructure Grid Background -->
-    <canvas id="infrastructure-grid"
+    <canvas id="infrastructure-grid" aria-hidden="true" data-border-color="rgba(76, 44, 44, 0.045)"
         style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;"></canvas>
 
     <div class="page-wrapper">
         <!-- LAYER 1: Institutional Header (Persistent) -->
         <!-- Note: Staggered menu will be injected here by staggered-menu.js -->
 
+        <!-- Removing data-tracker-layout restores the previous opening layout. -->
+        <div class="tracker-opening" data-nav-light>
         <!-- LAYER 2: Product Hero (Compact) -->
-        <section class="product-hero">
+        <section class="product-hero" data-nav-light>
             <h1>India AI Tracker</h1>
             <div class="product-controls">
                 <!-- View Mode Toggle -->
@@ -109,7 +115,7 @@
             </div>
         </section>
 
-        <main class="main-container">
+        <main class="main-container" data-nav-light>
             <!-- Map Frame - contains the map with rounded corners and shadow -->
             <div id="map-frame" class="map-frame">
                 <div class="map-container">
@@ -138,7 +144,7 @@
             <div id="sidePanel" class="side-panel">
                 <div class="panel-header">
                     <h2 id="panelTitle">State Name</h2>
-                    <button class="close-btn" onclick="closePanel()">
+                    <button class="close-btn" onclick="closePanel()" aria-label="Close state details">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -172,42 +178,41 @@
                 </div>
             </div>
         </main>
+        <div class="tracker-scroll-space" aria-hidden="true"></div>
+        </div>
 
         <!-- Shiny Text Section (Transition from Section 1 to Section 2) -->
-        <section class="shiny-text-container" id="shinyTextContainer">
+        <section class="shiny-text-container" id="shinyTextContainer" data-nav-light>
             <div class="shiny-text-wrapper">
-                <h2 class="shiny-text" id="shinyText">WEEKLY INSIGHTS</h2>
-                <p class="shiny-text-subtitle">A structured overview of India's AI capital, policy, and infrastructure
-                    movements.</p>
+                <h2 class="shiny-text" id="shinyText">NINE MONTHS OF SIGNAL</h2>
+                <p class="shiny-text-subtitle">Every AI signal out of India — 2,027 of them — read, filed and cross-checked since January 2026.</p>
             </div>
         </section>
 
         <!-- Section 2: Strategic Insights -->
-        <section class="strategic-insights-section" id="strategicInsightsSection">
+        <section class="strategic-insights-section" id="strategicInsightsSection" data-nav-light>
             <div class="strategic-insights-container">
                 <div class="strategic-bento-grid bento-section" id="strategicBentoGrid">
-                    <!-- Populated dynamically from data/strategic_insights.json -->
+                    <!-- Rendered from the same build-generated snapshot as the heading. -->
                 </div>
             </div>
         </section>
 
-        <!-- Newsletter Orange Strip CTA — Floating above grid, full-width -->
-        <section class="newsletter-hero-section" id="newsletterHeroSection">
-            <div class="newsletter-hero-container">
-                <div class="newsletter-hero-text">
-                    <h3 class="newsletter-hero-title" id="newsletterHeroTitle">Subscribe to the Kanan Labs Weekly Brief
-                    </h3>
-                    <p class="newsletter-hero-subtitle" id="newsletterHeroSubtitle">Stay updated on the shifting
-                        landscape of India's AI revolution.</p>
+        <!-- A permanent bridge from public research to the company behind it. -->
+        <section class="research-bridge" id="researchBridge" aria-labelledby="researchBridgeTitle">
+            <div class="research-bridge__inner">
+                <div class="research-bridge__copy">
+                    <p class="research-bridge__eyebrow">Research by Kanan Labs</p>
+                    <h2 class="research-bridge__title" id="researchBridgeTitle">The research is just the beginning.</h2>
+                    <p class="research-bridge__body">The India AI Tracker is a public research project by Kanan Labs.
+                        We bring the same care to understanding policy and regulation, and what they mean for supply chain risk.</p>
                 </div>
-                <form class="newsletter-hero-form" id="newsletterHeroForm">
-                    <input type="email" placeholder="Enter your email" required autocomplete="email" />
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
-            <div style="max-width: 960px; margin: 0 auto;">
-                <p class="newsletter-success-message" id="newsletterSuccessMsg">Thank you, looking forward to keeping
-                    you updated on India's AI revolution!</p>
+                <a class="research-bridge__link" href="index.html">
+                    <span>Get to know Kanan Labs</span>
+                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M4 12h16M14 6l6 6-6 6" />
+                    </svg>
+                </a>
             </div>
         </section>
 
@@ -225,13 +230,9 @@
                         <p class="kl-footer__tagline">Proactive Supply Chain Resilience</p>
 
                         <!-- Newsletter mini-form -->
-                        <div>
-                            <p class="kl-footer__nl-label">Weekly Brief</p>
-                            <form class="kl-footer__nl-form" id="footerNewsletterForm">
-                                <input type="email" class="kl-footer__nl-input" placeholder="Your email address"
-                                    autocomplete="email" required>
-                                <button type="submit" class="kl-footer__nl-submit">Subscribe</button>
-                            </form>
+                        <div class="kl-footer__links">
+                            <a href="https://apply.kananlabs.in/" class="kl-footer__consult">Supplier Programme &#8594;</a>
+                            <a href="request-demo.html" class="kl-footer__consult">Request a Demo &#8594;</a>
                         </div>
                     </div>
 
@@ -297,16 +298,18 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="js/infrastructure-grid.js"></script>
     <script src="js/magic-bento.js"></script>
-    <script src="js/shiny-text.js"></script>
+    <script src="js/shiny-text.js?v=3"></script>
     <script src="js/brevo-subscribe.js"></script>
-    <script src="js/strategic-insights.js"></script>
+    <script type="application/json" id="researchShowcaseData">{"lastUpdated":"2026-09-05","cards":[{"id":"stat-1","type":"stat","title":"Capital Tracked","value":"$2.7B","suffix":"","description":"Across 142 disclosed rounds, de-duplicated by deal."},{"id":"stat-2","type":"stat","title":"Signals Filed","value":"2,027","suffix":"","description":"Each one classified, geo-attributed and adjudicated before it enters the record."},{"id":"stat-3","type":"stat","title":"Policy Moves Logged","value":"165","suffix":"","description":"Central and state action, held apart from the announcement noise around it."},{"id":"stat-4","type":"stat","title":"States & UTs Mapped","value":"29","suffix":"","description":"Every jurisdiction kept as its own record, not folded into a national feed."},{"id":"insight-1","type":"insight","title":"Four States, Most of the Story","description":"Karnataka, Delhi, Maharashtra and Telangana carry 60% of every state-level signal. Fourteen states register fewer than fifteen. The map is four deep markets and a long, thin tail.","metadata":{"region":"Geography"},"checks":[{"figure":"topStateShare","expected":0.6,"tolerance":0.02},{"figure":"thinStateCount","expected":14}]},{"id":"insight-2","type":"insight","title":"Capital Runs Barbell","description":"One round — Neysa's $1.2B — is 47% of all capital tracked. The median deal is $5.5M. India funds a great many small companies and very few large ones.","metadata":{"region":"Capital"},"checks":[{"figure":"largestRoundShare","expected":0.47,"tolerance":0.02},{"figure":"medianRoundUsd","expected":5500000,"tolerance":500000}]},{"id":"insight-3","type":"insight","title":"Policy Moves in Waves","description":"44% of every policy move logged landed in the two months around the AI Impact Summit. By May it had fallen to eight. Attention here is event-driven, not continuous.","metadata":{"region":"Governance"},"checks":[{"figure":"policyTopTwoMonthsShare","expected":0.44,"tolerance":0.02},{"figure":"policyQuietMonthCount","expected":8}]},{"id":"insight-4","type":"insight","title":"Three Outlets, Two-Fifths","description":"Three publications carry 40% of India's AI coverage. The state-level story lives in the other 74 — which is why we read all of them.","metadata":{"region":"Sources"},"checks":[{"figure":"topSourceShare","expected":0.4,"tolerance":0.02},{"figure":"sourceCount","expected":77}]}],"heading":"NINE MONTHS OF SIGNAL","subheading":"Every AI signal out of India — 2,027 of them — read, filed and cross-checked since January 2026.","computed":{"totalSignals":2027,"monthsActive":9,"firstMonth":"2026-01","lastMonth":"2026-09","latestSignalDate":"2026-09-05","policyCount":165,"policyTopTwoMonthsShare":0.42424242424242425,"policyQuietMonthCount":2,"sourceCount":77,"topSourceShare":0.4070054267390232,"topSources":["Entrackr - AI & Startups","YourStory","ET CIO - AI"],"jurisdictionCount":29,"topStateShare":0.5989583333333334,"topStates":["KA","DL","MH","TG"],"thinStateCount":14,"roundCount":142,"capitalUsd":2737884090.909091,"medianRoundUsd":5590909.090909091,"largestRoundShare":0.4382946684940012}}</script>
+    <script src="js/strategic-insights.js?v=3"></script>
 
     <script src="js/contact-panel.js"></script>
     <script src="js/ripple-grid.js"></script>
-    <script src="js/staggered-menu.js?v=7"></script>
+    <script src="js/staggered-menu.js?v=12"></script>
     <!-- Leaflet moved from <head> to avoid render-blocking; app-final.js depends on it -->
     <script src="js/vendor/leaflet/leaflet.js"></script>
-    <script src="js/app-final.js?v=20"></script>
+    <script src="js/tracker-layout.js?v=1"></script>
+    <script src="js/app-final.js?v=22"></script>
 </body>
 
 </html>

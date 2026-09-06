@@ -11,8 +11,10 @@ PYTHONPATH=. venv/bin/python3 app.py &
 ### 2. Start Frontend (Public Site)
 ```bash
 cd /Users/sreenathgovindarajan/Documents/india-ai-tracker
-python3 -m http.server 8080 &
+npm run preview
 ```
+
+The preview builds the full site before serving `dist/`. Resources, articles, and careers are generated pages: do not serve the repository root. A failed build stops the preview. After editing sources, stop the preview with Ctrl+C and run `npm run preview` again. Port 4180 must be free; an occupied port fails explicitly. This static preview does not run serverless form endpoints.
 
 ### 3. Check Status
 ```bash
@@ -24,7 +26,7 @@ bash backend/scripts/check_services.sh
 ## 🔗 Access URLs
 
 ### Public Website
-- **URL:** http://localhost:8080/index.html
+- **URL:** http://127.0.0.1:4180/
 - **Shows:** Approved AI articles on interactive map
 - **No login required**
 

@@ -6,29 +6,30 @@
     <script src="js/consent.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers — Join us in building the world model for global trade | Kanan Labs</title>
+    <meta name="theme-color" content="#762c36">
+    <title>Careers at Kanan — AI, Engineering &amp; Data Science</title>
 
-    <meta name="description" content="Open roles at Kanan Labs. We build neuro-symbolic trade intelligence — DRONA, TradeWatch, and the evidence infrastructure underneath them. Engineering, research, design and trade policy.">
+    <meta name="description" content="Explore founding roles in AI research, engineering, and data science at Kanan. Full-time, on-site in Chennai.">
     <link rel="canonical" href="https://kananlabs.in/careers.html">
     <meta name="robots" content="index,follow,max-image-preview:large">
 
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Kanan Labs">
+    <meta property="og:site_name" content="Kanan">
     <meta property="og:url" content="https://kananlabs.in/careers.html">
-    <meta property="og:title" content="Careers — Join us in building the world model for global trade">
-    <meta property="og:description" content="Open roles at Kanan Labs across engineering, research, design and trade policy. Build the reasoning layer for cross-border trade.">
+    <meta property="og:title" content="Careers at Kanan">
+    <meta property="og:description" content="Explore founding roles in AI research, engineering, and data science at Kanan. Full-time, on-site in Chennai.">
     <meta property="og:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Kanan Labs">
+    <meta property="og:image:alt" content="Kanan">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://kananlabs.in/careers.html">
-    <meta name="twitter:title" content="Careers — Join us in building the world model for global trade">
-    <meta name="twitter:description" content="Open roles at Kanan Labs across engineering, research, design and trade policy.">
+    <meta name="twitter:title" content="Careers at Kanan">
+    <meta name="twitter:description" content="Explore founding roles in AI research, engineering, and data science at Kanan. Full-time, on-site in Chennai.">
     <meta name="twitter:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
-    <meta name="twitter:image:alt" content="Kanan Labs">
+    <meta name="twitter:image:alt" content="Kanan">
 
     <link rel="icon" type="image/png" href="assets/images/KANAN-LABS-WEBSITELOGO.png">
 
@@ -39,41 +40,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-v2.css?v=21">
-    <link rel="stylesheet" href="css/staggered-menu.css?v=4">
-    <link rel="stylesheet" href="css/footer.css?v=4">
-    <link rel="stylesheet" href="css/contact-panel.css?v=1">
-    <link rel="stylesheet" href="css/careers.css?v=5">
+    <link rel="stylesheet" href="css/staggered-menu.css?v=8">
+    <link rel="stylesheet" href="css/footer.css?v=5">
+    <link rel="stylesheet" href="css/careers.css?v=9">
 
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
-<body class="careers-page">
-
-    <!-- Roles payload. Injected at build time from data/careers.json by
-         scripts/generate-careers.js. js/careers.js reads it for filtering. -->
-    <script type="application/json" id="careers-data">{"roles":[]}</script>
-
-    <!-- ════════════════════════════════════════════════
-         HERO — navy, isometric trade lattice
-    ════════════════════════════════════════════════ -->
+<body class="careers-page" data-menu-light-color="#4c2c2c">
+    <a class="cr-skip" href="#open-roles">Skip to open roles</a>
+    <main>
     <section class="cr-hero" aria-labelledby="cr-hero-title">
         <div class="cr-hero__inner">
 
             <div class="cr-hero__copy">
-                <p class="cr-hero__eyebrow">Kanan&nbsp;Labs &middot; Open roles</p>
+                <p class="cr-hero__eyebrow">Join the founding team</p>
 
-                <!-- Three lines, not two: at the shell width the second line of a
-                     2-line break overflows the copy column and re-wraps to four. -->
-                <h1 class="cr-hero__title" id="cr-hero-title">
-                    Join us in building<br>
-                    the <em>world model</em><br>
-                    for global trade.
-                </h1>
+                <h1 class="cr-hero__title" id="cr-hero-title">Careers at Kanan.</h1>
 
-                <p class="cr-hero__lede">
-                    It is a small team, early, and the problems are unreasonably interesting.
-                </p>
+                <p class="cr-hero__lede" id="careersIntroduction"></p>
 
                 <div class="cr-hero__actions">
                     <a class="cr-btn cr-btn--primary" href="#open-roles">
@@ -91,12 +77,8 @@
                      an empty box. -->
                 <svg class="cr-lattice" viewBox="128 6 464 588" preserveAspectRatio="xMidYMid meet"
                      role="img" aria-labelledby="cr-lattice-title cr-lattice-desc">
-                    <title id="cr-lattice-title">The three layers DRONA reasons across</title>
-                    <desc id="cr-lattice-desc">An isometric diagram of three stacked planes. Shipments move on the lowest
-                        plane, the rules that govern them sit in the middle, and the evidence produced sits above.
-                        Trade routes trace across the planes and vertical threads connect the same consignment
-                        through all three layers. The planes are unlabelled; this description carries their
-                        meaning.</desc>
+                    <title id="cr-lattice-title">Connected layers of supply-chain intelligence</title>
+                    <desc id="cr-lattice-desc">Three stacked planes connected by paths and nodes, representing the relationships between supply-chain operations, knowledge, and evidence.</desc>
 
                     <defs>
                         <path id="cr-grid"
@@ -174,126 +156,39 @@
             </svg>
         </div>
     </section>
-
-    <!-- ════════════════════════════════════════════════
-         OPEN ROLES
-    ════════════════════════════════════════════════ -->
-    <section class="cr-roles" id="open-roles" data-nav-light aria-labelledby="cr-roles-title">
-        <div class="cr-shell">
-            <div class="cr-roles__head">
-                <div>
-                    <p class="cr-kicker">Open roles</p>
-                    <h2 class="cr-section-title" id="cr-roles-title">The roles we are hiring for now.</h2>
+        <section class="cr-roles" id="open-roles" aria-labelledby="cr-roles-title" data-nav-light>
+            <div class="cr-shell">
+                <div class="cr-roles__head">
+                    <h2 class="cr-section-title" id="cr-roles-title">Open roles</h2>
+                    <p class="cr-roles__count" id="careersCount"></p>
                 </div>
-                <p class="cr-roles__count" id="careersCount"></p>
+                <div class="cr-grid" id="careersGrid"></div>
             </div>
-
-            <!-- Filter pills. Injected at build time from the teams present in the data. -->
-            <div class="cr-filters" id="careersFilters" role="group" aria-label="Filter roles by team"></div>
-
-            <!-- Applications backend is temporarily down; route applicants to email until it's back. -->
-            <div class="cr-notice cr-notice--roles">
-                <span class="cr-notice__icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-width="1.4" />
-                        <path d="M10 6v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                        <circle cx="10" cy="13.6" r="0.9" fill="currentColor" />
-                    </svg>
-                </span>
-                <div class="cr-notice__body">
-                    <p class="cr-notice__title">A quick note on applying</p>
-                    <p class="cr-notice__text">
-                        Our applications system is temporarily down. Until it&rsquo;s back, send your CV and a
-                        short introduction to
-                        <a href="mailto:raya@kananlabs.in?subject=Job%20application%20%E2%80%94%20Kanan%20Labs">raya@kananlabs.in</a>
-                        &mdash; we&rsquo;re reading everything that arrives that way.
-                    </p>
-                </div>
+        </section>
+        <section class="cr-process" aria-labelledby="cr-process-title" data-nav-light>
+            <div class="cr-shell">
+                <h2 class="cr-section-title" id="cr-process-title">How we hire</h2>
+                <ol class="cr-stages">
+                    <li class="cr-stage"><span class="cr-stage__num">01</span><h3 class="cr-stage__title">Application review</h3><p class="cr-stage__body">Send your CV and any relevant links. We review your experience against the role.</p></li>
+                    <li class="cr-stage"><span class="cr-stage__num">02</span><h3 class="cr-stage__title">Introductory conversation</h3><p class="cr-stage__body">If there is a potential fit, we will arrange a conversation about your background and the opportunity.</p></li>
+                    <li class="cr-stage"><span class="cr-stage__num">03</span><h3 class="cr-stage__title">Discuss your work</h3><p class="cr-stage__body">Meet the founding team for a role-specific discussion of your work, approach, and interests.</p></li>
+                </ol>
             </div>
-
-            <!-- Role rows. Injected at build time. -->
-            <div class="cr-grid" id="careersGrid"></div>
-
-            <p class="cr-grid__empty" id="careersEmpty" hidden>No roles in that team right now.</p>
-        </div>
-    </section>
-
-    <!-- ════════════════════════════════════════════════
-         WHAT APPLYING LOOKS LIKE
-    ════════════════════════════════════════════════ -->
-    <section class="cr-process" data-nav-light aria-labelledby="cr-process-title">
-        <div class="cr-shell">
-            <p class="cr-kicker">How we hire</p>
-            <h2 class="cr-section-title" id="cr-process-title">A short process, and a reply either way.</h2>
-
-            <ol class="cr-stages">
-                <li class="cr-stage">
-                    <span class="cr-stage__num">01</span>
-                    <h3 class="cr-stage__title">You apply</h3>
-                    <p class="cr-stage__body">
-                        The form sits at the foot of each role: three written questions, your links,
-                        and a CV if you have one available. It should take about half an hour.
-                    </p>
-                </li>
-                <li class="cr-stage">
-                    <span class="cr-stage__num">02</span>
-                    <h3 class="cr-stage__title">We review it</h3>
-                    <p class="cr-stage__body">
-                        Every application is read by a person, and you will have a reply within a
-                        week either way. The written answers carry more weight than the CV.
-                    </p>
-                </li>
-                <li class="cr-stage">
-                    <span class="cr-stage__num">03</span>
-                    <h3 class="cr-stage__title">Two conversations</h3>
-                    <p class="cr-stage__body">
-                        One covering work you have already done, one covering the work here. Both
-                        are technical, and neither is a puzzle interview. Where the role calls for
-                        it, a paid exercise follows &mdash; real work, and you keep it.
-                    </p>
-                </li>
-            </ol>
-        </div>
-    </section>
-
-    <!-- ════════════════════════════════════════════════
-         CLOSING
-    ════════════════════════════════════════════════ -->
-    <section class="cr-closing" data-nav-light aria-labelledby="cr-closing-title">
-        <div class="cr-shell cr-closing__inner">
-            <h2 class="cr-section-title" id="cr-closing-title">If none of these roles fit.</h2>
-            <p class="cr-closing__body">
-                We would still be glad to hear from you, particularly if you have worked inside
-                customs, freight or trade policy and have a considered view of where the existing
-                software falls short. Tell us what you would want to build here.
-            </p>
-            <a class="cr-btn cr-btn--outline" href="mailto:sreenath@kananlabs.in?subject=General%20application%20%E2%80%94%20Kanan%20Labs">
-                <span>Write to us directly</span>
-                <span class="cr-btn__arrow" aria-hidden="true">&#8594;</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- ════════════════════════════════════════════════
-         FOOTER
-    ════════════════════════════════════════════════ -->
+        </section>
+    </main>
     <footer class="kl-footer">
         <div class="kl-footer__inner">
             <div class="kl-footer__content">
 
                 <!-- LEFT: Brand zone -->
                 <div class="kl-footer__brand">
-                    <img src="assets/logos/kanan-kl-hor-white.png" alt="Kanan Labs"
+                    <img src="assets/logos/kanan-kl-hor-white.png" alt="Kanan"
                          class="kl-footer__logo" width="922" height="262" loading="lazy" decoding="async" draggable="false">
                     <p class="kl-footer__tagline">Proactive Supply Chain Resilience</p>
 
-                    <div>
-                        <p class="kl-footer__nl-label">Weekly Brief</p>
-                        <form class="kl-footer__nl-form" id="footerNewsletterForm">
-                            <input type="email" class="kl-footer__nl-input" placeholder="Your email address"
-                                   autocomplete="email" required>
-                            <button type="submit" class="kl-footer__nl-submit">Subscribe</button>
-                        </form>
+                    <div class="kl-footer__links">
+                        <a href="https://apply.kananlabs.in/" class="kl-footer__consult">Supplier Programme &#8594;</a>
+                        <a href="request-demo.html" class="kl-footer__consult">Request a Demo &#8594;</a>
                     </div>
                 </div>
 
@@ -347,10 +242,9 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="js/contact-panel.js"></script>
-    <script defer src="js/careers.js?v=3"></script>
     <!-- Staggered menu requires gsap (loaded with defer in head); defer guarantees order -->
-    <script defer src="js/staggered-menu.js?v=7"></script>
+    <script defer src="js/careers.js?v=3"></script>
+    <script defer src="js/staggered-menu.js?v=12"></script>
 </body>
 
 </html>

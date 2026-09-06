@@ -1,337 +1,188 @@
 {
-  "_comment": "Source of truth for the careers surface. data/careers.json -> scripts/generate-careers.js -> dist/careers.html + dist/careers/<slug>/index.html. Validated at build time; malformed data fails the build. TITLING RULE (v2, 2026-08-06): every public title uses a standardised core noun plus an optional comma qualifier. LinkedIn parses prefix/core/suffix and standardises on the core, so a qualifier after the comma costs no reach and buys self-selection. Never mint a new head noun — a novel title is silently mapped to whatever the model thinks it resembles, and has no neighbours in the recommender's embedding space. Niche vocabulary belongs in the body, never the title. Internal names for these seats live in kanan-ops/hiring/Hire_Archetypes_for_Sourcing_v1.md.",
-
-  "teams": ["Engineering", "Trade & Compliance"],
-
+  "_comment": "Careers source of truth: role content, structured locations, and application fields feed the listing, detail pages, metadata, and application validation.",
+  "companyDescription": "Kanan is building AI software to help manufacturers and financial institutions understand supply chains, assess risk, and make informed decisions. We are bringing together a founding team across AI research, engineering, and data science.",
+  "teams": [
+    "Research",
+    "Engineering",
+    "Data Science"
+  ],
   "roles": [
-
     {
-      "slug": "founding-cto",
-      "title": "Founding CTO",
-      "team": "Engineering",
-      "location": "Bengaluru",
+      "slug": "chief-scientific-officer",
+      "title": "Chief Scientific Officer",
+      "team": "Research",
+      "summary": "Lead AI research and scientific development for systems that help businesses understand complex supply chains and make better decisions.",
+      "description": "As Chief Scientific Officer, you will lead the scientific development of Kanan’s AI capabilities. You will work directly with the CEO to turn complex business problems into a focused research agenda, and with engineers and data scientists to develop methods that can be tested and used in practice.\n\nThis is a hands-on role spanning research, experimentation, and technical guidance. Your work will connect advances in AI with practical questions about how systems represent knowledge, retain context, reason under uncertainty, and learn from evidence. You will help the team choose methods on the strength of their results and understand where further research is needed. You will also help establish a shared research practice so that experiments, findings, and technical decisions remain understandable as the team grows.",
+      "responsibilities": [
+        "Set the company’s AI research direction, identify the most valuable scientific questions, and translate them into practical development priorities.",
+        "Develop approaches to reasoning, learning, memory, and knowledge representation that can work across different types of business information.",
+        "Guide the use of language models, knowledge graphs, and agent-based systems, choosing methods that fit the problem and available evidence.",
+        "Establish evaluation methods for accuracy, reliability, and uncertainty, and use experimental results to guide research and product decisions.",
+        "Work with engineers and data scientists to turn research into working software, review technical approaches, and document important assumptions and limitations."
+      ],
+      "lookingFor": [
+        "Strong research experience in AI, machine learning, computational neuroscience, cognitive science, or a related discipline, with relevant computational work.",
+        "Understanding of learning, cognition, and decision-making, and the ability to connect these ideas to the design of AI systems.",
+        "Evidence of developing and testing research ideas through code, experiments, or applied work, with a clear account of what the results demonstrate.",
+        "Ability to explain scientific choices clearly, collaborate across disciplines, and guide a small technical team through open-ended research problems."
+      ],
+      "niceToHave": [
+        "Experience with knowledge representation, probabilistic reasoning, or neuroscience-informed approaches to AI.",
+        "Experience translating research into commercial applications and balancing scientific goals with real-world data and product constraints."
+      ],
+      "location": {
+        "city": "Chennai",
+        "region": "Tamil Nadu",
+        "country": "IN"
+      },
       "workMode": "on-site",
       "employmentType": "full-time",
       "seniority": "founding",
       "status": "open",
-      "datePosted": "2026-08-06",
+      "datePosted": "2026-09-06",
       "applyBy": null,
-      "timeline": "Four conversations over about six weeks, then a paid architecture review",
-      "summary": "Own the engine that turns written regulation into software a customs officer, an underwriter and a court could all check.",
-
-      "description": "This is a co-founder role in substance: founder-level equity, founder-standard vesting, and shared risk. We are direct about that from the first conversation.\n\nKanan Labs builds the reasoning layer for cross-border trade. Every container that crosses a border is governed by a stack of rules no single person holds in their head — tariff lines, origin criteria, licensing conditions, each with a citation and an effective date, each changing without notice. We are building the system that holds them, reasons over them, and can always show its working.\n\nThe technical core is a compiler. It takes primary regulation, turns it into typed and versioned rules, signs them, and hands them to a product engine that produces evidence an exporter can put in front of an authority. Determinism matters more than cleverness here: an answer that cannot name its source, its version and its effective date is not an answer.\n\nWhat this job entails. There is a constitution, an enforced type system, a working signing chain over one sealed slice and a green test suite. There is not yet a running product. Closing that gap is the job. For the first eighteen months you will be building, not managing — there is no team yet, and the work in front of you is code. Later you will hire and lead one.\n\nYou do not need to know anything about customs. Nobody arrives knowing this domain; the founder is a trade lawyer and supplies it. What you cannot learn on the job is the instinct that a rule which was true last year may not be true today, and that a system which cannot say \"unclear\" will eventually say something false with confidence.",
-
-      "responsibilities": [
-        "Own the compiler end to end — typed primitives in, signed and versioned rule packs out.",
-        "Make determinism real. Identical inputs produce byte-identical output, or there is a written reason why not.",
-        "Build the signing and provenance chain so every output traces to the instrument it came from.",
-        "Own privacy and data residency architecture — currently unowned, and the highest-severity item on the list.",
-        "Choose and build the knowledge substrate, including how the system handles a rule that changes retroactively.",
-        "Set the engineering bar, then hire against it."
-      ],
-
-      "lookingFor": [
-        "You have built and maintained production systems where being wrong was expensive.",
-        "Strong Python, and a preference for typed contracts over flexible dictionaries.",
-        "You have worked with versioned data or schemas that had to stay correct as the underlying rules changed.",
-        "You can explain why a fast non-deterministic answer can be worse than a slower deterministic one when the output has to be defended.",
-        "You are comfortable being the only engineer for a while."
-      ],
-
-      "niceToHave": [
-        "Experience inside a standards-bound domain — healthcare terminology, financial reporting, tax, payments, identity — where the specification sat upstream of your opinion.",
-        "Knowledge representation, ontologies, rules engines, or formal methods.",
-        "Applied cryptography for evidence: signatures, canonicalisation, tamper-evident logs.",
-        "Compiler or interpreter design. Bitemporal or versioned data modelling.",
-        "Any exposure at all to customs, trade, tax or insurance regulation."
-      ],
-
       "questions": [
         {
-          "id": "changed_your_mind",
-          "prompt": "Describe something you were confidently wrong about in your work. What changed your mind, and how long did it take you to accept it?",
-          "hint": "The last part is the one we read closest. \"Immediately\" is rarely true.",
-          "maxLength": 1200,
-          "required": true
-        },
-        {
-          "id": "not_enough_information",
-          "prompt": "Tell us about a time you did not have enough information to decide. What did you actually do — not what you would do now?",
-          "hint": "We are building a system whose job is to say \"unclear\" rather than guess. We are asking whether you do the same.",
-          "maxLength": 1200,
-          "required": true
-        },
-        {
-          "id": "truth_that_expired",
-          "prompt": "Name a system you have worked on where something that was true last year is not true now. How did the system represent that change — and what broke when it did not?",
-          "hint": "Any domain. Prices, permissions, tax rates, schemas, medical codes, entitlements — anything with an effective date.",
-          "maxLength": 1400,
-          "required": true
+          "id": "additional_information",
+          "prompt": "Additional information",
+          "hint": "Share anything else you would like us to know about your application.",
+          "maxLength": 2000,
+          "required": false
         }
       ]
     },
-
     {
-      "slug": "founding-engineer-full-stack",
-      "title": "Founding Engineer (Full-Stack)",
+      "slug": "founding-ai-engineer-full-stack",
+      "title": "Founding AI Engineer — Full Stack",
       "team": "Engineering",
-      "location": "Bengaluru",
+      "summary": "Build the applications, services, and integrations that bring Kanan’s AI capabilities into everyday business workflows.",
+      "description": "As a Founding AI Engineer focused on full-stack development, you will build the product around Kanan’s AI capabilities. Your work will span user interfaces, backend services, databases, and integrations, with ownership from early design through deployment and ongoing operation.\n\nYou will work directly with the founding team and business users to understand how information moves between manufacturers and financial institutions. The challenge is to turn fragmented documents, data, and working practices into clear, dependable software. You will collaborate with the Applied AI Engineer on model integration and with the CSO and Data Scientist on bringing validated capabilities into the product. You will help establish engineering practices that keep the product understandable, testable, and easy for future team members to extend.",
+      "responsibilities": [
+        "Build customer-facing applications and backend services that make complex information understandable and help users complete their work efficiently.",
+        "Design databases, APIs, and workflows for supplier, order, document, and risk information, with clear relationships and maintainable interfaces.",
+        "Integrate documents, spreadsheets, enterprise systems, and external data sources, and own the production pipelines that keep this information usable.",
+        "Bring AI capabilities into practical workflows with access controls, source traceability, human review, and clear handling of incomplete or failed results.",
+        "Own deployment, automated testing, monitoring, security, and production reliability, and improve the system as usage and integration needs grow."
+      ],
+      "lookingFor": [
+        "Experience building and shipping full-stack software, with strong backend fundamentals and evidence of maintaining systems after they reach users.",
+        "Proficiency in Python and JavaScript or TypeScript, relational databases, and API development, with sound judgement about data modelling and system design.",
+        "Experience integrating AI models into real applications and handling the latency, errors, costs, and testing requirements that come with them.",
+        "Ability to understand customer workflows, communicate technical tradeoffs clearly, and take features from design through deployment without a large support team."
+      ],
+      "niceToHave": [
+        "Experience with enterprise software, fintech, or supply-chain technology and the integration needs of business customers.",
+        "Experience with cloud infrastructure, application security, or an early-stage engineering team where you owned substantial parts of a product."
+      ],
+      "location": {
+        "city": "Chennai",
+        "region": "Tamil Nadu",
+        "country": "IN"
+      },
       "workMode": "on-site",
       "employmentType": "full-time",
       "seniority": "founding",
       "status": "open",
-      "datePosted": "2026-08-06",
+      "datePosted": "2026-09-06",
       "applyBy": null,
-      "timeline": "Two conversations, then a paid exercise — about three weeks end to end",
-      "summary": "Build the product around the engine: document intake, extraction, reconciliation, and the screen a reviewer signs their name to.",
-
-      "description": "Kanan Labs builds software that tells an exporter whether their shipping documents will survive contact with a customs authority — before the container sails, not after the refund is stuck.\n\nThere is an engine that produces signed, checkable rules. There is nothing yet that puts one in front of a human being about to send a container to Rotterdam. You build that.\n\nWhat this job entails. Concretely: the service layer that does not exist yet; document intake that copes with an invoice photographed at an angle; extraction where every field carries its source page and confidence rather than arriving as a bare string; reconciliation that can say exactly which of three documents disagrees and where; and the reviewer console the whole product is judged on. You will often be the person who writes the specification rather than the person who receives it.\n\nYou will not be alone in the sense that matters — the architecture is opinionated and already written down, and you consume it rather than redesign it. Arguing that it should change is welcome; there is a documented process for that.\n\nYou do not need customs experience and we do not expect it. What we do expect is that you have built something end to end that another person then depended on, and that you can talk about the parts of it that went wrong.",
-
-      "responsibilities": [
-        "Build the API layer between the rules engine and everything downstream.",
-        "Build document intake and classification, where \"we are not sure what this is\" is a real answer rather than a crash.",
-        "Build the extraction pipeline so every extracted field carries its source, its page and its confidence.",
-        "Build cross-document reconciliation — invoice, packing list and bill of lading must agree, and the system must say where they do not.",
-        "Build the packet engines and the reviewer console.",
-        "Ship weekly, in front of real users, from early on."
-      ],
-
-      "lookingFor": [
-        "Roughly two to six years building software other people relied on. Internships and your own projects count.",
-        "Python and TypeScript — or clear evidence you pick up a stack in a fortnight.",
-        "You have worked across the stack: an API, a database and a screen, all yours.",
-        "You are comfortable integrating vendor APIs rather than rebuilding them.",
-        "You write clearly. This company runs on written documents."
-      ],
-
-      "niceToHave": [
-        "Document AI or OCR — Docling, Azure Document Intelligence, Surya, Marker, Unstructured, or similar.",
-        "Next.js, TypeScript in strict mode, Tailwind, shadcn.",
-        "PostgreSQL beyond CRUD — migrations, constraints, query plans.",
-        "You have worked somewhere the output had to be defended: finance, healthcare, legal, logistics.",
-        "A public trail of things you have built. A good repository beats a good CV here and we will read it."
-      ],
-
       "questions": [
         {
-          "id": "changed_your_mind",
-          "prompt": "Describe something you were confidently wrong about in your work. What changed your mind, and how long did it take you to accept it?",
-          "hint": "The last part is the one we read closest. \"Immediately\" is rarely true.",
-          "maxLength": 1200,
-          "required": true
-        },
-        {
-          "id": "not_enough_information",
-          "prompt": "Tell us about a time you did not have enough information to decide. What did you actually do — not what you would do now?",
-          "hint": "We are building a system whose job is to say \"unclear\" rather than guess. We are asking whether you do the same.",
-          "maxLength": 1200,
-          "required": true
-        },
-        {
-          "id": "built_against_nothing",
-          "prompt": "Describe a time you had to build against something that did not exist yet — an API, a schema, a decision nobody had made. What did you actually do?",
-          "hint": "We are interested in the workaround, and in what it cost you later.",
-          "maxLength": 1200,
-          "required": true
+          "id": "additional_information",
+          "prompt": "Additional information",
+          "hint": "Share anything else you would like us to know about your application.",
+          "maxLength": 2000,
+          "required": false
         }
       ]
     },
-
     {
-      "slug": "head-of-customs-trade-compliance",
-      "title": "Head of Customs & Trade Compliance",
-      "team": "Trade & Compliance",
-      "location": "Bengaluru — with regular time in the Chennai–Hosur corridor",
+      "slug": "founding-ai-engineer-applied-ai",
+      "title": "Founding AI Engineer — Applied AI",
+      "team": "Engineering",
+      "summary": "Build and evaluate AI systems that extract information, connect knowledge, and support complex business decisions.",
+      "description": "As a Founding AI Engineer focused on applied AI, you will build the intelligence components behind Kanan’s software. You will turn research ideas into working systems that process documents, retrieve relevant information, connect facts, and support business analysis.\n\nYou will work closely with the CSO on scientific approaches and with the Full Stack Engineer on deployment and integration. This role combines strong coding with disciplined experimentation: implementing a method, measuring how it performs, understanding where it fails, and improving it. Your work will help make AI outputs useful and traceable when source information is fragmented, incomplete, or contradictory. You will maintain clear records of experiments and reusable evaluation tools so improvements can be checked and reproduced by the rest of the team.",
+      "responsibilities": [
+        "Develop AI agents, document-processing pipelines, and retrieval systems that work with a mix of structured records and unstructured business information.",
+        "Build knowledge-graph and information-extraction components that connect entities and relationships while preserving links to the sources behind them.",
+        "Implement and compare models, research methods, and reasoning approaches, using reproducible experiments to understand performance and practical tradeoffs.",
+        "Create evaluation datasets and tests for accuracy, grounding, and failure handling, including difficult cases where the system should request review.",
+        "Work with the CSO and Full Stack Engineer to deploy validated capabilities, investigate errors, and improve quality, latency, and cost over time."
+      ],
+      "lookingFor": [
+        "Strong Python and software-engineering skills, with experience building maintainable components, writing tests, and debugging systems that use multiple data sources.",
+        "Hands-on experience with language models, retrieval, and agent workflows, including examples that go beyond a demonstration or isolated notebook.",
+        "Understanding of machine learning, experimentation, and model evaluation, with the ability to choose useful metrics and interpret results critically.",
+        "Ability to implement research ideas, explain their strengths and limitations, and collaborate with researchers and product engineers to deliver practical results."
+      ],
+      "niceToHave": [
+        "Experience with entity resolution, knowledge graphs, document AI, or extracting structured information from complex documents.",
+        "Experience with model adaptation or combining machine learning with structured rules, especially where outputs need to be reviewed and explained."
+      ],
+      "location": {
+        "city": "Chennai",
+        "region": "Tamil Nadu",
+        "country": "IN"
+      },
       "workMode": "on-site",
       "employmentType": "full-time",
-      "seniority": "senior",
+      "seniority": "founding",
       "status": "open",
-      "datePosted": "2026-08-06",
+      "datePosted": "2026-09-06",
       "applyBy": null,
-      "timeline": "One conversation, then a short paid project — about four weeks, part-time",
-      "summary": "The person who knows what actually happens at the customs hall, and makes the software agree with it.",
-
-      "description": "Kanan Labs builds software that checks an exporter's shipping documents against the rules before the container sails. That claim is worth nothing unless somebody here has personally watched it fail at a port.\n\nThat is you. You are the reason our rules are right rather than merely well-formed, the person a customer talks to when a refund has not landed, and the person a prospective design partner believes within thirty seconds because you have obviously done the job.\n\nWhat this job entails. Three things. You check every rule the system encodes against what actually happens — the person who says \"that condition is correct on paper and wrong at the air cargo complex.\" You own delivery: reviewer workflow, what a packet must contain before a broker or an underwriter will accept it, onboarding, and the customer who writes in at 9pm. And you carry the conversations with exporters who might become our first design partners.\n\nTwo things we will say plainly rather than leave you to discover. First, this pays substantially more than the same work inside a broking firm, fully declared, with equity on top — we would rather state that than play a negotiation game. Second, and following from it, this is not a role where you keep a side practice. We will ask directly, because the entire product is an argument about defensibility and we cannot make that argument with a divided book.\n\nThis is not a sales role and there is no quota. It is also not a role for someone who has supervised the work without ever having done it.",
-
-      "responsibilities": [
-        "Check encoded rules against operational reality, and be the internal authority when they disagree.",
-        "Own the delivery backbone — reviewer workflow, packet acceptance, onboarding, customer queries.",
-        "Define what a shipping-bill or marine-insurance packet must contain before a broker or underwriter will sign it.",
-        "Carry design-partner conversations with exporters, brokers and forwarders.",
-        "Sit with the engineers often enough that the product is shaped by the port, not by a diagram."
-      ],
-
-      "lookingFor": [
-        "Eight years or more in customs clearance, export documentation or freight forwarding.",
-        "You have filed, or directly supervised the filing of, real shipping bills. Not managed a team that did — done it.",
-        "You can explain why an IGST refund gets stuck, and whose obligation the missing step usually was.",
-        "Tamil. This is a hard requirement — the corridor runs Chennai, Ranipet, Hosur, Krishnagiri and Coimbatore.",
-        "You want your income fully on the books."
-      ],
-
-      "niceToHave": [
-        "G-card, or having sat and passed the Customs Brokers Licensing Regulation 6 examination.",
-        "You have chosen or rolled out software at a broking firm or forwarder, or implemented it from the vendor side — Logi-Sys, Trezix, Kale, Automaxis, ODeX or similar.",
-        "AEO application experience. Surviving a customs audit of your own internal controls is a strong signal.",
-        "EV components, auto ancillaries, or anything that has made you argue about Chapter 85.",
-        "Marine cargo insurance exposure, broker-side or claims-side."
-      ],
-
       "questions": [
         {
-          "id": "changed_your_mind",
-          "prompt": "Describe something you were confidently wrong about in your work. What changed your mind, and how long did it take you to accept it?",
-          "hint": "The last part is the one we read closest. \"Immediately\" is rarely true.",
-          "maxLength": 1200,
-          "required": true
-        },
-        {
-          "id": "not_enough_information",
-          "prompt": "Tell us about a time you did not have enough information to decide. What did you actually do — not what you would do now?",
-          "hint": "We are building a system whose job is to say \"unclear\" rather than guess. We are asking whether you do the same.",
-          "maxLength": 1200,
-          "required": true
-        },
-        {
-          "id": "refund_not_landed",
-          "prompt": "A client's IGST refund still has not landed six weeks after export. Walk us through how you would find out why — naming the systems involved and who owns each step.",
-          "hint": "Be specific. We are more interested in the sequence and the ownership than in the eventual fix.",
-          "maxLength": 1600,
-          "required": true
+          "id": "additional_information",
+          "prompt": "Additional information",
+          "hint": "Share anything else you would like us to know about your application.",
+          "maxLength": 2000,
+          "required": false
         }
       ]
     },
-
     {
-      "slug": "trade-compliance-analyst",
-      "title": "Trade Compliance Analyst (Regulatory Content)",
-      "team": "Trade & Compliance",
-      "location": "Bengaluru",
-      "workMode": "hybrid",
-      "employmentType": "full-time",
-      "seniority": "mid",
-      "status": "open",
-      "datePosted": "2026-08-06",
-      "applyBy": null,
-      "timeline": "A conversation, a three-hour exercise on real regulatory text, then a session where we argue with your answers",
-      "summary": "Read primary regulation and turn it into rules a machine can run and an auditor can check.",
-
-      "description": "Somebody has to read the Customs Act, the Foreign Trade Policy, the IRDAI broker regulations and a stack of notifications, and turn what they say into something software can evaluate without lying about it. That is this job.\n\nIf you have worked in regulatory content, statutory compliance libraries, indirect tax content, patent drafting or trade compliance at a manufacturer, you have done a version of this already — reading a primary instrument and producing a structured obligation with a trigger, a date and an evidence requirement. We are asking you to do it with more precision than anyone has asked before, and to stop paraphrasing.\n\nWhat this job entails. You work from primary text, never a summary or a commentary. Each rule you produce carries the exact span it came from, the dates between which it applies, what evidence would satisfy it, and what it supersedes. When a provision genuinely cannot be resolved on the facts a system will ever hold, you say so and it becomes a state the software surfaces — not a footnote nobody reads. And you keep all of it correct through amendment cycles, which is the part that is invisible when it works.\n\nYou do not need to write code and we will not test you on it. You do need to be comfortable with structure: decision tables, if-then conditions, typed fields.\n\nWe are not filtering on the prestige of your degree, and we are not looking for policy writing. This is not a role about how trade ought to be regulated. It is a role about what the rule currently says, exactly, and what it would take to prove it.",
-
+      "slug": "founding-data-scientist-supply-chain-risk",
+      "title": "Founding Data Scientist — Supply Chain & Risk",
+      "team": "Data Science",
+      "summary": "Develop models that help manufacturers and financial institutions understand supply-chain performance, operational constraints, and risk.",
+      "description": "As a Founding Data Scientist, you will develop the quantitative methods behind Kanan’s supply-chain and risk capabilities. Your work will connect operational data with practical questions about production, delivery, and the financial constraints that affect business performance.\n\nYou will work with manufacturers, business stakeholders, and the founding team to understand how processes operate and which outcomes can be measured. You will build models, test their assumptions, and explain what the evidence supports. Working with incomplete data is part of the role, as is identifying which additional information would make an analysis more useful. You will document assumptions and model behaviour so that colleagues can review the analysis and understand when a result needs further investigation.",
       "responsibilities": [
-        "Read primary instruments and produce structured, executable rules with span-level citation.",
-        "Get the dates right — when a rule took effect, when it stopped, and what replaced it.",
-        "Define evidence requirements: which document, issued by whom, bearing which field, would satisfy an auditor.",
-        "Flag genuinely unresolvable provisions rather than picking an interpretation.",
-        "Keep the rule base correct as notifications amend it, and know what changed and why."
+        "Analyse supplier, production, order, and financial data to identify patterns, constraints, and sources of operational risk.",
+        "Model lead times, capacity constraints, supplier dependencies, and delivery risk, reflecting how real production and supply-chain processes work.",
+        "Use statistical modelling, simulation, and optimization to assess scenarios and understand how different assumptions affect the results.",
+        "Evaluate how supply disruptions, changing input costs, and financial constraints affect production and fulfilment in specific business situations.",
+        "Validate models against observed outcomes, assess their reliability, and communicate uncertainty and limitations clearly to technical and business audiences.",
+        "Work with operators and engineers to define useful measurements, improve data quality, and turn validated analysis into product capabilities."
       ],
-
       "lookingFor": [
-        "Two to six years working with primary legal, regulatory, tax or standards text.",
-        "You work from the source. If your instinct on an unfamiliar provision is to find a good summary of it, this is the wrong role.",
-        "You are comfortable with structure — decision tables, conditions, schemas, typed fields.",
-        "You can recognise when a provision cannot be decided on the available facts, and say so.",
-        "You will hold a position under pressure from a founder who disagrees with you."
+        "Applied experience in supply-chain data science, operations research, industrial engineering, or quantitative risk, with evidence of solving operational problems.",
+        "Strong Python, SQL, probability, and statistics, and the ability to build and explain your own analytical models.",
+        "Experience working with incomplete operational data, testing assumptions, and validating models against outcomes rather than relying only on historical fit.",
+        "Ability to connect analytical findings to business decisions and learn directly from the people responsible for production, procurement, or finance."
       ],
-
       "niceToHave": [
-        "Regulatory or trade content work — compliance libraries, tax content, legal publishing, XBRL taxonomies, or a regtech content team.",
-        "Registered patent agent, or a law degree taken after an engineering or science degree.",
-        "Customs, DGFT, foreign trade policy, HSN classification, SCOMET or marine insurance regulation specifically.",
-        "Indirect tax or GST content, especially where you owned what happens when a notification lands mid-year.",
-        "Any exposure to rules-as-code, decision modelling or knowledge representation."
+        "Experience in manufacturing, logistics, working-capital analysis, or financial risk involving the operations of a business.",
+        "Experience with stochastic modelling, sensitivity analysis, or simulation of production and supply-chain systems under uncertainty."
       ],
-
+      "location": {
+        "city": "Chennai",
+        "region": "Tamil Nadu",
+        "country": "IN"
+      },
+      "workMode": "on-site",
+      "employmentType": "full-time",
+      "seniority": "founding",
+      "status": "open",
+      "datePosted": "2026-09-06",
+      "applyBy": null,
       "questions": [
         {
-          "id": "changed_your_mind",
-          "prompt": "Describe something you were confidently wrong about in your work. What changed your mind, and how long did it take you to accept it?",
-          "hint": "The last part is the one we read closest. \"Immediately\" is rarely true.",
-          "maxLength": 1200,
-          "required": true
-        },
-        {
-          "id": "not_enough_information",
-          "prompt": "Tell us about a time you did not have enough information to decide. What did you actually do — not what you would do now?",
-          "hint": "We are building a system whose job is to say \"unclear\" rather than guess. We are asking whether you do the same.",
-          "maxLength": 1200,
-          "required": true
-        },
-        {
-          "id": "rule_as_if_then",
-          "prompt": "Take any rule you know well — from any domain, legal or not. Write it as an if-then. Then tell us what you would need to know in order to evaluate it that the rule itself does not tell you.",
-          "hint": "The second half is the real question. Tax, safety standards, a sport, an insurance policy, a company travel policy — anything you know properly.",
-          "maxLength": 1800,
-          "required": true
-        }
-      ]
-    },
-
-    {
-      "slug": "senior-data-engineer-regulatory-data",
-      "title": "Senior Data Engineer, Regulatory Data",
-      "team": "Engineering",
-      "location": "Bengaluru",
-      "workMode": "hybrid",
-      "employmentType": "full-time",
-      "seniority": "senior",
-      "status": "open",
-      "datePosted": "2026-08-06",
-      "applyBy": null,
-      "timeline": "Two conversations, then a paid exercise on a problem we are currently stuck on",
-      "summary": "Build the pipelines that notice when the law changes, and turn that change into something the product can act on.",
-
-      "description": "Indian trade regulation moves constantly. A duty remission rate is halved in February and restored in March. A notification supersedes another notification that amended a third. Nobody sends you an email about it, and an exporter finds out at the port.\n\nYou build the system that watches, diffs, extracts and routes — so a change in a circular becomes a machine-readable delta with an owner and a deadline, hours after it is published.\n\nWhat this job entails. Ingestion across a long tail of government sources that were never designed to be parsed. Structural diffing that says \"this clause changed, in this way, with effect from this date\" rather than \"this page changed.\" Extracting obligations from prose into something typed. Mapping an obligation to the specific customers it actually affects, so an alert is about them rather than about everyone. And temporal queries, because \"what were the rules on the date of this shipment\" is a different and much harder question than \"what are the rules.\"\n\nThis is the asset that compounds. Products pivot; a versioned, diffed corpus of trade regulation survives all of it and is worth more every month.\n\nOne thing we will say plainly because it comes up: we are not looking for sentiment analysis. Regulation carries obligation, not opinion, and a sentiment score over a government circular is both noise and impossible to audit. The techniques that matter here are change detection, information extraction, entity resolution and temporal reasoning. If you want to argue with that, do — it would be a good conversation.\n\nYou do not need to know trade law. You do need to care that an extracted fact without a citation and a date is worse than no fact at all.",
-
-      "responsibilities": [
-        "Build and run ingestion across government sources — notifications, circulars, tariff schedules, restricted-party lists.",
-        "Build structural diffing that identifies what changed at clause level, and from when.",
-        "Extract obligations from prose into typed records that carry their citation.",
-        "Map obligations to the customers they affect, using their commodity codes, ports and destinations.",
-        "Build temporal query support so the system can answer as of a past date.",
-        "Own data quality, because everything downstream inherits it."
-      ],
-
-      "lookingFor": [
-        "Roughly three to seven years building data pipelines in production.",
-        "Strong Python and SQL, and comfort with the messy end: scrapers that break, PDFs that are images, ten different date formats.",
-        "You have done information extraction, change detection or entity resolution on real data, not in a notebook.",
-        "You treat provenance as a requirement rather than a nice-to-have.",
-        "You can run something that has to be right every day, not just once."
-      ],
-
-      "niceToHave": [
-        "Regulatory, legal or government text specifically — horizon scanning, compliance content, legal publishing, or a regtech product team.",
-        "Document AI and layout-aware extraction.",
-        "Temporal or bitemporal data modelling; knowledge graphs.",
-        "Multilingual extraction.",
-        "You have worked somewhere the extraction had to be defended to an auditor."
-      ],
-
-      "questions": [
-        {
-          "id": "changed_your_mind",
-          "prompt": "Describe something you were confidently wrong about in your work. What changed your mind, and how long did it take you to accept it?",
-          "hint": "The last part is the one we read closest. \"Immediately\" is rarely true.",
-          "maxLength": 1200,
-          "required": true
-        },
-        {
-          "id": "not_enough_information",
-          "prompt": "Tell us about a time you did not have enough information to decide. What did you actually do — not what you would do now?",
-          "hint": "We are building a system whose job is to say \"unclear\" rather than guess. We are asking whether you do the same.",
-          "maxLength": 1200,
-          "required": true
-        },
-        {
-          "id": "silent_change",
-          "prompt": "Something you depended on changed and nobody told you. How did you find out, and what did you build afterwards?",
-          "hint": "An API, a schema, a data feed, a regulation, a supplier. We are interested in what you built — and whether it caught the next one.",
-          "maxLength": 1200,
-          "required": true
+          "id": "additional_information",
+          "prompt": "Additional information",
+          "hint": "Share anything else you would like us to know about your application.",
+          "maxLength": 2000,
+          "required": false
         }
       ]
     }
-
   ]
 }

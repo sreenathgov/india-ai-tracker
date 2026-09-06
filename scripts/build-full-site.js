@@ -5,7 +5,9 @@ const { execSync } = require('child_process');
 // Configuration
 const PROJECT_ROOT = path.resolve(__dirname, '../');
 const DIST_DIR = path.join(PROJECT_ROOT, 'dist');
-const ASSETS_TO_COPY = ['js', 'css', 'data', 'assets', 'added-assets', 'api', 'KANANLABS-LOGO-SET', 'dossiers'];
+const { forbidden } = require('./release/inventory');
+const publicInventory = require('./release/public-files.json');
+const ASSETS_TO_COPY = [];
 const FILES_TO_COPY = [
     'index.html',
     'about.html',
@@ -13,6 +15,7 @@ const FILES_TO_COPY = [
     'tradewatch.html',
     'tracker.html',
     'request-demo.html',
+    'supplier-programme.html',
     'drona.html',
     'drona-aos.html',
     // resources.html is NOT copied here: generate-publications.js renders it
@@ -21,6 +24,8 @@ const FILES_TO_COPY = [
     // careers.html is NOT copied here either, for the same reason:
     // generate-careers.js renders it from data/careers.json into dist/.
     'privacy-policy.html',
+    'terms-of-use.html',
+    'supplier-programme-terms.html',
     'disclaimers.html',
     '404.html'
 ];
@@ -62,7 +67,7 @@ function buildSite() {
             fs.copyFileSync(src, dest);
             console.log(`✓ Copied ${file}`);
         } else {
-            console.warn(`⚠️ Warning: ${file} not found.`);
+            throw new Error(`Required public page missing: ${file}`);
         }
     });
 
@@ -80,7 +85,19 @@ function buildSite() {
         console.log('✓ Copied public/.well-known → dist/.well-known');
     }
 
-    // 4. Copy Directories (recursive)
+    // Copy only reviewed individual assets. Never recursively publish source
+    // directories: api/ also contains server code and data/ contains governance.
+    publicInventory.assets.forEach(file => {
+        if (forbidden.test(file)) throw new Error(`Private static dependency: ${file}`);
+        const source = path.join(PROJECT_ROOT, file);
+        if (!fs.lstatSync(source).isFile()) throw new Error(`Invalid public file: ${file}`);
+        const destination = path.join(DIST_DIR, file);
+        fs.mkdirSync(path.dirname(destination), {recursive:true});
+        fs.copyFileSync(source, destination);
+    });
+
+    // Legacy directory list is deliberately empty; retained helper serves only
+    // the explicitly public .well-known standards directory above.
     // Files to exclude from copying into dist/ (serverless functions must stay at project root)
     const EXCLUDE_FROM_DIST = new Set(['api/subscribe.js']);
 
