@@ -1,6 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const {ROOT, DIST, walk} = require('./inventory');
+const {createHash} = require('node:crypto');
+const {ROOT, DIST, walk, localPath} = require('./inventory');
 const holding = new Set(['drona.html', 'drona-aos.html', 'tradewatch.html']);
 const footer = fs.readFileSync(path.join(ROOT, 'templates/shared-footer.html'), 'utf8');
 const preview = process.env.VERCEL_ENV === 'preview';
@@ -24,6 +25,20 @@ for (const file of walk(DIST).filter(file => file.endsWith('.html'))) {
     return '<a' + attrs + 'href="' + output.replace(/&/g, '&amp;') + '"';
   });
   if (!html.includes('/js/site-routes.js')) html = html.replace('</body>', '<script src="/js/site-routes.js" defer></script>\n</body>');
+  // Existing visitors may have year-long immutable caches for these paths.
+  // A content-derived query version changes only when the actual asset changes.
+  html = html.replace(/\b(src|href)="([^"\n]+)"/g, (match, attribute, href) => {
+    const target = localPath(href, html.includes('<base href="/"') ? 'index.html' : relative);
+    if (!target || !/\.(?:css|js)$/.test(target)) return match;
+    const asset = path.join(DIST, target);
+    if (!fs.existsSync(asset)) return match; // The output verifier reports missing assets.
+    const version = createHash('sha256').update(fs.readFileSync(asset)).digest('hex').slice(0,16);
+    const [beforeHash, hash] = href.replace(/&amp;/g,'&').split('#');
+    const [pathname, query] = beforeHash.split('?');
+    const params = new URLSearchParams(query || '');
+    params.set('v', version);
+    return `${attribute}="${pathname}?${params.toString().replace(/&/g,'&amp;')}${hash ? '#'+hash : ''}"`;
+  });
   fs.writeFileSync(file, html);
 }
 fs.writeFileSync(path.join(DIST, 'application-sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://apply.kananlabs.in/</loc></url></urlset>\n');

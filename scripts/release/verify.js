@@ -1,5 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
+const {createHash} = require('node:crypto');
 const {ROOT, DIST, INVENTORY, pageFiles, functions, forbidden, walk, references, localPath} = require('./inventory');
 const config = require('../../vercel.json');
 const inventory = JSON.parse(fs.readFileSync(INVENTORY, 'utf8'));
@@ -32,6 +33,10 @@ for (const file of files) {
     let target = localPath(ref, base);
     if (/^https:\/\/apply\.kananlabs\.in\/?(?:[?#]|$)/.test(ref)) target = 'supplier-programme.html';
     if (target && !resolves(target)) errors.push(`Broken destination: ${file} -> ${target}`);
+    if (file.endsWith('.html') && target && emitted.has(target) && /\.(?:css|js)$/.test(target)) {
+      const expected = createHash('sha256').update(fs.readFileSync(path.join(DIST, target))).digest('hex').slice(0,16);
+      if (new URL(ref,'https://kananlabs.in/').searchParams.get('v') !== expected) errors.push(`Stale asset version: ${file} -> ${target}`);
+    }
   }
   if (file.endsWith('.html') && !html.includes('/js/site-routes.js')) errors.push(`Missing routing contract: ${file}`);
 }
