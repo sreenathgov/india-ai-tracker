@@ -40,6 +40,7 @@
     const str = (key, fallback) => (d[key] !== undefined ? d[key] : fallback);
     const bool = (key, fallback) => (d[key] !== undefined ? d[key] !== 'false' : fallback);
     return {
+      palette: str('palette', 'spectrum'),
       oglUrl: str('oglUrl', DEFAULTS.oglUrl),
       height: num('height', DEFAULTS.height),
       baseWidth: num('baseWidth', DEFAULTS.baseWidth),
@@ -60,6 +61,12 @@
   }
 
   const config = readConfig();
+  const brandStyles = getComputedStyle(container);
+  const brandColor = (token, fallback) => (brandStyles.getPropertyValue(token).trim() || fallback)
+    .split(/\s+/).map(channel => Number(channel) / 255);
+  const brandWine = brandColor('--kanan-wine-rgb', '118 44 54');
+  const brandRose = brandColor('--kanan-accent-rgb', '143 85 85');
+  const brandInk = brandColor('--kanan-primary-rgb', '76 44 44');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   let OGL;
@@ -143,6 +150,10 @@
     uniform float uMinAxis;
     uniform float uPxScale;
     uniform float uTimeScale;
+    uniform int uBrandPalette;
+    uniform vec3 uBrandWine;
+    uniform vec3 uBrandRose;
+    uniform vec3 uBrandInk;
 
     vec4 tanh4(vec4 x){
       vec4 e2x = exp(2.0*x);
@@ -232,7 +243,16 @@
         col = clamp(hueRotation(uHueShift) * col, 0.0, 1.0);
       }
 
-      gl_FragColor = vec4(col, o.a);
+      if (uBrandPalette == 1) {
+        // Preserve the prism's geometry while replacing its spectrum entirely.
+        float intensity = smoothstep(0.08, 0.95, L);
+        vec3 red = mix(uBrandRose, uBrandWine, smoothstep(0.1, 0.65, L));
+        red = mix(red, uBrandInk, smoothstep(0.65, 1.0, L));
+        // Empty space stays transparent; white is the page, never a prism colour.
+        gl_FragColor = vec4(red, intensity);
+      } else {
+        gl_FragColor = vec4(col, o.a);
+      }
     }
   `;
 
@@ -244,6 +264,10 @@
     vertex,
     fragment,
     uniforms: {
+      uBrandPalette: { value: config.palette === 'brand' ? 1 : 0 },
+      uBrandWine: { value: brandWine },
+      uBrandRose: { value: brandRose },
+      uBrandInk: { value: brandInk },
       iResolution: { value: iResBuf },
       iTime: { value: 0 },
       uHeight: { value: H },
@@ -279,7 +303,7 @@
     offsetPxBuf[1] = offY * dpr;
     program.uniforms.uPxScale.value = 1 / ((gl.drawingBufferHeight || 1) * 0.1 * SCALE);
   };
-  const ro = new ResizeObserver(resize);
+  const ro = new ResizeObserver(() => { resize(); startRAF(); });
   ro.observe(container);
   resize();
 
@@ -308,9 +332,10 @@
 
   const NOISE_IS_ZERO = NOISE < 1e-6;
   let raf = 0;
-  const t0 = performance.now();
+  let t0 = performance.now();
+  let hiddenAt = document.hidden ? t0 : null;
   const startRAF = () => {
-    if (raf) return;
+    if (raf || document.hidden) return;
     raf = requestAnimationFrame(render);
   };
 
@@ -394,6 +419,18 @@
       raf = 0;
     }
   };
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      hiddenAt = performance.now();
+      cancelAnimationFrame(raf);
+      raf = 0;
+    } else {
+      if (hiddenAt !== null) t0 += performance.now() - hiddenAt;
+      hiddenAt = null;
+      startRAF();
+    }
+  });
 
   startRAF();
 })();

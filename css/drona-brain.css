@@ -14,8 +14,9 @@
     --kl-navy-2:   #224d78;
     --kl-paper:    #eeebe3;
     --kl-cream:    #f4ebd0;
-    --kl-orange:   #db4a2b;
-    --kl-red-deep: #bd3b21;
+    --kl-orange:   #3a0000;
+    --kl-red-deep: #3a0000;
+    --kl-red-fill: #762c36;
 }
 
 /* ---------- Section ---------- */
@@ -58,6 +59,19 @@
     text-transform: uppercase;
     color: rgba(16, 42, 62, 0.52);
     margin-bottom: 1.2rem;
+}
+
+.kl-drona__eyebrow--quote {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    text-transform: none;
+    color: rgba(16, 42, 62, 0.62);
+}
+
+.kl-drona__eyebrow--quote em {
+    font-style: italic;
 }
 
 .kl-drona__title {
@@ -124,10 +138,10 @@
         transform 320ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Hover — lift the ink wash without turning the chip into a dark card. */
+/* Hover — lift the red wash without turning the chip into a dark card. */
 .kl-drona__tab:hover {
-    background: rgba(16, 42, 62, 0.075);
-    border-color: rgba(16, 42, 62, 0.30);
+    background: rgba(58, 0, 0, 0.06);
+    border-color: rgba(58, 0, 0, 0.28);
     color: var(--kl-ink);
     transform: translateX(2px);
 }
@@ -138,14 +152,14 @@
     outline-offset: 3px;
 }
 
-/* Active — solid ink card with orange left rule + cream type. */
+/* Active — solid red card with cream left rule + cream type. */
 .kl-drona__tab[aria-selected="true"] {
-    background: var(--kl-ink);
-    border-color: rgba(16, 42, 62, 0.88);
-    border-left-color: var(--kl-orange);
+    background: var(--kl-red-fill);
+    border-color: rgba(58, 0, 0, 0.88);
+    border-left-color: var(--kl-cream);
     color: var(--kl-cream);
     box-shadow:
-        0 14px 36px -18px rgba(16, 42, 62, 0.46),
+        0 14px 36px -18px rgba(58, 0, 0, 0.46),
         inset 0 0 0 1px rgba(244, 235, 208, 0.06);
 }
 
@@ -157,9 +171,18 @@
     font-weight: 600;
     letter-spacing: 0.28em;
     color: var(--kl-red-deep);
-    align-self: start;
-    margin-top: 0.18em;
     transition: color 320ms ease;
+}
+
+.kl-drona__tab-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.kl-drona__tab-benefit {
+    font-size: 0.88em;
+    opacity: 0.72;
 }
 
 .kl-drona__tab:hover .kl-drona__tab-index {
@@ -228,12 +251,12 @@
     color: rgba(16, 42, 62, 0.72);
 }
 
-/* With Drona — the decisive navy answer on the paper field. */
+/* With Kanan — the decisive red answer on the paper field. */
 .kl-drona__panel[data-state="with"] {
-    background: var(--kl-ink);
-    border: 1px solid rgba(16, 42, 62, 0.92);
+    background: var(--kl-red-fill);
+    border: 1px solid rgba(58, 0, 0, 0.92);
     color: var(--kl-cream);
-    box-shadow: 0 22px 50px -24px rgba(16, 42, 62, 0.58);
+    box-shadow: 0 22px 50px -24px rgba(58, 0, 0, 0.58);
 }
 
 /* The shared band already supplies the material texture. */
@@ -241,7 +264,7 @@
     content: none;
 }
 
-/* Top rule for With Drona — the "answer line" in orange */
+/* Top rule for With Kanan — the "answer line" in cream */
 .kl-drona__panel[data-state="with"]::after {
     content: '';
     position: absolute;
@@ -249,7 +272,7 @@
     left: 0;
     right: 0;
     height: 2px;
-    background: var(--kl-orange);
+    background: var(--kl-cream);
     z-index: 1;
 }
 
@@ -295,13 +318,13 @@
 
 .kl-drona__panel[data-state="without"] .kl-drona__panel-body em {
     color: var(--kl-ink);
-    background: linear-gradient(180deg, transparent 62%, rgba(219, 74, 43, 0.22) 62%);
+    background: linear-gradient(180deg, transparent 62%, rgba(58, 0, 0, 0.2) 62%);
     padding: 0 0.12em;
 }
 
 .kl-drona__panel[data-state="with"] .kl-drona__panel-body em {
     color: var(--kl-cream);
-    background: linear-gradient(180deg, transparent 62%, rgba(219, 74, 43, 0.36) 62%);
+    background: linear-gradient(180deg, transparent 62%, rgba(255, 255, 255, 0.16) 62%);
     padding: 0 0.12em;
 }
 
@@ -397,7 +420,6 @@
     .kl-drona__tab[data-drona-tab="0"] { --drona-tab-order: 0; }
     .kl-drona__tab[data-drona-tab="1"] { --drona-tab-order: 2; }
     .kl-drona__tab[data-drona-tab="2"] { --drona-tab-order: 4; }
-    .kl-drona__tab[data-drona-tab="3"] { --drona-tab-order: 6; }
 
     /* The panel block slots in immediately after the active chip.
        JS writes --drona-active-order to <section root> on every tab change. */
@@ -407,13 +429,13 @@
         margin: clamp(6px, 1.4vw, 10px) 0 clamp(10px, 1.8vw, 14px);
     }
 
-    /* Active chip keeps the same decisive navy treatment on small screens. */
+    /* Active chip keeps the same decisive red treatment on small screens. */
     .kl-drona__tab[aria-selected="true"] {
-        background: var(--kl-ink);
-        border-color: rgba(16, 42, 62, 0.88);
-        border-left-color: var(--kl-orange);
+        background: var(--kl-red-fill);
+        border-color: rgba(58, 0, 0, 0.88);
+        border-left-color: var(--kl-cream);
         color: var(--kl-cream);
-        box-shadow: 0 14px 30px -18px rgba(16, 42, 62, 0.46);
+        box-shadow: 0 14px 30px -18px rgba(58, 0, 0, 0.46);
     }
 
     .kl-drona__tab[aria-selected="true"] .kl-drona__tab-index {

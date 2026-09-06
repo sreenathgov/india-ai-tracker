@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f9f9f6"/><stop offset=".55" stop-color="#e8eae9"/><stop offset="1" stop-color="#d7dcde"/></linearGradient>
+    <radialGradient id="glow" cx="72%" cy="20%" r="64%"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset=".55" stop-color="#95cbd3" stop-opacity=".2"/><stop offset="1" stop-color="#762c36" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="#0b0e13" stroke-opacity=".045"/></pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#silver)"/><rect width="1200" height="630" fill="url(#glow)"/><rect width="1200" height="630" fill="url(#grid)"/>
+  <text x="74" y="101" fill="#762c36" font-family="Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="-2">kanan</text>
+  <text x="74" y="174" fill="#762c36" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="3">SUPPLIER PROGRAMME · APPLICATIONS OPEN</text>
+  <text x="74" y="278" fill="#0b0e13" font-family="Arial, sans-serif" font-size="66" font-weight="700" letter-spacing="-3"><tspan x="74" dy="0">Prepare a stronger case for</tspan><tspan x="74" dy="76">working capital finance.</tspan></text>
+  <text x="76" y="480" fill="#4d565e" font-family="Arial, sans-serif" font-size="25">Hands-on evidence preparation for 15 selected Indian manufacturers.</text>
+  <rect x="76" y="530" width="246" height="54" rx="27" fill="#0b0e13"/><text x="110" y="565" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="700">Apply for a review  ↗</text>
+  <circle cx="1070" cy="108" r="9" fill="#762c36"/><path d="M1100 525L1020 400 1110 290 1168 446Z" fill="#0a2f52" opacity=".12"/><path d="M1020 400L952 478 1100 525Z" fill="#762c36" opacity=".12"/>
+</svg>

@@ -32,7 +32,7 @@ from typing import Tuple, List, Set, Optional
 
 
 class GeoAttributor:
-    """Conservative geographic attribution - location must be the SUBJECT."""
+    """Jurisdiction-first attribution, excluding datelines and company-HQ context."""
 
     # ==================== STATE NAME MAPPINGS ====================
     STATE_NAME_MAP = {
@@ -88,10 +88,10 @@ class GeoAttributor:
         'mumbai': 'MH', 'bombay': 'MH', 'pune': 'MH', 'nagpur': 'MH',
         'thane': 'MH', 'nashik': 'MH', 'aurangabad': 'MH', 'navi mumbai': 'MH',
 
-        # Delhi NCR
-        'delhi': 'DL', 'new delhi': 'DL', 'noida': 'DL', 'gurgaon': 'DL',
-        'gurugram': 'DL', 'faridabad': 'DL', 'ghaziabad': 'DL', 'ncr': 'DL',
-        'greater noida': 'DL',
+        # NCR is a multi-state region, not a synonym for Delhi jurisdiction.
+        'delhi': 'DL', 'new delhi': 'DL', 'noida': 'UP', 'gurgaon': 'HR',
+        'gurugram': 'HR', 'faridabad': 'HR', 'ghaziabad': 'UP',
+        'greater noida': 'UP',
 
         # Telangana
         'hyderabad': 'TG', 'secunderabad': 'TG', 'warangal': 'TG',
@@ -122,7 +122,7 @@ class GeoAttributor:
         'technopark': 'KL', 'infopark': 'KL',
 
         # Punjab
-        'chandigarh': 'PB', 'ludhiana': 'PB', 'amritsar': 'PB', 'mohali': 'PB',
+        'chandigarh': 'CH', 'ludhiana': 'PB', 'amritsar': 'PB', 'mohali': 'PB',
 
         # Madhya Pradesh
         'bhopal': 'MP', 'indore': 'MP', 'gwalior': 'MP', 'jabalpur': 'MP',
@@ -529,6 +529,13 @@ class GeoAttributor:
         for inst, state in sorted(self.INSTITUTION_STATE_MAP.items(), key=lambda x: -len(x[0])):
             self.compiled_institution_patterns[inst] = (re.compile(r'\b' + re.escape(inst) + r'\b', re.IGNORECASE), state)
 
+        places = '|'.join(re.escape(name) for name in sorted(
+            set(self.CITY_STATE_MAP) | set(self.STATE_NAME_MAP), key=len, reverse=True))
+        self.dateline_pattern = re.compile(r'^\s*(?:' + places + r')\s*:\s*', re.I)
+        self.hq_pattern = re.compile(
+            r'\b(?:' + places + r')[\s-]+based\b|'
+            r'\bheadquartered\s+in\s+(?:' + places + r')\b', re.I)
+
     def attribute(self, title: str, content: str = "", source_state: str = None,
                   is_state_specific_source: bool = False, geo_mode: str = "default") -> Tuple[List[str], str]:
         """
@@ -558,8 +565,10 @@ class GeoAttributor:
                       (['MH'], 'CITY_MATCH:mumbai→MH')
                       (['IN'], 'NATIONAL_SCOPE')
         """
-        title_lower = title.lower()
-        content_lower = (content[:2000] if content else "").lower()
+        # Strip only explicit metadata/HQ phrases, not other named locations.
+        # Preserve the approved jurisdiction-first rule for actual city mentions.
+        title_lower = self.hq_pattern.sub('', self.dateline_pattern.sub('', title or '')).lower()
+        content_lower = self.hq_pattern.sub('', self.dateline_pattern.sub('', (content or '')[:2000])).lower()
         text = f"{title_lower} {content_lower}"
 
         found_states: Set[str] = set()
@@ -582,7 +591,7 @@ class GeoAttributor:
 
         # PRIORITY 3: State government action patterns
         govt_states = self._check_govt_action(text)
-        for state in govt_states:
+        for state in sorted(govt_states):
             if state not in found_states:
                 found_states.add(state)
                 attribution_reasons.append(f"GOVT_ACTION:{state}")
@@ -609,7 +618,7 @@ class GeoAttributor:
         if not found_states:
             return ['IN'], "NO_STATE_SIGNAL"
 
-        return list(found_states), "; ".join(attribution_reasons)
+        return sorted(found_states), "; ".join(attribution_reasons)
 
     def _check_institution_match(self, text: str) -> List[Tuple[str, str]]:
         """

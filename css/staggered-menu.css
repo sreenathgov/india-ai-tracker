@@ -39,6 +39,7 @@
 .sm-logo {
   display: flex;
   align-items: center;
+  position: relative;
   user-select: none;
   text-decoration: none;
   cursor: pointer;
@@ -46,7 +47,7 @@
 
 .sm-logo-img {
   display: block;
-  height: 40px;
+  height: 30px;
   width: auto;
   object-fit: contain;
 }
@@ -59,7 +60,7 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  color: #0a2f52;
+  color: #4c2c2c;
   font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
   font-weight: 600;
   line-height: 1;
@@ -136,7 +137,7 @@
   right: 0;
   width: clamp(260px, 38vw, 420px);
   height: 100%;
-  background: #0a2f52;
+  background: #4c2c2c;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   display: flex;
@@ -195,7 +196,7 @@
   margin: 0;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--sm-accent, #db4a2b);
+  color: var(--sm-accent, #8f5555);
 }
 
 .sm-socials-list {
@@ -222,7 +223,7 @@
 }
 
 .sm-socials-link:focus-visible {
-  outline: 2px solid var(--sm-accent, #db4a2b);
+  outline: 2px solid var(--sm-accent, #8f5555);
   outline-offset: 3px;
 }
 
@@ -248,7 +249,7 @@
 }
 
 .sm-socials-link:hover {
-  color: var(--sm-accent, #db4a2b);
+  color: var(--sm-accent, #8f5555);
 }
 
 .sm-panel-list {
@@ -257,7 +258,11 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
+}
+
+.sm-panel-list:not([data-numbering]) .sm-panel-item {
+  padding-right: 0;
 }
 
 .sm-panel-itemWrap {
@@ -270,17 +275,19 @@
   position: relative;
   color: #f4ebd0;
   font-weight: 600;
-  font-size: 2.625rem;
+  font-size: 1.75rem;
   cursor: pointer;
   line-height: 1;
-  letter-spacing: -1.5px;
+  letter-spacing: -1px;
   text-transform: uppercase;
   transition:
     background 0.25s,
-    color 0.25s;
+    color 0.25s,
+    text-shadow 0.25s;
   display: inline-block;
   text-decoration: none;
   padding-right: 1.4em;
+  white-space: nowrap;
 }
 
 .sm-panel-itemLabel {
@@ -289,8 +296,10 @@
   transform-origin: 50% 100%;
 }
 
-.sm-panel-item:hover {
-  color: var(--sm-accent, #db4a2b);
+.sm-panel-item:hover,
+.sm-panel-item:focus-visible {
+  color: var(--sm-accent, #8f5555);
+  text-shadow: 0 0 16px rgba(143, 85, 85, 0.6);
 }
 
 .sm-panel-list[data-numbering] {
@@ -305,7 +314,7 @@
   right: 2.8em;
   font-size: 14px;
   font-weight: 400;
-  color: var(--sm-accent, #db4a2b);
+  color: var(--sm-accent, #8f5555);
   letter-spacing: 0;
   pointer-events: none;
   user-select: none;
@@ -351,7 +360,7 @@
   }
 
   .sm-logo-img {
-    height: 32px !important;
+    height: 26px !important;
     width: auto;
   }
 
@@ -382,18 +391,13 @@
   }
 
   .sm-logo-img {
-    height: 28px !important;
+    height: 22px !important;
     width: auto;
   }
 
   .sm-icon {
     width: 15px;
     height: 9px;
-  }
-
-  .sm-panel-item {
-    font-size: 2rem;
-    padding-right: 0.5em;
   }
 
   .sm-panel-list[data-numbering] .sm-panel-item::after {
@@ -442,11 +446,11 @@
 }
 
 .sm-panel-subItem:hover {
-  color: #db4a2b;
+  color: #8f5555;
 }
 
 .sm-panel-subItem:focus-visible {
-  outline: 2px solid #db4a2b;
+  outline: 2px solid #8f5555;
   outline-offset: 3px;
 }
 

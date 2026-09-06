@@ -2,318 +2,184 @@
 <html lang="en">
 
 <head>
-    <!-- Analytics load only after cookie consent (DPDP/GDPR) -->
-    <script src="js/consent.js" defer></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Privacy Policy | Kanan Labs</title>
-
-    <meta name="description" content="How Kanan Labs collects, uses, and protects information across kananlabs.in, TradeWatch, and the India AI Tracker.">
-    <link rel="canonical" href="https://kananlabs.in/privacy-policy.html">
+    <meta name="description" content="How Kanan Labs collects, uses, protects and deletes personal information across its websites and programmes.">
     <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#762c36">
+    <link rel="canonical" href="https://kananlabs.in/privacy-policy.html">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Kanan Labs">
     <meta property="og:url" content="https://kananlabs.in/privacy-policy.html">
     <meta property="og:title" content="Privacy Policy | Kanan Labs">
-    <meta property="og:description" content="How Kanan Labs collects, uses, and protects information across kananlabs.in, TradeWatch, and the India AI Tracker.">
-    <meta property="og:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Kanan Labs">
+    <meta property="og:description" content="How Kanan Labs collects, uses, protects and deletes personal information across its websites and programmes.">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://kananlabs.in/privacy-policy.html">
-    <meta name="twitter:title" content="Privacy Policy | Kanan Labs">
-    <meta name="twitter:description" content="How Kanan Labs collects, uses, and protects information across kananlabs.in, TradeWatch, and the India AI Tracker.">
-    <meta name="twitter:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
-    <meta name="twitter:image:alt" content="Kanan Labs">
+    <link rel="icon" type="image/png" href="/assets/images/KANAN-LABS-WEBSITELOGO.png">
 
-    <link rel="icon" type="image/png" href="assets/images/KANAN-LABS-WEBSITELOGO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/styles-v2.css?v=13">
-    <link rel="stylesheet" href="css/staggered-menu.css">
-    <link rel="stylesheet" href="css/footer.css?v=3">
-    <link rel="stylesheet" href="css/contact-panel.css?v=1">
-    <link rel="stylesheet" href="css/back-button.css">
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <style>
-        html {
-            height: auto !important;
-            overflow: auto !important;
-        }
+    <link rel="stylesheet" href="/css/legal-pages.css?v=3">
+    <link rel="stylesheet" href="/css/staggered-menu.css?v=8">
+    <link rel="stylesheet" href="/css/footer.css?v=5">
 
-        body.legal-page {
-            height: auto !important;
-            overflow: auto !important;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background: var(--brand-navy);
-        }
-
-        .legal-content {
-            flex: 1;
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-
-        .legal-content h1,
-        .legal-content h2 {
-            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-            font-size: 1.75rem;
-            font-weight: 600;
-            color: var(--brand-cream);
-            margin: 0;
-        }
-
-        .legal-content .kl-page-title-row {
-            margin-bottom: 0.5rem;
-        }
-
-        .legal-meta {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: rgba(244, 235, 208, 0.38);
-            margin-bottom: 2.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid rgba(244, 235, 208, 0.2);
-        }
-
-        .legal-section {
-            margin-bottom: 2.5rem;
-        }
-
-        .legal-section:last-of-type {
-            margin-bottom: 0;
-        }
-
-        .legal-section h3 {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--brand-cream);
-            opacity: 0.9;
-            margin-bottom: 0.75rem;
-        }
-
-        .legal-section p {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.9375rem;
-            color: var(--brand-cream);
-            opacity: 0.7;
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
-        }
-
-        .legal-section p:last-child {
-            margin-bottom: 0;
-        }
-
-        .legal-section a {
-            color: var(--brand-cream);
-            opacity: 0.9;
-            text-decoration: underline;
-            text-underline-offset: 2px;
-        }
-
-        .legal-section a:hover {
-            opacity: 1;
-        }
-
-        .legal-footer {
-            margin-top: auto;
-            background: var(--brand-navy);
-            border-top: 1px solid rgba(244, 235, 208, 0.1);
-        }
-
-        .legal-footer .footer-attribution,
-        .legal-footer .footer-links,
-        .legal-footer .footer-description {
-            color: var(--brand-cream);
-        }
-
-        .legal-footer .footer-links a {
-            color: var(--brand-cream);
-        }
-
-
-        @media (max-width: 768px) {
-            .legal-content {
-                padding: 2rem 1.5rem;
-            }
-
-            .legal-content h2 {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
+    <!-- GSAP: js/staggered-menu.js calls gsap.set unguarded. Served locally so
+         the nav does not depend on a third-party host. defer preserves order. -->
+    <script defer src="/assets/vendor/gsap/gsap.min.js"></script>
+    <script defer src="/assets/vendor/gsap/ScrollTrigger.min.js"></script>
+    <script defer src="/js/staggered-menu.js?v=12"></script>
 </head>
 
-<body class="legal-page">
+<body class="legal-page" data-menu-light-color="#4c2c2c">
+    <a class="legal-skip" href="#legal-main">Skip to content</a>
 
-    <div style="height: 80px;"></div>
+    <!-- Nav is injected by staggered-menu.js and floats over the wine masthead. -->
 
-    <main class="legal-content">
-        <div class="kl-page-title-row">
-            <a href="index.html" class="kl-back-btn" aria-label="Back to home">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                    <path d="M7.5 2L3.5 6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </a>
+    <header class="legal-masthead">
+        <div class="legal-masthead__inner">
+            <p class="legal-eyebrow">Kanan Labs · Legal</p>
             <h1>Privacy Policy</h1>
+            <p class="legal-masthead__lede">How Kanan Labs collects, uses, protects and deletes personal information across its websites and programmes.</p>
+            <p class="legal-meta">Effective 4 September 2026 · Version 2026-09</p>
         </div>
-        <p class="legal-meta">Effective date: February 2026</p>
+    </header>
 
-        <section class="legal-section">
-            <h3>Scope</h3>
-            <p>This policy applies to the India AI Tracker website, operated by Kanan Labs. It covers the limited
-                personal information we collect through two specific channels: newsletter subscriptions and consultation
-                scheduling requests.</p>
-            <p>We do not collect personal data through any other means, and this site does not use tracking pixels,
-                third-party analytics cookies, or behavioural advertising tools.</p>
-        </section>
+    <div class="legal-main" id="legal-main" data-nav-light>
+        <aside class="legal-aside">
+            <p>On this page</p>
+            <nav aria-label="Contents">
+                <a href="#scope">Scope</a>
+                <a href="#collect">What we collect</a>
+                <a href="#use">How we use it</a>
+                <a href="#sharing">Service providers</a>
+                <a href="#analytics">Analytics</a>
+                <a href="#retention">Retention</a>
+                <a href="#rights">Your choices</a>
+                <a href="#security">Security</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </aside>
 
-        <section class="legal-section">
-            <h3>Newsletter subscriptions</h3>
-            <p>When you subscribe to our Weekly Brief, we collect your email address solely for the purpose of
-                delivering the newsletter. Your email address will not be sold, rented, licensed, or disclosed to any
-                third party for any reason.</p>
-            <p>You may unsubscribe at any time by contacting us at <a
-                    href="mailto:feedback@kananlabs.in">feedback@kananlabs.in</a>. Upon request, your email address will
-                be deleted promptly from our records.</p>
-        </section>
+        <article class="legal-content">
+            <section class="legal-section legal-callout">
+                <p>This policy explains Kanan Labs’ handling of personal information across kananlabs.in, apply.kananlabs.in, TradeWatch, the India AI Tracker, consultation requests, newsletters and the Kanan Supplier Programme.</p>
+            </section>
 
-        <section class="legal-section">
-            <h3>Consultation scheduling</h3>
-            <p>When you submit a request to schedule a consultation, we collect the details you choose to provide — such
-                as your name, email address, organisation, and the nature of your enquiry. This information is used only
-                to respond to your request and facilitate the consultation.</p>
-            <p>Details submitted through consultation requests are held in strict confidence and will not be shared with
-                any individual, organisation, or third-party service beyond what is strictly necessary to process your
-                request.</p>
-        </section>
+            <section class="legal-section" id="scope">
+                <h2>Scope and responsibility</h2>
+                <p>Kanan Labs determines how information submitted through its public websites and application forms is used. This policy does not govern a bank, financier, WhatsApp or another organization’s independent processing. When a selected supplier enters a separately governed case process, Kanan provides additional purpose, sharing and authorization controls before collecting sensitive records.</p>
+            </section>
 
-        <section class="legal-section">
-            <h3>Data retention</h3>
-            <p>We retain personal information only for as long as necessary to fulfil the purpose for which it was
-                collected. Newsletter subscriber data is retained until you unsubscribe. Consultation enquiry data is
-                retained only for the duration of the engagement or correspondence.</p>
-        </section>
+            <section class="legal-section" id="collect">
+                <h2>Information we collect</h2>
+                <p>Depending on your interaction, we may collect your name, organization, role, email address, telephone or WhatsApp number, language preference, manufacturing description, location, broad financing requirement, customer-demand stage, referral source and the content of your enquiry. For Supplier Programme applications, we do not request PAN, Aadhaar, bank statements, tax returns, identity documents or raw borrower records through the initial form.</p>
+                <p>Our hosting and security systems may process limited technical information such as IP address, browser type, request time and security signals. We do not place application answers in URLs, analytics events or browser storage.</p>
+            </section>
 
-        <section class="legal-section">
-            <h3>Your rights</h3>
-            <p>You have the right to request access to, correction of, or deletion of any personal information we hold
-                about you. To exercise any of these rights, please write to us at <a
-                    href="mailto:feedback@kananlabs.in">feedback@kananlabs.in</a>. All requests will be acknowledged and
-                addressed promptly.</p>
-        </section>
+            <section class="legal-section" id="use">
+                <h2>Why we use information</h2>
+                <p>We use information to respond to enquiries; assess whether a programme or service may be relevant; arrange calls; provide requested communications; protect our services; maintain an application audit trail; and understand aggregated interest by language, location, manufacturing context and requirement type. Supplier Programme contact consent is limited to responding to and administering that application. A separate authorization is required before Kanan coordinates with a financial institution or shares case material.</p>
+            </section>
 
-        <section class="legal-section">
-            <h3>Contact</h3>
-            <p>Questions, concerns, or requests relating to this privacy policy may be directed to <a
-                    href="mailto:feedback@kananlabs.in">feedback@kananlabs.in</a>.</p>
-        </section>
-    </main>
+            <section class="legal-section" id="sharing">
+                <h2>Service providers and disclosures</h2>
+                <p>We use service providers only where needed to operate the service. These may include Vercel for hosting, Make for workflow routing, Google Workspace for restricted operational records, Brevo for transactional notifications, and communications providers used when you call or message us. They process information under their own security and contractual terms. Kanan does not sell or rent applicant information and does not disclose it to a lender, OEM or other external party merely because an application was submitted.</p>
+                <p>We may disclose information where required by law, to protect rights or safety, or in connection with a lawful organizational transaction subject to appropriate safeguards.</p>
+            </section>
+
+            <section class="legal-section" id="analytics">
+                <h2>Cookies and analytics</h2>
+                <p>Parts of kananlabs.in offer consent-based Google Analytics. Analytics loads only after a visitor accepts the relevant cookie choice. It is used to understand aggregate site use, not to evaluate Supplier Programme eligibility. The Supplier Programme application page does not require analytics cookies for submission. You can reject or withdraw non-essential cookie consent through the site controls.</p>
+            </section>
+
+            <section class="legal-section" id="retention">
+                <h2>Retention</h2>
+                <p>Contact details for Supplier Programme applicants who are not selected are deleted within 90 days after the application is resolved, unless a longer period is required by law or requested by the applicant for a continuing enquiry. Selected suppliers move into a separately governed case process with its own record purpose and retention decisions. Newsletter details are retained until unsubscribe. Other enquiries are retained only as long as reasonably needed for the correspondence, engagement, security or legal record.</p>
+            </section>
+
+            <section class="legal-section" id="rights">
+                <h2>Your choices and rights</h2>
+                <p>You may ask to access, correct or delete information Kanan holds about you, withdraw contact consent, or raise a grievance by writing to <a href="mailto:feedback@kananlabs.in">feedback@kananlabs.in</a>. We may need to verify the request and may retain limited information where law or a legitimate legal record requires it. Withdrawing consent does not affect processing already lawfully completed.</p>
+            </section>
+
+            <section class="legal-section" id="security">
+                <h2>Security and safe submission</h2>
+                <p>We use access controls, restricted workspaces, transport security and purpose-limited workflows appropriate to the information we process. No online system is completely secure. Do not send identity, bank, tax or confidential production documents through the initial Supplier Programme form or unsolicited WhatsApp messages. Kanan will identify an approved channel if deeper evidence is required.</p>
+            </section>
+
+            <section class="legal-section" id="contact">
+                <h2>Contact and changes</h2>
+                <p>Questions and requests may be sent to <a href="mailto:feedback@kananlabs.in">feedback@kananlabs.in</a>. We may update this policy when our services or legal obligations change. The effective date and version at the top identify the policy that applies.</p>
+            </section>
+        </article>
+    </div>
 
     <footer class="kl-footer">
         <div class="kl-footer__inner">
-
             <div class="kl-footer__content">
 
-                <!-- LEFT: Brand zone -->
                 <div class="kl-footer__brand">
+                    <img src="/assets/logos/kanan-kl-hor-white.png" alt="Kanan Labs"
+                         class="kl-footer__logo" width="922" height="262" loading="lazy" decoding="async" draggable="false">
+                    <p class="kl-footer__tagline">Proactive Supply Chain Resilience</p>
 
-                    <img src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png" alt="Kanan Labs"
-                        class="kl-footer__logo" width="500" height="500" loading="lazy" decoding="async" draggable="false">
-
-                    <p class="kl-footer__tagline">India's AI Governance Intelligence</p>
-
-                    <!-- Newsletter mini-form -->
-                    <div>
-                        <p class="kl-footer__nl-label">Weekly Brief</p>
-                        <form class="kl-footer__nl-form" id="footerNewsletterForm">
-                            <input type="email" class="kl-footer__nl-input" placeholder="Your email address"
-                                autocomplete="email" required>
-                            <button type="submit" class="kl-footer__nl-submit">Subscribe</button>
-                        </form>
+                    <div class="kl-footer__links">
+                        <a href="https://apply.kananlabs.in/" class="kl-footer__consult">Supplier Programme &#8594;</a>
+                        <a href="/request-demo.html" class="kl-footer__consult">Request a Demo &#8594;</a>
                     </div>
-
-                    <!-- Schedule Consultation -->
-                    <button class="kl-footer__consult" type="button"
-                        onclick="if(window.contactPanel) window.contactPanel.open()">
-                        Schedule Consultation →
-                    </button>
-
                 </div>
 
-                <!-- RIGHT: Sitemap grid -->
                 <div class="kl-footer__sitemap">
 
-                    <!-- Col 1: Advisory -->
                     <div class="kl-footer__col">
-                        <h4 class="kl-footer__col-heading">Advisory</h4>
+                        <h4 class="kl-footer__col-heading">Platform</h4>
                         <ul class="kl-footer__col-links">
-                            <li><a href="index.html#advisory">Regulatory Trajectory</a></li>
-                            <li><a href="index.html#advisory">Incentive Structuring</a></li>
-                            <li><a href="index.html#advisory">Governance Readiness</a></li>
-                            <li><a href="index.html#advisory">Cross-Border Advisory</a></li>
+                            <li><a href="/drona.html">Drona</a></li>
+                            <li><a href="/drona-aos.html">DronaAOS</a></li>
+                            <li><a href="/tracker.html">India AI Tracker</a></li>
+                            <li><a href="/resources.html">Resources</a></li>
                         </ul>
                     </div>
 
-                    <!-- Col 2: Company -->
                     <div class="kl-footer__col">
                         <h4 class="kl-footer__col-heading">Company</h4>
                         <ul class="kl-footer__col-links">
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="sector-watch.html">Sector Watch</a></li>
-                            <li><a href="resources.html">Resources</a></li>
-                            <li><a href="mailto:feedback@kananlabs.in">Contact</a></li>
+                            <li><a href="/about.html">About</a></li>
+                            <li><a href="/careers.html">Careers</a></li>
+                            <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
                         </ul>
                     </div>
 
-                    <!-- Col 3: Follow -->
                     <div class="kl-footer__col">
                         <h4 class="kl-footer__col-heading">Follow</h4>
                         <ul class="kl-footer__col-links">
-                            <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank"
-                                    rel="noopener">LinkedIn</a></li>
+                            <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank" rel="noopener">LinkedIn</a></li>
                             <li><a href="https://x.com/indiaAItracker" target="_blank" rel="noopener">Twitter</a></li>
                             <li><a href="https://github.com/sreenathgov" target="_blank" rel="noopener">GitHub</a></li>
                         </ul>
                     </div>
 
-                    <!-- Col 4: Legal -->
                     <div class="kl-footer__col">
                         <h4 class="kl-footer__col-heading">Legal</h4>
                         <ul class="kl-footer__col-links">
-                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                            <li><a href="disclaimers.html">Disclaimers</a></li>
+                            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="/disclaimers.html">Disclaimers</a></li>
                         </ul>
                     </div>
 
                 </div>
             </div>
 
-            <!-- BOTTOM: Watermark logo -->
             <div class="kl-footer__watermark">
-                <img src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png" alt=""
-                    class="kl-footer__watermark-img" width="1584" height="396" loading="lazy" decoding="async" aria-hidden="true" draggable="false">
+                <img src="/assets/logos/kanan-kl-hor-white.png" alt=""
+                     class="kl-footer__watermark-img" width="922" height="262" loading="lazy" decoding="async" aria-hidden="true" draggable="false">
             </div>
-
         </div>
     </footer>
-    <script src="js/contact-panel.js"></script>
-    <script src="js/staggered-menu.js?v=4"></script>
 </body>
 
 </html>

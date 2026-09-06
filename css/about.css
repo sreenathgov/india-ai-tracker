@@ -1,33 +1,42 @@
 /* ─────────────────────────────────────────────────────────────────────────
    About Us — page-local stylesheet
-   Loaded only on about.html (versioned via ?v=1).
-   Brand tokens (--brand-navy, --brand-cream) come from styles-v2.css.
+   Loaded only on about.html (versioned via ?v=6).
+   Palette mirrors css/kanan-brand-v2.css — wine grounds, oxblood ink,
+   rose accents. Tokens are page-scoped so nothing here leaks sitewide.
    ─────────────────────────────────────────────────────────────────────── */
 
 .about-page {
-    --ab-navy: #0a2f52;
-    --ab-navy-deep: #061f38;
-    --ab-cream: #F4EBD0;
-    --ab-cream-soft: #eeebe3;
-    --ab-cream-warm: #efe7d0;
-    --ab-ink: #102a3e;
-    --ab-ink-dim: rgba(16, 42, 62, 0.62);
-    --ab-rule-light: rgba(16, 42, 62, 0.14);
-    --ab-rule-dim: rgba(16, 42, 62, 0.08);
-    --ab-red: #db4a2b;
+    /* Dark act ground (the hero) and the type ramp that sits on it. */
+    --ab-wine: #762c36;
+    --ab-on-wine: #f8f5ed;
+    --ab-on-wine-accent: #f0c9c5;
+
+    /* Light acts. Paper is the continuous ground for Acts 2-4; paper-warm
+       raises the chips and data panels sitting on it. */
+    --ab-paper: #eeebe3;
+    --ab-paper-warm: #f6f2ea;
+
+    /* Ink ramp on paper. Oxford red is the brand ink, not a decoration. */
+    --ab-ink: #4c2c2c;
+    --ab-ink-dim: rgba(76, 44, 44, 0.62);
+    --ab-rule-light: rgba(76, 44, 44, 0.14);
+    --ab-rule-dim: rgba(76, 44, 44, 0.08);
+
+    /* Rose — accent only (eyebrows, rules, numerals). Never a ground. */
+    --ab-accent: #8f5555;
     --ab-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
     --ab-body: 'Inter', system-ui, sans-serif;
     --ab-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 /* ════════════════════════════════════════════════
-   ACT 1 — HERO (navy)
+   ACT 1 — HERO (wine)
    ════════════════════════════════════════════════ */
 
 .about-hero {
     position: relative;
-    background: var(--ab-navy);
-    color: var(--ab-cream);
+    background: var(--ab-wine);
+    color: var(--ab-on-wine);
     overflow: hidden;
     /* Extra bottom padding to clear the curve SVG (clamp 60–90px) without
        crowding the thesis paragraph. */
@@ -57,13 +66,16 @@
 }
 
 .about-hero__eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
     font-family: var(--ab-body);
     font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.32em;
     text-transform: uppercase;
-    color: var(--ab-cream);
-    opacity: 0.55;
+    color: var(--ab-on-wine-accent);
     margin: 0 0 1.6rem;
 }
 
@@ -80,7 +92,7 @@
     font-size: clamp(3.2rem, 11vw, 8rem);
     line-height: 1;
     letter-spacing: -0.02em;
-    color: var(--ab-cream);
+    color: var(--ab-on-wine);
     margin: 0;
 }
 
@@ -90,7 +102,7 @@
     font-weight: 400;
     font-size: clamp(1.25rem, 2.8vw, 1.75rem);
     line-height: 1.45;
-    color: var(--ab-cream);
+    color: var(--ab-on-wine);
     max-width: 740px;
     margin: 2.6rem auto 1.4rem;
 }
@@ -99,7 +111,7 @@
     font-family: var(--ab-body);
     font-size: clamp(0.92rem, 1.4vw, 1rem);
     line-height: 1.78;
-    color: var(--ab-cream);
+    color: var(--ab-on-wine);
     opacity: 0.72;
     max-width: 620px;
     margin: 0 auto;
@@ -112,24 +124,24 @@
     font-weight: 600;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--ab-cream);
+    color: var(--ab-on-wine);
     opacity: 0.32;
 }
 
 /* ════════════════════════════════════════════════
-   ACT — shared scaffolding (cream-side acts)
+   ACT — shared scaffolding (paper-side acts)
    ════════════════════════════════════════════════ */
 
 .about-act {
     padding: clamp(5rem, 12vh, 8rem) 1.5rem;
-    background: var(--ab-cream);
+    background: var(--ab-paper);
     color: var(--ab-ink);
 }
 
 /* Kept as a class alias for legacy hooks — same colour as the base act so
    every cream section reads as one continuous surface. */
 .about-act--soft {
-    background: var(--ab-cream);
+    background: var(--ab-paper);
 }
 
 .about-act__inner {
@@ -138,12 +150,16 @@
 }
 
 .about-act__eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
     font-family: var(--ab-body);
     font-size: 0.68rem;
     font-weight: 600;
     letter-spacing: 0.32em;
     text-transform: uppercase;
-    color: var(--ab-red);
+    color: var(--ab-wine);
     margin: 0 0 1.4rem;
 }
 
@@ -154,7 +170,7 @@
     font-size: clamp(2rem, 4.6vw, 3.2rem);
     line-height: 1.12;
     letter-spacing: -0.01em;
-    color: var(--ab-navy);
+    color: var(--ab-ink);
     margin: 0;
     max-width: 880px;
 }
@@ -165,8 +181,25 @@
     margin-right: auto;
 }
 
+/* The 24px currentColor hairline from .kb-eyebrow, mirrored either side so
+   the kicker stays balanced inside these centred columns. */
+.about-hero__eyebrow::before,
+.about-hero__eyebrow::after,
+.about-act__eyebrow::before,
+.about-act__eyebrow::after,
+.about-drona__matrix-eyebrow::before,
+.about-drona__matrix-eyebrow::after,
+.about-founder__eyebrow::before,
+.about-founder__eyebrow::after {
+    content: '';
+    flex: 0 0 auto;
+    width: 24px;
+    height: 1px;
+    background: currentColor;
+}
+
 /* ════════════════════════════════════════════════
-   ACT 2 — DRONA (cream)
+   ACT 2 — DRONA (paper)
    ════════════════════════════════════════════════ */
 
 /* Single-column editorial container — no more two-column grid, no mindmap.
@@ -187,7 +220,7 @@
 }
 
 .about-drona__lead strong {
-    color: var(--ab-navy);
+    color: var(--ab-ink);
     font-weight: 600;
 }
 
@@ -201,7 +234,7 @@
 }
 
 .about-drona__close strong {
-    color: var(--ab-navy);
+    color: var(--ab-ink);
     font-weight: 600;
 }
 
@@ -211,21 +244,24 @@
 .about-drona__matrix-wrap {
     margin: clamp(2.4rem, 5vw, 3.2rem) auto 0;
     padding: 1.6rem 1.4rem 1.2rem;
-    background: rgba(10, 47, 82, 0.04);
+    background: var(--ab-paper-warm);
     border: 1px solid var(--ab-rule-light);
     border-radius: 6px;
     text-align: left;
 }
 
 .about-drona__matrix-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
     font-family: var(--ab-body);
     font-size: 0.62rem;
     font-weight: 700;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: var(--ab-red);
+    color: var(--ab-wine);
     margin: 0 0 0.9rem;
-    text-align: center;
 }
 
 .about-drona__heatmap {
@@ -234,6 +270,8 @@
     gap: 6px;
     margin: 1.4rem 0 0.4rem;
 }
+
+.about-drona__heatmap-row { display: contents; }
 
 .about-drona__heatmap-cell {
     border-radius: 6px;
@@ -262,27 +300,29 @@
     font-size: 0.95rem;
 }
 
-/* Heatmap data cells — cream → red gradient across X axis */
+/* Heatmap data cells — a four-stop wine tint ramp across the X axis. The
+   darkest stop crosses into dark-ground territory, so its label flips to the
+   on-wine ink rather than staying oxblood-on-wine. */
 .heatmap-cell--non {
-    background: rgba(244, 235, 208, 0.6);
+    background: rgba(118, 44, 54, 0.06);
     color: var(--ab-ink-dim);
 }
 
 .heatmap-cell--litig {
-    background: rgba(219, 74, 43, 0.10);
-    color: var(--ab-navy);
+    background: rgba(118, 44, 54, 0.18);
+    color: var(--ab-ink);
 }
 
 .heatmap-cell--partial {
-    background: rgba(219, 74, 43, 0.22);
-    color: var(--ab-navy);
+    background: rgba(118, 44, 54, 0.38);
+    color: var(--ab-ink);
 }
 
 .heatmap-cell--full {
-    background: rgba(219, 74, 43, 0.42);
-    color: var(--ab-navy);
+    background: rgba(118, 44, 54, 0.86);
+    color: var(--ab-on-wine);
     font-weight: 600;
-    box-shadow: inset 0 0 0 1px rgba(219, 74, 43, 0.55);
+    box-shadow: inset 0 0 0 1px rgba(118, 44, 54, 0.95);
 }
 
 .about-drona__matrix-foot {
@@ -295,7 +335,7 @@
 }
 
 .about-drona__matrix-foot em {
-    color: var(--ab-navy);
+    color: var(--ab-ink);
 }
 
 /* ════════════════════════════════════════════════
@@ -313,7 +353,7 @@
 }
 
 .about-service__lead strong {
-    color: var(--ab-navy);
+    color: var(--ab-ink);
     font-weight: 600;
 }
 
@@ -343,11 +383,11 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    box-shadow: 0 1px 0 rgba(10, 47, 82, 0.04);
+    box-shadow: 0 1px 0 rgba(76, 44, 44, 0.04);
 }
 
 .about-service__card--us {
-    border-left: 3px solid var(--ab-red);
+    border-left: 3px solid var(--ab-wine);
 }
 
 .about-service__card-eyebrow {
@@ -360,7 +400,7 @@
 }
 
 .about-service__card--us .about-service__card-eyebrow {
-    color: var(--ab-red);
+    color: var(--ab-wine);
 }
 
 .about-service__card-title {
@@ -369,7 +409,7 @@
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 1.25;
-    color: var(--ab-navy);
+    color: var(--ab-ink);
     margin: 0;
 }
 
@@ -399,17 +439,17 @@
 }
 
 .about-service__close strong {
-    color: var(--ab-navy);
+    color: var(--ab-ink);
     font-weight: 600;
 }
 
 .about-service__close em {
-    color: var(--ab-navy);
+    color: var(--ab-ink);
     font-style: italic;
 }
 
 /* ════════════════════════════════════════════════
-   ACT 4 — FOUNDER (cream)
+   ACT 4 — FOUNDER (paper)
    ════════════════════════════════════════════════ */
 
 .about-founder {
@@ -424,12 +464,16 @@
 }
 
 .about-founder__eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
     font-family: var(--ab-body);
     font-size: 0.68rem;
     font-weight: 600;
     letter-spacing: 0.32em;
     text-transform: uppercase;
-    color: var(--ab-red);
+    color: var(--ab-wine);
     margin: 0 0 2rem;
 }
 
@@ -445,7 +489,7 @@
     font-weight: 400;
     font-size: clamp(1.15rem, 1.9vw, 1.35rem);
     line-height: 1.55;
-    color: var(--ab-navy);
+    color: var(--ab-ink);
     margin: 0 0 1.6rem;
     text-align: left;
 }
@@ -465,7 +509,7 @@
     font-family: var(--ab-display);
     font-weight: 600;
     font-size: 1.1rem;
-    color: var(--ab-navy);
+    color: var(--ab-ink);
     margin: 0 0 0.2rem;
     letter-spacing: 0.01em;
 }
@@ -533,7 +577,7 @@
     font-size: 0.62rem;
     font-weight: 600;
     letter-spacing: 0.2em;
-    color: var(--ab-red);
+    color: var(--ab-accent);
     padding-top: 0.45rem;
     line-height: 1;
 }
@@ -544,7 +588,7 @@
     font-weight: 400;
     font-size: clamp(1rem, 1.6vw, 1.1rem);
     line-height: 1.5;
-    color: var(--ab-navy);
+    color: var(--ab-ink);
     margin: 0;
 }
 

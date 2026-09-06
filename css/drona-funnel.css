@@ -35,8 +35,9 @@
     --df-navy: #0a2f52;
     --df-cream: #f4ebd0;
     --df-paper: #eeebe3;
-    --df-orange: #db4a2b;
-    --df-red-deep: #bd3b21;
+    --df-orange: #3a0000;
+    --df-red-deep: #3a0000;
+    --df-tint: #ffa892;
     --df-rule: rgba(16, 42, 62, 0.20);
     --df-rule-soft: rgba(16, 42, 62, 0.11);
 
@@ -72,12 +73,11 @@
     margin: 0 auto clamp(44px, 5vw, 60px);
     color: var(--df-red-deep);
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: clamp(0.62rem, 0.8vw, 0.7rem);
+    font-size: clamp(0.78rem, 1vw, 0.88rem);
     font-weight: 600;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.02em;
     line-height: 1.5;
     text-align: center;
-    text-transform: uppercase;
 }
 
 .kl-df__eyebrow::before,
@@ -133,12 +133,12 @@
     position: absolute;
     top: 0.37rem;
     left: calc(var(--df-rail-x) - var(--df-copy-offset));
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 9px;
+    border-radius: 1px;
+    transform: translate(-50%, -50%) rotate(45deg);
     background: var(--df-paper);
-    border: 1px solid rgba(16, 42, 62, 0.52);
+    border: 1.5px solid rgba(16, 42, 62, 0.52);
     transition: background 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
 }
 
@@ -149,7 +149,7 @@
 }
 
 .kl-df__station.is-active {
-    box-shadow: 0 0 0 5px rgba(219,74,43,0.11), 0 4px 14px rgba(219,74,43,0.30);
+    box-shadow: 0 0 0 5px rgba(58,0,0,0.11), 0 4px 14px rgba(58,0,0,0.30);
 }
 
 .kl-df__stage {
@@ -283,8 +283,8 @@
 }
 
 .kl-df__funnel-fill--3 {
-    fill: rgba(219, 74, 43, 0.22);
-    stroke: rgba(219, 74, 43, 0.92);
+    fill: rgba(255, 168, 146, 0.42);
+    stroke: rgba(58, 0, 0, 0.92);
 }
 
 .kl-df__outputs {
@@ -297,8 +297,8 @@
 .kl-df__outputs span {
     padding: 0.55rem 0.72rem;
     color: var(--df-ink);
-    border-color: rgba(219, 74, 43, 0.72);
-    background: rgba(219, 74, 43, 0.08);
+    border-color: rgba(58, 0, 0, 0.72);
+    background: rgba(255, 168, 146, 0.14);
     font-size: 0.66rem;
     font-weight: 600;
     letter-spacing: 0.04em;
@@ -328,7 +328,7 @@
     .kl-df__eyebrow {
         max-width: 42rem;
         margin-bottom: 42px;
-        letter-spacing: 0.24em;
+        letter-spacing: 0.02em;
     }
 
     .kl-df__layout {
@@ -370,8 +370,8 @@
     .kl-df__eyebrow {
         gap: 0.65rem;
         margin-bottom: 38px;
-        font-size: 0.56rem;
-        letter-spacing: 0.2em;
+        font-size: 0.72rem;
+        letter-spacing: 0.02em;
     }
 
     .kl-df__eyebrow::before,

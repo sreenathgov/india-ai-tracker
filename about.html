@@ -75,12 +75,10 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="css/styles-v2.css?v=13">
-    <link rel="stylesheet" href="css/staggered-menu.css">
-    <link rel="stylesheet" href="css/footer.css?v=3">
-    <link rel="stylesheet" href="css/contact-panel.css?v=1">
-    <link rel="stylesheet" href="css/back-button.css">
-    <link rel="stylesheet" href="css/about.css?v=5">
+    <link rel="stylesheet" href="css/styles-v2.css?v=21">
+    <link rel="stylesheet" href="css/staggered-menu.css?v=8">
+    <link rel="stylesheet" href="css/footer.css?v=5">
+    <link rel="stylesheet" href="css/about.css?v=6">
 
     <!-- GSAP (required by js/staggered-menu.js; matches the pattern on every other page) -->
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -91,7 +89,7 @@
         html {
             height: auto !important;
             overflow: auto !important;
-            background: #0a2f52;
+            background: #762c36;
         }
         body.about-page {
             height: auto !important;
@@ -99,21 +97,20 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            background: #0a2f52;
-            color: #F4EBD0;
+            background: #762c36;
+            color: #f8f5ed;
         }
-        /* Nav spacer parity with other pages */
-        .about-nav-spacer { height: 80px; background: #0a2f52; }
-        /* Footer sits on cream — flip its native dark background for visual continuity */
+        /* Nav spacer parity with other pages — wine, continuous with the hero */
+        .about-nav-spacer { height: 80px; background: #762c36; }
     </style>
 </head>
 
-<body class="about-page">
+<body class="about-page" data-menu-light-color="#4c2c2c">
     <!-- Nav injected by staggered-menu.js -->
     <div class="about-nav-spacer"></div>
 
     <!-- ════════════════════════════════════════════════
-         ACT 1 — HERO  (navy)
+         ACT 1 — HERO  (wine)
          Pure editorial typography. No lens, no orb, no canvas.
     ════════════════════════════════════════════════ -->
     <header class="about-hero">
@@ -136,18 +133,18 @@
             </p>
         </div>
 
-        <!-- Concave navy curve bridging the dark hero into the cream act below -->
+        <!-- Concave wine curve bridging the dark hero into the paper act below -->
         <svg class="about-hero__curve" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M0,0 C480,90 960,90 1440,0 L1440,90 L0,90 Z" fill="#0a2f52"/>
+            <path d="M0,0 C480,90 960,90 1440,0 L1440,90 L0,90 Z" fill="#762c36"/>
         </svg>
     </header>
 
     <!-- ════════════════════════════════════════════════
-         ACT 2 — SERVICE MODEL  (cream — unified)
+         ACT 2 — SERVICE MODEL  (paper — unified)
          "We send the plumber, not the toolkit."
          (was Act 3 — promoted to opener for narrative flow)
     ════════════════════════════════════════════════ -->
-    <section class="about-act about-service">
+    <section class="about-act about-service" data-nav-light>
         <div class="about-act__inner">
             <p class="about-act__eyebrow">01 · The Service Model</p>
             <h2 class="about-act__title about-act__title--centered">
@@ -175,13 +172,13 @@
                          aria-label="Vendor sends a toolkit — dashboard, wrench, and documents — toward the customer's office.">
                         <defs>
                             <style>
-                                .sv-stroke { stroke: #102a3e; stroke-width: 1.1; fill: none; }
-                                .sv-stroke-dim { stroke: rgba(16,42,62,0.4); stroke-width: 1; fill: none; }
-                                .sv-fill-soft { fill: rgba(10,47,82,0.05); }
-                                .sv-label { font-family: 'Inter', system-ui, sans-serif; font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; fill: rgba(16,42,62,0.62); }
+                                .sv-stroke { stroke: rgba(76,44,44,0.75); stroke-width: 1.1; fill: none; }
+                                .sv-stroke-dim { stroke: rgba(76,44,44,0.32); stroke-width: 1; fill: none; }
+                                .sv-fill-soft { fill: rgba(76,44,44,0.05); }
+                                .sv-label { font-family: 'Inter', system-ui, sans-serif; font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; fill: rgba(76,44,44,0.62); }
                             </style>
                             <marker id="sv-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-                                <path d="M0,0 L10,5 L0,10 z" fill="rgba(16,42,62,0.55)"/>
+                                <path d="M0,0 L10,5 L0,10 z" fill="rgba(76,44,44,0.5)"/>
                             </marker>
                         </defs>
                         <!-- Vendor source -->
@@ -223,15 +220,15 @@
                          aria-label="An analyst sits inside the customer's office and emits structured intelligence packets outward.">
                         <defs>
                             <style>
-                                .sk-stroke { stroke: #102a3e; stroke-width: 1.1; fill: none; }
-                                .sk-stroke-dim { stroke: rgba(16,42,62,0.4); stroke-width: 1; fill: none; }
-                                .sk-stroke-red { stroke: #db4a2b; stroke-width: 1.2; fill: none; }
-                                .sk-fill-soft { fill: rgba(10,47,82,0.05); }
-                                .sk-fill-red { fill: rgba(219,74,43,0.10); }
-                                .sk-label { font-family: 'Inter', system-ui, sans-serif; font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; fill: rgba(16,42,62,0.62); }
+                                .sk-stroke { stroke: rgba(76,44,44,0.75); stroke-width: 1.1; fill: none; }
+                                .sk-stroke-dim { stroke: rgba(76,44,44,0.32); stroke-width: 1; fill: none; }
+                                .sk-stroke-red { stroke: #762c36; stroke-width: 1.7; fill: none; }
+                                .sk-fill-soft { fill: rgba(76,44,44,0.05); }
+                                .sk-fill-red { fill: rgba(118,44,54,0.12); }
+                                .sk-label { font-family: 'Inter', system-ui, sans-serif; font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; fill: rgba(76,44,44,0.62); }
                             </style>
                             <marker id="sk-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-                                <path d="M0,0 L10,5 L0,10 z" fill="#db4a2b"/>
+                                <path d="M0,0 L10,5 L0,10 z" fill="#762c36"/>
                             </marker>
                         </defs>
                         <!-- Customer office (large, hosting analyst) -->
@@ -280,11 +277,11 @@
     </section>
 
     <!-- ════════════════════════════════════════════════
-         ACT 3 — DRONA  (cream — unified)
+         ACT 3 — DRONA  (paper — unified)
          "Drona isn't a wrapper on top of an LLM. It's a brain."
          Single-column editorial; matrix as heatmap chip-grid.
     ════════════════════════════════════════════════ -->
-    <section class="about-act about-drona">
+    <section class="about-act about-drona" data-nav-light>
         <div class="about-drona__inner">
             <p class="about-act__eyebrow">02 · The Engine</p>
             <h2 class="about-act__title about-act__title--centered">
@@ -305,39 +302,49 @@
                 <p class="about-drona__matrix-eyebrow">Defensibility-tier output</p>
                 <div class="about-drona__heatmap" role="table" aria-label="Defensibility tier matrix: state by recoverable tier.">
                     <!-- Header row -->
+                    <div class="about-drona__heatmap-row" role="row">
                     <div class="about-drona__heatmap-cell heatmap-cell--corner" role="presentation"></div>
                     <div class="about-drona__heatmap-cell heatmap-cell--axis" role="columnheader">None</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--axis" role="columnheader">Litig.</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--axis" role="columnheader">Partial</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--axis" role="columnheader">Full</div>
+                    </div>
 
                     <!-- OPEN -->
+                    <div class="about-drona__heatmap-row" role="row">
                     <div class="about-drona__heatmap-cell heatmap-cell--axis" role="rowheader">Open</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--non" role="cell">Non</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--litig" role="cell">Litig</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--partial" role="cell">Partial</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--full" role="cell">Full</div>
+                    </div>
 
                     <!-- CONDITIONAL -->
+                    <div class="about-drona__heatmap-row" role="row">
                     <div class="about-drona__heatmap-cell heatmap-cell--axis" role="rowheader">Conditional</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--non" role="cell">Non</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--litig" role="cell">Litig</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--partial" role="cell">Partial</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--full" role="cell">Full</div>
+                    </div>
 
                     <!-- BLOCKED -->
+                    <div class="about-drona__heatmap-row" role="row">
                     <div class="about-drona__heatmap-cell heatmap-cell--axis" role="rowheader">Blocked</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--non" role="cell">Non</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--litig" role="cell">Litig</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--partial" role="cell">Partial</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--full" role="cell">Full</div>
+                    </div>
 
                     <!-- UNCLEAR -->
+                    <div class="about-drona__heatmap-row" role="row">
                     <div class="about-drona__heatmap-cell heatmap-cell--axis" role="rowheader">Unclear</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--non" role="cell">Non</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--litig" role="cell">Litig</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--partial" role="cell">Partial</div>
                     <div class="about-drona__heatmap-cell heatmap-cell--full" role="cell">Full</div>
+                    </div>
                 </div>
                 <p class="about-drona__matrix-foot">
                     Every output carries both axes. Doctrine inherited from the Indian Supreme
@@ -353,10 +360,10 @@
     </section>
 
     <!-- ════════════════════════════════════════════════
-         ACT 4 — FOUNDER  (cream)
+         ACT 4 — FOUNDER  (paper)
          Founder note (verbatim) + tenets.
     ════════════════════════════════════════════════ -->
-    <section class="about-act about-founder" id="founder">
+    <section class="about-act about-founder" id="founder" data-nav-light>
         <div class="about-founder__inner">
             <p class="about-founder__eyebrow">03 · The Founder</p>
 
@@ -423,22 +430,14 @@
 
                 <!-- LEFT: Brand zone -->
                 <div class="kl-footer__brand">
-                    <img src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png" alt="Kanan Labs"
-                         class="kl-footer__logo" width="500" height="500" loading="lazy" decoding="async" draggable="false">
-                    <p class="kl-footer__tagline">Trade Intelligence Infrastructure</p>
+                    <img src="assets/logos/kanan-kl-hor-white.png" alt="Kanan Labs"
+                         class="kl-footer__logo" width="922" height="262" loading="lazy" decoding="async" draggable="false">
+                    <p class="kl-footer__tagline">Proactive Supply Chain Resilience</p>
 
-                    <div>
-                        <p class="kl-footer__nl-label">Weekly Brief</p>
-                        <form class="kl-footer__nl-form" id="footerNewsletterForm">
-                            <input type="email" class="kl-footer__nl-input" placeholder="Your email address"
-                                   autocomplete="email" required>
-                            <button type="submit" class="kl-footer__nl-submit">Subscribe</button>
-                        </form>
+                    <div class="kl-footer__links">
+                        <a href="https://apply.kananlabs.in/" class="kl-footer__consult">Supplier Programme &#8594;</a>
+                        <a href="request-demo.html" class="kl-footer__consult">Request a Demo &#8594;</a>
                     </div>
-
-                    <a href="tradewatch.html" class="kl-footer__consult">
-                        Explore TradeWatch &rarr;
-                    </a>
                 </div>
 
                 <!-- RIGHT: Sitemap grid -->
@@ -447,9 +446,9 @@
                     <div class="kl-footer__col">
                         <h4 class="kl-footer__col-heading">Platform</h4>
                         <ul class="kl-footer__col-links">
-                            <li><a href="tradewatch.html">TradeWatch</a></li>
+                            <li><a href="drona.html">Drona</a></li>
+                            <li><a href="drona-aos.html">DronaAOS</a></li>
                             <li><a href="tracker.html">India AI Tracker</a></li>
-                            <li><a href="sector-watch.html">SectorWatch</a></li>
                             <li><a href="resources.html">Resources</a></li>
                         </ul>
                     </div>
@@ -458,6 +457,7 @@
                         <h4 class="kl-footer__col-heading">Company</h4>
                         <ul class="kl-footer__col-links">
                             <li><a href="about.html">About</a></li>
+                            <li><a href="careers.html">Careers</a></li>
                             <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
                         </ul>
                     </div>
@@ -483,16 +483,15 @@
             </div>
 
             <div class="kl-footer__watermark">
-                <img src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png" alt=""
-                     class="kl-footer__watermark-img" width="1584" height="396" loading="lazy" decoding="async" aria-hidden="true" draggable="false">
+                <img src="assets/logos/kanan-kl-hor-white.png" alt=""
+                     class="kl-footer__watermark-img" width="922" height="262" loading="lazy" decoding="async" aria-hidden="true" draggable="false">
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/contact-panel.js"></script>
     <!-- Staggered menu requires gsap (loaded with defer in head); defer guarantees order -->
-    <script defer src="js/staggered-menu.js?v=4"></script>
+    <script defer src="js/staggered-menu.js?v=12"></script>
 </body>
 
 </html>

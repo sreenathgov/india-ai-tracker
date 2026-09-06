@@ -10,17 +10,25 @@
 const { siteEntityNodes, BASE_URL } = require('../publications/entities');
 const { SCHEMA_EMPLOYMENT_TYPE, escapeHtml } = require('./schema');
 
+// Keep the careers brand current without changing unrelated publication pages.
+function careersEntityNodes() {
+    return siteEntityNodes().map(node => node['@type'] === 'Organization'
+        ? { ...node, name: 'Kanan', legalName: 'KANANX ANALYTICS PRIVATE LIMITED',
+            description: 'AI software for supply-chain intelligence, operational risk, and business decisions.' }
+        : node['@type'] === 'WebSite' ? { ...node, name: 'Kanan' } : node);
+}
+
 const CAREERS_URL = `${BASE_URL}/careers.html`;
 
 /** Where the company actually sits. Used for on-site and hybrid roles. */
-function companyPlace() {
+function companyPlace(role) {
     return {
         '@type': 'Place',
         address: {
             '@type': 'PostalAddress',
-            addressLocality: 'Bengaluru',
-            addressRegion: 'Karnataka',
-            addressCountry: 'IN'
+            addressLocality: role.location.city,
+            addressRegion: role.location.region,
+            addressCountry: role.location.country
         }
     };
 }
@@ -29,7 +37,7 @@ function companyPlace() {
  * Google wants the JD as an HTML string, not plain text. Compose it from the
  * same fields the page renders so the two never drift.
  */
-function jobDescriptionHtml(role) {
+function jobDescriptionHtml(role, companyDescription) {
     const paragraphs = String(role.description || '')
         .split(/\n{2,}/)
         .map(p => p.trim())
@@ -44,13 +52,13 @@ function jobDescriptionHtml(role) {
             + '</ul>';
     };
 
-    return paragraphs
-        + section('What you&#39;ll do', role.responsibilities)
-        + section('What we look for', role.lookingFor)
-        + section('Nice to have', role.niceToHave);
+    return `<p>${escapeHtml(companyDescription)}</p>` + paragraphs
+        + section('Responsibilities', role.responsibilities)
+        + section('Required qualifications', role.lookingFor)
+        + section('Preferred experience', role.niceToHave);
 }
 
-function jobPostingNode(role) {
+function jobPostingNode(role, companyDescription) {
     const url = `${BASE_URL}/careers/${role.slug}/`;
 
     const node = {
@@ -58,11 +66,11 @@ function jobPostingNode(role) {
         '@id': `${url}#jobposting`,
         title: role.title,
         name: role.title,
-        description: jobDescriptionHtml(role),
+        description: jobDescriptionHtml(role, companyDescription),
         datePosted: role.datePosted,
         employmentType: SCHEMA_EMPLOYMENT_TYPE[role.employmentType],
         hiringOrganization: { '@id': `${BASE_URL}/#organization` },
-        industry: 'International Trade and Trade Compliance Software',
+        industry: 'AI Software, Supply Chain and Risk Analytics',
         occupationalCategory: role.team,
         url,
         directApply: true
@@ -77,9 +85,9 @@ function jobPostingNode(role) {
     if (role.workMode === 'remote') {
         node.jobLocationType = 'TELECOMMUTE';
         node.applicantLocationRequirements = { '@type': 'Country', name: 'India' };
-        node.jobLocation = companyPlace();
+        node.jobLocation = companyPlace(role);
     } else {
-        node.jobLocation = companyPlace();
+        node.jobLocation = companyPlace(role);
     }
 
     return node;
@@ -110,8 +118,8 @@ function listingJsonLd(roles) {
                 '@type': 'CollectionPage',
                 '@id': `${CAREERS_URL}#collection`,
                 url: CAREERS_URL,
-                name: 'Careers — Kanan Labs',
-                description: 'Open roles at Kanan Labs across engineering, knowledge and trade practice.',
+                name: 'Careers at Kanan',
+                description: 'Founding roles in AI research, engineering, and data science at Kanan. Full-time, on-site in Chennai.',
                 isPartOf: { '@id': `${BASE_URL}/#website` },
                 publisher: { '@id': `${BASE_URL}/#organization` }
             },
@@ -127,7 +135,7 @@ function listingJsonLd(roles) {
                 }))
             },
             breadcrumbNode(null),
-            ...siteEntityNodes()
+            ...careersEntityNodes()
         ]
     }, null, 4);
 }
@@ -137,10 +145,10 @@ function listingJsonLd(roles) {
  * A closed role gets no JobPosting node — advertising a filled position in
  * structured data is a Google policy violation, not just untidy.
  */
-function roleJsonLd(role, { advertised }) {
+function roleJsonLd(role, { advertised, companyDescription }) {
     const graph = [];
-    if (advertised) graph.push(jobPostingNode(role));
-    graph.push(breadcrumbNode(role), ...siteEntityNodes());
+    if (advertised) graph.push(jobPostingNode(role, companyDescription));
+    graph.push(breadcrumbNode(role), ...careersEntityNodes());
 
     return JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }, null, 4);
 }

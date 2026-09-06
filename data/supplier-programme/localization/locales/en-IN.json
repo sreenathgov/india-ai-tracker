@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "supplier-localization-bundle.v1",
+  "locale": "en-IN",
+  "languageCode": "en",
+  "script": "Latin",
+  "direction": "ltr",
+  "publicationStatus": "published",
+  "localizationVersion": "supplier-locales.2026-09-05.v1",
+  "approvalRecord": "../approval-record.json",
+  "researchSource": {
+    "driveFileId": "1BX7Pczi6hpyBKKvZqNsBjk_jRja0H9TM",
+    "researchVersion": "0.9.0-research-draft",
+    "glossaryVersion": "0.9.0-research-draft"
+  },
+  "message": {
+    "hero_eyebrow": "Support for manufacturers",
+    "hero_headline": "Prepare your working-capital requirement.",
+    "hero_supporting_text": "Tell us about your manufacturing business, confirmed orders and financing need. We will review whether Kanan may be able to support the next step.",
+    "finance_value_title": "Make your requirement easier to review",
+    "finance_value_body": "Where appropriate, Kanan may help clarify the requirement and organize supporting evidence before a bank or NBFC reviews it.",
+    "risk_diagnostic_title": "Global Disruption Review",
+    "risk_diagnostic_body": "Selected manufacturers may also receive a later, human-reviewed analysis of external developments that could affect materials, cost, logistics, compliance, production or delivery.",
+    "risk_scope_note": "A risk is included only where a clear connection to an input, source, process or route can be shown.",
+    "trust_signal_1": "Human-reviewed",
+    "trust_signal_2": "You choose the financial institution",
+    "trust_signal_3": "The financial institution decides",
+    "how_it_works_step_1": "Share basic details about your business and requirement.",
+    "how_it_works_step_2": "Kanan reviews whether the requirement may fit the support programme.",
+    "how_it_works_step_3": "Selected applicants are contacted for documents and next steps.",
+    "primary_cta": "Start manufacturer review",
+    "response_time_copy": "We confirm receipt immediately and contact you after human review.",
+    "lender_boundary_copy": "Kanan Labs is not a bank or NBFC. We do not lend, underwrite or approve credit, handle loan funds, or guarantee finance. Any financing decision is made only by the relevant financial institution.",
+    "privacy_microcopy": "We use the information you submit to review this request and contact you about it. We will not share it with a financial institution without your authorization.",
+    "submission_confirmation": "Application received. This confirms receipt only, not eligibility or approval.",
+    "explicit_no_charge_variant": "For selected applicants, the Global Disruption Review is provided at no charge.",
+    "terms_retained_in_english": [
+      "working capital",
+      "CC limit",
+      "OD",
+      "PO",
+      "invoice finance",
+      "GST",
+      "NBFC"
+    ]
+  },
+  "form": {
+    "back": "Back",
+    "next": "Continue",
+    "submit": "Submit application",
+    "required": "Please complete the required information.",
+    "invalidPhone": "Enter a valid 10-digit Indian mobile number.",
+    "choose": "Choose one",
+    "ctx": [
+      [
+        "Begin in the language that is most comfortable.",
+        "Your preferred language will be recorded with your application. You can change it without losing your answers."
+      ],
+      [
+        "Tell us what the finance is for.",
+        "This separates working-capital requirements from other enquiries and helps us choose the right follow-up."
+      ],
+      [
+        "Introduce the manufacturer.",
+        "A clear description of what the company makes is more useful than a broad industry label."
+      ],
+      [
+        "Place the requirement.",
+        "The amount and manufacturing location help us understand the scale and operating context."
+      ],
+      [
+        "Tell us about customer demand.",
+        "You can apply at any stage. This answer helps us understand how close the requirement is to a production obligation."
+      ],
+      [
+        "Leave one reliable contact.",
+        "We only need a name and WhatsApp/mobile number for the first response."
+      ]
+    ],
+    "titles": [
+      "Choose your preferred language.",
+      "Is this for working capital finance?",
+      "Tell us about your company.",
+      "Where do you manufacture, and how much do you need?",
+      "What customer demand do you have today?",
+      "Where should we contact you?"
+    ],
+    "shortTitle": "Tell us where we should contact you.",
+    "shortHelp": "The complete form is not yet available in this language. We will record your preference and arrange an appropriate follow-up.",
+    "yes": "Yes",
+    "no": "No",
+    "purpose": "What will the finance support?",
+    "raw": "Raw materials or components",
+    "production": "Production costs",
+    "order": "Confirmed order or export order",
+    "invoice": "Post-delivery or invoice cash gap",
+    "other": "Other requirement",
+    "company": "Company name",
+    "manufacture": "What does your company manufacture?",
+    "manufactureHint": "For example: precision-machined valve parts, steel fabrications, rubber components",
+    "state": "State or Union Territory",
+    "city": "City or industrial cluster",
+    "amount": "Exact amount required (₹)",
+    "amountHint": "Enter the total amount you are seeking. This is not a financing offer.",
+    "demand": "Current customer-demand position",
+    "po": "Confirmed purchase order or contract",
+    "release": "Customer schedule or production release",
+    "forecast": "Forecast or expected order",
+    "none": "No order yet",
+    "unsure": "Not sure",
+    "name": "Contact name",
+    "phone": "WhatsApp / mobile number",
+    "phoneHint": "Indian mobile number. Email is not required.",
+    "consent": "I authorize Kanan Labs to contact me by phone or WhatsApp only about this request.",
+    "received": "Application received.",
+    "receivedBody": "A Kanan team member will review your request and contact you within 24 hours. Do not send financial or identity documents until requested through an approved channel.",
+    "otherReceived": "Application received.",
+    "otherBody": "The current programme focuses on working-capital requirements. We will contact you within 24 hours.",
+    "languageReceived": "Language preference received.",
+    "languageBody": "A Kanan team member will contact you within 24 hours.",
+    "reference": "Application reference",
+    "failure": "We could not safely record the application. Please try again, call +91 98402 47729, or message Kanan on WhatsApp.",
+    "applicationTitle": "Manufacturer support application",
+    "availability": "Available in English and 4 Indian languages.",
+    "ccod": "CC limit or OD",
+    "machineryNote": "Machinery finance or a term loan is different from working capital.",
+    "selectedReview": "This is not instant, predictive, comprehensive or a credit score.",
+    "contactOnly": "Contact flow",
+    "progressLabel": "Application progress",
+    "help": "Need help?",
+    "call": "Call Kanan",
+    "whatsapp": "WhatsApp",
+    "close": "Close application",
+    "sending": "Sending…",
+    "privacy": "Privacy Policy",
+    "terms": "Programme Terms"
+  }
+}

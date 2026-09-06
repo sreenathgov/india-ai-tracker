@@ -8,8 +8,9 @@
  *   MAKE_WEBHOOK_URL           — optional; if set, fans the submission out to a Make scenario
  */
 
-const { applyCors, rateLimit, checkHoneypot } = require('./_lib/security');
+const { applyCors, rateLimit, checkHoneypot, validateRequest } = require('./_lib/security');
 const { notifyMake } = require('./_lib/notify');
+const {providerFetch} = require('./_lib/provider-fetch');
 
 module.exports = async function handler(req, res) {
   // CORS allowlist (kananlabs.in + *.vercel.app + local dev)
@@ -27,6 +28,7 @@ module.exports = async function handler(req, res) {
   }
 
   // Rate limit: 5 requests / 10 min / IP (per warm instance)
+  if (!validateRequest(req, res, 16384)) return;
   if (!rateLimit(req)) {
     return res.status(429).json({ message: 'Too many requests. Please try again later.' });
   }
@@ -36,13 +38,24 @@ module.exports = async function handler(req, res) {
     return res.status(200).json({ success: true });
   }
 
-  const { name, company, email } = req.body || {};
+  const { name, company, email, tradeNeeds } = req.body || {};
 
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (typeof email !== 'string' || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return res.status(400).json({ message: 'Invalid email address' });
   }
-  if (!name || name.trim().length < 1) {
+  if (typeof name !== 'string' || name.length > 160 || name.trim().length < 1) {
     return res.status(400).json({ message: 'Name is required' });
+  }
+
+  const allowedNeeds = new Set([
+    'Regulatory risk mapping & strategy',
+    'Entering new markets',
+    'Supply chain analysis',
+    'Identifying compatible incentives'
+  ]);
+  if (!Array.isArray(tradeNeeds) || tradeNeeds.length < 1 || tradeNeeds.length > allowedNeeds.size ||
+      tradeNeeds.some(item => typeof item !== 'string' || !allowedNeeds.has(item))) {
+    return res.status(400).json({ message: 'Select at least one valid area of interest' });
   }
 
   const apiKey = process.env.BREVO_API_KEY;
@@ -59,7 +72,7 @@ module.exports = async function handler(req, res) {
   const lastName = nameParts.slice(1).join(' ') || '';
 
   try {
-    const contactRes = await fetch('https://api.brevo.com/v3/contacts', {
+    const contactRes = await providerFetch('https://api.brevo.com/v3/contacts', {
       method: 'POST',
       headers: {
         'api-key': apiKey,
@@ -71,7 +84,8 @@ module.exports = async function handler(req, res) {
         attributes: {
           FIRSTNAME: firstName,
           LASTNAME: lastName,
-          COMPANY: company || ''
+          COMPANY: typeof company === 'string' ? company.substring(0, 500) : '',
+          CONTEXT: tradeNeeds.join(' · ')
         },
         listIds: [listId],
         updateEnabled: true
@@ -81,21 +95,22 @@ module.exports = async function handler(req, res) {
     // 201 = created, 204 = already exists (updated) — both fine
     if (!contactRes.ok && contactRes.status !== 204) {
       const err = await contactRes.json().catch(() => ({}));
-      console.error('Brevo early-access error:', contactRes.status, err);
+      console.error('Brevo early-access error:', err.code || 'provider-error');
       return res.status(502).json({ message: 'Failed to submit. Please try again.' });
     }
 
     await notifyMake('early-access', {
       contactName: name.trim(),
       email,
-      companyName: company || '',
+      companyName: typeof company === 'string' ? company.substring(0, 500) : '',
+      tradeNeeds,
       submittedAt: new Date().toISOString()
     });
 
     return res.status(200).json({ success: true });
 
   } catch (err) {
-    console.error('Early-access handler error:', err);
+    console.error('Early-access handler error:', err.name || 'provider-error');
     return res.status(500).json({ message: 'Server error. Please try again.' });
   }
 };

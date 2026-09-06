@@ -51,8 +51,8 @@ const WPM = 220;
 // Keep in sync with the cache-busted asset versions used by the preview shell.
 // Bump BOTH whenever css/publications.css or js/publications.js changes — an
 // unbumped version serves the old asset from cache against new markup.
-const CSS_VERSION = '31';
-const JS_VERSION = '25';
+const CSS_VERSION = '32';
+const JS_VERSION = '26';
 const ARTICLE_CSS = path.join(PROJECT_ROOT, 'css', 'publications.css');
 const ARTICLE_JS = path.join(PROJECT_ROOT, 'js', 'publications.js');
 
@@ -449,15 +449,13 @@ function renderArticleContent(meta, chapters, readingMinutes) {
             html += `
                         <div class="subsection-card"
                              id="card-${chapterIndex}-${sectionIndex}"
-                             onclick="openAnalysisPanel(${chapterIndex}, ${sectionIndex})"
-                             role="button"
-                             tabindex="0">
+                             onclick="if (!event.target.closest('a, button')) openAnalysisPanel(${chapterIndex}, ${sectionIndex})">
                             <div class="subsection-id">${chapterNumber}.${sectionIndex + 1}</div>
-                            <h3 class="subsection-title">${escapeHtmlText(section.title)}</h3>
+                            <h3 class="subsection-title" id="subsection-title-${chapterIndex}-${sectionIndex}">${escapeHtmlText(section.title)}</h3>
                             <div class="subsection-teaser">${firstParagraphOf(section.content)}</div>
                             ${notesList}
                             ${layerDetail}
-                            <div class="more-strip">Get the details <span class="more-icon">&rarr;</span></div>
+                            <div class="more-strip"><button type="button" class="more-strip__button" aria-describedby="subsection-title-${chapterIndex}-${sectionIndex}" onclick="openAnalysisPanel(${chapterIndex}, ${sectionIndex})">Get the details <span class="more-icon" aria-hidden="true">&rarr;</span></button></div>
                         </div>`;
         });
 
@@ -693,8 +691,16 @@ function generatePublications() {
     // be holding — which is how a stale stylesheet silently shipped once before.
     fs.mkdirSync(path.join(DIST_DIR, 'css'), { recursive: true });
     fs.copyFileSync(ARTICLE_CSS, path.join(DIST_DIR, 'css', 'publications.css'));
+    for (const asset of ['editorial-theme.css', 'kanan-brand-v2.css', 'resources.css', 'supplier-closing.css', 'footer.css']) {
+        fs.copyFileSync(path.join(PROJECT_ROOT, 'css', asset), path.join(DIST_DIR, 'css', asset));
+    }
     fs.mkdirSync(path.join(DIST_DIR, 'js'), { recursive: true });
     fs.copyFileSync(ARTICLE_JS, path.join(DIST_DIR, 'js', 'publications.js'));
+    fs.copyFileSync(path.join(PROJECT_ROOT, 'js', 'origin-cta.js'), path.join(DIST_DIR, 'js', 'origin-cta.js'));
+    fs.copyFileSync(path.join(PROJECT_ROOT, 'js', 'advisory-section.js'), path.join(DIST_DIR, 'js', 'advisory-section.js'));
+    fs.copyFileSync(path.join(PROJECT_ROOT, 'js', 'resources-subscribe.js'), path.join(DIST_DIR, 'js', 'resources-subscribe.js'));
+    fs.mkdirSync(path.join(DIST_DIR, 'data'), { recursive: true });
+    fs.copyFileSync(path.join(PROJECT_ROOT, 'data', 'advisory_services.json'), path.join(DIST_DIR, 'data', 'advisory_services.json'));
 
     // Last: the catalog validates every href against the built tree, so the
     // article pages and hubs it links to have to exist on disk by now.

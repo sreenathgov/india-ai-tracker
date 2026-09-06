@@ -1,0 +1,36 @@
+@import url('./kanan-brand-v2.css');
+
+/* Shared color roles, confined to the publication family. The homepage owns
+   the brand palette; these aliases adapt it to sustained reading. */
+body:is(.resources-page, .publications-page, .pub-catalog-page) {
+    --ed-ink: var(--kanan-color-primary);
+    --ed-deep: var(--kanan-color-primary-deep);
+    --ed-accent: var(--kanan-color-accent);
+    --ed-paper: var(--kanan-color-paper);
+    --ed-cream: var(--kanan-color-cream);
+    --ed-card: var(--kanan-color-paper-warm, #faf8f3);
+    --ed-body: #3f3030;
+    --ed-muted: #715b58;
+    --ed-rule: rgb(var(--kanan-primary-rgb) / 0.16);
+    --brand-navy: var(--ed-ink);
+    --brand-orange: var(--ed-accent);
+    --brand-cream: var(--ed-cream);
+    color: var(--ed-body);
+    background: var(--ed-paper);
+}
+
+body.resources-page .advisory-section { background: var(--ed-paper); }
+body.resources-page .advisory-hero__body { color: var(--ed-muted); }
+body.resources-page .advisory-hero__cta { color: var(--ed-accent); }
+body.resources-page .card-swap-card--red { background: var(--ed-accent); color: var(--ed-paper); }
+body.resources-page .card-swap-card--navy { background: var(--ed-ink); color: var(--ed-paper); }
+body.resources-page .card-swap-card--cream { background: var(--ed-cream); color: var(--ed-ink); border-color: var(--ed-rule); }
+body.resources-page :is(.rc-main, .advisory-section) :is(a, button, input):focus-visible { outline: 2px solid var(--ed-accent); outline-offset: 4px; }
+body.resources-page .rc-brief :is(a, button, input):focus-visible { outline-color: var(--ed-cream); }
+
+body.resources-page .advisory-hero__body[role="button"] { text-decoration-color: var(--ed-accent) !important; }
+/* Keep small secondary copy readable, including keyboard-accessible downloads. */
+body.resources-page :is(.card-swap-card__meta, .card-swap-card__subline) { opacity: 1; }
+body.resources-page .card-swap-card__download { opacity: 1; transform: none; pointer-events: auto; }
+body:is(.publications-page, .pub-catalog-page) .publications-footer { background: var(--ed-deep); }
+body:is(.publications-page, .pub-catalog-page) .publications-footer :is(.footer-byline, .footer-links, a) { color: var(--ed-cream); opacity: 1; }

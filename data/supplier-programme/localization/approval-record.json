@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "supplier-localization-approval.v1",
+  "localizationVersion": "supplier-locales.2026-09-05.v1",
+  "confirmedBy": "Founder",
+  "confirmedOn": "2026-09-05",
+  "decision": "Publish the English, Hindi, Marathi, Gujarati and Tamil form journeys after glossary reconciliation.",
+  "reviewBasis": "Qualified native commercial review was founder-confirmed for the four regional launch translations.",
+  "reviewerIdentities": "Not supplied; no identities have been inferred or invented.",
+  "approvedLocales": [
+    "en-IN",
+    "hi-IN",
+    "mr-IN",
+    "gu-IN",
+    "ta-IN"
+  ],
+  "limitations": [
+    "Approval applies to the application form, not the surrounding English landing page.",
+    "Expansion and preference languages remain contact-flow only.",
+    "No runtime translation or applicant-facing AI copy is authorized."
+  ]
+}

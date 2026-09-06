@@ -1,0 +1,500 @@
+/* Project Origin homepage conversion act.
+   The workflow is full-width, isolated from the legacy TradeWatch demo, and
+   uses a static fallback whenever motion is unavailable or reduced. */
+
+.kl-origin-band {
+    position: relative;
+    z-index: 1;
+    isolation: isolate;
+    overflow: hidden;
+    background: #762c36;
+}
+
+.kl-origin-band > .kl-origin-cta,
+.kl-origin-band > .kl-scope {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+.kl-origin-band > .kl-origin-cta::before,
+.kl-origin-band > .kl-scope::before {
+    content: none;
+}
+
+.kl-origin-band .kl-scope__cta-btn {
+    min-height: 48px;
+}
+
+.kl-origin-cta {
+    width: 100%;
+    box-sizing: border-box;
+    padding: clamp(42px, 4.5vw, 72px) clamp(14px, 4vw, 64px) clamp(36px, 3.5vw, 55px);
+    color: #f8f5ed;
+}
+
+.kl-origin-cta__inner {
+    width: min(1360px, 100%);
+    margin: 0 auto;
+}
+
+.kl-origin-workflow {
+    width: min(1240px, 100%);
+    margin: 0 auto;
+}
+
+.kl-origin-workflow__caption {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.kl-origin-workflow__stage {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.kl-origin-workflow__stage--mobile {
+    display: none;
+}
+
+.kl-origin-workflow__node-ring,
+.kl-origin-workflow__node-ring-inner,
+.kl-origin-workflow__risk-path,
+.kl-origin-workflow__route-layer,
+.kl-origin-workflow__route-progress,
+.kl-origin-workflow__process-arc,
+.kl-origin-workflow__institution-halo {
+    fill: none;
+    vector-effect: non-scaling-stroke;
+}
+
+.kl-origin-workflow__node-ring {
+    stroke: rgba(240, 201, 197, 0.32);
+    stroke-width: 1;
+}
+
+.kl-origin-workflow__node-ring-inner {
+    stroke: rgba(240, 201, 197, 0.18);
+    stroke-width: 0.7;
+    stroke-dasharray: 2 7;
+}
+
+.kl-origin-workflow__route-layer {
+    stroke: rgba(240, 201, 197, 0.08);
+    stroke-width: 7;
+    stroke-linecap: round;
+}
+
+.kl-origin-workflow__route-progress {
+    stroke: #f8f5ed;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-dasharray: 0.025 0.08;
+    stroke-dashoffset: 0.44;
+    opacity: 0;
+}
+
+.kl-origin-workflow__endpoint {
+    fill: rgba(118, 44, 54, 0.84);
+    stroke: rgba(240, 201, 197, 0.44);
+    stroke-width: 1;
+}
+
+.kl-origin-workflow__endpoint-title,
+.kl-origin-workflow__core-label,
+.kl-origin-workflow__step-caption {
+    fill: #f8f5ed;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 720;
+}
+
+.kl-origin-workflow__endpoint-title {
+    font-size: 15px;
+}
+
+.kl-origin-workflow__endpoint-kicker,
+.kl-origin-workflow__institution-state {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.kl-origin-workflow__endpoint-kicker {
+    fill: rgba(248, 245, 237, 0.48);
+}
+
+.kl-origin-workflow__institution-state {
+    fill: #ef765d;
+}
+
+.kl-origin-workflow__core-label {
+    font-size: 14px;
+}
+
+.kl-origin-workflow__step-caption {
+    font-size: 12px;
+}
+
+.kl-origin-workflow__risk-path {
+    stroke: #f0c9c5;
+    stroke-width: 1.1;
+    stroke-linecap: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    opacity: 0;
+}
+
+.kl-origin-workflow__risk-signal {
+    color: #f0c9c5;
+    opacity: 0.3;
+}
+
+.kl-origin-workflow__risk-signal circle {
+    fill: currentColor;
+}
+
+.kl-origin-workflow__risk-signal text {
+    fill: currentColor;
+    font: 9px 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.kl-origin-workflow__evidence-sheet {
+    fill: rgba(118, 44, 54, 0.68);
+    stroke: #f0c9c5;
+    stroke-width: 1;
+    transform-box: fill-box;
+    transform-origin: center;
+    opacity: 0.18;
+}
+
+.kl-origin-workflow__evidence-rule {
+    stroke: rgba(240, 201, 197, 0.65);
+    stroke-width: 1;
+    stroke-linecap: round;
+}
+
+.kl-origin-workflow__process-arc {
+    stroke: #f0c9c5;
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke-dasharray: 2 6;
+    opacity: 0.22;
+}
+
+.kl-origin-workflow__process-mark {
+    fill: #ef765d;
+    opacity: 0.25;
+}
+
+.kl-origin-workflow__institution-halo {
+    stroke: rgba(248, 245, 237, 0.35);
+    stroke-width: 1;
+    opacity: 0.18;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.kl-origin-workflow__endpoint-copy,
+.kl-origin-workflow__stage-content,
+.kl-origin-workflow__step-caption {
+    opacity: 0.38;
+}
+
+.kl-origin-workflow.is-running .kl-origin-workflow__route-progress {
+    animation: klOriginRouteReveal 1.5s cubic-bezier(0.3, 0.7, 0.25, 1) var(--delay) forwards;
+}
+
+.kl-origin-workflow.is-running .kl-origin-workflow__start-copy {
+    animation: klOriginRead 1.25s ease 0.1s forwards;
+}
+
+.kl-origin-workflow.is-running .kl-origin-workflow__risk-path {
+    animation: klOriginRiskTrace 1.3s cubic-bezier(0.25, 0.7, 0.25, 1) var(--delay) forwards;
+}
+
+.kl-origin-workflow.is-running .kl-origin-workflow__risk-signal {
+    animation: klOriginSignalRead 1.35s ease var(--delay) forwards;
+}
+
+.kl-origin-workflow.is-running .kl-origin-workflow__risk-content,
+.kl-origin-workflow.is-running .kl-origin-workflow__risk-caption {
+    animation: klOriginRead 1.3s ease 2.15s forwards;
+}
+
+.kl-origin-workflow.is-running .kl-origin-workflow__evidence-sheet {
+    animation: klOriginAssemble 1.15s cubic-bezier(0.2, 0.78, 0.25, 1) var(--delay) forwards;
+}
+
+.kl-origin-workflow.is-running .kl-origin-workflow__evidence-content,
+.kl-origin-workflow.is-running .kl-origin-workflow__evidence-caption {
+    animation: klOriginRead 1.3s ease 4.55s forwards;
+}
+
+.kl-origin-workflow.is-running .kl-origin-workflow__process-arc {
+    animation: klOriginArcRead 1.5s ease 5.8s forwards;
+}
+
+.kl-origin-workflow.is-running .kl-origin-workflow__process-mark:nth-of-type(1) {
+    animation: klOriginMarkRead 0.6s ease 6s forwards;
+}
+
+.kl-origin-workflow.is-running .kl-origin-workflow__process-mark:nth-of-type(2) {
+    animation: klOriginMarkRead 0.6s ease 6.35s forwards;
+}
+
+.kl-origin-workflow.is-running .kl-origin-workflow__process-mark:nth-of-type(3) {
+    animation: klOriginMarkRead 0.6s ease 6.7s forwards;
+}
+
+.kl-origin-workflow.is-running .kl-origin-workflow__process-content,
+.kl-origin-workflow.is-running .kl-origin-workflow__process-caption {
+    animation: klOriginRead 1.3s ease 7s forwards;
+}
+
+.kl-origin-workflow.is-running .kl-origin-workflow__institution-copy {
+    animation: klOriginRead 1.3s ease 8.7s forwards;
+}
+
+.kl-origin-workflow.is-running .kl-origin-workflow__institution-halo {
+    animation: klOriginInstitutionRead 1.7s ease 8.55s 2;
+}
+
+.kl-origin-workflow.is-paused *,
+.kl-origin-workflow.is-paused *::before,
+.kl-origin-workflow.is-paused *::after {
+    animation-play-state: paused !important;
+}
+
+@keyframes klOriginRouteReveal {
+    0% { opacity: 0; stroke-dashoffset: 0.44; }
+    30% { opacity: 0.9; }
+    100% { opacity: 0.78; stroke-dashoffset: 0; }
+}
+
+@keyframes klOriginRiskTrace {
+    0% { stroke-dashoffset: 1; opacity: 0; }
+    30% { opacity: 0.25; }
+    72% { stroke-dashoffset: 0; opacity: 0.92; }
+    100% { stroke-dashoffset: 0; opacity: 0.3; }
+}
+
+@keyframes klOriginSignalRead {
+    0% { color: #f0c9c5; opacity: 0.3; }
+    30%, 72% { color: #f8f5ed; opacity: 1; }
+    100% { color: #f0c9c5; opacity: 0.68; }
+}
+
+@keyframes klOriginAssemble {
+    0% { opacity: 0.12; transform: translate(var(--x), var(--y)) rotate(var(--r)); }
+    68% { opacity: 1; }
+    100% { opacity: 0.76; transform: translate(0, 0) rotate(0); }
+}
+
+@keyframes klOriginArcRead {
+    0% { opacity: 0.18; stroke-dashoffset: 20; }
+    55% { opacity: 0.95; }
+    100% { opacity: 0.52; stroke-dashoffset: 0; }
+}
+
+@keyframes klOriginMarkRead {
+    0% { opacity: 0.25; transform: scale(0.6); }
+    100% { opacity: 0.9; transform: scale(1); }
+}
+
+@keyframes klOriginRead {
+    0% { opacity: 0.38; }
+    35%, 72% { opacity: 1; }
+    100% { opacity: 0.82; }
+}
+
+@keyframes klOriginInstitutionRead {
+    0%, 100% { opacity: 0.18; transform: scale(1); }
+    50% { opacity: 0.75; transform: scale(1.08); }
+}
+
+.kl-origin-cta__copy {
+    width: min(840px, 100%);
+    /* Separate the workflow from the message; keep related copy closer together. */
+    margin: clamp(48px, 5.5vw, 80px) auto 0;
+    padding: 0 16px;
+    text-align: center;
+}
+
+.kl-origin-cta__eyebrow {
+    margin: 0;
+    color: #ef765d;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.kl-origin-cta__title {
+    margin: clamp(24px, 2.2vw, 32px) auto 0;
+    color: #f8f5ed;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2.9rem, 5.15vw, 5rem);
+    font-weight: 500;
+    line-height: 0.96;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+}
+
+.kl-origin-cta__body {
+    width: min(660px, 100%);
+    margin: clamp(24px, 2.2vw, 32px) auto 0;
+    color: rgba(248, 245, 237, 0.72);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: clamp(0.92rem, 1.3vw, 1.05rem);
+    line-height: 1.6;
+    text-wrap: balance;
+}
+
+.kl-origin-cta__button {
+    display: inline-flex;
+    min-height: 52px;
+    margin-top: clamp(32px, 2.8vw, 40px);
+    padding: 0.5rem 0.55rem 0.5rem 1.35rem;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    border: 1px solid #f8f5ed;
+    border-radius: 999px;
+    color: #0b2b45;
+    background: #f8f5ed;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 650;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: background 180ms ease, transform 180ms ease;
+}
+
+.kl-origin-cta__button:hover {
+    background: #fffaf0;
+    transform: translateY(-1px);
+}
+
+.kl-origin-cta__button:focus-visible {
+    outline: 3px solid #ef765d;
+    outline-offset: 4px;
+}
+
+.kl-origin-cta__button-arrow {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #f8f5ed;
+    background: #0b2b45;
+    font-size: 1rem;
+    transition: transform 180ms ease;
+}
+
+.kl-origin-cta__button:hover .kl-origin-cta__button-arrow {
+    transform: translateX(2px);
+}
+
+.kl-origin-workflow:not(.is-animated) .kl-origin-workflow__route-progress {
+    opacity: 0.78;
+    stroke-dashoffset: 0;
+}
+
+.kl-origin-workflow:not(.is-animated) .kl-origin-workflow__endpoint-copy,
+.kl-origin-workflow:not(.is-animated) .kl-origin-workflow__stage-content,
+.kl-origin-workflow:not(.is-animated) .kl-origin-workflow__step-caption {
+    opacity: 0.82;
+}
+
+.kl-origin-workflow:not(.is-animated) .kl-origin-workflow__risk-path {
+    stroke-dashoffset: 0;
+    opacity: 0.3;
+}
+
+.kl-origin-workflow:not(.is-animated) .kl-origin-workflow__risk-signal {
+    opacity: 0.68;
+}
+
+.kl-origin-workflow:not(.is-animated) .kl-origin-workflow__evidence-sheet {
+    opacity: 0.76;
+    transform: none;
+}
+
+.kl-origin-workflow:not(.is-animated) .kl-origin-workflow__process-arc {
+    opacity: 0.52;
+    stroke-dashoffset: 0;
+}
+
+.kl-origin-workflow:not(.is-animated) .kl-origin-workflow__process-mark {
+    opacity: 0.9;
+    transform: none;
+}
+
+.kl-origin-workflow:not(.is-animated) .kl-origin-workflow__institution-halo {
+    opacity: 0.34;
+}
+
+@media (max-width: 700px) {
+    .kl-origin-cta {
+        padding: 28px 10px 31px;
+    }
+
+    .kl-origin-workflow__stage--desktop {
+        display: none;
+    }
+
+    .kl-origin-workflow__stage--mobile {
+        display: block;
+    }
+
+    .kl-origin-workflow__endpoint-title {
+        font-size: 13px;
+    }
+
+    .kl-origin-workflow__core-label {
+        font-size: 12px;
+    }
+
+    .kl-origin-workflow__step-caption {
+        font-size: 10px;
+    }
+
+    .kl-origin-cta__copy {
+        margin-top: 40px;
+        padding: 0 10px;
+    }
+
+    .kl-origin-cta__title {
+        font-size: clamp(2.5rem, 12.5vw, 3.45rem);
+    }
+
+    .kl-origin-cta__body {
+        font-size: 0.92rem;
+    }
+
+    .kl-origin-cta__button {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .kl-origin-cta__button,
+    .kl-origin-cta__button-arrow {
+        transition: none !important;
+    }
+}

@@ -237,14 +237,19 @@ class TestContentIndiaSubstance:
         assert result.passed is True
         assert result.reason == 'CONTENT_INDIA_SUBSTANCE'
 
-    def test_rupee_amount(self, validator):
-        """Content with INR amounts indicates India."""
+    @pytest.mark.parametrize('decision', [True, False])
+    def test_rupee_amount(self, validator, monkeypatch, decision):
+        """Currency alone needs review, not automatic India qualification."""
+        monkeypatch.setattr(validator, '_llm_verify', lambda *args: {
+            'is_india': decision, 'classification': 'TEST_REVIEW'})
         result = validator.validate(
             "Company raises funding round",
             "The startup raised Rs 500 crore in a funding round. "
             "Investors from India participated in the deal."
         )
-        assert result.passed is True
+        assert result.passed is decision
+        assert result.reason == 'LLM_VERIFIED:TEST_REVIEW'
+        assert result.llm_used is True
 
 
 class TestNoIndiaSignal:
@@ -287,14 +292,19 @@ class TestEdgeCases:
         result = validator.validate("INDIA'S AI MARKET GROWS")
         assert result.passed is True
 
-    def test_global_with_india_mention(self, validator):
-        """Global news with India ranking should pass."""
+    @pytest.mark.parametrize('decision', [True, False])
+    def test_global_with_india_mention(self, validator, monkeypatch, decision):
+        """An incidental country mention is decided by the review gate."""
+        monkeypatch.setattr(validator, '_llm_verify', lambda *args: {
+            'is_india': decision, 'classification': 'TEST_REVIEW'})
         result = validator.validate(
             "Global AI adoption report",
             "India ranks third globally in AI adoption. "
             "The Indian market showed strong growth..."
         )
-        assert result.passed is True
+        assert result.passed is decision
+        assert result.reason == 'LLM_VERIFIED:TEST_REVIEW'
+        assert result.llm_used is True
 
 
 class TestValidationResult:

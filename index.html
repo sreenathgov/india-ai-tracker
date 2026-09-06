@@ -79,7 +79,7 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
     <!-- The local JPEG poster is kept materialized for instant cold starts. -->
-    <link rel="preload" as="image" href="added-assets/kanan-hero-poster.jpg" type="image/jpeg" fetchpriority="high">
+    <link rel="preload" as="image" href="added-assets/video-assets/optimized/kanan-hero-poster.jpg" type="image/jpeg" fetchpriority="high">
     <!-- The poster is the only hero preload. The video streams after the
          element is parsed so it cannot compete with render-blocking assets. -->
     <!-- Performance: preload Cormorant display font weights -->
@@ -101,15 +101,15 @@
     </script>
 
     <link rel="stylesheet" href="css/styles-v2.css?v=21">
-    <link rel="stylesheet" href="css/staggered-menu.css?v=2">
-    <link rel="stylesheet" href="css/identity-section.css?v=15">
+    <link rel="stylesheet" href="css/staggered-menu.css?v=8">
     <!-- manifesto-section.css removed — replaced by inline kl-manifesto styles -->
-    <link rel="stylesheet" href="css/footer.css?v=3">
-    <link rel="stylesheet" href="css/tw-demo-clone.css?v=7">
-    <link rel="stylesheet" href="css/triptych.css?v=1">
-    <link rel="stylesheet" href="css/drona-brain.css?v=3">
-    <link rel="stylesheet" href="css/drona-funnel.css?v=7">
-    <link rel="stylesheet" href="css/sectors-bento.css?v=6">
+    <link rel="stylesheet" href="css/footer.css?v=5">
+    <link rel="stylesheet" href="css/origin-cta.css?v=3">
+    <link rel="stylesheet" href="css/supplier-closing.css?v=3">
+    <link rel="stylesheet" href="css/triptych.css?v=3">
+    <link rel="stylesheet" href="css/drona-brain.css?v=5">
+    <link rel="stylesheet" href="css/drona-funnel.css?v=9">
+    <link rel="stylesheet" href="css/sectors-bento.css?v=14">
 
     <style>
         /* ══════════════════════════════════════════════════════════
@@ -150,8 +150,8 @@
         }
 
         :root {
-            --kl-navy:        #0a2f52;
-            --kl-navy-deep:   #061f38;
+            --kl-navy:        #3a0000;
+            --kl-navy-deep:   #290000;
             --kl-cream:       #eeebe3;   /* Kanan White */
             --kl-cream-soft:  rgba(238, 235, 227, 0.68);
             --kl-cream-faint: rgba(238, 235, 227, 0.45);
@@ -159,6 +159,7 @@
         }
 
         html {
+            background: var(--kl-navy);
             height: auto !important;
             overflow-x: clip; /* clip prevents h-scroll without changing scroll container */
             scroll-behavior: smooth;
@@ -180,8 +181,8 @@
         .kl-hero {
             position: relative;
             width: 100%;
-            min-height: 100vh;
-            min-height: 100svh;
+            min-height: 92vh;
+            min-height: 92svh;
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -201,18 +202,25 @@
             z-index: 0;
         }
 
-        /* Gradient overlay — light at top, heavier at bottom for legibility */
+        /* Gradient overlay — light at top, heavier at bottom for legibility,
+           converging to solid #762c36 (the exact background of .kl-origin-band
+           below) so the hero hands off seamlessly into the second act. The
+           tint uses that same wine hue throughout — not an unrelated dark
+           red — and ramps up over more, eased stops near the bottom so the
+           fade reads as smooth rather than a hard step at the seam. */
         .kl-hero__overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(
                 to bottom,
-                rgba(6, 31, 56, 0.22) 0%,
-                rgba(6, 31, 56, 0.04) 30%,
-                rgba(6, 31, 56, 0.12) 50%,
-                rgba(6, 31, 56, 0.62) 72%,
-                rgba(6, 31, 56, 0.92) 90%,
-                var(--kl-navy) 100%
+                rgba(118, 44, 54, 0.12) 0%,
+                rgba(118, 44, 54, 0.03) 35%,
+                rgba(118, 44, 54, 0.05) 55%,
+                rgba(118, 44, 54, 0.16) 70%,
+                rgba(118, 44, 54, 0.38) 82%,
+                rgba(118, 44, 54, 0.66) 90%,
+                rgba(118, 44, 54, 0.88) 96%,
+                #762c36 100%
             );
             pointer-events: none;
             z-index: 1;
@@ -417,7 +425,7 @@
                 display: none;
             }
             .kl-hero {
-                background-image: url('added-assets/kanan-hero-poster.jpg');
+                background-image: url('added-assets/video-assets/optimized/kanan-hero-poster.jpg');
                 background-size: cover;
                 background-position: center 35%;
             }
@@ -449,7 +457,8 @@
             overflow: hidden;
             z-index: 1;
             margin-top: 0;
-            padding: clamp(40px, 4.5vw, 60px) 0;
+            padding-top: clamp(20px, 2.25vw, 30px);
+            padding-bottom: clamp(40px, 4.5vw, 60px);
         }
 
         /* Faint paper-grain on navy — matches the Drona section */
@@ -515,11 +524,13 @@
             inset: 0;
         }
 
-        /* All words identical size — mask gradient does the opacity work */
+        /* All words identical size — mask gradient does the opacity work.
+           left:50% + GSAP xPercent:-50 keeps every word (whatever its length)
+           horizontally centered in the column, instead of hugging left:0. */
         .kl-scope__word {
             position: absolute;
             top: 50%;
-            left: 0;
+            left: 50%;
             font-family: 'Cormorant Garamond', Georgia, serif;
             font-size: clamp(2.25rem, 3.5vw, 3.75rem);
             font-weight: 500;
@@ -528,15 +539,18 @@
             letter-spacing: -0.01em;
             padding: 0.1em 0;
             white-space: nowrap;
+            text-align: center;
             opacity: 0;          /* hidden until GSAP positions them */
             will-change: transform;
         }
 
-        /* Right-column CTA — Harvey-subtle: thin border, no fill */
+        /* Right-column CTA — mirrors the left label by hugging the outer
+           (right) edge, so the label/carousel/CTA group reads as symmetric
+           left-center-right instead of everything crowding the left half. */
         .kl-scope__cta {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: flex-end;
             justify-content: center;
         }
 
@@ -610,20 +624,22 @@
         @media (max-width: 900px) {
             .kl-scope {
                 min-height: 0;
-                padding: 4rem 0;
+                padding-top: 2rem;
+                padding-bottom: 4rem;
             }
             .kl-scope__inner {
                 display: flex;
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
                 min-height: 0;
                 padding: 0 1.5rem;
                 gap: 0;
                 max-width: 100%;
+                text-align: center;
             }
             .kl-scope__label {
                 opacity: 0.65;
-                max-width: none;
+                max-width: 32ch;
                 flex-shrink: 0;
             }
             .kl-scope__column {
@@ -652,6 +668,7 @@
             }
             .kl-scope__cta {
                 display: flex;
+                align-items: center;
                 flex-shrink: 0;
                 margin-top: 1.5rem;
             }
@@ -659,7 +676,8 @@
 
         @media (max-width: 350px) {
             .kl-scope {
-                padding: 3.25rem 0;
+                padding-top: 1.625rem;
+                padding-bottom: 3.25rem;
             }
             .kl-scope__inner {
                 padding: 0 1.25rem;
@@ -674,7 +692,8 @@
 
         @media (max-width: 900px) and (max-height: 650px) {
             .kl-scope {
-                padding: 3rem 0;
+                padding-top: 1.5rem;
+                padding-bottom: 3rem;
             }
             .kl-scope__column {
                 height: 42vh;
@@ -706,6 +725,7 @@
                 transform: none !important;
                 display: block;
                 padding: 0.3em 0;
+                text-align: center;
             }
             .kl-scope__word[aria-hidden="true"] {
                 display: none; /* hide clones in reduced-motion */
@@ -723,15 +743,28 @@
             position: relative;
             width: 100%;
             min-height: 100vh;
-            background: transparent;
+            background: #3a0000;
             z-index: 1;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: clamp(4rem, 8vh, 7rem) clamp(1.5rem, 4vw, 4rem);
             box-sizing: border-box;
+            overflow: hidden;
+        }
+        /* Section-scoped dynamic grid (mirrors the hero's #infrastructure-grid,
+           which can't show through here — this section sits above it in the
+           stacking order, so it needs its own canvas to keep the moving-grid
+           effect while running on the red backdrop instead of navy). */
+        .kl-manifesto__grid {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
         }
         .kl-manifesto__stage {
+            position: relative;
+            z-index: 1;
             max-width: min(1360px, 92vw);
             width: 100%;
             text-align: center;
@@ -762,154 +795,6 @@
             }
         }
 
-        /* Match identity section and transition to footer's exact cream (#F4EBD0) */
-        .identity-section { background: #F4EBD0 !important; }
-        .identity-transition {
-            background: linear-gradient(to bottom, var(--kl-navy) 0%, #F4EBD0 100%) !important;
-        }
-
-
-        /* ──────────────────────────────────────────────
-           G. PLATFORM ACCESS BANNER — orange transition strip
-        ────────────────────────────────────────────── */
-        .kl-waitlist {
-            position: relative;
-            z-index: 2;
-            background: var(--kl-red);
-            padding: 2.75rem 0;
-        }
-
-        .kl-waitlist__inner {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 5rem;
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-        }
-
-        .kl-waitlist__text { flex-shrink: 0; }
-
-        .kl-waitlist__title {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: var(--kl-cream);
-            margin: 0 0 0.35rem 0;
-            line-height: 1.2;
-        }
-
-        .kl-waitlist__sub {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.875rem;
-            color: rgba(238, 235, 227, 0.7);
-            margin: 0;
-            max-width: 28ch;
-            line-height: 1.55;
-        }
-
-        .kl-waitlist__form {
-            display: flex;
-            gap: 0.65rem;
-            align-items: center;
-            flex: 1;
-            flex-wrap: wrap;
-        }
-
-        .kl-waitlist__form input {
-            flex: 1;
-            min-width: 130px;
-            background: transparent;
-            border: 1px solid rgba(238, 235, 227, 0.35);
-            border-radius: 3px;
-            padding: 0.65rem 1rem;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.8125rem;
-            color: var(--kl-cream);
-            outline: none;
-            transition: border-color 0.2s;
-        }
-
-        .kl-waitlist__form input:focus {
-            border-color: rgba(238, 235, 227, 0.7);
-        }
-
-        .kl-waitlist__form input::placeholder {
-            color: rgba(238, 235, 227, 0.45);
-        }
-
-        .kl-waitlist__form button {
-            background: var(--kl-cream);
-            color: var(--kl-red);
-            border: none;
-            border-radius: 3px;
-            padding: 0.65rem 1.5rem;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.8125rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            cursor: pointer;
-            white-space: nowrap;
-            transition: background 0.2s;
-        }
-
-        .kl-waitlist__form button:hover { background: #ffffff; }
-
-        .kl-waitlist__success {
-            display: none;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.875rem;
-            color: rgba(238, 235, 227, 0.9);
-            text-align: center;
-            padding-top: 0.75rem;
-        }
-
-        .kl-waitlist__success.visible {
-            display: block;
-        }
-
-        @media (max-width: 900px) {
-            .kl-waitlist {
-                padding: 1.75rem 0;
-            }
-            .kl-waitlist__inner {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 0 1.5rem;
-                gap: 1.1rem;
-            }
-            .kl-waitlist__title {
-                font-size: clamp(1.05rem, 4.4vw, 1.2rem);
-                line-height: 1.25;
-            }
-            .kl-waitlist__sub {
-                font-size: 0.75rem;
-                line-height: 1.5;
-                max-width: 36ch;
-            }
-            .kl-waitlist__form {
-                width: 100%;
-                flex-direction: column;
-                align-items: stretch;
-                gap: 0.55rem;
-                flex-wrap: nowrap;
-            }
-            .kl-waitlist__form input {
-                width: 100%;
-                min-width: 0;
-                flex: none;
-                padding: 0.8rem 1rem;
-                font-size: 0.8125rem;
-            }
-            .kl-waitlist__form button {
-                width: 100%;
-                padding: 0.85rem 1.25rem;
-                font-size: 0.75rem;
-                letter-spacing: 0.16em;
-                margin-top: 0.15rem;
-            }
-        }
     </style>
 </head>
 
@@ -927,24 +812,29 @@
         ════════════════════════════════════════════════ -->
         <header class="kl-hero">
 
-            <!-- Hero video. H.264 is used across desktop browsers so local
-                 previews never pause to materialize an optional codec asset. -->
+            <!-- Hero video. WebM/VP9 is offered first (smaller, 2-pass CRF 28
+                 encode) with an H.264 MP4 fallback for browsers without VP9
+                 support (Safari). -->
             <video class="kl-hero__video" id="klHeroVideo"
                    autoplay loop muted playsinline disablepictureinpicture
                    preload="metadata"
-                   poster="added-assets/kanan-hero-poster.jpg"></video>
+                   poster="added-assets/video-assets/optimized/kanan-hero-poster.jpg"></video>
             <script>
             (function () {
                 var v = document.getElementById('klHeroVideo');
                 if (!v) return;
-                var isMobile = window.matchMedia('(max-width: 768px)').matches;
-                var sources = isMobile
-                    ? [
-                        { src: 'added-assets/kanan-hero-720p.h264.mp4', type: 'video/mp4' }
-                      ]
-                    : [
-                        { src: 'added-assets/kanan-hero-1080p.h264.mp4', type: 'video/mp4' }
-                      ];
+                // Avoid downloading a hidden video, or spending a data-saving
+                // visitor's bandwidth on decoration. The poster stays visible.
+                var connection = navigator.connection;
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                    || (connection && (connection.saveData || /^(?:slow-)?2g$/.test(connection.effectiveType)))) {
+                    v.removeAttribute('autoplay');
+                    return;
+                }
+                var sources = [
+                    { src: 'added-assets/video-assets/optimized/kanan-hero-intro.webm', type: 'video/webm' },
+                    { src: 'added-assets/video-assets/optimized/kanan-hero-intro.mp4', type: 'video/mp4' }
+                ];
                 sources.forEach(function (s) {
                     var el = document.createElement('source');
                     el.src = s.src;
@@ -982,417 +872,265 @@
             <!-- Hero text overlay + CTAs -->
             <div class="kl-hero__content">
                 <h1 class="kl-hero__title">
-                    <span class="kl-hero__title-line">Agentic trade compliance</span>
-                    <span class="kl-hero__title-line">for a contested world.</span>
+                    <span class="kl-hero__title-line">Enabling PO financing</span>
+                    <span class="kl-hero__title-line">for manufacturers</span>
                 </h1>
-                <p class="kl-hero__tagline">Where businesses, logistics providers, and governments rearchitect global trade.</p>
+                <p class="kl-hero__tagline">Understand the risk profile behind your business</p>
                 <div class="kl-hero__actions">
-                    <a href="tradewatch.html" class="kl-btn-primary">
-                        <span>Explore TradeWatch</span>
+                    <a href="https://apply.kananlabs.in/?utm_source=kanan_homepage&amp;utm_medium=owned&amp;utm_campaign=supplier_programme&amp;utm_content=hero#apply" class="kl-btn-primary" data-supplier-programme-link>
+                        <span>Start application</span>
                         <span class="kl-btn-primary__arrow" aria-hidden="true"></span>
                     </a>
-                    <a href="request-demo.html" class="kl-btn-secondary">Request a demo</a>
+                    <a href="#klOriginCta" class="kl-btn-secondary">See how it works</a>
                 </div>
             </div>
 
         </header>
 
+
         <!-- ════════════════════════════════════════════════
-             A2. TRADEWATCH DEMO — ambient autoplay
-                  (Clone of tradewatch.html stage, scenes 1-3,
-                   scroll-free, 5s crossfade loop)
-        ════════════════════════════════════════════════ -->
-        <div class="kl-tradewatch-band">
-        <section class="kl-twdemo" aria-label="TradeWatch product demo">
-            <div class="kl-twdemo__inner">
-                <div class="kl-twdemo__copy">
-                    <h2 class="kl-twdemo__title">Export with an AI agent you can audit.</h2>
-                    <p class="kl-twdemo__description">TradeWatch checks classification, duties, origin and shipment documents, then prepares each compliance action with evidence your team and partners can verify.</p>
-                    <a href="tradewatch.html" class="kl-twdemo__link">
-                        <span>Explore TradeWatch</span>
-                        <span class="kl-twdemo__link-arrow" aria-hidden="true"></span>
-                    </a>
-                </div>
+             A2. PROJECT ORIGIN — supplier conversion act
+        ═════════════════════════════════════════════════ -->
+        <div class="kl-origin-band">
+            <section class="kl-origin-cta" id="klOriginCta" aria-labelledby="klOriginCtaTitle">
+                <div class="kl-origin-cta__inner">
+                    <figure class="kl-origin-workflow" data-origin-workflow aria-labelledby="klOriginWorkflowCaption">
+                        <figcaption class="kl-origin-workflow__caption" id="klOriginWorkflowCaption">Kanan checks external risks, organises a supplier’s evidence pack and helps through the application process before the chosen bank or NBFC makes its decision.</figcaption>
 
-                <div class="tw-stage kl-twdemo__stage">
+                        <svg class="kl-origin-workflow__stage kl-origin-workflow__stage--desktop" viewBox="0 20 1080 340" role="img" aria-labelledby="klOriginDesktopTitle klOriginDesktopDescription">
+                            <title id="klOriginDesktopTitle">Supplier Programme working-capital application workflow</title>
+                            <desc id="klOriginDesktopDescription">A segmented path moves from a supplier’s order through external-risk assessment, evidence organisation and application support to the supplier’s chosen bank or NBFC.</desc>
 
-                    <div class="tw-stage-chrome">
-                        <div class="tw-stage-chrome-left">
-                            <span class="tw-stage-chrome-scene" id="twChromeScene">Morning Brief</span>
-                        </div>
-                        <div class="tw-stage-chrome-right">
-                            <div class="tw-scene-meter-dots" aria-hidden="true">
-                                <span class="tw-scene-meter-dot is-active"></span>
-                                <span class="tw-scene-meter-dot"></span>
-                                <span class="tw-scene-meter-dot"></span>
-                                <span class="tw-scene-meter-dot"></span>
-                            </div>
-                        </div>
-                    </div>
+                            <path class="kl-origin-workflow__route-layer" d="M148 196 H210"></path><path class="kl-origin-workflow__route-progress" style="--delay:.25s" pathLength="1" d="M148 196 H210"></path>
+                            <path class="kl-origin-workflow__route-layer" d="M382 196 H450"></path><path class="kl-origin-workflow__route-progress" style="--delay:2.55s" pathLength="1" d="M382 196 H450"></path>
+                            <path class="kl-origin-workflow__route-layer" d="M622 196 H690"></path><path class="kl-origin-workflow__route-progress" style="--delay:5.05s" pathLength="1" d="M622 196 H690"></path>
+                            <path class="kl-origin-workflow__route-layer" d="M862 196 H932"></path><path class="kl-origin-workflow__route-progress" style="--delay:7.75s" pathLength="1" d="M862 196 H932"></path>
 
-                    <div class="tw-stage-inner">
-                        <div class="tw-stage-main">
-                            <div class="tw-app-shell">
+                            <g class="kl-origin-workflow__endpoint-copy kl-origin-workflow__start-copy">
+                                <rect class="kl-origin-workflow__endpoint" x="18" y="162" width="130" height="68" rx="34"></rect>
+                                <text class="kl-origin-workflow__endpoint-title" x="83" y="192" text-anchor="middle">Your order</text>
+                                <text class="kl-origin-workflow__endpoint-kicker" x="83" y="211" text-anchor="middle">REAL DEMAND</text>
+                            </g>
 
-                                <aside class="tw-rail" aria-label="Workspace navigation">
-                                    <div class="tw-rail-brand">
-                                        <span class="tw-rail-brand-mark" aria-hidden="true">K</span>
-                                        <div class="tw-rail-brand-text">
-                                            <span class="tw-rail-brand-name">TradeWatch</span>
-                                            <span class="tw-rail-brand-sub">Workspace</span>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="tw-rail-cta" tabindex="-1">New shipment</button>
-                                    <div class="tw-rail-section">
-                                        <div class="tw-rail-section-label">Workspace</div>
-                                        <div class="tw-rail-item">
-                                            <span class="tw-rail-item-icon" aria-hidden="true">
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 12 3l9 9"/><path d="M5 10v10h14V10"/></svg>
-                                            </span>
-                                            <span class="tw-rail-item-label">Home</span>
-                                            <span class="tw-rail-item-count">3</span>
-                                        </div>
-                                        <div class="tw-rail-item">
-                                            <span class="tw-rail-item-icon" aria-hidden="true">
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="13" rx="1.2"/><path d="M2 12h20"/><path d="M8 7V4h8v3"/></svg>
-                                            </span>
-                                            <span class="tw-rail-item-label">Shipments</span>
-                                            <span class="tw-rail-item-count">28</span>
-                                        </div>
-                                        <div class="tw-rail-item">
-                                            <span class="tw-rail-item-icon" aria-hidden="true">
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                                            </span>
-                                            <span class="tw-rail-item-label">Documents</span>
-                                            <span class="tw-rail-item-count">147</span>
-                                        </div>
-                                        <div class="tw-rail-item">
-                                            <span class="tw-rail-item-icon" aria-hidden="true">
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><line x1="12" y1="8" x2="6.7" y2="16"/><line x1="12" y1="8" x2="17.3" y2="16"/></svg>
-                                            </span>
-                                            <span class="tw-rail-item-label">Reasoning</span>
-                                            <span class="tw-rail-item-count">live</span>
-                                        </div>
-                                    </div>
-                                    <div class="tw-rail-section">
-                                        <div class="tw-rail-section-label">Records</div>
-                                        <div class="tw-rail-item">
-                                            <span class="tw-rail-item-icon" aria-hidden="true">
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6z"/></svg>
-                                            </span>
-                                            <span class="tw-rail-item-label">Insurance</span>
-                                            <span class="tw-rail-item-count">12</span>
-                                        </div>
-                                        <div class="tw-rail-item">
-                                            <span class="tw-rail-item-icon" aria-hidden="true">
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                                            </span>
-                                            <span class="tw-rail-item-label">Sealed dossiers</span>
-                                            <span class="tw-rail-item-count">104</span>
-                                        </div>
-                                    </div>
-                                    <div class="tw-rail-footer">
-                                        <span class="tw-rail-footer-avatar" aria-hidden="true">A</span>
-                                        <div class="tw-rail-footer-name">
-                                            Aarav S.
-                                            <span>Acme EV Components</span>
-                                        </div>
-                                    </div>
-                                </aside>
+                            <g>
+                                <circle class="kl-origin-workflow__node-ring" cx="296" cy="196" r="86"></circle>
+                                <circle class="kl-origin-workflow__node-ring-inner" cx="296" cy="196" r="61"></circle>
+                                <path class="kl-origin-workflow__risk-path" style="--delay:.7s" pathLength="1" d="M296 72 V141"></path>
+                                <path class="kl-origin-workflow__risk-path" style="--delay:1.15s" pathLength="1" d="M195 133 C226 137 240 151 250 163"></path>
+                                <path class="kl-origin-workflow__risk-path" style="--delay:1.6s" pathLength="1" d="M397 133 C366 137 352 151 342 163"></path>
+                                <g class="kl-origin-workflow__risk-signal" style="--delay:.7s"><circle cx="296" cy="67" r="3"></circle><text x="296" y="52" text-anchor="middle">Tariffs</text></g>
+                                <g class="kl-origin-workflow__risk-signal" style="--delay:1.15s"><circle cx="190" cy="132" r="3"></circle><text x="180" y="136" text-anchor="end">Freight</text></g>
+                                <g class="kl-origin-workflow__risk-signal" style="--delay:1.6s"><circle cx="402" cy="132" r="3"></circle><text x="412" y="136">Inputs</text></g>
+                                <g class="kl-origin-workflow__stage-content kl-origin-workflow__risk-content"><text class="kl-origin-workflow__core-label" x="296" y="201" text-anchor="middle">Risk check</text></g>
+                                <text class="kl-origin-workflow__step-caption kl-origin-workflow__risk-caption" x="296" y="322" text-anchor="middle">Spot production risks.</text>
+                            </g>
 
-                                <section class="tw-canvas">
-                                    <div class="tw-canvas-tab">
-                                        <strong>Home</strong>
-                                        <span class="tw-canvas-tab-sep">›</span>
-                                        <span>Today · 14 May</span>
-                                    </div>
-                                    <div class="tw-canvas-body">
+                            <g>
+                                <circle class="kl-origin-workflow__node-ring" cx="536" cy="196" r="86"></circle>
+                                <circle class="kl-origin-workflow__node-ring-inner" cx="536" cy="196" r="61"></circle>
+                                <g class="kl-origin-workflow__stage-content kl-origin-workflow__evidence-content">
+                                    <rect class="kl-origin-workflow__evidence-sheet" style="--delay:3s;--x:-36px;--y:-22px;--r:-9deg" x="496" y="153" width="62" height="78" rx="3"></rect>
+                                    <rect class="kl-origin-workflow__evidence-sheet" style="--delay:3.45s;--x:38px;--y:-18px;--r:10deg" x="503" y="147" width="62" height="78" rx="3"></rect>
+                                    <rect class="kl-origin-workflow__evidence-sheet" style="--delay:3.9s;--x:-3px;--y:30px;--r:-5deg" x="510" y="141" width="62" height="78" rx="3"></rect>
+                                    <line class="kl-origin-workflow__evidence-rule" x1="524" y1="162" x2="558" y2="162"></line>
+                                    <line class="kl-origin-workflow__evidence-rule" x1="524" y1="175" x2="553" y2="175"></line>
+                                    <line class="kl-origin-workflow__evidence-rule" x1="524" y1="188" x2="558" y2="188"></line>
+                                    <line class="kl-origin-workflow__evidence-rule" x1="524" y1="201" x2="546" y2="201"></line>
+                                </g>
+                                <text class="kl-origin-workflow__step-caption kl-origin-workflow__evidence-caption" x="536" y="322" text-anchor="middle">Present the full case.</text>
+                            </g>
 
-                                        <!-- ── Scene 1 · Morning Brief ── -->
-                                        <div class="tw-scene is-active" data-scene="1">
-                                            <div class="tw-brief">
-                                                <div class="tw-brief-head">
-                                                    <div>
-                                                        <span class="tw-brief-date">Today · 14 May</span>
-                                                        <span class="tw-brief-date-sub">Portfolio brief · 09:02 IST</span>
-                                                    </div>
-                                                    <div class="tw-brief-actions">
-                                                        <button type="button" class="tw-brief-chip tw-brief-chip--primary" tabindex="-1">Begin today's review<span class="tw-brief-chip-arrow"> →</span></button>
-                                                        <span class="tw-brief-chip tw-brief-chip--ghost">Brief me on IGM-4521</span>
-                                                        <span class="tw-brief-chip tw-brief-chip--ghost">Recap yesterday's seals</span>
-                                                    </div>
-                                                    <span class="tw-brief-alert">3 active · 1 needs you</span>
-                                                </div>
-                                                <div class="tw-brief-row">
-                                                    <div class="tw-brief-ship">
-                                                        <span class="tw-brief-ship-id">IGM-4521</span>
-                                                        <span class="tw-brief-ship-route">Pune → Hamburg</span>
-                                                    </div>
-                                                    <div class="tw-brief-note">Five documents in. Reconciliation clean. <em>Awaiting broker consent before 14:00.</em></div>
-                                                    <span class="tw-brief-status" data-state="awaiting">Awaiting consent</span>
-                                                </div>
-                                                <div class="tw-brief-row">
-                                                    <div class="tw-brief-ship">
-                                                        <span class="tw-brief-ship-id">IGM-4518</span>
-                                                        <span class="tw-brief-ship-route">Chennai → Rotterdam</span>
-                                                    </div>
-                                                    <div class="tw-brief-note">All rules OPEN. Both packets compiled. <em>Ready for your sign-off.</em></div>
-                                                    <span class="tw-brief-status" data-state="ready">Ready to seal</span>
-                                                </div>
-                                                <div class="tw-brief-row">
-                                                    <div class="tw-brief-ship">
-                                                        <span class="tw-brief-ship-id">IGM-4502</span>
-                                                        <span class="tw-brief-ship-route">Mumbai → Hamburg</span>
-                                                    </div>
-                                                    <div class="tw-brief-note">Sealed yesterday · dossier delivered to CHA and broker.</div>
-                                                    <span class="tw-brief-status" data-state="sealed">Dispatched</span>
-                                                </div>
-                                            </div>
-                                            <p class="tw-scene-cap">Nax initiates · you command · no dashboard to drive</p>
-                                        </div>
+                            <g>
+                                <circle class="kl-origin-workflow__node-ring" cx="776" cy="196" r="86"></circle>
+                                <circle class="kl-origin-workflow__node-ring-inner" cx="776" cy="196" r="61"></circle>
+                                <g class="kl-origin-workflow__stage-content kl-origin-workflow__process-content">
+                                    <path class="kl-origin-workflow__process-arc" d="M733 169 C749 143 803 143 819 169"></path>
+                                    <path class="kl-origin-workflow__process-arc" d="M733 223 C749 249 803 249 819 223"></path>
+                                    <circle class="kl-origin-workflow__process-mark" cx="747" cy="155" r="3"></circle>
+                                    <circle class="kl-origin-workflow__process-mark" cx="776" cy="148" r="3"></circle>
+                                    <circle class="kl-origin-workflow__process-mark" cx="805" cy="155" r="3"></circle>
+                                    <text class="kl-origin-workflow__core-label" x="776" y="192" text-anchor="middle">Application</text>
+                                    <text class="kl-origin-workflow__core-label" x="776" y="210" text-anchor="middle">process</text>
+                                </g>
+                                <text class="kl-origin-workflow__step-caption kl-origin-workflow__process-caption" x="776" y="322" text-anchor="middle">We help with the application.</text>
+                            </g>
 
-                                        <!-- ── Scene 2 · Plugs into your stack ── -->
-                                        <div class="tw-scene" data-scene="2">
-                                            <div class="tw-erp">
-                                                <svg class="tw-erp-svg" viewBox="0 0 600 380" preserveAspectRatio="none" aria-hidden="true">
-                                                    <path class="tw-erp-flow" d="M 190  72 Q 245 110  255 145" />
-                                                    <path class="tw-erp-flow" d="M 410  72 Q 355 110  345 145" />
-                                                    <path class="tw-erp-flow" d="M 175 195 Q 205 195  225 195" />
-                                                    <path class="tw-erp-flow" d="M 425 195 Q 395 195  375 195" />
-                                                    <path class="tw-erp-flow" d="M 300 305 Q 300 290  300 270" />
-                                                </svg>
-                                                <div class="tw-erp-medallion">
-                                                    <span class="tw-erp-medallion-mark">N</span>
-                                                    <span class="tw-erp-medallion-label">Nax</span>
-                                                </div>
-                                                <div class="tw-erp-chips">
-                                                    <div class="tw-erp-chip" data-system="gmail">
-                                                        <span class="tw-erp-chip-logo"><img src="added-assets/Logos/Gmail_icon_(2020).svg.png" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>Gmail
-                                                    </div>
-                                                    <div class="tw-erp-chip" data-system="tally">
-                                                        <span class="tw-erp-chip-logo"><img src="added-assets/Logos/Tally_-_Logo.png" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>Tally
-                                                    </div>
-                                                    <div class="tw-erp-chip" data-system="zoho">
-                                                        <span class="tw-erp-chip-logo"><img src="added-assets/Logos/zoho%20books%207269845-middle.png" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>Zoho Books
-                                                    </div>
-                                                    <div class="tw-erp-chip" data-system="sap">
-                                                        <span class="tw-erp-chip-logo"><img src="added-assets/Logos/sap-bi.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>SAP Business One
-                                                    </div>
-                                                    <div class="tw-erp-chip" data-system="excel">
-                                                        <span class="tw-erp-chip-logo"><img src="added-assets/Logos/Microsoft_Office_Excel_(2019%E2%80%932025).svg.png" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>Excel
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p class="tw-scene-cap">Reads your books · watches your inbox · writes nothing back</p>
-                                        </div>
+                            <g class="kl-origin-workflow__endpoint-copy kl-origin-workflow__institution-copy">
+                                <circle class="kl-origin-workflow__institution-halo" cx="997" cy="196" r="59"></circle>
+                                <rect class="kl-origin-workflow__endpoint" x="932" y="162" width="130" height="68" rx="34"></rect>
+                                <text class="kl-origin-workflow__endpoint-title" x="997" y="191" text-anchor="middle">Bank or NBFC</text>
+                                <text class="kl-origin-workflow__institution-state" x="997" y="211" text-anchor="middle">Institution decides</text>
+                            </g>
+                        </svg>
 
-                                        <!-- ── Scene 3 · Bundle arrives · Inbox ── -->
-                                        <div class="tw-scene" data-scene="3">
-                                            <div class="tw-inbox">
-                                                <div class="tw-inbox-head">
-                                                    <span class="tw-inbox-head-title">Inbox · linked to IGM-4521</span>
-                                                    <span class="tw-inbox-head-meta">5 attachments · 09:31 IST</span>
-                                                </div>
-                                                <div class="tw-inbox-dropzone">Auto-detected from <strong>rohit@acme-ev.in</strong> · classifying by document type</div>
-                                                <div class="tw-inbox-list">
-                                                    <div class="tw-inbox-row">
-                                                        <span class="tw-inbox-row-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg></span>
-                                                        <span class="tw-inbox-row-name">CI-IGM4521.pdf</span>
-                                                        <span class="tw-inbox-row-time">09:31</span>
-                                                        <span class="tw-inbox-tag">Commercial Invoice</span>
-                                                    </div>
-                                                    <div class="tw-inbox-row">
-                                                        <span class="tw-inbox-row-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg></span>
-                                                        <span class="tw-inbox-row-name">PL-IGM4521.pdf</span>
-                                                        <span class="tw-inbox-row-time">09:31</span>
-                                                        <span class="tw-inbox-tag">Packing List</span>
-                                                    </div>
-                                                    <div class="tw-inbox-row">
-                                                        <span class="tw-inbox-row-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg></span>
-                                                        <span class="tw-inbox-row-name">BL-IGM4521.pdf</span>
-                                                        <span class="tw-inbox-row-time">09:31</span>
-                                                        <span class="tw-inbox-tag">Bill of Lading</span>
-                                                    </div>
-                                                    <div class="tw-inbox-row">
-                                                        <span class="tw-inbox-row-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg></span>
-                                                        <span class="tw-inbox-row-name">COO-IGM4521.pdf</span>
-                                                        <span class="tw-inbox-row-time">09:31</span>
-                                                        <span class="tw-inbox-tag">Certificate of Origin</span>
-                                                    </div>
-                                                    <div class="tw-inbox-row">
-                                                        <span class="tw-inbox-row-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg></span>
-                                                        <span class="tw-inbox-row-name">INS-IGM4521.pdf</span>
-                                                        <span class="tw-inbox-row-time">09:31</span>
-                                                        <span class="tw-inbox-tag">Insurance Certificate</span>
-                                                    </div>
-                                                </div>
-                                                <span class="tw-inbox-stat"><strong>5 / 5</strong> classified · linked to IGM-4521</span>
-                                            </div>
-                                            <p class="tw-scene-cap">5 documents · classified deterministically · linked to one shipment</p>
-                                        </div>
+                        <svg class="kl-origin-workflow__stage kl-origin-workflow__stage--mobile" viewBox="0 20 360 470" role="img" aria-labelledby="klOriginMobileTitle klOriginMobileDescription">
+                            <title id="klOriginMobileTitle">Supplier Programme working-capital application workflow</title>
+                            <desc id="klOriginMobileDescription">A compact two-row path moves from a supplier’s order through risk, evidence and application support to the chosen institution.</desc>
 
-                                        <!-- ── Scene 4 · Reviewer signs · packets delivered ── -->
-                                        <div class="tw-scene" data-scene="4">
-                                            <div class="tw-pkg">
-                                                <span class="tw-pkg-compile-stat"><strong>2 packets</strong> compiled · <strong>22 fields</strong> · <strong>1 override</strong> recorded · ready</span>
-                                                <div class="tw-pkg-pair">
-                                                    <div class="tw-pkg-card">
-                                                        <span class="tw-pkg-tag">Packet · 01</span>
-                                                        <h5 class="tw-pkg-title">Shipping Bill Readiness Packet</h5>
-                                                        <p class="tw-pkg-route">For handoff to <strong>Customs House Agent</strong></p>
-                                                        <div class="tw-pkg-summary">
-                                                            <div class="tw-pkg-summary-cell is-open"><strong>4</strong>Open</div>
-                                                            <div class="tw-pkg-summary-cell is-cond"><strong>2</strong>Cond.</div>
-                                                            <div class="tw-pkg-summary-cell is-unclear"><strong>0</strong>Unclear</div>
-                                                            <div class="tw-pkg-summary-cell"><strong>0</strong>Blocked</div>
-                                                        </div>
-                                                        <ul class="tw-pkg-list">
-                                                            <li>Discrepancy register · 1 item</li>
-                                                            <li>e-SANCHIT references · 4 docs</li>
-                                                            <li>SCOMET screening evidence</li>
-                                                            <li>Boundary statement · CHA scope</li>
-                                                            <li>Provenance chain · 22 fields</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="tw-pkg-card">
-                                                        <span class="tw-pkg-tag">Packet · 02</span>
-                                                        <h5 class="tw-pkg-title">Marine Cargo Insurance Broker Packet</h5>
-                                                        <p class="tw-pkg-route">For handoff to <strong>IRDAI-registered broker</strong></p>
-                                                        <div class="tw-pkg-summary">
-                                                            <div class="tw-pkg-summary-cell is-open"><strong>3</strong>Open</div>
-                                                            <div class="tw-pkg-summary-cell is-cond"><strong>0</strong>Cond.</div>
-                                                            <div class="tw-pkg-summary-cell is-unclear"><strong>1</strong>Unclear</div>
-                                                            <div class="tw-pkg-summary-cell"><strong>0</strong>Blocked</div>
-                                                        </div>
-                                                        <ul class="tw-pkg-list">
-                                                            <li>Sum-insured calculation · CIF + 10%</li>
-                                                            <li>Commodity-voyage consistency note</li>
-                                                            <li>Exclusion-condition tracking</li>
-                                                            <li>Boundary statement · IRDAI scope</li>
-                                                            <li>Underwriting evidence pack</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="tw-pkg-signoff">
-                                                    <div class="tw-pkg-seal">Sealed<br>&amp; signed</div>
-                                                    <div class="tw-pkg-signoff-text">
-                                                        <strong>Reviewer · Aarav S.</strong>
-                                                        <span class="tw-pkg-hash">8a7f29c4d3e1f5b6a02c8e7f4d6a91b3c5e8f0a2d4c7e9b1f3a5d7c9e2b4f6a8</span>
-                                                    </div>
-                                                    <div class="tw-pkg-meta">
-                                                        <strong>10:14 IST · 14 May 26</strong>
-                                                        Audit trail · immutable
-                                                    </div>
-                                                </div>
-                                                <div class="tw-pkg-envelopes">
-                                                    <span class="tw-pkg-envelope">
-                                                        <span class="tw-pkg-envelope-glyph">
-                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
-                                                        </span>Delivered · CHA inbox
-                                                    </span>
-                                                    <span class="tw-pkg-envelope">
-                                                        <span class="tw-pkg-envelope-glyph">
-                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
-                                                        </span>Delivered · Broker inbox
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <p class="tw-scene-cap">Two PDF/A-3 packets · SHA-256 sealed · audit trail closed</p>
-                                        </div>
+                            <path class="kl-origin-workflow__route-layer" d="M92 145 H111"></path><path class="kl-origin-workflow__route-progress" style="--delay:.25s" pathLength="1" d="M92 145 H111"></path>
+                            <path class="kl-origin-workflow__route-layer" d="M219 145 H246"></path><path class="kl-origin-workflow__route-progress" style="--delay:2.55s" pathLength="1" d="M219 145 H246"></path>
+                            <path class="kl-origin-workflow__route-layer" d="M300 199 V276 C300 299 282 311 265 328"></path><path class="kl-origin-workflow__route-progress" style="--delay:5.05s" pathLength="1" d="M300 199 V276 C300 299 282 311 265 328"></path>
+                            <path class="kl-origin-workflow__route-layer" d="M190 382 H98"></path><path class="kl-origin-workflow__route-progress" style="--delay:7.75s" pathLength="1" d="M190 382 H98"></path>
 
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
+                            <g class="kl-origin-workflow__endpoint-copy kl-origin-workflow__start-copy">
+                                <rect class="kl-origin-workflow__endpoint" x="4" y="117" width="88" height="56" rx="28"></rect>
+                                <text class="kl-origin-workflow__endpoint-title" x="48" y="142" text-anchor="middle">Your order</text>
+                                <text class="kl-origin-workflow__endpoint-kicker" x="48" y="158" text-anchor="middle">REAL DEMAND</text>
+                            </g>
+
+                            <g>
+                                <circle class="kl-origin-workflow__node-ring" cx="165" cy="145" r="54"></circle>
+                                <circle class="kl-origin-workflow__node-ring-inner" cx="165" cy="145" r="38"></circle>
+                                <path class="kl-origin-workflow__risk-path" style="--delay:.7s" pathLength="1" d="M165 61 V105"></path>
+                                <path class="kl-origin-workflow__risk-path" style="--delay:1.15s" pathLength="1" d="M95 98 C116 102 125 111 132 119"></path>
+                                <path class="kl-origin-workflow__risk-path" style="--delay:1.6s" pathLength="1" d="M235 98 C214 102 205 111 198 119"></path>
+                                <g class="kl-origin-workflow__risk-signal" style="--delay:.7s"><circle cx="165" cy="56" r="3"></circle><text x="165" y="44" text-anchor="middle">Tariffs</text></g>
+                                <g class="kl-origin-workflow__risk-signal" style="--delay:1.15s"><circle cx="90" cy="97" r="3"></circle><text x="82" y="100" text-anchor="end">Freight</text></g>
+                                <g class="kl-origin-workflow__risk-signal" style="--delay:1.6s"><circle cx="240" cy="97" r="3"></circle><text x="248" y="100">Inputs</text></g>
+                                <g class="kl-origin-workflow__stage-content kl-origin-workflow__risk-content"><text class="kl-origin-workflow__core-label" x="165" y="150" text-anchor="middle">Risk check</text></g>
+                                <text class="kl-origin-workflow__step-caption kl-origin-workflow__risk-caption" x="165" y="229" text-anchor="middle">Spot production risks.</text>
+                            </g>
+
+                            <g>
+                                <circle class="kl-origin-workflow__node-ring" cx="300" cy="145" r="54"></circle>
+                                <circle class="kl-origin-workflow__node-ring-inner" cx="300" cy="145" r="38"></circle>
+                                <g class="kl-origin-workflow__stage-content kl-origin-workflow__evidence-content">
+                                    <rect class="kl-origin-workflow__evidence-sheet" style="--delay:3s;--x:-24px;--y:-18px;--r:-9deg" x="274" y="116" width="40" height="52" rx="2"></rect>
+                                    <rect class="kl-origin-workflow__evidence-sheet" style="--delay:3.45s;--x:25px;--y:-14px;--r:10deg" x="279" y="112" width="40" height="52" rx="2"></rect>
+                                    <rect class="kl-origin-workflow__evidence-sheet" style="--delay:3.9s;--x:-3px;--y:22px;--r:-5deg" x="284" y="108" width="40" height="52" rx="2"></rect>
+                                    <line class="kl-origin-workflow__evidence-rule" x1="293" y1="123" x2="316" y2="123"></line>
+                                    <line class="kl-origin-workflow__evidence-rule" x1="293" y1="132" x2="312" y2="132"></line>
+                                    <line class="kl-origin-workflow__evidence-rule" x1="293" y1="141" x2="316" y2="141"></line>
+                                </g>
+                                <text class="kl-origin-workflow__step-caption kl-origin-workflow__evidence-caption" x="300" y="229" text-anchor="middle">Present the full case.</text>
+                            </g>
+
+                            <g>
+                                <circle class="kl-origin-workflow__node-ring" cx="244" cy="382" r="54"></circle>
+                                <circle class="kl-origin-workflow__node-ring-inner" cx="244" cy="382" r="38"></circle>
+                                <g class="kl-origin-workflow__stage-content kl-origin-workflow__process-content">
+                                    <path class="kl-origin-workflow__process-arc" d="M211 365 C224 344 264 344 277 365"></path>
+                                    <path class="kl-origin-workflow__process-arc" d="M211 399 C224 420 264 420 277 399"></path>
+                                    <circle class="kl-origin-workflow__process-mark" cx="222" cy="354" r="3"></circle>
+                                    <circle class="kl-origin-workflow__process-mark" cx="244" cy="349" r="3"></circle>
+                                    <circle class="kl-origin-workflow__process-mark" cx="266" cy="354" r="3"></circle>
+                                    <text class="kl-origin-workflow__core-label" x="244" y="379" text-anchor="middle">Application</text>
+                                    <text class="kl-origin-workflow__core-label" x="244" y="395" text-anchor="middle">process</text>
+                                </g>
+                                <text class="kl-origin-workflow__step-caption kl-origin-workflow__process-caption" x="244" y="466" text-anchor="middle">We help with the application.</text>
+                            </g>
+
+                            <g class="kl-origin-workflow__endpoint-copy kl-origin-workflow__institution-copy">
+                                <circle class="kl-origin-workflow__institution-halo" cx="50" cy="382" r="50"></circle>
+                                <rect class="kl-origin-workflow__endpoint" x="2" y="354" width="96" height="56" rx="28"></rect>
+                                <text class="kl-origin-workflow__endpoint-title" x="50" y="379" text-anchor="middle">Bank or NBFC</text>
+                                <text class="kl-origin-workflow__institution-state" x="50" y="396" text-anchor="middle">Institution decides</text>
+                            </g>
+                        </svg>
+                    </figure>
+
+                    <div class="kl-origin-cta__copy">
+                        <p class="kl-origin-cta__eyebrow">SUPPLIER PROGRAMME · APPLICATIONS OPEN</p>
+                        <h2 class="kl-origin-cta__title" id="klOriginCtaTitle">Do not let working capital hold back a real order.</h2>
+                        <p class="kl-origin-cta__body">We help Indian manufacturers pursue working-capital finance. The first 15 selected receive hands-on support at no charge.</p>
+                        <a class="kl-origin-cta__button" href="https://apply.kananlabs.in/?utm_source=kanan_homepage&amp;utm_medium=owned&amp;utm_campaign=supplier_programme&amp;utm_content=origin_cta" data-supplier-programme-link>
+                            <span>Check if Kanan can help</span>
+                            <span class="kl-origin-cta__button-arrow" aria-hidden="true">→</span>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
         <!-- ════════════════════════════════════════════════
              B. SCOPE PIN — Harvey-style vertical word cycle
         ════════════════════════════════════════════════ -->
-        <section class="kl-scope" id="klScope" aria-label="What TradeWatch supports">
+        <section class="kl-scope" id="klScope" aria-label="What Kanan supports">
             <div class="kl-scope__inner">
                 <p class="kl-scope__label">
-                    One shipment.<br>
-                    Every compliance task connected.
+                    Great companies<br>
+                    borrow from the future.<br>
+                    Let's secure your orders.
                 </p>
                 <div class="kl-scope__column" aria-hidden="true">
                     <div class="kl-scope__list" id="klScopeList">
-                        <div class="kl-scope__word">HS Classification</div>
-                        <div class="kl-scope__word">Tariff Assessment</div>
-                        <div class="kl-scope__word">FTA Eligibility</div>
-                        <div class="kl-scope__word">Origin Evidence</div>
-                        <div class="kl-scope__word">Shipment Evidence</div>
-                        <div class="kl-scope__word">Customs Readiness</div>
-                        <div class="kl-scope__word">Insurance Readiness</div>
-                        <div class="kl-scope__word">Partner Coordination</div>
+                        <div class="kl-scope__word">Working Capital</div>
+                        <div class="kl-scope__word">PO Evidence</div>
+                        <div class="kl-scope__word">Risk Diagnosis</div>
+                        <div class="kl-scope__word">External Risk</div>
+                        <div class="kl-scope__word">Evidence Gaps</div>
+                        <div class="kl-scope__word">Bank Documentation</div>
+                        <div class="kl-scope__word">Query Support</div>
+                        <div class="kl-scope__word">Milestone Evidence</div>
                     </div>
                 </div>
 
                 <!-- Right column: CTA -->
                 <div class="kl-scope__cta">
-                    <a href="tradewatch.html" class="kl-scope__cta-btn">
-                        Explore TradeWatch
+                    <a href="https://apply.kananlabs.in/?utm_source=kanan_homepage&amp;utm_medium=owned&amp;utm_campaign=supplier_programme&amp;utm_content=capability_reel#apply" class="kl-scope__cta-btn" data-supplier-programme-link>
+                        Start application
                         <span class="kl-scope__cta-arrow" aria-hidden="true"></span>
                     </a>
                 </div>
 
                 <!-- Screen-reader list (static, off-screen) -->
-                <ul style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" aria-label="What TradeWatch supports">
-                    <li>HS Classification</li>
-                    <li>Tariff Assessment</li>
-                    <li>FTA Eligibility</li>
-                    <li>Origin Evidence</li>
-                    <li>Shipment Evidence</li>
-                    <li>Customs Readiness</li>
-                    <li>Insurance Readiness</li>
-                    <li>Partner Coordination</li>
+                <ul style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" aria-label="What Kanan supports">
+                    <li>Working Capital</li>
+                    <li>PO Evidence</li>
+                    <li>Risk Diagnosis</li>
+                    <li>External Risk</li>
+                    <li>Evidence Gaps</li>
+                    <li>Bank Documentation</li>
+                    <li>Query Support</li>
+                    <li>Milestone Evidence</li>
                 </ul>
             </div>
         </section>
         </div>
 
+
         <!-- ════════════════════════════════════════════════
              B½. DRONA — The Regulatory Brain
              Failure-mode tabs (left) vs With/Without contrast (right).
         ════════════════════════════════════════════════ -->
-        <div class="kl-drona-band">
-        <section class="kl-drona" id="klDrona" aria-label="Drona — the regulatory brain inside TradeWatch">
+        <div class="kl-drona-band" data-nav-light>
+        <section class="kl-drona" id="klDrona" aria-label="Kanan's value across manufacturers, suppliers and financiers">
 
             <div class="kl-drona__inner">
 
                 <div class="kl-drona__header">
-                    <span class="kl-drona__eyebrow">The Engine</span>
+                    <span class="kl-drona__eyebrow kl-drona__eyebrow--quote"><em>"Wisdom is prevention"</em> — Charlie Munger</span>
                     <h2 class="kl-drona__title">
-                        Meet <em>Drona.</em> The brain that knows the law,<br>
-                        not just the language of it.
+                        One order. Three perspectives.<br>
+                        <em>A clearer view of risk.</em>
                     </h2>
                 </div>
 
                 <div class="kl-drona__stage">
 
-                    <!-- Left rail: failure-mode tabs -->
-                    <div class="kl-drona__tabs" role="tablist" aria-label="What goes wrong without Drona">
+                    <!-- Left rail: participant tabs -->
+                    <div class="kl-drona__tabs" role="tablist" aria-label="How Kanan changes the financing workflow">
                         <button class="kl-drona__tab" type="button" role="tab" aria-selected="true"  data-drona-tab="0">
                             <span class="kl-drona__tab-index">01</span>
-                            When the AI invents an HS code that doesn't exist.
+                            <span class="kl-drona__tab-text">
+                                <span class="kl-drona__tab-participant">Large Manufacturers</span>
+                                <span class="kl-drona__tab-benefit">See deeper. Act earlier.</span>
+                            </span>
                             <span class="kl-drona__chevron" aria-hidden="true"></span>
                         </button>
                         <button class="kl-drona__tab" type="button" role="tab" aria-selected="false" data-drona-tab="1">
                             <span class="kl-drona__tab-index">02</span>
-                            When the model decides but cannot show why.
+                            <span class="kl-drona__tab-text">
+                                <span class="kl-drona__tab-participant">Suppliers</span>
+                                <span class="kl-drona__tab-benefit">Present the full case.</span>
+                            </span>
                             <span class="kl-drona__chevron" aria-hidden="true"></span>
                         </button>
                         <button class="kl-drona__tab" type="button" role="tab" aria-selected="false" data-drona-tab="2">
                             <span class="kl-drona__tab-index">03</span>
-                            When the same packet means different things in different jurisdictions.
-                            <span class="kl-drona__chevron" aria-hidden="true"></span>
-                        </button>
-                        <button class="kl-drona__tab" type="button" role="tab" aria-selected="false" data-drona-tab="3">
-                            <span class="kl-drona__tab-index">04</span>
-                            When yesterday's rule and today's rule are quietly the same answer.
+                            <span class="kl-drona__tab-text">
+                                <span class="kl-drona__tab-participant">Financiers</span>
+                                <span class="kl-drona__tab-benefit">See beyond financials.</span>
+                            </span>
                             <span class="kl-drona__chevron" aria-hidden="true"></span>
                         </button>
                     </div>
@@ -1400,11 +1138,11 @@
                     <!-- Right side: two stacked contrast cards -->
                     <div class="kl-drona__panels">
                         <article class="kl-drona__panel" data-state="without" aria-live="polite">
-                            <span class="kl-drona__panel-label">Without Drona</span>
+                            <span class="kl-drona__panel-label">Without Kanan</span>
                             <p class="kl-drona__panel-body"></p>
                         </article>
                         <article class="kl-drona__panel" data-state="with" aria-live="polite">
-                            <span class="kl-drona__panel-label">With Drona</span>
+                            <span class="kl-drona__panel-label">With Kanan</span>
                             <p class="kl-drona__panel-body"></p>
                         </article>
                     </div>
@@ -1417,9 +1155,9 @@
         <!-- ════════════════════════════════════════════════
              B⅝. DRONA FUNNEL — Input, process, auditable output
         ════════════════════════════════════════════════ -->
-        <section class="kl-df" id="klDronaFunnel" aria-labelledby="klDronaFunnelEyebrow">
+        <section class="kl-df" id="klDronaFunnel" aria-label="DronaAOS — governed intelligence for deep-tier risk and financing evidence">
             <div class="kl-df__inner">
-                <p class="kl-df__eyebrow" id="klDronaFunnelEyebrow">Drona turns regulatory intelligence into shipment-ready action.</p>
+                <p class="kl-df__eyebrow">DronaAOS turns fragmented evidence into governed decision context.</p>
 
                 <div class="kl-df__layout">
                     <div class="kl-df__stages">
@@ -1431,8 +1169,8 @@
                             <div class="kl-df__stage-copy">
                                 <span class="kl-df__station" data-station="1" aria-hidden="true"></span>
                                 <p class="kl-df__stage-num">01</p>
-                                <h3 class="kl-df__stage-title">Rules grounded.</h3>
-                                <p class="kl-df__stage-summary">Current rules and rulings stay linked to source.</p>
+                                <h3 class="kl-df__stage-title">Model the world.</h3>
+                                <p class="kl-df__stage-summary">Products, suppliers, materials, locations, rules and events are connected in context.</p>
                             </div>
                         </article>
 
@@ -1440,8 +1178,8 @@
                             <div class="kl-df__stage-copy">
                                 <span class="kl-df__station" data-station="2" aria-hidden="true"></span>
                                 <p class="kl-df__stage-num">02</p>
-                                <h3 class="kl-df__stage-title">Evidence coordinated.</h3>
-                                <p class="kl-df__stage-summary">Drona proactively requests and follows up on missing evidence with suppliers, customs brokers and logistics providers.</p>
+                                <h3 class="kl-df__stage-title">Trace the risk.</h3>
+                                <p class="kl-df__stage-summary">External risk is traced to the deeper-tier supplier, the order and its possible fulfilment effect.</p>
                             </div>
                         </article>
 
@@ -1449,18 +1187,18 @@
                             <div class="kl-df__stage-copy">
                                 <span class="kl-df__station" data-station="3" aria-hidden="true"></span>
                                 <p class="kl-df__stage-num">03</p>
-                                <h3 class="kl-df__stage-title">Packets ready.</h3>
-                                <p class="kl-df__stage-summary">Your team reviews customs and insurance packets with the evidence attached.</p>
+                                <h3 class="kl-df__stage-title">Traceable and auditable.</h3>
+                                <p class="kl-df__stage-summary">Authorised evidence is mapped to the institution's own requirements, with sources, permissions and uncertainty preserved.</p>
                             </div>
                         </article>
                     </div>
 
                     <div class="kl-df__visual">
                         <div class="kl-df__feeders" aria-hidden="true">
-                            <span>Customs</span>
-                            <span>Rulings</span>
-                            <span>Standards</span>
-                            <span>Circulars</span>
+                            <span>EVIDENCE</span>
+                            <span>CONTEXT</span>
+                            <span>RISK</span>
+                            <span>RULES</span>
                         </div>
 
                         <svg class="kl-df__funnel" viewBox="0 0 300 480" preserveAspectRatio="none" aria-hidden="true">
@@ -1478,8 +1216,8 @@
                         </svg>
 
                         <div class="kl-df__outputs">
-                            <span>Shipping Bill Readiness Packet</span>
-                            <span>Marine Cargo Insurance Packet</span>
+                            <span>DEEP-TIER RISK VIEW</span>
+                            <span>FINANCING EVIDENCE PACK</span>
                         </div>
                     </div>
                 </div>
@@ -1491,16 +1229,45 @@
              C–D. TRIPTYCH — Three Kanan Labs surfaces
         ════════════════════════════════════════════════ -->
         <section class="kl-triptych" aria-label="Kanan Labs — three surfaces">
+            <canvas class="kl-triptych__grid" id="triptych-grid" aria-hidden="true"></canvas>
             <div class="kl-triptych__header">
                 <span class="kl-triptych__eyebrow">The Kanan Intelligence Stack</span>
             </div>
             <div class="kl-triptych__row">
 
-                <!-- I · TradeWatch -->
-                <a href="tradewatch.html" class="kl-triptych__card"
-                   aria-label="TradeWatch — shipment-evidence intelligence">
+                <!-- I · DronaAOS (was SectorWatch) -->
+                <a href="drona-aos.html" class="kl-triptych__card"
+                   aria-label="DronaAOS — an early-stage system in research and development">
                     <div class="kl-triptych__img-wrap">
                         <span class="kl-triptych__numeral" aria-hidden="true">I</span>
+                        <picture>
+                            <source type="image/webp" srcset="added-assets/Thumbnails/SW_-_TN.webp">
+                            <img class="kl-triptych__img"
+                                 src="added-assets/Thumbnails/SW_-_TN.jpg"
+                                 alt="Antique cartographic map with hand-coloured territorial regions"
+                                 loading="lazy"
+                                 decoding="async"
+                                 width="800"
+                                 height="1000">
+                        </picture>
+                        <div class="kl-triptych__overlay" aria-hidden="true">
+                            <p class="kl-triptych__overlay-desc">An early-stage system for automating evidence work across Kanan's products, currently in research and development.</p>
+                            <span class="kl-triptych__overlay-cta">Learn More →</span>
+                        </div>
+                    </div>
+                    <div class="kl-triptych__label">
+                        <span class="kl-triptych__name">DronaAOS</span>
+                        <span class="kl-triptych__status">Research and Development</span>
+                        <p class="kl-triptych__desc-mobile">An early-stage system for automating evidence work across Kanan's products, currently in research and development.</p>
+                        <span class="kl-triptych__name-rule" aria-hidden="true"></span>
+                    </div>
+                </a>
+
+                <!-- II · Drona (was TradeWatch) -->
+                <a href="drona.html" class="kl-triptych__card"
+                   aria-label="Drona — evidence-connection engine for manufacturers, suppliers and financiers">
+                    <div class="kl-triptych__img-wrap">
+                        <span class="kl-triptych__numeral" aria-hidden="true">II</span>
                         <picture>
                             <source type="image/webp" srcset="added-assets/Thumbnails/TW_-_TN.webp">
                             <img class="kl-triptych__img"
@@ -1512,23 +1279,23 @@
                                  height="1000">
                         </picture>
                         <div class="kl-triptych__overlay" aria-hidden="true">
-                            <p class="kl-triptych__overlay-desc">Evidence-ready shipment packets for customs, trade insurance, and LC workflows.</p>
-                            <span class="kl-triptych__overlay-cta">Explore →</span>
+                            <p class="kl-triptych__overlay-desc">Kanan's evidence-connection engine for manufacturers, suppliers, and financiers — currently rolling out through direct partnerships.</p>
+                            <span class="kl-triptych__overlay-cta">Learn More →</span>
                         </div>
                     </div>
                     <div class="kl-triptych__label">
-                        <span class="kl-triptych__name">TradeWatch</span>
-                        <span class="kl-triptych__status">Active MVP</span>
-                        <p class="kl-triptych__desc-mobile">Evidence-ready shipment packets for customs, trade insurance, and LC workflows.</p>
+                        <span class="kl-triptych__name">Drona</span>
+                        <span class="kl-triptych__status">Ongoing Partnerships</span>
+                        <p class="kl-triptych__desc-mobile">Kanan's evidence-connection engine for manufacturers, suppliers, and financiers — currently rolling out through direct partnerships.</p>
                         <span class="kl-triptych__name-rule" aria-hidden="true"></span>
                     </div>
                 </a>
 
-                <!-- II · India AI Tracker -->
+                <!-- III · India AI Tracker -->
                 <a href="tracker.html" class="kl-triptych__card"
                    aria-label="India AI Tracker — live regulatory intelligence across India">
                     <div class="kl-triptych__img-wrap">
-                        <span class="kl-triptych__numeral" aria-hidden="true">II</span>
+                        <span class="kl-triptych__numeral" aria-hidden="true">III</span>
                         <picture>
                             <source type="image/webp" srcset="added-assets/Thumbnails/IAT_-_TN.webp">
                             <img class="kl-triptych__img"
@@ -1552,106 +1319,76 @@
                     </div>
                 </a>
 
-                <!-- III · SectorWatch -->
-                <a href="sector-watch.html" class="kl-triptych__card"
-                   aria-label="SectorWatch — sector intelligence platform">
-                    <div class="kl-triptych__img-wrap">
-                        <span class="kl-triptych__numeral" aria-hidden="true">III</span>
-                        <picture>
-                            <source type="image/webp" srcset="added-assets/Thumbnails/SW_-_TN.webp">
-                            <img class="kl-triptych__img"
-                                 src="added-assets/Thumbnails/SW_-_TN.jpg"
-                                 alt="Antique cartographic map with hand-coloured territorial regions"
-                                 loading="lazy"
-                                 decoding="async"
-                                 width="800"
-                                 height="1000">
-                        </picture>
-                        <div class="kl-triptych__overlay" aria-hidden="true">
-                            <p class="kl-triptych__overlay-desc">Kanan's long-term trade intelligence platform for supply-chain, regulatory, and market-risk exposure.</p>
-                            <span class="kl-triptych__overlay-cta">Learn More →</span>
-                        </div>
-                    </div>
-                    <div class="kl-triptych__label">
-                        <span class="kl-triptych__name">SectorWatch</span>
-                        <span class="kl-triptych__status">Platform Roadmap</span>
-                        <p class="kl-triptych__desc-mobile">Kanan's long-term trade intelligence platform for supply-chain, regulatory, and market-risk exposure.</p>
-                        <span class="kl-triptych__name-rule" aria-hidden="true"></span>
-                    </div>
-                </a>
-
             </div>
         </section>
 
         <!-- ════════════════════════════════════════════════
              D½. COMPANY ROADMAP — Foundation to SectorWatch
         ════════════════════════════════════════════════ -->
-        <section class="kl-roadmap" id="klRoadmap" aria-labelledby="klRoadmapTitle">
+        <section class="kl-roadmap" id="klRoadmap" aria-labelledby="klRoadmapTitle" data-nav-light>
             <div class="kl-roadmap__inner">
                 <div class="kl-roadmap__layout">
                     <div class="kl-roadmap__intro">
-                        <p class="kl-roadmap__eyebrow">Kanan Labs <span aria-hidden="true">·</span> Company Roadmap</p>
+                        <p class="kl-roadmap__eyebrow">Kanan <span aria-hidden="true">·</span> Execution Roadmap</p>
                         <h2 class="kl-roadmap__title" id="klRoadmapTitle">
                             <span>We began by modelling<br>the trade world.</span>
                             <em>Now we are putting<br>that intelligence to work.</em>
                         </h2>
-                        <div class="kl-roadmap__lead">
-                            <p>Kanan Labs is being built in deliberate stages: first the knowledge infrastructure, then its deployment inside live trade workflows, and ultimately a continuous intelligence layer across global value chains.</p>
-                            <p>TradeWatch is the first commercial expression of that infrastructure. SectorWatch is the horizon.</p>
-                        </div>
                     </div>
 
                     <div class="kl-roadmap__chronology">
-                        <ol class="kl-roadmap__track" aria-label="Kanan Labs company roadmap">
+                        <ol class="kl-roadmap__track" aria-label="Kanan company roadmap">
                             <li class="kl-roadmap__stage kl-roadmap__stage--foundation">
                                 <div class="kl-roadmap__meta">
                                     <span class="kl-roadmap__number">01</span>
-                                    <span class="kl-roadmap__status">March 2026 <i aria-hidden="true">·</i> Foundation</span>
+                                    <span class="kl-roadmap__status">April 2026 <i aria-hidden="true">·</i> Foundation</span>
                                 </div>
-                                <h3 class="kl-roadmap__stage-title">DRONA begins modelling the trade world.</h3>
+                                <h3 class="kl-roadmap__stage-title">Build the Trade Ontology.</h3>
                                 <p class="kl-roadmap__description">
-                                    <span class="kl-roadmap__copy kl-roadmap__copy--full">Kanan Labs is founded around a structured, source-linked model of products, rules, jurisdictions, documents, parties and evidence. <span class="kl-roadmap__term">Accretive World Learning</span> expands that model with every verified cycle.</span>
-                                    <span class="kl-roadmap__copy kl-roadmap__copy--compact">A source-linked world model that expands through <span class="kl-roadmap__term">Accretive World Learning</span>.</span>
+                                    <span class="kl-roadmap__copy kl-roadmap__copy--full">Kanan began in research and development, building a source-linked model connecting products, suppliers, materials, locations, rules, evidence and external events.</span>
+                                    <span class="kl-roadmap__copy kl-roadmap__copy--compact">A source-linked model connecting the actors, evidence, rules and events of global trade.</span>
                                 </p>
                             </li>
 
                             <li class="kl-roadmap__stage kl-roadmap__stage--now" aria-current="step">
                                 <div class="kl-roadmap__meta">
                                     <span class="kl-roadmap__number">02</span>
-                                    <span class="kl-roadmap__status">Design partners and pilots</span>
+                                    <span class="kl-roadmap__status">Industry Partnerships</span>
                                 </div>
-                                <h3 class="kl-roadmap__stage-title">TradeWatch enters live workflows.</h3>
+                                <h3 class="kl-roadmap__stage-title">Put Intelligence to Work.</h3>
                                 <p class="kl-roadmap__description">
-                                    <span class="kl-roadmap__copy kl-roadmap__copy--full">Inside defined products, corridors and shipment workflows, TradeWatch operates first in shadow mode&mdash;testing what applies and preparing evidence-backed actions for human review.</span>
-                                    <span class="kl-roadmap__copy kl-roadmap__copy--compact">Pilots test live shipments in shadow mode before human review.</span>
-                                    <a class="kl-roadmap__pilot-link" href="/request-demo.html"><span>Discuss a pilot</span></a>
+                                    <span class="kl-roadmap__copy kl-roadmap__copy--full">Kanan is forming focused partnerships with manufacturers and financial institutions, bringing deeper supplier evidence and external risk into defined decision workflows.</span>
+                                    <span class="kl-roadmap__copy kl-roadmap__copy--compact">Focused partnerships bring deeper supplier evidence and external risk into real decision workflows.</span>
+                                    <a class="kl-roadmap__pilot-link" href="/request-demo.html"><span>Discuss a partnership</span></a>
                                 </p>
                             </li>
 
                             <li class="kl-roadmap__stage kl-roadmap__stage--network">
                                 <div class="kl-roadmap__meta">
                                     <span class="kl-roadmap__number">03</span>
-                                    <span class="kl-roadmap__status">Expansion <i aria-hidden="true">·</i> Connected execution</span>
+                                    <span class="kl-roadmap__status">Launch <i aria-hidden="true">·</i> Precision Engineering</span>
                                 </div>
-                                <h3 class="kl-roadmap__stage-title">Compliance becomes collaborative.</h3>
+                                <h3 class="kl-roadmap__stage-title">Precision Engineering First.</h3>
                                 <p class="kl-roadmap__description">
-                                    <span class="kl-roadmap__copy kl-roadmap__copy--full">With customer authorisation, TradeWatch coordinates evidence, decisions and approvals across suppliers, brokers, logistics providers, insurers and banks&mdash;preserving every exchange in one audit trail.</span>
-                                    <span class="kl-roadmap__copy kl-roadmap__copy--compact">TradeWatch coordinates evidence and approvals across trade partners in one audit trail.</span>
+                                    <span class="kl-roadmap__copy kl-roadmap__copy--full">Our first deployment will focus on precision-engineering supply chains connecting India, the United States and the European Union.</span>
+                                    <span class="kl-roadmap__copy kl-roadmap__copy--compact">Beginning with precision-engineering supply chains connecting India, the United States and the European Union.</span>
                                 </p>
                             </li>
 
                             <li class="kl-roadmap__stage kl-roadmap__stage--horizon">
                                 <div class="kl-roadmap__meta">
                                     <span class="kl-roadmap__number">04</span>
-                                    <span class="kl-roadmap__status">Horizon <i aria-hidden="true">·</i> SectorWatch</span>
+                                    <span class="kl-roadmap__status">Direction <i aria-hidden="true">·</i> Capital Intelligence</span>
                                 </div>
-                                <h3 class="kl-roadmap__stage-title">From shipment readiness to continuous risk intelligence.</h3>
+                                <h3 class="kl-roadmap__stage-title">Connect Intelligence to Capital.</h3>
                                 <p class="kl-roadmap__description">
-                                    <span class="kl-roadmap__copy kl-roadmap__copy--full">The same infrastructure connects regulatory change, supplier exposure and geopolitical pressure across the value chain&mdash;turning the accumulated trade world model into continuous intelligence.</span>
-                                    <span class="kl-roadmap__copy kl-roadmap__copy--compact">SectorWatch turns the trade world model into continuous regulatory and geopolitical intelligence.</span>
+                                    <span class="kl-roadmap__copy kl-roadmap__copy--full">Give financial institutions a clearer view of the supplier, the order and the external risks that may affect fulfilment.</span>
+                                    <span class="kl-roadmap__copy kl-roadmap__copy--compact">A clearer view of the supplier, the order and the external risks affecting fulfilment.</span>
                                 </p>
                             </li>
                         </ol>
+
+                        <p class="kl-roadmap__origin-note">Through the Supplier Programme, Kanan is supporting a limited group of precision manufacturers seeking working-capital finance.</p>
                     </div>
                 </div>
             </div>
@@ -1661,213 +1398,98 @@
              E. MANIFESTO — word-reveal scroll statement
         ════════════════════════════════════════════════ -->
         <section class="kl-manifesto" aria-label="Kanan Labs manifesto">
+            <canvas class="kl-manifesto__grid" id="manifesto-grid" aria-hidden="true"></canvas>
             <div class="kl-manifesto__stage">
                 <h2 class="kl-manifesto__heading" id="klManifestoReveal">
-                    <span class="kl-word">Trade</span>
+                    <span class="kl-word">Risk</span>
                     <span class="kl-word">has</span>
-                    <span class="kl-word">become</span>
-                    <span class="kl-word">fragmented</span>
-                    <span class="kl-word">and</span>
-                    <span class="kl-word">evidence&#8209;intensive.</span>
-                    <span class="kl-word">The</span>
-                    <span class="kl-word">next</span>
-                    <span class="kl-word">era</span>
-                    <span class="kl-word">will</span>
-                    <span class="kl-word">be</span>
-                    <span class="kl-word">defined</span>
-                    <span class="kl-word">by</span>
-                    <span class="kl-word">a</span>
-                    <span class="kl-word">company&#8217;s</span>
-                    <span class="kl-word">ability</span>
+                    <span class="kl-word">outgrown</span>
+                    <span class="kl-word">the</span>
+                    <span class="kl-word">systems</span>
+                    <span class="kl-word">built</span>
                     <span class="kl-word">to</span>
-                    <span class="kl-word">maintain</span>
-                    <span class="kl-word">a</span>
-                    <span class="kl-word">defensible,</span>
-                    <span class="kl-word">continuously</span>
-                    <span class="kl-word">updated</span>
-                    <span class="kl-word">evidence</span>
-                    <span class="kl-word">position</span>
-                    <span class="kl-word">across</span>
-                    <span class="kl-word">customs,</span>
-                    <span class="kl-word">insurance,</span>
-                    <span class="kl-word">finance,</span>
-                    <span class="kl-word">regulation,</span>
+                    <span class="kl-word">assess</span>
+                    <span class="kl-word">it.</span>
+                    <span class="kl-word">It</span>
+                    <span class="kl-word">moves</span>
+                    <span class="kl-word">through</span>
+                    <span class="kl-word">suppliers,</span>
+                    <span class="kl-word">jurisdictions,</span>
+                    <span class="kl-word">rules</span>
                     <span class="kl-word">and</span>
-                    <span class="kl-word">supply&#8209;chain</span>
-                    <span class="kl-word">risk.</span>
+                    <span class="kl-word">events,</span>
+                    <span class="kl-word">while</span>
+                    <span class="kl-word">the</span>
+                    <span class="kl-word">decisions</span>
+                    <span class="kl-word">governing</span>
+                    <span class="kl-word">production</span>
+                    <span class="kl-word">and</span>
+                    <span class="kl-word">capital</span>
+                    <span class="kl-word">remain</span>
+                    <span class="kl-word">divided</span>
+                    <span class="kl-word">across</span>
+                    <span class="kl-word">institutions.</span>
+                    <span class="kl-word">Understanding</span>
+                    <span class="kl-word">the</span>
+                    <span class="kl-word">enterprise</span>
+                    <span class="kl-word">is</span>
+                    <span class="kl-word">no</span>
+                    <span class="kl-word">longer</span>
+                    <span class="kl-word">enough.</span>
+                    <span class="kl-word">The</span>
+                    <span class="kl-word">world</span>
+                    <span class="kl-word">behind</span>
+                    <span class="kl-word">it</span>
+                    <span class="kl-word">must</span>
+                    <span class="kl-word">also</span>
+                    <span class="kl-word">become</span>
+                    <span class="kl-word">legible.</span>
                     <br>
                     <span class="kl-word kl-word--accent">Kanan</span>
                     <span class="kl-word kl-word--accent">is</span>
                     <span class="kl-word kl-word--accent">building</span>
                     <span class="kl-word kl-word--accent">the</span>
                     <span class="kl-word kl-word--accent">intelligence</span>
-                    <span class="kl-word kl-word--accent">layer</span>
+                    <span class="kl-word kl-word--accent">architecture</span>
                     <span class="kl-word kl-word--accent">for</span>
                     <span class="kl-word kl-word--accent">that</span>
-                    <span class="kl-word kl-word--accent">problem.</span>
+                    <span class="kl-word kl-word--accent">new</span>
+                    <span class="kl-word kl-word--accent">reality.</span>
                 </h2>
-            </div>
-        </section>
-
-        <!-- ════════════════════════════════════════════════
-             G. PLATFORM ACCESS BANNER — orange transition
-        ════════════════════════════════════════════════ -->
-        <section class="kl-waitlist" id="klWaitlist">
-            <div class="kl-waitlist__inner">
-                <div class="kl-waitlist__text">
-                    <h3 class="kl-waitlist__title">Request Platform Access</h3>
-                    <p class="kl-waitlist__sub">Join the waitlist for early access to Kanan Labs' intelligence platform.</p>
-                </div>
-                <form class="kl-waitlist__form" id="platformWaitlistForm">
-                    <input type="text" name="name" placeholder="Full Name" required autocomplete="name">
-                    <input type="text" name="company" placeholder="Company / Organisation" required>
-                    <input type="email" name="email" placeholder="Work Email" required autocomplete="email">
-                    <!-- Honeypot: visually hidden, real humans never see it; bots fill all fields -->
-                    <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;">
-                    <button type="submit">Join Waitlist</button>
-                </form>
-            </div>
-            <div class="kl-waitlist__inner" style="padding-top:0; padding-bottom:0;">
-                <p class="kl-waitlist__success" id="platformWaitlistSuccess">Thank you — we'll be in touch shortly.</p>
-            </div>
-        </section>
-
-        <!-- ════════════════════════════════════════════════
-             F. IDENTITY — Founder / Why Kanan exists
-        ════════════════════════════════════════════════ -->
-        <div class="identity-transition" aria-hidden="true"></div>
-        <section class="kl-founder" id="founderNote" aria-label="Founder note">
-            <div class="kl-founder__inner">
-
-                <!-- TWO-COLUMN BODY: left rail + navy doctrine card -->
-                <div class="kl-founder__columns">
-
-                    <!-- LEFT RAIL: CTAs top, photo + signature bottom -->
-                    <aside class="kl-founder__rail">
-                        <div class="kl-founder__cta-block">
-                            <span class="kl-founder__cta-eyebrow">Get Involved</span>
-                            <a href="request-demo.html" class="kl-founder__cta-primary">
-                                Request Demo
-                            </a>
-                            <a href="mailto:sreenath@kananlabs.com?subject=Connect%20with%20Founder"
-                               class="kl-founder__cta-secondary">
-                                Connect with Founder
-                                <span aria-hidden="true">&rarr;</span>
-                            </a>
-                        </div>
-
-                        <div class="kl-founder__attribution">
-                            <figure class="kl-founder__portrait">
-                                <img src="added-assets/SG-TRANSPARENT.png"
-                                     alt="Sreenath Govindarajan, Founder of Kanan Labs"
-                                     width="1080"
-                                     height="1350"
-                                     loading="lazy"
-                                     decoding="async">
-                            </figure>
-                            <div class="kl-founder__signature">
-                                <p class="kl-founder__sig-name">Sreenath Govindarajan</p>
-                                <p class="kl-founder__sig-role">Founder, Kanan Labs</p>
-                                <p class="kl-founder__sig-disciplines">
-                                    Cross-border law &middot; AI governance &middot;
-                                    Regulatory strategy &middot; Trade intelligence
-                                </p>
-                            </div>
-                        </div>
-                    </aside>
-
-                    <!-- RIGHT: NAVY DOCTRINE CONTAINER -->
-                    <article class="kl-founder__doctrine-card">
-                        <canvas id="founder-grid" class="kl-founder__doctrine-grid" aria-hidden="true"></canvas>
-
-                        <div class="kl-founder__doctrine-inner">
-                            <div class="kl-founder__note">
-                                <p>
-                                    <strong>Businesses experience regulation in fragments.
-                                    Most AI systems reason about it in fragments too.</strong>
-                                </p>
-                                <p>
-                                    I founded Kanan Labs after seeing the same structural failure from two
-                                    directions.
-                                </p>
-                                <p>
-                                    Frontier AI could retrieve extraordinary amounts of information, yet
-                                    struggled to connect products, supply chains, jurisdictions,
-                                    institutions, rules and evidence into one coherent model. Industry
-                                    faced the corresponding problem: businesses could not see the
-                                    regulations, incentives and emerging risks relevant to them as one
-                                    usable operating picture.
-                                </p>
-                                <p>
-                                    Kanan Labs was founded to close both gaps.
-                                </p>
-                                <p>
-                                    DRONA builds a structured model of the trade world through
-                                    <strong>Accretive World Learning</strong>. TradeWatch is its first
-                                    commercial expression&mdash;turning that intelligence into action inside
-                                    live cross-border workflows.
-                                </p>
-                            </div>
-
-                            <ol class="kl-founder__doctrine" aria-label="Operating doctrine">
-                                <li class="kl-founder__tenet">
-                                    <span class="kl-founder__numeral" aria-hidden="true">I</span>
-                                    <h3 class="kl-founder__tenet-title">Model before answering</h3>
-                                    <p class="kl-founder__tenet-line">
-                                        The system must understand how the world fits together before it
-                                        reasons about any part of it.
-                                    </p>
-                                </li>
-                                <li class="kl-founder__tenet">
-                                    <span class="kl-founder__numeral" aria-hidden="true">II</span>
-                                    <h3 class="kl-founder__tenet-title">Evidence before action</h3>
-                                    <p class="kl-founder__tenet-line">
-                                        Every material conclusion preserves its source, rule, reasoning path
-                                        and human review.
-                                    </p>
-                                </li>
-                                <li class="kl-founder__tenet">
-                                    <span class="kl-founder__numeral" aria-hidden="true">III</span>
-                                    <h3 class="kl-founder__tenet-title">A narrow entry, a larger horizon</h3>
-                                    <p class="kl-founder__tenet-line">
-                                        TradeWatch begins with shipment-level compliance. The larger
-                                        undertaking is continuous intelligence for regulated global value
-                                        chains.
-                                    </p>
-                                </li>
-                            </ol>
-                        </div>
-                    </article>
-
-                </div>
             </div>
         </section>
 
         <!-- ════════════════════════════════════════════════
              Z. FOOTER
         ════════════════════════════════════════════════ -->
+        <section class="kl-supplier-closing-strip" aria-labelledby="homepage-closing-title">
+            <div class="kl-supplier-closing-strip__inner">
+                <div class="kl-supplier-closing-strip__copy">
+                    <p class="kl-supplier-section-kicker">Applications open</p>
+                    <h2 id="homepage-closing-title">Do not let finance hold back production.</h2>
+                    <p>Check whether Kanan can help prepare your working-capital case.</p>
+                </div>
+                <div class="kl-supplier-closing-strip__actions">
+                    <a class="kl-supplier-primary kl-supplier-primary-light" href="https://apply.kananlabs.in/?utm_source=kanan_homepage&amp;utm_medium=owned&amp;utm_campaign=supplier_programme&amp;utm_content=footer_cta#apply" data-supplier-programme-link>Start the 2-minute application <span aria-hidden="true">↗</span></a>
+                    <div class="kl-supplier-contact-actions"><a href="tel:+919840247729">Call +91 98402 47729</a><a href="https://wa.me/919840247729?text=Hello%20Kanan%20Labs%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Kanan%20Supplier%20Programme.">Message on WhatsApp</a></div>
+                </div>
+            </div>
+        </section>
+
         <footer class="kl-footer">
             <div class="kl-footer__inner">
                 <div class="kl-footer__content">
 
                     <!-- LEFT: Brand zone -->
                     <div class="kl-footer__brand">
-                        <img src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png" alt="Kanan Labs"
-                             class="kl-footer__logo" width="500" height="500" loading="lazy" decoding="async" draggable="false">
-                        <p class="kl-footer__tagline">Trade Intelligence Infrastructure</p>
+                        <img src="assets/logos/kanan-kl-hor-white.png" alt="Kanan Labs"
+                             class="kl-footer__logo" width="922" height="262" loading="lazy" decoding="async" draggable="false">
+                        <p class="kl-footer__tagline">Proactive Supply Chain Resilience</p>
 
-                        <div>
-                            <p class="kl-footer__nl-label">Weekly Brief</p>
-                            <form class="kl-footer__nl-form" id="footerNewsletterForm">
-                                <input type="email" class="kl-footer__nl-input" placeholder="Your email address"
-                                       autocomplete="email" required>
-                                <button type="submit" class="kl-footer__nl-submit">Subscribe</button>
-                            </form>
+                        <div class="kl-footer__links">
+                            <a href="https://apply.kananlabs.in/" class="kl-footer__consult">Supplier Programme &#8594;</a>
+                            <a href="request-demo.html" class="kl-footer__consult">Request a Demo &#8594;</a>
                         </div>
-
-                        <a href="tradewatch.html" class="kl-footer__consult">
-                            Explore TradeWatch →
-                        </a>
                     </div>
 
                     <!-- RIGHT: Sitemap grid -->
@@ -1876,9 +1498,10 @@
                         <div class="kl-footer__col">
                             <h4 class="kl-footer__col-heading">Platform</h4>
                             <ul class="kl-footer__col-links">
-                                <li><a href="tradewatch.html">TradeWatch</a></li>
+                                <li><a href="drona.html">Drona</a></li>
+                                <li><a href="drona-aos.html">DronaAOS</a></li>
+                                <li><a href="https://apply.kananlabs.in/">Supplier Programme</a></li>
                                 <li><a href="tracker.html">India AI Tracker</a></li>
-                                <li><a href="sector-watch.html">SectorWatch</a></li>
                                 <li><a href="resources.html">Resources</a></li>
                             </ul>
                         </div>
@@ -1887,6 +1510,7 @@
                             <h4 class="kl-footer__col-heading">Company</h4>
                             <ul class="kl-footer__col-links">
                                 <li><a href="about.html">About</a></li>
+                                <li><a href="careers.html">Careers</a></li>
                                 <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
                             </ul>
                         </div>
@@ -1904,6 +1528,8 @@
                             <h4 class="kl-footer__col-heading">Legal</h4>
                             <ul class="kl-footer__col-links">
                                 <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="terms-of-use.html">Terms of Use</a></li>
+                                <li><a href="supplier-programme-terms.html">Supplier Programme Terms</a></li>
                                 <li><a href="disclaimers.html">Disclaimers</a></li>
                             </ul>
                         </div>
@@ -1912,8 +1538,8 @@
                 </div>
 
                 <div class="kl-footer__watermark">
-                    <img src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png" alt=""
-                         class="kl-footer__watermark-img" width="1584" height="396" loading="lazy" decoding="async" aria-hidden="true" draggable="false">
+                    <img src="assets/logos/kanan-kl-hor-white.png" alt=""
+                         class="kl-footer__watermark-img" width="922" height="262" loading="lazy" decoding="async" aria-hidden="true" draggable="false">
                 </div>
             </div>
         </footer>
@@ -1923,6 +1549,28 @@
     <!-- Local GSAP + ScrollTrigger keep the preview independent of CDN latency. -->
     <script defer src="assets/vendor/gsap/gsap.min.js"></script>
     <script defer src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+    <!-- Reusable container-scoped grid canvas (also powers the archived founder doctrine card) -->
+    <script src="js/founder-grid.js" defer></script>
+    <script defer>
+    document.addEventListener('DOMContentLoaded', function () {
+        var gridIds = ['manifesto-grid', 'triptych-grid'];
+        gridIds.forEach(function (id) {
+            var canvas = document.getElementById(id);
+            if (canvas && typeof FounderGrid !== 'undefined') {
+                // The intelligence stack owns its palette; other grids keep theirs.
+                var gridColor = id === 'triptych-grid'
+                    ? getComputedStyle(canvas).getPropertyValue('--kl-triptych-grid-line').trim()
+                    : '';
+                new FounderGrid(canvas, {
+                    direction: 'up',
+                    speed: 0.12,
+                    borderColor: gridColor || 'rgba(255, 255, 255, 0.05)',
+                    squareSize: 30
+                });
+            }
+        });
+    });
+    </script>
     <!-- Manifesto word-reveal: GSAP timeline drives animation directly (no CSS transitions) -->
     <script defer>
     window.addEventListener('load', function () {
@@ -1935,13 +1583,13 @@
         /* Reduced motion: reveal all immediately */
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             words.forEach(function (w) { w.style.opacity='1'; w.style.filter='none'; w.style.transform='none'; });
-            accentWords.forEach(function (w) { w.style.color='#db4a2b'; });
+            accentWords.forEach(function (w) { w.style.color='#ffa892'; });
             return;
         }
 
         if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
             words.forEach(function (w) { w.style.opacity='1'; w.style.filter='none'; w.style.transform='none'; });
-            accentWords.forEach(function (w) { w.style.color='#db4a2b'; });
+            accentWords.forEach(function (w) { w.style.color='#ffa892'; });
             return;
         }
 
@@ -1949,8 +1597,8 @@
 
         /* GSAP sets initial state as inline styles — owns the properties, no CSS transition fight */
         gsap.set(words, { opacity: 0.12, filter: 'blur(4px)', rotation: 2, transformOrigin: '0% 80%' });
-        /* Orange colour present at all scroll positions so accent words reveal in correct colour */
-        gsap.set(accentWords, { color: '#db4a2b' });
+        /* Accent colour present at all scroll positions so accent words reveal in correct colour */
+        gsap.set(accentWords, { color: '#ffa892' });
 
         /* Single timeline: GSAP animates opacity/filter/rotation directly */
         var tl = gsap.timeline();
@@ -2020,9 +1668,12 @@
             }
 
             // word i starts at slot (i - (N-1)) → range -(N-1) to +N = -6 to +7
+            // xPercent:-50 pairs with the CSS left:50% anchor so every word,
+            // regardless of its own width, sits horizontally centered in the
+            // column instead of hugging the left edge.
             words.forEach(function(w, i) {
                 w._slot = i - (N - 1);
-                gsap.set(w, { yPercent: -50, y: w._slot * SLOT, opacity: slotOpacity(w._slot) });
+                gsap.set(w, { xPercent: -50, yPercent: -50, y: w._slot * SLOT, opacity: slotOpacity(w._slot) });
             });
 
             var EXIT_THRESHOLD = -N;
@@ -2053,62 +1704,11 @@
         });
     </script>
 
-    <!-- Platform waitlist form → /api/early-access -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('platformWaitlistForm');
-            const success = document.getElementById('platformWaitlistSuccess');
-            if (!form || !success) return;
-
-            form.addEventListener('submit', async function (e) {
-                e.preventDefault();
-                const btn = form.querySelector('button[type="submit"]');
-                const data = new FormData(form);
-                const payload = {
-                    name: (data.get('name') || '').toString().trim(),
-                    company: (data.get('company') || '').toString().trim(),
-                    email: (data.get('email') || '').toString().trim(),
-                    company_website: (data.get('company_website') || '').toString()
-                };
-
-                if (!payload.name || !payload.email) return;
-
-                const originalLabel = btn.textContent;
-                btn.disabled = true;
-                btn.textContent = 'Submitting…';
-                success.classList.remove('visible');
-                success.style.color = '';
-                success.textContent = "Thank you — we'll be in touch shortly.";
-
-                try {
-                    const res = await fetch('/api/early-access', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-                    if (!res.ok) {
-                        const err = await res.json().catch(() => ({}));
-                        throw new Error(err.message || 'Request failed');
-                    }
-                    form.style.display = 'none';
-                    success.classList.add('visible');
-                } catch (err) {
-                    success.style.color = '#ff8a8a';
-                    success.textContent = err.message || 'Something went wrong. Please try again.';
-                    success.classList.add('visible');
-                    btn.disabled = false;
-                    btn.textContent = originalLabel;
-                }
-            });
-        });
-    </script>
-
     <!-- Scripts (deferred — non-render-blocking) -->
     <script src="js/infrastructure-grid.js?v=2" defer></script>
-    <script src="js/founder-grid.js" defer></script>
     <script src="js/brevo-subscribe.js" defer></script>
-    <script src="js/staggered-menu.js?v=4" defer></script>
-    <script src="js/tw-demo-clone.js?v=3" defer></script>
+    <script src="js/staggered-menu.js?v=12" defer></script>
+    <script src="js/origin-cta.js?v=3" defer></script>
     <script src="js/triptych.js" defer></script>
     <script src="js/drona-tabs.js" defer></script>
     <script src="js/drona-funnel.js?v=2" defer></script>

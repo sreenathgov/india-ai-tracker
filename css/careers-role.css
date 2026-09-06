@@ -9,7 +9,7 @@
 
 .crd-head {
     position: relative;
-    background: var(--cr-navy);
+    background: var(--cr-wine);
     padding-top: clamp(6.5rem, 12vh, 9rem);
     padding-bottom: clamp(5rem, 10vh, 7.5rem);
     overflow: hidden;
@@ -19,7 +19,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 60% 70% at 82% 6%, rgba(219, 74, 43, 0.11), transparent 68%);
+    background: radial-gradient(ellipse 60% 70% at 82% 6%, rgba(239, 118, 93, 0.12), transparent 68%);
     pointer-events: none;
 }
 
@@ -34,17 +34,17 @@
     align-items: center;
     gap: 0.55rem;
     font-family: var(--cr-sans);
-    font-size: 0.8125rem;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    color: var(--cr-on-navy-dim);
+    font-size: .875rem;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: var(--cr-on-wine-body);
     text-decoration: none;
     margin-bottom: 2.4rem;
     transition: color 0.2s ease;
 }
 
 .crd-back:hover {
-    color: var(--cr-cream);
+    color: var(--cr-on-wine);
 }
 
 .crd-back__arrow {
@@ -58,38 +58,39 @@
 
 .crd-team {
     font-family: var(--cr-sans);
-    font-size: 0.6875rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
+    font-size: .8125rem;
+    font-weight: 500;
+    letter-spacing: .1em;
     text-transform: uppercase;
-    color: var(--cr-red);
+    color: var(--cr-on-wine-accent);
     margin: 0 0 1rem;
+    line-height: 1.5;
 }
 
-/* The status badge inherits the listing's palette but sits on navy here. */
+/* The status badge inherits the listing's palette but sits on wine here. */
 .crd-team .cr-badge--closing-soon {
-    background: rgba(219, 74, 43, 0.18);
-    color: #f6b8a6;
-    border-color: rgba(219, 74, 43, 0.45);
+    background: rgba(239, 118, 93, 0.16);
+    color: var(--cr-coral-light);
+    border-color: rgba(239, 118, 93, 0.45);
 }
 
 .crd-team .cr-badge--rolling,
 .crd-team .cr-badge--filled {
-    background: rgba(244, 235, 208, 0.07);
-    color: var(--cr-on-navy-dim);
-    border-color: var(--cr-on-navy-rule);
+    background: rgba(248, 245, 237, 0.07);
+    color: var(--cr-on-wine-dim);
+    border-color: var(--cr-on-wine-rule);
 }
 
 .crd-title {
     font-family: var(--cr-display);
-    font-weight: 400;
-    font-style: italic;
-    font-size: clamp(2.1rem, 4.6vw, 3.4rem);
-    line-height: 1.08;
-    letter-spacing: -0.012em;
-    color: var(--cr-cream);
+    font-weight: 500;
+    font-style: normal;
+    font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    color: var(--cr-on-wine);
     margin: 0 0 1.7rem;
-    max-width: 20ch;
+    max-width: 900px;
 }
 
 .crd-meta {
@@ -102,7 +103,7 @@
 }
 
 .crd-meta .cr-tag {
-    color: var(--cr-on-navy-body);
+    color: var(--cr-on-wine-body);
 }
 
 .crd-head__actions {
@@ -118,7 +119,7 @@
     font-size: 0.8125rem;
     font-weight: 300;
     line-height: 1.6;
-    color: var(--cr-on-navy-dim);
+    color: var(--cr-on-wine-dim);
     margin: 0;
     max-width: 44ch;
 }
@@ -145,25 +146,25 @@
 }
 
 .crd-block + .crd-block {
-    margin-top: clamp(2.5rem, 4.5vh, 3.5rem);
+    margin-top: 2rem;
 }
 
 .crd-block__title {
     font-family: var(--cr-display);
     font-weight: 600;
-    font-size: clamp(1.35rem, 2.3vw, 1.7rem);
+    font-size: 1.75rem;
     line-height: 1.2;
-    color: var(--cr-navy);
-    margin: 0 0 1.2rem;
-    padding-bottom: 0.8rem;
-    border-bottom: 1px solid var(--cr-rule);
+    color: var(--cr-oxblood);
+    margin: 0 0 1rem;
+    padding-bottom: 0;
+    border-bottom: 0;
 }
 
 .crd-block p {
     font-family: var(--cr-sans);
     font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.78;
+    font-weight: 400;
+    line-height: 1.8;
     color: var(--cr-ink-body);
     margin: 0 0 1.1rem;
     max-width: 68ch;
@@ -184,9 +185,9 @@
     position: relative;
     padding-left: 1.5rem;
     font-family: var(--cr-sans);
-    font-size: 0.9375rem;
-    font-weight: 300;
-    line-height: 1.72;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.8;
     color: var(--cr-ink-body);
 }
 
@@ -201,7 +202,7 @@
     top: 0.68em;
     width: 6px;
     height: 1px;
-    background: var(--cr-red);
+    background: var(--cr-wine);
 }
 
 /* ── Sticky summary rail ────────────────────────────────── */
@@ -210,7 +211,7 @@
     position: sticky;
     top: 96px;
     border: 1px solid var(--cr-rule);
-    background: rgba(255, 255, 255, 0.55);
+    background: var(--cr-paper-warm);
     padding: 1.6rem 1.5rem 1.5rem;
 }
 
@@ -231,19 +232,20 @@
 
 .crd-rail__row dt {
     font-family: var(--cr-sans);
-    font-size: 0.625rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--cr-ink-dim);
+    font-size: .8125rem;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: none;
+    color: var(--cr-ink-mid);
+    line-height: 1.5;
 }
 
 .crd-rail__row dd {
     margin: 0;
     font-family: var(--cr-sans);
-    font-size: 0.875rem;
+    font-size: .9375rem;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.6;
     color: var(--cr-ink);
 }
 
@@ -252,7 +254,7 @@
    ════════════════════════════════════════════════════════ */
 
 .crd-apply {
-    background: var(--cr-navy);
+    background: var(--cr-wine);
     padding-block: clamp(4rem, 8vh, 6.5rem);
     scroll-margin-top: 80px;
 }
@@ -262,8 +264,8 @@
 }
 
 .crd-apply__card {
-    background: rgba(244, 235, 208, 0.045);
-    border: 1px solid var(--cr-on-navy-rule);
+    background: rgba(248, 245, 237, 0.045);
+    border: 1px solid var(--cr-on-wine-rule);
     border-radius: 3px;
     padding: clamp(1.75rem, 4vw, 3rem);
 }
@@ -271,7 +273,7 @@
 .crd-apply__heading {
     margin-bottom: 2.4rem;
     padding-bottom: 1.8rem;
-    border-bottom: 1px solid var(--cr-on-navy-rule);
+    border-bottom: 1px solid var(--cr-on-wine-rule);
 }
 
 .crd-apply__heading h2 {
@@ -279,16 +281,16 @@
     font-weight: 500;
     font-size: clamp(1.6rem, 3vw, 2.1rem);
     line-height: 1.15;
-    color: var(--cr-cream);
+    color: var(--cr-on-wine);
     margin: 0 0 0.9rem;
 }
 
 .crd-apply__heading p {
     font-family: var(--cr-sans);
-    font-size: 0.9375rem;
-    font-weight: 300;
+    font-size: 1rem;
+    font-weight: 400;
     line-height: 1.7;
-    color: var(--cr-on-navy-body);
+    color: var(--cr-on-wine-body);
     margin: 0;
     max-width: 56ch;
 }
@@ -317,20 +319,20 @@
 .crd-field label {
     display: block;
     font-family: var(--cr-sans);
-    font-size: 0.8125rem;
+    font-size: .9375rem;
     font-weight: 500;
-    letter-spacing: 0.01em;
-    color: var(--cr-on-navy);
+    letter-spacing: normal;
+    color: var(--cr-on-wine);
     margin-bottom: 0.55rem;
     line-height: 1.5;
 }
 
 .crd-field label span {
     font-weight: 400;
-    font-size: 0.6875rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--cr-on-navy-dim);
+    font-size: .8125rem;
+    letter-spacing: normal;
+    text-transform: none;
+    color: var(--cr-on-wine-body);
     margin-left: 0.4rem;
 }
 
@@ -340,12 +342,12 @@
 .crd-field textarea {
     width: 100%;
     padding: 0.8rem 0.95rem;
-    background: rgba(6, 31, 56, 0.55);
-    border: 1px solid var(--cr-on-navy-rule);
+    background: rgba(48, 27, 27, 0.42);
+    border: 1px solid var(--cr-on-wine-rule);
     border-radius: 2px;
-    color: var(--cr-cream);
+    color: var(--cr-on-wine);
     font-family: var(--cr-sans);
-    font-size: 0.9375rem;
+    font-size: 1rem;
     font-weight: 300;
     line-height: 1.6;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -358,30 +360,30 @@
 
 .crd-field input::placeholder,
 .crd-field textarea::placeholder {
-    color: rgba(244, 235, 208, 0.28);
+    color: rgba(248, 245, 237, 0.32);
 }
 
 .crd-field input:focus,
 .crd-field textarea:focus {
     outline: none;
-    border-color: rgba(219, 74, 43, 0.7);
-    box-shadow: 0 0 0 3px rgba(219, 74, 43, 0.16);
+    border-color: rgba(239, 118, 93, 0.72);
+    box-shadow: 0 0 0 3px rgba(239, 118, 93, 0.18);
 }
 
 .crd-field input[type="file"] {
     width: 100%;
     font-family: var(--cr-sans);
     font-size: 0.8125rem;
-    color: var(--cr-on-navy-body);
+    color: var(--cr-on-wine-body);
 }
 
 .crd-field input[type="file"]::file-selector-button {
     margin-right: 0.9rem;
     padding: 0.55rem 1rem;
     background: transparent;
-    border: 1px solid var(--cr-on-navy-rule);
+    border: 1px solid var(--cr-on-wine-rule);
     border-radius: 2px;
-    color: var(--cr-on-navy);
+    color: var(--cr-on-wine);
     font-family: var(--cr-sans);
     font-size: 0.8125rem;
     font-weight: 500;
@@ -390,21 +392,21 @@
 }
 
 .crd-field input[type="file"]::file-selector-button:hover {
-    border-color: rgba(244, 235, 208, 0.5);
-    background: rgba(244, 235, 208, 0.06);
+    border-color: rgba(248, 245, 237, 0.5);
+    background: rgba(248, 245, 237, 0.06);
 }
 
 .crd-field.has-error input,
 .crd-field.has-error textarea {
-    border-color: rgba(219, 74, 43, 0.85);
+    border-color: rgba(239, 118, 93, 0.85);
 }
 
 .crd-field__hint {
     font-family: var(--cr-sans);
-    font-size: 0.75rem;
-    font-weight: 300;
+    font-size: .875rem;
+    font-weight: 400;
     line-height: 1.6;
-    color: var(--cr-on-navy-dim);
+    color: var(--cr-on-wine-dim);
     margin: 0.5rem 0 0;
 }
 
@@ -413,7 +415,7 @@
     font-size: 0.75rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #f0917a;
+    color: var(--cr-coral-light);
     margin: 0.45rem 0 0;
     min-height: 0;
 }
@@ -424,16 +426,16 @@
 
 .crd-field__counter {
     font-family: var(--cr-sans);
-    font-size: 0.6875rem;
+    font-size: .8125rem;
     font-weight: 400;
-    color: var(--cr-on-navy-dim);
+    color: var(--cr-on-wine-dim);
     text-align: right;
     margin: 0.4rem 0 0;
     font-variant-numeric: tabular-nums;
 }
 
 .crd-field__counter.is-near-limit {
-    color: #f0917a;
+    color: var(--cr-coral-light);
 }
 
 /* ── Screening questions ────────────────────────────────── */
@@ -441,7 +443,7 @@
 .crd-questions {
     margin-top: 2.2rem;
     padding-top: 2rem;
-    border-top: 1px solid var(--cr-on-navy-rule);
+    border-top: 1px solid var(--cr-on-wine-rule);
 }
 
 .crd-questions__label {
@@ -450,15 +452,16 @@
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--cr-red);
+    color: var(--cr-on-wine-accent);
     margin: 0 0 1.6rem;
 }
 
 .crd-field--question label {
-    font-size: 0.9375rem;
-    font-weight: 400;
+    font-size: .9375rem;
+    font-weight: 500;
     line-height: 1.65;
     max-width: 62ch;
+    font-family: var(--cr-sans);
 }
 
 /* ── Honeypot: off-screen but not display:none, or browsers
@@ -483,7 +486,7 @@
     font-family: var(--cr-sans);
     font-size: 0.875rem;
     line-height: 1.6;
-    color: #f0917a;
+    color: var(--cr-coral-light);
     margin: 0 0 1.2rem;
 }
 
@@ -496,10 +499,10 @@
     align-items: center;
     gap: 0.7rem;
     padding: 0.95rem 1.9rem;
-    background: var(--cr-red);
-    border: 1px solid var(--cr-red);
+    background: var(--cr-paper-warm);
+    border: 1px solid var(--cr-paper-warm);
     border-radius: 2px;
-    color: #fff;
+    color: var(--cr-oxblood);
     font-family: var(--cr-sans);
     font-size: 0.9375rem;
     font-weight: 500;
@@ -508,8 +511,8 @@
 }
 
 .crd-submit:hover:not(:disabled) {
-    background: var(--cr-red-deep);
-    border-color: var(--cr-red-deep);
+    background: #fff;
+    border-color: #fff;
 }
 
 .crd-submit:disabled {
@@ -518,7 +521,7 @@
 }
 
 .crd-submit:focus-visible {
-    outline: 2px solid var(--cr-cream);
+    outline: 2px solid var(--cr-coral);
     outline-offset: 3px;
 }
 
@@ -535,13 +538,13 @@
     font-size: 0.75rem;
     font-weight: 300;
     line-height: 1.7;
-    color: var(--cr-on-navy-dim);
+    color: var(--cr-on-wine-dim);
     margin: 1.4rem 0 0;
     max-width: 52ch;
 }
 
 .crd-form__privacy a {
-    color: var(--cr-on-navy-body);
+    color: var(--cr-on-wine-body);
     text-underline-offset: 3px;
 }
 
@@ -564,7 +567,7 @@
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--cr-red);
+    color: var(--cr-on-wine-accent);
     margin: 0 0 1rem;
 }
 
@@ -572,7 +575,7 @@
     font-family: var(--cr-display);
     font-weight: 500;
     font-size: clamp(1.7rem, 3.2vw, 2.3rem);
-    color: var(--cr-cream);
+    color: var(--cr-on-wine);
     margin: 0 0 1rem;
 }
 
@@ -582,7 +585,7 @@
     font-size: 0.9375rem;
     font-weight: 300;
     line-height: 1.75;
-    color: var(--cr-on-navy-body);
+    color: var(--cr-on-wine-body);
     margin: 0 auto 1.6rem;
     max-width: 46ch;
 }
@@ -592,16 +595,16 @@
     font-family: var(--cr-sans);
     font-size: 0.875rem;
     font-weight: 500;
-    color: var(--cr-cream);
+    color: var(--cr-on-wine);
     text-decoration: none;
-    border-bottom: 1px solid var(--cr-on-navy-rule);
+    border-bottom: 1px solid var(--cr-on-wine-rule);
     padding-bottom: 2px;
     transition: border-color 0.2s ease;
 }
 
 .crd-success a:hover,
 .crd-closed a:hover {
-    border-color: var(--cr-cream);
+    border-color: var(--cr-on-wine);
 }
 
 /* ════════════════════════════════════════════════════════
@@ -680,3 +683,12 @@
         border: 1px solid CanvasText;
     }
 }
+
+/* The revised CV choice uses the existing application's field styling. */
+.crd-cv { min-width: 0; margin: 1.5rem 0; padding: 1rem 1.25rem 0; border: 1px solid var(--cr-on-wine-rule); border-radius: 3px; }
+.crd-cv legend { padding-inline: .4rem; font: 500 .9375rem/1.5 var(--cr-sans); letter-spacing: normal; color: var(--cr-on-wine); }
+.crd-cv legend span { margin-left: .4rem; font-size: .8125rem; font-weight: 400; letter-spacing: normal; text-transform: none; color: var(--cr-on-wine-body); }
+.crd-cv > .crd-field__hint { margin: 0 0 1.25rem; }
+.crd-form__help { margin: 1.4rem 0 0; font: 300 .8125rem/1.7 var(--cr-sans); color: var(--cr-on-wine-body); }
+.crd-form__help a { color: var(--cr-on-wine); text-underline-offset: 3px; }
+.crd-body { scroll-margin-top: 90px; }

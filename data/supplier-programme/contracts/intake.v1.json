@@ -1,0 +1,191 @@
+{
+  "integrationVersion": "supplier-programme.make-intake.v1",
+  "formType": "supplier-programme",
+  "webhookResponse": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "ok": true,
+      "recorded": true
+    }
+  },
+  "workbook": {
+    "sheetName": "Supplier Intake Raw",
+    "headerRow": 1,
+    "firstLiveRow": 2
+  },
+  "writePolicy": {
+    "valueInputOption": "USER_ENTERED",
+    "literalTextColumns": [
+      "WhatsApp"
+    ],
+    "idempotencyKey": "applicationId",
+    "duplicateAction": "acknowledge-without-new-row"
+  },
+  "columns": [
+    {
+      "column": "Record Type",
+      "source": "constant",
+      "value": "Live"
+    },
+    {
+      "column": "Application ID",
+      "source": "applicationId"
+    },
+    {
+      "column": "Received At",
+      "source": "receivedAt"
+    },
+    {
+      "column": "Response Due At",
+      "source": "responseDueAt"
+    },
+    {
+      "column": "First Contact At",
+      "source": "manual",
+      "value": ""
+    },
+    {
+      "column": "SLA Status",
+      "source": "constant",
+      "value": "Pending"
+    },
+    {
+      "column": "Route",
+      "source": "route"
+    },
+    {
+      "column": "Language",
+      "source": "language"
+    },
+    {
+      "column": "Locale Code",
+      "source": "localeCode"
+    },
+    {
+      "column": "Language Experience",
+      "source": "languageExperience"
+    },
+    {
+      "column": "Localization Version",
+      "source": "localizationVersion"
+    },
+    {
+      "column": "Schema Version",
+      "source": "schemaVersion"
+    },
+    {
+      "column": "Company",
+      "source": "companyName"
+    },
+    {
+      "column": "Manufactures",
+      "source": "manufacturingDescription"
+    },
+    {
+      "column": "Working Capital",
+      "source": "workingCapital"
+    },
+    {
+      "column": "Purposes",
+      "source": "purposes",
+      "transform": "join with comma and space"
+    },
+    {
+      "column": "State",
+      "source": "state"
+    },
+    {
+      "column": "City / Cluster",
+      "source": "city"
+    },
+    {
+      "column": "Requested Amount INR",
+      "source": "fundingAmountInr"
+    },
+    {
+      "column": "Customer Demand State",
+      "source": "orderStatus"
+    },
+    {
+      "column": "Contact Name",
+      "source": "contactName"
+    },
+    {
+      "column": "WhatsApp",
+      "source": "whatsapp"
+    },
+    {
+      "column": "Consent Version",
+      "source": "consentVersion"
+    },
+    {
+      "column": "Referrer",
+      "source": "source.referrer"
+    },
+    {
+      "column": "UTM Source",
+      "source": "source.utmSource"
+    },
+    {
+      "column": "UTM Medium",
+      "source": "source.utmMedium"
+    },
+    {
+      "column": "UTM Campaign",
+      "source": "source.utmCampaign"
+    },
+    {
+      "column": "UTM Content",
+      "source": "source.utmContent"
+    },
+    {
+      "column": "Owner",
+      "source": "manual",
+      "value": ""
+    },
+    {
+      "column": "Call Completed At",
+      "source": "manual",
+      "value": ""
+    },
+    {
+      "column": "Disposition",
+      "source": "constant",
+      "value": "New"
+    },
+    {
+      "column": "Disposition Reason",
+      "source": "manual",
+      "value": ""
+    },
+    {
+      "column": "Case ID",
+      "source": "manual",
+      "value": ""
+    },
+    {
+      "column": "Notes Link",
+      "source": "manual",
+      "value": ""
+    },
+    {
+      "column": "Reminder At",
+      "source": "reminderAt"
+    },
+    {
+      "column": "Reminder Sent At",
+      "source": "automation",
+      "value": ""
+    },
+    {
+      "column": "Escalation At",
+      "source": "escalationAt"
+    },
+    {
+      "column": "Escalation Sent At",
+      "source": "automation",
+      "value": ""
+    }
+  ]
+}

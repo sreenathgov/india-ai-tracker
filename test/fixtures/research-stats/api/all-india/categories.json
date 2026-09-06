@@ -1,0 +1,210 @@
+{
+  "state": "IN",
+  "categories": {
+    "Major AI Developments": [
+      {
+        "id": 1,
+        "title": "Anthropic hits $965B valuation; AI complexity plagues Indian companies",
+        "url": "https://example.test/a1",
+        "summary": "Anthropic hits $965B valuation; AI complexity plagues Indian companies",
+        "date_published": "2026-03-04",
+        "source_name": "Alpha Wire",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      },
+      {
+        "id": 2,
+        "title": "AI could add $550 billion to India's economy by 2035",
+        "url": "https://example.test/a2",
+        "summary": "AI could add $550 billion to India's economy by 2035",
+        "date_published": "2026-02-11",
+        "source_name": "Alpha Wire",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      },
+      {
+        "id": 3,
+        "title": "Is AI rewriting the rules for $250 billion Indian IT industry?",
+        "url": "https://example.test/a3",
+        "summary": "Is AI rewriting the rules for $250 billion Indian IT industry?",
+        "date_published": "2026-04-08",
+        "source_name": "Beta Desk",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      },
+      {
+        "id": 4,
+        "title": "Indian startups raise $7.4 Bn in H1 2026 as CRED-Meta deal lifts funding",
+        "url": "https://example.test/a4",
+        "summary": "Indian startups raise $7.4 Bn in H1 2026 as CRED-Meta deal lifts funding",
+        "date_published": "2026-07-01",
+        "source_name": "Beta Desk",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      },
+      {
+        "id": 5,
+        "title": "Accel raises $5 Bn for AI and late-stage bets",
+        "url": "https://example.test/a5",
+        "summary": "Accel raises $5 Bn for AI and late-stage bets",
+        "date_published": "2026-04-15",
+        "source_name": "Gamma Press",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      },
+      {
+        "id": 6,
+        "title": "India eyes investments worth $200 billion in data centres: minister",
+        "url": "https://example.test/a6",
+        "summary": "India eyes investments worth $200 billion in data centres: minister",
+        "date_published": "2026-02-20",
+        "source_name": "Alpha Wire",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      }
+    ],
+    "AI Start-Up News": [
+      {
+        "id": 7,
+        "title": "AI startup Emergent turns unicorn with $130M Series C funding",
+        "url": "https://example.test/a7",
+        "summary": "AI startup Emergent turns unicorn with $130M Series C funding",
+        "date_published": "2026-07-15",
+        "source_name": "Alpha Wire",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      },
+      {
+        "id": 8,
+        "title": "Emergent becomes third AI unicorn of 2026 with $130 Mn Series C led by Creaegis",
+        "url": "https://example.test/a8",
+        "summary": "Emergent becomes third AI unicorn of 2026 with $130 Mn Series C led by Creaegis",
+        "date_published": "2026-07-15",
+        "source_name": "Beta Desk",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      },
+      {
+        "id": 9,
+        "title": "Equal AI raises $30 Mn Series B round led by Prosus and Tomales Bay Capital",
+        "url": "https://example.test/a9",
+        "summary": "Equal AI raises $30 Mn Series B round led by Prosus and Tomales Bay Capital",
+        "date_published": "2026-06-12",
+        "source_name": "Alpha Wire",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      },
+      {
+        "id": 10,
+        "title": "Panthera Growth Partners leads $30 Mn Series B round in Innefu Labs",
+        "url": "https://example.test/a10",
+        "summary": "Panthera Growth Partners leads $30 Mn Series B round in Innefu Labs",
+        "date_published": "2026-06-05",
+        "source_name": "Beta Desk",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      },
+      {
+        "id": 11,
+        "title": "Wealthtech platform Veriqus raises Rs 387 Cr in funding round led by Norwest",
+        "url": "https://example.test/a11",
+        "summary": "Wealthtech platform Veriqus raises Rs 387 Cr in funding round led by Norwest",
+        "date_published": "2026-07-20",
+        "source_name": "Gamma Press",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      }
+    ],
+    "Policies and Initiatives": [
+      {
+        "id": 12,
+        "title": "Centre notifies national AI governance framework",
+        "url": "https://example.test/a12",
+        "summary": "Centre notifies national AI governance framework",
+        "date_published": "2026-01-14",
+        "source_name": "Alpha Wire",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      },
+      {
+        "id": 13,
+        "title": "Ministry issues advisory on synthetic media labelling",
+        "url": "https://example.test/a13",
+        "summary": "Ministry issues advisory on synthetic media labelling",
+        "date_published": "2026-02-06",
+        "source_name": "Alpha Wire",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      }
+    ],
+    "Events": [
+      {
+        "id": 14,
+        "title": "India AI Impact Summit 2026 opens in New Delhi",
+        "url": "https://example.test/a14",
+        "summary": "India AI Impact Summit 2026 opens in New Delhi",
+        "date_published": "2026-02-19",
+        "source_name": "Beta Desk",
+        "category": "Events",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      }
+    ]
+  },
+  "today_updates": []
+}

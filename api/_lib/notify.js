@@ -26,7 +26,7 @@ async function notifyMake(formType, payload) {
     });
   } catch (err) {
     // Never let a Make outage break the user-facing form submission.
-    console.error('Make webhook notify error:', err.message);
+    console.error('Make webhook notify error:', err.name === 'AbortError' ? 'timeout' : 'provider-unreachable');
   } finally {
     clearTimeout(timeout);
   }

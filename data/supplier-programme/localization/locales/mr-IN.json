@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "supplier-localization-bundle.v1",
+  "locale": "mr-IN",
+  "languageCode": "mr",
+  "script": "Devanagari",
+  "direction": "ltr",
+  "publicationStatus": "published",
+  "localizationVersion": "supplier-locales.2026-09-05.v1",
+  "approvalRecord": "../approval-record.json",
+  "researchSource": {
+    "driveFileId": "1BX7Pczi6hpyBKKvZqNsBjk_jRja0H9TM",
+    "researchVersion": "0.9.0-research-draft",
+    "glossaryVersion": "0.9.0-research-draft"
+  },
+  "message": {
+    "hero_eyebrow": "उत्पादकांसाठी सहाय्य",
+    "hero_headline": "तुमची working capital ची गरज तयार करा.",
+    "hero_supporting_text": "तुमचा manufacturing business, confirmed orders आणि finance ची गरज आम्हाला सांगा. पुढच्या टप्प्यात Kanan मदत करू शकेल का याचा आम्ही आढावा घेऊ.",
+    "finance_value_title": "तुमची गरज समजणे सोपे करा",
+    "finance_value_body": "योग्य ठिकाणी, bank किंवा NBFC च्या review आधी गरज स्पष्ट करण्यात आणि संबंधित कागदपत्रे व्यवस्थित करण्यात Kanan मदत करू शकते.",
+    "risk_diagnostic_title": "Global Disruption Review",
+    "risk_diagnostic_body": "निवडलेल्या उत्पादकांना पुढील टप्प्यावर मानवी तज्ज्ञांनी केलेला आढावा मिळू शकतो. बाह्य घडामोडींचा materials, cost, logistics, compliance, production किंवा delivery वर होणारा संभाव्य परिणाम यात पाहिला जातो.",
+    "risk_scope_note": "एखादा risk input, source, process किंवा route शी स्पष्टपणे जोडता आला तरच तो समाविष्ट केला जाईल.",
+    "trust_signal_1": "मानवी आढावा",
+    "trust_signal_2": "financial institution तुम्ही निवडता",
+    "trust_signal_3": "finance चा निर्णय institution घेते",
+    "how_it_works_step_1": "business आणि गरजेची प्राथमिक माहिती द्या.",
+    "how_it_works_step_2": "गरज support programme मध्ये बसू शकते का याचा Kanan आढावा घेते.",
+    "how_it_works_step_3": "निवडलेल्या applicants शी कागदपत्रे आणि पुढील टप्प्यांसाठी संपर्क केला जातो.",
+    "primary_cta": "Manufacturer review सुरू करा",
+    "response_time_copy": "माहिती मिळाल्याची पुष्टी लगेच दिली जाईल. मानवी आढाव्यानंतर आम्ही संपर्क करू.",
+    "lender_boundary_copy": "Kanan Labs bank किंवा NBFC नाही. आम्ही कर्ज देत नाही, credit underwrite किंवा approve करत नाही, loan funds हाताळत नाही आणि finance ची हमी देत नाही. अंतिम निर्णय संबंधित financial institution घेते.",
+    "privacy_microcopy": "तुमची माहिती या request च्या आढाव्यासाठी आणि त्यासंबंधी संपर्कासाठी वापरली जाईल. तुमच्या परवानगीशिवाय ती financial institution सोबत शेअर केली जाणार नाही.",
+    "submission_confirmation": "Application मिळाली आहे. ही फक्त receipt ची पुष्टी आहे; eligibility किंवा approval नाही.",
+    "explicit_no_charge_variant": "निवडलेल्या applicants साठी Global Disruption Review कोणतेही शुल्क न घेता दिला जातो.",
+    "terms_retained_in_english": [
+      "working capital",
+      "CC limit",
+      "OD",
+      "PO",
+      "invoice finance",
+      "GST",
+      "NBFC"
+    ]
+  },
+  "form": {
+    "back": "मागे",
+    "next": "पुढे",
+    "submit": "अर्ज पाठवा",
+    "required": "कृपया आवश्यक माहिती पूर्ण करा.",
+    "invalidPhone": "योग्य 10 अंकी भारतीय मोबाइल क्रमांक टाका.",
+    "choose": "एक पर्याय निवडा",
+    "titles": [
+      "तुमची पसंतीची भाषा निवडा.",
+      "हे working capital finance साठी आहे का?",
+      "तुमच्या कंपनीबद्दल सांगा.",
+      "उत्पादन कुठे करता आणि किती रक्कम हवी?",
+      "आज ग्राहकाची मागणी कोणत्या टप्प्यावर आहे?",
+      "आम्ही तुमच्याशी कुठे संपर्क साधावा?"
+    ],
+    "yes": "होय",
+    "no": "नाही",
+    "purpose": "वित्त कशासाठी वापरणार?",
+    "raw": "कच्चा माल किंवा घटक",
+    "production": "उत्पादन खर्च",
+    "order": "निश्चित ऑर्डर किंवा निर्यात ऑर्डर",
+    "invoice": "invoice finance किंवा delivery नंतरची cash gap",
+    "other": "इतर गरज",
+    "company": "कंपनीचे नाव",
+    "manufacture": "तुमची कंपनी काय तयार करते?",
+    "manufactureHint": "उदा.: प्रिसिजन मशीन केलेले भाग, स्टील फॅब्रिकेशन, रबर घटक",
+    "state": "राज्य किंवा केंद्रशासित प्रदेश",
+    "city": "शहर किंवा औद्योगिक समूह",
+    "amount": "आवश्यक अचूक रक्कम (₹)",
+    "amountHint": "तुम्हाला आवश्यक असलेली एकूण रक्कम टाका. हा वित्तपुरवठ्याचा प्रस्ताव नाही.",
+    "demand": "ग्राहक मागणीची सद्यस्थिती",
+    "po": "निश्चित खरेदी आदेश किंवा करार",
+    "release": "ग्राहक वेळापत्रक किंवा उत्पादन रिलीज",
+    "forecast": "अंदाज किंवा अपेक्षित ऑर्डर",
+    "none": "अद्याप ऑर्डर नाही",
+    "unsure": "माहित नाही",
+    "name": "संपर्क व्यक्तीचे नाव",
+    "phone": "WhatsApp / मोबाइल क्रमांक",
+    "phoneHint": "भारतीय मोबाइल क्रमांक. ईमेल आवश्यक नाही.",
+    "consent": "Kanan Labs ने फक्त या request विषयी phone किंवा WhatsApp द्वारे संपर्क साधावा यासाठी मी परवानगी देतो/देते.",
+    "received": "Application मिळाली आहे.",
+    "receivedBody": "Kanan टीम तुमच्या request चा आढावा घेऊन 24 तासांत संपर्क करेल. Approved channel द्वारे मागेपर्यंत financial किंवा identity documents पाठवू नका.",
+    "otherReceived": "Application मिळाली आहे.",
+    "otherBody": "सध्याचा programme working capital requirements वर केंद्रित आहे. आम्ही 24 तासांत संपर्क करू.",
+    "reference": "अर्ज संदर्भ",
+    "failure": "अर्ज नोंदवता आला नाही. पुन्हा प्रयत्न करा किंवा +91 98402 47729 वर कॉल/WhatsApp करा.",
+    "ctx": [
+      [
+        "तुमची पसंतीची भाषा निवडा.",
+        ""
+      ],
+      [
+        "हे working capital finance साठी आहे का?",
+        ""
+      ],
+      [
+        "तुमच्या कंपनीबद्दल सांगा.",
+        ""
+      ],
+      [
+        "उत्पादन कुठे करता आणि किती रक्कम हवी?",
+        ""
+      ],
+      [
+        "आज ग्राहकाची मागणी कोणत्या टप्प्यावर आहे?",
+        ""
+      ],
+      [
+        "आम्ही तुमच्याशी कुठे संपर्क साधावा?",
+        ""
+      ]
+    ],
+    "applicationTitle": "उत्पादक सहाय्य application",
+    "availability": "English आणि 4 भारतीय भाषांमध्ये उपलब्ध.",
+    "ccod": "CC limit किंवा OD",
+    "machineryNote": "Machinery finance किंवा term loan हे working capital पेक्षा वेगळे आहेत.",
+    "selectedReview": "हा instant, predictive, comprehensive किंवा credit score नाही.",
+    "languageReceived": "भाषेची पसंती मिळाली आहे.",
+    "languageBody": "Kanan टीम 24 तासांत संपर्क करेल.",
+    "shortTitle": "आम्ही तुमच्याशी कुठे संपर्क साधावा ते सांगा.",
+    "shortHelp": "संपूर्ण form अजून या भाषेत उपलब्ध नाही. आम्ही तुमची पसंती नोंदवून योग्य follow-up करू.",
+    "contactOnly": "संपर्क flow",
+    "progressLabel": "Application ची प्रगती",
+    "help": "मदत हवी आहे?",
+    "call": "Kanan ला कॉल करा",
+    "whatsapp": "WhatsApp",
+    "close": "Application बंद करा",
+    "sending": "पाठवत आहे…",
+    "privacy": "गोपनीयता धोरण",
+    "terms": "Programme अटी"
+  }
+}

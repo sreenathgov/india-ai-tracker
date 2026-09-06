@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "supplier-localization-bundle.v1",
+  "locale": "ta-IN",
+  "languageCode": "ta",
+  "script": "Tamil",
+  "direction": "ltr",
+  "publicationStatus": "published",
+  "localizationVersion": "supplier-locales.2026-09-05.v1",
+  "approvalRecord": "../approval-record.json",
+  "researchSource": {
+    "driveFileId": "1BX7Pczi6hpyBKKvZqNsBjk_jRja0H9TM",
+    "researchVersion": "0.9.0-research-draft",
+    "glossaryVersion": "0.9.0-research-draft"
+  },
+  "message": {
+    "hero_eyebrow": "உற்பத்தியாளர்களுக்கான உதவி",
+    "hero_headline": "உங்கள் working capital தேவையைத் தயாராக்குங்கள்.",
+    "hero_supporting_text": "உங்கள் manufacturing business, confirmed orders மற்றும் finance தேவையைப் பற்றி தெரிவியுங்கள். அடுத்த கட்டத்தில் Kanan உதவ முடியுமா என்பதை நாங்கள் பரிசீலிப்போம்.",
+    "finance_value_title": "உங்கள் தேவையை மதிப்பிட எளிதாக்குங்கள்",
+    "finance_value_body": "பொருத்தமான நிலையில், bank அல்லது NBFC review செய்வதற்கு முன் தேவையைத் தெளிவுபடுத்தவும் தொடர்புடைய documents-ஐ ஒழுங்குபடுத்தவும் Kanan உதவலாம்.",
+    "risk_diagnostic_title": "Global Disruption Review",
+    "risk_diagnostic_body": "தேர்ந்தெடுக்கப்பட்ட உற்பத்தியாளர்களுக்கு பின்னர் human-reviewed analysis வழங்கப்படலாம். வெளிப்புற மாற்றங்கள் materials, cost, logistics, compliance, production அல்லது delivery-ஐ எவ்வாறு பாதிக்கக்கூடும் என்பதை அது பார்க்கும்.",
+    "risk_scope_note": "ஒரு risk-ஐ input, source, process அல்லது route உடன் தெளிவாக இணைக்க முடிந்தால் மட்டுமே சேர்க்கப்படும்.",
+    "trust_signal_1": "மனிதர் பரிசீலனை",
+    "trust_signal_2": "financial institution-ஐ நீங்கள் தேர்வு செய்கிறீர்கள்",
+    "trust_signal_3": "finance முடிவை institution எடுக்கிறது",
+    "how_it_works_step_1": "business மற்றும் தேவையின் அடிப்படை விவரங்களை பகிருங்கள்.",
+    "how_it_works_step_2": "தேவை support programme-க்கு பொருந்துமா என்பதை Kanan பரிசீலிக்கும்.",
+    "how_it_works_step_3": "தேர்ந்தெடுக்கப்பட்ட applicants-ஐ documents மற்றும் அடுத்த படிகளுக்காக தொடர்புகொள்வோம்.",
+    "primary_cta": "Manufacturer review தொடங்கவும்",
+    "response_time_copy": "தகவல் கிடைத்தது உடனே உறுதிப்படுத்தப்படும். மனிதர் பரிசீலித்த பிறகு தொடர்புகொள்வோம்.",
+    "lender_boundary_copy": "Kanan Labs ஒரு bank அல்லது NBFC அல்ல. நாங்கள் loan வழங்கவோ, credit underwrite அல்லது approve செய்யவோ, loan funds கையாளவோ, finance-க்கு guarantee அளிக்கவோ மாட்டோம். இறுதி முடிவை தொடர்புடைய financial institution மட்டுமே எடுக்கும்.",
+    "privacy_microcopy": "நீங்கள் அளிக்கும் தகவல் இந்த request-ஐ பரிசீலிக்கவும் அதைப் பற்றி உங்களைத் தொடர்புகொள்ளவும் பயன்படுத்தப்படும். உங்கள் அனுமதி இல்லாமல் financial institution-க்கு பகிரப்படாது.",
+    "submission_confirmation": "Application பெறப்பட்டது. இது receipt உறுதிப்படுத்தல் மட்டுமே; eligibility அல்லது approval அல்ல.",
+    "explicit_no_charge_variant": "தேர்ந்தெடுக்கப்பட்ட applicants-க்கு Global Disruption Review கட்டணமின்றி வழங்கப்படும்.",
+    "terms_retained_in_english": [
+      "working capital",
+      "CC limit",
+      "OD",
+      "PO",
+      "invoice finance",
+      "GST",
+      "NBFC"
+    ]
+  },
+  "form": {
+    "back": "பின்னால்",
+    "next": "தொடரவும்",
+    "submit": "விண்ணப்பத்தை அனுப்பவும்",
+    "required": "தேவையான தகவல்களை முழுமையாக நிரப்பவும்.",
+    "invalidPhone": "சரியான 10 இலக்க இந்திய மொபைல் எண்ணை உள்ளிடவும்.",
+    "choose": "ஒன்றைத் தேர்ந்தெடுக்கவும்",
+    "titles": [
+      "உங்களுக்கு விருப்பமான மொழியைத் தேர்ந்தெடுக்கவும்.",
+      "இது working capital finance-க்கானதா?",
+      "உங்கள் நிறுவனத்தைப் பற்றி கூறுங்கள்.",
+      "எங்கு உற்பத்தி செய்கிறீர்கள், எவ்வளவு தொகை தேவை?",
+      "தற்போதைய வாடிக்கையாளர் தேவை என்ன?",
+      "உங்களை எங்கு தொடர்புகொள்வது?"
+    ],
+    "yes": "ஆம்",
+    "no": "இல்லை",
+    "purpose": "நிதி எதற்காக?",
+    "raw": "மூலப்பொருட்கள் அல்லது பாகங்கள்",
+    "production": "உற்பத்திச் செலவுகள்",
+    "order": "உறுதிப்படுத்தப்பட்ட அல்லது ஏற்றுமதி ஆர்டர்",
+    "invoice": "invoice finance அல்லது delivery-க்குப் பிறகான cash gap",
+    "other": "வேறு தேவை",
+    "company": "நிறுவனத்தின் பெயர்",
+    "manufacture": "உங்கள் நிறுவனம் என்ன உற்பத்தி செய்கிறது?",
+    "manufactureHint": "உதாரணம்: துல்லிய இயந்திர பாகங்கள், எஃகு ஃபேப்ரிகேஷன், ரப்பர் பாகங்கள்",
+    "state": "மாநிலம் அல்லது ஒன்றியப் பிரதேசம்",
+    "city": "நகரம் அல்லது தொழிற்துறை பகுதி",
+    "amount": "தேவையான சரியான தொகை (₹)",
+    "amountHint": "தேவையான மொத்தத் தொகையை உள்ளிடவும். இது நிதி வழங்கும் முன்மொழிவு அல்ல.",
+    "demand": "வாடிக்கையாளர் தேவையின் தற்போதைய நிலை",
+    "po": "உறுதிப்படுத்தப்பட்ட கொள்முதல் ஆணை அல்லது ஒப்பந்தம்",
+    "release": "வாடிக்கையாளர் அட்டவணை அல்லது உற்பத்தி வெளியீடு",
+    "forecast": "எதிர்பார்ப்பு அல்லது வரவிருக்கும் ஆர்டர்",
+    "none": "இன்னும் ஆர்டர் இல்லை",
+    "unsure": "தெரியவில்லை",
+    "name": "தொடர்பு நபரின் பெயர்",
+    "phone": "WhatsApp / மொபைல் எண்",
+    "phoneHint": "இந்திய மொபைல் எண். மின்னஞ்சல் தேவையில்லை.",
+    "consent": "இந்த request பற்றி மட்டும் phone அல்லது WhatsApp மூலம் தொடர்பு கொள்ள Kanan Labs-க்கு நான் அனுமதி அளிக்கிறேன்.",
+    "received": "Application பெறப்பட்டது.",
+    "receivedBody": "Kanan team உங்கள் request-ஐ review செய்து 24 மணி நேரத்திற்குள் தொடர்பு கொள்வார்கள். Approved channel மூலம் கேட்கப்படும் வரை financial அல்லது identity documents அனுப்ப வேண்டாம்.",
+    "otherReceived": "Application பெறப்பட்டது.",
+    "otherBody": "தற்போதைய programme working capital requirements மீது கவனம் செலுத்துகிறது. 24 மணி நேரத்திற்குள் தொடர்பு கொள்வோம்.",
+    "reference": "விண்ணப்பக் குறிப்பு",
+    "failure": "விண்ணப்பத்தை பாதுகாப்பாக பதிவு செய்ய முடியவில்லை. மீண்டும் முயலவும் அல்லது +91 98402 47729 எண்ணில் அழைக்க/WhatsApp செய்யவும்.",
+    "ctx": [
+      [
+        "உங்களுக்கு விருப்பமான மொழியைத் தேர்ந்தெடுக்கவும்.",
+        ""
+      ],
+      [
+        "இது working capital finance-க்கானதா?",
+        ""
+      ],
+      [
+        "உங்கள் நிறுவனத்தைப் பற்றி கூறுங்கள்.",
+        ""
+      ],
+      [
+        "எங்கு உற்பத்தி செய்கிறீர்கள், எவ்வளவு தொகை தேவை?",
+        ""
+      ],
+      [
+        "தற்போதைய வாடிக்கையாளர் தேவை என்ன?",
+        ""
+      ],
+      [
+        "உங்களை எங்கு தொடர்புகொள்வது?",
+        ""
+      ]
+    ],
+    "applicationTitle": "உற்பத்தியாளர் உதவி application",
+    "availability": "English மற்றும் 4 இந்திய மொழிகளில் கிடைக்கிறது.",
+    "ccod": "CC limit அல்லது OD",
+    "machineryNote": "Machinery finance அல்லது term loan, working capital-இலிருந்து வேறுபட்டது.",
+    "selectedReview": "இது instant, predictive, comprehensive அல்லது credit score அல்ல.",
+    "languageReceived": "மொழி விருப்பம் பெறப்பட்டது.",
+    "languageBody": "Kanan team 24 மணி நேரத்திற்குள் தொடர்பு கொள்வார்கள்.",
+    "shortTitle": "உங்களை எங்கு தொடர்பு கொள்ள வேண்டும் என்று கூறுங்கள்.",
+    "shortHelp": "முழு form இன்னும் இந்த மொழியில் கிடைக்கவில்லை. உங்கள் விருப்பத்தை பதிவு செய்து சரியான follow-up ஏற்பாடு செய்வோம்.",
+    "contactOnly": "தொடர்பு flow",
+    "progressLabel": "Application முன்னேற்றம்",
+    "help": "உதவி வேண்டுமா?",
+    "call": "Kanan-ஐ அழைக்கவும்",
+    "whatsapp": "WhatsApp",
+    "close": "Application-ஐ மூடவும்",
+    "sending": "அனுப்பப்படுகிறது…",
+    "privacy": "தனியுரிமைக் கொள்கை",
+    "terms": "Programme விதிமுறைகள்"
+  }
+}

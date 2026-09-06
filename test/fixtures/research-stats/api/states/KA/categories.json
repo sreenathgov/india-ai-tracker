@@ -1,0 +1,55 @@
+{
+  "state": "KA",
+  "categories": {
+    "Major AI Developments": [
+      {
+        "id": 20,
+        "title": "Bengaluru lab opens AI compute cluster",
+        "url": "https://example.test/a20",
+        "summary": "Bengaluru lab opens AI compute cluster",
+        "date_published": "2026-05-02",
+        "source_name": "Delta Local",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      }
+    ],
+    "AI Start-Up News": [
+      {
+        "id": 22,
+        "title": "Blacksmith raises $45 Mn in Series B led by Peak XV",
+        "url": "https://example.test/a22",
+        "summary": "Blacksmith raises $45 Mn in Series B led by Peak XV",
+        "date_published": "2026-08-13",
+        "source_name": "Alpha Wire",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      }
+    ],
+    "Policies and Initiatives": [
+      {
+        "id": 21,
+        "title": "Karnataka unveils state AI policy refresh",
+        "url": "https://example.test/a21",
+        "summary": "Karnataka unveils state AI policy refresh",
+        "date_published": "2026-03-11",
+        "source_name": "Delta Local",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      }
+    ],
+    "Events": []
+  },
+  "today_updates": []
+}

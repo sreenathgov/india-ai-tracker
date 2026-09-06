@@ -72,8 +72,8 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles-v2.css?v=21">
-    <link rel="stylesheet" href="css/staggered-menu.css">
-    <link rel="stylesheet" href="css/footer.css?v=3">
+    <link rel="stylesheet" href="css/staggered-menu.css?v=8">
+    <link rel="stylesheet" href="css/footer.css?v=5">
     <link rel="stylesheet" href="css/contact-panel.css?v=1">
     <link rel="stylesheet" href="css/back-button.css">
 
@@ -252,6 +252,14 @@
 
         .sw-btn-secondary:hover {
             opacity: 0.85;
+        }
+
+        .sw-access__actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 1.75rem;
+            align-items: center;
+            margin-top: 1.5rem;
         }
 
         /* ══════════════════════════════════
@@ -929,7 +937,7 @@
          (No identity-transition strip needed — kl-flow above is already cream,
          so it flows naturally into the founder section's ivory.)
     ════════════════════════ -->
-    <section class="kl-founder" id="founderNote" aria-labelledby="founderHeadline">
+    <section class="kl-founder" id="founderNote" aria-labelledby="founderHeadline" data-nav-light>
         <div class="kl-founder__inner">
 
             <div class="kl-founder__header">
@@ -1046,7 +1054,10 @@
             <div class="sw-access__text">
                 <h2>Where Kanan is heading.</h2>
                 <p>Sector Watch is the long-horizon platform Kanan Labs is building toward. Today we are shipping TradeWatch &mdash; the first, focused expression of the same engine. Sector Watch is the direction, not yet the product.</p>
-                <a href="tradewatch.html" class="sw-btn-secondary">See TradeWatch &rarr;</a>
+                <div class="sw-access__actions">
+                    <a href="#access" class="sw-btn-secondary" data-engagement="Supply chain analysis">Request early access &rarr;</a>
+                    <a href="tradewatch.html" class="sw-btn-secondary">See TradeWatch &rarr;</a>
+                </div>
             </div>
         </div>
     </section>
@@ -1057,20 +1068,14 @@
             <div class="kl-footer__content">
 
                 <div class="kl-footer__brand">
-                    <img src="KANANLABS-LOGO-SET/KANANLABS-LETTERLOGO-BLUEBG.png" alt="Kanan Labs"
-                        class="kl-footer__logo" width="500" height="500" loading="lazy" decoding="async" draggable="false">
-                    <p class="kl-footer__tagline">Trade Intelligence Infrastructure</p>
+                    <img src="assets/logos/kanan-kl-hor-white.png" alt="Kanan Labs"
+                        class="kl-footer__logo" width="922" height="262" loading="lazy" decoding="async" draggable="false">
+                    <p class="kl-footer__tagline">Proactive Supply Chain Resilience</p>
 
-                    <div>
-                        <p class="kl-footer__nl-label">Weekly Brief</p>
-                        <form class="kl-footer__nl-form" id="footerNewsletterForm">
-                            <input type="email" class="kl-footer__nl-input" placeholder="Your email address"
-                                autocomplete="email" required>
-                            <button type="submit" class="kl-footer__nl-submit">Subscribe</button>
-                        </form>
+                    <div class="kl-footer__links">
+                        <a href="https://apply.kananlabs.in/" class="kl-footer__consult">Supplier Programme &#8594;</a>
+                        <a href="request-demo.html" class="kl-footer__consult">Request a Demo &#8594;</a>
                     </div>
-
-                    <a href="tradewatch.html" class="kl-footer__consult">Explore TradeWatch &#8594;</a>
                 </div>
 
                 <div class="kl-footer__sitemap">
@@ -1078,9 +1083,9 @@
                     <div class="kl-footer__col">
                         <h4 class="kl-footer__col-heading">Platform</h4>
                         <ul class="kl-footer__col-links">
-                            <li><a href="tradewatch.html">TradeWatch</a></li>
+                            <li><a href="drona.html">Drona</a></li>
+                            <li><a href="drona-aos.html">DronaAOS</a></li>
                             <li><a href="tracker.html">India AI Tracker</a></li>
-                            <li><a href="sector-watch.html">SectorWatch</a></li>
                             <li><a href="resources.html">Resources</a></li>
                         </ul>
                     </div>
@@ -1089,6 +1094,7 @@
                         <h4 class="kl-footer__col-heading">Company</h4>
                         <ul class="kl-footer__col-links">
                             <li><a href="about.html">About</a></li>
+                            <li><a href="careers.html">Careers</a></li>
                             <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
                         </ul>
                     </div>
@@ -1114,15 +1120,15 @@
             </div>
 
             <div class="kl-footer__watermark">
-                <img src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png" alt=""
-                    class="kl-footer__watermark-img" width="1584" height="396" loading="lazy" decoding="async" aria-hidden="true" draggable="false">
+                <img src="assets/logos/kanan-kl-hor-white.png" alt=""
+                    class="kl-footer__watermark-img" width="922" height="262" loading="lazy" decoding="async" aria-hidden="true" draggable="false">
             </div>
         </div>
     </footer>
 
     <!-- ─── Scripts ─── -->
     <script src="js/contact-panel.js" defer></script>
-    <script src="js/staggered-menu.js?v=4" defer></script>
+    <script src="js/staggered-menu.js?v=12" defer></script>
 
     <!-- Component scripts: shiny-text, evidence-workflow stagger reveal, founder doctrine canvas -->
     <script src="js/evidence-workflow.js" defer></script>

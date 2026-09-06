@@ -1,6 +1,19 @@
 {
   "version": 2,
+  "buildCommand": "npm test && npm run build",
+  "outputDirectory": "dist",
+  "functions": {
+    "api/supplier-programme.js": {"includeFiles": "data/supplier-programme/localization/manifest.json", "maxDuration": 30},
+    "api/apply.js": {"includeFiles": "data/careers.json", "maxDuration": 30},
+    "api/consult.js": {"maxDuration": 30},
+    "api/subscribe.js": {"maxDuration": 30},
+    "api/early-access.js": {"maxDuration": 30}
+  },
   "redirects": [
+    {"source":"/supplier-programme.html", "has":[{"type":"host","value":"kananlabs.in"}], "destination":"https://apply.kananlabs.in/", "permanent":true},
+    {"source":"/supplier-programme.html", "has":[{"type":"host","value":"www.kananlabs.in"}], "destination":"https://apply.kananlabs.in/", "permanent":true},
+    {"source":"/project-origin.html", "destination":"/supplier-programme.html", "permanent":true},
+    {"source":"/project-origin", "destination":"/supplier-programme.html", "permanent":true},
     { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/all-india/index.html", "destination": "/all-india/", "permanent": true },
 
@@ -26,21 +39,36 @@
     { "source": "/states/andaman-and-nicobar/", "destination": "/states/andaman-and-nicobar-islands/", "permanent": true },
     { "source": "/states/andaman-and-nicobar/index.html", "destination": "/states/andaman-and-nicobar-islands/", "permanent": true },
 
-    { "source": "/careers/cofounder-cto", "destination": "/careers/founding-cto/", "permanent": true },
-    { "source": "/careers/cofounder-cto/", "destination": "/careers/founding-cto/", "permanent": true },
-    { "source": "/careers/cofounder-cto/index.html", "destination": "/careers/founding-cto/", "permanent": true },
-    { "source": "/careers/founding-product-engineer", "destination": "/careers/founding-engineer-full-stack/", "permanent": true },
-    { "source": "/careers/founding-product-engineer/", "destination": "/careers/founding-engineer-full-stack/", "permanent": true },
-    { "source": "/careers/founding-product-engineer/index.html", "destination": "/careers/founding-engineer-full-stack/", "permanent": true },
-    { "source": "/careers/trade-practice-lead", "destination": "/careers/head-of-customs-trade-compliance/", "permanent": true },
-    { "source": "/careers/trade-practice-lead/", "destination": "/careers/head-of-customs-trade-compliance/", "permanent": true },
-    { "source": "/careers/trade-practice-lead/index.html", "destination": "/careers/head-of-customs-trade-compliance/", "permanent": true },
-    { "source": "/careers/regulatory-knowledge-engineer", "destination": "/careers/trade-compliance-analyst/", "permanent": true },
-    { "source": "/careers/regulatory-knowledge-engineer/", "destination": "/careers/trade-compliance-analyst/", "permanent": true },
-    { "source": "/careers/regulatory-knowledge-engineer/index.html", "destination": "/careers/trade-compliance-analyst/", "permanent": true },
-    { "source": "/careers/regulatory-systems-engineer", "destination": "/careers/senior-data-engineer-regulatory-data/", "permanent": true },
-    { "source": "/careers/regulatory-systems-engineer/", "destination": "/careers/senior-data-engineer-regulatory-data/", "permanent": true },
-    { "source": "/careers/regulatory-systems-engineer/index.html", "destination": "/careers/senior-data-engineer-regulatory-data/", "permanent": true },
+    {"source": "/careers/cofounder-cto", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/cofounder-cto/", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/cofounder-cto/index.html", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/founding-cto", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/founding-cto/", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/founding-cto/index.html", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/founding-product-engineer", "destination": "/careers/founding-ai-engineer-full-stack/", "permanent": true},
+    {"source": "/careers/founding-product-engineer/", "destination": "/careers/founding-ai-engineer-full-stack/", "permanent": true},
+    {"source": "/careers/founding-product-engineer/index.html", "destination": "/careers/founding-ai-engineer-full-stack/", "permanent": true},
+    {"source": "/careers/founding-engineer-full-stack", "destination": "/careers/founding-ai-engineer-full-stack/", "permanent": true},
+    {"source": "/careers/founding-engineer-full-stack/", "destination": "/careers/founding-ai-engineer-full-stack/", "permanent": true},
+    {"source": "/careers/founding-engineer-full-stack/index.html", "destination": "/careers/founding-ai-engineer-full-stack/", "permanent": true},
+    {"source": "/careers/trade-practice-lead", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/trade-practice-lead/", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/trade-practice-lead/index.html", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/head-of-customs-trade-compliance", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/head-of-customs-trade-compliance/", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/head-of-customs-trade-compliance/index.html", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/regulatory-knowledge-engineer", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/regulatory-knowledge-engineer/", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/regulatory-knowledge-engineer/index.html", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/trade-compliance-analyst", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/trade-compliance-analyst/", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/trade-compliance-analyst/index.html", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/regulatory-systems-engineer", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/regulatory-systems-engineer/", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/regulatory-systems-engineer/index.html", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/senior-data-engineer-regulatory-data", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/senior-data-engineer-regulatory-data/", "destination": "/careers.html", "permanent": true},
+    {"source": "/careers/senior-data-engineer-regulatory-data/index.html", "destination": "/careers.html", "permanent": true},
 
     { "source": "/states/:slug/index.html", "destination": "/states/:slug/", "permanent": true },
     { "source": "/publications/:slug/index.html", "destination": "/publications/:slug/", "permanent": true },
@@ -52,6 +80,15 @@
     { "source": "/publications.html", "destination": "/resources.html", "permanent": true },
     { "source": "/publications", "destination": "/resources.html", "permanent": true },
     { "source": "/publications/", "destination": "/resources.html", "permanent": true }
+  ],
+  "rewrites": [
+    {"source":"/robots.txt", "has":[{"type":"host","value":"apply.kananlabs.in"}], "destination":"/application-robots.txt"},
+    {"source":"/sitemap.xml", "has":[{"type":"host","value":"apply.kananlabs.in"}], "destination":"/application-sitemap.xml"},
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "apply.kananlabs.in" }],
+      "destination": "/supplier-programme.html"
+    }
   ],
   "headers": [
     {
@@ -70,7 +107,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://*.basemaps.cartocdn.com; media-src 'self'; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://*.arcgisonline.com; media-src 'self'; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
         }
       ]
     },
@@ -99,7 +136,13 @@
       ]
     },
     {
-      "source": "/api/((?!subscribe|consult|early-access|apply).*)",
+      "source": "/api/supplier-programme",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/api/((?!subscribe|consult|early-access|apply|supplier-programme).*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=300" }
       ]
@@ -107,25 +150,25 @@
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     },
     {
       "source": "/added-assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800" }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     },
     {
       "source": "/css/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     },
     {
       "source": "/js/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     }
   ]

@@ -1,0 +1,204 @@
+/* ============================================================================
+   KANAN LABS — BRAND TOKENS + PRIMITIVES
+   The single source of truth for the red rebrand palette.
+
+   Link this FIRST on any page that uses the brand, before page-local
+   stylesheets, so page token blocks can reference these names.
+
+   Also reached via `@import` from css/kanan-rebrand.css (the rebrand
+   homepage). Names in the original 14-line version of this file are load
+   bearing for that import — extend this file, never rename or remove.
+
+   Palette derived from css/supplier-programme.css, the fullest existing
+   expression of the system.
+   ========================================================================== */
+
+:root {
+    /* ---- Core grounds ---------------------------------------------------
+       Oxford red (oxblood) is the brand INK: body copy on light, the menu
+       panel, primary button fills. Wine is the dark SECTION ground. They are
+       not interchangeable — see the combination rules at the foot of this
+       file. */
+    --kanan-color-primary: #4c2c2c;       /* Oxford red / oxblood — brand ink */
+    --kanan-color-primary-deep: #301b1b;  /* gradient bottoms, arrow circles  */
+    --kanan-color-wine: #762c36;          /* wine red — dark section ground   */
+    --kanan-color-wine-deep: #3a0000;     /* terminal bands: footer, manifesto*/
+    --kanan-color-accent: #8f5555;        /* rose — accent only, never a bg   */
+    --kanan-color-coral: #ef765d;         /* high-energy accent, focus ring   */
+
+    /* ---- Light surfaces -------------------------------------------------- */
+    --kanan-color-cream: #f4ebd0;         /* menu items, body copy on oxblood */
+    --kanan-color-paper: #eeebe3;         /* the light page ground            */
+    --kanan-color-paper-warm: #f6f2ea;    /* raised cards on paper            */
+    --kanan-color-paper-edge: #e2ddd3;    /* paper's own hairline / inset     */
+
+    /* ---- Type on wine ---------------------------------------------------- */
+    --kanan-on-wine: #f8f5ed;
+    --kanan-on-wine-muted: rgba(248, 245, 237, 0.72);
+    --kanan-on-wine-dim: rgba(248, 245, 237, 0.42);
+    --kanan-on-wine-rule: rgba(248, 245, 237, 0.22);
+    --kanan-on-wine-accent: #f0c9c5;      /* eyebrows/kickers on wine         */
+
+    /* ---- Type on paper --------------------------------------------------- */
+    --kanan-ink: #4c2c2c;
+    --kanan-ink-muted: #756965;
+    --kanan-ink-dim: rgba(76, 44, 44, 0.55);
+    --kanan-rule: rgba(76, 44, 44, 0.16);
+    --kanan-rule-soft: rgba(76, 44, 44, 0.08);
+
+    /* ---- Type stacks ----------------------------------------------------- */
+    --kanan-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    --kanan-heading: Telegraf, Inter, Arial, sans-serif;
+    --kanan-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* ---- Motion ---------------------------------------------------------- */
+    --kanan-ease: cubic-bezier(.22, 1, .36, 1);
+
+    /* ---- Channel triples, for rgb(var(--x) / <alpha>) --------------------- */
+    --kanan-primary-rgb: 76 44 44;
+    --kanan-primary-deep-rgb: 48 27 27;
+    --kanan-wine-rgb: 118 44 54;
+    --kanan-accent-rgb: 143 85 85;
+    --kanan-cream-rgb: 244 235 208;
+    --kanan-paper-rgb: 238 235 227;
+}
+
+/* ============================================================================
+   PRIMITIVES
+   Prefixed .kb- (kanan brand). NOT .kl- — that prefix is already owned by
+   homepage sections (.kl-hero, .kl-footer, .kl-origin-cta) and would collide.
+   ========================================================================== */
+
+/* ---- Eyebrow / kicker ------------------------------------------------------
+   Uppercase micro-label preceded by a 24px currentColor hairline. Wine on a
+   light ground; put .kb-eyebrow--on-wine on it inside a dark band. */
+.kb-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin: 0;
+    font-family: var(--kanan-heading);
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--kanan-color-wine);
+}
+
+.kb-eyebrow span {
+    flex: 0 0 auto;
+    width: 24px;
+    height: 1px;
+    background: currentColor;
+}
+
+.kb-eyebrow--on-wine {
+    color: var(--kanan-on-wine-accent);
+}
+
+/* ---- Pill CTA + circle arrow ----------------------------------------------
+   .kb-pill is the oxblood-on-light default; .kb-pill--light inverts it for
+   use inside a wine band. */
+.kb-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.25rem;
+    min-height: 53px;
+    padding: 0 0.55rem 0 1.25rem;
+    border: 1px solid var(--kanan-color-primary);
+    border-radius: 999px;
+    font-family: var(--kanan-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    color: #fff;
+    background: var(--kanan-color-primary);
+    cursor: pointer;
+    transition: transform 0.25s var(--kanan-ease), box-shadow 0.25s var(--kanan-ease);
+}
+
+.kb-pill span {
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    color: var(--kanan-color-primary);
+    background: #fff;
+}
+
+.kb-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 35px rgba(76, 44, 44, 0.22);
+}
+
+.kb-pill--light {
+    border-color: #fff;
+    color: var(--kanan-color-primary);
+    background: #fff;
+}
+
+.kb-pill--light span {
+    color: #fff;
+    background: var(--kanan-color-primary);
+}
+
+/* ---- Dark band -------------------------------------------------------------
+   Wine ground with the on-wine type ramp already wired up. */
+.kb-band {
+    color: var(--kanan-on-wine);
+    background: var(--kanan-color-wine);
+}
+
+.kb-band h1,
+.kb-band h2,
+.kb-band h3 {
+    color: var(--kanan-on-wine);
+}
+
+.kb-band p,
+.kb-band li {
+    color: var(--kanan-on-wine-muted);
+}
+
+.kb-band hr,
+.kb-band .kb-rule {
+    border: 0;
+    border-top: 1px solid var(--kanan-on-wine-rule);
+}
+
+.kb-band a {
+    color: var(--kanan-on-wine);
+    text-underline-offset: 0.25em;
+}
+
+/* ---- Focus ring ------------------------------------------------------------
+   One brand-wide focus treatment. Wine at 36% reads on both paper and wine. */
+:focus-visible {
+    outline: 3px solid rgba(118, 44, 54, 0.36);
+    outline-offset: 3px;
+}
+
+/* ============================================================================
+   COMBINATION RULES — how the palette is meant to go together
+
+   1. LIGHT section  — ground --kanan-color-paper, headings/ink --kanan-ink,
+      body --kanan-ink-muted, hairlines --kanan-rule, eyebrow
+      --kanan-color-wine, CTA .kb-pill (oxblood fill, white circle).
+
+   2. DARK section   — ground --kanan-color-wine, headings --kanan-on-wine,
+      body --kanan-on-wine-muted, dividers --kanan-on-wine-rule, eyebrow
+      --kanan-on-wine-accent, CTA .kb-pill--light (white fill, oxblood circle).
+
+   3. TERMINAL bands (footer, manifesto, triptych) — --kanan-color-wine-deep,
+      text --kanan-color-paper / --kanan-color-cream.
+
+   4. Rose --kanan-color-accent is ONLY ever an accent: hover, numbering, a
+      second display line, a small border. It is never a background.
+
+   5. Wine and oxblood never appear as TEXT on a dark ground. The on-dark
+      accent is always a tint: --kanan-on-wine-accent or --kanan-color-coral.
+   ========================================================================== */
