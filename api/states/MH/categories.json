@@ -227,6 +227,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Pune becomes first Indian city to launch Google-powered traffic management system",
+        "url": "https://timesofindia.indiatimes.com/city/pune/pune-becomes-first-indian-city-to-launch-google-powered-traffic-management-system/articleshow/133819017.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=...",
+        "date_published": "2026-09-06",
+        "source_name": "Times of India - Mumbai",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Logistics startup OORJAA raises Series A funding led by Equentis Angel Fund",
         "url": "https://entrackr.com/snippets/logistics-startup-oorjaa-raises-series-a-funding-led-by-equentis-angel-fund-12444247",
@@ -2943,5 +2963,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
