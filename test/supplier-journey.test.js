@@ -5,9 +5,11 @@ const path=require('node:path');
 const {JSDOM}=require('jsdom');
 const root=path.resolve(__dirname,'..');
 const manifest=require('../data/supplier-programme/localization/manifest.json');
-function journey(mode='success'){
+function journey(mode='success',deferredFocus=false){
   const dom=new JSDOM(fs.readFileSync(path.join(root,'supplier-programme.html'),'utf8'),{url:'https://apply.kananlabs.in/#apply',runScripts:'outside-only',pretendToBeVisual:true});
   const w=dom.window,doc=w.document,calls=[];
+  const frames=[];
+  if(deferredFocus)w.requestAnimationFrame=fn=>frames.push(fn);
   w.matchMedia=()=>({matches:true,addEventListener(){}});
   w.fetch=async(url,options)=>{const payload=JSON.parse(options.body);calls.push(payload);return {ok:mode!=='failure',json:async()=>mode==='unconfirmed'?{}:{success:true,applicationId:payload.applicationId}}};
   for(const file of ['supplier-programme-locales.generated.js','supplier-programme.js'])w.eval(fs.readFileSync(path.join(root,'js',file),'utf8'));
@@ -16,7 +18,7 @@ function journey(mode='success'){
   function next(){click('form-next')}
   function company(){fill('companyName','Kanan Internal Test');fill('manufacturingDescription','Castings and machined parts')}
   function contact(){fill('contactName','Internal Test');fill('whatsapp','9840247729');assert.equal(doc.getElementById('consent').checked,false);click('consent')}
-  return {dom,w,doc,calls,fill,click,next,company,contact,async settle(){await new Promise(resolve=>setTimeout(resolve,10))}};
+  return {dom,w,doc,calls,fill,click,next,company,contact,flushFrames(){frames.splice(0).forEach(fn=>fn())},async settle(){await new Promise(resolve=>setTimeout(resolve,10))}};
 }
 for(const locale of manifest.locales){
   test(`${locale.localeCode}: ${locale.experience} completes the intended journey`,async()=>{
@@ -42,6 +44,15 @@ test('switching languages and closing a deep link preserve answers without leavi
     assert.equal(j.doc.getElementById('companyName').value,'Kanan Internal Test');
     j.doc.querySelector('[data-close-application]').click();assert.equal(j.w.location.pathname,'/');assert.equal(j.w.location.hash,'');
     j.doc.querySelector('[data-open-application]').click();assert.equal(j.doc.getElementById('companyName').value,'Kanan Internal Test');
+  }finally{j.dom.window.close()}
+});
+test('delayed step focus cannot steal an active field or refocus a closed application',()=>{
+  const j=journey('success',true);try{
+    j.flushFrames();j.next();j.click('workingCapital-no');j.next();
+    const description=j.doc.getElementById('manufacturingDescription');description.focus();j.flushFrames();
+    assert.equal(j.doc.activeElement,description);
+    j.click('form-back');j.next();j.doc.querySelector('[data-close-application]').click();
+    const closedFocus=j.doc.activeElement;j.flushFrames();assert.equal(j.doc.activeElement,closedFocus);
   }finally{j.dom.window.close()}
 });
 for(const mode of ['failure','unconfirmed'])test(`${mode}: never shows a false receipt and retains the retry ID`,async()=>{

@@ -64,7 +64,7 @@
     document.body.classList.add('sp-locked');
     lockBackground();
     if(location.hash!=='#apply')history.pushState({supplierApplication:true},'',location.pathname+location.search+'#apply');
-    render();requestAnimationFrame(()=>{const el=screen.querySelector('select,input,button');if(el)el.focus()});
+    render();focusFirstField(false);
   }
   function closeApplication(fromHistory){
     if(app.hidden||submitting)return;
@@ -134,7 +134,17 @@
   function validate(){const c=t(),step=current();let ok=true;if(step===1&&!state.language)ok=false;if(step===2&&(!state.workingCapital||(state.workingCapital==='yes'&&!state.purposes.length)))ok=false;if(step===3&&(!state.companyName.trim()||!state.manufacturingDescription.trim()))ok=false;if(step===4&&(!state.state||!state.city.trim()||!Number(state.fundingAmountInr)))ok=false;if(step===5&&!state.orderStatus)ok=false;if(step===6){if(!state.contactName.trim()||!state.consent)ok=false;if(!validPhone(state.whatsapp)){ok=false;errorSummary.textContent=c.invalidPhone}else errorSummary.textContent=c.required}else errorSummary.textContent=c.required;errorSummary.hidden=ok;if(!ok){const target=screen.querySelector('input:not([type="hidden"]),select,textarea');if(target)target.focus()}return ok}
   function normalizePhone(v){let digits=String(v||'').replace(/\D/g,'');if(digits.length===10)digits='91'+digits;return '+'+digits}
   back.addEventListener('click',()=>{if(cursor>0){cursor-=1;render()}});
-  next.addEventListener('click',async()=>{if(submitting||!validate())return;if(cursor<sequence.length-1){cursor+=1;render();requestAnimationFrame(()=>{const el=screen.querySelector('input,select,textarea');if(el)el.focus({preventScroll:true})});return}await submit()});
+  function focusFirstField(preventScroll){
+    const rendered=screen.firstElementChild;
+    requestAnimationFrame(()=>{
+      // A fast tap or Tab may already have moved into the new screen. Never
+      // pull focus back, or focus a field after the overlay has closed.
+      if(app.hidden||screen.firstElementChild!==rendered||screen.contains(document.activeElement))return;
+      const el=screen.querySelector('input,select,textarea,button');
+      if(el)el.focus({preventScroll});
+    });
+  }
+  next.addEventListener('click',async()=>{if(submitting||!validate())return;if(cursor<sequence.length-1){cursor+=1;render();focusFirstField(true);return}await submit()});
   form.addEventListener('submit',(event)=>{event.preventDefault();next.click()});
   async function submit(){
     submitting=true;
