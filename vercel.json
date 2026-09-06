@@ -10,6 +10,7 @@
     "api/early-access.js": {"maxDuration": 30}
   },
   "redirects": [
+    {"source":"/", "has":[{"type":"host","value":"apply.kananlabs.in"}], "destination":"/supplier-programme.html", "permanent":false},
     {"source":"/supplier-programme.html", "has":[{"type":"host","value":"kananlabs.in"}], "destination":"https://apply.kananlabs.in/", "permanent":true},
     {"source":"/supplier-programme.html", "has":[{"type":"host","value":"www.kananlabs.in"}], "destination":"https://apply.kananlabs.in/", "permanent":true},
     {"source":"/project-origin.html", "destination":"/supplier-programme.html", "permanent":true},
@@ -83,12 +84,7 @@
   ],
   "rewrites": [
     {"source":"/robots.txt", "has":[{"type":"host","value":"apply.kananlabs.in"}], "destination":"/application-robots.txt"},
-    {"source":"/sitemap.xml", "has":[{"type":"host","value":"apply.kananlabs.in"}], "destination":"/application-sitemap.xml"},
-    {
-      "source": "/",
-      "has": [{ "type": "host", "value": "apply.kananlabs.in" }],
-      "destination": "/supplier-programme.html"
-    }
+    {"source":"/sitemap.xml", "has":[{"type":"host","value":"apply.kananlabs.in"}], "destination":"/application-sitemap.xml"}
   ],
   "headers": [
     {
