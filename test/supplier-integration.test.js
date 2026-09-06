@@ -4,8 +4,12 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
-const integration = JSON.parse(fs.readFileSync(path.join(root, 'data/supplier-programme/integration/make-intake.v1.json'), 'utf8'));
-const sample = JSON.parse(fs.readFileSync(path.join(root, 'data/supplier-programme/integration/sample-webhook-payload.v1.json'), 'utf8'));
+// Public schema only: real workbook identifiers and operational samples stay private.
+const integration = JSON.parse(fs.readFileSync(path.join(root, 'data/supplier-programme/contracts/intake.v1.json'), 'utf8'));
+const {validateApplication, enrichApplication, sheetRecord} = require('../api/_lib/supplier-programme');
+const validated = validateApplication({schemaVersion:'supplier-programme.v2',applicationId:'KSP-20260906-CONTRACT',language:'en',workingCapital:'yes',purposes:['invoice_gap'],companyName:'Example Manufacturing',manufacturingDescription:'Test-only casting parts',state:'Tamil Nadu',city:'Chennai',fundingAmountInr:500000,orderStatus:'no_order',contactName:'Example contact',whatsapp:'9000000000',consent:true,consentVersion:'supplier-programme-2026-09-v2',source:{}});
+assert.equal(validated.ok, true);
+const sample = sheetRecord(enrichApplication(validated.data, new Date('2026-09-06T00:00:00Z')));
 
 test('Make integration owns one ordered and duplicate-free Sheet schema', () => {
   assert.equal(integration.workbook.sheetName, 'Supplier Intake Raw');
