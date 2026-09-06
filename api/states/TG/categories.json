@@ -111,6 +111,127 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "AI-led taxpayer monitoring in Telangana",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/ai-led-taxpayer-monitoring-in-telangana/articleshow/133774863.cms",
+        "summary": "AI-led taxpayer monitoring in Telangana",
+        "date_published": "2026-09-05",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "The Hyderabad that was, and the city it is now",
+        "url": "https://www.thehindu.com/news/cities/Hyderabad/the-hyderabad-that-was-and-the-city-it-is-now/article71424311.ece",
+        "summary": "Once a city of leisurely chai, neighbourhood cinema halls, street-corner conversations and the twin cities, Hyderabad has changed almost beyond recognition. Over five decades, tech, infrastructure, mi...",
+        "date_published": "2026-09-04",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "AI boom sparks chip employees’ surge for a Trump Towers address in Hyderabad",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/ai-boom-sparks-chip-employees-surge-for-a-trump-towers-address-in-hyderabad/articleshow/133520322.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"...",
+        "date_published": "2026-08-26",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "AMI orders 9,000 NVIDIA Rubin GPUs for Hyderabad facility",
+        "url": "https://www.thehindu.com/business/Industry/ami-orders-9000-nvidia-rubin-gpus-for-hyderabad-facility/article71390110.ece",
+        "summary": "The facility is expected to be among Asia’s first frontier AI computing clusters using the Vera Rubin platform, the company said in a press release",
+        "date_published": "2026-08-25",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Endiya Partners leads $2.5 Mn seed round in physical AI startup WATER",
+        "url": "https://entrackr.com/snippets/endiya-partners-leads-25-mn-seed-round-in-physical-ai-startup-water-12425820",
+        "summary": "Physical AI company WATER has raised $2.5 million in...",
+        "date_published": "2026-08-24",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Telangana PGLCET admissions: 967 LLM seats allotted in first phase",
+        "url": "https://www.thehindu.com/news/national/telangana/telangana-pglcet-admissions-967-llm-seats-allotted-in-first-phase/article71381487.ece",
+        "summary": "Telangana PGLCET admissions: 967 LLM seats allotted in first phase",
+        "date_published": "2026-08-23",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "IIIT Hyderabad Opens Applications for Cohort 3 of Certificate Program on Engineering Agentic AI Systems",
         "url": "https://www.iiit.ac.in/cohort-3-program-on-engineering-agentic-ai-systems/",
@@ -2633,5 +2754,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

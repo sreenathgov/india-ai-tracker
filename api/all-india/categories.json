@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 1,
+        "title": "India&#039;s AI agents to make small digital payments via UPI without approval",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-agents-to-make-small-digital-payments-via-upi-without-approval/133674112",
+        "summary": "India is set to launch a groundbreaking framework for AI agents that will facilitate small digital transactions. This promising initiative aims to elevate UPI to a forefront position in agentic paymen...",
+        "date_published": "2026-09-01",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Imarticus Learning acquires Singapore-based BELLS Institute of Higher Learning",
         "url": "https://entrackr.com/snippets/imarticus-learning-acquires-singapore-based-bells-institute-of-higher-learning-12223587",
@@ -1353,6 +1373,626 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 1,
+        "title": "Bodhan AI launches four open AI models for Indian languages",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/bodhan-ai-launches-four-open-ai-models-for-indian-languages/articleshow/133774265.cms",
+        "summary": "Bodhan AI launches four open AI models for Indian languages",
+        "date_published": "2026-09-05",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Commerce that listens, learns, and speaks: Inside Flipkart&#039;s AI-First playbook",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/commerce-that-listens-learns-and-speaks-inside-flipkarts-ai-first-playbook/133749441",
+        "summary": "Flipkart&#039;s CPTO Balaji Thiagarajan reflects on how voice, memory, and reinforcement learning are turning the search bar into a conversation and why AI still isn&#039;t allowed to act without aski...",
+        "date_published": "2026-09-04",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Indian banks move AI into production, but scaling remains a challenge",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indian-banks-move-ai-into-production-but-scaling-remains-a-challenge/133749655",
+        "summary": "Indian banks are now deploying artificial intelligence in production across various functions. Scaling these AI deployments faces significant hurdles related to security and data usability. Retail len...",
+        "date_published": "2026-09-04",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Indian-origin Anil Chakravarthy to take over as Adobe CEO",
+        "url": "https://yourstory.com/2026/09/indian-origin-anil-chakravarthy-to-take-over-as-adobe-ceo",
+        "summary": "Adobe has named Indian-origin executive Anil Chakravarthy as CEO, succeeding Shantanu Narayen as the software giant enters a new AI-driven phase of growth.",
+        "date_published": "2026-09-04",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Coforge launches AI Launchpad to help enterprises build and run AI stacks in-house",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/coforge-launches-ai-launchpad-to-help-enterprises-build-and-run-ai-stacks-in-house/133723417",
+        "summary": "Coforge has launched a new enterprise AI offering called AI Launchpad. This platform allows organizations to build and operate their own AI stacks. It provides greater control over data, costs, and AI...",
+        "date_published": "2026-09-03",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "India leads in AI adoption, but workers say ‘AI output is a starting point, not the final answer’",
+        "url": "https://www.livemint.com/ai/india-leads-in-ai-adoption-but-workers-say-ai-output-is-a-starting-point-not-the-final-answer-11788435466783.html",
+        "summary": "&amp;nbsp;A Microsoft report shows India’s lead in AI adoption, with 32% of users as Frontier Professionals managing multi-step workflows while maintaining responsibility for outcomes.",
+        "date_published": "2026-09-03",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "‘Really anxious and very excited’: Nvidia CEO Jensen Huang on India’s AI rise",
+        "url": "https://www.etnownews.com/technology/nvidia-ceo-jensen-huang-excited-and-anxious-about-india-ai-rise-article-156038038",
+        "summary": "Nvidia CEO Jansen Huang sees India has one of the world's leading IT industries and is enthralled to witness India taking advantage of the technology and build local AI economy.",
+        "date_published": "2026-09-03",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Tech Mahindra, AWS launch agentic AI CoE for enterprise transformation",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/tech-mahindra-aws-launch-agentic-ai-coe-for-enterprise-transformation/133732961",
+        "summary": "The CoE integrates Tech Mahindra BPS&#039; extensive process expertise with AWS&#039; cloud and Agentic AI capabilities, facilitating enterprises&#039; transition from AI experimentation to tangible b...",
+        "date_published": "2026-09-03",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Indian employees are taking the lead in defining the future of work: Microsoft study",
+        "url": "https://yourstory.com/2026/09/indian-employees-are-taking-the-lead-in-defining-the-future-of-work-microsoft-study",
+        "summary": "The Microsoft 2026 Work Trend Index reveals that India leads global AI adoption through frontier professionals who combine agent automation with strong human judgement. Despite rapid adoption of highl...",
+        "date_published": "2026-09-03",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "How the Unacademy-upGrad deal unfolded; Why AI could push India’s ER&D revenue past $100B",
+        "url": "https://yourstory.com/2026/09/unacademy-upgrad-deal-ai-could-push-india-erd-revenue",
+        "summary": "The Unacademy-upGrad deal began with an audacious pitch, recalls Ronnie Screwvala. Meanwhile, a Nasccom study says the engineering research and development (ER&amp;D) services revenue from India is pr...",
+        "date_published": "2026-09-02",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Meta launches ‘Muse Voice Transcribe’ with native support for five Indian languages",
+        "url": "https://telanganatoday.com/meta-launches-muse-voice-transcribe-with-native-support-for-five-indian-languages",
+        "summary": "Meta has launched Muse Voice Transcribe, its first real-time audio-perception model, supporting five major Indian languages and over 70 languages globally. The model offers streaming transcription, sp...",
+        "date_published": "2026-09-02",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Prompter or creator? India's copyright office rejects AI DABUS as author in artwork case",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/prompter-or-creator-indias-copyright-office-rejects-ai-dabus-as-author-in-artwork-case/articleshow/133699120.cms",
+        "summary": "Says AI System Is Not A Natural Person Under Law — Extension Of Authorship To AI Is Matter For Parliament To Decide: Registrar",
+        "date_published": "2026-09-02",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "India’s BHASHINI, Kathmandu University explore partnership in language AI",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/indias-bhashini-kathmandu-university-explore-partnership-in-language-ai/133711496",
+        "summary": "The interaction centred on strengthening existing language models while developing new ones for underrepresented languages.",
+        "date_published": "2026-09-02",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Building India’s sovereign AI ecosystem",
+        "url": "https://cio.economictimes.indiatimes.com/building-india-sovereign-ai-ecosystem?ag=events_listing&utm_source=events_listing&utm_medium=eventListing",
+        "summary": "Building India’s sovereign AI ecosystem",
+        "date_published": "2026-09-01",
+        "source_name": "CIO ET - Events",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Indian IT companies poised for strong growth from FY27 as AI deployment accelerates",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indian-it-companies-poised-for-strong-growth-from-fy27-as-ai-deployment-accelerates/133648312",
+        "summary": "Indian IT companies are gearing up for significant growth beginning in FY27, fueled by an increase in AI-related expenditures. The emphasis will be on integrating AI and demonstrating its economic ben...",
+        "date_published": "2026-09-01",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Measuring the business value of agentic AI in Indian enterprises",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/measuring-the-business-value-of-agentic-ai-in-indian-enterprises/133504310",
+        "summary": "Indian enterprises are moving agentic AI from experimentation to production for measurable business value.  Organizations now focus on demonstrating tangible returns and operational improvements from...",
+        "date_published": "2026-09-01",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "UPI set for AI payment push: India plans framework for agentic payments without approval for every transaction",
+        "url": "https://www.etnownews.com/technology/upi-set-for-ai-payment-push-india-plans-framework-for-agentic-payments-without-approval-for-every-transaction-article-156025554",
+        "summary": "As AI continues to change the world, India is set to introduce a system under which artificial intelligence agents would be able to make small digital payments through the Unified Payments Interface w...",
+        "date_published": "2026-09-01",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "PhonePe launches UPI 123Pay for feature phone users without internet",
+        "url": "https://entrackr.com/snippets/phonepe-launches-upi-123pay-for-feature-phone-users-without-internet-12458166",
+        "summary": "PhonePe has launched UPI 123Pay, allowing feature phone user...",
+        "date_published": "2026-08-31",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Honor's Robot Phone: Smartphone with camera that moves and tracks you; check price and India launch date",
+        "url": "https://www.etnownews.com/technology/honors-robot-phone-smartphone-with-camera-that-moves-and-tracks-you-check-price-and-india-launch-date-article-156011632",
+        "summary": "Honor's Robot Phone features a motorised gimbal camera with AI tracking, ARRI imaging tech and flagship hardware, launched in China with India debut expected later.",
+        "date_published": "2026-08-30",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "AI&#039;s impact on Indian office leasing decisions: 57% see no immediate effect",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ais-impact-on-indian-office-leasing-decisions-57-see-no-immediate-effect/133561085",
+        "summary": "Most Indian office occupiers are implementing artificial intelligence in early stages.  AI adoption is widespread, yet it has little immediate impact on leasing.  Occupiers prioritize high-quality wor...",
+        "date_published": "2026-08-27",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "AI transforms Indian jobs: Workforce transformation over reduction",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-transforms-indian-jobs-workforce-transformation-over-reduction/133560840",
+        "summary": "AI is reshaping jobs in India more through task automation and role redesign than outright workforce replacement. Companies such as Wipro and DHL are using AI to handle repetitive work while shifting...",
+        "date_published": "2026-08-27",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Jio Financial Services to launch AI personal CFO and membership program on JioFinance app",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/jio-financial-services-to-launch-ai-personal-cfo-and-membership-program-on-jiofinance-app/133556948",
+        "summary": "In an exciting development, Jio Financial Services will introduce an AI-driven personal CFO alongside a membership program. This initiative is tailored to enhance customer acquisition through a cost-e...",
+        "date_published": "2026-08-27",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "ChatGPT to implement advertising in India targeted at users of Free and Go subscription tiers soon",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/chatgpt-to-implement-advertising-in-india-targeted-at-users-of-free-and-go-subscription-tiers-soon/133556841",
+        "summary": "OpenAI is set to introduce advertisements on its widely-used ChatGPT platform in India, targeting both free and paid adult users. Advertisers can monitor the performance of their campaigns without acc...",
+        "date_published": "2026-08-27",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Tata Motors, Tata Communications partner to bring 5G connectivity to Sierra.ev",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/tata-motors-tata-communications-partner-to-bring-5g-connectivity-to-sierra-ev/133559168",
+        "summary": "Tata Motors and Tata Communications are joining forces to embed 5G connectivity in their latest vehicles. This strategic collaboration will pave the way for enhanced software-defined vehicle functions...",
+        "date_published": "2026-08-27",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "ChatGPT Ads launched in India on Free, Go tiers",
+        "url": "https://telanganatoday.com/chatgpt-ads-launched-in-india-on-free-go-tiers",
+        "summary": "OpenAI has expanded ChatGPT Ads to India, its second‑largest market, targeting logged‑in adult users on Free and Go tiers ahead of a planned IPO. Ads will appear at the bottom of chatbot responses, re...",
+        "date_published": "2026-08-27",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "AI adoption sees a rapid surge in Asia as corporations establish innovative hubs in Singapore and India",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-adoption-sees-a-rapid-surge-in-asia-as-corporations-establish-innovative-hubs-in-singapore-and-india/133538213",
+        "summary": "Asia-Pacific is experiencing rapid enterprise AI adoption across various sectors.  Investment in AI and generative AI is projected to reach $175 billion by 2028.  Singapore and India are emerging as k...",
+        "date_published": "2026-08-26",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "AI could drive 3-3.5% annual revenue deflation in Indian IT services through FY28",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-could-drive-3-3-5-annual-revenue-deflation-in-indian-it-services-through-fy28/133501709",
+        "summary": "The Indian IT services sector is projected to face an annual revenue decrease of three to three and a half percent, with these challenges expected to persist until fiscal year twenty twenty-eight. How...",
+        "date_published": "2026-08-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Indian IT firms partner with OpenAI, Anthropic for AI deployment and integration",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indian-it-firms-partner-with-openai-anthropic-for-ai-deployment-and-integration/133500666",
+        "summary": "Indian IT services companies have emerged as critical collaborators for global AI laboratories. Their expertise in deployment and integration makes them invaluable. Leading AI entities such as OpenAI...",
+        "date_published": "2026-08-25",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "TCS acquires Porsche’s IT arm for €320M; bags €1.25B deal",
+        "url": "https://yourstory.com/2026/08/tcs-acquires-porsches-it-arm-for--320-million-bags--125-billion-deal",
+        "summary": "The partnership between Porsche and TCS will see both companies jointly working on AI led solutions for automotive sector.",
+        "date_published": "2026-08-24",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "India sets the pace in APAC for AI adoption and investment, showcasing enterprise readiness like no other",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-sets-the-pace-in-apac-for-ai-adoption-and-investment-showcasing-enterprise-readiness-like-no-other/133397164",
+        "summary": "Indian organizations significantly increased AI investment over the past year.  Most Indian companies now utilize AI assistants and chatbots for operations.  AI adoption has demonstrably improved prod...",
+        "date_published": "2026-08-22",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Indian CEOs encouraged to innovate by creating impactful AI products beyond simple chatbot experiments",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indian-ceos-encouraged-to-innovate-by-creating-impactful-ai-products-beyond-simple-chatbot-experiments/133396590",
+        "summary": "Indian CEOs must build real AI products and solutions, moving beyond simple chatbot experiments.  Companies are accelerating AI adoption and need to identify complex problems for dedicated task forces...",
+        "date_published": "2026-08-21",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 4,
         "title": "Exclusive: BGauss raises Rs 110 Cr in fresh round at Rs 1,000 Cr valuation",
@@ -13040,6 +13680,66 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "Adobe picks up AI marketing startup Rilo in second India acquisition",
+        "url": "https://entrackr.com/snippets/adobe-picks-up-ai-marketing-startup-rilo-in-second-india-acquisition-12484822",
+        "summary": "Adobe has picked up India based marketing intelligence startup R...",
+        "date_published": "2026-09-02",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "EquityList launches AI-native cap table and compliance platform",
+        "url": "https://entrackr.com/snippets/equitylist-launches-ai-native-cap-table-and-compliance-platform-12478460",
+        "summary": "Equity and shareholder management platform Equit...",
+        "date_published": "2026-09-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "From Sarvam AI co-founder to IBM CEO, meet the 10 Indians and people of Indian origin on TIME100 AI 2026",
+        "url": "https://yourstory.com/2026/08/10-indians-and-indian-origin-names-on-time100-ai-2026",
+        "summary": "TIME published the fourth edition of its TIME100 AI list on August 27, naming 100 people it considers the most influential in artificial intelligence across four categories: Leaders, Innovators, Shape...",
+        "date_published": "2026-08-28",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Fleetx.ai acquires TMS provider Pando.ai",
         "url": "https://entrackr.com/snippets/fleetxai-acquires-tms-provider-pandoai-12399265",
@@ -15949,5 +16649,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -4,6 +4,47 @@
     "Policies and Initiatives": [
       {
         "id": 3,
+        "title": "Andhra CM approves India&#039;s first dedicated Quantum, AI university campus in Amaravati",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/andhra-cm-approves-indias-first-dedicated-quantum-ai-university-campus-in-amaravati/133591355",
+        "summary": "Andhra Pradesh&#039;s Chief Minister has officially sanctioned the establishment of India&#039;s first Quantum and AI University campus in Amaravati, led by NIELIT. The university is set to kick off a...",
+        "date_published": "2026-08-28",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Airbound raises $37 Mn from Greenoaks, DoorDash, Lachy Groom and others",
+        "url": "https://entrackr.com/news/airbound-raises-37-mn-from-greenoaks-doordash-lachy-groom-and-others-12431939",
+        "summary": "Bengaluru-based aerospace startup Air...",
+        "date_published": "2026-08-25",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA",
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "Andhra Pradesh to become 'India's first' AI-powered tourism state",
         "url": "https://yourstory.com/2026/07/andhra-pradesh-to-become-indias-first-ai-powered-tourism-state",
         "summary": "Andhra Pradesh is set to become India's first AI-powered tourism state through a new initiative. The state's tourism development corporation has signed a three-year MoU with Xplore to implement the AI-powered tourism project. This partnership aims to enhance the state's tourism sector using artificial intelligence.",
@@ -85,6 +126,26 @@
     ],
     "Events": [],
     "Major AI Developments": [
+      {
+        "id": 1,
+        "title": "India’s first AI-Quantum University: All you need to know about  ₹730 cr campus coming up in Amaravati",
+        "url": "https://www.livemint.com/ai/indias-first-ai-quantum-university-all-you-need-to-know-about-730-crore-campus-coming-up-in-amravati-tdp-naidu-11787900209187.html",
+        "summary": "Academic and advanced technology skill-development programmes will begin on the campus from September 2026 at a temporary facility at Acharya Nagarjuna University in Guntur, while the permanent Amarav...",
+        "date_published": "2026-08-28",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 3,
         "title": "Andhra Pradesh stands at the top in AI & BDA Skilling under...",

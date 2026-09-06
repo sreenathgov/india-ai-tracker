@@ -267,6 +267,48 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "Delhi-bound AI Express flight makes precautionary landing at Lucknow airport after smoke alarm goes off",
+        "url": "https://www.thehindu.com/news/national/uttar-pradesh/delhi-bound-ai-express-flight-makes-precautionary-landing-at-lucknow-airport-after-smoke-alarm-goes-off/article71423427.ece",
+        "summary": "Preliminary checks at Lucknow airport found no sign of smoke or fire in the aircraft,",
+        "date_published": "2026-09-03",
+        "source_name": "The Hindu - Uttar Pradesh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP",
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Man uses AI to create minor girl’s obscene photo in Delhi, extorts Rs 1.2L over 2.5 years; arrested",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/after-32-months-of-online-threats-extortion-girl-goes-to-cops-man-held/articleshow/133476574.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"...",
+        "date_published": "2026-08-25",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "IIT Knp holds orientation for new AI, cyber courses",
         "url": "https://timesofindia.indiatimes.com/city/kanpur/iit-knp-holds-orientation-for-new-ai-cyber-courses/articleshow/133247987.cms",
