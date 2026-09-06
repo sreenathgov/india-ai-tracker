@@ -80,3 +80,13 @@ test('Sector Watch panel posts its mapped fields to the dedicated endpoint', () 
   assert.match(source, /company:\s*formData\.organisation/);
   assert.doesNotMatch(source, /fetch\('\/api\/consult'/);
 });
+
+test('Sector Watch exposes the panel from a visible early-access action and hides the closed dialog from focus', () => {
+  const page = fs.readFileSync(path.join(root, 'sector-watch.html'), 'utf8');
+  const panel = fs.readFileSync(path.join(root, 'js/contact-panel.js'), 'utf8');
+  assert.match(page, /data-engagement="Supply chain analysis"/);
+  assert.match(page, />Request early access &rarr;<\/a>/);
+  assert.match(panel, /panel\.inert = true/);
+  assert.match(panel, /this\.panelEl\.setAttribute\('aria-hidden', 'false'\)/);
+  assert.match(panel, /this\.returnFocusEl\?\.isConnected/);
+});
