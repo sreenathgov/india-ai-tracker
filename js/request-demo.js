@@ -93,20 +93,23 @@
             submittedAt: new Date().toISOString()
         };
 
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 20000);
         try {
             const response = await fetch('/api/consult', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
+                body: JSON.stringify(payload),
+                signal: controller.signal
             });
 
             const result = await response.json().catch(() => ({}));
 
-            if (!response.ok || result.success !== true) {
+            if (!response.ok || result?.success !== true) {
                 if (response.status === 429) {
                     throw new Error('Too many requests have been sent. Please wait a few minutes and try again.');
                 }
-                throw new Error(result.message || 'We could not send your request. Please try again.');
+                throw new Error(result?.message || 'We could not send your request. Please try again.');
             }
 
             form.hidden = true;
@@ -114,9 +117,12 @@
             success.hidden = false;
             success.focus();
         } catch (error) {
-            submitError.textContent = error.message || 'We could not send your request. Please try again.';
+            submitError.textContent = error.name === 'AbortError'
+                ? 'The connection timed out. Your details are still here. Please try again.'
+                : error.message || 'We could not send your request. Please try again.';
             submitError.focus?.();
         } finally {
+            clearTimeout(timeout);
             submitting = false;
             setBusy(false);
         }

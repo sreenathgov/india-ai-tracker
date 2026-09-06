@@ -1,6 +1,6 @@
 @font-face{font-family:Telegraf;src:url('../assets/fonts/Telegraf-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
 @font-face{font-family:Telegraf;src:url('../assets/fonts/Telegraf-UltraBold.otf') format('opentype');font-weight:800;font-display:swap}
-@font-face{font-family:Inter;src:url('../added-assets/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');font-weight:100 900;font-display:swap}
+@font-face{font-family:Inter;src:url('../added-assets/Inter/Inter-VariableFont_opsz,wght.woff2') format('woff2');font-weight:100 900;font-display:swap}
 @font-face{font-family:'Noto Sans Devanagari Kanan';src:url('../assets/fonts/noto/NotoSansDevanagari-Kanan.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
 @font-face{font-family:'Noto Sans Gujarati Kanan';src:url('../assets/fonts/noto/NotoSansGujarati-Kanan.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
 @font-face{font-family:'Noto Sans Tamil Kanan';src:url('../assets/fonts/noto/NotoSansTamil-Kanan.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
@@ -1193,4 +1193,17 @@ h1{max-width:13ch;margin:1.1rem 0 0;font-size:clamp(3.35rem,6.4vw,7rem);font-wei
   .sp-process-action{
     display:none!important;
   }
+}
+
+/* Reflow at enlarged text sizes without shrinking the user's chosen type. */
+@media(max-width:760px){
+  .sp-statement,.sp-dark-section,.sp-fit,.sp-process .sp-section-heading,
+  .sp-process-track,.sp-closing-strip__inner{grid-template-columns:minmax(0,1fr)}
+  .sp-statement>* , .sp-dark-section>*, .sp-fit>*{min-width:0}
+  .sp-statement h2,.sp-dark-section h2,.sp-process h2,.sp-fit h2,
+  .sp-faq h2,.sp-closing-strip h2{overflow-wrap:anywhere}
+  .sp-primary{min-width:0;gap:.75rem;white-space:normal;overflow-wrap:anywhere}
+  .sp-accordions summary{grid-template-columns:24px minmax(0,1fr) auto;gap:.4rem;padding:.7rem .6rem;overflow-wrap:anywhere}
+  .sp-accordions details p{padding-inline:1rem;overflow-wrap:anywhere}
+  .sp-process-action>p{white-space:normal;text-wrap:balance}
 }

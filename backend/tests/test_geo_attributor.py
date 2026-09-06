@@ -1,5 +1,5 @@
 """
-Unit Tests for Conservative Geographic Attributor
+Unit Tests for Jurisdiction-First Geographic Attributor
 
 Tests the 4 rules:
 1. STATE GOVERNMENT ACTION
@@ -86,7 +86,8 @@ class TestPhysicalActivity:
             "The Chennai-based company will establish a new R&D facility in Lucknow."
         )
         assert 'UP' in states
-        assert 'PHYSICAL_ACTIVITY:UP' in reason
+        assert 'CITY_MATCH:lucknow→UP' in reason
+        assert 'TN' not in states  # Company HQ is not the facility being opened.
 
     def test_new_data_centre(self, geo):
         """New data centre should return state."""
@@ -131,7 +132,7 @@ class TestLocationBoundEvent:
             "The annual AI summit will be held at Bangalore International Convention Centre."
         )
         assert 'KA' in states
-        assert 'EVENT_LOCATION:KA' in reason
+        assert 'CITY_MATCH:bangalore→KA' in reason
 
     def test_conference_in_chennai(self, geo):
         """Conference in city should return state."""
@@ -176,7 +177,7 @@ class TestExplicitInvestment:
             "The company announced Rs 500 crore investment in Hyderabad."
         )
         assert 'TG' in states
-        assert 'INVESTMENT:TG' in reason
+        assert 'CITY_MATCH:hyderabad→TG' in reason
 
     def test_deployment_across_state(self, geo):
         """Deployment across state should return state."""
@@ -227,21 +228,22 @@ class TestDisallowedSignals:
         assert states == ['IN']
 
     def test_passing_mention(self, geo):
-        """Passing city mention should NOT cause attribution."""
+        """Named locations follow the February jurisdiction-first policy."""
         states, reason = geo.attribute(
             "AI adoption trends in Indian enterprises",
             "Companies like those in Bangalore and Pune are adopting AI rapidly. The trend is similar across India."
         )
-        # Bangalore/Pune are mentioned in passing, not as subject
-        assert states == ['IN']
+        assert states == ['KA', 'MH']
+        assert 'CITY_MATCH' in reason
 
     def test_quote_mention(self, geo):
-        """City in quote should NOT cause attribution."""
+        """A named operational team retains its jurisdiction, even in a quote."""
         states, reason = geo.attribute(
             "CEO discusses AI strategy",
             "As our Mumbai team noted, AI is transforming businesses. The strategy applies nationwide."
         )
-        assert states == ['IN']
+        assert states == ['MH']
+        assert 'CITY_MATCH:mumbai→MH' in reason
 
     def test_news_source_location(self, geo):
         """Source location should NOT auto-attribute (strict mode)."""

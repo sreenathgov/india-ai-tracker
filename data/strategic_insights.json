@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-05",
+  "lastUpdated": "2026-09-06",
   "cards": [
     {
       "id": "stat-1",
@@ -13,7 +13,7 @@
       "id": "stat-2",
       "type": "stat",
       "title": "Signals Filed",
-      "value": "2,027",
+      "value": "2,032",
       "suffix": "",
       "description": "Each one classified, geo-attributed and adjudicated before it enters the record."
     },
@@ -116,25 +116,25 @@
     }
   ],
   "heading": "NINE MONTHS OF SIGNAL",
-  "subheading": "Every AI signal out of India — 2,027 of them — read, filed and cross-checked since January 2026.",
+  "subheading": "Every AI signal out of India — 2,032 of them — read, filed and cross-checked since January 2026.",
   "computed": {
-    "totalSignals": 2027,
+    "totalSignals": 2032,
     "monthsActive": 9,
     "firstMonth": "2026-01",
     "lastMonth": "2026-09",
-    "latestSignalDate": "2026-09-05",
+    "latestSignalDate": "2026-09-06",
     "policyCount": 165,
     "policyTopTwoMonthsShare": 0.42424242424242425,
     "policyQuietMonthCount": 2,
     "sourceCount": 77,
-    "topSourceShare": 0.4070054267390232,
+    "topSourceShare": 0.406003937007874,
     "topSources": [
       "Entrackr - AI & Startups",
       "YourStory",
       "ET CIO - AI"
     ],
     "jurisdictionCount": 29,
-    "topStateShare": 0.5989583333333334,
+    "topStateShare": 0.6001483679525222,
     "topStates": [
       "KA",
       "DL",

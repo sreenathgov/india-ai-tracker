@@ -33,50 +33,50 @@ class TestTitleAISignals:
         """Title with 'AI' should pass."""
         result = validator.validate("New AI tool launches in India")
         assert result.passed is True
-        assert result.reason == 'TITLE_AI_SIGNAL'
+        assert result.reason == 'TITLE_AI_STRONG'
         assert result.confidence == 'high'
 
     def test_title_with_artificial_intelligence(self, validator):
         """Title with 'artificial intelligence' should pass."""
         result = validator.validate("Artificial Intelligence transforms healthcare")
         assert result.passed is True
-        assert result.reason == 'TITLE_AI_SIGNAL'
+        assert result.reason == 'TITLE_AI_STRONG'
 
     def test_title_with_machine_learning(self, validator):
         """Title with 'machine learning' should pass."""
         result = validator.validate("Machine learning model achieves record accuracy")
         assert result.passed is True
-        assert result.reason == 'TITLE_AI_SIGNAL'
+        assert result.reason == 'TITLE_AI_STRONG'
 
     def test_title_with_genai(self, validator):
         """Title with 'GenAI' should pass."""
         result = validator.validate("GenAI adoption surges in enterprises")
         assert result.passed is True
-        assert result.reason == 'TITLE_AI_SIGNAL'
+        assert result.reason == 'TITLE_AI_STRONG'
 
     def test_title_with_llm(self, validator):
         """Title with 'LLM' should pass."""
         result = validator.validate("New LLM outperforms GPT-4")
         assert result.passed is True
-        assert result.reason == 'TITLE_AI_SIGNAL'
+        assert result.reason == 'TITLE_AI_STRONG'
 
     def test_title_with_chatgpt(self, validator):
         """Title with 'ChatGPT' should pass."""
         result = validator.validate("ChatGPT users reach 200 million milestone")
         assert result.passed is True
-        assert result.reason == 'TITLE_AI_SIGNAL'
+        assert result.reason == 'TITLE_AI_STRONG'
 
     def test_title_with_deep_learning(self, validator):
         """Title with 'deep learning' should pass."""
         result = validator.validate("Deep learning breakthrough in image recognition")
         assert result.passed is True
-        assert result.reason == 'TITLE_AI_SIGNAL'
+        assert result.reason == 'TITLE_AI_STRONG'
 
     def test_title_with_neural_network(self, validator):
         """Title with 'neural network' should pass."""
         result = validator.validate("Neural network predicts protein structures")
         assert result.passed is True
-        assert result.reason == 'TITLE_AI_SIGNAL'
+        assert result.reason == 'TITLE_AI_STRONG'
 
 
 class TestNonAISubjects:
@@ -116,14 +116,17 @@ class TestNonAISubjects:
 class TestGoldStandardArchetypes:
     """Gold standard archetypes that MUST always pass."""
 
-    def test_archetype_product_launch(self, validator):
-        """AI product launch should pass."""
+    def test_archetype_product_launch(self, validator, monkeypatch):
+        """A weak title with one content signal is reviewed by the model."""
+        monkeypatch.setattr(validator, "_llm_verify", lambda *args, **kwargs: {
+            "is_subject": True, "classification": "SUBJECT"})
         result = validator.validate(
             "Zoho launches AI-powered analytics tool",
             "The company unveiled its new artificial intelligence product..."
         )
         assert result.passed is True
-        assert 'ARCHETYPE_MATCH' in result.reason or result.reason == 'TITLE_AI_SIGNAL'
+        assert result.reason == 'TITLE_WEAK_LLM:SUBJECT'
+        assert result.llm_used is True
 
     def test_archetype_research_paper(self, validator):
         """AI research publication should pass."""
@@ -258,7 +261,7 @@ class TestEdgeCases:
         """None content should work."""
         result = validator.validate("AI news headline", None)
         assert result.passed is True  # Title has AI
-        assert result.reason == 'TITLE_AI_SIGNAL'
+        assert result.reason == 'TITLE_AI_STRONG'
 
     def test_very_long_content(self, validator):
         """Very long content should not crash."""
@@ -279,7 +282,7 @@ class TestEdgeCases:
         """Should work regardless of case."""
         result = validator.validate("NEW AI TOOL LAUNCHES")
         assert result.passed is True
-        assert result.reason == 'TITLE_AI_SIGNAL'
+        assert result.reason == 'TITLE_AI_STRONG'
 
     def test_lowercase_ai(self, validator):
         """Lowercase 'ai' should also match."""

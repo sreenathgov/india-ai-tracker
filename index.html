@@ -79,7 +79,7 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
     <!-- The local JPEG poster is kept materialized for instant cold starts. -->
-    <link rel="preload" as="image" href="added-assets/kanan-hero-poster.jpg" type="image/jpeg" fetchpriority="high">
+    <link rel="preload" as="image" href="added-assets/video-assets/optimized/kanan-hero-poster.jpg" type="image/jpeg" fetchpriority="high">
     <!-- The poster is the only hero preload. The video streams after the
          element is parsed so it cannot compete with render-blocking assets. -->
     <!-- Performance: preload Cormorant display font weights -->
@@ -425,7 +425,7 @@
                 display: none;
             }
             .kl-hero {
-                background-image: url('added-assets/kanan-hero-poster.jpg');
+                background-image: url('added-assets/video-assets/optimized/kanan-hero-poster.jpg');
                 background-size: cover;
                 background-position: center 35%;
             }
@@ -823,6 +823,14 @@
             (function () {
                 var v = document.getElementById('klHeroVideo');
                 if (!v) return;
+                // Avoid downloading a hidden video, or spending a data-saving
+                // visitor's bandwidth on decoration. The poster stays visible.
+                var connection = navigator.connection;
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                    || (connection && (connection.saveData || /^(?:slow-)?2g$/.test(connection.effectiveType)))) {
+                    v.removeAttribute('autoplay');
+                    return;
+                }
                 var sources = [
                     { src: 'added-assets/video-assets/optimized/kanan-hero-intro.webm', type: 'video/webm' },
                     { src: 'added-assets/video-assets/optimized/kanan-hero-intro.mp4', type: 'video/mp4' }

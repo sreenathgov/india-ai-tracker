@@ -944,6 +944,21 @@ body.publications-page .page-wrapper {
 }
 
 /* Hover: the bar fills solid orange and inverts to white — reads as a button. */
+.more-strip__button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+}
+.more-strip__button:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+
 .subsection-card:hover .more-strip {
     background: var(--kanan-orange);
     border-top-color: var(--kanan-orange);

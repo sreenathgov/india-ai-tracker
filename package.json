@@ -13,7 +13,7 @@
     "build:text-pressure": "vite build",
     "build:scroll-reveal": "vite build --config vite.config.scroll-reveal.js",
     "dev:text-pressure": "vite build --watch",
-    "build": "npm run build:supplier-locales && npm run build:research-stats && node scripts/build-full-site.js && node scripts/generate-static-pages.js && node scripts/generate-publications.js && node scripts/generate-careers.js && node scripts/generate-sitemap.js && node scripts/release/finalize.js && node scripts/release/verify.js",
+    "build": "node scripts/release/check-environment.js && npm run build:supplier-locales && npm run build:research-stats && node scripts/build-full-site.js && node scripts/generate-static-pages.js && node scripts/generate-publications.js && node scripts/generate-careers.js && node scripts/generate-sitemap.js && node scripts/release/finalize.js && node scripts/release/verify.js",
     "build:publications": "node scripts/generate-publications.js && node scripts/generate-careers.js && node scripts/generate-sitemap.js",
     "test": "node --test test/*.test.js",
     "preview": "npm run build && vite preview --host 127.0.0.1 --port 4180 --strictPort"

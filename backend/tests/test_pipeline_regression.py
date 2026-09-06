@@ -90,12 +90,30 @@ class TestAISubjectValidatorRegression:
         # Weak title + strong content = PASS
         ("AI-powered tool launched", "Uses deep learning and neural networks for inference.", True),
         ("Robotics system unveiled", "Transformer models trained on GPU clusters.", True),
-        ("Smart solution deployed", "Machine learning algorithms process data in real-time.", True),
     ])
     def test_weak_signals_need_content(self, validator, title, content, expected_pass):
         """Weak AI signals require content reinforcement."""
         result = validator.validate(title, content)
         assert result.passed == expected_pass, f"Title: {title}, Expected: {expected_pass}, Got: {result.passed}, Reason: {result.reason}"
+
+    @pytest.mark.parametrize('decision', [True, False])
+    def test_borderline_content_follows_review(self, validator, monkeypatch, decision):
+        calls = []
+        def review(title, content, has_title_signal):
+            calls.append(has_title_signal)
+            return {'is_subject': decision, 'classification': 'TEST_REVIEW'}
+        monkeypatch.setattr(validator, '_llm_verify', review)
+        result = validator.validate('Smart solution deployed',
+                                    'Machine learning algorithms process data in real-time.')
+        assert calls == [False]
+        assert result.passed is decision
+        assert result.llm_used is True
+
+    def test_borderline_content_without_api_key_fails_closed(self, validator):
+        result = validator.validate('Smart solution deployed',
+                                    'Machine learning algorithms process data in real-time.')
+        assert result.passed is False
+        assert result.reason == 'LLM_VERIFIED:NO_API_KEY_DROP'
 
 
 class TestIndiaSubjectValidatorRegression:

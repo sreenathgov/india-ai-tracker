@@ -28,6 +28,8 @@ for(const locale of manifest.locales){
         j.fill('state','Tamil Nadu');j.fill('city','Chennai');j.fill('fundingAmountInr','5000000');assert.equal(j.doc.getElementById('fundingAmountInr').value,'₹ 50,00,000');j.next();j.click('orderStatus-no_order');j.next();
       }
       assert.ok(j.doc.querySelector('.sp-boundary-copy').textContent.includes('NBFC'));
+      const copy=require('../data/supplier-programme/localization/locales/' + (locale.experience==='full-form'?locale.localeCode:'en-IN') + '.json');
+      assert.equal(j.doc.querySelector('.sp-institution-choice').textContent,copy.message.trust_signal_2);
       j.contact();j.next();await j.settle();
       assert.equal(j.calls.length,1);assert.equal(j.calls[0].localeCode,locale.localeCode);assert.equal(j.calls[0].languageExperience,locale.experience);
       assert.equal(j.doc.getElementById('application-result').hidden,false);

@@ -113,7 +113,7 @@ let ip = 1;
 function response() {
     return { statusCode: 200, payload: null, headers: {}, setHeader(k, v) { this.headers[k] = v; }, status(code) { this.statusCode = code; return this; }, json(body) { this.payload = body; return this; }, end() { return this; } };
 }
-async function withMockDelivery(run, failContact = false) {
+async function withMockDelivery(run, failContact = false, failNotification = false) {
     const env = { BREVO_API_KEY: 'test-only', BREVO_CAREERS_LIST_ID: '123', BREVO_CAREERS_TEMPLATE_ID: '456', CAREERS_NOTIFY_EMAIL: 'reviewer@example.test', CAREERS_SENDER_EMAIL: 'careers@example.test', MAKE_WEBHOOK_URL: 'https://example.test/mock-webhook' };
     const previous = Object.fromEntries(Object.keys(env).map(k => [k, process.env[k]]));
     const calls = [];
@@ -121,7 +121,7 @@ async function withMockDelivery(run, failContact = false) {
     Object.assign(process.env, env);
     global.fetch = async (url, options) => {
         calls.push({ url, body: JSON.parse(options.body) });
-        const fail = failContact && url.endsWith('/contacts');
+        const fail = (failContact && url.endsWith('/contacts')) || (failNotification && url.endsWith('/email'));
         return { ok: !fail, status: fail ? 503 : 201, json: async () => ({ message: 'Mock delivery result' }) };
     };
     try { await run(calls); }
@@ -164,4 +164,15 @@ test('invalid applications make no external calls; a storage failure returns an 
         assert.notEqual(res.payload.success, true);
         assert.equal(calls.length, 1);
     }, true);
+});
+
+test('careers never confirms receipt when the full application and CV were not delivered', async () => {
+    await withMockDelivery(async calls => {
+        const res = response();
+        await handler(request(application({cvUrl:'',cvFile:pdf})),res);
+        assert.equal(res.statusCode,502);
+        assert.notEqual(res.payload.success,true);
+        assert.match(res.payload.message,/complete application/);
+        assert.equal(calls.length,2);
+    },false,true);
 });

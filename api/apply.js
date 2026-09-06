@@ -6,15 +6,15 @@
  * 2. Emails the founder the full, untruncated answers, with the CV attached.
  * 3. Sends the candidate an acknowledgement from a transactional template.
  *
- * Steps 2 and 3 are logged on failure but do not fail the request — by then
- * the application is already stored, and telling a candidate their submission
- * failed when it did not is the worse outcome. Same trade as api/consult.js.
+ * The contact is a searchable summary, not the full application. Step 2 must
+ * succeed before receipt is confirmed: it holds the complete answers and CV.
+ * Candidate acknowledgement failure does not undo an accepted application.
  *
  * Environment variables (set in the Vercel dashboard):
  *   BREVO_API_KEY              — already set; shared with the other endpoints
  *   BREVO_CAREERS_LIST_ID      — required; numeric id of the applications list
  *   BREVO_CAREERS_TEMPLATE_ID  — optional; candidate acknowledgement template
- *   CAREERS_NOTIFY_EMAIL       — optional; where the founder notification goes
+ *   CAREERS_NOTIFY_EMAIL       — required; where the complete application goes
  *   CAREERS_SENDER_EMAIL       — optional; must be a VERIFIED Brevo sender
  *   MAKE_WEBHOOK_URL           — optional; fans the submission out to Make
  */
@@ -80,8 +80,7 @@ async function storeContact(headers, listId, { fields, role, answers, timestamp 
 async function notifyFounder(headers, { role, fields, answers, cv, timestamp }) {
     const to = process.env.CAREERS_NOTIFY_EMAIL;
     if (!to) {
-        console.warn('CAREERS_NOTIFY_EMAIL is not set — no founder notification sent');
-        return;
+        throw new Error('Careers notification destination is missing');
     }
 
     const payload = {
@@ -112,8 +111,7 @@ async function notifyFounder(headers, { role, fields, answers, cv, timestamp }) 
     });
 
     if (!response.ok) {
-        const err = await response.json().catch(() => ({}));
-        console.error('Brevo founder notification error:', err.code || 'provider-error');
+        throw new Error('Careers full-application delivery failed');
     }
 }
 
@@ -171,8 +169,8 @@ module.exports = async function handler(req, res) {
     }
 
     const apiKey = process.env.BREVO_API_KEY;
-    if (!apiKey) {
-        console.error('BREVO_API_KEY is not set');
+    if (!apiKey || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(process.env.CAREERS_NOTIFY_EMAIL || '')) {
+        console.error('Careers delivery configuration is incomplete');
         return res.status(500).json({ message: 'Server configuration error' });
     }
 
@@ -189,7 +187,7 @@ module.exports = async function handler(req, res) {
         Accept: 'application/json'
     };
 
-    const timestamp = (req.body && req.body.submittedAt) || new Date().toISOString();
+    const timestamp = new Date().toISOString();
     const context = { role, fields, answers, cv, timestamp };
 
     try {
@@ -203,10 +201,15 @@ module.exports = async function handler(req, res) {
         return res.status(500).json({ message: 'Server error. Please try again.' });
     }
 
-    // Past this point the application is safely stored. Nothing below may fail
-    // the request.
+    // A contact record alone does not retain an attached CV or complete answers.
+    // Fail visibly and preserve the browser form if their delivery is unconfirmed.
     try {
         await notifyFounder(headers, context);
+    } catch (err) {
+        console.error('Careers full-application delivery unavailable:', err.name || 'provider-error');
+        return res.status(502).json({ message: 'Your contact details were saved, but we could not deliver the complete application. Your details are still here. Please try again.' });
+    }
+    try {
         await acknowledgeCandidate(headers, context);
         await notifyMake('apply', {
             roleSlug: role.slug,

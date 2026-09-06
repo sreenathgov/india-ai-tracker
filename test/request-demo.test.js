@@ -72,7 +72,7 @@ function browserForm(fetch) {
         return nodes.get(id);
     }
     const document = { getElementById: node, querySelector: node };
-    vm.runInNewContext(fs.readFileSync(path.join(root, 'js/request-demo.js'), 'utf8'), { document, fetch });
+    vm.runInNewContext(fs.readFileSync(path.join(root, 'js/request-demo.js'), 'utf8'), { document, fetch, AbortController, setTimeout, clearTimeout });
     node('demo-name').value = 'Test Person'; node('demo-email').value = 'test@example.com'; node('demo-company').value = 'Example OEM';
     return { node, focused: () => focused, submit: () => node('demoRequestForm').listeners.submit({ preventDefault() {} }) };
 }

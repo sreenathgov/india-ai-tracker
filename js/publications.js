@@ -31,6 +31,41 @@ let readingColumn, readingContent;
 let analysisPanel, analysisPanelTitle, analysisPanelContent;
 let indepthPanel, indepthPanelTitle, indepthPanelContent;
 let layerName, layerBoxes, tocList, tocSidebar, layerIndicatorEl;
+const panelReturnFocus = new Map();
+let panelInertSiblings = [];
+
+// Keep keyboard and screen-reader navigation on the currently visible layer.
+// Remember existing inert state, so closing a panel cannot unlock another UI.
+function syncPanelAccess() {
+    for (const [node, previous] of panelInertSiblings) node.inert = previous;
+    panelInertSiblings = [];
+    const active = currentLayer === 'indepth' ? indepthPanel : currentLayer === 'analysis' ? analysisPanel : null;
+    for (const panel of [analysisPanel, indepthPanel]) {
+        panel.inert = panel !== active;
+        panel.setAttribute('aria-hidden', String(panel !== active));
+    }
+    if (!active) return;
+    for (let branch = active; branch.parentElement; branch = branch.parentElement) {
+        for (const sibling of branch.parentElement.children) {
+            if (sibling === branch || sibling.matches('script,style,.layer-backdrop')) continue;
+            panelInertSiblings.push([sibling, sibling.inert]);
+            sibling.inert = true;
+        }
+        if (branch.parentElement === document.body) break;
+    }
+}
+
+function focusPanel(panel) {
+    syncPanelAccess();
+    panel.querySelector('.panel-close').focus({preventScroll:true});
+}
+
+function returnPanelFocus(panel) {
+    syncPanelAccess();
+    const trigger = panelReturnFocus.get(panel);
+    if (trigger?.isConnected) trigger.focus({preventScroll:true});
+    panelReturnFocus.delete(panel);
+}
 
 // ≤1024px = popup mode: sidebar hidden, panels are near-full-screen popups,
 // no connector-spot geometry (must match the publications.css breakpoint).
@@ -660,14 +695,12 @@ function renderOverviewContent() {
             html += `
                 <div class="subsection-card"
                      id="card-${chapterIndex}-${sectionIndex}"
-                     onclick="openAnalysisPanel(${chapterIndex}, ${sectionIndex})"
-                     role="button"
-                     tabindex="0">
+                     onclick="if (!event.target.closest('a, button')) openAnalysisPanel(${chapterIndex}, ${sectionIndex})">
                     <div class="subsection-id">${chapterNumber}.${sectionIndex + 1}</div>
-                    <h3 class="subsection-title">${section.title}</h3>
+                    <h3 class="subsection-title" id="subsection-title-${chapterIndex}-${sectionIndex}">${section.title}</h3>
                     <div class="subsection-teaser">${firstParagraphOf(section.content)}</div>
                     ${notesHtml}
-                    <div class="more-strip">Get the details <span class="more-icon">&rarr;</span></div>
+                    <div class="more-strip"><button type="button" class="more-strip__button" aria-describedby="subsection-title-${chapterIndex}-${sectionIndex}" onclick="openAnalysisPanel(${chapterIndex}, ${sectionIndex})">Get the details <span class="more-icon" aria-hidden="true">&rarr;</span></button></div>
                 </div>
             `;
         });
@@ -750,6 +783,7 @@ function alignSpotToCard(card, chapterIndex, sectionIndex) {
 function openAnalysisPanel(chapterIndex, sectionIndex) {
     const chapter = publicationData.chapters[chapterIndex];
     const section = chapter.sections[sectionIndex];
+    if (currentLayer === 'overview') panelReturnFocus.set(analysisPanel, document.activeElement);
 
     currentChapter = chapterIndex;
     currentSection = sectionIndex;
@@ -802,6 +836,7 @@ function openAnalysisPanel(chapterIndex, sectionIndex) {
     requestAnimationFrame(() => {
         analysisPanel.classList.add('open');
         updateLayerIndicator('Analysis');
+        if (currentLayer === 'analysis') focusPanel(analysisPanel);
     });
 
     // Update URL
@@ -824,6 +859,7 @@ function closeAnalysisPanel() {
     requestAnimationFrame(() => {
         analysisPanel.classList.remove('open');
         updateLayerIndicator('Overview');
+        returnPanelFocus(analysisPanel);
     });
 
     // Update URL
@@ -834,6 +870,7 @@ function openIndepthPanel(chapterIndex, sectionIndex, subsectionIndex) {
     const chapter = publicationData.chapters[chapterIndex];
     const section = chapter.sections[sectionIndex];
     const subsection = section.subsections[subsectionIndex];
+    panelReturnFocus.set(indepthPanel, document.activeElement);
 
     currentSubsection = subsectionIndex;
     currentLayer = 'indepth';
@@ -857,6 +894,7 @@ function openIndepthPanel(chapterIndex, sectionIndex, subsectionIndex) {
         indepthPanel.classList.add('open');
         analysisPanel.classList.add('pushed');
         updateLayerIndicator('In Depth');
+        if (currentLayer === 'indepth') focusPanel(indepthPanel);
     });
 
     // Update URL
@@ -873,6 +911,7 @@ function closeIndepthPanel() {
         indepthPanel.classList.remove('open');
         analysisPanel.classList.remove('pushed');
         updateLayerIndicator('Analysis');
+        returnPanelFocus(indepthPanel);
     });
 
     // Update URL
@@ -1178,6 +1217,17 @@ function bindSubscribeForm(form) {
 
 function setupKeyboardNavigation() {
     document.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab' && currentLayer !== 'overview') {
+            const panel = currentLayer === 'indepth' ? indepthPanel : analysisPanel;
+            const targets = [...panel.querySelectorAll('button,a[href],input,select,textarea,[tabindex]')]
+                .filter(node => !node.disabled && node.tabIndex >= 0 && !node.closest('[hidden],[inert]'));
+            const first = targets[0], last = targets[targets.length - 1];
+            if (first && e.shiftKey && (document.activeElement === first || !panel.contains(document.activeElement))) {
+                e.preventDefault(); last.focus();
+            } else if (first && !e.shiftKey && (document.activeElement === last || !panel.contains(document.activeElement))) {
+                e.preventDefault(); first.focus();
+            }
+        }
         if (e.key === 'Escape') {
             if (currentLayer === 'indepth') {
                 closeIndepthPanel();
@@ -1189,8 +1239,8 @@ function setupKeyboardNavigation() {
 
     // Allow Enter/Space on subsection cards and More-about links
     document.addEventListener('keydown', (e) => {
-        if (e.target.classList.contains('subsection-card') ||
-            e.target.classList.contains('subsection-link')) {
+        if (e.target.classList?.contains('subsection-card') ||
+            e.target.classList?.contains('subsection-link')) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 e.target.click();
@@ -1354,11 +1404,13 @@ function restoreFromURL() {
 function renderError(message) {
     readingContent.innerHTML = `
         <div class="error-state" style="text-align: center; padding: 4rem 2rem;">
-            <p style="font-family: 'Telegraf', sans-serif; color: var(--text-secondary); margin-bottom: 1.5rem;">${message}</p>
-            <a href="index.html" style="font-family: 'Telegraf', sans-serif; color: var(--accent-orange); text-decoration: underline;">Return to Tracker</a>
+            <p class="publication-error-message" style="font-family: 'Telegraf', sans-serif; color: var(--text-secondary); margin-bottom: 1.5rem;"></p>
+            <a href="/tracker.html" style="font-family: 'Telegraf', sans-serif; color: var(--accent-orange); text-decoration: underline;">Return to Tracker</a>
         </div>
     `;
-    document.getElementById('publicationTitle').textContent = 'Publication Not Found';
+    readingContent.querySelector('.publication-error-message').textContent = message;
+    const title = document.getElementById('publicationTitle');
+    if (title) title.textContent = 'Publication Not Found';
 }
 
 // Make functions available globally for onclick handlers

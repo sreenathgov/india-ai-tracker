@@ -399,17 +399,21 @@ class ContactPanel {
     }
 
     // Send to serverless API
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 20000);
     fetch('/api/consult', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
+      signal: controller.signal
     })
       .then(res => res.ok ? res.json() : res.json().then(e => Promise.reject(e)))
-      .then(() => {
+      .then(result => {
+        if (result?.success !== true) throw new Error('We could not confirm your request. Please try again.');
         this.showSuccessState();
       })
       .catch(err => {
-        console.error('Consultation submit error:', err);
+        console.error('Consultation request was not confirmed');
         // Re-enable button
         if (submitBtn) {
           submitBtn.disabled = false;
@@ -423,8 +427,11 @@ class ContactPanel {
           errorEl.style.cssText = 'color:#c0392b;font-size:13px;margin-top:8px;text-align:center';
           submitBtn ? submitBtn.parentNode.insertBefore(errorEl, submitBtn.nextSibling) : this.formEl.appendChild(errorEl);
         }
-        errorEl.textContent = err.message || 'Something went wrong. Please try again.';
-      });
+        errorEl.textContent = err.name === 'AbortError'
+          ? 'The connection timed out. Your details are still here. Please try again.'
+          : err.message || 'Something went wrong. Please try again.';
+      })
+      .finally(() => clearTimeout(timeout));
   }
 
   preselectEngagement(needValue) {
