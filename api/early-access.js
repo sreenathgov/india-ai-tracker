@@ -38,13 +38,24 @@ module.exports = async function handler(req, res) {
     return res.status(200).json({ success: true });
   }
 
-  const { name, company, email } = req.body || {};
+  const { name, company, email, tradeNeeds } = req.body || {};
 
   if (typeof email !== 'string' || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return res.status(400).json({ message: 'Invalid email address' });
   }
   if (typeof name !== 'string' || name.length > 160 || name.trim().length < 1) {
     return res.status(400).json({ message: 'Name is required' });
+  }
+
+  const allowedNeeds = new Set([
+    'Regulatory risk mapping & strategy',
+    'Entering new markets',
+    'Supply chain analysis',
+    'Identifying compatible incentives'
+  ]);
+  if (!Array.isArray(tradeNeeds) || tradeNeeds.length < 1 || tradeNeeds.length > allowedNeeds.size ||
+      tradeNeeds.some(item => typeof item !== 'string' || !allowedNeeds.has(item))) {
+    return res.status(400).json({ message: 'Select at least one valid area of interest' });
   }
 
   const apiKey = process.env.BREVO_API_KEY;
@@ -73,7 +84,8 @@ module.exports = async function handler(req, res) {
         attributes: {
           FIRSTNAME: firstName,
           LASTNAME: lastName,
-          COMPANY: company || ''
+          COMPANY: typeof company === 'string' ? company.substring(0, 500) : '',
+          CONTEXT: tradeNeeds.join(' · ')
         },
         listIds: [listId],
         updateEnabled: true
@@ -90,7 +102,8 @@ module.exports = async function handler(req, res) {
     await notifyMake('early-access', {
       contactName: name.trim(),
       email,
-      companyName: company || '',
+      companyName: typeof company === 'string' ? company.substring(0, 500) : '',
+      tradeNeeds,
       submittedAt: new Date().toISOString()
     });
 

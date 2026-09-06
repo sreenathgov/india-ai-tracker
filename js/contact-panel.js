@@ -401,10 +401,15 @@ class ContactPanel {
     // Send to serverless API
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 20000);
-    fetch('/api/consult', {
+    fetch('/api/early-access', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({
+        name: formData.contactName,
+        email: formData.email,
+        company: formData.organisation,
+        tradeNeeds: formData.tradeNeeds
+      }),
       signal: controller.signal
     })
       .then(res => res.ok ? res.json() : res.json().then(e => Promise.reject(e)))
