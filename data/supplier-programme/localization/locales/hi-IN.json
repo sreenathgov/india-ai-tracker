@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "supplier-localization-bundle.v1",
+  "locale": "hi-IN",
+  "languageCode": "hi",
+  "script": "Devanagari",
+  "direction": "ltr",
+  "publicationStatus": "published",
+  "localizationVersion": "supplier-locales.2026-09-05.v1",
+  "approvalRecord": "../approval-record.json",
+  "researchSource": {
+    "driveFileId": "1BX7Pczi6hpyBKKvZqNsBjk_jRja0H9TM",
+    "researchVersion": "0.9.0-research-draft",
+    "glossaryVersion": "0.9.0-research-draft"
+  },
+  "message": {
+    "hero_eyebrow": "निर्माताओं के लिए सहायता",
+    "hero_headline": "अपनी working capital की आवश्यकता तैयार करें।",
+    "hero_supporting_text": "अपने manufacturing business, confirmed orders और finance की आवश्यकता के बारे में बताएं। Kanan समीक्षा करेगा कि वह अगले चरण में सहायता कर सकता है या नहीं।",
+    "finance_value_title": "अपनी आवश्यकता को समझना आसान बनाएं",
+    "finance_value_body": "जहां उचित हो, bank या NBFC की review से पहले Kanan आवश्यकता स्पष्ट करने और संबंधित documents व्यवस्थित करने में मदद कर सकता है।",
+    "risk_diagnostic_title": "Global Disruption Review",
+    "risk_diagnostic_body": "चुने गए manufacturers को बाद में human-reviewed analysis मिल सकता है कि बाहरी घटनाएं materials, cost, logistics, compliance, production या delivery को कैसे प्रभावित कर सकती हैं।",
+    "risk_scope_note": "Risk तभी शामिल होगा जब उसका किसी input, source, process या route से स्पष्ट संबंध दिखे।",
+    "trust_signal_1": "मानवीय समीक्षा",
+    "trust_signal_2": "financial institution आप चुनते हैं",
+    "trust_signal_3": "finance का निर्णय institution करता है",
+    "how_it_works_step_1": "अपने business और आवश्यकता की basic details दें।",
+    "how_it_works_step_2": "Kanan देखता है कि आवश्यकता support programme के अनुरूप हो सकती है या नहीं।",
+    "how_it_works_step_3": "चुने गए applicants से documents और अगले steps के लिए संपर्क किया जाता है।",
+    "primary_cta": "Manufacturer review शुरू करें",
+    "response_time_copy": "Receipt तुरंत confirm होगी। Human review के बाद हम संपर्क करेंगे।",
+    "lender_boundary_copy": "Kanan Labs bank या NBFC नहीं है। हम loan नहीं देते, credit underwrite या approve नहीं करते, funds नहीं संभालते और finance की guarantee नहीं देते। अंतिम निर्णय संबंधित financial institution ही करता है।",
+    "privacy_microcopy": "आपकी दी हुई जानकारी इस request की review और आपसे संपर्क करने के लिए उपयोग होगी। आपकी अनुमति के बिना इसे किसी financial institution से साझा नहीं किया जाएगा।",
+    "submission_confirmation": "Application मिली है। यह केवल receipt की पुष्टि है, eligibility या approval नहीं।",
+    "explicit_no_charge_variant": "चुने गए applicants को Global Disruption Review बिना किसी charge के दिया जाता है।",
+    "terms_retained_in_english": [
+      "working capital",
+      "CC limit",
+      "OD",
+      "PO",
+      "invoice finance",
+      "GST",
+      "NBFC"
+    ]
+  },
+  "form": {
+    "back": "पीछे",
+    "next": "आगे बढ़ें",
+    "submit": "आवेदन भेजें",
+    "required": "कृपया आवश्यक जानकारी पूरी करें।",
+    "invalidPhone": "कृपया 10 अंकों का सही भारतीय मोबाइल नंबर दर्ज करें।",
+    "choose": "एक विकल्प चुनें",
+    "ctx": [
+      [
+        "अपनी सुविधाजनक भाषा से शुरू करें।",
+        "आपकी चुनी हुई भाषा आवेदन के साथ दर्ज की जाएगी। उत्तर खोए बिना भाषा बदली जा सकती है।"
+      ],
+      [
+        "क्या यह working capital finance के लिए है?",
+        "इससे हमें कार्यशील पूंजी और अन्य जरूरतों में फर्क करके सही अगला कदम चुनने में मदद मिलती है।"
+      ],
+      [
+        "निर्माता का परिचय दें।",
+        "कंपनी क्या बनाती है, इसका साफ विवरण केवल उद्योग का नाम बताने से अधिक उपयोगी है।"
+      ],
+      [
+        "जरूरत का स्थान और आकार बताएं।",
+        "राशि और विनिर्माण स्थान से हमें जरूरत का स्तर समझ आता है।"
+      ],
+      [
+        "आज की ग्राहक मांग बताएं।",
+        "आप किसी भी चरण में आवेदन कर सकते हैं।"
+      ],
+      [
+        "एक भरोसेमंद संपर्क दें।",
+        "पहले उत्तर के लिए केवल नाम और WhatsApp/मोबाइल नंबर चाहिए।"
+      ]
+    ],
+    "titles": [
+      "अपनी पसंदीदा भाषा चुनें।",
+      "क्या यह working capital finance के लिए है?",
+      "अपनी कंपनी के बारे में बताएं।",
+      "आप कहां निर्माण करते हैं और कितनी राशि चाहिए?",
+      "आज आपके पास ग्राहक की कौन-सी मांग है?",
+      "हम आपसे कहां संपर्क करें?"
+    ],
+    "shortTitle": "बताइए हम आपसे कहां संपर्क करें।",
+    "shortHelp": "विस्तृत फॉर्म अभी इस भाषा में उपलब्ध नहीं है। हम आपकी पसंद दर्ज करके उचित संपर्क करेंगे।",
+    "yes": "हाँ",
+    "no": "नहीं",
+    "purpose": "वित्त किस काम में लगेगा?",
+    "raw": "कच्चा माल या पुर्जे",
+    "production": "उत्पादन खर्च",
+    "order": "पक्का ऑर्डर या निर्यात ऑर्डर",
+    "invoice": "invoice finance या delivery के बाद की cash gap",
+    "other": "अन्य जरूरत",
+    "company": "कंपनी का नाम",
+    "manufacture": "आपकी कंपनी क्या बनाती है?",
+    "manufactureHint": "उदाहरण: सटीक मशीन वाले पुर्जे, स्टील फैब्रिकेशन, रबर घटक",
+    "state": "राज्य या केंद्र शासित प्रदेश",
+    "city": "शहर या औद्योगिक क्षेत्र",
+    "amount": "आवश्यक सही राशि (₹)",
+    "amountHint": "आपको जितनी कुल राशि चाहिए वह लिखें। यह वित्त का प्रस्ताव नहीं है।",
+    "demand": "ग्राहक मांग की मौजूदा स्थिति",
+    "po": "पक्का खरीद आदेश या अनुबंध",
+    "release": "ग्राहक शेड्यूल या उत्पादन रिलीज",
+    "forecast": "पूर्वानुमान या अपेक्षित ऑर्डर",
+    "none": "अभी कोई ऑर्डर नहीं",
+    "unsure": "निश्चित नहीं",
+    "name": "संपर्क व्यक्ति का नाम",
+    "phone": "WhatsApp / मोबाइल नंबर",
+    "phoneHint": "भारतीय मोबाइल नंबर। ईमेल जरूरी नहीं है।",
+    "consent": "मैं Kanan Labs को केवल इस request के बारे में phone या WhatsApp से संपर्क करने की अनुमति देता/देती हूँ।",
+    "received": "Application मिली है।",
+    "receivedBody": "Kanan टीम आपकी request की review करके 24 घंटे के भीतर संपर्क करेगी। Approved channel से मांगे जाने तक financial या identity documents न भेजें।",
+    "otherReceived": "Application मिली है।",
+    "otherBody": "मौजूदा programme working capital requirements पर केंद्रित है। हम 24 घंटे में संपर्क करेंगे।",
+    "languageReceived": "भाषा की पसंद मिल गई है।",
+    "languageBody": "Kanan टीम 24 घंटे में आपसे संपर्क करेगी।",
+    "reference": "आवेदन संख्या",
+    "failure": "आवेदन सुरक्षित रूप से दर्ज नहीं हो पाया। दोबारा कोशिश करें या +91 98402 47729 पर कॉल/WhatsApp करें।",
+    "applicationTitle": "निर्माता सहायता application",
+    "availability": "English और 4 भारतीय भाषाओं में उपलब्ध।",
+    "ccod": "CC limit या OD",
+    "machineryNote": "Machinery finance या term loan, working capital से अलग हैं।",
+    "selectedReview": "यह instant, predictive, comprehensive या credit score नहीं है।",
+    "contactOnly": "संपर्क flow",
+    "progressLabel": "Application की प्रगति",
+    "help": "मदद चाहिए?",
+    "call": "Kanan को कॉल करें",
+    "whatsapp": "WhatsApp",
+    "close": "Application बंद करें",
+    "sending": "भेजा जा रहा है…",
+    "privacy": "गोपनीयता नीति",
+    "terms": "Programme की शर्तें"
+  }
+}

@@ -1,0 +1,102 @@
+/* Homepage closing banner; isolated from the supplier programme page. */
+.kl-supplier-closing-strip{font-family:Telegraf,Inter,Arial,sans-serif;text-align:left}
+.kl-supplier-closing-strip,.kl-supplier-closing-strip *{box-sizing:border-box}
+.kl-supplier-closing-strip .kl-supplier-section-kicker{display:flex;align-items:center;gap:.65rem;margin:0;font-size:.64rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase}
+.kl-supplier-closing-strip h2{font-family:'Cormorant Garamond',Georgia,serif;color:inherit}
+.kl-supplier-primary{display:inline-flex;align-items:center;justify-content:space-between;gap:2.25rem;min-height:53px;padding:0 .55rem 0 1.25rem;border:1px solid #fff;border-radius:999px;color:#4c2c2c;background:#fff;font-size:1rem;font-weight:400;line-height:normal;text-decoration:none;transition:transform .25s,box-shadow .25s}
+.kl-supplier-primary span{display:grid;place-items:center;flex:0 0 auto;width:39px;height:39px;border-radius:50%;color:#fff;background:#4c2c2c}
+.kl-supplier-primary:hover{transform:translateY(-2px);box-shadow:0 16px 35px rgba(11,14,19,.17)}
+.kl-supplier-closing-strip a:focus-visible{outline:2px solid #f8f5ed;outline-offset:5px}
+.kl-supplier-contact-actions a{text-decoration:underline}
+.kl-supplier-closing-strip{
+  position:relative;
+  z-index:1;
+  width:100%;
+  margin:0;
+  padding:2.75rem 3rem;
+  border:0;
+  border-radius:0;
+  box-shadow:0 -5px 16px rgba(0,0,0,.12),0 8px 20px rgba(0,0,0,.18);
+  color:#f8f5ed;
+  background:#762c36;
+}
+
+.kl-supplier-closing-strip__inner{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 380px;
+  align-items:center;
+  gap:2.5rem;
+  width:min(1244px,100%);
+  margin:0 auto;
+}
+
+.kl-supplier-closing-strip .kl-supplier-section-kicker{
+  color:#f0c9c5;
+}
+
+.kl-supplier-closing-strip h2{
+  max-width:20ch;
+  margin:1rem 0 0;
+  font-size:clamp(2.75rem,4vw,4rem);
+  font-weight:500;
+  letter-spacing:-.025em;
+  line-height:1;
+  text-wrap:balance;
+}
+
+.kl-supplier-closing-strip__copy>p:last-child{
+  max-width:none;
+  white-space:nowrap;
+  margin:1.15rem 0 0;
+  font-family:'Inter',Arial,sans-serif;
+  font-size:.9rem;
+  line-height:1.55;
+  color:rgba(248,245,237,.74);
+}
+
+.kl-supplier-closing-strip__actions{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:1rem;
+  min-width:0;
+}
+
+.kl-supplier-closing-strip__actions .kl-supplier-primary{
+  width:100%;
+}
+
+.kl-supplier-closing-strip__actions .kl-supplier-contact-actions{
+  width:100%;
+  justify-content:space-between;
+}
+
+.kl-supplier-contact-actions{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:.85rem 1.45rem;
+}
+
+.kl-supplier-contact-actions a{
+  color:inherit;
+  font-family:'Inter',Arial,sans-serif;
+  font-size:.77rem;
+  line-height:1.4;
+  text-underline-offset:.28em;
+}
+
+
+/* Stack before the single-line byline and actions would compete for space. */
+@media(max-width:1199px){
+  .kl-supplier-closing-strip__inner{grid-template-columns:1fr;gap:2rem}
+  .kl-supplier-closing-strip__actions{width:380px;max-width:100%}
+}
+@media(max-width:760px){
+  .kl-supplier-closing-strip{padding:2rem 1.5rem}
+  .kl-supplier-closing-strip h2{max-width:20ch;font-size:clamp(2.5rem,9vw,3.5rem)}
+  .kl-supplier-closing-strip__copy>p:last-child{white-space:normal}
+  .kl-supplier-closing-strip__actions{width:100%}
+  .kl-supplier-primary{gap:1rem;font-size:.9rem}
+}
+@media(prefers-reduced-motion:reduce){.kl-supplier-primary{transition:none}}

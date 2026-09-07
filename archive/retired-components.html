@@ -6,6 +6,7 @@
     <meta name="robots" content="noindex,nofollow,noarchive">
     <title>Retired Components Archive — Kanan Labs</title>
     <link rel="stylesheet" href="../css/evidence-workflow.css?v=1">
+    <link rel="stylesheet" href="../css/identity-section.css?v=15">
     <style>
         @font-face {
             font-family: 'Cormorant Garamond';
@@ -4146,6 +4147,371 @@
         } else {
             bootArchivedCollaboration();
         }
+    })();
+    </script>
+
+    <style>
+        /* Scoped support styles for the Homepage Platform Access Banner + Founder Note record below. */
+        :root {
+            --kl-navy: #0a2f52;
+            --kl-red: #db4a2b;
+            --kl-cream: #eeebe3;
+        }
+
+        .identity-section { background: #F4EBD0 !important; }
+        .identity-transition {
+            background: linear-gradient(to bottom, var(--kl-navy) 0%, #F4EBD0 100%) !important;
+        }
+
+        .kl-waitlist {
+            position: relative;
+            z-index: 2;
+            background: var(--kl-red);
+            padding: 2.75rem 0;
+        }
+
+        .kl-waitlist__inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 5rem;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .kl-waitlist__text { flex-shrink: 0; }
+
+        .kl-waitlist__title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--kl-cream);
+            margin: 0 0 0.35rem 0;
+            line-height: 1.2;
+        }
+
+        .kl-waitlist__sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            color: rgba(238, 235, 227, 0.7);
+            margin: 0;
+            max-width: 28ch;
+            line-height: 1.55;
+        }
+
+        .kl-waitlist__form {
+            display: flex;
+            gap: 0.65rem;
+            align-items: center;
+            flex: 1;
+            flex-wrap: wrap;
+        }
+
+        .kl-waitlist__form input {
+            flex: 1;
+            min-width: 130px;
+            background: transparent;
+            border: 1px solid rgba(238, 235, 227, 0.35);
+            border-radius: 3px;
+            padding: 0.65rem 1rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8125rem;
+            color: var(--kl-cream);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .kl-waitlist__form input:focus {
+            border-color: rgba(238, 235, 227, 0.7);
+        }
+
+        .kl-waitlist__form input::placeholder {
+            color: rgba(238, 235, 227, 0.45);
+        }
+
+        .kl-waitlist__form button {
+            background: var(--kl-cream);
+            color: var(--kl-red);
+            border: none;
+            border-radius: 3px;
+            padding: 0.65rem 1.5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .kl-waitlist__form button:hover { background: #ffffff; }
+
+        .kl-waitlist__success {
+            display: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            color: rgba(238, 235, 227, 0.9);
+            text-align: center;
+            padding-top: 0.75rem;
+        }
+
+        .kl-waitlist__success.visible {
+            display: block;
+        }
+
+        @media (max-width: 900px) {
+            .kl-waitlist {
+                padding: 1.75rem 0;
+            }
+            .kl-waitlist__inner {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 1.5rem;
+                gap: 1.1rem;
+            }
+            .kl-waitlist__title {
+                font-size: clamp(1.05rem, 4.4vw, 1.2rem);
+                line-height: 1.25;
+            }
+            .kl-waitlist__sub {
+                font-size: 0.75rem;
+                line-height: 1.5;
+                max-width: 36ch;
+            }
+            .kl-waitlist__form {
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.55rem;
+                flex-wrap: nowrap;
+            }
+            .kl-waitlist__form input {
+                width: 100%;
+                min-width: 0;
+                flex: none;
+                padding: 0.8rem 1rem;
+                font-size: 0.8125rem;
+            }
+            .kl-waitlist__form button {
+                width: 100%;
+                padding: 0.85rem 1.25rem;
+                font-size: 0.75rem;
+                letter-spacing: 0.16em;
+                margin-top: 0.15rem;
+            }
+        }
+    </style>
+
+    <header class="archive-record">
+        <p class="archive-record__eyebrow">Retired component archive · not for publication</p>
+        <h1>Homepage Platform Access Banner + Founder Note</h1>
+        <dl>
+            <dt>Component name</dt><dd>Platform Access Banner (orange waitlist strip) + Founder Note (bio / operating doctrine)</dd>
+            <dt>Original page</dt><dd>index.html</dd>
+            <dt>Date retired</dt><dd>2026-09-04</dd>
+            <dt>Reason</dt><dd>Removed from the homepage at the owner's request — section no longer wanted on the page. Kept intact here for reuse on this or another page.</dd>
+        </dl>
+    </header>
+
+    <!-- ════════════════════════════════════════════════
+         G. PLATFORM ACCESS BANNER — orange transition
+    ════════════════════════════════════════════════ -->
+    <section class="kl-waitlist" id="archivedKlWaitlist">
+        <div class="kl-waitlist__inner">
+            <div class="kl-waitlist__text">
+                <h3 class="kl-waitlist__title">Request Platform Access</h3>
+                <p class="kl-waitlist__sub">Join the waitlist for early access to Kanan Labs' intelligence platform.</p>
+            </div>
+            <form class="kl-waitlist__form" id="archivedPlatformWaitlistForm">
+                <input type="text" name="name" placeholder="Full Name" required autocomplete="name">
+                <input type="text" name="company" placeholder="Company / Organisation" required>
+                <input type="email" name="email" placeholder="Work Email" required autocomplete="email">
+                <!-- Honeypot: visually hidden, real humans never see it; bots fill all fields -->
+                <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;">
+                <button type="submit">Join Waitlist</button>
+            </form>
+        </div>
+        <div class="kl-waitlist__inner" style="padding-top:0; padding-bottom:0;">
+            <p class="kl-waitlist__success" id="archivedPlatformWaitlistSuccess">Thank you — we'll be in touch shortly.</p>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         F. IDENTITY — Founder / Why Kanan exists
+    ════════════════════════════════════════════════ -->
+    <div class="identity-transition" aria-hidden="true"></div>
+    <section class="kl-founder" id="archivedFounderNote" aria-label="Founder note">
+        <div class="kl-founder__inner">
+
+            <!-- TWO-COLUMN BODY: left rail + navy doctrine card -->
+            <div class="kl-founder__columns">
+
+                <!-- LEFT RAIL: CTAs top, photo + signature bottom -->
+                <aside class="kl-founder__rail">
+                    <div class="kl-founder__cta-block">
+                        <span class="kl-founder__cta-eyebrow">Get Involved</span>
+                        <a href="../request-demo.html" class="kl-founder__cta-primary">
+                            Request Demo
+                        </a>
+                        <a href="mailto:sreenath@kananlabs.com?subject=Connect%20with%20Founder"
+                           class="kl-founder__cta-secondary">
+                            Connect with Founder
+                            <span aria-hidden="true">&rarr;</span>
+                        </a>
+                    </div>
+
+                    <div class="kl-founder__attribution">
+                        <figure class="kl-founder__portrait">
+                            <img src="../added-assets/SG-TRANSPARENT.png"
+                                 alt="Sreenath Govindarajan, Founder of Kanan Labs"
+                                 width="1080"
+                                 height="1350"
+                                 loading="lazy"
+                                 decoding="async">
+                        </figure>
+                        <div class="kl-founder__signature">
+                            <p class="kl-founder__sig-name">Sreenath Govindarajan</p>
+                            <p class="kl-founder__sig-role">Founder, Kanan Labs</p>
+                            <p class="kl-founder__sig-disciplines">
+                                Cross-border law &middot; AI governance &middot;
+                                Regulatory strategy &middot; Trade intelligence
+                            </p>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- RIGHT: NAVY DOCTRINE CONTAINER -->
+                <article class="kl-founder__doctrine-card">
+                    <canvas id="archived-founder-grid" class="kl-founder__doctrine-grid" aria-hidden="true"></canvas>
+
+                    <div class="kl-founder__doctrine-inner">
+                        <div class="kl-founder__note">
+                            <p>
+                                <strong>Businesses experience regulation in fragments.
+                                Most AI systems reason about it in fragments too.</strong>
+                            </p>
+                            <p>
+                                I founded Kanan Labs after seeing the same structural failure from two
+                                directions.
+                            </p>
+                            <p>
+                                Frontier AI could retrieve extraordinary amounts of information, yet
+                                struggled to connect products, supply chains, jurisdictions,
+                                institutions, rules and evidence into one coherent model. Industry
+                                faced the corresponding problem: businesses could not see the
+                                regulations, incentives and emerging risks relevant to them as one
+                                usable operating picture.
+                            </p>
+                            <p>
+                                Kanan Labs was founded to close both gaps.
+                            </p>
+                            <p>
+                                DRONA builds a structured model of the trade world through
+                                <strong>Accretive World Learning</strong>. TradeWatch is its first
+                                commercial expression&mdash;turning that intelligence into action inside
+                                live cross-border workflows.
+                            </p>
+                        </div>
+
+                        <ol class="kl-founder__doctrine" aria-label="Operating doctrine">
+                            <li class="kl-founder__tenet">
+                                <span class="kl-founder__numeral" aria-hidden="true">I</span>
+                                <h3 class="kl-founder__tenet-title">Model before answering</h3>
+                                <p class="kl-founder__tenet-line">
+                                    The system must understand how the world fits together before it
+                                    reasons about any part of it.
+                                </p>
+                            </li>
+                            <li class="kl-founder__tenet">
+                                <span class="kl-founder__numeral" aria-hidden="true">II</span>
+                                <h3 class="kl-founder__tenet-title">Evidence before action</h3>
+                                <p class="kl-founder__tenet-line">
+                                    Every material conclusion preserves its source, rule, reasoning path
+                                    and human review.
+                                </p>
+                            </li>
+                            <li class="kl-founder__tenet">
+                                <span class="kl-founder__numeral" aria-hidden="true">III</span>
+                                <h3 class="kl-founder__tenet-title">A narrow entry, a larger horizon</h3>
+                                <p class="kl-founder__tenet-line">
+                                    TradeWatch begins with shipment-level compliance. The larger
+                                    undertaking is continuous intelligence for regulated global value
+                                    chains.
+                                </p>
+                            </li>
+                        </ol>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/founder-grid.js" defer></script>
+    <script>
+    (function () {
+        'use strict';
+        // Repoint the archived founder-grid canvas init at this record's own canvas id.
+        document.addEventListener('DOMContentLoaded', function () {
+            var canvas = document.getElementById('archived-founder-grid');
+            if (canvas && typeof FounderGrid !== 'undefined') {
+                new FounderGrid(canvas, {
+                    direction: 'up',
+                    speed: 0.10,
+                    borderColor: 'rgba(255, 255, 255, 0.15)',
+                    squareSize: 28
+                });
+            }
+        });
+
+        // Platform waitlist form → /api/early-access (original submit logic, preserved for reuse)
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.getElementById('archivedPlatformWaitlistForm');
+            var success = document.getElementById('archivedPlatformWaitlistSuccess');
+            if (!form || !success) return;
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                var btn = form.querySelector('button[type="submit"]');
+                var data = new FormData(form);
+                var payload = {
+                    name: (data.get('name') || '').toString().trim(),
+                    company: (data.get('company') || '').toString().trim(),
+                    email: (data.get('email') || '').toString().trim(),
+                    company_website: (data.get('company_website') || '').toString()
+                };
+
+                if (!payload.name || !payload.email) return;
+
+                var originalLabel = btn.textContent;
+                btn.disabled = true;
+                btn.textContent = 'Submitting…';
+                success.classList.remove('visible');
+                success.style.color = '';
+                success.textContent = "Thank you — we'll be in touch shortly.";
+
+                try {
+                    var res = await fetch('/api/early-access', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    if (!res.ok) {
+                        var err = await res.json().catch(function () { return {}; });
+                        throw new Error(err.message || 'Request failed');
+                    }
+                    form.style.display = 'none';
+                    success.classList.add('visible');
+                } catch (err) {
+                    success.style.color = '#ff8a8a';
+                    success.textContent = err.message || 'Something went wrong. Please try again.';
+                    success.classList.add('visible');
+                    btn.disabled = false;
+                    btn.textContent = originalLabel;
+                }
+            });
+        });
     })();
     </script>
 

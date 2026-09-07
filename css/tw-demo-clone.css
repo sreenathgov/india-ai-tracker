@@ -44,14 +44,26 @@
 }
 
 /* ---------- Continuous TradeWatch band on landing page ----------
-   The demo and the capability reel share one transparent field so the fixed
-   infrastructure grid remains continuous across their boundary. Grain is
-   applied once to the band instead of restarting inside each section. */
+   The demo and the capability reel share one solid field so the grid
+   canvas and grain remain continuous across their boundary instead of
+   restarting inside each section. */
 .kl-tradewatch-band {
     position: relative;
     z-index: 1;
     isolation: isolate;
-    background: transparent;
+    background: #3a0000;
+    overflow: hidden;
+}
+
+/* Section-scoped dynamic grid, spanning the whole band (mirrors the hero's
+   #infrastructure-grid, which can't show through here since this band sits
+   above it in the stacking order — one shared canvas keeps the moving-grid
+   effect continuous across the demo/capability-reel boundary). */
+.kl-tradewatch-band__grid {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .kl-tradewatch-band::before {

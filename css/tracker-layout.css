@@ -1,0 +1,92 @@
+/* Opt-in opening layout. Without the document flag, the wrapper contributes
+   no box and the existing light theme / flex layout are restored. */
+@font-face {
+    font-family: 'Tracker Telegraf';
+    src: url('../assets/fonts/Telegraf-UltraBold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+.tracker-opening { display: contents; }
+.tracker-scroll-space { display: none; }
+
+html[data-tracker-layout="compact"] {
+    --tracker-nav-height: 60px;
+    /* Normal wheel scrolling must be possible in the empty bottom strip. */
+    scroll-snap-type: none;
+}
+
+[data-tracker-layout="compact"] .tracker-opening {
+    display: grid;
+    /* 322px leaves 320px for Leaflet inside the frame's two 1px borders. */
+    grid-template-rows: max-content minmax(322px, 1fr) 8vh;
+    grid-template-rows: max-content minmax(322px, 1fr) 8svh;
+    height: 100vh;
+    height: 100svh;
+    min-height: calc(var(--tracker-nav-height) + var(--tracker-hero-height, 160px) + 322px + 8svh);
+    padding-top: var(--tracker-nav-height);
+    /* No position/transform: preserve the map's existing positioning tree. */
+}
+
+[data-tracker-layout="compact"] .product-hero {
+    padding: 20px 32px 20px;
+}
+
+[data-tracker-layout="compact"] .product-hero h1 {
+    font-family: 'Tracker Telegraf', 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.25rem, 3.25vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+    color: var(--tracker-ink);
+    margin-bottom: 14px;
+}
+
+[data-tracker-layout="compact"] .product-controls { gap: 8px; }
+[data-tracker-layout="compact"] .system-status { min-height: 1.2rem; }
+
+[data-tracker-layout="compact"] .main-container {
+    height: auto;
+    min-height: 322px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+[data-tracker-layout="compact"] .tracker-scroll-space {
+    display: block;
+    /* This is outside Leaflet and the news scroller. It owns no wheel handler. */
+}
+
+[data-tracker-layout="compact"] .shiny-text-container { padding-top: 24px; }
+
+@media (max-width: 1024px) {
+    html[data-tracker-layout="compact"] { --tracker-nav-height: 48px; }
+}
+
+@media (min-width: 769px) and (max-height: 599px) {
+    [data-tracker-layout="compact"] .tracker-opening {
+        height: auto;
+        min-height: 0;
+        grid-template-rows: max-content 322px 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    [data-tracker-layout="compact"] .tracker-opening {
+        display: block;
+        height: auto;
+        min-height: 0;
+    }
+    [data-tracker-layout="compact"] .product-hero { padding: 20px 16px; }
+    [data-tracker-layout="compact"] .product-hero h1 {
+        font-size: clamp(1.75rem, 5vw, 2rem);
+        letter-spacing: -0.025em;
+    }
+    [data-tracker-layout="compact"] .main-container { min-height: 0; }
+    [data-tracker-layout="compact"] .tracker-scroll-space { height: 24px; }
+    /* Restore small interaction cues that were cream on the former dark UI. */
+    [data-tracker-layout="compact"] .feed-carousel-dot { background: #aaa6a6; }
+    [data-tracker-layout="compact"] .feed-carousel-dot.active { background: var(--tracker-accent); }
+    [data-tracker-layout="compact"] .side-panel::before { background: #aaa6a6; }
+}

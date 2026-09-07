@@ -12,42 +12,32 @@
     var SCRIPTS = [
         {
             without: {
-                label: 'Without Drona',
-                body:  'A confident sentence. The classification <em>sounds</em> right. But there is no source, no rule trail and nothing to hand to customs officials when asked where this came from.'
+                label: 'Without Kanan',
+                body:  'Standard supplier reports show financial and delivery performance. Risks deeper in the supply chain may become visible <em>only after they affect production or delivery</em>.'
             },
             with: {
-                label: 'With Drona',
-                body:  'Every code resolves against a structured rule pack with the source clause, the schedule, and the version stamped to the answer. <em>The AI extracts; the symbol decides.</em>'
+                label: 'With Kanan',
+                body:  'Kanan connects authorised supplier, order and external-risk evidence to show where disruption could reach the production programme—giving the manufacturer <em>an earlier opportunity to respond</em>.'
             }
         },
         {
             without: {
-                label: 'Without Drona',
-                body:  'A black-box output. A high confidence score and no audit trail. Three years later, in a Section 149 review, the model is gone and so is the reasoning.'
+                label: 'Without Kanan',
+                body:  'The supplier may have a genuine PO, but the financing request, order documents and relevant risks reach the bank <em>as separate pieces</em>.'
             },
             with: {
-                label: 'With Drona',
-                body:  'Every claim resolves to one of four states — <em>Open, Blocked, Conditional, Unclear</em> — and every state points to the rule that produced it. Deterministic-first, replayable, defensible.'
+                label: 'With Kanan',
+                body:  'Kanan connects the supplier\'s stated working-capital request to the PO, supporting evidence and a one-time risk diagnosis—<em>creating a clearer path into bank or NBFC review</em>.'
             }
         },
         {
             without: {
-                label: 'Without Drona',
-                body:  'One model, one answer, every jurisdiction. The same packet is "compliant" in Mumbai and silently non-compliant in Rotterdam — and you only find out at the port.'
+                label: 'Without Kanan',
+                body:  'Conventional appraisal begins with financial history, banking conduct and collateral. It may say much less about <em>what could affect completion of the specific order being financed</em>.'
             },
             with: {
-                label: 'With Drona',
-                body:  'A jurisdiction-portable architecture. The same shipment fact produces an Indian Shipping Bill, an EU AES declaration, and a US ITN-bearing filing.'
-            }
-        },
-        {
-            without: {
-                label: 'Without Drona',
-                body:  'The regulation changed last quarter. Your tool answered it the old way. Nothing in the system knows when, why, or against which version of the law a decision was made.'
-            },
-            with: {
-                label: 'With Drona',
-                body:  'A bi-temporal knowledge layer that remembers when a rule was true and when it changed. <em>Yesterday\'s packet stays defensible</em>. Today\'s decisions ride the live rule pack.'
+                label: 'With Kanan',
+                body:  'Kanan adds the order-level context: demand evidence, production dependencies and relevant external risks—showing what could affect fulfilment, why it matters and <em>what remains uncertain</em>.'
             }
         }
     ];
@@ -94,7 +84,7 @@
         /* Per-chip CSS `order` values used on tablet/mobile (match the
            --drona-tab-order rules in drona-brain.css). Chips spaced by 2
            so the panel block can slot at an odd integer between them. */
-        var CHIP_ORDERS = [0, 2, 4, 6];
+        var CHIP_ORDERS = [0, 2, 4];
 
         function swapTo(index) {
             var script = SCRIPTS[index];

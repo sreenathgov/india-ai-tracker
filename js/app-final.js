@@ -124,6 +124,13 @@ const STARTUP_POLICY_MAP = {
 
 // Animation timing constant - single source of truth
 const TRANSITION_DURATION = 450;
+// Single rollback switch; absent flag retains the previous map/layout behaviour.
+const COMPACT_TRACKER_LAYOUT = document.documentElement.dataset.trackerLayout === 'compact';
+let trackerLayoutCoordinator = null;
+let trackerLayoutObserver = null;
+let stateRequestVersion = 0;
+let lastFeedUpdates = null;
+let renderedFeedIsMobile = null;
 
 // Auto-scroll configuration
 let autoScrollInterval = null;
@@ -199,6 +206,11 @@ async function fetchTodayFeed() {
 function renderFeed(updates) {
     const feedContent = document.getElementById('feedContent');
     if (!feedContent) return;
+    if (COMPACT_TRACKER_LAYOUT) {
+        stopAutoScroll();
+        lastFeedUpdates = updates;
+        renderedFeedIsMobile = window.innerWidth <= 768;
+    }
 
     if (!updates || updates.length === 0) {
         feedContent.innerHTML = `
@@ -306,6 +318,11 @@ function getRelativeTime(dateString) {
 
 // Initialize auto-scrolling for the feed
 function initAutoScroll() {
+    // Mobile has its own horizontal timer; never replace it with vertical scrolling.
+    if (COMPACT_TRACKER_LAYOUT && window.innerWidth <= 768) {
+        syncTrackerFeed();
+        return;
+    }
     const feedContent = document.getElementById('feedContent');
     if (!feedContent) return;
 
@@ -342,6 +359,11 @@ function stopAutoScroll() {
         autoScrollInterval = null;
     }
     stopMobileCarousel();
+    if (COMPACT_TRACKER_LAYOUT) {
+        clearTimeout(carouselResumeTimer);
+        carouselResumeTimer = null;
+        carouselInteractionPaused = false;
+    }
 }
 
 function pauseAutoScroll() {
@@ -362,6 +384,8 @@ let carouselCurrentPage = 0;
 let carouselTotalPages = 0;
 let carouselAutoAdvanceTimer = null;
 let carouselTouchStartX = 0;
+let carouselResumeTimer = null;
+let carouselInteractionPaused = false;
 
 function initMobileCarousel(totalPages) {
     carouselCurrentPage = 0;
@@ -376,6 +400,10 @@ function initMobileCarousel(totalPages) {
         carouselTouchStartX = e.touches[0].clientX;
         // Pause auto-advance while user is swiping
         stopMobileCarousel();
+        if (COMPACT_TRACKER_LAYOUT) {
+            clearTimeout(carouselResumeTimer);
+            carouselInteractionPaused = true;
+        }
     }, { passive: true });
 
     track.addEventListener('touchend', (e) => {
@@ -388,7 +416,7 @@ function initMobileCarousel(totalPages) {
             }
         }
         // Restart auto-advance after 8s
-        setTimeout(() => startCarouselAutoAdvance(), 8000);
+        resumeCarouselDelayed();
     }, { passive: true });
 
     // Dot click navigation
@@ -399,7 +427,7 @@ function initMobileCarousel(totalPages) {
             if (dot) {
                 carouselGoToPage(parseInt(dot.dataset.page, 10));
                 stopMobileCarousel();
-                setTimeout(() => startCarouselAutoAdvance(), 8000);
+                resumeCarouselDelayed();
             }
         });
     }
@@ -420,10 +448,27 @@ function carouselGoToPage(page) {
 }
 
 function startCarouselAutoAdvance() {
+    if (COMPACT_TRACKER_LAYOUT && (carouselInteractionPaused || window.innerWidth > 768 ||
+        currentViewMode !== 'state' || document.getElementById('feedPanel')?.classList.contains('hidden'))) return;
     stopMobileCarousel();
     carouselAutoAdvanceTimer = setInterval(() => {
         carouselGoToPage(carouselCurrentPage + 1);
     }, 5000);
+}
+
+function resumeCarouselDelayed() {
+    if (!COMPACT_TRACKER_LAYOUT) {
+        setTimeout(() => startCarouselAutoAdvance(), 8000);
+        return;
+    }
+    // Reuse one pending resume, preserving the existing eight-second touch pause.
+    clearTimeout(carouselResumeTimer);
+    carouselInteractionPaused = true;
+    carouselResumeTimer = setTimeout(() => {
+        carouselResumeTimer = null;
+        carouselInteractionPaused = false;
+        startCarouselAutoAdvance();
+    }, 8000);
 }
 
 function stopMobileCarousel() {
@@ -463,7 +508,7 @@ function highlightStateOnMap(stateName) {
         if (name === stateName) {
             layer.setStyle({
                 weight: 3,
-                color: '#db4a2b',
+                color: getComputedStyle(document.body).getPropertyValue('--tracker-map-selection').trim() || '#db4a2b',
                 fillOpacity: 0.8
             });
             layer.bringToFront();
@@ -491,7 +536,8 @@ function showFeedPanel() {
     const feedPanel = document.getElementById('feedPanel');
     if (feedPanel) {
         feedPanel.classList.remove('hidden');
-        initAutoScroll();
+        if (COMPACT_TRACKER_LAYOUT) trackerLayoutCoordinator?.schedule({ transition: true });
+        else initAutoScroll();
     }
 }
 
@@ -503,6 +549,8 @@ async function initMap() {
         renderer: L.canvas({ padding: 1.0 }),  // 100% buffer for seamless tile loading
         zoomControl: true,
         attributionControl: true,
+        // The opt-in coordinator owns settled resize work, including window resize.
+        ...(COMPACT_TRACKER_LAYOUT ? { trackResize: false } : {}),
         // Smooth zoom and pan settings
         zoomAnimation: true,
         fadeAnimation: true,
@@ -516,21 +564,23 @@ async function initMap() {
     });
 
     // Add tile layer with ultra-aggressive pre-loading to eliminate ALL latency
-    // Using light_nolabels for clean appearance (no city/country names)
-    tileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+    // Esri World Light Gray Canvas: free, no API key, clean low-detail appearance
+    tileLayer = L.tileLayer('https://{s}.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+        subdomains: ['server', 'services'], // Esri's actual tile subdomains
         keepBuffer: 40,        // Maximum: keep all India tiles in memory across zoom levels
         updateWhenIdle: false, // Update tiles during panning for smooth experience
         updateWhenZooming: true, // Update tiles when zooming for smooth transitions
         updateInterval: 50,    // Update tiles every 50ms for responsive loading
         tileSize: 256,         // Standard tile size
         zoomOffset: 0,
-        maxZoom: 19,
+        maxZoom: 16,           // Esri's native tile ceiling for this layer
         minZoom: 3,
-        attribution: '&copy; <a href="https://carto.com/">CARTO</a>'
+        attribution: '&copy; <a href="https://www.esri.com/">Esri</a>, DeLorme, NAVTEQ'
     }).addTo(map);
 
     // Set initial view to perfect India bounds
     resetMapToIndia(false); // false = no animation on init
+    if (COMPACT_TRACKER_LAYOUT) initTrackerLayout();
 
     // Set up auto-reset mechanism: return to India view after 3 seconds of idle
     map.on('moveend', scheduleMapReset);
@@ -580,11 +630,102 @@ function resetMapToIndia(animate = true) {
     const isMobile = window.innerWidth <= 768;
     const targetZoom = isMobile ? INDIA_ZOOM_MOBILE : INDIA_ZOOM_DESKTOP;
 
+    if (COMPACT_TRACKER_LAYOUT) {
+        if (currentPanel || currentViewMode !== 'state') return;
+        const container = map.getContainer();
+        if (container.clientWidth < 2 || container.clientHeight < 2) return;
+        TrackerLayout.fitOverview(map, geojsonLayer?.getBounds(), targetZoom, animate);
+        return;
+    }
+
     map.setView(INDIA_CENTER, targetZoom, {
         animate: animate,
         duration: animate ? 0.6 : 0,
         easeLinearity: 0.25
     });
+}
+
+// Reconcile only after the frame settles. Read current state at that moment,
+// rather than capturing the state that happened to start a CSS transition.
+function initTrackerLayout() {
+    const hero = document.querySelector('.product-hero');
+    let wasMobile = window.innerWidth <= 768;
+    const measureHero = () => {
+        if (hero) document.documentElement.style.setProperty('--tracker-hero-height', `${hero.offsetHeight}px`);
+    };
+    measureHero();
+    trackerLayoutCoordinator = TrackerLayout.createCoordinator({
+        transitionMs: TRANSITION_DURATION,
+        readState: () => ({
+            map, mode: currentViewMode, panel: currentPanel, selectedLayer,
+            mobile: window.innerWidth <= 768,
+            bounds: geojsonLayer?.getBounds(),
+            maxZoom: window.innerWidth <= 768 ? INDIA_ZOOM_MOBILE : INDIA_ZOOM_DESKTOP
+        }),
+        onSettled: syncTrackerFeed
+    });
+    const schedule = () => {
+        measureHero();
+        const mobile = window.innerWidth <= 768;
+        const breakpointChanged = mobile !== wasMobile;
+        if (breakpointChanged) {
+            wasMobile = mobile;
+            // Keep an already-open panel in the correct arrangement on rotation
+            // or resize. Reuse the panel and selected geography; do not reopen it.
+            const panel = document.getElementById('sidePanel');
+            document.getElementById('map-frame').classList.toggle('panel-open', !mobile && !!currentPanel);
+            document.getElementById('feedPanel').classList.toggle('hidden',
+                currentViewMode !== 'state' || (!mobile && !!currentPanel));
+            if (panel?._removeSwipe) panel._removeSwipe();
+            if (mobile && currentPanel) initPanelSwipe();
+            if (currentViewMode === 'allIndia') {
+                if (mobile && !document.body.classList.contains('all-india-open')) {
+                    document.body.dataset.scrollY = window.scrollY;
+                    document.body.style.top = `-${window.scrollY}px`;
+                    document.body.classList.add('all-india-open');
+                } else if (!mobile && document.body.classList.contains('all-india-open')) {
+                    document.body.classList.remove('all-india-open');
+                    document.body.style.top = '';
+                    window.scrollTo(0, parseInt(document.body.dataset.scrollY || '0', 10));
+                }
+            }
+        }
+        trackerLayoutCoordinator.schedule({ transition: breakpointChanged });
+    };
+    if (typeof ResizeObserver !== 'undefined') {
+        trackerLayoutObserver = new ResizeObserver(schedule);
+        if (hero) trackerLayoutObserver.observe(hero);
+        ['map-frame', 'feedContent'].forEach(id => {
+            const element = document.getElementById(id);
+            if (element) trackerLayoutObserver.observe(element);
+        });
+    }
+    window.addEventListener('resize', schedule, { passive: true });
+    document.fonts?.ready.then(schedule);
+    trackerLayoutCoordinator.schedule();
+}
+
+function syncTrackerFeed() {
+    const panel = document.getElementById('feedPanel');
+    const content = document.getElementById('feedContent');
+    if (!panel || !content || lastFeedUpdates === null) return;
+    const mobile = window.innerWidth <= 768;
+    if (currentViewMode !== 'state' || (!mobile && currentPanel) || panel.classList.contains('hidden')) {
+        stopAutoScroll();
+        return;
+    }
+    if (mobile !== renderedFeedIsMobile) {
+        renderFeed(lastFeedUpdates);
+        return;
+    }
+    if (mobile) {
+        if (carouselTotalPages > 1 && !carouselAutoAdvanceTimer) startCarouselAutoAdvance();
+    } else if (content.scrollHeight <= content.clientHeight) {
+        if (autoScrollInterval) clearInterval(autoScrollInterval);
+        autoScrollInterval = null;
+    } else if (!autoScrollInterval) {
+        initAutoScroll();
+    }
 }
 
 // Schedule auto-reset: return to India view after 3 seconds of idle
@@ -654,7 +795,7 @@ function loadGeoJSON() {
                             e.target.setStyle({
                                 weight: 2,
                                 fillOpacity: 0.75,
-                                color: '#B45309'
+                                color: getComputedStyle(document.body).getPropertyValue('--tracker-map-selection').trim() || '#B45309'
                             });
                         },
                         mouseout: (e) => geojsonLayer.resetStyle(e.target),
@@ -673,6 +814,7 @@ function loadGeoJSON() {
                     });
                 }
             }).addTo(map);
+            if (COMPACT_TRACKER_LAYOUT) trackerLayoutCoordinator?.schedule();
         });
 }
 
@@ -706,9 +848,22 @@ async function fetchStateData(stateCode) {
 }
 
 async function openStatePanel(stateName) {
+    const requestVersion = ++stateRequestVersion;
     const jurisdiction = resolveJurisdiction(stateName);
     const displayName = jurisdiction ? jurisdiction.name : stateName;
     const stateCode = jurisdiction ? jurisdiction.code : null;
+
+    // A direct state URL has no preceding map click to supply selectedLayer.
+    // Resolve the same existing feature so it receives the normal state fit.
+    if (COMPACT_TRACKER_LAYOUT && geojsonLayer) {
+        selectedLayer = null;
+        geojsonLayer.eachLayer(layer => {
+            const properties = layer.feature.properties;
+            const featureName = properties.ST_NM || properties.name || properties.NAME;
+            const featureJurisdiction = resolveJurisdiction(featureName);
+            if (featureName === displayName || (stateCode && featureJurisdiction?.code === stateCode)) selectedLayer = layer;
+        });
+    }
 
     if (!stateCode) {
         console.warn(`State "${stateName}" not found in STATE_CODE_MAP.`);
@@ -735,6 +890,8 @@ async function openStatePanel(stateName) {
     showPanel(displayName, '<div class="loading">Loading...</div>');
 
     const data = await fetchStateData(stateCode);
+    // A slow response must not reopen a panel that was closed or superseded.
+    if (COMPACT_TRACKER_LAYOUT && (requestVersion !== stateRequestVersion || currentViewMode !== 'state')) return;
     if (!data) {
         showPanel(displayName, '<div style="text-align:center;padding:40px;color:#B45309;">Failed to load. Check if backend is running on port 5001.</div>');
         return;
@@ -1071,6 +1228,7 @@ function showPanel(stateName, content) {
 
     // Cancel auto-reset when panel opens
     cancelMapReset();
+    if (COMPACT_TRACKER_LAYOUT) trackerLayoutCoordinator?.schedule({ transition: true, animate: true });
 
     document.getElementById('panelTitle').textContent = stateName;
     document.getElementById('panelContent').innerHTML = content;
@@ -1083,6 +1241,7 @@ function showPanel(stateName, content) {
 
     // Step 2: Open panel; desktop also collapses map frame
     requestAnimationFrame(() => {
+        if (COMPACT_TRACKER_LAYOUT && (currentViewMode !== 'state' || currentPanel !== stateName)) return;
         panel.classList.add('open');
         if (window.innerWidth > 768) {
             mapFrame.classList.add('panel-open');
@@ -1090,7 +1249,7 @@ function showPanel(stateName, content) {
     });
 
     // After transition: resize map to new dimensions (desktop only — map doesn't move on mobile overlay)
-    if (window.innerWidth > 768) {
+    if (!COMPACT_TRACKER_LAYOUT && window.innerWidth > 768) {
         setTimeout(() => {
             map.invalidateSize({ animate: false, pan: false });
 
@@ -1191,6 +1350,7 @@ function initPanelSwipe() {
  * High keepBuffer (40) ensures India tiles stay cached for smooth zoom-out
  */
 function closePanel() {
+    stateRequestVersion += 1;
     const panel = document.getElementById('sidePanel');
     const mapFrame = document.getElementById('map-frame');
     const feedPanel = document.getElementById('feedPanel');
@@ -1200,6 +1360,7 @@ function closePanel() {
 
     // Cancel any pending auto-reset
     cancelMapReset();
+    if (COMPACT_TRACKER_LAYOUT) trackerLayoutCoordinator?.schedule({ transition: true, animate: true });
 
     if (swipeDismissing) {
         // Panel already animated off-screen by swipe — suppress CSS re-animation
@@ -1222,7 +1383,7 @@ function closePanel() {
     }
 
     // Desktop: resize map back to full width and reset India view
-    if (window.innerWidth > 768) {
+    if (!COMPACT_TRACKER_LAYOUT && window.innerWidth > 768) {
         setTimeout(() => {
             map.invalidateSize({ animate: false, pan: false });
             resetMapToIndia(true);
@@ -1230,9 +1391,9 @@ function closePanel() {
     }
 
     // Restart auto-scroll after transition
-    setTimeout(() => {
-        initAutoScroll();
-    }, TRANSITION_DURATION + 100);
+    if (!COMPACT_TRACKER_LAYOUT) {
+        setTimeout(() => initAutoScroll(), TRANSITION_DURATION + 100);
+    }
 
     currentPanel = null;
     currentCategoriesData = null;
@@ -1246,6 +1407,8 @@ function closePanel() {
 function setViewMode(mode) {
     // Prevent redundant calls
     if (mode === currentViewMode) return;
+    stateRequestVersion += 1;
+    if (COMPACT_TRACKER_LAYOUT) trackerLayoutCoordinator?.schedule({ transition: true });
 
     const mapFrame = document.getElementById('map-frame');
     const allIndiaPanel = document.getElementById('allIndiaPanel');
@@ -1259,6 +1422,7 @@ function setViewMode(mode) {
     // Close any open state panel first (without triggering another view change)
     if (currentPanel) {
         const panel = document.getElementById('sidePanel');
+        if (COMPACT_TRACKER_LAYOUT && panel._removeSwipe) panel._removeSwipe();
         panel.classList.remove('open');
         mapFrame.classList.remove('panel-open');
         currentPanel = null;
@@ -1282,6 +1446,7 @@ function setViewMode(mode) {
 
         // Fade out map frame, hide feed panel, show All India panel
         requestAnimationFrame(() => {
+            if (COMPACT_TRACKER_LAYOUT && currentViewMode !== 'allIndia') return;
             mapFrame.classList.add('hidden');
             hideFeedPanel();
             allIndiaPanel.classList.add('visible');
@@ -1312,6 +1477,7 @@ function setViewMode(mode) {
         // Show map frame, hide All India panel, restore feed panel immediately
         // Feed content is already in the DOM — no reason to delay its reveal
         requestAnimationFrame(() => {
+            if (COMPACT_TRACKER_LAYOUT && currentViewMode !== 'state') return;
             mapFrame.classList.remove('hidden');
             allIndiaPanel.classList.remove('visible');
             showFeedPanel();
@@ -1326,7 +1492,7 @@ function setViewMode(mode) {
         }
 
         // Recalculate map size and reset to perfect India view after animation completes
-        setTimeout(() => {
+        if (!COMPACT_TRACKER_LAYOUT) setTimeout(() => {
             // Force recalculation of map container size
             window.dispatchEvent(new Event('resize'));
             // Give the map time to process the resize
@@ -1342,6 +1508,7 @@ function setViewMode(mode) {
 }
 
 async function loadAllIndiaContent() {
+    const requestVersion = stateRequestVersion;
     const contentEl = document.getElementById('allIndiaPanelContent');
     contentEl.innerHTML = '<div class="loading">Loading national updates...</div>';
 
@@ -1349,6 +1516,8 @@ async function loadAllIndiaContent() {
         const response = await fetch(`${API_BASE_URL}/all-india/categories.json`);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const data = await response.json();
+
+        if (COMPACT_TRACKER_LAYOUT && (requestVersion !== stateRequestVersion || currentViewMode !== 'allIndia')) return;
 
         currentCategoriesData = data.categories;
         currentTodayUpdates = data.today_updates || [];
@@ -1363,6 +1532,7 @@ async function loadAllIndiaContent() {
             }
         }, 100);
     } catch (error) {
+        if (COMPACT_TRACKER_LAYOUT && (requestVersion !== stateRequestVersion || currentViewMode !== 'allIndia')) return;
         console.error('Error fetching All India data:', error);
         contentEl.innerHTML = '<div class="no-updates">Failed to load. Check if backend is running.</div>';
     }
@@ -1508,9 +1678,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         setViewMode('allIndia');
     } else if (targetState) {
         console.log('Deep linking to state:', targetState);
+        const routeRequestVersion = stateRequestVersion;
 
         // Wait for map and data to be ready
         const checkReady = setInterval(() => {
+            if (COMPACT_TRACKER_LAYOUT && (routeRequestVersion !== stateRequestVersion || currentViewMode !== 'state')) {
+                clearInterval(checkReady);
+                return;
+            }
             if (geojsonLayer && recentUpdatesLoaded) {
                 clearInterval(checkReady);
                 openStatePanel(targetState);

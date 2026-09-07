@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "cls": "kl-hero",
+      "height": 828,
+      "width": 1440
+    },
+    {
+      "cls": "kl-origin-cta",
+      "height": 953,
+      "width": 1440
+    },
+    {
+      "cls": "kl-scope",
+      "height": 630,
+      "width": 1440
+    },
+    {
+      "cls": "kl-drona",
+      "height": 936,
+      "width": 1440
+    },
+    {
+      "cls": "kl-drona__tab",
+      "height": 90,
+      "width": 508
+    },
+    {
+      "cls": "kl-drona__tab",
+      "height": 90,
+      "width": 508
+    },
+    {
+      "cls": "kl-drona__tab",
+      "height": 90,
+      "width": 508
+    },
+    {
+      "cls": "kl-drona__panels",
+      "height": 388,
+      "width": 723
+    },
+    {
+      "cls": "kl-df",
+      "height": 747,
+      "width": 1440
+    },
+    {
+      "cls": "kl-triptych",
+      "height": 953,
+      "width": 1440
+    },
+    {
+      "cls": "kl-roadmap",
+      "height": 900,
+      "width": 1440
+    },
+    {
+      "cls": "kl-manifesto",
+      "height": 900,
+      "width": 1440
+    }
+  ],
+  "width": 1440
+}

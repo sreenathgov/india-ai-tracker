@@ -30,7 +30,7 @@ const {
 const BREVO_CONTACTS_URL = 'https://api.brevo.com/v3/contacts';
 const BREVO_EMAIL_URL = 'https://api.brevo.com/v3/smtp/email';
 
-const DEFAULT_SENDER = { name: 'Kanan Labs', email: 'careers@kananlabs.in' };
+const DEFAULT_SENDER = { name: 'Kanan', email: 'careers@kananlabs.in' };
 
 function splitName(fullName) {
     const parts = fullName.split(/\s+/).filter(Boolean);

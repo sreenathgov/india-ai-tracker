@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Risk Animation Study | Kanan Labs</title>
+    <meta name="robots" content="noindex,nofollow">
+    <style>
+        @font-face{font-family:Telegraf;src:url('/assets/fonts/Telegraf-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+        @font-face{font-family:Telegraf;src:url('/assets/fonts/Telegraf-UltraBold.otf') format('opentype');font-weight:800;font-display:swap}
+        @font-face{font-family:Inter;src:url('/added-assets/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');font-weight:100 900;font-display:swap}
+
+        :root{
+            --paper:#eeebe3;
+            --wine:#762c36;
+            --cream:#f8f5ed;
+            --rose:#f0c9c5;
+            --line:rgba(240,201,197,.22);
+        }
+
+        *{box-sizing:border-box}
+
+        body{
+            min-height:100svh;
+            margin:0;
+            color:var(--cream);
+            background:var(--wine);
+            font-family:Telegraf,Inter,Arial,sans-serif;
+            -webkit-font-smoothing:antialiased;
+        }
+
+        .study{
+            width:min(680px,calc(100% - 3rem));
+            margin:auto;
+            padding:clamp(2rem,6vh,4rem) 0;
+        }
+
+        .study-header{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:2rem;
+            margin-bottom:clamp(2rem,5vh,3.5rem);
+        }
+
+        .study-label{
+            margin:0;
+            font-size:.62rem;
+            font-weight:800;
+            letter-spacing:.18em;
+            text-transform:uppercase;
+            color:var(--rose);
+        }
+
+        .replay{
+            min-height:36px;
+            padding:0 .9rem;
+            border:1px solid rgba(248,245,237,.28);
+            border-radius:999px;
+            color:var(--cream);
+            background:transparent;
+            font:inherit;
+            font-size:.7rem;
+            cursor:pointer;
+        }
+
+        .replay:hover,
+        .replay:focus-visible{
+            border-color:rgba(248,245,237,.7);
+            outline:none;
+        }
+
+        .risk-study{
+            width:min(100%,560px);
+            margin:0 auto;
+        }
+
+        .risk-stage{
+            display:block;
+            width:100%;
+            height:auto;
+            overflow:visible;
+        }
+
+        .orbit,
+        .orbit-inner{
+            fill:none;
+            stroke:var(--line);
+            vector-effect:non-scaling-stroke;
+        }
+
+        .orbit{stroke-width:1}
+        .orbit-inner{stroke-width:.6;stroke-dasharray:2 8}
+
+        .scan-arc{
+            fill:none;
+            stroke:rgba(248,245,237,.48);
+            stroke-width:1.25;
+            stroke-linecap:round;
+            stroke-dasharray:115 820;
+            stroke-dashoffset:820;
+            vector-effect:non-scaling-stroke;
+        }
+
+        .risk-path{
+            fill:none;
+            stroke:var(--rose);
+            stroke-width:1.15;
+            stroke-linecap:round;
+            stroke-dasharray:1;
+            stroke-dashoffset:1;
+            opacity:0;
+            vector-effect:non-scaling-stroke;
+        }
+
+        .risk-signal{
+            color:var(--rose);
+            opacity:.3;
+        }
+
+        .risk-signal circle{
+            fill:currentColor;
+        }
+
+        .risk-signal text{
+            fill:currentColor;
+            font-family:Inter,Arial,sans-serif;
+            font-size:13px;
+            letter-spacing:.02em;
+        }
+
+        .core-halo{
+            fill:none;
+            stroke:rgba(248,245,237,.3);
+            stroke-width:1;
+            transform-box:fill-box;
+            transform-origin:center;
+        }
+
+        .core{
+            fill:var(--cream);
+        }
+
+        .core-label{
+            fill:var(--wine);
+            font-family:Inter,Arial,sans-serif;
+            font-size:13px;
+            font-weight:750;
+            letter-spacing:.01em;
+        }
+
+        .core-caption{
+            fill:rgba(118,44,54,.68);
+            font-family:Inter,Arial,sans-serif;
+            font-size:8px;
+            letter-spacing:.12em;
+            text-transform:uppercase;
+        }
+
+        .is-running .scan-arc{
+            animation:scanOrbit 11s cubic-bezier(.4,0,.2,1) forwards;
+        }
+
+        .is-running .risk-path{
+            animation:pathTrace 2.2s cubic-bezier(.25,.7,.25,1) var(--delay) forwards;
+        }
+
+        .is-running .risk-signal{
+            animation:signalRead 2.2s ease var(--delay) forwards;
+        }
+
+        .is-running .core-halo{
+            animation:coreResponse 2.2s ease-out .7s 5;
+        }
+
+        @keyframes scanOrbit{
+            0%{stroke-dashoffset:820;opacity:.08}
+            12%{opacity:.55}
+            88%{opacity:.55}
+            100%{stroke-dashoffset:0;opacity:.12}
+        }
+
+        @keyframes pathTrace{
+            0%{stroke-dashoffset:1;opacity:0}
+            18%{opacity:.18}
+            68%{stroke-dashoffset:0;opacity:.95}
+            100%{stroke-dashoffset:0;opacity:.16}
+        }
+
+        @keyframes signalRead{
+            0%{color:var(--rose);opacity:.3}
+            28%{color:var(--cream);opacity:1}
+            72%{color:var(--cream);opacity:1}
+            100%{color:var(--rose);opacity:.66}
+        }
+
+        @keyframes coreResponse{
+            0%,32%,100%{opacity:.26;transform:scale(1)}
+            58%{opacity:.82;transform:scale(1.09)}
+        }
+
+        .risk-study figcaption{
+            display:grid;
+            gap:.55rem;
+            width:min(100%,430px);
+            margin:1rem auto 0;
+            text-align:center;
+        }
+
+        .risk-study figcaption strong{
+            font-size:clamp(1.15rem,3vw,1.45rem);
+            line-height:1.25;
+        }
+
+        .risk-study figcaption span{
+            font-family:Inter,Arial,sans-serif;
+            font-size:.82rem;
+            line-height:1.55;
+            color:rgba(248,245,237,.66);
+        }
+
+        .study-note{
+            margin:2.5rem 0 0;
+            font-family:Inter,Arial,sans-serif;
+            font-size:.68rem;
+            text-align:center;
+            color:rgba(248,245,237,.42);
+        }
+
+        @media(max-width:520px){
+            .study{width:min(100% - 2rem,680px);padding-top:1.25rem}
+            .study-header{margin-bottom:1.25rem}
+            .risk-signal text{font-size:15px}
+            .risk-study figcaption{margin-top:.25rem}
+            .study-note{margin-top:1.75rem}
+        }
+
+        @media(prefers-reduced-motion:reduce){
+            .replay{display:none}
+            .risk-signal{opacity:.72}
+            .risk-path{stroke-dashoffset:0;opacity:.16}
+            .scan-arc{display:none}
+            .core-halo{opacity:.32}
+        }
+    </style>
+</head>
+<body>
+    <main class="study">
+        <header class="study-header">
+            <p class="study-label">Production-risk motion study</p>
+            <button class="replay" type="button">Replay</button>
+        </header>
+
+        <figure class="risk-study is-running" id="risk-study">
+            <svg class="risk-stage" viewBox="0 0 560 430" role="img" aria-labelledby="risk-title risk-description">
+                <title id="risk-title">Five external risks traced into one production plan</title>
+                <desc id="risk-description">Sourcing, tariffs, freight, materials and energy are reviewed one at a time to understand how each could affect the production plan.</desc>
+
+                <circle class="orbit" cx="280" cy="215" r="147"></circle>
+                <circle class="orbit-inner" cx="280" cy="215" r="112"></circle>
+                <circle class="scan-arc" cx="280" cy="215" r="147"></circle>
+
+                <path class="risk-path" style="--delay:0s" pathLength="1" d="M280 48 C280 90 280 116 280 150"></path>
+                <path class="risk-path" style="--delay:2.2s" pathLength="1" d="M96 126 C157 126 191 158 221 184"></path>
+                <path class="risk-path" style="--delay:4.4s" pathLength="1" d="M464 126 C403 126 369 158 339 184"></path>
+                <path class="risk-path" style="--delay:6.6s" pathLength="1" d="M96 318 C158 318 194 283 222 250"></path>
+                <path class="risk-path" style="--delay:8.8s" pathLength="1" d="M464 318 C402 318 366 283 338 250"></path>
+
+                <g class="risk-signal" style="--delay:0s">
+                    <circle cx="280" cy="42" r="3"></circle>
+                    <text x="280" y="26" text-anchor="middle">Energy</text>
+                </g>
+                <g class="risk-signal" style="--delay:2.2s">
+                    <circle cx="90" cy="126" r="3"></circle>
+                    <text x="78" y="130" text-anchor="end">Sourcing</text>
+                </g>
+                <g class="risk-signal" style="--delay:4.4s">
+                    <circle cx="470" cy="126" r="3"></circle>
+                    <text x="482" y="130">Tariffs</text>
+                </g>
+                <g class="risk-signal" style="--delay:6.6s">
+                    <circle cx="90" cy="318" r="3"></circle>
+                    <text x="78" y="322" text-anchor="end">Freight</text>
+                </g>
+                <g class="risk-signal" style="--delay:8.8s">
+                    <circle cx="470" cy="318" r="3"></circle>
+                    <text x="482" y="322">Materials</text>
+                </g>
+
+                <circle class="core-halo" cx="280" cy="215" r="85"></circle>
+                <rect class="core" x="202" y="181" width="156" height="68" rx="34"></rect>
+                <text class="core-label" x="280" y="211" text-anchor="middle">Production plan</text>
+                <text class="core-caption" x="280" y="230" text-anchor="middle">one obligation</text>
+            </svg>
+            <figcaption>
+                <strong>Know the risks before they reach production.</strong>
+                <span>One signal is traced at a time—then connected to the production plan.</span>
+            </figcaption>
+        </figure>
+
+        <p class="study-note">Standalone motion study · not yet incorporated into the Supplier Programme page</p>
+    </main>
+
+    <script>
+        const study = document.getElementById('risk-study');
+        const replay = document.querySelector('.replay');
+
+        replay.addEventListener('click', () => {
+            study.classList.remove('is-running');
+            requestAnimationFrame(() => requestAnimationFrame(() => study.classList.add('is-running')));
+        });
+    </script>
+</body>
+</html>

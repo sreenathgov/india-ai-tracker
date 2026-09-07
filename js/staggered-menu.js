@@ -10,14 +10,15 @@ class StaggeredMenu {
       colors: ['#B19EEF', '#5227FF'],
       items: [],
       socialItems: [],
+      contextItems: [],
       displaySocials: true,
       displayItemNumbering: true,
       logoUrl: '/assets/logos/kanan-kl-hor-white.png',
       mobileLogoUrl: '/assets/logos/kanan-kl-hor-white.png',
       mobileOpenLogoUrl: '/assets/logos/kanan-kl-hor-white.png',
-      menuButtonColor: '#0a2f52',
+      menuButtonColor: '#4c2c2c',
       openMenuButtonColor: '#fff',
-      accentColor: '#db4a2b',
+      accentColor: '#8f5555',
       changeMenuColorOnOpen: true,
       isFixed: true,
       closeOnClickAway: true,
@@ -59,7 +60,7 @@ class StaggeredMenu {
       mobileDarkLogoUrl: '/assets/logos/kanan-kl-hor-white.png',
       mobileLightLogoUrl: '/assets/logos/kanan-kl-hor-red.png',
       darkMenuColor: '#f4ebd0',
-      lightMenuColor: '#0a2f52',
+      lightMenuColor: this.options.lightMenuColor || '#4c2c2c',
       currentMenuColor: '#f4ebd0'
     };
 
@@ -323,6 +324,38 @@ class StaggeredMenu {
 
     inner.appendChild(menuList);
 
+    // Optional page-scoped utility links. These are supplied declaratively by
+    // an individual page and remain absent everywhere else.
+    if (Array.isArray(this.options.contextItems) && this.options.contextItems.length > 0) {
+      const contextNav = document.createElement('nav');
+      contextNav.className = 'sm-context-actions';
+      contextNav.setAttribute('aria-label', 'Supplier programme contact options');
+
+      const contextTitle = document.createElement('p');
+      contextTitle.className = 'sm-context-actions-title';
+      contextTitle.textContent = 'Speak with Kanan';
+
+      const contextLinks = document.createElement('div');
+      contextLinks.className = 'sm-context-actions-links';
+
+      this.options.contextItems.forEach(item => {
+        const link = document.createElement('a');
+        link.className = 'sm-context-action';
+        link.href = item.link;
+        link.textContent = item.label;
+        link.setAttribute('aria-label', item.ariaLabel || item.label);
+        if (item.external) {
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+        }
+        contextLinks.appendChild(link);
+      });
+
+      contextNav.appendChild(contextTitle);
+      contextNav.appendChild(contextLinks);
+      inner.appendChild(contextNav);
+    }
+
     // Social items
     if (this.options.displaySocials && this.options.socialItems && this.options.socialItems.length > 0) {
       const socialsDiv = document.createElement('div');
@@ -459,7 +492,7 @@ class StaggeredMenu {
 
     // Start items in the accent red so they flash to cream during entrance.
     if (itemEls.length) {
-      gsap.set(itemEls, { yPercent: 140, rotate: 10, color: '#db4a2b' });
+      gsap.set(itemEls, { yPercent: 140, rotate: 10, color: '#8f5555' });
     }
     if (numberEls.length) {
       gsap.set(numberEls, { '--sm-num-opacity': 0 });
@@ -620,7 +653,7 @@ class StaggeredMenu {
       onComplete: () => {
         const itemEls = Array.from(panel.querySelectorAll('.sm-panel-itemLabel'));
         if (itemEls.length) {
-          gsap.set(itemEls, { yPercent: 140, rotate: 10, color: '#db4a2b' });
+          gsap.set(itemEls, { yPercent: 140, rotate: 10, color: '#8f5555' });
         }
 
         const numberEls = Array.from(panel.querySelectorAll('.sm-panel-list[data-numbering] .sm-panel-item'));
@@ -849,17 +882,15 @@ class StaggeredMenu {
       gsap.to(toggleBtn, { color: menuColor, duration: 0.4, ease: 'power2.out' });
     }
 
-    // Desktop logo swap with fade
+    // Desktop logo swap with fade. The src is set synchronously (not behind
+    // an onComplete callback) so a fast scroll-direction reversal — which
+    // retargets this same tween via GSAP's auto-overwrite before the fade-out
+    // finishes — can never strand the header on the wrong logo/color.
     if (logoImg && window.innerWidth > 1024) {
-      gsap.to(logoImg, {
-        opacity: 0,
-        duration: 0.2,
-        ease: 'power2.in',
-        onComplete: () => {
-          logoImg.src = logoUrl;
-          gsap.to(logoImg, { opacity: 1, duration: 0.35, ease: 'power2.out' });
-        }
-      });
+      if (logoImg.src !== new URL(logoUrl, window.location.href).href) {
+        logoImg.src = logoUrl;
+      }
+      gsap.fromTo(logoImg, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: 'power2.out', overwrite: true });
     } else if (logoImg) {
       // Mobile logo swap: use mobile-specific transparent logos
       const mobileLogoUrl = this.theme.isLight
@@ -944,14 +975,36 @@ class StaggeredMenu {
 
 // Initialize menu when DOM is ready
 document.addEventListener('DOMContentLoaded', function () {
+  const contextItems = [];
+  const phoneLink = document.body.dataset.menuContactPhone;
+  const whatsappLink = document.body.dataset.menuContactWhatsapp;
+
+  if (phoneLink) {
+    contextItems.push({
+      label: 'Call +91 98402 47729',
+      ariaLabel: 'Call Kanan at +91 98402 47729',
+      link: phoneLink
+    });
+  }
+
+  if (whatsappLink) {
+    contextItems.push({
+      label: 'Message on WhatsApp',
+      ariaLabel: 'Message Kanan on WhatsApp',
+      link: whatsappLink,
+      external: true
+    });
+  }
+
   new StaggeredMenu({
     position: 'right',
-    colors: ['#db4a2b', '#f4ebd0', '#0a2f52'],
+    colors: ['#8f5555', '#f4ebd0', '#4c2c2c'],
     items: [
       { label: 'Home', ariaLabel: 'Go to home page', link: 'index.html' },
-      { label: 'TradeWatch', ariaLabel: 'View TradeWatch product', link: 'tradewatch.html' },
+      { label: 'Drona', ariaLabel: 'View Drona product', link: 'drona.html' },
+      { label: 'Supplier Application', ariaLabel: 'Apply to the Kanan Supplier Programme', link: 'https://apply.kananlabs.in/' },
       { label: 'India AI Tracker', ariaLabel: 'View the India AI Tracker', link: 'tracker.html' },
-      { label: 'SectorWatch', ariaLabel: 'View SectorWatch platform', link: 'sector-watch.html' },
+      { label: 'DronaAOS', ariaLabel: 'View DronaAOS platform', link: 'drona-aos.html' },
       { label: 'Resources', ariaLabel: 'Browse resources', link: 'resources.html' },
       { label: 'About', ariaLabel: 'Learn about Kanan Labs', link: 'about.html' },
       { label: 'Careers', ariaLabel: 'See open roles at Kanan Labs', link: 'careers.html' }
@@ -961,11 +1014,13 @@ document.addEventListener('DOMContentLoaded', function () {
       { label: 'Twitter', link: 'https://x.com/indiaAItracker' },
       { label: 'GitHub', link: 'https://github.com/sreenathgov' }
     ],
+    contextItems,
     displaySocials: true,
     displayItemNumbering: false, // set to true to re-enable numbered labels beside menu items
     menuButtonColor: '#f4ebd0',
-    openMenuButtonColor: '#db4a2b',
-    accentColor: '#db4a2b',
+    lightMenuColor: document.body.dataset.menuLightColor || '#4c2c2c',
+    openMenuButtonColor: '#8f5555',
+    accentColor: '#8f5555',
     changeMenuColorOnOpen: true,
     logoUrl: '/assets/logos/kanan-kl-hor-white.png',
     mobileLogoUrl: '/assets/logos/kanan-kl-hor-white.png',

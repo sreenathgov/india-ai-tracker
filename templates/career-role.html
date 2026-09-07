@@ -7,6 +7,7 @@
     <script src="/js/consent.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#762c36">
     <title>{{TITLE_TAG}}</title>
 
     <meta name="description" content="{{META_DESCRIPTION}}">
@@ -14,7 +15,7 @@
     <meta name="robots" content="{{ROBOTS}}">
 
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Kanan Labs">
+    <meta property="og:site_name" content="Kanan">
     <meta property="og:url" content="{{CANONICAL_URL}}">
     <meta property="og:title" content="{{OG_TITLE}}">
     <meta property="og:description" content="{{META_DESCRIPTION}}">
@@ -22,14 +23,14 @@
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Kanan Labs">
+    <meta property="og:image:alt" content="Kanan">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="{{CANONICAL_URL}}">
     <meta name="twitter:title" content="{{OG_TITLE}}">
     <meta name="twitter:description" content="{{META_DESCRIPTION}}">
     <meta name="twitter:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
-    <meta name="twitter:image:alt" content="Kanan Labs">
+    <meta name="twitter:image:alt" content="Kanan">
 
     <link rel="icon" type="image/png" href="/assets/images/KANAN-LABS-WEBSITELOGO.png">
 
@@ -41,18 +42,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles-v2.css?v=21">
-    <link rel="stylesheet" href="/css/staggered-menu.css?v=4">
-    <link rel="stylesheet" href="/css/footer.css?v=4">
-    <link rel="stylesheet" href="/css/careers.css?v=5">
-    <link rel="stylesheet" href="/css/careers-role.css?v=1">
+    <link rel="stylesheet" href="/css/staggered-menu.css?v=8">
+    <link rel="stylesheet" href="/css/footer.css?v=5">
+    <link rel="stylesheet" href="/css/careers.css?v=9">
+    <link rel="stylesheet" href="/css/careers-role.css?v=5">
 
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
 
-<body class="careers-page careers-role-page">
+<body class="careers-page careers-role-page" data-menu-light-color="#4c2c2c">
 
+    <a class="cr-skip" href="/careers/{{ROLE_SLUG}}/#role-description">Skip to job description</a>
     <!-- ════════════════════════════════════════════════
-         ROLE HEADER — navy band
+         ROLE HEADER
     ════════════════════════════════════════════════ -->
     <header class="crd-head">
         <div class="cr-shell">
@@ -70,11 +72,10 @@
             </ul>
 
             <div class="crd-head__actions">
-                <a class="cr-btn cr-btn--primary" href="#apply">
+                <a class="cr-btn cr-btn--primary" href="/careers/{{ROLE_SLUG}}/#apply">
                     <span>Apply for this role</span>
                     <span class="cr-btn__arrow" aria-hidden="true">&#8595;</span>
                 </a>
-                <p class="crd-head__timeline">{{TIMELINE_LINE}}</p>
             </div>
         </div>
 
@@ -88,46 +89,28 @@
     <!-- ════════════════════════════════════════════════
          JOB DESCRIPTION
     ════════════════════════════════════════════════ -->
-    <main class="crd-body" data-nav-light>
-        <div class="cr-shell">
-            <!-- Applications backend is temporarily down; route applicants to email until it's back. -->
-            <div class="cr-notice cr-notice--role-page">
-                <span class="cr-notice__icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-width="1.4" />
-                        <path d="M10 6v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                        <circle cx="10" cy="13.6" r="0.9" fill="currentColor" />
-                    </svg>
-                </span>
-                <div class="cr-notice__body">
-                    <p class="cr-notice__title">A quick note on applying</p>
-                    <p class="cr-notice__text">
-                        Our applications system is temporarily down. Until it&rsquo;s back, send your CV and a
-                        short introduction to
-                        <a href="mailto:raya@kananlabs.in?subject=Application%20for%20{{ROLE_TITLE_MAILTO}}%20%E2%80%94%20Kanan%20Labs">raya@kananlabs.in</a>
-                        &mdash; we&rsquo;re reading everything that arrives that way.
-                    </p>
-                </div>
-            </div>
-        </div>
-
+    <main class="crd-body" id="role-description" data-nav-light>
         <div class="cr-shell crd-body__inner">
 
             <article class="crd-jd">
+                <section class="crd-block" aria-labelledby="crd-company">
+                    <h2 class="crd-block__title" id="crd-company">About Kanan</h2>
+                    {{COMPANY_DESCRIPTION_HTML}}
+                </section>
                 <section class="crd-block" aria-labelledby="crd-about">
                     <h2 class="crd-block__title" id="crd-about">About the role</h2>
                     {{DESCRIPTION_HTML}}
                 </section>
 
                 <section class="crd-block" aria-labelledby="crd-do">
-                    <h2 class="crd-block__title" id="crd-do">What you&rsquo;ll do</h2>
+                    <h2 class="crd-block__title" id="crd-do">Responsibilities</h2>
                     <ul class="crd-list">
                         {{RESPONSIBILITIES_HTML}}
                     </ul>
                 </section>
 
                 <section class="crd-block" aria-labelledby="crd-look">
-                    <h2 class="crd-block__title" id="crd-look">What we look for</h2>
+                    <h2 class="crd-block__title" id="crd-look">Required qualifications</h2>
                     <ul class="crd-list">
                         {{LOOKING_FOR_HTML}}
                     </ul>
@@ -140,7 +123,7 @@
                 <dl class="crd-rail__list">
                     {{RAIL_HTML}}
                 </dl>
-                <a class="cr-btn cr-btn--outline cr-btn--block" href="#apply">
+                <a class="cr-btn cr-btn--outline cr-btn--block" href="/careers/{{ROLE_SLUG}}/#apply">
                     <span>Apply</span>
                     <span class="cr-btn__arrow" aria-hidden="true">&#8595;</span>
                 </a>
@@ -159,7 +142,7 @@
                 <div class="crd-apply__heading" id="applyHeading">
                     <p class="cr-kicker cr-kicker--light">Application</p>
                     <h2 id="crd-apply-title">Apply &mdash; {{ROLE_TITLE}}</h2>
-                    <p>This takes about twenty minutes. The written answers carry more weight than the CV, so please give them the time.</p>
+                    <p>Submit your CV and contact details. Relevant links and additional information are optional.</p>
                 </div>
 
                 <form id="applyForm" class="crd-form" novalidate
@@ -167,13 +150,13 @@
 
                     <div class="crd-form__row">
                         <div class="crd-field">
-                            <label for="ap-name">Full name</label>
+                            <label for="ap-name">Full name <span>Required</span></label>
                             <input id="ap-name" name="fullName" type="text" autocomplete="name" maxlength="120" required>
                             <p class="crd-field__error" id="ap-name-error"></p>
                         </div>
 
                         <div class="crd-field">
-                            <label for="ap-email">Email</label>
+                            <label for="ap-email">Email <span>Required</span></label>
                             <input id="ap-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="180" required>
                             <p class="crd-field__error" id="ap-email-error"></p>
                         </div>
@@ -205,22 +188,22 @@
                         </div>
                     </div>
 
-                    <div class="crd-field">
-                        <label for="ap-cv-url">Link to your CV <span>Optional</span></label>
-                        <input id="ap-cv-url" name="cvUrl" type="url" inputmode="url" maxlength="300" placeholder="https://">
-                        <p class="crd-field__hint">A link is easier for us to handle than an attachment &mdash; Drive, Dropbox, or your own site.</p>
-                        <p class="crd-field__error" id="ap-cv-url-error"></p>
-                    </div>
-
-                    <div class="crd-field">
-                        <label for="ap-cv-file">Or attach a PDF <span>Optional</span></label>
-                        <input id="ap-cv-file" name="cvFile" type="file" accept="application/pdf,.pdf">
-                        <p class="crd-field__hint">PDF only, up to 3&nbsp;MB.</p>
-                        <p class="crd-field__error" id="ap-cv-file-error"></p>
-                    </div>
+                    <fieldset class="crd-cv" aria-describedby="ap-cv-hint">
+                        <legend>CV <span>Required</span></legend>
+                        <p class="crd-field__hint" id="ap-cv-hint">Upload a PDF up to 3 MB, or provide a link to your CV.</p>
+                        <div class="crd-field">
+                            <label for="ap-cv-file">Upload CV</label>
+                            <input id="ap-cv-file" name="cvFile" type="file" accept="application/pdf,.pdf" aria-describedby="ap-cv-hint">
+                            <p class="crd-field__error" id="ap-cv-file-error"></p>
+                        </div>
+                        <div class="crd-field">
+                            <label for="ap-cv-url">Or link to your CV</label>
+                            <input id="ap-cv-url" name="cvUrl" type="url" inputmode="url" maxlength="300" placeholder="https://" aria-describedby="ap-cv-hint">
+                            <p class="crd-field__error" id="ap-cv-url-error"></p>
+                        </div>
+                    </fieldset>
 
                     <div class="crd-questions">
-                        <p class="crd-questions__label">Written questions</p>
                         {{QUESTIONS_HTML}}
                     </div>
 
@@ -236,6 +219,10 @@
                         <span class="crd-submit__arrow" aria-hidden="true">&#8594;</span>
                     </button>
 
+                    <p class="crd-form__help">Having trouble applying? Email your CV to
+                        <a href="mailto:raya@kananlabs.in?subject=Application%20for%20{{ROLE_TITLE_MAILTO}}">raya@kananlabs.in</a>.
+                    </p>
+                    <noscript><p class="crd-form__help">Enable JavaScript to use this form, or apply by email using the link above.</p></noscript>
                     <p class="crd-form__privacy">
                         We use the information you provide here solely to assess this application. See our
                         <a href="/privacy-policy.html">privacy policy</a>.
@@ -244,8 +231,8 @@
 
                 <div class="crd-success" id="applySuccess" role="status" tabindex="-1" hidden>
                     <p class="crd-success__kicker">Application received</p>
-                    <h2>Thank you.</h2>
-                    <p>A member of the team will read your application and reply within a week, either way.</p>
+                    <h2>Thank you for applying.</h2>
+                    <p>We have received your application. Our team will review your experience and contact you if there is a potential fit.</p>
                     <a href="/careers.html">Back to open roles</a>
                 </div>
 
@@ -261,17 +248,13 @@
             <div class="kl-footer__content">
 
                 <div class="kl-footer__brand">
-                    <img src="/assets/logos/kanan-kl-hor-white.png" alt="Kanan Labs"
+                    <img src="/assets/logos/kanan-kl-hor-white.png" alt="Kanan"
                          class="kl-footer__logo" width="922" height="262" loading="lazy" decoding="async" draggable="false">
                     <p class="kl-footer__tagline">Proactive Supply Chain Resilience</p>
 
-                    <div>
-                        <p class="kl-footer__nl-label">Weekly Brief</p>
-                        <form class="kl-footer__nl-form" id="footerNewsletterForm">
-                            <input type="email" class="kl-footer__nl-input" placeholder="Your email address"
-                                   autocomplete="email" required>
-                            <button type="submit" class="kl-footer__nl-submit">Subscribe</button>
-                        </form>
+                    <div class="kl-footer__links">
+                        <a href="https://apply.kananlabs.in/" class="kl-footer__consult">Supplier Programme &#8594;</a>
+                        <a href="/request-demo.html" class="kl-footer__consult">Request a Demo &#8594;</a>
                     </div>
                 </div>
 
@@ -324,9 +307,9 @@
     </footer>
 
     <!-- Scripts -->
-    <script defer src="/js/careers-apply.js?v=2"></script>
+    <script defer src="/js/careers-apply.js?v=3"></script>
     <!-- Staggered menu requires gsap (loaded with defer in head); defer guarantees order -->
-    <script defer src="/js/staggered-menu.js?v=7"></script>
+    <script defer src="/js/staggered-menu.js?v=12"></script>
 </body>
 
 </html>

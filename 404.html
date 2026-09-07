@@ -3,13 +3,14 @@
 
 <head>
     <!-- Analytics load only after cookie consent (DPDP/GDPR) -->
-    <script src="js/consent.js" defer></script>
+    <script src="/js/consent.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page not found | Kanan Labs</title>
 
-    <meta name="description" content="The page you were looking for could not be found. Return to Kanan Labs, TradeWatch, or the India AI Tracker.">
+    <meta name="description" content="The page you were looking for could not be found. Return to Kanan Labs, Drona, or the India AI Tracker.">
     <meta name="robots" content="noindex,follow">
+    <meta name="theme-color" content="#762c36">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Kanan Labs">
@@ -27,190 +28,95 @@
     <meta name="twitter:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
     <meta name="twitter:image:alt" content="Kanan Labs">
 
-    <link rel="icon" type="image/png" href="assets/images/KANAN-LABS-WEBSITELOGO.png">
+    <link rel="icon" type="image/png" href="/assets/images/KANAN-LABS-WEBSITELOGO.png">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/styles-v2.css?v=13">
-    <link rel="stylesheet" href="css/staggered-menu.css?v=4">
-    <link rel="stylesheet" href="css/footer.css?v=4">
-    <link rel="stylesheet" href="css/contact-panel.css?v=1">
-    <link rel="stylesheet" href="css/back-button.css">
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <style>
-        html {
-            height: auto !important;
-            overflow: auto !important;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap">
 
-        body.legal-page {
-            height: auto !important;
-            overflow: auto !important;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background: var(--brand-navy);
-        }
+    <!-- Shares the legal-page reading surface: wine masthead over paper.
+         styles-v2.css is deliberately NOT loaded — its single-screen html/body
+         lock had to be fought with !important overrides here, and nothing else
+         on this page needs it. -->
+    <link rel="stylesheet" href="/css/legal-pages.css?v=3">
+    <link rel="stylesheet" href="/css/staggered-menu.css?v=8">
+    <link rel="stylesheet" href="/css/footer.css?v=5">
 
-        .legal-content {
-            flex: 1;
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .legal-content h1 {
-            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-            font-size: 2.25rem;
-            font-weight: 600;
-            color: var(--brand-cream);
-            margin: 0 0 0.5rem;
-        }
-
-        .legal-meta {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: rgba(244, 235, 208, 0.38);
-            margin-bottom: 2.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid rgba(244, 235, 208, 0.2);
-        }
-
-        .legal-section {
-            margin-bottom: 2.5rem;
-        }
-
-        .legal-section p {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 1rem;
-            color: var(--brand-cream);
-            opacity: 0.75;
-            line-height: 1.7;
-            margin-bottom: 1rem;
-        }
-
-        .kl-404-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(244, 235, 208, 0.15);
-        }
-
-        .kl-404-links a {
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.9375rem;
-            color: var(--brand-cream);
-            text-decoration: none;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.2s ease, opacity 0.2s ease;
-            opacity: 0.85;
-        }
-
-        .kl-404-links a:hover {
-            opacity: 1;
-            border-bottom-color: rgba(244, 235, 208, 0.4);
-        }
-
-        .kl-404-links a::after {
-            content: ' →';
-            opacity: 0.5;
-        }
-
-        @media (max-width: 768px) {
-            .legal-content {
-                padding: 3rem 1.5rem;
-            }
-
-            .legal-content h1 {
-                font-size: 1.75rem;
-            }
-        }
-    </style>
+    <!-- GSAP: js/staggered-menu.js calls gsap.set unguarded. -->
+    <script defer src="/assets/vendor/gsap/gsap.min.js"></script>
+    <script defer src="/assets/vendor/gsap/ScrollTrigger.min.js"></script>
+    <script defer src="/js/staggered-menu.js?v=12"></script>
 </head>
 
-<body class="legal-page">
+<body class="legal-page" data-menu-light-color="#4c2c2c">
+    <a class="legal-skip" href="#legal-main">Skip to content</a>
 
-    <div style="height: 80px;"></div>
+    <!-- Nav is injected by staggered-menu.js and floats over the wine masthead. -->
 
-    <main class="legal-content">
-        <h1>Page not found.</h1>
-        <p class="legal-meta">Error 404</p>
+    <header class="legal-masthead">
+        <div class="legal-masthead__inner">
+            <p class="legal-eyebrow">Error 404</p>
+            <h1>Page not found.</h1>
+            <p class="legal-masthead__lede">The page you were looking for could not be found. It may have been moved, renamed, or it never existed.</p>
+        </div>
+    </header>
 
-        <section class="legal-section">
-            <p>The page you were looking for could not be found. It may have been moved, renamed, or it never existed.</p>
-            <p>Try one of the destinations below.</p>
+    <div class="legal-main legal-main--solo" id="legal-main" data-nav-light>
+        <article class="legal-content">
+            <section class="legal-section">
+                <p>Nothing is broken on your end. Pick a destination below, or use the menu in the top-right corner.</p>
 
-            <nav class="kl-404-links" aria-label="Recovery links">
-                <a href="/">Kanan Labs — home</a>
-                <a href="/tradewatch.html">TradeWatch — shipment evidence packets</a>
-                <a href="/tracker.html">India AI Tracker — policy &amp; regulatory intelligence</a>
-            </nav>
-        </section>
-    </main>
+                <nav class="kl-404-links" aria-label="Recovery links">
+                    <a href="/">Kanan Labs — home</a>
+                    <a href="/drona.html">Drona</a>
+                    <a href="/tracker.html">India AI Tracker</a>
+                    <a href="/resources.html">Resources</a>
+                </nav>
+            </section>
+        </article>
+    </div>
 
     <footer class="kl-footer">
         <div class="kl-footer__inner">
-
             <div class="kl-footer__content">
 
                 <div class="kl-footer__brand">
+                    <img src="/assets/logos/kanan-kl-hor-white.png" alt="Kanan Labs"
+                         class="kl-footer__logo" width="922" height="262" loading="lazy" decoding="async" draggable="false">
+                    <p class="kl-footer__tagline">Proactive Supply Chain Resilience</p>
 
-                    <img src="assets/logos/kanan-kl-hor-white.png" alt="Kanan Labs"
-                        class="kl-footer__logo" width="922" height="262" loading="lazy" decoding="async" draggable="false">
-
-                    <p class="kl-footer__tagline">India's AI Governance Intelligence</p>
-
-                    <div>
-                        <p class="kl-footer__nl-label">Weekly Brief</p>
-                        <form class="kl-footer__nl-form" id="footerNewsletterForm">
-                            <input type="email" class="kl-footer__nl-input" placeholder="Your email address"
-                                autocomplete="email" required>
-                            <button type="submit" class="kl-footer__nl-submit">Subscribe</button>
-                        </form>
+                    <div class="kl-footer__links">
+                        <a href="https://apply.kananlabs.in/" class="kl-footer__consult">Supplier Programme &#8594;</a>
+                        <a href="/request-demo.html" class="kl-footer__consult">Request a Demo &#8594;</a>
                     </div>
-
-                    <button class="kl-footer__consult" type="button"
-                        onclick="if(window.contactPanel) window.contactPanel.open()">
-                        Schedule Consultation →
-                    </button>
-
                 </div>
 
                 <div class="kl-footer__sitemap">
 
                     <div class="kl-footer__col">
-                        <h4 class="kl-footer__col-heading">Advisory</h4>
+                        <h4 class="kl-footer__col-heading">Platform</h4>
                         <ul class="kl-footer__col-links">
-                            <li><a href="index.html#advisory">Regulatory Trajectory</a></li>
-                            <li><a href="index.html#advisory">Incentive Structuring</a></li>
-                            <li><a href="index.html#advisory">Governance Readiness</a></li>
-                            <li><a href="index.html#advisory">Cross-Border Advisory</a></li>
+                            <li><a href="/drona.html">Drona</a></li>
+                            <li><a href="/drona-aos.html">DronaAOS</a></li>
+                            <li><a href="/tracker.html">India AI Tracker</a></li>
+                            <li><a href="/resources.html">Resources</a></li>
                         </ul>
                     </div>
 
                     <div class="kl-footer__col">
                         <h4 class="kl-footer__col-heading">Company</h4>
                         <ul class="kl-footer__col-links">
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="careers.html">Careers</a></li>
-                            <li><a href="sector-watch.html">Sector Watch</a></li>
-                            <li><a href="resources.html">Resources</a></li>
-                            <li><a href="mailto:feedback@kananlabs.in">Contact</a></li>
+                            <li><a href="/about.html">About</a></li>
+                            <li><a href="/careers.html">Careers</a></li>
+                            <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
                         </ul>
                     </div>
 
                     <div class="kl-footer__col">
                         <h4 class="kl-footer__col-heading">Follow</h4>
                         <ul class="kl-footer__col-links">
-                            <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank"
-                                    rel="noopener">LinkedIn</a></li>
+                            <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank" rel="noopener">LinkedIn</a></li>
                             <li><a href="https://x.com/indiaAItracker" target="_blank" rel="noopener">Twitter</a></li>
                             <li><a href="https://github.com/sreenathgov" target="_blank" rel="noopener">GitHub</a></li>
                         </ul>
@@ -219,8 +125,8 @@
                     <div class="kl-footer__col">
                         <h4 class="kl-footer__col-heading">Legal</h4>
                         <ul class="kl-footer__col-links">
-                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                            <li><a href="disclaimers.html">Disclaimers</a></li>
+                            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="/disclaimers.html">Disclaimers</a></li>
                         </ul>
                     </div>
 
@@ -228,14 +134,11 @@
             </div>
 
             <div class="kl-footer__watermark">
-                <img src="assets/logos/kanan-kl-hor-white.png" alt=""
-                    class="kl-footer__watermark-img" width="922" height="262" loading="lazy" decoding="async" aria-hidden="true" draggable="false">
+                <img src="/assets/logos/kanan-kl-hor-white.png" alt=""
+                     class="kl-footer__watermark-img" width="922" height="262" loading="lazy" decoding="async" aria-hidden="true" draggable="false">
             </div>
-
         </div>
     </footer>
-    <script src="js/contact-panel.js"></script>
-    <script src="js/staggered-menu.js?v=7"></script>
 </body>
 
 </html>

@@ -19,21 +19,19 @@ const path = require('path');
 
 const { validateCareers } = require('./careers/validate');
 const { listingJsonLd, roleJsonLd } = require('./careers/jsonld');
-const { escapeHtml, escapeJsonForScript } = require('./careers/schema');
+const { escapeHtml } = require('./careers/schema');
 const {
     isAdvertised,
     metaChips,
     renderChip,
     renderStatusBadge,
-    renderFilters,
     renderRoleRow,
     renderCount,
     renderParagraphs,
     renderListItems,
     renderNiceToHave,
     renderRail,
-    renderQuestions,
-    renderTimelineLine
+    renderQuestions
 } = require('./careers/render');
 
 const PROJECT_ROOT = path.resolve(__dirname, '..');
@@ -90,25 +88,8 @@ function fillTemplate(template, tokens, label) {
 
 function writeListing(data, advertised) {
     let html = fs.readFileSync(LISTING_TEMPLATE, 'utf-8');
-
-    // The client-side payload carries only what the filter needs, not the full
-    // JD — the detail pages already hold that, and shipping it twice would add
-    // ~30 KB to every careers.html request for no benefit.
-    const payload = {
-        roles: advertised.map(r => ({
-            slug: r.slug,
-            title: r.title,
-            team: r.team,
-            workMode: r.workMode,
-            employmentType: r.employmentType,
-            status: r.status
-        }))
-    };
-
-    html = replaceById(html, 'careers-data',
-        escapeJsonForScript(JSON.stringify(payload)), 'roles payload');
-    html = replaceById(html, 'careersFilters',
-        renderFilters(data.teams, advertised), 'filter pills');
+    html = replaceById(html, 'careersIntroduction',
+        escapeHtml(data.companyDescription), 'company introduction');
     html = replaceById(html, 'careersGrid',
         advertised.map(renderRoleRow).join('\n'), 'role rows');
     html = replaceById(html, 'careersCount',
@@ -134,17 +115,17 @@ const CLOSED_NOTICE = `<div class="crd-closed" role="status">
 // comes later — so this cannot over-match.
 const APPLY_BLOCK_RE = /<div class="crd-apply__heading"[\s\S]*?<\/form>/;
 
-function writeRolePage(template, role) {
+function writeRolePage(template, role, companyDescription) {
     const advertised = isAdvertised(role);
     const canonical = `${BASE_URL}/careers/${role.slug}/`;
 
     const html = fillTemplate(template, {
-        TITLE_TAG: escapeHtml(`${role.title} — Careers | Kanan Labs`),
+        TITLE_TAG: escapeHtml(`${role.title} — Careers | Kanan`),
         META_DESCRIPTION: escapeHtml(role.summary),
-        OG_TITLE: escapeHtml(`${role.title} — Kanan Labs`),
+        OG_TITLE: escapeHtml(`${role.title} — Kanan`),
         CANONICAL_URL: canonical,
         ROBOTS: advertised ? 'index,follow,max-image-preview:large' : 'noindex,follow',
-        JSON_LD: roleJsonLd(role, { advertised }),
+        JSON_LD: roleJsonLd(role, { advertised, companyDescription }),
 
         ROLE_SLUG: escapeHtml(role.slug),
         ROLE_TITLE: escapeHtml(role.title),
@@ -152,8 +133,7 @@ function writeRolePage(template, role) {
         TEAM: escapeHtml(role.team),
         STATUS_BADGE: renderStatusBadge(role.status),
         META_CHIPS: metaChips(role).map(renderChip).join('\n                '),
-        TIMELINE_LINE: renderTimelineLine(role),
-
+        COMPANY_DESCRIPTION_HTML: renderParagraphs(companyDescription),
         DESCRIPTION_HTML: renderParagraphs(role.description),
         RESPONSIBILITIES_HTML: renderListItems(role.responsibilities),
         LOOKING_FOR_HTML: renderListItems(role.lookingFor),
@@ -203,7 +183,17 @@ function generateCareers() {
     try {
         writeListing(data, advertised);
         const roleTemplate = fs.readFileSync(ROLE_TEMPLATE, 'utf-8');
-        data.roles.forEach(role => writeRolePage(roleTemplate, role));
+        data.roles.forEach(role => writeRolePage(roleTemplate, role, data.companyDescription));
+
+        // This directory contains generated role pages only. Prune retired
+        // routes after successful rendering, including on incremental builds.
+        const currentSlugs = new Set(data.roles.map(role => role.slug));
+        const rolesDir = path.join(DIST_DIR, 'careers');
+        for (const entry of fs.readdirSync(rolesDir, { withFileTypes: true })) {
+            if (entry.isDirectory() && !currentSlugs.has(entry.name)) {
+                fs.rmSync(path.join(rolesDir, entry.name), { recursive: true, force: true });
+            }
+        }
     } catch (err) {
         console.error(`\n❌ Careers: ${err.message}\n`);
         process.exit(1);

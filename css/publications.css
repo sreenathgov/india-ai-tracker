@@ -14,35 +14,35 @@
    CSS VARIABLES
    ============================================ */
 
-:root {
+body.publications-page {
     /* Brand + reading tokens (referenced throughout this file but historically
        never defined — the reader was authored against a Figma token set that was
        never wired into the shared stylesheet). Scoped here to avoid polluting the
        global brand/accent token vocabulary in styles-v2.css. */
-    --kanan-orange: #db4a2b;   /* brand orange (confirmed sitewide) */
-    --kanan-blue: #0a2f52;     /* brand navy */
-    --kanan-white: #ffffff;
-    --reading-canvas: #faf9f6; /* warm near-white long-form surface */
-    --reading-text: #2d2d2d;
-    --reading-text-light: #6b6e74;
+    --kanan-orange: var(--ed-accent);   /* brand orange (confirmed sitewide) */
+    --kanan-blue: var(--ed-ink);     /* brand navy */
+    --kanan-white: var(--ed-card);
+    --reading-canvas: var(--ed-paper); /* warm near-white long-form surface */
+    --reading-text: var(--ed-body);
+    --reading-text-light: var(--ed-muted);
 
     /* Accent & reading tokens derived from Figma "Design reading experience" */
     --accent-orange: var(--kanan-orange);
 
     /* Polygraph-reference surfaces (extracted spec, translated to brand) */
-    --pub-card: #ffffff;             /* chapter/section cards + panels */
-    --pub-sidebar: #f2efe9;          /* fixed left rail */
-    --pub-dim: #f1ece4;              /* per-layer dim overlay (fades to 0.7) */
+    --pub-card: var(--ed-card);             /* chapter/section cards + panels */
+    --pub-sidebar: var(--ed-cream);          /* fixed left rail */
+    --pub-dim: var(--ed-paper);              /* per-layer dim overlay (fades to 0.7) */
     --pub-strip: var(--brand-cream); /* "Get the details" strip */
-    --pub-border: rgba(10, 47, 82, 0.14);
-    --pub-border-subtle: rgba(10, 47, 82, 0.10);
-    --pub-gray: #8a8d93;
+    --pub-border: rgb(var(--kanan-primary-rgb) / 0.14);
+    --pub-border-subtle: rgb(var(--kanan-primary-rgb) / 0.10);
+    --pub-gray: var(--ed-muted);
 
     /* Publications-specific surface/border tokens (legacy names, kept) */
     --publications-reading-bg: var(--reading-canvas);
-    --publications-surface: #ffffff;
-    --publications-border-subtle: rgba(10, 47, 82, 0.1);
-    --publications-border-subtler: rgba(10, 47, 82, 0.08);
+    --publications-surface: var(--ed-card);
+    --publications-border-subtle: rgb(var(--kanan-primary-rgb) / 0.1);
+    --publications-border-subtler: rgb(var(--kanan-primary-rgb) / 0.08);
 }
 
 /* ============================================
@@ -153,8 +153,8 @@ body.publications-page .page-wrapper {
    Kanan orange, text = charcoal, markers = navy hairlines on the cream rail. */
 .toc-list {
     --toc-accent: var(--kanan-orange);
-    --toc-text: #3a3d42;
-    --toc-marker: rgba(10, 47, 82, 0.30);
+    --toc-text: var(--ed-ink);
+    --toc-marker: rgb(var(--kanan-primary-rgb) / 0.30);
     --toc-marker-length: 1.5rem;
     --toc-marker-gap: 0.75rem;
     --toc-max-shift: 10px;
@@ -394,22 +394,22 @@ body.publications-page .page-wrapper {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 1.35rem;
     line-height: 1.6;
-    color: #4a4d52;
+    color: var(--ed-muted);
     max-width: 46rem;
 }
 
 /* --- Key Takeaways (AUTHORING.md §4; approved design tokens) ---
    Container/label/summary/divider/bullets are the founder-approved reference:
-   #B45309 amber accents, Inter text, 12px radius, ✓ bullet checks. */
+   var(--ed-accent) amber accents, Inter text, 12px radius, ✓ bullet checks. */
 
 .pub-takeaways {
     position: relative;
     margin: 2.8rem 2rem 1rem 5.5rem;
     padding: 2rem 2.25rem;
     max-width: 68rem;
-    background: #FFFFFF;
-    border: 1px solid #F1F3F5;
-    border-top: 3px solid #B45309;
+    background: var(--ed-card);
+    border: 1px solid var(--ed-rule);
+    border-top: 3px solid var(--ed-accent);
     border-radius: 12px;
 }
 
@@ -419,7 +419,7 @@ body.publications-page .page-wrapper {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: #B45309;
+    color: var(--ed-accent);
     margin-bottom: 14px;
 }
 
@@ -428,7 +428,7 @@ body.publications-page .page-wrapper {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
-    color: #1C1C1E;
+    color: var(--ed-ink);
     margin: 0 0 20px;
 }
 
@@ -439,7 +439,7 @@ body.publications-page .page-wrapper {
 
 .pub-takeaways-rule {
     height: 1px;
-    background: #F1F3F5;
+    background: var(--ed-rule);
     border: 0;
     margin: 0 0 18px;
 }
@@ -462,7 +462,7 @@ body.publications-page .page-wrapper {
 }
 
 .pub-takeaway-check {
-    color: #B45309;
+    color: var(--ed-accent);
     font-size: 16px;
     line-height: 1.35;
     flex-shrink: 0;
@@ -472,13 +472,13 @@ body.publications-page .page-wrapper {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     line-height: 1.55;
-    color: #4A4A4C;
+    color: var(--ed-body);
 }
 
 .pub-takeaway-text strong,
 .pub-takeaway-text .hl {
     font-weight: 500;
-    color: #1C1C1E;
+    color: var(--ed-ink);
 }
 
 @media (max-width: 640px) {
@@ -504,7 +504,7 @@ body.publications-page .page-wrapper {
 .masthead-kicker .masthead-cluster {
     color: inherit;
     text-decoration: none;
-    border-bottom: 1px solid rgba(219, 74, 43, 0.35);
+    border-bottom: 1px solid rgb(var(--kanan-accent-rgb) / 0.35);
 }
 
 .masthead-kicker .masthead-cluster:hover {
@@ -725,7 +725,7 @@ body.publications-page .page-wrapper {
     padding: 0.7rem 0.9rem;
     text-align: left;
     vertical-align: top;
-    border-bottom: 1px solid rgba(10, 47, 82, 0.14);
+    border-bottom: 1px solid rgb(var(--kanan-primary-rgb) / 0.14);
 }
 
 .chapter-content th {
@@ -740,7 +740,7 @@ body.publications-page .page-wrapper {
     font-size: 0.9em;
     padding: 0.15em 0.4em;
     border-radius: 4px;
-    background: rgba(10, 47, 82, 0.06);
+    background: rgb(var(--kanan-primary-rgb) / 0.06);
     overflow-wrap: break-word;
 }
 
@@ -750,7 +750,7 @@ body.publications-page .page-wrapper {
     margin: 2rem 0;
     padding: 1.1rem 1.25rem;
     border-radius: 8px;
-    background: rgba(10, 47, 82, 0.05);
+    background: rgb(var(--kanan-primary-rgb) / 0.05);
     line-height: 1.55;
 }
 
@@ -775,8 +775,8 @@ body.publications-page .page-wrapper {
     /* Apple-style resting elevation: tight contact shadow + soft ambient lift,
        so the tile reads as a raised, clickable object even before hover. */
     box-shadow:
-        0 1px 2px rgba(10, 47, 82, 0.05),
-        0 10px 30px -14px rgba(10, 47, 82, 0.16);
+        0 1px 2px rgb(var(--kanan-primary-rgb) / 0.05),
+        0 10px 30px -14px rgb(var(--kanan-primary-rgb) / 0.16);
     cursor: pointer;
     transition:
         transform 0.25s ease-out,
@@ -792,8 +792,8 @@ body.publications-page .page-wrapper {
     transform: translateY(-3px);
     border-color: var(--pub-border);
     box-shadow:
-        0 4px 10px rgba(10, 47, 82, 0.06),
-        0 22px 48px -18px rgba(10, 47, 82, 0.26);
+        0 4px 10px rgb(var(--kanan-primary-rgb) / 0.06),
+        0 22px 48px -18px rgb(var(--kanan-primary-rgb) / 0.26);
 }
 
 /* Active card: lit above the dim backdrop; it has "lifted into" the panel, so
@@ -828,7 +828,7 @@ body.publications-page .page-wrapper {
     left: 0;
     width: 1px;
     height: 1px;
-    background: rgba(10, 47, 82, 0.5);
+    background: rgb(var(--kanan-primary-rgb) / 0.5);
     transform-origin: left center;
     transition: transform 0.1s ease-out;
     z-index: 2;
@@ -933,8 +933,8 @@ body.publications-page .page-wrapper {
     line-height: 1.4;
     /* Rest: a legible terracotta CTA bar (not the old near-invisible whisper),
        with orange label — a persistent, unmistakable "click to open" affordance. */
-    background: #f6e6dc;
-    border-top: 1px solid rgba(219, 74, 43, 0.22);
+    background: var(--ed-cream);
+    border-top: 1px solid rgb(var(--kanan-accent-rgb) / 0.22);
     font-family: 'Telegraf', 'Inter', sans-serif;
     font-size: 0.78rem;
     font-weight: 600;
@@ -1083,7 +1083,7 @@ body.publications-page .page-wrapper {
 .pub-sub-input:focus {
     outline: none;
     border-color: var(--kanan-orange);
-    box-shadow: 0 0 0 3px rgba(219, 74, 43, 0.12);
+    box-shadow: 0 0 0 3px rgb(var(--kanan-accent-rgb) / 0.12);
 }
 
 .pub-sub-btn {
@@ -1103,7 +1103,7 @@ body.publications-page .page-wrapper {
 }
 
 .pub-sub-btn:hover {
-    background: #c23e22;
+    background: var(--ed-ink);
 }
 
 .pub-sub-btn:active {
@@ -1200,8 +1200,8 @@ body.publications-page .page-wrapper {
     border: 1px solid var(--pub-border-subtle);
     border-top: 3px solid var(--kanan-orange);
     box-shadow:
-        0 1px 2px rgba(10, 47, 82, 0.05),
-        0 14px 40px -18px rgba(10, 47, 82, 0.18);
+        0 1px 2px rgb(var(--kanan-primary-rgb) / 0.05),
+        0 14px 40px -18px rgb(var(--kanan-primary-rgb) / 0.18);
 }
 
 .pub-signup-inline-title {
@@ -1435,7 +1435,7 @@ html.pub-locked .sm-ghost-zone {
     right: 0;
     width: 1px;
     height: 1px;
-    background: rgba(10, 47, 82, 0.5);
+    background: rgb(var(--kanan-primary-rgb) / 0.5);
     transform-origin: left center;
     transition: transform 0.1s ease-out;
     z-index: 1;
@@ -1498,7 +1498,7 @@ html.pub-locked .sm-ghost-zone {
 
 .panel-close:hover {
     color: var(--kanan-blue);
-    background: rgba(10, 47, 82, 0.06);
+    background: rgb(var(--kanan-primary-rgb) / 0.06);
 }
 
 /* Scoped + explicit overrides: styles-v2.css defines a global navy-band
@@ -1591,8 +1591,8 @@ html.pub-locked .sm-ghost-zone {
     margin-top: 0.65rem;
     padding: 0.9rem 1.2rem;
     appearance: none;
-    border: 1px solid rgba(10, 47, 82, 0.18);
-    background: #faf8f3;
+    border: 1px solid rgb(var(--kanan-primary-rgb) / 0.18);
+    background: var(--ed-cream);
     font-family: 'Telegraf', 'Inter', sans-serif;
     font-size: 0.85rem;
     text-align: left;
@@ -1605,7 +1605,7 @@ html.pub-locked .sm-ghost-zone {
 .subsection-link:hover,
 .subsection-link:active {
     border-color: var(--kanan-orange);
-    background: #ffffff;
+    background: var(--ed-card);
 }
 
 .subsection-link-arrow {
@@ -1930,3 +1930,9 @@ html.pub-locked .sm-ghost-zone {
         padding: 4rem 1.25rem 2.5rem;
     }
 }
+
+/* Tonal separation identifies depth without changing reader geometry. */
+body.publications-page .analysis-panel { background: var(--ed-card); }
+body.publications-page .indepth-panel { background: var(--ed-cream); }
+body.publications-page .chapter-card { background: var(--ed-card); }
+body.publications-page :is(a, button, input):focus-visible { outline: 2px solid var(--ed-accent); outline-offset: 3px; }

@@ -31,7 +31,10 @@
     hoverStrength: 2,
     inertia: 0.05,
     bloom: 1,
-    timeScale: 0.5
+    timeScale: 0.5,
+    maxDpr: 2,
+    maxFps: 60,
+    steps: 100
   };
 
   function readConfig() {
@@ -40,6 +43,7 @@
     const str = (key, fallback) => (d[key] !== undefined ? d[key] : fallback);
     const bool = (key, fallback) => (d[key] !== undefined ? d[key] !== 'false' : fallback);
     return {
+      palette: str('palette', 'spectrum'),
       oglUrl: str('oglUrl', DEFAULTS.oglUrl),
       height: num('height', DEFAULTS.height),
       baseWidth: num('baseWidth', DEFAULTS.baseWidth),
@@ -55,11 +59,20 @@
       hoverStrength: num('hoverStrength', DEFAULTS.hoverStrength),
       inertia: num('inertia', DEFAULTS.inertia),
       bloom: num('bloom', DEFAULTS.bloom),
-      timeScale: num('timeScale', DEFAULTS.timeScale)
+      timeScale: num('timeScale', DEFAULTS.timeScale),
+      maxDpr: num('maxDpr', DEFAULTS.maxDpr),
+      maxFps: num('maxFps', DEFAULTS.maxFps),
+      steps: num('steps', DEFAULTS.steps)
     };
   }
 
   const config = readConfig();
+  const brandStyles = getComputedStyle(container);
+  const brandColor = (token, fallback) => (brandStyles.getPropertyValue(token).trim() || fallback)
+    .split(/\s+/).map(channel => Number(channel) / 255);
+  const brandWine = brandColor('--kanan-wine-rgb', '118 44 54');
+  const brandRose = brandColor('--kanan-accent-rgb', '143 85 85');
+  const brandInk = brandColor('--kanan-primary-rgb', '76 44 44');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   let OGL;
@@ -89,10 +102,12 @@
   const animationType = prefersReducedMotion && config.animationType === 'hover'
     ? 'rotate'
     : config.animationType;
+  const shaderSteps = Math.max(32, Math.min(100, Math.round(config.steps)));
+  const frameInterval = 1000 / Math.max(1, Math.min(60, config.maxFps));
 
   let renderer;
   try {
-    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const dpr = Math.min(Math.max(0.75, config.maxDpr), window.devicePixelRatio || 1);
     renderer = new Renderer({ dpr, alpha: config.transparent, antialias: false });
   } catch (err) {
     console.warn('prism-bg: WebGL unavailable, skipping background.', err);
@@ -143,6 +158,10 @@
     uniform float uMinAxis;
     uniform float uPxScale;
     uniform float uTimeScale;
+    uniform int uBrandPalette;
+    uniform vec3 uBrandWine;
+    uniform vec3 uBrandRose;
+    uniform vec3 uBrandInk;
 
     vec4 tanh4(vec4 x){
       vec4 e2x = exp(2.0*x);
@@ -206,7 +225,7 @@
         wob = mat2(c0, c1, c2, c0);
       }
 
-      const int STEPS = 100;
+      const int STEPS = ${shaderSteps};
       for (int i = 0; i < STEPS; i++) {
         p = vec3(f, z);
         p.xz = p.xz * wob;
@@ -232,7 +251,16 @@
         col = clamp(hueRotation(uHueShift) * col, 0.0, 1.0);
       }
 
-      gl_FragColor = vec4(col, o.a);
+      if (uBrandPalette == 1) {
+        // Preserve the prism's geometry while replacing its spectrum entirely.
+        float intensity = smoothstep(0.08, 0.95, L);
+        vec3 red = mix(uBrandRose, uBrandWine, smoothstep(0.1, 0.65, L));
+        red = mix(red, uBrandInk, smoothstep(0.65, 1.0, L));
+        // Empty space stays transparent; white is the page, never a prism colour.
+        gl_FragColor = vec4(red, intensity);
+      } else {
+        gl_FragColor = vec4(col, o.a);
+      }
     }
   `;
 
@@ -244,6 +272,10 @@
     vertex,
     fragment,
     uniforms: {
+      uBrandPalette: { value: config.palette === 'brand' ? 1 : 0 },
+      uBrandWine: { value: brandWine },
+      uBrandRose: { value: brandRose },
+      uBrandInk: { value: brandInk },
       iResolution: { value: iResBuf },
       iTime: { value: 0 },
       uHeight: { value: H },
@@ -268,7 +300,7 @@
   });
   const mesh = new Mesh(gl, { geometry, program });
 
-  const dpr = Math.min(2, window.devicePixelRatio || 1);
+  const dpr = Math.min(Math.max(0.75, config.maxDpr), window.devicePixelRatio || 1);
   const resize = () => {
     const w = container.clientWidth || 1;
     const h = container.clientHeight || 1;
@@ -279,7 +311,7 @@
     offsetPxBuf[1] = offY * dpr;
     program.uniforms.uPxScale.value = 1 / ((gl.drawingBufferHeight || 1) * 0.1 * SCALE);
   };
-  const ro = new ResizeObserver(resize);
+  const ro = new ResizeObserver(() => { resize(); startRAF(); });
   ro.observe(container);
   resize();
 
@@ -308,10 +340,24 @@
 
   const NOISE_IS_ZERO = NOISE < 1e-6;
   let raf = 0;
-  const t0 = performance.now();
+  let t0 = performance.now();
+  let pausedAt = document.hidden ? t0 : null;
+  let lastRenderAt = 0;
+  let inViewport = true;
+  let externallyPaused = document.body && document.body.classList.contains('sp-locked');
+  const canRender = () => !document.hidden && inViewport && !externallyPaused;
   const startRAF = () => {
-    if (raf) return;
+    if (raf || !canRender()) return;
+    if (pausedAt !== null) {
+      t0 += performance.now() - pausedAt;
+      pausedAt = null;
+    }
     raf = requestAnimationFrame(render);
+  };
+  const stopRAF = () => {
+    if (pausedAt === null) pausedAt = performance.now();
+    cancelAnimationFrame(raf);
+    raf = 0;
   };
 
   const rnd = () => Math.random();
@@ -353,6 +399,15 @@
   }
 
   const render = t => {
+    if (!canRender()) {
+      stopRAF();
+      return;
+    }
+    if (lastRenderAt && t - lastRenderAt < frameInterval) {
+      raf = requestAnimationFrame(render);
+      return;
+    }
+    lastRenderAt = t;
     const time = (t - t0) * 0.001;
     program.uniforms.iTime.value = time;
 
@@ -394,6 +449,32 @@
       raf = 0;
     }
   };
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopRAF();
+    } else {
+      startRAF();
+    }
+  });
+
+  window.addEventListener('kanan:motion-pause', () => {
+    externallyPaused = true;
+    stopRAF();
+  });
+  window.addEventListener('kanan:motion-resume', () => {
+    externallyPaused = false;
+    startRAF();
+  });
+
+  if ('IntersectionObserver' in window) {
+    const visibilityObserver = new IntersectionObserver(entries => {
+      inViewport = entries.some(entry => entry.isIntersecting);
+      if (inViewport) startRAF();
+      else stopRAF();
+    }, { rootMargin: '100px 0px' });
+    visibilityObserver.observe(container);
+  }
 
   startRAF();
 })();

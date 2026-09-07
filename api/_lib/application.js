@@ -140,6 +140,9 @@ function validateApplication(body) {
     });
 
     const cv = validateCv(data.cvFile, errors);
+    if (!cv && !fields.cvUrl) {
+        errors.push('Please upload your CV as a PDF or provide a link to it.');
+    }
     const { errors: answerErrors, answers } = validateAnswers(role, data.answers);
 
     return { errors: errors.concat(answerErrors), role, fields, answers, cv };
@@ -242,7 +245,7 @@ function notificationHtml({ role, fields, answers, hasCv, submittedAt }) {
         </table>
 
         <hr style="border:none;border-top:1px solid #e3e6ea;margin:0 0 26px;">
-        ${answerBlocks || '<p style="color:#98a2b3;font-size:14px;">This role has no screening questions.</p>'}
+        ${answerBlocks || '<p style="color:#98a2b3;font-size:14px;">No additional information provided.</p>'}
     </div>`;
 }
 

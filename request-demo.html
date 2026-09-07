@@ -4,8 +4,8 @@
     <script src="js/consent.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Request a TradeWatch Demo | Kanan Labs</title>
-    <meta name="description" content="Request a focused demonstration of TradeWatch, Kanan Labs' agentic trade-compliance platform.">
+    <title>Request a Drona Demo | Kanan Labs</title>
+    <meta name="description" content="Explore a Drona design partnership for earlier supplier-risk visibility and working-capital readiness across your manufacturing supply chain.">
     <meta name="robots" content="noindex,follow">
     <link rel="canonical" href="https://kananlabs.in/request-demo.html">
     <link rel="icon" type="image/png" href="assets/images/KANAN-LABS-WEBSITELOGO.png">
@@ -13,13 +13,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/request-demo.css?v=1">
-    <script src="js/request-demo.js?v=1" defer></script>
-    <script src="js/prism-bg.js?v=1" defer></script>
+    <link rel="stylesheet" href="css/kanan-brand-v2.css?v=2">
+    <link rel="stylesheet" href="css/staggered-menu.css?v=8">
+    <link rel="stylesheet" href="css/footer.css?v=5">
+    <link rel="stylesheet" href="css/request-demo.css?v=4">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="js/staggered-menu.js?v=12" defer></script>
+    <script src="js/request-demo.js?v=2" defer></script>
+    <script src="js/prism-bg.js?v=4" defer></script>
 </head>
 
-<body>
+<body class="demo-page">
+    <a class="demo-skip" href="#demo-page-title">Skip to content</a>
+    <main class="demo-stage" data-nav-light>
     <div id="demo-prism-bg" class="demo-prism-bg" aria-hidden="true"
+         data-palette="brand"
          data-animation-type="3drotate"
          data-height="3.5"
          data-base-width="5.6"
@@ -30,22 +38,15 @@
          data-glow="1"
          data-time-scale="0.5"></div>
 
-    <header class="demo-header">
-        <a class="demo-logo" href="index.html" aria-label="Kanan Labs home">
-            <img src="KANANLABS-LOGO-SET/TRANSPARENT-of-KANAN-LABS-WEBSITELOGO.png"
-                 alt="Kanan Labs" width="1584" height="396">
-        </a>
-        <a class="demo-back" href="index.html">Back to Kanan Labs</a>
-    </header>
-
-    <main class="demo-main">
+    <div class="demo-main">
         <section class="demo-intro" aria-labelledby="demo-page-title">
-            <p class="demo-eyebrow">TradeWatch · Product demo</p>
-            <h1 id="demo-page-title">See agentic trade compliance at work.</h1>
+            <p class="demo-eyebrow">Drona · OEM design partnerships</p>
+            <h1 id="demo-page-title">See supplier risk before it stops production.</h1>
             <p class="demo-intro-copy">
-                Tell us a little about your organisation and what you would like to explore.
-                We will arrange a focused walkthrough of TradeWatch.
+                We’re building Drona to identify risks across your supplier network earlier and help prepare the evidence for working-capital finance—even for suppliers beyond your direct vendors.
             </p>
+            <p class="demo-invitation">Explore a design partnership around a real supplier or production challenge.</p>
+            <p class="demo-supplier">Are you a supplier? <a href="supplier-programme.html?utm_source=kanan_demo&amp;utm_medium=owned&amp;utm_campaign=supplier_programme">Explore the Supplier Programme.</a></p>
         </section>
 
         <section class="demo-form-card" aria-labelledby="demo-form-title">
@@ -75,8 +76,8 @@
 
                 <div class="demo-field">
                     <label for="demo-context">What would you like to see? <span>Optional</span></label>
-                    <textarea id="demo-context" name="strategicContext" rows="4" maxlength="1000"></textarea>
-                    <p class="demo-field-hint">For example: classification, shipment evidence, or broker coordination.</p>
+                    <textarea id="demo-context" name="strategicContext" aria-describedby="demo-context-hint" rows="3" maxlength="1000"></textarea>
+                    <p class="demo-field-hint" id="demo-context-hint">For example: supplier disruption, production delays, or working-capital gaps.</p>
                 </div>
 
                 <div class="demo-honeypot" aria-hidden="true">
@@ -84,7 +85,7 @@
                     <input id="demo-website" name="company_website" type="text" tabindex="-1" autocomplete="off">
                 </div>
 
-                <p class="demo-submit-error" id="demoSubmitError" role="alert"></p>
+                <p class="demo-submit-error" id="demoSubmitError" role="alert" tabindex="-1"></p>
 
                 <button class="demo-submit" type="submit">
                     <span class="demo-submit-label">Request a demo</span>
@@ -100,10 +101,77 @@
             <div class="demo-success" id="demoSuccess" role="status" tabindex="-1" hidden>
                 <p class="demo-success-kicker">Request received</p>
                 <h2>Thank you.</h2>
-                <p>We’ll be in touch to arrange your TradeWatch demo.</p>
-                <a href="tradewatch.html">Explore TradeWatch while you wait</a>
+                <p>We’ll be in touch to arrange your Drona demo.</p>
             </div>
         </section>
+    </div>
     </main>
+<footer class="kl-footer">
+            <div class="kl-footer__inner">
+                <div class="kl-footer__content">
+
+                    <!-- LEFT: Brand zone -->
+                    <div class="kl-footer__brand">
+                        <img src="assets/logos/kanan-kl-hor-white.png" alt="Kanan Labs"
+                             class="kl-footer__logo" width="922" height="262" loading="lazy" decoding="async" draggable="false">
+                        <p class="kl-footer__tagline">Proactive Supply Chain Resilience</p>
+
+                        <div class="kl-footer__links">
+                            <a href="https://apply.kananlabs.in/" class="kl-footer__consult">Supplier Programme &#8594;</a>
+                            <a href="request-demo.html" class="kl-footer__consult">Request a Demo &#8594;</a>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: Sitemap grid -->
+                    <div class="kl-footer__sitemap">
+
+                        <div class="kl-footer__col">
+                            <h4 class="kl-footer__col-heading">Platform</h4>
+                            <ul class="kl-footer__col-links">
+                                <li><a href="drona.html">Drona</a></li>
+                                <li><a href="drona-aos.html">DronaAOS</a></li>
+                                <li><a href="https://apply.kananlabs.in/">Supplier Programme</a></li>
+                                <li><a href="tracker.html">India AI Tracker</a></li>
+                                <li><a href="resources.html">Resources</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="kl-footer__col">
+                            <h4 class="kl-footer__col-heading">Company</h4>
+                            <ul class="kl-footer__col-links">
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="careers.html">Careers</a></li>
+                                <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="kl-footer__col">
+                            <h4 class="kl-footer__col-heading">Follow</h4>
+                            <ul class="kl-footer__col-links">
+                                <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank" rel="noopener">LinkedIn</a></li>
+                                <li><a href="https://x.com/indiaAItracker" target="_blank" rel="noopener">Twitter</a></li>
+                                <li><a href="https://github.com/sreenathgov" target="_blank" rel="noopener">GitHub</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="kl-footer__col">
+                            <h4 class="kl-footer__col-heading">Legal</h4>
+                            <ul class="kl-footer__col-links">
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="terms-of-use.html">Terms of Use</a></li>
+                                <li><a href="supplier-programme-terms.html">Supplier Programme Terms</a></li>
+                                <li><a href="disclaimers.html">Disclaimers</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="kl-footer__watermark">
+                    <img src="assets/logos/kanan-kl-hor-white.png" alt=""
+                         class="kl-footer__watermark-img" width="922" height="262" loading="lazy" decoding="async" aria-hidden="true" draggable="false">
+                </div>
+            </div>
+        </footer>
 </body>
 </html>

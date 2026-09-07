@@ -101,15 +101,15 @@
     </script>
 
     <link rel="stylesheet" href="css/styles-v2.css?v=21">
-    <link rel="stylesheet" href="css/staggered-menu.css?v=4">
+    <link rel="stylesheet" href="css/staggered-menu.css?v=8">
     <link rel="stylesheet" href="css/identity-section.css?v=15">
     <!-- manifesto-section.css removed — replaced by inline kl-manifesto styles -->
-    <link rel="stylesheet" href="css/footer.css?v=4">
+    <link rel="stylesheet" href="css/footer.css?v=5">
     <link rel="stylesheet" href="css/tw-demo-clone.css?v=7">
-    <link rel="stylesheet" href="css/triptych.css?v=1">
-    <link rel="stylesheet" href="css/drona-brain.css?v=3">
-    <link rel="stylesheet" href="css/drona-funnel.css?v=7">
-    <link rel="stylesheet" href="css/sectors-bento.css?v=6">
+    <link rel="stylesheet" href="css/triptych.css?v=3">
+    <link rel="stylesheet" href="css/drona-brain.css?v=5">
+    <link rel="stylesheet" href="css/drona-funnel.css?v=9">
+    <link rel="stylesheet" href="css/sectors-bento.css?v=14">
     <style>
         /* ══════════════════════════════════════════════════════════
            KANAN LABS — CORPORATE LANDING (Phase 2: Hero + Footer)
@@ -911,7 +911,7 @@
         }
     </style>
     <!-- Loaded last so the isolated rebrand palette wins over component and embedded styles. -->
-    <link rel="stylesheet" href="css/kanan-rebrand.css?v=2">
+    <link rel="stylesheet" href="css/kanan-rebrand.css?v=6">
 </head>
 
 <body class="kl-page">
@@ -1360,40 +1360,44 @@
              Failure-mode tabs (left) vs With/Without contrast (right).
         ════════════════════════════════════════════════ -->
         <div class="kl-drona-band" data-nav-light>
-        <section class="kl-drona" id="klDrona" aria-label="Drona — the regulatory brain inside TradeWatch">
+        <section class="kl-drona" id="klDrona" aria-label="Kanan's value across manufacturers, suppliers and financiers">
 
             <div class="kl-drona__inner">
 
                 <div class="kl-drona__header">
-                    <span class="kl-drona__eyebrow">The Engine</span>
+                    <span class="kl-drona__eyebrow kl-drona__eyebrow--quote"><em>"Wisdom is prevention"</em> — Charlie Munger</span>
                     <h2 class="kl-drona__title">
-                        Meet <em>Drona.</em> The brain that knows the law,<br>
-                        not just the language of it.
+                        One order. Three perspectives.<br>
+                        <em>A clearer view of risk.</em>
                     </h2>
                 </div>
 
                 <div class="kl-drona__stage">
 
-                    <!-- Left rail: failure-mode tabs -->
-                    <div class="kl-drona__tabs" role="tablist" aria-label="What goes wrong without Drona">
+                    <!-- Left rail: participant tabs -->
+                    <div class="kl-drona__tabs" role="tablist" aria-label="How Kanan changes the financing workflow">
                         <button class="kl-drona__tab" type="button" role="tab" aria-selected="true"  data-drona-tab="0">
                             <span class="kl-drona__tab-index">01</span>
-                            When the AI invents an HS code that doesn't exist.
+                            <span class="kl-drona__tab-text">
+                                <span class="kl-drona__tab-participant">Large Manufacturers</span>
+                                <span class="kl-drona__tab-benefit">See deeper. Act earlier.</span>
+                            </span>
                             <span class="kl-drona__chevron" aria-hidden="true"></span>
                         </button>
                         <button class="kl-drona__tab" type="button" role="tab" aria-selected="false" data-drona-tab="1">
                             <span class="kl-drona__tab-index">02</span>
-                            When the model decides but cannot show why.
+                            <span class="kl-drona__tab-text">
+                                <span class="kl-drona__tab-participant">Suppliers</span>
+                                <span class="kl-drona__tab-benefit">Present the full case.</span>
+                            </span>
                             <span class="kl-drona__chevron" aria-hidden="true"></span>
                         </button>
                         <button class="kl-drona__tab" type="button" role="tab" aria-selected="false" data-drona-tab="2">
                             <span class="kl-drona__tab-index">03</span>
-                            When the same packet means different things in different jurisdictions.
-                            <span class="kl-drona__chevron" aria-hidden="true"></span>
-                        </button>
-                        <button class="kl-drona__tab" type="button" role="tab" aria-selected="false" data-drona-tab="3">
-                            <span class="kl-drona__tab-index">04</span>
-                            When yesterday's rule and today's rule are quietly the same answer.
+                            <span class="kl-drona__tab-text">
+                                <span class="kl-drona__tab-participant">Financiers</span>
+                                <span class="kl-drona__tab-benefit">See beyond financials.</span>
+                            </span>
                             <span class="kl-drona__chevron" aria-hidden="true"></span>
                         </button>
                     </div>
@@ -1401,11 +1405,11 @@
                     <!-- Right side: two stacked contrast cards -->
                     <div class="kl-drona__panels">
                         <article class="kl-drona__panel" data-state="without" aria-live="polite">
-                            <span class="kl-drona__panel-label">Without Drona</span>
+                            <span class="kl-drona__panel-label">Without Kanan</span>
                             <p class="kl-drona__panel-body"></p>
                         </article>
                         <article class="kl-drona__panel" data-state="with" aria-live="polite">
-                            <span class="kl-drona__panel-label">With Drona</span>
+                            <span class="kl-drona__panel-label">With Kanan</span>
                             <p class="kl-drona__panel-body"></p>
                         </article>
                     </div>
@@ -1857,13 +1861,9 @@
                              class="kl-footer__logo" width="922" height="262" loading="lazy" decoding="async" draggable="false">
                         <p class="kl-footer__tagline">Proactive Supply Chain Resilience</p>
 
-                        <div>
-                            <p class="kl-footer__nl-label">Weekly Brief</p>
-                            <form class="kl-footer__nl-form" id="footerNewsletterForm">
-                                <input type="email" class="kl-footer__nl-input" placeholder="Your email address"
-                                       autocomplete="email" required>
-                                <button type="submit" class="kl-footer__nl-submit">Subscribe</button>
-                            </form>
+                        <div class="kl-footer__links">
+                            <a href="https://apply.kananlabs.in/" class="kl-footer__consult">Supplier Programme &#8594;</a>
+                            <a href="request-demo.html" class="kl-footer__consult">Request a Demo &#8594;</a>
                         </div>
                     </div>
 
@@ -2107,7 +2107,7 @@
     <script src="js/infrastructure-grid.js?v=2" defer></script>
     <script src="js/founder-grid.js" defer></script>
     <script src="js/brevo-subscribe.js" defer></script>
-    <script src="js/staggered-menu.js?v=7" defer></script>
+    <script src="js/staggered-menu.js?v=12" defer></script>
     <script src="js/tw-demo-clone.js?v=3" defer></script>
     <script src="js/triptych.js" defer></script>
     <script src="js/drona-tabs.js" defer></script>

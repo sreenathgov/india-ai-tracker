@@ -1,0 +1,40 @@
+{
+  "state": "DL",
+  "categories": {
+    "Major AI Developments": [
+      {
+        "id": 30,
+        "title": "Delhi pilots AI traffic control",
+        "url": "https://example.test/a30",
+        "summary": "Delhi pilots AI traffic control",
+        "date_published": "2026-04-19",
+        "source_name": "Eps Daily",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      }
+    ],
+    "AI Start-Up News": [],
+    "Policies and Initiatives": [
+      {
+        "id": 31,
+        "title": "Delhi government tables AI procurement rules",
+        "url": "https://example.test/a31",
+        "summary": "Delhi government tables AI procurement rules",
+        "date_published": "2026-07-08",
+        "source_name": "Eps Daily",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false
+      }
+    ],
+    "Events": []
+  },
+  "today_updates": []
+}

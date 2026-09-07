@@ -47,6 +47,11 @@ const STATUS_LABELS = {
     'filled': 'Filled'
 };
 
+/** Display and structured metadata both read the role's structured address. */
+function locationLabel(role) {
+    return role.location.city;
+}
+
 /** schema.org employmentType values, keyed by our own vocabulary. */
 const SCHEMA_EMPLOYMENT_TYPE = {
     'full-time': 'FULL_TIME',
@@ -69,7 +74,7 @@ function formatDate(iso) {
 /** The one-line answer to "when do applications close?" — used in chips and the rail. */
 function applyByLabel(applyBy) {
     const formatted = formatDate(applyBy);
-    return formatted ? `Applications close ${formatted}` : 'Rolling — reviewed weekly';
+    return formatted ? `Applications close ${formatted}` : 'Applications open';
 }
 
 /**
@@ -93,6 +98,7 @@ function escapeJsonForScript(json) {
 }
 
 module.exports = {
+    locationLabel,
     WORK_MODES,
     EMPLOYMENT_TYPES,
     SENIORITIES,

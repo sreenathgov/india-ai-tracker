@@ -19,7 +19,7 @@ const DIST_DIR = path.join(PROJECT_ROOT, 'dist');
 const HUB_TEMPLATE = path.join(PROJECT_ROOT, 'templates', 'publication-hub.html');
 const CATALOG_CSS = path.join(PROJECT_ROOT, 'css', 'publications-catalog.css');
 const BASE_URL = 'https://kananlabs.in';
-const CATALOG_CSS_VERSION = '2';
+const CATALOG_CSS_VERSION = '3';
 const SUMMARY_TRUNCATE_AT = 200;
 
 // ---------------------------------------------------------------------------

@@ -4,32 +4,42 @@
    ============================================================ */
 
 :root {
-    --cr-navy: #0a2f52;
-    --cr-navy-deep: #061f38;
+    /* Wine is the dark SECTION ground (hero, apply band, lattice nodes).
+       Oxford red is the brand INK — headings on paper, button fills, active
+       pills. They are neighbours in hue but never interchangeable by role. */
+    --cr-wine: #762c36;
+    --cr-oxblood: #4c2c2c;
+    --cr-oxblood-deep: #301b1b;
+
+    /* Paper is the continuous light ground; paper-warm raises what sits on it
+       (the sticky rail) and doubles as the light pill's fill on wine. */
+    --cr-paper: #eeebe3;
+    --cr-paper-warm: #f6f2ea;
     --cr-cream: #f4ebd0;
-    --cr-paper: #f5f3ee;
-    /* Kanan White — the homepage primary button's surface (--kl-cream in
-       index.html). Cooler than --cr-cream, which is the on-navy text colour. */
-    --cr-kanan-white: #eeebe3;
-    --cr-red: #db4a2b;
-    --cr-red-deep: #bd3b21;
 
-    --cr-ink: rgba(10, 47, 82, 0.92);
-    --cr-ink-body: rgba(10, 47, 82, 0.74);
-    --cr-ink-mid: rgba(10, 47, 82, 0.56);
-    --cr-ink-dim: rgba(10, 47, 82, 0.40);
-    --cr-rule: rgba(10, 47, 82, 0.13);
-    --cr-rule-strong: rgba(10, 47, 82, 0.22);
+    /* Accents. Rose and wine read on paper; coral is the on-wine accent,
+       because wine and oxblood never appear as text on a dark ground. */
+    --cr-rose: #8f5555;
+    --cr-coral: #ef765d;
+    --cr-coral-light: #f8c0ad;
 
-    --cr-on-navy: rgba(244, 235, 208, 0.92);
-    --cr-on-navy-body: rgba(244, 235, 208, 0.66);
-    --cr-on-navy-dim: rgba(244, 235, 208, 0.42);
-    --cr-on-navy-rule: rgba(244, 235, 208, 0.18);
+    --cr-ink: #4c2c2c;
+    --cr-ink-body: #695050;
+    --cr-ink-mid: #786060;
+    --cr-ink-dim: rgba(76, 44, 44, 0.40);
+    --cr-rule: rgba(76, 44, 44, .18);
+    --cr-rule-strong: rgba(76, 44, 44, 0.22);
+
+    --cr-on-wine: #f8f5ed;
+    --cr-on-wine-body: #ede0dc;
+    --cr-on-wine-dim: rgba(248, 245, 237, 0.42);
+    --cr-on-wine-rule: rgba(248, 245, 237, 0.18);
+    --cr-on-wine-accent: #f0c9c5;
 
     --cr-display: 'Cormorant Garamond', Georgia, serif;
     --cr-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
-    --cr-shell: 1180px;
+    --cr-shell: 1120px;
     --cr-gutter: clamp(1.25rem, 4vw, 3.5rem);
 }
 
@@ -62,35 +72,36 @@ body.careers-page {
 }
 
 .cr-shell {
-    width: 100%;
+    width: calc(100% - var(--cr-gutter) * 2);
     max-width: var(--cr-shell);
     margin: 0 auto;
-    padding-inline: var(--cr-gutter);
+    padding-inline: 0;
 }
 
 /* ── Shared type ────────────────────────────────────────── */
 
 .cr-kicker {
     font-family: var(--cr-sans);
-    font-size: 0.6875rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
+    font-size: .8125rem;
+    font-weight: 500;
+    letter-spacing: .12em;
     text-transform: uppercase;
-    color: var(--cr-red);
-    margin: 0 0 0.9rem;
+    color: var(--cr-wine);
+    margin: 0 0 1rem;
+    line-height: 1.5;
 }
 
 .cr-kicker--light {
-    color: rgba(219, 74, 43, 0.95);
+    color: var(--cr-on-wine-accent);
 }
 
 .cr-section-title {
     font-family: var(--cr-display);
     font-weight: 500;
-    font-size: clamp(1.9rem, 3.6vw, 2.85rem);
-    line-height: 1.14;
-    letter-spacing: -0.01em;
-    color: var(--cr-navy);
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: var(--cr-oxblood);
     margin: 0;
 }
 
@@ -120,8 +131,9 @@ body.careers-page {
 }
 
 /* Primary CTA — the homepage `kl-btn-primary` shape: a Kanan White pill with
-   the arrow carried in a filled navy badge rather than set inline. Both places
-   it appears (the careers hero, the role-page head) sit on the navy band, so
+   the arrow carried in a filled oxblood badge rather than set inline. Both
+   places it appears (the careers hero, the role-page head) sit on the wine
+   band, so
    the light pill is the high-contrast reading. Padding is asymmetric because
    the badge supplies its own inset on the right. */
 .cr-btn--primary {
@@ -129,8 +141,8 @@ body.careers-page {
     min-height: 48px;
     padding: 0.375rem 0.375rem 0.375rem 1.35rem;
     border-radius: 999px;
-    background: var(--cr-kanan-white);
-    color: var(--cr-navy);
+    background: var(--cr-paper-warm);
+    color: var(--cr-oxblood);
     border-color: transparent;
     font-size: 0.9375rem;
     letter-spacing: -0.01em;
@@ -145,7 +157,7 @@ body.careers-page {
     background: #fff;
     border-color: transparent;
     transform: translateY(-1px);
-    box-shadow: 0 12px 30px rgba(6, 31, 56, 0.2);
+    box-shadow: 0 12px 30px rgba(48, 27, 27, 0.28);
 }
 
 .cr-btn--primary .cr-btn__arrow {
@@ -156,8 +168,8 @@ body.careers-page {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: var(--cr-navy-deep);
-    color: var(--cr-kanan-white);
+    background: var(--cr-oxblood-deep);
+    color: var(--cr-paper-warm);
     font-size: 0.95rem;
     line-height: 1;
     transition: background-color 0.22s ease,
@@ -166,24 +178,24 @@ body.careers-page {
 
 .cr-btn--ghost {
     background: transparent;
-    color: var(--cr-on-navy);
-    border-color: var(--cr-on-navy-rule);
+    color: var(--cr-on-wine);
+    border-color: var(--cr-on-wine-rule);
 }
 
 .cr-btn--ghost:hover {
-    border-color: rgba(244, 235, 208, 0.5);
-    background: rgba(244, 235, 208, 0.06);
+    border-color: rgba(248, 245, 237, 0.5);
+    background: rgba(248, 245, 237, 0.06);
 }
 
 .cr-btn--outline {
     background: transparent;
-    color: var(--cr-navy);
+    color: var(--cr-oxblood);
     border-color: var(--cr-rule-strong);
 }
 
 .cr-btn--outline:hover {
-    background: var(--cr-navy);
-    border-color: var(--cr-navy);
+    background: var(--cr-oxblood);
+    border-color: var(--cr-oxblood);
     color: var(--cr-cream);
 }
 
@@ -200,13 +212,13 @@ body.careers-page {
    CTAs anchor further down the same page rather than navigating away. */
 .cr-btn--primary:hover .cr-btn__arrow {
     transform: translateY(2px);
-    background: var(--cr-navy);
+    background: var(--cr-oxblood);
 }
 
 .cr-btn:focus-visible,
 .cr-filter:focus-visible,
 .cr-role__title a:focus-visible {
-    outline: 2px solid var(--cr-red);
+    outline: 2px solid var(--cr-coral);
     outline-offset: 3px;
 }
 
@@ -215,21 +227,22 @@ body.careers-page {
 .cr-tag {
     display: inline-flex;
     align-items: center;
-    gap: 0.45rem;
+    gap: .6rem;
     font-family: var(--cr-sans);
-    font-size: 0.6875rem;
-    font-weight: 500;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
+    font-size: .875rem;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: none;
     color: var(--cr-ink-mid);
     white-space: nowrap;
+    line-height: 1.5;
 }
 
 .cr-tag__dot {
-    width: 4px;
-    height: 4px;
+    width: 3px;
+    height: 3px;
     border-radius: 50%;
-    background: var(--cr-red);
+    background: currentColor;
     flex: none;
 }
 
@@ -247,13 +260,13 @@ body.careers-page {
 }
 
 .cr-badge--closing-soon {
-    background: rgba(219, 74, 43, 0.12);
-    color: var(--cr-red-deep);
-    border: 1px solid rgba(219, 74, 43, 0.3);
+    background: rgba(118, 44, 54, 0.10);
+    color: var(--cr-wine);
+    border: 1px solid rgba(118, 44, 54, 0.28);
 }
 
 .cr-badge--rolling {
-    background: rgba(10, 47, 82, 0.07);
+    background: rgba(76, 44, 44, 0.07);
     color: var(--cr-ink-mid);
     border: 1px solid var(--cr-rule);
 }
@@ -268,7 +281,7 @@ body.careers-page {
    HERO
    ════════════════════════════════════════════════════════ */
 
-/* Three-quarters of the viewport, not all of it — the navy → paper curve is the
+/* Three-quarters of the viewport, not all of it — the wine → paper curve is the
    page's best transition and should be visible without scrolling.
    `.cr-hero__inner` is the only in-flow child (`.cr-curve` is absolutely
    positioned), so min-height needs this flex context to centre against.
@@ -279,7 +292,7 @@ body.careers-page {
     flex-direction: column;
     justify-content: center;
     min-height: 75svh;
-    background: var(--cr-navy);
+    background: var(--cr-wine);
     padding-top: clamp(7rem, 13vh, 10rem);
     padding-bottom: clamp(6rem, 10vh, 8rem);
     overflow: hidden;
@@ -292,64 +305,60 @@ body.careers-page {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse 55% 45% at 72% 42%, rgba(244, 235, 208, 0.07), transparent 70%),
-        radial-gradient(ellipse 40% 60% at 20% 10%, rgba(219, 74, 43, 0.09), transparent 72%);
+        radial-gradient(ellipse 55% 45% at 72% 42%, rgba(248, 245, 237, 0.07), transparent 70%),
+        radial-gradient(ellipse 40% 60% at 20% 10%, rgba(239, 118, 93, 0.10), transparent 72%);
     pointer-events: none;
 }
 
 .cr-hero__inner {
     position: relative;
     z-index: 1;
-    width: 100%;
+    width: calc(100% - var(--cr-gutter) * 2);
     max-width: var(--cr-shell);
     margin: 0 auto;
-    padding-inline: var(--cr-gutter);
+    padding-inline: 0;
     display: grid;
-    /* The cropped lattice is portrait (464x588); a wide figure column would
-       letterbox it. The extra copy width also buys headroom against the h1
-       overflow documented in careers.html. */
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, .85fr);
     align-items: center;
     gap: clamp(2rem, 5vw, 4.5rem);
 }
 
 .cr-hero__eyebrow {
     font-family: var(--cr-sans);
-    font-size: 0.6875rem;
-    font-weight: 600;
-    letter-spacing: 0.22em;
+    font-size: .8125rem;
+    font-weight: 500;
+    letter-spacing: .12em;
     text-transform: uppercase;
-    color: rgba(244, 235, 208, 0.5);
-    margin: 0 0 1.6rem;
+    color: var(--cr-on-wine-accent);
+    margin: 0 0 1rem;
+    line-height: 1.5;
 }
 
 .cr-hero__title {
     font-family: var(--cr-display);
-    font-weight: 400;
-    /* Sized so the longest line ("Join us in building") still fits the copy
-       column at the shell width — see the <br> comment in careers.html. */
-    font-size: clamp(2.35rem, 4.2vw, 3.6rem);
-    line-height: 1.06;
-    letter-spacing: -0.015em;
-    color: var(--cr-cream);
-    margin: 0 0 1.8rem;
+    font-weight: 500;
+    font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -.025em;
+    color: var(--cr-on-wine);
+    margin: 0 0 1.25rem;
 }
 
 .cr-hero__title em {
     font-style: italic;
     font-weight: 500;
-    color: #fff;
+    color: var(--cr-on-wine-accent);
 }
 
 /* The sole subhead now — brighter and heavier than a body paragraph would be,
    since it carries the whole copy column between the h1 and the button. */
 .cr-hero__lede {
     font-family: var(--cr-sans);
-    font-size: clamp(0.95rem, 1.2vw, 1.0625rem);
+    font-size: 1.0625rem;
     font-weight: 400;
-    line-height: 1.72;
-    color: rgba(244, 235, 208, 0.82);
-    max-width: 52ch;
+    line-height: 1.8;
+    color: var(--cr-on-wine-body);
+    max-width: 760px;
     margin: 0;
 }
 
@@ -385,27 +394,27 @@ body.careers-page {
 }
 
 .cr-plane__fill {
-    fill: rgba(244, 235, 208, 0.028);
+    fill: rgba(248, 245, 237, 0.028);
     stroke: none;
 }
 
 .cr-plane__grid {
     fill: none;
-    stroke: rgba(244, 235, 208, 0.135);
+    stroke: rgba(248, 245, 237, 0.135);
     stroke-width: 1;
     vector-effect: non-scaling-stroke;
 }
 
 .cr-plane__edge {
     fill: none;
-    stroke: rgba(244, 235, 208, 0.32);
+    stroke: rgba(248, 245, 237, 0.32);
     stroke-width: 1.25;
     vector-effect: non-scaling-stroke;
 }
 
 .cr-thread {
     fill: none;
-    stroke: rgba(244, 235, 208, 0.22);
+    stroke: rgba(248, 245, 237, 0.22);
     stroke-width: 1;
     stroke-dasharray: 3 7;
     vector-effect: non-scaling-stroke;
@@ -413,14 +422,14 @@ body.careers-page {
 
 .cr-route {
     fill: none;
-    stroke: var(--cr-red);
+    stroke: var(--cr-coral);
     stroke-width: 2;
     stroke-linecap: round;
     vector-effect: non-scaling-stroke;
 }
 
 .cr-route--faint {
-    stroke: rgba(219, 74, 43, 0.34);
+    stroke: rgba(239, 118, 93, 0.34);
     stroke-width: 1.4;
 }
 
@@ -436,19 +445,19 @@ body.careers-page {
 }
 
 .cr-node {
-    fill: var(--cr-navy);
-    stroke: rgba(244, 235, 208, 0.55);
+    fill: var(--cr-wine);
+    stroke: rgba(248, 245, 237, 0.55);
     stroke-width: 1.25;
     vector-effect: non-scaling-stroke;
 }
 
 .cr-node--live {
-    fill: var(--cr-red);
-    stroke: rgba(219, 74, 43, 0.28);
+    fill: var(--cr-coral);
+    stroke: rgba(239, 118, 93, 0.28);
     stroke-width: 5;
 }
 
-/* ── Navy → paper handoff ───────────────────────────────── */
+/* ── Wine → paper handoff ───────────────────────────────── */
 
 .cr-curve {
     position: absolute;
@@ -477,26 +486,27 @@ body.careers-page {
    carries the full top padding that band used to supply after the curve. */
 .cr-roles {
     background: var(--cr-paper);
-    padding-block: clamp(4.5rem, 9vh, 7rem);
+    padding-block: 3rem 4.5rem;
     scroll-margin-top: 90px;
 }
 
 .cr-roles__head {
     display: flex;
-    align-items: flex-end;
+    align-items: baseline;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 1rem;
     flex-wrap: wrap;
+    padding-block: 1.5rem;
 }
 
 .cr-roles__count {
     font-family: var(--cr-sans);
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--cr-ink-dim);
-    margin: 0 0 0.4rem;
+    font-size: .875rem;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: none;
+    color: var(--cr-ink-body);
+    margin: 0;
     white-space: nowrap;
 }
 
@@ -528,13 +538,13 @@ body.careers-page {
 }
 
 .cr-filter:hover {
-    border-color: var(--cr-navy);
-    color: var(--cr-navy);
+    border-color: var(--cr-oxblood);
+    color: var(--cr-oxblood);
 }
 
 .cr-filter.is-active {
-    background: var(--cr-navy);
-    border-color: var(--cr-navy);
+    background: var(--cr-oxblood);
+    border-color: var(--cr-oxblood);
     color: var(--cr-cream);
 }
 
@@ -558,9 +568,9 @@ body.careers-page {
     align-items: flex-start;
     gap: 0.9rem;
     padding: 1.15rem 1.35rem;
-    background: rgba(219, 74, 43, 0.07);
-    border: 1px solid rgba(219, 74, 43, 0.3);
-    border-left: 3px solid var(--cr-red);
+    background: rgba(118, 44, 54, 0.06);
+    border: 1px solid rgba(118, 44, 54, 0.22);
+    border-left: 3px solid var(--cr-wine);
     border-radius: 2px;
 }
 
@@ -578,7 +588,7 @@ body.careers-page {
     width: 1.375rem;
     height: 1.375rem;
     margin-top: 0.15rem;
-    color: var(--cr-red-deep);
+    color: var(--cr-wine);
 }
 
 .cr-notice__icon svg {
@@ -595,7 +605,7 @@ body.careers-page {
     font-size: 0.8125rem;
     font-weight: 600;
     letter-spacing: 0.01em;
-    color: var(--cr-navy);
+    color: var(--cr-oxblood);
     margin: 0 0 0.3rem;
 }
 
@@ -610,7 +620,7 @@ body.careers-page {
 }
 
 .cr-notice__text a {
-    color: var(--cr-red-deep);
+    color: var(--cr-wine);
     font-weight: 500;
     text-decoration: underline;
     text-underline-offset: 2px;
@@ -618,13 +628,13 @@ body.careers-page {
 
 .cr-notice__text a:hover,
 .cr-notice__text a:focus-visible {
-    color: var(--cr-red);
+    color: var(--cr-rose);
 }
 
 /* ── Role rows ──────────────────────────────────────────── */
 
 .cr-grid {
-    margin-top: 2.6rem;
+    margin-top: 0;
     border-top: 1px solid var(--cr-rule);
 }
 
@@ -633,8 +643,8 @@ body.careers-page {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: clamp(1.25rem, 4vw, 3rem);
-    padding: clamp(1.6rem, 2.6vw, 2.2rem) clamp(0.5rem, 1.4vw, 1.25rem);
+    gap: 1.5rem 3rem;
+    padding: 2rem 0;
     border-bottom: 1px solid var(--cr-rule);
     transition: background-color 0.24s ease;
 }
@@ -644,20 +654,21 @@ body.careers-page {
 }
 
 .cr-role::before {
+    display: none;
     content: '';
     position: absolute;
     left: 0;
     top: -1px;
     bottom: -1px;
     width: 2px;
-    background: var(--cr-red);
+    background: var(--cr-wine);
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cr-role:hover {
-    background: rgba(10, 47, 82, 0.025);
+    background: transparent;
 }
 
 .cr-role:hover::before,
@@ -671,11 +682,11 @@ body.careers-page {
 
 .cr-role__title {
     font-family: var(--cr-display);
-    font-weight: 600;
-    font-size: clamp(1.3rem, 2.1vw, 1.6rem);
-    line-height: 1.2;
-    color: var(--cr-navy);
-    margin: 0 0 0.6rem;
+    font-weight: 500;
+    font-size: clamp(1.55rem, 2.4vw, 2rem);
+    line-height: 1.25;
+    color: var(--cr-oxblood);
+    margin: 0 0 .7rem;
 }
 
 .cr-role__title a {
@@ -694,46 +705,48 @@ body.careers-page {
 
 .cr-role:hover .cr-role__title a,
 .cr-role__title a:focus-visible {
-    color: var(--cr-red);
+    color: var(--cr-wine);
 }
 
 .cr-role__summary {
     font-family: var(--cr-sans);
-    font-size: 0.9375rem;
-    font-weight: 300;
-    line-height: 1.65;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75;
     color: var(--cr-ink-body);
-    margin: 0 0 1rem;
-    max-width: 62ch;
+    margin: 0;
+    max-width: 740px;
 }
 
 .cr-role__meta {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem 1.35rem;
-    margin: 0;
+    gap: .5rem 1.1rem;
+    margin: 1rem 0 0;
     padding: 0;
 }
 
 .cr-role__aside {
     flex: none;
-    padding-top: 0.35rem;
+    padding-top: 0;
 }
 
 .cr-role__apply {
     display: inline-flex;
     align-items: center;
-    gap: 0.45rem;
+    gap: .6rem;
     font-family: var(--cr-sans);
     font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--cr-navy);
+    font-weight: 400;
+    color: var(--cr-oxblood);
     text-decoration: none;
     white-space: nowrap;
     border-bottom: 1px solid var(--cr-rule-strong);
     padding-bottom: 2px;
     transition: color 0.2s ease, border-color 0.2s ease;
+    padding-block: .5rem;
+    line-height: 1.5;
 }
 
 .cr-role__apply-arrow {
@@ -742,8 +755,8 @@ body.careers-page {
 }
 
 .cr-role:hover .cr-role__apply {
-    color: var(--cr-red);
-    border-color: var(--cr-red);
+    color: var(--cr-wine);
+    border-color: var(--cr-wine);
 }
 
 .cr-role:hover .cr-role__apply-arrow {
@@ -763,24 +776,24 @@ body.careers-page {
    ════════════════════════════════════════════════════════ */
 
 .cr-process {
-    background: var(--cr-paper);
-    padding-block: clamp(4rem, 8vh, 6.5rem);
+    background: var(--cr-paper-warm);
+    padding-block: 3rem 4rem;
     border-top: 1px solid var(--cr-rule);
 }
 
 .cr-stages {
     list-style: none;
-    margin: 3rem 0 0;
+    margin: 2rem 0 0;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(1.25rem, 2.6vw, 2.25rem);
+    gap: 2.5rem;
 }
 
 .cr-stage {
     position: relative;
-    padding-top: 1.6rem;
-    border-top: 1px solid var(--cr-rule-strong);
+    padding-top: 0;
+    border-top: 0;
 }
 
 /* Dashed connector between stages, matching the flow rails elsewhere. */
@@ -791,33 +804,34 @@ body.careers-page {
     right: calc(clamp(1.25rem, 2.6vw, 2.25rem) * -1);
     width: clamp(1.25rem, 2.6vw, 2.25rem);
     border-top: 1px dashed var(--cr-rule-strong);
+    display: none;
 }
 
 .cr-stage__num {
     display: block;
     font-family: var(--cr-sans);
-    font-size: 0.6875rem;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    color: var(--cr-red);
-    margin-bottom: 0.9rem;
+    font-size: .8125rem;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: var(--cr-wine);
+    margin-bottom: .75rem;
     font-variant-numeric: tabular-nums;
 }
 
 .cr-stage__title {
-    font-family: var(--cr-display);
-    font-weight: 600;
-    font-size: 1.2rem;
-    line-height: 1.25;
-    color: var(--cr-navy);
-    margin: 0 0 0.7rem;
+    font-family: var(--cr-sans);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--cr-oxblood);
+    margin: 0 0 .75rem;
 }
 
 .cr-stage__body {
     font-family: var(--cr-sans);
-    font-size: 0.84375rem;
-    font-weight: 300;
-    line-height: 1.7;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75;
     color: var(--cr-ink-body);
     margin: 0;
 }
@@ -852,7 +866,7 @@ body.careers-page {
    RESPONSIVE
    ════════════════════════════════════════════════════════ */
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
     /* Stacked, so the band is naturally taller than three-quarters of the
        viewport — let content drive the height rather than forcing a fraction. */
     .cr-hero {
@@ -968,3 +982,11 @@ body.careers-page {
         border-left-width: 3px;
     }
 }
+
+/* Preserve the updated form states and keyboard shortcut within the original design. */
+.careers-page [hidden] { display: none !important; }
+.cr-skip { position: fixed; top: -100px; left: 1rem; z-index: 99999; padding: .9rem 1.25rem; background: var(--cr-oxblood); color: #fff; }
+.cr-skip:focus { top: 1rem; }
+
+/* Metadata stays in sentence case, with separators only between details. */
+.cr-tag:first-child .cr-tag__dot { display: none; }

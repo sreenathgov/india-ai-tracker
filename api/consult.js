@@ -113,19 +113,24 @@ module.exports = async function handler(req, res) {
       ? demoTemplateId
       : 3;
 
-    const emailRes = await fetch('https://api.brevo.com/v3/smtp/email', {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({
-        to: [{ email, name: contactName.trim() }],
-        templateId
-      })
-    });
+    // A saved request remains successful if the acknowledgement provider fails.
+    try {
+      const emailRes = await fetch('https://api.brevo.com/v3/smtp/email', {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({
+          to: [{ email, name: contactName.trim() }],
+          templateId
+        })
+      });
 
-    if (!emailRes.ok) {
-      const err = await emailRes.json().catch(() => ({}));
-      // Log but don't fail — contact was stored successfully
-      console.error('Brevo send email error:', emailRes.status, err);
+      if (!emailRes.ok) {
+        const err = await emailRes.json().catch(() => ({}));
+        // Log but don't fail — contact was stored successfully
+        console.error('Brevo send email error:', emailRes.status, err);
+      }
+    } catch (error) {
+      console.error('Brevo acknowledgement unavailable:', error.message);
     }
 
     await notifyMake('consult', {

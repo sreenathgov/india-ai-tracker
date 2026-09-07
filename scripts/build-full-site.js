@@ -13,6 +13,7 @@ const FILES_TO_COPY = [
     'tradewatch.html',
     'tracker.html',
     'request-demo.html',
+    'supplier-programme.html',
     'drona.html',
     'drona-aos.html',
     // resources.html is NOT copied here: generate-publications.js renders it
@@ -21,6 +22,8 @@ const FILES_TO_COPY = [
     // careers.html is NOT copied here either, for the same reason:
     // generate-careers.js renders it from data/careers.json into dist/.
     'privacy-policy.html',
+    'terms-of-use.html',
+    'supplier-programme-terms.html',
     'disclaimers.html',
     '404.html'
 ];

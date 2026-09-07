@@ -7,7 +7,9 @@
 class ShinyText {
   constructor(element, config = {}) {
     this.element = element;
-    this.text = config.text || 'WEEKLY INSIGHTS';
+    // Fall back to whatever the markup already says, so the heading can be
+    // changed in HTML alone. Hardcoding it here silently overwrites the page.
+    this.text = config.text || (element ? element.textContent.trim() : '');
     this.speed = config.speed || 4; // seconds
     this.color = config.color || 'rgba(244, 235, 208, 1)';
     this.shineColor = config.shineColor || '#ffffff';
@@ -187,10 +189,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const element = document.getElementById('shinyText');
   if (element) {
     const shinyText = new ShinyText(element, {
-      text: 'WEEKLY INSIGHTS',
       speed: 4,
-      color: 'rgba(244, 235, 208, 1)',
-      shineColor: '#ffffff',
+      // Page themes can recolour the moving shine without changing its animation.
+      color: 'var(--shiny-text-color, rgba(244, 235, 208, 1))',
+      shineColor: 'var(--shiny-text-highlight, #ffffff)',
       spread: 120,
       direction: 'left',
       yoyo: false,

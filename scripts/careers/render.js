@@ -9,43 +9,21 @@
 const {
     WORK_MODE_LABELS,
     EMPLOYMENT_TYPE_LABELS,
-    SENIORITY_LABELS,
     STATUS_LABELS,
     CLOSED_STATUSES,
-    applyByLabel,
+    locationLabel,
     formatDate,
     escapeHtml
 } = require('./schema');
-
-const ALL_TEAMS_FILTER = 'all';
 
 function isAdvertised(role) {
     return !CLOSED_STATUSES.includes(role.status);
 }
 
-/**
- * True when the location string already says the work mode, e.g. workMode
- * `remote` with location "Remote (IST overlap) / Chennai" — which would
- * otherwise chip out as "REMOTE · REMOTE (IST OVERLAP) / CHENNAI".
- *
- * Whole-word only, so a `hybrid` role located at "Chennai / Remote" keeps its
- * Hybrid chip — that pair carries two different facts, not one repeated.
- */
-function locationStatesWorkMode(role) {
-    const label = WORK_MODE_LABELS[role.workMode];
-    if (!label || !role.location) return false;
-    const escaped = label.replace(/[.*+?^${}()|[\]\\-]/g, '\\$&');
-    return new RegExp(`\\b${escaped}\\b`, 'i').test(role.location);
-}
-
-/** The chip set shown under a role title, in fixed reading order. */
+/** Compact metadata shared by listing rows and role headers. */
 function metaChips(role) {
-    return [
-        EMPLOYMENT_TYPE_LABELS[role.employmentType],
-        locationStatesWorkMode(role) ? null : WORK_MODE_LABELS[role.workMode],
-        role.location,
-        applyByLabel(role.applyBy)
-    ].filter(Boolean);
+    return [locationLabel(role), WORK_MODE_LABELS[role.workMode],
+        EMPLOYMENT_TYPE_LABELS[role.employmentType]].filter(Boolean);
 }
 
 function renderChip(text) {
@@ -62,24 +40,6 @@ function renderStatusBadge(status) {
 // Listing
 // ---------------------------------------------------------------------------
 
-function renderFilters(teams, roles) {
-    const present = teams.filter(team => roles.some(r => r.team === team));
-    const buttons = [
-        `<button class="cr-filter is-active" type="button" data-team="${ALL_TEAMS_FILTER}" aria-pressed="true">`
-        + `View all<span class="cr-filter__count">${roles.length}</span></button>`
-    ];
-
-    present.forEach((team) => {
-        const count = roles.filter(r => r.team === team).length;
-        buttons.push(
-            `<button class="cr-filter" type="button" data-team="${escapeHtml(team)}" aria-pressed="false">`
-            + `${escapeHtml(team)}<span class="cr-filter__count">${count}</span></button>`
-        );
-    });
-
-    return buttons.join('\n');
-}
-
 function renderRoleRow(role) {
     const href = `/careers/${role.slug}/`;
     const chips = metaChips(role).map(renderChip).join('');
@@ -93,8 +53,8 @@ function renderRoleRow(role) {
         <ul class="cr-role__meta">${chips}</ul>
     </div>
     <div class="cr-role__aside">
-        <a class="cr-role__apply" href="${href}" tabindex="-1" aria-hidden="true">
-            <span>Apply</span>
+        <a class="cr-role__apply" href="${href}" aria-label="View role: ${escapeHtml(role.title)}">
+            <span>View role</span>
             <span class="cr-role__apply-arrow">&#8599;</span>
         </a>
     </div>
@@ -133,7 +93,7 @@ function renderListItems(items) {
 function renderNiceToHave(role) {
     if (!Array.isArray(role.niceToHave) || !role.niceToHave.length) return '';
     return `<section class="crd-block" aria-labelledby="crd-nice">
-                    <h2 class="crd-block__title" id="crd-nice">Nice to have</h2>
+                    <h2 class="crd-block__title" id="crd-nice">Preferred experience</h2>
                     <ul class="crd-list">
                         ${renderListItems(role.niceToHave)}
                     </ul>
@@ -144,12 +104,10 @@ function renderNiceToHave(role) {
 function renderRail(role) {
     const rows = [
         ['Team', role.team],
-        ['Location', role.location],
+        ['Location', [role.location.city, role.location.region, role.location.country === 'IN' ? 'India' : role.location.country].join(', ')],
         ['Work mode', WORK_MODE_LABELS[role.workMode]],
         ['Employment', EMPLOYMENT_TYPE_LABELS[role.employmentType]],
-        ['Level', SENIORITY_LABELS[role.seniority]],
-        ['Hiring timeline', role.timeline],
-        ['Applications', formatDate(role.applyBy) ? `Close ${formatDate(role.applyBy)}` : 'Rolling'],
+        ['Applications', formatDate(role.applyBy) ? `Close ${formatDate(role.applyBy)}` : 'Open'],
         ['Posted', formatDate(role.datePosted)]
     ];
 
@@ -193,26 +151,16 @@ function renderQuestions(role) {
     }).join('\n\n                        ');
 }
 
-/** The one-line hiring-runway note under the apply button in the navy band. */
-function renderTimelineLine(role) {
-    const close = formatDate(role.applyBy);
-    const closing = close ? `Applications close ${close}.` : 'Applications reviewed weekly.';
-    return `${escapeHtml(role.timeline)}. ${closing}`;
-}
-
 module.exports = {
-    ALL_TEAMS_FILTER,
     isAdvertised,
     metaChips,
     renderChip,
     renderStatusBadge,
-    renderFilters,
     renderRoleRow,
     renderCount,
     renderParagraphs,
     renderListItems,
     renderNiceToHave,
     renderRail,
-    renderQuestions,
-    renderTimelineLine
+    renderQuestions
 };

@@ -13,7 +13,7 @@
   });
 
   const VALID_BUCKETS = Object.freeze(['insight', 'whitepaper', 'news']);
-  const FALLBACK_TILE_SRC = 'KANANLABS-LOGO-SET/ORANGE of KANAN-LABS-WEBSITELOGO.png';
+  const FALLBACK_TILE_SRC = 'assets/logos/kanan-kl-hor-white.png';
   const PAGE_SIZE = 9;
 
   const els = {
@@ -36,7 +36,9 @@
     try {
       const parsed = JSON.parse(block.textContent);
       if (!parsed || !Array.isArray(parsed.items)) return null;
-      return parsed.items.filter(isValidItem);
+      // A damaged catalog is not an empty category. Keep the static baseline.
+      if (!parsed.items.every(isValidItem)) return null;
+      return parsed.items;
     } catch (err) {
       console.error('resources-data JSON is malformed:', err);
       return null;
@@ -303,14 +305,36 @@
 
   // ---------- init ----------
 
+  if (document.body.hasAttribute('data-resources-unbuilt')) {
+    showStatus('This is an unbuilt Resources template. Run npm run preview and open http://127.0.0.1:4180/resources.html to view the published catalog.');
+    els.tabs.forEach(tab => { tab.disabled = true; });
+    return;
+  }
+
   const items = readItems();
   if (items === null) {
-    showStatus('Our publications are being prepared. Please check back shortly.');
+    showStatus('Resource filters are temporarily unavailable. You can still browse the publications below.');
+    els.tabs.forEach(tab => { tab.disabled = true; });
   } else {
+    // Hydration is an enhancement. Restore the complete static catalog if
+    // initialization fails after partially replacing its DOM.
+    const baseline = [els.featured, els.grid, els.pagination].filter(Boolean)
+      .map(node => ({ node, children: Array.from(node.childNodes), hidden: node.hidden }));
+    try {
+      activate(items, bucketFromHash(), false);
+    } catch (err) {
+      baseline.forEach(({ node, children, hidden }) => {
+        node.replaceChildren(...children);
+        node.hidden = hidden;
+      });
+      console.error('Resources initialization failed:', err);
+      showStatus('Resource filters are temporarily unavailable. You can still browse the publications below.');
+      els.tabs.forEach(tab => { tab.disabled = true; });
+      return;
+    }
     els.tabs.forEach(tab => {
       tab.addEventListener('click', () => activate(items, tab.dataset.bucket, true));
     });
     window.addEventListener('hashchange', () => activate(items, bucketFromHash(), false));
-    activate(items, bucketFromHash(), false);
   }
 })();

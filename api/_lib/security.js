@@ -11,12 +11,14 @@
 const ALLOWED_ORIGINS = [
   'https://kananlabs.in',
   'https://www.kananlabs.in',
+  'https://apply.kananlabs.in',
   // local dev
   'http://localhost:3000',
   'http://localhost:8000',
   'http://localhost:5000',
   'http://127.0.0.1:3000',
-  'http://127.0.0.1:8000'
+  'http://127.0.0.1:8000',
+  'http://127.0.0.1:4173'
 ];
 
 const VERCEL_PREVIEW_RE = /^https:\/\/[a-z0-9-]+\.vercel\.app$/i;

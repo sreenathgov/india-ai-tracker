@@ -1,8 +1,8 @@
 /**
  * Strategic Insights — Section 2 Orchestrator
- * Fetches data from data/strategic_insights.json
+ * Reads the research snapshot embedded by generate-research-stats.js.
+ * Heading, byline and cards ship together, without a separately cached request.
  * Renders a Magic Bento grid with stat and insight cards
- * Manages standalone Newsletter Hero section
  * Reuses existing magic-bento.js spotlight system (softened for institutional feel)
  */
 
@@ -10,7 +10,6 @@ class StrategicInsights {
   constructor() {
     this.gridEl = document.getElementById('strategicBentoGrid');
     this.sectionEl = document.getElementById('strategicInsightsSection');
-    this.newsletterSection = document.getElementById('newsletterHeroSection');
     this.data = null;
     this.bentoManager = null;
   }
@@ -22,25 +21,22 @@ class StrategicInsights {
       this.data = await this.loadData();
       if (!this.data || !this.data.cards || this.data.cards.length === 0) {
         this.sectionEl.style.display = 'none';
-        if (this.newsletterSection) this.newsletterSection.style.display = 'none';
         return;
       }
 
       this.renderBentoGrid(this.data.cards);
       this.initSpotlight();
       this.initEntranceAnimations();
-      this.initNewsletter(this.data.newsletter);
     } catch (err) {
       console.warn('Strategic Insights: Failed to load data', err);
       this.sectionEl.style.display = 'none';
-      if (this.newsletterSection) this.newsletterSection.style.display = 'none';
     }
   }
 
   async loadData() {
-    const response = await fetch('data/strategic_insights.json');
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    return response.json();
+    const payload = document.getElementById('researchShowcaseData');
+    if (!payload) throw new Error('Missing build-generated research snapshot');
+    return JSON.parse(payload.textContent);
   }
 
   renderBentoGrid(cards) {
@@ -95,84 +91,6 @@ class StrategicInsights {
     `;
 
     this.gridEl.appendChild(el);
-  }
-
-  /**
-   * Initialize the standalone Newsletter Hero section
-   * Populates from JSON data and wires up form submission
-   */
-  initNewsletter(newsletterData) {
-    if (!this.newsletterSection || !newsletterData) return;
-
-    // Populate from JSON
-    const titleEl = document.getElementById('newsletterHeroTitle');
-    const subtitleEl = document.getElementById('newsletterHeroSubtitle');
-    const successEl = document.getElementById('newsletterSuccessMsg');
-    const form = document.getElementById('newsletterHeroForm');
-
-    if (titleEl && newsletterData.title) {
-      titleEl.textContent = newsletterData.title;
-    }
-    if (subtitleEl && newsletterData.subtitle) {
-      subtitleEl.textContent = newsletterData.subtitle;
-    }
-    if (successEl && newsletterData.successMessage) {
-      successEl.textContent = newsletterData.successMessage;
-    }
-
-    // Set placeholder from JSON
-    if (form && newsletterData.ctaPlaceholder) {
-      const input = form.querySelector('input[type="email"]');
-      if (input) input.placeholder = newsletterData.ctaPlaceholder;
-    }
-    if (form && newsletterData.ctaText) {
-      const button = form.querySelector('button');
-      if (button) button.textContent = newsletterData.ctaText;
-    }
-
-    // Wire up form submission
-    if (form) {
-      form.addEventListener('submit', (e) => this.handleNewsletterSubmit(e, form));
-    }
-  }
-
-  handleNewsletterSubmit(e, form) {
-    e.preventDefault();
-    const input = form.querySelector('input[type="email"]');
-    const email = input ? input.value.trim() : '';
-
-    if (!email) return;
-
-    const button = form.querySelector('button');
-
-    // Disable form while submitting
-    if (button) { button.disabled = true; button.textContent = 'Subscribing…'; }
-    if (input) input.disabled = true;
-
-    // Subscribe via Brevo
-    const subscribePromise = typeof window.brevoSubscribe === 'function'
-      ? window.brevoSubscribe(email)
-      : Promise.reject(new Error('brevoSubscribe not loaded'));
-
-    subscribePromise
-      .then(() => {
-        // Show success state
-        form.classList.add('success');
-        if (button) button.textContent = 'Subscribed';
-        if (input) { input.value = ''; input.placeholder = 'Thank you!'; }
-
-        const successMsg = document.getElementById('newsletterSuccessMsg');
-        if (successMsg) {
-          setTimeout(() => { successMsg.classList.add('visible'); }, 200);
-        }
-      })
-      .catch((err) => {
-        console.error('Newsletter subscription failed:', err);
-        // Re-enable form so user can try again
-        if (button) { button.disabled = false; button.textContent = 'Subscribe'; }
-        if (input) { input.disabled = false; }
-        alert('Something went wrong. Please try again.');
-      });
   }
 
   initSpotlight() {

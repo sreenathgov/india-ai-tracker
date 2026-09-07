@@ -34,7 +34,7 @@ const BUCKET_LABELS = Object.freeze({
     whitepaper: 'Whitepaper',
     news: 'News & Press'
 });
-const FALLBACK_TILE_SRC = 'KANANLABS-LOGO-SET/ORANGE of KANAN-LABS-WEBSITELOGO.png';
+const FALLBACK_TILE_SRC = 'assets/logos/kanan-kl-hor-white.png';
 const PAGE_SIZE = 9;
 
 // ---------------------------------------------------------------------------
@@ -277,6 +277,9 @@ function writeResourcesCatalog(manifest, distDir) {
     html = replaceById(html, 'resources-data', JSON.stringify({ items }, null, 2), 'catalog data');
     html = replaceById(html, 'resourcesFeatured', featured ? renderFeatured(featured) : '', 'featured card');
     html = replaceById(html, 'resourcesGrid', gridItems.map(renderCard).join('\n'), 'card grid');
+    html = html.replace(' data-resources-unbuilt', '');
+    html = replaceById(html, 'resourcesStatus', '', 'build status');
+    html = html.replace('id="resourcesStatus" role="status"', 'id="resourcesStatus" role="status" hidden');
     html = injectJsonLd(html, itemListJsonLd(items));
 
     fs.mkdirSync(distDir, { recursive: true });
