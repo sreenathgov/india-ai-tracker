@@ -127,6 +127,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Visakhapatnam civil society calls for moratorium on AI data centre approvals",
+        "url": "https://www.thehindu.com/news/national/andhra-pradesh/visakhapatnam-civil-society-calls-for-moratorium-on-ai-data-centre-approvals/article71435952.ece",
+        "summary": "The convention flags water, land and transparency concerns; adopts six-point declaration",
+        "date_published": "2026-09-07",
+        "source_name": "The Hindu - Andhra Pradesh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "India’s first AI-Quantum University: All you need to know about  ₹730 cr campus coming up in Amaravati",
         "url": "https://www.livemint.com/ai/indias-first-ai-quantum-university-all-you-need-to-know-about-730-crore-campus-coming-up-in-amravati-tdp-naidu-11787900209187.html",
@@ -701,5 +721,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

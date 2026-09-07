@@ -4429,6 +4429,27 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "Voice AI startup Navana.ai raises Rs 40 Cr led by Ronnie Screwvala",
+        "url": "https://entrackr.com/snippets/voice-ai-startup-navanaai-raises-rs-40-cr-led-by-ronnie-screwvala-12501888",
+        "summary": "Voice AI startup Navana.ai has raised Rs 40 crore...",
+        "date_published": "2026-09-07",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Oppex AI raises Rs 4.2 Cr in pre-seed round led by Info Edge Ventures",
         "url": "https://entrackr.com/snippets/oppex-ai-raises-rs-42-cr-in-pre-seed-round-led-by-info-edge-ventures-12480269",
@@ -5910,6 +5931,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }

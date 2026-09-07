@@ -1325,6 +1325,27 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "Voice AI startup Navana.ai raises Rs 40 Cr led by Ronnie Screwvala",
+        "url": "https://entrackr.com/snippets/voice-ai-startup-navanaai-raises-rs-40-cr-led-by-ronnie-screwvala-12501888",
+        "summary": "Voice AI startup Navana.ai has raised Rs 40 crore...",
+        "date_published": "2026-09-07",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "IIT Madras startup Plenome wins AI hackathon; Deploys AI-based prescription generator at AIIMS New Delhi",
         "url": "https://timesofindia.indiatimes.com/city/chennai/iit-madras-startup-plenome-wins-ai-hackathon-deploys-ai-based-prescription-generator-at-aiims-new-delhi/articleshow/133074018.cms",
@@ -1473,5 +1494,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }
