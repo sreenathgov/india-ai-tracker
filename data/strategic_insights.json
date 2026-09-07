@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-08-21",
+  "lastUpdated": "2026-09-06",
   "cards": [
     {
       "id": "stat-1",
       "type": "stat",
       "title": "Capital Tracked",
-      "value": "$2.5B",
+      "value": "$2.7B",
       "suffix": "",
-      "description": "Across 133 disclosed rounds, de-duplicated by deal."
+      "description": "Across 142 disclosed rounds, de-duplicated by deal."
     },
     {
       "id": "stat-2",
       "type": "stat",
       "title": "Signals Filed",
-      "value": "1,949",
+      "value": "2,032",
       "suffix": "",
       "description": "Each one classified, geo-attributed and adjudicated before it enters the record."
     },
@@ -21,7 +21,7 @@
       "id": "stat-3",
       "type": "stat",
       "title": "Policy Moves Logged",
-      "value": "160",
+      "value": "165",
       "suffix": "",
       "description": "Central and state action, held apart from the announcement noise around it."
     },
@@ -115,26 +115,26 @@
       ]
     }
   ],
-  "heading": "EIGHT MONTHS OF SIGNAL",
-  "subheading": "Every AI signal out of India — 1,949 of them — read, filed and cross-checked since January 2026.",
+  "heading": "NINE MONTHS OF SIGNAL",
+  "subheading": "Every AI signal out of India — 2,032 of them — read, filed and cross-checked since January 2026.",
   "computed": {
-    "totalSignals": 1949,
-    "monthsActive": 8,
+    "totalSignals": 2032,
+    "monthsActive": 9,
     "firstMonth": "2026-01",
-    "lastMonth": "2026-08",
-    "latestSignalDate": "2026-08-21",
-    "policyCount": 160,
-    "policyTopTwoMonthsShare": 0.4375,
-    "policyQuietMonthCount": 8,
+    "lastMonth": "2026-09",
+    "latestSignalDate": "2026-09-06",
+    "policyCount": 165,
+    "policyTopTwoMonthsShare": 0.42424242424242425,
+    "policyQuietMonthCount": 2,
     "sourceCount": 77,
-    "topSourceShare": 0.3991790661877886,
+    "topSourceShare": 0.406003937007874,
     "topSources": [
       "Entrackr - AI & Startups",
       "YourStory",
       "ET CIO - AI"
     ],
     "jurisdictionCount": 29,
-    "topStateShare": 0.5975232198142415,
+    "topStateShare": 0.6001483679525222,
     "topStates": [
       "KA",
       "DL",
@@ -142,9 +142,9 @@
       "TG"
     ],
     "thinStateCount": 14,
-    "roundCount": 133,
-    "capitalUsd": 2574706818.181819,
-    "medianRoundUsd": 5500000,
-    "largestRoundShare": 0.466072483098252
+    "roundCount": 142,
+    "capitalUsd": 2737884090.909091,
+    "medianRoundUsd": 5590909.090909091,
+    "largestRoundShare": 0.4382946684940012
   }
 }

@@ -55,7 +55,7 @@ async function withDeliveryEnvironment(values, run) {
     brevo: process.env.BREVO_API_KEY
   };
   process.env.ORIGIN_MAKE_WEBHOOK_URL = values.make || '';
-  process.env.ORIGIN_MAKE_WEBHOOK_API_KEY = values.makeApiKey || '';
+  process.env.ORIGIN_MAKE_WEBHOOK_API_KEY = values.makeApiKey === undefined ? 'fixture-auth-key' : values.makeApiKey;
   process.env.BREVO_API_KEY = values.brevo || '';
   global.fetch = values.fetch;
   try { return await run(); }
@@ -84,6 +84,17 @@ test('accepts the application when Make succeeds', async () => {
   assert.equal(calls.length, 1);
   assert.equal(calls[0].url, 'https://hook.example.test/origin');
   assert.equal(calls[0].options.headers['X-Make-Apikey'], 'make-secret');
+});
+
+test('a duplicate receipt retains the original stored response deadline', async () => {
+  const res = response();
+  const deadline = '2026-09-07T08:00:00.000Z';
+  await withDeliveryEnvironment({
+    make: 'https://hook.example.test/origin',
+    fetch: async () => ({ok:true,status:200,json:async()=>({ok:true,recorded:true,duplicate:true,responseDueAt:deadline})})
+  }, () => handler(request(application(), '198.51.100.90'), res));
+  assert.equal(res.statusCode, 200);
+  assert.equal(res.payload.responseDueAt, deadline);
 });
 
 test('delivers one complete v2 application in each published language', async () => {

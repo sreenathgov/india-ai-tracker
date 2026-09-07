@@ -37,16 +37,15 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --ignore-scripts
 
       # Validates every article (fails the job on any AUTHORING.md §9
       # violation) and builds pages + catalog + hubs + manifest + llms.txt.
-      - name: Validate publications against AUTHORING.md
-        run: node scripts/generate-publications.js
-
-      - name: Regenerate sitemap
-        run: node scripts/generate-sitemap.js
+      # Validate through the clean site build so linked public PDFs and other
+      # allowlisted assets exist before the resources catalog is checked.
+      - name: Validate publications and their deployed destinations
+        run: npm run build

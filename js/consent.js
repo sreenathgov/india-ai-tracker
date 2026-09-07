@@ -37,6 +37,8 @@
   var gaLoaded = false;
 
   function loadGoogleAnalytics() {
+    window['ga-disable-' + GA_MEASUREMENT_ID] = false;
+    if (gaLoaded && typeof window.gtag === 'function') window.gtag('consent', 'update', { analytics_storage: 'granted' });
     if (location.hostname === '127.0.0.1' || location.hostname === 'localhost' || location.hostname === '::1') {
       return;
     }
@@ -61,16 +63,17 @@
       '.cookie-consent{position:fixed;left:0;right:0;bottom:0;z-index:2147483647;' +
       'background:#0f172a;color:#e2e8f0;padding:16px 20px;font-size:14px;line-height:1.5;' +
       'box-shadow:0 -2px 16px rgba(0,0,0,.35);display:flex;flex-wrap:wrap;gap:12px;' +
-      'align-items:center;justify-content:center}' +
+      'align-items:center;justify-content:center;box-sizing:border-box;max-height:100dvh;overflow:auto}' +
       '.cookie-consent__text{max-width:780px;flex:1 1 320px}' +
       '.cookie-consent__text a{color:#7dd3fc;text-decoration:underline}' +
       '.cookie-consent__actions{display:flex;gap:8px;flex:0 0 auto}' +
       '.cookie-consent__btn{border:0;border-radius:6px;padding:8px 16px;font-size:14px;' +
-      'font-weight:600;cursor:pointer;font-family:inherit}' +
+      'font-weight:600;cursor:pointer;font-family:inherit;min-height:44px}' +
       '.cookie-consent__btn--accept{background:#38bdf8;color:#0f172a}' +
       '.cookie-consent__btn--decline{background:transparent;color:#cbd5e1;' +
       'border:1px solid #475569}' +
       '@media (max-width:520px){.cookie-consent{flex-direction:column;align-items:stretch}' +
+      '.cookie-consent__text{flex:0 1 auto;min-width:0}' +
       '.cookie-consent__actions{justify-content:flex-end}}';
     var style = document.createElement('style');
     style.id = 'cookie-consent-styles';
@@ -119,6 +122,9 @@
     decline.textContent = 'Decline';
     decline.addEventListener('click', function () {
       storeDecision('denied');
+      // Stop an already-loaded tracker when consent is withdrawn in settings.
+      window['ga-disable-' + GA_MEASUREMENT_ID] = true;
+      if (typeof window.gtag === 'function') window.gtag('consent', 'update', { analytics_storage: 'denied' });
       removeBanner();
     });
 

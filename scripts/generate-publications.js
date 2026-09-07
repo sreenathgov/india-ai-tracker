@@ -449,15 +449,13 @@ function renderArticleContent(meta, chapters, readingMinutes) {
             html += `
                         <div class="subsection-card"
                              id="card-${chapterIndex}-${sectionIndex}"
-                             onclick="openAnalysisPanel(${chapterIndex}, ${sectionIndex})"
-                             role="button"
-                             tabindex="0">
+                             onclick="if (!event.target.closest('a, button')) openAnalysisPanel(${chapterIndex}, ${sectionIndex})">
                             <div class="subsection-id">${chapterNumber}.${sectionIndex + 1}</div>
-                            <h3 class="subsection-title">${escapeHtmlText(section.title)}</h3>
+                            <h3 class="subsection-title" id="subsection-title-${chapterIndex}-${sectionIndex}">${escapeHtmlText(section.title)}</h3>
                             <div class="subsection-teaser">${firstParagraphOf(section.content)}</div>
                             ${notesList}
                             ${layerDetail}
-                            <div class="more-strip">Get the details <span class="more-icon">&rarr;</span></div>
+                            <div class="more-strip"><button type="button" class="more-strip__button" aria-describedby="subsection-title-${chapterIndex}-${sectionIndex}" onclick="openAnalysisPanel(${chapterIndex}, ${sectionIndex})">Get the details <span class="more-icon" aria-hidden="true">&rarr;</span></button></div>
                         </div>`;
         });
 

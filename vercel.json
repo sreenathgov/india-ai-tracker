@@ -1,6 +1,20 @@
 {
   "version": 2,
+  "buildCommand": "npm test && npm run build",
+  "outputDirectory": "dist",
+  "functions": {
+    "api/supplier-programme.js": {"includeFiles": "data/supplier-programme/localization/manifest.json", "maxDuration": 30},
+    "api/apply.js": {"includeFiles": "data/careers.json", "maxDuration": 30},
+    "api/consult.js": {"maxDuration": 30},
+    "api/subscribe.js": {"maxDuration": 30},
+    "api/early-access.js": {"maxDuration": 30}
+  },
   "redirects": [
+    {"source":"/", "has":[{"type":"host","value":"apply.kananlabs.in"}], "destination":"/supplier-programme.html", "permanent":false},
+    {"source":"/supplier-programme.html", "has":[{"type":"host","value":"kananlabs.in"}], "destination":"https://apply.kananlabs.in/", "permanent":true},
+    {"source":"/supplier-programme.html", "has":[{"type":"host","value":"www.kananlabs.in"}], "destination":"https://apply.kananlabs.in/", "permanent":true},
+    {"source":"/project-origin.html", "destination":"/supplier-programme.html", "permanent":true},
+    {"source":"/project-origin", "destination":"/supplier-programme.html", "permanent":true},
     { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/all-india/index.html", "destination": "/all-india/", "permanent": true },
 
@@ -69,11 +83,8 @@
     { "source": "/publications/", "destination": "/resources.html", "permanent": true }
   ],
   "rewrites": [
-    {
-      "source": "/",
-      "has": [{ "type": "host", "value": "apply.kananlabs.in" }],
-      "destination": "/supplier-programme.html"
-    }
+    {"source":"/robots.txt", "has":[{"type":"host","value":"apply.kananlabs.in"}], "destination":"/application-robots.txt"},
+    {"source":"/sitemap.xml", "has":[{"type":"host","value":"apply.kananlabs.in"}], "destination":"/application-sitemap.xml"}
   ],
   "headers": [
     {
@@ -135,25 +146,25 @@
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     },
     {
       "source": "/added-assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800" }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     },
     {
       "source": "/css/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     },
     {
       "source": "/js/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     }
   ]

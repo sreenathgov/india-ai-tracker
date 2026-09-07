@@ -14,7 +14,7 @@ function applicationLink(content) {
 
 test('renders the approved Project Origin conversion act', () => {
   assert.match(homepage, /id="klOriginCta"/);
-  assert.match(homepage, /PROJECT ORIGIN · APPLICATIONS OPEN/);
+  assert.match(homepage, /SUPPLIER PROGRAMME · APPLICATIONS OPEN/);
   assert.match(homepage, /Do not let working capital hold back a real order\./);
   assert.match(homepage, /We help Indian manufacturers pursue working-capital finance\. The first 15 selected receive hands-on support at no charge\./);
   assert.doesNotMatch(homepage, /guaranteed financing|approval probability|Kanan underwriting|lender matching/i);

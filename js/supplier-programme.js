@@ -33,6 +33,15 @@
   let state = freshState();
   let sequence = [1,2,3,4,5,6];
   let cursor = 0;
+  let completed = false;
+  let backgroundState = [];
+  function lockBackground(){
+    Array.from(document.body.children).filter(el=>el!==app&&!el.contains(app)&&!['SCRIPT','STYLE'].includes(el.tagName)).forEach(el=>{
+      if(!backgroundState.some(([saved])=>saved===el))backgroundState.push([el,el.inert]);
+      el.inert=true;
+    });
+  }
+  new MutationObserver(()=>{if(!app.hidden)lockBackground()}).observe(document.body,{childList:true});
 
   function freshState() {
     return {applicationId: makeId(),language:'en',workingCapital:'',purposes:[],companyName:'',manufacturingDescription:'',state:'',city:'',fundingAmountInr:'',orderStatus:'',contactName:'',whatsapp:'',consent:false};
@@ -47,11 +56,30 @@
   function syncApplicationLanguage(c){const meta=languageMeta();const renderedLocale=shortFlow()?'en-IN':meta.localeCode;applicationShell.lang=renderedLocale;applicationShell.dir='ltr';applicationShell.dataset.locale=renderedLocale;applicationShell.dataset.preferredLocale=meta.localeCode;applicationTitle.textContent=c.applicationTitle;applicationProgress.setAttribute('aria-label',c.progressLabel);closeButton.setAttribute('aria-label',c.close);helpTitle.textContent=c.help;helpCall.textContent=c.call;helpWhatsapp.textContent=c.whatsapp}
   function setSequence(){sequence=shortFlow()?[1,3,6]:(state.workingCapital==='no'?[1,2,3,6]:[1,2,3,4,5,6]);cursor=Math.max(0,Math.min(cursor,sequence.length-1))}
   function current(){return sequence[cursor]}
-  function openApplication(){if(!app.hidden)return;lastFocus=document.activeElement;state=freshState();sequence=[1,2,3,4,5,6];cursor=0;result.hidden=true;form.hidden=false;app.hidden=false;app.setAttribute('aria-hidden','false');document.body.classList.add('sp-locked');window.dispatchEvent(new Event('kanan:motion-pause'));if(location.hash!=='#apply')history.pushState({supplierApplication:true},'',location.pathname+location.search+'#apply');render();requestAnimationFrame(()=>{const el=screen.querySelector('select,input,button');if(el)el.focus()})}
-  function closeApplication(fromHistory){if(app.hidden)return;app.hidden=true;app.setAttribute('aria-hidden','true');document.body.classList.remove('sp-locked');window.dispatchEvent(new Event('kanan:motion-resume'));if(!fromHistory&&location.hash==='#apply')history.back();if(lastFocus&&lastFocus.focus)lastFocus.focus()}
+  function openApplication(){
+    if(!app.hidden)return;
+    lastFocus=document.activeElement;
+    if(completed){state=freshState();sequence=[1,2,3,4,5,6];cursor=0;completed=false}
+    result.hidden=true;form.hidden=false;app.hidden=false;app.setAttribute('aria-hidden','false');
+    document.body.classList.add('sp-locked');
+    lockBackground();
+    if(location.hash!=='#apply')history.pushState({supplierApplication:true},'',location.pathname+location.search+'#apply');
+    render();focusFirstField(false);
+  }
+  function closeApplication(fromHistory){
+    if(app.hidden||submitting)return;
+    app.hidden=true;app.setAttribute('aria-hidden','true');document.body.classList.remove('sp-locked');
+    backgroundState.forEach(([el,inert])=>{el.inert=inert});backgroundState=[];
+    if(!fromHistory&&location.hash==='#apply'){
+      if(history.state&&history.state.supplierApplication)history.back();
+      else history.replaceState(history.state,'',location.pathname+location.search);
+    }
+    if(lastFocus&&lastFocus.focus)lastFocus.focus();
+  }
   document.querySelectorAll('[data-open-application]').forEach((el)=>el.addEventListener('click',openApplication));
   document.querySelectorAll('[data-close-application]').forEach((el)=>el.addEventListener('click',()=>closeApplication(false)));
   window.addEventListener('popstate',()=>{if(location.hash==='#apply')openApplication();else closeApplication(true)});
+  window.addEventListener('hashchange',()=>{if(location.hash==='#apply')openApplication();else closeApplication(true)});
   if(location.hash==='#apply')openApplication();
 
   function radio(name,value,label,checked){return `<div class="sp-choice"><input type="radio" id="${name}-${value}" name="${name}" value="${value}" ${checked?'checked':''}><label for="${name}-${value}">${esc(label)}</label></div>`}
@@ -97,7 +125,7 @@
     if(step===5){
       return `<h3>${esc(c.titles[4])}</h3><fieldset class="sp-field"><legend>${esc(c.demand)}</legend><div class="sp-choice-grid">${radio('orderStatus','confirmed_po',c.po,state.orderStatus==='confirmed_po')}${radio('orderStatus','customer_release',c.release,state.orderStatus==='customer_release')}${radio('orderStatus','forecast',c.forecast,state.orderStatus==='forecast')}${radio('orderStatus','no_order',c.none,state.orderStatus==='no_order')}${radio('orderStatus','not_sure',c.unsure,state.orderStatus==='not_sure')}</div></fieldset><aside class="sp-programme-note"><strong>${esc(m.risk_diagnostic_title)}</strong><span>${esc(m.risk_diagnostic_body)}</span><span>${esc(m.risk_scope_note)}</span><span>${esc(c.selectedReview)}</span></aside>`;
     }
-    return `<h3>${esc(c.titles[5])}</h3><div class="sp-field"><label for="contactName">${esc(c.name)}</label><input id="contactName" name="contactName" maxlength="120" autocomplete="name" value="${esc(state.contactName)}"></div><div class="sp-field"><label for="whatsapp">${esc(c.phone)}</label><input id="whatsapp" name="whatsapp" inputmode="tel" autocomplete="tel" placeholder="+91 98402 47729" value="${esc(state.whatsapp)}"><small>${esc(c.phoneHint)}</small></div><aside class="sp-boundary-note"><p class="sp-boundary-copy">${esc(m.lender_boundary_copy)}</p><p>${esc(m.privacy_microcopy)}</p></aside><div class="sp-consent"><input id="consent" name="consent" type="checkbox" ${state.consent?'checked':''}><label for="consent">${esc(c.consent)} <a href="/privacy-policy.html" target="_blank" rel="noopener">${esc(c.privacy)}</a> · <a href="/supplier-programme-terms.html" target="_blank" rel="noopener">${esc(c.terms)}</a></label></div>`;
+    return `<h3>${esc(c.titles[5])}</h3><div class="sp-field"><label for="contactName">${esc(c.name)}</label><input id="contactName" name="contactName" maxlength="120" autocomplete="name" value="${esc(state.contactName)}"></div><div class="sp-field"><label for="whatsapp">${esc(c.phone)}</label><input id="whatsapp" name="whatsapp" inputmode="tel" autocomplete="tel" placeholder="+91 98402 47729" value="${esc(state.whatsapp)}"><small>${esc(c.phoneHint)}</small></div><aside class="sp-boundary-note"><p class="sp-boundary-copy">${esc(m.lender_boundary_copy)}</p><p class="sp-institution-choice">${esc(m.trust_signal_2)}</p><p>${esc(m.privacy_microcopy)}</p></aside><div class="sp-consent"><input id="consent" name="consent" type="checkbox" ${state.consent?'checked':''}><label for="consent">${esc(c.consent)} <a href="/privacy-policy.html" target="_blank" rel="noopener">${esc(c.privacy)}</a> · <a href="/supplier-programme-terms.html" target="_blank" rel="noopener">${esc(c.terms)}</a></label></div>`;
   }
   function bindInputs(){screen.querySelectorAll('input,select,textarea').forEach((el)=>{el.addEventListener('input',capture);el.addEventListener('change',(event)=>{capture(event);if(el.name==='language'){setSequence();render()}if(el.name==='workingCapital'){setSequence();render()}})});screen.querySelectorAll('[data-amount]').forEach((el)=>el.addEventListener('click',()=>{state.fundingAmountInr=el.dataset.amount;render()}))}
   function capture(event){const el=event.target;if(el.name==='purposes'){state.purposes=Array.from(screen.querySelectorAll('[name="purposes"]:checked')).map((n)=>n.value);return}if(el.name==='consent'){state.consent=el.checked;return}if(el.name==='fundingAmountInr'){state.fundingAmountInr=el.value.replace(/\D/g,'');el.value=formatAmount(state.fundingAmountInr);return}if(el.name in state)state[el.name]=el.value}
@@ -106,10 +134,22 @@
   function validate(){const c=t(),step=current();let ok=true;if(step===1&&!state.language)ok=false;if(step===2&&(!state.workingCapital||(state.workingCapital==='yes'&&!state.purposes.length)))ok=false;if(step===3&&(!state.companyName.trim()||!state.manufacturingDescription.trim()))ok=false;if(step===4&&(!state.state||!state.city.trim()||!Number(state.fundingAmountInr)))ok=false;if(step===5&&!state.orderStatus)ok=false;if(step===6){if(!state.contactName.trim()||!state.consent)ok=false;if(!validPhone(state.whatsapp)){ok=false;errorSummary.textContent=c.invalidPhone}else errorSummary.textContent=c.required}else errorSummary.textContent=c.required;errorSummary.hidden=ok;if(!ok){const target=screen.querySelector('input:not([type="hidden"]),select,textarea');if(target)target.focus()}return ok}
   function normalizePhone(v){let digits=String(v||'').replace(/\D/g,'');if(digits.length===10)digits='91'+digits;return '+'+digits}
   back.addEventListener('click',()=>{if(cursor>0){cursor-=1;render()}});
-  next.addEventListener('click',async()=>{if(submitting||!validate())return;if(cursor<sequence.length-1){cursor+=1;render();requestAnimationFrame(()=>{const el=screen.querySelector('input,select,textarea');if(el)el.focus({preventScroll:true})});return}await submit()});
+  function focusFirstField(preventScroll){
+    const rendered=screen.firstElementChild;
+    requestAnimationFrame(()=>{
+      // A fast tap or Tab may already have moved into the new screen. Never
+      // pull focus back, or focus a field after the overlay has closed.
+      if(app.hidden||screen.firstElementChild!==rendered||screen.contains(document.activeElement))return;
+      const el=screen.querySelector('input,select,textarea,button');
+      if(el)el.focus({preventScroll});
+    });
+  }
+  next.addEventListener('click',async()=>{if(submitting||!validate())return;if(cursor<sequence.length-1){cursor+=1;render();focusFirstField(true);return}await submit()});
   form.addEventListener('submit',(event)=>{event.preventDefault();next.click()});
   async function submit(){
     submitting=true;
+    back.disabled=true;
+    closeButton.disabled=true;
     next.disabled=true;
     next.firstChild.textContent=t().sending+' ';
     const params=new URLSearchParams(location.search);
@@ -133,19 +173,23 @@
       },
       company_website:form.elements.company_website.value
     };
+    const controller=new AbortController();
+    const timeout=setTimeout(()=>controller.abort(),20000);
     try{
-      const response=await fetch('/api/supplier-programme',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+      const response=await fetch('/api/supplier-programme',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal:controller.signal});
       if(!response.ok)throw new Error('submission_failed');
       const data=await response.json();
-      showSuccess(data.applicationId||state.applicationId);
+      if(data.success!==true||data.applicationId!==state.applicationId)throw new Error('unconfirmed_receipt');
+      showSuccess(data.applicationId);
     }catch(_){
       errorSummary.textContent=t().failure;
       errorSummary.hidden=false;
       next.disabled=false;
       next.firstChild.textContent=t().submit+' ';
-    }finally{submitting=false}
+    }finally{clearTimeout(timeout);submitting=false;back.disabled=false;closeButton.disabled=false}
   }
   function showSuccess(applicationId){
+    completed=true;
     const c=t(),m=message();
     form.hidden=true;
     result.hidden=false;

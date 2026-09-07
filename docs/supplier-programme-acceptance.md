@@ -1,7 +1,8 @@
 # Kanan Supplier Programme — implementation acceptance
 
-Date: 5 September 2026  
-Release candidate: `supplier-programme.v2`  
+Date: 5 September 2026
+
+Release candidate: `supplier-programme.v2`
 Status: code-complete; production release awaits the external gates below.
 
 ## Implemented surface

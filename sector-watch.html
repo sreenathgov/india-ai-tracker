@@ -254,6 +254,14 @@
             opacity: 0.85;
         }
 
+        .sw-access__actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 1.75rem;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
         /* ══════════════════════════════════
            B. MANIFESTO — word-reveal (lifted from index.html)
         ══════════════════════════════════ */
@@ -1046,7 +1054,10 @@
             <div class="sw-access__text">
                 <h2>Where Kanan is heading.</h2>
                 <p>Sector Watch is the long-horizon platform Kanan Labs is building toward. Today we are shipping TradeWatch &mdash; the first, focused expression of the same engine. Sector Watch is the direction, not yet the product.</p>
-                <a href="tradewatch.html" class="sw-btn-secondary">See TradeWatch &rarr;</a>
+                <div class="sw-access__actions">
+                    <a href="#access" class="sw-btn-secondary" data-engagement="Supply chain analysis">Request early access &rarr;</a>
+                    <a href="tradewatch.html" class="sw-btn-secondary">See TradeWatch &rarr;</a>
+                </div>
             </div>
         </div>
     </section>

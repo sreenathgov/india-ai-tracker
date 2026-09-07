@@ -26,6 +26,7 @@ function validateApplication(body) {
   const shortLanguageFlow = locale?.experience === 'contact-flow';
   const clientSchemaVersion = clean(body?.schemaVersion, 40) === 'supplier-programme.v2' ? 'supplier-programme.v2' : 'supplier-programme.v1';
   const legacyClient = clientSchemaVersion === 'supplier-programme.v1';
+  if (body?.schemaVersion && !['supplier-programme.v1', 'supplier-programme.v2'].includes(body.schemaVersion)) errors.push('schemaVersion');
   const workingCapital = shortLanguageFlow ? '' : clean(body?.workingCapital, 8);
   const companyName = clean(body?.companyName, 160);
   const manufacturingDescription = clean(body?.manufacturingDescription, 500);
@@ -84,7 +85,7 @@ function validateApplication(body) {
       schemaVersion: 'supplier-programme.v2',
       clientSchemaVersion,
       source: {
-        referrer: clean(source.referrer, 500),
+        referrer: safeReferrer(source.referrer),
         utmSource: clean(source.utm_source, 120),
         utmMedium: clean(source.utm_medium, 120),
         utmCampaign: clean(source.utm_campaign, 160),
@@ -92,6 +93,26 @@ function validateApplication(body) {
       }
     }
   };
+}
+
+function safeReferrer(value) {
+  try {
+    const url = new URL(value);
+    return /^https?:$/.test(url.protocol) ? clean(url.origin + url.pathname, 500) : '';
+  } catch (_) { return ''; }
+}
+
+// Make uses USER_ENTERED for timestamp columns. Prefix user-controlled text
+// separately so Sheets never evaluates an applicant's text as a formula.
+function sheetText(value) {
+  return typeof value === 'string' && /^[\s\uFEFF]*[=+\-@]/.test(value) ? "'" + value : value;
+}
+function sheetRecord(record) {
+  const result = {...record, source:{...record.source}};
+  for (const key of ['companyName','manufacturingDescription','state','city','contactName']) result[key] = sheetText(result[key]);
+  for (const key of Object.keys(result.source)) result.source[key] = sheetText(result.source[key]);
+  // WhatsApp is already explicitly formatted as text by the Make column mapping.
+  return result;
 }
 
 function addHours(date, hours) { return new Date(date.getTime() + hours * 60 * 60 * 1000).toISOString(); }
@@ -119,4 +140,4 @@ function renderInternalEmail(record) {
   return `<h1>New Kanan Supplier Programme application</h1><p><strong>Personal response due within 24 hours.</strong></p><table cellpadding="8" cellspacing="0" border="1" style="border-collapse:collapse">${rows.map(([a,b])=>`<tr><th align="left">${escapeHtml(a)}</th><td>${escapeHtml(b)}</td></tr>`).join('')}</table><p>18-hour reminder: ${escapeHtml(record.reminderAt)}<br>22-hour escalation: ${escapeHtml(record.escalationAt)}</p>`;
 }
 
-module.exports = { validateApplication, enrichApplication, renderInternalEmail, normalizePhone };
+module.exports = { validateApplication, enrichApplication, renderInternalEmail, normalizePhone, sheetText, sheetRecord };

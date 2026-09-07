@@ -31,10 +31,7 @@
     hoverStrength: 2,
     inertia: 0.05,
     bloom: 1,
-    timeScale: 0.5,
-    maxDpr: 2,
-    maxFps: 60,
-    steps: 100
+    timeScale: 0.5
   };
 
   function readConfig() {
@@ -59,10 +56,7 @@
       hoverStrength: num('hoverStrength', DEFAULTS.hoverStrength),
       inertia: num('inertia', DEFAULTS.inertia),
       bloom: num('bloom', DEFAULTS.bloom),
-      timeScale: num('timeScale', DEFAULTS.timeScale),
-      maxDpr: num('maxDpr', DEFAULTS.maxDpr),
-      maxFps: num('maxFps', DEFAULTS.maxFps),
-      steps: num('steps', DEFAULTS.steps)
+      timeScale: num('timeScale', DEFAULTS.timeScale)
     };
   }
 
@@ -102,12 +96,10 @@
   const animationType = prefersReducedMotion && config.animationType === 'hover'
     ? 'rotate'
     : config.animationType;
-  const shaderSteps = Math.max(32, Math.min(100, Math.round(config.steps)));
-  const frameInterval = 1000 / Math.max(1, Math.min(60, config.maxFps));
 
   let renderer;
   try {
-    const dpr = Math.min(Math.max(0.75, config.maxDpr), window.devicePixelRatio || 1);
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
     renderer = new Renderer({ dpr, alpha: config.transparent, antialias: false });
   } catch (err) {
     console.warn('prism-bg: WebGL unavailable, skipping background.', err);
@@ -225,7 +217,7 @@
         wob = mat2(c0, c1, c2, c0);
       }
 
-      const int STEPS = ${shaderSteps};
+      const int STEPS = 100;
       for (int i = 0; i < STEPS; i++) {
         p = vec3(f, z);
         p.xz = p.xz * wob;
@@ -300,7 +292,7 @@
   });
   const mesh = new Mesh(gl, { geometry, program });
 
-  const dpr = Math.min(Math.max(0.75, config.maxDpr), window.devicePixelRatio || 1);
+  const dpr = Math.min(2, window.devicePixelRatio || 1);
   const resize = () => {
     const w = container.clientWidth || 1;
     const h = container.clientHeight || 1;
@@ -341,23 +333,10 @@
   const NOISE_IS_ZERO = NOISE < 1e-6;
   let raf = 0;
   let t0 = performance.now();
-  let pausedAt = document.hidden ? t0 : null;
-  let lastRenderAt = 0;
-  let inViewport = true;
-  let externallyPaused = document.body && document.body.classList.contains('sp-locked');
-  const canRender = () => !document.hidden && inViewport && !externallyPaused;
+  let hiddenAt = document.hidden ? t0 : null;
   const startRAF = () => {
-    if (raf || !canRender()) return;
-    if (pausedAt !== null) {
-      t0 += performance.now() - pausedAt;
-      pausedAt = null;
-    }
+    if (raf || document.hidden) return;
     raf = requestAnimationFrame(render);
-  };
-  const stopRAF = () => {
-    if (pausedAt === null) pausedAt = performance.now();
-    cancelAnimationFrame(raf);
-    raf = 0;
   };
 
   const rnd = () => Math.random();
@@ -399,15 +378,6 @@
   }
 
   const render = t => {
-    if (!canRender()) {
-      stopRAF();
-      return;
-    }
-    if (lastRenderAt && t - lastRenderAt < frameInterval) {
-      raf = requestAnimationFrame(render);
-      return;
-    }
-    lastRenderAt = t;
     const time = (t - t0) * 0.001;
     program.uniforms.iTime.value = time;
 
@@ -452,29 +422,15 @@
 
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
-      stopRAF();
+      hiddenAt = performance.now();
+      cancelAnimationFrame(raf);
+      raf = 0;
     } else {
+      if (hiddenAt !== null) t0 += performance.now() - hiddenAt;
+      hiddenAt = null;
       startRAF();
     }
   });
-
-  window.addEventListener('kanan:motion-pause', () => {
-    externallyPaused = true;
-    stopRAF();
-  });
-  window.addEventListener('kanan:motion-resume', () => {
-    externallyPaused = false;
-    startRAF();
-  });
-
-  if ('IntersectionObserver' in window) {
-    const visibilityObserver = new IntersectionObserver(entries => {
-      inViewport = entries.some(entry => entry.isIntersecting);
-      if (inViewport) startRAF();
-      else stopRAF();
-    }, { rootMargin: '100px 0px' });
-    visibilityObserver.observe(container);
-  }
 
   startRAF();
 })();

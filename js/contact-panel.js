@@ -19,6 +19,7 @@ class ContactPanel {
     this.closeBtn = null;
     this.formEl = null;
     this.scrollEl = null;
+    this.returnFocusEl = null;
 
     // GSAP timelines
     this.openTimeline = null;
@@ -50,6 +51,8 @@ class ContactPanel {
     panel.setAttribute('role', 'dialog');
     panel.setAttribute('aria-modal', 'true');
     panel.setAttribute('aria-label', 'Join the Sector Watch waitlist');
+    panel.setAttribute('aria-hidden', 'true');
+    panel.inert = true;
 
     // Drag handle
     const handle = document.createElement('div');
@@ -244,12 +247,17 @@ class ContactPanel {
   open(engagementType = null) {
     if (this.isOpen) return;
     this.isOpen = true;
+    this.returnFocusEl = document.activeElement instanceof HTMLElement
+      ? document.activeElement
+      : null;
     this.resetForm();
     if (engagementType) this.preselectEngagement(engagementType);
     this.lockBodyScroll();
 
     this.overlayEl.classList.add('active');
     this.overlayEl.setAttribute('aria-hidden', 'false');
+    this.panelEl.inert = false;
+    this.panelEl.setAttribute('aria-hidden', 'false');
 
     if (this.openTimeline) this.openTimeline.kill();
 
@@ -285,10 +293,14 @@ class ContactPanel {
       onComplete: () => {
         this.overlayEl.classList.remove('active');
         this.overlayEl.setAttribute('aria-hidden', 'true');
+        this.panelEl.inert = true;
+        this.panelEl.setAttribute('aria-hidden', 'true');
         this.unlockBodyScroll();
         gsap.set(this.panelEl, { y: '100%' });
         // Reset overlay opacity (may have been modified by swipe gesture)
         this.overlayEl.style.opacity = '';
+        if (this.returnFocusEl?.isConnected) this.returnFocusEl.focus();
+        this.returnFocusEl = null;
       }
     });
 
@@ -399,17 +411,26 @@ class ContactPanel {
     }
 
     // Send to serverless API
-    fetch('/api/consult', {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 20000);
+    fetch('/api/early-access', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData)
+      body: JSON.stringify({
+        name: formData.contactName,
+        email: formData.email,
+        company: formData.organisation,
+        tradeNeeds: formData.tradeNeeds
+      }),
+      signal: controller.signal
     })
       .then(res => res.ok ? res.json() : res.json().then(e => Promise.reject(e)))
-      .then(() => {
+      .then(result => {
+        if (result?.success !== true) throw new Error('We could not confirm your request. Please try again.');
         this.showSuccessState();
       })
       .catch(err => {
-        console.error('Consultation submit error:', err);
+        console.error('Consultation request was not confirmed');
         // Re-enable button
         if (submitBtn) {
           submitBtn.disabled = false;
@@ -423,8 +444,11 @@ class ContactPanel {
           errorEl.style.cssText = 'color:#c0392b;font-size:13px;margin-top:8px;text-align:center';
           submitBtn ? submitBtn.parentNode.insertBefore(errorEl, submitBtn.nextSibling) : this.formEl.appendChild(errorEl);
         }
-        errorEl.textContent = err.message || 'Something went wrong. Please try again.';
-      });
+        errorEl.textContent = err.name === 'AbortError'
+          ? 'The connection timed out. Your details are still here. Please try again.'
+          : err.message || 'Something went wrong. Please try again.';
+      })
+      .finally(() => clearTimeout(timeout));
   }
 
   preselectEngagement(needValue) {

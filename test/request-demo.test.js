@@ -12,7 +12,8 @@ function consult({ contactStatus = 201, emailStatus = 201, emailThrows = false, 
         process: { env: { BREVO_API_KEY: 'test-key', BREVO_DEMO_TEMPLATE_ID: '99' } },
         console: { error() {} },
         require(name) {
-            if (name.endsWith('security')) return { applyCors: () => true, rateLimit: () => !limited, checkHoneypot: body => Boolean(body.company_website) };
+            if (name.endsWith('security')) return { applyCors: () => true, validateRequest: () => true, rateLimit: () => !limited, checkHoneypot: body => Boolean(body.company_website) };
+            if (name.endsWith('provider-fetch')) return {providerFetch:(...args)=>context.fetch(...args)};
             return { notifyMake: async (...args) => notifications.push(args) };
         },
         fetch: async (url, options) => {
@@ -71,7 +72,7 @@ function browserForm(fetch) {
         return nodes.get(id);
     }
     const document = { getElementById: node, querySelector: node };
-    vm.runInNewContext(fs.readFileSync(path.join(root, 'js/request-demo.js'), 'utf8'), { document, fetch });
+    vm.runInNewContext(fs.readFileSync(path.join(root, 'js/request-demo.js'), 'utf8'), { document, fetch, AbortController, setTimeout, clearTimeout });
     node('demo-name').value = 'Test Person'; node('demo-email').value = 'test@example.com'; node('demo-company').value = 'Example OEM';
     return { node, focused: () => focused, submit: () => node('demoRequestForm').listeners.submit({ preventDefault() {} }) };
 }

@@ -150,7 +150,7 @@
             <!-- Per-layer dim backdrops are inserted here by publications.js -->
 
             <!-- Analysis Panel (Layer 2, slides from right) -->
-            <aside class="reading-panel analysis-panel" id="analysisPanel">
+            <aside class="reading-panel analysis-panel" id="analysisPanel" role="dialog" aria-modal="true" aria-labelledby="analysisPanelTitle" aria-hidden="true" inert>
                 <div class="spot" aria-hidden="true"></div>
                 <button class="panel-close" id="closeAnalysisBtn" aria-label="Close panel">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -162,9 +162,7 @@
                 <div class="panel-scroll" data-lenis-prevent>
                     <div class="panel-header">
                         <span class="panel-layer-tag">Analysis</span>
-                        <!-- Filled by js/publications.js on open. Ships empty: the panel is
-                             not aria-hidden, so placeholder text would be announced as a real
-                             heading by screen readers and indexed as page content. -->
+                        <!-- Filled on open; closed panels are inert and hidden from assistive technology. -->
                         <h2 class="panel-title" id="analysisPanelTitle"></h2>
                     </div>
                     <div class="panel-content" id="analysisPanelContent"></div>
@@ -172,7 +170,7 @@
             </aside>
 
             <!-- In-Depth Panel (Layer 3, slides from right, stacks on Analysis) -->
-            <aside class="reading-panel indepth-panel" id="indepthPanel">
+            <aside class="reading-panel indepth-panel" id="indepthPanel" role="dialog" aria-modal="true" aria-labelledby="indepthPanelTitle" aria-hidden="true" inert>
                 <div class="spot" aria-hidden="true"></div>
                 <button class="panel-close" id="closeIndepthBtn" aria-label="Close panel">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"

@@ -107,7 +107,8 @@ function build() {
   for (const locale of expected) {
     const bundle = readJson(path.join(LOCALE_DIR, `${locale}.json`));
     validateBundle(locale, bundle, manifest, approval);
-    bundles[locale] = bundle;
+    // Public copy only. Provenance and approval metadata stay build-side.
+    bundles[locale] = {form:bundle.form, message:bundle.message};
   }
 
   const browserRegistry = {

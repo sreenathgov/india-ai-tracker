@@ -1,5 +1,8 @@
 # Environment variables (CRITICAL - contains API keys)
 .env
+.env.*
+!.env.example
+.vercel/
 backend/.env
 
 # Python
@@ -78,6 +81,11 @@ backend/test_*.py
 
 # node_modules — was previously tracked; stop tracking to reduce diff churn
 node_modules/
+
+# Operational integration details belong in the private Company Brain.
+added-assets/video-assets/Kanan-LandingPage-Intro-Video-MAIN-10S.mp4
+data/supplier-programme/integration/
+docs/supplier-programme-operations.md
 
 # Codex tool config (user-specific)
 .codex/
