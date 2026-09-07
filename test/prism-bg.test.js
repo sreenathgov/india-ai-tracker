@@ -5,7 +5,7 @@ const vm = require('node:vm');
 const path = require('node:path');
 
 async function prism({ reduced = false, unavailable = false } = {}) {
-    const frames = new Map(), listeners = {};
+    const frames = new Map(), listeners = {}, windowListeners = {};
     let next = 0, draws = 0, program, clock = 0;
     const container = { dataset: { palette: 'brand', animationType: '3drotate', noise: '0' }, clientWidth: 1200, clientHeight: 900, children: [], appendChild(child) { this.children.push(child); } };
     const document = { hidden: false, getElementById: () => container, addEventListener: (name, fn) => { listeners[name] = fn; } };
@@ -17,7 +17,8 @@ async function prism({ reduced = false, unavailable = false } = {}) {
         setSize() {} render() { draws++; }
     }
     const OGL = { Renderer, Triangle: class {}, Program: class { constructor(gl, options) { Object.assign(this, options); program = this; } }, Mesh: class {} };
-    const context = { document, window: { devicePixelRatio: 1, matchMedia: () => ({ matches: reduced }), addEventListener() {} },
+    document.body = { classList: { contains: () => false } };
+    const context = { document, window: { devicePixelRatio: 1, matchMedia: () => ({ matches: reduced }), addEventListener: (name, fn) => { windowListeners[name] = fn; } },
         getComputedStyle: () => ({ getPropertyValue: () => '118 44 54' }),
         performance: { now: () => clock }, console: { warn() {} }, mockOGL: OGL,
         ResizeObserver: class { observe() {} },
@@ -30,7 +31,8 @@ async function prism({ reduced = false, unavailable = false } = {}) {
     await vm.runInNewContext(source, context);
     return { frames, container, program, draws: () => draws,
         frame(t) { clock = t; const [id, fn] = frames.entries().next().value; frames.delete(id); fn(t); },
-        visibility(hidden, t) { clock = t; document.hidden = hidden; listeners.visibilitychange(); }
+        visibility(hidden, t) { clock = t; document.hidden = hidden; listeners.visibilitychange(); },
+        motion(name, t) { clock = t; windowListeners[name](); }
     };
 }
 test('brand prism uses shared wine colour and renders only once for reduced motion', async () => {
@@ -42,6 +44,11 @@ test('brand prism uses shared wine colour and renders only once for reduced moti
 test('hidden page cancels prism frames and resumes without a time jump', async () => {
     const app = await prism(); app.frame(16); app.visibility(true, 20);
     assert.equal(app.frames.size, 0); app.visibility(false, 1020); app.frame(1032);
+    assert.equal(app.program.uniforms.iTime.value, .032); assert.equal(app.frames.size, 1);
+});
+test('application overlay suspends the GPU loop and resumes without a time jump', async () => {
+    const app = await prism(); app.frame(16); app.motion('kanan:motion-pause', 20);
+    assert.equal(app.frames.size, 0); app.motion('kanan:motion-resume', 1020); app.frame(1032);
     assert.equal(app.program.uniforms.iTime.value, .032); assert.equal(app.frames.size, 1);
 });
 test('unavailable WebGL leaves the page background intact', async () => {

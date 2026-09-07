@@ -449,44 +449,44 @@
 }
 
 @media (max-width: 700px) {
-    .kl-origin-cta {
+    body:not(.kl-homepage) .kl-origin-cta {
         padding: 28px 10px 31px;
     }
 
-    .kl-origin-workflow__stage--desktop {
+    body:not(.kl-homepage) .kl-origin-workflow__stage--desktop {
         display: none;
     }
 
-    .kl-origin-workflow__stage--mobile {
+    body:not(.kl-homepage) .kl-origin-workflow__stage--mobile {
         display: block;
     }
 
-    .kl-origin-workflow__endpoint-title {
+    body:not(.kl-homepage) .kl-origin-workflow__endpoint-title {
         font-size: 13px;
     }
 
-    .kl-origin-workflow__core-label {
+    body:not(.kl-homepage) .kl-origin-workflow__core-label {
         font-size: 12px;
     }
 
-    .kl-origin-workflow__step-caption {
+    body:not(.kl-homepage) .kl-origin-workflow__step-caption {
         font-size: 10px;
     }
 
-    .kl-origin-cta__copy {
+    body:not(.kl-homepage) .kl-origin-cta__copy {
         margin-top: 40px;
         padding: 0 10px;
     }
 
-    .kl-origin-cta__title {
+    body:not(.kl-homepage) .kl-origin-cta__title {
         font-size: clamp(2.5rem, 12.5vw, 3.45rem);
     }
 
-    .kl-origin-cta__body {
+    body:not(.kl-homepage) .kl-origin-cta__body {
         font-size: 0.92rem;
     }
 
-    .kl-origin-cta__button {
+    body:not(.kl-homepage) .kl-origin-cta__button {
         width: 100%;
         justify-content: space-between;
     }

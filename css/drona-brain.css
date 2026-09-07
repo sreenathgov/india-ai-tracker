@@ -358,16 +358,16 @@
    ======================================================================== */
 
 @media (max-width: 1023px) {
-    .kl-drona__stage {
+    body:not(.kl-homepage) .kl-drona__stage {
         grid-template-columns: 1fr;
         gap: clamp(14px, 2vw, 18px);
     }
 
-    .kl-drona__tabs {
+    body:not(.kl-homepage) .kl-drona__tabs {
         display: contents;     /* let each chip + the panel block share the grid */
     }
 
-    .kl-drona__tab {
+    body:not(.kl-homepage) .kl-drona__tab {
         order: var(--drona-tab-order, 0);
         min-height: 72px;
         font-size: clamp(0.98rem, 2.4vw, 1.05rem);
@@ -386,7 +386,7 @@
         transition: transform 320ms ease;
     }
 
-    .kl-drona__chevron::before {
+    body:not(.kl-homepage) .kl-drona__chevron::before {
         content: '';
         display: block;
         width: 7px;
@@ -397,11 +397,11 @@
         transition: border-color 320ms ease;
     }
 
-    .kl-drona__tab[aria-selected="true"] .kl-drona__chevron {
+    body:not(.kl-homepage) .kl-drona__tab[aria-selected="true"] .kl-drona__chevron {
         transform: rotate(180deg);
     }
 
-    .kl-drona__tab[aria-selected="true"] .kl-drona__chevron::before {
+    body:not(.kl-homepage) .kl-drona__tab[aria-selected="true"] .kl-drona__chevron::before {
         border-color: var(--kl-cream);
     }
 
@@ -410,7 +410,7 @@
         display: none;
     }
 
-    .kl-drona.has-active-tab .kl-drona__panels {
+    body:not(.kl-homepage) .kl-drona.has-active-tab .kl-drona__panels {
         display: flex;
         animation: drona-panel-in 240ms ease forwards;
     }
@@ -418,8 +418,8 @@
     /* Order assignment — chips spaced by 2, so the panel block can slot
        cleanly between any two chips at an odd-integer order. */
     .kl-drona__tab[data-drona-tab="0"] { --drona-tab-order: 0; }
-    .kl-drona__tab[data-drona-tab="1"] { --drona-tab-order: 2; }
-    .kl-drona__tab[data-drona-tab="2"] { --drona-tab-order: 4; }
+    body:not(.kl-homepage) .kl-drona__tab[data-drona-tab="1"] { --drona-tab-order: 2; }
+    body:not(.kl-homepage) .kl-drona__tab[data-drona-tab="2"] { --drona-tab-order: 4; }
 
     /* The panel block slots in immediately after the active chip.
        JS writes --drona-active-order to <section root> on every tab change. */
@@ -438,20 +438,20 @@
         box-shadow: 0 14px 30px -18px rgba(58, 0, 0, 0.46);
     }
 
-    .kl-drona__tab[aria-selected="true"] .kl-drona__tab-index {
+    body:not(.kl-homepage) .kl-drona__tab[aria-selected="true"] .kl-drona__tab-index {
         color: var(--kl-cream);
     }
 }
 
 @media (max-width: 640px) {
-    .kl-drona {
+    body:not(.kl-homepage) .kl-drona {
         padding: clamp(64px, 14vw, 96px) clamp(14px, 4vw, 22px);
     }
 
-    .kl-drona__title {
+    body:not(.kl-homepage) .kl-drona__title {
         font-size: clamp(1.55rem, 6.5vw, 1.95rem);
     }
-    .kl-drona__title br { display: none; }
+    body:not(.kl-homepage) .kl-drona__title br { display: none; }
 
     /* Mobile chip: switch from italic serif to Inter for readability at small sizes */
     .kl-drona__tab {
@@ -465,12 +465,12 @@
         letter-spacing: -0.005em;
     }
 
-    .kl-drona__panel {
+    body:not(.kl-homepage) .kl-drona__panel {
         padding: clamp(1.05rem, 4.5vw, 1.4rem);
         min-height: 148px;
     }
 
-    .kl-drona__panel-body {
+    body:not(.kl-homepage) .kl-drona__panel-body {
         font-size: 1rem;
         line-height: 1.5;
     }

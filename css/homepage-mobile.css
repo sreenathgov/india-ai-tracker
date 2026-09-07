@@ -2,7 +2,7 @@
    responsive rules for other pages; this is the single owner below 1024px. */
 @font-face {
     font-family: 'Kanan Inter';
-    src: url('../added-assets/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    src: url('../added-assets/Inter/Inter-VariableFont_opsz,wght.woff2') format('woff2');
     font-weight: 100 900;
     font-display: swap;
 }

@@ -48,20 +48,20 @@ test('decorative homepage video respects reduced motion and data-saving preferen
   const html=fs.readFileSync('index.html','utf8');
   const dom=new JSDOM(html,{runScripts:'outside-only'});
   try {
-    const script=[...dom.window.document.scripts].find(el=>el.textContent.includes("getElementById('klHeroVideo')")).textContent;
+    const source=fs.readFileSync('js/homepage.js','utf8');
+    const script=source.slice(source.indexOf('    function initVideo()'),source.indexOf('    function initWorkflow()')) + '\ninitVideo();';
     for (const preferences of [{reduced:true},{saveData:true},{effectiveType:'2g'},{effectiveType:'slow-2g'},{}]) {
-      let sources=0,loads=0,autoplay=true;
-      const video={removeAttribute:()=>{autoplay=false},appendChild:()=>{sources++},load:()=>{loads++},readyState:3,play:()=>Promise.resolve()};
+      let plays=0;
+      const video={play:()=>{plays++; return Promise.resolve()},pause:()=>{}};
       vm.runInNewContext(script,{
-        document:{getElementById:()=>video,createElement:()=>({})},
-        window:{matchMedia:()=>({matches:!!preferences.reduced})},
-        navigator:{connection:preferences},setTimeout
+        $:()=>video,
+        register:(_id,_element,callbacks)=>{if(preferences.reduced) callbacks.static(); else callbacks.resume();},
+        navigator:{connection:preferences}
       });
-      const blocked=Object.keys(preferences).length>0;
-      assert.equal(sources,blocked?0:2);
-      assert.equal(loads,blocked?0:1);
-      assert.equal(autoplay,!blocked);
+      assert.equal(plays,Object.keys(preferences).length ? 0 : 1);
     }
+    assert.equal(dom.window.document.getElementById('klHeroVideo').getAttribute('preload'),'none');
+    assert.equal(dom.window.document.getElementById('klHeroVideo').hasAttribute('autoplay'),false);
     const video=dom.window.document.getElementById('klHeroVideo');
     assert.ok([...dom.window.document.querySelectorAll('link[rel=preload][as=image]')].some(link=>link.getAttribute('href')===video.getAttribute('poster')));
   } finally {dom.window.close()}

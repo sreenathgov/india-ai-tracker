@@ -60,6 +60,8 @@
 
     function initVideo() {
         const video = $('#klHeroVideo');
+        const connection = navigator.connection;
+        if (connection && (connection.saveData || /^(?:slow-)?2g$/.test(connection.effectiveType))) return;
         let desired = false;
         let effect;
         function play() {

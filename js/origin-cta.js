@@ -10,6 +10,8 @@
         });
     }
 
+    if (document.body.classList.contains('kl-homepage')) return;
+
     var workflow = document.querySelector('[data-origin-workflow]');
     if (!workflow) return;
 

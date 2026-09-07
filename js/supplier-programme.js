@@ -62,6 +62,7 @@
     if(completed){state=freshState();sequence=[1,2,3,4,5,6];cursor=0;completed=false}
     result.hidden=true;form.hidden=false;app.hidden=false;app.setAttribute('aria-hidden','false');
     document.body.classList.add('sp-locked');
+        window.dispatchEvent(new Event('kanan:motion-pause'));
     lockBackground();
     if(location.hash!=='#apply')history.pushState({supplierApplication:true},'',location.pathname+location.search+'#apply');
     render();focusFirstField(false);
@@ -69,6 +70,7 @@
   function closeApplication(fromHistory){
     if(app.hidden||submitting)return;
     app.hidden=true;app.setAttribute('aria-hidden','true');document.body.classList.remove('sp-locked');
+        window.dispatchEvent(new Event('kanan:motion-resume'));
     backgroundState.forEach(([el,inert])=>{el.inert=inert});backgroundState=[];
     if(!fromHistory&&location.hash==='#apply'){
       if(history.state&&history.state.supplierApplication)history.back();

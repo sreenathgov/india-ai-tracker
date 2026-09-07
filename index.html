@@ -104,12 +104,12 @@
     <link rel="stylesheet" href="css/staggered-menu.css?v=8">
     <!-- manifesto-section.css removed — replaced by inline kl-manifesto styles -->
     <link rel="stylesheet" href="css/footer.css?v=5">
-    <link rel="stylesheet" href="css/origin-cta.css?v=3">
+    <link rel="stylesheet" href="css/origin-cta.css?v=4">
     <link rel="stylesheet" href="css/supplier-closing.css?v=3">
-    <link rel="stylesheet" href="css/triptych.css?v=3">
-    <link rel="stylesheet" href="css/drona-brain.css?v=5">
-    <link rel="stylesheet" href="css/drona-funnel.css?v=9">
-    <link rel="stylesheet" href="css/sectors-bento.css?v=14">
+    <link rel="stylesheet" href="css/triptych.css?v=4">
+    <link rel="stylesheet" href="css/drona-brain.css?v=6">
+    <link rel="stylesheet" href="css/drona-funnel.css?v=10">
+    <link rel="stylesheet" href="css/sectors-bento.css?v=15">
 
     <style>
         /* ══════════════════════════════════════════════════════════
@@ -383,39 +383,9 @@
         /* ──────────────────────────────────────────────
            Responsive — mobile
         ────────────────────────────────────────────── */
-        @media (max-width: 768px) {
-            .kl-hero__content {
-                bottom: calc(max(2rem, env(safe-area-inset-bottom)) + 2.25rem);
-                width: calc(100% - 2rem);
-            }
-            .kl-hero__title {
-                font-size: clamp(2.7rem, 11vw, 4.25rem);
-                line-height: 0.98;
-                max-width: 12ch;
-                margin-bottom: 0.9rem;
-            }
-            .kl-hero__tagline {
-                max-width: 34ch;
-                margin-bottom: 1.25rem;
-                line-height: 1.45;
-            }
-            .kl-btn-primary {
-                font-size: 0.9rem;
-            }
-        }
 
-        @media (max-height: 640px) {
-            .kl-hero__content {
-                bottom: calc(max(1rem, env(safe-area-inset-bottom)) + 1rem);
-            }
-            .kl-hero__title {
-                font-size: clamp(2.35rem, 8vw, 4.25rem);
-                margin-bottom: 0.7rem;
-            }
-            .kl-hero__tagline {
-                margin-bottom: 0.8rem;
-            }
-        }
+
+
 
         /* ──────────────────────────────────────────────
            Reduced motion — pause video, show poster only
@@ -621,89 +591,11 @@
             transform: translateX(2px);
         }
 
-        @media (max-width: 900px) {
-            .kl-scope {
-                min-height: 0;
-                padding-top: 2rem;
-                padding-bottom: 4rem;
-            }
-            .kl-scope__inner {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                min-height: 0;
-                padding: 0 1.5rem;
-                gap: 0;
-                max-width: 100%;
-                text-align: center;
-            }
-            .kl-scope__label {
-                opacity: 0.65;
-                max-width: 32ch;
-                flex-shrink: 0;
-            }
-            .kl-scope__column {
-                width: 100%;
-                height: 35vh;
-                min-height: 290px;
-                flex-shrink: 0;
-                margin-top: 1.5rem;
-                -webkit-mask-image: linear-gradient(to bottom,
-                    transparent 0%,
-                    rgba(0,0,0,0.25) 8%,
-                    #000 17%,
-                    #000 83%,
-                    rgba(0,0,0,0.25) 92%,
-                    transparent 100%);
-                mask-image: linear-gradient(to bottom,
-                    transparent 0%,
-                    rgba(0,0,0,0.25) 8%,
-                    #000 17%,
-                    #000 83%,
-                    rgba(0,0,0,0.25) 92%,
-                    transparent 100%);
-            }
-            .kl-scope__word {
-                font-size: clamp(2rem, 9vw, 3rem);
-            }
-            .kl-scope__cta {
-                display: flex;
-                align-items: center;
-                flex-shrink: 0;
-                margin-top: 1.5rem;
-            }
-        }
 
-        @media (max-width: 350px) {
-            .kl-scope {
-                padding-top: 1.625rem;
-                padding-bottom: 3.25rem;
-            }
-            .kl-scope__inner {
-                padding: 0 1.25rem;
-            }
-            .kl-scope__word {
-                font-size: clamp(1.75rem, 9vw, 2rem);
-            }
-            .kl-scope__cta-btn {
-                padding-inline: 1.15rem 1rem;
-            }
-        }
 
-        @media (max-width: 900px) and (max-height: 650px) {
-            .kl-scope {
-                padding-top: 1.5rem;
-                padding-bottom: 3rem;
-            }
-            .kl-scope__column {
-                height: 42vh;
-                min-height: 240px;
-                margin-top: 1rem;
-            }
-            .kl-scope__cta {
-                margin-top: 1rem;
-            }
-        }
+
+
+
 
         @media (prefers-reduced-motion: reduce) {
             .kl-scope__cta-btn,
@@ -796,12 +688,14 @@
         }
 
     </style>
+    <link rel="stylesheet" href="css/homepage-mobile.css?v=15">
 </head>
 
-<body class="kl-page">
+<body class="kl-page kl-homepage">
 
     <!-- Infrastructure grid background (canvas) — hidden under hero video, revealed below -->
-    <canvas id="infrastructure-grid"></canvas>
+    <canvas id="infrastructure-grid" aria-hidden="true"></canvas>
+    <noscript><nav class="kl-homepage-fallback" aria-label="Main navigation"><a href="index.html">Kanan Labs</a><a href="resources.html">Resources</a><a href="careers.html">Careers</a><a href="https://apply.kananlabs.in/">Supplier Programme</a></nav></noscript>
 
     <div class="page-wrapper">
 
@@ -815,56 +709,11 @@
             <!-- Hero video. WebM/VP9 is offered first (smaller, 2-pass CRF 28
                  encode) with an H.264 MP4 fallback for browsers without VP9
                  support (Safari). -->
-            <video class="kl-hero__video" id="klHeroVideo"
-                   autoplay loop muted playsinline disablepictureinpicture
-                   preload="metadata"
-                   poster="added-assets/video-assets/optimized/kanan-hero-poster.jpg"></video>
-            <script>
-            (function () {
-                var v = document.getElementById('klHeroVideo');
-                if (!v) return;
-                // Avoid downloading a hidden video, or spending a data-saving
-                // visitor's bandwidth on decoration. The poster stays visible.
-                var connection = navigator.connection;
-                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches
-                    || (connection && (connection.saveData || /^(?:slow-)?2g$/.test(connection.effectiveType)))) {
-                    v.removeAttribute('autoplay');
-                    return;
-                }
-                var sources = [
-                    { src: 'added-assets/video-assets/optimized/kanan-hero-intro.webm', type: 'video/webm' },
-                    { src: 'added-assets/video-assets/optimized/kanan-hero-intro.mp4', type: 'video/mp4' }
-                ];
-                sources.forEach(function (s) {
-                    var el = document.createElement('source');
-                    el.src = s.src;
-                    el.type = s.type;
-                    v.appendChild(el);
-                });
-                v.load();
-
-                // Defer playback until the browser has buffered enough frames
-                // to play through without stalling. Calling .play() before
-                // canplay causes a 1–3 s stutter on cold loads.
-                var played = false;
-                function startPlayback() {
-                    if (played) return;
-                    played = true;
-                    var p = v.play();
-                    if (p && typeof p.catch === 'function') {
-                        p.catch(function () { /* autoplay gated by browser */ });
-                    }
-                }
-                if (v.readyState >= 3 /* HAVE_FUTURE_DATA */) {
-                    startPlayback();
-                } else {
-                    v.addEventListener('canplay', startPlayback, { once: true });
-                    // Safety net for browsers that load enough but never fire
-                    // canplay for short autoplay loops.
-                    setTimeout(startPlayback, 1500);
-                }
-            })();
-            </script>
+            <video class="kl-hero__video" id="klHeroVideo" loop muted playsinline disablepictureinpicture
+                   preload="none" poster="added-assets/video-assets/optimized/kanan-hero-poster.jpg">
+                <source src="added-assets/video-assets/optimized/kanan-hero-intro.webm" type="video/webm">
+                <source src="added-assets/video-assets/optimized/kanan-hero-intro.mp4" type="video/mp4">
+            </video>
 
             <!-- Gradient overlay for legibility -->
             <div class="kl-hero__overlay" aria-hidden="true"></div>
@@ -878,7 +727,7 @@
                 <p class="kl-hero__tagline">Understand the risk profile behind your business</p>
                 <div class="kl-hero__actions">
                     <a href="https://apply.kananlabs.in/?utm_source=kanan_homepage&amp;utm_medium=owned&amp;utm_campaign=supplier_programme&amp;utm_content=hero#apply" class="kl-btn-primary" data-supplier-programme-link>
-                        <span>Start application</span>
+                        <span>Check Eligibility</span>
                         <span class="kl-btn-primary__arrow" aria-hidden="true"></span>
                     </a>
                     <a href="#klOriginCta" class="kl-btn-secondary">See how it works</a>
@@ -963,14 +812,14 @@
                             </g>
                         </svg>
 
-                        <svg class="kl-origin-workflow__stage kl-origin-workflow__stage--mobile" viewBox="0 20 360 470" role="img" aria-labelledby="klOriginMobileTitle klOriginMobileDescription">
+                        <svg class="kl-origin-workflow__stage kl-origin-workflow__stage--mobile" viewBox="0 20 360 440" role="img" aria-labelledby="klOriginMobileTitle klOriginMobileDescription">
                             <title id="klOriginMobileTitle">Supplier Programme working-capital application workflow</title>
                             <desc id="klOriginMobileDescription">A compact two-row path moves from a supplier’s order through risk, evidence and application support to the chosen institution.</desc>
 
                             <path class="kl-origin-workflow__route-layer" d="M92 145 H111"></path><path class="kl-origin-workflow__route-progress" style="--delay:.25s" pathLength="1" d="M92 145 H111"></path>
                             <path class="kl-origin-workflow__route-layer" d="M219 145 H246"></path><path class="kl-origin-workflow__route-progress" style="--delay:2.55s" pathLength="1" d="M219 145 H246"></path>
                             <path class="kl-origin-workflow__route-layer" d="M300 199 V276 C300 299 282 311 265 328"></path><path class="kl-origin-workflow__route-progress" style="--delay:5.05s" pathLength="1" d="M300 199 V276 C300 299 282 311 265 328"></path>
-                            <path class="kl-origin-workflow__route-layer" d="M190 382 H98"></path><path class="kl-origin-workflow__route-progress" style="--delay:7.75s" pathLength="1" d="M190 382 H98"></path>
+                            <path class="kl-origin-workflow__route-layer" d="M190 382 H110"></path><path class="kl-origin-workflow__route-progress" style="--delay:7.75s" pathLength="1" d="M190 382 H110"></path>
 
                             <g class="kl-origin-workflow__endpoint-copy kl-origin-workflow__start-copy">
                                 <rect class="kl-origin-workflow__endpoint" x="4" y="117" width="88" height="56" rx="28"></rect>
@@ -982,11 +831,11 @@
                                 <circle class="kl-origin-workflow__node-ring" cx="165" cy="145" r="54"></circle>
                                 <circle class="kl-origin-workflow__node-ring-inner" cx="165" cy="145" r="38"></circle>
                                 <path class="kl-origin-workflow__risk-path" style="--delay:.7s" pathLength="1" d="M165 61 V105"></path>
-                                <path class="kl-origin-workflow__risk-path" style="--delay:1.15s" pathLength="1" d="M95 98 C116 102 125 111 132 119"></path>
-                                <path class="kl-origin-workflow__risk-path" style="--delay:1.6s" pathLength="1" d="M235 98 C214 102 205 111 198 119"></path>
+                                <path class="kl-origin-workflow__risk-path" style="--delay:1.15s" pathLength="1" d="M95 74 C116 78 125 103 132 119"></path>
+                                <path class="kl-origin-workflow__risk-path" style="--delay:1.6s" pathLength="1" d="M235 74 C214 78 205 103 198 119"></path>
                                 <g class="kl-origin-workflow__risk-signal" style="--delay:.7s"><circle cx="165" cy="56" r="3"></circle><text x="165" y="44" text-anchor="middle">Tariffs</text></g>
-                                <g class="kl-origin-workflow__risk-signal" style="--delay:1.15s"><circle cx="90" cy="97" r="3"></circle><text x="82" y="100" text-anchor="end">Freight</text></g>
-                                <g class="kl-origin-workflow__risk-signal" style="--delay:1.6s"><circle cx="240" cy="97" r="3"></circle><text x="248" y="100">Inputs</text></g>
+                                <g class="kl-origin-workflow__risk-signal" style="--delay:1.15s"><circle cx="90" cy="73" r="3"></circle><text x="82" y="76" text-anchor="end">Freight</text></g>
+                                <g class="kl-origin-workflow__risk-signal" style="--delay:1.6s"><circle cx="240" cy="73" r="3"></circle><text x="248" y="76">Inputs</text></g>
                                 <g class="kl-origin-workflow__stage-content kl-origin-workflow__risk-content"><text class="kl-origin-workflow__core-label" x="165" y="150" text-anchor="middle">Risk check</text></g>
                                 <text class="kl-origin-workflow__step-caption kl-origin-workflow__risk-caption" x="165" y="229" text-anchor="middle">Spot production risks.</text>
                             </g>
@@ -1017,14 +866,13 @@
                                     <text class="kl-origin-workflow__core-label" x="244" y="379" text-anchor="middle">Application</text>
                                     <text class="kl-origin-workflow__core-label" x="244" y="395" text-anchor="middle">process</text>
                                 </g>
-                                <text class="kl-origin-workflow__step-caption kl-origin-workflow__process-caption" x="244" y="466" text-anchor="middle">We help with the application.</text>
                             </g>
 
                             <g class="kl-origin-workflow__endpoint-copy kl-origin-workflow__institution-copy">
-                                <circle class="kl-origin-workflow__institution-halo" cx="50" cy="382" r="50"></circle>
-                                <rect class="kl-origin-workflow__endpoint" x="2" y="354" width="96" height="56" rx="28"></rect>
-                                <text class="kl-origin-workflow__endpoint-title" x="50" y="379" text-anchor="middle">Bank or NBFC</text>
-                                <text class="kl-origin-workflow__institution-state" x="50" y="396" text-anchor="middle">Institution decides</text>
+                                <circle class="kl-origin-workflow__institution-halo" cx="56" cy="382" r="54"></circle>
+                                <rect class="kl-origin-workflow__endpoint" x="2" y="354" width="108" height="56" rx="28"></rect>
+                                <text class="kl-origin-workflow__endpoint-title" x="56" y="379" text-anchor="middle">Bank or NBFC</text>
+                                <text class="kl-origin-workflow__institution-state" x="56" y="396" text-anchor="middle">Institution decides</text>
                             </g>
                         </svg>
                     </figure>
@@ -1067,13 +915,14 @@
                 <!-- Right column: CTA -->
                 <div class="kl-scope__cta">
                     <a href="https://apply.kananlabs.in/?utm_source=kanan_homepage&amp;utm_medium=owned&amp;utm_campaign=supplier_programme&amp;utm_content=capability_reel#apply" class="kl-scope__cta-btn" data-supplier-programme-link>
-                        Start application
+                        Check Eligibility
                         <span class="kl-scope__cta-arrow" aria-hidden="true"></span>
                     </a>
                 </div>
 
-                <!-- Screen-reader list (static, off-screen) -->
-                <ul style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" aria-label="What Kanan supports">
+
+                    <div class="kl-capabilities">
+                <ul aria-label="What Kanan supports">
                     <li>Working Capital</li>
                     <li>PO Evidence</li>
                     <li>Risk Diagnosis</li>
@@ -1083,6 +932,7 @@
                     <li>Query Support</li>
                     <li>Milestone Evidence</li>
                 </ul>
+                    </div>
             </div>
         </section>
         </div>
@@ -1106,49 +956,40 @@
                 </div>
 
                 <div class="kl-drona__stage">
-
-                    <!-- Left rail: participant tabs -->
-                    <div class="kl-drona__tabs" role="tablist" aria-label="How Kanan changes the financing workflow">
-                        <button class="kl-drona__tab" type="button" role="tab" aria-selected="true"  data-drona-tab="0">
+<div class="kl-audience" data-audience="0"><button class="kl-drona__tab" type="button" id="klAudience0" data-drona-tab="0">
                             <span class="kl-drona__tab-index">01</span>
                             <span class="kl-drona__tab-text">
                                 <span class="kl-drona__tab-participant">Large Manufacturers</span>
                                 <span class="kl-drona__tab-benefit">See deeper. Act earlier.</span>
                             </span>
                             <span class="kl-drona__chevron" aria-hidden="true"></span>
-                        </button>
-                        <button class="kl-drona__tab" type="button" role="tab" aria-selected="false" data-drona-tab="1">
+                        </button><div class="kl-drona__panels" id="klAudiencePanel0" role="region" aria-labelledby="klAudience0">
+<article class="kl-drona__panel" data-state="without"><span class="kl-drona__panel-label">Without Kanan</span><p class="kl-drona__panel-body">Standard supplier reports show financial and delivery performance. Risks deeper in the supply chain may become visible <em>only after they affect production or delivery</em>.</p></article>
+<article class="kl-drona__panel" data-state="with"><span class="kl-drona__panel-label">With Kanan</span><p class="kl-drona__panel-body">Kanan connects authorised supplier, order and external-risk evidence to show where disruption could reach the production programme—giving the manufacturer <em>an earlier opportunity to respond</em>.</p></article>
+</div></div>
+<div class="kl-audience" data-audience="1"><button class="kl-drona__tab" type="button" id="klAudience1" data-drona-tab="1">
                             <span class="kl-drona__tab-index">02</span>
                             <span class="kl-drona__tab-text">
                                 <span class="kl-drona__tab-participant">Suppliers</span>
                                 <span class="kl-drona__tab-benefit">Present the full case.</span>
                             </span>
                             <span class="kl-drona__chevron" aria-hidden="true"></span>
-                        </button>
-                        <button class="kl-drona__tab" type="button" role="tab" aria-selected="false" data-drona-tab="2">
+                        </button><div class="kl-drona__panels" id="klAudiencePanel1" role="region" aria-labelledby="klAudience1">
+<article class="kl-drona__panel" data-state="without"><span class="kl-drona__panel-label">Without Kanan</span><p class="kl-drona__panel-body">The supplier may have a genuine PO, but the financing request, order documents and relevant risks reach the bank <em>as separate pieces</em>.</p></article>
+<article class="kl-drona__panel" data-state="with"><span class="kl-drona__panel-label">With Kanan</span><p class="kl-drona__panel-body">Kanan connects the supplier's stated working-capital request to the PO, supporting evidence and a one-time risk diagnosis—<em>creating a clearer path into bank or NBFC review</em>.</p></article>
+</div></div>
+<div class="kl-audience" data-audience="2"><button class="kl-drona__tab" type="button" id="klAudience2" data-drona-tab="2">
                             <span class="kl-drona__tab-index">03</span>
                             <span class="kl-drona__tab-text">
                                 <span class="kl-drona__tab-participant">Financiers</span>
                                 <span class="kl-drona__tab-benefit">See beyond financials.</span>
                             </span>
                             <span class="kl-drona__chevron" aria-hidden="true"></span>
-                        </button>
-                    </div>
-
-                    <!-- Right side: two stacked contrast cards -->
-                    <div class="kl-drona__panels">
-                        <article class="kl-drona__panel" data-state="without" aria-live="polite">
-                            <span class="kl-drona__panel-label">Without Kanan</span>
-                            <p class="kl-drona__panel-body"></p>
-                        </article>
-                        <article class="kl-drona__panel" data-state="with" aria-live="polite">
-                            <span class="kl-drona__panel-label">With Kanan</span>
-                            <p class="kl-drona__panel-body"></p>
-                        </article>
-                    </div>
-
-                </div>
-
+                        </button><div class="kl-drona__panels" id="klAudiencePanel2" role="region" aria-labelledby="klAudience2">
+<article class="kl-drona__panel" data-state="without"><span class="kl-drona__panel-label">Without Kanan</span><p class="kl-drona__panel-body">Conventional appraisal begins with financial history, banking conduct and collateral. It may say much less about <em>what could affect completion of the specific order being financed</em>.</p></article>
+<article class="kl-drona__panel" data-state="with"><span class="kl-drona__panel-label">With Kanan</span><p class="kl-drona__panel-body">Kanan adds the order-level context: demand evidence, production dependencies and relevant external risks—showing what could affect fulfilment, why it matters and <em>what remains uncertain</em>.</p></article>
+</div></div>
+</div>
             </div>
         </section>
 
@@ -1339,6 +1180,11 @@
                     <div class="kl-roadmap__chronology">
                         <ol class="kl-roadmap__track" aria-label="Kanan company roadmap">
                             <li class="kl-roadmap__stage kl-roadmap__stage--foundation">
+                                <div class="kl-roadmap__mobile-summary">
+                                    <span class="kl-roadmap__number">01</span>
+                                    <h3 class="kl-roadmap__stage-title">Research and Development</h3>
+                                    <p class="kl-roadmap__mobile-label">Building Trade Ontology and Metacognition for Supply Chain Intelligence</p>
+                                </div>
                                 <div class="kl-roadmap__meta">
                                     <span class="kl-roadmap__number">01</span>
                                     <span class="kl-roadmap__status">April 2026 <i aria-hidden="true">·</i> Foundation</span>
@@ -1351,6 +1197,12 @@
                             </li>
 
                             <li class="kl-roadmap__stage kl-roadmap__stage--now" aria-current="step">
+                                <div class="kl-roadmap__mobile-summary">
+                                    <span class="kl-roadmap__number">02</span>
+                                    <h3 class="kl-roadmap__stage-title">Design Partnerships</h3>
+                                    <p class="kl-roadmap__mobile-label">Engaging with select manufacturers to enable risk resilience</p>
+                                    <a class="kl-roadmap__pilot-link" href="/request-demo.html">Discuss a Partnership</a>
+                                </div>
                                 <div class="kl-roadmap__meta">
                                     <span class="kl-roadmap__number">02</span>
                                     <span class="kl-roadmap__status">Industry Partnerships</span>
@@ -1364,6 +1216,11 @@
                             </li>
 
                             <li class="kl-roadmap__stage kl-roadmap__stage--network">
+                                <div class="kl-roadmap__mobile-summary">
+                                    <span class="kl-roadmap__number">03</span>
+                                    <h3 class="kl-roadmap__stage-title">Launch early 2027</h3>
+                                    <p class="kl-roadmap__mobile-label">Supply chain intelligence for make-to-order manufacturers</p>
+                                </div>
                                 <div class="kl-roadmap__meta">
                                     <span class="kl-roadmap__number">03</span>
                                     <span class="kl-roadmap__status">Launch <i aria-hidden="true">·</i> Precision Engineering</span>
@@ -1376,6 +1233,11 @@
                             </li>
 
                             <li class="kl-roadmap__stage kl-roadmap__stage--horizon">
+                                <div class="kl-roadmap__mobile-summary">
+                                    <span class="kl-roadmap__number">04</span>
+                                    <h3 class="kl-roadmap__stage-title">Enabling Supply Chain Financing</h3>
+                                    <p class="kl-roadmap__mobile-label">Connecting Intelligence to Capital</p>
+                                </div>
                                 <div class="kl-roadmap__meta">
                                     <span class="kl-roadmap__number">04</span>
                                     <span class="kl-roadmap__status">Direction <i aria-hidden="true">·</i> Capital Intelligence</span>
@@ -1401,6 +1263,7 @@
             <canvas class="kl-manifesto__grid" id="manifesto-grid" aria-hidden="true"></canvas>
             <div class="kl-manifesto__stage">
                 <h2 class="kl-manifesto__heading" id="klManifestoReveal">
+                <span class="kl-manifesto__group">
                     <span class="kl-word">Risk</span>
                     <span class="kl-word">has</span>
                     <span class="kl-word">outgrown</span>
@@ -1410,51 +1273,44 @@
                     <span class="kl-word">to</span>
                     <span class="kl-word">assess</span>
                     <span class="kl-word">it.</span>
-                    <span class="kl-word">It</span>
-                    <span class="kl-word">moves</span>
-                    <span class="kl-word">through</span>
-                    <span class="kl-word">suppliers,</span>
-                    <span class="kl-word">jurisdictions,</span>
-                    <span class="kl-word">rules</span>
-                    <span class="kl-word">and</span>
-                    <span class="kl-word">events,</span>
-                    <span class="kl-word">while</span>
-                    <span class="kl-word">the</span>
-                    <span class="kl-word">decisions</span>
-                    <span class="kl-word">governing</span>
-                    <span class="kl-word">production</span>
-                    <span class="kl-word">and</span>
-                    <span class="kl-word">capital</span>
-                    <span class="kl-word">remain</span>
-                    <span class="kl-word">divided</span>
-                    <span class="kl-word">across</span>
-                    <span class="kl-word">institutions.</span>
                     <span class="kl-word">Understanding</span>
-                    <span class="kl-word">the</span>
-                    <span class="kl-word">enterprise</span>
+                    <span class="kl-word">supply</span>
+                    <span class="kl-word">chain</span>
+                    <span class="kl-word">risk</span>
                     <span class="kl-word">is</span>
                     <span class="kl-word">no</span>
                     <span class="kl-word">longer</span>
-                    <span class="kl-word">enough.</span>
-                    <span class="kl-word">The</span>
+                    <span class="kl-word">just</span>
+                    <span class="kl-word">about</span>
+                    <span class="kl-word">past</span>
+                    <span class="kl-word">performance,</span>
+                    <span class="kl-word">or</span>
+                    <span class="kl-word">internal</span>
+                    <span class="kl-word">metrics.</span>
+                    <span class="kl-word">You</span>
+                    <span class="kl-word">need</span>
+                    <span class="kl-word">to</span>
+                    <span class="kl-word">understand</span>
+                    <span class="kl-word">how</span>
+                    <span class="kl-word">the</span>
+                    <span class="kl-word">external</span>
                     <span class="kl-word">world</span>
-                    <span class="kl-word">behind</span>
-                    <span class="kl-word">it</span>
-                    <span class="kl-word">must</span>
-                    <span class="kl-word">also</span>
-                    <span class="kl-word">become</span>
-                    <span class="kl-word">legible.</span>
-                    <br>
+                    <span class="kl-word">affects</span>
+                    <span class="kl-word">your</span>
+                    <span class="kl-word">production.</span>
+                </span>
+                <br class="kl-manifesto__desktop-break">
+                <span class="kl-manifesto__group">
                     <span class="kl-word kl-word--accent">Kanan</span>
-                    <span class="kl-word kl-word--accent">is</span>
-                    <span class="kl-word kl-word--accent">building</span>
+                    <span class="kl-word kl-word--accent">builds</span>
                     <span class="kl-word kl-word--accent">the</span>
                     <span class="kl-word kl-word--accent">intelligence</span>
-                    <span class="kl-word kl-word--accent">architecture</span>
-                    <span class="kl-word kl-word--accent">for</span>
+                    <span class="kl-word kl-word--accent">layer</span>
                     <span class="kl-word kl-word--accent">that</span>
-                    <span class="kl-word kl-word--accent">new</span>
-                    <span class="kl-word kl-word--accent">reality.</span>
+                    <span class="kl-word kl-word--accent">makes</span>
+                    <span class="kl-word kl-word--accent">you</span>
+                    <span class="kl-word kl-word--accent">resilient</span>
+                </span>
                 </h2>
             </div>
         </section>
@@ -1549,169 +1405,11 @@
     <!-- Local GSAP + ScrollTrigger keep the preview independent of CDN latency. -->
     <script defer src="assets/vendor/gsap/gsap.min.js"></script>
     <script defer src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
-    <!-- Reusable container-scoped grid canvas (also powers the archived founder doctrine card) -->
-    <script src="js/founder-grid.js" defer></script>
-    <script defer>
-    document.addEventListener('DOMContentLoaded', function () {
-        var gridIds = ['manifesto-grid', 'triptych-grid'];
-        gridIds.forEach(function (id) {
-            var canvas = document.getElementById(id);
-            if (canvas && typeof FounderGrid !== 'undefined') {
-                // The intelligence stack owns its palette; other grids keep theirs.
-                var gridColor = id === 'triptych-grid'
-                    ? getComputedStyle(canvas).getPropertyValue('--kl-triptych-grid-line').trim()
-                    : '';
-                new FounderGrid(canvas, {
-                    direction: 'up',
-                    speed: 0.12,
-                    borderColor: gridColor || 'rgba(255, 255, 255, 0.05)',
-                    squareSize: 30
-                });
-            }
-        });
-    });
-    </script>
-    <!-- Manifesto word-reveal: GSAP timeline drives animation directly (no CSS transitions) -->
-    <script defer>
-    window.addEventListener('load', function () {
-        var heading = document.getElementById('klManifestoReveal');
-        if (!heading) return;
-        var words = Array.prototype.slice.call(heading.querySelectorAll('.kl-word'));
-        var accentWords = Array.prototype.slice.call(heading.querySelectorAll('.kl-word--accent'));
-        if (!words.length) return;
-
-        /* Reduced motion: reveal all immediately */
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            words.forEach(function (w) { w.style.opacity='1'; w.style.filter='none'; w.style.transform='none'; });
-            accentWords.forEach(function (w) { w.style.color='#ffa892'; });
-            return;
-        }
-
-        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
-            words.forEach(function (w) { w.style.opacity='1'; w.style.filter='none'; w.style.transform='none'; });
-            accentWords.forEach(function (w) { w.style.color='#ffa892'; });
-            return;
-        }
-
-        gsap.registerPlugin(ScrollTrigger);
-
-        /* GSAP sets initial state as inline styles — owns the properties, no CSS transition fight */
-        gsap.set(words, { opacity: 0.12, filter: 'blur(4px)', rotation: 2, transformOrigin: '0% 80%' });
-        /* Accent colour present at all scroll positions so accent words reveal in correct colour */
-        gsap.set(accentWords, { color: '#ffa892' });
-
-        /* Single timeline: GSAP animates opacity/filter/rotation directly */
-        var tl = gsap.timeline();
-        tl.to(words, {
-            opacity: 1,
-            filter: 'blur(0px)',
-            rotation: 0,
-            ease: 'none',
-            stagger: { each: 0.04, from: 'start' }
-        });
-
-        /* ScrollTrigger drives the timeline playhead — works on every scroll pass, forward and back */
-        ScrollTrigger.create({
-            trigger: heading,
-            start: 'top bottom',
-            end: 'top 45%',
-            scrub: 1,
-            animation: tl,
-            invalidateOnRefresh: true
-        });
-    });
-    </script>
-    <script defer>
-        window.addEventListener('load', function () {
-            setTimeout(function () {
-                if (window.ScrollTrigger) window.ScrollTrigger.refresh();
-            }, 300);
-        });
-    </script>
-
-    <!-- Word reel: doubled linear buffer — no circular math, no collisions -->
-    <script defer>
-        window.addEventListener('load', function () {
-            if (typeof gsap === 'undefined') return;
-            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-            var list = document.getElementById('klScopeList');
-            if (!list) return;
-
-            // Defer SLOT measurement to after first paint so Cormorant Garamond is rendered
-            requestAnimationFrame(function () { requestAnimationFrame(function () {
-
-            var origWords = Array.from(list.querySelectorAll('.kl-scope__word'));
-            if (origWords.length < 2) return;
-
-            var N = origWords.length;
-
-            // Append N clones — gives us a staging buffer below the visible zone
-            origWords.forEach(function(w) {
-                var clone = w.cloneNode(true);
-                clone.setAttribute('aria-hidden', 'true');
-                list.appendChild(clone);
-            });
-
-            var words     = Array.from(list.querySelectorAll('.kl-scope__word'));
-            var SLOT      = origWords[0].offsetHeight;
-            var SCROLL_DUR = 0.75;
-            var HOLD       = 0.75;
-
-            // Opacity by slot distance — no mask, GSAP controls visibility
-            function slotOpacity(slot) {
-                var abs = Math.abs(slot);
-                if (abs === 0) return 1;
-                if (abs === 1) return 0.3;
-                if (abs === 2) return 0.1;
-                return 0;
-            }
-
-            // word i starts at slot (i - (N-1)) → range -(N-1) to +N = -6 to +7
-            // xPercent:-50 pairs with the CSS left:50% anchor so every word,
-            // regardless of its own width, sits horizontally centered in the
-            // column instead of hugging the left edge.
-            words.forEach(function(w, i) {
-                w._slot = i - (N - 1);
-                gsap.set(w, { xPercent: -50, yPercent: -50, y: w._slot * SLOT, opacity: slotOpacity(w._slot) });
-            });
-
-            var EXIT_THRESHOLD = -N;
-            var REENTRY_SLOT   =  N;
-
-            function advance() {
-                words.forEach(function(w) {
-                    var ns = w._slot - 1;
-                    if (ns <= EXIT_THRESHOLD) {
-                        w._slot = REENTRY_SLOT;
-                        gsap.set(w, { y: REENTRY_SLOT * SLOT, opacity: 0, overwrite: true });
-                    } else {
-                        w._slot = ns;
-                        gsap.to(w, {
-                            y: ns * SLOT,
-                            opacity: slotOpacity(ns),
-                            duration: SCROLL_DUR,
-                            ease: 'power2.inOut',
-                            overwrite: true
-                        });
-                    }
-                });
-            }
-
-            setInterval(advance, (SCROLL_DUR + HOLD) * 1000);
-
-            }); }); // double-rAF font guard
-        });
-    </script>
-
-    <!-- Scripts (deferred — non-render-blocking) -->
-    <script src="js/infrastructure-grid.js?v=2" defer></script>
     <script src="js/brevo-subscribe.js" defer></script>
     <script src="js/staggered-menu.js?v=12" defer></script>
-    <script src="js/origin-cta.js?v=3" defer></script>
-    <script src="js/triptych.js" defer></script>
-    <script src="js/drona-tabs.js" defer></script>
-    <script src="js/drona-funnel.js?v=2" defer></script>
+    <script src="js/origin-cta.js?v=4" defer></script>
+    <script src="js/homepage-motion.js?v=2" defer></script>
+    <script src="js/homepage.js?v=4" defer></script>
 </body>
 
 </html>
