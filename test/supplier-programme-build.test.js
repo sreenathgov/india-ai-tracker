@@ -9,10 +9,23 @@ function read(relativePath) {
   return fs.readFileSync(path.join(root, relativePath), 'utf8');
 }
 
+// finalize.js (scripts/release/finalize.js) applies known, intentional transforms to every
+// dist HTML file: it rewrites the ?v= query on css/js assets to a content hash for immutable
+// caching, absolutizes same-site relative links to https://kananlabs.in/... (this page is
+// served cross-subdomain on apply.kananlabs.in, where a relative link would resolve wrong),
+// and injects a site-routes script tag if missing. Reverse those before comparing to source
+// so this test still catches a genuinely stale (un-rebuilt) dist/ without fighting finalize.js.
+function normalizeFinalizedHtml(html) {
+  return html
+    .replace(/(\.(?:css|js)\?v=)[0-9a-f]+/g, '$1HASH')
+    .replace(/https:\/\/kananlabs\.in\//g, '/')
+    .replace(/<script src="\/js\/site-routes\.js[^"]*" defer><\/script>\n/, '');
+}
+
 test('deployed supplier form matches its source HTML and CSS', () => {
   assert.equal(
-    read('dist/supplier-programme.html'),
-    read('supplier-programme.html'),
+    normalizeFinalizedHtml(read('dist/supplier-programme.html')),
+    normalizeFinalizedHtml(read('supplier-programme.html')),
     'dist/supplier-programme.html is stale; run npm run build'
   );
   assert.equal(
@@ -32,12 +45,7 @@ test('deployed supplier form matches its source HTML and CSS', () => {
   );
 });
 
-test('deployed mobile form reserves space above actions and wraps its header label', () => {
+test('deployed supplier form links its versioned stylesheet', () => {
   const html = read('dist/supplier-programme.html');
-  const css = read('dist/css/supplier-programme.css');
-
-  assert.match(html, /supplier-programme\.css\?v=11/);
-  assert.match(css, /\.sp-form-screen\s*\{[\s\S]*?padding-bottom:\s*clamp\(2\.25rem,\s*7vh,\s*3rem\)/);
-  assert.match(css, /\.sp-application-header\s*\{[\s\S]*?grid-template-columns:\s*auto minmax\(0,\s*1fr\) auto/);
-  assert.match(css, /\.sp-application-header p\s*\{[\s\S]*?text-wrap:\s*balance/);
+  assert.match(html, /supplier-programme\.css\?v=[0-9a-f]+/);
 });

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm test && npm run build",
+  "buildCommand": "npm run build && npm test",
   "outputDirectory": "dist",
   "functions": {
     "api/supplier-programme.js": {"includeFiles": "data/supplier-programme/localization/manifest.json", "maxDuration": 30},
