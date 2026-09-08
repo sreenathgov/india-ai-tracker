@@ -1375,9 +1375,89 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "Apple expands AI and engineering hiring in India, report reveals focus on advanced tech",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/apple-expands-ai-and-engineering-hiring-in-india-report-reveals-focus-on-advanced-tech/133913099",
+        "summary": "Apple is making big strides in India, notably ramping up its technology operations. Recent recruitment efforts are heavily centered on artificial intelligence and data management systems. Furthermore,...",
+        "date_published": "2026-09-08",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India joins US-led global initiative to shape next-generation 6G networks",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/india-joins-us-led-global-initiative-to-shape-next-generation-6g-networks/133903880",
+        "summary": "India has joined twenty-four nations in a global initiative for 6G network development. This agreement was finalized following a bilateral meeting between US and Indian officials. The G20 Innovation M...",
+        "date_published": "2026-09-08",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Newgen CEO Tarun Nandwani on AI-first governance and India’s vision for Viksit Bharat 2047",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/newgen-ceo-tarun-nandwani-on-ai-first-governance-and-indias-vision-for-viksit-bharat-2047/133916837",
+        "summary": "Newgen CEO Tarun Nandwani highlights India’s transition to AI-first governance, leveraging Digital Public Infrastructure and unified platforms to build faster, citizen-centric public services.",
+        "date_published": "2026-09-08",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Paytm’s Vijay Shekhar Sharma predicts AI agents will eat apps by 2027",
         "url": "https://yourstory.com/2026/09/paytms-vijay-shekhar-sharma-predicts-ai-agents-will-eat-apps-by-2027",
         "summary": "Sharma says autonomous personal assistants will replace smartphone apps and reshape everyday computing.",
+        "date_published": "2026-09-07",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Got an AI Solution for Infrastructure? Rodic Consultants and Nasscom Are Opening the Door",
+        "url": "https://yourstory.com/2026/09/got-an-ai-solution-for-infrastructure-rodic-consultants-and-nasscom-are-opening-the-door",
+        "summary": "Rodic Consultants and Nasscom are calling on India's AI and deep-tech innovators to take on real infrastructure problems through the InfraAI Innovation Challenge, with applications open until Septembe...",
         "date_published": "2026-09-07",
         "source_name": "YourStory",
         "category": "Major AI Developments",
@@ -13720,6 +13800,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "B2B pharma distribution startup Fundly.ai raises $4 Mn led by Accel, Multiply",
+        "url": "https://entrackr.com/snippets/b2b-pharma-distribution-startup-fundlyai-raises-4-mn-led-by-accel-multiply-12505458",
+        "summary": "Mumbai-based B2B pharma distribution startup Fundly.ai has r...",
+        "date_published": "2026-09-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Adobe picks up AI marketing startup Rilo in second India acquisition",
         "url": "https://entrackr.com/snippets/adobe-picks-up-ai-marketing-startup-rilo-in-second-india-acquisition-12484822",
@@ -16690,6 +16790,7 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

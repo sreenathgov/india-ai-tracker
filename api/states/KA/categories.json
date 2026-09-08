@@ -511,6 +511,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Karnataka plans immediate AI skilling ahead of proposed AI University",
+        "url": "https://yourstory.com/2026/09/karnataka-ai-university-ai-skilling-roadmap",
+        "summary": "Karnataka’s proposed AI University will take a phased approach, with the state planning to launch AI skilling programmes before the full-fledged institution is established.",
+        "date_published": "2026-09-07",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Karnataka’s proposed AI university to launch skilling programmes ahead of establishment",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/karnatakas-proposed-ai-university-to-launch-skilling-programmes-ahead-of-establishment/articleshow/133811994.cms",
@@ -5930,7 +5950,5 @@
       }
     ]
   },
-  "today_updates": [
-    "AI Start-Up News"
-  ]
+  "today_updates": []
 }
