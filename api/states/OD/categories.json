@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 1,
+        "title": "TCS bags  ₹122.6 crore Odisha govt deal: AI, automation, analytics, security- what will OSWAS 3.0 change? What we know",
+        "url": "https://www.livemint.com/ai/tcs-bags-rs-122-6-crore-odisha-govt-deal-ai-automation-analytics-security-what-oswas-3-0-will-change-what-we-know-11788864314363.html",
+        "summary": "TCS wins  ₹122.6 crore Odisha deal to modernise digital governance with AI, automation and analytics.",
+        "date_published": "2026-09-08",
+        "source_name": "LiveMint AI News",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 12,
         "title": "Odisha signs MoU with HCLTech for AI Data Centre",
         "url": "https://www.thehindu.com/news/national/odisha/odisha-signs-mou-with-hcltech-for-ai-data-centre/article71262871.ece",
@@ -448,7 +468,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

@@ -1325,6 +1325,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 7,
+        "title": "Deep-tech cybersecurity company QNu Labs raises Rs 200 Cr in Series A1 round",
+        "url": "https://entrackr.com/news/deep-tech-cybersecurity-company-qnu-labs-raises-rs-200-cr-in-series-a1-round-12509199",
+        "summary": "Deep-tech cybersecurity company QNu Labs has raise...",
+        "date_published": "2026-09-09",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Voice AI startup Navana.ai raises Rs 40 Cr led by Ronnie Screwvala",
         "url": "https://entrackr.com/snippets/voice-ai-startup-navanaai-raises-rs-40-cr-led-by-ronnie-screwvala-12501888",
@@ -1494,5 +1514,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

@@ -511,6 +511,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "Bengaluru South Corporation deploys AI cameras to track potholes, garbage dumping, and encroachments",
+        "url": "https://www.thehindu.com/news/cities/bangalore/bengaluru-south-corporation-deploys-ai-cameras-to-track-potholes-garbage-dumping-and-encroachments/article71442384.ece",
+        "summary": "The AI system is also intended to detect the misuse of building basements",
+        "date_published": "2026-09-08",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Karnataka plans immediate AI skilling ahead of proposed AI University",
         "url": "https://yourstory.com/2026/09/karnataka-ai-university-ai-skilling-roadmap",

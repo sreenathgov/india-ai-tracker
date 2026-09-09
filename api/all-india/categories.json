@@ -1374,6 +1374,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Only 22% Indian firms have AI governance despite 119% investment surge",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/only-22-indian-firms-have-ai-governance-despite-119-investment-surge/133950162",
+        "summary": "Enterprise AI investment in India has surged significantly over the past year.  However, a concerning gap exists between capital deployment and necessary governance frameworks.  Many Indian organizati...",
+        "date_published": "2026-09-09",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "IndiaAI Mission, Sweden explore cooperation in AI, digitalisation under SITAC",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indiaai-mission-sweden-explore-cooperation-in-ai-digitalisation-under-sitac/133949586",
+        "summary": "India and Sweden engaged in discussions to bolster cooperation in AI and emerging technologies, centering around industrial AI, trusted data management, and the development of compute infrastructure....",
+        "date_published": "2026-09-09",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Apple expands AI and engineering hiring in India, report reveals focus on advanced tech",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/apple-expands-ai-and-engineering-hiring-in-india-report-reveals-focus-on-advanced-tech/133913099",
@@ -1420,6 +1460,86 @@
         "summary": "Newgen CEO Tarun Nandwani highlights India’s transition to AI-first governance, leveraging Digital Public Infrastructure and unified platforms to build faster, citizen-centric public services.",
         "date_published": "2026-09-08",
         "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "India&#039;s AI boom: Massive investment, but critical governance and testing failures plague enterprises",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-boom-massive-investment-but-critical-governance-and-testing-failures-plague-enterprises/133914786",
+        "summary": "Indian businesses are ramping up their investments in artificial intelligence, exceeding global benchmarks. Nevertheless, many organizations still struggle with establishing thorough testing and risk...",
+        "date_published": "2026-09-08",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Blue Machines AI introduces advanced speech-to-text technology for India&#039;s BFSI sector",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/blue-machines-ai-introduces-advanced-speech-to-text-technology-for-indias-bfsi-sector/133918193",
+        "summary": "Recently launched by Blue Machines AI, Aurora is a cutting-edge speech-to-text model designed specifically for Indian financial services. This model adeptly manages multilingual interactions and overc...",
+        "date_published": "2026-09-08",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Bajaj Finance acquires 5% stake in TrueFan AI",
+        "url": "https://yourstory.com/2026/09/bajaj-finance-acquires-5-stake-in-truefan-ai",
+        "summary": "Bajaj Finance and TrueFan AI will expand their collaboration across personalised marketing, video generation among other things with the goal of enhancing customer experiences.",
+        "date_published": "2026-09-08",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Kuku to build 1,000-member AI team ahead of Rs 3,500 Cr IPO",
+        "url": "https://entrackr.com/news/kuku-to-build-1000-member-ai-team-ahead-of-rs-3500-cr-ipo-12507869",
+        "summary": "Kuku Technologies, the parent company of Kuku FM...",
+        "date_published": "2026-09-08",
+        "source_name": "Entrackr - AI & Startups",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -16790,7 +16910,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
     "Major AI Developments"
   ]
 }
