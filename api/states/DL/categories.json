@@ -616,6 +616,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Delhi HC gets CJP leaders to pull down AI posts against BJP&#8217;s Gaurav Bhatia, declines wider injunction",
+        "url": "https://www.tribuneindia.com/news/delhi/delhi-hc-gets-cjp-leaders-to-pull-down-ai-posts-against-bjps-gaurav-bhatia-declines-wider-injunction",
+        "summary": "The Delhi High Court on Thursday persuaded two Cockroach Janta Party (CJP) leaders to take down AI-generated social media posts targeting BJP leader and senior advocate Gaurav Bhatia, but stopped shor...",
+        "date_published": "2026-09-10",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "11 Top Machine Learning Companies in Delhi",
+        "url": "https://builtindelhi.in/articles/machine-learning-companies-in-delhi",
+        "summary": "11 Top Machine Learning Companies in Delhi",
+        "date_published": "2026-09-10",
+        "source_name": "Built in Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Navam Capital leads Rs 22 Cr round in DigitalPaani",
         "url": "https://entrackr.com/snippets/navam-capital-leads-rs-22-cr-round-in-digitalpaani-12507542",
@@ -4703,5 +4743,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
