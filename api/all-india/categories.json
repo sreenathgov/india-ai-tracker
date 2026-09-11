@@ -1435,6 +1435,126 @@
       },
       {
         "id": 2,
+        "title": "Startups and small firms will drive India's job growth in the age of AI: Nandan Nilekani",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/startups-and-small-firms-will-drive-indias-job-growth-in-the-age-of-ai-nandan-nilekani-11789046947202.html",
+        "summary": "As AI and automation hit rigid corporate jobs, agile startups and smaller firms will lead job creation, boosted by asset-tokenization tools that equalize access to capital, the Infosys co-founder said...",
+        "date_published": "2026-09-10",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "This Indian-origin couple gifted $20 million to Texas university. All about the new AI college they are helping to build",
+        "url": "https://www.livemint.com/ai/this-indian-origin-couple-gifted-20-million-to-texas-university-all-about-the-new-ai-college-they-are-helping-to-build-11789031479485.html",
+        "summary": "An Indian-origin couple, Anuradha and Vikas Sinha, has donated $20 million to the University of North Texas to support AI and advanced analytics. The gift will establish the Anuradha and Vikas Sinha C...",
+        "date_published": "2026-09-10",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Revolutionizing finance: India&#039;s AI registry aims to transform agentic payments across the nation",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/revolutionizing-finance-indias-ai-registry-aims-to-transform-agentic-payments-across-the-nation/134003618",
+        "summary": "The landscape of digital finance is evolving as India&#039;s payments authority creates a registry specifically for AI agents. This registry aims to verify and oversee AI transactions, initially targe...",
+        "date_published": "2026-09-10",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Cheaper AI models to boost adoption, but raise pricing risks for Indian IT",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/cheaper-ai-models-to-boost-adoption-but-raise-pricing-risks-for-indian-it/134002436",
+        "summary": "Decreasing costs of artificial intelligence models alongside expanding capabilities are unlocking fresh enterprise applications. This shift holds the potential for boosting Indian IT firms as they nav...",
+        "date_published": "2026-09-10",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Google expands India's clean-energy push with Solar API for 300M rooftops, climate-smart agri programme, and more",
+        "url": "https://yourstory.com/2026/09/google-expands-indias-clean-energy-push",
+        "summary": "Google is backing Indian climate-tech startups using AI, satellite imagery and geospatial intelligence to address challenges ranging from regenerative agriculture and biodiversity restoration to carbo...",
+        "date_published": "2026-09-10",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "AI contact centre startup Dialflo raises Rs 1.7 Cr led by AJVC",
+        "url": "https://entrackr.com/snippets/ai-contact-centre-startup-dialflo-raises-rs-17-cr-led-by-ajvc-12515938",
+        "summary": "AI-powered contact centre startup Dialflo has raise...",
+        "date_published": "2026-09-10",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "Only 22% Indian firms have AI governance despite 119% investment surge",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/only-22-indian-firms-have-ai-governance-despite-119-investment-surge/133950162",
         "summary": "Enterprise AI investment in India has surged significantly over the past year.  However, a concerning gap exists between capital deployment and necessary governance frameworks.  Many Indian organizati...",
@@ -16989,7 +17109,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
