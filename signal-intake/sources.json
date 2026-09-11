@@ -1,0 +1,201 @@
+{
+  "_comment": "Signal Intake source registry, v1. Every url verified live via direct HTTP GET (browser UA, response body inspected for actual RSS/Atom content) on 2026-09-11. tier: 1 = primary/official government or regulator feed, descending toward general news/trade media. clusters: one or more of the 7 function-axis clusters. Never add a url here without verifying it actually returns feed content.",
+  "sources": [
+    {
+      "name": "USTR Press Releases",
+      "url": "https://ustr.gov/rss.xml",
+      "tier": 1,
+      "clusters": ["trade_policy_tariffs"],
+      "notes": "US Trade Representative's own announcements — primary source for tariff actions and negotiations."
+    },
+    {
+      "name": "Federal Register - USTR",
+      "url": "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=trade-representative-office-of-united-states",
+      "tier": 1,
+      "clusters": ["trade_policy_tariffs"],
+      "notes": "Official USTR rule-filings; catches formal actions that don't get a press release."
+    },
+    {
+      "name": "UK Department for Business & Trade",
+      "url": "https://www.gov.uk/government/organisations/department-for-business-and-trade.atom",
+      "tier": 1,
+      "clusters": ["trade_policy_tariffs"],
+      "notes": "UK government's own trade policy feed."
+    },
+    {
+      "name": "EU Commission Press Corner - Trade",
+      "url": "https://ec.europa.eu/commission/presscorner/api/rss?type=all&topic=TRADE",
+      "tier": 1,
+      "clusters": ["trade_policy_tariffs"],
+      "notes": "EU's own trade policy announcements."
+    },
+    {
+      "name": "Nikkei Asia",
+      "url": "https://asia.nikkei.com/rss/feed/nar",
+      "tier": 2,
+      "clusters": ["trade_policy_tariffs", "supply_chain_disruption_inputs"],
+      "notes": "Leading pan-Asian business desk — closes the Asia-Pacific gap other verified sources miss; also covers Asia manufacturing/input disruption."
+    },
+    {
+      "name": "Federal Register - Bureau of Industry and Security",
+      "url": "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=industry-and-security-bureau",
+      "tier": 1,
+      "clusters": ["export_control_sanctions"],
+      "notes": "Official Entity List and EAR rule changes."
+    },
+    {
+      "name": "Federal Register - OFAC",
+      "url": "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=foreign-assets-control-office",
+      "tier": 1,
+      "clusters": ["export_control_sanctions"],
+      "notes": "Official US sanctions designations."
+    },
+    {
+      "name": "Federal Register - Customs and Border Protection",
+      "url": "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=u-s-customs-and-border-protection",
+      "tier": 1,
+      "clusters": ["export_control_sanctions"],
+      "notes": "Official UFLPA Withhold Release Orders and forced-labor enforcement actions."
+    },
+    {
+      "name": "UK HM Treasury / OFSI",
+      "url": "https://www.gov.uk/government/organisations/hm-treasury.atom?departments%5B%5D=office-of-financial-sanctions-implementation",
+      "tier": 1,
+      "clusters": ["export_control_sanctions"],
+      "notes": "UK's sanctions-implementation authority."
+    },
+    {
+      "name": "Federal Reserve - Banking/Consumer Regulatory Policy",
+      "url": "https://www.federalreserve.gov/feeds/press_bcreg.xml",
+      "tier": 1,
+      "clusters": ["working_capital_trade_finance"],
+      "notes": "US central bank's bank-regulatory actions affecting lending and credit capacity."
+    },
+    {
+      "name": "Bank of England",
+      "url": "https://www.bankofengland.co.uk/rss/news",
+      "tier": 1,
+      "clusters": ["working_capital_trade_finance"],
+      "notes": "UK central bank — bank capital and credit policy."
+    },
+    {
+      "name": "European Central Bank",
+      "url": "https://www.ecb.europa.eu/rss/press.html",
+      "tier": 1,
+      "clusters": ["working_capital_trade_finance"],
+      "notes": "EU central bank — credit conditions affecting trade finance."
+    },
+    {
+      "name": "International Chamber of Commerce",
+      "url": "https://iccwbo.org/feed/",
+      "tier": 1,
+      "clusters": ["working_capital_trade_finance"],
+      "notes": "Writes the rules trade-finance instruments run on (UCP, guarantees); publishes the annual Trade Finance Gap survey."
+    },
+    {
+      "name": "Reserve Bank of India",
+      "url": "https://rbi.org.in/pressreleases_rss.xml",
+      "tier": 1,
+      "clusters": ["working_capital_trade_finance"],
+      "notes": "Direct regulator of TReDS itself, plus NBFC/factoring/priority-sector-lending rules. Deliberate India anchor: TReDS is India-specific by design."
+    },
+    {
+      "name": "Supply Chain Dive",
+      "url": "https://www.supplychaindive.com/feeds/news/",
+      "tier": 2,
+      "clusters": ["supply_chain_disruption_inputs", "market_funding_competition"],
+      "notes": "Dedicated trade press for sourcing/logistics disruption; also covers M&A and funding among supply-chain-risk vendors."
+    },
+    {
+      "name": "FreightWaves",
+      "url": "https://www.freightwaves.com/feed",
+      "tier": 2,
+      "clusters": ["supply_chain_disruption_inputs"],
+      "notes": "Freight and logistics market intelligence."
+    },
+    {
+      "name": "gCaptain",
+      "url": "https://gcaptain.com/feed/",
+      "tier": 2,
+      "clusters": ["supply_chain_disruption_inputs"],
+      "notes": "Maritime and shipping trade press — chokepoints, port disruption."
+    },
+    {
+      "name": "The Loadstar",
+      "url": "https://theloadstar.com/feed/",
+      "tier": 2,
+      "clusters": ["supply_chain_disruption_inputs"],
+      "notes": "Global freight and logistics trade press."
+    },
+    {
+      "name": "EU Commission Press Corner - Taxation and Customs Union",
+      "url": "https://ec.europa.eu/commission/presscorner/api/rss?type=all&topic=TAXUD",
+      "tier": 1,
+      "clusters": ["esg_cbam_labour_compliance"],
+      "notes": "CBAM is administered by DG TAXUD (customs) — its official channel."
+    },
+    {
+      "name": "EU Commission Press Corner - Climate Action",
+      "url": "https://ec.europa.eu/commission/presscorner/api/rss?type=all&topic=CLIMATE_ACTION",
+      "tier": 1,
+      "clusters": ["esg_cbam_labour_compliance"],
+      "notes": "CBAM's climate and ETS-linkage side."
+    },
+    {
+      "name": "Federal Register - Labor Department",
+      "url": "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=labor-department",
+      "tier": 1,
+      "clusters": ["esg_cbam_labour_compliance"],
+      "notes": "Official US labour-compliance rule actions."
+    },
+    {
+      "name": "Fashion Revolution",
+      "url": "https://www.fashionrevolution.org/feed/",
+      "tier": 3,
+      "clusters": ["esg_cbam_labour_compliance"],
+      "notes": "NGO tracking garment-sector labour and ESG transparency — adjacent to the forced-labor/UFLPA overlap."
+    },
+    {
+      "name": "Crunchbase News",
+      "url": "https://news.crunchbase.com/feed/",
+      "tier": 3,
+      "clusters": ["market_funding_competition"],
+      "notes": "Funding-round coverage for supply-chain-risk and trade-fintech startups (Altana/Resilink/Sourcemap-adjacent)."
+    },
+    {
+      "name": "TechCrunch - AI",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "tier": 3,
+      "clusters": ["market_funding_competition", "ai_governed_technology"],
+      "notes": "Funding and competition news for AI-enabled supply-chain and trade-fintech players; also general AI industry coverage."
+    },
+    {
+      "name": "EU Digital Strategy",
+      "url": "https://digital-strategy.ec.europa.eu/en/rss.xml",
+      "tier": 1,
+      "clusters": ["ai_governed_technology"],
+      "notes": "The EU AI Office's own channel (AI Act implementation)."
+    },
+    {
+      "name": "NIST News",
+      "url": "https://www.nist.gov/news-events/news/rss.xml",
+      "tier": 1,
+      "clusters": ["ai_governed_technology"],
+      "notes": "Owns the US AI Risk Management Framework."
+    },
+    {
+      "name": "UK Department for Science, Innovation and Technology",
+      "url": "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology.atom",
+      "tier": 1,
+      "clusters": ["ai_governed_technology"],
+      "notes": "UK's AI governance department."
+    },
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/feed/",
+      "tier": 3,
+      "clusters": ["ai_governed_technology"],
+      "notes": "Independent journalism and analysis on AI governance globally."
+    }
+  ]
+}
