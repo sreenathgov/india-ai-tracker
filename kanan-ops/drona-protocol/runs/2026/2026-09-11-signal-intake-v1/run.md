@@ -59,6 +59,17 @@ See design spec for full architecture. Summary:
 - `signal-intake/requirements.txt`, `signal-intake/pytest.ini`,
   `signal-intake/README.md`.
 
+## Verification
+
+- TDD throughout: RED (failing test) confirmed before implementation for
+  every module, then GREEN.
+- 81 tests, 94% coverage (`pytest --cov=signal_intake`), every module
+  individually ≥80%.
+- Live smoke run against the real 28-source registry: 23 signals captured
+  on first pass, 0 on an immediate re-run (dedup confirmed end-to-end
+  against real feed data, not just mocks).
+- Committed as `b7f9ff3` on `main`.
+
 ## What's left (future workstreams)
 
 - Workstreams 2-4 of the Continuous Intelligence architecture: AI
