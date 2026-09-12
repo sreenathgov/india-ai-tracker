@@ -511,6 +511,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "When a dog’s nose meets AI: Bengaluru startup’s hunt for cancer in human breath",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/when-a-dogs-nose-meets-ai-bengaluru-startups-hunt-for-cancer-in-human-breath/articleshow/134055553.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=...",
+        "date_published": "2026-09-11",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Bengaluru South Corporation deploys AI cameras to track potholes, garbage dumping, and encroachments",
+        "url": "https://www.thehindu.com/news/cities/bangalore/bengaluru-south-corporation-deploys-ai-cameras-to-track-potholes-garbage-dumping-and-encroachments/article71442384.ece",
+        "summary": "The AI system is also intended to detect the misuse of building basements",
+        "date_published": "2026-09-08",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Karnataka plans immediate AI skilling ahead of proposed AI University",
+        "url": "https://yourstory.com/2026/09/karnataka-ai-university-ai-skilling-roadmap",
+        "summary": "Karnataka’s proposed AI University will take a phased approach, with the state planning to launch AI skilling programmes before the full-fledged institution is established.",
+        "date_published": "2026-09-07",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Karnataka’s proposed AI university to launch skilling programmes ahead of establishment",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/karnatakas-proposed-ai-university-to-launch-skilling-programmes-ahead-of-establishment/articleshow/133811994.cms",
@@ -4429,6 +4489,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 8,
+        "title": "Karnataka, Italy explore startup, AI and space technology partnerships",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/karnataka-italy-explore-startup-ai-and-space-technology-partnerships/134018180",
+        "summary": "The two sides also discussed creating soft-landing mechanisms to help startups access each other&#039;s markets, including physical spaces, ecosystem networks, industry partners and research instituti...",
+        "date_published": "2026-09-10",
+        "source_name": "ET Government - Technology",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Voice AI startup Navana.ai raises Rs 40 Cr led by Ronnie Screwvala",
         "url": "https://entrackr.com/snippets/voice-ai-startup-navanaai-raises-rs-40-cr-led-by-ronnie-screwvala-12501888",
@@ -5930,7 +6010,5 @@
       }
     ]
   },
-  "today_updates": [
-    "AI Start-Up News"
-  ]
+  "today_updates": []
 }

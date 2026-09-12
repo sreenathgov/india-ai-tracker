@@ -112,6 +112,26 @@
     "Major AI Developments": [
       {
         "id": 3,
+        "title": "From AI pilots to production: Rebuilding the enterprise stack for intelligent agents",
+        "url": "https://yourstory.com/2026/09/ai-pilots-production-rebuilding-enterprise-stack-intelligent-agents",
+        "summary": "At DevSparks Hyderabad 2026, leaders from MetLife and Tiger Analytics explored what it will take to move enterprise AI from experimentation to production, from AI-ready data and semantic layers to gov...",
+        "date_published": "2026-09-09",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "IIIT-H Launches Centre for Educational Technology and Learning Sciences (CETLS) to Reimagine Learning in the Age of AI",
         "url": "https://www.iiit.ac.in/iiit-h-launches-cetls/",
         "summary": "IIIT-H Launches Centre for Educational Technology and Learning Sciences (CETLS) to Reimagine Learning in the Age of AIFoundation Day 2026IIIT Hyderabad Opens Applications for Cohort 3 of Certificate P...",
@@ -2814,7 +2834,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

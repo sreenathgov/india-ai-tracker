@@ -1375,9 +1375,449 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "AI agents may force rethink of India’s data-localisation rules",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-agents-may-force-rethink-of-indias-data-localisation-rules/134060753",
+        "summary": "As AI agents take on greater roles in managing transactions, India’s data regulations may need to adapt. These personal AI entities could utilize international payment systems for domestic activities....",
+        "date_published": "2026-09-12",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Dell launches new AI PCs and workstations for Indian enterprises with on-device AI focus",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/dell-launches-new-ai-pcs-and-workstations-for-indian-enterprises-with-on-device-ai-focus/134102602",
+        "summary": "Dell Technologies has unveiled a fresh lineup of commercial PCs and workstations tailored for Indian enterprises. Emphasizing on-device artificial intelligence and the ability to handle intensive work...",
+        "date_published": "2026-09-12",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Insight Partners sees niche AI businesses emerge after deploying over $1 billion in India",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/insight-partners-india-software-artificial-intelligence-ai-enterprise-software-saas-b2b-ai-startups-11789007085707.html",
+        "summary": "Insight Partners sees India producing a new generation of AI-enabled businesses that combine software with services and engineering talent, while local enterprise demand creates another growth opportu...",
+        "date_published": "2026-09-10",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Apple AirPods 5 launched with Siri AI, better ANC & live translation: Check price & availability in India",
+        "url": "https://www.etnownews.com/technology/apple-airpods-5-launched-with-siri-ai-better-anc-live-translation-check-price-availability-article-156132301",
+        "summary": "AirPods 5 price: According to Apple, the earbuds remove up to 50 per cent more external noise than AirPods 4 with ANC, while a new multiport acoustic architecture and next-generation Adaptive EQ impro...",
+        "date_published": "2026-09-10",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Can Companies Use Publicly Available Personal Data Under India’s DPDP Act?",
+        "url": "https://www.india-briefing.com/news/india-dpdp-act-publicly-available-personal-data-46899.html/",
+        "summary": "India’s DPDP Act excludes certain publicly available personal data from its scope. Companies using public data for scraping, aggregation, AI, and commercial purposes should understand the statutory ex...",
+        "date_published": "2026-09-10",
+        "source_name": "India Briefing - Legal & Regulatory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Startups and small firms will drive India's job growth in the age of AI: Nandan Nilekani",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/startups-and-small-firms-will-drive-indias-job-growth-in-the-age-of-ai-nandan-nilekani-11789046947202.html",
+        "summary": "As AI and automation hit rigid corporate jobs, agile startups and smaller firms will lead job creation, boosted by asset-tokenization tools that equalize access to capital, the Infosys co-founder said...",
+        "date_published": "2026-09-10",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "This Indian-origin couple gifted $20 million to Texas university. All about the new AI college they are helping to build",
+        "url": "https://www.livemint.com/ai/this-indian-origin-couple-gifted-20-million-to-texas-university-all-about-the-new-ai-college-they-are-helping-to-build-11789031479485.html",
+        "summary": "An Indian-origin couple, Anuradha and Vikas Sinha, has donated $20 million to the University of North Texas to support AI and advanced analytics. The gift will establish the Anuradha and Vikas Sinha C...",
+        "date_published": "2026-09-10",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Revolutionizing finance: India&#039;s AI registry aims to transform agentic payments across the nation",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/revolutionizing-finance-indias-ai-registry-aims-to-transform-agentic-payments-across-the-nation/134003618",
+        "summary": "The landscape of digital finance is evolving as India&#039;s payments authority creates a registry specifically for AI agents. This registry aims to verify and oversee AI transactions, initially targe...",
+        "date_published": "2026-09-10",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Cheaper AI models to boost adoption, but raise pricing risks for Indian IT",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/cheaper-ai-models-to-boost-adoption-but-raise-pricing-risks-for-indian-it/134002436",
+        "summary": "Decreasing costs of artificial intelligence models alongside expanding capabilities are unlocking fresh enterprise applications. This shift holds the potential for boosting Indian IT firms as they nav...",
+        "date_published": "2026-09-10",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Google expands India's clean-energy push with Solar API for 300M rooftops, climate-smart agri programme, and more",
+        "url": "https://yourstory.com/2026/09/google-expands-indias-clean-energy-push",
+        "summary": "Google is backing Indian climate-tech startups using AI, satellite imagery and geospatial intelligence to address challenges ranging from regenerative agriculture and biodiversity restoration to carbo...",
+        "date_published": "2026-09-10",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "AI contact centre startup Dialflo raises Rs 1.7 Cr led by AJVC",
+        "url": "https://entrackr.com/snippets/ai-contact-centre-startup-dialflo-raises-rs-17-cr-led-by-ajvc-12515938",
+        "summary": "AI-powered contact centre startup Dialflo has raise...",
+        "date_published": "2026-09-10",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Only 22% Indian firms have AI governance despite 119% investment surge",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/only-22-indian-firms-have-ai-governance-despite-119-investment-surge/133950162",
+        "summary": "Enterprise AI investment in India has surged significantly over the past year.  However, a concerning gap exists between capital deployment and necessary governance frameworks.  Many Indian organizati...",
+        "date_published": "2026-09-09",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "IndiaAI Mission, Sweden explore cooperation in AI, digitalisation under SITAC",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indiaai-mission-sweden-explore-cooperation-in-ai-digitalisation-under-sitac/133949586",
+        "summary": "India and Sweden engaged in discussions to bolster cooperation in AI and emerging technologies, centering around industrial AI, trusted data management, and the development of compute infrastructure....",
+        "date_published": "2026-09-09",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Apple expands AI and engineering hiring in India, report reveals focus on advanced tech",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/apple-expands-ai-and-engineering-hiring-in-india-report-reveals-focus-on-advanced-tech/133913099",
+        "summary": "Apple is making big strides in India, notably ramping up its technology operations. Recent recruitment efforts are heavily centered on artificial intelligence and data management systems. Furthermore,...",
+        "date_published": "2026-09-08",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India joins US-led global initiative to shape next-generation 6G networks",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/india-joins-us-led-global-initiative-to-shape-next-generation-6g-networks/133903880",
+        "summary": "India has joined twenty-four nations in a global initiative for 6G network development. This agreement was finalized following a bilateral meeting between US and Indian officials. The G20 Innovation M...",
+        "date_published": "2026-09-08",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Newgen CEO Tarun Nandwani on AI-first governance and India’s vision for Viksit Bharat 2047",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/newgen-ceo-tarun-nandwani-on-ai-first-governance-and-indias-vision-for-viksit-bharat-2047/133916837",
+        "summary": "Newgen CEO Tarun Nandwani highlights India’s transition to AI-first governance, leveraging Digital Public Infrastructure and unified platforms to build faster, citizen-centric public services.",
+        "date_published": "2026-09-08",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "India&#039;s AI boom: Massive investment, but critical governance and testing failures plague enterprises",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-boom-massive-investment-but-critical-governance-and-testing-failures-plague-enterprises/133914786",
+        "summary": "Indian businesses are ramping up their investments in artificial intelligence, exceeding global benchmarks. Nevertheless, many organizations still struggle with establishing thorough testing and risk...",
+        "date_published": "2026-09-08",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Blue Machines AI introduces advanced speech-to-text technology for India&#039;s BFSI sector",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/blue-machines-ai-introduces-advanced-speech-to-text-technology-for-indias-bfsi-sector/133918193",
+        "summary": "Recently launched by Blue Machines AI, Aurora is a cutting-edge speech-to-text model designed specifically for Indian financial services. This model adeptly manages multilingual interactions and overc...",
+        "date_published": "2026-09-08",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Bajaj Finance acquires 5% stake in TrueFan AI",
+        "url": "https://yourstory.com/2026/09/bajaj-finance-acquires-5-stake-in-truefan-ai",
+        "summary": "Bajaj Finance and TrueFan AI will expand their collaboration across personalised marketing, video generation among other things with the goal of enhancing customer experiences.",
+        "date_published": "2026-09-08",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Kuku to build 1,000-member AI team ahead of Rs 3,500 Cr IPO",
+        "url": "https://entrackr.com/news/kuku-to-build-1000-member-ai-team-ahead-of-rs-3500-cr-ipo-12507869",
+        "summary": "Kuku Technologies, the parent company of Kuku FM...",
+        "date_published": "2026-09-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Bajaj Finance acquires 5% stake in TrueFan AI",
+        "url": "https://entrackr.com/snippets/bajaj-finance-acquires-5-stake-in-truefan-ai-12507925",
+        "summary": "Bajaj Finance, part of Bajaj Finserv, has acqui...",
+        "date_published": "2026-09-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Paytm’s Vijay Shekhar Sharma predicts AI agents will eat apps by 2027",
         "url": "https://yourstory.com/2026/09/paytms-vijay-shekhar-sharma-predicts-ai-agents-will-eat-apps-by-2027",
         "summary": "Sharma says autonomous personal assistants will replace smartphone apps and reshape everyday computing.",
+        "date_published": "2026-09-07",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Got an AI Solution for Infrastructure? Rodic Consultants and Nasscom Are Opening the Door",
+        "url": "https://yourstory.com/2026/09/got-an-ai-solution-for-infrastructure-rodic-consultants-and-nasscom-are-opening-the-door",
+        "summary": "Rodic Consultants and Nasscom are calling on India's AI and deep-tech innovators to take on real infrastructure problems through the InfraAI Innovation Challenge, with applications open until Septembe...",
         "date_published": "2026-09-07",
         "source_name": "YourStory",
         "category": "Major AI Developments",
@@ -13719,6 +14159,26 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 5,
+        "title": "B2B pharma distribution startup Fundly.ai raises $4 Mn led by Accel, Multiply",
+        "url": "https://entrackr.com/snippets/b2b-pharma-distribution-startup-fundlyai-raises-4-mn-led-by-accel-multiply-12505458",
+        "summary": "Mumbai-based B2B pharma distribution startup Fundly.ai has r...",
+        "date_published": "2026-09-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 4,
         "title": "Adobe picks up AI marketing startup Rilo in second India acquisition",
