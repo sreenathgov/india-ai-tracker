@@ -1375,6 +1375,46 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "AI agents may force rethink of India’s data-localisation rules",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-agents-may-force-rethink-of-indias-data-localisation-rules/134060753",
+        "summary": "As AI agents take on greater roles in managing transactions, India’s data regulations may need to adapt. These personal AI entities could utilize international payment systems for domestic activities....",
+        "date_published": "2026-09-12",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Dell launches new AI PCs and workstations for Indian enterprises with on-device AI focus",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/dell-launches-new-ai-pcs-and-workstations-for-indian-enterprises-with-on-device-ai-focus/134102602",
+        "summary": "Dell Technologies has unveiled a fresh lineup of commercial PCs and workstations tailored for Indian enterprises. Emphasizing on-device artificial intelligence and the ability to handle intensive work...",
+        "date_published": "2026-09-12",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Insight Partners sees niche AI businesses emerge after deploying over $1 billion in India",
         "url": "https://www.livemint.com/ai/artificial-intelligence/insight-partners-india-software-artificial-intelligence-ai-enterprise-software-saas-b2b-ai-startups-11789007085707.html",
         "summary": "Insight Partners sees India producing a new generation of AI-enabled businesses that combine software with services and engineering talent, while local enterprise demand creates another growth opportu...",
@@ -17109,5 +17149,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
