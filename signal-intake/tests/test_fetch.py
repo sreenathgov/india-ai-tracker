@@ -146,3 +146,89 @@ class TestFetchEntries:
         entries = fetch.fetch_entries("https://example.com/feed")
 
         assert len(entries) <= fetch.MAX_ENTRIES_PER_FEED
+
+
+class TestStripsHtmlFromTitleAndSummary:
+    """Real captured signals have shown up with raw HTML markup stuck in
+    title/summary — a Drupal title-span wrapper, embedded figure/img
+    markup, and paragraph-tag wrapping — which then pollutes downstream
+    keyword matching. fetch_entries's own docstring promises a "normalized
+    entry shape independent of feedparser internals"; that normalization
+    must include stripping markup, not just whitespace."""
+
+    @pytest.mark.unit
+    def test_strips_drupal_title_span_wrapper(self, monkeypatch):
+        title = (
+            '<span class="field field--name-title field--type-string '
+            'field--label-hidden" id="pageTitle">Ambassador Greer Joins '
+            "the FT News Briefing Podcast</span>"
+        )
+        doc = rss_document(
+            [item_xml(title, "https://example.com/a", "x", RECENT)]
+        )
+        monkeypatch.setattr(fetch.requests, "get", lambda *a, **k: FakeResponse(doc))
+
+        entries = fetch.fetch_entries("https://example.com/feed")
+
+        assert entries[0]["title"] == "Ambassador Greer Joins the FT News Briefing Podcast"
+
+    @pytest.mark.unit
+    def test_strips_figure_img_markup_from_summary(self, monkeypatch):
+        summary = (
+            '<figure><div><img src="https://imgproxy.divecdn.com/x.jpg">'
+            "</div></figure>Supply chains face new bottlenecks this quarter."
+        )
+        doc = rss_document(
+            [item_xml("Good Title", "https://example.com/b", summary, RECENT)]
+        )
+        monkeypatch.setattr(fetch.requests, "get", lambda *a, **k: FakeResponse(doc))
+
+        entries = fetch.fetch_entries("https://example.com/feed")
+
+        assert entries[0]["summary"] == "Supply chains face new bottlenecks this quarter."
+
+    @pytest.mark.unit
+    def test_strips_paragraph_tag_wrapper_from_summary(self, monkeypatch):
+        summary = "<p>Clean prose already, just wrapped in a paragraph tag.</p>"
+        doc = rss_document(
+            [item_xml("Good Title", "https://example.com/c", summary, RECENT)]
+        )
+        monkeypatch.setattr(fetch.requests, "get", lambda *a, **k: FakeResponse(doc))
+
+        entries = fetch.fetch_entries("https://example.com/feed")
+
+        assert entries[0]["summary"] == "Clean prose already, just wrapped in a paragraph tag."
+
+    @pytest.mark.unit
+    def test_decodes_html_entities_after_stripping_tags(self, monkeypatch):
+        title = "Greer&#8217;s briefing &amp; the department&#8217;s response"
+        doc = rss_document(
+            [item_xml(title, "https://example.com/d", "x", RECENT)]
+        )
+        monkeypatch.setattr(fetch.requests, "get", lambda *a, **k: FakeResponse(doc))
+
+        entries = fetch.fetch_entries("https://example.com/feed")
+
+        assert entries[0]["title"] == "Greer’s briefing & the department’s response"
+
+    @pytest.mark.unit
+    def test_plain_text_title_and_summary_are_unaffected(self, monkeypatch):
+        doc = rss_document(
+            [
+                item_xml(
+                    "India semiconductor manufacturing boost",
+                    "https://example.com/e",
+                    "India semiconductor manufacturing incentives announced for new chip plants.",
+                    RECENT,
+                )
+            ]
+        )
+        monkeypatch.setattr(fetch.requests, "get", lambda *a, **k: FakeResponse(doc))
+
+        entries = fetch.fetch_entries("https://example.com/feed")
+
+        assert entries[0]["title"] == "India semiconductor manufacturing boost"
+        assert (
+            entries[0]["summary"]
+            == "India semiconductor manufacturing incentives announced for new chip plants."
+        )

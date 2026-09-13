@@ -7,7 +7,9 @@ Returns a normalized entry shape independent of feedparser internals:
 """
 
 import logging
+import re
 from datetime import datetime, timedelta, timezone
+from html import unescape
 
 import feedparser
 import requests
@@ -18,6 +20,15 @@ DEFAULT_USER_AGENT = "Mozilla/5.0 (compatible; KananLabs-SignalIntake/1.0)"
 DEFAULT_TIMEOUT_SECONDS = 15
 DEFAULT_TIME_WINDOW_HOURS = 96
 MAX_ENTRIES_PER_FEED = 20
+
+_TAG_RE = re.compile(r"<[^>]+>")
+
+
+def _strip_html(raw: str) -> str:
+    """Some source feeds embed markup (a title-span wrapper, figure/img
+    blocks, paragraph tags) directly in title/summary text. Strip tags and
+    decode entities so downstream matching sees clean prose, not markup."""
+    return unescape(_TAG_RE.sub("", raw)).strip()
 
 
 def fetch_entries(
@@ -55,7 +66,7 @@ def fetch_entries(
     entries: list[dict[str, str | None]] = []
 
     for raw_entry in feed.entries[:MAX_ENTRIES_PER_FEED]:
-        title = (raw_entry.get("title") or "").strip()
+        title = _strip_html(raw_entry.get("title") or "")
         link = (raw_entry.get("link") or "").strip()
         if not title or not link:
             continue
@@ -68,7 +79,7 @@ def fetch_entries(
             {
                 "title": title,
                 "url": link,
-                "summary": (raw_entry.get("summary") or "").strip(),
+                "summary": _strip_html(raw_entry.get("summary") or ""),
                 "published_at": published_dt.isoformat() if published_dt else None,
             }
         )
