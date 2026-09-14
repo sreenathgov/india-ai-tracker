@@ -228,6 +228,26 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "[Sponsored] IP8 Expands into Patent Decision Intelligence with Five Connected AI Workflows",
+        "url": "https://spicyip.com/2026/09/sponsored-ip8-expands-into-patent-decision-intelligence-with-five-connected-ai-workflows.html",
+        "summary": "A year after launching agentic AI for patent-infringement surveillance, IP8 expands across critical patent decision workflows for law firms and enterprise IP teams. To know more, read their press rele...",
+        "date_published": "2026-09-14",
+        "source_name": "SpicyIP",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "ChatGPT AI Photo Trend: Turn your pics into vintage Maharashtra scenes from 1960s-90s for Instagram with these 5 prompts",
         "url": "https://www.livemint.com/ai/chatgpt-ai-photo-trend-turn-your-pics-into-vintage-maharashtra-scenes-from-1960s-90s-for-instagram-with-these-5-prompts-11789101111269.html",
         "summary": "As the 1980s AI photo trend rises, the urge to create authentic vintage-style images is also gaining ground. Specially curated ChatGPT prompts can be used to turn modern selfies to vintage-style image...",
@@ -2983,5 +3003,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

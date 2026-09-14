@@ -146,6 +146,26 @@
     "Major AI Developments": [
       {
         "id": 2,
+        "title": "AI driving tests slow road to licence at RTOs",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ai-driving-tests-slow-road-to-licence-at-rtos/articleshow/134219969.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"https://timesofindia....",
+        "date_published": "2026-09-14",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "Ahmedabad: India must become ‘laboratory of the world’: Anupriya Patel",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ahmedabad-india-must-become-laboratory-of-the-world-anupriya-patel/articleshow/133430131.cms",
         "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"...",
@@ -1901,5 +1921,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
