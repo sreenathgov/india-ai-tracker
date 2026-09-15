@@ -111,6 +111,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "IIIT-Hyderabad releases book on evolution of UPI",
+        "url": "https://www.iiit.ac.in/cashless-nation/",
+        "summary": "IIIT-Hyderabad releases book on evolution of UPIIIIT-H Launches Centre for Educational Technology and Learning Sciences (CETLS) to Reimagine Learning in the Age of AIFoundation Day 2026IIIT Hyderabad...",
+        "date_published": "2026-09-15",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "From AI pilots to production: Rebuilding the enterprise stack for intelligent agents",
         "url": "https://yourstory.com/2026/09/ai-pilots-production-rebuilding-enterprise-stack-intelligent-agents",
@@ -2834,5 +2854,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
