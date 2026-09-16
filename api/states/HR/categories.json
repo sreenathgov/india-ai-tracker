@@ -27,6 +27,46 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Beauty quick commerce startup Firi raises $3 Mn led by 360 ONE Asset",
+        "url": "https://entrackr.com/snippets/beauty-quick-commerce-startup-firi-raises-3-mn-led-by-360-one-asset-12538816",
+        "summary": "Gurugram-based beauty and personal care quick commerce startup F...",
+        "date_published": "2026-09-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "HR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Gurugram to get 6 ‘smart model roads’ with AI cameras, emergency call points",
+        "url": "https://www.tribuneindia.com/news/gurugram/gurugram-to-get-6-smart-model-roads-with-ai-cameras-emergency-call-points",
+        "summary": "Six of Gurugram’s busiest roads are set to be transformed into &#8216;Smart Model Roads&#8217; under the Gurugram Metropolitan Development Authority’s (GMDA) Smart City initiative, with digital survei...",
+        "date_published": "2026-09-16",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "HR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Haryana Police sets up AI Task Force to speed up cybercrime probes",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/haryana-police-sets-up-ai-task-force-to-speed-up-cybercrime-probes/articleshow/133662523.cms",
@@ -133,5 +173,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

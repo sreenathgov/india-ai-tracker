@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 4,
+        "title": "Govt to match VC investments in Indian chip startups; Shah Rukh Khan, QED Investors back AI content firm Flam",
+        "url": "https://yourstory.com/2026/09/govt-to-match-vc-investments-chip-startups-shah-rukh-khan-qed-investors-back-flam",
+        "summary": "Amitesh Kumar Sinha, Additional Secretary at the Ministry of Electronics and Information Technology and CEO of the India Semiconductor Mission, lays out the thinking behind Semicon 2.0.",
+        "date_published": "2026-09-16",
+        "source_name": "YourStory",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "India&#039;s AI agents to make small digital payments via UPI without approval",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-agents-to-make-small-digital-payments-via-upi-without-approval/133674112",
@@ -1460,6 +1480,66 @@
         "summary": "Bengaluru-based AI interactive content company Flam ha...",
         "date_published": "2026-09-15",
         "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "HCLTech, CrowdStrike expand partnership for AI security",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/hcltech-crowdstrike-expand-partnership-for-ai-security/134258609",
+        "summary": "HCLTech and CrowdStrike are taking their strategic alliance to the next level by enhancing enterprise AI security. This partnership merges CrowdStrike Falcon Guardian with HCLTech’s comprehensive AI s...",
+        "date_published": "2026-09-15",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Jio users to get Canva's premium design tools free for a year in Indian languages",
+        "url": "https://yourstory.com/2026/09/jio-users-to-get-canvas-premium-design-tools-free-for-a-year-in-indian-languages",
+        "summary": "Canva offers millions of premium templates plus AI-powered design tools that can be used for designing professional presentations, publicity materials, etc.",
+        "date_published": "2026-09-15",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "AI will be the great equaliser only if India gets four things right: Gates Foundation CEO Mark Suzman",
+        "url": "https://yourstory.com/2026/09/gates-foundation-mark-suzman-india-ai-four-things-interview",
+        "summary": "In conversation with Shradha Sharma, the Gates Foundation CEO lays out what the next 18 to 24 months will decide for 1.4 billion people",
+        "date_published": "2026-09-15",
+        "source_name": "YourStory",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -14281,6 +14361,46 @@
     "AI Start-Up News": [
       {
         "id": 5,
+        "title": "Semiconductor verification startup VerifAIX raises $5 Mn in seed round",
+        "url": "https://entrackr.com/snippets/semiconductor-verification-startup-verifaix-raises-5-mn-in-seed-round-12538970",
+        "summary": "AI-native semiconductor verification startup Verif...",
+        "date_published": "2026-09-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Teachers’ Venture Growth makes follow-on investment in Darwinbox",
+        "url": "https://entrackr.com/snippets/teachers-venture-growth-makes-follow-on-investment-in-darwinbox-12535764",
+        "summary": "Teachers&rsquo; Venture Growth (TVG), the late-st...",
+        "date_published": "2026-09-15",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
         "title": "B2B pharma distribution startup Fundly.ai raises $4 Mn led by Accel, Multiply",
         "url": "https://entrackr.com/snippets/b2b-pharma-distribution-startup-fundlyai-raises-4-mn-led-by-accel-multiply-12505458",
         "summary": "Mumbai-based B2B pharma distribution startup Fundly.ai has r...",
@@ -17270,6 +17390,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News",
+    "Policies and Initiatives"
   ]
 }
