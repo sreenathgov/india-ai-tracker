@@ -1394,6 +1394,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "India’s semiconductor growth to strengthen global supply chains amid rising AI demand: PM Modi",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/indias-semiconductor-growth-to-strengthen-global-supply-chains-amid-rising-ai-demand-pm-modi/134305447",
+        "summary": "Speaking at the inaugural session of Semicon 2026, Modi said India is emerging as a reliable semiconductor manufacturing hub amid rising global demand.",
+        "date_published": "2026-09-17",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Plenty of coders, few AI implementers: Why Forward Deployed Engineers can earn up to  ₹1.55 crore in India",
         "url": "https://www.livemint.com/ai/artificial-intelligence/plenty-of-coders-few-deployers-india-s-ai-skill-gap-sparks-rs-1-55-crore-salary-boom-11789442981155.html",
@@ -17390,7 +17410,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
-    "Policies and Initiatives"
+    "Major AI Developments"
   ]
 }

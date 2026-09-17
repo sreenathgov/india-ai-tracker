@@ -511,6 +511,27 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "India’s top AI teams set to battle in Elastic and AWS's Forge the Future Hackathon finale",
+        "url": "https://yourstory.com/2026/09/indias-top-ai-teams-set-battle-elastic-awss-forge-future-hackathon-finale",
+        "summary": "After weeks of registration, idea submission, and shortlisting, India's top AI teams are set to compete at the Forge the Future Hackathon's Grand Finale in Bengaluru, with the winners earning a place...",
+        "date_published": "2026-09-17",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Four Indian startups in Google DeepMind Accelerator; What happens when AI makes thinking cheap? An IISc professor weighs in",
         "url": "https://yourstory.com/2026/09/amazon-adds-176-facilities-ahead-of-indias-festive-rush",
@@ -6030,5 +6051,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

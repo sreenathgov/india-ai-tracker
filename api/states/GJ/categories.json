@@ -145,6 +145,49 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Micron Technology poised for major expansion of semiconductor operations in 2024",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/micron-technology-poised-for-major-expansion-of-semiconductor-operations-in-2024/134304192",
+        "summary": "Micron Technology is set to enhance its chip manufacturing capabilities in Gujarat next year, capitalizing on India&#039;s semiconductor initiatives and a surge in AI demand. The Sanand facility will...",
+        "date_published": "2026-09-17",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Enlight Metals raises $1.5 Mn at $10 Mn valuation from Exar North Group",
+        "url": "https://entrackr.com/snippets/enlight-metals-raises-15-mn-at-10-mn-valuation-from-exar-north-group-12543275",
+        "summary": "New Delhi-based metal procurement platform Enlight Metals has r...",
+        "date_published": "2026-09-17",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "CG",
+          "GJ",
+          "MH",
+          "MP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "AI driving tests slow road to licence at RTOs",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ai-driving-tests-slow-road-to-licence-at-rtos/articleshow/134219969.cms",
@@ -1921,5 +1964,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
