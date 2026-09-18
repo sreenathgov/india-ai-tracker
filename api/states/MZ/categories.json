@@ -3,7 +3,28 @@
   "categories": {
     "Policies and Initiatives": [],
     "Events": [],
-    "Major AI Developments": [],
+    "Major AI Developments": [
+      {
+        "id": 4,
+        "title": "Mizoram Speaker to lead Indian delegation session on AI at Commonwealth meet in South Africa",
+        "url": "https://www.thehindu.com/news/national/mizoram/mizoram-speaker-to-lead-indian-delegation-session-on-ai-at-commonwealth-meet-in-south-africa/article71476412.ece",
+        "summary": "The conference is deliberating upon issues related to strengthening parliamentary systems and promoting equitable development among Commonwealth countries, according to an official release.",
+        "date_published": "2026-09-17",
+        "source_name": "The Hindu - Mizoram",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MZ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      }
+    ],
     "AI Start-Up News": []
   },
   "today_updates": []

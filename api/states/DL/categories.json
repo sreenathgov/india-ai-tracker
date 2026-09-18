@@ -616,6 +616,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "AIIMS-Delhi develops AI-based tool for breast cancer screening",
+        "url": "https://www.tribuneindia.com/news/delhi/aiims-delhi-develops-ai-based-tool-for-breast-cancer-screening",
+        "summary": "A breast cancer screening technology developed at the AIIMS, New Delhi, has taken a significant step towards moving from the research laboratory to routine healthcare, with the institute transferring...",
+        "date_published": "2026-09-18",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Himachal Pradesh University students shine in Delhi hackathon",
         "url": "https://www.tribuneindia.com/news/himachal/himachal-pradesh-university-students-shine-in-delhi-hackathon",
@@ -4784,5 +4804,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
