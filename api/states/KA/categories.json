@@ -4,6 +4,26 @@
     "Policies and Initiatives": [
       {
         "id": 5,
+        "title": "Karnataka govt. approves sustainable data centre to address AI’s environmental footprint",
+        "url": "https://www.thehindu.com/news/cities/bangalore/karnataka-govt-approves-sustainable-data-centre-to-address-ais-environmental-footprint/article71481827.ece",
+        "summary": "The revised data centre policy envisages sustainable data centre development, with emphasis on renewable energy adoption, energy efficiency, advanced cooling, water management, carbon emission mitigat...",
+        "date_published": "2026-09-18",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
         "title": "Airbound raises $37 Mn from Greenoaks, DoorDash, Lachy Groom and others",
         "url": "https://entrackr.com/news/airbound-raises-37-mn-from-greenoaks-doordash-lachy-groom-and-others-12431939",
         "summary": "Bengaluru-based aerospace startup Air...",
@@ -6071,7 +6091,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

@@ -267,6 +267,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "IIT-K to impart AI training to teachers",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/iit-k-to-impart-ai-training-to-teachers/articleshow/134343385.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"https://timesofindia.indiatim...",
+        "date_published": "2026-09-19",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "IIT Kanpur’s AI solution could help governments identify households needing welfare support",
         "url": "https://www.tribuneindia.com/news/india/iit-kanpurs-ai-solution-could-help-governments-identify-households-needing-welfare-support",
@@ -1479,5 +1499,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
