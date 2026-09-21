@@ -1414,6 +1414,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "India leading enterprise AI adoption, focus on production deployments and agentic AI growth",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-leading-enterprise-ai-adoption-focus-on-production-deployments-and-agentic-ai-growth/134378311",
+        "summary": "A groundbreaking shift is taking place as Indian firms embrace extensive AI production deployments. Salesforce is set to significantly enhance India’s physical infrastructure and workforce investments...",
+        "date_published": "2026-09-21",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India&#039;s AI agent sprawl: Enterprises struggle with production beyond pilot stages",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-ai-agent-sprawl-enterprises-struggle-with-production-beyond-pilot-stages/134377914",
+        "summary": "Indian organizations are delving into AI agents across various sectors, yet a noticeable divide exists between experimental phases and full-scale implementation. This unchecked proliferation of agents...",
+        "date_published": "2026-09-21",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Amazon brings Alexa+ to India: AI features, Hinglish support, free early access & more - All you need to know",
         "url": "https://www.etnownews.com/technology/amazon-brings-alexa-to-india-ai-features-hinglish-support-free-early-access-more-all-you-need-to-know-article-156185452",
@@ -17509,5 +17549,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
