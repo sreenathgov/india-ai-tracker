@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 4,
+        "title": "AI replacing 3rd language in Karnataka high schools? Teachers protest against move",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/teachers-oppose-ai-replacing-third-language-in-high-schools-in-karnataka/articleshow/134396544.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\"...",
+        "date_published": "2026-09-22",
+        "source_name": "Times of India - Bangalore",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Karnataka govt. approves sustainable data centre to address AI’s environmental footprint",
         "url": "https://www.thehindu.com/news/cities/bangalore/karnataka-govt-approves-sustainable-data-centre-to-address-ais-environmental-footprint/article71481827.ece",
@@ -6091,5 +6111,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

@@ -14520,6 +14520,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "Lumikai leads $600K pre-seed round in Demoverse",
+        "url": "https://entrackr.com/snippets/lumikai-leads-600k-pre-seed-round-in-demoverse-12562408",
+        "summary": "Bengaluru-based AI-powered product co-creation startup...",
+        "date_published": "2026-09-22",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Semiconductor verification startup VerifAIX raises $5 Mn in seed round",
         "url": "https://entrackr.com/snippets/semiconductor-verification-startup-verifaix-raises-5-mn-in-seed-round-12538970",
@@ -17550,6 +17570,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }

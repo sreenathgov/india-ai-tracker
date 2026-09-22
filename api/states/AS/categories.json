@@ -26,6 +26,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Blend of space, music &amp; AI goes cosmic with Assam’s artistic touch",
+        "url": "https://timesofindia.indiatimes.com/city/guwahati/blend-of-space-music-ai-goes-cosmic-with-assams-artistic-touch/articleshow/134396319.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"https...",
+        "date_published": "2026-09-22",
+        "source_name": "Times of India - Guwahati",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AS"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Assam commissions first govt-owned GPU cluster to power AI services",
         "url": "https://timesofindia.indiatimes.com/city/guwahati/assam-commissions-first-govt-owned-gpu-cluster-to-power-ai-services/articleshow/132772376.cms",
@@ -248,5 +268,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
