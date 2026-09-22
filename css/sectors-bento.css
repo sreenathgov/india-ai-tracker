@@ -602,6 +602,10 @@
     transition: color 320ms ease;
 }
 
+body.kl-homepage .kl-roadmap__pilot-link {
+    color: var(--kl-roadmap-red-deep);
+}
+
 .kl-roadmap__pilot-link::before {
     content: '';
     position: absolute;
@@ -627,6 +631,10 @@
 .kl-roadmap__pilot-link:focus-visible {
     outline: 2px solid var(--kl-roadmap-ink);
     outline-offset: 4px;
+}
+
+body.kl-homepage .kl-roadmap__pilot-link:focus-visible {
+    outline-color: var(--kl-roadmap-red-deep);
 }
 
 @media (hover: hover) and (pointer: fine) {

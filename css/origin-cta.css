@@ -118,7 +118,8 @@
 }
 
 .kl-origin-workflow__endpoint-title {
-    font-size: 15px;
+    font-size: 13px;
+    letter-spacing: -0.01em;
 }
 
 .kl-origin-workflow__endpoint-kicker,
@@ -362,10 +363,19 @@
     text-wrap: balance;
 }
 
+.kl-origin-cta__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: clamp(32px, 2.8vw, 40px);
+}
+
 .kl-origin-cta__button {
     display: inline-flex;
     min-height: 52px;
-    margin-top: clamp(32px, 2.8vw, 40px);
+    margin-top: 0;
     padding: 0.5rem 0.55rem 0.5rem 1.35rem;
     box-sizing: border-box;
     align-items: center;
@@ -373,7 +383,7 @@
     gap: 0.85rem;
     border: 1px solid #f8f5ed;
     border-radius: 999px;
-    color: #0b2b45;
+    color: var(--kl-wine, #762c36);
     background: #f8f5ed;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 0.9rem;
@@ -381,6 +391,32 @@
     line-height: 1.2;
     text-decoration: none;
     transition: background 180ms ease, transform 180ms ease;
+}
+
+.kl-origin-cta__drona-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: #f8f5ed;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 550;
+    line-height: 1.2;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(248, 245, 237, 0.55);
+    text-underline-offset: 0.4em;
+    transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+.kl-origin-cta__drona-link:hover {
+    color: #fffaf0;
+    text-decoration-color: #fffaf0;
+}
+
+.kl-origin-cta__drona-link:focus-visible {
+    outline: 3px solid #ef765d;
+    outline-offset: 4px;
 }
 
 .kl-origin-cta__button:hover {
@@ -400,7 +436,7 @@
     place-items: center;
     border-radius: 50%;
     color: #f8f5ed;
-    background: #0b2b45;
+    background: var(--kl-wine, #762c36);
     font-size: 1rem;
     transition: transform 180ms ease;
 }
@@ -494,7 +530,8 @@
 
 @media (prefers-reduced-motion: reduce) {
     .kl-origin-cta__button,
-    .kl-origin-cta__button-arrow {
+    .kl-origin-cta__button-arrow,
+    .kl-origin-cta__drona-link {
         transition: none !important;
     }
 }

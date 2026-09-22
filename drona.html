@@ -1,271 +1,486 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Analytics load only after cookie consent (DPDP/GDPR) -->
     <script src="js/consent.js" defer></script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drona | Kanan Labs</title>
-
-    <meta name="description" content="Drona — coming soon from Kanan Labs.">
-    <meta name="robots" content="noindex,follow">
-
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Kanan Labs">
-    <meta property="og:title" content="Drona | Kanan Labs">
-    <meta property="og:description" content="Drona — coming soon from Kanan Labs.">
-    <meta property="og:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Kanan Labs">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Drona | Kanan Labs">
-    <meta name="twitter:description" content="Drona — coming soon from Kanan Labs.">
-    <meta name="twitter:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
-    <meta name="twitter:image:alt" content="Kanan Labs">
-
+    <title>Drona — Production Intelligence | Kanan Labs</title>
+    <meta name="description" content="Drona connects production commitments, supplier evidence and external risk signals so teams can see where fulfilment is at risk while there is still time to act.">
+    <link rel="canonical" href="https://kananlabs.in/drona.html">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta property="og:type" content="website"><meta property="og:site_name" content="Kanan Labs"><meta property="og:url" content="https://kananlabs.in/drona.html">
+    <meta property="og:title" content="Drona — Production Intelligence | Kanan Labs"><meta property="og:description" content="A clearer view of production risk, built from the evidence behind each commitment.">
+    <meta property="og:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png"><meta property="og:image:alt" content="Drona by Kanan Labs">
+    <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Drona — Production Intelligence | Kanan Labs"><meta name="twitter:description" content="A clearer view of production risk, built from the evidence behind each commitment."><meta name="twitter:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
     <link rel="icon" type="image/png" href="assets/images/KANAN-LABS-WEBSITELOGO.png">
-
-    <!-- Shared design tokens & fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/styles-v2.css?v=13">
-    <link rel="stylesheet" href="css/staggered-menu.css?v=8">
-    <link rel="stylesheet" href="css/footer.css?v=5">
-
-    <!-- GSAP (required by js/staggered-menu.js; matches the pattern on every other page) -->
+    <link rel="preload" as="image" href="added-assets/tw-hero-1920.avif" type="image/avif" fetchpriority="high" imagesrcset="added-assets/tw-hero-1280.avif 1280w, added-assets/tw-hero-1920.avif 1920w, added-assets/tw-hero-2560.avif 2560w, added-assets/tw-hero-3200.avif 3200w">
+    <link rel="stylesheet" href="css/styles-v2.css?v=21"><link rel="stylesheet" href="css/staggered-menu.css?v=8"><link rel="stylesheet" href="css/footer.css?v=5">
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-
-    <!-- Prism WebGL background (same effect as tradewatch.html / request-demo.html) -->
-    <script src="js/prism-bg.js?v=1" defer></script>
-
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <style>
-        @font-face {
-            font-family: 'Telegraf';
-            src: url('assets/fonts/Telegraf-UltraBold.otf') format('opentype');
-            font-weight: 800;
-            font-style: normal;
-            font-display: swap;
-        }
+        @font-face { font-family: Telegraf; src: url('assets/fonts/Telegraf-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+        @font-face { font-family: Telegraf; src: url('assets/fonts/Telegraf-UltraBold.otf') format('opentype'); font-weight: 800; font-style: normal; font-display: swap; }
+        :root { --dr-navy:#0a2f52; --dr-navy-deep:#061f38; --dr-cream:#eeebe3; --dr-wine:#762c36; --dr-oxblood:#310b10; --dr-red:#c53b35; }
+        *,*::before,*::after { box-sizing:border-box; } html { background:var(--dr-navy-deep); scroll-behavior:smooth; } body { margin:0; overflow-x:hidden; background:var(--dr-navy-deep); color:var(--dr-cream); font-family:Telegraf,Inter,sans-serif; -webkit-font-smoothing:antialiased; }
 
-        /* ── HOLDING PAGE — Drona, coming soon ── */
-        :root {
-            --dr-maroon-deep: #200b0d;
-            --dr-maroon-mid:  #4a1820;
-            --dr-wine:        #762c36;
-            --dr-cream:       #eeebe3;
-        }
+        /* Act 0 — shared TradeWatch opening architecture, with a Drona message. */
+        .dr-hero { position:relative; min-height:100vh; min-height:100dvh; display:flex; align-items:flex-end; justify-content:center; overflow:hidden; background:var(--dr-navy-deep); }
+        .dr-hero__media { position:absolute; inset:0; overflow:hidden; background:image-set(url('added-assets/tw-hero-2400.avif') type('image/avif'),url('added-assets/tw-hero-2400.jpg') type('image/jpeg')) center 30% / cover no-repeat; }
+        .dr-hero__image { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 30%; transform:scale(1.08); transform-origin:50% 60%; will-change:transform; opacity:0; transition:opacity .55s ease; }.dr-hero__image.is-ready { opacity:.95; }
+        .dr-hero__particles { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; mix-blend-mode:screen; opacity:.85; }
+        .dr-hero__top-shade { position:absolute; inset:0 0 auto; height:30%; background:linear-gradient(180deg,rgba(6,31,56,.5),transparent); }.dr-hero__bottom-shade { position:absolute; inset:auto 0 0; height:36%; background:linear-gradient(180deg,rgba(238,235,227,0) 0%,rgba(238,235,227,0) 32%,rgba(238,235,227,.04) 48%,rgba(238,235,227,.13) 62%,rgba(238,235,227,.38) 74%,rgba(238,235,227,.70) 86%,rgba(238,235,227,.92) 94%,var(--dr-cream) 100%); }
+        .dr-hero__content { position:relative; z-index:1; width:min(1280px,100%); padding:0 clamp(1.5rem,4vw,4rem) clamp(4.5rem,10vh,7.5rem); display:flex; flex-direction:column; align-items:center; text-align:center; }
+        .dr-hero__title { margin:0 0 1rem; color:var(--dr-cream); font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(4rem,11vw,10rem); font-weight:500; font-style:italic; letter-spacing:-.035em; line-height:.9; opacity:0; transform:translateY(20px); transition:opacity 1.35s ease-out,transform 1.35s ease-out; }
+        .dr-hero__title.is-in,.dr-hero__strap.is-in,.dr-hero__actions.is-in { opacity:1; transform:translateY(0); }.dr-hero__strap { max-width:37rem; margin:0 0 1.65rem; color:rgba(238,235,227,.92); font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.05rem,1.6vw,1.5rem); font-style:italic; line-height:1.4; text-shadow:0 1px 18px rgba(6,31,56,.6); opacity:0; transform:translateY(15px); transition:opacity 1.25s ease-out .25s,transform 1.25s ease-out .25s; }
+        .dr-hero__actions { display:flex; flex-direction:column; align-items:center; gap:.55rem; opacity:0; transform:translateY(15px); transition:opacity 1.25s ease-out .5s,transform 1.25s ease-out .5s; }
+        .dr-button-primary { display:inline-flex; align-items:center; justify-content:center; gap:.95rem; min-height:48px; padding:.375rem .375rem .375rem 1.35rem; border-radius:999px; color:var(--dr-navy); background:var(--dr-cream); font-family:Inter,sans-serif; font-size:.9375rem; font-weight:500; text-decoration:none; transition:transform 220ms cubic-bezier(.22,1,.36,1),box-shadow 220ms ease,background 220ms ease; }.dr-button-primary:hover { background:#fff; transform:translateY(-1px); box-shadow:0 12px 30px rgba(0,0,0,.25); }
+        .dr-button-primary__arrow { display:inline-grid; width:36px; height:36px; place-items:center; border-radius:50%; color:var(--dr-cream); background:#3a0000; font-size:1.15rem; line-height:1; transition:transform 220ms ease; }.dr-button-primary:hover .dr-button-primary__arrow { transform:translateX(2px); }
+        .dr-button-secondary { border-bottom:1px solid rgba(238,235,227,.6); padding-bottom:.2rem; color:rgba(238,235,227,.92); font-family:Inter,sans-serif; font-size:.86rem; text-decoration:none; transition:border-color .2s ease,color .2s ease; }.dr-button-secondary:hover { color:#fff; border-color:#fff; }.dr-button-primary:focus-visible,.dr-button-secondary:focus-visible { outline:2px solid #fff; outline-offset:4px; }
+        .dr-scroll-cue { position:absolute; z-index:2; bottom:1.85rem; left:50%; display:none; color:rgba(238,235,227,.55); font-size:.58rem; letter-spacing:.34em; text-transform:uppercase; transform:translateX(-50%); }.dr-scroll-cue::after { content:''; display:block; width:1px; height:28px; margin:.6rem auto 0; background:linear-gradient(to bottom,rgba(238,235,227,.55),transparent); animation:dr-cue 2.2s ease-in-out infinite; } @media (min-height:700px) { .dr-scroll-cue { display:block; } } @keyframes dr-cue { 0%,100% { transform:scaleY(.4); opacity:.4; transform-origin:top; } 50% { transform:scaleY(1); opacity:1; transform-origin:top; } }
 
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        /* Act I — the same statement-and-wide-visual cadence, now about commitments. */
+        .dr-act1 { position:relative; display:flex; flex-direction:column; align-items:center; overflow:hidden; background:var(--dr-cream); color:var(--dr-wine); }.dr-act1::before { content:''; position:absolute; inset:0 0 auto; height:60%; background:radial-gradient(ellipse at 50% 45%,rgba(118,44,54,.035),transparent 65%); pointer-events:none; }.dr-act1__copy { position:relative; width:100%; max-width:76rem; padding:clamp(3.5rem,10vh,8rem) clamp(1.5rem,4vw,4rem) clamp(2rem,6vh,5rem); text-align:center; }
+        .dr-act1__heading { margin:0; font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(2.05rem,5.2vw,5rem); font-weight:500; letter-spacing:-.015em; line-height:1.08; }.dr-act1__word { display:inline-block; margin-right:.18em; opacity:.12; filter:blur(4px); transform:rotate(2deg); transform-origin:0 80%; transition:opacity .6s ease-out,filter .6s ease-out,transform .6s ease-out; }.dr-act1__word.is-active { opacity:1; filter:blur(0); transform:rotate(0); }.dr-act1__emphasis { color:var(--dr-wine); font-style:italic; }
+        .dr-act1__visual { position:relative; width:100%; overflow:hidden; line-height:0; background:var(--dr-navy); }.dr-act1__video { display:block; width:100%; height:auto; } @media (max-width:639px) { .dr-act1__visual { aspect-ratio:4 / 3; }.dr-act1__video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 38%; } } @media (min-width:640px) and (max-width:1023px) { .dr-act1__visual { aspect-ratio:16 / 9; }.dr-act1__video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 38%; } } @media (max-width:480px) { .dr-hero__content { padding-bottom:4.3rem; }.dr-hero__title { font-size:clamp(4rem,20vw,6.4rem); } } @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation-duration:.01ms !important; transition-duration:.01ms !important; }.dr-hero__title,.dr-hero__strap,.dr-hero__actions,.dr-act1__word { opacity:1; filter:none; transform:none; } }
+        /* Evidence banner — follows the operating model as a concise proof point. */
+        .dr-fracture { background:var(--dr-wine); color:var(--dr-cream); padding:clamp(3.5rem,4.8vw,4rem) clamp(1.5rem,5vw,5rem) clamp(3.75rem,5vw,4.5rem); }
+        .dr-fracture__inner { max-width:1280px; margin:0 auto; }
+        .dr-fracture__title { max-width:42rem; margin:0 0 clamp(2.75rem,4.5vw,3.75rem); font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(2.1rem,3.3vw,3.4rem); font-weight:500; letter-spacing:-.02em; line-height:1.02; }
+        .dr-fracture__grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(2rem,5vw,5rem); }
+        .dr-fracture__stat { min-width:0; padding-top:1.15rem; border-top:1px solid rgba(238,235,227,.38); }
+        .dr-fracture__number { display:block; margin-bottom:.85rem; font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(3.7rem,6.2vw,6.8rem); font-weight:400; letter-spacing:-.06em; line-height:.8; white-space:nowrap; }
+        .dr-fracture__copy { max-width:25rem; margin:0; color:rgba(238,235,227,.9); font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.1rem,1.5vw,1.45rem); font-weight:400; line-height:1.25; }
+        @media (max-width:760px) { .dr-fracture__grid { grid-template-columns:1fr; gap:2.5rem; }.dr-fracture__title { margin-bottom:3.5rem; }.dr-fracture__number { font-size:clamp(4rem,17vw,6rem); }.dr-fracture__copy { max-width:21rem; } }
 
-        html, body {
-            height: 100%;
-            background: var(--dr-maroon-deep);
-            color: var(--dr-cream);
-            font-family: 'Telegraf', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden;
-        }
+        /* Act II — Drona's operating model, adapted from TradeWatch. */
+        .dr-difference { position:relative; isolation:isolate; overflow:hidden; padding:calc(clamp(6rem,9.6vw,8rem) + clamp(5.5rem,11vw,10rem)) clamp(1.5rem,5vw,5rem) clamp(5.5rem,11vw,10rem); background:#f5f2ea; color:var(--dr-oxblood); border-bottom:1px solid rgba(49,11,16,.08); }
+        .dr-difference::before { content:''; position:absolute; z-index:-1; inset:-56px; background-image:linear-gradient(rgba(118,44,54,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(118,44,54,.045) 1px,transparent 1px); background-size:56px 56px; animation:dr-grid-drift 28s linear infinite; pointer-events:none; }
+        @keyframes dr-grid-drift { to { transform:translate3d(56px,56px,0); } }
+        .dr-difference__inner { position:relative; max-width:1180px; margin:0 auto; }
+        .dr-difference__intro { display:grid; grid-template-columns:minmax(16rem,1fr) 1px minmax(25rem,1.65fr); gap:0 clamp(2.5rem,6vw,5rem); align-items:center; margin-bottom:clamp(4.5rem,9vw,7rem); }
+        .dr-difference__eyebrow { margin:0 0 1.25rem; color:var(--dr-red); font-family:Telegraf,Inter,sans-serif; font-size:.68rem; font-weight:800; letter-spacing:.3em; line-height:1.4; text-transform:uppercase; }
+        .dr-difference__headline { margin:0; color:var(--dr-oxblood); font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(3rem,5.5vw,5.15rem); font-style:italic; font-weight:500; letter-spacing:-.035em; line-height:.92; }
+        .dr-difference__headline span { display:block; }
+        .dr-difference__divider { width:1px; min-height:250px; align-self:stretch; background:linear-gradient(to bottom,transparent,rgba(118,44,54,.12) 20%,rgba(118,44,54,.25) 50%,rgba(118,44,54,.12) 80%,transparent); }
+        .dr-difference__copy { max-width:43rem; padding-top:.35rem; }
+        .dr-difference__copy p { margin:0 0 1.15rem; color:rgba(49,11,16,.72); font-family:Telegraf,Inter,sans-serif; font-size:clamp(.95rem,1.15vw,1.05rem); line-height:1.72; }
+        .dr-difference__cta { display:inline-flex; align-items:center; gap:1rem; margin-top:.65rem; padding:.4rem .4rem .4rem 1.35rem; min-height:50px; border-radius:999px; color:#fff; background:var(--dr-wine); font-family:Inter,sans-serif; font-size:.92rem; font-weight:500; text-decoration:none; box-shadow:0 10px 24px rgba(49,11,16,.12); transition:transform 220ms ease,background 220ms ease,box-shadow 220ms ease; }
+        .dr-difference__cta:hover { background:var(--dr-oxblood); transform:translateY(-2px); box-shadow:0 16px 34px rgba(49,11,16,.2); }
+        .dr-difference__cta-arrow { display:grid; width:38px; height:38px; place-items:center; border:1px solid rgba(49,11,16,.08); border-radius:50%; background:var(--dr-cream); color:var(--dr-oxblood); font-size:1.1rem; box-shadow:0 1px 3px rgba(49,11,16,.12); transition:transform 220ms ease,background-color 220ms ease; }
+        .dr-difference__cta:hover .dr-difference__cta-arrow { background:#fff; transform:translateX(2px); }
+        .dr-difference__cta:focus-visible { outline:2px solid var(--dr-red); outline-offset:4px; }
+        .dr-principles { --dr-node:68px; --dr-line-y:3.4rem; position:relative; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(1.25rem,3vw,2.75rem); }
+        .dr-principles::before { content:''; position:absolute; z-index:0; left:0; right:0; top:var(--dr-line-y); height:1px; background:repeating-linear-gradient(to right,rgba(197,59,53,.34) 0 5px,transparent 5px 12px); background-size:17px 1px; animation:dr-route-flow 9s linear infinite; pointer-events:none; }
+        @keyframes dr-route-flow { to { background-position:68px 0; } }
+        .dr-principle { position:relative; z-index:1; min-width:0; }
+        .dr-principle__visual { display:flex; flex-direction:column; align-items:flex-start; }
+        .dr-principle__number { margin-bottom:.65rem; color:var(--dr-red); font-family:Telegraf,Inter,sans-serif; font-size:.64rem; font-weight:800; letter-spacing:.23em; line-height:1; }
+        .dr-principle__medallion { position:relative; z-index:1; display:grid; width:var(--dr-node); height:var(--dr-node); margin:0 0 1.5rem; place-items:center; color:var(--dr-oxblood); background:#f5f2ea; box-shadow:0 0 0 9px #f5f2ea; }
+        .dr-principle__medallion svg { width:40px; height:40px; }
+        .dr-principle__title { margin:0 0 .35rem; color:var(--dr-oxblood); font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.45rem,2vw,1.75rem); font-weight:600; line-height:1.1; }
+        .dr-principle__descriptor { margin:0 0 .75rem; color:var(--dr-red); font-family:Telegraf,Inter,sans-serif; font-size:.62rem; font-weight:800; letter-spacing:.16em; line-height:1.4; text-transform:uppercase; }
+        .dr-principle__support { max-width:17rem; margin:0; color:rgba(49,11,16,.68); font-family:Telegraf,Inter,sans-serif; font-size:.82rem; line-height:1.62; }
+        @media (min-width:700px) and (max-width:1023px) { .dr-difference__intro { grid-template-columns:1fr; gap:1.5rem; }.dr-difference__divider { display:none; }.dr-difference__copy { max-width:46rem; }.dr-principles { grid-template-columns:repeat(2,minmax(0,1fr)); gap:4rem clamp(2rem,8vw,5rem); }.dr-principles::before { display:none; }.dr-principle { border-top:1px dashed rgba(197,59,53,.26); padding-top:1rem; } }
+        @media (max-width:699px) { .dr-difference { padding-top:calc(clamp(6rem,9.6vw,8rem) + 5rem); padding-bottom:5.5rem; }.dr-difference__intro { grid-template-columns:1fr; gap:1.5rem; margin-bottom:4rem; }.dr-difference__divider { display:none; }.dr-difference__headline { font-size:clamp(3rem,15vw,4.35rem); }.dr-difference__copy p { font-size:.95rem; }.dr-principles { --dr-node:58px; grid-template-columns:1fr; gap:2.65rem; }.dr-principles::before { left:29px; right:auto; top:2.65rem; bottom:2rem; width:1px; height:auto; background:repeating-linear-gradient(to bottom,rgba(197,59,53,.3) 0 5px,transparent 5px 12px); animation:dr-route-flow-mobile 9s linear infinite; }.dr-principle { display:grid; grid-template-columns:58px minmax(0,1fr); gap:1.2rem; }.dr-principle__visual { width:58px; }.dr-principle__number { margin-bottom:.55rem; }.dr-principle__medallion { margin:0; box-shadow:0 0 0 7px #f5f2ea; }.dr-principle__content { min-width:0; padding-top:1.55rem; }.dr-principle__support { max-width:none; } @keyframes dr-route-flow-mobile { to { background-position:0 68px; } } }
+        @media (prefers-reduced-motion:reduce) { .dr-difference::before,.dr-principles::before { animation:none; } }
 
-        /* Radial ambient glow — pure CSS, no image assets */
-        .dr-hold-bg {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            background:
-                radial-gradient(ellipse 80% 60% at 50% 40%,
-                    rgba(74, 24, 32, 0.9) 0%,
-                    rgba(32, 11, 13, 0) 70%),
-                radial-gradient(ellipse 50% 40% at 50% 55%,
-                    rgba(226, 165, 66, 0.06) 0%,
-                    transparent 70%);
-            pointer-events: none;
-        }
+        /* Act IV — the TradeWatch capability grid, adapted to Drona's palette and copy. */
+        .dr-capabilities { position:relative; overflow:hidden; padding:clamp(5.5rem,11vh,9rem) clamp(1rem,4vw,4rem) clamp(6rem,12vh,10rem); background:var(--dr-cream); color:var(--dr-oxblood); }
+        .dr-capabilities__inner { position:relative; max-width:1280px; margin:0 auto; }
+        .dr-capabilities__header { position:relative; z-index:auto; display:grid; grid-template-columns:minmax(17rem,.85fr) minmax(20rem,1.15fr); align-items:center; gap:clamp(2rem,5vw,5rem); max-width:920px; margin:0 auto clamp(3rem,6vw,5rem); padding:0; color:inherit; background:transparent; border:0; border-radius:0; box-shadow:none; backdrop-filter:none; -webkit-backdrop-filter:none; }
+        .dr-capabilities__title { margin:0; color:var(--dr-oxblood); font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(2.35rem,4vw,3.6rem); font-weight:600; letter-spacing:-.02em; line-height:1.05; }
+        .dr-capabilities__intro { max-width:48ch; margin:0; color:rgba(49,11,16,.7); font-family:Telegraf,Inter,sans-serif; font-size:clamp(.9rem,1.15vw,1.05rem); line-height:1.65; }
+        .dr-capabilities__grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); grid-auto-rows:1fr; gap:1px; border:1px solid rgba(49,11,16,.24); background:rgba(49,11,16,.24); }
+        .dr-capabilities__item { position:relative; display:flex; flex-direction:column; min-width:0; min-height:270px; padding:clamp(1.6rem,2.6vw,2.4rem); background:var(--dr-cream); transition:background-color 260ms ease; }
+        .dr-capabilities__item::after { content:''; position:absolute; inset:0; pointer-events:none; --dr-cap-mark:rgba(118,44,54,.34); --dr-cap-arm:11px; background-image:linear-gradient(var(--dr-cap-mark),var(--dr-cap-mark)),linear-gradient(var(--dr-cap-mark),var(--dr-cap-mark)),linear-gradient(var(--dr-cap-mark),var(--dr-cap-mark)),linear-gradient(var(--dr-cap-mark),var(--dr-cap-mark)),linear-gradient(var(--dr-cap-mark),var(--dr-cap-mark)),linear-gradient(var(--dr-cap-mark),var(--dr-cap-mark)),linear-gradient(var(--dr-cap-mark),var(--dr-cap-mark)),linear-gradient(var(--dr-cap-mark),var(--dr-cap-mark)); background-repeat:no-repeat; background-size:var(--dr-cap-arm) 1px,1px var(--dr-cap-arm),var(--dr-cap-arm) 1px,1px var(--dr-cap-arm),var(--dr-cap-arm) 1px,1px var(--dr-cap-arm),var(--dr-cap-arm) 1px,1px var(--dr-cap-arm); background-position:left -5.5px top -.5px,left -.5px top -5.5px,right -5.5px top -.5px,right -.5px top -5.5px,left -5.5px bottom -.5px,left -.5px bottom -5.5px,right -5.5px bottom -.5px,right -.5px bottom -5.5px; }
+        .dr-capabilities__item > * { opacity:0; transform:translateY(18px); transition:opacity 700ms ease-out,transform 700ms cubic-bezier(.22,1,.36,1); }
+        .dr-capabilities__item.is-in > * { opacity:1; transform:translateY(0); }
+        .dr-capabilities__number { position:absolute; top:1.2rem; right:1.25rem; color:var(--dr-red); font-family:Telegraf,Inter,sans-serif; font-size:.6rem; font-weight:800; letter-spacing:.28em; line-height:1; }
+        .dr-capabilities__icon { width:32px; height:32px; margin-bottom:clamp(1.5rem,2.8vw,2.2rem); color:var(--dr-oxblood); }
+        .dr-capabilities__icon svg { display:block; width:100%; height:100%; }
+        .dr-capabilities__name { min-height:2.5em; margin:0 0 .85rem; color:var(--dr-oxblood); font-family:Telegraf,Inter,sans-serif; font-size:clamp(.95rem,1.2vw,1.08rem); font-weight:800; letter-spacing:-.015em; line-height:1.25; }
+        .dr-capabilities__description { max-width:43ch; margin:0; color:rgba(49,11,16,.7); font-family:Telegraf,Inter,sans-serif; font-size:clamp(.82rem,1vw,.94rem); line-height:1.62; }
+        .dr-capabilities__cta { display:grid; grid-template-columns:minmax(17rem,.9fr) minmax(24rem,1.1fr) auto; align-items:center; gap:clamp(1.5rem,4vw,4rem); margin-top:clamp(3.5rem,7vw,5.75rem); padding:clamp(2rem,3.5vw,3rem) 0 0; border-top:1px solid rgba(49,11,16,.2); }
+        .dr-capabilities__cta-heading { margin:0; color:var(--dr-oxblood); font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.85rem,3vw,2.65rem); font-weight:500; letter-spacing:-.025em; line-height:1.02; }
+        .dr-capabilities__cta-copy { max-width:42rem; margin:0; color:rgba(49,11,16,.68); font-family:Telegraf,Inter,sans-serif; font-size:clamp(.88rem,1.05vw,.98rem); line-height:1.65; }
+        .dr-capabilities__cta-link { display:inline-flex; align-items:center; justify-content:center; gap:.9rem; min-height:50px; padding:.4rem .4rem .4rem 1.25rem; border-radius:999px; color:var(--dr-cream); background:var(--dr-wine); font-family:Inter,sans-serif; font-size:.9rem; font-weight:500; text-decoration:none; white-space:nowrap; box-shadow:0 10px 24px rgba(49,11,16,.1); transition:transform 220ms cubic-bezier(.22,1,.36,1),background-color 220ms ease,box-shadow 220ms ease; }
+        .dr-capabilities__cta-link:hover { background:var(--dr-oxblood); transform:translateY(-2px); box-shadow:0 14px 30px rgba(49,11,16,.17); }
+        .dr-capabilities__cta-link:focus-visible { outline:2px solid var(--dr-red); outline-offset:4px; }
+        .dr-capabilities__cta-arrow { display:grid; width:38px; height:38px; place-items:center; border:1px solid rgba(49,11,16,.08); border-radius:50%; color:var(--dr-oxblood); background:var(--dr-cream); font-size:1.1rem; line-height:1; box-shadow:0 1px 3px rgba(49,11,16,.12); transition:transform 220ms ease,background-color 220ms ease; }
+        .dr-capabilities__cta-link:hover .dr-capabilities__cta-arrow { background:#fff; transform:translateX(2px); }
+        @media (hover:hover) { .dr-capabilities__item:hover { background:#f5f2ea; } }
+        @media (max-width:1080px) { .dr-capabilities__cta { grid-template-columns:minmax(15rem,.8fr) minmax(20rem,1.2fr); }.dr-capabilities__cta-link { grid-column:2; justify-self:start; } }
+        @media (max-width:980px) { .dr-capabilities__header { grid-template-columns:1fr; align-items:start; gap:1.25rem; }.dr-capabilities__grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+        @media (max-width:700px) { .dr-capabilities__cta { grid-template-columns:1fr; gap:1rem; }.dr-capabilities__cta-copy { max-width:36rem; }.dr-capabilities__cta-link { grid-column:auto; justify-self:start; margin-top:.35rem; } }
+        @media (max-width:640px) { .dr-capabilities { padding-right:clamp(.875rem,4vw,1.25rem); padding-left:clamp(.875rem,4vw,1.25rem); }.dr-capabilities__header { margin-bottom:2rem; }.dr-capabilities__grid { grid-template-columns:minmax(0,1fr); grid-auto-rows:auto; }.dr-capabilities__item { min-height:0; padding:1.5rem 1.35rem 1.65rem; }.dr-capabilities__icon { width:28px; height:28px; margin-bottom:1.25rem; }.dr-capabilities__number { top:1rem; right:1rem; }.dr-capabilities__name { min-height:0; font-size:1rem; }.dr-capabilities__description { max-width:none; font-size:.84rem; }.dr-capabilities__cta { margin-top:3rem; padding-top:2rem; }.dr-capabilities__cta-heading { max-width:12ch; font-size:clamp(1.9rem,9vw,2.45rem); }.dr-capabilities__cta-link { width:100%; justify-content:space-between; padding-left:1.2rem; } }
+        @media (prefers-reduced-motion:reduce) { .dr-capabilities__item > * { opacity:1 !important; transform:none !important; transition:none !important; } }
 
-        /* Prism WebGL background layer — sits between the ambient glow and the grid overlay */
-        .dr-hold-prism {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            overflow: hidden;
-            pointer-events: none;
+        /* FAQ — the TradeWatch accordion, carried over with Drona's oxblood palette. */
+        .dr-faq { padding:clamp(5.5rem,11vh,9rem) clamp(1.5rem,4vw,4rem); background:var(--dr-cream); color:var(--dr-oxblood); border-top:1px solid rgba(49,11,16,.08); }
+        .dr-faq__inner { max-width:clamp(56rem,80vw,72rem); margin:0 auto; }
+        .dr-faq__head { margin:0 auto clamp(2.5rem,5vh,4rem); text-align:center; }
+        .dr-faq__eyebrow { margin:0 0 .9rem; color:var(--dr-red); font-family:Telegraf,Inter,sans-serif; font-size:.72rem; font-weight:800; letter-spacing:.22em; line-height:1; text-transform:uppercase; }
+        .dr-faq__headline { margin:0; color:var(--dr-oxblood); font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.85rem,3.8vw,2.8rem); font-weight:500; letter-spacing:-.012em; line-height:1.18; }
+        .dr-faq__list { border-top:1px solid rgba(49,11,16,.16); }
+        .dr-faq__item { border-bottom:1px solid rgba(49,11,16,.16); }
+        .dr-faq__summary { display:grid; grid-template-columns:auto 1fr auto; align-items:center; column-gap:1.5rem; padding:1.5rem .25rem; cursor:pointer; list-style:none; outline:none; }
+        .dr-faq__summary::-webkit-details-marker { display:none; }
+        .dr-faq__summary::marker { content:''; }
+        .dr-faq__summary:focus-visible { outline:2px solid var(--dr-red); outline-offset:4px; border-radius:2px; }
+        .dr-faq__summary:hover .dr-faq__chevron { border-color:var(--dr-oxblood); }
+        .dr-faq__index { min-width:1.75rem; align-self:center; color:rgba(49,11,16,.48); font-family:Telegraf,Inter,sans-serif; font-size:.72rem; font-weight:800; letter-spacing:.18em; line-height:1; text-transform:uppercase; }
+        .dr-faq__question { color:var(--dr-oxblood); font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.1rem,1.9vw,1.4rem); font-style:italic; font-weight:500; letter-spacing:-.008em; line-height:1.32; transition:color .2s ease; }
+        .dr-faq__chevron { display:inline-block; width:8px; height:8px; margin-right:.25rem; align-self:center; border-right:1.5px solid rgba(49,11,16,.48); border-bottom:1.5px solid rgba(49,11,16,.48); transform:rotate(45deg); transform-origin:center; transition:transform .25s ease,border-color .25s ease; }
+        .dr-faq__item[open] > .dr-faq__summary .dr-faq__chevron { border-color:var(--dr-red); transform:rotate(-135deg); }
+        .dr-faq__item[open] > .dr-faq__summary .dr-faq__index { color:var(--dr-red); }
+        .dr-faq__panel { max-width:56rem; padding:0 .25rem 1.75rem calc(1.75rem + 1.5rem); }
+        .dr-faq__panel p { margin:0 0 .85rem; color:rgba(49,11,16,.72); font-family:Telegraf,Inter,sans-serif; font-size:.95rem; line-height:1.65; }
+        .dr-faq__panel p:last-child { margin-bottom:0; }
+        @media (max-width:640px) {
+            .dr-faq { padding-right:clamp(.875rem,4vw,1.25rem); padding-left:clamp(.875rem,4vw,1.25rem); }
+            .dr-faq__summary { column-gap:.9rem; padding:1.15rem .15rem; }
+            .dr-faq__question { font-size:clamp(1rem,4.2vw,1.15rem); }
+            .dr-faq__panel { padding-left:calc(1.75rem + .9rem); padding-bottom:1.4rem; }
+            .dr-faq__panel p { font-size:.88rem; }
         }
-
-        /* Tint layer — forces the prism's full-spectrum render into wine-red /
-           cream variations only (no blue, green or yellow allowed through) */
-        .dr-hold-tint {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            background: var(--dr-wine);
-            mix-blend-mode: hue;
-            pointer-events: none;
-        }
-
-        /* Subtle grid overlay */
-        .dr-hold-grid {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            background-image:
-                linear-gradient(rgba(238, 235, 227, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(238, 235, 227, 0.03) 1px, transparent 1px);
-            background-size: 64px 64px;
-            mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 80%);
-            -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 80%);
-            pointer-events: none;
-        }
-
-        /* Main stage */
-        .dr-hold-stage {
-            position: relative;
-            z-index: 1;
-            min-height: 100vh;
-            min-height: 100dvh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: clamp(5rem, 12vh, 9rem) clamp(1.5rem, 6vw, 5rem);
-            text-align: center;
-        }
-
-        /* Wordmark */
-        .dr-hold-wordmark {
-            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-            font-weight: 500;
-            font-style: italic;
-            font-size: clamp(3.5rem, 11vw, 9.5rem);
-            line-height: 0.95;
-            letter-spacing: -0.025em;
-            color: var(--dr-cream);
-            margin-bottom: 2.75rem;
-            opacity: 0;
-            animation: dr-hold-fade-up 1s ease-out 0.4s forwards;
-        }
-
-        /* Divider rule */
-        .dr-hold-rule {
-            width: 56px;
-            height: 1.5px;
-            background: #ffffff;
-            margin: 0 auto 2.5rem;
-            opacity: 0;
-            animation: dr-hold-fade-up 0.8s ease-out 0.7s forwards,
-                       dr-hold-pulse 3.5s ease-in-out 1.5s infinite;
-            transform-origin: center;
-        }
-
-        /* Message */
-        .dr-hold-message {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-weight: 400;
-            font-style: italic;
-            font-size: clamp(1.15rem, 2.2vw, 1.65rem);
-            line-height: 1.5;
-            color: rgba(238, 235, 227, 0.78);
-            max-width: 38ch;
-            margin: 0 auto 3.5rem;
-            opacity: 0;
-            animation: dr-hold-fade-up 0.9s ease-out 0.9s forwards;
-        }
-
-        /* Home link */
-        .dr-hold-back {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.55rem;
-            font-family: 'Telegraf', 'Inter', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 800;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: rgba(238, 235, 227, 0.48);
-            text-decoration: none;
-            border-bottom: 1px solid rgba(238, 235, 227, 0.18);
-            padding-bottom: 0.2rem;
-            transition: color 0.25s ease, border-color 0.25s ease;
-            opacity: 0;
-            animation: dr-hold-fade-up 0.8s ease-out 1.1s forwards;
-        }
-
-        .dr-hold-back:hover {
-            color: rgba(238, 235, 227, 0.88);
-            border-color: rgba(238, 235, 227, 0.5);
-        }
-
-        .dr-hold-back-arrow {
-            display: inline-block;
-            transition: transform 0.25s ease;
-        }
-
-        .dr-hold-back:hover .dr-hold-back-arrow {
-            transform: translateX(-3px);
-        }
-
-        /* Animations */
-        @keyframes dr-hold-fade-up {
-            from { opacity: 0; transform: translateY(16px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes dr-hold-pulse {
-            0%, 100% { width: 56px; opacity: 1; }
-            50%       { width: 80px; opacity: 0.7; }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .dr-hold-wordmark, .dr-hold-rule,
-            .dr-hold-message, .dr-hold-back {
-                opacity: 1;
-                animation: none;
-            }
-        }
-
-        /* Responsive tweaks */
-        @media (max-width: 480px) {
-            .dr-hold-stage {
-                justify-content: center;
-            }
-        }
+        @media (prefers-reduced-motion:reduce) { .dr-faq__chevron,.dr-faq__question { transition:none !important; } }
     </style>
 </head>
-
 <body>
-
-    <!-- Ambient background layers -->
-    <div class="dr-hold-bg" aria-hidden="true"></div>
-    <div id="demo-prism-bg" class="dr-hold-prism" aria-hidden="true" data-animation-type="3drotate" data-height="3.5" data-base-width="5.6" data-scale="3.6" data-hue-shift="0" data-color-frequency="1" data-noise="0" data-glow="1" data-time-scale="0.5"></div>
-    <div class="dr-hold-tint" aria-hidden="true"></div>
-    <div class="dr-hold-grid" aria-hidden="true"></div>
-
-    <!-- Staggered nav injected here by staggered-menu.js -->
-
-    <main class="dr-hold-stage" id="main-content">
-
-        <h1 class="dr-hold-wordmark">Drona</h1>
-
-        <div class="dr-hold-rule" aria-hidden="true"></div>
-
-        <p class="dr-hold-message">
-            Exciting things coming soon.
-        </p>
-
-        <a href="/" class="dr-hold-back" id="dr-hold-home-link">
-            <span class="dr-hold-back-arrow" aria-hidden="true">←</span>
-            Back to Home
-        </a>
-
+    <!-- Shared staggered navigation is injected by js/staggered-menu.js. -->
+    <main>
+        <section class="dr-hero" aria-labelledby="drona-title">
+            <div class="dr-hero__media" aria-hidden="true"><picture><source type="image/avif" srcset="added-assets/tw-hero-1280.avif 1280w, added-assets/tw-hero-1920.avif 1920w, added-assets/tw-hero-2560.avif 2560w, added-assets/tw-hero-3200.avif 3200w" sizes="100vw"><source type="image/webp" srcset="added-assets/tw-hero-1280.webp 1280w, added-assets/tw-hero-1920.webp 1920w, added-assets/tw-hero-2560.webp 2560w, added-assets/tw-hero-3200.webp 3200w" sizes="100vw"><img class="dr-hero__image" src="added-assets/tw-hero-2400.jpg" alt="" width="2400" height="1350" decoding="async" fetchpriority="high"></picture><canvas class="dr-hero__particles" id="drParticleLayer"></canvas><div class="dr-hero__top-shade"></div><div class="dr-hero__bottom-shade"></div></div>
+            <div class="dr-hero__content"><h1 class="dr-hero__title" id="drona-title">Drona</h1><p class="dr-hero__strap">Production intelligence for a world where every commitment carries more risk.</p><div class="dr-hero__actions"><a class="dr-button-primary" href="request-demo.html?utm_source=drona&amp;utm_medium=owned&amp;utm_campaign=production_intelligence&amp;utm_content=hero"><span>Request a demo</span><span class="dr-button-primary__arrow" aria-hidden="true">→</span></a><a class="dr-button-secondary" href="#how-drona-works">See how it works</a></div></div>
+            <span class="dr-scroll-cue" aria-hidden="true">Scroll to explore</span>
+        </section>
+        <section class="dr-act1" id="how-drona-works" aria-labelledby="drona-premise"><div class="dr-act1__copy"><h2 class="dr-act1__heading" id="drona-premise"><span class="dr-act1__word">Don&rsquo;t</span><span class="dr-act1__word">simply</span><span class="dr-act1__word">react</span><span class="dr-act1__word">to</span><span class="dr-act1__word">disruptions.</span><br><span class="dr-act1__word dr-act1__emphasis">Prevent</span><span class="dr-act1__word dr-act1__emphasis">them.</span></h2></div><div class="dr-act1__visual" aria-hidden="true"><video class="dr-act1__video" autoplay muted loop playsinline preload="metadata" width="3840" height="1440"><source src="added-assets/TW%20-%20KL%20-%20WEBVID-hevc.mp4" type="video/mp4; codecs=hvc1"><source src="added-assets/TW%20-%20KL%20-%20WEBVID.MP4" type="video/mp4"></video></div></section>
+        <section class="dr-difference" aria-labelledby="drona-difference-title">
+            <div class="dr-difference__inner">
+                <div class="dr-difference__intro">
+                    <div class="dr-difference__heading">
+                        <p class="dr-difference__eyebrow">What Drona does</p>
+                        <h2 class="dr-difference__headline" id="drona-difference-title"><span>See the risk.</span><span>Act earlier.</span></h2>
+                    </div>
+                    <div class="dr-difference__divider" aria-hidden="true"></div>
+                    <div class="dr-difference__copy">
+                        <p>Drona connects the materials, suppliers, production stages and external conditions that determine whether an order will be delivered on time.</p>
+                        <p>As production moves, it tracks the evidence that changes the risk and helps manufacturers and suppliers respond while options remain.</p>
+                        <a class="dr-difference__cta" href="request-demo.html?utm_source=drona&amp;utm_medium=owned&amp;utm_campaign=production_intelligence&amp;utm_content=what_drona_does"><span>Request a demo</span><span class="dr-difference__cta-arrow" aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+                <div class="dr-principles" aria-label="How Drona supports production resilience">
+                    <article class="dr-principle">
+                        <div class="dr-principle__visual"><span class="dr-principle__number">01</span><div class="dr-principle__medallion" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="8"/><path d="m20 20 7 7M10 14h8M14 10v8"/><circle cx="14" cy="14" r="2" stroke="var(--dr-red)"/></svg></div></div>
+                        <div class="dr-principle__content"><h3 class="dr-principle__title">Assess</h3><p class="dr-principle__descriptor">Before production</p><p class="dr-principle__support">Analyse the suppliers across tiers for risks and vulnerabilities.</p></div>
+                    </article>
+                    <article class="dr-principle">
+                        <div class="dr-principle__visual"><span class="dr-principle__number">02</span><div class="dr-principle__medallion" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3.5 26 8v7.2c0 6.2-4.2 10.6-10 13.3C10.2 25.8 6 21.4 6 15.2V8z"/><path d="m10.5 16 3.2 3.2 7.8-8" stroke="var(--dr-red)" stroke-width="1.7"/></svg></div></div>
+                        <div class="dr-principle__content"><h3 class="dr-principle__title">Mitigate</h3><p class="dr-principle__descriptor">Across the chain</p><p class="dr-principle__support">Spot risks and make actionable recommendations to suppliers.</p></div>
+                    </article>
+                    <article class="dr-principle">
+                        <div class="dr-principle__visual"><span class="dr-principle__number">03</span><div class="dr-principle__medallion" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"><path d="M25.5 11A10.5 10.5 0 0 0 7 8.5L4.5 11M6.5 21A10.5 10.5 0 0 0 25 23.5l2.5-2.5"/><path d="M4.5 5.5V11H10M27.5 26.5V21H22"/><circle cx="16" cy="16" r="2.5" stroke="var(--dr-red)"/></svg></div></div>
+                        <div class="dr-principle__content"><h3 class="dr-principle__title">Update</h3><p class="dr-principle__descriptor">During production</p><p class="dr-principle__support">Monitor production milestones and manage disruptions as they emerge.</p></div>
+                    </article>
+                    <article class="dr-principle">
+                        <div class="dr-principle__visual"><span class="dr-principle__number">04</span><div class="dr-principle__medallion" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h24M6.5 12v13M12.5 12v13M19.5 12v13M25.5 12v13M3.5 25h25M16 3.5 28 9H4z"/><path d="M13 18h6" stroke="var(--dr-red)" stroke-width="1.7"/></svg></div></div>
+                        <div class="dr-principle__content"><h3 class="dr-principle__title">Finance</h3><p class="dr-principle__descriptor">Where capital is needed</p><p class="dr-principle__support">Prevent disruptions and build a resilient supplier ecosystem that can expand with you.</p></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="dr-fracture" aria-labelledby="fracture-title">
+            <div class="dr-fracture__inner">
+                <h2 class="dr-fracture__title" id="fracture-title">The fracture starts upstream.</h2>
+                <div class="dr-fracture__grid">
+                    <article class="dr-fracture__stat"><span class="dr-fracture__number">$82M</span><p class="dr-fracture__copy">lost annually to supply-chain disruptions.</p></article>
+                    <article class="dr-fracture__stat"><span class="dr-fracture__number">58%</span><p class="dr-fracture__copy">lack risk visibility beyond Tier 1.</p></article>
+                    <article class="dr-fracture__stat"><span class="dr-fracture__number">~$150B</span><p class="dr-fracture__copy">in unmet credit demand across India&rsquo;s manufacturing MSMEs.</p></article>
+                </div>
+            </div>
+        </section>
+        <section class="dr-capabilities" aria-labelledby="drona-capabilities-title" data-nav-light>
+            <div class="dr-capabilities__inner">
+                <header class="dr-capabilities__header">
+                    <h2 class="dr-capabilities__title" id="drona-capabilities-title">Core capabilities</h2>
+                    <p class="dr-capabilities__intro">Drona helps manufacturers see what could interrupt an order, coordinate the response and strengthen the suppliers responsible for delivery.</p>
+                </header>
+                <div class="dr-capabilities__grid">
+                    <article class="dr-capabilities__item">
+                        <span class="dr-capabilities__number">01</span>
+                        <div class="dr-capabilities__icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M6 5h14l6 6v16H6z"/><path d="M20 5v6h6M10 16h8M10 20h5"/><circle cx="22" cy="21" r="4"/><path d="m25 24 3 3M20.5 21h3" stroke="var(--dr-red)" stroke-width="1.5"/></svg></div>
+                        <h3 class="dr-capabilities__name">Production Order Analysis</h3>
+                        <p class="dr-capabilities__description">Assess whether a specific order can be produced and delivered on time—before production begins.</p>
+                    </article>
+                    <article class="dr-capabilities__item">
+                        <span class="dr-capabilities__number">02</span>
+                        <div class="dr-capabilities__icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="16" cy="6" r="3"/><circle cx="6" cy="23" r="3"/><circle cx="26" cy="23" r="3"/><circle cx="16" cy="17" r="3"/><path d="m14.5 8.6-6.8 11.8M17.5 8.6l6.8 11.8M9 23h14M16 9v5"/><circle cx="16" cy="17" r="1" fill="var(--dr-red)" stroke="var(--dr-red)"/></svg></div>
+                        <h3 class="dr-capabilities__name">Supply Network Graph</h3>
+                        <p class="dr-capabilities__description">See critical suppliers, sub-tiers, materials and shared dependencies in one connected view.</p>
+                    </article>
+                    <article class="dr-capabilities__item">
+                        <span class="dr-capabilities__number">03</span>
+                        <div class="dr-capabilities__icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="14" cy="14" r="9"/><path d="m20.5 20.5 7 7M8 15h3l2-5 3 9 2-4h4"/><circle cx="14" cy="14" r="2" stroke="var(--dr-red)" stroke-width="1.5"/></svg></div>
+                        <h3 class="dr-capabilities__name">Active Risk Monitoring</h3>
+                        <p class="dr-capabilities__description">Monitor financial, commodity, geopolitical, regulatory, logistics and climate risks—and recommend how to respond before they delay production.</p>
+                    </article>
+                    <article class="dr-capabilities__item">
+                        <span class="dr-capabilities__number">04</span>
+                        <div class="dr-capabilities__icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" focusable="false"><rect x="5" y="5" width="22" height="22" rx="1"/><path d="M10 3v5M22 3v5M5 11h22M10 16h4M10 21h7"/><path d="m20 19 2.3 2.3 4.2-5" stroke="var(--dr-red)" stroke-width="1.5"/></svg></div>
+                        <h3 class="dr-capabilities__name">Production Milestones</h3>
+                        <p class="dr-capabilities__description">Track production, inspection and delivery milestones to see whether the order remains on course.</p>
+                    </article>
+                    <article class="dr-capabilities__item">
+                        <span class="dr-capabilities__number">05</span>
+                        <div class="dr-capabilities__icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4 6h18v14H10l-6 5z"/><path d="M11 11h7M11 15h4"/><path d="M22 12h6v12h-4l-4 4v-8"/><circle cx="23.5" cy="16" r="1.5" stroke="var(--dr-red)" stroke-width="1.5"/></svg></div>
+                        <h3 class="dr-capabilities__name">Agentic Supplier Collaboration</h3>
+                        <p class="dr-capabilities__description">With your approval, alert suppliers by email, message or voice call and coordinate the next action.</p>
+                    </article>
+                    <article class="dr-capabilities__item">
+                        <span class="dr-capabilities__number">06</span>
+                        <div class="dr-capabilities__icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4 12h24M6.5 12v13M12.5 12v13M19.5 12v13M25.5 12v13M3.5 25h25M16 3.5 28 9H4z"/><path d="M13 18h6M16 15v6" stroke="var(--dr-red)" stroke-width="1.5"/></svg></div>
+                        <h3 class="dr-capabilities__name">Working-Capital Access</h3>
+                        <p class="dr-capabilities__description">Connect a supplier’s finance request to the exact order and prepare the evidence for a regulated financier. The financier decides.</p>
+                    </article>
+                </div>
+                <aside class="dr-capabilities__cta" aria-label="Request a Drona demonstration">
+                    <h3 class="dr-capabilities__cta-heading">See what could interrupt delivery.</h3>
+                    <p class="dr-capabilities__cta-copy">Start with one production order. Drona brings its suppliers, dependencies and changing risk signals into one decision-ready view.</p>
+                    <a class="dr-capabilities__cta-link" href="request-demo.html?utm_source=drona&amp;utm_medium=owned&amp;utm_campaign=production_intelligence&amp;utm_content=capabilities"><span>Request a demo</span><span class="dr-capabilities__cta-arrow" aria-hidden="true">→</span></a>
+                </aside>
+            </div>
+        </section>
+        <section class="dr-faq" aria-labelledby="drona-faq-title" data-nav-light>
+            <div class="dr-faq__inner">
+                <div class="dr-faq__head">
+                    <p class="dr-faq__eyebrow">Frequently asked</p>
+                    <h2 class="dr-faq__headline" id="drona-faq-title">Questions about Drona.</h2>
+                </div>
+                <div class="dr-faq__list">
+                    <details class="dr-faq__item">
+                        <summary class="dr-faq__summary"><span class="dr-faq__index" aria-hidden="true">01</span><span class="dr-faq__question">What is Drona, and what decisions does it help manufacturers make?</span><span class="dr-faq__chevron" aria-hidden="true"></span></summary>
+                        <div class="dr-faq__panel">
+                            <p>Drona is a production-intelligence system for manufacturers with order-driven supply chains.</p>
+                            <p>It helps teams determine whether a specific order can be produced and delivered on time, which dependencies require attention, and what action remains available when conditions change. The assessment is built around the actual commitment&mdash;not a permanent or generic supplier score.</p>
+                        </div>
+                    </details>
+                    <details class="dr-faq__item">
+                        <summary class="dr-faq__summary"><span class="dr-faq__index" aria-hidden="true">02</span><span class="dr-faq__question">How does Drona determine whether a production order can be completed and delivered on time?</span><span class="dr-faq__chevron" aria-hidden="true"></span></summary>
+                        <div class="dr-faq__panel">
+                            <p>Drona begins with the order and works through the components, suppliers, production stages, materials and external dependencies required to fulfil it.</p>
+                            <p>It establishes what must remain true for the order to succeed, what could break those conditions, and what evidence would change the assessment. This creates an order-specific view of production reliability and helps teams concentrate attention where it can still affect the outcome.</p>
+                        </div>
+                    </details>
+                    <details class="dr-faq__item">
+                        <summary class="dr-faq__summary"><span class="dr-faq__index" aria-hidden="true">03</span><span class="dr-faq__question">How does Drona identify the suppliers and dependencies that matter most to an order?</span><span class="dr-faq__chevron" aria-hidden="true"></span></summary>
+                        <div class="dr-faq__panel">
+                            <p>Drona does not begin by trying to map everything. It works with the manufacturer to identify the components and commitments whose failure would materially affect production or delivery.</p>
+                            <p>It then traces the suppliers, facilities, materials, processes and sub-tier relationships behind them. Factors such as consequence, substitutability, lead time, concentration and the time remaining to respond help determine what is critical.</p>
+                        </div>
+                    </details>
+                    <details class="dr-faq__item">
+                        <summary class="dr-faq__summary"><span class="dr-faq__index" aria-hidden="true">04</span><span class="dr-faq__question">How far into the supply chain does Drona look?</span><span class="dr-faq__chevron" aria-hidden="true"></span></summary>
+                        <div class="dr-faq__panel">
+                            <p>As far as the decision requires.</p>
+                            <p>Drona looks beyond Tier 1 when a lower-tier material, processor, facility, route or single-source dependency can control the outcome of an order. Broader network mapping can deepen over time, but critical dependencies come first. The objective is decision-useful visibility&mdash;not completeness for its own sake.</p>
+                        </div>
+                    </details>
+                    <details class="dr-faq__item">
+                        <summary class="dr-faq__summary"><span class="dr-faq__index" aria-hidden="true">05</span><span class="dr-faq__question">What risks does Drona monitor, and when does a signal become relevant to an order?</span><span class="dr-faq__chevron" aria-hidden="true"></span></summary>
+                        <div class="dr-faq__panel">
+                            <p>Drona can monitor financial, commodity, geopolitical, regulatory, logistics, climate and location-specific risks.</p>
+                            <p>It does not treat every external event as an alert. A warning becomes relevant when it connects to a real dependency, could materially affect production or delivery, can be tested against available evidence, and reaches the team while a useful response is still possible.</p>
+                        </div>
+                    </details>
+                    <details class="dr-faq__item">
+                        <summary class="dr-faq__summary"><span class="dr-faq__index" aria-hidden="true">06</span><span class="dr-faq__question">What happens after Drona identifies a risk? Can it work directly with the supplier?</span><span class="dr-faq__chevron" aria-hidden="true"></span></summary>
+                        <div class="dr-faq__panel">
+                            <p>Yes&mdash;with the manufacturer&rsquo;s approval.</p>
+                            <p>Drona can recommend a proportionate response, such as requesting additional evidence, securing an input earlier, escalating a production milestone or opening a working-capital pathway. It can then contact the relevant supplier through email, messaging or voice to explain the concern and coordinate the next step.</p>
+                            <p>The manufacturer retains control over external communication and final action. The supplier retains responsibility for its operational decisions.</p>
+                        </div>
+                    </details>
+                    <details class="dr-faq__item">
+                        <summary class="dr-faq__summary"><span class="dr-faq__index" aria-hidden="true">07</span><span class="dr-faq__question">How can working-capital access reduce the risk of supplier disruption?</span><span class="dr-faq__chevron" aria-hidden="true"></span></summary>
+                        <div class="dr-faq__panel">
+                            <p>A viable order can still fail when a supplier cannot fund the materials or production activity required to complete it.</p>
+                            <p>Drona connects a finance request to the underlying order, production requirements, milestones and relevant risks. This gives the financier a clearer evidence package and gives the manufacturer an earlier opportunity to address a cash constraint before it becomes a production delay.</p>
+                            <p>Kanan does not lend, guarantee approval or make the credit decision. The regulated financier does.</p>
+                        </div>
+                    </details>
+                    <details class="dr-faq__item">
+                        <summary class="dr-faq__summary"><span class="dr-faq__index" aria-hidden="true">08</span><span class="dr-faq__question">Can Drona explain every assessment and show the evidence behind it?</span><span class="dr-faq__chevron" aria-hidden="true"></span></summary>
+                        <div class="dr-faq__panel">
+                            <p>That is a core design requirement.</p>
+                            <p>Every material assessment is intended to remain connected to its supporting evidence, the dependency being evaluated, the reasoning applied and the uncertainty that remains. Where the evidence is insufficient, Drona should surface the gap or request review&mdash;not manufacture certainty.</p>
+                            <p>AI can assist with analysis and coordination. It does not replace evidence, accountability or human authority.</p>
+                        </div>
+                    </details>
+                    <details class="dr-faq__item">
+                        <summary class="dr-faq__summary"><span class="dr-faq__index" aria-hidden="true">09</span><span class="dr-faq__question">How does Drona fit into our existing systems, teams and supplier relationships?</span><span class="dr-faq__chevron" aria-hidden="true"></span></summary>
+                        <div class="dr-faq__panel">
+                            <p>Drona is designed to work alongside existing procurement, ERP, supplier, quality and finance workflows&mdash;not replace them.</p>
+                            <p>A deployment can begin with one bounded order and an agreed set of documents, supplier records and production evidence. Suppliers can be engaged through familiar channels, while internal teams retain their existing responsibilities and approval rights. Integration can deepen where it reduces work and improves the quality of the decision.</p>
+                        </div>
+                    </details>
+                    <details class="dr-faq__item">
+                        <summary class="dr-faq__summary"><span class="dr-faq__index" aria-hidden="true">10</span><span class="dr-faq__question">Where is Drona today, and what does a design partnership involve?</span><span class="dr-faq__chevron" aria-hidden="true"></span></summary>
+                        <div class="dr-faq__panel">
+                            <p>Drona is currently in the design-partner phase.</p>
+                            <p>Kanan has a defined product thesis and operating model. Its performance, integrations and production-stage logic must now be tested against real manufacturing conditions.</p>
+                            <p>A design partnership typically begins with a bounded live or shadow-live order, agreed data boundaries and clear success measures. Kanan and the manufacturer then review what became knowable, when it became actionable and whether the assessment improved the response. It is a structured product-validation engagement&mdash;not an open-ended consulting exercise.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
     </main>
-
-    <!-- ── Staggered nav + footer ── -->
+    <footer class="kl-footer">
+        <div class="kl-footer__inner">
+            <div class="kl-footer__content">
+                <div class="kl-footer__brand">
+                    <img src="assets/logos/kanan-kl-hor-white.png" alt="Kanan Labs" class="kl-footer__logo" width="922" height="262" loading="lazy" decoding="async" draggable="false">
+                    <p class="kl-footer__tagline">Proactive Supply Chain Resilience</p>
+                    <div class="kl-footer__links">
+                        <a href="https://apply.kananlabs.in/" class="kl-footer__consult">Supplier Programme &#8594;</a>
+                        <a href="request-demo.html" class="kl-footer__consult">Request a Demo &#8594;</a>
+                    </div>
+                </div>
+                <div class="kl-footer__sitemap">
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Platform</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="drona.html">Drona</a></li>
+                            <li><a href="drona-aos.html">DronaAOS</a></li>
+                            <li><a href="https://apply.kananlabs.in/">Supplier Programme</a></li>
+                            <li><a href="tracker.html">India AI Tracker</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                        </ul>
+                    </div>
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Company</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="mailto:sreenath@kananlabs.in">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Follow</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="https://www.linkedin.com/in/sreenathgovindarajan" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a href="https://x.com/indiaAItracker" target="_blank" rel="noopener">Twitter</a></li>
+                            <li><a href="https://github.com/sreenathgov" target="_blank" rel="noopener">GitHub</a></li>
+                        </ul>
+                    </div>
+                    <div class="kl-footer__col">
+                        <h4 class="kl-footer__col-heading">Legal</h4>
+                        <ul class="kl-footer__col-links">
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="terms-of-use.html">Terms of Use</a></li>
+                            <li><a href="supplier-programme-terms.html">Supplier Programme Terms</a></li>
+                            <li><a href="disclaimers.html">Disclaimers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="kl-footer__watermark">
+                <img src="assets/logos/kanan-kl-hor-white.png" alt="" class="kl-footer__watermark-img" width="922" height="262" loading="lazy" decoding="async" aria-hidden="true" draggable="false">
+            </div>
+        </div>
+    </footer>
     <script src="js/staggered-menu.js?v=12" defer></script>
-    <script src="js/footer.js?v=4" defer></script>
+    <script>
+    window.addEventListener('DOMContentLoaded', function () {
+        var image=document.querySelector('.dr-hero__image'),title=document.querySelector('.dr-hero__title'),strap=document.querySelector('.dr-hero__strap'),actions=document.querySelector('.dr-hero__actions');
+        function revealHero(){image.classList.add('is-ready');title.classList.add('is-in');strap.classList.add('is-in');actions.classList.add('is-in');}
+        if(image.complete){revealHero();}else{image.addEventListener('load',revealHero,{once:true});image.addEventListener('error',revealHero,{once:true});}
 
+        var heading=document.querySelector('.dr-act1__heading'),words=heading&&heading.querySelectorAll('.dr-act1__word'),capabilities=document.querySelectorAll('.dr-capabilities__item'),reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        function initHeroParticles(){
+            var canvas=document.getElementById('drParticleLayer');
+            if(!canvas||reduced){return;}
+            var ctx=canvas.getContext('2d'),w,h,dpr,raf=0;
+            var routes=[
+                [[.18,.52],[.35,.36],[.50,.34],.9],
+                [[.20,.55],[.40,.72],[.78,.52],.7],
+                [[.20,.55],[.18,.78],[.12,.85],.4],
+                [[.18,.52],[.10,.40],[.05,.30],.6],
+                [[.50,.34],[.30,.20],[.10,.28],.5],
+                [[.78,.52],[.85,.38],[.90,.30],.5],
+                [[.50,.34],[.65,.55],[.78,.52],.6],
+                [[.18,.52],[.32,.62],[.50,.62],.5]
+            ];
+            var particles=[];
+            for(var i=0;i<56;i++){
+                particles.push({route:Math.floor(Math.random()*routes.length),t:Math.random(),speed:.0010+Math.random()*.0018,size:.8+Math.random()*1.4});
+            }
+            function size(){
+                dpr=Math.min(window.devicePixelRatio||1,2);
+                w=canvas.clientWidth;
+                h=canvas.clientHeight;
+                canvas.width=w*dpr;
+                canvas.height=h*dpr;
+                ctx.setTransform(dpr,0,0,dpr,0,0);
+            }
+            function pointOnRoute(route,t){
+                var a=route[0],c=route[1],b=route[2],u=1-t;
+                return [(u*u*a[0]+2*u*t*c[0]+t*t*b[0])*w,(u*u*a[1]+2*u*t*c[1]+t*t*b[1])*h];
+            }
+            function drawRouteLine(route){
+                var a=route[0],c=route[1],b=route[2],intensity=route[3];
+                ctx.beginPath();
+                ctx.moveTo(a[0]*w,a[1]*h);
+                ctx.quadraticCurveTo(c[0]*w,c[1]*h,b[0]*w,b[1]*h);
+                ctx.strokeStyle='rgba(238, 235, 227, '+(.05*intensity)+')';
+                ctx.lineWidth=.75;
+                ctx.stroke();
+            }
+            function tick(){
+                ctx.clearRect(0,0,w,h);
+                routes.forEach(drawRouteLine);
+                for(var i=0;i<particles.length;i++){
+                    var p=particles[i];
+                    p.t+=p.speed;
+                    if(p.t>1){p.t=0;}
+                    var point=pointOnRoute(routes[p.route],p.t),x=point[0],y=point[1],intensity=routes[p.route][3];
+                    var glow=ctx.createRadialGradient(x,y,0,x,y,8*p.size);
+                    glow.addColorStop(0,'rgba(238, 235, 227, '+(.55*intensity)+')');
+                    glow.addColorStop(.5,'rgba(238, 235, 227, '+(.12*intensity)+')');
+                    glow.addColorStop(1,'rgba(238, 235, 227, 0)');
+                    ctx.fillStyle=glow;
+                    ctx.beginPath();
+                    ctx.arc(x,y,8*p.size,0,Math.PI*2);
+                    ctx.fill();
+                    ctx.fillStyle='rgba(238, 235, 227, '+(.92*intensity)+')';
+                    ctx.beginPath();
+                    ctx.arc(x,y,p.size,0,Math.PI*2);
+                    ctx.fill();
+                }
+                raf=requestAnimationFrame(tick);
+            }
+            size();
+            tick();
+            var resizeTimer;
+            window.addEventListener('resize',function(){clearTimeout(resizeTimer);resizeTimer=setTimeout(size,200);});
+            var observer=new IntersectionObserver(function(entries){
+                entries.forEach(function(entry){
+                    if(entry.isIntersecting&&!raf){raf=requestAnimationFrame(tick);}
+                    else if(!entry.isIntersecting){cancelAnimationFrame(raf);raf=0;}
+                });
+            },{threshold:0});
+            observer.observe(canvas);
+        }
+        initHeroParticles();
+        if(reduced||typeof gsap==='undefined'||typeof ScrollTrigger==='undefined'){
+            if(words){words.forEach(function(word){word.classList.add('is-active');});}
+            capabilities.forEach(function(item){item.classList.add('is-in');});
+            return;
+        }
+        gsap.registerPlugin(ScrollTrigger);
+        if(words&&words.length){ScrollTrigger.create({trigger:heading,start:'top 75%',end:'bottom 30%',scrub:1,onUpdate:function(self){var active=Math.ceil(self.progress*words.length*1.1);words.forEach(function(word,index){word.classList.toggle('is-active',index<active);});}});}
+        capabilities.forEach(function(item){ScrollTrigger.create({trigger:item,start:'top 84%',onEnter:function(){item.classList.add('is-in');},onLeaveBack:function(){item.classList.remove('is-in');}});});
+    });
+    </script>
 </body>
 </html>

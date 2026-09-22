@@ -103,15 +103,19 @@
     /* Original two-row SVG composition, with its original nodes and paths. */
     .kl-homepage .kl-origin-workflow__stage--desktop { display: none; }
     .kl-homepage .kl-origin-workflow__stage--mobile { display: block; max-width: 360px; margin-inline: auto; }
-    .kl-homepage .kl-origin-workflow__endpoint-title { font-size: 12px; }
+    .kl-homepage .kl-origin-workflow__endpoint-title { font-size: 10.5px; }
+    .kl-homepage .kl-origin-workflow__endpoint-title--mobile { letter-spacing: 0; }
     .kl-homepage .kl-origin-workflow__core-label { font-size: 11px; }
     .kl-homepage .kl-origin-workflow__institution-state { letter-spacing: .03em; }
     .kl-homepage .kl-origin-workflow__step-caption { font-size: 10.5px; }
+    .kl-homepage .kl-origin-workflow__mobile-caption { letter-spacing: -0.01em; }
     .kl-homepage .kl-origin-cta__copy { margin-top: 28px; padding: 0; }
     .kl-homepage h2.kl-origin-cta__title { margin-top: 12px; font-size: clamp(1.75rem, 7.5vw, 2rem); line-height: 1.12; }
     .kl-homepage .kl-origin-cta__eyebrow { color: #f0c9c5; }
     .kl-homepage .kl-origin-cta__body { margin-top: 18px; text-align: center; color: var(--home-muted-wine); }
-    .kl-homepage .kl-origin-cta__button { width: 100%; justify-content: space-between; margin-top: 24px; }
+    .kl-homepage .kl-origin-cta__actions { width: 100%; margin-top: 24px; gap: 8px; }
+    .kl-homepage .kl-origin-cta__button { width: 100%; justify-content: space-between; margin-top: 0; }
+    .kl-homepage .kl-origin-cta__drona-link { min-height: 44px; font: 500 .875rem/1.4 var(--home-sans); }
 
     .kl-homepage .kl-origin-band > .kl-scope { padding-block: 7rem; }
     .kl-homepage .kl-scope__inner { display: flex; flex-direction: column; padding: 0; gap: 24px; text-align: center; }

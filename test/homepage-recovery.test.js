@@ -16,7 +16,9 @@ test('production build ships the approved homepage composition and its dependenc
     assert.deepEqual([...doc.querySelectorAll('.kl-roadmap__mobile-summary h3')].map(el => el.textContent.trim()), [
       'Research and Development', 'Design Partnerships', 'Launch early 2027', 'Enabling Supply Chain Financing'
     ]);
-    assert.match(doc.querySelector('#klManifestoReveal').textContent.replace(/\s+/g, ' '), /Kanan builds the intelligence layer that makes you resilient/);
+    const manifesto = doc.querySelector('#klManifestoReveal').textContent.replace(/\s+/g, ' ');
+    assert.match(manifesto, /The geopolitical shifts we’ve been facing is just the beginning/);
+    assert.match(manifesto, /You need a system that understands and thinks for you/);
     assert.equal(doc.querySelector('.kl-origin-workflow__stage--mobile .kl-origin-workflow__process-caption'), null);
     assert.equal([...doc.querySelectorAll('button')].filter(el => /Pause (video|animation|background)/.test(el.textContent)).length, 0);
   } finally { dom.window.close(); }

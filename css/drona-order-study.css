@@ -1,0 +1,94 @@
+@font-face{font-family:Telegraf;src:url('../assets/fonts/Telegraf-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Telegraf;src:url('../assets/fonts/Telegraf-UltraBold.otf') format('opentype');font-weight:800;font-display:swap}
+@font-face{font-family:'Cormorant Garamond';src:url('../assets/fonts/CormorantGaramond-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+
+:root{--dos-wine:#762c36;--dos-paper:#eeebe3;--dos-cream:#f8f5ed;--dos-rose:#e8bbb8;--dos-line:#a9656d;--dos-ink:#4c2c2c}
+*{box-sizing:border-box}
+html{background:var(--dos-wine);scroll-behavior:smooth}
+body{margin:0;background:var(--dos-wine);color:var(--dos-cream);font-family:Telegraf,Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+button,a{font:inherit}
+button{border:0}
+.dos-skip{position:fixed;z-index:20;top:1rem;left:1rem;padding:.75rem 1rem;background:var(--dos-cream);color:var(--dos-wine);transform:translateY(-180%)}
+.dos-skip:focus{transform:translateY(0)}
+.dos-study{width:min(100% - clamp(2rem,8vw,9rem),1740px);margin:auto;padding:2.2rem 0 1rem}
+.dos-meta{display:flex;justify-content:space-between;gap:2rem;padding-bottom:1.4rem;border-bottom:1px solid rgba(232,187,184,.43);font-size:.64rem;letter-spacing:.2em}
+.dos-intro{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(19rem,.85fr);gap:1.5rem 8%;align-items:end;padding:clamp(4rem,8vw,8rem) 0 clamp(3rem,6vw,5rem)}
+.dos-kicker{margin:0 0 1.35rem;font-size:.64rem;font-weight:800;letter-spacing:.24em}
+.dos-intro .dos-kicker{grid-column:1/-1}
+.dos-intro h1{margin:0;font:500 clamp(4.2rem,7.7vw,8rem)/.86 'Cormorant Garamond',Georgia,serif;letter-spacing:-.04em}
+.dos-intro h1 em{font-weight:500}
+.dos-body{max-width:35rem;margin:0 0 .35rem;color:rgba(248,245,237,.8);font-size:clamp(.9rem,1.05vw,1.05rem);line-height:1.78}
+
+.dos-review{border-top:1px solid rgba(232,187,184,.55);border-bottom:1px solid rgba(232,187,184,.55);padding:1.5rem 0 1.25rem}
+.dos-review__header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:end;margin-bottom:1.4rem}
+.dos-frame-copy{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.35rem 1.7rem;align-items:baseline}
+.dos-frame-count{grid-row:1 / 3;align-self:start;margin:.4rem 0 0;color:var(--dos-rose);font-size:.61rem;font-weight:800;letter-spacing:.22em}
+.dos-frame-copy h2{margin:0;font:500 clamp(2rem,3vw,3.7rem)/1 'Cormorant Garamond',Georgia,serif;letter-spacing:-.02em}
+.dos-frame-copy>p:last-child{max-width:46rem;margin:.35rem 0 0;color:rgba(248,245,237,.68);font-size:.8rem;line-height:1.55}
+.dos-theme-control{display:flex;align-items:center;gap:.4rem}
+.dos-theme-control>span{margin-right:.45rem;color:var(--dos-rose);font-size:.57rem;letter-spacing:.18em}
+.dos-theme-control button,.dos-arrow{min-height:40px;padding:.65rem .85rem;border:1px solid rgba(248,245,237,.55);color:var(--dos-cream);background:transparent;font-size:.7rem;cursor:pointer}
+.dos-theme-control button[aria-pressed="true"],.dos-theme-control button:hover,.dos-arrow:hover{background:var(--dos-cream);color:var(--dos-wine)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--dos-cream);outline-offset:4px}
+
+.dos-canvas-grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
+.dos-canvas{position:relative;min-width:0;margin:0;border:1px solid rgba(248,245,237,.35);overflow:hidden}
+.dos-canvas>figcaption{position:absolute;z-index:2;top:1rem;left:1rem;padding:.45rem .62rem;border:1px solid currentColor;color:rgba(248,245,237,.7);background:rgba(118,44,54,.9);font-size:.52rem;letter-spacing:.17em}
+.dos-canvas--wine{background:var(--dos-wine)}
+.dos-canvas--light{display:none;background:var(--dos-paper);border-color:rgba(76,44,44,.25)}
+.dos-canvas--light>figcaption{color:rgba(76,44,44,.75);background:rgba(238,235,227,.92)}
+body[data-preview="light"] .dos-canvas--wine{display:none}
+body[data-preview="light"] .dos-canvas--light{display:block}
+body[data-preview="compare"] .dos-canvas-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+body[data-preview="compare"] .dos-canvas--light{display:block}
+
+.dos-frame-nav{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:1rem;align-items:stretch;margin-top:1.15rem}
+.dos-arrow{display:flex;align-items:center;gap:.75rem;justify-content:center;padding-inline:1rem}
+.dos-frame-list{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;margin:0;padding:0;list-style:none}
+.dos-frame-list li{min-width:0}
+.dos-frame-list button{width:100%;height:100%;min-height:56px;padding:.55rem .7rem;border-top:1px solid rgba(248,245,237,.28);border-right:1px solid rgba(248,245,237,.17);border-bottom:1px solid rgba(248,245,237,.28);color:rgba(248,245,237,.62);background:transparent;text-align:left;font-size:.64rem;line-height:1.25;cursor:pointer}
+.dos-frame-list li:first-child button{border-left:1px solid rgba(248,245,237,.28)}
+.dos-frame-list button span{display:block;margin-bottom:.3rem;color:var(--dos-rose);font-size:.54rem;letter-spacing:.16em}
+.dos-frame-list button[aria-current="true"]{color:var(--dos-wine);background:var(--dos-cream)}
+.dos-frame-list button[aria-current="true"] span{color:var(--dos-wine)}
+.dos-frame-list button:hover:not([aria-current="true"]){color:var(--dos-cream);background:rgba(248,245,237,.06)}
+.dos-review-status{margin:1rem 0 0;color:rgba(248,245,237,.5);font-size:.63rem;letter-spacing:.05em;text-align:right}
+
+.dos-partners{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(18rem,.75fr);gap:4rem;align-items:center;padding:clamp(4.5rem,8vw,8rem) 0}
+.dos-partners h2{margin:0 0 1rem;font:500 clamp(2.6rem,4.2vw,5rem)/.95 'Cormorant Garamond',Georgia,serif;letter-spacing:-.025em}
+.dos-partners p:not(.dos-kicker){max-width:41rem;margin:0;color:rgba(248,245,237,.72);font-size:.86rem;line-height:1.75}
+.dos-conversion{justify-self:end;width:min(100%,22rem)}
+.dos-conversion a{display:flex;justify-content:space-between;gap:3rem;padding:1.15rem 1.35rem;color:var(--dos-wine);background:var(--dos-cream);text-decoration:none;font-size:.85rem}
+.dos-conversion small{display:block;margin-top:.9rem;color:rgba(248,245,237,.65);font-size:.68rem}
+.dos-review-note{margin:0;padding:1.3rem 0;border-top:1px solid rgba(232,187,184,.35);color:rgba(248,245,237,.45);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase}
+
+@media(max-width:1100px){
+  .dos-study{width:min(100% - 2.5rem,1740px)}
+  .dos-frame-nav{grid-template-columns:1fr 1fr}.dos-frame-list{grid-column:1/-1;grid-row:1}.dos-arrow{grid-row:2}
+  body[data-preview="compare"] .dos-canvas-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:720px){
+  html{scroll-behavior:auto}
+  .dos-study{width:calc(100% - 1.5rem);padding-top:1rem}
+  .dos-meta{font-size:.5rem}
+  .dos-intro{display:block;padding:3.25rem .25rem 2.5rem}
+  .dos-intro h1{font-size:clamp(3.6rem,19vw,5.3rem)}
+  .dos-body{margin-top:1.6rem;font-size:.85rem}
+  .dos-review{padding-top:1rem}
+  .dos-review__header{grid-template-columns:1fr;gap:1.25rem}
+  .dos-frame-copy{grid-template-columns:1fr;gap:.35rem}
+  .dos-frame-count{grid-row:auto;margin:0}
+  .dos-frame-copy h2{font-size:2.25rem}
+  .dos-theme-control{overflow-x:auto;padding-bottom:.25rem}
+  .dos-theme-control button{min-width:66px}
+  .dos-canvas>figcaption{top:.45rem;left:.45rem;font-size:.42rem}
+  .dos-frame-list{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}
+  .dos-frame-list li{flex:0 0 47%;scroll-snap-align:start}
+  .dos-frame-list button{min-height:62px}
+  .dos-partners{grid-template-columns:1fr;gap:2rem;padding:4rem .25rem}
+  .dos-conversion{justify-self:start}
+  .dos-review-status{text-align:left;line-height:1.5}
+}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

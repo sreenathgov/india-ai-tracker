@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-09-06",
+  "lastUpdated": "2026-09-22",
   "cards": [
     {
       "id": "stat-1",
       "type": "stat",
       "title": "Capital Tracked",
-      "value": "$2.7B",
+      "value": "$2.8B",
       "suffix": "",
-      "description": "Across 142 disclosed rounds, de-duplicated by deal."
+      "description": "Across 150 disclosed rounds, de-duplicated by deal."
     },
     {
       "id": "stat-2",
       "type": "stat",
       "title": "Signals Filed",
-      "value": "2,032",
+      "value": "2,118",
       "suffix": "",
       "description": "Each one classified, geo-attributed and adjudicated before it enters the record."
     },
@@ -21,7 +21,7 @@
       "id": "stat-3",
       "type": "stat",
       "title": "Policy Moves Logged",
-      "value": "165",
+      "value": "171",
       "suffix": "",
       "description": "Central and state action, held apart from the announcement noise around it."
     },
@@ -29,7 +29,7 @@
       "id": "stat-4",
       "type": "stat",
       "title": "States & UTs Mapped",
-      "value": "29",
+      "value": "30",
       "suffix": "",
       "description": "Every jurisdiction kept as its own record, not folded into a national feed."
     },
@@ -116,25 +116,25 @@
     }
   ],
   "heading": "NINE MONTHS OF SIGNAL",
-  "subheading": "Every AI signal out of India — 2,032 of them — read, filed and cross-checked since January 2026.",
+  "subheading": "Every AI signal out of India — 2,118 of them — read, filed and cross-checked since January 2026.",
   "computed": {
-    "totalSignals": 2032,
+    "totalSignals": 2118,
     "monthsActive": 9,
     "firstMonth": "2026-01",
     "lastMonth": "2026-09",
-    "latestSignalDate": "2026-09-06",
-    "policyCount": 165,
-    "policyTopTwoMonthsShare": 0.42424242424242425,
-    "policyQuietMonthCount": 2,
-    "sourceCount": 77,
-    "topSourceShare": 0.406003937007874,
+    "latestSignalDate": "2026-09-22",
+    "policyCount": 171,
+    "policyTopTwoMonthsShare": 0.4093567251461988,
+    "policyQuietMonthCount": 8,
+    "sourceCount": 78,
+    "topSourceShare": 0.408876298394712,
     "topSources": [
       "Entrackr - AI & Startups",
-      "YourStory",
-      "ET CIO - AI"
+      "ET CIO - AI",
+      "YourStory"
     ],
-    "jurisdictionCount": 29,
-    "topStateShare": 0.6001483679525222,
+    "jurisdictionCount": 30,
+    "topStateShare": 0.5977093772369363,
     "topStates": [
       "KA",
       "DL",
@@ -142,9 +142,9 @@
       "TG"
     ],
     "thinStateCount": 14,
-    "roundCount": 142,
-    "capitalUsd": 2737884090.909091,
-    "medianRoundUsd": 5590909.090909091,
-    "largestRoundShare": 0.4382946684940012
+    "roundCount": 150,
+    "capitalUsd": 2831281818.1818185,
+    "medianRoundUsd": 5500000,
+    "largestRoundShare": 0.4238362964413805
   }
 }

@@ -12,21 +12,24 @@ function applicationLink(content) {
   return `https://apply.kananlabs.in/?utm_source=kanan_homepage&amp;utm_medium=owned&amp;utm_campaign=supplier_programme&amp;utm_content=${content}`;
 }
 
-test('renders the approved Project Origin conversion act', () => {
+test('renders the production-reliability conversion act', () => {
   assert.match(homepage, /id="klOriginCta"/);
-  assert.match(homepage, /SUPPLIER PROGRAMME · APPLICATIONS OPEN/);
-  assert.match(homepage, /Do not let working capital hold back a real order\./);
-  assert.match(homepage, /We help Indian manufacturers pursue working-capital finance\. The first 15 selected receive hands-on support at no charge\./);
+  assert.match(homepage, /DESIGN PARTNERSHIPS · MAKE-TO-ORDER MANUFACTURERS/);
+  assert.match(homepage, /Start with one consequential production order\./);
+  assert.match(homepage, /Kanan works with manufacturers to examine the critical components, suppliers and dependencies/);
+  assert.match(homepage, /The lender retains the decision\./);
   assert.doesNotMatch(homepage, /guaranteed financing|approval probability|Kanan underwriting|lender matching/i);
 });
 
-test('routes homepage conversion points to the canonical supplier subdomain with distinct attribution', () => {
-  assert.ok(homepage.includes(applicationLink('hero') + '#apply'));
-  assert.ok(homepage.includes(applicationLink('origin_cta') + '"'));
-  assert.ok(homepage.includes(applicationLink('capability_reel') + '#apply'));
-  assert.match(homepage, /data-supplier-programme-link/);
+test('routes production-reliability conversion points to an order discussion', () => {
+  assert.match(homepage, /href="request-demo\.html\?utm_source=kanan_homepage&amp;utm_medium=owned&amp;utm_campaign=production_reliability&amp;utm_content=hero"/);
+  assert.match(homepage, /<span>Request Demo<\/span>/);
+  assert.match(homepage, /class="kl-origin-cta__button" href="supplier-programme\.html"/);
+  assert.match(homepage, /<span>Discuss an order<\/span>/);
+  assert.match(homepage, /class="kl-origin-cta__drona-link" href="drona\.html">Explore Drona<\/a>/);
+  assert.match(homepage, /class="kl-scope__cta-btn"[\s\S]*?Explore Drona/);
   assert.match(behaviour, /supplier-programme\.html/);
-  assert.match(homepage, /href="#klOriginCta" class="kl-btn-secondary">See how it works<\/a>/);
+  assert.match(homepage, /href="drona\.html" class="kl-btn-secondary">Explore Drona<\/a>/);
 });
 
 test('removes the legacy homepage demo while retaining independent Origin assets', () => {
@@ -37,12 +40,13 @@ test('removes the legacy homepage demo while retaining independent Origin assets
   assert.ok(homepage.indexOf('id="klOriginCta"') < homepage.indexOf('class="kl-footer"'));
 });
 
-test('keeps the institution decision explicit and never depicts approval', () => {
+test('keeps financier authority explicit and never depicts approval', () => {
   const start = homepage.indexOf('<section class="kl-origin-cta"');
   const end = homepage.indexOf('</section>', start);
   const section = homepage.slice(start, end);
-  assert.match(section, /Institution decides/);
-  assert.doesNotMatch(section, /approved|sanctioned|approval tick|✓|✔/i);
+  assert.match(homepage, /The lender retains the decision\./);
+  assert.match(homepage, /The financier retains credit authority\./);
+  assert.doesNotMatch(homepage, /guaranteed financing|approval probability|Kanan underwriting|lender matching/i);
 });
 
 test('provides visibility-aware motion, reduced-motion fallback and a dedicated mobile composition', () => {
