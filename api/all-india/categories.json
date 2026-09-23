@@ -1415,6 +1415,86 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "Doctors push for AI in Indian healthcare—from smart ICUs to smarter diagnoses",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/ai-healthcare-smart-icus-smarter-diagnoses-doctors-training-inhouse-teams-ambient-scribes-doctorsai-11790057846504.html",
+        "summary": "Doctors are pushing for AI to not only improve productivity and diagnosis but also address issues including second opinions, faster test results and quicker access to doctors, freeing up their time to...",
+        "date_published": "2026-09-23",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "From data to trust: The layer powering India&#039;s AI breakthrough",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/from-data-to-trust-the-layer-powering-indias-ai-breakthrough/134423926",
+        "summary": "Indian businesses are increasingly embracing AI, but they encounter hurdles in fostering confidence in AI-generated results. Many pilot projects have faltered due to a lack of contextual understanding...",
+        "date_published": "2026-09-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "‘AI is the new UI’: Zoho’s Sridhar Vembu outlines his vision for ‘ubiquitous intelligence’",
+        "url": "https://yourstory.com/2026/09/ai-is-the-new-ui-zohos-sridhar-vembu-ubiquitous-intelligence",
+        "summary": "Even as US President Donald Trump rebrands AI as \"super intelligence\", Zoho's Sridhar Vembu believes it can be \"ubiquitous intelligence\".",
+        "date_published": "2026-09-23",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "AI doom fears overstated, global pause unrealistic: Zoho Co-founder Sridhar Vembu",
+        "url": "https://telanganatoday.com/ai-doom-fears-overstated-global-pause-unrealistic-zoho-co-founder-sridhar-vembu",
+        "summary": "Zoho cofounder Sridhar Vembu said catastrophic AI predictions are overstated and a global development pause is unlikely. He urged India to pursue strategic autonomy, invest in foundational R&#038;D, p...",
+        "date_published": "2026-09-23",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "India leading enterprise AI adoption, focus on production deployments and agentic AI growth",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-leading-enterprise-ai-adoption-focus-on-production-deployments-and-agentic-ai-growth/134378311",
         "summary": "A groundbreaking shift is taking place as Indian firms embrace extensive AI production deployments. Salesforce is set to significantly enhance India’s physical infrastructure and workforce investments...",
@@ -14520,6 +14600,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "Mahindra Finance&#039;s AI system now handles 70% of new-loan volumes",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/mahindra-finances-ai-system-now-handles-70-of-new-loan-volumes/134423973",
+        "summary": "Mahindra Finance has made significant advancements in its Samur.AI system, enhancing the efficiency of loan processing. By automating operations, the branch network has seen reduced turnaround times a...",
+        "date_published": "2026-09-23",
+        "source_name": "ET CIO - AI",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Lumikai leads $600K pre-seed round in Demoverse",
         "url": "https://entrackr.com/snippets/lumikai-leads-600k-pre-seed-round-in-demoverse-12562408",
@@ -17570,6 +17670,7 @@
     ]
   },
   "today_updates": [
+    "Major AI Developments",
     "AI Start-Up News"
   ]
 }

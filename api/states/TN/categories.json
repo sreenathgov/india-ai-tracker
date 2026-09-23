@@ -214,6 +214,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Zoho’s Sridhar Vembu calls global tech’s push to slow AI development unfair",
+        "url": "https://yourstory.com/2026/09/zoho-sridhar-vembu-big-tech-push-slow-ai-development-cynical",
+        "summary": "Large language models (LLMs) are becoming a commodity, with too many models in the market and prices also falling, Vembu said on the sidelines of the Zoholics event in Chennai.",
+        "date_published": "2026-09-23",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Banaras crafts get an AI, blockchain boost from IIT- Madras",
         "url": "https://timesofindia.indiatimes.com/city/varanasi/banaras-crafts-get-an-ai-blockchain-boost-from-iit-madras/articleshow/134360125.cms",
@@ -1555,5 +1575,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
