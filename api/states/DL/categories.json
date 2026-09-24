@@ -617,6 +617,26 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "‘India is a key pillar’: Delta Electronics’ leadership meets PM Modi to chart next decade of energy transition and AI",
+        "url": "https://www.livemint.com/ai/india-is-key-pillar-delta-electronics-leadership-meets-pm-modi-to-chart-next-decade-of-energy-transition-and-ai-infa-11790237749918.html",
+        "summary": "Prime Minister Narendra Modi met Delta Electronics leadership in New Delhi to discuss the company’s India growth plans across AI infrastructure, clean energy and smart manufacturing. Delta outlined pl...",
+        "date_published": "2026-09-24",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Kishan Reddy &amp; Gen VK Singh join industry leaders at IEI Excellence Summit",
         "url": "https://government.economictimes.indiatimes.com/news/policy/kishan-reddy-gen-vk-singh-join-industry-leaders-at-iei-excellence-summit/134391748",
         "summary": "At the IEI Excellence Summit in Delhi, leaders called for India to move from manufacturing to global engineering design, highlighting tech, talent, and trust, with NIT Meghalaya winning top honors.",
@@ -4026,6 +4046,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 7,
+        "title": "Exclusive: Rio Health raises Rs 43 Cr in pre-Series A led by Version One Ventures",
+        "url": "https://entrackr.com/exclusive/exclusive-rioai-raises-rs-43-cr-in-pre-series-a-led-by-version-one-ventures-12566460",
+        "summary": "Rio Health, a quick-commerce platform for medici...",
+        "date_published": "2026-09-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "BRICS backs startup incubator network, considers innovation fund in New Delhi Declaration",
         "url": "https://yourstory.com/2026/09/brics-startup-incubator-network-considers-innovation-fund-new-delhi-declaration",
@@ -4825,5 +4865,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

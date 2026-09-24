@@ -551,6 +551,67 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Mythic AI sets centre in Bengaluru to build AI chip engineering capabilities",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/mythic-ai-sets-centre-in-bengaluru-to-build-ai-chip-engineering-capabilities/134455638",
+        "summary": "Mythic AI has established a centre of excellence in Bengaluru to focus on AI chip development. This centre is expected to contribute significantly to their flagship Vanguard platform. The company aims...",
+        "date_published": "2026-09-24",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Google Cloud pushes Gemini deeper into India’s businesses",
+        "url": "https://yourstory.com/2026/09/google-cloud-brings-gemini-deeper-into-india-businesses",
+        "summary": "At an event in Bengaluru, Google Cloud outlined its India strategy, which combines Gemini AI models and infrastructure, to take AI from pilots into production environments through industry partnership...",
+        "date_published": "2026-09-24",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "HEADS to bridge India’s mental healthcare gap with AI",
+        "url": "https://www.thehindu.com/news/national/karnataka/heads-to-bridge-indias-mental-healthcare-gap-with-ai/article71499835.ece",
+        "summary": "NIMHANS in collaboration with IIT Kharagpur, and Lokopriya Gopinath Bordoloi Regional Institute of Mental Health, Tezpur, to formally launch HEADS (Human-in-the-loop Evaluation of Assisted Depression...",
+        "date_published": "2026-09-24",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Bengaluru firm showcases AI-powered early wafer defect detection technology at SEMICON India",
         "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/bengaluru-firm-showcases-ai-powered-early-wafer-defect-detection-technology-at-semicon-india/134324149",
@@ -6111,5 +6172,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

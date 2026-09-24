@@ -1414,6 +1414,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "AI lifting India Inc&#039;s productivity as well as workload",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-lifting-india-incs-productivity-as-well-as-workload/134456528",
+        "summary": "AI adoption is reshaping workplaces in India, with 81 per cent of employees surveyed by Korn Ferry saying the technology has improved efficiency and 79 per cent reporting higher productivity than a ye...",
+        "date_published": "2026-09-24",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "India&#039;s GCCs embrace &#039;Workforce 2.0&#039; with AI integration and lean engineering teams",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-gccs-embrace-workforce-2-0-with-ai-integration-and-lean-engineering-teams/134449555",
+        "summary": "The traditional GCC workforce has typically followed a pyramid structure, with a broad base of junior engineers supporting a smaller layer of senior architects and leaders. The emerging model is expec...",
+        "date_published": "2026-09-24",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Doctors push for AI in Indian healthcare—from smart ICUs to smarter diagnoses",
         "url": "https://www.livemint.com/ai/artificial-intelligence/ai-healthcare-smart-icus-smarter-diagnoses-doctors-training-inhouse-teams-ambient-scribes-doctorsai-11790057846504.html",
@@ -14620,6 +14660,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 6,
+        "title": "On-demand convenience platform TimBuckDo raises bridge round at Rs 120 Cr valuation",
+        "url": "https://entrackr.com/snippets/on-demand-convenience-platform-timbuckdo-raises-bridge-round-at-rs-150-cr-valuation-12568862",
+        "summary": "On-demand convenience platform TimBuckDo has rais...",
+        "date_published": "2026-09-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Lumikai leads $600K pre-seed round in Demoverse",
         "url": "https://entrackr.com/snippets/lumikai-leads-600k-pre-seed-round-in-demoverse-12562408",
@@ -17670,7 +17730,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

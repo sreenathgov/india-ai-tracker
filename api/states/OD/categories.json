@@ -145,6 +145,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "Odisha clears ₹2.47L cr projects; data centres, AI lead investment surge",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/odisha-clears-2-47l-cr-projects-data-centres-ai-lead-investment-surge/articleshow/134443781.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\"...",
+        "date_published": "2026-09-24",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Odisha clears record ₹15,948 crore power transmission push",
         "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/odisha-clears-record-15948-crore-power-transmission-push/articleshow/133889020.cms",
@@ -468,5 +488,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

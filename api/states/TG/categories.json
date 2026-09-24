@@ -131,6 +131,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "IIIT Hyderabad and Hexagon R&D India Partner to Advance Digital Twin Research",
+        "url": "https://www.iiit.ac.in/iiit-hyderabad-and-hexagon-rd-india-partner-to-advance-digital-twin-research/",
+        "summary": "IIIT Hyderabad and Hexagon R&D India Partner to Advance Digital Twin ResearchIIIT-Hyderabad releases book on evolution of UPIIIIT-H Launches Centre for Educational Technology and Learning Sciences (CE...",
+        "date_published": "2026-09-24",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "AI cannot replace judicial conscience, says Telangana HC judge",
         "url": "https://www.thehindu.com/news/cities/Hyderabad/ai-cannot-replace-judicial-conscience-says-telangana-hc-judge/article71472351.ece",
@@ -2894,5 +2914,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

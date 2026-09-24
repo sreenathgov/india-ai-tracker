@@ -45,6 +45,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "HEADS to bridge India’s mental healthcare gap with AI",
+        "url": "https://www.thehindu.com/news/national/karnataka/heads-to-bridge-indias-mental-healthcare-gap-with-ai/article71499835.ece",
+        "summary": "NIMHANS in collaboration with IIT Kharagpur, and Lokopriya Gopinath Bordoloi Regional Institute of Mental Health, Tezpur, to formally launch HEADS (Human-in-the-loop Evaluation of Assisted Depression...",
+        "date_published": "2026-09-24",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "IIT-Kgp Launches 2-day AI Programme At Houston Centre",
         "url": "https://timesofindia.indiatimes.com/city/kolkata/iit-kgp-launches-2-day-ai-programme-at-houston-centre/articleshow/133412306.cms",
@@ -645,5 +666,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
