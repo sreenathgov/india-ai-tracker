@@ -1414,6 +1414,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Tata tussle turns the spotlight on TVS-Hanno deal; India is leapfrogging in AI: Google Cloud executive",
+        "url": "https://yourstory.com/2026/09/tata-tussle-spotlight-tvs-hanno-deal-india-is-leapfrogging-in-ai",
+        "summary": "The Tata conflict has brought attention to Hanno’s deal with TVS Motor after documents revealed a 29-year lease and a build-to-suit structure.",
+        "date_published": "2026-09-25",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "AI lifting India Inc&#039;s productivity as well as workload",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-lifting-india-incs-productivity-as-well-as-workload/134456528",
@@ -1438,6 +1458,46 @@
         "title": "India&#039;s GCCs embrace &#039;Workforce 2.0&#039; with AI integration and lean engineering teams",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-gccs-embrace-workforce-2-0-with-ai-integration-and-lean-engineering-teams/134449555",
         "summary": "The traditional GCC workforce has typically followed a pyramid structure, with a broad base of junior engineers supporting a smaller layer of senior architects and leaders. The emerging model is expec...",
+        "date_published": "2026-09-24",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Nearly 70% of India&#039;s GCCs stuck at AI pilot stage: Dell-Zinnov report",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/nearly-70-of-indias-gccs-stuck-at-ai-pilot-stage-dell-zinnov-report/134461169",
+        "summary": "The report, titled &#039;India GCCs 2030: From Capability Centers to Agentic Transformation Engines&#039;, noted that while ambition remains high, approximately 55% of routine GCC work is currently ex...",
+        "date_published": "2026-09-24",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "IIEST, Shibpur partners with TCS to launch state-of-the-art centre of excellence in AI",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/iiest-shibpur-partners-with-tcs-to-launch-state-of-the-art-centre-of-excellence-in-ai/134460939",
+        "summary": "Under this strategic collaboration, the on-campus high-performance Computing Lab of the Electrical Engineering Department has been designated as the physical venue for the Centre of Excellence (CoE) i...",
         "date_published": "2026-09-24",
         "source_name": "ET CIO - AI",
         "category": "Major AI Developments",
@@ -14640,6 +14700,66 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 1,
+        "title": "Saaras V4: Sarvam AI’s new speech recognition model adds 22 Indian languages, 5 speech formats",
+        "url": "https://www.livemint.com/ai/saaras-v4-sarvam-ai-s-new-speech-recognition-model-adds-22-indian-languages-5-speech-formats-11790308365323.html",
+        "summary": "Sarvam AI has launched Saaras V4, a new speech recognition model supporting 22 Indian languages and English. The model offers five output modes: transcription, translation, transliteration, verbatim a...",
+        "date_published": "2026-09-25",
+        "source_name": "LiveMint AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Exclusive: Edtech startup Arivihan raising Rs 96 Cr at Rs 570 Cr valuation",
+        "url": "https://entrackr.com/exclusive/exclusive-edtech-startup-arivihan-raising-rs-96-cr-at-rs-570-cr-valuation-12574900",
+        "summary": "AI Edtech startup Arivihan is set to raise Rs 95.8...",
+        "date_published": "2026-09-25",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "India-based research Action Policy Lab launched",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/india-based-research-action-policy-lab-launched/134462466",
+        "summary": "Institute for Human Flourishing has been launched to address the impact of AI on labor markets. It aims to create opportunities for vulnerable communities, especially in India and the Global South. Fo...",
+        "date_published": "2026-09-24",
+        "source_name": "ET Government - Technology",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Mahindra Finance&#039;s AI system now handles 70% of new-loan volumes",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/mahindra-finances-ai-system-now-handles-70-of-new-loan-volumes/134423973",
@@ -17730,6 +17850,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }

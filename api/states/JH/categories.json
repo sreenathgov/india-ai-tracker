@@ -88,6 +88,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 13,
+        "title": "AI must be guided by human values: Jharkhand Guv at DSPMU Convocation",
+        "url": "https://timesofindia.indiatimes.com/city/ranchi/ai-must-be-guided-by-human-values-jharkhand-guv-at-dspmu-convocation/articleshow/134463597.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"h...",
+        "date_published": "2026-09-25",
+        "source_name": "Times of India - Ranchi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "JH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Medical emergency delays AI Express flight to Bengaluru by over four hours",
         "url": "https://timesofindia.indiatimes.com/city/ranchi/medical-emergency-delays-ai-express-flight-to-bengaluru-by-over-four-hours/articleshow/133441294.cms",
@@ -274,5 +294,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
