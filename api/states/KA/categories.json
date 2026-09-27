@@ -551,6 +551,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Challan gone wrong: AI camera mistakes guitar for unhelmeted pillion in Bengaluru",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-strums-wrong-tune-mistakes-guitar-for-helmetless-pillion-in-bengaluru/articleshow/134508809.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\"...",
+        "date_published": "2026-09-27",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "AI camera mistakes guitar for pillion rider in Bengaluru, issues fine for not wearing helmet",
+        "url": "https://www.thehindu.com/news/national/karnataka/ai-camera-mistakes-guitar-for-pillion-rider-in-bengaluru-issues-fine-for-not-wearing-helmet/article71512387.ece",
+        "summary": "After getting a ₹500 challan, the rider complains to the Bengaluru Traffic Police and seeks rectification; the incident draws attention to the limitations of AI-dependent traffic systems; AI sharpens...",
+        "date_published": "2026-09-26",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Finland’s Aiven expands into India, targets AI and cloud data infrastructure market",
         "url": "https://entrackr.com/snippets/finlands-aiven-expands-into-india-targets-ai-and-cloud-data-infrastructure-market-12574652",
@@ -6213,5 +6253,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -214,6 +214,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "IIT Madras invests ₹55 crore in four deeptech startups working in space tech, quatum applications",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/iit-madras-invests-55-crore-in-four-deeptech-startups-working-in-space-tech-quatum-applications/articleshow/134509011.cms",
+        "summary": "<img align=\"left\" b...",
+        "date_published": "2026-09-27",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "AI, semiconductors, quantum tech next major frontier for India: Sitharaman",
+        "url": "https://yourstory.com/2026/09/ai-semiconductors-quantum-tech-major-frontier-india-sitharaman",
+        "summary": "Speaking at a fireside chat organised by the IIT Madras Alumni Association here, Finance Minister Nirmala Sitharaman said India needed to accelerate efforts to build the hardware, skills and instituti...",
+        "date_published": "2026-09-26",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Zoho goes all-in on vertical SaaS as AI reshapes enterprise software",
         "url": "https://timesofindia.indiatimes.com/city/chennai/zoho-goes-all-in-on-vertical-saas-as-ai-reshapes-enterprise-software/articleshow/134435864.cms",
@@ -1615,5 +1655,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

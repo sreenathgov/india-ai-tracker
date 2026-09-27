@@ -131,6 +131,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Bhatti calls for AI to take Telangana tourism global",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/bhatti-calls-for-ai-to-take-telangana-tourism-global/articleshow/134508687.cms",
+        "summary": "Bhatti calls for AI to take Telangana tourism global",
+        "date_published": "2026-09-27",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "IIIT Hyderabad and Hexagon R&D India Partner to Advance Digital Twin Research",
         "url": "https://www.iiit.ac.in/iiit-hyderabad-and-hexagon-rd-india-partner-to-advance-digital-twin-research/",
@@ -2914,5 +2934,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
