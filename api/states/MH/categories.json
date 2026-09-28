@@ -227,6 +227,31 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Alive App raises $1 Mn from Powerhouse, Flipkart Ventures",
+        "url": "https://entrackr.com/snippets/alive-app-raises-1-mn-from-powerhouse-flipkart-ventures-12583861",
+        "summary": "Alive App, an AI-powered experience-tech platform, ha...",
+        "date_published": "2026-09-28",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "GA",
+          "KA",
+          "MH",
+          "TG",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "India’s top AI teams set to battle in Elastic and AWS's Forge the Future Hackathon finale",
         "url": "https://yourstory.com/2026/09/indias-top-ai-teams-set-battle-elastic-awss-forge-future-hackathon-finale",
@@ -3047,5 +3072,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -5,6 +5,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Rajasthan agriculture department trains officials on AI for crop monitoring, farmer services",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/rajasthan-agriculture-department-trains-officials-on-ai-for-crop-monitoring-farmer-services/134535505",
+        "summary": "The workshop covered AI applications in agricultural planning, crop-loss assessment, weather and pest advisories, yield forecasting and personalised farmer services through the Raj Kisan Portal.",
+        "date_published": "2026-09-28",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "RJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Govt to set up quantum computing, AI labs at MNIT Jaipur",
         "url": "https://government.economictimes.indiatimes.com/news/technology/govt-to-set-up-quantum-computing-ai-labs-at-mnit-jaipur/131662150",
@@ -256,5 +276,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
