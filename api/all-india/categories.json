@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 6,
+        "title": "Governance must change for the age of AI, next 20 years crucial for India: Chandrababu Naidu",
+        "url": "https://www.thehindu.com/news/national/andhra-pradesh/governance-must-change-for-the-age-of-ai-next-20-years-crucial-for-india-chandrababu-naidu/article71523081.ece",
+        "summary": "The IT revolution has given way to the age of AI, Chandrababu Naidu says, and unnecessary regulations must go while government employees keep training",
+        "date_published": "2026-09-29",
+        "source_name": "The Hindu - Andhra Pradesh",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Electronics demand, global supply shifts, policy support driving India&#039;s semiconductor play",
         "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/electronics-demand-global-supply-shifts-policy-support-driving-indias-semiconductor-play/134530094",
@@ -1455,6 +1475,46 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "IBM, Yotta launch sovereign agentic AI platform for Indian enterprises",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ibm-yotta-launch-sovereign-agentic-ai-platform-for-indian-enterprises/134559260",
+        "summary": "IBM collaborates with Yotta Data Services to introduce an innovative AI platform designed specifically for Indian businesses. This comprehensive solution combines IBM’s watsonx Orchestrate with Yotta’...",
+        "date_published": "2026-09-29",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "From payments to wealth: Where is India's fintech story headed next?",
+        "url": "https://yourstory.com/2026/09/where-is-india-fintech-story-headed-next",
+        "summary": "India’s fintech story is moving beyond payments and credit as rising incomes and longer lifespans create a growing need for personalised wealth advice. But access to independent, affordable financial...",
+        "date_published": "2026-09-29",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "India insurance growth to hinge on AI-led distribution, ecosystem partnerships",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-insurance-growth-to-hinge-on-ai-led-distribution-ecosystem-partnerships/134533882",
         "summary": "India&#039;s insurance sector is expected to grow by enhancing distribution through AI-powered methods and partnerships. Insurers are reassessing traditional direct-to-customer models to improve custo...",
@@ -1478,6 +1538,26 @@
         "title": "OpenAI teams up with Sachin Tendulkar to demystify AI in India",
         "url": "https://yourstory.com/2026/09/openai-teams-up-with-sachin-tendulkar-to-demystify-ai-in-india",
         "summary": "Cricket legend Sachin Tendulkar has teamed up with OpenAI in a multi-year partnership to show how ChatGPT can be used for everyday learning, idea generation, and personal interests.",
+        "date_published": "2026-09-28",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Epiklogue unveils India’s new commerce model: Try and Buy",
+        "url": "https://yourstory.com/2026/09/epiklogue-unveils-indias-new-commerce-model-try-and-buy",
+        "summary": "Backed by India’s finest brands, Epik pioneers ‘experience commerce’, blending AI with human expertise to create a shopping model the world has never seen before.\n\n\n\nFor years, the big ideas in commer...",
         "date_published": "2026-09-28",
         "source_name": "YourStory",
         "category": "Major AI Developments",
@@ -14780,6 +14860,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "Peak XV unveils Surge 12 with 18 startups across AI, robotics, space, consumer, healthcare, music and fintech",
+        "url": "https://entrackr.com/snippets/peak-xv-unveils-surge-12-with-18-startups-across-ai-robotics-space-consumer-healthcare-music-and-fintech-12589318",
+        "summary": "Peak XV Partners has unveiled the 12th cohort of its seed stage...",
+        "date_published": "2026-09-29",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Saaras V4: Sarvam AI’s new speech recognition model adds 22 Indian languages, 5 speech formats",
         "url": "https://www.livemint.com/ai/saaras-v4-sarvam-ai-s-new-speech-recognition-model-adds-22-indian-languages-5-speech-formats-11790308365323.html",
@@ -17930,7 +18030,8 @@
     ]
   },
   "today_updates": [
+    "Major AI Developments",
     "Policies and Initiatives",
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }
