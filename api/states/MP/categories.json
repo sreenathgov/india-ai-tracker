@@ -91,6 +91,29 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "Edtech startup Arivihan raises $10 Mn in Series A led by Accel and Prosus",
+        "url": "https://entrackr.com/news/edtech-startup-arivihan-raises-10-mn-in-series-a-led-by-accel-and-prosus-12592500",
+        "summary": "Bengaluru- based edtech startup Arivihan has raised $10 milli...",
+        "date_published": "2026-09-30",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "BR",
+          "MP",
+          "RJ",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Tractor Junction gets RBI licence to launch NBFC arm Dhanrise Finance",
         "url": "https://entrackr.com/snippets/tractor-junction-gets-rbi-licence-to-launch-nbfc-arm-dhanrise-finance-12225871",
@@ -142,5 +165,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

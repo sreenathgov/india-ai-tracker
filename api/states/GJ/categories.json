@@ -145,6 +145,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Robotics and AI transform joint replacement surgeries, say experts at IAACON 2026 in Ahmedabad",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/robotics-and-ai-transform-joint-replacement-surgeries-say-experts-at-iaacon-2026-in-ahmedabad/articleshow/134572918.cms",
+        "summary": "Robotics and AI transform joint replacement surgeries, say experts at IAACON 2026 in Ahmedabad",
+        "date_published": "2026-09-30",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Mother travels 250km from Ahmedabad to Surat to donate breast milk for newborns",
         "url": "https://timesofindia.indiatimes.com/city/surat/woman-travels-250km-to-give-her-milk-to-newborns-she-would-never-meet/articleshow/134509766.cms",
@@ -1984,5 +2004,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

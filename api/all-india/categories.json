@@ -1514,6 +1514,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 3,
+        "title": "India faces 53-60% talent gap in GenAI, cloud skills: TeamLease",
+        "url": "https://yourstory.com/2026/09/talent-gap-genai-cloud-india-stands-53-60-teamlease-digital-report",
+        "summary": "The report by TeamLease Digital highlighted that only 16% of IT professionals hold AI skills with 20 lakh upskilled and only three lakh in advanced AI.",
+        "date_published": "2026-09-29",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "India insurance growth to hinge on AI-led distribution, ecosystem partnerships",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-insurance-growth-to-hinge-on-ai-led-distribution-ecosystem-partnerships/134533882",
@@ -14860,6 +14880,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "Arivihan raises $10M as AI-led edtech targets India’s smaller cities",
+        "url": "https://yourstory.com/2026/09/arivihan-10m-as-ai-led-edtech-targets-indias-smaller-cities",
+        "summary": "Arivihan will use the new capital to expand across states and CBSE, strengthen AI and vernacular capabilities, and broaden access to personalised learning.",
+        "date_published": "2026-09-30",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Peak XV unveils Surge 12 with 18 startups across AI, robotics, space, consumer, healthcare, music and fintech",
         "url": "https://entrackr.com/snippets/peak-xv-unveils-surge-12-with-18-startups-across-ai-robotics-space-consumer-healthcare-music-and-fintech-12589318",
@@ -18030,8 +18070,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "Policies and Initiatives",
     "AI Start-Up News"
   ]
 }

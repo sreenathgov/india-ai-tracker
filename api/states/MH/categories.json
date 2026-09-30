@@ -228,6 +228,26 @@
     "Major AI Developments": [
       {
         "id": 4,
+        "title": "Longevity startup Vytalyou raises Rs 9 Cr in pre-Series A round",
+        "url": "https://entrackr.com/snippets/longevity-startup-vytalyou-raises-rs-9-cr-in-pre-series-a-round-12593640",
+        "summary": "Doctor-led longevity and preventive healthcare sta...",
+        "date_published": "2026-09-30",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
         "title": "Alive App raises $1 Mn from Powerhouse, Flipkart Ventures",
         "url": "https://entrackr.com/snippets/alive-app-raises-1-mn-from-powerhouse-flipkart-ventures-12583861",
         "summary": "Alive App, an AI-powered experience-tech platform, ha...",
@@ -3072,5 +3092,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

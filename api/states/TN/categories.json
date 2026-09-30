@@ -1472,6 +1472,26 @@
     "AI Start-Up News": [
       {
         "id": 1,
+        "title": "TechSparks gets bolder; Meet Tamil Nadu’s all-female rap crew",
+        "url": "https://yourstory.com/2026/09/techsparks-gets-bolder-meet-tamil-nadus-all-female-rap-crew",
+        "summary": "At TechSparks 2026, YourStory's flagship startup and technology summit, conversations will span policy, deeptech, AI, fintech, aerospace, mobility and digital infrastructure.",
+        "date_published": "2026-09-30",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Sarvam AI updates vision model, doubles down on Indic-language push",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/sarvam-ai-updates-vision-model-doubles-down-on-indic-language-push/134482883",
         "summary": "Sarvam AI has proudly unveiled the new Sarvam Vision 2.1, significantly boosting its vision AI capabilities. This enhanced model specializes in digitizing intricate Indian scripts and handwritten docu...",
@@ -1680,5 +1700,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }
