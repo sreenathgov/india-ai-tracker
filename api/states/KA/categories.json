@@ -3,6 +3,33 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 5,
+        "title": "Antler, Nikhil Kamath back healthtech startup Aignosis with Rs 4 Cr seed round",
+        "url": "https://entrackr.com/snippets/antler-nikhil-kamath-back-healthtech-startup-aignosis-with-rs-4-cr-seed-round-12611813",
+        "summary": "Jaipur based healthtech startup Aignosis has raised Rs 4...",
+        "date_published": "2026-10-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GJ",
+          "HR",
+          "JH",
+          "KA",
+          "MH",
+          "PB",
+          "RJ",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "AI replacing 3rd language in Karnataka high schools? Teachers protest against move",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/teachers-oppose-ai-replacing-third-language-in-high-schools-in-karnataka/articleshow/134396544.cms",
@@ -4797,6 +4824,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "Indian startups raise $2.9 Bn in Q3 2026 as EV, AI drive funding",
+        "url": "https://entrackr.com/report/quarterly-funding-report/indian-startups-raise-29-bn-in-q3-2026-as-ev-ai-drive-funding-12612860",
+        "summary": "Indian startups raised less than $3 billion i...",
+        "date_published": "2026-10-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Karnataka, Italy explore startup, AI and space technology partnerships",
         "url": "https://government.economictimes.indiatimes.com/news/technology/karnataka-italy-explore-startup-ai-and-space-technology-partnerships/134018180",
@@ -6318,5 +6365,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives",
+    "AI Start-Up News"
+  ]
 }

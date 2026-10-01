@@ -3,6 +3,33 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 5,
+        "title": "Antler, Nikhil Kamath back healthtech startup Aignosis with Rs 4 Cr seed round",
+        "url": "https://entrackr.com/snippets/antler-nikhil-kamath-back-healthtech-startup-aignosis-with-rs-4-cr-seed-round-12611813",
+        "summary": "Jaipur based healthtech startup Aignosis has raised Rs 4...",
+        "date_published": "2026-10-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GJ",
+          "HR",
+          "JH",
+          "KA",
+          "MH",
+          "PB",
+          "RJ",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "AI must remain a tool, not become the decision-maker in governance: Ex-Cabinet Secy Prabhat Kumar",
         "url": "https://www.tribuneindia.com/news/delhi/ai-must-remain-a-tool-not-become-the-decision-maker-in-governance-ex-cabinet-secy-prabhat-kumar",
@@ -294,5 +321,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

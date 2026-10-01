@@ -3,6 +3,33 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 5,
+        "title": "Antler, Nikhil Kamath back healthtech startup Aignosis with Rs 4 Cr seed round",
+        "url": "https://entrackr.com/snippets/antler-nikhil-kamath-back-healthtech-startup-aignosis-with-rs-4-cr-seed-round-12611813",
+        "summary": "Jaipur based healthtech startup Aignosis has raised Rs 4...",
+        "date_published": "2026-10-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GJ",
+          "HR",
+          "JH",
+          "KA",
+          "MH",
+          "PB",
+          "RJ",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "CB-CID probes AI deepfake video impersonating Tamil Nadu CM Vijay",
         "url": "https://timesofindia.indiatimes.com/city/chennai/cb-cid-probes-ai-deepfake-video-impersonating-cm-vijay/articleshow/133718749.cms",
@@ -1701,6 +1728,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Policies and Initiatives"
   ]
 }

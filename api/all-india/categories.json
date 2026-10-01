@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 3,
+        "title": "IPV leads Rs 7 Cr seed round in cybersecurity startup Zaperon",
+        "url": "https://entrackr.com/snippets/ipv-leads-rs-7-cr-seed-round-in-cybersecurity-startup-zaperon-12612485",
+        "summary": "Cybersecurity startup Zaperon has raised Rs 7 crore in a...",
+        "date_published": "2026-10-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Governance must change for the age of AI, next 20 years crucial for India: Chandrababu Naidu",
         "url": "https://www.thehindu.com/news/national/andhra-pradesh/governance-must-change-for-the-age-of-ai-next-20-years-crucial-for-india-chandrababu-naidu/article71523081.ece",
@@ -1473,6 +1493,46 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 1,
+        "title": "High compute costs, value-conscious users to challenge Indian consumer AI startups: Lightspeed's Harsha Kumar",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/indian-consumer-ai-startups-scaling-monetization-compute-costs-lightspeed-11790826089597.html",
+        "summary": "Venture investors are betting that the next set of large companies will emerge across health, education and entertainment. But computing costs will be an inhibitor in a business that is already expens...",
+        "date_published": "2026-10-01",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Unveilr AI raises pre-seed round from AJVC at Rs 16.7 Cr valuation",
+        "url": "https://entrackr.com/snippets/unveilr-ai-raises-pre-seed-round-from-ajvc-at-rs-167-cr-valuation-12611816",
+        "summary": "Mumbai based Unveilr AI has raised an undisclosed amount...",
+        "date_published": "2026-10-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 1,
         "title": "IBM, Yotta launch sovereign agentic AI platform for Indian enterprises",
@@ -18070,6 +18130,7 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Policies and Initiatives",
+    "Major AI Developments"
   ]
 }

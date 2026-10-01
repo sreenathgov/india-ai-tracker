@@ -267,6 +267,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "PayMe nearly doubles monthly disbursals to Rs 200 Cr, targets Rs 2,000 Cr for FY27",
+        "url": "https://entrackr.com/snippets/payme-nearly-doubles-monthly-disbursals-to-rs-200-cr-targets-rs-2000-cr-for-fy27-12612682",
+        "summary": "Noida-based fintech PayMe has nearly doubled its monthly loan disburs...",
+        "date_published": "2026-10-01",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Aishbagh Ramleela to blend tradition with AI in Lucknow",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/aishbagh-ramleela-to-blend-tradition-with-ai-in-lucknow/articleshow/134611021.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"https://times...",
+        "date_published": "2026-10-01",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Banaras crafts get an AI, blockchain boost from IIT- Madras",
         "url": "https://timesofindia.indiatimes.com/city/varanasi/banaras-crafts-get-an-ai-blockchain-boost-from-iit-madras/articleshow/134360125.cms",
@@ -1564,6 +1604,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }
