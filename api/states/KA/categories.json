@@ -578,6 +578,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "How accurate is Bengaluru’s AI traffic enforcement? | Explained",
+        "url": "https://www.thehindu.com/sci-tech/technology/how-accurate-is-bengalurus-ai-traffic-enforcement-explained/article71532005.ece",
+        "summary": "Amid debates around the shortcomings of using AI in smart policing and rule enforcement, The Hindu  looks at how the Bengaluru Traffic Police’s Intelligent Traffic Management System works, how accurat...",
+        "date_published": "2026-10-02",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Infosys plans to transition workforce while focusing on AI and recruiting new talent",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/infosys-plans-to-transition-workforce-while-focusing-on-ai-and-recruiting-new-talent/134556465",
@@ -6366,7 +6386,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }

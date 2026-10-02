@@ -1495,6 +1495,66 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "Samsung Galaxy Tab S12 Ultra, Tab S12+ launched in India: Sale starts on October 7; check price, features & other details",
+        "url": "https://www.etnownews.com/technology/samsung-galaxy-tab-s12-ultra-tab-s12-launched-in-india-sale-starts-on-october-7-check-price-features-other-details-article-156262192",
+        "summary": "Samsung Galaxy Tab S12 series: The Galaxy Tab S12 series is powered by Galaxy AI features, 3nm processor and long battery life. The company has also promised up to seven generations of OS upgrades and...",
+        "date_published": "2026-10-02",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Spintronics AI partners CSIR-CEERI to advance indigenous GaN tech, set up fabrication unit",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/spintronics-ai-partners-csir-ceeri-to-advance-indigenous-gan-tech-set-up-fabrication-unit/134630472",
+        "summary": "Spintronics AI Semiconductors has partnered with CSIR-CEERI to advance GaN technology through a signed memorandum of understanding. This collaboration aims to enhance technology transfer frameworks fo...",
+        "date_published": "2026-10-02",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Meta’s AI could flood the internet; Four Indian brands putting a new spin on khadi",
+        "url": "https://yourstory.com/2026/10/metas-ai-could-flood-the-internet-india-brands-khadi",
+        "summary": "A new report on Meta’s latest AI developments explores how the company’s push could accelerate the creation of machine-generated content at a scale that changes what we see—and trust—online.",
+        "date_published": "2026-10-02",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "High compute costs, value-conscious users to challenge Indian consumer AI startups: Lightspeed's Harsha Kumar",
         "url": "https://www.livemint.com/ai/artificial-intelligence/indian-consumer-ai-startups-scaling-monetization-compute-costs-lightspeed-11790826089597.html",
         "summary": "Venture investors are betting that the next set of large companies will emerge across health, education and entertainment. But computing costs will be an inhibitor in a business that is already expens...",
@@ -18130,7 +18190,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives",
     "Major AI Developments"
   ]
 }

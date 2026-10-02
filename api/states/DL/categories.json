@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 6,
+        "title": "AI-enabled command centre to monitor pollution sources 24*7 in Delhi",
+        "url": "https://www.tribuneindia.com/news/delhi/ai-enabled-command-centre-to-monitor-pollution-sources-247-in-delhi",
+        "summary": "The Delhi Pollution Control Committee (DPCC) on Thursday launched an Integrated Command and Control Centre (ICCC) at Shastri Park to enable round-the-clock monitoring of pollution sources, including m...",
+        "date_published": "2026-10-01",
+        "source_name": "Tribune - Delhi",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Delhi CM Rekha Gupta opens skill, health centres in Moti Nagar",
         "url": "https://www.tribuneindia.com/news/delhi/delhi-cm-rekha-gupta-opens-skill-health-centres-in-moti-nagar",
@@ -615,6 +635,26 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 5,
+        "title": "A traffic system that thinks: What Delhi can expect over next 2 years",
+        "url": "https://timesofindia.indiatimes.com/city/delhi/a-traffic-system-that-thinks-what-delhi-can-expect-over-the-next-2-years/articleshow/134631321.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src...",
+        "date_published": "2026-10-02",
+        "source_name": "Times of India - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 4,
         "title": "Alive App raises $1 Mn from Powerhouse, Flipkart Ventures",
@@ -4971,5 +5011,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
