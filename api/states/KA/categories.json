@@ -578,6 +578,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "From K-pop to AI, Karnataka seeks deeper ties with Korea",
+        "url": "https://yourstory.com/2026/10/karnataka-korean-investment-technology-partnerships",
+        "summary": "From K-pop to AI, Karnataka is looking to turn India’s growing Korean connection into investment and technology partnerships.",
+        "date_published": "2026-10-03",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "How accurate is Bengaluru’s AI traffic enforcement? | Explained",
         "url": "https://www.thehindu.com/sci-tech/technology/how-accurate-is-bengalurus-ai-traffic-enforcement-explained/article71532005.ece",
@@ -6405,7 +6425,5 @@
       }
     ]
   },
-  "today_updates": [
-    "AI Start-Up News"
-  ]
+  "today_updates": []
 }

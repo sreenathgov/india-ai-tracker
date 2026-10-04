@@ -1495,6 +1495,26 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "VC money is pouring into Indian startups; Inside Softdel’s enterprise AI strategy",
+        "url": "https://yourstory.com/2026/10/vc-money-is-pouring-into-indian-startups",
+        "summary": "The total funding for the first week of October was at $418 million across 22 deals. In contrast, the previous week saw a total of $382 million.",
+        "date_published": "2026-10-04",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Samsung Galaxy Tab S12 Ultra, Tab S12+ launched in India: Sale starts on October 7; check price, features & other details",
         "url": "https://www.etnownews.com/technology/samsung-galaxy-tab-s12-ultra-tab-s12-launched-in-india-sale-starts-on-october-7-check-price-features-other-details-article-156262192",
         "summary": "Samsung Galaxy Tab S12 series: The Galaxy Tab S12 series is powered by Galaxy AI features, 3nm processor and long battery life. The company has also promised up to seven generations of OS upgrades and...",
@@ -18189,5 +18209,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
