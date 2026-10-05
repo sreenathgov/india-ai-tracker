@@ -1495,11 +1495,131 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "Razorpay partners with OpenAI to bring ChatGPT Ads to Indian brands: What it means for advertisers",
+        "url": "https://www.livemint.com/ai/razorpay-partners-with-openai-to-bring-chatgpt-ads-to-indian-brands-what-it-means-for-advertisers-11791195019809.html",
+        "summary": "Razorpay has partnered with OpenAI to help Indian brands launch and manage advertising campaigns on ChatGPT through its Engage platform. Brands including Tanishq, Tata Neu, Fastrack, Traya and Shaadi....",
+        "date_published": "2026-10-05",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "India&#039;s 5G journey to enter new phase focusing on intelligent networks and AI by 2025",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/indias-5g-journey-to-enter-new-phase-focusing-on-intelligent-networks-and-ai-by-2025/134684135",
+        "summary": "India&#039;s 5G network is set for remarkable growth, targeting 430 million subscriptions by 2025. Telecom operators are gearing up to monetize their 5G ventures through innovative services and advanc...",
+        "date_published": "2026-10-05",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Razorpay partners with OpenAI to help brands run ads on ChatGPT in India",
+        "url": "https://entrackr.com/snippets/razorpay-partners-with-openai-to-help-brands-run-ads-on-chatgpt-in-india-12624751",
+        "summary": "Razorpay partners with OpenAI to help brands run ads on ChatGPT in India...",
+        "date_published": "2026-10-05",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "VC money is pouring into Indian startups; Inside Softdel’s enterprise AI strategy",
         "url": "https://yourstory.com/2026/10/vc-money-is-pouring-into-indian-startups",
         "summary": "The total funding for the first week of October was at $418 million across 22 deals. In contrast, the previous week saw a total of $382 million.",
         "date_published": "2026-10-04",
         "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "India needs its own AI safety rules, not Trump’s US model: Industry experts On deepfakes, cyber risks",
+        "url": "https://www.etnownews.com/technology/india-needs-its-own-ai-safety-rules-not-trumps-us-model-industry-experts-on-deepfakes-cyber-risks-article-156272270",
+        "summary": "Considering risks such as deepfakes and cyberattacks, experts have called for broader commitment which will involve all stakeholders. However, experts remain divided over whether voluntary measures wo...",
+        "date_published": "2026-10-04",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "India needs its own AI safety framework, not a copy of US pact: Industry experts",
+        "url": "https://yourstory.com/2026/10/india-needs-own-ai-safety-framework-not-copy-us-pact-industry-experts",
+        "summary": "India should build its own artificial intelligence (AI) safety framework suited to its languages, scale, and application-led AI ecosystem rather than replicate a voluntary pact signed by US President...",
+        "date_published": "2026-10-04",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Indian School of Agriculture should help farmers become CEOs of their own farmlands, says Anant Ambani",
+        "url": "https://www.thehindu.com/news/national/andhra-pradesh/indian-school-of-agriculture-should-help-farmers-become-ceos-of-their-own-farmlands-says-anant-ambani/article71536992.ece",
+        "summary": "Highlighting the importance of tech-driven farming, the Executive Director of Reliance Industries says AI can alert farmers to pest attacks and help Madanapalle tomato growers decide when and where to...",
+        "date_published": "2026-10-04",
+        "source_name": "The Hindu - Andhra Pradesh",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
