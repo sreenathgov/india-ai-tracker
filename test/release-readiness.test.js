@@ -7,10 +7,13 @@ const {missingConfiguration}=require('../scripts/release/check-environment');
 
 test('Production configuration gate rejects missing careers routing and malformed IDs',()=>{
   const env={BREVO_API_KEY:'test-only',ORIGIN_MAKE_WEBHOOK_URL:'https://example.test/webhook',ORIGIN_MAKE_WEBHOOK_API_KEY:'test-only',CAREERS_NOTIFY_EMAIL:'reviewer@example.test'};
-  assert.deepEqual(missingConfiguration(env),['BREVO_CAREERS_LIST_ID']);
-  assert.deepEqual(missingConfiguration({...env,BREVO_CAREERS_LIST_ID:'12'}),[]);
-  for(const id of ['0','-1','12oops','1.5'])assert.ok(missingConfiguration({...env,BREVO_CAREERS_LIST_ID:id}).includes('BREVO_CAREERS_LIST_ID'));
-  assert.ok(missingConfiguration({...env,ORIGIN_MAKE_WEBHOOK_URL:'http://example.test',BREVO_CAREERS_LIST_ID:'12'}).length);
+  assert.deepEqual(missingConfiguration(env),['BREVO_CAREERS_LIST_ID','BREVO_REPORT_ACCESS_LIST_ID']);
+  assert.deepEqual(missingConfiguration({...env,BREVO_CAREERS_LIST_ID:'12',BREVO_REPORT_ACCESS_LIST_ID:'13'}),[]);
+  for(const id of ['0','-1','12oops','1.5']) {
+    assert.ok(missingConfiguration({...env,BREVO_CAREERS_LIST_ID:id,BREVO_REPORT_ACCESS_LIST_ID:'13'}).includes('BREVO_CAREERS_LIST_ID'));
+    assert.ok(missingConfiguration({...env,BREVO_CAREERS_LIST_ID:'12',BREVO_REPORT_ACCESS_LIST_ID:id}).includes('BREVO_REPORT_ACCESS_LIST_ID'));
+  }
+  assert.ok(missingConfiguration({...env,ORIGIN_MAKE_WEBHOOK_URL:'http://example.test',BREVO_CAREERS_LIST_ID:'12',BREVO_REPORT_ACCESS_LIST_ID:'13'}).length);
 });
 
 test('About matrix exposes complete rows without changing its cells',()=>{

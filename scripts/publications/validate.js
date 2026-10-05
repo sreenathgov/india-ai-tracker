@@ -626,6 +626,20 @@ function validateResourceItems(items, distDir) {
         if (!RESOURCE_BUCKETS.includes(item.bucket)) {
             errors.push(`${where}: bucket must be one of ${RESOURCE_BUCKETS.join(' | ')} (got ${JSON.stringify(item.bucket)})`);
         }
+        if (item.access !== undefined) {
+            if (!item.access || typeof item.access !== 'object' || Array.isArray(item.access)
+                || item.access.mode !== 'lead-gate') {
+                errors.push(`${where}: access must be { mode: "lead-gate" } when present`);
+            } else {
+                if (item.bucket !== 'whitepaper') errors.push(`${where}: lead-gate access is only supported for whitepaper resources`);
+                if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(String(item.slug || ''))) {
+                    errors.push(`${where}: gated reports require a kebab-case slug`);
+                }
+                if (!/\.pdf(?:[?#].*)?$/i.test(String(item.href || '')) || /^https?:\/\//i.test(String(item.href || ''))) {
+                    errors.push(`${where}: gated reports require an internal PDF href`);
+                }
+            }
+        }
         if (item.date !== undefined && item.date !== null && !isValidIsoDate(item.date)) {
             errors.push(`${where}: date must be YYYY-MM-DD (got ${JSON.stringify(item.date)})`);
         }

@@ -7,7 +7,8 @@
     "api/apply.js": {"includeFiles": "data/careers.json", "maxDuration": 30},
     "api/consult.js": {"maxDuration": 30},
     "api/subscribe.js": {"maxDuration": 30},
-    "api/early-access.js": {"maxDuration": 30}
+    "api/early-access.js": {"maxDuration": 30},
+    "api/report-access.js": {"maxDuration": 30}
   },
   "redirects": [
     {"source":"/", "has":[{"type":"host","value":"apply.kananlabs.in"}], "destination":"/supplier-programme.html", "permanent":false},
@@ -120,6 +121,12 @@
       ]
     },
     {
+      "source": "/api/report-access",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
       "source": "/api/consult",
       "headers": [
         { "key": "Cache-Control", "value": "no-store" }
@@ -138,7 +145,7 @@
       ]
     },
     {
-      "source": "/api/((?!subscribe|consult|early-access|apply|supplier-programme).*)",
+      "source": "/api/((?!subscribe|consult|early-access|report-access|apply|supplier-programme).*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=300" }
       ]

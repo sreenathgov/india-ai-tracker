@@ -70,10 +70,21 @@ test('featured article and nine-card pagination survive category changes', () =>
   assert.equal(nodes.resourcesGrid.childNodes.length, 9);
 });
 test('deep-linked category and failed image use the intended fallback', () => {
-  const { nodes } = boot({ items: [...items, { title: 'Paper', href: 'dossiers/p.pdf', bucket: 'whitepaper', image: 'missing.png' }] }, { hash: '#whitepapers' });
+  const { nodes, win } = boot({ items: [...items, { title: 'Paper', href: 'dossiers/p.pdf', bucket: 'whitepaper', image: 'missing.png' }] }, { hash: '#whitepapers' });
+  assert.equal(win.location.hash, '#reports');
   const media = nodes.resourcesGrid.childNodes[0].childNodes[0];
   media.childNodes[0].events.error();
   assert.equal(media.childNodes[0].src, 'assets/logos/kanan-kl-hor-white.png');
+});
+
+test('gated report cards carry the download-gate contract', () => {
+  const report = { title: 'Report', slug: 'report', href: 'dossiers/report.pdf', bucket: 'whitepaper', access: { mode: 'lead-gate' } };
+  const { nodes } = boot({ items: [report] }, { hash: '#reports' });
+  const card = nodes.resourcesGrid.childNodes[0];
+  assert.equal(card.dataset.reportGate, '');
+  assert.equal(card.dataset.reportSlug, 'report');
+  assert.equal(card.dataset.reportTitle, 'Report');
+  assert.equal(card.attrs.download, '');
 });
 
 test('newsletter keeps its pill label and arrow through success and failure', async () => {

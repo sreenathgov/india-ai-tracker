@@ -4,6 +4,7 @@ function missingConfiguration(env) {
   const missing = ['BREVO_API_KEY','ORIGIN_MAKE_WEBHOOK_URL','ORIGIN_MAKE_WEBHOOK_API_KEY']
     .filter(key => !String(env[key] || '').trim() || env[key] === '[SENSITIVE]');
   if (!/^[1-9]\d*$/.test(env.BREVO_CAREERS_LIST_ID || '')) missing.push('BREVO_CAREERS_LIST_ID');
+  if (!/^[1-9]\d*$/.test(env.BREVO_REPORT_ACCESS_LIST_ID || '')) missing.push('BREVO_REPORT_ACCESS_LIST_ID');
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(env.CAREERS_NOTIFY_EMAIL || '')) missing.push('CAREERS_NOTIFY_EMAIL');
   if (env.CAREERS_SENDER_EMAIL && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(env.CAREERS_SENDER_EMAIL)) missing.push('CAREERS_SENDER_EMAIL');
   for (const key of ['BREVO_LIST_ID','BREVO_EARLY_ACCESS_LIST_ID','BREVO_CAREERS_TEMPLATE_ID','BREVO_NEWSLETTER_TEMPLATE_ID','BREVO_DEMO_TEMPLATE_ID']) {

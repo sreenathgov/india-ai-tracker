@@ -6,7 +6,8 @@
     "",
     "Item shape (see js/resources.js): title, href, bucket are required.",
     "bucket is one of: whitepaper | news.  Optional: description, date, image,",
-    "featured, meta.pages (whitepaper), meta.source (news).",
+    "featured, meta.pages (whitepaper), meta.source (news), and",
+    "access.mode=lead-gate for reports that require name and email before download.",
     "",
     "Every internal href is checked against the built dist/ tree at build time by",
     "validateResourceItems() in scripts/publications/validate.js — a dead link",
@@ -14,6 +15,22 @@
     "and do not state a page count you have not read off the actual file."
   ],
   "items": [
+    {
+      "slug": "weaponised-containers-hormuz-shipping-crisis",
+      "bucket": "whitepaper",
+      "title": "Weaponised Containers Could Trigger the Next Hormuz Shipping Crisis",
+      "description": "An October 2026 risk alert on how a weaponised commercial vessel could tighten Hormuz shipping, insurance, container capacity, and manufacturer lead times.",
+      "date": "2026-10-05",
+      "image": "added-assets/Thumbnails/weaponised-containers-hormuz-shipping-crisis.jpg",
+      "href": "dossiers/weaponised-containers-hormuz-shipping-crisis-october-2026.pdf",
+      "featured": true,
+      "access": {
+        "mode": "lead-gate"
+      },
+      "meta": {
+        "pages": 4
+      }
+    },
     {
       "slug": "kl-handbook-india-ai-regulations",
       "bucket": "whitepaper",

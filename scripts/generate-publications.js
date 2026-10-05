@@ -699,6 +699,7 @@ function generatePublications() {
     fs.copyFileSync(path.join(PROJECT_ROOT, 'js', 'origin-cta.js'), path.join(DIST_DIR, 'js', 'origin-cta.js'));
     fs.copyFileSync(path.join(PROJECT_ROOT, 'js', 'advisory-section.js'), path.join(DIST_DIR, 'js', 'advisory-section.js'));
     fs.copyFileSync(path.join(PROJECT_ROOT, 'js', 'resources-subscribe.js'), path.join(DIST_DIR, 'js', 'resources-subscribe.js'));
+    fs.copyFileSync(path.join(PROJECT_ROOT, 'js', 'report-access.js'), path.join(DIST_DIR, 'js', 'report-access.js'));
     fs.mkdirSync(path.join(DIST_DIR, 'data'), { recursive: true });
     fs.copyFileSync(path.join(PROJECT_ROOT, 'data', 'advisory_services.json'), path.join(DIST_DIR, 'data', 'advisory_services.json'));
 

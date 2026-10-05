@@ -8,7 +8,7 @@
 
   const BUCKET_LABELS = Object.freeze({
     insight: 'Insight',
-    whitepaper: 'Whitepaper',
+    whitepaper: 'Specialized Report',
     news: 'News & Press'
   });
 
@@ -46,11 +46,17 @@
   }
 
   function isValidItem(item) {
-    return Boolean(
+    const base = Boolean(
       item &&
       typeof item.title === 'string' && item.title.trim() &&
       typeof item.href === 'string' && item.href.trim() &&
       VALID_BUCKETS.includes(item.bucket)
+    );
+    if (!base || item.access === undefined) return base;
+    return Boolean(
+      item.access &&
+      item.access.mode === 'lead-gate' &&
+      typeof item.slug === 'string' && item.slug.trim()
     );
   }
 
@@ -124,6 +130,12 @@
 
   function linkAttrs(anchor, item) {
     anchor.href = item.href;
+    if (item.access && item.access.mode === 'lead-gate') {
+      anchor.dataset.reportGate = '';
+      anchor.dataset.reportSlug = item.slug;
+      anchor.dataset.reportTitle = item.title;
+      anchor.setAttribute('download', '');
+    }
     if (isExternal(item.href)) {
       anchor.target = '_blank';
       anchor.rel = 'noopener noreferrer';
@@ -273,12 +285,13 @@
 
   const HASH_TO_BUCKET = Object.freeze({
     '#insights': 'insight',
+    '#reports': 'whitepaper',
     '#whitepapers': 'whitepaper',
     '#news': 'news'
   });
   const BUCKET_TO_HASH = Object.freeze({
     insight: '#insights',
-    whitepaper: '#whitepapers',
+    whitepaper: '#reports',
     news: '#news'
   });
 
@@ -322,6 +335,9 @@
       .map(node => ({ node, children: Array.from(node.childNodes), hidden: node.hidden }));
     try {
       activate(items, bucketFromHash(), false);
+      if (window.location.hash === '#whitepapers') {
+        history.replaceState(null, '', '#reports');
+      }
     } catch (err) {
       baseline.forEach(({ node, children, hidden }) => {
         node.replaceChildren(...children);

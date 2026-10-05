@@ -31,7 +31,7 @@ const BASE_URL = 'https://kananlabs.in';
 // Mirrors js/resources.js — keep in lockstep.
 const BUCKET_LABELS = Object.freeze({
     insight: 'Insight',
-    whitepaper: 'Whitepaper',
+    whitepaper: 'Specialized Report',
     news: 'News & Press'
 });
 const FALLBACK_TILE_SRC = 'assets/logos/kanan-kl-hor-white.png';
@@ -138,7 +138,11 @@ function renderMedia(item, mediaClass) {
 
 function renderLinkAttrs(item) {
     const href = ` href="${escapeHtmlAttribute(item.href)}"`;
-    return isExternal(item.href) ? `${href} target="_blank" rel="noopener noreferrer"` : href;
+    const external = isExternal(item.href) ? ` target="_blank" rel="noopener noreferrer"` : '';
+    const gated = item.access && item.access.mode === 'lead-gate'
+        ? ` data-report-gate data-report-slug="${escapeHtmlAttribute(item.slug)}" data-report-title="${escapeHtmlAttribute(item.title)}" download`
+        : '';
+    return `${href}${external}${gated}`;
 }
 
 function renderMetaRow(item) {
@@ -289,6 +293,7 @@ function writeResourcesCatalog(manifest, distDir) {
     // copy, so ship the renderer ourselves.
     fs.mkdirSync(path.join(distDir, 'js'), { recursive: true });
     fs.copyFileSync(RESOURCES_JS, path.join(distDir, 'js', 'resources.js'));
+    fs.copyFileSync(path.join(PROJECT_ROOT, 'js', 'report-access.js'), path.join(distDir, 'js', 'report-access.js'));
 
     return { items, warnings };
 }

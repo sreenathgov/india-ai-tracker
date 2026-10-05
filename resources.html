@@ -6,25 +6,25 @@
     <script src="js/consent.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources — Insights, Whitepapers & News | Kanan Labs</title>
+    <title>Resources — Insights, Specialized Reports & News | Kanan Labs</title>
 
-    <meta name="description" content="Insights, whitepapers, and news from Kanan Labs on trade evidence, customs readiness, marine cargo claims, and India's regulatory landscape.">
+    <meta name="description" content="Insights, specialized reports, and news from Kanan Labs on trade evidence, customs readiness, marine cargo claims, and India's regulatory landscape.">
     <link rel="canonical" href="https://kananlabs.in/resources.html">
     <meta name="robots" content="index,follow,max-image-preview:large">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Kanan Labs">
     <meta property="og:url" content="https://kananlabs.in/resources.html">
-    <meta property="og:title" content="Resources — Insights, Whitepapers & News | Kanan Labs">
-    <meta property="og:description" content="Insights, whitepapers, and news from Kanan Labs on trade evidence, customs readiness, marine cargo claims, and India's regulatory landscape.">
+    <meta property="og:title" content="Resources — Insights, Specialized Reports & News | Kanan Labs">
+    <meta property="og:description" content="Insights, specialized reports, and news from Kanan Labs on trade evidence, customs readiness, marine cargo claims, and India's regulatory landscape.">
     <meta property="og:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Kanan Labs Resources">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Resources — Insights, Whitepapers & News | Kanan Labs">
-    <meta name="twitter:description" content="Insights, whitepapers, and news from Kanan Labs on trade evidence, customs readiness, and India's regulatory landscape.">
+    <meta name="twitter:title" content="Resources — Insights, Specialized Reports & News | Kanan Labs">
+    <meta name="twitter:description" content="Insights, specialized reports, and news from Kanan Labs on trade evidence, customs readiness, and India's regulatory landscape.">
     <meta name="twitter:image" content="https://kananlabs.in/KANANLABS-LOGO-SET/Link-Previews/01-KANANLABS.png">
 
     <link rel="icon" type="image/png" href="assets/images/KANAN-LABS-WEBSITELOGO.png">
@@ -38,7 +38,7 @@
           "@id": "https://kananlabs.in/resources.html#collection",
           "url": "https://kananlabs.in/resources.html",
           "name": "Resources — Kanan Labs",
-          "description": "Insights, whitepapers, and news from Kanan Labs.",
+          "description": "Insights, specialized reports, and news from Kanan Labs.",
           "isPartOf": { "@id": "https://kananlabs.in/#website" },
           "publisher": { "@id": "https://kananlabs.in/#organization" }
         },
@@ -73,7 +73,7 @@
 
         <div class="rc-masthead">
             <h1 class="rc-masthead__title">Resources</h1>
-            <p class="rc-masthead__subline">Operational insights, substantive whitepapers, and news from the team
+            <p class="rc-masthead__subline">Operational insights, specialized reports, and news from the team
                 building the evidence layer for Indian trade.</p>
         </div>
 
@@ -95,8 +95,8 @@
             <button class="rc-tab" type="button" data-bucket="whitepaper" aria-pressed="false">
                 <span class="rc-tab__hover-circle" aria-hidden="true"></span>
                 <span class="rc-tab__label-stack">
-                    <span class="rc-tab__label">Whitepapers</span>
-                    <span class="rc-tab__label-hover" aria-hidden="true">Whitepapers</span>
+                    <span class="rc-tab__label">Specialized Reports</span>
+                    <span class="rc-tab__label-hover" aria-hidden="true">Specialized Reports</span>
                 </span>
             </button>
             <button class="rc-tab" type="button" data-bucket="news" aria-pressed="false">
@@ -117,6 +117,29 @@
         <nav class="rc-pagination" id="resourcesPagination" aria-label="Publication pages" hidden></nav>
 
     </main>
+
+    <dialog class="rc-report-gate" id="reportAccessDialog" aria-labelledby="reportAccessTitle" aria-describedby="reportAccessDescription">
+        <button class="rc-report-gate__close" type="button" data-report-close aria-label="Close report download form">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+        <p class="rc-report-gate__eyebrow">Specialized report</p>
+        <h2 class="rc-report-gate__title" id="reportAccessTitle">Download the report</h2>
+        <p class="rc-report-gate__description" id="reportAccessDescription">Enter your name and email to download <span data-report-title>this report</span>.</p>
+        <form class="rc-report-gate__form" id="reportAccessForm" novalidate>
+            <label class="rc-report-gate__label" for="reportAccessName">Full name</label>
+            <input class="rc-report-gate__input" id="reportAccessName" name="name" type="text" autocomplete="name" maxlength="160" required>
+            <label class="rc-report-gate__label" for="reportAccessEmail">Email address</label>
+            <input class="rc-report-gate__input" id="reportAccessEmail" name="email" type="email" autocomplete="email" maxlength="254" required>
+            <div class="rc-report-gate__honeypot" aria-hidden="true">
+                <label for="reportAccessWebsite">Company website</label>
+                <input id="reportAccessWebsite" name="company_website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <button class="rc-report-gate__submit" type="submit"><span data-report-submit-label>Download report</span><span aria-hidden="true">↓</span></button>
+        </form>
+        <p class="rc-report-gate__privacy">These details are used only to provide the requested report. This does not subscribe you to marketing. See our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+        <p class="rc-report-gate__status" id="reportAccessStatus" role="status" aria-live="polite" hidden></p>
+        <a class="rc-report-gate__again" data-report-download-again href="#" download hidden>Download again</a>
+    </dialog>
 
     <!-- Optional, nonmodal invitation. Revealed only after the second article row. -->
     <aside class="rc-subscribe" id="resourcesSubscribe" aria-labelledby="resourcesSubscribeTitle" aria-hidden="true" inert hidden>
@@ -233,6 +256,7 @@
         </footer>
 
     <script src="js/resources.js?v=5"></script>
+    <script src="js/report-access.js?v=1"></script>
     <script src="js/rc-pill-tabs.js"></script>
     <script src="js/contact-panel.js"></script>
     <script src="js/advisory-section.js?v=5"></script>

@@ -9,7 +9,7 @@ const pageFiles = [
   'privacy-policy.html', 'terms-of-use.html', 'supplier-programme-terms.html',
   'disclaimers.html', '404.html'
 ];
-const functions = ['apply', 'consult', 'subscribe', 'early-access', 'supplier-programme'];
+const functions = ['apply', 'consult', 'subscribe', 'early-access', 'report-access', 'supplier-programme'];
 const forbidden = /(?:^|\/)(?:\.env[^/]*|\.git|_lib|backups?|archive|integration|localization|node_modules|backend|docs|test|scripts|templates)(?:\/|$)|\.map$|(?:^|\/)api\/.*\.(?:js|ts)$/i;
 function walk(dir) {
   return fs.readdirSync(dir, {withFileTypes:true}).flatMap(entry => {
