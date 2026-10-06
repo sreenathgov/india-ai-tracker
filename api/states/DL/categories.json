@@ -636,6 +636,47 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "&#8216;Why has he not deleted it?’: BJP accuses Rahul Gandhi of amplifying fake AI video involving journalist, Delhi Police",
+        "url": "https://www.tribuneindia.com/news/delhi/why-has-he-not-deleted-it-bjp-accuses-rahul-gandhi-of-amplifying-fake-ai-video-involving-journalist-delhi-police",
+        "summary": "BJP on Tuesday launched a sharp attack on Congress leader Rahul Gandhi over the alleged circulation of a fake AI-generated video involving a woman journalist and a Delhi Police officer, accusing the C...",
+        "date_published": "2026-10-06",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Delhi Police arrest Haryana man for &#8216;creating&#8217; AI-generated videos of cop misbehaving with women protesters",
+        "url": "https://www.tribuneindia.com/news/delhi/delhi-police-arrest-haryana-man-for-creating-ai-generated-videos-of-cop-misbehaving-with-women-protesters",
+        "summary": "Delhi Police have arrested a 24-year-old man from Haryana for allegedly creating AI-generated videos showing a uniformed police officer misbehaving with women protesters and circulating them on social...",
+        "date_published": "2026-10-06",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "HR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "A traffic system that thinks: What Delhi can expect over next 2 years",
         "url": "https://timesofindia.indiatimes.com/city/delhi/a-traffic-system-that-thinks-what-delhi-can-expect-over-the-next-2-years/articleshow/134631321.cms",
@@ -5011,5 +5052,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

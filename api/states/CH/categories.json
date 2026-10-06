@@ -27,6 +27,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "Chandigarh court restrains three FB pages from uploading AI content against Cong neta",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/chandigarh-court-restrains-three-fb-pages-from-uploading-ai-content-against-cong-neta/articleshow/134716705.cms",
+        "summary": "<img align=\"left\" border=\"...",
+        "date_published": "2026-10-06",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "CH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Haryana Police sets up AI Task Force to speed up cybercrime probes",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/haryana-police-sets-up-ai-task-force-to-speed-up-cybercrime-probes/articleshow/133662523.cms",
@@ -387,5 +407,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

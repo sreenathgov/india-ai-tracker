@@ -3,6 +3,27 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 4,
+        "title": "Karnataka plans to introduce AI training in govt schools from Class 6",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/karnataka-plans-to-introduce-ai-training-in-govt-schools-from-class-6/134726331",
+        "summary": "The initiative aims to prepare students effectively for future job markets and technological advancements. Google has shown interest in providing AI training, with plans to consider existing programs...",
+        "date_published": "2026-10-06",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA",
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Govt asks Microsoft to set up data centres closer to power generation sites",
         "url": "https://yourstory.com/2026/09/govt-asks-microsoft-set-up-data-centres-closer-to-power-generation-sites",
@@ -130,6 +151,26 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 5,
+        "title": "IIIT Hyderabad Launches Advanced EEG Lab to Advance Cognitive Neuroscience Research",
+        "url": "https://www.iiit.ac.in/brainlab/",
+        "summary": "IIIT Hyderabad Launches Advanced EEG Lab to Advance Cognitive Neuroscience ResearchIIIT Hyderabad and Hexagon R&D India Partner to Advance Digital Twin ResearchIIIT-Hyderabad releases book on evolutio...",
+        "date_published": "2026-10-06",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 7,
         "title": "Telangana to bring AI into driving tests, cut human intervention",
@@ -2979,5 +3020,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments",
+    "Policies and Initiatives"
+  ]
 }

@@ -1495,6 +1495,46 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "Cyient launches IES business unit, CYiNGINE intelligence platform to drive enterprise AI growth",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/cyient-launches-ies-business-unit-cyingine-intelligence-platform-to-drive-enterprise-ai-growth/134727478",
+        "summary": "Cyient has launched an innovative integrated business unit named Intelligent Engineering Solutions (IES), accompanied by its cutting-edge AI platform CYiNGINE. This initiative is designed to leverage...",
+        "date_published": "2026-10-06",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "CurvetAI raises Rs 6 Cr pre-seed round led by Merak Ventures",
+        "url": "https://entrackr.com/snippets/curvetai-raises-rs-6-cr-pre-seed-round-led-by-merak-ventures-12627784",
+        "summary": "Pune-based AI startup CurvetAI has raised Rs 6 crore in...",
+        "date_published": "2026-10-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Razorpay partners with OpenAI to bring ChatGPT Ads to Indian brands: What it means for advertisers",
         "url": "https://www.livemint.com/ai/razorpay-partners-with-openai-to-bring-chatgpt-ads-to-indian-brands-what-it-means-for-advertisers-11791195019809.html",
         "summary": "Razorpay has partnered with OpenAI to help Indian brands launch and manage advertising campaigns on ChatGPT through its Engage platform. Brands including Tanishq, Tata Neu, Fastrack, Traya and Shaadi....",
@@ -15141,6 +15181,26 @@
     "AI Start-Up News": [
       {
         "id": 2,
+        "title": "Medical tourism startup CureMeAbroad raises $1.1 Mn in pre Seed funding",
+        "url": "https://entrackr.com/snippets/medical-tourism-startup-curemeabroad-raises-11-mn-in-pre-seed-funding-12628366",
+        "summary": "CureMeAbroad, a global healthcare platform tha...",
+        "date_published": "2026-10-06",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "Arivihan raises $10M as AI-led edtech targets India’s smaller cities",
         "url": "https://yourstory.com/2026/09/arivihan-10m-as-ai-led-edtech-targets-indias-smaller-cities",
         "summary": "Arivihan will use the new capital to expand across states and CBSE, strengthen AI and vernacular capabilities, and broaden access to personalised learning.",
@@ -18330,6 +18390,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }
