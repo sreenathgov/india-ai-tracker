@@ -24,6 +24,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 1,
+        "title": "Karnataka govt signs MoU with ElevenLabs for Voice AI services",
+        "url": "https://yourstory.com/2026/10/karnataka-govt-signs-mou-with-elevenlabs-for-voice-ai-services",
+        "summary": "The partnership will focus on voice AI safety framework, assisting people with speaking disabilities and usage in government services.",
+        "date_published": "2026-10-06",
+        "source_name": "YourStory",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Antler, Nikhil Kamath back healthtech startup Aignosis with Rs 4 Cr seed round",
         "url": "https://entrackr.com/snippets/antler-nikhil-kamath-back-healthtech-startup-aignosis-with-rs-4-cr-seed-round-12611813",
@@ -6486,8 +6506,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments",
-    "Policies and Initiatives"
-  ]
+  "today_updates": []
 }
