@@ -15,9 +15,9 @@ const pdf = { name: 'cv.pdf', content: Buffer.from('%PDF-1.4\nTest CV\n%%EOF').t
 const application = (overrides = {}) => ({ roleSlug: data.roles[0].slug, fullName: 'Test Applicant', email: 'applicant@example.test', cvUrl: 'https://example.test/cv.pdf', ...overrides });
 const jsonLd = html => [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m => JSON.parse(m[1])['@graph']);
 
-test('four roles share valid location data across text and structured job metadata', () => {
+test('two roles share valid location data across text and structured job metadata', () => {
     assert.deepEqual(validateCareers(data), []);
-    assert.equal(data.roles.length, 4);
+    assert.equal(data.roles.length, 2);
     for (const role of data.roles) {
         assert.deepEqual(metaChips(role), ['Chennai', 'On-site', 'Full-time']);
         const graph = JSON.parse(roleJsonLd(role, { advertised: true, companyDescription: data.companyDescription }))['@graph'];
@@ -51,8 +51,8 @@ test('generation retires stale pages and keeps listing, details, and job metadat
         const generated = path.join(temp, 'dist');
         assert.deepEqual(fs.readdirSync(path.join(generated, 'careers')).sort(), data.roles.map(r => r.slug).sort());
         const listing = fs.readFileSync(path.join(generated, 'careers.html'), 'utf8');
-        assert.equal((listing.match(/<article class="cr-role"/g) || []).length, 4);
-        assert.equal(jsonLd(listing).find(n => n['@type'] === 'ItemList').numberOfItems, 4);
+        assert.equal((listing.match(/<article class="cr-role"/g) || []).length, 2);
+        assert.equal(jsonLd(listing).find(n => n['@type'] === 'ItemList').numberOfItems, 2);
         assert.doesNotMatch(listing, /careersFilters|three written questions|Bengaluru|Founding CTO|temporarily down/);
         for (const role of data.roles) {
             const html = fs.readFileSync(path.join(generated, 'careers', role.slug, 'index.html'), 'utf8');
@@ -78,10 +78,10 @@ test('generation retires stale pages and keeps listing, details, and job metadat
     } finally { fs.rmSync(temp, { recursive: true, force: true }); }
 });
 
-test('legacy routes resolve directly to the replacement or the careers index', () => {
+test('legacy routes resolve directly to the careers index', () => {
     const redirects = require('../vercel.json').redirects;
-    const replaced = ['founding-product-engineer', 'founding-engineer-full-stack'];
-    const retired = ['cofounder-cto', 'founding-cto', 'trade-practice-lead', 'head-of-customs-trade-compliance', 'regulatory-knowledge-engineer', 'trade-compliance-analyst', 'regulatory-systems-engineer', 'senior-data-engineer-regulatory-data'];
+    const replaced = [];
+    const retired = ['founding-product-engineer', 'founding-engineer-full-stack', 'chief-scientific-officer', 'founding-ai-engineer-full-stack', 'cofounder-cto', 'founding-cto', 'trade-practice-lead', 'head-of-customs-trade-compliance', 'regulatory-knowledge-engineer', 'trade-compliance-analyst', 'regulatory-systems-engineer', 'senior-data-engineer-regulatory-data'];
     for (const slug of [...replaced, ...retired]) {
         for (const suffix of ['', '/', '/index.html']) {
             const redirect = redirects.find(r => r.source === `/careers/${slug}${suffix}`);
