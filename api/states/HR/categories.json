@@ -55,6 +55,28 @@
     "Major AI Developments": [
       {
         "id": 9,
+        "title": "Blinkit leads quick commerce in product availability, Flipkart Minutes ranks second: Bernstein",
+        "url": "https://entrackr.com/news/blinkit-leads-quick-commerce-in-product-availability-flipkart-minutes-ranks-second-bernstein-12636830",
+        "summary": "Eternal's quick commerce arm Blinkit has emerged as...",
+        "date_published": "2026-10-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "HR",
+          "KA",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
         "title": "Delhi Police arrest Haryana man for &#8216;creating&#8217; AI-generated videos of cop misbehaving with women protesters",
         "url": "https://www.tribuneindia.com/news/delhi/delhi-police-arrest-haryana-man-for-creating-ai-generated-videos-of-cop-misbehaving-with-women-protesters",
         "summary": "Delhi Police have arrested a 24-year-old man from Haryana for allegedly creating AI-generated videos showing a uniformed police officer misbehaving with women protesters and circulating them on social...",
@@ -242,5 +264,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

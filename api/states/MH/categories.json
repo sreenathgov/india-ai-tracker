@@ -254,6 +254,28 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "Blinkit leads quick commerce in product availability, Flipkart Minutes ranks second: Bernstein",
+        "url": "https://entrackr.com/news/blinkit-leads-quick-commerce-in-product-availability-flipkart-minutes-ranks-second-bernstein-12636830",
+        "summary": "Eternal's quick commerce arm Blinkit has emerged as...",
+        "date_published": "2026-10-08",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "HR",
+          "KA",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Longevity startup Vytalyou raises Rs 9 Cr in pre-Series A round",
         "url": "https://entrackr.com/snippets/longevity-startup-vytalyou-raises-rs-9-cr-in-pre-series-a-round-12593640",
@@ -3119,5 +3141,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
