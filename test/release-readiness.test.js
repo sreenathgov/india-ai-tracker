@@ -16,15 +16,60 @@ test('Production configuration gate rejects missing careers routing and malforme
   assert.ok(missingConfiguration({...env,ORIGIN_MAKE_WEBHOOK_URL:'http://example.test',BREVO_CAREERS_LIST_ID:'12',BREVO_REPORT_ACCESS_LIST_ID:'13'}).length);
 });
 
-test('About matrix exposes complete rows without changing its cells',()=>{
-  const dom=new JSDOM(fs.readFileSync('about.html','utf8'));
+test('Team page presents the founders and the engagement paths',()=>{
+  const dom=new JSDOM(fs.readFileSync('team.html','utf8'));
   try{
-    const table=dom.window.document.querySelector('.about-drona__heatmap');
-    assert.equal(table.getAttribute('role'),'table');
-    assert.equal(table.querySelectorAll(':scope > [role=row]').length,5);
-    assert.equal(table.querySelectorAll('[role=cell]').length,16);
-    for(const cell of table.querySelectorAll('[role=cell],[role=columnheader],[role=rowheader]')) assert.equal(cell.parentElement.getAttribute('role'),'row');
+    const document=dom.window.document;
+    assert.equal(document.querySelectorAll('h1').length,1);
+    assert.match(document.querySelector('h1').textContent,/Enabling growth & trust for supply chains/);
+    const headings=[...document.querySelectorAll('h2')].map(node=>node.textContent.trim());
+    for(const expected of ['Founders','The hard problems are','Questions about Drona']) {
+      assert.ok(headings.some(heading=>heading.includes(expected)),`Missing Team heading: ${expected}`);
+    }
+    assert.equal(document.querySelectorAll('.chroma-card').length,2);
+    assert.equal(document.querySelectorAll('.team-faq__item').length,10);
+    assert.deepEqual([...document.querySelectorAll('.founder__links a')].map(a=>a.getAttribute('href')),[
+      'https://www.linkedin.com/in/sreenathgovindarajan/','mailto:sreenath@kananlabs.in',
+      'https://www.linkedin.com/in/lakshana-balaji/','mailto:lakshana@kananlabs.in']);
+    assert.ok(document.querySelectorAll('a[href="request-demo.html"]').length>=2);
+    assert.ok(document.querySelector('a[href="careers.html"]'));
+    const body=document.body.textContent.replace(/\s+/g,' ');
+    assert.doesNotMatch(body,/Kanan Labs/);
   }finally{dom.window.close()}
+});
+
+test('Team page is indexable and its structured data matches the Kanan entity',()=>{
+  const dom=new JSDOM(fs.readFileSync('team.html','utf8'));
+  try {
+    const document=dom.window.document;
+    assert.equal(document.querySelector('meta[name="robots"]').content.includes('noindex'),false);
+    assert.equal(document.querySelector('link[rel="canonical"]').href,'https://kananlabs.in/team.html');
+    assert.ok(document.querySelector('meta[property="og:image"]').content.startsWith('https://kananlabs.in/'));
+    const payload=JSON.parse(document.querySelector('script[type="application/ld+json"]').textContent);
+    const graph=payload['@graph'];
+    const organization=graph.find(node=>node['@type']==='Organization');
+    assert.equal(organization.name,'Kanan');
+    assert.equal(organization.legalName,'KANANX ANALYTICS PRIVATE LIMITED');
+    assert.equal(organization.foundingDate,'2026');
+    assert.ok(graph.some(node=>node['@type']==='AboutPage'));
+    assert.ok(graph.some(node=>node['@type']==='Person' && node.name==='Sreenath Govindarajan'));
+    assert.ok(graph.some(node=>node['@type']==='BreadcrumbList'));
+    assert.equal(JSON.stringify(payload).includes('mailto:'),false);
+  } finally { dom.window.close(); }
+});
+
+test('About URLs redirect to the Team page ahead of the catch-all rules, and the menu points there',()=>{
+  const {redirects}=require('../vercel.json');
+  const index=source=>redirects.findIndex(rule=>rule.source===source);
+  const catchAll=index('/states/:slug/index.html');
+  for(const source of ['/about.html','/about']) {
+    const at=index(source);
+    assert.ok(at>=0 && at<catchAll,`${source} must redirect before the catch-all rules`);
+    assert.equal(redirects[at].destination,'/team.html');
+    assert.equal(redirects[at].permanent,true);
+  }
+  const menu=fs.readFileSync('js/staggered-menu.js','utf8');
+  assert.match(menu,/label: 'About'[^}]*link: 'team\.html'/);
 });
 
 function newsletter(fetch){

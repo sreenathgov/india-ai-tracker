@@ -4,7 +4,7 @@ const ROOT = path.resolve(__dirname, '../..');
 const DIST = path.join(ROOT, 'dist');
 const INVENTORY = path.join(__dirname, 'public-files.json');
 const pageFiles = [
-  'index.html', 'about.html', 'sector-watch.html', 'tradewatch.html', 'tracker.html',
+  'index.html', 'team.html', 'sector-watch.html', 'tradewatch.html', 'tracker.html',
   'request-demo.html', 'supplier-programme.html', 'drona.html', 'drona-aos.html',
   'privacy-policy.html', 'terms-of-use.html', 'supplier-programme-terms.html',
   'disclaimers.html', '404.html'

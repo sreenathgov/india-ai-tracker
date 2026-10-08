@@ -15,7 +15,7 @@ const staticRoutes = [
   { path: '/tradewatch.html',    file: 'tradewatch.html',    priority: '0.9', changefreq: 'weekly'  },
   { path: '/tracker.html',       file: 'tracker.html',       priority: '0.9', changefreq: 'daily'   },
   { path: '/sector-watch.html',  file: 'sector-watch.html',  priority: '0.7', changefreq: 'monthly' },
-  { path: '/about.html',         file: 'about.html',         priority: '0.7', changefreq: 'monthly' },
+  { path: '/team.html',          file: 'team.html',          priority: '0.7', changefreq: 'monthly' },
   { path: '/resources.html',     file: 'resources.html',     priority: '0.8', changefreq: 'weekly'  },
   { path: '/drona.html', file: 'drona.html', priority: '0.6', changefreq: 'monthly' },
   { path: '/drona-aos.html', file: 'drona-aos.html', priority: '0.6', changefreq: 'monthly' },

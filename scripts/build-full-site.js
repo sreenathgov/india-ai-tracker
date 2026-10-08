@@ -10,7 +10,7 @@ const publicInventory = require('./release/public-files.json');
 const ASSETS_TO_COPY = [];
 const FILES_TO_COPY = [
     'index.html',
-    'about.html',
+    'team.html',
     'sector-watch.html',
     'tradewatch.html',
     'tracker.html',

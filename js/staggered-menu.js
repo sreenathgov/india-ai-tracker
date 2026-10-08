@@ -1006,7 +1006,7 @@ document.addEventListener('DOMContentLoaded', function () {
       { label: 'India AI Tracker', ariaLabel: 'View the India AI Tracker', link: 'tracker.html' },
       { label: 'DronaAOS', ariaLabel: 'View DronaAOS platform', link: 'drona-aos.html' },
       { label: 'Resources', ariaLabel: 'Browse resources', link: 'resources.html' },
-      { label: 'About', ariaLabel: 'Learn about Kanan Labs', link: 'about.html' },
+      { label: 'About', ariaLabel: 'Learn about Kanan', link: 'team.html' },
       { label: 'Careers', ariaLabel: 'See open roles at Kanan Labs', link: 'careers.html' }
     ],
     socialItems: [

@@ -72,6 +72,9 @@
     {"source": "/careers/senior-data-engineer-regulatory-data/", "destination": "/careers.html", "permanent": true},
     {"source": "/careers/senior-data-engineer-regulatory-data/index.html", "destination": "/careers.html", "permanent": true},
 
+    { "source": "/about.html", "destination": "/team.html", "permanent": true },
+    { "source": "/about", "destination": "/team.html", "permanent": true },
+
     { "source": "/states/:slug/index.html", "destination": "/states/:slug/", "permanent": true },
     { "source": "/publications/:slug/index.html", "destination": "/publications/:slug/", "permanent": true },
     { "source": "/careers/:slug/index.html", "destination": "/careers/:slug/", "permanent": true },

@@ -1,0 +1,681 @@
+/* Team page. Hero: Shape Waves dot field over a world map (js/team-hero-waves.js). */
+
+.team-page {
+    margin: 0;
+    background: #1c1010;
+    color: #f8f5ed;
+}
+
+.team-hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    isolation: isolate;
+    /* Shown until the field is ready, and kept if WebGL2 is unavailable. */
+    background: #1c1010;
+}
+
+/* The map fills the hero; the copy is anchored to the bottom edge. The mask
+   fades the field in under the header and recedes it behind the copy so the
+   text reads without a scrim. Ported from React Bits ShapeWaves.css. */
+.team-hero__field {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 20%, #000 48%, rgba(0, 0, 0, 0.32) 76%, rgba(0, 0, 0, 0.18) 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 20%, #000 48%, rgba(0, 0, 0, 0.32) 76%, rgba(0, 0, 0, 0.18) 100%);
+}
+
+.team-hero__field canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 900ms ease;
+}
+
+.team-hero[data-field-ready] .team-hero__field canvas {
+    opacity: 1;
+}
+
+.team-hero__inner {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Top padding only matters on short viewports: it keeps the copy clear of
+       the fixed header when there is no room to sit at the bottom. */
+    padding: clamp(7rem, 14vh, 9.5rem) 16px clamp(3rem, 9vh, 6rem);
+}
+
+.team-hero__eyebrow {
+    margin: 0 0 clamp(1.5rem, 3vw, 2.25rem);
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(240, 201, 197, 0.22);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #f0c9c5;
+}
+
+.team-hero__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.team-hero__title {
+    margin: 0;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(2.6rem, 4.8vw, 4.1rem);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: #f8f5ed;
+}
+
+.team-hero__nowrap {
+    white-space: nowrap;
+}
+
+.team-hero__muted {
+    color: #b39a96;
+}
+
+.team-hero__lede {
+    max-width: 34rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(248, 245, 237, 0.74);
+}
+
+.team-hero__lede p {
+    margin: 0 0 1.25rem;
+}
+
+.team-hero__lede p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .team-hero__grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* The copy is taller than a phone screen, so the map gets its own band at
+       the top and the copy follows it, starting low in the first view. */
+    .team-hero__field {
+        bottom: auto;
+        height: 58svh;
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 62%, transparent 100%);
+        mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 62%, transparent 100%);
+    }
+
+    .team-hero__inner {
+        padding-top: 50svh;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .team-hero__field canvas {
+        transition: none;
+    }
+}
+
+/* Founders: Chroma Grid (ported from React Bits ChromaGrid.css, js/team-founders.js).
+   The greyscale overlay and veil sit inside each card, so the bio text beneath
+   a card is never filtered. Light paper band: oxblood ink, wine accents (brand rules: wine is a ground
+   or an accent on paper, oxblood is ink). */
+
+.team-founders {
+    background: #f8f5ed;
+    padding: clamp(4rem, 10vh, 6rem) 0;
+}
+
+.team-founders__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.team-founders__eyebrow {
+    margin: 0 0 clamp(1.5rem, 3vw, 2.25rem);
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(76, 44, 44, 0.16);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #762c36;
+}
+
+.team-founders__title {
+    margin: 0 0 clamp(2rem, 4vw, 3rem);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 4.2vw, 3.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: #4c2c2c;
+}
+
+.team-founders__muted {
+    color: #695050;
+}
+
+.chroma-grid {
+    --r: 260px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 360px));
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: start;
+}
+
+.founder {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-width: 0;
+}
+
+.chroma-card {
+    --x: 50%;
+    --y: 50%;
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+    --spotlight-color: rgba(118, 44, 54, 0.07);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(76, 44, 44, 0.12);
+    background: linear-gradient(165deg, #fffaf0, #f1e9dc);
+    transition: border-color 0.3s ease;
+}
+
+.chroma-card:hover {
+    border-color: rgba(118, 44, 54, 0.45);
+}
+
+.chroma-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.chroma-card:hover::before {
+    opacity: 1;
+}
+
+.chroma-img-wrapper {
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+}
+
+.chroma-img-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 10px;
+    max-height: 56vh;
+}
+
+.chroma-info {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    row-gap: 0.2rem;
+    column-gap: 0.75rem;
+    padding: 0.5rem 1.1rem 1.1rem;
+}
+
+.chroma-info .name {
+    margin: 0;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    font-size: 1.35rem;
+    line-height: 1.2;
+    color: #4c2c2c;
+}
+
+.chroma-info .role {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.85rem;
+    color: #695050;
+}
+
+/* Limited to the photo (10px wrapper padding, 4:5) so the cream card frame
+   and name strip are never greyed on the paper ground. */
+.chroma-overlay,
+.chroma-fade {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    aspect-ratio: 4 / 5;
+    border-radius: 10px;
+    pointer-events: none;
+    -webkit-backdrop-filter: grayscale(1) brightness(0.94);
+    backdrop-filter: grayscale(1) brightness(0.94);
+    background: rgba(0, 0, 0, 0.001);
+}
+
+.chroma-overlay {
+    z-index: 3;
+    -webkit-mask-image: radial-gradient(circle var(--r) at var(--x) var(--y),
+        transparent 0%, transparent 15%, rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.22) 45%,
+        rgba(0, 0, 0, 0.35) 60%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0.68) 88%, white 100%);
+    mask-image: radial-gradient(circle var(--r) at var(--x) var(--y),
+        transparent 0%, transparent 15%, rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.22) 45%,
+        rgba(0, 0, 0, 0.35) 60%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0.68) 88%, white 100%);
+}
+
+/* Full veil, deliberately unmasked: the original's masked veil leaks a ring of
+   colour at rest where both masks are partial (visible on the wine ground). */
+.chroma-fade {
+    z-index: 4;
+    opacity: 1;
+}
+
+.founder__bio {
+    max-width: 360px;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.founder__bio h3 {
+    margin: 0 0 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #762c36;
+}
+
+.founder__bio p {
+    margin: 0 0 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(76, 44, 44, 0.86);
+}
+
+.founder__bio p:last-child {
+    margin-bottom: 0;
+}
+
+/* Founder links: small glyphs under the bio, left edge optically flush with the text. */
+.founder__links {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0 0 -10px;
+    padding: 0;
+    list-style: none;
+}
+
+.founder__links a {
+    display: inline-grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border-radius: 50%;
+    color: #762c36;
+    transition: color 200ms ease, background-color 200ms ease;
+}
+
+.founder__links a:hover {
+    color: #4c2c2c;
+    background: rgba(118, 44, 54, 0.08);
+}
+
+.founder__links a:focus-visible {
+    outline: 2px solid #762c36;
+    outline-offset: 2px;
+}
+
+/* Contact row: hairline, one quiet line of text and two text links. */
+.team-founders__contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 2rem;
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(76, 44, 44, 0.16);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.9375rem;
+}
+
+.team-founders__contact p {
+    margin: 0;
+    color: #695050;
+}
+
+.team-founders__contact a {
+    color: #762c36;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.team-founders__contact a:hover,
+.team-founders__contact a:focus-visible {
+    color: #4c2c2c;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Desktop: the two founders share three grid rows (card, bio, links), so the
+   link icons sit on one line whatever length each bio wraps to. */
+@media (min-width: 769px) {
+    .chroma-grid {
+        grid-template-rows: auto auto auto;
+        row-gap: 0;
+    }
+
+    .founder {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 3;
+        gap: 0;
+    }
+
+    .founder__bio {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .chroma-grid {
+        grid-template-columns: minmax(0, 360px);
+        gap: 4rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .chroma-card,
+    .chroma-card::before {
+        transition: none;
+    }
+}
+
+/* Careers: wine ground between the two paper bands. Text on wine is cream
+   and rose only (brand rule: wine is a ground, never text on dark). */
+
+.team-careers {
+    background: #762c36;
+    color: #f8f5ed;
+    padding: clamp(5rem, 12vh, 8rem) 0;
+}
+
+.team-careers__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.team-careers__eyebrow {
+    margin: 0 0 clamp(1.5rem, 3vw, 2.25rem);
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(240, 201, 197, 0.3);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #f0c9c5;
+}
+
+.team-careers__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.team-careers__title {
+    margin: 0;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 4.2vw, 3.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: #f8f5ed;
+}
+
+.team-careers__muted {
+    color: #f0c9c5;
+}
+
+.team-careers__body {
+    max-width: 34rem;
+}
+
+.team-careers__body p {
+    margin: 0 0 2rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(248, 245, 237, 0.82);
+}
+
+/* Pill button, same shape as the Drona page CTAs: cream on wine, ink arrow. */
+.team-careers__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.95rem;
+    min-height: 48px;
+    padding: 0.375rem 0.375rem 0.375rem 1.35rem;
+    border-radius: 999px;
+    background: #f8f5ed;
+    color: #4c2c2c;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 220ms ease, background-color 220ms ease;
+}
+
+.team-careers__cta-arrow {
+    display: inline-grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    border-radius: 50%;
+    background: #4c2c2c;
+    color: #f8f5ed;
+    font-size: 1.1rem;
+    line-height: 1;
+    transition: transform 220ms ease;
+}
+
+.team-careers__cta:hover {
+    background: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 30px rgba(28, 16, 16, 0.25);
+}
+
+.team-careers__cta:hover .team-careers__cta-arrow {
+    transform: translateX(2px);
+}
+
+.team-careers__cta:focus-visible {
+    outline: 2px solid #f8f5ed;
+    outline-offset: 4px;
+}
+
+/* FAQ: the Drona accordion on the paper band, in the page's type system. */
+
+.team-faq {
+    background: #f8f5ed;
+    color: #4c2c2c;
+    padding: clamp(5rem, 12vh, 8rem) 0;
+}
+
+.team-faq__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.team-faq__eyebrow {
+    margin: 0 0 clamp(1.5rem, 3vw, 2.25rem);
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(76, 44, 44, 0.16);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #762c36;
+}
+
+.team-faq__title {
+    margin: 0 0 clamp(2.5rem, 5vw, 4rem);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 4.2vw, 3.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: #4c2c2c;
+}
+
+.team-faq__list {
+    border-top: 1px solid rgba(76, 44, 44, 0.16);
+}
+
+.team-faq__item {
+    border-bottom: 1px solid rgba(76, 44, 44, 0.16);
+}
+
+.team-faq__summary {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    column-gap: 1.5rem;
+    padding: 1.5rem 0.25rem;
+    cursor: pointer;
+    list-style: none;
+}
+
+.team-faq__summary::-webkit-details-marker {
+    display: none;
+}
+
+.team-faq__summary::marker {
+    content: '';
+}
+
+.team-faq__summary:focus-visible {
+    outline: 2px solid #762c36;
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+.team-faq__index {
+    min-width: 1.75rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: rgba(76, 44, 44, 0.48);
+    transition: color 0.2s ease;
+}
+
+.team-faq__question {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.15rem, 1.9vw, 1.4rem);
+    font-weight: 500;
+    line-height: 1.32;
+    color: #4c2c2c;
+}
+
+.team-faq__chevron {
+    width: 8px;
+    height: 8px;
+    margin-right: 0.25rem;
+    border-right: 1.5px solid rgba(76, 44, 44, 0.48);
+    border-bottom: 1.5px solid rgba(76, 44, 44, 0.48);
+    transform: rotate(45deg);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.team-faq__summary:hover .team-faq__chevron {
+    border-color: #4c2c2c;
+}
+
+.team-faq__item[open] > .team-faq__summary .team-faq__chevron {
+    border-color: #762c36;
+    transform: rotate(-135deg);
+}
+
+.team-faq__item[open] > .team-faq__summary .team-faq__index {
+    color: #762c36;
+}
+
+.team-faq__panel {
+    max-width: 56rem;
+    padding: 0 0.25rem 1.75rem calc(1.75rem + 1.5rem);
+}
+
+.team-faq__panel p {
+    margin: 0 0 0.85rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: rgba(76, 44, 44, 0.8);
+}
+
+.team-faq__panel p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .team-careers__grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .team-faq__summary {
+        column-gap: 0.9rem;
+        padding: 1.15rem 0.15rem;
+    }
+
+    .team-faq__panel {
+        padding-left: calc(1.75rem + 0.9rem);
+        padding-bottom: 1.4rem;
+    }
+
+    .team-faq__panel p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .team-careers__cta,
+    .team-careers__cta-arrow,
+    .team-faq__chevron,
+    .team-faq__index {
+        transition: none;
+    }
+}
