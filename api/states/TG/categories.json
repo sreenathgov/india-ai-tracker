@@ -152,6 +152,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "IIIT-Hyderabad study cautions against blindly trusting medical AI models",
+        "url": "https://www.iiit.ac.in/iiit-hyderabad-study-cautions-against-blindly-trusting-medical-ai-models/",
+        "summary": "IIIT-Hyderabad study cautions against blindly trusting medical AI modelsIIIT Hyderabad Launches Advanced EEG Lab to Advance Cognitive Neuroscience ResearchIIIT Hyderabad and Hexagon R&D India Partner...",
+        "date_published": "2026-10-09",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "IIIT-H study caution doctors against relying entirely on AI for medical diagnosis",
+        "url": "https://www.thehindu.com/news/cities/Hyderabad/iiit-h-study-caution-doctors-against-relying-entirely-on-ai-for-medical-diagnosis/article71562754.ece",
+        "summary": "The researchers find discrepancies in chest X-ray regions highlighted by vision-language models and radiologists",
+        "date_published": "2026-10-09",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "IIIT Hyderabad Launches Advanced EEG Lab to Advance Cognitive Neuroscience Research",
         "url": "https://www.iiit.ac.in/brainlab/",
@@ -3020,5 +3060,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

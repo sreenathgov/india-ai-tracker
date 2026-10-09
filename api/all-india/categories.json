@@ -3,6 +3,46 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 1,
+        "title": "India plans AI regulation: Deepfakes, user safety in focus as Vaishnaw signals paper",
+        "url": "https://www.livemint.com/ai/india-plans-ai-regulation-deepfakes-user-safety-in-focus-as-vaishnaw-signals-paper-11791526290167.html",
+        "summary": "India plans to release an AI consultation paper within a month, IT Minister Ashwini Vaishnaw said. The proposed framework will seek stakeholder feedback on AI safety, deepfakes, cybersecurity, user ha...",
+        "date_published": "2026-10-09",
+        "source_name": "LiveMint AI News",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "India needs stronger data access framework, AI skilling push: MeitY Secretary S Krishnan",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/india-needs-stronger-data-access-framework-ai-skilling-push-meity-secretary-s-krishnan/134790573",
+        "summary": "Krishnan says rapid diffusion of AI makes data availability and skills critical to building India’s AI ecosystem",
+        "date_published": "2026-10-08",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "India plans unified AI assistant for government services, awards contract to Bengaluru-based CoRover",
         "url": "https://www.livemint.com/ai/india-plans-unified-ai-assistant-for-government-services-awards-contract-to-bengaluru-based-corover-11791393553264.html",
@@ -1514,6 +1554,86 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Google brings Gemini AI auto browse to Chrome in India - What it means to users",
+        "url": "https://www.etnownews.com/technology/google-brings-gemini-ai-auto-browse-to-chrome-in-india-what-it-means-to-users-article-156301511",
+        "summary": "Gemini AI: Launched across Chrome for desktop and Android, the agentic capability allows users to delegate complex workflows, such as event parking bookings, lengthy form submissions, or online grocer...",
+        "date_published": "2026-10-09",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "India&#039;s semiconductor push, agentic AI set to reshape telecom and connected devices",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-semiconductor-push-agentic-ai-set-to-reshape-telecom-and-connected-devices/134804762",
+        "summary": "India&#039;s semiconductor ambitions and the rapid adoption of agentic artificial intelligence (AI) are set to reshape the country&#039;s technology and telecom ecosystem, with industry leaders seeing...",
+        "date_published": "2026-10-09",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Be agent provocateur: India&#039;s internet needs an AI makeover",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/be-agent-provocateur-indias-internet-needs-an-ai-makeover/134804586",
+        "summary": "As India&#039;s digital ecosystem experiences rapid transformation, it is imperative to enhance support for the growing presence of AI agents in business and services. By tackling the obstacles within...",
+        "date_published": "2026-10-09",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "India&#039;s contributions to next-gen telecom standards at &#039;all time high&#039;",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/indias-contributions-to-next-gen-telecom-standards-at-all-time-high/134816980",
+        "summary": "The Bharat 6G Alliance has expanded its membership significantly, now including over 90 organisations. Among these members are more than 30 deep-tech artificial intelligence companies focused on devel...",
+        "date_published": "2026-10-09",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Google wants you to make games and films with AI: Playground launches with Unity, Flow expands in India",
         "url": "https://www.livemint.com/ai/google-wants-you-to-make-games-and-films-with-ai-playground-launches-with-unity-flow-expands-in-india-11791431915625.html",
@@ -1598,6 +1718,26 @@
         "title": "The next frontier: Reengineering Indian enterprises for the agentic era",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/the-next-frontier-reengineering-indian-enterprises-for-the-agentic-era/134777924",
         "summary": "India has a significant opportunity to leverage artificial intelligence for economic growth and productivity. Many enterprises are currently not maximizing the potential of AI across all functions. Le...",
+        "date_published": "2026-10-08",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Voice AI adoption scales up in India as 31 pc of firms move to limited production",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/voice-ai-adoption-scales-up-in-india-as-31-pc-of-firms-move-to-limited-production/134783606",
+        "summary": "The landscape of voice AI adoption in India is evolving rapidly, transitioning from initial trials to widespread implementation across diverse industries. Businesses are leveraging voice agents for ef...",
         "date_published": "2026-10-08",
         "source_name": "ET CIO - AI",
         "category": "Major AI Developments",
@@ -18590,7 +18730,7 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
-    "Major AI Developments"
+    "Major AI Developments",
+    "Policies and Initiatives"
   ]
 }

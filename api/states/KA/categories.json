@@ -701,6 +701,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 9,
+        "title": "Karnataka to leverage Bhashini AI for citizen services in local languages: Priyank Kharge",
+        "url": "https://www.thehindu.com/news/cities/bangalore/karnataka-to-leverage-bhashini-ai-for-citizen-services-in-local-languages-priyank-kharge/article71559933.ece",
+        "summary": "The Bhashini workshop focused on exploring the application of AI-powered language and voice technologies to make government services simpler, more inclusive and citizen-centric",
+        "date_published": "2026-10-08",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "10-year plan: Nine townships, 312km Metro, 210km ring road to take pressure off Bengaluru",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/10-year-plan-nine-townships-312km-metro-210km-ring-road-to-take-pressure-off-bengaluru/articleshow/134714979.cms",
@@ -6588,7 +6608,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
