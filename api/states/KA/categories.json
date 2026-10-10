@@ -619,6 +619,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "AI changing employer expectations; degrees alone no longer enough, say experts in Bengaluru",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-changing-employer-expectations-degrees-alone-no-longer-enough-say-experts-in-bengaluru/articleshow/134838363.cms",
+        "summary": "<img align=\"left\" borde...",
+        "date_published": "2026-10-10",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Blinkit leads quick commerce in product availability, Flipkart Minutes ranks second: Bernstein",
         "url": "https://entrackr.com/news/blinkit-leads-quick-commerce-in-product-availability-flipkart-minutes-ranks-second-bernstein-12636830",
@@ -6608,5 +6628,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

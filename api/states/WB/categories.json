@@ -45,6 +45,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Kone India to double connected elevators in a year, bets on AI to cut lift downtime, prevent entrapment",
+        "url": "https://timesofindia.indiatimes.com/city/kolkata/kone-india-to-double-connected-elevators-in-a-year-bets-on-ai-to-cut-lift-downtime-prevent-entrapment/articleshow/134845889.cms",
+        "summary": "<img align=\"l...",
+        "date_published": "2026-10-10",
+        "source_name": "Times of India - Kolkata",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "HEADS to bridge India’s mental healthcare gap with AI",
         "url": "https://www.thehindu.com/news/national/karnataka/heads-to-bridge-indias-mental-healthcare-gap-with-ai/article71499835.ece",
@@ -666,5 +686,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

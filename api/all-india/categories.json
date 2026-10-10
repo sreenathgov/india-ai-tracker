@@ -1634,6 +1634,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 3,
+        "title": "HCLTech eyes big play in AI-native networks, sovereign tech and enterprise modernisation",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/hcltech-eyes-big-play-in-ai-native-networks-sovereign-tech-and-enterprise-modernisation/134832558",
+        "summary": "Artificial intelligence is driving significant changes in the telecommunications and enterprise sectors in India. Companies are increasingly adopting AI-native architectures, impacting bandwidth monet...",
+        "date_published": "2026-10-09",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Google wants you to make games and films with AI: Playground launches with Unity, Flow expands in India",
         "url": "https://www.livemint.com/ai/google-wants-you-to-make-games-and-films-with-ai-playground-launches-with-unity-flow-expands-in-india-11791431915625.html",
@@ -18729,8 +18749,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments",
-    "Policies and Initiatives"
-  ]
+  "today_updates": []
 }
