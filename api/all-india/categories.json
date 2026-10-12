@@ -1555,6 +1555,26 @@
     "Major AI Developments": [
       {
         "id": 2,
+        "title": "TCS to hire 80% of workforce with digital, AI skills; AI work to expand profitability",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/tcs-to-hire-80-of-workforce-with-digital-ai-skills-ai-work-to-expand-profitability/134885046",
+        "summary": "TCS aims to hire 80% of new talent with digital and Artificial Intelligence skills to enhance growth. The company reports that 10% of its revenue now comes from AI-led work. TCS&#039;s chief operating...",
+        "date_published": "2026-10-12",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "Google brings Gemini AI auto browse to Chrome in India - What it means to users",
         "url": "https://www.etnownews.com/technology/google-brings-gemini-ai-auto-browse-to-chrome-in-india-what-it-means-to-users-article-156301511",
         "summary": "Gemini AI: Launched across Chrome for desktop and Android, the agentic capability allows users to delegate complex workflows, such as event parking bookings, lengthy form submissions, or online grocer...",
@@ -18769,5 +18789,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

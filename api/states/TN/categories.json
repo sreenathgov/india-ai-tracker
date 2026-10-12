@@ -241,6 +241,32 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "How AI exposure varies across Indian states: Kerala leads, UP and Bihar lag behind",
+        "url": "https://www.livemint.com/ai/how-ai-exposure-varies-across-indian-states-kerala-leads-up-and-bihar-lag-behind-11791727545580.html",
+        "summary": "Kerala, Haryana, Maharashtra and Tamil Nadu lead in AI-complementary jobs, while UP, Bihar, Jharkhand and Madhya Pradesh lag behind, a new study finds.",
+        "date_published": "2026-10-11",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR",
+          "HR",
+          "JH",
+          "KL",
+          "MH",
+          "MP",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Alive App raises $1 Mn from Powerhouse, Flipkart Ventures",
         "url": "https://entrackr.com/snippets/alive-app-raises-1-mn-from-powerhouse-flipkart-ventures-12583861",
