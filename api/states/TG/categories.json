@@ -152,6 +152,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "Different shades of puja pandals in Hyderabad",
+        "url": "https://www.thehindu.com/life-and-style/different-shades-of-puja-pandals-in-hyderabad/article71562914.ece",
+        "summary": "From traditional to an AI-driven pandal itinerary, Durga pandals in Hyderabad weave stories of nostalgia, community spirit and Bengali heritage and culture",
+        "date_published": "2026-10-13",
+        "source_name": "The Hindu - Hyderabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "IIIT-Hyderabad study cautions against blindly trusting medical AI models",
         "url": "https://www.iiit.ac.in/iiit-hyderabad-study-cautions-against-blindly-trusting-medical-ai-models/",
@@ -3060,5 +3080,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

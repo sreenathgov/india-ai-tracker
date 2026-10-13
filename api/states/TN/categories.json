@@ -241,6 +241,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Zoho pauses pay hikes, cuts marketing spend amid rising AI costs",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/zoho-pauses-pay-hikes-cuts-marketing-spend-amid-rising-ai-costs/articleshow/134907078.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"https...",
+        "date_published": "2026-10-13",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "AI levels the playing field for entrepreneurs from Chennai: Mithun Sacheti",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/ai-levels-the-playing-field-for-entrepreneurs-from-chennai-mithun-sacheti/articleshow/134898398.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\"...",
+        "date_published": "2026-10-13",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "IIT Madras Pravartak, Medhastra join hands to advance Indigenous defence AI",
+        "url": "https://telanganatoday.com/iit-madras-pravartak-medhastra-join-hands-to-advance-indigenous-defence-ai",
+        "summary": "IIT Madras’ Pravartak Technologies Foundation has partnered with Hyderabad-based Medhastra Techsystems to develop indigenous defence artificial intelligence solutions. The collaboration aims to combin...",
+        "date_published": "2026-10-13",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "How AI exposure varies across Indian states: Kerala leads, UP and Bihar lag behind",
         "url": "https://www.livemint.com/ai/how-ai-exposure-varies-across-indian-states-kerala-leads-up-and-bihar-lag-behind-11791727545580.html",
@@ -1753,5 +1813,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
