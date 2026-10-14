@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 3,
+        "title": "Karnataka govt cautious on use of AI in governance: Priyank Kharge",
+        "url": "https://yourstory.com/2026/10/karnataka-govt-cautious-on-use-of-ai-in-governance-priyank-kharge",
+        "summary": "The Minister for Home, IT, BT & E-Governance, Govt of Karnataka, said the government will first look at responsible use of AI before deploying the technology in governance.",
+        "date_published": "2026-10-13",
+        "source_name": "YourStory",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Karnataka plans to introduce AI training in govt schools from Class 6",
         "url": "https://government.economictimes.indiatimes.com/news/technology/karnataka-plans-to-introduce-ai-training-in-govt-schools-from-class-6/134726331",
@@ -618,6 +638,26 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 6,
+        "title": "Amid AI push, no internet in 48% of Karnataka schools",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/amid-ai-push-no-internet-in-48-of-ktaka-schools/articleshow/134926339.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"https://timesofindi...",
+        "date_published": "2026-10-14",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 4,
         "title": "AI changing employer expectations; degrees alone no longer enough, say experts in Bengaluru",
@@ -6628,5 +6668,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

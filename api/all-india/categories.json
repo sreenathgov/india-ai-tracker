@@ -1554,6 +1554,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Only 6.7% of Indian companies have scaled AI across workflows, 59% face hurdles",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/only-6-7-of-indian-companies-have-scaled-ai-across-workflows-59-face-hurdles/134937107",
+        "summary": "A recent Adobe report indicates that only 6.7 per cent of Indian companies have successfully scaled AI. While 77 per cent are increasing AI investments, 44 per cent struggle with initial use cases. Fu...",
+        "date_published": "2026-10-14",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "How Indian companies are putting AI to work in 2026: From smart factories and fraud detection to AI agents",
         "url": "https://www.etnownews.com/technology/how-indian-companies-are-putting-ai-to-work-in-2026-from-smart-factories-and-fraud-detection-to-ai-agents-article-156328266",
@@ -15660,6 +15680,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "Enterprise AI startup RevRag AI raises $2.5 Mn in seed round",
+        "url": "https://entrackr.com/snippets/enterprise-ai-startup-revrag-ai-raises-25-mn-in-seed-round-12674070",
+        "summary": "Enterprise AI startup RevRag AI has raised $2.5 million in a...",
+        "date_published": "2026-10-14",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Google Cloud names Amit Kumar interim India head after Sreedharan exit",
         "url": "https://entrackr.com/news/google-cloud-names-amit-kumar-interim-india-head-after-sreedharan-exit-12636189",
@@ -18910,6 +18950,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }
