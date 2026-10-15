@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 3,
+        "title": "Google.org backs The/Nudge with $15 Mn to digitise India's MSMEs",
+        "url": "https://entrackr.com/snippets/googleorg-backs-thenudge-with-15-mn-to-digitise-indias-msmes-12676021",
+        "summary": "Google.org has committed $15 million in funding to T...",
+        "date_published": "2026-10-14",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "India plans AI regulation: Deepfakes, user safety in focus as Vaishnaw signals paper",
         "url": "https://www.livemint.com/ai/india-plans-ai-regulation-deepfakes-user-safety-in-focus-as-vaishnaw-signals-paper-11791526290167.html",
@@ -1560,6 +1580,26 @@
         "summary": "A recent Adobe report indicates that only 6.7 per cent of Indian companies have successfully scaled AI. While 77 per cent are increasing AI investments, 44 per cent struggle with initial use cases. Fu...",
         "date_published": "2026-10-14",
         "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Scimplify raises $25 Mn in strategic round led by Hitachi Ventures",
+        "url": "https://entrackr.com/news/scimplify-raises-25-mn-in-strategic-round-led-by-hitachi-ventures-12676144",
+        "summary": "Scimplify, a Bengaluru based advanced materials a...",
+        "date_published": "2026-10-14",
+        "source_name": "Entrackr - AI & Startups",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -18949,8 +18989,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
-  ]
+  "today_updates": []
 }
