@@ -1574,6 +1574,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "India’s AI opportunity could run into trillions of dollars, creating new possibilities for startups",
+        "url": "https://yourstory.com/2026/10/indias-ai-opportunity-could-run-trillions-dollars-creating-new-possibilities-startups",
+        "summary": "Indian entrepreneurs can build globally competitive AI businesses by solving local problems across education, healthcare and consumer services, said panelists at Techsparks 2026.",
+        "date_published": "2026-10-16",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Only 6.7% of Indian companies have scaled AI across workflows, 59% face hurdles",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/only-6-7-of-indian-companies-have-scaled-ai-across-workflows-59-face-hurdles/134937107",
@@ -18989,5 +19009,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
