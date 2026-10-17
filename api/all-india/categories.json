@@ -1575,6 +1575,66 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "Mint Explainer | India issues first ever AI agent cyber-attack warning. What’s really at stake?",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/india-ai-agent-cyber-attack-warning-cert-in-data-breach-11792137815639.html",
+        "summary": "Cert-In claims the AI bots that infiltrated Indian IT systems automatically were part of research trials carried out by companies developing them.",
+        "date_published": "2026-10-17",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Only 6.7% of Indian enterprises have scaled AI across multiple workflows",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/only-6-7-of-indian-enterprises-have-scaled-ai-across-multiple-workflows/135006154",
+        "summary": "According to Adobe&#039;s 2026 State of AI Readiness Report, many Indian enterprises struggle to implement AI effectively. Approximately 59 per cent remain between piloting and full deployment, facing...",
+        "date_published": "2026-10-17",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "India’s massive AI opportunity; Women entrepreneurs in this year’s Mann Ki Baat",
+        "url": "https://yourstory.com/2026/10/india-massive-ai-opportunity-women-entrepreneurship",
+        "summary": "Unlike previous digital revolutions (internet and smartphones) that democratised access, AI is democratising intelligence itself, raising overall productivity across sectors.",
+        "date_published": "2026-10-17",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "India’s AI opportunity could run into trillions of dollars, creating new possibilities for startups",
         "url": "https://yourstory.com/2026/10/indias-ai-opportunity-could-run-trillions-dollars-creating-new-possibilities-startups",
         "summary": "Indian entrepreneurs can build globally competitive AI businesses by solving local problems across education, healthcare and consumer services, said panelists at Techsparks 2026.",
@@ -15741,6 +15801,26 @@
     "AI Start-Up News": [
       {
         "id": 4,
+        "title": "Funding and acquisitions in Indian startups this week [Oct 12- Oct 17]",
+        "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-oct-12-oct-17-12683867",
+        "summary": "This week, 28 Indian startups raised $302.85...",
+        "date_published": "2026-10-17",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
         "title": "Enterprise AI startup RevRag AI raises $2.5 Mn in seed round",
         "url": "https://entrackr.com/snippets/enterprise-ai-startup-revrag-ai-raises-25-mn-in-seed-round-12674070",
         "summary": "Enterprise AI startup RevRag AI has raised $2.5 million in a...",
@@ -19010,6 +19090,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }
