@@ -241,6 +241,27 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "US-based TN techie uses AI to send threats to Kerala airport, CM’s home and temples for years, then tracks impact through news reports. Now held from airport after 1,500 hoax bomb threats across India",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/us-based-tn-techie-uses-ai-to-send-threats-to-kerala-airport-cms-home-and-temples-for-years-then-tracks-impact-through-news-reports-now-held-from-airport-after-1500-hoax-bomb-threats-across-india/articleshow/135025738.cms",
+        "summary": "<a href=\"https://timesofindia.indiatimes.com/city/chennai/us-based-tn-techie-uses-ai-to-send-threats-to-kerala-airport-cms-home-and-temples-for-years-then-tracks-impact-through-news-reports-now-held-f...",
+        "date_published": "2026-10-18",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KL",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Zoho’s Vembu says co paused hikes &amp; ad spend due to AI costs",
         "url": "https://timesofindia.indiatimes.com/city/chennai/zohos-vembu-says-co-paused-hikes-ad-spend-due-to-ai-costs/articleshow/134907078.cms",
@@ -1833,5 +1854,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

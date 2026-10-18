@@ -172,6 +172,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Surat CA uses ChatGPT for everything, fuels marital discord; wife walks out with daughter, Gujarat HC refuses to hand over custody",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/surat-ca-uses-chatgpt-for-everything-fuels-marital-discord-wife-walks-out-with-daughter-gujarat-hc-refuses-to-hand-over-custody/articleshow/135022932.cms",
+        "summary": "<a href=\"https://timesofindia.indiatimes.com/city/ahmedabad/surat-ca-uses-chatgpt-for-everything-fuels-marital-discord-wife-walks-out-with-daughter-gujarat-hc-refuses-to-hand-over-custody/articleshow/...",
+        "date_published": "2026-10-18",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "In child's custody row, Gujarat HC cites husband’s excessive dependence on ChatGPT",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/in-custody-row-hc-cites-husbands-excessive-dependence-on-chatgpt/articleshow/135019685.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"ht...",
+        "date_published": "2026-10-18",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Gujarat: Experts guide BAOU students on startups, innovation and AI",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/gujarat-experts-guide-baou-students-on-startups-innovation-and-ai/articleshow/134974874.cms",
@@ -2051,5 +2091,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

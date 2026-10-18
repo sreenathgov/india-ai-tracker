@@ -1635,6 +1635,46 @@
       },
       {
         "id": 1,
+        "title": "As India buys more AI chips, the real test is to keep them running",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/as-india-buys-more-ai-chips-the-real-test-is-to-keep-them-running/135011420",
+        "summary": "Industry leaders said businesses must pay closer attention to the systems around their processors, which actually decide the return on their investments.",
+        "date_published": "2026-10-17",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "79% of employed respondents would sacrifice salary for protection against AI job displacement: Report",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/79-of-employed-respondents-would-sacrifice-salary-for-protection-against-ai-job-displacement-report/135011403",
+        "summary": "A recent survey by the Oliver Wyman Forum highlights a fascinating trend among Indian shoppers: approximately 60% of them trust AI recommendations more than suggestions from friends or social media wh...",
+        "date_published": "2026-10-17",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "India’s AI opportunity could run into trillions of dollars, creating new possibilities for startups",
         "url": "https://yourstory.com/2026/10/indias-ai-opportunity-could-run-trillions-dollars-creating-new-possibilities-startups",
         "summary": "Indian entrepreneurs can build globally competitive AI businesses by solving local problems across education, healthcare and consumer services, said panelists at Techsparks 2026.",
@@ -19089,8 +19129,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
-  ]
+  "today_updates": []
 }

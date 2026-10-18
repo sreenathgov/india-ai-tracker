@@ -46,6 +46,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "Investment in data centres, AI city on Vibrant Goa summit agenda",
+        "url": "https://timesofindia.indiatimes.com/city/goa/investment-in-data-centres-ai-city-on-vibrant-goa-summit-agenda/articleshow/135019450.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"https://t...",
+        "date_published": "2026-10-18",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Alive App raises $1 Mn from Powerhouse, Flipkart Ventures",
         "url": "https://entrackr.com/snippets/alive-app-raises-1-mn-from-powerhouse-flipkart-ventures-12583861",
@@ -454,5 +474,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
