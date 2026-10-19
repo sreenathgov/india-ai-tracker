@@ -267,6 +267,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "MeitY-backed conclave explores AI applications in healthcare, assistive technologies",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/meity-backed-conclave-explores-ai-applications-in-healthcare-assistive-technologies/135045121",
+        "summary": "The conclave on &quot;AI for Health &amp; Assistive Technologies&quot; was organised by Software Technology Parks of India (STPI), under MeitY, and the Centre for Innovation, Incubation and Entreprene...",
+        "date_published": "2026-10-19",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "HCL Group to invest ₹500 crore in Lucknow IT City expansion; UP targets 50 AI startups",
         "url": "https://government.economictimes.indiatimes.com/news/technology/hcl-group-to-invest-500-crore-in-lucknow-it-city-expansion-up-targets-50-ai-startups/134743242",
@@ -1623,5 +1643,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

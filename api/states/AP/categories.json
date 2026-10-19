@@ -127,6 +127,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "Google, AdaniConneX's data centres to use air cooling: How this project could transform Vizag into a global AI hub",
+        "url": "https://www.livemint.com/ai/google-adaniconnexs-data-centres-to-use-air-cooling-how-this-project-could-transform-vizag-into-a-global-ai-hub-11792325536247.html",
+        "summary": "AdaniConneX and Google plan three air-cooled data centre campuses in Visakhapatnam, with capacity of about 1 gigawatt. The design aims to keep freshwater use below the volume of an Olympic-sized swimm...",
+        "date_published": "2026-10-18",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Visakhapatnam civil society calls for moratorium on AI data centre approvals",
         "url": "https://www.thehindu.com/news/national/andhra-pradesh/visakhapatnam-civil-society-calls-for-moratorium-on-ai-data-centre-approvals/article71435952.ece",

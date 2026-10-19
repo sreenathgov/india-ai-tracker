@@ -1575,6 +1575,126 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "AI Agent Breach Exposes Flaws in India’s Autonomous System Defences",
+        "url": "https://analyticsindiamag.com/ai-features/ai-agent-breach-exposes-flaws-in-indias-autonomous-system-defences",
+        "summary": "The CERT-In disclosure has renewed concerns about AI agents interacting iwith sensitive systems such as government portals and financial institutions.",
+        "date_published": "2026-10-19",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Birla AI Labs Launches Yug-1, a Time Series Foundation Model Built in India",
+        "url": "https://analyticsindiamag.com/ai-news/birla-ai-labs-launches-yug-1-a-time-series-foundation-model-built-in-india",
+        "summary": "Yug-1 is built to analyse such time-dependent data and generate forecasts across multiple variables.",
+        "date_published": "2026-10-19",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Tech Mahindra’s Q2 Revenue Modest, But AI-led Deflation Remains Higher",
+        "url": "https://analyticsindiamag.com/it-services/tech-mahindra-lifted-margins-for-12-quarters-ai-is-the-next-test",
+        "summary": "Tech Mahindra plans to disclose AI revenue separately in H2 FY27, giving investors a clearer view of its contribution to growth and profitability.",
+        "date_published": "2026-10-19",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Data, not chips, will decide India’s AI and biotech future, say deeptech founders",
+        "url": "https://yourstory.com/2026/10/india-data-infrastructure-ai-biotech-coremantle-loopworm",
+        "summary": "Founders from CoreMantle and Loopworm say India must own context-rich data to scale AI and biotech and cut reliance on imports.",
+        "date_published": "2026-10-19",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Data is not a moat: What India’s CTOs say will define the next tech edge",
+        "url": "https://yourstory.com/2026/10/data-not-moat-india-cto-define-next-tech-edge-sharechat-amagi-innovaccer-angel-one",
+        "summary": "At TechSparks 2026, technology leaders from ShareChat, Angel One, Amagi and Innovaccer said India’s next competitive edge will depend on deep industry expertise, customer insights, trust and the abili...",
+        "date_published": "2026-10-19",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "Fractal appoints Shilpa Kedia as CFO",
+        "url": "https://entrackr.com/snippets/fractal-appoints-shilpa-kedia-as-cfo-12689288",
+        "summary": "Fractal Analytics has appointed Shilpa Kedia as its...",
+        "date_published": "2026-10-19",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Mint Explainer | India issues first ever AI agent cyber-attack warning. What’s really at stake?",
         "url": "https://www.livemint.com/ai/artificial-intelligence/india-ai-agent-cyber-attack-warning-cert-in-data-breach-11792137815639.html",
         "summary": "Cert-In claims the AI bots that infiltrated Indian IT systems automatically were part of research trials carried out by companies developing them.",
@@ -1674,12 +1794,72 @@
         "posted_to_x_at": null
       },
       {
+        "id": 5,
+        "title": "Wipro’s Deal Slump Puts Its AI Growth Story to the Test",
+        "url": "https://analyticsindiamag.com/it-services/wipros-deal-slump-puts-its-ai-growth-story-to-the-test",
+        "summary": "Wipro’s large-deal bookings fell 58.6% sequentially, yet its CEO says AI is helping it win deals.",
+        "date_published": "2026-10-17",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "India’s AI opportunity could run into trillions of dollars, creating new possibilities for startups",
         "url": "https://yourstory.com/2026/10/indias-ai-opportunity-could-run-trillions-dollars-creating-new-possibilities-startups",
         "summary": "Indian entrepreneurs can build globally competitive AI businesses by solving local problems across education, healthcare and consumer services, said panelists at Techsparks 2026.",
         "date_published": "2026-10-16",
         "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "CERT-In Warns AI Agents Are Accessing Indian Systems Without Authorisation",
+        "url": "https://analyticsindiamag.com/ai-news/cert-in-warns-ai-agents-are-accessing-indian-systems-without-authorisation",
+        "summary": "The agency said it received multiple voluntary disclosures from AI model providers whose models had reached live systems of Indian organisations while conducting research and evaluation activities on...",
+        "date_published": "2026-10-16",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Persistent’s Software, Hi-Tech Revenue Grows 28.5% as It Expands AI Services",
+        "url": "https://analyticsindiamag.com/ai-news/persistents-software-hi-tech-revenue-grows-285-as-it-expands-ai-services",
+        "summary": "Nagarro-related expenses pushed Persistent’s reported profit down 25.4%, despite 20.8% constant-currency revenue growth in Q2 FY27.",
+        "date_published": "2026-10-16",
+        "source_name": "Analytics India Magazine - AI News",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -19129,5 +19309,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
