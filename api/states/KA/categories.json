@@ -659,6 +659,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 1,
+        "title": "Karnataka’s ElevenLabs Partnership Irks Indian Voice AI Startups",
+        "url": "https://analyticsindiamag.com/ai-features/karnatakas-elevenlabs-partnership-irks-indian-voice-ai-startups",
+        "summary": "Indian voice AI startups worry that giving a formal entry to ElevenLabs and Anthropic could deprive domestic companies of any credibility.",
+        "date_published": "2026-10-19",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "AI flags 1,000 garbage spots in Bengaluru South, officials told to act in 10 days",
         "url": "https://www.thehindu.com/news/cities/bangalore/ai-flags-1000-garbage-spots-in-bengaluru-south-officials-told-to-act-in-10-days/article71588139.ece",
@@ -6748,7 +6768,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
