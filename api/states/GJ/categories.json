@@ -172,6 +172,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "Gujarat proposes three-tier AI training for 5 lakh students",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/gujarat-proposes-three-tier-ai-training-for-5-lakh-students/articleshow/135075774.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"https:/...",
+        "date_published": "2026-10-21",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Surat CA uses ChatGPT for everything, fuels marital discord; wife walks out with daughter, Gujarat HC refuses to hand over custody",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/surat-ca-uses-chatgpt-for-everything-fuels-marital-discord-wife-walks-out-with-daughter-gujarat-hc-refuses-to-hand-over-custody/articleshow/135022932.cms",
@@ -2091,5 +2111,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

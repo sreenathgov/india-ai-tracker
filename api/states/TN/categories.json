@@ -241,6 +241,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Chennai to Host One of the World’s Largest AMD GPU Clusters",
+        "url": "https://analyticsindiamag.com/ai-news/chennai-to-host-one-of-the-worlds-largest-amd-gpu-clusters",
+        "summary": "Vultr has announced a 20MW cluster of AMD MI355X GPUs in Chennai.",
+        "date_published": "2026-10-21",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Vultr expands its AMD-powered cloud infrastructure for AI initiatives",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/vultr-expands-its-amd-powered-cloud-infrastructure-for-ai-initiatives/135084699",
+        "summary": "In a major announcement, Vultr has unveiled a substantial supercluster in Chennai, India, focused on enhancing its AMD-powered infrastructure. This new setup, recognized as the largest AMD Instinct de...",
+        "date_published": "2026-10-21",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "US-based TN techie uses AI to send threats to Kerala airport, CM’s home and temples for years, then tracks impact through news reports. Now held from airport after 1,500 hoax bomb threats across India",
         "url": "https://timesofindia.indiatimes.com/city/chennai/us-based-tn-techie-uses-ai-to-send-threats-to-kerala-airport-cms-home-and-temples-for-years-then-tracks-impact-through-news-reports-now-held-from-airport-after-1500-hoax-bomb-threats-across-india/articleshow/135025738.cms",
@@ -1854,5 +1894,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
