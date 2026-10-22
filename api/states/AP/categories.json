@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 6,
+        "title": "Rural healthcare startup CureBay raises Rs 100 Cr in Pre-Series C led by IvyCap",
+        "url": "https://entrackr.com/news/rural-healthcare-startup-curebay-raises-rs-100-cr-in-pre-series-c-led-by-ivycap-12705651",
+        "summary": "CureBay, a rural healthcare startup, has raised around Rs 100...",
+        "date_published": "2026-10-22",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Andhra CM approves India&#039;s first dedicated Quantum, AI university campus in Amaravati",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/andhra-cm-approves-indias-first-dedicated-quantum-ai-university-campus-in-amaravati/133591355",
@@ -741,5 +761,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

@@ -1574,6 +1574,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Why Nandan Nilekani-Backed F2A Believes India's Investment Opportunity Lies in Edge AI",
+        "url": "https://analyticsindiamag.com/ai-features/why-nandan-nilekani-backed-f2a-believes-indias-investment-opportunity-lies-in-edge-ai",
+        "summary": "Fundamentum Frontier Advisors plans to invest across physical AI, AI-enabled consumer businesses, and enterprise software.",
+        "date_published": "2026-10-22",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "HCLTech launches NVIDIA-powered AI solution to reduce physical testing of vehicle software",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/hcltech-launches-nvidia-powered-ai-solution-to-reduce-physical-testing-of-vehicle-software/135105539",
+        "summary": "HCLTech has unveiled an advanced AI-driven Verification and Validation solution tailored for automotive manufacturers and their suppliers. This cutting-edge tool leverages NVIDIA&#039;s simulation tec...",
+        "date_published": "2026-10-22",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Deepinder Goyal’s Dark AI teaser sparks curiosity: What is the Zomato founder planning next after Temple wearable?",
         "url": "https://www.etnownews.com/technology/deepinder-goyals-dark-ai-teaser-sparks-curiosity-what-is-the-zomato-founder-planning-next-after-temple-wearable-article-156377587",
@@ -1600,6 +1640,26 @@
         "summary": "Shivaarti Bajaj explains how DPDP compliance and privacy by design protect AI startups from penalties and valuation discounts.",
         "date_published": "2026-10-21",
         "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "43% of Indian Enterprises Struggle to Control AI Costs: Splunk Report",
+        "url": "https://analyticsindiamag.com/ai-news/43-of-indian-enterprises-struggle-to-control-ai-costs-splunk-report",
+        "summary": "Despite prioritising AI monitoring, Indian organisations face challenges measuring model quality, controlling AI costs, and managing security risks as agentic AI adoption grows.",
+        "date_published": "2026-10-21",
+        "source_name": "Analytics India Magazine - AI News",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -16060,6 +16120,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "Voice AI platform Karta AI raises $3 Mn in seed round led by PeerCapital and Cedar Hill",
+        "url": "https://entrackr.com/snippets/voice-ai-platform-karta-ai-raises-3-mn-in-seed-round-led-by-peercapital-and-cedar-hill-12705952",
+        "summary": "Karta AI, a voice AI platform for inbound customer operations acro...",
+        "date_published": "2026-10-22",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Eloelo's Saurabh Pandey bets that Dolphin AI can break the gatekeepers of Indian storytelling",
         "url": "https://yourstory.com/2026/10/eloelos-saurabh-pandey-bets-that-dolphin-ai-can-break-the-gatekeepers-of-indian-storytelling",
@@ -19370,6 +19450,7 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }
