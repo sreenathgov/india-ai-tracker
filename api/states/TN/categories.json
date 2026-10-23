@@ -241,6 +241,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "LTM launches Industrial AI Lab in Chennai to scale enterprise AI adoption",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ltm-launches-industrial-ai-lab-in-chennai-to-scale-enterprise-ai-adoption/135139225",
+        "summary": "LTM has inaugurated the BlueVerse Industrial AI Lab in Chennai, aiming to foster artificial intelligence innovation. This hub serves as a collaborative space for enterprises to devise and test industr...",
+        "date_published": "2026-10-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "Small data centres could bridge AI divide, says IIT Madras director Kamakoti",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/small-data-centres-could-bridge-ai-divide-says-iit-madras-director-kamakoti/articleshow/135135978.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10...",
+        "date_published": "2026-10-23",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Chennai to Host One of the World’s Largest AMD GPU Clusters",
         "url": "https://analyticsindiamag.com/ai-news/chennai-to-host-one-of-the-worlds-largest-amd-gpu-clusters",
@@ -1894,5 +1934,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

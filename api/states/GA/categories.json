@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 11,
+        "title": "Goa unveils AI Policy proposing AI fundamentals for Classes 6 to 12, targets 25% women",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/goa-unveils-ai-policy-proposing-ai-fundamentals-for-classes-6-to-12-targets-25-women/135142590",
+        "summary": "Goa has launched its AI Policy 2026, proposing AI fundamentals for Classes VI–XII from 2027–28, AI labs in up to 50 government schools and training for 500 teachers to strengthen AI education.",
+        "date_published": "2026-10-23",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Goa proposes curbs on social media for minors under 16; draft to be sent to Centre",
         "url": "https://timesofindia.indiatimes.com/city/goa/social-media-curbs-for-u-16s-goa-to-move-proposal-to-centre/articleshow/130615954.cms",
@@ -45,6 +65,26 @@
     ],
     "Events": [],
     "Major AI Developments": [
+      {
+        "id": 4,
+        "title": "Goa unveils AI policy 2026, launches state-level hackathon",
+        "url": "https://government.economictimes.indiatimes.com/news/policy/goa-unveils-ai-policy-2026-launches-state-level-hackathon/135121314",
+        "summary": "The announcements were made at the inaugural session of the two-day Goa AI Tech Conclave 2026 organised by the Goa Department of Information Technology, Electronics and Communications at the INOX Cour...",
+        "date_published": "2026-10-22",
+        "source_name": "ET Government - Policy",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 8,
         "title": "Investment in data centres, AI city on Vibrant Goa summit agenda",
@@ -474,5 +514,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

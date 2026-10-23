@@ -4273,6 +4273,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 9,
+        "title": "Honasa elevates Vipul Maheshwari to CPTO",
+        "url": "https://entrackr.com/snippets/honasa-elevates-vipul-maheshwari-to-cpto-12741347",
+        "summary": "Honasa Consumer, the parent company of Mamaea...",
+        "date_published": "2026-10-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 7,
         "title": "Exclusive: Rio Health raises Rs 43 Cr in pre-Series A led by Version One Ventures",
         "url": "https://entrackr.com/exclusive/exclusive-rioai-raises-rs-43-cr-in-pre-series-a-led-by-version-one-ventures-12566460",
@@ -5092,5 +5112,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }
