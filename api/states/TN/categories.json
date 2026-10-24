@@ -281,6 +281,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 4,
+        "title": "LTM Launches BlueVerse Industrial AI Lab in Chennai",
+        "url": "https://analyticsindiamag.com/ai-news/ltm-launches-blueverse-industrial-ai-lab-in-chennai",
+        "summary": "The facility will support testing of industrial AI, robotics and digital twins, including solutions for factories with legacy equipment and limited connectivity.",
+        "date_published": "2026-10-23",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Chennai to Host One of the World’s Largest AMD GPU Clusters",
         "url": "https://analyticsindiamag.com/ai-news/chennai-to-host-one-of-the-worlds-largest-amd-gpu-clusters",
@@ -1934,7 +1954,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

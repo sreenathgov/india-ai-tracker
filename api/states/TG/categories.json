@@ -152,6 +152,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "IIIT-H launches revamped MSIT program",
+        "url": "https://www.iiit.ac.in/iiit-h-launches-revamped-msit-programme/",
+        "summary": "IIIT-H launches revamped MSIT programIIIT-Hyderabad study cautions against blindly trusting medical AI modelsIIIT Hyderabad Launches Advanced EEG Lab to Advance Cognitive Neuroscience ResearchIIIT Hyd...",
+        "date_published": "2026-10-24",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "AI engineering company Altimetrik opens healthcare and Life Sciences CoE in Hyderabad",
         "url": "https://www.thehindu.com/news/cities/Hyderabad/ai-engineering-company-altimetrik-opens-healthcare-and-life-sciences-coe-in-hyderabad/article71593177.ece",
@@ -3120,5 +3140,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
