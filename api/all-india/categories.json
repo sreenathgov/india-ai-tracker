@@ -1574,6 +1574,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Beyond transactions: How PhonePe and Razorpay are using AI to improve digital payments",
+        "url": "https://yourstory.com/2026/10/beyond-transactions-how-phonepe-and-razorpay-are-using-ai-to-improve-digital-payments",
+        "summary": "At TechSparks 2026, Deep Agrawal of PhonePe and Khilan Haria of Razorpay discussed how contextual payments and AI can improve customer experiences, make financial services more accessible, and help sm...",
+        "date_published": "2026-10-25",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "The new Indian brand ambassador may be sitting in the next cubicle: Why companies are turning employees into influencers",
         "url": "https://www.etnownews.com/technology/the-new-indian-brand-ambassador-may-be-sitting-in-the-next-cubicle-why-companies-are-turning-employees-into-influencers-article-156394741",
@@ -1598,6 +1618,26 @@
         "title": "Infosys AI revenue jumps 29%; Apple’s foldable iPhone fully pre-booked in week 1",
         "url": "https://yourstory.com/2026/10/infosys-ai-revenue-jumps-29-but-growth-outlook-dims",
         "summary": "Infosys reported steady revenue growth in Q2 FY27, driven by strong AI demand and large deal wins.",
+        "date_published": "2026-10-24",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Comm min identifying AI-proof professions, sectors where India can take global lead: Goyal",
+        "url": "https://yourstory.com/2026/10/comm-min-identifying-ai-proof-professions-sectors-where-india-can-take-global-lead-goyal",
+        "summary": "The commerce and industry minister said that the focus would be on sectors where AI could improve efficiency without necessarily replacing human workers, while leveraging India's large pool of skilled...",
         "date_published": "2026-10-24",
         "source_name": "YourStory",
         "category": "Major AI Developments",
@@ -19730,7 +19770,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

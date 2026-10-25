@@ -147,6 +147,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "Centre backs A.P.’s semiconductor push, approves rail links for nine ports",
+        "url": "https://www.thehindu.com/news/national/andhra-pradesh/centre-backs-aps-semiconductor-push-approves-rail-links-for-nine-ports/article71621247.ece",
+        "summary": "Ashwini Vaishnaw assures support for chip-sector research, skilling and AI; agrees to a Vande Bharat sleeper train between Visakhapatnam and Bengaluru via Tirupati as Chandrababu Naidu seeks approval...",
+        "date_published": "2026-10-24",
+        "source_name": "The Hindu - Andhra Pradesh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AP",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Google, AdaniConneX's data centres to use air cooling: How this project could transform Vizag into a global AI hub",
         "url": "https://www.livemint.com/ai/google-adaniconnexs-data-centres-to-use-air-cooling-how-this-project-could-transform-vizag-into-a-global-ai-hub-11792325536247.html",

@@ -33,6 +33,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "NCERT introduces 20-hour AI module for classes 9-12, covers deepfakes and data privacy",
+        "url": "https://www.livemint.com/ai/ncert-introduces-20-hour-ai-module-for-classes-9-12-covers-deepfakes-and-data-privacy-11792905477009.html",
+        "summary": "NCERT has introduced a 20-hour AI and computational thinking module for Classes 9-12, aligned with NEP 2020 and developed with experts from IIT Madras and IIT Jodhpur. The five-unit curriculum covers...",
+        "date_published": "2026-10-25",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "RJ",
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Rajasthan agriculture department trains officials on AI for crop monitoring, farmer services",
         "url": "https://government.economictimes.indiatimes.com/news/technology/rajasthan-agriculture-department-trains-officials-on-ai-for-crop-monitoring-farmer-services/134535505",
@@ -327,5 +348,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
