@@ -1574,12 +1574,132 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "India set for explosive growth in multimodal AI usage, projected to reach 43% by 2030",
+        "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/india-set-for-explosive-growth-in-multimodal-ai-usage-projected-to-reach-43-by-2030/135206472",
+        "summary": "India is set to witness a remarkable growth in the daily use of multimodal artificial intelligence, reaching an impressive 43 percent by 2030. Consumers will turn to AI for enhanced creativity and com...",
+        "date_published": "2026-10-26",
+        "source_name": "ET CIO - Next Gen Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "L Catterton makes strategic investment in Jio Platforms-backed Glance",
+        "url": "https://entrackr.com/snippets/l-catterton-makes-strategic-investment-in-jio-platforms-backed-glance-12752023",
+        "summary": "Global consumer-focused investment firm L Catterton...",
+        "date_published": "2026-10-26",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "India’s GCCs offer AI professionals salaries of up to Rs 1.08 crore: Report",
+        "url": "https://telanganatoday.com/indias-gccs-offer-ai-professionals-salaries-of-up-to-rs-1-08-crore-report",
+        "summary": "India's Global Capability Centres are increasingly shifting towards AI-led operations, with AI architects earning up to Rs 108.6 lakh annually. A TeamLease Digital report highlights salary premiums fo...",
+        "date_published": "2026-10-26",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Beyond transactions: How PhonePe and Razorpay are using AI to improve digital payments",
         "url": "https://yourstory.com/2026/10/beyond-transactions-how-phonepe-and-razorpay-are-using-ai-to-improve-digital-payments",
         "summary": "At TechSparks 2026, Deep Agrawal of PhonePe and Khilan Haria of Razorpay discussed how contextual payments and AI can improve customer experiences, make financial services more accessible, and help sm...",
         "date_published": "2026-10-25",
         "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "The great compute buildout: Can data centres power India’s AI leap?",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/india-ai-data-centre-boom-11792919781691.html",
+        "summary": "Global tech giants are pouring billions into AI-ready data centres across India. Can the infrastructure boom help the country, with its vast user base and engineering talent, become a creator of AI ra...",
+        "date_published": "2026-10-25",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Mint Explainer | Is India’s tech workforce AI-ready?",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/is-india-s-tech-workforce-ai-ready-11792911678159.html",
+        "summary": "India faces a widening gap between demand for AI skills and the supply of job-ready professionals, reshaping hiring, salaries and career prospects across the technology industry.",
+        "date_published": "2026-10-25",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Chinese smartphone brands lose ground in India as record memory chip prices hit budget phones: Report",
+        "url": "https://www.etnownews.com/technology/chinese-smartphone-brands-lose-ground-in-india-as-record-memory-chip-prices-hit-budget-phones-report-article-156404919",
+        "summary": "Chinese brands’ India share fell to 68% in July-September as chip costs hit budget models, while Lava and Ai+ gained.",
+        "date_published": "2026-10-25",
+        "source_name": "ET Now Technology",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -16380,6 +16500,46 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 6,
+        "title": "India's voice AI challenges could shape global technology, says Murf AI co-founder",
+        "url": "https://yourstory.com/2026/10/india-voice-ai-murf-ai-sneha-roy-techsparks",
+        "summary": "At TechSparks 2026, Sneha Roy, the co-founder and COO of Murf AI, explains how multilingual speech, smaller AI models, and cost-efficient infrastructure can make voice agents work across markets.",
+        "date_published": "2026-10-26",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Deep-tech defence startup Paar Autonomy raises Rs 10 Cr",
+        "url": "https://entrackr.com/snippets/deep-tech-defence-startup-paar-autonomy-raises-rs-10-cr-12751873",
+        "summary": "Deep-tech defence and robo...",
+        "date_published": "2026-10-26",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Funding and acquisitions in Indian startups this week [Oct 19- Oct 24]",
         "url": "https://entrackr.com/report/weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-oct-19-oct-24-12744844",
@@ -19770,6 +19930,7 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

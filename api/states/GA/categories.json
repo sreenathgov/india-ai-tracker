@@ -66,6 +66,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "GCCI pledges industry support to help build knowledge economy under Goa AI Policy",
+        "url": "https://timesofindia.indiatimes.com/city/goa/gcci-pledges-industry-support-to-help-build-knowledge-economy-under-goa-ai-policy/articleshow/135197095.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"...",
+        "date_published": "2026-10-26",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Goa unveils AI policy 2026, launches state-level hackathon",
         "url": "https://government.economictimes.indiatimes.com/news/policy/goa-unveils-ai-policy-2026-launches-state-level-hackathon/135121314",
@@ -514,5 +534,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
