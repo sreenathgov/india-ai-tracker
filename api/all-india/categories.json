@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 16,
+        "title": "Defence Ministry arm, Sarvam sign pact for tri-service AI projects",
+        "url": "https://telanganatoday.com/defence-ministry-arm-sarvam-sign-pact-for-tri-service-ai-projects",
+        "summary": "Indian AI firm Sarvam signed an MoU with Headquarters Integrated Defence Staff to develop AI applications for the Army, Navy and Air Force. The partnership focuses on operational support, training, de...",
+        "date_published": "2026-10-27",
+        "source_name": "Telangana Today - Tech",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Google.org backs The/Nudge with $15 Mn to digitise India's MSMEs",
         "url": "https://entrackr.com/snippets/googleorg-backs-thenudge-with-15-mn-to-digitise-indias-msmes-12676021",
@@ -1574,6 +1594,126 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Tech Mahindra and Mastercard Partner to Integrate B2B Payments Into ERP Platforms",
+        "url": "https://analyticsindiamag.com/ai-news/tech-mahindra-and-mastercard-partner-to-integrate-b2b-payments-into-erp-platforms",
+        "summary": "The partnership targets automated payment reconciliation and tighter spending controls, while also bringing agentic AI workflows into procurement and finance sy",
+        "date_published": "2026-10-27",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "E2E Networks Plans 5.4 MW NVIDIA Blackwell Expansion in India",
+        "url": "https://analyticsindiamag.com/ai-news/e2e-networks-plans-54-mw-nvidia-blackwell-expansion-in-india",
+        "summary": "The expansion will increase the company's AI infrastructure capacity by nearly 59% to 14.6 MW, adding NVIDIA HGX B300 systems and other Blackwell GPUs for model",
+        "date_published": "2026-10-27",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Infosys’s $5.2 Billion Deal Wins Fail to Lift FY27 Outlook",
+        "url": "https://analyticsindiamag.com/it-services/infosyss-52-billion-deal-wins-fail-to-lift-fy27-outlook",
+        "summary": "Infosys cut FY27 guidance to 1%-2% despite $5.2 billion in large deals and AI at 10.5% of revenue, as its largest new deal ramps up only next year.",
+        "date_published": "2026-10-27",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "India&#039;s moment has arrived: Pier Stefano Sailer on governance, defence and economic growth",
+        "url": "https://government.economictimes.indiatimes.com/news/policy/indias-moment-has-arrived-pier-stefano-sailer-on-governance-defence-and-economic-growth/135222506",
+        "summary": "India&#039;s moment has arrived, says Pier Stefano Sailer, highlighting opportunities in defence, AI and European partnerships while stressing governance reforms, investment and infrastructure develop...",
+        "date_published": "2026-10-27",
+        "source_name": "ET Government - Policy",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "44% of India’s GCCs now own platforms and AI outcomes",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/44-of-indias-gccs-now-own-platforms-and-ai-outcomes/135226651",
+        "summary": "Global Capability Centres in India are transitioning into AI capability hubs, significantly increasing salaries for digital professionals. The focus of GCCs is shifting from execution to innovation an...",
+        "date_published": "2026-10-27",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 17,
+        "title": "Microsoft offers voluntary exit scheme in India, US, UK and Canada",
+        "url": "https://telanganatoday.com/microsoft-offers-voluntary-exit-scheme-in-india-us-uk-and-canada",
+        "summary": "Microsoft has launched a voluntary exit programme for eligible employees in India, the US, Canada and the UK as it seeks to balance rising AI infrastructure investments with workforce costs. Reports s...",
+        "date_published": "2026-10-27",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "India set for explosive growth in multimodal AI usage, projected to reach 43% by 2030",
         "url": "https://cio.economictimes.indiatimes.com/news/next-gen-technologies/india-set-for-explosive-growth-in-multimodal-ai-usage-projected-to-reach-43-by-2030/135206472",
@@ -1620,6 +1760,46 @@
         "summary": "India's Global Capability Centres are increasingly shifting towards AI-led operations, with AI architects earning up to Rs 108.6 lakh annually. A TeamLease Digital report highlights salary premiums fo...",
         "date_published": "2026-10-26",
         "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "India a preferred destination for data centres: Why world should invest in India, Vedanta chairman Anil Agarwal explains",
+        "url": "https://www.livemint.com/ai/india-a-preferred-destination-for-data-centres-why-world-should-invest-in-india-vedanta-chairman-anil-agarwal-explains-11793013281877.html",
+        "summary": "Vedanta chairman Anil Agarwal says India is well-positioned to attract global data centre investments, citing lower construction costs, renewable energy potential, and a vast consumer base. The AI boo...",
+        "date_published": "2026-10-26",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "Social gaming startup Matiks raises $10 Mn in Pre-Series A led by General Catalyst",
+        "url": "https://entrackr.com/news/social-gaming-startup-matiks-raises-10-mn-in-pre-series-a-led-by-general-catalyst-12754114",
+        "summary": "Bengaluru-based social gaming startup Matiks has rais...",
+        "date_published": "2026-10-26",
+        "source_name": "Entrackr - AI & Startups",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -16500,6 +16680,66 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "HCLTech Completes Acquisition of Croatia-Based Robotiq.ai",
+        "url": "https://analyticsindiamag.com/ai-news/hcltech-completes-acquisition-of-croatia-based-robotiqai",
+        "summary": "The €9 million transaction gives HCLSoftware full ownership of the Croatian RPA provider, with plans to integrate its technology into HCL UnO Agentic.",
+        "date_published": "2026-10-27",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Sarvam Signs 5-Year Defence AI Deal Covering Army, Navy and Air Force",
+        "url": "https://analyticsindiamag.com/ai-news/sarvam-signs-5-year-defence-ai-deal-covering-army-navy-and-air-force",
+        "summary": "The agreement covers decision support, target acquisition and data fusion, with Sarvam’s Chanakya division leading the work.",
+        "date_published": "2026-10-27",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "IvyCap Ventures leads Rs 130 Cr pre-Series B round in Live2.ai",
+        "url": "https://entrackr.com/news/ivycap-ventures-leads-rs-130-cr-pre-series-b-round-in-live2ai-12757291",
+        "summary": "Live2.ai, an AI-based social intelligence and commerce...",
+        "date_published": "2026-10-27",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "India's voice AI challenges could shape global technology, says Murf AI co-founder",
         "url": "https://yourstory.com/2026/10/india-voice-ai-murf-ai-sneha-roy-techsparks",
@@ -19930,7 +20170,8 @@
     ]
   },
   "today_updates": [
+    "Major AI Developments",
     "AI Start-Up News",
-    "Major AI Developments"
+    "Policies and Initiatives"
   ]
 }

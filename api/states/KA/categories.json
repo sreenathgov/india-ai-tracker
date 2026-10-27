@@ -639,6 +639,50 @@
     ],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "Practo co-founder Shashank ND’s startup Cent raises $15 Mn led by Blume, acquires Medsee",
+        "url": "https://entrackr.com/news/practo-co-founder-shashank-nds-startup-cent-raises-15-mn-led-by-blume-acquires-medsee-12757196",
+        "summary": "Preventive healthcare startup Cent has raised $15 mill...",
+        "date_published": "2026-10-27",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "KA",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 15,
+        "title": "Delhi teenager’s Project Sadak logs 2,927 road complaints across Delhi, Mumbai, Bengaluru; tracks 190 repairs",
+        "url": "https://www.thehindu.com/news/cities/Delhi/delhi-teenagers-project-sadak-logs-2927-road-complaints-across-delhi-mumbai-bengaluru-tracks-190-repairs/article71627417.ece",
+        "summary": "Inspired by an accident that left his parents injured, the 16-year-old built an AI-powered platform to report potholes and other road hazards, identify the departments responsible and track repairs.",
+        "date_published": "2026-10-26",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "KA",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Centre backs A.P.’s semiconductor push, approves rail links for nine ports",
         "url": "https://www.thehindu.com/news/national/andhra-pradesh/centre-backs-aps-semiconductor-push-approves-rail-links-for-nine-ports/article71621247.ece",
@@ -6809,5 +6853,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
