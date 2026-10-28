@@ -661,6 +661,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 3,
+        "title": "Bengaluru AI Startup Simplismart Raises $14 Mn in NVIDIA-Backed Round",
+        "url": "https://analyticsindiamag.com/ai-news/bengaluru-ai-startup-simplismart-raises-14-mn-in-nvidia-backed-round",
+        "summary": "The company will use the funds to develop its AI inference platform, expand partnerships with cloud providers and sovereign AI players.",
+        "date_published": "2026-10-27",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 15,
         "title": "Delhi teenager’s Project Sadak logs 2,927 road complaints across Delhi, Mumbai, Bengaluru; tracks 190 repairs",
         "url": "https://www.thehindu.com/news/cities/Delhi/delhi-teenagers-project-sadak-logs-2927-road-complaints-across-delhi-mumbai-bengaluru-tracks-190-repairs/article71627417.ece",
@@ -5253,6 +5273,26 @@
     "AI Start-Up News": [
       {
         "id": 1,
+        "title": "This Bengaluru Startup Is Building AI Agents for Hardware Design",
+        "url": "https://analyticsindiamag.com/ai-startups/this-bengaluru-startup-is-building-ai-agents-for-hardware-design",
+        "summary": "The startup integrates AI into existing hardware design tools to automate circuit design, validation and debugging while keeping engineers in control of key dec",
+        "date_published": "2026-10-28",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Figma unveils AI-powered tools to bring code, design and agents onto a single canvas",
         "url": "https://entrackr.com/news/figma-unveils-ai-powered-tools-to-bring-code-design-and-agents-onto-a-single-canvas-12677861",
         "summary": "Figma has announced a series of product updates aimed at bringi...",
@@ -6854,6 +6894,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }

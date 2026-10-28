@@ -1594,6 +1594,86 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Google Cloud brings production-ready AI to India&#039;s small and mid-sized businesses",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/google-cloud-brings-production-ready-ai-to-indias-small-and-mid-sized-businesses/135262997",
+        "summary": "At a recent event, Google Cloud illustrated the remarkable influence of AI on productivity within Indian small and mid-sized businesses. Drawing an audience of over 600 tech and business leaders, disc...",
+        "date_published": "2026-10-28",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Tata Capital steps up AI led operations; employee costs touch Rs 788 crore",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/tata-capital-steps-up-ai-led-operations-employee-costs-touch-rs-788-crore/135260175",
+        "summary": "As of September 2026, Tata Capital&#039;s workforce reached 31,655, marking a notable 6 percent rise. The firm&#039;s assets under management surged by 26 percent, showcasing robust growth. With over...",
+        "date_published": "2026-10-28",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "India Inc wants AI talent to transform manufacturing space",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-inc-wants-ai-talent-to-transform-manufacturing-space/135249651",
+        "summary": "Manufacturing firms are increasingly focusing on integrating artificial intelligence into their operations for efficiency. Companies such as Honeywell Technologies and RPG Group are actively searching...",
+        "date_published": "2026-10-28",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "AI enterprise startup QwikBuild raises $2.3 Mn in pre-seed round",
+        "url": "https://entrackr.com/snippets/ai-enterprise-startup-qwikbuild-raises-23-mn-in-pre-seed-round-12760872",
+        "summary": "QwikBuild, an enterprise AI startup that builds b...",
+        "date_published": "2026-10-28",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Tech Mahindra and Mastercard Partner to Integrate B2B Payments Into ERP Platforms",
         "url": "https://analyticsindiamag.com/ai-news/tech-mahindra-and-mastercard-partner-to-integrate-b2b-payments-into-erp-platforms",
@@ -16740,6 +16820,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 5,
+        "title": "Explained: Sarvam to build defence AI for Indian Armed Forces: Why India's military is turning to homegrown AI models",
+        "url": "https://www.livemint.com/ai/sarvam-to-build-defence-ai-for-indian-armed-forces-why-indias-military-is-turning-to-homegrown-ai-models-explained-11793098835548.html",
+        "summary": "Sarvam AI has partnered with India’s Integrated Defence Staff to develop secure AI applications for the Army, Navy and Air Force. The partnership will focus on building secure, sovereign and scalable...",
+        "date_published": "2026-10-27",
+        "source_name": "LiveMint AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "India's voice AI challenges could shape global technology, says Murf AI co-founder",
         "url": "https://yourstory.com/2026/10/india-voice-ai-murf-ai-sneha-roy-techsparks",
@@ -20170,8 +20270,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News",
-    "Policies and Initiatives"
+    "Major AI Developments"
   ]
 }

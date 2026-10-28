@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 10,
+        "title": "UP Cabinet approves robotics, AI park in Greater Noida",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/up-cabinet-approves-robotics-ai-park-in-greater-noida/135231207",
+        "summary": "The Cabinet of Uttar Pradesh has given the green light for a cutting-edge robotics and artificial intelligence park in Greater Noida. This innovative project is projected to create more than 100,000 j...",
+        "date_published": "2026-10-27",
+        "source_name": "ET Government - Technology",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Architecting future-readiness: How Uttar Pradesh and Sify are building an AI-ready state ecosystem",
         "url": "https://government.economictimes.indiatimes.com/news/news/architecting-future-readiness-how-uttar-pradesh-and-sify-are-building-an-ai-ready-state-ecosystem/133339433",

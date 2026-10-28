@@ -152,6 +152,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "IIIT Hyderabad and NPCI Sign MoU to Strengthen Cybersecurity in Digital Payments",
+        "url": "https://www.iiit.ac.in/iiit-hyderabad-and-npci-sign-mou-to-strengthen-cybersecurity-in-digital-payments/",
+        "summary": "IIIT Hyderabad and NPCI Sign MoU to Strengthen Cybersecurity in Digital PaymentsIIIT-H’s Robotic Research Sees Real World Deployment On Shop FloorIIIT-H launches revamped MSIT programIIIT-Hyderabad st...",
+        "date_published": "2026-10-28",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "IIIT-H, Ati Robotics demonstrate AI robot navigation breakthrough",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/iiit-h-ati-robotics-demonstrate-ai-robot-navigation-breakthrough/articleshow/135243462.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"ht...",
+        "date_published": "2026-10-28",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Tata Communications Plans $450 Mn Investment to Build 10,000 Km AI Network",
         "url": "https://analyticsindiamag.com/ai-news/tata-communications-plans-450-mn-investment-to-build-10000-km-ai-network",
@@ -3184,5 +3224,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
