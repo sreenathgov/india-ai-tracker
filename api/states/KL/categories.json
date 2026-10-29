@@ -87,6 +87,27 @@
     ],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "Venttup raises $3 Mn in pre Series A round led by Rainmatter, Unicorn India Ventures",
+        "url": "https://entrackr.com/snippets/industries-50-startup-venttup-raises-3-mn-in-pre-series-a-led-by-rainmatter-by-zerodha-and-unicorn-india-12764564",
+        "summary": "Industries 5.0 startup Venttup has raised $3 million in a pre...",
+        "date_published": "2026-10-29",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "US-based TN techie uses AI to send threats to Kerala airport, CM’s home and temples for years, then tracks impact through news reports. Now held from airport after 1,500 hoax bomb threats across India",
         "url": "https://timesofindia.indiatimes.com/city/chennai/us-based-tn-techie-uses-ai-to-send-threats-to-kerala-airport-cms-home-and-temples-for-years-then-tracks-impact-through-news-reports-now-held-from-airport-after-1500-hoax-bomb-threats-across-india/articleshow/135025738.cms",
@@ -444,5 +465,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

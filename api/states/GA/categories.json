@@ -66,6 +66,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 16,
+        "title": "Tourism dept taps AI to promote Goa through online searches, drive international footfalls",
+        "url": "https://timesofindia.indiatimes.com/city/goa/tourism-dept-taps-ai-to-promote-goa-through-online-searches-drive-international-footfalls/articleshow/135278278.cms",
+        "summary": "<img align=\"left\" border=\"0\"...",
+        "date_published": "2026-10-29",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 18,
         "title": "North Goa hospital performs AI-assisted knee replacement surgery",
         "url": "https://timesofindia.indiatimes.com/city/goa/north-goa-hospital-performs-ai-assisted-knee-replacement-surgery/articleshow/135219217.cms",
@@ -554,5 +574,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

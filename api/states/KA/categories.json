@@ -639,6 +639,47 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "‘Study math if you want to understand AI’: IISc Bangalore professor explains how to learn artificial intelligence",
+        "url": "https://www.livemint.com/ai/study-math-if-you-want-to-understand-ai-iisc-bangalore-professor-explains-how-to-learn-artificial-intelligence-11793263844388.html",
+        "summary": "IISc professor Prathosh AP recommends a three-semester learning path and emphasises mentorship, clear reasoning, and research to address real-world problems through artificial intelligence (AI).",
+        "date_published": "2026-10-29",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "Venttup raises $3 Mn in pre Series A round led by Rainmatter, Unicorn India Ventures",
+        "url": "https://entrackr.com/snippets/industries-50-startup-venttup-raises-3-mn-in-pre-series-a-led-by-rainmatter-by-zerodha-and-unicorn-india-12764564",
+        "summary": "Industries 5.0 startup Venttup has raised $3 million in a pre...",
+        "date_published": "2026-10-29",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 12,
         "title": "Practo co-founder Shashank ND’s startup Cent raises $15 Mn led by Blume, acquires Medsee",
         "url": "https://entrackr.com/news/practo-co-founder-shashank-nds-startup-cent-raises-15-mn-led-by-blume-acquires-medsee-12757196",
@@ -6894,6 +6935,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }
