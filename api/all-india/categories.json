@@ -1594,6 +1594,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "India ranks second globally in AI-powered shopping, 76% consumers use AI tools",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-ranks-second-globally-in-ai-powered-shopping-76-consumers-use-ai-tools/135351781",
+        "summary": "An impressive surge in AI tool usage for shopping is reshaping the retail landscape in India. According to a McKinsey report, 76 percent of consumers are turning to AI for their purchasing choices, wi...",
+        "date_published": "2026-10-30",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "DSCI releases India-focused industry guide on liability for agentic AI",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/dsci-releases-india-focused-industry-guide-on-liability-for-agentic-ai/135349357",
+        "summary": "The Digital Security Council of India (DSCI) has released a comprehensive guide that outlines the liability framework for the use of agentic AI in the country. This document emphasizes the importance...",
+        "date_published": "2026-10-30",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Why India needs an AI-native approach to national cyber defence",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/why-india-needs-an-ai-native-approach-to-national-cyber-defence/135339487",
+        "summary": "With the rise of AI agents, cybersecurity threats are escalating in Indian organizations. CERT-In has revealed that a significant number of companies are only discovering breaches through notification...",
+        "date_published": "2026-10-30",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "India’s Enterprises are Scaling AI. Is the Infrastructure Ready?",
         "url": "https://analyticsindiamag.com/ai-features/indias-enterprises-are-scaling-ai-is-the-infrastructure-ready",
@@ -1678,6 +1738,46 @@
         "title": "Beyond AI infrastructure, India’s tech boom rests on the efficient use of power and water",
         "url": "https://yourstory.com/2026/10/why-scaling-climatetech-solutions-challenge-ai-infrastructure-data-centre",
         "summary": "At TechSparks 2026, founders of SolarSquare and Boson Whitewater unpack why overcoming perception, pricing gaps, and consumer trust matters far more in climatetech than just building the technology.",
+        "date_published": "2026-10-29",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "HCLTech launches AI-powered nano GCC offering on AWS",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/hcltech-launches-ai-powered-nano-gcc-offering-on-aws/135293204",
+        "summary": "In a significant move, HCL Tech has introduced an AI-centric nano Global Capability Centre model aimed at assisting enterprises in embedding AI into their operations. This new model is intended for es...",
+        "date_published": "2026-10-29",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "India’s new-age manufacturers to benefit from $3 trillion global AI investment cycle: Avendus Capital",
+        "url": "https://yourstory.com/2026/10/new-age-manufacturers-to-benefit-from-3-trillion-global-ai-investment-cycle-avendus-capital",
+        "summary": "The investment banking firm has identified defence and aerospace, space technology, robotics and automation, semiconductors, energy transition, and advanced materials as the sectors that will drive In...",
         "date_published": "2026-10-29",
         "source_name": "YourStory",
         "category": "Major AI Developments",
@@ -20450,7 +20550,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

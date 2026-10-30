@@ -287,6 +287,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "ETGovernment Vision Conclave 5.0: Uttar Pradesh bets on AI to power its $1 trillion economy ambition",
+        "url": "https://government.economictimes.indiatimes.com/news/policy/etgovernment-vision-conclave-5-0-uttar-pradesh-bets-on-ai-to-power-its-1-trillion-economy-ambition/135340131",
+        "summary": "The fifth edition of the conclave, to be held in Lucknow on October 30, will feature Deputy Chief Minister of Uttar Pradesh Brajesh Pathak, IT &amp; Electronics Minister Sunil Kumar Sharma, and Social...",
+        "date_published": "2026-10-30",
+        "source_name": "ET Government - Policy",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 15,
         "title": "U.P. approves robotics park and AI hub in Greater Noida",
         "url": "https://www.thehindu.com/news/national/uttar-pradesh/up-approves-robotics-park-and-ai-hub-in-greater-noida/article71632226.ece",
@@ -1703,5 +1723,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
