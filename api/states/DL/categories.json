@@ -636,6 +636,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Ecuador Ambassador highlights growing role of Artificial Intelligence in modern diplomacy",
+        "url": "https://government.economictimes.indiatimes.com/news/policy/ecuador-ambassador-highlights-growing-role-of-artificial-intelligence-in-modern-diplomacy/135388572",
+        "summary": "The Embassy of Ecuador hosts a specialised session for ambassadors and senior diplomats in New Delhi, exploring how AI can strengthen diplomatic analysis, strategic planning, official communications a...",
+        "date_published": "2026-10-31",
+        "source_name": "ET Government - Policy",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Hidden AI Prompts in Petitions: Why Indian Courts Should Take This Up Suo Motu",
         "url": "https://spicyip.com/2026/10/hidden-ai-prompts-in-petitions-why-indian-courts-should-take-this-up-suo-motu.html",
@@ -5196,5 +5216,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 3,
+        "title": "MeitY unveils DEPA handbook to enable trusted data sharing for AI training",
+        "url": "https://yourstory.com/2026/10/meity-unveils-depa-handbook-to-enable-trusted-data-sharing-for-ai-training",
+        "summary": "The handbook outlines a techno-legal framework that allows institutions to collaborate on data for AI training while keeping control of their data.",
+        "date_published": "2026-10-31",
+        "source_name": "YourStory",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 16,
         "title": "Defence Ministry arm, Sarvam sign pact for tri-service AI projects",
         "url": "https://telanganatoday.com/defence-ministry-arm-sarvam-sign-pact-for-tri-service-ai-projects",
@@ -1593,6 +1613,26 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 1,
+        "title": "Are Boutique AI Firms India’s Next Big Thing?",
+        "url": "https://analyticsindiamag.com/it-services/are-boutique-ai-firms-indias-next-big-thing",
+        "summary": "AI-native consultancies are positioning themselves as smaller, faster engineering partners that can take AI projects from concept to production in days, not mon",
+        "date_published": "2026-10-31",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 2,
         "title": "India ranks second globally in AI-powered shopping, 76% consumers use AI tools",
@@ -16960,6 +17000,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 4,
+        "title": "Funding and acquisitions in Indian startups this week [Oct 26- Oct 31]",
+        "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-oct-26-oct-31-12770310",
+        "summary": "This week, 28 Indian startups raised $115 mil...",
+        "date_published": "2026-10-31",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Sarvam, Krutrim Account for 68% of Indic AI Funding as Sector Raises $687 Million: Tracxn",
         "url": "https://analyticsindiamag.com/ai-news/sarvam-krutrim-account-for-68-of-indic-ai-funding-as-sector-raises-687-million-tracxn",
@@ -20550,6 +20610,8 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Policies and Initiatives",
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }
