@@ -287,6 +287,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "AI will reshape careers, skills alone won’t suffice: Birla at IIT-BHU convocation",
+        "url": "https://timesofindia.indiatimes.com/city/varanasi/ai-will-reshape-careers-skills-alone-wont-suffice-birla-at-iit-bhu-convocation/articleshow/135410899.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace...",
+        "date_published": "2026-11-01",
+        "source_name": "Times of India - Varanasi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "ETGovernment Vision Conclave 5.0: Uttar Pradesh bets on AI to power its $1 trillion economy ambition",
         "url": "https://government.economictimes.indiatimes.com/news/policy/etgovernment-vision-conclave-5-0-uttar-pradesh-bets-on-ai-to-power-its-1-trillion-economy-ambition/135340131",
@@ -1723,5 +1743,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 5,
+        "title": "2,152 more AI cameras, 85% conviction rate: Amit Shah lauds Chandigarh Police on Raising Day",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/2152-more-ai-cameras-85-conviction-rate-amit-shah-lauds-chandigarh-police-on-raising-day/articleshow/135423388.cms",
+        "summary": "<img align=\"left\" borde...",
+        "date_published": "2026-11-01",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "CH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 14,
         "title": "CM Saini meets top World Bank officials, discuss AI &amp; digital governance",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/cm-saini-meets-top-world-bank-officials-discuss-ai-digital-governance/articleshow/132961545.cms",
@@ -407,5 +427,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

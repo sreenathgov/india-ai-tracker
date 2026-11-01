@@ -1614,12 +1614,52 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "India’s sovereign AI push moves from foundational models to real-world applications for Bharat: Ganesh Ramakrishnan",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/indias-sovereign-ai-push-moves-from-foundational-models-to-real-world-applications-for-bharat-ganesh-ramakrishnan/135418246",
+        "summary": "BharatGen’s Ganesh Ramakrishnan says building AI for India&#039;s linguistic diversity, data sovereignty and public-sector needs will be critical to achieving the country’s Viksit Bharat 2047 vision.",
+        "date_published": "2026-11-01",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Are Boutique AI Firms India’s Next Big Thing?",
         "url": "https://analyticsindiamag.com/it-services/are-boutique-ai-firms-indias-next-big-thing",
         "summary": "AI-native consultancies are positioning themselves as smaller, faster engineering partners that can take AI projects from concept to production in days, not mon",
         "date_published": "2026-10-31",
         "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
+        "title": "Zoho's Sridhar Vembu says AI requires ‘meta level skills’, explains why clear thinking and problem-solving matter",
+        "url": "https://www.livemint.com/ai/zohos-sridhar-vembu-says-ai-requires-meta-level-skills-explains-why-clear-thinking-and-problem-solving-matter-11793462089375.html",
+        "summary": "Zoho co-founder Sridhar Vembu said AI makes clear communication, problem-solving and spotting errors in AI-generated responses increasingly important, calling them 'meta level skills' that can signifi...",
+        "date_published": "2026-10-31",
+        "source_name": "LiveMint AI News",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -20610,8 +20650,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives",
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }
