@@ -1614,6 +1614,226 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "India’s Frontier AI Race Gets a 240M Model That Beats Liquid AI",
+        "url": "https://analyticsindiamag.com/ai-features/indias-frontier-ai-race-gets-a-240m-model-that-beats-liquid-ai",
+        "summary": "NeuroDX’s Sphota claims 50x greater training data efficiency and 4.5x better memory efficiency than a comparable Liquid AI model.",
+        "date_published": "2026-11-02",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "AI platform detects alleged  ₹5,700 crore GST fraud network involving 1,500 shell companies in India",
+        "url": "https://www.livemint.com/ai/ai-platform-detects-alleged-5-700-crore-gst-fraud-network-involving-1-500-shell-companies-in-india-11793601099508.html",
+        "summary": "Innefu Labs claims its AI-powered Prophecy Eagle I platform has detected a suspected  ₹5,700 crore GST fraud network involving more than 1,500 businesses across India.",
+        "date_published": "2026-11-02",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "HCLTech launches AI agents to automate enterprise mainframe operations",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/hcltech-launches-ai-agents-to-automate-enterprise-mainframe-operations/135452621",
+        "summary": "HCLTech has launched a groundbreaking AI-driven solution designed specifically for revamping mainframe environments. This innovative offering focuses on enhancing management strategies through advance...",
+        "date_published": "2026-11-02",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "India’s small companies need to see AI as more than an artificial promise",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indias-small-companies-need-to-see-ai-as-more-than-an-artificial-promise/135450649",
+        "summary": "India MSME news: India&#039;s micro, small and medium enterprises are exploring the adoption of artificial intelligence to enhance productivity. AI is expected to generate significant economic value f...",
+        "date_published": "2026-11-02",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Nearly 7 in 10 Indian firms to boost AI investments despite data readiness gap",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/nearly-7-in-10-indian-firms-to-boost-ai-investments-despite-data-readiness-gap/135450653",
+        "summary": "A report reveals that 69 percent of Indian businesses intend to increase artificial intelligence spending in the coming year. However, only 3 percent have fully AI-ready enterprise data, posing a barr...",
+        "date_published": "2026-11-02",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "Banks report 10-50% productivity improvements with AI in customer service and operations",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/banks-report-10-50-productivity-improvements-with-ai-in-customer-service-and-operations/135442977",
+        "summary": "Several banks in India have implemented artificial intelligence initiatives that have increased productivity and efficiency significantly. Notably, Kotak Mahindra Bank has improved its handling of cor...",
+        "date_published": "2026-11-02",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "From code to content: How AI could make India the world’s next story exporter",
+        "url": "https://yourstory.com/2026/11/from-code-to-content-how-ai-could-make-india-the-worlds-next-story-exporter",
+        "summary": "Eloelo Group’s Saurabh Pandey showcased Dolphin AI, an end-to-end video production suite, and told TechSparks 2026 that falling production costs could let Indian storytellers compete for global audien...",
+        "date_published": "2026-11-02",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Health-tech startup Clinics On Cloud raises $12.5 Mn in Series A round",
+        "url": "https://entrackr.com/news/health-tech-startup-clinics-on-cloud-raises-125-mn-in-series-a-round-12776580",
+        "summary": "Pune-based health-tech startup Clinics On Cloud has r...",
+        "date_published": "2026-11-02",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Antler India leads pre-seed round in last-mile delivery startup Dispatch Network",
+        "url": "https://entrackr.com/snippets/antler-india-leads-pre-seed-round-in-last-mile-delivery-startup-dispatch-network-12775883",
+        "summary": "Pune-based last-mile delivery startup Dispatch Netwo...",
+        "date_published": "2026-11-02",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Clean energy deployment platform Two Point O Capital raises $10 Mn led by Transition VC",
+        "url": "https://entrackr.com/news/clean-energy-deployment-platform-two-point-o-capital-raises-10-mn-led-by-transition-vc-12775140",
+        "summary": "Two Point O Capital (TW.O), an AI-powered clean energy deployment...",
+        "date_published": "2026-11-02",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "LG launches 115-inch QNED evo AI Mini LED TV in India",
+        "url": "https://telanganatoday.com/lg-launches-115-inch-qned-evo-ai-mini-led-tv-in-india",
+        "summary": "LG Electronics India has introduced its 115-inch QNED evo AI Mini LED television, combining ultra-large-screen viewing with AI-powered picture and sound, gaming features and personalised entertainment...",
+        "date_published": "2026-11-02",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "India’s sovereign AI push moves from foundational models to real-world applications for Bharat: Ganesh Ramakrishnan",
         "url": "https://government.economictimes.indiatimes.com/news/technology/indias-sovereign-ai-push-moves-from-foundational-models-to-real-world-applications-for-bharat-ganesh-ramakrishnan/135418246",
@@ -17040,6 +17260,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 11,
+        "title": "Indian startup funding nosedives 47.5% to $678 Mn in October",
+        "url": "https://entrackr.com/monthly-funding-report-monthly-funding-report/indian-startup-funding-nosedives-475-to-678-mn-in-october-12775014",
+        "summary": "Indian startups raised $678 million in Octobe...",
+        "date_published": "2026-11-02",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Funding and acquisitions in Indian startups this week [Oct 26- Oct 31]",
         "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-oct-26-oct-31-12770310",
@@ -20650,6 +20890,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }

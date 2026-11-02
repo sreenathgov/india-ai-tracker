@@ -47,6 +47,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 14,
+        "title": "Shah presents President’s Police Colour to Chandigarh Police, unveils AI shield for city",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/shah-presents-presidents-police-colour-to-chandigarh-police-unveils-ai-shield-for-city/articleshow/135437456.cms",
+        "summary": "<img align=\"left\" border=...",
+        "date_published": "2026-11-02",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "CH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "Chandigarh court restrains three FB pages from uploading AI content against Cong neta",
         "url": "https://timesofindia.indiatimes.com/city/chandigarh/chandigarh-court-restrains-three-fb-pages-from-uploading-ai-content-against-cong-neta/articleshow/134716705.cms",
@@ -428,6 +448,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives"
+    "Major AI Developments"
   ]
 }
