@@ -26,6 +26,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "NU-led research team explores AI tools to preserve India’s cultural heritage",
+        "url": "https://timesofindia.indiatimes.com/city/guwahati/nu-led-research-team-explores-ai-tools-to-preserve-indias-cultural-heritage/articleshow/135472134.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"1...",
+        "date_published": "2026-11-03",
+        "source_name": "Times of India - Guwahati",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AS"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Study maps jumbo corridors in Assam; AI intervention helps avert 257 potential train hits",
         "url": "https://timesofindia.indiatimes.com/city/guwahati/study-maps-jumbo-corridors-in-assam-ai-intervention-helps-avert-257-potential-train-hits/articleshow/134748346.cms",
@@ -288,5 +308,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
