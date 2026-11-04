@@ -1,3 +1,26 @@
+.stage, .overlay { --material-coach-width:320px; }
+.stage { display:flex; min-height:0; min-width:0; flex:1; flex-direction:column; }
+/* The walkthrough gets a real reading rail. Native sections keep their own
+   layout and identity; the explanation never sits on top of their content. */
+.workspace:global([data-investigation]) { left:80px; top:24px; width:calc(100vw - 104px); height:calc(100vh - 48px); }
+.stage[data-material-beat] :global([data-material-tab-body]) { container-type:size; }
+.stage[data-material-beat] :global([data-material-tab-body]),
+.stage[data-material-beat] :global([data-guide-target="finding"]),
+.stage[data-material-beat] :global([data-material-stakes]) { transition:none !important; }
+.stage[data-material-layout="left"] :global([data-material-tab-body]) { padding-left:calc(var(--material-coach-width) + 72px); }
+.stage[data-material-layout="right"] :global([data-material-tab-body]) { padding-right:calc(var(--material-coach-width) + 72px); }
+.stage[data-material-beat="path"] :global([data-material-path-summary]),
+.stage[data-material-beat="network"] :global([data-material-path-summary]) { display:none; }
+.stage[data-material-beat="forecast"] :global([data-guide-target="finding"]),
+.stage[data-material-beat="assessment"] :global([data-guide-target="finding"]) { max-width:calc(100% - var(--material-coach-width) - 72px); padding:24px; margin-bottom:28px; border-radius:12px; background:var(--bg-sheet); }
+.stage[data-material-beat="stakes"] :global([data-material-stakes]) { padding:24px; border:0; border-radius:12px; background:var(--bg-sheet); }
+.stage[data-material-beat] :global([data-overview]) > div { column-gap:48px; }
+.stage[data-material-beat="question"] :global([data-working-question]),
+.stage[data-material-beat="action"] :global([data-working-question]),
+.stage[data-material-beat="assistant"] :global([aria-label="Supplier-specific Drona conversation"]) { max-height:calc(100cqh - 48px); overflow-y:auto; overscroll-behavior:contain; scroll-padding:24px; }
+.stage[data-material-beat="question"] :global([data-working-question]),
+.stage[data-material-beat="action"] :global([data-working-question]) { padding:24px; }
+.stage[data-material-beat="source"] :global([data-material-source-record]) { padding:24px; background:var(--bg-card); }
 .overlay { position:absolute; inset:0; z-index:90; pointer-events:none; isolation:isolate; }
 .veil { position:absolute; inset:0; pointer-events:none; }
 .card { position:absolute; display:flex; flex-direction:column; overflow:hidden; border:1px solid rgba(40,44,38,.12); border-radius:12px; background:#f8f7f3; color:#262824; box-shadow:0 8px 28px rgba(12,16,16,.13); pointer-events:auto; animation:appear .2s ease-out both; }
@@ -14,4 +37,5 @@
 .skip { min-height:38px; margin:0 20px 12px; color:#606358; font-size:12px; text-align:left; text-decoration:underline; text-underline-offset:4px; }
 .card button:focus-visible { outline:2px solid #8f3736; outline-offset:3px; }
 @keyframes appear { from { opacity:0; } to { opacity:1; } }
+@media(max-width:1399px) { .stage, .overlay { --material-coach-width:300px; } }
 @media(prefers-reduced-motion:reduce) { .card { animation:none; } }

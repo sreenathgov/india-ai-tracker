@@ -34,6 +34,24 @@ async function record(page: Page, question: string, answer: "Yes" | "No" | "Unkn
   await section.getByRole("button", { name: answer, exact: true }).click();
   await section.getByRole("button", { name: "Record sample reply and reassess", exact: true }).click();
 }
+/** Check the visual contract against live DOM sections, including after scrolling. */
+async function expectComfortableFrame(page: Page) {
+  await expect.poll(async () => page.evaluate(() => {
+    const overlay = document.querySelector<HTMLElement>("[data-material-guide]")!;
+    const subject = document.querySelector<HTMLElement>(overlay.dataset.materialSubject!)!;
+    const section = subject.getBoundingClientRect();
+    const scope = document.querySelector("[data-investigation]")!.getBoundingClientRect();
+    const aperture = overlay.querySelector("[data-material-aperture]")!;
+    const coach = overlay.querySelector("[data-material-coach]")!.getBoundingClientRect();
+    const left = scope.left + Number(aperture.getAttribute("x")), top = scope.top + Number(aperture.getAttribute("y"));
+    const right = left + Number(aperture.getAttribute("width")), bottom = top + Number(aperture.getAttribute("height"));
+    const contains = left <= section.left + 1 && top <= section.top + 1 && right >= section.right - 1 && bottom >= section.bottom - 1;
+    const separate = coach.right + 24 <= left || coach.left - 24 >= right || coach.bottom + 24 <= top || coach.top - 24 >= bottom;
+    const onScreen = coach.left >= scope.left + 16 && coach.top >= scope.top + 16 && coach.right <= scope.right - 16 && coach.bottom <= scope.bottom - 16;
+    const padded = !["forecast", "assessment", "stakes"].includes(overlay.dataset.materialGuide!) || parseFloat(getComputedStyle(subject).paddingLeft) >= 24;
+    return contains && separate && onScreen && padded;
+  })).toBe(true);
+}
 test.beforeAll(async ({ browser }) => {
   const file = process.env.DRONA_E2E_CREDENTIALS_FILE;
   if (!file) throw new Error("A private local credential file is required.");
@@ -166,42 +184,50 @@ test("Act Three guides the real case, follows actual replies and hands control t
   const errors: string[] = []; page.on("pageerror", error => errors.push(error.message));
   await openMaterial(page, true);
   const coach = page.locator("[data-material-guide]");
-  const ready = async (beat: string) => { await expect(coach).toHaveAttribute("data-material-guide", beat); await expect(coach).toHaveAttribute("data-material-ready", "true"); };
+  const ready = async (beat: string) => { await expect(coach).toHaveAttribute("data-material-guide", beat); await expect(coach).toHaveAttribute("data-material-ready", "true"); await expectComfortableFrame(page); };
   const advance = async (beat: string) => { await ready(beat); await coach.getByRole("button", { name: "Continue", exact: true }).click(); };
   await expect(page.getByRole("dialog")).toHaveCount(1);
   await expect(coach.getByRole("heading", { name: "See the disruption before the production gap." })).toBeFocused();
+  await ready("forecast");
   await page.screenshot({ path: info.outputPath("act-three-forecast.png"), animations: "disabled" });
-  await advance("forecast"); await advance("stakes");
+  await advance("forecast"); await ready("stakes");
+  await page.screenshot({ path: info.outputPath("act-three-stakes.png"), animations: "disabled" });
+  await advance("stakes");
   await expect(page.locator("[data-material-critical-path]")).toBeVisible();
   await ready("path");
   await page.screenshot({ path: info.outputPath("act-three-upstream-path.png"), animations: "disabled" });
   await advance("path");
   await expect(page.getByRole("button", { name: "All mapped", exact: true })).toHaveAttribute("aria-pressed", "true");
+  await ready("network");
+  await page.screenshot({ path: info.outputPath("act-three-wider-network.png"), animations: "disabled" });
   await advance("network");
   for (const q of ["allocation", "dealer-stock", "arrival"]) {
-    await expect(coach).toHaveAttribute("data-material-guide", "question");
+    await ready("question");
+    await page.screenshot({ path: info.outputPath(`act-three-question-${q}.png`), animations: "disabled" });
     await record(page, q, q === "arrival" ? "Yes" : "No");
     await expect(coach).toHaveAttribute("data-material-guide", "assessment");
     await coach.getByRole("button", { name: q === "arrival" ? "Continue" : "Next question", exact: true }).click();
   }
   await expect(page.locator('[data-material-status="timing-gap"]')).toBeVisible();
+  await ready("action");
+  await page.screenshot({ path: info.outputPath("act-three-next-action.png"), animations: "disabled" });
   await advance("action");
   await page.getByRole("button", { name: "Why does this affect my order?", exact: true }).click();
   await expect(page.locator('[aria-label="Supplier-specific Drona conversation"]')).toContainText("15–17 Nov");
+  await ready("assistant");
+  await page.screenshot({ path: info.outputPath("act-three-assistant.png"), animations: "disabled" });
   await advance("assistant");
   await ready("reasoning");
-  await expect.poll(() => page.evaluate(() => {
-    const target = document.querySelector('[data-reasoning-node="claim:dc-receipt"]')!.getBoundingClientRect();
-    const scope = document.querySelector('[data-investigation]')!.getBoundingClientRect();
-    const cutout = document.querySelector('[data-material-aperture]')!;
-    return Math.abs(Number(cutout.getAttribute("x")) + scope.left - target.left) + Math.abs(Number(cutout.getAttribute("y")) + scope.top - target.top) + Math.abs(Number(cutout.getAttribute("width")) - target.width) + Math.abs(Number(cutout.getAttribute("height")) - target.height);
-  })).toBeLessThan(2);
+  await expect(coach).toHaveAttribute("data-material-subject", "[data-evidence-panel]");
   await page.screenshot({ path: info.outputPath("act-three-reasoning.png"), animations: "disabled" });
   await advance("reasoning");
   await expect(page.locator('[data-claim-inspector="dc-receipt"]')).toBeVisible();
   await coach.getByRole("button", { name: "Open source", exact: true }).click();
   await ready("source");
   await expect(page.locator('[data-source-extract="dc-ev-carrier"]')).toBeVisible();
+  const source = page.locator("[data-material-source-record]");
+  await expect(source).toContainText("Aster Freight · AF-884 advisory");
+  await expect(source).toContainText("received/reviewed 2026-11-02");
   await page.screenshot({ path: info.outputPath("act-three-source.png"), animations: "disabled" });
   await advance("source");
   await ready("complete");
@@ -227,7 +253,13 @@ test("Act Three accepts a protected outcome and restores all focus and controls 
   const context = await contextFor(browser, true, 1366, 800, true), page = await context.newPage();
   await openMaterial(page, true);
   const coach = page.locator("[data-material-guide]");
-  for (const beat of ["forecast", "stakes", "path", "network"]) { await expect(coach).toHaveAttribute("data-material-guide", beat); await coach.getByRole("button", { name: "Continue", exact: true }).click(); }
+  for (const beat of ["forecast", "stakes", "path", "network"]) {
+    await expect(coach).toHaveAttribute("data-material-guide", beat);
+    await expect(coach).toHaveAttribute("data-material-ready", "true");
+    await expectComfortableFrame(page);
+    await page.screenshot({ path: info.outputPath(`act-three-${beat}-short-dark.png`), animations: "disabled" });
+    await coach.getByRole("button", { name: "Continue", exact: true }).click();
+  }
   await record(page, "allocation", "Yes");
   await expect(coach).toHaveAttribute("data-material-guide", "assessment");
   await expect(page.locator('[data-material-status="stock-protected"]')).toBeVisible();
@@ -239,5 +271,41 @@ test("Act Three accepts a protected outcome and restores all focus and controls 
   await page.getByRole("button", { name: "Investigate billet disruption", exact: true }).click();
   await expect(page.locator("[data-material-guide]")).toHaveCount(0);
   await expect(page.locator('[data-material-status="stock-protected"]')).toBeVisible();
+  await context.close();
+});
+
+test("Act Three frames complete sections on a short desktop with motion and native source scrolling", async ({ browser }, info) => {
+  test.setTimeout(120_000);
+  const context = await contextFor(browser, true, 1280, 720), page = await context.newPage();
+  await page.emulateMedia({ reducedMotion: "no-preference" });
+  await openMaterial(page, true);
+  const coach = page.locator("[data-material-guide]");
+  const ready = async (beat: string) => { await expect(coach).toHaveAttribute("data-material-guide", beat); await expect(coach).toHaveAttribute("data-material-ready", "true"); await expectComfortableFrame(page); };
+  for (const beat of ["forecast", "stakes", "path", "network"]) {
+    await ready(beat);
+    if (beat === "path") {
+      // The entire order-to-shipment path, not just its scroll container, fits.
+      for (const node of await page.locator("[data-material-critical-path] [data-graph-node]").all()) await expect(node).toBeInViewport({ ratio: 1 });
+      await page.screenshot({ path: info.outputPath("act-three-whole-path-1280x720.png"), animations: "disabled" });
+    }
+    await coach.getByRole("button", { name: "Continue", exact: true }).click();
+  }
+  await ready("question");
+  await coach.getByRole("button", { name: "Continue to the evidence", exact: true }).click();
+  await ready("reasoning");
+  await coach.getByRole("button", { name: "Continue", exact: true }).click();
+  await ready("evidence");
+  await coach.getByRole("button", { name: "Open source", exact: true }).click();
+  await ready("source");
+  const record = page.locator("[data-material-source-record]");
+  await expect(record.getByRole("button", { name: /Aster Freight · AF-884 advisory/ })).toBeInViewport();
+  await record.evaluate(el => { el.scrollTop = el.scrollHeight; });
+  await expect(record.getByText(/Authored demo record · received\/reviewed/)).toBeInViewport();
+  await expectComfortableFrame(page);
+  await page.screenshot({ path: info.outputPath("act-three-source-reader-1280x720.png"), animations: "disabled" });
+  await coach.getByRole("button", { name: "Continue", exact: true }).click();
+  await ready("complete");
+  await coach.getByRole("button", { name: "Explore Drona", exact: true }).click();
+  await expect(page.locator("[data-investigation]")).toHaveCount(0);
   await context.close();
 });

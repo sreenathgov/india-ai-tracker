@@ -28,7 +28,7 @@
     },
     {
       "path": "WALKTHROUGH_FRAMEWORK.md",
-      "sha256": "1ab425724a61174ce537d3eddb1ea24dc840ade149f8d918d8a92e43dd3c597e"
+      "sha256": "85295892a1cd86f160c5186d4b8e381151e2287092ba305973161e864c09b9fc"
     },
     {
       "path": "e2e/README.md",
@@ -36,7 +36,7 @@
     },
     {
       "path": "e2e/VERIFICATION.md",
-      "sha256": "da992010a530f8a13c1026eb3b0f0f0f3a44576d5881546135948055f98e2259"
+      "sha256": "35fb03921a923ab65bc623ac480e52665e8bafa39aaa4b5aee770e902979050f"
     },
     {
       "path": "e2e/guided-demo.spec.ts",
@@ -352,7 +352,7 @@
     },
     {
       "path": "src/components/scene2/investigation/InvestigationWorkspace.tsx",
-      "sha256": "e73e3e5a1eed4b7e58fdc0106aba8e10f7c6ce6f898b8d39e61fbc5a35092f97"
+      "sha256": "4814938f4ff60f922a636ff2f6fbcb4d475bd8bd59f18ba5d437af1b967a36cc"
     },
     {
       "path": "src/components/scene2/investigation/PendingTab.tsx",
@@ -368,7 +368,7 @@
     },
     {
       "path": "src/components/scene2/investigation/evidence/EvidenceRegister.tsx",
-      "sha256": "f2c0f92b5974928f990b24c09cf88c4ad7d9b61475a1ad67b10cac6ba4638dba"
+      "sha256": "d9cbcae515ec8d89b146f5d18fd1976f479f364ae49a3c8564540096a282d14f"
     },
     {
       "path": "src/components/scene2/investigation/evidence/EvidenceSourceCard.tsx",
@@ -468,7 +468,7 @@
     },
     {
       "path": "src/components/scene2/investigation/supplychain/SupplyChainPanel.tsx",
-      "sha256": "3492878191649186d31b7a167cf6821f053665d87dbb1e5e75a201564d0040a3"
+      "sha256": "46e1278afdf35c08f2f61635c5c0ae95df40bbaa6217abe2fa02cf6e1b9b9c2b"
     },
     {
       "path": "src/components/scene2/investigation/supplychain/ViewControls.tsx",
@@ -1408,7 +1408,7 @@
     },
     {
       "path": "e2e/material-case.spec.ts",
-      "sha256": "2691e0887ae8938a0c667fedd07b8624fa1753391c90162d9890b2df25f0e519"
+      "sha256": "c3ed5d23a3ed189557508b5815f9eee01338248bbbeb196c4db493e133213dc4"
     },
     {
       "path": "MATERIAL_CASE.md",
@@ -1416,11 +1416,11 @@
     },
     {
       "path": "src/components/guided/MaterialWalkthrough.module.css",
-      "sha256": "952e4cab79922d5b9b1036b5b4b69dff63c4fc85be77348386e5e2c2c3d39212"
+      "sha256": "945b36fed5e45d8d21423593423b61d12c0936b526b5a3b91fecd49a0f01d36b"
     },
     {
       "path": "src/components/guided/MaterialWalkthrough.tsx",
-      "sha256": "bb12b7080c0ffe5f27bc5d7e99cdbb0421e09805310bf4e98997c97563d1f730"
+      "sha256": "880bb7869bd879de9dcf775c6b637fb16ba74982f6a58b1515512c4792717219"
     },
     {
       "path": "src/components/guided/caseBrief.ts",
@@ -1428,7 +1428,7 @@
     },
     {
       "path": "src/components/scene2/investigation/supplychain/MaterialCriticalPath.module.css",
-      "sha256": "3340b5a6e18071ad5c1fed503575a3a7f06572877cf7d852db8c8dae0e8fc626"
+      "sha256": "75bbb1dadec5c9a50d25b871daf9f00690ad6369d040dba877c6a8eca6d2586f"
     },
     {
       "path": "src/components/scene2/investigation/supplychain/MaterialCriticalPath.tsx",
@@ -1441,7 +1441,15 @@
     {
       "path": "src/lib/scene2/investigation/materialCase.ts",
       "sha256": "3326d0ce055a379198eeeab5064b725ff5ec2e73338fc3969e40f5f5bbe4d132"
+    },
+    {
+      "path": "src/components/guided/materialFraming.ts",
+      "sha256": "e4a882224c839981b3880d0829866a2f9ca10f486c9b5fdfdf317380400081a6"
+    },
+    {
+      "path": "src/components/guided/materialFraming.test.ts",
+      "sha256": "2a8fe1306c2071c564a9b7d1cf3b4c2b1b47ffb4831e0766f71349b9c4fde7d5"
     }
   ],
-  "releaseScope": "4 Nov material case and complete Act Three; scoped hash refresh only. Existing unrelated GuidedDemo.module.css baseline retained; Git commit is the release source authority."
+  "releaseScope": "4 Nov Act Three section-framing refinement; scoped hash refresh only. Existing unrelated GuidedDemo.module.css baseline retained; Git commit is the release source authority."
 }

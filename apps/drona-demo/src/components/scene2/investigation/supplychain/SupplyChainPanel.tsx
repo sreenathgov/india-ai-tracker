@@ -100,7 +100,7 @@ export function SupplyChainPanel({
       </div>
 
       <div className="flex min-h-0 flex-1 gap-3">
-        <div className="min-w-0 flex-1" style={tour?.enabled && tour.beat === "network" ? { marginLeft: 340 } : undefined}>
+        <div className="min-w-0 flex-1">
           {orderId === MATERIAL_CASE.orderId && supplierId === MATERIAL_CASE.supplierId && view.mode === "critical" && view.tier === 3 && view.hidden.size === 0 ? <MaterialCriticalPath graph={graph} selectedId={selectedId} onSelect={setSelectedId} /> : <GraphCanvas graph={visible} selectedId={selectedId} onSelect={setSelectedId} />}
         </div>
         {selected ? (

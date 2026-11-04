@@ -42,6 +42,7 @@ export function EvidenceRegister({
   readonly onSelect: (id: string | null) => void;
 }): React.ReactElement {
   const tour = useMaterialWalkthrough();
+  const readingSource = tour?.enabled && tour.beat === "source";
   const [filter, setFilter] = React.useState<EvidenceFilter>("all");
   const [query, setQuery] = React.useState("");
   const itemRefs = React.useRef(new Map<string, HTMLDivElement>());
@@ -55,8 +56,8 @@ export function EvidenceRegister({
 
   const visible = React.useMemo(() => {
     const q = query.trim().toLowerCase();
-    return rows.filter((row) => matchesFilter(row, filter) && (q === "" || row.source.toLowerCase().includes(q) || row.scope.toLowerCase().includes(q) || row.excerpt?.toLowerCase().includes(q)));
-  }, [rows, filter, query]);
+    return rows.filter((row) => readingSource ? row.id === selectedId : matchesFilter(row, filter) && (q === "" || row.source.toLowerCase().includes(q) || row.scope.toLowerCase().includes(q) || row.excerpt?.toLowerCase().includes(q)));
+  }, [rows, filter, query, readingSource, selectedId]);
 
   React.useEffect(() => {
     if (!selectedId) return;
@@ -67,8 +68,8 @@ export function EvidenceRegister({
   }, [selectedId, visible]);
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col gap-3" data-evidence-register style={tour?.enabled && tour.beat === "source" ? { marginRight: 340 } : undefined}>
-      <div className="flex shrink-0 flex-wrap items-center gap-2">
+    <div className="flex min-h-0 flex-1 flex-col gap-3" data-evidence-register>
+      {!readingSource ? <div className="flex shrink-0 flex-wrap items-center gap-2">
         <div className="flex flex-wrap items-center gap-1" role="group" aria-label="Evidence filter">
           {FILTERS.map((f) => (
             <button
@@ -94,9 +95,9 @@ export function EvidenceRegister({
           aria-label="Search evidence" placeholder="Search evidence"
           className="ml-auto h-7 w-[180px] rounded-pill border border-separator bg-transparent px-2.5 text-caption text-label-primary placeholder:text-label-quaternary focus:outline-none focus:ring-1 focus:ring-label-quaternary"
         />
-      </div>
+      </div> : null}
 
-      <div className="min-h-0 flex-1 overflow-y-auto rounded-card border border-separator bg-sheet-sunk p-2">
+      <div className="min-h-0 flex-1 overflow-y-auto rounded-card border border-separator bg-sheet-sunk p-2" data-material-source-record={readingSource ? "" : undefined}>
         {visible.length > 0 ? (
           <ul className="flex flex-col gap-1.5">
             {visible.map((row) => (
@@ -108,7 +109,7 @@ export function EvidenceRegister({
                   }}
                   row={row}
                   selected={selectedId === row.id}
-                  onSelect={() => onSelect(selectedId === row.id ? null : row.id)}
+                  onSelect={() => onSelect(readingSource || selectedId !== row.id ? row.id : null)}
                 />
               </li>
             ))}

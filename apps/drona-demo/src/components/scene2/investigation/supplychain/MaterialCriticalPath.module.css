@@ -21,4 +21,24 @@
 .small .evidence { display:none; }
 .note { margin-top:24px; color:var(--label-tertiary); font-size:12px; line-height:1.6; }
 @media(max-height:850px) { .canvas { padding-block:18px; justify-content:flex-start; } .object { min-height:156px; padding:14px; } .small { min-height:136px; } .note { margin-top:18px; } }
+/* Within the guided stage the entire four-column path is the subject. Keep the
+   order, tier headings and both rows inside that section at desktop heights. */
+:global([data-material-beat="path"]) .canvas { padding:24px 20px; }
+:global([data-material-beat="path"]) .object { min-height:148px; padding:14px; }
+:global([data-material-beat="path"]) .small { min-height:120px; }
+:global([data-material-beat="path"]) .note { margin-top:18px; }
+@media(max-height:850px) { :global([data-material-beat="path"]) .canvas { padding-block:16px; } :global([data-material-beat="path"]) .note { display:none; } }
+@media(max-height:760px) {
+  :global([data-material-beat="path"]) .canvas { padding:12px 16px; }
+  :global([data-material-beat="path"]) .reading { margin-bottom:12px; }
+  :global([data-material-beat="path"]) .object { min-height:120px; padding:12px; }
+  :global([data-material-beat="path"]) .object strong { margin-top:6px; font-size:14px; }
+  :global([data-material-beat="path"]) .detail { margin-top:6px; font-size:12px; line-height:1.45; }
+  :global([data-material-beat="path"]) .evidence { display:none; }
+  :global([data-material-beat="path"]) .small { min-height:100px; }
+  :global([data-material-beat="path"]) .small strong { font-size:13px; }
+  :global([data-material-beat="path"]) .small .detail { font-size:11px; }
+  :global([data-material-beat="path"]) .stem { height:14px; }
+  :global([data-material-beat="path"]) .branch > p { margin-bottom:8px; }
+}
 @media(prefers-reduced-motion:reduce) { .object { transition:none; } }
