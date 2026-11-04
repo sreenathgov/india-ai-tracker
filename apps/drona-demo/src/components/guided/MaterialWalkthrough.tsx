@@ -86,7 +86,7 @@ function CaseSpotlight({ scopeRef, beat, copy, primaryLabel, waitForReply, canBa
       setFrame(old => JSON.stringify(old) === measurement ? old : nextFrame);
       const margin = 20, gap = 16, leftRoom = left - scopeBox.left - margin - gap, rightRoom = scopeBox.right - right - margin - gap;
       const preferLeft = beat === "complete" || leftRoom >= 260;
-      const width = Math.min(320, Math.max(250, preferLeft ? leftRoom : rightRoom), scopeBox.width - 40);
+      const width = beat === "complete" ? Math.min(320, scopeBox.width - 48) : Math.min(320, Math.max(250, preferLeft ? leftRoom : rightRoom), scopeBox.width - 40);
       const height = card.current?.getBoundingClientRect().height || 300;
       let x = preferLeft && leftRoom >= 250 ? left - gap - width : rightRoom >= 250 ? right + gap : scopeBox.left + margin;
       let y = Math.max(scopeBox.top + margin, Math.min(top + (bottom - top - height) / 2, scopeBox.bottom - height - margin));

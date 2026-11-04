@@ -207,6 +207,7 @@ test("Act Three guides the real case, follows actual replies and hands control t
   await ready("complete");
   const box = await coach.locator("[data-material-coach]").boundingBox();
   expect(box!.x).toBeLessThan(300);
+  expect(box!.width).toBeGreaterThanOrEqual(300);
   await page.screenshot({ path: info.outputPath("act-three-completion-left.png"), animations: "disabled" });
   await coach.getByRole("button", { name: "Explore Drona", exact: true }).click();
   await expect(page.locator("[data-material-guide]")).toHaveCount(0);
