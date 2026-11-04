@@ -1,0 +1,57 @@
+{
+  "name": "kanan-drona-guided-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Private guided Drona demonstration with fictional order data.",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "next dev --webpack -H 127.0.0.1 -p 3402",
+    "build": "next build --webpack",
+    "start": "next start -H 127.0.0.1 -p 3402",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "verify:boundary": "node scripts/verify-boundary.mjs",
+    "predev": "node scripts/build-login-prism.mjs",
+    "prebuild": "node scripts/build-login-prism.mjs",
+    "pretypecheck": "node scripts/build-login-prism.mjs",
+    "pretest": "node scripts/build-login-prism.mjs",
+    "pretest:watch": "node scripts/build-login-prism.mjs"
+  },
+  "dependencies": {
+    "@deck.gl/core": "9.4.0",
+    "@deck.gl/layers": "9.4.0",
+    "@deck.gl/react": "9.4.0",
+    "@radix-ui/react-dialog": "1.1.23",
+    "@radix-ui/react-tabs": "1.1.21",
+    "@radix-ui/react-tooltip": "1.2.16",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "jose": "6.2.15",
+    "next": "16.4.4",
+    "ogl": "1.0.11",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "server-only": "0.0.1",
+    "tailwind-merge": "2.6.1",
+    "tailwindcss-animate": "1.0.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@testing-library/react": "16.1.0",
+    "@types/node": "22.10.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "4.3.4",
+    "autoprefixer": "10.4.20",
+    "esbuild": "0.28.2",
+    "jsdom": "25.0.1",
+    "postcss": "8.5.32",
+    "tailwindcss": "3.4.17",
+    "typescript": "5.6.3",
+    "vitest": "2.1.9"
+  }
+}

@@ -1,0 +1,52 @@
+.queue { container-type: inline-size; }
+.summary { flex: 0 0 auto; margin: 0 12px; padding: 12px 0 24px; border-bottom: 1px solid var(--separator); }
+.heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.heading h3 { margin: 0; font-size: 14px; line-height: 22px; font-weight: 500; color: var(--label-secondary); }
+.heading > span { color: var(--label-tertiary); font-size: 12px; line-height: 18px; letter-spacing: .04em; }
+.amount { margin: 12px 0 10px; font-family: Georgia, serif; font-size: clamp(48px, 5vw, 64px); line-height: 1; letter-spacing: -.035em; color: var(--label-primary); font-variant-numeric: tabular-nums; }
+.definition { max-width: 46ch; margin: 0; font-size: 13px; line-height: 20px; color: var(--label-secondary); }
+.statuses { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; margin: 24px 0 20px; }
+.statuses dt { min-height: 20px; font-size: 13px; line-height: 20px; color: var(--label-secondary); }
+.statuses dd { margin: 6px 0 0; font-size: 24px; line-height: 28px; font-weight: 500; color: var(--label-primary); font-variant-numeric: tabular-nums; }
+.coverage { margin: 0; font-size: 12px; line-height: 20px; color: var(--label-secondary); }
+.timing { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; margin-top: 16px; font-size: 12px; line-height: 20px; color: var(--label-secondary); }
+.timing strong { font-weight: 500; color: var(--label-primary); }
+.basis { margin-top: 14px; font-size: 12px; line-height: 20px; color: var(--label-secondary); }
+.basis summary { cursor: pointer; width: fit-content; min-height: 32px; display: list-item; align-content: center; }
+.basis summary:focus-visible { outline: 2px solid var(--brand-mark); outline-offset: 3px; }
+.basis p { max-width: 60ch; margin: 12px 0; }
+.basis ul { margin: 0; padding: 0; list-style: none; }
+.basis li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; padding: 12px 0; border-top: 1px solid var(--separator); }
+.basis small { display: block; margin-top: 4px; font-size: 11px; overflow-wrap: anywhere; }
+.basis strong { font-weight: 500; color: var(--label-primary); white-space: nowrap; }
+.queueBody { padding-top: 8px; }
+.queue > header h2 { font-size: 15px; line-height: 22px; }
+.orderList { min-height: 120px; min-width: 0; flex: 1 1 0; overflow-y: auto; overscroll-behavior: contain; padding-top: 24px; }
+.orderList > section + section { margin-top: 24px; }
+.groupHeading { display: flex; align-items: baseline; gap: 10px; margin: 0; padding: 0 12px 8px; font-size: 13px; line-height: 20px; font-weight: 500; color: var(--label-secondary); }
+.groupHeading > span:last-child { font-weight: 400; color: var(--label-tertiary); }
+.groupRows { margin: 0; padding: 0; list-style: none; }
+.groupRows > li + li { border-top: 1px solid var(--separator); }
+.orderRow { display: grid; grid-template-columns: minmax(0, 1fr) minmax(90px, 118px); grid-template-areas: "identity value" "cue value" "context open"; align-items: start; column-gap: 20px; row-gap: 8px; width: 100%; padding: 16px 12px; border-radius: 8px; text-align: left; background: transparent; transition: background-color .18s ease; }
+.orderRow:hover { background: var(--bg-quiet); }
+.orderIdentity { grid-area: identity; min-width: 0; }
+.orderTitle { display: block; font-size: 15px; line-height: 22px; font-weight: 500; letter-spacing: normal; color: var(--label-primary); overflow-wrap: anywhere; }
+.orderRow[data-recommended="true"] .orderTitle { font-weight: 600; }
+.orderValue { grid-area: value; display: flex; flex-direction: column; gap: 5px; align-items: flex-end; text-align: right; min-width: 0; color: var(--label-secondary); font-size: 12px; line-height: 18px; }
+.orderValue strong { color: var(--label-primary); font-size: 20px; line-height: 24px; font-weight: 500; }
+.orderValue .unassessed { max-width: 100px; }
+.orderCue { grid-area: cue; font-size: 13px; line-height: 20px; color: var(--label-secondary); overflow-wrap: anywhere; }
+.orderContext { grid-area: context; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; padding-top: 8px; font-size: 12px; line-height: 20px; color: var(--label-secondary); }
+.openOrder { grid-area: open; display: inline-flex; justify-self: end; align-items: center; gap: 8px; min-height: 44px; font-size: 13px; line-height: 20px; font-weight: 500; color: var(--label-primary); white-space: nowrap; }
+.queue[data-financial-presenting="true"] .queueBody { display: block; overflow-y: auto; overscroll-behavior: contain; }
+.queue[data-financial-presenting="true"] .orderList { overflow: visible; min-height: 0; }
+@container (max-width: 390px) {
+  .orderRow { grid-template-columns: minmax(0, 1fr) minmax(84px, 100px); grid-template-areas: "identity value" "cue cue" "context open"; column-gap: 12px; }
+}
+@media (max-width: 599px) {
+  .summary { padding-top: 8px; padding-bottom: 20px; }
+  .amount { font-size: 48px; }
+  .statuses { margin-top: 20px; }
+  .statuses dt { min-height: 40px; }
+}
+@media (prefers-reduced-motion: reduce) { .orderRow { transition: none; } }

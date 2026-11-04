@@ -1,0 +1,125 @@
+@import "../design/tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /*
+   * Hierarchy is built from size, case, tracking and ink — never from a synthesised
+   * weight or slant. Disabling synthesis globally makes that rule enforceable rather
+   * than aspirational: a missing cut now fails visibly instead of being faked.
+   */
+  :root { --font-paragon: Georgia; }
+
+  html {
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    /* The canvas is lit from above: warm at the top, a shade deeper at the foot. */
+    background-image: linear-gradient(180deg, var(--canvas-top), var(--canvas-foot));
+    background-attachment: fixed;
+    color: var(--label-primary);
+    font-family: var(--font-geist), system-ui, sans-serif;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  /* Tabular figures everywhere a number can change. A count that reflows by a pixel
+     as it ticks reads as instability on a surface selling calm. */
+  .tabular,
+  [data-figure] {
+    font-variant-numeric: tabular-nums;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--brand-mark);
+    outline-offset: 2px;
+    border-radius: var(--radius-stamp);
+  }
+
+  ::selection {
+    background: rgba(132, 53, 53, 0.16);
+  }
+}
+
+@layer utilities {
+  .micro-label {
+    font-size: 10.5px;
+    line-height: 1;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* Floating contextual surfaces: overlays, popovers, tooltips. Near-opaque so
+     text never sits on a busy ground; the blur only softens what is behind. */
+  .float-material {
+    background: var(--bg-float);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    box-shadow: var(--shadow-float);
+  }
+
+  /* A SHEET: white paper that barely casts. The ring inside the shadow is the only
+     edge, at 3.5% ink — felt more than seen. */
+  .sheet-material {
+    background: var(--bg-sheet);
+    box-shadow: var(--shadow-rest);
+  }
+
+  /* A VEIL: translucent and blurred; the canvas shows through, so the surface
+     half-merges into the page instead of sitting on it as a box. */
+  .veil-material {
+    background: var(--bg-veil);
+    backdrop-filter: blur(20px) saturate(120%);
+    -webkit-backdrop-filter: blur(20px) saturate(120%);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  }
+  /* A sheet sunk a step into the canvas, so the rows lifted off it read as objects. */
+  .sheet-sunk {
+    background: var(--bg-sheet-sunk);
+  }
+  :root[data-theme="dark"] .veil-material {
+    box-shadow: inset 0 0 0 1px rgba(235, 232, 225, 0.04);
+  }
+
+  /* The identity gate's material. Apple's Liquid Glass direction, not an opaque modal. */
+  .glass {
+    background: var(--glass-tint);
+    backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* The contextual overlay's veil: dims and softens the page; the summoning card is
+   cut out of it (clip-path set inline) and lifted. */
+.overlay-veil {
+  background: var(--bg-scrim);
+  backdrop-filter: blur(3px) saturate(90%);
+  -webkit-backdrop-filter: blur(3px) saturate(90%);
+}
+
+[data-overlay-origin] {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-float);
+  transition:
+    transform var(--duration-overlay-in) var(--ease-overlay),
+    box-shadow var(--duration-overlay-in) var(--ease-overlay);
+}

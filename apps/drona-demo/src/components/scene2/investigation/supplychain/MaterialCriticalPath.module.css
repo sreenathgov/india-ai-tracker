@@ -1,0 +1,24 @@
+.canvas { position:relative; display:flex; height:100%; min-height:0; flex-direction:column; justify-content:center; padding:32px 24px; overflow:auto; border:1px solid var(--separator); border-radius:16px; background:var(--bg-sheet-sunk); }
+.reading, .groups { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:28px; }
+.reading { margin-bottom:18px; color:var(--label-tertiary); font-size:11px; line-height:1.5; }
+.group { min-width:0; }
+.main { position:relative; }
+.object { display:flex; width:100%; min-height:184px; flex-direction:column; align-items:flex-start; justify-content:center; padding:17px; border:1px solid; border-radius:10px; text-align:left; transition:box-shadow 160ms ease,border-color 160ms ease; }
+.object:hover, .object[aria-pressed="true"] { box-shadow:0 4px 18px rgba(12,16,16,.07); }
+.object[aria-pressed="true"] { outline:1px solid var(--label-secondary); outline-offset:2px; }
+.object:focus-visible { outline:2px solid var(--label-secondary); outline-offset:4px; }
+.kind { font-size:10px; line-height:1.5; letter-spacing:.07em; text-transform:uppercase; color:var(--label-tertiary); }
+.object strong { display:block; margin-top:8px; font-size:15px; line-height:1.4; font-weight:500; color:var(--label-primary); overflow-wrap:anywhere; }
+.detail { display:block; margin-top:8px; font-size:13px; line-height:1.55; color:var(--label-secondary); }
+.evidence { display:block; margin-top:12px; font-size:11px; line-height:1.5; color:var(--label-tertiary); }
+.arrow { position:absolute; top:50%; right:-24px; transform:translateY(-50%); color:var(--label-tertiary); font-size:17px; }
+.branch { display:flex; flex-direction:column; align-items:center; }
+.stem { display:block; width:1px; height:20px; background:var(--separator); }
+.branch > p { margin-bottom:10px; color:var(--label-tertiary); font-size:11px; line-height:1.5; text-align:center; }
+.small { min-height:158px; }
+.small strong { font-size:14px; }
+.small .detail { font-size:12px; }
+.small .evidence { display:none; }
+.note { margin-top:24px; color:var(--label-tertiary); font-size:12px; line-height:1.6; }
+@media(max-height:850px) { .canvas { padding-block:18px; justify-content:flex-start; } .object { min-height:156px; padding:14px; } .small { min-height:136px; } .note { margin-top:18px; } }
+@media(prefers-reduced-motion:reduce) { .object { transition:none; } }

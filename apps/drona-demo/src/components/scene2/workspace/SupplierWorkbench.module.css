@@ -1,0 +1,19 @@
+.workbench { container-type: inline-size; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 14px; }
+.table { width: 100%; table-layout: fixed; text-align: left; font-size: 14px; line-height: 1.45; }
+.table thead th { padding: 0 16px 12px 0; font-size: 13px; font-weight: 400; color: var(--label-tertiary); border-bottom: 1px solid var(--separator); }
+.table thead th:nth-child(1) { width: 30%; }
+.table thead th:nth-child(2) { width: 23%; }
+.table thead th:nth-child(3) { width: 32%; }
+.table tbody th, .table td { padding: 18px 16px 18px 0; vertical-align: top; border-bottom: 1px solid var(--separator); overflow-wrap: anywhere; }
+.table tbody tr:last-child > * { border-bottom: 0; }
+.table tbody tr:hover { background: var(--bg-quiet); }
+@container (max-width: 700px) {
+  .table, .table tbody { display: block; }
+  .table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .table tbody tr { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 18px; padding: 20px 0; border-bottom: 1px solid var(--separator); }
+  .table tbody th { grid-column: 1 / -1; min-width: 0; }
+  .table tbody th, .table td { display: block; padding: 0; border: 0; }
+  .table td::before { content: attr(data-label); display: block; margin-bottom: 5px; font-size: 12px; color: var(--label-tertiary); }
+  .table td[data-label="Concern"] { grid-column: 1 / -1; }
+}

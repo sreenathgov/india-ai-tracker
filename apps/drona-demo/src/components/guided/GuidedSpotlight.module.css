@@ -1,0 +1,30 @@
+.stage { --spotlight-veil: rgba(17, 19, 18, .48); position: fixed; inset: 0; z-index: 120; outline: none; isolation: isolate; opacity: 0; }
+.stage[data-positioned="true"] { opacity: 1; animation: appear .2s ease-out both; }
+.aperture { position: fixed; box-shadow: 0 0 0 9999px var(--spotlight-veil); pointer-events: none; }
+.blanket { position: absolute; inset: 0; background: var(--spotlight-veil); }
+.card { position: fixed; display: flex; flex-direction: column; min-height: 100px; overflow: hidden; border: 1px solid rgba(40, 44, 38, .12); border-radius: 12px; background: #f8f7f3; color: #262824; box-shadow: 0 8px 28px rgba(12, 16, 16, .13); }
+.reading { min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 26px 26px 24px; scrollbar-width: thin; }
+.eyebrow { margin: 0 0 14px; color: #69675e; font-size: 10px; font-weight: 500; line-height: 1.5; letter-spacing: .12em; text-transform: uppercase; }
+.title { margin: 0; font-family: Georgia, serif; font-size: 28px; font-weight: 400; line-height: 1.12; letter-spacing: -.025em; text-wrap: balance; }
+.title:focus { outline: none; }
+.description { margin: 16px 0 0; color: #55584f; font-size: 15px; line-height: 1.65; text-wrap: pretty; }
+.note { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid #dcdcd3; color: #66675e; font-size: 12px; line-height: 1.6; }
+.controls { display: flex; flex: 0 0 auto; align-items: center; gap: 20px; padding: 12px 24px; border-top: 1px solid rgba(40, 44, 38, .10); background: #f8f7f3; }
+.primary, .secondary { min-height: 44px; border: 0; font: inherit; font-size: 13px; cursor: pointer; }
+.primary { display: flex; align-items: center; justify-content: space-between; gap: 28px; margin-left: auto; padding: 12px 16px; border-radius: 4px; background: #3a4238; color: #fffef8; font-weight: 500; }
+.primary:hover { background: #293327; }
+.secondary { padding: 10px 0; background: transparent; color: #606358; }
+.secondary:hover { color: #252a22; }
+.primary:focus-visible, .secondary:focus-visible, .reading:focus-visible { outline: 2px solid #8f3736; outline-offset: 3px; }
+.reading:focus-visible { outline-offset: -4px; }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 599px) {
+  .reading { padding: 24px 24px 20px; }
+  .eyebrow { margin-bottom: 14px; }
+  .title { font-size: 28px; }
+  .description { margin-top: 14px; }
+  .controls { gap: 18px; padding: 12px 20px; }
+}
+@media (prefers-reduced-motion: reduce) { .stage[data-positioned="true"] { animation: none; } }
+
+.supporting { margin: 14px 0 0; color: #606358; font-size: 13px; line-height: 1.6; }

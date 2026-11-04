@@ -1,0 +1,529 @@
+/*
+ * Drona demo — design tokens.
+ * Authored from BRAND.md v1. Two layers, and the separation is enforced by convention:
+ *
+ *   PRIMITIVE  raw values. Components must never reference these.
+ *   SEMANTIC   the only names a component is allowed to consume.
+ *
+ * If a component reaches past the semantic layer, re-theming becomes a find-and-replace
+ * across the app instead of an edit to this file.
+ */
+
+:root {
+  /* ─────────────────────────────────────────────────────────────
+     PRIMITIVE — brand
+     ───────────────────────────────────────────────────────────── */
+  --maroon-deep: #3a0000;
+  --maroon: #8f3736;
+  /* Maroon lifted for dark ground, where #8f3736 sinks under 3:1. */
+  --maroon-lift: #c0605a;
+  /* The logo's own two inks, exactly as supplied (assets/DRONA-LOGO/). */
+  --logo-maroon: #772c36;
+  --logo-cream: #f4ebd0;
+
+  /* PRIMITIVE — silver, the working canvas */
+  --silver-000: #ffffff;
+  --silver-050: #f5f7f9;
+  --silver-100: #eff2f5;
+  --silver-200: #e8edf2;
+  --silver-300: #dbe2ea;
+
+  /* PRIMITIVE — paper, the Scene 1 canvas. Warm rather than blue-silver, so white
+     cards separate from it by temperature as much as by value. */
+  --paper-100: #f3f2ee;
+  --paper-card-edge: rgba(38, 34, 28, 0.08);
+  --paper-card-edge-strong: rgba(38, 34, 28, 0.15);
+
+  /* PRIMITIVE — graphite, the dark theme. */
+  --graphite-900: #121211;
+  --graphite-850: #1a1a18;
+  --graphite-800: #201f1d;
+  --graphite-750: #272624;
+  --graphite-700: #2e2d2a;
+  --ink-primary-dark: #ebe8e1;
+  --ink-secondary-dark: rgba(235, 232, 225, 0.82);
+  --ink-tertiary-dark: rgba(235, 232, 225, 0.66);
+  --ink-quaternary-dark: rgba(235, 232, 225, 0.56);
+  --ink-separator-dark: rgba(235, 232, 225, 0.09);
+
+  /* PRIMITIVE — commitment state. Three hues that never borrow concern's: a state is
+     where the order sits in the workflow, not how worried anyone should be. */
+  --state-new-light: #5e6b7a;
+  --state-action-light: #b8472f;
+  --state-monitoring-light: #3e7a68;
+  --state-new-dark: #8c9aab;
+  --state-action-dark: #d8674d;
+  --state-monitoring-dark: #6fa897;
+
+  /* PRIMITIVE — dependency types. Seven restrained hues, told apart by lightness as
+     well as hue, and always paired with a text label: colour is never the only cue. */
+  --dep-material-light: #8f3736;
+  --dep-process-light: #a86a2c;
+  --dep-quality-light: #6b7b3a;
+  --dep-network-light: #3e7a68;
+  --dep-logistics-light: #3f6690;
+  --dep-liquidity-light: #6a5a92;
+  --dep-external-light: #7d7f84;
+  --dep-material-dark: #c8706b;
+  --dep-process-dark: #d49a5c;
+  --dep-quality-dark: #a4b46a;
+  --dep-network-dark: #6fa897;
+  --dep-logistics-dark: #7aa0c8;
+  --dep-liquidity-dark: #a292c8;
+  --dep-external-dark: #a6a8ad;
+
+  /* PRIMITIVE — the map ground. Silver in both themes, after the cartographic
+     "silver" skin: near-white land, cool grey water, a crisp graphite coast. The
+     continents are context and the marks are the content, so the ground carries no
+     hue at all — only concern, the plant and the delivery lines do. */
+  --map-ocean-silver: #cdd1d6;
+  --map-land-silver: #f6f6f5;
+  --map-land-edge-silver: #b3b8be;
+  /* The same skin one step down for the dark page, so the map does not glare. */
+  --map-ocean-silver-dim: #b9bec4;
+  --map-land-silver-dim: #e4e5e6;
+  --map-land-edge-silver-dim: #a2a8af;
+  /* A buyer is a place the business answers to, not one it owns — slate, not maroon.
+     Every mark carries a white keyline, which separates overlapping marks. */
+  --map-buyer-ink: #5b6b7c;
+  /* Upstream parties carry evidence, never concern, so they are drawn in a neutral —
+     deep enough to hold 3:1 against the silver land. */
+  --map-upstream-ink: #74808d;
+  /* The map's popover glass: white over silver, in both themes. */
+  --map-glass: #ffffff;
+
+  /* PRIMITIVE — concern hues. */
+  --concern-low-silver: #2e9e6b;
+  --concern-elevated-silver: #c77a17;
+  --concern-critical-silver: #ce4a33;
+  /* Critical, deepened, for the one job the hue above cannot do.
+     The concern hues are tuned to be *spotted* — a dot, a ring, a stage marker — and
+     WCAG holds non-text to 3.0, which #ce4a33 clears on every ground here. Text is
+     held to 4.5, and it does not: 4.32 on white, 4.02 on the page, 2.75 read through
+     the gate's glass. That gap is not a defect in the hue; it is two different jobs
+     wearing one name. This is the read-grade cut, and it clears 4.5 on every ground
+     in the system including the worst case the glass can produce (4.60). */
+  --concern-critical-silver-deep: #98301d;
+  /* Concern as a *surface*: each hue laid 45% over white, for the concern band's
+     filled tiles. Light enough that ink reads on them at 10:1 and above (tertiary
+     ink clears 6:1), saturated enough that the band's urgency reads before a
+     number is. The deep cuts are the glyphs drawn inside each tile's icon well. */
+  --concern-low-silver-fill: #a1d3bc;
+  --concern-elevated-silver-fill: #e6c394;
+  --concern-critical-silver-fill: #e9aea3;
+  --concern-low-silver-ink: #1f6b48;
+  --concern-elevated-silver-ink: #83500f;
+
+  /* PRIMITIVE — ink, alpha-modulated label tiers (Apple pattern)
+     ─────────────────────────────────────────────────────────────
+     The alphas are measured, not borrowed. Apple's own light-mode ladder
+     (rgba(60,60,67) at .60/.30/.18) was in here first, and against these
+     surfaces it renders secondary at 3.4:1, tertiary at 2.0:1 and quaternary
+     at 1.4:1 — under BRAND.md §4's 4.5:1 body floor, and in quaternary's case
+     very nearly invisible. Those values are sound in iOS, where the tiers below
+     secondary carry disabled glyphs and placeholder chrome. This demo does not
+     use them that way: every micro-label on every screen, and the whole of
+     Drona's epistemic qualification, is tertiary or quaternary. Text that
+     carries the argument has to clear the floor for text.
+
+     Two changes make the range available. The ladder is re-based on the primary
+     ink, because rgba(60,60,67) tops out near 9:1 even at full opacity and four
+     legible steps will not fit under that ceiling. And the alphas are then
+     solved against `--bg-band`, the darkest of the light surfaces, so a tier
+     that passes here passes on every ground it can land on.
+
+     Measured, darkest → lightest light surface:
+       primary     13.8 – 18.0     secondary    9.4 – 11.4
+       tertiary     6.2 –  7.1     quaternary   4.6 –  5.0
+     The map is silver ground in both themes and keeps this light ladder,
+     scoped by `[data-surface="map"]` below.
+
+     Separators are hairlines and carry no information, so no floor applies to
+     them; their alpha is set to hold the previous optical weight against the
+     darker ink rather than to hit a ratio. */
+  --ink-primary-light: #1f1e1b;
+  --ink-secondary-light: rgba(31, 30, 27, 0.84);
+  --ink-tertiary-light: rgba(31, 30, 27, 0.7);
+  --ink-quaternary-light: rgba(31, 30, 27, 0.6);
+  --ink-separator-light: rgba(31, 30, 27, 0.1);
+
+  /* ─────────────────────────────────────────────────────────────
+     SEMANTIC — surfaces
+     ───────────────────────────────────────────────────────────── */
+  --bg-page: var(--paper-100);
+  --bg-surface: var(--silver-000);
+  --bg-card: var(--silver-000);
+  --border-card: var(--paper-card-edge);
+  --bg-raised: var(--silver-050);
+  --bg-inset: var(--silver-200);
+  --bg-band: var(--silver-300);
+  --bg-map: var(--map-ocean);
+  --bg-map-raised: var(--map-glass);
+  --bg-map-control: var(--map-glass);
+  /* A popover floating over the map. Nearly the raised surface, but not quite — the
+     last few per cent let the coastline register faintly underneath, so the card
+     reads as sitting *on* the map rather than as a hole punched through it.
+     Declared here rather than written `bg-map-raised/95` at the call site: Tailwind
+     cannot apply an alpha modifier to a colour it only knows as `var(--…)`, and the
+     utility it silently fails to emit leaves the element with no background at all.
+     Every translucent surface in this file is therefore a named token. */
+  --bg-map-popover: color-mix(in srgb, var(--map-glass) 92%, transparent);
+
+  /* SEMANTIC — labels on light ground (the default) */
+  --label-primary: var(--ink-primary-light);
+  --label-secondary: var(--ink-secondary-light);
+  --label-tertiary: var(--ink-tertiary-light);
+  --label-quaternary: var(--ink-quaternary-light);
+  --separator: var(--ink-separator-light);
+
+  /* SEMANTIC — brand.
+     Maroon is brand and authority. It is never a state colour and never chrome.
+     It carries: wordmark, section rules, display type, and ONE primary action
+     per screen. Nothing else. */
+  --brand-mark: var(--maroon);
+  /* The logo: maroon on the light ground. Only the logo uses it. */
+  --brand-logo: var(--logo-maroon);
+  --brand-deep: var(--maroon-deep);
+  --action-primary: var(--maroon);
+  --action-primary-hover: #6f2c2c;
+  --action-on-primary: #f7ecec;
+
+  /* SEMANTIC — concern state */
+  --concern-low: var(--concern-low-silver);
+  --concern-elevated: var(--concern-elevated-silver);
+  --concern-critical: var(--concern-critical-silver);
+  /* Critical where it has to be read rather than noticed. A sentence, never a mark. */
+  --concern-critical-deep: var(--concern-critical-silver-deep);
+  /* The concern band's filled tiles, and the glyph drawn in each tile's icon well. */
+  --concern-low-fill: var(--concern-low-silver-fill);
+  --concern-elevated-fill: var(--concern-elevated-silver-fill);
+  --concern-critical-fill: var(--concern-critical-silver-fill);
+  --concern-low-ink: var(--concern-low-silver-ink);
+  --concern-elevated-ink: var(--concern-elevated-silver-ink);
+  --concern-critical-ink: var(--concern-critical-silver-deep);
+
+  /* SEMANTIC — commitment state. `-ink` is the hue at text grade, `-wash` a tint for
+     a row or chip ground (≤8%, so ink above it keeps its contrast). */
+  --state-new: var(--state-new-light);
+  --state-action: var(--state-action-light);
+  --state-monitoring: var(--state-monitoring-light);
+  --state-new-ink: var(--state-new-light);
+  --state-action-ink: #9c3b27;
+  --state-monitoring-ink: #33675a;
+  --state-new-wash: color-mix(in srgb, var(--state-new) 7%, transparent);
+  --state-action-wash: color-mix(in srgb, var(--state-action) 7%, transparent);
+  --state-monitoring-wash: color-mix(in srgb, var(--state-monitoring) 7%, transparent);
+
+  /* SEMANTIC — dependency types */
+  --dep-material: var(--dep-material-light);
+  --dep-process: var(--dep-process-light);
+  --dep-quality: var(--dep-quality-light);
+  --dep-network: var(--dep-network-light);
+  --dep-logistics: var(--dep-logistics-light);
+  --dep-liquidity: var(--dep-liquidity-light);
+  --dep-external: var(--dep-external-light);
+  --brand-wash: color-mix(in srgb, var(--brand-mark) 5%, transparent);
+  --card-shadow: 0 1px 2px rgba(40, 36, 30, 0.04);
+
+  /* SEMANTIC — Scene 1 workspace (design-system.md). A surface rests on a hairline
+     and one pixel of shadow; hover lifts it a pixel and lets the shadow widen;
+     a floating surface (overlay, popover, hover card) is the one place depth is
+     allowed to read as depth. */
+  --border-card-strong: var(--paper-card-edge-strong);
+  /* Three materials (design-system.md §2.1). A SHEET is white paper that barely
+     casts: no line, a wide low shadow. A VEIL is translucent and blurred, so the
+     canvas shows through and the surface half-merges into it. BARE is no surface
+     at all — content set straight on the canvas. */
+  --shadow-rest: 0 0 0 1px rgba(38, 34, 28, 0.035), 0 1px 2px rgba(38, 34, 28, 0.03),
+    0 12px 32px -18px rgba(38, 34, 28, 0.1);
+  --shadow-hover: 0 0 0 1px rgba(38, 34, 28, 0.05), 0 2px 4px rgba(38, 34, 28, 0.03),
+    0 18px 40px -18px rgba(38, 34, 28, 0.18);
+  --shadow-float: 0 0 0 1px rgba(38, 34, 28, 0.05), 0 2px 6px rgba(38, 34, 28, 0.04),
+    0 32px 72px -28px rgba(38, 34, 28, 0.3);
+  /* A work object lifted off its sheet: a queue row under the pointer, the next thread. */
+  --shadow-lift: 0 0 0 1px rgba(38, 34, 28, 0.04), 0 1px 2px rgba(38, 34, 28, 0.04),
+    0 8px 20px -12px rgba(38, 34, 28, 0.16);
+  --bg-sheet: #ffffff;
+  --bg-sheet-sunk: #faf9f7;
+  --bg-veil: rgba(255, 255, 255, 0.55);
+  --bg-float: rgba(255, 255, 255, 0.94);
+  --bg-float-solid: #ffffff;
+  --bg-scrim: rgba(236, 234, 229, 0.62);
+  --bg-hover: rgba(38, 34, 28, 0.035);
+  --bg-selected: rgba(38, 34, 28, 0.055);
+  /* A quiet button or borderless chip: a grey wash, no line. */
+  --bg-quiet: rgba(38, 34, 28, 0.045);
+  --bg-quiet-hover: rgba(38, 34, 28, 0.08);
+  /* The dark circular send / primary-quiet control. */
+  --bg-ink-button: #2a2926;
+  --ink-on-ink-button: #f5f3ee;
+  /* The canvas's light: warmer at the top, a touch deeper at the foot. */
+  --canvas-top: #f5f4f1;
+  --canvas-foot: #ecebe7;
+
+  /* SEMANTIC — the dependency radial. One warm tonal ramp, rust to sand, rather
+     than seven hues: the codes beside each segment carry identity, the ramp only
+     carries order. Largest type darkest. */
+  --dep-ramp-1: #9c3b27;
+  --dep-ramp-2: #b4563a;
+  --dep-ramp-3: #c77552;
+  --dep-ramp-4: #d4946f;
+  --dep-ramp-5: #ddb08f;
+  --dep-ramp-6: #e3c6ab;
+  --dep-ramp-7: #e8d8c5;
+  --dep-track: rgba(38, 34, 28, 0.06);
+
+  /* SEMANTIC — the map's own furniture */
+  --map-ocean: var(--map-ocean-silver);
+  --map-land: var(--map-land-silver);
+  --map-land-edge: var(--map-land-edge-silver);
+  /* The maroon plant and the count inside a white cluster disc. */
+  --map-plant: var(--maroon);
+  --map-label: var(--ink-primary-light);
+  /* Plant → buyer. Graphite ink, not a hue: BRAND.md §3.3 keeps saturated colour
+     for concern and the one primary action, and five red-brown lines would read as
+     five alarms. */
+  --map-flow: rgba(52, 56, 62, 0.55);
+  /* Every other order's line, while one is being looked at. */
+  --map-flow-muted: rgba(52, 56, 62, 0.14);
+  --map-buyer: var(--map-buyer-ink);
+  --map-upstream: var(--map-upstream-ink);
+  /* The halo under a selected node. */
+  --map-halo: rgba(52, 56, 62, 0.12);
+  /* The space behind the globe: a shade under the water, so the sphere reads as a body. */
+  --map-space: #e3e5e8;
+
+  /* SEMANTIC — epistemic encoding.
+     Scene 3 makes these load-bearing; they are declared here so that the grammar
+     is one decision, not a per-component improvisation. */
+  --evidence-verified-opacity: 1;
+  --evidence-inferred-opacity: 0.6;
+  --evidence-low-confidence-dash: 2 3;
+  --evidence-missing-dash: 1 3;
+
+  /* ─────────────────────────────────────────────────────────────
+     GEOMETRY
+     ───────────────────────────────────────────────────────────── */
+  --radius-stamp: 2px;
+  --radius-pill: 6px;
+  --radius-chip: 10px;
+  --radius-card: 14px;
+  --radius-frame: 20px;
+  --radius-stage: 28px;
+  --radius-surface: 18px;
+  --radius-float: 16px;
+
+  /* MOTION — one curve for everything meaningful */
+  --ease-calm: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-gentle: 220ms;
+  --duration-reveal: 450ms;
+  --duration-settle: 700ms;
+  /* Workspace motion: hover and the contextual overlay. No overshoot anywhere. */
+  --ease-overlay: cubic-bezier(0.22, 0.9, 0.24, 1);
+  --duration-hover: 180ms;
+  --duration-overlay-in: 280ms;
+  --duration-overlay-out: 200ms;
+
+  /* MATERIAL — the identity gate */
+  --glass-tint: rgba(255, 255, 255, 0.62);
+  --glass-blur: 28px;
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 32px 80px -24px rgba(11, 11, 13, 0.45);
+  /* The veil between the panel and the dashboard it is standing in front of. Without
+     it the panel's own tint is the only thing between its type and whatever happens to
+     be behind — and the map is behind its top edge, whose coloured marks sit under
+     the label tier purely as a function of where the panel lands. The veil
+     makes the ground a property of the gate rather than of the viewport height. */
+  --glass-scrim: color-mix(in srgb, var(--silver-100) 45%, transparent);
+  /* A field on glass. Lighter than the tint it sits in, so the PIN cells read as
+     recessed without a second border doing the work. */
+  --glass-field: color-mix(in srgb, var(--silver-000) 70%, transparent);
+}
+
+/*
+ * DARK THEME — the semantic layer only; primitives never change. Set by the pre-paint
+ * script in layout.tsx from the stored choice, or the OS preference.
+ *
+ * The map surface is silver in both themes, so `[data-surface="map"]` (below) pins
+ * the light ladder to the map subtree whichever theme the page is in.
+ */
+:root[data-theme="dark"] {
+  --label-primary: var(--ink-primary-dark);
+  --label-secondary: var(--ink-secondary-dark);
+  --label-tertiary: var(--ink-tertiary-dark);
+  --label-quaternary: var(--ink-quaternary-dark);
+  --separator: var(--ink-separator-dark);
+  --bg-inset: var(--graphite-750);
+  --concern-critical-deep: #eb8b77;
+  --concern-critical-ink: #eb8b77;
+  --concern-low-ink: #7fcaa5;
+  --concern-elevated-ink: #e2ab62;
+}
+
+[data-surface="map"] {
+  color-scheme: light;
+  --label-primary: var(--ink-primary-light);
+  --label-secondary: var(--ink-secondary-light);
+  --label-tertiary: var(--ink-tertiary-light);
+  --label-quaternary: var(--ink-quaternary-light);
+  --separator: var(--ink-separator-light);
+  --bg-inset: var(--silver-200);
+  --bg-surface: var(--map-glass);
+  --bg-raised: var(--map-glass);
+  --concern-critical-deep: var(--concern-critical-silver-deep);
+  --concern-critical-ink: var(--concern-critical-silver-deep);
+  --concern-low-ink: var(--concern-low-silver-ink);
+  --concern-elevated-ink: var(--concern-elevated-silver-ink);
+}
+
+:root[data-theme="dark"] [data-surface="map"] {
+  --map-ocean: var(--map-ocean-silver-dim);
+  --map-land: var(--map-land-silver-dim);
+  --map-land-edge: var(--map-land-edge-silver-dim);
+  --bg-map: var(--map-ocean-silver-dim);
+  --map-space: #cfd3d7;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-page: var(--graphite-900);
+  --bg-surface: var(--graphite-850);
+  --bg-card: var(--graphite-850);
+  --bg-raised: var(--graphite-800);
+  --bg-band: var(--graphite-700);
+  --border-card: rgba(235, 232, 225, 0.08);
+  --card-shadow: none;
+  --border-card-strong: rgba(235, 232, 225, 0.16);
+  --shadow-rest: 0 0 0 1px rgba(235, 232, 225, 0.05), 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 14px 32px -18px rgba(0, 0, 0, 0.55);
+  --shadow-hover: 0 0 0 1px rgba(235, 232, 225, 0.08), 0 2px 4px rgba(0, 0, 0, 0.3),
+    0 20px 44px -18px rgba(0, 0, 0, 0.7);
+  --shadow-float: 0 0 0 1px rgba(235, 232, 225, 0.08), 0 2px 6px rgba(0, 0, 0, 0.35),
+    0 32px 72px -24px rgba(0, 0, 0, 0.75);
+  --shadow-lift: 0 0 0 1px rgba(235, 232, 225, 0.07), 0 1px 2px rgba(0, 0, 0, 0.3),
+    0 10px 22px -12px rgba(0, 0, 0, 0.6);
+  --bg-sheet: #1b1b19;
+  --bg-sheet-sunk: #171716;
+  --bg-veil: rgba(34, 34, 32, 0.55);
+  --bg-float: rgba(36, 35, 33, 0.94);
+  --bg-float-solid: #242321;
+  --bg-scrim: rgba(14, 14, 13, 0.6);
+  --bg-hover: rgba(235, 232, 225, 0.04);
+  --bg-selected: rgba(235, 232, 225, 0.07);
+  --bg-quiet: rgba(235, 232, 225, 0.06);
+  --bg-quiet-hover: rgba(235, 232, 225, 0.1);
+  --bg-ink-button: #ebe8e1;
+  --ink-on-ink-button: #1a1a18;
+  --canvas-top: #151514;
+  --canvas-foot: #10100f;
+  --dep-ramp-1: #e07a5f;
+  --dep-ramp-2: #cf6d52;
+  --dep-ramp-3: #b8644c;
+  --dep-ramp-4: #9c5a47;
+  --dep-ramp-5: #825243;
+  --dep-ramp-6: #6b4a40;
+  --dep-ramp-7: #57433c;
+  --dep-track: rgba(235, 232, 225, 0.06);
+
+  --brand-mark: var(--maroon-lift);
+  /* The logo: cream on the dark ground, as supplied for it. */
+  --brand-logo: var(--logo-cream);
+  --action-primary: #a8433f;
+  --action-primary-hover: #b8504b;
+  --action-on-primary: #fff5f4;
+
+  --concern-low-fill: #1f3b2f;
+  --concern-elevated-fill: #3f3120;
+  --concern-critical-fill: #43261f;
+
+  --state-new: var(--state-new-dark);
+  --state-action: var(--state-action-dark);
+  --state-monitoring: var(--state-monitoring-dark);
+  --state-new-ink: var(--state-new-dark);
+  --state-action-ink: #e88a73;
+  --state-monitoring-ink: #8cc0b0;
+  --state-new-wash: color-mix(in srgb, var(--state-new) 10%, transparent);
+  --state-action-wash: color-mix(in srgb, var(--state-action) 10%, transparent);
+  --state-monitoring-wash: color-mix(in srgb, var(--state-monitoring) 10%, transparent);
+
+  --dep-material: var(--dep-material-dark);
+  --dep-process: var(--dep-process-dark);
+  --dep-quality: var(--dep-quality-dark);
+  --dep-network: var(--dep-network-dark);
+  --dep-logistics: var(--dep-logistics-dark);
+  --dep-liquidity: var(--dep-liquidity-dark);
+  --dep-external: var(--dep-external-dark);
+  --brand-wash: color-mix(in srgb, var(--brand-mark) 8%, transparent);
+
+  --glass-tint: rgba(23, 25, 24, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-scrim: color-mix(in srgb, var(--graphite-900) 55%, transparent);
+  --glass-field: color-mix(in srgb, var(--graphite-750) 80%, transparent);
+}
+
+/*
+ * Translucency eats stroke contrast, and some people ask the OS to stop producing it
+ * at all. Both are answered the same way: an opaque surface, full weight.
+ */
+@media (prefers-reduced-transparency: reduce) {
+  :root {
+    --glass-tint: var(--bg-surface);
+    --glass-blur: 0px;
+    --glass-scrim: var(--bg-page);
+    --glass-field: var(--bg-raised);
+    --bg-map-popover: var(--bg-map-raised);
+    --bg-float: var(--bg-float-solid);
+    --bg-veil: var(--bg-sheet);
+  }
+}
+
+/*
+ * COMPONENT — the supplier workbench's band washes (Scene 2).
+ *
+ * A band as a *tint*, not a tile: the concern hue mixed a few percent into the card
+ * ground, so a critical supplier reads as a warmer object among neutral ones rather
+ * than as a red block. The mark beside the name carries the full-strength hue;
+ * the wash only has to separate critical from elevated from everything else.
+ * Low has no wash at all — green is a mark, never a surface.
+ *
+ * Declared on :root and re-declared for dark, because the mix percentages that sit
+ * quietly on silver disappear on graphite.
+ */
+:root {
+  /* Mixed over the warm sheet, not the cool silver inset: on silver the amber
+     turned grey-pink and critical and elevated read as the same wash. */
+  --band-critical-wash: color-mix(in srgb, var(--concern-critical) 7%, var(--bg-sheet-sunk));
+  --band-critical-wash-hover: color-mix(in srgb, var(--concern-critical) 10.5%, var(--bg-sheet-sunk));
+  --band-critical-edge: color-mix(in srgb, var(--concern-critical) 26%, transparent);
+  --band-critical-edge-hover: color-mix(in srgb, var(--concern-critical) 40%, transparent);
+  --band-elevated-wash: color-mix(in srgb, var(--concern-elevated) 10%, var(--bg-sheet-sunk));
+  --band-elevated-wash-hover: color-mix(in srgb, var(--concern-elevated) 14%, var(--bg-sheet-sunk));
+  --band-elevated-edge: color-mix(in srgb, var(--concern-elevated) 28%, transparent);
+  --band-elevated-edge-hover: color-mix(in srgb, var(--concern-elevated) 42%, transparent);
+  --band-critical-row: color-mix(in srgb, var(--concern-critical) 4%, transparent);
+  --band-elevated-row: color-mix(in srgb, var(--concern-elevated) 4.5%, transparent);
+  /* Mitigation is the one warm-toward-cool band: a possible alternate is relief,
+     not concern, so it gets the same restrained wash grammar in sage. */
+  --band-mitigation-wash: color-mix(in srgb, var(--state-monitoring) 8%, var(--bg-sheet-sunk));
+  --band-mitigation-wash-hover: color-mix(in srgb, var(--state-monitoring) 12%, var(--bg-sheet-sunk));
+  --band-mitigation-edge: color-mix(in srgb, var(--state-monitoring) 24%, transparent);
+  --band-mitigation-edge-hover: color-mix(in srgb, var(--state-monitoring) 38%, transparent);
+}
+
+:root[data-theme="dark"] {
+  --band-critical-wash: color-mix(in srgb, var(--concern-critical) 9%, var(--bg-inset));
+  --band-critical-wash-hover: color-mix(in srgb, var(--concern-critical) 13%, var(--bg-inset));
+  --band-critical-edge: color-mix(in srgb, var(--concern-critical) 26%, transparent);
+  --band-critical-edge-hover: color-mix(in srgb, var(--concern-critical) 40%, transparent);
+  --band-elevated-wash: color-mix(in srgb, var(--concern-elevated) 8.5%, var(--bg-inset));
+  --band-elevated-wash-hover: color-mix(in srgb, var(--concern-elevated) 12.5%, var(--bg-inset));
+  --band-elevated-edge: color-mix(in srgb, var(--concern-elevated) 22%, transparent);
+  --band-elevated-edge-hover: color-mix(in srgb, var(--concern-elevated) 36%, transparent);
+  --band-critical-row: color-mix(in srgb, var(--concern-critical) 5%, transparent);
+  --band-elevated-row: color-mix(in srgb, var(--concern-elevated) 4.5%, transparent);
+  --band-mitigation-wash: color-mix(in srgb, var(--state-monitoring) 10%, var(--bg-inset));
+  --band-mitigation-wash-hover: color-mix(in srgb, var(--state-monitoring) 14%, var(--bg-inset));
+  --band-mitigation-edge: color-mix(in srgb, var(--state-monitoring) 22%, transparent);
+  --band-mitigation-edge-hover: color-mix(in srgb, var(--state-monitoring) 34%, transparent);
+}

@@ -1,0 +1,8 @@
+.stage { pointer-events: none; }
+.card { pointer-events: auto; }
+@media (max-width: 1099px) {
+  .reading { padding: 16px 20px; }
+  .reading > p:first-child { margin-bottom: 8px; }
+  .reading h2 { font-size: 23px; line-height: 1.15; }
+  .reading > p:not(:first-child) { margin-top: 10px; font-size: 13px; line-height: 1.5; }
+}
