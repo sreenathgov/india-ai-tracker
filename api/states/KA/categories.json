@@ -639,6 +639,27 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "India becomes ChatGPT&#039;s largest market globally by users",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-becomes-chatgpts-largest-market-globally-by-users/135518462",
+        "summary": "OpenAI&#039;s ChatGPT user base in India has doubled since January 2026, with over 100 million weekly users. The company is expanding its Indian-language capabilities and focusing on Android-first pro...",
+        "date_published": "2026-11-04",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Global players bid for design, planning of Bidadi AI township",
         "url": "https://www.thehindu.com/news/cities/bangalore/global-players-bid-for-design-planning-of-bidadi-ai-township/article71657363.ece",
@@ -6994,5 +7015,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

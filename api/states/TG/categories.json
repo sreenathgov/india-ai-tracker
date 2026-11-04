@@ -152,6 +152,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 14,
+        "title": "IIIT-H’s Research That’s Headed To NeurIPS 2026",
+        "url": "https://www.iiit.ac.in/iiit-hs-research-thats-headed-to-neurips-2026/",
+        "summary": "IIIT-H’s Research That’s Headed To NeurIPS 2026IROS 2026IIIT Hyderabad hosts Digital Citizen Summit, making India’s digital public infrastructure more inclusive, accountable and accessibleIIIT Hyderab...",
+        "date_published": "2026-11-04",
+        "source_name": "IIIT Hyderabad - News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "IROS 2026",
         "url": "https://www.iiit.ac.in/iros-2026/",
@@ -3264,5 +3284,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
