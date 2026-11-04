@@ -28,7 +28,7 @@
     },
     {
       "path": "WALKTHROUGH_FRAMEWORK.md",
-      "sha256": "b634ce18a27e38356453b5c1244470618b05b3ea90233b1147e2e6c650986236"
+      "sha256": "5a2cbe07d481d82fe9a5140ea1d3e2d898f3de4e3a270163b69bc72b23fb83d3"
     },
     {
       "path": "e2e/README.md",
@@ -36,15 +36,15 @@
     },
     {
       "path": "e2e/VERIFICATION.md",
-      "sha256": "7144fdb5e0133fc1e5a5ae9e5b976d755d9b5d3f92bc65dba412eb7800665df9"
+      "sha256": "8b6986c1d0b034253d0bb3a25ca92e7a51183ab303136495d9a14463069f6f07"
     },
     {
       "path": "e2e/guided-demo.spec.ts",
-      "sha256": "9e87ee06b90f72e9caad950e59c20cac9e5a1c060392bd171b003eab59e1e004"
+      "sha256": "ffd416f9d1d885ed5e787351475173b3d33d11aabffa578aa48ac85dfcd8083f"
     },
     {
       "path": "e2e/login-presentation.spec.ts",
-      "sha256": "918eba795f9d3ec12ffa2e1561d6dc86120b297f13eb7dcd015184a4ab98e9d2"
+      "sha256": "0b4cfca91913bb7d80f319a88c7275cd680746c840082b71537ae317d2c0d031"
     },
     {
       "path": "licenses/Geist-LICENSE.txt",
@@ -80,7 +80,7 @@
     },
     {
       "path": "playwright.config.ts",
-      "sha256": "e1def2d9d5e7db674e8bdf07ec3420498d3c99cc6396b5b20ece4fecbc2bac19"
+      "sha256": "3d29cc53dc07d7af07913db9a6a6b6351a875083abf91dc2415f25d04b6b7d0d"
     },
     {
       "path": "postcss.config.js",
@@ -120,7 +120,7 @@
     },
     {
       "path": "src/app/globals.css",
-      "sha256": "54d2bb861f01eab85be4f478485d2f020ef2263bed4692adb7e8d9a56dd46bbe"
+      "sha256": "328718b2c73b08b9e0586a3399bdf1fad4ca5be7cd8a5b84cdbc206cc1b82bde"
     },
     {
       "path": "src/app/icon.svg",
@@ -128,15 +128,15 @@
     },
     {
       "path": "src/app/layout.tsx",
-      "sha256": "f8528df794167b83d12490f0ce63f9f5695bddcbbafe73139bbddb3f7954edf0"
+      "sha256": "12f49e84e7846b977f58c14b5eafc9730bb3b176ab9b6b465bc6cbd1b8a0b3d4"
     },
     {
       "path": "src/app/login/route.ts",
-      "sha256": "75938cbcdc56923e950671222fa73d7dddf27c9c319cf00d4585c7ba61a04177"
+      "sha256": "e2ec51201a7ad6550677bd2f3228d78e5843a374779585021e22cbd98404fb90"
     },
     {
       "path": "src/app/page.tsx",
-      "sha256": "e7d3b15d9d10f5301650f6aa2d0aa41eaa77ea9eabd053b9938aeda3ea80162a"
+      "sha256": "fdf8430112fb5ea15e1607a569b68b26960587c7a4675284203edcf1839ea40f"
     },
     {
       "path": "src/app/robots.txt/route.ts",
@@ -148,11 +148,11 @@
     },
     {
       "path": "src/components/AppHeader.tsx",
-      "sha256": "d686a43be65fc80c344323ee56456b2df391284b0cf0a6ece1449655117845ea"
+      "sha256": "666410fb919b2348ceaba6d23462599f3b1eadebae6659c9e1e152db4e30689d"
     },
     {
       "path": "src/components/DemoExperience.tsx",
-      "sha256": "c195eba1c3a585ff55f5f6c8c04d3f48856db83abd53ae074c5bbb662dff461f"
+      "sha256": "774393b08cc4f600ed6248035d37a75cd4bffa0afcda12a4fc202ecf532d8e12"
     },
     {
       "path": "src/components/SessionMonitor.tsx",
@@ -204,11 +204,11 @@
     },
     {
       "path": "src/components/guided/GuidedSpotlight.module.css",
-      "sha256": "d11428e0e294b0276a1d400d6e82d420db1212ac3ea463a457cbc969210f7aee"
+      "sha256": "5faee1a4ec9f1b551c24feea86d1680a3186831a6e531354ec558aca39f33fd2"
     },
     {
       "path": "src/components/guided/GuidedSpotlight.tsx",
-      "sha256": "0fe39b6f9413d968ee55b6c080463fc2817e9ea5edf7a9a73e31d169bd282061"
+      "sha256": "60c80454b03e661148e886a3b12fd87ecc136f0c945fadb4cdec360e8871ac3c"
     },
     {
       "path": "src/components/guided/index.ts",
@@ -352,7 +352,7 @@
     },
     {
       "path": "src/components/scene2/investigation/InvestigationWorkspace.tsx",
-      "sha256": "4814938f4ff60f922a636ff2f6fbcb4d475bd8bd59f18ba5d437af1b967a36cc"
+      "sha256": "dcd98070c53c97da6c7c20888d201f0d939386784a0ba8c71f7460f29206225b"
     },
     {
       "path": "src/components/scene2/investigation/PendingTab.tsx",
@@ -364,7 +364,7 @@
     },
     {
       "path": "src/components/scene2/investigation/evidence/EvidencePanel.tsx",
-      "sha256": "c9880bd5b66704c6248cbf1792f52f3556799b16c8b23c3a09b1c819eebb1955"
+      "sha256": "f28e02a8c28caeeaaa7c64034b33e8da9c8f818e6b4e8adaf47ce27ee7a21b6d"
     },
     {
       "path": "src/components/scene2/investigation/evidence/EvidenceRegister.tsx",
@@ -440,7 +440,7 @@
     },
     {
       "path": "src/components/scene2/investigation/overview/overview.module.css",
-      "sha256": "8bf6638cff6a9847b84022065ccf25327f2367dcf296143ecb080f695691613f"
+      "sha256": "0a61b2c698717f4086c08f8bfd535e0e105e2083fb34403630c97f545ca8f83f"
     },
     {
       "path": "src/components/scene2/investigation/supplychain/GraphCanvas.tsx",
@@ -468,7 +468,7 @@
     },
     {
       "path": "src/components/scene2/investigation/supplychain/SupplyChainPanel.tsx",
-      "sha256": "46e1278afdf35c08f2f61635c5c0ae95df40bbaa6217abe2fa02cf6e1b9b9c2b"
+      "sha256": "8deb537300ff18f81be93812aded9548a05c262492961c6f6a4d3ceff780e962"
     },
     {
       "path": "src/components/scene2/investigation/supplychain/ViewControls.tsx",
@@ -580,7 +580,7 @@
     },
     {
       "path": "src/components/surface/DependencyRadial.module.css",
-      "sha256": "7790f192c3f4ac58e90fa73dfc2a0423bb77f12b702bb271a955c657e58665cc"
+      "sha256": "aa4983268f215d643e88643837da4dfdfc44ad4210a123e7afe92cb756bb4826"
     },
     {
       "path": "src/components/surface/DependencyRadial.tsx",
@@ -600,11 +600,11 @@
     },
     {
       "path": "src/components/surface/drona/ActivityPane.tsx",
-      "sha256": "82bd7b1d507a6fa2e92eda3400eb4d25830429854bdd5b51c4e06a0867f8a012"
+      "sha256": "61c6b8e351b131882f5df7f901614ba8846b2864d68dcf1477abb1e720af078e"
     },
     {
       "path": "src/components/surface/drona/AssistantPane.tsx",
-      "sha256": "b403002bc5a322a89b8efb9196b10eec693d1ee5aadfa8c9cf1e04a22533dc01"
+      "sha256": "2317a4f6ee78a161c47204d8f26375d158a864524cad79f35895e6cb03dfa0ef"
     },
     {
       "path": "src/components/surface/drona/DronaWorkspace.test.tsx",
@@ -612,7 +612,7 @@
     },
     {
       "path": "src/components/surface/drona/DronaWorkspace.tsx",
-      "sha256": "8dee1a2ecf4158f24ff03dcd4c80228783cf8a04110106fc55ba4bc7ce062b3e"
+      "sha256": "838e1afa38fa8639dd4ad5bc171efe755686b12212bc558199696fecc35ad2f3"
     },
     {
       "path": "src/components/surface/drona/EpistemicMark.tsx",
@@ -720,7 +720,7 @@
     },
     {
       "path": "src/lib/auth/routes.test.ts",
-      "sha256": "e85bcd7f41913d8a1cbad616dc0a835a74bd0e357d95fef739e1dc8b001b4c37"
+      "sha256": "daedd41c1bb5e7b95a9d85dc6939e6d13cbda7aa5c4778ea1e582d4854761109"
     },
     {
       "path": "src/lib/auth/server.ts",
@@ -780,7 +780,7 @@
     },
     {
       "path": "src/lib/login/presentation.ts",
-      "sha256": "515458aa481f9d8440f558417d6e6c4eb3c8d8d0a4c3ce075276938c88a3b3cb"
+      "sha256": "d0eeee4943b72428fe1fb684dbc73782084130a4eef4861f05a7ea13682e0b09"
     },
     {
       "path": "src/lib/login/prism.browser.js",
@@ -1356,7 +1356,7 @@
     },
     {
       "path": "src/components/guided/GuidedSurfaceSpotlight.tsx",
-      "sha256": "4480565a61433cae67134d3e1a5ac5286090d7ee0e8204727ac5861bac40e8cf"
+      "sha256": "10c9d00b967e452e6297bad1937b24bf28d6a3fbb6fe7ad3d59669b706f29554"
     },
     {
       "path": "src/components/surface/FinancialExposure.tsx",
@@ -1364,7 +1364,7 @@
     },
     {
       "path": "src/components/surface/FinancialExposure.module.css",
-      "sha256": "e9a268e9a758c0af7d44668bf9965c37d767a8795fe38af875e77858779c29ff"
+      "sha256": "7bbafcba6288459bfb2088249f5a3811de0e348dbb0042b7d3865f75c6e643e7"
     },
     {
       "path": "src/lib/portfolio/commercial.ts",
@@ -1408,7 +1408,7 @@
     },
     {
       "path": "e2e/material-case.spec.ts",
-      "sha256": "0c4852287ef0edbf10a7fbaa26a629bfcda502aa46ab49f8425c1ed8d17bb29c"
+      "sha256": "86769c171d266507494ccab8f406d68c638592a1fa56c2c55ab20b1118e4ed5f"
     },
     {
       "path": "MATERIAL_CASE.md",
@@ -1416,11 +1416,11 @@
     },
     {
       "path": "src/components/guided/MaterialWalkthrough.module.css",
-      "sha256": "945b36fed5e45d8d21423593423b61d12c0936b526b5a3b91fecd49a0f01d36b"
+      "sha256": "575cacf62d5357da24d4ccd7a5ca51956f4f57058c6110e64ab56bdd2110cba8"
     },
     {
       "path": "src/components/guided/MaterialWalkthrough.tsx",
-      "sha256": "880bb7869bd879de9dcf775c6b637fb16ba74982f6a58b1515512c4792717219"
+      "sha256": "4ed33fd318071e6c8fd7f10108516c9fe15fa2389bb7554808f5f7b0ba7aa072"
     },
     {
       "path": "src/components/guided/caseBrief.ts",
@@ -1428,7 +1428,7 @@
     },
     {
       "path": "src/components/scene2/investigation/supplychain/MaterialCriticalPath.module.css",
-      "sha256": "75bbb1dadec5c9a50d25b871daf9f00690ad6369d040dba877c6a8eca6d2586f"
+      "sha256": "b5b083b6cbbe62b592269676d717b59b5d16d9aeab5f4630d49f9a2b53517938"
     },
     {
       "path": "src/components/scene2/investigation/supplychain/MaterialCriticalPath.tsx",
@@ -1449,7 +1449,39 @@
     {
       "path": "src/components/guided/materialFraming.test.ts",
       "sha256": "2a8fe1306c2071c564a9b7d1cf3b4c2b1b47ffb4831e0766f71349b9c4fde7d5"
+    },
+    {
+      "path": "e2e/desktop-layout.spec.ts",
+      "sha256": "45472127dadc9e2c2d293453a833481de0ba5f0c54e557fdb70a5ce255839f59"
+    },
+    {
+      "path": "src/components/DesktopAccess.tsx",
+      "sha256": "e9623ac85f009f9b69bf2f5110ab3e7327f52039d9f9b401496e43a235d99fe9"
+    },
+    {
+      "path": "src/components/scene2/investigation/useInspectorReadingPosition.ts",
+      "sha256": "6aa2422a54a26f8c3d5a7927952e1de7b4105d35dac0568ce5594aa505b466b6"
+    },
+    {
+      "path": "src/design/desktop.css",
+      "sha256": "f548bd8c4a749cf47209235975898667849223282ee4b39607b25b1c95fc090f"
+    },
+    {
+      "path": "src/lib/demo/desktop.test.ts",
+      "sha256": "1c51de84fefd3b57dba71bcde6e9ac01ede0ba30a8f6da216ce610ef36a62d10"
+    },
+    {
+      "path": "src/lib/demo/desktop.ts",
+      "sha256": "2f291c7410fcd3ca95e0c0372174fcc494952173aa8019b1db6b98533461b3a5"
     }
   ],
-  "releaseScope": "4 Nov logo dashboard navigation; scoped hashes only. Existing unrelated GuidedDemo.module.css baseline retained; Git commit is release source authority."
+  "releaseScope": "5 Nov desktop sizing, natural scrolling, narration framing and handheld entry. Scoped hashes only; original SOURCE_MANIFEST and the unrelated historical GuidedDemo.module.css baseline are retained. Git commit is release source authority.",
+  "scopedPresentationRevisions": [
+    {
+      "date": "2026-11-05",
+      "path": "src/components/guided/GuidedDemo.module.css",
+      "scope": "Append compact cover rules only; pre-existing content and historical baseline retained.",
+      "patchSha256": "207b22dfcd6fc054987a5b0f3f4da15c6db4e5f6c30b7aabd589ce5e74d6f28b"
+    }
+  ]
 }

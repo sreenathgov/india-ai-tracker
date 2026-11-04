@@ -50,3 +50,17 @@
   .statuses dt { min-height: 40px; }
 }
 @media (prefers-reduced-motion: reduce) { .orderRow { transition: none; } }
+
+@media(max-width:1439px),(max-height:819px) {
+  .summary { margin-inline:4px; padding-block:8px 16px; }
+  .amount { font-size:48px; margin-block:10px 8px; }
+  .statuses { margin-block:16px 12px; gap:12px; }
+  .statuses dd { font-size:21px; line-height:26px; margin-top:4px; }
+  .timing { margin-top:10px; }
+  .basis { margin-top:8px; }
+  .orderList { padding-top:16px; }
+  .orderList > section + section { margin-top:16px; }
+  .orderRow { padding:12px 4px; row-gap:6px; column-gap:12px; }
+  .orderContext { padding-top:2px; gap:4px 10px; }
+  .openOrder { min-height:36px; }
+}

@@ -30,8 +30,8 @@ export function ActivityPane({
   readonly onComment: (text: string) => void;
 }): React.ReactElement {
   return (
-    <div className="flex h-full flex-col">
-      <ol aria-label="Activity" className="relative min-h-0 flex-1 overflow-y-auto pr-1">
+    <div className="flex min-h-0 flex-1 flex-col">
+      <ol tabIndex={0} aria-label="Activity" className="relative min-h-0 flex-1 overflow-y-auto pr-1">
         {feed.map((event, i) => (
           <TimelineItem key={event.id} event={event} last={i === feed.length - 1} />
         ))}

@@ -1,5 +1,6 @@
 import "server-only";
 import { LOGIN_PRISM_SCRIPT } from "./generated/prism-script";
+import { DESKTOP_BOOT_SCRIPT, DESKTOP_MESSAGE, DESKTOP_TITLE } from "@/lib/demo/desktop";
 
 /** This page intentionally does not load any authenticated application assets. */
 const styles = `
@@ -47,6 +48,18 @@ footer p{margin:0}
 [hidden]{display:none!important}
 @media(max-width:600px){.page{padding-top:36px;padding-bottom:18px}main{padding:24px 0 64px}.intro{max-width:34ch;font-size:14px}.access{margin-top:48px}.access::before{inset:-20px -12px}.motion-toggle{position:static;margin:18px auto 0}}
 @media(max-height:700px) and (min-width:601px){.page{padding-top:24px}main{padding:12px 0 56px}h1{font-size:64px}.access{margin-top:44px}}
+
+.desktop-access{display:none;width:100%;max-width:540px;margin:auto;text-align:center;padding:32px 0 64px}
+.desktop-access h1{font-size:clamp(36px,5vw,48px);line-height:1.15}
+.desktop-access p{margin:24px 0 0;font-size:15px;line-height:1.7;color:#e0d4d3}
+.desktop-access span{display:block;margin-top:24px;font-size:14px;color:#d3bfbe}
+html[data-device-blocked="true"] .desktop-access{display:block}
+html[data-device-blocked="true"] .login-main,html[data-device-blocked="true"] .motion-toggle,html[data-device-blocked="true"] .prism{display:none!important}
+.desktop-label{font-size:12px;color:#d3bfbe;text-align:center;margin:20px -16px 0}
+.window-note{display:none;font-size:12px;line-height:1.5;color:#e0d4d3;text-align:center;margin:10px 0 0}
+@media(max-width:1023px){.window-note{display:block}}
+@media(max-width:1439px),(max-height:819px){.page{padding-top:24px}main{padding:16px 0 48px}h1{font-size:clamp(44px,5.5vw,64px)}.intro{margin-top:16px}.access{margin-top:44px}.access::before{inset:-20px}input,.enter{min-height:46px}.enter{margin-top:20px}}
+
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
 @media(forced-colors:active){.ambient,.prism,.tint,.grid,.scrim{display:none}.access::before{background:Canvas;border-color:CanvasText}input,button{border:1px solid ButtonText}body,h1,.intro,label,footer,.notice{color:CanvasText}.enter:disabled{color:GrayText}}
 `;
@@ -57,22 +70,23 @@ type LoginPresentation = {
   enabled: boolean;
   error: boolean;
   expired: boolean;
+  handheld?: boolean;
 };
 
-export function renderLoginPage({ csrf, nonce, enabled, error, expired }: LoginPresentation): string {
+export function renderLoginPage({ csrf, nonce, enabled, error, expired, handheld = false }: LoginPresentation): string {
   // Only these fixed messages enter HTML; URL query values are never reflected.
   const notice = !enabled ? "Access is temporarily unavailable." : error ? "Check your username and password." : expired ? "Session ended. Sign in again." : "";
   const noticeHtml = notice ? `<p class="notice${error && enabled ? " error" : ""}" role="${error && enabled ? "alert" : "status"}">${notice}</p>` : "";
   return `<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#200b0d"><title>Explore Drona · Private demonstration</title><style nonce="${nonce}">${styles}</style></head>
+<html lang="en"${handheld ? ' data-device-blocked="true"' : ""}><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#200b0d"><title>Explore Drona · Private demonstration</title><style nonce="${nonce}">${styles}</style><script nonce="${nonce}">${DESKTOP_BOOT_SCRIPT}</script></head>
 <body>
 <div class="ambient" aria-hidden="true"></div>
 <div id="demo-prism-bg" class="prism" aria-hidden="true" data-render="fallback" data-animation-type="3drotate" data-height="3.5" data-base-width="5.6" data-scale="3.6" data-noise="0" data-glow="1" data-time-scale="0.5" data-max-fps="30" data-max-dpr="1.5"></div>
 <div class="tint" aria-hidden="true"></div><div class="grid" aria-hidden="true"></div><div class="scrim" aria-hidden="true"></div>
-<div class="page"><main>
+<div class="page"><section class="desktop-access" aria-labelledby="desktop-title"><h1 id="desktop-title">${DESKTOP_TITLE}</h1><p>${DESKTOP_MESSAGE}</p><span>demo.kananlabs.in</span></section>${handheld ? "" : `<main class="login-main">
 <h1>Explore Drona.</h1><p class="intro">A guided demonstration of supply-chain risk intelligence.</p>
-<div class="access"><form method="post" action="/api/auth/login"><input type="hidden" name="csrf" value="${csrf}"><label for="username">Username</label><input id="username" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required maxlength="64"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required maxlength="1024"><button class="enter" type="submit"${enabled ? "" : " disabled"}>Enter demo <span aria-hidden="true">→</span></button></form>${noticeHtml}</div>
-</main><footer><p>Private demonstration · Illustrative data<span class="legal">KANANX ANALYTICS PRIVATE LIMITED</span></p>
+<div class="access"><form method="post" action="/api/auth/login"><input type="hidden" name="csrf" value="${csrf}"><label for="username">Username</label><input id="username" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required maxlength="64"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required maxlength="1024"><button class="enter" type="submit"${enabled ? "" : " disabled"}>Enter demo <span aria-hidden="true">→</span></button></form>${noticeHtml}<p class="desktop-label">Designed for laptop and desktop viewing.</p><p class="window-note">For the best view, widen this window.</p></div>
+</main>`}<footer><p>Private demonstration · Illustrative data<span class="legal">KANANX ANALYTICS PRIVATE LIMITED</span></p>
 <button id="motion-toggle" class="motion-toggle" type="button" aria-label="Pause background animation" title="Pause background animation" aria-pressed="false" hidden><svg class="pause-icon" viewBox="0 0 12 12" aria-hidden="true"><rect x="3" y="1.5" width="1.5" height="9" rx=".75"/><rect x="7.5" y="1.5" width="1.5" height="9" rx=".75"/></svg><svg class="play-icon" viewBox="0 0 12 12" aria-hidden="true"><path d="m3 1 8 5-8 5z"/></svg><span data-motion-label>Pause motion</span></button></footer></div>
-<script nonce="${nonce}">${LOGIN_PRISM_SCRIPT}</script></body></html>`;
+<script nonce="${nonce}">${handheld ? "" : LOGIN_PRISM_SCRIPT}</script></body></html>`;
 }

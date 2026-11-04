@@ -20,7 +20,7 @@ const DATE = new Intl.DateTimeFormat("en-GB", {
  */
 export function AppHeader({ asOf, logoutCsrf }: { readonly asOf: Date; readonly logoutCsrf?: string }): React.ReactElement {
   return (
-    <header className="flex h-14 shrink-0 items-center justify-between gap-4 px-6">
+    <header data-app-header className="flex h-14 shrink-0 items-center justify-between gap-4 px-6">
       <div className="flex min-w-0 items-center gap-3">
         <p className="flex min-w-0 items-baseline gap-2 truncate">
           <span className="text-body-s font-medium text-label-primary">Network</span>

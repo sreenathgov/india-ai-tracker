@@ -3,6 +3,7 @@ import * as React from "react";
 import { useSupplierInquiry } from "@/components/scene2/investigation/overview/SupplierInquiryProvider";
 import { deccanInquiry } from "@/lib/scene2/investigation/inquiry";
 import type { InvestigationTab } from "@/lib/scene2/supplierView";
+import { hasSideNarration } from "@/lib/demo/desktop";
 import { frameSection, placeCoach, type ReadingRail } from "./materialFraming";
 import styles from "./MaterialWalkthrough.module.css";
 
@@ -54,6 +55,8 @@ function CaseSpotlight({ scopeRef, beat, rail, copy, primaryLabel, waitForReply,
   const [position, setPosition] = React.useState<React.CSSProperties>({ visibility: "hidden" });
   React.useLayoutEffect(() => {
     const scope = scopeRef.current ?? overlay.current?.closest<HTMLDivElement>("[data-investigation]"); if (!scope) return;
+    const previousNarration = scope.getAttribute("data-material-narration");
+    const previousBandHeight = scope.style.getPropertyValue("--material-band-height");
     let scheduled = 0, missingFrames = 0, painted = false;
     let previousMeasurement: string | null = null;
     let resize: ResizeObserver | null = null;
@@ -63,6 +66,13 @@ function CaseSpotlight({ scopeRef, beat, rail, copy, primaryLabel, waitForReply,
     const inert = (el: HTMLElement) => { if (el === overlay.current || el.contains(overlay.current)) return; if (!changed.has(el)) changed.set(el, el.inert); el.inert = true; };
     const measure = () => {
       restore();
+      const scopeBox = scope.getBoundingClientRect();
+      const band = beat !== "complete" && !hasSideNarration(scopeBox.width, window.innerHeight);
+      scope.setAttribute("data-material-narration", band ? "band" : "side");
+      const bandHeight = Math.ceil(card.current?.getBoundingClientRect().height || 140);
+      const bandValue = `${bandHeight}px`;
+      if (scope.style.getPropertyValue("--material-band-height") !== bandValue) scope.style.setProperty("--material-band-height", bandValue);
+      const bodyBox = scope.querySelector<HTMLElement>("[data-material-narration-space]")?.getBoundingClientRect();
       const targets = Array.from(scope.querySelectorAll<HTMLElement>(copy.target)).filter(el => el.getBoundingClientRect().width > 0);
       for (const el of targets) if (!watchedTargets.has(el)) { watchedTargets.add(el); resize?.observe(el); }
       const target = targets[0];
@@ -76,8 +86,7 @@ function CaseSpotlight({ scopeRef, beat, rail, copy, primaryLabel, waitForReply,
       }
       // Replies and assistant answers can grow the real section after entry.
       // Keep its outer reading surface in view without resetting its own scroll.
-      target?.scrollIntoView?.({ block: "nearest", inline: "nearest", behavior: "instant" });
-      const scopeBox = scope.getBoundingClientRect();
+      target?.scrollIntoView?.({ block: band ? "start" : "nearest", inline: "nearest", behavior: "instant" });
       if (copy.interactive && target) {
         for (let node: HTMLElement | null = target; node && node !== scope; node = node.parentElement) for (const sibling of Array.from(node.parentElement?.children ?? [])) if (sibling !== node && sibling instanceof HTMLElement) inert(sibling);
       } else for (const child of Array.from(scope.children)) if (child instanceof HTMLElement) inert(child);
@@ -98,10 +107,10 @@ function CaseSpotlight({ scopeRef, beat, rail, copy, primaryLabel, waitForReply,
       previousMeasurement = measurement;
       setFrame(old => JSON.stringify(old) === measurement ? old : nextFrame);
       const preferredWidth = parseFloat(getComputedStyle(overlay.current!).getPropertyValue("--material-coach-width")) || 320;
-      const width = Math.min(beat === "complete" ? 320 : preferredWidth, scopeBox.width - 48);
+      const width = band && bodyBox ? bodyBox.width - 40 : Math.min(beat === "complete" ? 320 : preferredWidth, scopeBox.width - 48);
       const height = card.current?.getBoundingClientRect().height || 300;
       const position = placeCoach(scopeBox, subject, width, height, rail, beat === "complete");
-      setPosition({ left: position.left - scopeBox.left, top: position.top - scopeBox.top, width, maxHeight: scopeBox.height - 48, visibility: ready ? "visible" : "hidden" });
+      setPosition({ left: band && bodyBox ? bodyBox.left - scopeBox.left + 20 : position.left - scopeBox.left, top: band && bodyBox ? bodyBox.top - scopeBox.top + 12 : position.top - scopeBox.top, width, maxHeight: band ? Math.max(140, scopeBox.height * .38) : scopeBox.height - 48, visibility: ready ? "visible" : "hidden" });
       if (ready) painted = true;
       else scheduled = requestAnimationFrame(measure);
     };
@@ -114,7 +123,7 @@ function CaseSpotlight({ scopeRef, beat, rail, copy, primaryLabel, waitForReply,
     // section without resizing the dialog or mutating its attributes.
     resize = typeof ResizeObserver === "undefined" ? null : new ResizeObserver(schedule); resize?.observe(scope); if (card.current) resize?.observe(card.current); watchedTargets.forEach(el => resize?.observe(el));
     document.addEventListener("scroll", schedule, true); window.addEventListener("resize", schedule);
-    return () => { cancelAnimationFrame(scheduled); restore(); observer.disconnect(); resize?.disconnect(); document.removeEventListener("scroll", schedule, true); window.removeEventListener("resize", schedule); };
+    return () => { cancelAnimationFrame(scheduled); restore(); observer.disconnect(); resize?.disconnect(); document.removeEventListener("scroll", schedule, true); window.removeEventListener("resize", schedule); if (previousNarration === null) scope.removeAttribute("data-material-narration"); else scope.setAttribute("data-material-narration", previousNarration); if (previousBandHeight) scope.style.setProperty("--material-band-height", previousBandHeight); else scope.style.removeProperty("--material-band-height"); };
   }, [scopeRef, beat, rail, copy]);
   React.useEffect(() => {
     if (position.visibility !== "visible") return;

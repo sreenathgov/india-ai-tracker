@@ -1,6 +1,6 @@
 .surface { container-type: inline-size; }
 .body { gap: 16px; overflow-y: auto; overscroll-behavior: contain; }
-.content { display: flex; flex: 1 0 auto; min-height: 0; flex-direction: column; justify-content: center; gap: 16px; }
+.content { display: flex; flex: 1 0 auto; min-height: 0; flex-direction: column; justify-content: flex-start; gap: 16px; }
 .chartAndCategories { display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .ring { position: relative; flex-shrink: 0; width: min(100%, 320px); aspect-ratio: 1; }
 .svg { width: 100%; height: 100%; }
@@ -35,4 +35,29 @@
   .surface[data-risk-presenting="true"] .centreLabel { max-width: 110px; font-size: 12px; }
   .surface[data-risk-presenting="true"] .categoryBlock { flex: 1; min-width: 0; }
   .surface[data-risk-presenting="true"] .categories { grid-template-columns: 1fr; }
+}
+
+/* A card's readable content must not depend on its parent's leftover height. */
+.surface:not([data-risk-presenting="true"]) .body { overflow:visible; }
+@media(max-width:1439px),(max-height:819px) {
+  .ring { width:180px; max-width:200px; }
+  .chartAndCategories { gap:12px; }
+  .figure { font-size:48px; }
+  .centre { gap:6px; }
+  .centreLabel { max-width:116px; font-size:12px; }
+  .category { min-height:32px; padding-block:5px; font-size:13px; line-height:22px; }
+  .listHeading { margin-bottom:6px; }
+  .explanation { padding-top:12px; }
+  .status { padding-top:12px; gap:8px; }
+  .status dt { min-height:0; font-size:12px; }
+  .status dd { margin-top:5px; font-size:22px; }
+}
+@media(max-width:1439px),(max-height:819px) {
+@container(min-width:360px) {
+  .chartAndCategories { flex-direction:row; align-items:center; gap:12px; }
+  .ring { width:40%; min-width:144px; max-width:200px; }
+  .categoryBlock { flex:1; min-width:0; }
+  .categories { grid-template-columns:1fr; }
+}
+
 }

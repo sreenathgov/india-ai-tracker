@@ -162,10 +162,11 @@ function DemoPage({ onReplay, logoutCsrf }: { readonly onReplay: () => void; rea
      owns focus for exactly as long as it is up — which is what the guard says —
      and hands it to the surface it was standing in front of. */
   const stageRef = React.useRef<HTMLDivElement | null>(null);
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     if (!admitted) return;
-    stageRef.current?.focus();
-  }, [admitted, scene.scene]);
+    stageRef.current?.closest<HTMLElement>(".demo-reading-area")?.scrollTo({ top: 0, behavior: "instant" });
+    stageRef.current?.focus({ preventScroll: true });
+  }, [admitted, scene.scene, scene.commitmentId]);
 
   /* Scene 2 shows the order's planned network: plant, its Tier-1s and its
      destination. The production sub-tier overlay returns with the supplier panels. */
@@ -215,6 +216,7 @@ function DemoPage({ onReplay, logoutCsrf }: { readonly onReplay: () => void; rea
         <main className="flex min-w-0 flex-1 flex-col">
           <AppHeader asOf={DEMO_NOW} logoutCsrf={logoutCsrf} />
           <div data-exploration-host />
+          <p className="desktop-window-note">For the best view, widen this window.</p>
 
           {/* Scene 1 is an asymmetric bento: commitments down the left as the main
               work surface; the map, then dependencies beside working capital and
@@ -225,16 +227,16 @@ function DemoPage({ onReplay, logoutCsrf }: { readonly onReplay: () => void; rea
             className={cn(
               "flex min-h-0 flex-1",
               surface
-                ? "mx-auto w-full max-w-[1600px] flex-col overflow-y-auto px-5 pb-5 pt-1 min-[1100px]:overflow-hidden"
+                ? "demo-reading-area"
                 : workspace
-                  ? "mx-auto w-full max-w-[1600px] flex-col overflow-y-auto px-5 pb-6 pt-1"
+                  ? "demo-reading-area"
                   : "flex-row"
             )}
           >
           <div
             className={cn(
               surface
-                ? "flex shrink-0 flex-col gap-4 min-[1100px]:grid min-[1100px]:min-h-0 min-[1100px]:flex-1 min-[1100px]:grid-cols-12 min-[1100px]:grid-rows-[minmax(240px,36fr)_64fr]"
+                ? "dashboard-grid"
                 : workspace
                   ? /* Scene 2: one 12-column grid. The stage below spans it as a subgrid,
                        so the map (page-owned, never remounted) and the workspace
@@ -261,7 +263,7 @@ function DemoPage({ onReplay, logoutCsrf }: { readonly onReplay: () => void; rea
             }
             className={
               surface
-                ? "order-2 h-[300px] shrink-0 rounded-surface shadow-rest min-[1100px]:order-none min-[1100px]:col-span-7 min-[1100px]:col-start-6 min-[1100px]:row-start-1 min-[1100px]:h-auto"
+                ? "dashboard-map shadow-rest"
                 : workspace
                   ? /* z-[1] lifts the map over the stage's subgrid, which spans this
                        cell but leaves it empty, so the map keeps its pointer. */
@@ -290,7 +292,7 @@ function DemoPage({ onReplay, logoutCsrf }: { readonly onReplay: () => void; rea
             className={cn(
               "flex flex-col outline-none motion-safe:animate-scene-enter",
               surface
-                ? "order-1 min-h-0 gap-2 min-[1100px]:order-none min-[1100px]:col-span-5 min-[1100px]:col-start-1 min-[1100px]:row-span-2 min-[1100px]:row-start-1"
+                ? "dashboard-stage"
                 : workspace
                   ? "order-1 gap-3 min-[1100px]:order-none min-[1100px]:col-span-12 min-[1100px]:col-start-1 min-[1100px]:row-span-3 min-[1100px]:row-start-1 min-[1100px]:grid min-[1100px]:grid-cols-subgrid min-[1100px]:grid-rows-subgrid"
                   : "h-full min-h-0 min-w-0 flex-1"
@@ -308,7 +310,7 @@ function DemoPage({ onReplay, logoutCsrf }: { readonly onReplay: () => void; rea
                   onClearFilter={() => setFilter(null)}
                   onOpen={onOpen}
                   onEmphasis={setEmphasis}
-                  className="min-h-[620px] flex-1 min-[1100px]:min-h-0"
+                  className="dashboard-commitments"
                 />
               </>
             ) : null}
@@ -339,14 +341,14 @@ function DemoPage({ onReplay, logoutCsrf }: { readonly onReplay: () => void; rea
           {/* The right column beneath the map: the analytical heart beside two
               supporting surfaces. Scene 1 only, so it mounts fresh on every return. */}
           {surface ? (
-            <div className="order-3 flex flex-col gap-4 motion-safe:animate-scene-enter min-[1100px]:order-none min-[1100px]:col-span-7 min-[1100px]:col-start-6 min-[1100px]:row-start-2 min-[1100px]:grid min-[1100px]:min-h-0 min-[1100px]:grid-cols-[minmax(0,5fr)_minmax(0,3fr)] min-[1100px]:grid-rows-[auto_1fr]">
+            <div className="dashboard-analysis motion-safe:animate-scene-enter">
               <DependencyRadial
                 filter={filter}
                 onFilterType={(type) => setFilter((current) => toggleFilter(current, { kind: "type", type }))}
-                className="min-h-[600px] min-[1100px]:col-start-1 min-[1100px]:row-span-2 min-[1100px]:min-h-0"
+                className="dashboard-risks"
               />
-              <WorkingCapitalCard className="min-[1100px]:col-start-2" />
-              <DronaWorkspace onOpen={onOpen} className="min-h-[320px] min-[1100px]:col-start-2 min-[1100px]:min-h-0" />
+              <WorkingCapitalCard className="dashboard-capital" />
+              <DronaWorkspace onOpen={onOpen} className="dashboard-assistant" />
             </div>
           ) : null}
           </div>

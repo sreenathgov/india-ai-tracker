@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { createPortal } from "react-dom";
+import { hasSideNarration } from "@/lib/demo/desktop";
 import { type RiskTourBeat } from "@/components/surface/riskPresentation";
 import styles from "./GuidedSpotlight.module.css";
 import riskStyles from "./GuidedRiskSpotlight.module.css";
@@ -16,6 +17,7 @@ export function GuidedSurfaceSpotlight({ target, focusTarget, primaryLabel, step
   const [host, setHost] = React.useState<HTMLElement | null>(null);
   const [frame, setFrame] = React.useState<React.CSSProperties | null>(null);
   const [placement, setPlacement] = React.useState<React.CSSProperties>({ visibility: "hidden" });
+  const [band, setBand] = React.useState(false);
   const [unavailable, setUnavailable] = React.useState(false);
   const card = React.useRef<HTMLDivElement>(null);
   const heading = React.useRef<HTMLHeadingElement>(null);
@@ -75,20 +77,22 @@ export function GuidedSurfaceSpotlight({ target, focusTarget, primaryLabel, step
       if (!active) return;
       const width = window.innerWidth, height = window.innerHeight;
       const margin = width < 600 ? 12 : 24;
-      const wide = width >= 1100;
-      const guideWidth = Math.min(360, width - margin * 2);
+      const wide = hasSideNarration(width - 64, height);
+      setBand(!wide);
+      const guideWidth = wide ? Math.min(360, width - margin * 2) : width - 96;
       const gap = wide ? 16 : 12;
-      const guideBudget = wide ? height - margin * 2 : Math.max(100, height - margin * 2 - gap - 120);
+      const guideBudget = wide ? height - margin * 2 : Math.max(120, height * .38);
       // Measure the full reading content, independently of an earlier max-height.
       // Measuring the clipped outer card feeds its old size back into placement.
       const reading = card.current?.firstElementChild as HTMLElement | null;
       const controls = card.current?.lastElementChild as HTMLElement | null;
-      const intrinsicGuideHeight = reading && controls ? reading.scrollHeight + controls.offsetHeight + 2 : wide ? 340 : 230;
+      const intrinsicGuideHeight = reading && controls ? (wide ? reading.scrollHeight + controls.offsetHeight : Math.max(reading.scrollHeight, controls.offsetHeight)) + 2 : wide ? 340 : 230;
       const guideHeight = Math.min(intrinsicGuideHeight, guideBudget);
       const subjectWidth = wide ? Math.min(step === "capital" ? 480 : step === "risks" ? 700 : 640, width - guideWidth - gap - margin * 2) : Math.min(step === "capital" ? 480 : width, width - margin * 2);
-      const subjectHeight = wide ? Math.min(step === "capital" ? 320 : 660, height - margin * 2) : Math.min(step === "capital" ? 320 : height, Math.max(120, height - guideHeight - gap - margin * 2));
+      const subjectTop = wide ? margin : margin + guideHeight + 24;
+      const subjectHeight = wide ? Math.min(step === "capital" ? 320 : 660, height - margin * 2) : Math.min(step === "capital" ? 320 : height, Math.max(120, height - guideHeight - 24 - margin * 2));
       if (subject) {
-        Object.assign(subject.style, { position: "fixed", zIndex: "121", width: `${subjectWidth}px`, height: `${subjectHeight}px`, minHeight: "0", maxHeight: "none", top: `${wide ? Math.max(margin, (height - subjectHeight) / 2) : margin}px`, right: ((step === "exposure" || step === "order") && wide) || (step === "capital" && !wide) ? "auto" : `${margin}px`, left: ((step === "exposure" || step === "order") && wide) || (step === "capital" && !wide) ? `${margin}px` : "auto" });
+        Object.assign(subject.style, { position: "fixed", zIndex: "121", width: `${subjectWidth}px`, height: `${subjectHeight}px`, minHeight: "0", maxHeight: "none", top: `${wide ? Math.max(margin, (height - subjectHeight) / 2) : subjectTop}px`, right: ((step === "exposure" || step === "order") && wide) || (step === "capital" && !wide) ? "auto" : `${margin}px`, left: ((step === "exposure" || step === "order") && wide) || (step === "capital" && !wide) ? `${margin}px` : "auto" });
       }
       const rect = subject?.getBoundingClientRect();
       if (financialBody && readingReset) {
@@ -113,9 +117,9 @@ export function GuidedSurfaceSpotlight({ target, focusTarget, primaryLabel, step
       const valid = Boolean(rect && right > left && bottom > top);
       setUnavailable(!valid);
       setFrame(valid ? { left, top, width: right - left, height: bottom - top, borderRadius: focusTarget ? 8 : getComputedStyle(subject!).borderTopLeftRadius } : null);
-      setPlacement({ width: guideWidth, left: wide && rect ? step === "exposure" || step === "order" ? rect.right + gap : rect.left - gap - guideWidth : margin,
-        top: wide ? Math.max(margin, (height - guideHeight) / 2) : valid && rect ? rect.bottom + gap : margin,
-        maxHeight: wide ? height - margin * 2 : Math.max(100, height - (valid && rect ? rect.bottom + gap : margin) - margin), visibility: "visible" });
+      setPlacement({ width: guideWidth, left: !wide ? 80 : wide && rect ? step === "exposure" || step === "order" ? rect.right + gap : rect.left - gap - guideWidth : margin,
+        top: wide ? Math.max(margin, (height - guideHeight) / 2) : margin,
+        maxHeight: wide ? height - margin * 2 : guideBudget, visibility: "visible" });
     };
     const schedule = () => { cancelAnimationFrame(scheduled); scheduled = requestAnimationFrame(measure); };
     const allowed = () => Array.from(host.querySelectorAll<HTMLElement>(FOCUSABLE)).filter(element =>
@@ -182,7 +186,7 @@ export function GuidedSurfaceSpotlight({ target, focusTarget, primaryLabel, step
     return () => cancelAnimationFrame(scheduled);
   }, [beat, step, host, positioned, placement.visibility]);
   if (!host) return null;
-  return createPortal(<div className={`${styles.stage} ${riskStyles.stage}`} style={focusTarget ? { zIndex: 122 } : undefined} data-risk-spotlight data-guide-control data-guide-step={step} data-guide-act="1" data-spotlight-focus={focusTarget ? step : "surface"} data-risk-beat={beat} data-positioned={positioned}>
+  return createPortal(<div className={`${styles.stage} ${riskStyles.stage}`} style={focusTarget ? { zIndex: 122 } : undefined} data-narration={band ? "band" : "side"} data-risk-spotlight data-guide-control data-guide-step={step} data-guide-act="1" data-spotlight-focus={focusTarget ? step : "surface"} data-risk-beat={beat} data-positioned={positioned}>
     {frame ? <div aria-hidden="true" data-spotlight-aperture className={styles.aperture} style={frame} /> : <div aria-hidden="true" className={styles.blanket} />}
     <div ref={card} data-spotlight-card className={`${styles.card} ${riskStyles.card}`} style={placement}>
       <div className={`${styles.reading} ${riskStyles.reading}`} tabIndex={0} aria-label={`${eyebrow} explanation`}>

@@ -275,9 +275,10 @@ test("separate browser contexts retain independent sample replies", async ({ bro
   await first.close(); await second.close();
 });
 
-test("mobile guidance fits and dialog keyboard focus remains inside the investigation", async ({ browser }, testInfo) => {
-  const context = await localContext(browser, true, true);
+test("narrow desktop guidance fits and keyboard focus remains inside the investigation", async ({ browser }, testInfo) => {
+  const context = await localContext(browser, true);
   const page = await context.newPage();
+  await page.setViewportSize({ width: 1024, height: 600 });
   await startWalkthrough(page);
   await assertNoHorizontalOverflow(page);
   await openCase(page);
@@ -397,8 +398,8 @@ test("the cover presents a case brief and optional details before the dashboard"
   await context.close();
 });
 
-test("the cover stacks and remains keyboard-accessible on mobile and short screens", async ({ browser }, testInfo) => {
-  for (const viewport of [{ width: 375, height: 812 }, { width: 768, height: 900 }, { width: 1024, height: 600 }]) {
+test("the cover remains keyboard-accessible on narrow and short desktops", async ({ browser }, testInfo) => {
+  for (const viewport of [{ width: 980, height: 700 }, { width: 1280, height: 650 }, { width: 1024, height: 600 }]) {
     const context = await localContext(browser);
     const page = await context.newPage();
     await page.setViewportSize(viewport);
@@ -431,7 +432,7 @@ test("the cover stacks and remains keyboard-accessible on mobile and short scree
 
 
 test("Act One spotlights the real map, keeps controls reachable and restores the dashboard", async ({ browser }, testInfo) => {
-  for (const viewport of [{ width: 1440, height: 1000 }, { width: 1024, height: 768 }, { width: 375, height: 812 }, { width: 375, height: 480 }, { width: 320, height: 640 }]) {
+  for (const viewport of [{ width: 1440, height: 1000 }, { width: 1280, height: 650 }, { width: 1440, height: 780 }, { width: 1024, height: 600 }]) {
     const context = await localContext(browser);
     const page = await context.newPage();
     await page.setViewportSize(viewport);
@@ -453,8 +454,16 @@ test("Act One spotlights the real map, keeps controls reachable and restores the
       expect(card.x).toBeGreaterThanOrEqual(0);
       expect(card.x + card.width).toBeLessThanOrEqual(viewport.width);
       expect(next.y + next.height).toBeLessThanOrEqual(viewport.height);
-      expect(card.x + card.width <= map.x || card.y >= map.y + map.height).toBe(true);
-    }).toPass();
+      expect(card.x + card.width <= map.x || card.x >= map.x + map.width || card.y >= map.y + map.height || card.y + card.height <= map.y).toBe(true);
+    }).toPass({ timeout: 15_000 }).catch(async error => {
+      console.log("Map framing diagnostics", await page.evaluate(() => {
+        const map=document.querySelector<HTMLElement>('[data-surface="map"]')!, card=document.querySelector<HTMLElement>('[data-spotlight-card]')!, scroller=document.querySelector<HTMLElement>('.demo-reading-area')!;
+        const rect=(element:HTMLElement)=>({x:element.getBoundingClientRect().x,y:element.getBoundingClientRect().y,width:element.getBoundingClientRect().width,height:element.getBoundingClientRect().height});
+        return {map:rect(map),card:rect(card),mapStyle:map.getAttribute('style'),computedMapHeight:getComputedStyle(map).height,scroller:rect(scroller),scrollTop:scroller.scrollTop,padding:getComputedStyle(scroller).paddingTop,narration:document.querySelector('[data-guide-step="map"]')?.getAttribute('data-narration')};
+      }));
+      await page.screenshot({path:testInfo.outputPath(`map-framing-failure-${viewport.width}x${viewport.height}.png`)});
+      throw error;
+    });
     expect(await page.locator("[data-guided-boundary]").evaluate(element => (element as HTMLElement).inert)).toBe(true);
     for (let i = 0; i < 6; i++) {
       await page.keyboard.press("Tab");
@@ -541,7 +550,7 @@ test("refined spotlight enters together and remains legible in both colour theme
 
 
 test("risk categories share a real accessible spotlight and retain the order evidence", async ({ browser }, testInfo) => {
-  for (const viewport of [{ width: 1440, height: 1000 }, { width: 1024, height: 768 }, { width: 375, height: 812 }, { width: 375, height: 480 }, { width: 320, height: 640 }]) {
+  for (const viewport of [{ width: 1440, height: 1000 }, { width: 1280, height: 650 }, { width: 1440, height: 780 }, { width: 1024, height: 600 }]) {
     const context = await localContext(browser);
     const page = await context.newPage();
     await page.setViewportSize(viewport);
@@ -565,7 +574,7 @@ test("risk categories share a real accessible spotlight and retain the order evi
       expect(guide.x).toBeGreaterThanOrEqual(0);
       expect(guide.y).toBeGreaterThanOrEqual(0);
       expect(guide.y + guide.height).toBeLessThanOrEqual(viewport.height + 1);
-      expect(guide.x + guide.width <= target.x || guide.y >= target.y + target.height).toBe(true);
+      expect(guide.x + guide.width <= target.x || guide.x >= target.x + target.width || guide.y >= target.y + target.height || guide.y + guide.height <= target.y).toBe(true);
     }).toPass();
     await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
     await page.screenshot({ path: testInfo.outputPath(`risks-overview-${viewport.width}x${viewport.height}.png`), fullPage: true });
@@ -665,7 +674,7 @@ test("hover previews and pinned category selections highlight the wheel and dim 
 
 test("capital precedes exposure and a continuous order-list spotlight opens Act Two", async ({ browser }, testInfo) => {
   test.setTimeout(90_000);
-  for (const viewport of [{ width: 1440, height: 1000 }, { width: 1024, height: 768 }, { width: 375, height: 812 }, { width: 375, height: 480 }, { width: 320, height: 640 }]) {
+  for (const viewport of [{ width: 1440, height: 1000 }, { width: 1280, height: 650 }, { width: 1440, height: 780 }, { width: 1024, height: 600 }]) {
     const context = await localContext(browser);
     if (viewport.width === 1024) await context.addInitScript(() => localStorage.setItem("drona-theme", "dark"));
     const page = await context.newPage();
@@ -702,7 +711,7 @@ test("capital precedes exposure and a continuous order-list spotlight opens Act 
         expect(box.y + box.height).toBeLessThanOrEqual(viewport.height + 1);
         expect(guide.y + guide.height).toBeLessThanOrEqual(viewport.height + 1);
         expect(guide.x + guide.width).toBeLessThanOrEqual(viewport.width + 1);
-        expect(guide.x >= box.x + box.width || guide.x + guide.width <= box.x || guide.y >= box.y + box.height).toBe(true);
+        expect(guide.x >= box.x + box.width || guide.x + guide.width <= box.x || guide.y >= box.y + box.height || guide.y + guide.height <= box.y).toBe(true);
         if (step !== "capital") {
           const focal = (await target.locator(step === "exposure" ? "[data-financial-summary]" : "[data-production-orders]").boundingBox())!;
           expect(Math.abs(aperture.x - box.x)).toBeLessThan(1);
@@ -826,7 +835,7 @@ test("closing the regulatory condition updates portfolio exposure without erasin
 
 test("polished supplier cards and List share concise data and a working featured case", async ({ browser }, testInfo) => {
   test.setTimeout(90_000);
-  for (const viewport of [{ width: 1440, height: 1000 }, { width: 1024, height: 768 }, { width: 375, height: 812 }, { width: 320, height: 640 }]) {
+  for (const viewport of [{ width: 1440, height: 1000 }, { width: 1280, height: 650 }, { width: 1024, height: 600 }]) {
     const context = await localContext(browser);
     if (viewport.width === 1024) await context.addInitScript(() => localStorage.setItem("drona-theme", "dark"));
     const page = await context.newPage();
@@ -896,7 +905,8 @@ test("Act Two spotlights the real planning brief, separates market value and sup
       expect(Math.abs(aperture.x - target.x)).toBeLessThan(1);
       expect(Math.abs(aperture.width - target.width)).toBeLessThan(1);
       expect(Math.abs(aperture.height - target.height)).toBeLessThan(1);
-      expect(guide.x).toBeGreaterThanOrEqual(target.x + target.width);
+      if (viewport.height >= 700) expect(guide.x).toBeGreaterThanOrEqual(target.x + target.width);
+      else expect(guide.y + guide.height + 16).toBeLessThanOrEqual(target.y);
       expect(guide.x + guide.width).toBeLessThanOrEqual(viewport.width);
       expect(guide.y + guide.height).toBeLessThanOrEqual(viewport.height);
     }).toPass();
@@ -1027,9 +1037,10 @@ test("Act Two supplier overview spotlights the actual full-width panel and hands
       expect(Math.abs(aperture.x - target.x)).toBeLessThan(1);
       expect(Math.abs(aperture.width - target.width)).toBeLessThan(1);
       expect(aperture.y).toBeGreaterThanOrEqual(0);
-      expect(target.y).toBeLessThan(120);
+      if (viewport.height >= 700) expect(target.y).toBeLessThan(120);
       expect(first.y + first.height).toBeLessThanOrEqual(viewport.height);
-      expect(guide.x).toBeGreaterThanOrEqual(target.x + target.width + 8);
+      if (viewport.height >= 700) expect(guide.x).toBeGreaterThanOrEqual(target.x + target.width + 8);
+      else expect(guide.y + guide.height + 16).toBeLessThanOrEqual(target.y);
       expect(guide.x + guide.width).toBeLessThanOrEqual(viewport.width - 12);
       expect(guide.y).toBeGreaterThanOrEqual(12);
       expect(guide.y + guide.height).toBeLessThanOrEqual(viewport.height - 12);

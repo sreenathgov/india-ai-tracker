@@ -23,6 +23,7 @@ import { GraphCanvas } from "./GraphCanvas";
 import { GraphLegend } from "./GraphLegend";
 import { NodeInspector } from "./NodeInspector";
 import { ViewControls } from "./ViewControls";
+import { useInspectorReadingPosition } from "../useInspectorReadingPosition";
 
 /**
  * What this supplier depends on for this commitment, and where the concern travels.
@@ -54,6 +55,8 @@ export function SupplyChainPanel({
   const [view, setView] = React.useState<GraphView>(DEFAULT_VIEW);
   React.useEffect(() => { if (tour?.enabled && (tour.beat === "path" || tour.beat === "network")) setView(current => setMode(current, tour.beat === "network" ? "mapped" : "critical")); }, [tour?.enabled, tour?.beat]);
   const [selectedId, setSelectedId] = React.useState<string | null>(null);
+  const graphRow = React.useRef<HTMLDivElement>(null);
+  useInspectorReadingPosition(graphRow, selectedId);
 
   /* A new supplier is a new investigation: open it the way every other one opens. */
   React.useEffect(() => {
@@ -99,7 +102,7 @@ export function SupplyChainPanel({
         />
       </div>
 
-      <div className="flex min-h-0 flex-1 gap-3">
+      <div ref={graphRow} className="investigation-graph-row flex min-h-0 flex-1 gap-3">
         <div className="min-w-0 flex-1">
           {orderId === MATERIAL_CASE.orderId && supplierId === MATERIAL_CASE.supplierId && view.mode === "critical" && view.tier === 3 && view.hidden.size === 0 ? <MaterialCriticalPath graph={graph} selectedId={selectedId} onSelect={setSelectedId} /> : <GraphCanvas graph={visible} selectedId={selectedId} onSelect={setSelectedId} />}
         </div>

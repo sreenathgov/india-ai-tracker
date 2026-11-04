@@ -43,8 +43,8 @@ test("login prism is self-contained, centered, and can be paused without affecti
   await context.close();
 });
 
-test("login remains readable and keyboard-accessible on mobile and short screens", async ({ browser }) => {
-  for (const viewport of [{ width: 375, height: 812 }, { width: 375, height: 480 }, { width: 1024, height: 600 }]) {
+test("login remains readable and keyboard-accessible on short and narrow desktops", async ({ browser }) => {
+  for (const viewport of [{ width: 980, height: 700 }, { width: 1280, height: 650 }, { width: 1024, height: 600 }]) {
     const context = await isolated(browser, { viewport, reducedMotion: "reduce" });
     const page = await context.newPage();
     await page.goto("/login?expired=1");
@@ -62,7 +62,8 @@ test("login remains readable and keyboard-accessible on mobile and short screens
     await page.getByLabel("Username", { exact: true }).focus();
     await page.keyboard.press("Tab");
     await expect(page.getByLabel("Password", { exact: true })).toBeFocused();
-    await page.keyboard.press("Tab");
+    // Safari uses Option-Tab for all controls when its default keyboard setting skips buttons.
+    await page.keyboard.press(browser.browserType().name() === "webkit" ? "Alt+Tab" : "Tab");
     await expect(page.getByRole("button", { name: "Enter demo" })).toBeFocused();
     await expect(page.getByRole("button", { name: "Enter demo" })).toBeInViewport();
     await page.screenshot({ path: `${screenshotDirectory}/02-${viewport.width}x${viewport.height}.png`, fullPage: true });

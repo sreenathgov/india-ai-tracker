@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { fontVariables } from "@/fonts";
 import { THEME_BOOT_SCRIPT } from "@/lib/theme/theme";
 import "./globals.css";
+import { DESKTOP_BOOT_SCRIPT } from "@/lib/demo/desktop";
 import { requireDemoSession } from "@/lib/auth/server";
 
 export const dynamic = "force-dynamic";
@@ -27,6 +28,7 @@ export default async function RootLayout({
     /* The boot script sets data-theme before hydration; React is told not to mind. */
     <html lang="en" className={fontVariables} suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: DESKTOP_BOOT_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOT_SCRIPT }} />
       </head>
       <body>{children}</body>

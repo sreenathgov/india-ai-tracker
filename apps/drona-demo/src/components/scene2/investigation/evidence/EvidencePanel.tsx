@@ -23,6 +23,7 @@ import { ClaimInspector } from "./ClaimInspector";
 import { EvidenceRegister } from "./EvidenceRegister";
 import { ReasoningGraphCanvas } from "./ReasoningGraphCanvas";
 import { ReasoningLegend } from "./ReasoningLegend";
+import { useInspectorReadingPosition } from "../useInspectorReadingPosition";
 
 type EvidenceView = "graph" | "register";
 type ReasoningMode = "all" | "decision-path" | "challenges";
@@ -64,6 +65,8 @@ export function EvidencePanel({
   const [view, setView] = React.useState<EvidenceView>("graph");
   const [mode, setMode] = React.useState<ReasoningMode>(inv.material ? "decision-path" : "all");
   const [selectedNodeId, setSelectedNodeId] = React.useState<string | null>(null);
+  const graphRow = React.useRef<HTMLDivElement>(null);
+  useInspectorReadingPosition(graphRow, selectedNodeId);
   const [selectedEvidenceId, setSelectedEvidenceId] = React.useState<string | null>(null);
 
   const fullGraph = React.useMemo(() => buildReasoningGraph(inv), [inv]);
@@ -140,7 +143,7 @@ export function EvidencePanel({
 
       {view === "graph" ? (
         <div className="flex min-h-0 flex-1 flex-col gap-3">
-          <div className="flex min-h-0 flex-1 gap-3">
+          <div ref={graphRow} className="investigation-graph-row flex min-h-0 flex-1 gap-3">
             <div className="min-w-0 flex-1">
               <ReasoningGraphCanvas columnLabels={inv.regulatory ? REGULATORY_STAGE_LABEL : inv.material && mode === "decision-path" ? { condition: "External signal", dependency: "Order link + forecast", supplier: "Order consequence", actions: "Next useful action" } : undefined} graph={graph} selectedId={selectedNodeId} onSelect={setSelectedNodeId} emphasize={emphasize} />
             </div>

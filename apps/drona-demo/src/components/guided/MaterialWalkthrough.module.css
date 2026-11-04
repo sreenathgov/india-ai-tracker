@@ -2,7 +2,7 @@
 .stage { display:flex; min-height:0; min-width:0; flex:1; flex-direction:column; }
 /* The walkthrough gets a real reading rail. Native sections keep their own
    layout and identity; the explanation never sits on top of their content. */
-.workspace:global([data-investigation]) { left:80px; top:24px; width:calc(100vw - 104px); height:calc(100vh - 48px); }
+.workspace:global([data-investigation]) { left:80px; top:16px; width:calc(100vw - 96px); height:calc(100dvh - 32px); }
 .stage[data-material-beat] :global([data-material-tab-body]) { container-type:size; }
 .stage[data-material-beat] :global([data-material-tab-body]),
 .stage[data-material-beat] :global([data-guide-target="finding"]),
@@ -39,3 +39,20 @@
 @keyframes appear { from { opacity:0; } to { opacity:1; } }
 @media(max-width:1399px) { .stage, .overlay { --material-coach-width:300px; } }
 @media(prefers-reduced-motion:reduce) { .card { animation:none; } }
+
+.workspace:global([data-material-narration="band"]) .stage :global([data-material-tab-body]) { padding:16px 20px; scroll-padding-top:16px; }
+.workspace:global([data-material-narration="band"]) .stage :global([data-material-narration-space]) { display:block; height:calc(var(--material-band-height,140px) + 40px); }
+.workspace:global([data-material-narration="band"]) .stage :global([data-guide-target="finding"]) { max-width:100%; }
+.workspace:global([data-material-narration="band"]) .card { display:grid; grid-template-columns:minmax(0,1fr) 240px; }
+.workspace:global([data-material-narration="band"]) .reading { padding:12px 16px; }
+.workspace:global([data-material-narration="band"]) .eyebrow { margin-bottom:6px; }
+.workspace:global([data-material-narration="band"]) .reading h2 { font-size:22px; line-height:1.2; text-wrap:pretty; }
+.workspace:global([data-material-narration="band"]) .reading > p:not(.eyebrow) { margin-top:8px; font-size:14px; line-height:1.5; }
+.workspace:global([data-material-narration="band"]) .controls { grid-column:2; grid-row:1; align-content:center; border-top:0; border-left:1px solid rgba(40,44,38,.1); padding:12px 16px; gap:8px 14px; }
+.workspace:global([data-material-narration="band"]) .skip { grid-column:1 / -1; margin:0 16px 8px; min-height:28px; }
+.workspace:global([data-material-narration="band"]) .stage :global([data-working-question]),
+.workspace:global([data-material-narration="band"]) .stage :global([aria-label="Supplier-specific Drona conversation"]) { max-height:calc(100cqh - 24px); }
+
+.workspace:global([data-material-narration="band"]) .reading { grid-column:1; grid-row:1 / span 2; }
+.workspace:global([data-material-narration="band"]) .reading .note { display:none; }
+.workspace:global([data-material-narration="band"]) .skip { grid-column:2; grid-row:2; margin:0 16px 10px; }

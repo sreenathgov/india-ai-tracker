@@ -194,7 +194,7 @@ export function InvestigationWorkspace({
             event.preventDefault();
             card.focus();
           }}
-          className={cn("float-material fixed z-50 flex flex-col overflow-hidden rounded-[20px] outline-none left-[calc(64px+(100vw-64px)*0.06)] top-[calc(56px+(100vh-56px)*0.05)] h-[calc((100vh-56px)*0.9)] w-[calc((100vw-64px)*0.88)] max-[900px]:left-0 max-[900px]:top-14 max-[900px]:h-[calc(100vh-56px)] max-[900px]:w-full max-[900px]:rounded-none", isMaterial && guide?.phase === "tour" && walkthroughStyles.workspace)}
+          className={cn("investigation-sheet float-material fixed z-50 flex flex-col overflow-hidden rounded-[16px] outline-none", isMaterial && guide?.phase === "tour" && walkthroughStyles.workspace)}
         >
           <MaterialWalkthrough key={held} enabled={isMaterial && guide?.phase === "tour" && entryReady} scopeRef={contentRef} tab={tab} onTabChange={onTabChange} onExplore={completed => { guide?.explore(completed); onClose(); }}>
           <div ref={bodyRef} className="flex min-h-0 flex-1 flex-col">
@@ -205,8 +205,10 @@ export function InvestigationWorkspace({
               className="flex min-h-0 flex-1 flex-col"
             >
               <InvestigationTabList />
+              <div data-material-narration-space aria-hidden="true" className="hidden shrink-0" />
               <div
                 data-material-tab-body
+                data-investigation-tab={tab}
                 className={cn(
                   "min-h-0 flex-1 px-7 pb-5 pt-5 max-[600px]:px-5",
                   /* The graph owns its height and pans inside itself; it must not scroll the tab. */

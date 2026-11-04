@@ -22,8 +22,8 @@ export function AssistantPane({
   const { state } = useRegulatoryCase();
   const a = React.useMemo(() => dronaAssistant(state), [state]);
   return (
-    <div className="flex h-full flex-col">
-      <div className="min-h-0 flex-1 overflow-y-auto [mask-image:linear-gradient(to_bottom,black_calc(100%-20px),transparent)] pb-3">
+    <div className="flex min-h-0 flex-1 flex-col">
+      <div tabIndex={0} aria-label="Assistant note" className="min-h-0 flex-1 overflow-y-auto pr-2 pb-3">
         <p className="font-display text-[18px] leading-[1.25] tracking-[-0.005em] text-label-primary">{a.headline}</p>
         <p data-figure className="mt-2 text-body-s leading-5 text-label-secondary">{a.observation}</p>
         <p data-figure className="mt-1 text-caption text-label-tertiary">{a.note}</p>

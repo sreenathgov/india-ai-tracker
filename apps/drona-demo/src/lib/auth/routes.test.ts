@@ -76,6 +76,16 @@ describe("actual authentication handlers", () => {
     const second = await loginPage(new Request(origin + "/login"));
     expect(first.headers.get("content-security-policy")).not.toBe(second.headers.get("content-security-policy"));
   });
+  it("renders handheld entry without a login form while retaining the private response policy", async () => {
+    const response = await loginPage(new Request(origin + "/login", { headers: { "user-agent": "Android Tablet", "sec-ch-ua-mobile": "?0" } }));
+    const html = await response.text();
+    expect(response.status).toBe(200);
+    expect(html).toContain("Explore Drona on a laptop or desktop.");
+    expect(html).not.toContain("<form");
+    expect(html).not.toContain('name="password"');
+    expect(response.headers.get("cache-control")).toContain("no-store");
+    expect(response.headers.get("content-security-policy")).not.toMatch(/unsafe-inline|unsafe-eval/);
+  });
   it("issues a host-only signed session only after valid password and CSRF", async () => {
     const response = await login(loginRequest()); const config = readAuthConfig();
     expect(response.status).toBe(303); expect(response.headers.get("location")).toBe(origin + "/");

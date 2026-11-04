@@ -56,14 +56,14 @@ export function DronaWorkspace({
             <span data-figure className="text-label-quaternary">{feed.length}</span>
           </TabsTrigger>
         </TabsList>
-        <TabsContent value="assistant" className="mt-4">
+        <TabsContent value="assistant" className="mt-4 min-h-0 overflow-hidden">
           <AssistantPane
             onInvestigate={() => onOpen(RECOMMENDED_COMMITMENT)}
             onEvidence={evidence.show}
             onChanges={() => setMode("activity")}
           />
         </TabsContent>
-        <TabsContent value="activity" className="mt-4">
+        <TabsContent value="activity" className="mt-4 min-h-0 overflow-hidden">
           <ActivityPane feed={feed} onComment={(text) => setComments((f) => addComment(f, text))} />
         </TabsContent>
       </Tabs>

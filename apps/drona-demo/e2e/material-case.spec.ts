@@ -193,9 +193,9 @@ test("earlier receipt challenges the original forecast and desktop dark/short la
 });
 
 
-test("Act Three guides the real case, follows actual replies and hands control to exploration", async ({ browser }, info) => {
+for (const viewport of [{width:1280,height:650},{width:1440,height:780},{width:1920,height:1080}]) for (const protectedOutcome of [false,true]) test(`Act Three complete ${protectedOutcome ? "protective" : "adverse"} journey at ${viewport.width}x${viewport.height}`, async ({ browser }, info) => {
   test.setTimeout(120_000);
-  const context = await contextFor(browser), page = await context.newPage();
+  const context = await contextFor(browser,true,viewport.width,viewport.height), page = await context.newPage();
   const errors: string[] = []; page.on("pageerror", error => errors.push(error.message));
   await openMaterial(page, true);
   const coach = page.locator("[data-material-guide]");
@@ -216,19 +216,21 @@ test("Act Three guides the real case, follows actual replies and hands control t
   await ready("network");
   await page.screenshot({ path: info.outputPath("act-three-wider-network.png"), animations: "disabled" });
   await advance("network");
-  for (const q of ["allocation", "dealer-stock", "arrival"]) {
+  for (const q of protectedOutcome ? ["allocation"] : ["allocation", "dealer-stock", "arrival"]) {
     await ready("question");
     await page.screenshot({ path: info.outputPath(`act-three-question-${q}.png`), animations: "disabled" });
-    await record(page, q, q === "arrival" ? "Yes" : "No");
+    await record(page, q, protectedOutcome || q === "arrival" ? "Yes" : "No");
     await expect(coach).toHaveAttribute("data-material-guide", "assessment");
-    await coach.getByRole("button", { name: q === "arrival" ? "Continue" : "Next question", exact: true }).click();
+    await coach.getByRole("button", { name: protectedOutcome || q === "arrival" ? "Continue" : "Next question", exact: true }).click();
   }
-  await expect(page.locator('[data-material-status="timing-gap"]')).toBeVisible();
+  await expect(page.locator(`[data-material-status="${protectedOutcome ? "stock-protected" : "timing-gap"}"]`)).toBeVisible();
   await ready("action");
   await page.screenshot({ path: info.outputPath("act-three-next-action.png"), animations: "disabled" });
   await advance("action");
   await page.getByRole("button", { name: "Why does this affect my order?", exact: true }).click();
-  await expect(page.locator('[aria-label="Supplier-specific Drona conversation"]')).toContainText("15–17 Nov");
+  await expect(page.locator('[aria-label="Supplier-specific Drona conversation"]')).toContainText(
+    protectedOutcome ? "removes this upstream exposure" : "15–17 Nov",
+  );
   await ready("assistant");
   await page.screenshot({ path: info.outputPath("act-three-assistant.png"), animations: "disabled" });
   await advance("assistant");

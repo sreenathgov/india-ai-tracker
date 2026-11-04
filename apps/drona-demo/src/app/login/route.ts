@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { randomBytes } from "node:crypto";
 import { readAuthConfig } from "@/lib/auth/config";
 import { cookieOptions, createCsrfToken, isConfiguredHost, PRIVATE_HEADERS } from "@/lib/auth/http";
+import { isHandheldDevice } from "@/lib/demo/desktop";
 import { renderLoginPage } from "@/lib/login/presentation";
 
 export const dynamic = "force-dynamic";
@@ -13,7 +14,7 @@ export async function GET(request: Request): Promise<Response> {
     const csrf = createCsrfToken();
     const nonce = randomBytes(16).toString("base64");
     const query = new URL(request.url).searchParams;
-    const html = renderLoginPage({ csrf, nonce, enabled: config.loginEnabled, error: query.get("error") === "access", expired: query.get("expired") === "1" });
+    const html = renderLoginPage({ csrf, nonce, handheld: isHandheldDevice({ userAgent: request.headers.get("user-agent"), mobileHint: request.headers.get("sec-ch-ua-mobile") }), enabled: config.loginEnabled, error: query.get("error") === "access", expired: query.get("expired") === "1" });
     const response = new NextResponse(html, { headers: {
       ...PRIVATE_HEADERS,
       "Content-Type": "text/html; charset=utf-8",

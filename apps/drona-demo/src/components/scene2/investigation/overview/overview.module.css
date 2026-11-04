@@ -86,3 +86,30 @@
 .recovery dt { color:var(--label-tertiary); font-size:12px; }
 .recovery dd { margin-top:4px; font-size:14px; line-height:1.6; }
 .overview[data-overview] button:focus-visible, .overview select:focus-visible { outline:2px solid var(--label-secondary); outline-offset:3px; }
+
+/* Respond to space remaining after narration, not just the device viewport. */
+.overview { container-type:inline-size; }
+@container(max-width:999px) {
+  .columns { display:flex; flex-direction:column; gap:20px; }
+  .stakes { order:0; width:100%; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+  .main { order:1; width:100%; }
+  .assistant { order:2; width:100%; }
+  .prompts { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+@media(max-width:1439px),(max-height:819px) {
+  .finding { margin-bottom:14px; }
+  .finding h2 { font-size:24px; }
+  .finding p { font-size:14px; line-height:1.6; }
+  .timeline { padding-block:12px; margin-bottom:14px; }
+  .question { padding:16px; }
+  .questionText { font-size:17px; }
+  .request { margin-block:12px; }
+  .next { margin-top:16px; padding-top:14px; }
+  .assistant { padding:16px; }
+}
+
+:global([data-material-narration="band"]) .columns { display:flex; flex-direction:column; gap:16px; }
+:global([data-material-narration="band"]) .stakes { order:0; width:100%; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+:global([data-material-narration="band"]) .main { order:1; width:100%; }
+:global([data-material-narration="band"]) .assistant { order:2; width:100%; }
+:global([data-material-narration="band"]) .prompts { grid-template-columns:repeat(3,minmax(0,1fr)); }
