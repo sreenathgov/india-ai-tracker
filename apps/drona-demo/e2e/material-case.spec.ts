@@ -139,6 +139,21 @@ test("protective evidence removes only Deccan’s exposure and leaves CBAM avail
   await page.getByRole("button", { name: "Investigate CBAM readiness", exact: true }).click();
   await expect(page.locator('[data-working-question="scope"]')).toBeVisible();
   await page.screenshot({ path: info.outputPath("cbam-preserved.png"), animations: "disabled" });
+  await page.getByRole("button", { name: "Order workspace", exact: true }).click();
+  const home = page.getByRole("button", { name: "Return to dashboard", exact: true });
+  await home.focus();
+  await home.press("Enter");
+  await expect(page.getByRole("region", { name: "Production intelligence surface", exact: true })).toBeFocused();
+  await expect(page.locator("[data-financial-total]")).toHaveText("$7.0M");
+  await expect(page.locator("[data-guide-cover], [data-guide-step], [data-investigation]")).toHaveCount(0);
+  await page.locator('[data-guide-target="order:c1"]').click();
+  await page.getByRole("button", { name: "Investigate billet disruption", exact: true }).click();
+  await expect(page.locator('[data-material-status="stock-protected"]')).toBeVisible();
+  await page.getByRole("button", { name: "Order workspace", exact: true }).click();
+  await home.click();
+  await expect(page.locator("[data-financial-total]")).toHaveText("$7.0M");
+  await page.mouse.move(600, 30);
+  await page.screenshot({ path: info.outputPath("logo-dashboard-return.png"), animations: "disabled" });
   await context.close();
 });
 

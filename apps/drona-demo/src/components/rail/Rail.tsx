@@ -3,6 +3,7 @@
 import * as React from "react";
 
 import { DronaWordmark } from "@/components/brand/DronaLogo";
+import { useGuidedDemo } from "@/components/guided";
 import { MONOGRAM_VIEWBOX, WORDMARK_VIEWBOX } from "@/components/brand/logoPaths";
 import { cn } from "@/lib/ui/cn";
 
@@ -68,6 +69,7 @@ export function Rail({
   readonly sessionStart: string;
 }): React.ReactElement {
   const [expanded, setExpanded] = React.useState(false);
+  const guide = useGuidedDemo();
 
   return (
     <nav
@@ -84,12 +86,15 @@ export function Rail({
         <div className="flex h-8 items-center pl-6">
           {/* One wordmark, clipped to its "d" while the rail is narrow: opening the
               rail reveals the rest of the name rather than swapping marks. */}
+          <button type="button" aria-label="Return to dashboard" onClick={() => guide ? guide.dashboard() : onSelect?.("network")}
+            className="-ml-2 inline-flex min-h-10 min-w-10 items-center rounded-chip px-2 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-mark">
           <span
             className="block overflow-hidden motion-safe:transition-[width] motion-safe:duration-gentle motion-safe:ease-calm"
             style={{ width: expanded ? LOGO.full : LOGO.collapsed }}
           >
             <DronaWordmark height={LOGO.height} />
           </span>
+          </button>
         </div>
 
         <ul className="mt-8 space-y-1 px-2">

@@ -35,6 +35,7 @@ interface GuideContextValue {
   readonly back: () => void;
   readonly finish: () => void;
   readonly explore: (completed?: boolean) => void;
+  readonly dashboard: () => void;
   readonly openMaterial: () => void;
   readonly openRegulatory: () => void;
   readonly replay: () => void;
@@ -80,10 +81,18 @@ export function GuidedDemoProvider({ children, navigation, onReplay, logoutCsrf 
   }, [navigation, step, mapIntroduced, risksIntroduced, exposureIntroduced, capitalIntroduced, riskBeat]);
   const continueRisk = React.useCallback(() => { const next = nextRiskBeat(riskBeat); if (next === null) setRisksIntroduced(true); else setRiskBeat(next); }, [riskBeat]);
   const explore = React.useCallback((didComplete = false) => { setPhase("explore"); setCompleted(didComplete); setOrderOverviewIntroduced(true); setSupplierOverviewIntroduced(true); investigationRef.current?.close(); }, []);
+  const dashboard = React.useCallback(() => {
+    investigationRef.current?.close();
+    investigationRef.current = null;
+    setInvestigation(null);
+    setPhase("explore");
+    setCompleted(false);
+    navigation.resetNavigation();
+  }, [navigation]);
   const finish = React.useCallback(() => { setCompleted(step === "result"); setPhase("complete"); investigationRef.current?.close(); }, [step]);
   const showOverview = React.useCallback(() => investigationRef.current?.setTab("overview"), []);
   const showEvidence = React.useCallback(() => investigationRef.current?.setTab("evidence"), []);
-  const value = React.useMemo<GuideContextValue>(() => ({ phase, completed, logoutCsrf, step, investigation, reportInvestigation, continueOrderOverview: () => setOrderOverviewIntroduced(true), continueSupplierOverview: () => setSupplierOverviewIntroduced(true), releaseOrderWorkspace: () => { setOrderOverviewIntroduced(true); setSupplierOverviewIntroduced(true); setCompleted(false); setPhase("explore"); }, start: () => { regulatory.dispatch({ type: "reset" }); navigation.resetNavigation(); setCompleted(false); setOrderOverviewIntroduced(false); setSupplierOverviewIntroduced(false); setMapIntroduced(false); setRisksIntroduced(false); setExposureIntroduced(false); setCapitalIntroduced(false); setRiskBeat("overview"); setPhase("tour"); }, continueMap: () => { setRiskBeat("overview"); setMapIntroduced(true); }, continueExposure: () => setExposureIntroduced(true), continueCapital: () => setCapitalIntroduced(true), riskBeat, selectRisk: setRiskBeat, continueRisk, back, finish, explore, replay, openMaterial: () => navigation.openSupplier?.(MATERIAL_CASE.supplierId), openRegulatory: () => navigation.openSupplier?.(TOUR_SUPPLIER), openOrder: navigation.openOrder, showOverview, showEvidence }), [phase, completed, logoutCsrf, step, riskBeat, continueRisk, investigation, reportInvestigation, regulatory.dispatch, navigation, back, finish, explore, replay, showOverview, showEvidence]);
+  const value = React.useMemo<GuideContextValue>(() => ({ phase, completed, logoutCsrf, step, investigation, reportInvestigation, continueOrderOverview: () => setOrderOverviewIntroduced(true), continueSupplierOverview: () => setSupplierOverviewIntroduced(true), releaseOrderWorkspace: () => { setOrderOverviewIntroduced(true); setSupplierOverviewIntroduced(true); setCompleted(false); setPhase("explore"); }, start: () => { regulatory.dispatch({ type: "reset" }); navigation.resetNavigation(); setCompleted(false); setOrderOverviewIntroduced(false); setSupplierOverviewIntroduced(false); setMapIntroduced(false); setRisksIntroduced(false); setExposureIntroduced(false); setCapitalIntroduced(false); setRiskBeat("overview"); setPhase("tour"); }, continueMap: () => { setRiskBeat("overview"); setMapIntroduced(true); }, continueExposure: () => setExposureIntroduced(true), continueCapital: () => setCapitalIntroduced(true), riskBeat, selectRisk: setRiskBeat, continueRisk, back, finish, explore, dashboard, replay, openMaterial: () => navigation.openSupplier?.(MATERIAL_CASE.supplierId), openRegulatory: () => navigation.openSupplier?.(TOUR_SUPPLIER), openOrder: navigation.openOrder, showOverview, showEvidence }), [phase, completed, logoutCsrf, step, riskBeat, continueRisk, investigation, reportInvestigation, regulatory.dispatch, navigation, back, finish, explore, dashboard, replay, showOverview, showEvidence]);
   return <Context.Provider value={value}>{children}</Context.Provider>;
 }
 

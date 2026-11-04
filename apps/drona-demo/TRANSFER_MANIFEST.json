@@ -28,7 +28,7 @@
     },
     {
       "path": "WALKTHROUGH_FRAMEWORK.md",
-      "sha256": "d9288f01445201fbd1199e21f4b7ec50c6b06b605334a5d5407371f151c40872"
+      "sha256": "5b086ef416af36f63a77276e37091b1b2ca0bf22ef9cee91c4e0037b2cd984ea"
     },
     {
       "path": "e2e/README.md",
@@ -36,7 +36,7 @@
     },
     {
       "path": "e2e/VERIFICATION.md",
-      "sha256": "afa0961d10aeddd3908fe4e88eacfd18f6f337209081d12ee3e86d059a78b5d7"
+      "sha256": "e30a9f0dcce99632b8c39370e21ba1c725dbd0e9a25a26f0ba9117b62d515715"
     },
     {
       "path": "e2e/guided-demo.spec.ts",
@@ -192,7 +192,7 @@
     },
     {
       "path": "src/components/guided/GuidedDemo.tsx",
-      "sha256": "a63537511cf40e7e7bd9f5e5f68c0116ecd618b5fcba26546b99ee32f5682129"
+      "sha256": "817f6397cfc5503e8121fee97aad24d69f34fcc17ff90ee40e04f7f918d24628"
     },
     {
       "path": "src/components/guided/GuidedRiskSpotlight.module.css",
@@ -272,7 +272,7 @@
     },
     {
       "path": "src/components/rail/Rail.tsx",
-      "sha256": "dc9caf2fa87c68ec56f75ca7281509dcd0b057c0fc4bec9aa6ae806224958316"
+      "sha256": "ed69fd78018691040e98911b6d4e47dcfc8855b370e1e78b31e34fa4d5d32e47"
     },
     {
       "path": "src/components/regulatory/RegulatoryActions.tsx",
@@ -1408,7 +1408,7 @@
     },
     {
       "path": "e2e/material-case.spec.ts",
-      "sha256": "c3ed5d23a3ed189557508b5815f9eee01338248bbbeb196c4db493e133213dc4"
+      "sha256": "0c4852287ef0edbf10a7fbaa26a629bfcda502aa46ab49f8425c1ed8d17bb29c"
     },
     {
       "path": "MATERIAL_CASE.md",
@@ -1451,5 +1451,5 @@
       "sha256": "2a8fe1306c2071c564a9b7d1cf3b4c2b1b47ffb4831e0766f71349b9c4fde7d5"
     }
   ],
-  "releaseScope": "4 Nov Act Three section-framing refinement; scoped hash refresh only. Existing unrelated GuidedDemo.module.css baseline retained; Git commit is the release source authority."
+  "releaseScope": "4 Nov logo dashboard navigation; scoped hashes only. Existing unrelated GuidedDemo.module.css baseline retained; Git commit is release source authority."
 }
