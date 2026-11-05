@@ -636,6 +636,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "DevSparks 2026 heads to Delhi to explore agentic AI and the future of software development",
+        "url": "https://yourstory.com/2026/10/devsparks-2026-delhi-ncr-agentic-ai-developer-summit",
+        "summary": "YourStory’s flagship developer summit makes its Delhi NCR debut on December 5, bringing together developers, technology leaders, startups, and enterprises for hands-on sessions on AI, cloud infrastruc...",
+        "date_published": "2026-11-05",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 13,
         "title": "Congress used AI-generated image to show massive crowd at Ramlila Maidan rally: Kiren Rijiju",
         "url": "https://www.tribuneindia.com/news/india/congress-used-ai-generated-image-to-show-massive-crowd-at-ramlila-maidan-rally-kiren-rijiju",
@@ -5256,5 +5276,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -1635,6 +1635,26 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "AI Productivity to Add $28 Billion to $84 Billion to India's GDP: Cognizant Study",
+        "url": "https://analyticsindiamag.com/ai-news/ai-productivity-to-add-28-billion-to-84-billion-to-indias-gdp-cognizant-study",
+        "summary": "The research surveyed 700 enterprise employees and 75 C-suite and business executives at companies with revenues up to and exceeding $10 billion.",
+        "date_published": "2026-11-05",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "84% See AI Productivity Gains, but Only 10% Allow Agent Autonomy: TCS Study",
         "url": "https://analyticsindiamag.com/ai-news/84-see-ai-productivity-gains-but-only-10-allow-agent-autonomy-tcs-study",
         "summary": "Security, governance and model dependence are emerging as major concerns for businesses, even as executives report productivity gains from AI investments.",
@@ -21310,8 +21330,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives",
-    "AI Start-Up News",
     "Major AI Developments"
   ]
 }
