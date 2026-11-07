@@ -639,6 +639,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "IIIT-Bangalore students build AI tool to identify pending court cases suitable for mediation",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/iiit-bangalore-students-build-ai-tool-to-identify-pending-court-cases-suitable-for-mediation/articleshow/135617793.cms",
+        "summary": "IIIT-Bangalore students build AI tool to identify pending court cases suitable for mediation",
+        "date_published": "2026-11-07",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Bio-tech startup Venomics AI raises $2.7 Mn in pre-seed round",
         "url": "https://entrackr.com/snippets/bio-tech-startup-venomics-ai-raises-27-mn-in-pre-seed-round-12785718",
@@ -7055,5 +7075,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

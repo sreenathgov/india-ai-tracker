@@ -241,6 +241,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "‘Errors in 1,800 books at Tamil Nadu library’: Writer flags possible AI use, questions authorship",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/errors-in-1800-books-at-tamil-nadu-library-writer-flags-possible-ai-use-questions-authorship/articleshow/135629171.cms",
+        "summary": "<img align=\"left\" bord...",
+        "date_published": "2026-11-07",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Suspected AI-written books, phantom authors and bogus history: Rs 300crore Coimbatore Periyar library procurement under scanner",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/suspected-ai-written-books-phantom-authors-and-bogus-history-300cr-coimbatore-periyar-library-procurement-under-scanner/articleshow/135615876.cms",
+        "summary": "<a href=\"https://timesofindia.indiatimes.com/city/chennai/suspected-ai-written-books-phantom-authors-and-bogus-history-300cr-coimbatore-periyar-library-procurement-under-scanner/articleshow/135615876....",
+        "date_published": "2026-11-07",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 15,
         "title": "Tamil Nadu registration dept clocks Rs 1,950crore revenue in October, launches AI app to track court cases",
         "url": "https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-registration-dept-clocks-rs-1950crore-revenue-in-october-launches-ai-app-to-track-court-cases/articleshow/135540181.cms",
@@ -2099,5 +2139,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
