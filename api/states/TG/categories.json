@@ -152,6 +152,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "'Insulted and upset': Hyderabad student dies by suicide after college refuses to return phone seized over AI image",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/insulted-and-upset-hyderabad-student-dies-by-suicide-after-college-refuses-to-return-phone-seized-over-ai-image/articleshow/135643723.cms",
+        "summary": "<...",
+        "date_published": "2026-11-08",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 14,
         "title": "IIIT-H’s Research That’s Headed To NeurIPS 2026",
         "url": "https://www.iiit.ac.in/iiit-hs-research-thats-headed-to-neurips-2026/",
@@ -3284,5 +3304,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
