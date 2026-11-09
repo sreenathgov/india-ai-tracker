@@ -1634,6 +1634,86 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Coforge Joins SpaceX Network to Develop Industry-Specific Grok Applications",
+        "url": "https://analyticsindiamag.com/ai-news/coforge-joins-spacex-network-to-develop-industry-specific-grok-applications",
+        "summary": "Momentuum blue, Coforge’s FDE unit, will handle deployments using teams of engineers and AI agents embedded within client organisations.",
+        "date_published": "2026-11-09",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "India’s Office Workforce to Reach 48 Mn by 2030 as AI Reshapes Demand: Report",
+        "url": "https://analyticsindiamag.com/ai-news/indias-office-workforce-to-reach-48-mn-by-2030-as-ai-reshapes-demand-report",
+        "summary": "India's office workforce is set to rise by 9 million by 2030, driven by AI and evolving office demands, according to Cushman & Wakefield.",
+        "date_published": "2026-11-09",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Indian companies seek on-site security engineers as AI-led cyber threats mount",
+        "url": "https://www.livemint.com/ai/indian-companies-seek-on-site-security-engineers-as-ai-led-cyber-threats-mount-11793951525980.html",
+        "summary": "On 4 November, the Indian Cybercrime Coordination Centre (I4C), under the Union home ministry, cautioned banks and fintech companies about financially motivated cyberattacks that use AI agents to comp...",
+        "date_published": "2026-11-09",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "India may gain as global AI investment cycle slows: Report",
+        "url": "https://telanganatoday.com/india-may-gain-as-global-ai-investment-cycle-slows-report",
+        "summary": "Concerns over the sustainability of global AI investments could redirect capital towards India, according to an SBI Funds report. It highlighted India's resilient market performance, rising merchandis...",
+        "date_published": "2026-11-09",
+        "source_name": "Telangana Today - Tech",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "VibeCode30 2026: The 30 AI-built products to watch from India",
         "url": "https://yourstory.com/2026/11/vibecode30-2026-30-ai-built-products-india-new-builders",
@@ -17700,6 +17780,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 1,
+        "title": "Sarvam AI Appoints Ex-Google Cloud India MD Sashikumar Sreedharan as President and CBO",
+        "url": "https://analyticsindiamag.com/ai-news/sarvam-ai-appoints-ex-google-cloud-india-md-sashikumar-sreedharan-as-president-and-cbo",
+        "summary": "The appointment comes as Sarvam looks to scale its presence across enterprise and government customers, with more than 100 institutions already using its AI off",
+        "date_published": "2026-11-09",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Sarvam AI Launches Prism, a Jev-Like Decision Model Built on Sarvam 105B",
         "url": "https://analyticsindiamag.com/ai-news/sarvam-ai-launches-prism-a-jev-like-decision-model-built-on-sarvam-105b",
@@ -21429,5 +21529,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News",
+    "Major AI Developments"
+  ]
 }

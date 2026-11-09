@@ -173,6 +173,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 5,
+        "title": "Startup ecosystem sees sharp rise VC inflow;\nBuilding a hemp ecosystem in Uttarakhand",
+        "url": "https://yourstory.com/2026/11/angel-one-claims-silver-spot-in-indias-broking-race",
+        "summary": "Industry watchers expect that a post-US midterm slowdown in AI funding could work in favor of Indian startups.",
+        "date_published": "2026-11-09",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "UK"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Bucketlistt raises pre-seed funding to scale experience tourism platform",
         "url": "https://entrackr.com/snippets/bucketlistt-raises-pre-seed-funding-to-scale-experience-tourism-platform-12020971",
@@ -196,5 +216,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }
