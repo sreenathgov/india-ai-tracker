@@ -241,6 +241,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "AI-generated books, fake authors, inflated prices: DVAC probes Tamil Nadu library procurement scam",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/ai-generated-books-fake-authors-inflated-prices-dvac-probes-tamil-nadu-library-procurement-scam/articleshow/135705340.cms",
+        "summary": "<img align=\"left\" b...",
+        "date_published": "2026-11-10",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Suspected AI-written books, phantom authors and bogus history: Rs 300crore Coimbatore Periyar library procurement under scanner",
         "url": "https://timesofindia.indiatimes.com/city/coimbatore/suspected-ai-written-books-phantom-authors-and-bogus-history-300cr-coimbatore-periyar-library-procurement-under-scanner/articleshow/135615899.cms",
@@ -2159,5 +2179,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
