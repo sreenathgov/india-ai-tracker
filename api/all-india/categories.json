@@ -1634,6 +1634,66 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Why do Indian consumers change their buying decisions? AI helps brands track actual shopping behaviour",
+        "url": "https://www.livemint.com/ai/why-indian-consumers-change-their-buying-decisions-ai-helps-brands-track-actual-shopping-behaviour-11794396820385.html",
+        "summary": "AI-powered research platforms such as Smytten's PulseAI are helping brands uncover the gap between what Indian consumers say they prefer and what they actually purchase.&amp;nbsp;",
+        "date_published": "2026-11-11",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Dun &amp; Bradstreet sees AI opportunities rising in India, but workforce readiness lags",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/dun-bradstreet-ai-adoption-spending-india-businesses-data-readiness-julian-prower-arun-singh-11794297723067.html",
+        "summary": "Nearly seven in 10 Indian businesses plan to raise AI spending, but just 3% say their data is fully ready to support the technology at scale, a Dun &amp;amp; Bradstreet survey finds.",
+        "date_published": "2026-11-11",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Kunal Shah sets three priorities for WhatsApp, but spam and payments remain key challenges",
+        "url": "https://entrackr.com/news/kunal-shah-sets-three-priorities-for-whatsapp-but-spam-and-payments-remain-key-challenges-12800955",
+        "summary": "WhatsApp is looking to expand beyond messaging a...",
+        "date_published": "2026-11-11",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Qantas AI Jobs are Coming to India as Outsourcing Deal Affects 850 Roles",
         "url": "https://analyticsindiamag.com/ai-news/qantas-ai-jobs-are-coming-to-india-as-outsourcing-deal-affects-850-roles",
@@ -1740,6 +1800,26 @@
         "summary": "In India&#039;s pursuit of operational excellence, companies are increasingly merging artificial intelligence with established automation strategies. Notable examples include DBS Bank India and Arcelo...",
         "date_published": "2026-11-10",
         "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "‘It's the ecosystem, stupid!’: Anand Mahindra believes India's software talent could be its biggest advantage in AI race",
+        "url": "https://www.livemint.com/ai/its-the-ecosystem-stupid-anand-mahindra-believes-indias-software-talent-could-be-its-biggest-advantage-in-ai-race-11794327660079.html",
+        "summary": "Mahindra highlighted India's third-place position in Stanford University's Global AI Vibrancy rankings, saying the country had a promising opportunity to capitalise on its software talent, systems int...",
+        "date_published": "2026-11-10",
+        "source_name": "LiveMint AI News",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -21690,7 +21770,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

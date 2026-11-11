@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 5,
+        "title": "Andhra Pradesh Cabinet clears policy frameworks to attract investments in AI, electronics, renewable energy",
+        "url": "https://www.thehindu.com/news/national/andhra-pradesh/andhra-pradesh-cabinet-clears-policy-frameworks-to-attract-investments-in-ai-electronics-renewable-energy/article71686342.ece",
+        "summary": "Directorate of Traffic Management and Road Safety to be set up at Mangalagiri; ₹31,387-crore green integrated AI data centre proposed by AM Intelligence at Amanam in Visakhapatnam district cleared",
+        "date_published": "2026-11-11",
+        "source_name": "The Hindu - Andhra Pradesh",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Rural healthcare startup CureBay raises Rs 100 Cr in Pre-Series C led by IvyCap",
         "url": "https://entrackr.com/news/rural-healthcare-startup-curebay-raises-rs-100-cr-in-pre-series-c-led-by-ivycap-12705651",
@@ -782,5 +802,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }
