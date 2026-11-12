@@ -639,6 +639,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 8,
+        "title": "Karnataka may subsidise GPU access for startups through AI hub",
+        "url": "https://yourstory.com/2026/11/karnataka-open-to-subsidising-gpu-access-for-startups-through-ai-hub",
+        "summary": "The state could offer support beyond the Centre’s IndiaAI Mission. It is also considering shared manufacturing space for small companies near Bengaluru.",
+        "date_published": "2026-11-12",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "AI helps Bengaluru police gather feedback from 1.5 lakh people in 3 months",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/ai-helps-bengaluru-police-gather-feedback-from-1-5-lakh-people-in-3-months/articleshow/135746219.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"1...",
+        "date_published": "2026-11-12",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "IIIT-Bangalore students build AI tool to identify pending court cases suitable for mediation",
         "url": "https://timesofindia.indiatimes.com/city/bengaluru/iiit-bangalore-students-build-ai-tool-to-identify-pending-court-cases-suitable-for-mediation/articleshow/135617793.cms",
@@ -7075,5 +7115,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
