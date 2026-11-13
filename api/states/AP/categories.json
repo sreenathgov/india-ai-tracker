@@ -167,6 +167,46 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "ReNew Pledges ₹80,000 Cr for Green Data Centre to Fuel India’s AI Push",
+        "url": "https://analyticsindiamag.com/ai-news/renew-pledges-80000-cr-for-green-data-centre-to-fuel-indias-ai-push",
+        "summary": "The proposed projects include a 1 GW facility in Andhra Pradesh, silicon manufacturing plants, a permanent magnet factory, and a technical training centre.",
+        "date_published": "2026-11-13",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Jensen Huang exits Nvidia after 33 years; Kia India plans $2B investment in Andhra Pradesh",
+        "url": "https://yourstory.com/2026/11/jensen-huang-exits-nvidia-after-33-years",
+        "summary": "The transition comes at a critical juncture for Nvidia, whose chips have become the backbone of the global AI boom.",
+        "date_published": "2026-11-13",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Centre backs A.P.’s semiconductor push, approves rail links for nine ports",
         "url": "https://www.thehindu.com/news/national/andhra-pradesh/centre-backs-aps-semiconductor-push-approves-rail-links-for-nine-ports/article71621247.ece",
@@ -802,5 +842,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

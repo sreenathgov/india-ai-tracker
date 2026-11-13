@@ -152,6 +152,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Mars Opens Hyderabad GCC With Genpact to Expand Digital, AI Capabilities",
+        "url": "https://analyticsindiamag.com/ai-news/mars-opens-hyderabad-gcc-with-genpact-to-expand-digital-ai-capabilities",
+        "summary": "The 60,000 sq ft facility will initially have more than 400 Genpact employees, with Mars aiming to transition to 1,000 of its associates over time.",
+        "date_published": "2026-11-13",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Telangana ties up with NISG to bring AI agri-advisory Bharat-Vistaar in Telugu",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/telangana-ties-up-with-nisg-to-bring-ai-agri-advisory-bharat-vistaar-in-telugu/articleshow/135780597.cms",
+        "summary": "Telangana ties up with NISG to bring AI agri-advisory Bharat-Vistaar in Telugu",
+        "date_published": "2026-11-13",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "U.S. healthcare tech firm opens AI engineering centre in Hyderabad, to hire 1,000",
         "url": "https://www.thehindu.com/news/cities/Hyderabad/us-healthcare-tech-firm-opens-ai-engineering-centre-to-hire-1000/article71683360.ece",
@@ -3344,5 +3384,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

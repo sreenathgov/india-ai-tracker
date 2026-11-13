@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 9,
+        "title": "MeitY examines data collection by home services platforms for physical AI training",
+        "url": "https://entrackr.com/news/meity-examines-data-collection-by-home-services-platforms-for-physical-ai-training-12806000",
+        "summary": "The Ministry of Electronics and Information...",
+        "date_published": "2026-11-13",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 13,
         "title": "MeitY unveils indigenous AI Models EKA-1, Dhīr 2B and 5B under IndiaAI mission",
         "url": "https://government.economictimes.indiatimes.com/news/technology/meity-unveils-indigenous-ai-models-eka-1-dhr-2b-and-5b-under-indiaai-mission/135523266",
@@ -1634,6 +1654,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "60% Indian organisations investing in AI report positive returns",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/60-indian-organisations-investing-in-ai-report-positive-returns/135797422",
+        "summary": "Indian organizations are increasingly deploying AI beyond pilot projects, yet face challenges in scaling these initiatives. Although 70% report having more AI pilots than they can manage, security con...",
+        "date_published": "2026-11-13",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "AI could disrupt India's outsourcing model. It could also create millions of new exporters",
+        "url": "https://yourstory.com/2026/11/ai-could-disrupt-indias-outsourcing-model-could-also-create-millions-new-exporters",
+        "summary": "AI is letting small Indian teams win global work that once needed a big company. As AI separates capability from headcount, it could shape India’s next export story.",
+        "date_published": "2026-11-13",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "LatentView Analytics Certified as Best Firm for AI Engineers",
         "url": "https://analyticsindiamag.com/ai-highlights/latentview-analytics-certified-as-best-firm-for-ai-engineers",
@@ -1800,6 +1860,26 @@
         "summary": "Hyderabad-based waste management startup Recykal ha...",
         "date_published": "2026-11-12",
         "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "LatentView Analytics Certified as Best Firm for Data Engineers",
+        "url": "https://analyticsindiamag.com/ai-highlights/latentview-analytics-certified-as-best-firm-for-data-engineers",
+        "summary": "LatentView Analytics earns recognition as a top firm for data engineers, reflecting its strong workplace culture and focus on modern enterprise AI.",
+        "date_published": "2026-11-12",
+        "source_name": "Analytics India Magazine - AI News",
         "category": "Major AI Developments",
         "state_codes": [
           "IN"
@@ -21950,6 +22030,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "Policies and Initiatives"
   ]
 }

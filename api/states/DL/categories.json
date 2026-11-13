@@ -636,6 +636,27 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Shield AI Opens Bengaluru Engineering Office to Build Defence Autonomy Software",
+        "url": "https://analyticsindiamag.com/ai-news/shield-ai-opens-bengaluru-engineering-office-to-build-defence-autonomy-software",
+        "summary": "The US defence technology company plans to hire Indian engineers to develop and test its Hivemind autonomy platform, expanding its presence beyond Delhi.",
+        "date_published": "2026-11-13",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "DevSparks 2026 heads to Delhi to explore agentic AI and the future of software development",
         "url": "https://yourstory.com/2026/10/devsparks-2026-delhi-ncr-agentic-ai-developer-summit",
@@ -5276,5 +5297,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -639,6 +639,47 @@
     ],
     "Major AI Developments": [
       {
+        "id": 3,
+        "title": "Shield AI Opens Bengaluru Engineering Office to Build Defence Autonomy Software",
+        "url": "https://analyticsindiamag.com/ai-news/shield-ai-opens-bengaluru-engineering-office-to-build-defence-autonomy-software",
+        "summary": "The US defence technology company plans to hire Indian engineers to develop and test its Hivemind autonomy platform, expanding its presence beyond Delhi.",
+        "date_published": "2026-11-13",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL",
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Can Karnataka’s AI Hub Ease Compute Costs for Women-Led Startups?",
+        "url": "https://analyticsindiamag.com/ai-startups/can-karnatakas-ai-hub-ease-compute-costs-for-women-led-startups",
+        "summary": "Women entrepreneurs urge Karnataka for affordable computing resources to enhance AI development and reduce operational costs for startups.",
+        "date_published": "2026-11-13",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Karnataka may subsidise GPU access for startups through AI hub",
         "url": "https://yourstory.com/2026/11/karnataka-open-to-subsidising-gpu-access-for-startups-through-ai-hub",
