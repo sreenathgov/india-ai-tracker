@@ -1654,6 +1654,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "AI Chatbots and Children: Should India Regulate What Bots Say?",
+        "url": "https://analyticsindiamag.com/ai-features/ai-chatbots-and-children-should-india-regulate-what-bots-say",
+        "summary": "Explore the need for regulations on AI chatbots as children seek emotional support and companionship, following global trends and legislation.",
+        "date_published": "2026-11-14",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "60% Indian organisations investing in AI report positive returns",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/60-indian-organisations-investing-in-ai-report-positive-returns/135797422",
@@ -18240,6 +18260,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "Funding and acquisitions in Indian startups this week [Nov 09- Nov 14]",
+        "url": "https://entrackr.com/report/funding-and-acquisitions-in-indian-startups-this-week-nov-09-nov-14-12808553",
+        "summary": "This week, 12 Indian startups raised $31.3 mi...",
+        "date_published": "2026-11-14",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Froncort.AI Gets $2.3M From Google.org to Expand AI-Based Disease Screening in India",
         "url": "https://analyticsindiamag.com/ai-news/froncortai-gets-23m-from-googleorg-to-expand-ai-based-disease-screening-in-india",
@@ -22030,7 +22070,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "Policies and Initiatives"
+    "AI Start-Up News",
+    "Major AI Developments"
   ]
 }

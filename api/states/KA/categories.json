@@ -680,6 +680,28 @@
         "posted_to_x_at": null
       },
       {
+        "id": 3,
+        "title": "Create future technologies while preserving human values: Former IIT Director",
+        "url": "https://starofmysore.com/create-future-technologies-while-preserving-human-values-former-iit-director/",
+        "summary": "<img alt=\"\" class=\"webfeedsFeaturedVisual wp-post-image\" height=\"275\" src=\"https://starofmysore.com/wp-content/uploads/2026/11/News-10-1-1024x275.jpg\" style=\"display: block; margin: auto; margin-botto...",
+        "date_published": "2026-11-13",
+        "source_name": "Star of Mysore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "AP",
+          "KA",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Karnataka may subsidise GPU access for startups through AI hub",
         "url": "https://yourstory.com/2026/11/karnataka-open-to-subsidising-gpu-access-for-startups-through-ai-hub",
@@ -7156,7 +7178,5 @@
       }
     ]
   },
-  "today_updates": [
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }
