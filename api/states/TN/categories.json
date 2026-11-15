@@ -241,6 +241,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Tamil Nadu suspends 5 library officials over AI-generated books, fake authors and inflated prices",
+        "url": "https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-suspends-5-library-officials-over-ai-generated-books-fake-authors-and-inflated-prices/articleshow/135847091.cms",
+        "summary": "<img align=\"left\"...",
+        "date_published": "2026-11-15",
+        "source_name": "Times of India - Tamil Nadu",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "AI-generated books, fake authors, inflated prices: DVAC probes Tamil Nadu library procurement scam",
         "url": "https://timesofindia.indiatimes.com/city/chennai/ai-generated-books-fake-authors-inflated-prices-dvac-probes-tamil-nadu-library-procurement-scam/articleshow/135705340.cms",
@@ -2179,5 +2199,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

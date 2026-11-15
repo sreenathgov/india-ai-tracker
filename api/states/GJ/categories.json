@@ -172,6 +172,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Ahmedabad civic body deploys AI to track attendance",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ahmedabad-civic-body-deploys-ai-to-track-attendance/articleshow/135841161.cms",
+        "summary": "Ahmedabad civic body deploys AI to track attendance",
+        "date_published": "2026-11-15",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "‘Dr’ rush or research boom? India sees 43,000-plus PhD theses for fourth straight year",
+        "url": "https://timesofindia.indiatimes.com/city/ahmedabad/ai-evs-expand-indias-phd-frontiers/articleshow/135841113.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"https://timesofindia.indiatimes....",
+        "date_published": "2026-11-15",
+        "source_name": "Times of India - Ahmedabad",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "Gujarat proposes three-tier AI training for 5 lakh students",
         "url": "https://timesofindia.indiatimes.com/city/ahmedabad/gujarat-proposes-three-tier-ai-training-for-5-lakh-students/articleshow/135075774.cms",
@@ -2131,5 +2171,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
