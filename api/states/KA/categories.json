@@ -640,6 +640,46 @@
     "Major AI Developments": [
       {
         "id": 3,
+        "title": "Karnataka Bets on Physical AI, Deeptech at Bengaluru Tech Summit 2026",
+        "url": "https://analyticsindiamag.com/ai-news/karnataka-bets-on-physical-ai-deeptech-at-bengaluru-tech-summit-2026",
+        "summary": "Bengaluru Tech Summit 2026 aims to extend AI adoption beyond enterprise software into agriculture, biotechnology, gaming, industrial systems, and e-governance.",
+        "date_published": "2026-11-16",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "The 29th edition of the Bengaluru Tech Summit",
+        "url": "https://www.allconferencealert.com/conference/the-29th-edition-of-the-bengaluru-tech-summit-bangalore-india-nov-2026-2898247",
+        "summary": "The 29th edition of the Bengaluru Tech Summit",
+        "date_published": "2026-11-16",
+        "source_name": "AllConferenceAlert India",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
         "title": "Shield AI Opens Bengaluru Engineering Office to Build Defence Autonomy Software",
         "url": "https://analyticsindiamag.com/ai-news/shield-ai-opens-bengaluru-engineering-office-to-build-defence-autonomy-software",
         "summary": "The US defence technology company plans to hire Indian engineers to develop and test its Hivemind autonomy platform, expanding its presence beyond Delhi.",
@@ -7178,5 +7218,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

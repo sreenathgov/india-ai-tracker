@@ -4,6 +4,26 @@
     "Policies and Initiatives": [
       {
         "id": 9,
+        "title": "Bharat Semi raises $24 Mn in seed round from Info Edge, South Park Common, others",
+        "url": "https://entrackr.com/news/bharat-semi-raises-24-mn-in-seed-round-from-info-edge-south-park-common-others-12812801",
+        "summary": "Semiconductor startup Bharat Semi has raised $2...",
+        "date_published": "2026-11-16",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
         "title": "MeitY examines data collection by home services platforms for physical AI training",
         "url": "https://entrackr.com/news/meity-examines-data-collection-by-home-services-platforms-for-physical-ai-training-12806000",
         "summary": "The Ministry of Electronics and Information...",
@@ -1653,6 +1673,106 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 2,
+        "title": "Inside CtrlS’s Massive 4.4 GW Bet on India’s AI and Data Centre Boom",
+        "url": "https://analyticsindiamag.com/ai-features/inside-ctrlss-44-gw-bet-on-indias-data-centre-boom",
+        "summary": "CrtlS currently operates 19 data centres and plans to establish more than 20 edge data centres across tier-2 and tier-3 cities.",
+        "date_published": "2026-11-16",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "India Joins US-Led Pact to Secure AI and Semiconductor Supply Chains",
+        "url": "https://analyticsindiamag.com/ai-news/india-joins-us-led-pact-to-secure-ai-and-semiconductor-supply-chains",
+        "summary": "The agreement brings 10 countries together to protect critical technologies, diversify supply chains and coordinate investment in AI infrastructure amid",
+        "date_published": "2026-11-16",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Zoho launches Blended AI Agents to automate customer service with human oversight",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/zoho-launches-blended-ai-agents-to-automate-customer-service-with-human-oversight/135882623",
+        "summary": "In a significant upgrade to its Zoho Desk platform, Zoho has introduced Blended Agents, leveraging artificial intelligence to streamline customer service operations. These smart agents manage everyday...",
+        "date_published": "2026-11-16",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "AI may deepen pricing pressure on Indian IT services before new demand offsets it",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/ai-may-deepen-pricing-pressure-on-indian-it-services-before-new-demand-offsets-it/135870501",
+        "summary": "Rapid advancements in artificial intelligence are expected to exert pressure on the pricing of traditional Indian IT services. While demand for new AI projects is growing, providers may reduce contrac...",
+        "date_published": "2026-11-16",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "India, US, eight other nations sign declaration to safeguard AI supply chains",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/india-us-eight-other-nations-sign-declaration-to-safeguard-ai-supply-chains/135875513",
+        "summary": "Washington and nine other nations recently signed the San Francisco Declaration to safeguard AI supply chains. This initiative aims to enhance economic and national security through collaboration and...",
+        "date_published": "2026-11-16",
+        "source_name": "ET Government - Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 1,
         "title": "AI Chatbots and Children: Should India Regulate What Bots Say?",
@@ -18260,6 +18380,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 6,
+        "title": "India&#039;s youth do not lack enterprise–they lack the right ecosystem: Lakshmi Venkataraman",
+        "url": "https://government.economictimes.indiatimes.com/news/policy/indias-youth-do-not-lack-enterprisethey-lack-the-right-ecosystem-lakshmi-v-venkatesan/135858055",
+        "summary": "Lakshmi Venkataraman Venkatesan, Founder of BYST, calls for larger loans, institutionalised mentorship, regulatory reforms and AI adoption to transform India&#039;s Grampreneurs into engines of growth...",
+        "date_published": "2026-11-16",
+        "source_name": "ET Government - Policy",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Funding and acquisitions in Indian startups this week [Nov 09- Nov 14]",
         "url": "https://entrackr.com/report/funding-and-acquisitions-in-indian-startups-this-week-nov-09-nov-14-12808553",
@@ -22069,5 +22209,9 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News",
+    "Policies and Initiatives",
+    "Major AI Developments"
+  ]
 }

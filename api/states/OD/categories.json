@@ -145,6 +145,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 15,
+        "title": "Researcher builds Odisha’s homegrown AI model suite from scratch",
+        "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/researcher-builds-odishas-homegrown-ai-model-suite-from-scratch/articleshow/135863008.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"h...",
+        "date_published": "2026-11-16",
+        "source_name": "Times of India - Bhubaneswar",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "OD"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "AI-based model to help scrutinise Odisha pension cases",
         "url": "https://timesofindia.indiatimes.com/city/bhubaneswar/ai-based-model-to-help-scrutinise-odisha-pension-cases/articleshow/135641873.cms",
@@ -528,5 +548,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

@@ -636,6 +636,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 14,
+        "title": "Delhi govt allows voter ID, DL for citizen services, makes Aadhaar authentication voluntary",
+        "url": "https://www.tribuneindia.com/news/delhi/delhi-govt-allows-voter-id-dl-for-citizen-services-makes-aadhaar-authentication-voluntary",
+        "summary": "The Delhi Government will not deny any service to residents due to lack of Aadhaar authentication, allowing verification through alternative documents such as voter ID, driving licence and passport, a...",
+        "date_published": "2026-11-16",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Shield AI Opens Bengaluru Engineering Office to Build Defence Autonomy Software",
         "url": "https://analyticsindiamag.com/ai-news/shield-ai-opens-bengaluru-engineering-office-to-build-defence-autonomy-software",
@@ -4458,6 +4478,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 1,
+        "title": "Delhi's Bharat Semi Raises $24 Mn to Develop AI Image Sensors",
+        "url": "https://analyticsindiamag.com/ai-news/delhis-bharat-semi-raises-24-mn-to-develop-ai-image-sensors",
+        "summary": "The Delhi-based startup plans to begin commercial production in 2027, targeting customers across the US and other markets.",
+        "date_published": "2026-11-16",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Honasa elevates Vipul Maheshwari to CPTO",
         "url": "https://entrackr.com/snippets/honasa-elevates-vipul-maheshwari-to-cpto-12741347",
@@ -5297,5 +5337,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News",
+    "Major AI Developments"
+  ]
 }
