@@ -797,6 +797,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 16,
+        "title": "AI infra startup JohnAIC raises $1.9 Mn in pre-seed round",
+        "url": "https://entrackr.com/snippets/ai-infra-startup-johnaic-raises-19-mn-in-pre-seed-round-12815778",
+        "summary": "Bengaluru-based sovereign AI infrastructure startup JohnAIC has ra...",
+        "date_published": "2026-11-17",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "AP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Aquapulse raises Rs 25 Cr in Series A led by NABVENTURES",
         "url": "https://entrackr.com/snippets/aquapulse-raises-rs-25-cr-in-series-a-led-by-nabventures-11446411",
@@ -864,5 +884,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News"
+  ]
 }

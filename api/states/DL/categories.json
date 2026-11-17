@@ -656,6 +656,26 @@
         "posted_to_x_at": null
       },
       {
+        "id": 5,
+        "title": "Delhi govt allows voter ID, DL for citizen services, makes Aadhaar authentication voluntary",
+        "url": "https://government.economictimes.indiatimes.com/news/policy/delhi-govt-allows-voter-id-dl-for-citizen-services-makes-aadhaar-authentication-voluntary/135894201",
+        "summary": "The IT department is now mandated to inform Aadhaar number holders about alternative and viable means of identification and ensure that no service is denied if they are unable to undergo Aadhaar authe...",
+        "date_published": "2026-11-16",
+        "source_name": "ET Government - Policy",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Shield AI Opens Bengaluru Engineering Office to Build Defence Autonomy Software",
         "url": "https://analyticsindiamag.com/ai-news/shield-ai-opens-bengaluru-engineering-office-to-build-defence-autonomy-software",
@@ -5337,8 +5357,5 @@
       }
     ]
   },
-  "today_updates": [
-    "AI Start-Up News",
-    "Major AI Developments"
-  ]
+  "today_updates": []
 }

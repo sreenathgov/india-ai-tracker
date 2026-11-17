@@ -274,6 +274,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Velocity launches agentic AI platform to automate D2C shipping operations",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/velocity-launches-agentic-ai-platform-to-automate-d2c-shipping-operations/135918493",
+        "summary": "Velocity proudly presents Vector, a cutting-edge AI platform aimed at revolutionizing shipping operations for digital-first brands. By using order details and logistics intelligence, the platform enab...",
+        "date_published": "2026-11-17",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "Elastic{ON} Mumbai: Why context, not the model, is the real AI advantage",
+        "url": "https://yourstory.com/2026/11/elasticon-mumbai-context-not-model-real-ai-advantage",
+        "summary": "At Elastic{ON} Mumbai, CEO Ash Kulkarni argued that every business already owns what AI models lack. The rest of the day showed what it takes to put that context to work.",
+        "date_published": "2026-11-17",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "How ChatGPT helped trace Maharashtra woman missing for 2.5 years, reunite her with family",
         "url": "https://www.livemint.com/ai/how-chatgpt-helped-trace-maharashtra-woman-missing-for-2-5-years-reunite-her-with-family-11794751228951.html",
@@ -3376,5 +3416,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
