@@ -719,6 +719,47 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Hitachi Systems India Sets Up Bengaluru GDC to Tackle Frontier AI Risks",
+        "url": "https://analyticsindiamag.com/ai-news/hitachi-systems-india-sets-up-bengaluru-gdc-to-tackle-frontier-ai-risks",
+        "summary": "The centre will serve customers across Asia Pacific and the Middle East, offering services covering AI agent security, vulnerability remediation and security",
+        "date_published": "2026-11-18",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Karnataka aims to become a global hub for frontier tech; Fadnavis’ vision for a new Maharashtra",
+        "url": "https://yourstory.com/2026/11/karnataka-aim-global-hub-frontier-tech-fadnavi-vision-new-maharashtra",
+        "summary": "Karnataka aims to become a global hub for frontier technologies such as AI, deeptech, and biotech, said CM DK Shivakumar at Bengaluru Tech Summit. Meanwhile, Maharashtra CM Fadnavis has shared his roa...",
+        "date_published": "2026-11-18",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "The best of AI is yet to come, say experts at Bengaluru Tech Summit",
         "url": "https://yourstory.com/2026/11/the-best-of-ai-is-yet-to-come-say-experts-at-bengaluru-tech-summit",
@@ -765,6 +806,26 @@
         "summary": "<img align=\"left\" border=...",
         "date_published": "2026-11-17",
         "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 12,
+        "title": "Karnataka embarks on aggressive AI skilling drive; to train 63,200 students, engineers",
+        "url": "https://www.thehindu.com/news/national/karnataka/karnataka-embarks-on-aggressive-ai-skilling-drive-to-train-63200-students-engineers/article71712837.ece",
+        "summary": "Karnataka embarks on aggressive AI skilling drive; to train 63,200 students, engineers",
+        "date_published": "2026-11-17",
+        "source_name": "The Hindu - Bangalore",
         "category": "Major AI Developments",
         "state_codes": [
           "KA"
@@ -5737,6 +5798,46 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 6,
+        "title": "Bengaluru leads India in AI startup funding: Innovation Report 2026",
+        "url": "https://yourstory.com/2026/11/bengaluru-leads-india-in-ai-startup-funding-innovation-report-2026",
+        "summary": "$85 billion raised, a growing AI ecosystem and a strong deep-tech pipeline. The Bengaluru Innovation Report 2026 maps the city's startup growth as Karnataka looks to spread its tech ambitions beyond t...",
+        "date_published": "2026-11-18",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "Karnataka bets on AI, robotics and semiconductors with 6 new technology initiatives at BTS 2026",
+        "url": "https://government.economictimes.indiatimes.com/news/technology/karnataka-bets-on-ai-robotics-and-semiconductors-with-6-new-technology-initiatives-at-bts-2026/135952209",
+        "summary": "Chief Minister D K Shivakumar outlines plans to position the state as a global deep-tech hub, with new innovation centres, semiconductor research facilities and startup support programmes.",
+        "date_published": "2026-11-18",
+        "source_name": "ET Government - Technology",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "This Bengaluru Startup Is Building AI Agents for Hardware Design",
         "url": "https://analyticsindiamag.com/ai-startups/this-bengaluru-startup-is-building-ai-agents-for-hardware-design",
@@ -7359,7 +7460,7 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives",
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }

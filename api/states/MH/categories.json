@@ -274,6 +274,27 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "Karnataka aims to become a global hub for frontier tech; Fadnavis’ vision for a new Maharashtra",
+        "url": "https://yourstory.com/2026/11/karnataka-aim-global-hub-frontier-tech-fadnavi-vision-new-maharashtra",
+        "summary": "Karnataka aims to become a global hub for frontier technologies such as AI, deeptech, and biotech, said CM DK Shivakumar at Bengaluru Tech Summit. Meanwhile, Maharashtra CM Fadnavis has shared his roa...",
+        "date_published": "2026-11-18",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Velocity launches agentic AI platform to automate D2C shipping operations",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/velocity-launches-agentic-ai-platform-to-automate-d2c-shipping-operations/135918493",
@@ -2799,6 +2820,26 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "Neysa Deploys AMD GPU Cluster in Mumbai for AI Training and Inference",
+        "url": "https://analyticsindiamag.com/ai-news/neysa-deploys-amd-gpu-cluster-in-mumbai-for-ai-training-and-inference",
+        "summary": "The new deployment brings together AMD Instinct MI350X GPUs, AMD EPYC processors as well as the AMD ROCm software ecosystem.",
+        "date_published": "2026-11-18",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Adobe acquires Indian AI startup Rilo",
         "url": "https://yourstory.com/2026/09/adobe-acquires-indian-ai-startup-rilo",
@@ -3417,6 +3458,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "AI Start-Up News"
   ]
 }
