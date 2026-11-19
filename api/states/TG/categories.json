@@ -152,6 +152,46 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "Zurich Insurance to Expand Hyderabad GCC With 1,000 Employees By 2028",
+        "url": "https://analyticsindiamag.com/ai-news/zurich-to-expand-hyderabad-centre-with-1000-employees-by-2028",
+        "summary": "Zurich Insurance Group plans to hire across cloud engineering, data and AI, application development, and cybersecurity roles.",
+        "date_published": "2026-11-19",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 17,
+        "title": "Hyderabad student uses ChatGPT to forge SHE Teams notice to intimidate ex-boyfriend, booked",
+        "url": "https://timesofindia.indiatimes.com/city/hyderabad/hyderabad-student-uses-chatgpt-to-forge-she-teams-notice-to-intimidate-ex-boyfriend-booked/articleshow/135969986.cms",
+        "summary": "<img align=\"left\" bord...",
+        "date_published": "2026-11-19",
+        "source_name": "Times of India - Bhopal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TG"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "Mars Opens Hyderabad GCC With Genpact to Expand Digital, AI Capabilities",
         "url": "https://analyticsindiamag.com/ai-news/mars-opens-hyderabad-gcc-with-genpact-to-expand-digital-ai-capabilities",
@@ -3384,5 +3424,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

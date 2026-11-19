@@ -5,6 +5,31 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "InPrime Finserv raises Rs 101 Cr in Series B round led by FMO",
+        "url": "https://entrackr.com/snippets/inprime-finserv-raises-rs-101-cr-in-series-b-round-led-by-fmo-12823682",
+        "summary": "Bengaluru-based InPrime Finser...",
+        "date_published": "2026-11-19",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "HR",
+          "KA",
+          "MP",
+          "RJ",
+          "UK",
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "How AI exposure varies across Indian states: Kerala leads, UP and Bihar lag behind",
         "url": "https://www.livemint.com/ai/how-ai-exposure-varies-across-indian-states-kerala-leads-up-and-bihar-lag-behind-11791727545580.html",
@@ -191,5 +216,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

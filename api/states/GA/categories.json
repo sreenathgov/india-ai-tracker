@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 16,
+        "title": "Goa cabinet approves five schemes under AI policy, sanctions Rs 10cr",
+        "url": "https://timesofindia.indiatimes.com/city/goa/goa-cabinet-approves-five-schemes-under-ai-policy-sanctions-rs-10cr/articleshow/135970046.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"https...",
+        "date_published": "2026-11-19",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 11,
         "title": "Goa unveils AI Policy proposing AI fundamentals for Classes 6 to 12, targets 25% women",
         "url": "https://government.economictimes.indiatimes.com/news/technology/goa-unveils-ai-policy-proposing-ai-fundamentals-for-classes-6-to-12-targets-25-women/135142590",
@@ -574,5 +594,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

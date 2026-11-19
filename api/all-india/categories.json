@@ -1674,6 +1674,86 @@
     ],
     "Major AI Developments": [
       {
+        "id": 2,
+        "title": "Infosys Expands AI Footprint in Japan With Telecom JV",
+        "url": "https://analyticsindiamag.com/ai-news/infosys-joins-ntt-docomo-metaverse-venture-as-ai-partner",
+        "summary": "Tnfosys will acquire a 10.1% stake in the Japanese venture, which will focus on digital twins, immersive experiences, and virtual commerce.",
+        "date_published": "2026-11-19",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "GitHub Now Lets Indian Enterprises Store Code Locally Ahead of DPDP Deadline",
+        "url": "https://analyticsindiamag.com/ai-news/github-now-lets-indian-enterprises-store-code-locally-ahead-of-dpdp-deadline",
+        "summary": "Global AI labs and cloud hyperscalers have accelerated their data residency and local inference rollouts in India ahead of full enforcement of the DPDP Rules.",
+        "date_published": "2026-11-19",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "From 10,000 GPUs to Gram Panchayats, India's AI test is reach",
+        "url": "https://www.livemint.com/ai/from-10-000-gpus-to-gram-panchayats-indias-ai-test-is-reach-11795076492716.html",
+        "summary": "At the Mint All About AI Tech4Good Awards 2026, industry leaders highlighted that the true success of AI in India will be measured on how it improves access to public services, strengthens livelihoods...",
+        "date_published": "2026-11-19",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "Bajaj Finserv and Pennant invest $4 million in Indian AI startup Soket AI",
+        "url": "https://yourstory.com/2026/11/bajaj-finserv-backs-soket-ai-with-4-million-investment-alongside-pennant",
+        "summary": "Bajaj Finance and Pennant Technologies are backing Soket AI with investments of around $2 million each to advance its homegrown foundation models and enterprise AI solutions.",
+        "date_published": "2026-11-19",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "India signals readiness to build next-generation AI at Bennett University’s Global AI Summit",
         "url": "https://www.etnownews.com/technology/india-signals-readiness-to-build-next-generation-ai-at-bennett-universitys-global-ai-summit-article-156528556",
@@ -18619,6 +18699,66 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 4,
+        "title": "America is Flooding AI With Billions. Indian Startups are Fighting for Survival",
+        "url": "https://analyticsindiamag.com/ai-startups/america-is-flooding-ai-with-billions-indian-startups-are-fighting-for-survival",
+        "summary": "As global venture capital concentrates around American AI companies, Indian startups face a tougher fundraising environment, with investors demanding stronger",
+        "date_published": "2026-11-19",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Wadhwani AI Joins LinkedIn to Train 2,000 Northeast SMEs in AI",
+        "url": "https://analyticsindiamag.com/ai-news/wadhwani-ai-and-linkedin-partner-to-train-2000-northeast-entrepreneurs",
+        "summary": "The 12-month programme will help small and micro entrepreneurs across five northeastern states apply AI to marketing, customer engagement, and business",
+        "date_published": "2026-11-19",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 10,
+        "title": "Six Indian startups selected for Hub71's Immersion Programme in Abu Dhabi",
+        "url": "https://yourstory.com/2026/11/six-indian-startups-selected-for-hub71s-immersion-programme-in-abu-dhabi",
+        "summary": "The winners were chosen from among ten finalists in the areas of AI, clean energy, advanced manufacturing and digital finance.",
+        "date_published": "2026-11-19",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 2,
         "title": "Sarvam’s Token Factory Sparks India’s Sovereign AI Debate, Again",
