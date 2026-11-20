@@ -86,6 +86,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Goa Wants to Train 50,000 Graduates in AI Skills",
+        "url": "https://analyticsindiamag.com/ai-news/goa-cabinet-approves-ai-policy-2026-puts-60-towards-skilling",
+        "summary": "The 2026–2029 roadmap includes a Konkani language model, a dedicated AI research centre, and support for startups and MSME adoption.",
+        "date_published": "2026-11-20",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 16,
         "title": "Tourism dept taps AI to promote Goa through online searches, drive international footfalls",
         "url": "https://timesofindia.indiatimes.com/city/goa/tourism-dept-taps-ai-to-promote-goa-through-online-searches-drive-international-footfalls/articleshow/135278278.cms",
@@ -595,6 +615,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives"
+    "Major AI Developments"
   ]
 }

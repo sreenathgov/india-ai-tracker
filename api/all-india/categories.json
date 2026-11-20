@@ -1675,6 +1675,86 @@
     "Major AI Developments": [
       {
         "id": 2,
+        "title": "Forget Organic Growth, AI is Forcing Mid-Cap Indian IT to Reinvent M&A Playbook",
+        "url": "https://analyticsindiamag.com/it-services/ai-is-forcing-mid-tier-indian-it-companies-to-rethink-their-competitive-advantage",
+        "summary": "Acquisitions have given mid-tier IT firms access to specialist skills, technology, and customers. Their Q2 results show how these deals are shaping their",
+        "date_published": "2026-11-20",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Indian firms embrace AI, digital models to drive trade growth",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indian-firms-embrace-ai-digital-models-to-drive-trade-growth/136017992",
+        "summary": "Indian enterprises are making significant strides in integrating artificial intelligence and digital strategies into their operations. A notable percentage anticipate that their technological investme...",
+        "date_published": "2026-11-20",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Data gaps, skills shortage slow AI adoption in India’s aerospace sector",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/data-gaps-skills-shortage-slow-ai-adoption-in-indias-aerospace-sector/136011269",
+        "summary": "The integration of artificial intelligence into India&#039;s aerospace, defence, and space sectors is fraught with inconsistencies and hurdles. Challenges such as fragmented data access, exorbitant co...",
+        "date_published": "2026-11-20",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "YourStory launches voice AI hackathon with Rs 8 lakh prize pool in collaboration with Google Cloud India",
+        "url": "https://yourstory.com/2026/11/hack2skill-yourstory-launches-voice-ai-hackathon-with-rs-8-lakh-prize-pool-in-collaboration-with-google-cloud-india",
+        "summary": "Virtual hackathon invites working professionals to build voice AI prototypes using Gemini Enterprise and the Google Cloud AI stack.",
+        "date_published": "2026-11-20",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "Infosys Expands AI Footprint in Japan With Telecom JV",
         "url": "https://analyticsindiamag.com/ai-news/infosys-joins-ntt-docomo-metaverse-venture-as-ai-partner",
         "summary": "Tnfosys will acquire a 10.1% stake in the Japanese venture, which will focus on digital twins, immersive experiences, and virtual commerce.",
@@ -22670,7 +22750,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }
