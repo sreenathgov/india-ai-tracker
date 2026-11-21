@@ -45,6 +45,46 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Google backs IIT Kharagpur's AI ambitions with Rs 46 crore commitment",
+        "url": "https://www.etnownews.com/technology/google-backs-iit-kharagpurs-ai-ambitions-with-rs-46-crore-commitment-article-156546179",
+        "summary": "Google has committed USD 5 million (around Rs 46 crore) to IIT Kharagpur, Sundar Pichai's alma mater, to accelerate AI research, expand education and strengthen India's scientific talent pool.",
+        "date_published": "2026-11-21",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Google announces $5M funding for IIT Kharagpur for advanced AI research",
+        "url": "https://yourstory.com/2026/11/google-announces-5m-funding-for-iit-kharagpur-for-advanced-ai-research",
+        "summary": "The funding will support the institute's researchers and students across three core pillars: advanced AI research, educational opportunities, and AI capacity building.",
+        "date_published": "2026-11-21",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "WB"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 13,
         "title": "Reliable, secure digital infrastructure key to West Bengal’s economic growth: NIXI CEO",
         "url": "https://government.economictimes.indiatimes.com/news/technology/reliable-secure-digital-infrastructure-key-to-west-bengals-economic-growth-nixi-ceo/135967641",
@@ -766,5 +806,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

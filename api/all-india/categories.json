@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 4,
+        "title": "Funding and acquisitions in Indian startups this week [Nov 16- Nov 21]",
+        "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-nov-16-nov-21-12829487",
+        "summary": "This week, 23 Indian startups raised $290 million across 6 growth-st...",
+        "date_published": "2026-11-21",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 9,
         "title": "Bharat Semi raises $24 Mn in seed round from Info Edge, South Park Common, others",
         "url": "https://entrackr.com/news/bharat-semi-raises-24-mn-in-seed-round-from-info-edge-south-park-common-others-12812801",
@@ -1673,6 +1693,46 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 2,
+        "title": "Indian organisations report declining readiness to manage cybersecurity risks",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indian-organisations-report-declining-readiness-to-manage-cybersecurity-risks/136043583",
+        "summary": "Indian companies are witnessing enhanced returns from AI investments and expanding their use from pilot schemes. Nonetheless, their readiness to tackle external risks associated with AI appears to hav...",
+        "date_published": "2026-11-21",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "IIT-Mandi researchers develop AI-based model to forecast wildlife population changes",
+        "url": "https://www.tribuneindia.com/news/himachal/iit-mandi-researchers-develop-ai-based-model-to-forecast-wildlife-population-changes",
+        "summary": "Researchers at the Indian Institute of Technology (IIT), Mandi, have developed an innovative artificial intelligence (AI)-based mathematical modelling framework capable of predicting changes in wildli...",
+        "date_published": "2026-11-21",
+        "source_name": "Tribune - Himachal",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 2,
         "title": "Forget Organic Growth, AI is Forcing Mid-Cap Indian IT to Reinvent M&A Playbook",
@@ -22750,6 +22810,7 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "Major AI Developments",
+    "Policies and Initiatives"
   ]
 }
