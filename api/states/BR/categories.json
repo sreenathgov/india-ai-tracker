@@ -147,6 +147,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "PM opens IIT-Patna’s AI centre, lays stone for research park",
+        "url": "https://timesofindia.indiatimes.com/city/patna/pm-opens-iit-patnas-ai-centre-lays-stone-for-research-park/articleshow/136057293.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"https://time...",
+        "date_published": "2026-11-22",
+        "source_name": "Times of India - Patna",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "BR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "How AI exposure varies across Indian states: Kerala leads, UP and Bihar lag behind",
         "url": "https://www.livemint.com/ai/how-ai-exposure-varies-across-indian-states-kerala-leads-up-and-bihar-lag-behind-11791727545580.html",
@@ -736,5 +756,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

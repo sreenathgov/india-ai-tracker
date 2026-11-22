@@ -287,6 +287,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 7,
+        "title": "No AI threat if you have skills, demand will rise in future: Modi",
+        "url": "https://timesofindia.indiatimes.com/city/lucknow/no-ai-threat-if-you-have-skills-demand-will-rise-in-future-modi/articleshow/136062764.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"https...",
+        "date_published": "2026-11-22",
+        "source_name": "Times of India - Lucknow",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "UP"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Missing for 5 years, found in Rajasthan: How AI helped UP cops trace woman using childhood photo",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/missing-for-5-years-found-in-rajasthan-how-ai-helped-up-cops-trace-woman-using-childhood-photo/articleshow/136022688.cms",
@@ -1831,5 +1851,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

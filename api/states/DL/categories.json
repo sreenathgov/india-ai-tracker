@@ -636,6 +636,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 9,
+        "title": "Delhi emerging as global hub for healthcare innovation: L-G",
+        "url": "https://www.tribuneindia.com/news/delhi/delhi-emerging-as-global-hub-for-healthcare-innovation-l-g",
+        "summary": "Delhi is emerging as a global hub for healthcare innovation, backed by its advanced medical infrastructure, leading hospitals, research institutions and growing adoption of technologies such as artifi...",
+        "date_published": "2026-11-22",
+        "source_name": "Tribune - Delhi",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 14,
         "title": "Delhi govt allows voter ID, DL for citizen services, makes Aadhaar authentication voluntary",
         "url": "https://www.tribuneindia.com/news/delhi/delhi-govt-allows-voter-id-dl-for-citizen-services-makes-aadhaar-authentication-voluntary",
@@ -5357,5 +5377,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

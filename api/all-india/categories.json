@@ -1695,6 +1695,46 @@
     "Major AI Developments": [
       {
         "id": 2,
+        "title": "India’s boot camps raising commandos for the world's AI trenches",
+        "url": "https://www.livemint.com/ai/indias-coaching-factories-find-their-next-big-product-ai-engineers-who-can-sell-11795086606868.html",
+        "summary": "At least six institutes have sprung up in the past year to train so-called forward-deployed engineers—on-site specialists juggling AI and sales. It doesn’t come cheap: fees go as high as  ₹4 lakh, bac...",
+        "date_published": "2026-11-22",
+        "source_name": "LiveMint AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "How Illumine cracked the US SaaS market from India: AI, GTM, Growth playbook",
+        "url": "https://yourstory.com/2026/11/how-illumine-cracked-the-us-saas-market-india-ai-gtm-growth-playbook",
+        "summary": "In this episode of the Prime Venture Partners Podcast, Illumine co-founders Navneet Rastogi and Sourabh Agarwal share how they went from losing nearly 200 customers during COVID to building a global c...",
+        "date_published": "2026-11-22",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
         "title": "Indian organisations report declining readiness to manage cybersecurity risks",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/indian-organisations-report-declining-readiness-to-manage-cybersecurity-risks/136043583",
         "summary": "Indian companies are witnessing enhanced returns from AI investments and expanding their use from pilot schemes. Nonetheless, their readiness to tackle external risks associated with AI appears to hav...",
@@ -22810,7 +22850,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments",
-    "Policies and Initiatives"
+    "Major AI Developments"
   ]
 }
