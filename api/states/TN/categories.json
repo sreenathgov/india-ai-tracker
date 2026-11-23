@@ -242,6 +242,26 @@
     "Major AI Developments": [
       {
         "id": 1,
+        "title": "L&T Bags Contract to Deploy NVIDIA B300 GPUs in Chennai Data Centre",
+        "url": "https://analyticsindiamag.com/ai-news/lt-wins-large-order-to-deploy-additional-nvidia-b300-gpus-in-chennai",
+        "summary": "The customer and number of additional GPUs remain undisclosed, while the engagement is part of a planned 10,000-GPU cluster.",
+        "date_published": "2026-11-23",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "TN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 1,
         "title": "Tamil Nadu suspends 5 library officials over AI-generated books, fake authors and inflated prices",
         "url": "https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-suspends-5-library-officials-over-ai-generated-books-fake-authors-and-inflated-prices/articleshow/135847091.cms",
         "summary": "<img align=\"left\"...",
@@ -2199,5 +2219,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

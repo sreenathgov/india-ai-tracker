@@ -1694,6 +1694,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 5,
+        "title": "India may emerge as long-term AI winner despite dependence on foreign tech",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-may-emerge-as-long-term-ai-winner-despite-dependence-on-foreign-tech/136092363",
+        "summary": "India is poised to capitalize on the global Artificial Intelligence revolution due to its large population and technology workforce. The country has a significant unmet demand for AI applications acro...",
+        "date_published": "2026-11-23",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 2,
         "title": "India’s boot camps raising commandos for the world's AI trenches",
         "url": "https://www.livemint.com/ai/indias-coaching-factories-find-their-next-big-product-ai-engineers-who-can-sell-11795086606868.html",
@@ -18880,6 +18900,66 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 3,
+        "title": "Sarvam Defends Hosting Chinese AI Models, Releases Upgraded 105B Model",
+        "url": "https://analyticsindiamag.com/ai-news/sarvam-defends-hosting-chinese-ai-models-releases-upgraded-105b-model",
+        "summary": "Sarvam previously launched Token Factory as an inference platform that allows developers to access open-weight AI models via infrastructure in India.",
+        "date_published": "2026-11-23",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Sarvam clarifies AI strategy amid debate over hosting Chinese models",
+        "url": "https://yourstory.com/2026/11/sarvam-clarifies-ai-strategy-amid-debate-over-hosting-chinese-models",
+        "summary": "Co-founder Pratyush Kumar contends that a model’s country of origin and the location of the infrastructure on which it runs are two different matters. Building inference infrastructure does not take a...",
+        "date_published": "2026-11-23",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Sarvam's new AI model promises better performance at lower cost",
+        "url": "https://yourstory.com/2026/11/sarvam-new-model-make-ai-assistants-cheaper-to-run",
+        "summary": "Sarvam’s latest model promises better reasoning, tool use and Indian-language capabilities at lower costs, as competition to build India’s AI ecosystem gathers pace.",
+        "date_published": "2026-11-23",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "America is Flooding AI With Billions. Indian Startups are Fighting for Survival",
         "url": "https://analyticsindiamag.com/ai-startups/america-is-flooding-ai-with-billions-indian-startups-are-fighting-for-survival",
@@ -22850,6 +22930,7 @@
     ]
   },
   "today_updates": [
+    "AI Start-Up News",
     "Major AI Developments"
   ]
 }

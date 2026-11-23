@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 10,
+        "title": "EloElo Group launches Dolphin AI Film Studio at IFFI 2026",
+        "url": "https://entrackr.com/snippets/eloelo-group-launches-dolphin-ai-film-studio-at-iffi-2026-12833088",
+        "summary": "EloElo Group, the parent company of Story TV, has launched an AI...",
+        "date_published": "2026-11-23",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 16,
         "title": "Goa cabinet approves five schemes under AI policy, sanctions Rs 10cr",
         "url": "https://timesofindia.indiatimes.com/city/goa/goa-cabinet-approves-five-schemes-under-ai-policy-sanctions-rs-10cr/articleshow/135970046.cms",
@@ -614,5 +634,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

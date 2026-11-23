@@ -2840,6 +2840,27 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 6,
+        "title": "India AI funding nearly doubles to $1.6B in Jan-Sept 2026: Tracxn",
+        "url": "https://yourstory.com/2026/11/india-ai-funding-nearly-doubles-jan-sept-2026-tracxn",
+        "summary": "Early-stage funding led the investment mix. Mumbai overtook Bengaluru to become the city with the largest funding during the period.",
+        "date_published": "2026-11-23",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 3,
         "title": "Neysa Deploys AMD GPU Cluster in Mumbai for AI Training and Inference",
         "url": "https://analyticsindiamag.com/ai-news/neysa-deploys-amd-gpu-cluster-in-mumbai-for-ai-training-and-inference",
@@ -3478,6 +3499,6 @@
     ]
   },
   "today_updates": [
-    "Major AI Developments"
+    "AI Start-Up News"
   ]
 }

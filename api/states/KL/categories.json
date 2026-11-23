@@ -87,6 +87,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 4,
+        "title": "World Landslide Forum 2026: Can AI and real-time monitoring help India predict landslides better?",
+        "url": "https://www.etnownews.com/technology/world-landslide-forum-2026-can-ai-and-real-time-monitoring-help-india-predict-landslides-better-article-156550986",
+        "summary": "World Landslide Forum 2026 : Long-term monitoring in Munnar, Kerala, has helped researchers understand how rainfall, soil characteristics, groundwater movement and subsurface pressure interact to infl...",
+        "date_published": "2026-11-23",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 12,
         "title": "Venttup raises $3 Mn in pre Series A round led by Rainmatter, Unicorn India Ventures",
         "url": "https://entrackr.com/snippets/industries-50-startup-venttup-raises-3-mn-in-pre-series-a-led-by-rainmatter-by-zerodha-and-unicorn-india-12764564",
@@ -465,5 +485,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

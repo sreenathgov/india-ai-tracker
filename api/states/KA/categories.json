@@ -719,6 +719,26 @@
     ],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "Karnataka Beary Sahitya Academy to digitise 22,000-word Kannada-Beary dictionary, explore Google Translate and AI integration after Dec release",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/karnataka-beary-sahitya-academy-to-digitise-22000-word-kannada-beary-dictionary-explore-google-translate-and-ai-integration-after-dec-release/articleshow/136108345.cms",
+        "summary": "<a href=\"https://timesofindia.indiatimes.com/city/bengaluru/karnataka-beary-sahitya-academy-to-digitise-22000-word-kannada-beary-dictionary-explore-google-translate-and-ai-integration-after-dec-releas...",
+        "date_published": "2026-11-23",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Warner Music Group to develop Bengaluru as global technology hub",
         "url": "https://www.thehindu.com/news/national/karnataka/warner-music-group-to-develop-bengaluru-as-global-technology-hub/article71702427.ece",
@@ -5963,6 +5983,47 @@
     ],
     "AI Start-Up News": [
       {
+        "id": 2,
+        "title": "From Sarvam Tie-Up to Drones, All That Happened at Bengaluru Tech Summit 2026",
+        "url": "https://analyticsindiamag.com/ai-features/from-sarvam-to-all-that-happened-at-the-bengaluru-tech-summit-2026",
+        "summary": "At the Bengaluru Tech Summit 2026, Karnataka announced six initiatives to strengthen its research and innovation infrastructure.",
+        "date_published": "2026-11-23",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 6,
+        "title": "India AI funding nearly doubles to $1.6B in Jan-Sept 2026: Tracxn",
+        "url": "https://yourstory.com/2026/11/india-ai-funding-nearly-doubles-jan-sept-2026-tracxn",
+        "summary": "Early-stage funding led the investment mix. Mumbai overtook Bengaluru to become the city with the largest funding during the period.",
+        "date_published": "2026-11-23",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "KA",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 14,
         "title": "Bengaluru is India’s AI, start-up capital; city captures 47% of national venture funding: Report",
         "url": "https://www.thehindu.com/news/national/karnataka/bengaluru-is-indias-ai-start-up-capital-city-captures-47-of-national-venture-funding/article71717187.ece",
@@ -7644,5 +7705,8 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "AI Start-Up News",
+    "Major AI Developments"
+  ]
 }
