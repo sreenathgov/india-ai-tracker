@@ -1694,6 +1694,106 @@
     ],
     "Major AI Developments": [
       {
+        "id": 1,
+        "title": "Google Launches Initiative to Support Indian Startups With AI, Cloud Infra",
+        "url": "https://analyticsindiamag.com/ai-news/google-launches-momentum-initiative-to-support-indias-startups",
+        "summary": "The initiative will provide Indian founders access to Google's AI models, cloud infrastructure, engineering expertise, and global platforms.",
+        "date_published": "2026-11-24",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Cashfree Enables AI Agents in India to Pay From Wallet on Behalf of Users",
+        "url": "https://analyticsindiamag.com/ai-news/cashfree-launches-wallet-letting-ai-agents-pay-for-indian-users",
+        "summary": "Users keep control, as Cashfree Wallet lets AI agents pay bills within set budgets without ever seeing card or bank details.",
+        "date_published": "2026-11-24",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 3,
+        "title": "Ahead of Budget, Nasscom Seeks AI Scheme for Indian IT",
+        "url": "https://analyticsindiamag.com/ai-news/nasscom-seeks-three-year-ai-scheme-for-indian-it-firms-in-budget-2027-28",
+        "summary": "The proposal includes support for AI product development, supervised employee training, and shared technical facilities for smaller service providers.",
+        "date_published": "2026-11-24",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "How Will AI Change Jobs in India? The Roles at Risk & Those on the Rise",
+        "url": "https://analyticsindiamag.com/ai-features/how-will-ai-change-jobs-in-india-the-skills-roles-and-workers-at-risk",
+        "summary": "Artificial intelligence is changing the nature of work in India. As routine tasks become easier to automate, critical thinking, human judgment and continuous",
+        "date_published": "2026-11-24",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 8,
+        "title": "Can AI detect a fake Rolex, Birkin bag or diamond? How technology is changing India's growing luxury resale and authentication business",
+        "url": "https://www.etnownews.com/technology/can-ai-detect-a-fake-rolex-birkin-bag-or-diamond-how-technology-is-changing-indias-growing-luxury-resale-and-authentication-business-article-156557924",
+        "summary": "Can AI detect fake Rolex watches, Hermès Birkin bags and diamonds? Explore how artificial intelligence, digital verification and expert authentication are transforming India’s growing luxury resale ma...",
+        "date_published": "2026-11-24",
+        "source_name": "ET Now Technology",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 5,
         "title": "India may emerge as long-term AI winner despite dependence on foreign tech",
         "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-may-emerge-as-long-term-ai-winner-despite-dependence-on-foreign-tech/136092363",
@@ -18899,6 +18999,86 @@
       }
     ],
     "AI Start-Up News": [
+      {
+        "id": 6,
+        "title": "Mint Explainer | Why India’s sovereign AI flagship Sarvam is now renting out global models",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/mint-explainer-why-india-s-sovereign-ai-flagship-sarvam-is-now-renting-out-global-models-11795501075369.html",
+        "summary": "Sarvam’s Token Factory is targetting Indian startups, smaller enterprises, and government-linked buyers who want to build with top open-weight AI models without investing in expensive servers or routi...",
+        "date_published": "2026-11-24",
+        "source_name": "LiveMint AI News",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 7,
+        "title": "Can India build AI sovereignty without developing every model? The Sarvam debate explained",
+        "url": "https://www.etnownews.com/technology/can-india-build-ai-sovereignty-without-developing-every-model-the-sarvam-debate-explained-article-156560763",
+        "summary": "Sarvam AI's Token Factory has sparked a debate over India's AI sovereignty after the platform began hosting Chinese-developed models alongside its own.",
+        "date_published": "2026-11-24",
+        "source_name": "ET Now Technology",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 9,
+        "title": "NVIDIA reinstates Jensen Huang as CEO; Sarvam unveils upgraded model amid Token Factory row",
+        "url": "https://yourstory.com/2026/11/nvidia-reinstates-jensen-huang-as-ceo-sarvam-unveils-upgraded-model",
+        "summary": "Nvidia has reinstated co-founder Jensen Huang as its president, CEO, and board director, less than two weeks after his resignation from the company. In other news, Sarvam’s new AI model promises bette...",
+        "date_published": "2026-11-24",
+        "source_name": "YourStory",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 11,
+        "title": "Cosine Robots raises Rs 22.36 Cr led by Avaana Capital",
+        "url": "https://entrackr.com/snippets/cosine-robots-raises-rs-2236-cr-led-by-avaana-capital-12836692",
+        "summary": "Bengaluru-based deeptech startup Cosine Robots has r...",
+        "date_published": "2026-11-24",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "AI Start-Up News",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 3,
         "title": "Sarvam Defends Hosting Chinese AI Models, Releases Upgraded 105B Model",

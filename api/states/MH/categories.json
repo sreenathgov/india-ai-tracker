@@ -274,6 +274,47 @@
     ],
     "Major AI Developments": [
       {
+        "id": 12,
+        "title": "India AI funding nearly doubles to $1.6 billion in nine months of 2026: Tracxn report",
+        "url": "https://www.thehindu.com/news/national/karnataka/india-ai-funding-nearly-doubles-to-16-billion-in-nine-months-of-2026-tracxn-report/article71738125.ece",
+        "summary": "Mumbai overtook Bengaluru as the largest recipient of AI funding in the country during the period, shows the report, which places India ninth among countries in terms of AI funding raised",
+        "date_published": "2026-11-24",
+        "source_name": "The Hindu - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 13,
+        "title": "NMC rolls out AI Smart Toilet, claims India-first, at Reshimbagh",
+        "url": "https://timesofindia.indiatimes.com/city/nagpur/nmc-rolls-out-ai-smart-toilet-claims-india-first-at-reshimbagh/articleshow/136113384.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"https:/...",
+        "date_published": "2026-11-24",
+        "source_name": "Times of India - Thane",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "MH"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "Cold chain industry scouts greener, efficient tech at refrigeration expo in Pune",
         "url": "https://timesofindia.indiatimes.com/city/pune/cold-chain-industry-scouts-greener-efficient-tech-at-refrigeration-expo-in-pune/articleshow/136062425.cms",
@@ -3499,6 +3540,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News"
+    "Major AI Developments"
   ]
 }
