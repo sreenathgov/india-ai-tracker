@@ -54,6 +54,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 11,
+        "title": "Saini to lead Haryana investment mission to UK, Germany from Nov 28",
+        "url": "https://timesofindia.indiatimes.com/city/chandigarh/saini-to-lead-haryana-investment-mission-to-uk-germany-from-nov-28/articleshow/136159312.cms",
+        "summary": "State to hold Germany roadshow; focus on industrial investment, AI, clean energy and education partnerships",
+        "date_published": "2026-11-25",
+        "source_name": "Times of India - Chandigarh",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "HR"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 12,
         "title": "InPrime Finserv raises Rs 101 Cr in Series B round led by FMO",
         "url": "https://entrackr.com/snippets/inprime-finserv-raises-rs-101-cr-in-series-b-round-led-by-fmo-12823682",
@@ -335,5 +355,7 @@
     ],
     "AI Start-Up News": []
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }

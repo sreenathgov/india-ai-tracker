@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 7,
+        "title": "How this 26-year-old built AI start-up in Bengaluru to help make govt tender bidding easier for businesses | Interview",
+        "url": "https://www.livemint.com/ai/artificial-intelligence/how-this-26-year-old-built-ai-start-up-in-bengaluru-to-help-make-govt-tender-bidding-easier-for-businesses-interview-11795547889814.html",
+        "summary": "Launched just a few weeks back, Zelmier was founded by 26-year-old entrepreneur Pranjal Srivastava. The startup aggregates tenders from more than 250 government portals and uses AI to match opportunit...",
+        "date_published": "2026-11-25",
+        "source_name": "LiveMint AI News",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "KA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Karnataka Unveils 6 Initiatives to Strengthen AI and Semiconductor Ecosystem",
         "url": "https://analyticsindiamag.com/ai-news/karnataka-unveils-six-initiatives-to-strengthen-its-ai-and-semiconductor-ecosystem",
@@ -7767,7 +7787,6 @@
     ]
   },
   "today_updates": [
-    "AI Start-Up News",
-    "Major AI Developments"
+    "Policies and Initiatives"
   ]
 }
