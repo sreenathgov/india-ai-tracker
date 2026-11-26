@@ -739,6 +739,27 @@
     ],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "A BITS Pilani alumnus from UP quit his high-paying Microsoft job to build a Bengaluru-based AI startup, missing Rs 15 lakh voluntary exit offer by just a month; his venture joins OpenAI's partner network",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/a-bits-pilani-alumnus-from-up-quit-his-high-paying-microsoft-job-to-build-a-bengaluru-based-ai-startup-missing-rs-15-lakh-voluntary-exit-offer-by-just-a-month-his-venture-joins-openais-partner-network/articleshow/136182490.cms",
+        "summary": "<a href=\"https://timesofindia.indiatimes.com/city/bengaluru/a-bits-pilani-alumnus-from-up-quit-his-high-paying-microsoft-job-to-build-a-bengaluru-based-ai-startup-missing-rs-15-lakh-voluntary-exit-off...",
+        "date_published": "2026-11-26",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "RJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 10,
         "title": "CortexSpark Ventures enters India’s VC market with SEBI approval for Rs 1,000 Cr deep-tech fund",
         "url": "https://entrackr.com/snippets/cortexspark-ventures-enters-indias-vc-market-with-sebi-approval-for-rs-1000-cr-deep-tech-fund-12837440",
@@ -7787,6 +7808,6 @@
     ]
   },
   "today_updates": [
-    "Policies and Initiatives"
+    "Major AI Developments"
   ]
 }

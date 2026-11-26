@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 3,
+        "title": "India launches indigenous Chariot-1 Foundation Models to strengthen sovereign AI capabilities",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/india-launches-indigenous-chariot-1-foundation-models-to-strengthen-sovereign-ai-capabilities/136183991",
+        "summary": "The Union Ministry of Electronics and Information Technology has launched Chariot-1 Foundation Models to boost AI capabilities. This initiative is part of the IndiaAI Mission aimed at developing indig...",
+        "date_published": "2026-11-26",
+        "source_name": "ET CIO - AI",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 4,
         "title": "Funding and acquisitions in Indian startups this week [Nov 16- Nov 21]",
         "url": "https://entrackr.com/report/weekly-funding-report-weekly-funding-report/funding-and-acquisitions-in-indian-startups-this-week-nov-16-nov-21-12829487",
@@ -1693,6 +1713,86 @@
       }
     ],
     "Major AI Developments": [
+      {
+        "id": 1,
+        "title": "Threatened by SaaSpocalypse, 9 Bets Defined Indian IT’s AI Strategy in 2026",
+        "url": "https://analyticsindiamag.com/it-services/threatened-by-saaspocalypse-9-bets-defined-indian-its-ai-strategy-in-2026",
+        "summary": "From TCS and Anthropic to Wipro and ServiceNow, nine alliances show how Indian IT firms are positioning themselves across the AI value chain.",
+        "date_published": "2026-11-26",
+        "source_name": "Analytics India Magazine - AI News",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 2,
+        "title": "Agentic AI adoption by global banks could put further pressure on Indian IT revenues",
+        "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/agentic-ai-adoption-by-global-banks-could-put-further-pressure-on-indian-it-revenues/136184033",
+        "summary": "Agentic AI adoption across global banking firms is rapidly improving productivity and reducing operational costs, as noted in a recent report. Indian IT services companies face declining revenues from...",
+        "date_published": "2026-11-26",
+        "source_name": "ET CIO - AI",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 4,
+        "title": "Zoho–LinkedIn report: AI is helping Indian SMBs grow, but skills lag behind",
+        "url": "https://yourstory.com/2026/11/indian-smbs-ai-talent-headcount-growth-zoho-linkedin-report",
+        "summary": "Zoho–LinkedIn report: Indian SMBs with AI talent grow teams 5.2 points faster, while only 6% have everyday AI skills across staff.",
+        "date_published": "2026-11-26",
+        "source_name": "YourStory",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
+        "id": 5,
+        "title": "Nexent Capital launches $1 Bn fund for AI infra, advanced energy investments",
+        "url": "https://entrackr.com/snippets/nexent-capital-launches-1-bn-fund-for-ai-infra-advanced-energy-investments-12842840",
+        "summary": "Nexent Capital IFSC has launched Nexent Capi...",
+        "date_published": "2026-11-26",
+        "source_name": "Entrackr - AI & Startups",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "IN"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
       {
         "id": 1,
         "title": "AI Trading in India Promises Smarter Investment Bets—At a Steep New Risk",
@@ -23291,6 +23391,6 @@
   },
   "today_updates": [
     "Major AI Developments",
-    "AI Start-Up News"
+    "Policies and Initiatives"
   ]
 }

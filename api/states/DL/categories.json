@@ -3,6 +3,26 @@
   "categories": {
     "Policies and Initiatives": [
       {
+        "id": 7,
+        "title": "Govt launches indigenous Chariot-1 AI models under IndiaAI Mission",
+        "url": "https://telanganatoday.com/govt-launches-indigenous-chariot-1-ai-foundation-models",
+        "summary": "India launched the indigenous Chariot-1 AI foundation models under the IndiaAI Mission, supporting multilingual language processing and speech generation. MeitY Secretary S. Krishnan unveiled the mode...",
+        "date_published": "2026-11-26",
+        "source_name": "Telangana Today - Tech",
+        "category": "Policies and Initiatives",
+        "state_codes": [
+          "DL"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 6,
         "title": "AI-enabled command centre to monitor pollution sources 24*7 in Delhi",
         "url": "https://www.tribuneindia.com/news/delhi/ai-enabled-command-centre-to-monitor-pollution-sources-247-in-delhi",
@@ -5377,5 +5397,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Policies and Initiatives"
+  ]
 }

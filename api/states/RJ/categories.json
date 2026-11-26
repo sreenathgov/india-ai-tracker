@@ -33,6 +33,27 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 6,
+        "title": "A BITS Pilani alumnus from UP quit his high-paying Microsoft job to build a Bengaluru-based AI startup, missing Rs 15 lakh voluntary exit offer by just a month; his venture joins OpenAI's partner network",
+        "url": "https://timesofindia.indiatimes.com/city/bengaluru/a-bits-pilani-alumnus-from-up-quit-his-high-paying-microsoft-job-to-build-a-bengaluru-based-ai-startup-missing-rs-15-lakh-voluntary-exit-offer-by-just-a-month-his-venture-joins-openais-partner-network/articleshow/136182490.cms",
+        "summary": "<a href=\"https://timesofindia.indiatimes.com/city/bengaluru/a-bits-pilani-alumnus-from-up-quit-his-high-paying-microsoft-job-to-build-a-bengaluru-based-ai-startup-missing-rs-15-lakh-voluntary-exit-off...",
+        "date_published": "2026-11-26",
+        "source_name": "Times of India - Bangalore",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "KA",
+          "RJ"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 8,
         "title": "Missing for 5 years, found in Rajasthan: How AI helped UP cops trace woman using childhood photo",
         "url": "https://timesofindia.indiatimes.com/city/lucknow/missing-for-5-years-found-in-rajasthan-how-ai-helped-up-cops-trace-woman-using-childhood-photo/articleshow/136022688.cms",
@@ -394,5 +415,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
