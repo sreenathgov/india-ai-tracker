@@ -106,6 +106,26 @@
     "Events": [],
     "Major AI Developments": [
       {
+        "id": 10,
+        "title": "Soon, voice-assisted AI labs to assist Goa divyang in classrooms",
+        "url": "https://timesofindia.indiatimes.com/city/goa/soon-voice-assisted-ai-labs-to-assist-goa-divyang-in-classrooms/articleshow/136202051.cms",
+        "summary": "<img align=\"left\" border=\"0\" hspace=\"10\" src=\"https://t...",
+        "date_published": "2026-11-27",
+        "source_name": "Times of India - Rajasthan",
+        "category": "Major AI Developments",
+        "state_codes": [
+          "GA"
+        ],
+        "is_approved": true,
+        "is_deleted": false,
+        "processing_state": "PROCESSED",
+        "processing_attempts": 0,
+        "importance_score": 0.0,
+        "premium_processed": false,
+        "sector": null,
+        "posted_to_x_at": null
+      },
+      {
         "id": 1,
         "title": "Goa Wants to Train 50,000 Graduates in AI Skills",
         "url": "https://analyticsindiamag.com/ai-news/goa-cabinet-approves-ai-policy-2026-puts-60-towards-skilling",
@@ -634,5 +654,7 @@
       }
     ]
   },
-  "today_updates": []
+  "today_updates": [
+    "Major AI Developments"
+  ]
 }
